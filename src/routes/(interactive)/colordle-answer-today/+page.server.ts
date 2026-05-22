@@ -285,13 +285,19 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         const requestedFormattedDate = format(today, 'MMMM d, yyyy');
         let todayData: ColordleTodayPayload | null = null;
 
-        try {
+		try {
                 const response = await fetch('/api/colordle/today');
                 const payload = (await response.json().catch(() => null)) as
                         | ({ success?: boolean } & Partial<ColordleTodayPayload>)
                         | null;
 
-                if (response.ok && payload?.success && payload.color && payload.formattedDate) {
+                if (
+                        response.ok &&
+                        payload?.success &&
+                        payload.color &&
+                        payload.formattedDate &&
+                        payload.fallbackReason !== 'after-end'
+                ) {
                         todayData = payload as ColordleTodayPayload;
                         const puzzleDateHeader = response.headers.get('X-Puzzle-Date');
                         if (puzzleDateHeader) {
@@ -300,11 +306,15 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                                 });
                         }
                 }
-        } catch (error) {
+		} catch (error) {
                 console.warn('Colordle today API request failed, using local dataset fallback:', error);
         }
 
         todayData ??= getColordleTodayPayload(today);
+
+        if (todayData?.fallbackReason === 'after-end') {
+                todayData = null;
+        }
 
         if (!todayData) {
                 return {

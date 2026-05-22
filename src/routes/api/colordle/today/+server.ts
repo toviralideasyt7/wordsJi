@@ -38,11 +38,13 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const payload = getColordleTodayPayload(requestedDate);
 
-	if (!payload) {
+	if (!payload || payload.fallbackReason === 'after-end') {
 		return json(
 			{
 				success: false,
-				error: 'Colordle data is not available right now.'
+				error: 'Colordle data is not available right now.',
+				requestedDate: requestedDate.toISOString().slice(0, 10),
+				availableThroughDate: payload?.availableThroughDateKey ?? null
 			},
 			{
 				status: 503,

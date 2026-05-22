@@ -13,6 +13,7 @@ const COLORDLE_SOURCE_URL =
 	process.env.COLORDLE_SOURCE_URL ?? 'https://colordle.ryantanen.com/colors.json';
 const START_DATE = '2023-08-07';
 const DAY_OFFSET = 500;
+const JST_TIME_ZONE = 'Asia/Tokyo';
 
 const targetPath = path.join(projectRoot, 'src', 'lib', 'data', 'colordle-targets.json');
 const staticDataPath = path.join(projectRoot, 'static', 'colordle_data.json');
@@ -65,6 +66,17 @@ function buildDateKey(index) {
 	return date.toISOString().slice(0, 10);
 }
 
+function getExpectedLatestDate(now = new Date()) {
+	const parts = new Intl.DateTimeFormat('en-CA', {
+		timeZone: JST_TIME_ZONE,
+		year: 'numeric',
+		month: '2-digit',
+		day: '2-digit'
+	}).formatToParts(now);
+	const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+	return `${values.year}-${values.month}-${values.day}`;
+}
+
 function buildDataset(colors) {
 	const availableDateStrings = colors.map((_, index) => buildDateKey(index));
 	const entries = colors.map((name, index) => ({
@@ -90,7 +102,10 @@ async function fetchColors() {
 	const response = await fetch(COLORDLE_SOURCE_URL, {
 		headers: {
 			accept: 'application/json',
-			'user-agent': 'WordSolverX Colordle Dataset Builder'
+			'accept-language': 'ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7',
+			referer: 'https://colordle.ryantanen.com/',
+			'user-agent':
+				'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 WordSolverX Colordle Dataset Builder'
 		}
 	});
 
@@ -144,37 +159,58 @@ async function writeDataset(colors) {
 
 async function main() {
 	let colors;
-	let usedFallback = false;
+	let outputMode = 'fresh source data';
 	let failureMessage = '';
+	let shouldMarkFailure = false;
+	const existingColors = await loadFallbackColors();
 
 	try {
 		colors = await fetchColors();
 	} catch (error) {
-		usedFallback = true;
+		colors = existingColors;
+		outputMode = 'cached fallback data';
 		failureMessage = error instanceof Error ? error.message : String(error);
+		shouldMarkFailure = true;
 		console.warn(
 			`Failed to refresh Colordle data from ${COLORDLE_SOURCE_URL}. Reusing existing local dataset.`,
 			error
 		);
-		colors = await loadFallbackColors();
+	}
+
+	if (!shouldMarkFailure && colors.length < existingColors.length) {
+		const remoteCount = colors.length;
+		colors = existingColors;
+		outputMode = 'cached fallback data';
+		failureMessage = `Colordle source returned ${remoteCount} colors, which is shorter than the local dataset (${existingColors.length}).`;
+		shouldMarkFailure = true;
+	}
+
+	const remoteLatestDate = buildDateKey(colors.length - 1);
+	const expectedLatestDate = getExpectedLatestDate();
+
+	if (!shouldMarkFailure && remoteLatestDate < expectedLatestDate) {
+		outputMode = 'stale source data';
+		failureMessage = `Colordle source is only available through ${remoteLatestDate}; expected at least ${expectedLatestDate}.`;
+		shouldMarkFailure = true;
 	}
 
 	const dataset = await writeDataset(colors);
-	const outputMode = usedFallback ? 'cached fallback data' : 'fresh source data';
 
-	if (usedFallback) {
+	if (shouldMarkFailure) {
 		await markUpdateFailure(
 			projectRoot,
 			'colordle',
 			failureMessage || 'Colordle refresh fell back to the cached dataset.',
 			{
 				latestDate: dataset.latestDate,
+				expectedLatestDate,
 				sourceUrl: COLORDLE_SOURCE_URL
 			}
 		);
 	} else {
 		await markUpdateSuccess(projectRoot, 'colordle', {
 			latestDate: dataset.latestDate,
+			expectedLatestDate,
 			sourceUrl: COLORDLE_SOURCE_URL
 		});
 	}

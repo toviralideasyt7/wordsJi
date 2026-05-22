@@ -9,6 +9,9 @@ on:
   schedule:
     # Run after the 16:30 UTC main-game rollover used by prerendered "today" pages.
     - cron: "35 16 * * *"
+    # Retry later in the day if upstream data was not ready on the first pass.
+    - cron: "30 3 * * *"
+    - cron: "31 11 * * *"
   repository_dispatch:
     types:
       - pages-publish-requested

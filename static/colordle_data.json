@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-04-03T23:07:00.828Z",
+  "generatedAt": "2026-05-21T19:00:19.033Z",
   "sourceUrl": "https://colordle.ryantanen.com/colors.json",
   "startDate": "2023-08-07",
   "dayOffset": 500,
-  "entryCount": 973,
-  "latestDate": "2026-04-05",
+  "entryCount": 1016,
+  "latestDate": "2026-05-18",
   "colors": [
     "night sky",
     "smoke",
@@ -978,7 +978,50 @@
     "porcelain",
     "sea blue",
     "brown sugar",
-    "pink red"
+    "pink red",
+    "lemon",
+    "green apple",
+    "orange juice",
+    "cucumber",
+    "champagne",
+    "honeydew",
+    "celadon",
+    "aged pink",
+    "verdigris",
+    "dark mahogany",
+    "platinum",
+    "sea moss",
+    "marmalade",
+    "gin",
+    "birchwood",
+    "cyan",
+    "ketchup",
+    "melon",
+    "light lavender",
+    "kiwi",
+    "sunshine",
+    "purple",
+    "spelunking",
+    "cool blue",
+    "vermilion",
+    "vantablack",
+    "mint",
+    "slate",
+    "plum",
+    "royal blue",
+    "ice",
+    "lemon",
+    "mustard",
+    "mocha",
+    "lavender",
+    "sangria",
+    "cloud",
+    "light pink",
+    "grass",
+    "white",
+    "blue purple",
+    "cobalt",
+    "tangerine"
   ],
   "availableDateStrings": [
     "2023-08-07",
@@ -1953,7 +1996,50 @@
     "2026-04-02",
     "2026-04-03",
     "2026-04-04",
-    "2026-04-05"
+    "2026-04-05",
+    "2026-04-06",
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10",
+    "2026-04-11",
+    "2026-04-12",
+    "2026-04-13",
+    "2026-04-14",
+    "2026-04-15",
+    "2026-04-16",
+    "2026-04-17",
+    "2026-04-18",
+    "2026-04-19",
+    "2026-04-20",
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-24",
+    "2026-04-25",
+    "2026-04-26",
+    "2026-04-27",
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30",
+    "2026-05-01",
+    "2026-05-02",
+    "2026-05-03",
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07",
+    "2026-05-08",
+    "2026-05-09",
+    "2026-05-10",
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15",
+    "2026-05-16",
+    "2026-05-17",
+    "2026-05-18"
   ],
   "entries": [
     {
@@ -9738,6 +9824,350 @@
       "color": {
         "name": "Pink Red",
         "hex": "#f5054f"
+      }
+    },
+    {
+      "date": "2026-04-06",
+      "dayNum": 1473,
+      "color": {
+        "name": "Lemon",
+        "hex": "#fff700"
+      }
+    },
+    {
+      "date": "2026-04-07",
+      "dayNum": 1474,
+      "color": {
+        "name": "Green Apple",
+        "hex": "#5edc1f"
+      }
+    },
+    {
+      "date": "2026-04-08",
+      "dayNum": 1475,
+      "color": {
+        "name": "Orange Juice",
+        "hex": "#ff7f00"
+      }
+    },
+    {
+      "date": "2026-04-09",
+      "dayNum": 1476,
+      "color": {
+        "name": "Cucumber",
+        "hex": "#006400"
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "dayNum": 1477,
+      "color": {
+        "name": "Champagne",
+        "hex": "#e9d2ac"
+      }
+    },
+    {
+      "date": "2026-04-11",
+      "dayNum": 1478,
+      "color": {
+        "name": "Honeydew",
+        "hex": "#f0fff0"
+      }
+    },
+    {
+      "date": "2026-04-12",
+      "dayNum": 1479,
+      "color": {
+        "name": "Celadon",
+        "hex": "#ace1af"
+      }
+    },
+    {
+      "date": "2026-04-13",
+      "dayNum": 1480,
+      "color": {
+        "name": "Aged Pink",
+        "hex": "#c99f99"
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "dayNum": 1481,
+      "color": {
+        "name": "Verdigris",
+        "hex": "#43b3ae"
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "dayNum": 1482,
+      "color": {
+        "name": "Dark Mahogany",
+        "hex": "#482029"
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "dayNum": 1483,
+      "color": {
+        "name": "Platinum",
+        "hex": "#e5e4e2"
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "dayNum": 1484,
+      "color": {
+        "name": "Sea Moss",
+        "hex": "#2c5252"
+      }
+    },
+    {
+      "date": "2026-04-18",
+      "dayNum": 1485,
+      "color": {
+        "name": "Marmalade",
+        "hex": "#d46f14"
+      }
+    },
+    {
+      "date": "2026-04-19",
+      "dayNum": 1486,
+      "color": {
+        "name": "Gin",
+        "hex": "#d9dfcd"
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "dayNum": 1487,
+      "color": {
+        "name": "Birchwood",
+        "hex": "#ccbeac"
+      }
+    },
+    {
+      "date": "2026-04-21",
+      "dayNum": 1488,
+      "color": {
+        "name": "Cyan",
+        "hex": "#00ffff"
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "dayNum": 1489,
+      "color": {
+        "name": "Ketchup",
+        "hex": "#9a382d"
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "dayNum": 1490,
+      "color": {
+        "name": "Melon",
+        "hex": "#ff7855"
+      }
+    },
+    {
+      "date": "2026-04-24",
+      "dayNum": 1491,
+      "color": {
+        "name": "Light Lavender",
+        "hex": "#efc0fe"
+      }
+    },
+    {
+      "date": "2026-04-25",
+      "dayNum": 1492,
+      "color": {
+        "name": "Kiwi",
+        "hex": "#749e4e"
+      }
+    },
+    {
+      "date": "2026-04-26",
+      "dayNum": 1493,
+      "color": {
+        "name": "Sunshine",
+        "hex": "#f9d376"
+      }
+    },
+    {
+      "date": "2026-04-27",
+      "dayNum": 1494,
+      "color": {
+        "name": "Purple",
+        "hex": "#800080"
+      }
+    },
+    {
+      "date": "2026-04-28",
+      "dayNum": 1495,
+      "color": {
+        "name": "Spelunking",
+        "hex": "#35465e"
+      }
+    },
+    {
+      "date": "2026-04-29",
+      "dayNum": 1496,
+      "color": {
+        "name": "Cool Blue",
+        "hex": "#4984b8"
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "dayNum": 1497,
+      "color": {
+        "name": "Vermilion",
+        "hex": "#f4320c"
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "dayNum": 1498,
+      "color": {
+        "name": "Vantablack",
+        "hex": "#000100"
+      }
+    },
+    {
+      "date": "2026-05-02",
+      "dayNum": 1499,
+      "color": {
+        "name": "Mint",
+        "hex": "#3eb489"
+      }
+    },
+    {
+      "date": "2026-05-03",
+      "dayNum": 1500,
+      "color": {
+        "name": "Slate",
+        "hex": "#516572"
+      }
+    },
+    {
+      "date": "2026-05-04",
+      "dayNum": 1501,
+      "color": {
+        "name": "Plum",
+        "hex": "#66386a"
+      }
+    },
+    {
+      "date": "2026-05-05",
+      "dayNum": 1502,
+      "color": {
+        "name": "Royal Blue",
+        "hex": "#4169e1"
+      }
+    },
+    {
+      "date": "2026-05-06",
+      "dayNum": 1503,
+      "color": {
+        "name": "Ice",
+        "hex": "#d6fffa"
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "dayNum": 1504,
+      "color": {
+        "name": "Lemon",
+        "hex": "#fff700"
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "dayNum": 1505,
+      "color": {
+        "name": "Mustard",
+        "hex": "#ceb301"
+      }
+    },
+    {
+      "date": "2026-05-09",
+      "dayNum": 1506,
+      "color": {
+        "name": "Mocha",
+        "hex": "#9d7651"
+      }
+    },
+    {
+      "date": "2026-05-10",
+      "dayNum": 1507,
+      "color": {
+        "name": "Lavender",
+        "hex": "#b56edc"
+      }
+    },
+    {
+      "date": "2026-05-11",
+      "dayNum": 1508,
+      "color": {
+        "name": "Sangria",
+        "hex": "#b14566"
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "dayNum": 1509,
+      "color": {
+        "name": "Cloud",
+        "hex": "#e4f0ef"
+      }
+    },
+    {
+      "date": "2026-05-13",
+      "dayNum": 1510,
+      "color": {
+        "name": "Light Pink",
+        "hex": "#ffd1df"
+      }
+    },
+    {
+      "date": "2026-05-14",
+      "dayNum": 1511,
+      "color": {
+        "name": "Grass",
+        "hex": "#5cac2d"
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "dayNum": 1512,
+      "color": {
+        "name": "White",
+        "hex": "#ffffff"
+      }
+    },
+    {
+      "date": "2026-05-16",
+      "dayNum": 1513,
+      "color": {
+        "name": "Blue Purple",
+        "hex": "#5729ce"
+      }
+    },
+    {
+      "date": "2026-05-17",
+      "dayNum": 1514,
+      "color": {
+        "name": "Cobalt",
+        "hex": "#030aa7"
+      }
+    },
+    {
+      "date": "2026-05-18",
+      "dayNum": 1515,
+      "color": {
+        "name": "Tangerine",
+        "hex": "#ff9300"
       }
     }
   ]
