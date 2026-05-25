@@ -1,4 +1,15 @@
-# Primary crawl rules
+User-agent: Googlebot
+Allow: /_app/immutable/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /_app/immutable/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
 User-agent: *
 Allow: /
 Disallow: /api/
