@@ -1,6 +1,6 @@
 name: Publish Pages
 
-run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || ((github.event_name == 'push' || github.event_name == 'schedule') && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
+run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
 
 on:
   push:
@@ -71,13 +71,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     concurrency:
-      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || ((github.event_name == 'push' || github.event_name == 'schedule') && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
+      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
       cancel-in-progress: true
     env:
-      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || ((github.event_name == 'push' || github.event_name == 'schedule') && 'site') || 'manual' }}
+      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}
       TARGET_DATE: ${{ github.event.client_payload.target_date || github.event.inputs.target_date || '' }}
       WORKFLOW_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode || 'deploy' }}
-      ARTICLE_SCOPE: ${{ (github.event_name == 'push' && 'all-current-windows') || (github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && github.event.inputs.article_scope) || 'current-group' }}
+      ARTICLE_SCOPE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && github.event.inputs.article_scope) || 'current-group' }}
+      ARTICLE_GROUPS_TO_GENERATE: ''
+      ARTICLE_SKIP_EXISTING: 'false'
+      RUN_DATA_UPDATE_MODE: full
       SOURCE_NAME: ${{ github.event.client_payload.source || github.event.inputs.source || (github.event_name == 'push' && format('push:{0}', github.ref_name)) || github.event.action || 'manual' }}
       PREVIEW_BASE_URL: https://wordsolverx-z-ai.pages.dev
       PUBLIC_BASE_URL: https://wordsolverx.com
@@ -85,12 +88,16 @@ jobs:
       NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       AGENT_ROUTER_TOKENS: ${{ secrets.AGENT_ROUTER_TOKENS }}
       AGENT_ROUTER_TOKEN: ${{ secrets.AGENT_ROUTER_TOKEN }}
-      ENABLE_DAILY_ARTICLE_GENERATION: ${{ github.event_name == 'push' || github.event_name == 'repository_dispatch' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.generate_articles == 'true') }}
+      ENABLE_DAILY_ARTICLE_GENERATION: ${{ github.event_name == 'repository_dispatch' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.generate_articles == 'true') }}
       ARTICLE_MAX_CONCURRENCY: 6
       ARTICLE_MAX_ATTEMPTS: 3
-      ARTICLE_REQUEST_TIMEOUT_MS: 300000
-      ARTICLE_MAX_OUTPUT_TOKENS: 8192
-      ARTICLE_RATE_LIMIT_DELAY_MS: 2500
+      ARTICLE_REQUEST_TIMEOUT_MS: 120000
+      ARTICLE_MAX_OUTPUT_TOKENS: 32768
+      ARTICLE_RATE_LIMIT_DELAY_MS: 500
+      ARTICLE_TOP_P: 0.80
+      ARTICLE_TOP_K: 20
+      ARTICLE_PRESENCE_PENALTY: 1.5
+      ARTICLE_REPETITION_PENALTY: 1.0
       INDEXING_ARTIFACT_DIR: artifacts/indexing
       INDEXING_REQUEST_TIMEOUT_MS: 10000
       SITEMAP_URL: https://wordsolverx.com/sitemap.xml
@@ -112,6 +119,126 @@ jobs:
         with:
           node-version: 22
           cache: npm
+
+      - name: Resolve Publish Strategy
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule || '' }}
+          INPUT_GENERATE_ARTICLES: ${{ github.event.inputs.generate_articles || '' }}
+        run: |
+          resolve_retry_groups() {
+            case "$1" in
+              site|main|"") echo "site" ;;
+              waffle) echo "waffle,site" ;;
+              gamedle) echo "gamedle,waffle,site" ;;
+              *) echo "$1" ;;
+            esac
+          }
+
+          resolved_group="$GROUP_NAME"
+          resolved_article_groups="site"
+          resolved_scope="$ARTICLE_SCOPE"
+          resolved_generate="$ENABLE_DAILY_ARTICLE_GENERATION"
+          resolved_data_mode="full"
+          resolved_skip_existing="false"
+
+          case "$EVENT_NAME" in
+            push)
+              resolved_group="site"
+              resolved_article_groups="site"
+              resolved_scope="current-group"
+              resolved_generate="false"
+              resolved_data_mode="skip"
+              resolved_skip_existing="true"
+              ;;
+            schedule)
+              case "$EVENT_SCHEDULE" in
+                "35 16 * * *")
+                  resolved_group="site"
+                  resolved_article_groups="site"
+                  resolved_data_mode="full"
+                  ;;
+                "30 3 * * *")
+                  resolved_group="waffle"
+                  resolved_article_groups="waffle,site"
+                  resolved_data_mode="retry-failed"
+                  ;;
+                "31 11 * * *")
+                  resolved_group="gamedle"
+                  resolved_article_groups="gamedle,waffle,site"
+                  resolved_data_mode="retry-failed"
+                  ;;
+                *)
+                  resolved_group="site"
+                  resolved_article_groups="site"
+                  resolved_data_mode="full"
+                  ;;
+              esac
+              resolved_scope="current-group"
+              resolved_generate="true"
+              resolved_skip_existing="true"
+              ;;
+            repository_dispatch)
+              case "$GROUP_NAME" in
+                waffle)
+                  resolved_group="waffle"
+                  resolved_article_groups="waffle"
+                  resolved_data_mode="retry-failed"
+                  ;;
+                gamedle)
+                  resolved_group="gamedle"
+                  resolved_article_groups="gamedle"
+                  resolved_data_mode="retry-failed"
+                  ;;
+                main|"")
+                  resolved_group="site"
+                  resolved_article_groups="site"
+                  resolved_data_mode="full"
+                  ;;
+                *)
+                  resolved_group="$GROUP_NAME"
+                  resolved_article_groups="$GROUP_NAME"
+                  resolved_data_mode="full"
+                  ;;
+              esac
+              resolved_scope="current-group"
+              resolved_generate="true"
+              resolved_skip_existing="true"
+              ;;
+            workflow_dispatch)
+              if [ "$WORKFLOW_MODE" = "generate-articles-only" ] || [ "$INPUT_GENERATE_ARTICLES" = "true" ]; then
+                resolved_generate="true"
+                resolved_skip_existing="true"
+              fi
+
+              if [ "$ARTICLE_SCOPE" = "all-current-windows" ]; then
+                resolved_article_groups="site,waffle,gamedle"
+              else
+                resolved_article_groups="$(resolve_retry_groups "$GROUP_NAME")"
+              fi
+
+              case "$GROUP_NAME" in
+                waffle|gamedle)
+                  resolved_data_mode="retry-failed"
+                  ;;
+                *)
+                  resolved_data_mode="full"
+                  ;;
+              esac
+              ;;
+          esac
+
+          {
+            echo "GROUP_NAME=$resolved_group"
+            echo "ARTICLE_GROUPS_TO_GENERATE=$resolved_article_groups"
+            echo "ARTICLE_SCOPE=$resolved_scope"
+            echo "ENABLE_DAILY_ARTICLE_GENERATION=$resolved_generate"
+            echo "RUN_DATA_UPDATE_MODE=$resolved_data_mode"
+            echo "ARTICLE_SKIP_EXISTING=$resolved_skip_existing"
+          } >> "$GITHUB_ENV"
+
+          echo "Resolved strategy: group=$resolved_group article_groups=$resolved_article_groups article_scope=$resolved_scope generate=$resolved_generate data_update=$resolved_data_mode skip_existing=$resolved_skip_existing"
 
       - name: Resolve Canary Path
         id: canary_path
@@ -215,13 +342,8 @@ jobs:
           ENABLE_DAILY_ARTICLE_GENERATION: true
         shell: bash
         run: |
-          npm run data:update
-
-          if [ "$ARTICLE_SCOPE" = "all-current-windows" ]; then
-            node scripts/generate-daily-articles-batch.mjs
-          else
-            node scripts/generate-daily-articles.mjs
-          fi
+          node scripts/run-group-data-update.mjs
+          node scripts/generate-daily-articles.mjs
 
       - name: Upload Generated Article Bundle
         if: env.WORKFLOW_MODE == 'generate-articles-only'

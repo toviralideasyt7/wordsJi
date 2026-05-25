@@ -18,7 +18,7 @@
 
   const article = $derived(getTodayPageArticle(articleKey, articleDate));
 
-  // Use the article's own date when it differs from the page date (fallback scenario)
+  // Reused stored articles can still display their own saved date when it differs from the page date.
   const displayDate = $derived(article?.date && article.date !== articleDate ? article.date : articleDate);
 </script>
 

@@ -62,8 +62,28 @@
         <script>
                 (function () {
                         var GA_ID = 'G-8QRMXK049Z';
+                        var ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8421191784631095';
+                        var CONSENT_KEY = 'wordsolverx-consent-v1';
+
                         window.dataLayer = window.dataLayer || [];
                         window.__wordsolverxQueuedGtagCalls = window.__wordsolverxQueuedGtagCalls || [];
+
+                        function readConsent() {
+                                try {
+                                        var value = window.localStorage.getItem(CONSENT_KEY);
+                                        return value === 'accepted' || value === 'rejected' ? value : null;
+                                } catch (error) {
+                                        return null;
+                                }
+                        }
+
+                        function dispatchConsent(value) {
+                                window.dispatchEvent(
+                                        new CustomEvent('wordsolverx:consent-updated', {
+                                                detail: { value: value }
+                                        })
+                                );
+                        }
 
                         function queueGtagCall() {
                                 var args = Array.prototype.slice.call(arguments);
@@ -117,7 +137,33 @@
                                 document.head.appendChild(script);
                         }
 
+                        function loadAdsense() {
+                                if (window.__wordsolverxAdsenseLoaded) return;
+                                window.__wordsolverxAdsenseLoaded = true;
+
+                                var script = document.createElement('script');
+                                script.async = true;
+                                script.src = ADSENSE_SRC;
+                                script.crossOrigin = 'anonymous';
+                                document.head.appendChild(script);
+                        }
+
                         window.__wordsolverxLoadAnalytics = loadAnalytics;
+                        window.__wordsolverxGetConsent = readConsent;
+                        window.__wordsolverxSetConsent = function (value) {
+                                try {
+                                        window.localStorage.setItem(CONSENT_KEY, value);
+                                } catch (error) {
+                                        // Ignore storage failures and still apply in-memory behavior.
+                                }
+
+                                dispatchConsent(value);
+
+                                if (value === 'accepted') {
+                                        loadAnalytics();
+                                        loadAdsense();
+                                }
+                        };
 
                         function scheduleAnalytics() {
                                 var interactionEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
@@ -150,7 +196,10 @@
                                 );
                         }
 
-                        scheduleAnalytics();
+                        if (readConsent() === 'accepted') {
+                                scheduleAnalytics();
+                                loadAdsense();
+                        }
 
                         function updateCardFilter(input) {
                                 var group = input.getAttribute('data-card-filter-input');
@@ -234,11 +283,6 @@
                         window.addEventListener('pageshow', refreshAllCardFilters);
                 })();
         </script>
-        <script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8421191784631095"
-                crossorigin="anonymous"
-        ></script>
 
         %sveltekit.head%
 </head>

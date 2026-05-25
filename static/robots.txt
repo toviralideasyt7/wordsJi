@@ -1,11 +1,19 @@
 User-agent: Googlebot
+Allow: /
 Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 
 User-agent: Bingbot
+Allow: /
 Allow: /_app/immutable/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Slurp
+Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
@@ -18,10 +26,6 @@ Disallow: /private/
 Disallow: /_app/
 Disallow: /build/
 
-# Sitemaps
-Sitemap: https://wordsolverx.com/sitemap.xml
-
-# AI crawlers - allow content, block API
 User-agent: GPTBot
 Allow: /
 Disallow: /api/
@@ -46,12 +50,4 @@ User-agent: Applebot-Extended
 Allow: /
 Disallow: /api/
 
-# Search engine crawlers - ensure full access
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
+Sitemap: https://wordsolverx.com/sitemap.xml

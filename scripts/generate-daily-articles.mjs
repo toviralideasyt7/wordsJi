@@ -18,7 +18,7 @@ const colordleDataPath = path.join(projectRoot, 'static', 'colordle_data.json');
 const WORDLE_API_BASE_URL =
   process.env.WORDLE_API_BASE_URL ?? 'https://api.wordsolverx.workers.dev';
 const NVIDIA_BASE_URL = 'https://integrate.api.nvidia.com/v1';
-const DEFAULT_TIMEOUT_MS = Number.parseInt(process.env.ARTICLE_REQUEST_TIMEOUT_MS ?? '300000', 10);
+const DEFAULT_TIMEOUT_MS = Number.parseInt(process.env.ARTICLE_REQUEST_TIMEOUT_MS ?? '120000', 10);
 const MAX_REQUEST_ATTEMPTS = Math.max(
   1,
   Number.parseInt(process.env.ARTICLE_MAX_ATTEMPTS ?? '3', 10) || 3
@@ -29,11 +29,11 @@ const MAX_CONCURRENCY = Math.max(
 );
 const MAX_OUTPUT_TOKENS = Math.max(
   512,
-  Number.parseInt(process.env.ARTICLE_MAX_OUTPUT_TOKENS ?? '8192', 10) || 8192
+  Number.parseInt(process.env.ARTICLE_MAX_OUTPUT_TOKENS ?? '32768', 10) || 32768
 );
 const RATE_LIMIT_DELAY_MS = Math.max(
   0,
-  Number.parseInt(process.env.ARTICLE_RATE_LIMIT_DELAY_MS ?? '2500', 10) || 2500
+  Number.parseInt(process.env.ARTICLE_RATE_LIMIT_DELAY_MS ?? '500', 10) || 500
 );
 const STATUS_POLL_INTERVAL_MS = Math.max(
   250,
@@ -43,12 +43,18 @@ const MAX_STORED_DATES_PER_ROUTE = Math.max(
   1,
   Number.parseInt(process.env.ARTICLE_MAX_STORED_DATES_PER_ROUTE ?? '45', 10) || 45
 );
+const ARTICLE_TOP_P = Number.parseFloat(process.env.ARTICLE_TOP_P ?? '0.8') || 0.8;
+const ARTICLE_TOP_K = Math.max(1, Number.parseInt(process.env.ARTICLE_TOP_K ?? '20', 10) || 20);
+const ARTICLE_PRESENCE_PENALTY =
+  Number.parseFloat(process.env.ARTICLE_PRESENCE_PENALTY ?? '1.5') || 1.5;
+const ARTICLE_REPETITION_PENALTY =
+  Number.parseFloat(process.env.ARTICLE_REPETITION_PENALTY ?? '1.0') || 1.0;
 const LOG_SNIPPET_LIMIT = 220;
-const PRIMARY_MODEL = 'deepseek-ai/deepseek-v4-pro';
+const PRIMARY_MODEL = 'qwen/qwen3.5-397b-a17b';
 const NVIDIA_MODEL_CHAIN = [
   PRIMARY_MODEL,
-  'qwen/qwen3.5-397b-a17b',
-  'moonshotai/kimi-k2.6'
+  'qwen/qwen3.5-122b-a10b',
+  'minimaxai/minimax-m2.7'
 ];
 const BATCH_GROUPS = ['site', 'gamedle', 'waffle'];
 
@@ -302,6 +308,12 @@ function stripHtml(html) {
     .trim();
 }
 
+function normalizeWhitespace(value) {
+  return String(value ?? '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function countWords(html) {
   const text = stripHtml(html);
   if (!text) {
@@ -370,21 +382,58 @@ function shouldGenerateArticles() {
   return String(process.env.ENABLE_DAILY_ARTICLE_GENERATION ?? 'false').toLowerCase() === 'true';
 }
 
-function getSelectedEntries(groupName) {
-  if (groupName === 'all-current-windows') {
-    const selectedKeys = new Set();
-    return TODAY_ARTICLE_REGISTRY.filter((entry) => {
-      const matchesBatchWindow = BATCH_GROUPS.some((group) => entry.groups.includes(group));
-      if (!matchesBatchWindow || selectedKeys.has(entry.key)) {
-        return false;
-      }
+function getRequestedRouteKeys() {
+  return new Set(
+    String(process.env.ARTICLE_ROUTE_KEYS ?? '')
+      .split(',')
+      .map((value) => value.trim())
+      .filter(Boolean)
+  );
+}
 
-      selectedKeys.add(entry.key);
-      return true;
-    });
+function getConfiguredArticleGroups(groupName) {
+  const configuredGroups = String(process.env.ARTICLE_GROUPS_TO_GENERATE ?? '')
+    .split(',')
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+
+  if (configuredGroups.length > 0) {
+    return [...new Set(configuredGroups)];
   }
 
-  return TODAY_ARTICLE_REGISTRY.filter((entry) => entry.groups.includes(groupName));
+  if (getArticleScope() === 'all-current-windows') {
+    return [...BATCH_GROUPS];
+  }
+
+  return [groupName];
+}
+
+function getSelectedEntries(groupSelection) {
+  const requestedRouteKeys = getRequestedRouteKeys();
+  const selectedKeys = new Set();
+  const groups = Array.isArray(groupSelection)
+    ? groupSelection
+    : groupSelection === 'all-current-windows'
+      ? [...BATCH_GROUPS]
+      : [groupSelection];
+
+  return TODAY_ARTICLE_REGISTRY.filter((entry) => {
+    const matchesGroup = groups.some((group) => entry.groups.includes(group));
+    if (!matchesGroup || selectedKeys.has(entry.key)) {
+      return false;
+    }
+
+    if (requestedRouteKeys.size > 0 && !requestedRouteKeys.has(entry.key)) {
+      return false;
+    }
+
+    selectedKeys.add(entry.key);
+    return true;
+  });
+}
+
+function shouldSkipExistingArticles() {
+  return String(process.env.ARTICLE_SKIP_EXISTING ?? 'false').toLowerCase() === 'true';
 }
 
 function getEntryGenerationGroup(entry) {
@@ -713,6 +762,32 @@ const BANNED_PHRASES = [
   'comprehensive'  // as adjective
 ];
 
+const AUTO_PHRASE_REPLACEMENTS = [
+  [/\bin today's\b/gi, 'for this'],
+  [/\bin today’s\b/gi, 'for this'],
+  [/\badditionally\b/gi, 'also'],
+  [/\bfurthermore\b/gi, 'also'],
+  [/\bmoreover\b/gi, 'also'],
+  [/\bit's worth noting\b/gi, 'keep in mind'],
+  [/\bit is worth noting\b/gi, 'keep in mind'],
+  [/\bwithout further ado\b/gi, ''],
+  [/\bmastering the\b/gi, 'solving'],
+  [/\bmachine learning\b/gi, 'semantic similarity'],
+  [/\blandscape\b/gi, 'field'],
+  [/\bshowcase\b/gi, 'highlight'],
+  [/\bstreamline\b/gi, 'simplify'],
+  [/\bcomprehensive\b/gi, 'detailed']
+];
+
+const AUTO_PERSONAL_VOICE_REPLACEMENTS = [
+  [
+    /\bI (burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/gi,
+    'players $1'
+  ],
+  [/\bI['â€™]ve (logged|tracked|kept|played|solved|noticed)\b/gi, 'players have $1'],
+  [/\bmy (streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/gi, 'the $1']
+];
+
 function containsBannedPhrases(html) {
   const lower = String(html ?? '').toLowerCase();
   for (const phrase of BANNED_PHRASES) {
@@ -721,6 +796,85 @@ function containsBannedPhrases(html) {
     }
   }
   return null;
+}
+
+function autoCleanGeneratedHtml(html) {
+  let cleaned = String(html ?? '');
+  for (const [pattern, replacement] of AUTO_PHRASE_REPLACEMENTS) {
+    cleaned = cleaned.replace(pattern, replacement);
+  }
+  for (const [pattern, replacement] of AUTO_PERSONAL_VOICE_REPLACEMENTS) {
+    cleaned = cleaned.replace(pattern, replacement);
+  }
+
+  return cleaned
+    .replace(/\s{2,}/g, ' ')
+    .replace(/> +</g, '><')
+    .trim();
+}
+
+function normalizeHintList(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const seen = new Set();
+  const normalized = [];
+
+  for (const entry of value) {
+    const hint = normalizeWhitespace(entry);
+    if (!hint) {
+      continue;
+    }
+
+    const key = hint.toLowerCase();
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    normalized.push(hint);
+  }
+
+  return normalized;
+}
+
+function ensureMinimumHints(existingHints, fallbackHints, minimum = 4) {
+  const normalized = normalizeHintList(existingHints);
+
+  for (const hint of normalizeHintList(fallbackHints)) {
+    if (normalized.length >= minimum) {
+      break;
+    }
+
+    const key = hint.toLowerCase();
+    if (!normalized.some((entry) => entry.toLowerCase() === key)) {
+      normalized.push(hint);
+    }
+  }
+
+  return normalized.slice(0, Math.max(minimum, normalized.length));
+}
+
+function buildWordleFallbackHints(context) {
+  const vowelText = context.vowelCount === 1 ? '1 vowel' : `${context.vowelCount} vowels`;
+  return [
+    `The answer starts with ${context.firstLetter}.`,
+    `The answer ends with ${context.lastLetter}.`,
+    `It contains ${vowelText}.`,
+    context.hasRepeatedLetter ? 'One letter appears more than once.' : 'No letters repeat.',
+    'Think of a common household word rather than a niche term.'
+  ];
+}
+
+function buildColordleFallbackHints(context) {
+  return [
+    `The target sits in the ${context.hueFamily} family.`,
+    `The hex code begins ${context.colorHex.slice(0, 4)}.`,
+    'The color name is a familiar everyday label, not a technical pigment term.',
+    'Closer guesses usually come from changing hue first, then brightness and saturation.',
+    'Big score jumps usually mean the dominant channel moved in the right direction.'
+  ];
 }
 
 const BANNED_PHRASE_LIST_LINES = [
@@ -762,7 +916,7 @@ const BANNED_PHRASE_LIST_LINES = [
   '',
   'REQUIRED WRITING STYLE:',
   '- Start directly with something specific about today\'s puzzle or answer. No warm-up paragraph.',
-  '- Write like you played the game today and have an opinion about it.',
+  '- Write like an experienced editor reviewing today\'s verified puzzle data, not like a diary entry.',
   '- Vary sentence length: some short and punchy, some longer and explanatory.',
   '- Include at least one specific, opinionated observation per section.',
   '- End sections with a useful tip or next step, not a summary.',
@@ -771,17 +925,17 @@ const BANNED_PHRASE_LIST_LINES = [
   '- Do not write a "Why fans love this game" section — that is filler.',
   '- Vary paragraph structure. Not every paragraph should be 3 sentences.',
   '- Use contractions: "doesn\'t" not "does not."',
-  '- Show, don\'t just state. Narrate brief scenarios instead of flat claims.',
+  '- Show, don\'t just state. Use puzzle-specific observations instead of generic scene-setting.',
   '- Break the topic-sentence-support pattern. Start some paragraphs with an example or question.',
   '',
   'E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) REQUIREMENTS:',
-  '- Write from first-hand experience perspective: "When I solved today\'s puzzle..." or "Here\'s what tripped me up..."',
-  '- Include at least 2-3 internal links to other WordSolverX pages per article (solver tools, archives, other answer pages)',
-  '- Be transparent about limitations: mention if a hint could be misleading, or if the answer surprised you',
+  '- Do not claim you personally played, solved, logged, tracked, or reviewed the puzzle unless that evidence is explicitly provided.',
+  '- Include internal links only when they genuinely help the reader reach a solver, archive, or related answer page.',
+  '- Be transparent about limitations: if the data supplied is thin, say less instead of inventing details.',
   '- Use specific, concrete observations from the puzzle data provided — no generic filler',
-  '- Every factual claim must be verifiable from the puzzle data given',
-  '- Do NOT fabricate personal stories, test results, or experiences you did not have',
-  '- Write as Preston Hayes, the site\'s Word Puzzle Analyst who has solved 500+ daily puzzles',
+  '- Every factual claim must be supportable from the puzzle data given or stable game rules.',
+  '- Never invent percentages, difficulty ratings, private spreadsheets, Discord chatter, or long-term tracking.',
+  '- Write in Preston Hayes\' editorial voice without pretending to narrate Preston\'s personal gameplay.',
   '',
   'SEO STRUCTURE REQUIREMENTS:',
   '- Place a 40-60 word direct answer immediately after the first H2 — targets featured snippets',
@@ -804,7 +958,7 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
   return [
     'You are writing a daily Wordle answer page for a real site. Return JSON only.',
     '',
-    'You are writing as Preston Hayes, the site\'s Word Puzzle Analyst who has solved 500+ daily puzzles since Wordle launched in October 2021. You play these games every day. Write from genuine experience and expertise.',
+    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -820,11 +974,14 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `contentGuideHtml` must be 900-1300 words after HTML tags are stripped.',
+    '- `contentGuideHtml` must target 980-1150 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not sound like generic AI or SEO filler.',
-    '- Do not invent personal stories, test results, or private knowledge.',
+    '- `bonusHints` must contain exactly 4 distinct strings.',
+    '- Do not use first-person gameplay anecdotes such as "I guessed", "I burned", or "my streak".',
+    '- Do not invent personal stories, test results, private knowledge, or fake long-term tracking.',
     '- Use concrete observations from the word itself and the recent answers provided.',
+    '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Keep the first 5 hints spoiler-safe. Do not reveal the answer before the reveal section.',
     '- Use straightforward American English.',
     '- Keep links internal to wordsolverx.com only when you actually need a link.',
@@ -869,7 +1026,7 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
   return [
     'You are writing a daily Colordle answer page for a real site. Return JSON only.',
     '',
-    'You are writing as Preston Hayes, the site\'s Word Puzzle Analyst who has solved 500+ daily puzzles since Wordle launched in October 2021. You play these games every day. Write from genuine experience and expertise.',
+    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -885,11 +1042,13 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must be 900-1300 words after HTML tags are stripped.',
+    '- `articleHtml` must target 980-1150 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
-    '- Do not invent first-hand gameplay or made-up scoring data.',
+    '- `bonusHints` must contain exactly 4 distinct strings.',
+    '- Do not use first-person gameplay anecdotes or made-up scoring data.',
     '- The site already has logic-based color clues and a logic-based guess path. Your job is to write the surrounding human article text only.',
     '- Keep the writing grounded in the supplied color name, hex code, hue family, and recent history.',
+    '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Use valid HTML with clear headings and normal paragraphs.',
     '',
     'Required section order inside `articleHtml`:',
@@ -934,7 +1093,7 @@ function getGameGroup(key) {
 const temperatureMap = {
   wordle: 0.7,
   colordle: 0.7,
-  gamedle: 0.75,
+  gamedle: 0.7,
   geography: 0.7,
   word: 0.7,
   visual: 0.7,
@@ -1024,7 +1183,7 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
   const lines = [
     'You are writing a daily answer-page article for a real puzzle website. Return JSON only.',
     '',
-    'You are writing as Preston Hayes, the site\'s Word Puzzle Analyst who has solved 500+ daily puzzles since Wordle launched in October 2021. You play these games every day. Write from genuine experience and expertise.',
+    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -1039,13 +1198,15 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must be 800-1200 words after HTML tags are stripped.',
+    '- `articleHtml` must target 900-1100 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not mention AI, prompts, models, or automation.',
-    '- Do not make up private stats, fake test runs, or first-hand experiences.',
+    '- Do not use first-person gameplay anecdotes such as "I guessed", "I burned", or "my streak".',
+    '- Do not make up private stats, fake test runs, first-hand experiences, difficulty ratings, or percentages unless they were explicitly provided in the page facts.',
     '- Keep a short evergreen explanation of what the game is, but do not let the whole article become static filler.',
     '- Make the article feel like a real daily update tied to the current date and the page purpose.',
     '- Keep the tone natural, specific, and non-corporate.',
+    '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '',
     'Required sections inside `articleHtml` (use these exact headings):',
     ...getGenericSections(entry).map((s, i) => `${i + 1}. ${s}`),
@@ -1150,38 +1311,29 @@ function extractAsyncRequestId(response, payload) {
 
 function buildModelRequestSettings(model) {
   const normalizedModel = String(model ?? '').toLowerCase();
+  const baseSettings = {
+    top_p: ARTICLE_TOP_P,
+    top_k: ARTICLE_TOP_K,
+    presence_penalty: ARTICLE_PRESENCE_PENALTY,
+    repetition_penalty: ARTICLE_REPETITION_PENALTY
+  };
 
-  if (normalizedModel.includes('deepseek-v4-pro')) {
+  if (normalizedModel.includes('qwen3.5-397b-a17b') || normalizedModel.includes('qwen3.5-122b-a10b')) {
     return {
-      reasoning_effort: 'none'
-    };
-  }
-
-  if (normalizedModel.includes('qwen3.5-397b-a17b')) {
-    return {
+      ...baseSettings,
       chat_template_kwargs: {
         enable_thinking: false
       }
     };
   }
 
-  if (normalizedModel.includes('kimi-k2.6')) {
+  if (normalizedModel.includes('minimax-m2.7')) {
     return {
-      chat_template_kwargs: {
-        thinking: false
-      }
+      ...baseSettings
     };
   }
 
-  if (normalizedModel.includes('glm4.7')) {
-    return {
-      chat_template_kwargs: {
-        enable_thinking: false
-      }
-    };
-  }
-
-  return {};
+  return baseSettings;
 }
 
 async function fetchWithDeadline(url, init, deadlineAt) {
@@ -1280,7 +1432,7 @@ async function callChatCompletion({ baseUrl, apiKey, model, prompt, temperature 
         {
           role: 'system',
           content:
-            'You write for a puzzle answer site run by daily players. No fluff, no filler, no corporate speak, no "welcome to" intros. Write like a friend who plays these games every day and is sharing notes, not like a content mill or AI assistant. You must return strictly valid JSON matching the requested shape.'
+            'You write for a puzzle answer site in an experienced editor voice. No fluff, no filler, no corporate speak, no "welcome to" intros, and no first-person gameplay diaries. Never claim personal playtesting, streaks, or private tracking unless the prompt explicitly provides them. You must return strictly valid JSON matching the requested shape.'
         },
         {
           role: 'user',
@@ -1364,17 +1516,61 @@ function summarizeArticle(article) {
   };
 }
 
+const DISALLOWED_PERSONAL_VOICE_PATTERNS = [
+  /\bI (?:burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/i,
+  /\bmy (?:streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/i,
+  /\bI['’]ve (?:logged|tracked|kept|played|solved|noticed)\b/i,
+  /\bBack tomorrow\b/i,
+  /\bPlace your bets\b/i,
+  /\bcoffee in hand\b/i,
+  /\b500\+\s+daily\b/i
+];
+
+function findDisallowedPersonalVoice(html) {
+  const text = stripHtml(html);
+  for (const pattern of DISALLOWED_PERSONAL_VOICE_PATTERNS) {
+    const match = text.match(pattern);
+    if (match?.[0]) {
+      return match[0];
+    }
+  }
+
+  return null;
+}
+
+function isStoredArticleReusable(article, expectedDate) {
+  if (!isRecord(article)) {
+    return false;
+  }
+
+  const articleDate = toDateKey(article.date);
+  if (!articleDate || articleDate !== expectedDate) {
+    return false;
+  }
+
+  const html = String(article.articleHtml ?? article.contentGuideHtml ?? '');
+  if (!html.trim()) {
+    return false;
+  }
+
+  if (containsBannedPhrases(html)) {
+    return false;
+  }
+
+  if (findDisallowedPersonalVoice(html)) {
+    return false;
+  }
+
+  return true;
+}
+
 function validateArticlePayload(game, payload, targetDate) {
   if (!payload || typeof payload !== 'object') {
     throw new Error('Model payload was not an object.');
   }
 
   if (game === 'wordle') {
-    if (!Array.isArray(payload.bonusHints) || payload.bonusHints.length < 3) {
-      throw new Error('Wordle payload must include at least 3 bonus hints.');
-    }
-
-    const html = String(payload.contentGuideHtml ?? '');
+    const html = autoCleanGeneratedHtml(String(payload.contentGuideHtml ?? ''));
     if (!html.includes("<h2>5 Hints for Today's Wordle</h2>")) {
       throw new Error('Wordle HTML is missing the required hints heading.');
     }
@@ -1384,47 +1580,51 @@ function validateArticlePayload(game, payload, targetDate) {
     if (!html.includes(targetDate) && !html.includes(formatLongDate(targetDate))) {
       throw new Error('Wordle HTML does not include the target date.');
     }
-    if (countWords(html) < 900) {
-      throw new Error('Wordle HTML did not reach the minimum word count (900).');
+    if (countWords(html) < 880) {
+      throw new Error('Wordle HTML did not reach the minimum word count (880).');
     }
-    if (countWords(html) > 1300) {
-      throw new Error('Wordle HTML exceeded the maximum word count (1300).');
+    if (countWords(html) > 1450) {
+      throw new Error('Wordle HTML exceeded the maximum word count (1450).');
     }
     const bannedPhrase = containsBannedPhrases(html);
     if (bannedPhrase) {
       throw new Error(`Wordle HTML contains banned phrase: "${bannedPhrase}".`);
     }
+    const personalVoice = findDisallowedPersonalVoice(html);
+    if (personalVoice) {
+      throw new Error(`Wordle HTML contains first-person gameplay claim: "${personalVoice}".`);
+    }
     return {
-      title: String(payload.title ?? ''),
-      summary: String(payload.summary ?? ''),
-      bonusHints: payload.bonusHints.map((hint) => String(hint)),
+      title: normalizeWhitespace(payload.title),
+      summary: normalizeWhitespace(payload.summary),
+      bonusHints: normalizeHintList(payload.bonusHints),
       contentGuideHtml: html
     };
   }
 
-  const html = String(payload.articleHtml ?? '');
+  const html = autoCleanGeneratedHtml(String(payload.articleHtml ?? ''));
 
   if (game === 'generic') {
-    if (countWords(html) < 800) {
-      throw new Error('Generic article HTML did not reach the minimum word count (800).');
+    if (countWords(html) < 650) {
+      throw new Error('Generic article HTML did not reach the minimum word count (650).');
     }
-    if (countWords(html) > 1200) {
-      throw new Error('Generic article HTML exceeded the maximum word count (1200).');
+    if (countWords(html) > 1400) {
+      throw new Error('Generic article HTML exceeded the maximum word count (1400).');
     }
     const bannedPhrase = containsBannedPhrases(html);
     if (bannedPhrase) {
       throw new Error(`Generic article HTML contains banned phrase: "${bannedPhrase}".`);
     }
+    const personalVoice = findDisallowedPersonalVoice(html);
+    if (personalVoice) {
+      throw new Error(`Generic article HTML contains first-person gameplay claim: "${personalVoice}".`);
+    }
     return {
-      title: String(payload.title ?? ''),
-      summary: String(payload.summary ?? ''),
+      title: normalizeWhitespace(payload.title),
+      summary: normalizeWhitespace(payload.summary),
       bonusHints: [],
       articleHtml: html
     };
-  }
-
-  if (!Array.isArray(payload.bonusHints) || payload.bonusHints.length < 3) {
-    throw new Error('Colordle payload must include at least 3 bonus hints.');
   }
 
   if (!html.includes("<h2>Today's Colordle answer at a glance</h2>")) {
@@ -1433,20 +1633,24 @@ function validateArticlePayload(game, payload, targetDate) {
   if (!html.includes(targetDate) && !html.includes(formatLongDate(targetDate))) {
     throw new Error('Colordle HTML does not include the target date.');
   }
-  if (countWords(html) < 900) {
-    throw new Error('Colordle HTML did not reach the minimum word count (900).');
+  if (countWords(html) < 880) {
+    throw new Error('Colordle HTML did not reach the minimum word count (880).');
   }
-  if (countWords(html) > 1300) {
-    throw new Error('Colordle HTML exceeded the maximum word count (1300).');
+  if (countWords(html) > 1450) {
+    throw new Error('Colordle HTML exceeded the maximum word count (1450).');
   }
   const bannedPhrase = containsBannedPhrases(html);
   if (bannedPhrase) {
     throw new Error(`Colordle HTML contains banned phrase: "${bannedPhrase}".`);
   }
+  const personalVoice = findDisallowedPersonalVoice(html);
+  if (personalVoice) {
+    throw new Error(`Colordle HTML contains first-person gameplay claim: "${personalVoice}".`);
+  }
   return {
-    title: String(payload.title ?? ''),
-    summary: String(payload.summary ?? ''),
-    bonusHints: payload.bonusHints.map((hint) => String(hint)),
+    title: normalizeWhitespace(payload.title),
+    summary: normalizeWhitespace(payload.summary),
+    bonusHints: normalizeHintList(payload.bonusHints),
     articleHtml: html
   };
 }
@@ -1504,7 +1708,8 @@ function classifyProviderError(message) {
     normalized.includes('html does not include the target date') ||
     normalized.includes('html did not reach the minimum word count') ||
     normalized.includes('html exceeded the maximum word count') ||
-    normalized.includes('html contains banned phrase')
+    normalized.includes('html contains banned phrase') ||
+    normalized.includes('html contains first-person gameplay claim')
   ) {
     return 'route_model_failure';
   }
@@ -1539,29 +1744,20 @@ async function generateWithProviders({ game, prompt, targetDate, providers, rout
   const temperature = temperatureMap[gameGroup] ?? 0.6;
 
   for (const provider of providers) {
-    for (let modelIndex = provider.modelCursor ?? 0; modelIndex < provider.models.length; ) {
-      if ((provider.modelCursor ?? 0) > modelIndex) {
-        modelIndex = provider.modelCursor;
-        continue;
-      }
+    const preferredStart = provider.modelCursor ?? 0;
+    const modelOrder = rotateList(
+      provider.models.map((model, index) => ({ model, index })),
+      preferredStart
+    );
 
+    for (const { model, index: modelIndex } of modelOrder) {
       const rotatedKeys = takeProviderKeyOrder(provider);
-      const model = provider.models[modelIndex];
       let moveToNextRouteModel = false;
 
       for (const apiKeyEntry of rotatedKeys) {
-        if ((provider.modelCursor ?? 0) > modelIndex) {
-          break;
-        }
-
         const keyLabel = `${provider.provider}:${model}:${apiKeyEntry.label}`;
-        let modelFailureTriggered = false;
 
         for (let attempt = 1; attempt <= MAX_REQUEST_ATTEMPTS; attempt += 1) {
-          if ((provider.modelCursor ?? 0) > modelIndex) {
-            break;
-          }
-
           const startedAt = Date.now();
           try {
             console.log(
@@ -1583,6 +1779,13 @@ async function generateWithProviders({ game, prompt, targetDate, providers, rout
               `[lane ${laneIndex + 1}] [${routeKey}] Success with ${keyLabel} in ${elapsedMs}ms (words=${articleSummary.wordCount}, summaryWords=${articleSummary.summaryWords}, hints=${articleSummary.bonusHintCount}, title="${truncateForLog(articleSummary.title, 120)}")`
             );
 
+            if ((provider.modelCursor ?? 0) !== modelIndex) {
+              console.log(
+                `[lane ${laneIndex + 1}] [${routeKey}] Promoting ${provider.provider} to ${model} for the rest of this run because this model succeeded cleanly.`
+              );
+              provider.modelCursor = modelIndex;
+            }
+
             return {
               ...validated,
               meta: {
@@ -1603,7 +1806,6 @@ async function generateWithProviders({ game, prompt, targetDate, providers, rout
             const errorType = classifyProviderError(message);
             if (errorType === 'provider_model_failure') {
               advanceProviderModel(provider, modelIndex, routeKey, laneIndex, message);
-              modelFailureTriggered = true;
               moveToNextRouteModel = true;
               break;
             }
@@ -1612,29 +1814,20 @@ async function generateWithProviders({ game, prompt, targetDate, providers, rout
               console.warn(
                 `[lane ${laneIndex + 1}] [${routeKey}] Moving from ${provider.provider}:${model} to the next fallback model for this route only because the generated output was invalid: ${truncateForLog(message, 160)}`
               );
-              modelFailureTriggered = true;
               moveToNextRouteModel = true;
               break;
             }
           }
         }
 
-        if (modelFailureTriggered || (provider.modelCursor ?? 0) > modelIndex) {
+        if (moveToNextRouteModel) {
           break;
         }
       }
 
-      if ((provider.modelCursor ?? 0) > modelIndex) {
-        modelIndex = provider.modelCursor;
-        continue;
-      }
-
       if (moveToNextRouteModel) {
-        modelIndex += 1;
         continue;
       }
-
-      modelIndex += 1;
     }
   }
 
@@ -1857,22 +2050,18 @@ async function runConcurrent(entries, concurrency, worker) {
 
 async function main() {
   const groupName = getGenerationGroupName();
-  const requestedGroupName = getArticleScope() === 'all-current-windows' ? 'all-current-windows' : groupName;
-  const selectedEntries = getSelectedEntries(requestedGroupName);
+  const requestedGroups = getConfiguredArticleGroups(groupName);
+  const requestedGroupLabel =
+    getArticleScope() === 'all-current-windows' ? 'all-current-windows' : requestedGroups.join(',');
+  const selectedEntries = getSelectedEntries(requestedGroups);
   const targetDatesByGroup = {
     site: getTargetDate('site'),
     main: getTargetDate('site'),
     gamedle: getTargetDate('gamedle'),
     waffle: getTargetDate('waffle')
   };
-  const targetDate =
-    requestedGroupName === 'all-current-windows'
-      ? targetDatesByGroup.site
-      : targetDatesByGroup[requestedGroupName] ?? getTargetDate(requestedGroupName);
-  const requestedDateLabel =
-    requestedGroupName === 'all-current-windows'
-      ? `site=${targetDatesByGroup.site}, gamedle=${targetDatesByGroup.gamedle}, waffle=${targetDatesByGroup.waffle}`
-      : targetDate;
+  const targetDate = targetDatesByGroup[groupName] ?? getTargetDate(groupName);
+  const requestedDateLabel = `site=${targetDatesByGroup.site}, gamedle=${targetDatesByGroup.gamedle}, waffle=${targetDatesByGroup.waffle}`;
   const existingBundle = await readExistingBundle();
   const routeStores = await readAllRouteStores();
   const seededCount = await seedRouteStoresFromBundle(existingBundle, routeStores);
@@ -1885,18 +2074,18 @@ async function main() {
 
   if (!shouldGenerateArticles()) {
     console.log(
-      `Daily article generation skipped because ENABLE_DAILY_ARTICLE_GENERATION is false for group ${requestedGroupName}. Rebuilt bundle from persisted route files.`
+      `Daily article generation skipped because ENABLE_DAILY_ARTICLE_GENERATION is false for group ${requestedGroupLabel}. Rebuilt bundle from persisted route files.`
     );
     return;
   }
 
   if (!selectedEntries.length) {
-    console.log(`No daily article entries are assigned to group ${requestedGroupName}.`);
+    console.log(`No daily article entries are assigned to group ${requestedGroupLabel}.`);
     return;
   }
 
   console.log(
-    `Preparing daily articles for workflow group ${groupName} using article scope ${requestedGroupName} and target date ${requestedDateLabel}.`
+    `Preparing daily articles for workflow group ${groupName} using article scope ${requestedGroupLabel} and target date ${requestedDateLabel}.`
   );
 
   const providers = buildProviderConfigs();
@@ -1924,7 +2113,7 @@ async function main() {
   );
   console.log(`Configured providers: ${summarizeProviders(providers)}`);
   console.log(
-    `Selected ${selectedEntries.length} route(s) for group ${requestedGroupName}: ${selectedEntries.map((entry) => entry.key).join(', ')}`
+    `Selected ${selectedEntries.length} route(s) for group ${requestedGroupLabel}: ${selectedEntries.map((entry) => entry.key).join(', ')}`
   );
 
   let wordleContext = null;
@@ -1967,15 +2156,28 @@ async function main() {
   await runConcurrent(selectedEntries, concurrency, async (entry, laneIndex) => {
     try {
       let article;
-      const entryTargetDate =
-        requestedGroupName === 'all-current-windows'
-          ? targetDatesByGroup[getEntryGenerationGroup(entry)] ?? targetDate
-          : targetDate;
-      let articleDate = entryTargetDate;
+      const entryGroup = getEntryGenerationGroup(entry);
+      const entryTargetDate = targetDatesByGroup[entryGroup] ?? targetDate;
+      let articleDate = entry.mode === 'colordle' && colordleContext ? colordleContext.date : entryTargetDate;
 
       console.log(
         `[lane ${laneIndex + 1}] [${entry.key}] Starting route generation (mode=${entry.mode}, requestedDate=${entryTargetDate}).`
       );
+
+      const existingRouteStore = routeStores.get(entry.key);
+      if (shouldSkipExistingArticles() && isStoredArticleReusable(existingRouteStore?.byDate?.[articleDate], articleDate)) {
+        const existingArticle = existingRouteStore.byDate[articleDate];
+        const existingWordCount = countWords(
+          String(existingArticle.articleHtml ?? existingArticle.contentGuideHtml ?? '')
+        );
+        completedEntries.push(
+          `${entry.key} -> articleDate=${articleDate}, provider=stored, model=existing, words=${existingWordCount}`
+        );
+        console.log(
+          `[lane ${laneIndex + 1}] [${entry.key}] Skipping article generation because a reusable stored article already exists for ${articleDate}.`
+        );
+        return;
+      }
 
       if (entry.mode === 'wordle') {
         if (!wordleContext) {
@@ -1995,8 +2197,9 @@ async function main() {
           articleKey: entry.key,
           game: 'wordle',
           date: entryTargetDate,
-          articleHtml: article.contentGuideHtml,
-          ...article
+          ...article,
+          bonusHints: ensureMinimumHints(article.bonusHints, buildWordleFallbackHints(wordleContext)),
+          articleHtml: article.contentGuideHtml
         };
         persistenceQueue = persistenceQueue.then(async () => {
           await persistRouteArticle(routeStores, entry.key, routeArticle);
@@ -2007,8 +2210,6 @@ async function main() {
         if (!colordleContext) {
           throw new Error('Colordle context was not available.');
         }
-
-        articleDate = colordleContext.date;
 
         article = await generateWithProviders({
           game: 'colordle',
@@ -2023,7 +2224,8 @@ async function main() {
           articleKey: entry.key,
           game: 'colordle',
           date: articleDate,
-          ...article
+          ...article,
+          bonusHints: ensureMinimumHints(article.bonusHints, buildColordleFallbackHints(colordleContext))
         };
         persistenceQueue = persistenceQueue.then(async () => {
           await persistRouteArticle(routeStores, entry.key, routeArticle);
@@ -2087,7 +2289,7 @@ async function main() {
   }
 
   console.log(
-    `Daily articles ready for ${requestedDateLabel} across ${selectedEntries.length - failedEntries.length}/${selectedEntries.length} routes in scope ${requestedGroupName}.`
+    `Daily articles ready for ${requestedDateLabel} across ${selectedEntries.length - failedEntries.length}/${selectedEntries.length} routes in scope ${requestedGroupLabel}.`
   );
 }
 

@@ -8,7 +8,10 @@ function normalizePath(path: string): string {
 }
 
 export function sanitizeGeneratedArticleHtml(html: string): string {
-	return html.replace(
+	return html
+		.replace(/<h1\b([^>]*)>/gi, '<h2$1>')
+		.replace(/<\/h1>/gi, '</h2>')
+		.replace(
 		/<a\b([^>]*?)href=(["'])(\/[^"']*|https?:\/\/wordsolverx\.com\/[^"']*)\2([^>]*)>(.*?)<\/a>/gi,
 		(match, beforeHref: string, _quote: string, href: string, afterHref: string, text: string) => {
 			let path = href;

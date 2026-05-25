@@ -56,27 +56,52 @@ interface DailyArticleBundle {
 
 const dailyArticles = dailyArticlesJson as DailyArticleBundle;
 
-function getMatchingArticle(key: string, date?: string): DailyArticleContent | null {
-  const article = dailyArticles.articles?.[key];
+const DISALLOWED_ARTICLE_PATTERNS = [
+  /\bI (?:burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/i,
+  /\bmy (?:streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/i,
+  /\bI['’]ve (?:logged|tracked|kept|played|solved|noticed)\b/i,
+  /\bBack tomorrow\b/i,
+  /\bPlace your bets\b/i,
+  /\bcoffee in hand\b/i,
+  /\b500\+\s+daily\b/i
+];
+
+function stripHtml(html: string): string {
+  return String(html ?? '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isRenderableArticle(article: DailyArticleContent | null, expectedDate?: string): article is DailyArticleContent {
   if (!article) {
+    return false;
+  }
+
+  if (expectedDate && article.date !== expectedDate) {
+    return false;
+  }
+
+  const html = article.articleHtml ?? article.contentGuideHtml ?? '';
+  if (!html.trim()) {
+    return false;
+  }
+
+  const text = stripHtml(html);
+  return !DISALLOWED_ARTICLE_PATTERNS.some((pattern) => pattern.test(text));
+}
+
+function getMatchingArticle(key: string, date?: string): DailyArticleContent | null {
+  const article = dailyArticles.articles?.[key] ?? null;
+  if (!isRenderableArticle(article, date)) {
     return null;
   }
 
-  // Exact date match — best case
-  if (article.date === date) {
-    return article;
-  }
-
-  // If no date was requested, return whatever we have
   if (!date) {
     return article;
   }
 
-  // Date mismatch: still return the article so pages are never blank.
-  // The article content is game-specific advice/tips that remains useful
-  // even if it was generated for a previous day. The component will show
-  // the actual article date ("Updated 2026-05-14") so readers know.
-  return { ...article, meta: { ...article.meta, fallbackUsed: true } };
+  return article.date === date ? article : null;
 }
 
 export function getDailyArticleBundle(): DailyArticleBundle {

@@ -19,7 +19,7 @@
 		"build": "node scripts/build-cloudflare.mjs",
 		"build:pages": "node scripts/build-pages.mjs",
 		"deploy": "npm run data:update && npm run articles:generate && npm run build && wrangler deploy --config wrangler.jsonc",
-		"deploy:pages": "npm run data:update && npm run articles:generate && npm run build:pages && node scripts/deploy-pages.mjs",
+		"deploy:pages": "node scripts/run-pages-pipeline.mjs",
 		"preview": "vite preview",
 		"preview:cf": "npm run build && wrangler dev --config wrangler.jsonc",
 		"pagespeed:capture:before": "node scripts/pagespeed-capture-before.mjs",
