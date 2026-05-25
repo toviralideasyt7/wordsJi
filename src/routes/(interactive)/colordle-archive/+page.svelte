@@ -7,12 +7,21 @@
   import { parseArchiveDateKey } from '$lib/archive-page';
   import ArchiveCalendar from '$lib/components/ArchiveCalendar.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
-  import type { ColordleDayData } from '$lib/colordle-date';
+
+  interface ColordleArchiveEntry {
+    dateKey: string;
+    dayNum: number;
+    formattedDate: string;
+    color: {
+      name: string;
+      hex: string;
+    };
+  }
 
   interface ColordleArchivePayload {
     availableDateStrings: string[];
     selectedDateKey: string | null;
-    selectedColordle: ColordleDayData | null;
+    selectedColordle: ColordleArchiveEntry | null;
   }
 
   const fallbackStartDate = new Date(2023, 7, 7);

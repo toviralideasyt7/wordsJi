@@ -2,34 +2,36 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
-  import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
+  import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
 
   let { data } = $props();
   let historySearch = $state('');
 
   const featuredImage = $derived(data.meta?.featuredImage ?? '/images/colordle-answer-today.webp');
-  const historyEntries = $derived(data.last100Days ?? []);
+  const publishedDate = $derived(data.publishedDate ?? null);
   const requestedDateLabel = $derived(data.requestedFormattedDate ?? data.formattedDate ?? 'today');
   const answerDateLabel = $derived(data.formattedDate ?? requestedDateLabel);
   const generatedArticle = $derived(data.generatedArticle ?? null);
   const hasGeneratedArticle = $derived(Boolean(generatedArticle?.articleHtml));
   const generatedBonusHints = $derived(generatedArticle?.bonusHints ?? []);
-  const publishedDate = $derived(data.publishedDate ?? null);
+  const historyEntries = $derived(data.last100Days ?? []);
   const noscriptAnswer = $derived(
-    `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim()
+    `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim() || null
   );
 
   const filteredHistory = $derived.by(() => {
     const query = historySearch.trim().toLowerCase();
-    if (!query) return historyEntries;
+    if (!query) {
+      return historyEntries;
+    }
 
     return historyEntries.filter((entry) =>
       [entry.formattedDate, entry.color.name, entry.color.hex].some((value) =>
@@ -43,14 +45,17 @@
   <title>{data.meta?.title ?? 'Colordle Answer Today'}</title>
   <meta name="description" content={data.meta?.description ?? ''} />
   <meta name="robots" content="index, follow, max-snippet:-1" />
-  <meta name="news_keywords" content={data.meta?.keywords ?? 'colordle answer today, colordle hint, daily color puzzle'} />
+  <meta
+    name="news_keywords"
+    content={data.meta?.keywords ?? 'colordle answer today, colordle hint, daily color puzzle'}
+  />
   <link rel="canonical" href="https://wordsolverx.com/colordle-answer-today" />
   <meta property="og:title" content={data.meta?.title ?? 'Colordle Answer Today'} />
   <meta property="og:description" content={data.meta?.description ?? ''} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://wordsolverx.com/colordle-answer-today" />
   <meta property="og:image" content={featuredImage} />
-  <meta property="og:image:alt" content={`Colordle daily color solution for ${answerDateLabel}`} />
+  <meta property="og:image:alt" content={`Colordle answer for ${answerDateLabel}`} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta?.title ?? 'Colordle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
@@ -61,74 +66,112 @@
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
-<AnswerPageNoscript gameName="Colordle" answer={noscriptAnswer || null} />
+<AnswerPageNoscript gameName="Colordle" answer={noscriptAnswer} />
 
 {#if data.error || !data.color}
-  <div class="min-h-screen flex items-center justify-center p-4 bg-slate-50">
-    <div class="max-w-2xl rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-lg">
-      <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Colordle</p>
+  <div class="min-h-screen bg-slate-50 px-4 py-10">
+    <div class="mx-auto max-w-2xl rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-lg">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-indigo-500">Colordle</p>
       <h1 class="mt-3 text-3xl font-black text-slate-900">Latest Colordle data is temporarily unavailable</h1>
-      <p class="mt-4 text-base leading-7 text-slate-600">
-        We could not load a verified Colordle answer for {requestedDateLabel} right now. You can still browse the archive or use the solver while the latest answer data refreshes.
+      <p class="mt-4 text-base leading-8 text-slate-600">
+        We could not load a verified Colordle answer for {requestedDateLabel} right now. You can still browse the archive or use the solver while the latest answer refreshes.
       </p>
       <div class="mt-6 flex flex-wrap justify-center gap-3">
-        <a
-          href="/colordle-archive"
-          class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-500/20 transition hover:bg-indigo-700"
-        >
-          Browse Colordle Archive
+        <a href="/colordle-archive" class="inline-flex items-center rounded-full bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:bg-indigo-500">
+          Browse Archive
         </a>
-        <a
-          href="/colordle-solver"
-          class="inline-flex items-center justify-center rounded-full border border-indigo-200 px-5 py-3 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50"
-        >
-          Open Colordle Solver
+        <a href="/colordle-solver" class="inline-flex items-center rounded-full border border-indigo-200 bg-white px-6 py-3 text-sm font-bold text-indigo-700 transition hover:border-indigo-300 hover:bg-indigo-50">
+          Open Solver
         </a>
       </div>
     </div>
   </div>
 {:else}
-  <div class="bg-slate-50 min-h-screen font-sans">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <figure class="mb-12 overflow-hidden rounded-3xl border border-indigo-100 bg-white shadow-lg">
-        <img
-          src={featuredImage}
-          alt={`Colordle answer today featured image for ${answerDateLabel}`}
-          width="1200"
-          height="630"
-          class="h-auto w-full object-cover"
-          loading="eager"
-          fetchpriority="high"
-        />
-        <figcaption class="px-5 py-4 text-sm text-slate-500">
-          Today's daily color puzzle solution
-        </figcaption>
-      </figure>
+  <div class="min-h-screen bg-slate-50">
+    <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <Breadcrumbs />
 
-      <header class="text-center mb-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-pink-600 bg-clip-text text-transparent mb-4">
+      <section class="mt-6 rounded-[2rem] border border-indigo-100 bg-white p-8 shadow-[0_20px_60px_rgba(79,70,229,0.08)] sm:p-10">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-indigo-500">Daily Color Puzzle</p>
+        <h1 class="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
           Colordle Answer Today ({answerDateLabel})
         </h1>
-        <p class="mx-auto max-w-3xl text-lg leading-8 text-slate-600">
-          Today's Colordle color, hex code, and hints for <span class="font-semibold text-indigo-600">{answerDateLabel}</span>.
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
+          The worker API now feeds this page directly, so the color name, hex code, and recent history all come from the same verified source.
         </p>
-      </header>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/colordle-solver" class="inline-flex items-center rounded-full bg-indigo-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-xl">
+            Open Solver
+          </a>
+          <a href="/colordle-archive" class="inline-flex items-center rounded-full border border-indigo-200 bg-white px-6 py-3 text-sm font-bold text-indigo-700 transition hover:border-indigo-300 hover:bg-indigo-50">
+            Browse Archive
+          </a>
+        </div>
+      </section>
 
-      <div class="mb-12">
-        <ColorClues colorName={data.color.name} colorHex={data.color.hex} />
-      </div>
+      <section class="mt-8 rounded-[2rem] border border-indigo-100 bg-white p-6 shadow-[0_20px_60px_rgba(79,70,229,0.06)] sm:p-10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Today's answer</p>
+            <h2 class="mt-2 text-3xl font-black text-slate-900">{data.color.name}</h2>
+            <p class="mt-2 font-mono text-lg font-bold text-indigo-600">{data.color.hex}</p>
+            <p class="mt-3 text-sm text-slate-500">Puzzle #{data.dayNum} for {answerDateLabel}</p>
+          </div>
+          {#if data.yesterdayData}
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-600 shadow-sm sm:max-w-xs">
+              <p class="font-semibold uppercase tracking-[0.2em] text-slate-400">Yesterday</p>
+              <p class="mt-2 font-bold text-slate-900">{data.yesterdayData.color.name}</p>
+              <p class="font-mono text-indigo-600">{data.yesterdayData.color.hex}</p>
+              <p class="mt-2">{data.yesterdayData.formattedDate}</p>
+            </div>
+          {/if}
+        </div>
+
+        <div class="mt-8">
+          <ColorClues colorName={data.color.name} colorHex={data.color.hex} />
+        </div>
+
+        {#if data.gameNarrative?.guesses?.length}
+          <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-slate-500">Suggested solve path</p>
+            <p class="mt-2 text-sm leading-7 text-slate-600">
+              Today's puzzle felt <strong class="text-slate-900">{data.gameNarrative.difficultyLabel}</strong>. Here is a plausible path using the same color-difference logic the solver relies on.
+            </p>
+            <div class="mt-5 space-y-4">
+              {#each data.gameNarrative.guesses as guess, index}
+                <div class="flex items-start gap-4">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm" style={`background:${guess.hex}`}></div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class="text-xs font-bold uppercase tracking-[0.2em] text-indigo-500">Guess {index + 1}</span>
+                      <span class="font-bold text-slate-900">{guess.name}</span>
+                      <span class="font-mono text-sm {guess.percent === 100 ? 'text-emerald-600' : 'text-slate-500'}">
+                        {guess.percent === 100 ? '100%' : `${guess.percent}%`}
+                      </span>
+                    </div>
+                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                      {#if guess.percent === 100}
+                        Exact match. That locks in {data.color.name} at {data.color.hex}.
+                      {:else if guess.percent >= 85}
+                        Close enough that the next move is usually a narrower shade in the same family.
+                      {:else if guess.percent >= 60}
+                        Useful signal, but broad enough that the hue family still needed refinement.
+                      {:else}
+                        A low match, so the next guess should pivot harder across the spectrum.
+                      {/if}
+                    </p>
+                  </div>
+                </div>
+              {/each}
+            </div>
+          </div>
+        {/if}
+      </section>
 
       {#if generatedBonusHints.length > 0}
-        <section class="mb-12 rounded-3xl border border-fuchsia-100 bg-white p-6 shadow-lg">
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.24em] text-fuchsia-600">Extra hint pass</p>
-              <h2 class="mt-2 text-2xl font-bold text-slate-900">Fresh nudges before you peek</h2>
-            </div>
-            <p class="max-w-xl text-sm leading-6 text-slate-500">
-              Extra hints from our editorial team to nudge you in the right direction.
-            </p>
-          </div>
+        <section class="mt-8 rounded-[2rem] border border-fuchsia-100 bg-white p-6 shadow-[0_20px_60px_rgba(217,70,239,0.06)] sm:p-8">
+          <p class="text-xs font-bold uppercase tracking-[0.24em] text-fuchsia-500">Extra hints</p>
+          <h2 class="mt-2 text-2xl font-black text-slate-900">Fresh nudges before you peek elsewhere</h2>
           <div class="mt-6 grid gap-3 md:grid-cols-2">
             {#each generatedBonusHints as hint}
               <div class="rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70 px-4 py-4 text-sm leading-6 text-slate-700">
@@ -139,313 +182,101 @@
         </section>
       {/if}
 
-      <div class="mb-12 rounded-3xl border border-indigo-100 bg-white p-6 shadow-lg">
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      {#if hasGeneratedArticle}
+        <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Daily write-up</p>
+          <h2 class="mt-2 text-3xl font-black text-slate-900">
+            {generatedArticle?.title ?? `Colordle notes for ${answerDateLabel}`}
+          </h2>
+          {#if generatedArticle?.summary}
+            <p class="mt-4 text-lg leading-8 text-slate-600">{generatedArticle.summary}</p>
+          {/if}
+          <div class="prose prose-lg mt-6 max-w-none prose-headings:text-slate-900 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-indigo-600">
+            {@html sanitizeGeneratedArticleHtml(generatedArticle?.articleHtml ?? '')}
+          </div>
+        </section>
+      {/if}
+
+      <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Quick actions</p>
-            <h2 class="mt-2 text-2xl font-bold text-slate-900">Compare today with earlier colors</h2>
-            <p class="mt-2 text-slate-600">
-              If you want to sanity-check a guess, browse recent colors, jump into the archive, or open the solver and work through the scoring yourself.
-            </p>
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Recent history</p>
+            <h2 class="mt-2 text-2xl font-black text-slate-900">The last 100 Colordle answers</h2>
           </div>
-          <div class="flex flex-wrap gap-3">
-            <a
-              href="/colordle-archive"
-              class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-500/25 transition hover:bg-indigo-700 hover:shadow-lg"
-            >
-              Search Previous Answers
-            </a>
-            <a
-              href="/colordle-solver"
-              class="inline-flex items-center justify-center rounded-full border border-indigo-200 px-5 py-3 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50"
-            >
-              Open Solver
-            </a>
-          </div>
+          <p class="text-sm text-slate-500">
+            Search by date, color name, or hex code.
+          </p>
         </div>
-      <article class="space-y-8">
-        <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-xl border border-slate-100">
-          <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-            <div class="max-w-2xl">
-              <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Logic path</p>
-              <h2 class="mt-2 text-3xl font-bold text-slate-900">How the existing guess logic narrows today&apos;s color</h2>
-              <p class="mt-3 text-lg leading-8 text-slate-600">
-                {generatedArticle?.summary ??
-                  `The clue card above handles the logical side of the puzzle. Below is a solve path based on contrast, hue family, and the same scoring the page already uses.`}
-              </p>
-            </div>
-            <div class="rounded-3xl border border-indigo-100 bg-indigo-50 px-5 py-4 text-sm text-indigo-900 shadow-sm lg:w-72">
-              <p class="font-semibold uppercase tracking-[0.2em] text-indigo-600">Today&apos;s answer</p>
-              <p class="mt-2 text-2xl font-bold text-slate-900">{data.color.name}</p>
-              <p class="font-mono text-sm text-indigo-700">{data.color.hex}</p>
-              <p class="mt-3 text-sm leading-6 text-indigo-900/80">
-                Puzzle <strong>#{data.dayNum}</strong> for {answerDateLabel}.
-              </p>
-            </div>
-          </div>
 
-          {#if data.gameNarrative && data.gameNarrative.guesses.length > 0}
-            <div class="mt-8 rounded-3xl border border-slate-100 bg-slate-50 p-6">
-              <p class="text-sm uppercase tracking-[0.24em] text-slate-500">Guess trail</p>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-                Today&apos;s puzzle was <strong class="text-slate-900">{data.gameNarrative.difficultyLabel}</strong>. The path below is generated from the page&apos;s own the game's color-matching rules, based on contrast, hue family, and the same scoring the page already uses.
-              </p>
-              <div class="mt-6 space-y-4">
-                {#each data.gameNarrative.guesses as guess, i}
-                  <div class="flex items-start gap-4 group">
-                    <div class="flex flex-col items-center">
-                      <div class="w-10 h-10 rounded-xl border-2 shadow-sm shrink-0 transition-transform group-hover:scale-110 {guess.percent === 100 ? 'border-teal-400 ring-2 ring-teal-100' : 'border-slate-200'}" style="background-color: {guess.hex}"></div>
-                      {#if i < data.gameNarrative.guesses.length - 1}
-                        <div class="w-0.5 h-6 bg-slate-200 mt-2"></div>
-                      {/if}
-                    </div>
-                    <div class="flex-1 min-w-0 pb-2">
-                      <div class="flex items-baseline gap-2 flex-wrap">
-                        <span class="text-sm font-bold uppercase tracking-wider text-indigo-600">Guess {i + 1}</span>
-                        <span class="font-bold text-slate-900">{guess.name}</span>
-                        <span class="font-mono text-sm {guess.percent === 100 ? 'text-teal-600 font-bold' : guess.percent >= 85 ? 'text-teal-600' : guess.percent >= 60 ? 'text-amber-600' : 'text-slate-500'}">
-                          {guess.percent === 100 ? '100%' : `${guess.percent}%`}
-                        </span>
-                      </div>
-                      <p class="text-sm text-slate-500 mt-1 leading-6">
-                        {#if guess.percent === 100}
-                          Exact hit. That locked in {data.color.name} at {data.color.hex}.
-                        {:else if guess.percent >= 90}
-                          Very close. At this stage the answer usually comes down to naming precision rather than a huge hue shift.
-                        {:else if guess.percent >= 75}
-                          Right neighborhood. The next move is usually a narrower shade inside the same family.
-                        {:else if guess.percent >= 55}
-                          Useful feedback, but still broad enough that the color family needed another pass.
-                        {:else}
-                          Low match. That told the logic to pivot to a different part of the spectrum.
-                        {/if}
-                      </p>
-                    </div>
-                  </div>
-                {/each}
+        <form class="mt-6 flex overflow-hidden rounded-2xl border border-indigo-200 bg-white shadow-sm" onsubmit={(event) => event.preventDefault()}>
+          <input
+            bind:value={historySearch}
+            type="search"
+            placeholder="Search by date, color name, or hex code..."
+            class="min-w-0 flex-1 bg-transparent px-5 py-4 text-base text-slate-900 outline-none placeholder:text-slate-400"
+          />
+          <button
+            type="submit"
+            class="border-l border-indigo-200 bg-indigo-600 px-6 py-4 text-base font-semibold text-white transition hover:bg-indigo-500"
+          >
+            Search
+          </button>
+        </form>
+
+        <div class="mt-6 grid gap-3 md:grid-cols-2">
+          {#each filteredHistory as entry}
+            <div class="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50/60">
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-slate-900">{entry.formattedDate}</p>
+                <p class="text-xs text-slate-500">Daily color</p>
+              </div>
+              <div class="text-right">
+                <p class="font-semibold text-slate-900">{entry.color.name}</p>
+                <p class="font-mono text-sm text-indigo-600">{entry.color.hex}</p>
               </div>
             </div>
-          {/if}
-        </section>
+          {/each}
+        </div>
 
-        <nav class="rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-md" aria-label="Table of Contents">
-          <div class="bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-pink-500 px-6 py-4">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-white/90">Jump to section</p>
-          </div>
-          <div class="grid gap-1 p-5 sm:grid-cols-2">
-            {#if hasGeneratedArticle}
-              <a href="#today-article" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-indigo-50 hover:text-indigo-600">
-                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-100 text-xs font-bold text-indigo-600">1</span>
-                Today&apos;s article
-              </a>
-            {/if}
-            <a href="#frequently-asked-questions" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-fuchsia-50 hover:text-fuchsia-600">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-fuchsia-100 text-xs font-bold text-fuchsia-600">{hasGeneratedArticle ? '2' : '1'}</span>
-              FAQs
-            </a>
-            <a href="#recent-daily-colors" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-pink-50 hover:text-pink-600">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-pink-100 text-xs font-bold text-pink-600">{hasGeneratedArticle ? '3' : '2'}</span>
-              Recent colors
-            </a>
-            <a href="/colordle-solver" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-teal-50 hover:text-teal-600">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-100 text-xs font-bold text-teal-600">{hasGeneratedArticle ? '4' : '3'}</span>
-              Open solver
-            </a>
-          </div>
-        </nav>
-
-        {#if hasGeneratedArticle}
-          <section id="today-article" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Daily write-up</p>
-            <h2 class="mt-2 text-3xl font-bold text-slate-900">
-              {generatedArticle?.title ?? `Colordle notes for ${answerDateLabel}`}
-            </h2>
-            <div class="prose prose-lg mt-6 max-w-none prose-headings:scroll-mt-28 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-indigo-600">
-              {@html sanitizeGeneratedArticleHtml(generatedArticle?.articleHtml ?? '')}
-            </div>
-          </section>
+        {#if historySearch.trim() && filteredHistory.length === 0}
+          <p class="mt-6 text-center text-slate-500">No matching colors found in the recent archive.</p>
         {/if}
+      </section>
 
-        <section id="frequently-asked-questions" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-          <h2 class="text-3xl font-bold text-slate-900 mb-6">Frequently asked questions</h2>
-          <div class="space-y-4">
-            <details class="group rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden" open>
-              <summary class="flex cursor-pointer items-center justify-between p-5 font-semibold text-slate-900">
-                <span>What is the Colordle answer for {answerDateLabel}?</span>
-                <FiChevronDown class="text-slate-500 transition-transform group-open:rotate-180" />
-              </summary>
-              <div class="px-5 pb-5 text-slate-600 leading-7">
-                For {answerDateLabel}, the daily color is <span class="font-bold text-slate-900">{data.color.name}</span> with hex code <span class="font-mono text-indigo-600">{data.color.hex}</span>.
-              </div>
-            </details>
-
-            {#if data.yesterdayData}
-              <details class="group rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                <summary class="flex cursor-pointer items-center justify-between p-5 font-semibold text-slate-900">
-                  <span>What was yesterday&apos;s color?</span>
-                  <FiChevronDown class="text-slate-500 transition-transform group-open:rotate-180" />
-                </summary>
-                <div class="flex items-center gap-4 px-5 pb-5 text-slate-600">
-                  <div class="h-10 w-10 rounded-lg border border-slate-300 shadow-inner" style="background-color: {data.yesterdayData.color.hex}"></div>
-                  <p class="leading-7">
-                    The previous daily color was <span class="font-bold text-slate-900">{data.yesterdayData.color.name}</span>
-                    <span class="font-mono text-indigo-600"> ({data.yesterdayData.color.hex})</span> on {data.yesterdayData.formattedDate}.
-                  </p>
-                </div>
-              </details>
-            {/if}
-
-            <details class="group rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-              <summary class="flex cursor-pointer items-center justify-between p-5 font-semibold text-slate-900">
-                <span>How do you actually play Colordle?</span>
-                <FiChevronDown class="text-slate-500 transition-transform group-open:rotate-180" />
-              </summary>
-              <div class="px-5 pb-5 text-slate-600 leading-7">
-                You guess a named color, then the game returns a percentage showing how perceptually close that guess is to the target. The closer the score gets to 100, the closer you are to the exact answer.
-              </div>
-            </details>
-
-            
-
-            <details class="group rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-              <summary class="flex cursor-pointer items-center justify-between p-5 font-semibold text-slate-900">
-                <span>Where can I compare older answers?</span>
-                <FiChevronDown class="text-slate-500 transition-transform group-open:rotate-180" />
-              </summary>
-              <div class="px-5 pb-5 text-slate-600 leading-7">
-                Use the searchable recent-color section below for quick checks, or open the dedicated <a href="/colordle-archive" class="font-semibold text-indigo-600 hover:text-indigo-500">Colordle archive</a> when you want the broader history view.
-              </div>
-            </details>
-          </div>
-        </section>
-
-        <section id="what-is-colordle" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Game overview</p>
-          <h2 class="mt-2 text-3xl font-bold text-slate-900">What is Colordle?</h2>
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Colordle picks a named color each day and you guess what it is. Type color names like "crimson" or "sage" and get back a percentage showing how perceptually close your guess is. The pool is roughly 150-200 named colors from the CSS spec — everything from "red" to "cerulean" to "gainsboro."
-          </p>
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Some days the answer is obvious ("olive" in two guesses). Other days it's a subtle shade like "misty rose" that sits near multiple other colors. That variance is what keeps it interesting.
-          </p>
-        </section>
-
-        <section id="how-colordle-works" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Rules and mechanics</p>
-          <h2 class="mt-2 text-3xl font-bold text-slate-900">How Colordle Works</h2>
-          <p class="mt-4 text-lg leading-8 text-slate-600">
-            Type a color name, get back a perceptual similarity score. The scoring uses CIELAB color distance — not hex proximity. That means "navy" can score 85% against "dark blue" even with very different hex values. Today's answer is <strong class="text-slate-900">{data.color.name}</strong> (<span class="font-mono text-indigo-600">{data.color.hex}</span>), puzzle #{data.dayNum}. Resets at midnight UTC. No guess limit, but most people solve in 3-6 guesses.
-          </p>
-        </section>
-
-        <section id="colordle-strategy" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Improve your guesses</p>
-          <h2 class="mt-2 text-3xl font-bold text-slate-900">Colordle Strategy Tips</h2>
-          <div class="mt-6 space-y-6">
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Start with a primary color to establish the hue family</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          Your first guess should be one of the basic primary or secondary colors: red, blue, yellow, green, orange, purple, or pink. The percentage score you get back immediately tells you which hue family the target belongs to.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          If "red" scores 70%, you know the answer is in the red family — now you just need to figure out whether it is a darker shade like "maroon," a lighter one like "salmon," or a shifted variant like "crimson." This opening strategy works because it covers the widest possible hue distance on the first guess.
-        </p>
-            </div>
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Use the lightness signal to narrow saturation</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          Once you know the hue family, the next most useful clue is whether the target is lighter or darker than your guess. If you guess "navy" and score 60%, the answer is probably lighter — think "cornflower blue" or "steel blue" rather than "midnight blue." Most color pools organize into clear lightness tiers: pastel, standard, dark, and very dark.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          Identifying the tier eliminates a large portion of candidates in a single guess.
-        </p>
-            </div>
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Learn the boundary colors between families</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          Colors like "teal" sit on the boundary between blue and green. "Magenta" sits between red and purple. "Gold" sits between yellow and orange. When your percentage scores hover around 75-85% regardless of which neighboring family you guess from, you are probably dealing with a boundary color.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          Knowing these in-between shades gives you a significant advantage because they are among the hardest answers to pinpoint with binary "is it this family or that family" thinking.
-        </p>
-            </div>
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Check the hex code when you are close</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          When your guess scores 90% or above, the color is very close to the target. At that point, looking at the hex code of your guess compared to a color reference chart can help you name the exact shade. For instance, if your guess of "coral" scores 95%, the target might be "tomato" or "salmon" — both are near-coral but have slightly different hex values.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          The Colordle solver on WordSolverX lets you compare hex codes side by side, which makes this kind of precision naming much easier.
-        </p>
-            </div>
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Keep a list of uncommon color names handy</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          Colordle loves to pick colors with less obvious names. Words like "khaki," "sienna," "taupe," "burgundy," "periwinkle," and "mauve" show up frequently because they fill specific niches in the color palette that common names like "brown" or "purple" do not cover.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          Spend ten minutes reviewing a color name reference chart — it will pay off within a week of daily play. The searchable archive on this page also helps you learn which names appear most often in the answer rotation.
-        </p>
-            </div>
-            <div class="rounded-2xl bg-slate-50 p-6">
-              <h3 class="text-xl font-bold text-slate-900">Do not overthink near-misses</h3>
-              <p class="mt-2 text-base leading-7 text-slate-600">
-          If your guess scores 98%, the answer is almost certainly a named color variation that is visually indistinguishable at normal screen distances. Do not waste three more guesses testing tiny variations — pick the closest named shade you can think of and submit it. The game uses specific named colors from its palette, not continuous spectrum values, so at very high percentages the answer is usually one of two or three nearby named options.
-        </p>
-        <p class="mt-2 text-base leading-7 text-slate-600">
-          Guessing your best option at 98% is more efficient than trying to split the difference between two nearly identical shades.
-        </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="recent-daily-colors" class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
-          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-6">
-            <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-600">Answer history</p>
-              <h2 class="mt-2 text-2xl font-bold text-slate-900">Recent daily colors</h2>
-            </div>
-            <p class="text-sm text-slate-500 max-w-xl">
-              Newest confirmed colors first. Search by date, name, or hex code.
+      <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <h2 class="text-3xl font-black text-slate-900">Frequently asked questions</h2>
+        <div class="mt-6 space-y-4">
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5" open>
+            <summary class="cursor-pointer font-semibold text-slate-900">
+              What is the Colordle answer for {answerDateLabel}?
+            </summary>
+            <p class="mt-3 text-slate-600">
+              The answer is <strong class="text-slate-900">{data.color.name}</strong> with hex code
+              <span class="font-mono text-indigo-600"> {data.color.hex}</span>.
             </p>
-          </div>
+          </details>
 
-          <form class="mb-6 flex overflow-hidden rounded-2xl border border-indigo-200 bg-white shadow-sm" onsubmit={(event) => event.preventDefault()}>
-            <input
-              bind:value={historySearch}
-              type="search"
-              placeholder="Search by date, color name, or hex code..."
-              class="min-w-0 flex-1 bg-transparent px-5 py-4 text-base text-slate-900 outline-none placeholder:text-slate-400"
-            />
-            <button
-              type="submit"
-              class="border-l border-indigo-200 bg-indigo-600 px-6 py-4 text-base font-semibold text-white transition hover:bg-indigo-500"
-            >
-              Search
-            </button>
-          </form>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <summary class="cursor-pointer font-semibold text-slate-900">
+              What does the percentage score mean in Colordle?
+            </summary>
+            <p class="mt-3 text-slate-600">
+              The score reflects perceptual similarity, not just raw RGB distance. A higher percentage means your guess is visually closer to the target color.
+            </p>
+          </details>
 
-          <div class="grid gap-3 md:grid-cols-2">
-            {#each filteredHistory as d}
-              <div class="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50/60">
-                <div class="min-w-0">
-                  <p class="text-sm font-semibold text-slate-900">{d.formattedDate}</p>
-                  <p class="text-xs text-slate-500">Daily color</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-semibold text-slate-900">{d.color.name}</p>
-                  <p class="font-mono text-sm text-indigo-600">{d.color.hex}</p>
-                </div>
-              </div>
-            {/each}
-          </div>
-          {#if historySearch.trim() && filteredHistory.length === 0}
-            <p class="mt-6 text-center text-slate-500">No matching colors found in the recent archive.</p>
-          {/if}
-        </section>
-      </article></div>
-
-      
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <summary class="cursor-pointer font-semibold text-slate-900">
+              Where can I compare older Colordle answers?
+            </summary>
+            <p class="mt-3 text-slate-600">
+              Use the recent history section above for quick lookups, or open the
+              <a href="/colordle-archive" class="font-semibold text-indigo-600 hover:text-indigo-500"> Colordle archive</a>
+              for the broader date-by-date view.
+            </p>
+          </details>
+        </div>
+      </section>
 
       <div class="mt-12">
         <AuthorCard

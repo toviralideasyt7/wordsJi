@@ -1,160 +1,267 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
+  import { onMount } from 'svelte';
+  import type { ApiColorfleAnswer } from '$lib/color-answers-api';
+  import ArchiveCalendar from '$lib/components/ArchiveCalendar.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
-  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import { getColorfleArchiveEntries } from '$lib/colorfle';
+  import {
+    PRESTON_HAYES_AUTHOR_DESCRIPTION,
+    PRESTON_HAYES_AUTHOR_IMAGE,
+    PRESTON_HAYES_AUTHOR_NAME
+  } from '$lib/authors';
+  import { fetchArchivePayload } from '$lib/archive-client';
+  import { getContrastColor } from '$lib/colorfle';
+  import { parseArchiveDateKey } from '$lib/archive-page';
 
-  const allEntries = getColorfleArchiveEntries(365);
-  let days = $state(30);
-  let selectedDate = $state(allEntries[0]?.date ?? '');
+  interface ColorfleArchivePayload {
+    availableDateStrings: string[];
+    selectedDateKey: string | null;
+    selectedColorfle: ApiColorfleAnswer | null;
+  }
 
-  const visibleEntries = $derived(allEntries.slice(0, days));
-  const selectedEntry = $derived(
-    allEntries.find((entry) => entry.date === selectedDate) ?? visibleEntries[0] ?? null
+  const fallbackStartDate = new Date(2022, 3, 25);
+
+  let data = $state<ColorfleArchivePayload>({
+    availableDateStrings: [],
+    selectedDateKey: null,
+    selectedColorfle: null
+  });
+  let isLoading = $state(false);
+  let loadError = $state<string | null>(null);
+
+  let availableDates = $derived(
+    (data.availableDateStrings ?? [])
+      .map((dateString) => parseArchiveDateKey(dateString))
+      .filter((date): date is Date => date !== null)
   );
+  let startDate = $derived(availableDates[0] ?? fallbackStartDate);
+  let selectedDateParam = $state<string | null>(
+    browser ? new URL(window.location.href).searchParams.get('date') : null
+  );
+
+  onMount(() => {
+    if (window.location.search || window.location.hash) {
+      window.history.replaceState(window.history.state, '', window.location.pathname);
+    }
+  });
+
+  function handleDateSelect(dateKey: string): void {
+    selectedDateParam = dateKey;
+  }
+
+  async function loadArchive(dateKey: string | null): Promise<void> {
+    const requestDateKey = dateKey;
+    isLoading = true;
+    loadError = null;
+
+    try {
+      const payload = await fetchArchivePayload<ColorfleArchivePayload>('colorfle', requestDateKey);
+
+      if (selectedDateParam !== requestDateKey) {
+        return;
+      }
+
+      data.availableDateStrings = payload.availableDateStrings ?? [];
+      data.selectedDateKey = payload.selectedDateKey;
+      data.selectedColorfle = payload.selectedColorfle;
+    } catch (error) {
+      if (selectedDateParam !== requestDateKey) {
+        return;
+      }
+
+      data.selectedDateKey = requestDateKey;
+      data.selectedColorfle = null;
+      loadError = error instanceof Error ? error.message : 'Failed to load the Colorfle archive entry.';
+    } finally {
+      if (selectedDateParam === requestDateKey) {
+        isLoading = false;
+      }
+    }
+  }
+
+  $effect(() => {
+    if (!browser) {
+      return;
+    }
+
+    void loadArchive(selectedDateParam);
+  });
+
+  function formatWeight(weight: number | undefined): string {
+    return typeof weight === 'number' ? `${Math.round(weight * 100)}%` : '';
+  }
 </script>
 
 <svelte:head>
-  <title>Colorfle Archive - Daily Color Answers History | WordSolverX</title>
-  <meta name="description" content="Browse the Colorfle archive with recent puzzle dates, source colors, and final target hex results for past Colorfle games." />
+  <title>Colorfle Archive - Normal and Hard Answers by Date | WordSolverX</title>
+  <meta
+    name="description"
+    content="Browse the full Colorfle archive with API-backed normal and hard answers for every date since launch."
+  />
   <link rel="canonical" href="https://wordsolverx.com/colorfle-archive" />
-  <meta property="og:title" content="Colorfle Archive - Daily Color Answers History" />
-  <meta property="og:description" content="Check past Colorfle answer colors and target hex codes with a static date archive." />
+  <meta property="og:title" content="Colorfle Archive - Normal and Hard Answers by Date" />
+  <meta
+    property="og:description"
+    content="Look up any Colorfle date and see the exact normal and hard mode color mixes."
+  />
   <meta property="og:url" content="https://wordsolverx.com/colorfle-archive" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Colorfle Archive" />
-  <meta name="twitter:description" content="Past Colorfle puzzle answers with source colors and final target hex values." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Colorfle Archive',
-    description: 'Archive of previous Colorfle daily color answers.',
-    url: 'https://wordsolverx.com/colorfle-archive'
+    description: 'Complete archive of Colorfle normal and hard answers by date.',
+    url: 'https://wordsolverx.com/colorfle-archive',
+    isPartOf: { '@type': 'WebSite', name: 'WordSolverX', url: 'https://wordsolverx.com' }
   })}</script>`}
 </svelte:head>
 
-<div class="min-h-screen bg-slate-50 py-10">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-    <Breadcrumbs />
+<ArchiveCalendar
+  gameName="Colorfle"
+  gameColor="orange"
+  gameIcon="Cf"
+  {startDate}
+  {availableDates}
+  basePath="/colorfle-archive"
+  selectedDate={data.selectedDateKey}
+  description="Every Colorfle answer in both normal and hard mode."
+  onSelectDate={handleDateSelect}
+/>
 
-    <!-- Hero Header -->
-    <section class="rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.08)] sm:p-10">
-      <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[0.3em] text-pink-500">Colorfle Archive</p>
-          <h1 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight text-slate-900">Past Colorfle Answers</h1>
-          <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            Browse {allEntries.length} archived Colorfle puzzles. Pick a date to inspect the exact source colors and final target hex.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap gap-2">
-          {#each [30, 90, 365] as option}
-            <button
-              type="button"
-              class={`rounded-full px-5 py-2.5 text-sm font-bold transition-all ${days === option ? 'bg-pink-600 text-white shadow-lg shadow-pink-500/20' : 'border border-slate-200 text-slate-600 hover:border-pink-300 hover:bg-pink-50'}`}
-              onclick={() => (days = option)}
-            >
-              Last {option} days
-            </button>
-          {/each}
-        </div>
+<section id="archive-answer" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 scroll-mt-28">
+  {#if data.selectedColorfle}
+    <div class="rounded-3xl border border-orange-100 bg-white p-6 shadow-lg sm:p-8">
+      <div class="mb-8 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-orange-600">Selected archive date</p>
+        <h2 class="mt-3 text-3xl font-black text-slate-900">
+          Colorfle answers for {data.selectedColorfle.formattedDate}
+        </h2>
+        <p class="mt-2 text-sm text-slate-500">
+          Puzzle #{data.selectedColorfle.puzzleNumber} with both normal and hard mode mixes.
+        </p>
       </div>
-    </section>
 
-    <section class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-      <!-- Date List -->
-      <article class="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-        <label for="colorfle-archive-date" class="block text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Select date</label>
-        <input
-          id="colorfle-archive-date"
-          class="mt-3 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-100"
-          type="date"
-          value={selectedDate}
-          min={allEntries[allEntries.length - 1]?.date}
-          max={allEntries[0]?.date}
-          onchange={(event) => (selectedDate = (event.currentTarget as HTMLInputElement).value)}
-        />
+      <div class="grid gap-6 lg:grid-cols-2">
+        {#each [data.selectedColorfle.normal, data.selectedColorfle.hard] as modeAnswer}
+          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-orange-600">
+                  {modeAnswer.label} mode
+                </p>
+                <h3 class="mt-2 text-2xl font-bold text-slate-900">
+                  {modeAnswer.colors.length} source colors
+                </h3>
+              </div>
+              <div class="rounded-2xl border border-white/70 bg-white px-4 py-3 text-right shadow-sm">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Target</p>
+                <p class="mt-2 font-mono text-sm font-bold text-slate-900">
+                  {modeAnswer.targetColor.hex}
+                </p>
+              </div>
+            </div>
 
-        <div class="mt-6 max-h-[28rem] space-y-3 overflow-y-auto pr-1">
-          {#each visibleEntries as entry}
-            <button
-              type="button"
-              class={`w-full rounded-2xl border p-4 text-left transition-all ${selectedEntry?.date === entry.date ? 'border-pink-400 bg-pink-50 shadow-sm' : 'border-slate-100 bg-slate-50/50 hover:border-pink-200 hover:bg-white hover:shadow-sm'}`}
-              onclick={() => (selectedDate = entry.date)}
-            >
-              <div class="flex items-center justify-between gap-4">
-                <div>
-                  <p class="font-bold text-slate-900">#{entry.puzzleNumber}</p>
-                  <p class="text-sm text-slate-500">{entry.date}</p>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              {#each modeAnswer.colors as color}
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-slate-200 shadow-inner"
+                      style={`background:${color.hex}; color:${getContrastColor(color.hex)}`}
+                    >
+                      <span class="text-xs font-black uppercase tracking-[0.16em]">
+                        {formatWeight(color.weight)}
+                      </span>
+                    </div>
+                    <div class="min-w-0">
+                      <p class="font-bold text-slate-900">{color.name}</p>
+                      <p class="mt-1 font-mono text-xs text-slate-500">{color.hex}</p>
+                      {#if typeof color.weight === 'number'}
+                        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-orange-600">
+                          {formatWeight(color.weight)}
+                        </p>
+                      {/if}
+                    </div>
+                  </div>
                 </div>
-                <div class="flex items-center gap-1.5">
-                  {#each entry.colors as color}
-                    <span class="h-8 w-8 rounded-lg shadow-sm ring-2 ring-white" style={`background:${color.hex}`}></span>
-                  {/each}
+              {/each}
+            </div>
+
+            <div class="mt-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Mixed result</p>
+              <div class="mt-4 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="h-20 w-20 rounded-full border-4 border-white shadow-lg"
+                    style={`background:${modeAnswer.targetColor.hex}`}
+                  ></div>
+                  <div>
+                    <p class="font-mono text-lg font-bold text-slate-900">{modeAnswer.targetColor.hex}</p>
+                    <p class="text-sm text-slate-500">
+                      RGB({modeAnswer.targetColor.rgb.r}, {modeAnswer.targetColor.rgb.g},
+                      {modeAnswer.targetColor.rgb.b})
+                    </p>
+                  </div>
+                </div>
+                <div class="text-sm leading-6 text-slate-600 sm:max-w-xs sm:text-right">
+                  The worker provides the exact source colors. WordSolverX computes the blended target
+                  preview for this archive card from those verified inputs.
                 </div>
               </div>
-            </button>
-          {/each}
-        </div>
-      </article>
-
-      <!-- Selected Puzzle Detail -->
-      <article class="rounded-[2rem] border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-        {#if selectedEntry}
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-pink-500">Selected puzzle</p>
-          <h2 class="mt-3 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">Colorfle #{selectedEntry.puzzleNumber}</h2>
-          <p class="mt-1 text-sm text-slate-500">{selectedEntry.date}</p>
-
-          <!-- Color Mixing Visualization -->
-          <div class="mt-6 flex items-center justify-center gap-3">
-            {#each selectedEntry.colors as color, i}
-              <div class="flex flex-col items-center gap-2">
-                <div class="h-20 w-20 rounded-2xl shadow-lg ring-[3px] ring-white" style={`background:${color.hex}`}></div>
-                <p class="text-xs font-bold text-slate-700">{color.name}</p>
-                <p class="font-mono text-[10px] text-slate-400">{color.hex}</p>
-                {#if color.weight != null}
-                  <span class="rounded-full bg-pink-50 px-2.5 py-0.5 text-[10px] font-bold text-pink-600">
-                    {Math.round(color.weight * 100)}%
-                  </span>
-                {/if}
-              </div>
-              {#if i < selectedEntry.colors.length - 1}
-                <span class="text-2xl font-black text-slate-300">+</span>
-              {/if}
-            {/each}
-            <span class="text-2xl font-black text-slate-300">=</span>
-            <div class="flex flex-col items-center gap-2">
-              <div class="h-20 w-20 rounded-full shadow-lg ring-[3px] ring-white" style={`background:${selectedEntry.targetColor.hex}`}></div>
-              <p class="text-xs font-bold text-slate-700">Target</p>
-              <p class="font-mono text-[10px] text-slate-400">{selectedEntry.targetColor.hex}</p>
             </div>
-          </div>
+          </article>
+        {/each}
+      </div>
+    </div>
+  {:else if loadError}
+    <div class="rounded-3xl border border-rose-200 bg-rose-50 p-8 text-center">
+      <h2 class="text-2xl font-bold text-rose-900">We couldn't load that Colorfle date</h2>
+      <p class="mt-3 text-rose-700">{loadError}</p>
+    </div>
+  {:else if isLoading}
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 text-center">
+      <h2 class="text-2xl font-bold text-slate-900">Loading Colorfle archive data...</h2>
+      <p class="mt-3 text-slate-600">
+        Pulling the selected Colorfle normal and hard answers from the worker API.
+      </p>
+    </div>
+  {:else}
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 text-center">
+      <h2 class="text-2xl font-bold text-slate-900">Choose a Colorfle date from the archive</h2>
+      <p class="mt-3 text-slate-600">
+        Pick any archived date above to load the verified normal and hard answers on this page.
+      </p>
+    </div>
+  {/if}
+</section>
 
-          <!-- Target Color Large Preview -->
-          <div class="mt-8 rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-            <div class="h-40" style={`background:${selectedEntry.targetColor.hex}`}></div>
-            <div class="p-5 bg-white">
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Target Color</p>
-              <p class="mt-2 text-3xl font-black text-slate-900">{selectedEntry.targetColor.hex}</p>
-              <p class="mt-1 font-mono text-sm text-slate-400">
-                RGB({selectedEntry.targetColor.rgb.r}, {selectedEntry.targetColor.rgb.g}, {selectedEntry.targetColor.rgb.b})
-              </p>
-            </div>
-          </div>
-        {/if}
-      </article>
-    </section>
-
-    <div class="mt-12">
-      <AuthorCard
-        name={PRESTON_HAYES_AUTHOR_NAME}
-        image={PRESTON_HAYES_AUTHOR_IMAGE}
-        description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
-      />
+<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+    <h2 class="text-3xl font-black text-slate-900">Why this Colorfle archive is more useful now</h2>
+    <div class="mt-6 space-y-4 text-base leading-8 text-slate-600">
+      <p>
+        This archive now reads straight from the same worker-backed answer source used for the new
+        Colorfle hub. That means every date resolves from the live API instead of relying on a small
+        local snapshot or a single-mode approximation.
+      </p>
+      <p>
+        Each selected date shows both modes. Normal mode keeps the familiar three-color mix, while
+        hard mode adds the fourth block and its smaller weight. Seeing both together makes it much
+        easier to study how the game changes difficulty from one mode to the next.
+      </p>
+      <p>
+        If you mainly use the archive to double-check a missed puzzle, this page is now simpler too:
+        pick a date, wait for the API call, and you get the verified source colors immediately.
+      </p>
     </div>
   </div>
-</div>
+
+  <div class="mt-12">
+    <AuthorCard
+      name={PRESTON_HAYES_AUTHOR_NAME}
+      image={PRESTON_HAYES_AUTHOR_IMAGE}
+      description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
+    />
+  </div>
+</article>

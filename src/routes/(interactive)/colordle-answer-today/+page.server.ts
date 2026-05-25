@@ -1,12 +1,13 @@
 import {
-        getColordleTodayPayload,
-        type ColordleTodayPayload
-} from '$lib/colordle-date';
+        getColordleRangeFromApi,
+        getColordleTodayFromApi
+} from '$lib/color-answers-api';
 import { colorDiff, hexToRgb, type RGB } from '$lib/colordle';
 import { getColordleDailyArticle } from '$lib/daily-article-content';
-import { format } from 'date-fns';
-import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { format, subDays } from 'date-fns';
 import type { PageServerLoad } from './$types';
+
+export const prerender = true;
 
 interface GuessStep {
         name: string;
@@ -19,6 +20,35 @@ interface GameNarrative {
         difficultyLabel: string;
         attempts: number;
         guesses: GuessStep[];
+}
+
+interface ColordleHistoryEntry {
+        dateKey: string;
+        dayNum: number;
+        color: {
+                name: string;
+                hex: string;
+        };
+        formattedDate: string;
+}
+
+interface ColordleTodayPagePayload {
+        actualDateKey: string;
+        requestedDateKey: string;
+        color: {
+                name: string;
+                hex: string;
+        };
+        dayNum: number;
+        formattedDate: string;
+        requestedFormattedDate: string;
+        exactMatch: boolean;
+        isFallback: boolean;
+        fallbackReason: null;
+        availableThroughDateKey: string | null;
+        availableThroughFormattedDate: string | null;
+        yesterdayData: ColordleHistoryEntry | null;
+        last100Days: ColordleHistoryEntry[];
 }
 
 const OPENING_COLORS = [
@@ -280,40 +310,44 @@ function generateGameNarrative(targetColor: { name: string; hex: string }): Game
         };
 }
 
-export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
-        const today = getPuzzleDateForGame('colordle');
-        const requestedFormattedDate = format(today, 'MMMM d, yyyy');
-        let todayData: ColordleTodayPayload | null = null;
+export const load: PageServerLoad = async ({ setHeaders }) => {
+        let todayData: ColordleTodayPagePayload | null = null;
+        let requestedFormattedDate = 'today';
+        const workerFetch = globalThis.fetch;
 
-		try {
-                const response = await fetch('/api/colordle/today');
-                const payload = (await response.json().catch(() => null)) as
-                        | ({ success?: boolean } & Partial<ColordleTodayPayload>)
-                        | null;
+        try {
+                const todayAnswer = await getColordleTodayFromApi(workerFetch);
+                requestedFormattedDate = todayAnswer.formattedDate;
 
-                if (
-                        response.ok &&
-                        payload?.success &&
-                        payload.color &&
-                        payload.formattedDate &&
-                        payload.fallbackReason !== 'after-end'
-                ) {
-                        todayData = payload as ColordleTodayPayload;
-                        const puzzleDateHeader = response.headers.get('X-Puzzle-Date');
-                        if (puzzleDateHeader) {
-                                setHeaders({
-                                        'X-Puzzle-Date': puzzleDateHeader
-                                });
-                        }
-                }
-		} catch (error) {
-                console.warn('Colordle today API request failed, using local dataset fallback:', error);
-        }
+                const todayDate = new Date(`${todayAnswer.date}T12:00:00Z`);
+                const rangeStart = format(subDays(todayDate, 99), 'yyyy-MM-dd');
+                const last100Days = (await getColordleRangeFromApi(workerFetch, rangeStart, todayAnswer.date)).map(
+                        (entry): ColordleHistoryEntry => ({
+                                dateKey: entry.date,
+                                dayNum: entry.dayNumber,
+                                color: entry.color,
+                                formattedDate: entry.formattedDate
+                        })
+                );
 
-        todayData ??= getColordleTodayPayload(today);
+                todayData = {
+                        actualDateKey: todayAnswer.date,
+                        requestedDateKey: todayAnswer.date,
+                        color: todayAnswer.color,
+                        dayNum: todayAnswer.dayNumber,
+                        formattedDate: todayAnswer.formattedDate,
+                        requestedFormattedDate: todayAnswer.formattedDate,
+                        exactMatch: true,
+                        isFallback: false,
+                        fallbackReason: null,
+                        availableThroughDateKey: todayAnswer.date,
+                        availableThroughFormattedDate: todayAnswer.formattedDate,
+                        yesterdayData: last100Days.find((entry) => entry.dateKey !== todayAnswer.date) ?? null,
+                        last100Days
+                };
 
-        if (todayData?.fallbackReason === 'after-end') {
-                todayData = null;
+        } catch (error) {
+                console.warn('Colordle worker API request failed:', error);
         }
 
         if (!todayData) {
@@ -348,13 +382,14 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                 last100Days,
                 actualDateKey
         } = todayData;
-        const generatedArticle = getColordleDailyArticle(actualDateKey);
+        const generatedArticleCandidate = getColordleDailyArticle(actualDateKey);
+        const generatedArticle =
+                generatedArticleCandidate?.date === actualDateKey ? generatedArticleCandidate : null;
 
         setHeaders({
                 'X-Puzzle-Date': actualDateKey
         });
 
-        const currentMonth = format(today, 'MMMM');
         const pageTitle = `Colordle Answer Today (${formattedDate}) - Daily Color Puzzle Solution & Tips | WordSolver`;
         const pageDescription = `Verified Colordle answer for ${formattedDate} with hex code, scoring breakdown, strategy tips, and a full answer archive. Updated daily by real players.`;
         const pageKeywords = `colordle answer today, colordle color puzzle, daily color solution, colordle hex code, colordle tips, colordle archive`;
@@ -439,7 +474,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                                 { '@type': 'HowToStep', position: 1, text: 'Visit colordle.ryantanen.com and look at the target color on screen.' },
                                 { '@type': 'HowToStep', position: 2, text: 'Type a color name as your first guess. Start with something broad like "blue" or "red" to gauge direction.' },
                                 { '@type': 'HowToStep', position: 3, text: 'Review the percentage feedback. A higher score means your guess is perceptually closer to the target.' },
-                                { '@type': 'HowToStep', position: 4, text: 'Adjust one property at a time — brightness, hue family, or warmth — based on the feedback.' },
+                                { '@type': 'HowToStep', position: 4, text: 'Adjust one property at a time - brightness, hue family, or warmth - based on the feedback.' },
                                 { '@type': 'HowToStep', position: 5, text: 'Continue refining with more specific names until you reach a 100% match.' }
                         ]
                 },
@@ -457,7 +492,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                         '@type': 'Article',
                         headline: pageTitle,
                         datePublished: `${todayData.actualDateKey}T00:00:00.000Z`,
-                        dateModified: today.toISOString(),
+                        dateModified: `${todayData.actualDateKey}T12:00:00.000Z`,
                         author: {
                                 '@type': 'Person',
                                 name: 'Preston Hayes',

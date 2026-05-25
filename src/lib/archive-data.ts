@@ -4,9 +4,12 @@ import countryDetailsData from '$lib/data/worldle/country-details.json';
 import { getWordleByDate } from '$lib/api';
 import { isArchiveDateInRange, parseArchiveDateKey, toArchiveDateKey } from '$lib/archive-page';
 import {
-	getColordleAvailableDateKeys,
-	getColordleDataForDate
-} from '$lib/colordle-date';
+	buildContinuousDateKeys,
+	getColordleDateFromApi,
+	getColordleTodayFromApi,
+	getColorfleDateFromApi,
+	getColorfleTodayFromApi
+} from '$lib/color-answers-api';
 import { getContextoDateFromGameNumber, getContextoTodayDate } from '$lib/contexto';
 import { getGlobleDataForDate } from '$lib/globle-date';
 import {
@@ -43,6 +46,7 @@ import worgleSolutionsData from '../../static/worgle_solutions.json';
 export const ARCHIVE_GAMES = [
 	'wordle',
 	'colordle',
+	'colorfle',
 	'contexto',
 	'globle',
 	'nerdle',
@@ -75,6 +79,9 @@ interface ContextoAnswerResponse {
 
 const WORDLE_START_DATE = new Date(2021, 5, 19);
 const COLORDLE_START_DATE = new Date(2023, 7, 7);
+const COLORDLE_START_DATE_KEY = '2023-08-07';
+const COLORFLE_START_DATE = new Date(2022, 3, 25);
+const COLORFLE_START_DATE_KEY = '2022-04-25';
 const CONTEXTO_START_DATE = getContextoDateFromGameNumber(1);
 const GLOBLE_START_DATE = new Date(2022, 0, 1);
 const QUORDLE_START_DATE = new Date(2022, 0, 30);
@@ -124,17 +131,44 @@ async function getWordleArchiveData(dateKey: string | null) {
 	};
 }
 
-function getColordleArchiveData(dateKey: string | null) {
-	const availableDateStrings = getColordleAvailableDateKeys();
+async function getColordleArchiveData(dateKey: string | null, fetchImpl: typeof fetch) {
+	const latestAnswer = await getColordleTodayFromApi(fetchImpl);
+	const availableDateStrings = buildContinuousDateKeys(COLORDLE_START_DATE_KEY, latestAnswer.date);
 	const availableDateSet = new Set(availableDateStrings);
 	const selectedDate = parseArchiveDateKey(dateKey);
 	const selectedDateKey = selectedDate ? toArchiveDateKey(selectedDate) : null;
 	const isAvailable = Boolean(selectedDateKey && availableDateSet.has(selectedDateKey));
+	const selectedColordle =
+		selectedDateKey && isAvailable ? await getColordleDateFromApi(fetchImpl, selectedDateKey) : null;
 
 	return {
 		availableDateStrings,
 		selectedDateKey: isAvailable ? selectedDateKey : null,
-		selectedColordle: selectedDate && isAvailable ? getColordleDataForDate(selectedDate) : null
+		selectedColordle: selectedColordle
+			? {
+					dateKey: selectedColordle.date,
+					dayNum: selectedColordle.dayNumber,
+					formattedDate: selectedColordle.formattedDate,
+					color: selectedColordle.color
+				}
+			: null
+	};
+}
+
+async function getColorfleArchiveData(dateKey: string | null, fetchImpl: typeof fetch) {
+	const latestAnswer = await getColorfleTodayFromApi(fetchImpl);
+	const availableDateStrings = buildContinuousDateKeys(COLORFLE_START_DATE_KEY, latestAnswer.date);
+	const availableDateSet = new Set(availableDateStrings);
+	const selectedDate = parseArchiveDateKey(dateKey);
+	const selectedDateKey = selectedDate ? toArchiveDateKey(selectedDate) : null;
+	const isAvailable = Boolean(selectedDateKey && availableDateSet.has(selectedDateKey));
+	const selectedColorfle =
+		selectedDateKey && isAvailable ? await getColorfleDateFromApi(fetchImpl, selectedDateKey) : null;
+
+	return {
+		availableDateStrings,
+		selectedDateKey: isAvailable ? selectedDateKey : null,
+		selectedColorfle
 	};
 }
 
@@ -387,7 +421,9 @@ export async function getArchiveRouteResponse(
 		case 'wordle':
 			return getWordleArchiveData(options.dateKey);
 		case 'colordle':
-			return getColordleArchiveData(options.dateKey);
+			return getColordleArchiveData(options.dateKey, options.fetchImpl);
+		case 'colorfle':
+			return getColorfleArchiveData(options.dateKey, options.fetchImpl);
 		case 'contexto':
 			return getContextoArchiveData(options.dateKey, options.fetchImpl);
 		case 'globle':
