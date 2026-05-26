@@ -1,6 +1,4 @@
-
 import { colornames } from 'color-name-list';
-import space from 'color-space';
 import DeltaE from 'delta-e';
 import targetColorNames from './data/colordle-targets.json';
 import { colordleColorOverrides } from './data/colordle-color-overrides.js';
@@ -138,10 +136,46 @@ export const hexToRgb = (hex: string): RGB | null => {
         : null;
 };
 
+function srgbToLinear(channel: number): number {
+    const normalized = channel / 255;
+    return normalized <= 0.04045
+        ? normalized / 12.92
+        : Math.pow((normalized + 0.055) / 1.055, 2.4);
+}
+
+function rgbToLab(color: RGB): [number, number, number] {
+    const red = srgbToLinear(color.r);
+    const green = srgbToLinear(color.g);
+    const blue = srgbToLinear(color.b);
+
+    const x = (red * 0.4124 + green * 0.3576 + blue * 0.1805) * 100;
+    const y = (red * 0.2126 + green * 0.7152 + blue * 0.0722) * 100;
+    const z = (red * 0.0193 + green * 0.1192 + blue * 0.9505) * 100;
+
+    const refX = 95.047;
+    const refY = 100;
+    const refZ = 108.883;
+    const epsilon = 216 / 24389;
+    const kappa = 24389 / 27;
+
+    const transform = (value: number): number => {
+        const normalized = value;
+        return normalized > epsilon
+            ? Math.cbrt(normalized)
+            : (kappa * normalized + 16) / 116;
+    };
+
+    const fx = transform(x / refX);
+    const fy = transform(y / refY);
+    const fz = transform(z / refZ);
+
+    return [116 * fy - 16, 500 * (fx - fy), 200 * (fy - fz)];
+}
+
 export const colorDiff = (c1: RGB, c2: RGB): number => {
     try {
-        const color1 = space.rgb.lab([c1.r, c1.g, c1.b]);
-        const color2 = space.rgb.lab([c2.r, c2.g, c2.b]);
+        const color1 = rgbToLab(c1);
+        const color2 = rgbToLab(c2);
         const color1LAB = { L: color1[0], A: color1[1], B: color1[2] };
         const color2LAB = { L: color2[0], A: color2[1], B: color2[2] };
 

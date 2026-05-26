@@ -8,9 +8,11 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
 const GAME_RUNNERS = {
+  canuckle: 'scripts/update-canuckle-data.mjs',
   colordle: 'scripts/update-colordle-data.mjs',
   countryle: 'scripts/update-countryle-data.mjs',
-  framed: 'scripts/update-framed-data.mjs'
+  framed: 'scripts/update-framed-data.mjs',
+  spotle: 'scripts/update-spotle-data.mjs'
 };
 
 const excludedGames = new Set(

@@ -1,7 +1,7 @@
 // Per-length word data is now loaded via fetch() from static assets
 // See app.ts getDatasetForGame() for the fetch-based implementation
 
-import type { SolverDataset } from '../../types';
+import type { SolverDataset } from '../../../types';
 
 // Cache for fetched datasets
 const dataCache = new Map<string, SolverDataset>();

@@ -4,6 +4,7 @@ export type PuzzleTimezone = 'JST' | 'IST' | 'UTC' | 'worker-latest';
 export type PuzzleSourceReadiness = 'deterministic' | 'latest-payload';
 
 export type PuzzleGame =
+	| 'canuckle'
 	| 'wordle'
 	| 'quordle'
 	| 'phoodle'
@@ -54,6 +55,14 @@ const OFFSET_MINUTES = {
 } as const;
 
 export const PUZZLE_WINDOW_CONFIG: Record<PuzzleGame, PuzzleWindowConfig> = {
+	canuckle: {
+		group: 'main',
+		timezone: 'worker-latest',
+		sourceReadiness: 'latest-payload',
+		boundaryHourUtc: 5,
+		boundaryMinuteUtc: 0,
+		rolloverGraceSeconds: 300
+	},
 	wordle: {
 		group: 'main',
 		timezone: 'worker-latest',
@@ -224,6 +233,7 @@ export const PUZZLE_WINDOW_CONFIG: Record<PuzzleGame, PuzzleWindowConfig> = {
 };
 
 export const TODAY_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
+	'/canuckle-answer-today': 'canuckle',
 	'/wordle-answer-today': 'wordle',
 	'/quordle-answer-today': 'quordle',
 	'/phoodle-answer-today': 'phoodle',
@@ -248,6 +258,7 @@ export const TODAY_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
 };
 
 export const ARCHIVE_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
+	'/canuckle-archive': 'canuckle',
 	'/wordle-answer-archive': 'wordle',
 	'/quordle-archive': 'quordle',
 	'/phoodle-archive': 'phoodle',

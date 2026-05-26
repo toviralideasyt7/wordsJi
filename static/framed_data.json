@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T01:12:27.397Z",
+  "generatedAt": "2026-05-26T20:01:20.096Z",
   "referenceDate": "2026-04-02",
   "modes": {
     "daily": {
@@ -8,8 +8,178 @@
       "color": "#e50914",
       "gradient": "from-red-600 to-red-900",
       "referencePuzzle": 1483,
-      "latestPuzzleNumber": 1504,
+      "latestPuzzleNumber": 1538,
       "entries": [
+        {
+          "date": "2026-05-27",
+          "puzzleNumber": 1538,
+          "answer": "Once Upon a Time in Mexico"
+        },
+        {
+          "date": "2026-05-26",
+          "puzzleNumber": 1537,
+          "answer": "Life of Brian"
+        },
+        {
+          "date": "2026-05-25",
+          "puzzleNumber": 1536,
+          "answer": "Moneyball"
+        },
+        {
+          "date": "2026-05-24",
+          "puzzleNumber": 1535,
+          "answer": "Pirates of the Caribbean: At World's End"
+        },
+        {
+          "date": "2026-05-23",
+          "puzzleNumber": 1534,
+          "answer": "The Imitation Game"
+        },
+        {
+          "date": "2026-05-22",
+          "puzzleNumber": 1533,
+          "answer": "Napoleon"
+        },
+        {
+          "date": "2026-05-21",
+          "puzzleNumber": 1532,
+          "answer": "Pokemon Detective Pikachu"
+        },
+        {
+          "date": "2026-05-20",
+          "puzzleNumber": 1531,
+          "answer": "Red Riding Hood"
+        },
+        {
+          "date": "2026-05-19",
+          "puzzleNumber": 1530,
+          "answer": "Scarface"
+        },
+        {
+          "date": "2026-05-18",
+          "puzzleNumber": 1529,
+          "answer": "Forrest Gump"
+        },
+        {
+          "date": "2026-05-17",
+          "puzzleNumber": 1528,
+          "answer": "The Matrix Reloaded"
+        },
+        {
+          "date": "2026-05-16",
+          "puzzleNumber": 1527,
+          "answer": "Paddington"
+        },
+        {
+          "date": "2026-05-15",
+          "puzzleNumber": 1526,
+          "answer": "A Clockwork Orange"
+        },
+        {
+          "date": "2026-05-14",
+          "puzzleNumber": 1525,
+          "answer": "Mulan (2020)"
+        },
+        {
+          "date": "2026-05-13",
+          "puzzleNumber": 1524,
+          "answer": "Seabiscuit"
+        },
+        {
+          "date": "2026-05-12",
+          "puzzleNumber": 1523,
+          "answer": "Zack and Miri Make a Porno"
+        },
+        {
+          "date": "2026-05-11",
+          "puzzleNumber": 1522,
+          "answer": "Mufasa: The Lion King"
+        },
+        {
+          "date": "2026-05-10",
+          "puzzleNumber": 1521,
+          "answer": "Cast Away"
+        },
+        {
+          "date": "2026-05-09",
+          "puzzleNumber": 1520,
+          "answer": "Pulp Fiction"
+        },
+        {
+          "date": "2026-05-08",
+          "puzzleNumber": 1519,
+          "answer": "Jaws 3-D"
+        },
+        {
+          "date": "2026-05-07",
+          "puzzleNumber": 1518,
+          "answer": "Hereditary"
+        },
+        {
+          "date": "2026-05-06",
+          "puzzleNumber": 1517,
+          "answer": "Train to Busan"
+        },
+        {
+          "date": "2026-05-05",
+          "puzzleNumber": 1516,
+          "answer": "District 9"
+        },
+        {
+          "date": "2026-05-04",
+          "puzzleNumber": 1515,
+          "answer": "Princess Mononoke"
+        },
+        {
+          "date": "2026-05-03",
+          "puzzleNumber": 1514,
+          "answer": "Zombieland: Double Tap"
+        },
+        {
+          "date": "2026-05-02",
+          "puzzleNumber": 1513,
+          "answer": "The Smashing Machine"
+        },
+        {
+          "date": "2026-05-01",
+          "puzzleNumber": 1512,
+          "answer": "DodgeBall: A True Underdog Story"
+        },
+        {
+          "date": "2026-04-30",
+          "puzzleNumber": 1511,
+          "answer": "Who Framed Roger Rabbit"
+        },
+        {
+          "date": "2026-04-29",
+          "puzzleNumber": 1510,
+          "answer": "Amadeus"
+        },
+        {
+          "date": "2026-04-28",
+          "puzzleNumber": 1509,
+          "answer": "Interstellar"
+        },
+        {
+          "date": "2026-04-27",
+          "puzzleNumber": 1508,
+          "answer": "The Truman Show"
+        },
+        {
+          "date": "2026-04-26",
+          "puzzleNumber": 1507,
+          "answer": "You've Got Mail"
+        },
+        {
+          "date": "2026-04-25",
+          "puzzleNumber": 1506,
+          "answer": "Superman (2025)"
+        },
+        {
+          "date": "2026-04-24",
+          "puzzleNumber": 1505,
+          "answer": "Back to the Future Part III"
+        },
         {
           "date": "2026-04-23",
           "puzzleNumber": 1504,
@@ -7538,8 +7708,178 @@
       "color": "#6366f1",
       "gradient": "from-violet-500 to-purple-700",
       "referencePuzzle": 486,
-      "latestPuzzleNumber": 507,
+      "latestPuzzleNumber": 541,
       "entries": [
+        {
+          "date": "2026-05-27",
+          "puzzleNumber": 541,
+          "answer": "Mission: Impossible 3"
+        },
+        {
+          "date": "2026-05-26",
+          "puzzleNumber": 540,
+          "answer": "Spotlight"
+        },
+        {
+          "date": "2026-05-25",
+          "puzzleNumber": 539,
+          "answer": "Predator"
+        },
+        {
+          "date": "2026-05-24",
+          "puzzleNumber": 538,
+          "answer": "Five Nights at Freddy's"
+        },
+        {
+          "date": "2026-05-23",
+          "puzzleNumber": 537,
+          "answer": "Venom"
+        },
+        {
+          "date": "2026-05-22",
+          "puzzleNumber": 536,
+          "answer": "The 40 Year Old Virgin"
+        },
+        {
+          "date": "2026-05-21",
+          "puzzleNumber": 535,
+          "answer": "Sinners"
+        },
+        {
+          "date": "2026-05-20",
+          "puzzleNumber": 534,
+          "answer": "Zombieland"
+        },
+        {
+          "date": "2026-05-19",
+          "puzzleNumber": 533,
+          "answer": "KPop Demon Hunters"
+        },
+        {
+          "date": "2026-05-18",
+          "puzzleNumber": 532,
+          "answer": "West Side Story"
+        },
+        {
+          "date": "2026-05-17",
+          "puzzleNumber": 531,
+          "answer": "Nacho Libre"
+        },
+        {
+          "date": "2026-05-16",
+          "puzzleNumber": 530,
+          "answer": "Hancock"
+        },
+        {
+          "date": "2026-05-15",
+          "puzzleNumber": 529,
+          "answer": "World War Z"
+        },
+        {
+          "date": "2026-05-14",
+          "puzzleNumber": 528,
+          "answer": "The Green Mile"
+        },
+        {
+          "date": "2026-05-13",
+          "puzzleNumber": 527,
+          "answer": "The Death of Stalin"
+        },
+        {
+          "date": "2026-05-12",
+          "puzzleNumber": 526,
+          "answer": "How to Train Your Dragon"
+        },
+        {
+          "date": "2026-05-11",
+          "puzzleNumber": 525,
+          "answer": "Freaky Friday"
+        },
+        {
+          "date": "2026-05-10",
+          "puzzleNumber": 524,
+          "answer": "The Warriors"
+        },
+        {
+          "date": "2026-05-09",
+          "puzzleNumber": 523,
+          "answer": "American Pie"
+        },
+        {
+          "date": "2026-05-08",
+          "puzzleNumber": 522,
+          "answer": "Elysium"
+        },
+        {
+          "date": "2026-05-07",
+          "puzzleNumber": 521,
+          "answer": "Ray"
+        },
+        {
+          "date": "2026-05-06",
+          "puzzleNumber": 520,
+          "answer": "Pitch Perfect"
+        },
+        {
+          "date": "2026-05-05",
+          "puzzleNumber": 519,
+          "answer": "Rush Hour"
+        },
+        {
+          "date": "2026-05-04",
+          "puzzleNumber": 518,
+          "answer": "Anora"
+        },
+        {
+          "date": "2026-05-03",
+          "puzzleNumber": 517,
+          "answer": "Magic Mike"
+        },
+        {
+          "date": "2026-05-02",
+          "puzzleNumber": 516,
+          "answer": "Borat"
+        },
+        {
+          "date": "2026-05-01",
+          "puzzleNumber": 515,
+          "answer": "Minions"
+        },
+        {
+          "date": "2026-04-30",
+          "puzzleNumber": 514,
+          "answer": "Hotel Rwanda"
+        },
+        {
+          "date": "2026-04-29",
+          "puzzleNumber": 513,
+          "answer": "John Wick"
+        },
+        {
+          "date": "2026-04-28",
+          "puzzleNumber": 512,
+          "answer": "A Bronx Tale"
+        },
+        {
+          "date": "2026-04-27",
+          "puzzleNumber": 511,
+          "answer": "Zootopia"
+        },
+        {
+          "date": "2026-04-26",
+          "puzzleNumber": 510,
+          "answer": "Wicked"
+        },
+        {
+          "date": "2026-04-25",
+          "puzzleNumber": 509,
+          "answer": "The Menu"
+        },
+        {
+          "date": "2026-04-24",
+          "puzzleNumber": 508,
+          "answer": "Oppenheimer"
+        },
         {
           "date": "2026-04-23",
           "puzzleNumber": 507,
@@ -10083,8 +10423,178 @@
       "color": "#f59e0b",
       "gradient": "from-amber-500 to-orange-600",
       "referencePuzzle": 302,
-      "latestPuzzleNumber": 323,
+      "latestPuzzleNumber": 357,
       "entries": [
+        {
+          "date": "2026-05-27",
+          "puzzleNumber": 357,
+          "answer": "10 Cloverfield Lane"
+        },
+        {
+          "date": "2026-05-26",
+          "puzzleNumber": 356,
+          "answer": "Avengers: Age of Ultron"
+        },
+        {
+          "date": "2026-05-25",
+          "puzzleNumber": 355,
+          "answer": "Rear Window"
+        },
+        {
+          "date": "2026-05-24",
+          "puzzleNumber": 354,
+          "answer": "Cowboys & Aliens"
+        },
+        {
+          "date": "2026-05-23",
+          "puzzleNumber": 353,
+          "answer": "Princess Mononoke"
+        },
+        {
+          "date": "2026-05-22",
+          "puzzleNumber": 352,
+          "answer": "Nomadland"
+        },
+        {
+          "date": "2026-05-21",
+          "puzzleNumber": 351,
+          "answer": "Hell or High Water"
+        },
+        {
+          "date": "2026-05-20",
+          "puzzleNumber": 350,
+          "answer": "Doctor Strange"
+        },
+        {
+          "date": "2026-05-19",
+          "puzzleNumber": 349,
+          "answer": "Gattaca"
+        },
+        {
+          "date": "2026-05-18",
+          "puzzleNumber": 348,
+          "answer": "Crocodile Dundee"
+        },
+        {
+          "date": "2026-05-17",
+          "puzzleNumber": 347,
+          "answer": "The Curious Case of Benjamin Button"
+        },
+        {
+          "date": "2026-05-16",
+          "puzzleNumber": 346,
+          "answer": "Gods of Egypt"
+        },
+        {
+          "date": "2026-05-15",
+          "puzzleNumber": 345,
+          "answer": "Assassin's Creed"
+        },
+        {
+          "date": "2026-05-14",
+          "puzzleNumber": 344,
+          "answer": "Marathon Man"
+        },
+        {
+          "date": "2026-05-13",
+          "puzzleNumber": 343,
+          "answer": "Shazam!"
+        },
+        {
+          "date": "2026-05-12",
+          "puzzleNumber": 342,
+          "answer": "The Hurt Locker"
+        },
+        {
+          "date": "2026-05-11",
+          "puzzleNumber": 341,
+          "answer": "Her"
+        },
+        {
+          "date": "2026-05-10",
+          "puzzleNumber": 340,
+          "answer": "Blade Runner"
+        },
+        {
+          "date": "2026-05-09",
+          "puzzleNumber": 339,
+          "answer": "Alien: Resurrection"
+        },
+        {
+          "date": "2026-05-08",
+          "puzzleNumber": 338,
+          "answer": "On Her Majesty's Secret Service"
+        },
+        {
+          "date": "2026-05-07",
+          "puzzleNumber": 337,
+          "answer": "After Hours"
+        },
+        {
+          "date": "2026-05-06",
+          "puzzleNumber": 336,
+          "answer": "3:10 to Yuma"
+        },
+        {
+          "date": "2026-05-05",
+          "puzzleNumber": 335,
+          "answer": "Harry Potter and the Half Blood Prince"
+        },
+        {
+          "date": "2026-05-04",
+          "puzzleNumber": 334,
+          "answer": "Ingrid Goes West"
+        },
+        {
+          "date": "2026-05-03",
+          "puzzleNumber": 333,
+          "answer": "Cinderella"
+        },
+        {
+          "date": "2026-05-02",
+          "puzzleNumber": 332,
+          "answer": "The Bourne Identity"
+        },
+        {
+          "date": "2026-05-01",
+          "puzzleNumber": 331,
+          "answer": "Argo"
+        },
+        {
+          "date": "2026-04-30",
+          "puzzleNumber": 330,
+          "answer": "The Color Purple"
+        },
+        {
+          "date": "2026-04-29",
+          "puzzleNumber": 329,
+          "answer": "Adaptation."
+        },
+        {
+          "date": "2026-04-28",
+          "puzzleNumber": 328,
+          "answer": "Blade"
+        },
+        {
+          "date": "2026-04-27",
+          "puzzleNumber": 327,
+          "answer": "Donnie Brasco"
+        },
+        {
+          "date": "2026-04-26",
+          "puzzleNumber": 326,
+          "answer": "Don't Look Up"
+        },
+        {
+          "date": "2026-04-25",
+          "puzzleNumber": 325,
+          "answer": "Chicken Run"
+        },
+        {
+          "date": "2026-04-24",
+          "puzzleNumber": 324,
+          "answer": "The Legend of Tarzan"
+        },
         {
           "date": "2026-04-23",
           "puzzleNumber": 323,
@@ -11708,8 +12218,178 @@
       "color": "#10b981",
       "gradient": "from-emerald-500 to-teal-700",
       "referencePuzzle": 252,
-      "latestPuzzleNumber": 273,
+      "latestPuzzleNumber": 307,
       "entries": [
+        {
+          "date": "2026-05-27",
+          "puzzleNumber": 307,
+          "answer": "Lock, Stock and Two Smoking Barrels"
+        },
+        {
+          "date": "2026-05-26",
+          "puzzleNumber": 306,
+          "answer": "Despicable Me"
+        },
+        {
+          "date": "2026-05-25",
+          "puzzleNumber": 305,
+          "answer": "Glengarry Glen Ross"
+        },
+        {
+          "date": "2026-05-24",
+          "puzzleNumber": 304,
+          "answer": "Don Jon"
+        },
+        {
+          "date": "2026-05-23",
+          "puzzleNumber": 303,
+          "answer": "Spaceballs"
+        },
+        {
+          "date": "2026-05-22",
+          "puzzleNumber": 302,
+          "answer": "Avatar: The Way of Water"
+        },
+        {
+          "date": "2026-05-21",
+          "puzzleNumber": 301,
+          "answer": "Aquaman"
+        },
+        {
+          "date": "2026-05-20",
+          "puzzleNumber": 300,
+          "answer": "Shrek"
+        },
+        {
+          "date": "2026-05-19",
+          "puzzleNumber": 299,
+          "answer": "Ender's Game"
+        },
+        {
+          "date": "2026-05-18",
+          "puzzleNumber": 298,
+          "answer": "Milk"
+        },
+        {
+          "date": "2026-05-17",
+          "puzzleNumber": 297,
+          "answer": "Man of Steel"
+        },
+        {
+          "date": "2026-05-16",
+          "puzzleNumber": 296,
+          "answer": "Billy Elliot"
+        },
+        {
+          "date": "2026-05-15",
+          "puzzleNumber": 295,
+          "answer": "Cars"
+        },
+        {
+          "date": "2026-05-14",
+          "puzzleNumber": 294,
+          "answer": "About a Boy"
+        },
+        {
+          "date": "2026-05-13",
+          "puzzleNumber": 293,
+          "answer": "Ted"
+        },
+        {
+          "date": "2026-05-12",
+          "puzzleNumber": 292,
+          "answer": "The Hangover"
+        },
+        {
+          "date": "2026-05-11",
+          "puzzleNumber": 291,
+          "answer": "Anaconda"
+        },
+        {
+          "date": "2026-05-10",
+          "puzzleNumber": 290,
+          "answer": "Chitty Chitty Bang Bang"
+        },
+        {
+          "date": "2026-05-09",
+          "puzzleNumber": 289,
+          "answer": "Life of Brian"
+        },
+        {
+          "date": "2026-05-08",
+          "puzzleNumber": 288,
+          "answer": "Notting Hill"
+        },
+        {
+          "date": "2026-05-07",
+          "puzzleNumber": 287,
+          "answer": "Ant-Man"
+        },
+        {
+          "date": "2026-05-06",
+          "puzzleNumber": 286,
+          "answer": "Se7en"
+        },
+        {
+          "date": "2026-05-05",
+          "puzzleNumber": 285,
+          "answer": "Zodiac"
+        },
+        {
+          "date": "2026-05-04",
+          "puzzleNumber": 284,
+          "answer": "Jaws"
+        },
+        {
+          "date": "2026-05-03",
+          "puzzleNumber": 283,
+          "answer": "Joker"
+        },
+        {
+          "date": "2026-05-02",
+          "puzzleNumber": 282,
+          "answer": "Ford V Ferrari"
+        },
+        {
+          "date": "2026-05-01",
+          "puzzleNumber": 281,
+          "answer": "Pulp Fiction"
+        },
+        {
+          "date": "2026-04-30",
+          "puzzleNumber": 280,
+          "answer": "Cruella"
+        },
+        {
+          "date": "2026-04-29",
+          "puzzleNumber": 279,
+          "answer": "Creed"
+        },
+        {
+          "date": "2026-04-28",
+          "puzzleNumber": 278,
+          "answer": "Dog Day Afternoon"
+        },
+        {
+          "date": "2026-04-27",
+          "puzzleNumber": 277,
+          "answer": "Crazy, Stupid, Love."
+        },
+        {
+          "date": "2026-04-26",
+          "puzzleNumber": 276,
+          "answer": "Peter Pan"
+        },
+        {
+          "date": "2026-04-25",
+          "puzzleNumber": 275,
+          "answer": "Lawrence of Arabia"
+        },
+        {
+          "date": "2026-04-24",
+          "puzzleNumber": 274,
+          "answer": "GoldenEye"
+        },
         {
           "date": "2026-04-23",
           "puzzleNumber": 273,

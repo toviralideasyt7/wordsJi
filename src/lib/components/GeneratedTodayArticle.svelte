@@ -5,18 +5,20 @@
   let {
     articleKey,
     articleDate,
+    allowStaleDate = false,
     eyebrow = "Today's notes",
     fallbackTitle = "Today's notes",
     fallbackSummary = ''
   }: {
     articleKey: TodayArticleKey;
     articleDate: string;
+    allowStaleDate?: boolean;
     eyebrow?: string;
     fallbackTitle?: string;
     fallbackSummary?: string;
   } = $props();
 
-  const article = $derived(getTodayPageArticle(articleKey, articleDate));
+  const article = $derived(getTodayPageArticle(articleKey, articleDate, { allowStaleDate }));
 
   // Reused stored articles can still display their own saved date when it differs from the page date.
   const displayDate = $derived(article?.date && article.date !== articleDate ? article.date : articleDate);

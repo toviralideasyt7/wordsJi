@@ -803,6 +803,19 @@ function autoCleanGeneratedHtml(html) {
   for (const [pattern, replacement] of AUTO_PHRASE_REPLACEMENTS) {
     cleaned = cleaned.replace(pattern, replacement);
   }
+
+  cleaned = cleaned.replace(/<(p|li)\b[^>]*>[\s\S]*?<\/\1>/gi, (block) => {
+    if (findDisallowedPersonalVoice(block)) {
+      return '';
+    }
+
+    let cleanedBlock = block;
+    for (const [pattern, replacement] of AUTO_PERSONAL_VOICE_REPLACEMENTS) {
+      cleanedBlock = cleanedBlock.replace(pattern, replacement);
+    }
+    return cleanedBlock;
+  });
+
   for (const [pattern, replacement] of AUTO_PERSONAL_VOICE_REPLACEMENTS) {
     cleaned = cleaned.replace(pattern, replacement);
   }
@@ -1518,7 +1531,11 @@ function summarizeArticle(article) {
 
 const DISALLOWED_PERSONAL_VOICE_PATTERNS = [
   /\bI (?:burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/i,
-  /\bmy (?:streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/i,
+  /\bI (?:saw|recommend|recommended|usually|watched|found|realized|thought|tried|ran|run|reviewed|keep)\b/i,
+  /\bI(?:'ll|’ll| am|'m|’m| was| got| have| had| did(?:n't)?| do(?:n't)?| admit| almost| paused?| watched| looked| keep| know| think| prefer| started| stopped| spent| forced| landed| locked| talked)\b/i,
+  /\bmy (?:(?:first|second|third|fourth|fifth|sixth|last|final)\s+guess|streak|guess|guesses|path|notes|spreadsheet|sheet|brain|mind|head|grid|keyboard|rule|tracking|opener|play|morning)\b/i,
+  /\bI have been (?:tracking|watching|seeing)\b/i,
+  /\bI personally\b/i,
   /\bI['’]ve (?:logged|tracked|kept|played|solved|noticed)\b/i,
   /\bBack tomorrow\b/i,
   /\bPlace your bets\b/i,
@@ -1867,6 +1884,49 @@ function toDateKey(value) {
   return trimmed;
 }
 
+function sanitizeStoredArticle(article) {
+  if (!isRecord(article)) {
+    return null;
+  }
+
+  const sanitized = { ...article };
+
+  if (typeof sanitized.title === 'string') {
+    sanitized.title = normalizeWhitespace(sanitized.title);
+  }
+
+  if (typeof sanitized.summary === 'string') {
+    const normalizedSummary = normalizeWhitespace(sanitized.summary);
+    sanitized.summary =
+      normalizedSummary &&
+      !containsBannedPhrases(normalizedSummary) &&
+      !findDisallowedPersonalVoice(normalizedSummary)
+        ? normalizedSummary
+        : undefined;
+  }
+
+  if (typeof sanitized.contentGuideHtml === 'string') {
+    sanitized.contentGuideHtml = autoCleanGeneratedHtml(sanitized.contentGuideHtml);
+  }
+
+  if (typeof sanitized.articleHtml === 'string') {
+    sanitized.articleHtml = autoCleanGeneratedHtml(sanitized.articleHtml);
+  }
+
+  if (Array.isArray(sanitized.bonusHints)) {
+    sanitized.bonusHints = normalizeHintList(sanitized.bonusHints);
+  }
+
+  if (isRecord(sanitized.meta)) {
+    sanitized.meta = {
+      ...sanitized.meta,
+      wordCount: countWords(String(sanitized.articleHtml ?? sanitized.contentGuideHtml ?? ''))
+    };
+  }
+
+  return sanitized;
+}
+
 function sanitizeByDateMap(byDate) {
   if (!isRecord(byDate)) {
     return {};
@@ -1881,8 +1941,9 @@ function sanitizeByDateMap(byDate) {
   const trimmed = {};
   for (const dateKey of sortedDateKeys) {
     const article = byDate[dateKey];
-    if (isRecord(article)) {
-      trimmed[dateKey] = article;
+    const sanitizedArticle = sanitizeStoredArticle(article);
+    if (sanitizedArticle) {
+      trimmed[dateKey] = sanitizedArticle;
     }
   }
 
@@ -1952,6 +2013,12 @@ async function readAllRouteStores() {
   }
 
   return stores;
+}
+
+async function persistNormalizedRouteStores(routeStores) {
+  for (const [routeKey, routeStore] of routeStores.entries()) {
+    await writeRouteStore(routeKey, routeStore);
+  }
 }
 
 async function seedRouteStoresFromBundle(bundle, routeStores) {
@@ -2070,6 +2137,7 @@ async function main() {
     console.log(`Seeded ${seededCount} persisted route file(s) from the existing daily article bundle.`);
   }
 
+  await persistNormalizedRouteStores(routeStores);
   await writeBundleFromRouteStores(routeStores);
 
   if (!shouldGenerateArticles()) {
@@ -2091,6 +2159,7 @@ async function main() {
   const providers = buildProviderConfigs();
   if (!providers.length) {
     console.warn('No NVIDIA keys were provided. Kept previously persisted per-route daily articles.');
+    await writeBundleFromRouteStores(routeStores);
     if (!buildBundleFromRouteStores(routeStores).generatedAt) {
       console.warn('No existing article bundle was found yet. The frontend will fall back to built-in content.');
     }

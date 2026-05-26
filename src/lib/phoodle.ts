@@ -26,6 +26,14 @@ export interface PhoodleTodaySummary {
     recent: PhoodleDayData[];
 }
 
+type PhoodleApiResponse = {
+    success?: boolean;
+    data?: unknown;
+    visible_date?: string;
+    current?: unknown;
+    recent?: unknown;
+};
+
 async function fetchPhoodleJson(endpoint: string): Promise<any | null> {
     try {
         const res = await fetch(`${PHOODLE_API}/${endpoint}`);
@@ -83,9 +91,12 @@ export async function getAllPhoodleDates(): Promise<string[]> {
         return pendingPhoodleDates;
     }
 
-    pendingPhoodleDates = (async () => {
-        const data = await fetchPhoodleJson('list/all');
-        const dates = data?.success && Array.isArray(data.data) ? data.data : [];
+    pendingPhoodleDates = (async (): Promise<string[]> => {
+        const data = await fetchPhoodleJson('list/all') as PhoodleApiResponse | null;
+        const dates =
+            data?.success && Array.isArray(data.data)
+                ? data.data.filter((dateStr): dateStr is string => typeof dateStr === 'string')
+                : [];
         const visibleDate = getPhoodleVisibleDateKey();
         const uniqueDates = Array.from(new Set(dates))
             .filter((dateStr) => dateStr <= visibleDate)
@@ -154,11 +165,13 @@ export async function getRecentPhoodleHistory(beforeDate: Date, count: number): 
 
 export async function getPhoodleTodaySummary(historyCount = 10): Promise<PhoodleTodaySummary> {
     const safeHistoryCount = Math.max(0, Math.min(20, historyCount));
-    const data = await fetchPhoodleJson(`summary/today?history=${safeHistoryCount}`);
+    const data = await fetchPhoodleJson(`summary/today?history=${safeHistoryCount}`) as PhoodleApiResponse | null;
     const visibleDate = data?.visible_date ?? getPhoodleVisibleDateKey();
     const current = mapPhoodleApiEntry(data?.current);
     const recent = Array.isArray(data?.recent)
-        ? data.recent.map(mapPhoodleApiEntry).filter((entry): entry is PhoodleDayData => entry !== null)
+        ? data.recent
+            .map((entry: unknown) => mapPhoodleApiEntry(entry))
+            .filter((entry): entry is PhoodleDayData => entry !== null)
         : [];
 
     if (current) {

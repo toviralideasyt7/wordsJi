@@ -128,7 +128,7 @@
         </div>
 
         <div class="mt-8">
-          <ColorClues colorName={data.color.name} colorHex={data.color.hex} />
+          <ColorClues colorName={data.color.name} colorHex={data.color.hex} showAnswerReveal={false} />
         </div>
 
         {#if data.gameNarrative?.guesses?.length}

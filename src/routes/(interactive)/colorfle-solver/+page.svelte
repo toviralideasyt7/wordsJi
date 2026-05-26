@@ -276,8 +276,8 @@ const faqs = [
                   <input
                     type="color"
                     bind:value={pickerColor}
-                    class="w-24 h-24 rounded-xl border-2 border-slate-300 cursor-pointer shadow-sm"
-                    style="padding: 0;"
+                    class="w-24 h-24 appearance-none rounded-xl border-2 border-slate-300 cursor-pointer shadow-sm"
+                    style="-webkit-appearance: none; appearance: none; padding: 2px;"
                   />
                 </div>
                 <div class="flex-1 space-y-3">

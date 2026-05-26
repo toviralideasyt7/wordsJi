@@ -21156,6 +21156,62 @@
       "soundcloudUrl": "https://soundcloud.com/wizkhalifa/black-and-yellow-1"
     },
     {
+      "date": "2026-05-20",
+      "dayNumber": 1481,
+      "artist": "Justin Timberlake",
+      "track": "Can't Stop the Feeling!",
+      "image": "https://i.scdn.co/image/ab67616d0000b273d965d29d7dcf46ade5a8a7e4",
+      "soundcloudUrl": "https://soundcloud.com/justintimberlake/cant-stop-the-feeling-original"
+    },
+    {
+      "date": "2026-05-21",
+      "dayNumber": 1482,
+      "artist": "Limp Bizkit",
+      "track": "Rollin' (Air Raid Vehicle)",
+      "image": "https://i.scdn.co/image/ab67616d0000b2733783782de74f61e36795bf9c",
+      "soundcloudUrl": "https://soundcloud.com/limpbizkit/rollin-air-raid-vehicle"
+    },
+    {
+      "date": "2026-05-22",
+      "dayNumber": 1483,
+      "artist": "AC/DC",
+      "track": "Highway to Hell",
+      "image": "https://i.scdn.co/image/ab67616d0000b27351c02a77d09dfcd53c8676d0",
+      "soundcloudUrl": "https://soundcloud.com/acdcofficial/highway-to-hell"
+    },
+    {
+      "date": "2026-05-23",
+      "dayNumber": 1484,
+      "artist": "MGMT",
+      "track": "Kids",
+      "image": "https://i.scdn.co/image/ab67616d0000b2738b32b139981e79f2ebe005eb",
+      "soundcloudUrl": "https://soundcloud.com/whoismgmt/kids"
+    },
+    {
+      "date": "2026-05-24",
+      "dayNumber": 1485,
+      "artist": "LMFAO",
+      "track": "Party Rock Anthem",
+      "image": "https://i.scdn.co/image/ab67616d0000b273d77a9a738c99b8c4f7a7c3ee",
+      "soundcloudUrl": "https://soundcloud.com/interscope/lmfao-party-rock-anthem-feat"
+    },
+    {
+      "date": "2026-05-25",
+      "dayNumber": 1487,
+      "artist": "Panic! At The Disco",
+      "track": "I Write Sins Not Tragedies",
+      "image": "https://i.scdn.co/image/ab67616d0000b27323152d9337d6c57b116ed13a",
+      "soundcloudUrl": "https://soundcloud.com/panicatthedisco/i-write-sins-not-tragedies"
+    },
+    {
+      "date": "2026-05-26",
+      "dayNumber": 1488,
+      "artist": "The Doors",
+      "track": "Light My Fire",
+      "image": "https://i.scdn.co/image/ab67616d0000b27386339e6cd71cc2a167451ee5",
+      "soundcloudUrl": "https://soundcloud.com/thedoors/light-my-fire"
+    },
+    {
       "date": "2026-09-01",
       "dayNumber": 1628,
       "artist": "Lady Gaga"
@@ -22909,8 +22965,8 @@
   "metadata": {
     "startDate": "2022-03-19",
     "totalArtists": 1103,
-    "totalAnswers": 1295,
-    "lastSyncedAt": "2026-04-20T21:53:18.792Z",
+    "totalAnswers": 1302,
+    "lastSyncedAt": "2026-05-26T20:01:22.365Z",
     "source": "https://spotle.io/__data.json"
   }
 }

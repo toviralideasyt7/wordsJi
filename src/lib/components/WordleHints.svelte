@@ -30,7 +30,7 @@
     word.toLowerCase().split('').filter((char: string) => 'aeiou'.includes(char)).length
   );
 
-  let hasDoubleLetters = $derived(() => {
+  let hasDoubleLetters = $derived.by(() => {
     const wordLower = word.toLowerCase();
     for (let i = 0; i < wordLower.length; i++) {
       if (wordLower.indexOf(wordLower[i]) !== wordLower.lastIndexOf(wordLower[i])) return true;
@@ -127,7 +127,7 @@
       <div class="transition-all duration-300 ease-in-out overflow-hidden {revealedHints['double'] ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}">
         <div class="p-5 pt-0 border-t border-blue-100 dark:border-blue-800/30">
           <p class="mt-4 text-lg font-medium text-slate-800 dark:text-slate-200">
-            {#if hasDoubleLetters()}
+            {#if hasDoubleLetters}
               <span class="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                 <span class="font-bold">Yes!</span> There is at least one repeating letter.
               </span>

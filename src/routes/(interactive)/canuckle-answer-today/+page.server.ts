@@ -67,7 +67,7 @@ function getLast30Puzzles(basePuzzle: CanucklePuzzle | null): CanucklePuzzle[] {
 }
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
-        const today = getPuzzleDateForGame('wordle');
+        const today = getPuzzleDateForGame('canuckle');
         const dateKey = format(today, 'yyyy-MM-dd');
 
         const todayPuzzle = getPuzzleForDate(today);

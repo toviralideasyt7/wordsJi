@@ -8,7 +8,15 @@
 
   interface DatamuseWord { word: string; defs?: string[]; }
 
-  let { colorName, colorHex }: { colorName: string; colorHex: string } = $props();
+  let {
+    colorName,
+    colorHex,
+    showAnswerReveal = true
+  }: {
+    colorName: string;
+    colorHex: string;
+    showAnswerReveal?: boolean;
+  } = $props();
 
   let showAnswer = $state(false);
   let definition = $state<string | null>(null);
@@ -97,26 +105,28 @@
       <div class="h-16 w-full rounded-xl shadow-inner border border-slate-200 dark:border-slate-600" style="background-color: {colorHex}"></div>
     </div>
 
-    <button
-      onclick={() => (showAnswer = !showAnswer)}
-      class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
-    >
-      {#if showAnswer}
-        <FiChevronUp class="text-xl" /> Hide Answer
-      {:else}
-        <FiChevronDown class="text-xl" /> Reveal Answer
-      {/if}
-    </button>
+    {#if showAnswerReveal}
+      <button
+        onclick={() => (showAnswer = !showAnswer)}
+        class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+      >
+        {#if showAnswer}
+          <FiChevronUp class="text-xl" /> Hide Answer
+        {:else}
+          <FiChevronDown class="text-xl" /> Reveal Answer
+        {/if}
+      </button>
 
-    <div class="answer-reveal-area" class:revealed={showAnswer}>
-      <div class="answer-text-content bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
-        <div class="text-center">
-          <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Today's Answer</p>
-          <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 mb-1">{colorName}</h3>
-          <p class="font-mono text-lg text-slate-600 dark:text-slate-400">({colorHex})</p>
+      <div class="answer-reveal-area" class:revealed={showAnswer}>
+        <div class="answer-text-content bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
+          <div class="text-center">
+            <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Today's Answer</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 mb-1">{colorName}</h3>
+            <p class="font-mono text-lg text-slate-600 dark:text-slate-400">({colorHex})</p>
+          </div>
         </div>
       </div>
-    </div>
+    {/if}
   </div>
 </div>
 

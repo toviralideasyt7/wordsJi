@@ -108,8 +108,9 @@
   async function addHint(): Promise<void> {
     const distance = Number.parseInt(distanceInput, 10);
     const proximityValue = proximityInput ? Number.parseInt(proximityInput, 10) : undefined;
+    const candidate = selectedCountry;
 
-    if (!selectedCountry) {
+    if (!candidate) {
       errorMessage = 'Select a country from the list before adding the hint.';
       return;
     }
@@ -119,7 +120,7 @@
       return;
     }
 
-    if (hints.some((hint) => hint.country.code === selectedCountry.code)) {
+    if (hints.some((hint) => hint.country.code === candidate.code)) {
       errorMessage = 'That country is already in your hint list.';
       return;
     }
@@ -127,7 +128,7 @@
     hints = [
       ...hints,
       {
-        country: selectedCountry,
+        country: candidate,
         distance,
         direction,
         proximity: Number.isFinite(proximityValue) ? proximityValue : undefined,

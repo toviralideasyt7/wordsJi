@@ -210,6 +210,7 @@ async function main() {
   const countryById = new Map(countries.map((country) => [country.id, country]));
   const archive = { ...archiveSeed };
   const failedDates = [];
+  const missingCountryRefs = [];
 
   const todayDate = getCurrentJstDate();
   const todayKey = toDateKey(todayDate);
@@ -225,6 +226,9 @@ async function main() {
       const country = countryById.get(countryId);
 
       if (!country) {
+        failedDates.push(dateKey);
+        missingCountryRefs.push({ dateKey, countryId });
+        console.warn(`Unable to resolve Countryle country id "${countryId}" for ${dateKey}.`);
         continue;
       }
 
@@ -268,6 +272,7 @@ async function main() {
       `Countryle archive is incomplete for ${missingDates.length} date(s) and ${failedDates.length} fetch attempt(s) failed.`,
       {
         failedDates,
+        missingCountryRefs,
         missingDates,
         latestArchiveDate: archiveLatestDateKey,
         latestDate: todayPayload?.date ?? todayKey
@@ -276,6 +281,7 @@ async function main() {
   } else {
     await markUpdateSuccess(projectRoot, 'countryle', {
       failedDates: [],
+      missingCountryRefs: [],
       missingDates: [],
       latestArchiveDate: archiveLatestDateKey,
       latestDate: todayPayload?.date ?? todayKey

@@ -57,13 +57,25 @@ interface DailyArticleBundle {
 const dailyArticles = dailyArticlesJson as DailyArticleBundle;
 
 const DISALLOWED_ARTICLE_PATTERNS = [
-  /\bI (?:burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/i,
-  /\bmy (?:streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/i,
-  /\bI['’]ve (?:logged|tracked|kept|played|solved|noticed)\b/i,
+  /\bI (?:burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost|saw|recommend|recommended|usually|watched|found|realized|thought|tried|ran|run|reviewed|keep)\b/i,
+  /\bI(?:'ll|’ll| am|'m|’m| was| got| have| had| did(?:n't)?| do(?:n't)?| admit| almost| paused?| watched| looked| keep| know| think| prefer| started| stopped| spent| forced| landed| locked| talked)\b/i,
+  /\bmy (?:(?:first|second|third|fourth|fifth|sixth|last|final)\s+guess|streak|guess|guesses|path|notes|spreadsheet|sheet|brain|mind|head|grid|keyboard|rule|tracking|opener|play|morning)\b/i,
+  /\bI(?:'|’|â€™)ve (?:logged|tracked|kept|played|solved|noticed|seen)\b/i,
+  /\bI(?:'|’|â€™)ve been (?:tracking|watching|seeing)\b/i,
+  /\bI personally\b/i,
   /\bBack tomorrow\b/i,
   /\bPlace your bets\b/i,
   /\bcoffee in hand\b/i,
   /\b500\+\s+daily\b/i
+];
+
+const AUTO_PERSONAL_VOICE_REPLACEMENTS: Array<[RegExp, string]> = [
+  [
+    /\bI (burned|guessed|opened|started|missed|needed|stared|wasted|hesitated|plugged|spotted|noticed|kept|played|solved|tracked|logged|use|used|figured|checked|lost)\b/gi,
+    'players $1'
+  ],
+  [/\bI(?:'|’|â€™)ve (logged|tracked|kept|played|solved|noticed)\b/gi, 'players have $1'],
+  [/\bmy (streak|guess|guesses|path|notes|spreadsheet|sheet|brain|rule|tracking|opener|play|morning)\b/gi, 'the $1']
 ];
 
 function stripHtml(html: string): string {
@@ -73,35 +85,72 @@ function stripHtml(html: string): string {
     .trim();
 }
 
-function isRenderableArticle(article: DailyArticleContent | null, expectedDate?: string): article is DailyArticleContent {
-  if (!article) {
-    return false;
+function cleanPersonalVoice(text: string): string {
+  let cleaned = String(text ?? '').replace(/â€™|’/g, "'");
+
+  for (const [pattern, replacement] of AUTO_PERSONAL_VOICE_REPLACEMENTS) {
+    cleaned = cleaned.replace(pattern, replacement);
   }
 
-  if (expectedDate && article.date !== expectedDate) {
-    return false;
-  }
-
-  const html = article.articleHtml ?? article.contentGuideHtml ?? '';
-  if (!html.trim()) {
-    return false;
-  }
-
-  const text = stripHtml(html);
-  return !DISALLOWED_ARTICLE_PATTERNS.some((pattern) => pattern.test(text));
+  return cleaned;
 }
 
-function getMatchingArticle(key: string, date?: string): DailyArticleContent | null {
-  const article = dailyArticles.articles?.[key] ?? null;
-  if (!isRenderableArticle(article, date)) {
+function stripDisallowedBlocks(html: string): string {
+  return String(html ?? '').replace(/<(p|li)\b[^>]*>[\s\S]*?<\/\1>/gi, (block) => {
+    const text = stripHtml(cleanPersonalVoice(block));
+    return DISALLOWED_ARTICLE_PATTERNS.some((pattern) => pattern.test(text)) ? '' : block;
+  });
+}
+
+function sanitizeArticleHtml(html: string): string {
+  return stripDisallowedBlocks(cleanPersonalVoice(html))
+    .replace(/\s{2,}/g, ' ')
+    .replace(/> +</g, '><')
+    .trim();
+}
+
+function sanitizeArticleSummary(summary: string | undefined): string | undefined {
+  const cleaned = cleanPersonalVoice(summary ?? '').trim();
+  if (!cleaned) {
+    return undefined;
+  }
+
+  return DISALLOWED_ARTICLE_PATTERNS.some((pattern) => pattern.test(cleaned)) ? undefined : cleaned;
+}
+
+function buildRenderableArticle(
+  article: DailyArticleContent | null,
+  expectedDate?: string,
+  options: { allowStaleDate?: boolean } = {}
+): DailyArticleContent | null {
+  if (!article) {
     return null;
   }
 
-  if (!date) {
-    return article;
+  if (expectedDate && article.date !== expectedDate && !options.allowStaleDate) {
+    return null;
   }
 
-  return article.date === date ? article : null;
+  const html = sanitizeArticleHtml(article.articleHtml ?? article.contentGuideHtml ?? '');
+  if (!html.trim()) {
+    return null;
+  }
+
+  return {
+    ...article,
+    summary: sanitizeArticleSummary(article.summary),
+    articleHtml: article.articleHtml ? html : article.articleHtml,
+    contentGuideHtml: article.contentGuideHtml ? html : article.contentGuideHtml
+  };
+}
+
+function getMatchingArticle(
+  key: string,
+  date?: string,
+  options: { allowStaleDate?: boolean } = {}
+): DailyArticleContent | null {
+  const article = dailyArticles.articles?.[key] ?? null;
+  return buildRenderableArticle(article, date, options);
 }
 
 export function getDailyArticleBundle(): DailyArticleBundle {
@@ -118,7 +167,8 @@ export function getColordleDailyArticle(date: string): DailyArticleContent | nul
 
 export function getTodayPageArticle(
   articleKey: TodayArticleKey,
-  date: string
+  date: string,
+  options: { allowStaleDate?: boolean } = {}
 ): DailyArticleContent | null {
-  return getMatchingArticle(articleKey, date);
+  return getMatchingArticle(articleKey, date, options);
 }
