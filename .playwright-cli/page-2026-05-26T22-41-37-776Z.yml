@@ -1,0 +1,250 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e10]: W
+        - generic [ref=e11]: WordSolverX
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Today's Answers" [ref=e14] [cursor=pointer]:
+          - /url: /today
+        - link "Solvers" [ref=e15] [cursor=pointer]:
+          - /url: /solver
+        - link "Archives" [ref=e16] [cursor=pointer]:
+          - /url: /archive
+        - link "Guides" [ref=e17] [cursor=pointer]:
+          - /url: /guides
+        - link "About" [ref=e18] [cursor=pointer]:
+          - /url: /about
+  - main [ref=e19]:
+    - main [ref=e20]:
+      - generic [ref=e22]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - link "Home" [ref=e26] [cursor=pointer]:
+                - /url: /
+                - img [ref=e27]
+                - generic [ref=e30]: Home
+            - listitem [ref=e31]:
+              - img [ref=e32]
+              - generic [ref=e34]: 11 Letter Wordle Solver
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Wordle solver by word length
+          - heading "11-Letter Wordle Solver" [level=1] [ref=e37]
+          - paragraph [ref=e38]: Use the 11-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.
+          - generic [ref=e39]:
+            - generic [ref=e40]: 11 letters
+            - generic [ref=e41]: Hard mode
+            - generic [ref=e42]: Fast clue filtering
+          - link "Open 5-letter Wordle solver" [ref=e43] [cursor=pointer]:
+            - /url: /5-letter-wordle-solver
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - heading "11-Letter Wordle Solver" [level=2] [ref=e47]
+          - paragraph [ref=e48]: Type a guess, match the clue tiles to your puzzle, then review the ranked answers.
+        - generic [ref=e52]:
+          - generic [ref=e53]: H
+          - generic [ref=e54]: E
+          - generic [ref=e55]: L
+          - generic [ref=e56]: L
+          - generic [ref=e57]: O
+          - generic [ref=e58]: W
+          - generic [ref=e59]: O
+          - generic [ref=e60]: R
+          - generic [ref=e61]: L
+          - generic [ref=e62]: D
+        - generic [ref=e126]: Loading interactive solver…
+      - generic [ref=e131]:
+        - heading "11-Letter Wordle Solver FAQs" [level=2] [ref=e132]
+        - generic [ref=e133]:
+          - group [ref=e134]:
+            - generic "How does the 11-letter Wordle solver work?" [ref=e135] [cursor=pointer]:
+              - generic [ref=e136]: How does the 11-letter Wordle solver work?
+              - img [ref=e137]
+          - group [ref=e139]:
+            - generic "Why does this page only show 11-letter words?" [ref=e140] [cursor=pointer]:
+              - generic [ref=e141]: Why does this page only show 11-letter words?
+              - img [ref=e142]
+          - group [ref=e144]:
+            - generic "How hard is 11-letter Wordle compared to shorter lengths?" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: How hard is 11-letter Wordle compared to shorter lengths?
+              - img [ref=e147]
+          - group [ref=e149]:
+            - generic "What is a good starting word in 11-letter Wordle?" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]: What is a good starting word in 11-letter Wordle?
+              - img [ref=e152]
+          - group [ref=e154]:
+            - generic "Does hard mode on 11 letters work differently?" [ref=e155] [cursor=pointer]:
+              - generic [ref=e156]: Does hard mode on 11 letters work differently?
+              - img [ref=e157]
+          - group [ref=e159]:
+            - generic "How many possible 11-letter answers are there?" [ref=e160] [cursor=pointer]:
+              - generic [ref=e161]: How many possible 11-letter answers are there?
+              - img [ref=e162]
+          - group [ref=e164]:
+            - generic "Can I use the 11-letter solver for daily Wordle?" [ref=e165] [cursor=pointer]:
+              - generic [ref=e166]: Can I use the 11-letter solver for daily Wordle?
+              - img [ref=e167]
+          - group [ref=e169]:
+            - generic "What vocabulary dominates the 11-letter pool?" [ref=e170] [cursor=pointer]:
+              - generic [ref=e171]: What vocabulary dominates the 11-letter pool?
+              - img [ref=e172]
+          - group [ref=e174]:
+            - generic "Does the solver work for unlimited Play Again 11-letter mode?" [ref=e175] [cursor=pointer]:
+              - generic [ref=e176]: Does the solver work for unlimited Play Again 11-letter mode?
+              - img [ref=e177]
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - heading "How to use the 11-letter Wordle solver" [level=2] [ref=e181]
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: "1"
+              - heading "Type your guess" [level=3] [ref=e185]
+              - paragraph [ref=e186]: Enter the 11-letter word you played in Wordle.
+            - generic [ref=e187]:
+              - generic [ref=e188]: "2"
+              - heading "Match the clue colors" [level=3] [ref=e189]
+              - paragraph [ref=e190]: Tap each tile until it matches the gray, yellow, or green result from your game.
+            - generic [ref=e191]:
+              - generic [ref=e192]: "3"
+              - heading "Review the ranked answers" [level=3] [ref=e193]
+              - paragraph [ref=e194]: Run the solver to see the best next guesses and the most likely remaining answers.
+        - article [ref=e195]:
+          - generic [ref=e196]:
+            - 'heading "11-letter Wordle: the ultimate test" [level=2] [ref=e197]'
+            - generic [ref=e198]:
+              - paragraph [ref=e199]: The 11-letter answer pool has roughly 12,000 words. The solver is completely essential here. No one tracks eleven-position elimination across 12,000 words mentally — it is not possible.
+              - paragraph [ref=e200]: Eleven tiles means one green tells you 1/11 of the answer and eliminates ~91% of candidates for that position. But getting that green requires navigating 12,000 vocabulary options.
+              - paragraph [ref=e201]: Hard mode at 11 letters is the hardest standard Wordle format. Eleven simultaneous locks severely restrict valid candidates.
+          - generic [ref=e202]:
+            - 'heading "The huge pool: ~12,000 words" [level=2] [ref=e203]'
+            - generic [ref=e204]:
+              - paragraph [ref=e205]: 12,000 words in the 11-letter pool is beyond what any human can track. After two guesses, you could have 2,000+ viable candidates — completely manual solving is impossible.
+              - paragraph [ref=e206]: The solver cross-references all eleven tiles of feedback against the full 12,000-word pool in milliseconds. You enter clues, it shows all valid candidates that satisfy them.
+              - paragraph [ref=e207]: Without the solver, 11-letter Wordle cannot be solved systematically. The solver is not helpful — it is the only way to make progress.
+          - generic [ref=e208]:
+            - heading "Starting word strategy at 11 letters" [level=2] [ref=e209]
+            - generic [ref=e210]:
+              - paragraph [ref=e211]: ABORTIONIZE, CHRONOLOGIES, and INTERNATION are strong 11-letter starters. These maximize letter diversity across all eleven positions with no duplicates.
+              - paragraph [ref=e212]: Rare letters like Q, X, Z, J should be avoided in openers unless you have confirmed clue support. They appear in fewer than 1% of 11-letter answers and waste positions.
+              - paragraph [ref=e213]: The solver ranks starting candidates by letter frequency within the 11-letter pool specifically. The patterns at 11 letters differ from shorter lengths.
+          - generic [ref=e214]:
+            - 'heading "Hard mode at 11 letters: the hardest Wordle format" [level=2] [ref=e215]'
+            - generic [ref=e216]:
+              - paragraph [ref=e217]: Eleven simultaneous locks must all be satisfied in every guess. This is the hardest standard Wordle format. As you lock in letters, valid candidates become vanishingly rare.
+              - paragraph [ref=e218]: The solver finds 11-letter words from the 12,000-word pool that satisfy all eleven locks. It ensures every suggestion respects your hard mode constraints.
+              - paragraph [ref=e219]: Without the solver, finding valid hard mode candidates at 11 letters after four confirmed clues is essentially impossible. The constraint intersection is too tight.
+          - generic [ref=e220]:
+            - heading "The information equation at 11 letters" [level=2] [ref=e221]
+            - generic [ref=e222]:
+              - paragraph [ref=e223]: One green at 11 letters narrows 1/11 of the answer and eliminates ~91% of candidates for that position. That is the most constraint power per confirmed letter of any standard Wordle length.
+              - paragraph [ref=e224]: Two greens typically narrows to under 30 candidates. Three greens usually leaves fewer than 5. The solver sorts these final candidates by likelihood.
+              - paragraph [ref=e225]: The solver handles the complex cross-referencing. You enter eleven tiles of feedback, it shows all 12,000-word pool candidates that satisfy the full constraint set.
+          - generic [ref=e226]:
+            - heading "Vocabulary in the 11-letter pool" [level=2] [ref=e227]
+            - generic [ref=e228]:
+              - paragraph [ref=e229]: "The 11-letter pool is dominated by long Latin and Greek formations: INTERNATIONALIZATION, UNCHARACTERISTIC, COMPREHENSIVE. These are not everyday vocabulary."
+              - paragraph [ref=e230]: Legal, medical, scientific, and compound vocabulary dominates. Without the solver, you waste guesses on valid English words that are not in the accepted answer list.
+              - paragraph [ref=e231]: The solver filters to only accepted 11-letter answers. It shows candidates that are both valid and consistent with your clues, sorted by how well they match the clue pattern.
+          - generic [ref=e232]:
+            - heading "How the solver works at 11 letters" [level=2] [ref=e233]
+            - generic [ref=e234]:
+              - paragraph [ref=e235]: The solver cross-references all eleven tiles of feedback against 12,000 words instantly. You enter your clues, it shows candidates satisfying all eleven constraints simultaneously.
+              - paragraph [ref=e236]: At this length, you must use the solver from the beginning. Manual solving cannot keep up after the first guess — the candidate pool is too large to track mentally.
+              - paragraph [ref=e237]: The solver also prevents guessing non-answers. When you are down to candidates and cannot distinguish them, the solver shows which fits all clues best.
+          - generic [ref=e238]:
+            - heading "Strategy for 11-letter Wordle" [level=2] [ref=e239]
+            - generic [ref=e240]:
+              - paragraph [ref=e241]: Use the solver from the very first guess. There is no manual alternative at this length. Let the solver show you candidates as you build up clue information.
+              - paragraph [ref=e242]: Maximize letter diversity in your opener. ABORTIONIZE or CHRONOLOGIES covers eleven distinct positions with common letters — no duplicates, maximum information.
+              - paragraph [ref=e243]: Lock in greens fast. With 12,000 words and eleven tiles, confirmed letters eliminate candidates at a massive rate. Two greens typically narrows to under 30 immediately.
+  - contentinfo [ref=e244]:
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - link "W WordSolverX" [ref=e248] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e250]: W
+            - generic [ref=e251]: WordSolverX
+          - paragraph [ref=e252]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+          - generic [ref=e253]:
+            - link "Facebook" [ref=e254] [cursor=pointer]:
+              - /url: https://www.facebook.com/wordsolverx/
+              - img [ref=e255]
+            - link "Pinterest" [ref=e257] [cursor=pointer]:
+              - /url: https://www.pinterest.com/wordsolverx/
+              - img [ref=e258]
+            - link "Telegram" [ref=e260] [cursor=pointer]:
+              - /url: https://t.me/wordsolverx
+              - img [ref=e261]
+        - generic [ref=e263]:
+          - heading "Today's Answers" [level=3] [ref=e264]
+          - list [ref=e265]:
+            - listitem [ref=e266]:
+              - link "Wordle Answer" [ref=e267] [cursor=pointer]:
+                - /url: /wordle-answer-today
+            - listitem [ref=e268]:
+              - link "Quordle Answer" [ref=e269] [cursor=pointer]:
+                - /url: /quordle-answer-today
+            - listitem [ref=e270]:
+              - link "Nerdle Answer" [ref=e271] [cursor=pointer]:
+                - /url: /nerdle-answer-today
+            - listitem [ref=e272]:
+              - link "Contexto Answer" [ref=e273] [cursor=pointer]:
+                - /url: /contexto-answer-today
+            - listitem [ref=e274]:
+              - link "View All →" [ref=e275] [cursor=pointer]:
+                - /url: /today
+        - generic [ref=e276]:
+          - heading "Solver Tools" [level=3] [ref=e277]
+          - list [ref=e278]:
+            - listitem [ref=e279]:
+              - link "5-Letter Wordle Solver" [ref=e280] [cursor=pointer]:
+                - /url: /5-letter-wordle-solver
+            - listitem [ref=e281]:
+              - link "Quordle Solver" [ref=e282] [cursor=pointer]:
+                - /url: /quordle-solver
+            - listitem [ref=e283]:
+              - link "Nerdle Solver" [ref=e284] [cursor=pointer]:
+                - /url: /nerdle-solver
+            - listitem [ref=e285]:
+              - link "Wordle Analyzer" [ref=e286] [cursor=pointer]:
+                - /url: /wordle-analyzer
+            - listitem [ref=e287]:
+              - link "View All →" [ref=e288] [cursor=pointer]:
+                - /url: /solver
+        - generic [ref=e289]:
+          - heading "Resources" [level=3] [ref=e290]
+          - list [ref=e291]:
+            - listitem [ref=e292]:
+              - link "Guides & Tips" [ref=e293] [cursor=pointer]:
+                - /url: /guides
+            - listitem [ref=e294]:
+              - link "Answer Archives" [ref=e295] [cursor=pointer]:
+                - /url: /archive
+            - listitem [ref=e296]:
+              - link "About" [ref=e297] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e298]:
+              - link "Contact" [ref=e299] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e300]:
+              - link "DMCA Policy" [ref=e301] [cursor=pointer]:
+                - /url: /dmca-policy
+            - listitem [ref=e302]:
+              - link "Editorial Policy" [ref=e303] [cursor=pointer]:
+                - /url: /editorial-policy
+            - listitem [ref=e304]:
+              - link "Privacy" [ref=e305] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=e306]:
+              - button "Cookie Settings" [ref=e307]
+            - listitem [ref=e308]:
+              - link "Terms" [ref=e309] [cursor=pointer]:
+                - /url: /terms-of-service
+      - generic [ref=e310]:
+        - paragraph [ref=e311]: © 2026 WordSolverX. All rights reserved.
+        - paragraph [ref=e312]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.

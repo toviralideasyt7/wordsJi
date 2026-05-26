@@ -87,12 +87,7 @@
           image: 'https://wordsolverx.com/author-wordsolverx.webp',
           jobTitle: 'Word Puzzle Analyst',
           knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-          sameAs: [
-            'https://www.linkedin.com/in/preston-hayes-wordsolverx/',
-            'https://x.com/WordSolverX',
-            'https://www.facebook.com/wordsolverx/',
-            'https://t.me/wordsolverx'
-          ]
+          sameAs: ['https://www.pinterest.com/wordsolverx/']
         },
         publisher: {
           '@type': 'Organization',
@@ -282,8 +277,9 @@
           More Today Answers
         </a>
       </div>
+
+      <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
     </section>
-  </div>
 
   <section class="pb-12">
     <FAQSection {faqs} title="Betweenle Answer FAQs" />
@@ -330,8 +326,6 @@
       </div>
     </section>
   </article>
-
-    <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
     <div class="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
@@ -341,6 +335,7 @@
 
       <InternalLinkSection currentGame="Betweenle" />
     </div>
+  </div>
 </main>
 
 <style>

@@ -1,0 +1,511 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e10]: W
+        - generic [ref=e11]: WordSolverX
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Today's Answers" [ref=e14] [cursor=pointer]:
+          - /url: /today
+        - link "Solvers" [ref=e15] [cursor=pointer]:
+          - /url: /solver
+        - link "Archives" [ref=e16] [cursor=pointer]:
+          - /url: /archive
+        - link "Guides" [ref=e17] [cursor=pointer]:
+          - /url: /guides
+        - link "About" [ref=e18] [cursor=pointer]:
+          - /url: /about
+  - main [ref=e19]:
+    - generic [ref=e22]:
+      - navigation "Breadcrumb" [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - img [ref=e27]
+              - generic [ref=e30]: Home
+          - listitem [ref=e31]:
+            - img [ref=e32]
+            - generic [ref=e34]: Canuckle Answer Today
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - img [ref=e39]
+            - text: "Puzzle #1473"
+          - generic [ref=e41]: May 26, 2026
+        - heading "Canuckle Answer Today (May 26, 2026)" [level=1] [ref=e42]
+        - paragraph [ref=e43]: Verified answer, puzzle number, and Canadian fact for today's Canuckle puzzle.
+        - generic [ref=e44]:
+          - link "Open Solver" [ref=e45] [cursor=pointer]:
+            - /url: /canuckle-solver
+          - link "Browse Archive" [ref=e46] [cursor=pointer]:
+            - /url: /canuckle-archive
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - img [ref=e50]
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: Verified Daily
+            - paragraph [ref=e54]: Answers checked each day
+        - generic [ref=e55]:
+          - img [ref=e57]
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: Updated Midnight ET
+            - paragraph [ref=e61]: Synced with game clock
+        - generic [ref=e62]:
+          - img [ref=e64]
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: 1,500+ Puzzles
+            - paragraph [ref=e68]: Historical archive tracked
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: Preston Hayes
+            - paragraph [ref=e75]: Word Puzzle Expert
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - paragraph [ref=e79]: Today's verified answer
+          - heading "SOOTY" [level=2] [ref=e80]
+          - paragraph [ref=e81]: "Puzzle #1473 for May 26, 2026. This answer is rendered directly in the page HTML for faster crawlability and easier verification."
+          - generic [ref=e82]:
+            - paragraph [ref=e83]: Canadian fact
+            - paragraph [ref=e84]: "The Sooty Grouse is a large, forest-dwelling bird found along Canada’s Pacific coast. In Canada, it is primarily found in British Columbia, where it inhabits coastal and interior mountain forests from Vancouver Island to the mainland ranges. These non-migratory birds are best known for their distinctive spring courtship displays. Check out the Canuckle Recap page to see a full list of all of the previous words all the way back to puzzle #1!"
+        - complementary [ref=e85]:
+          - paragraph [ref=e86]: Quick actions
+          - generic [ref=e87]:
+            - link "Open Solver" [ref=e88] [cursor=pointer]:
+              - /url: /canuckle-solver
+            - link "Browse Archive" [ref=e89] [cursor=pointer]:
+              - /url: /canuckle-archive
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Date key
+            - paragraph [ref=e92]: 2026-05-26
+            - paragraph [ref=e93]: This page now shows the answer directly instead of hiding it behind the client-only daily widget.
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: Yesterday's Answer
+          - generic [ref=e97]: "Puzzle #1472"
+        - paragraph [ref=e98]:
+          - text: Yesterday's word was
+          - generic [ref=e99]: PAGES
+      - generic [ref=e102]: Guide
+      - article [ref=e104]:
+        - generic [ref=e105]:
+          - heading "Quick Tips for Canuckle" [level=2] [ref=e106]
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: Canuckle is Wordle with a Canadian twist — every answer has a connection to Canada. The answer card above shows today's word, puzzle number, and a Canadian fact. It resets at midnight Eastern Time.
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - heading "Think Canadian first" [level=3] [ref=e111]
+                - paragraph [ref=e112]: Words like TOQUE, POUTINE, MAPLE, LOONIE, MOOSE, and SYRUP are all fair game. Once you have a few letters locked in, reach for Canadian vocabulary before generic English words.
+              - generic [ref=e113]:
+                - heading "Open with ABOUT" [level=3] [ref=e114]
+                - paragraph [ref=e115]: ABOUT tests four vowels plus B and T — letters that show up constantly in Canadian answers. It's the best single opener for this game specifically.
+              - generic [ref=e116]:
+                - heading "Check recent answers" [level=3] [ref=e117]
+                - paragraph [ref=e118]: Canuckle rarely repeats within a month. Scan the recent answers grid below before guessing to avoid wasting a try on a word that already came up.
+        - generic [ref=e119]:
+          - heading "Canuckle FAQ" [level=2] [ref=e120]
+          - generic [ref=e121]:
+            - group [ref=e122]:
+              - generic "What time does Canuckle reset?" [ref=e123] [cursor=pointer]:
+                - text: What time does Canuckle reset?
+                - img [ref=e124]
+            - group [ref=e126]:
+              - generic "What does the red feedback mean?" [ref=e127] [cursor=pointer]:
+                - text: What does the red feedback mean?
+                - img [ref=e128]
+            - group [ref=e130]:
+              - generic "How do I browse earlier answers?" [ref=e131] [cursor=pointer]:
+                - text: How do I browse earlier answers?
+                - img [ref=e132]
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - img [ref=e137]
+            - generic [ref=e139]:
+              - paragraph [ref=e140]: Archive
+              - heading "Recent Canuckle Answers" [level=2] [ref=e141]
+          - paragraph [ref=e142]: Last 30 days of verified Canuckle answers.
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - paragraph [ref=e146]: SOOTY
+                - paragraph [ref=e147]: May 26, 2026
+              - generic [ref=e148]: "#1473"
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: PAGES
+                - paragraph [ref=e152]: May 25, 2026
+              - generic [ref=e153]: "#1472"
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - paragraph [ref=e156]: SHISH
+                - paragraph [ref=e157]: May 24, 2026
+              - generic [ref=e158]: "#1471"
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - paragraph [ref=e161]: TORSO
+                - paragraph [ref=e162]: May 23, 2026
+              - generic [ref=e163]: "#1470"
+            - generic [ref=e164]:
+              - generic [ref=e165]:
+                - paragraph [ref=e166]: DUPLE
+                - paragraph [ref=e167]: May 22, 2026
+              - generic [ref=e168]: "#1469"
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - paragraph [ref=e171]: SILOS
+                - paragraph [ref=e172]: May 21, 2026
+              - generic [ref=e173]: "#1468"
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - paragraph [ref=e176]: CLEAR
+                - paragraph [ref=e177]: May 20, 2026
+              - generic [ref=e178]: "#1467"
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - paragraph [ref=e181]: RESET
+                - paragraph [ref=e182]: May 19, 2026
+              - generic [ref=e183]: "#1466"
+            - generic [ref=e184]:
+              - generic [ref=e185]:
+                - paragraph [ref=e186]: DOCKS
+                - paragraph [ref=e187]: May 18, 2026
+              - generic [ref=e188]: "#1465"
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - paragraph [ref=e191]: SAFER
+                - paragraph [ref=e192]: May 17, 2026
+              - generic [ref=e193]: "#1464"
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: CROOK
+                - paragraph [ref=e197]: May 16, 2026
+              - generic [ref=e198]: "#1463"
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - paragraph [ref=e201]: AWARE
+                - paragraph [ref=e202]: May 15, 2026
+              - generic [ref=e203]: "#1462"
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - paragraph [ref=e206]: PIETY
+                - paragraph [ref=e207]: May 14, 2026
+              - generic [ref=e208]: "#1461"
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - paragraph [ref=e211]: CREST
+                - paragraph [ref=e212]: May 13, 2026
+              - generic [ref=e213]: "#1460"
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - paragraph [ref=e216]: SINKS
+                - paragraph [ref=e217]: May 12, 2026
+              - generic [ref=e218]: "#1459"
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - paragraph [ref=e221]: WACKE
+                - paragraph [ref=e222]: May 11, 2026
+              - generic [ref=e223]: "#1458"
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - paragraph [ref=e226]: ASTER
+                - paragraph [ref=e227]: May 10, 2026
+              - generic [ref=e228]: "#1457"
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - paragraph [ref=e231]: WIMPY
+                - paragraph [ref=e232]: May 9, 2026
+              - generic [ref=e233]: "#1456"
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - paragraph [ref=e236]: SEPAL
+                - paragraph [ref=e237]: May 8, 2026
+              - generic [ref=e238]: "#1455"
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - paragraph [ref=e241]: FLOES
+                - paragraph [ref=e242]: May 7, 2026
+              - generic [ref=e243]: "#1454"
+            - generic [ref=e244]:
+              - generic [ref=e245]:
+                - paragraph [ref=e246]: BLING
+                - paragraph [ref=e247]: May 6, 2026
+              - generic [ref=e248]: "#1453"
+            - generic [ref=e249]:
+              - generic [ref=e250]:
+                - paragraph [ref=e251]: NEVER
+                - paragraph [ref=e252]: May 5, 2026
+              - generic [ref=e253]: "#1452"
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - paragraph [ref=e256]: FIZZY
+                - paragraph [ref=e257]: May 4, 2026
+              - generic [ref=e258]: "#1451"
+            - generic [ref=e259]:
+              - generic [ref=e260]:
+                - paragraph [ref=e261]: SPRAY
+                - paragraph [ref=e262]: May 3, 2026
+              - generic [ref=e263]: "#1450"
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - paragraph [ref=e266]: PEDAL
+                - paragraph [ref=e267]: May 2, 2026
+              - generic [ref=e268]: "#1449"
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: GULLS
+                - paragraph [ref=e272]: May 1, 2026
+              - generic [ref=e273]: "#1448"
+            - generic [ref=e274]:
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: BORER
+                - paragraph [ref=e277]: April 30, 2026
+              - generic [ref=e278]: "#1447"
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - paragraph [ref=e281]: COPSE
+                - paragraph [ref=e282]: April 29, 2026
+              - generic [ref=e283]: "#1446"
+            - generic [ref=e284]:
+              - generic [ref=e285]:
+                - paragraph [ref=e286]: BROOD
+                - paragraph [ref=e287]: April 28, 2026
+              - generic [ref=e288]: "#1445"
+            - generic [ref=e289]:
+              - generic [ref=e290]:
+                - paragraph [ref=e291]: FABLE
+                - paragraph [ref=e292]: April 27, 2026
+              - generic [ref=e293]: "#1444"
+      - region "Preston Hayes" [ref=e294]:
+        - generic [ref=e295]:
+          - img "Photo of Preston Hayes" [ref=e297]
+          - generic [ref=e298]:
+            - paragraph [ref=e299]: Written by
+            - heading "Preston Hayes" [level=2] [ref=e300]
+            - paragraph [ref=e301]: Preston Hayes is the credited editor for WordSolverX answer pages and puzzle strategy content. His work focuses on clear answer presentation, source verification, solver guidance, and fast corrections when a game changes.
+            - generic [ref=e302]:
+              - link "LinkedIn" [ref=e303] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/preston-hayes-wordsolverx/
+                - text: LinkedIn
+                - img [ref=e304]
+              - link "X (Twitter)" [ref=e306] [cursor=pointer]:
+                - /url: https://x.com/WordSolverX
+                - text: X (Twitter)
+                - img [ref=e307]
+              - link "Facebook" [ref=e309] [cursor=pointer]:
+                - /url: https://www.facebook.com/wordsolverx/
+                - text: Facebook
+                - img [ref=e310]
+              - link "Telegram" [ref=e312] [cursor=pointer]:
+                - /url: https://t.me/wordsolverx
+                - text: Telegram
+                - img [ref=e313]
+      - generic [ref=e315]:
+        - generic [ref=e316]: Updated Daily
+        - generic [ref=e318]:
+          - generic [ref=e319]:
+            - heading "TD Today's Game Answers" [level=2] [ref=e320]:
+              - generic [ref=e321]: TD
+              - text: Today's Game Answers
+            - generic [ref=e322]:
+              - link "Bt Betweenle Today" [ref=e323] [cursor=pointer]:
+                - /url: /betweenle-answer-today
+                - generic [ref=e324]: Bt
+                - generic [ref=e325]: Betweenle Today
+              - link "Cf Colorfle Today" [ref=e326] [cursor=pointer]:
+                - /url: /colorfle-answer-today
+                - generic [ref=e327]: Cf
+                - generic [ref=e328]: Colorfle Today
+              - link "Cd Colordle Today" [ref=e329] [cursor=pointer]:
+                - /url: /colordle-answer-today
+                - generic [ref=e330]: Cd
+                - generic [ref=e331]: Colordle Today
+              - link "Cx Contexto Today" [ref=e332] [cursor=pointer]:
+                - /url: /contexto-answer-today
+                - generic [ref=e333]: Cx
+                - generic [ref=e334]: Contexto Today
+              - link "Cy Countryle Today" [ref=e335] [cursor=pointer]:
+                - /url: /countryle-answer-today
+                - generic [ref=e336]: Cy
+                - generic [ref=e337]: Countryle Today
+              - link "Do Dotadle Today" [ref=e338] [cursor=pointer]:
+                - /url: /dotadle-answer-today
+                - generic [ref=e339]: Do
+                - generic [ref=e340]: Dotadle Today
+              - link "Fr Framed Today" [ref=e341] [cursor=pointer]:
+                - /url: /framed-answer-today
+                - generic [ref=e342]: Fr
+                - generic [ref=e343]: Framed Today
+              - link "Gb Globle Today" [ref=e344] [cursor=pointer]:
+                - /url: /globle-answer-today
+                - generic [ref=e345]: Gb
+                - generic [ref=e346]: Globle Today
+              - link "Lo Loldle Today" [ref=e347] [cursor=pointer]:
+                - /url: /loldle-answer-today
+                - generic [ref=e348]: Lo
+                - generic [ref=e349]: Loldle Today
+              - link "Na Narutodle Today" [ref=e350] [cursor=pointer]:
+                - /url: /narutodle-answer-today
+                - generic [ref=e351]: Na
+                - generic [ref=e352]: Narutodle Today
+          - generic [ref=e353]:
+            - heading "AR Past Solutions Archive" [level=2] [ref=e354]:
+              - generic [ref=e355]: AR
+              - text: Past Solutions Archive
+            - generic [ref=e356]:
+              - link "Cf Colorfle Archive" [ref=e357] [cursor=pointer]:
+                - /url: /colorfle-archive
+                - generic [ref=e358]: Cf
+                - generic [ref=e359]: Colorfle Archive
+              - link "Cd Colordle Archive" [ref=e360] [cursor=pointer]:
+                - /url: /colordle-archive
+                - generic [ref=e361]: Cd
+                - generic [ref=e362]: Colordle Archive
+              - link "Cx Contexto Archive" [ref=e363] [cursor=pointer]:
+                - /url: /contexto-archive
+                - generic [ref=e364]: Cx
+                - generic [ref=e365]: Contexto Archive
+              - link "Cy Countryle Archive" [ref=e366] [cursor=pointer]:
+                - /url: /countryle-archive
+                - generic [ref=e367]: Cy
+                - generic [ref=e368]: Countryle Archive
+              - link "Fr Framed Archive" [ref=e369] [cursor=pointer]:
+                - /url: /framed-archive
+                - generic [ref=e370]: Fr
+                - generic [ref=e371]: Framed Archive
+              - link "Gb Globle Archive" [ref=e372] [cursor=pointer]:
+                - /url: /globle-archive
+                - generic [ref=e373]: Gb
+                - generic [ref=e374]: Globle Archive
+              - link "Nd Nerdle Archive" [ref=e375] [cursor=pointer]:
+                - /url: /nerdle-archive
+                - generic [ref=e376]: Nd
+                - generic [ref=e377]: Nerdle Archive
+              - link "Ph Phoodle Archive" [ref=e378] [cursor=pointer]:
+                - /url: /phoodle-archive
+                - generic [ref=e379]: Ph
+                - generic [ref=e380]: Phoodle Archive
+              - link "Pz Phrazle Archive" [ref=e381] [cursor=pointer]:
+                - /url: /phrazle-archive
+                - generic [ref=e382]: Pz
+                - generic [ref=e383]: Phrazle Archive
+              - link "Qd Quordle Archive" [ref=e384] [cursor=pointer]:
+                - /url: /quordle-archive
+                - generic [ref=e385]: Qd
+                - generic [ref=e386]: Quordle Archive
+        - generic [ref=e387]:
+          - heading "RG Related Games" [level=2] [ref=e388]:
+            - generic [ref=e389]: RG
+            - text: Related Games
+          - generic [ref=e390]:
+            - link "Wo Wordle" [ref=e391] [cursor=pointer]:
+              - /url: /wordle-answer-today
+              - generic [ref=e392]: Wo
+              - text: Wordle
+            - link "Qu Quordle" [ref=e393] [cursor=pointer]:
+              - /url: /quordle-answer-today
+              - generic [ref=e394]: Qu
+              - text: Quordle
+            - link "Ph Phoodle" [ref=e395] [cursor=pointer]:
+              - /url: /phoodle-answer-today
+              - generic [ref=e396]: Ph
+              - text: Phoodle
+            - link "Wo Worgle" [ref=e397] [cursor=pointer]:
+              - /url: /worgle-answer-today
+              - generic [ref=e398]: Wo
+              - text: Worgle
+        - paragraph [ref=e400]:
+          - text: Stuck on a tricky puzzle?
+          - link "Try our 5-Letter Wordle Solver" [ref=e401] [cursor=pointer]:
+            - /url: /5-letter-wordle-solver
+          - text: to filter clues fast, rank next guesses, and move into the right 3 to 11 letter Wordle page when you need a different board size.
+  - contentinfo [ref=e402]:
+    - generic [ref=e403]:
+      - generic [ref=e404]:
+        - generic [ref=e405]:
+          - link "W WordSolverX" [ref=e406] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e408]: W
+            - generic [ref=e409]: WordSolverX
+          - paragraph [ref=e410]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+          - generic [ref=e411]:
+            - link "Facebook" [ref=e412] [cursor=pointer]:
+              - /url: https://www.facebook.com/wordsolverx/
+              - img [ref=e413]
+            - link "Pinterest" [ref=e415] [cursor=pointer]:
+              - /url: https://www.pinterest.com/wordsolverx/
+              - img [ref=e416]
+            - link "Telegram" [ref=e418] [cursor=pointer]:
+              - /url: https://t.me/wordsolverx
+              - img [ref=e419]
+        - generic [ref=e421]:
+          - heading "Today's Answers" [level=3] [ref=e422]
+          - list [ref=e423]:
+            - listitem [ref=e424]:
+              - link "Wordle Answer" [ref=e425] [cursor=pointer]:
+                - /url: /wordle-answer-today
+            - listitem [ref=e426]:
+              - link "Quordle Answer" [ref=e427] [cursor=pointer]:
+                - /url: /quordle-answer-today
+            - listitem [ref=e428]:
+              - link "Nerdle Answer" [ref=e429] [cursor=pointer]:
+                - /url: /nerdle-answer-today
+            - listitem [ref=e430]:
+              - link "Contexto Answer" [ref=e431] [cursor=pointer]:
+                - /url: /contexto-answer-today
+            - listitem [ref=e432]:
+              - link "View All →" [ref=e433] [cursor=pointer]:
+                - /url: /today
+        - generic [ref=e434]:
+          - heading "Solver Tools" [level=3] [ref=e435]
+          - list [ref=e436]:
+            - listitem [ref=e437]:
+              - link "5-Letter Wordle Solver" [ref=e438] [cursor=pointer]:
+                - /url: /5-letter-wordle-solver
+            - listitem [ref=e439]:
+              - link "Quordle Solver" [ref=e440] [cursor=pointer]:
+                - /url: /quordle-solver
+            - listitem [ref=e441]:
+              - link "Nerdle Solver" [ref=e442] [cursor=pointer]:
+                - /url: /nerdle-solver
+            - listitem [ref=e443]:
+              - link "Wordle Analyzer" [ref=e444] [cursor=pointer]:
+                - /url: /wordle-analyzer
+            - listitem [ref=e445]:
+              - link "View All →" [ref=e446] [cursor=pointer]:
+                - /url: /solver
+        - generic [ref=e447]:
+          - heading "Resources" [level=3] [ref=e448]
+          - list [ref=e449]:
+            - listitem [ref=e450]:
+              - link "Guides & Tips" [ref=e451] [cursor=pointer]:
+                - /url: /guides
+            - listitem [ref=e452]:
+              - link "Answer Archives" [ref=e453] [cursor=pointer]:
+                - /url: /archive
+            - listitem [ref=e454]:
+              - link "About" [ref=e455] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e456]:
+              - link "Contact" [ref=e457] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e458]:
+              - link "DMCA Policy" [ref=e459] [cursor=pointer]:
+                - /url: /dmca-policy
+            - listitem [ref=e460]:
+              - link "Editorial Policy" [ref=e461] [cursor=pointer]:
+                - /url: /editorial-policy
+            - listitem [ref=e462]:
+              - link "Privacy" [ref=e463] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=e464]:
+              - button "Cookie Settings" [ref=e465]
+            - listitem [ref=e466]:
+              - link "Terms" [ref=e467] [cursor=pointer]:
+                - /url: /terms-of-service
+      - generic [ref=e468]:
+        - paragraph [ref=e469]: © 2026 WordSolverX. All rights reserved.
+        - paragraph [ref=e470]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.

@@ -24,6 +24,12 @@
     feedback: Array<Feedback | null>;
   }
 
+  interface RgbChannels {
+    r: number;
+    g: number;
+    b: number;
+  }
+
   let hexInput = $state('');
   let errorMessage = $state('');
   let suggestions = $state<SolveResult[]>([]);
@@ -31,6 +37,8 @@
   let solved = $state(false);
   let showColorPicker = $state(false);
   let pickerColor = $state('#ff0000');
+  let pickerHexInput = $state('#ff0000');
+  let pickerRgb = $state<RgbChannels>({ r: 255, g: 0, b: 0 });
 
 const faqs = [
         {
@@ -83,6 +91,63 @@ const faqs = [
     { href: '/nerdle-solver', label: 'Nerdle Solver' },
     { href: '/spotle-solver', label: 'Spotle Solver' }
   ];
+
+  function clampChannel(value: number): number {
+    return Math.min(255, Math.max(0, Math.round(value)));
+  }
+
+  function hexToRgbChannels(hex: string): RgbChannels {
+    const normalized = normalizeHex(hex);
+    const safeHex = normalized.length === 7 ? normalized : '#ff0000';
+
+    return {
+      r: Number.parseInt(safeHex.slice(1, 3), 16),
+      g: Number.parseInt(safeHex.slice(3, 5), 16),
+      b: Number.parseInt(safeHex.slice(5, 7), 16)
+    };
+  }
+
+  function rgbChannelsToHex(channels: RgbChannels): string {
+    return `#${[channels.r, channels.g, channels.b]
+      .map((value) => clampChannel(value).toString(16).padStart(2, '0'))
+      .join('')}`;
+  }
+
+  function updatePickerChannel(channel: keyof RgbChannels, value: number) {
+    const nextChannels = { ...pickerRgb, [channel]: clampChannel(value) };
+    pickerRgb = nextChannels;
+    pickerColor = rgbChannelsToHex(nextChannels);
+  }
+
+  function updatePickerHexInput(value: string) {
+    pickerHexInput = value;
+
+    if (!isValidHex(value)) {
+      return;
+    }
+
+    pickerColor = normalizeHex(value);
+  }
+
+  $effect(() => {
+    const normalized = normalizeHex(pickerColor);
+    if (normalized.length !== 7) {
+      return;
+    }
+
+    if (pickerHexInput !== normalized) {
+      pickerHexInput = normalized;
+    }
+
+    const nextChannels = hexToRgbChannels(normalized);
+    if (
+      nextChannels.r !== pickerRgb.r ||
+      nextChannels.g !== pickerRgb.g ||
+      nextChannels.b !== pickerRgb.b
+    ) {
+      pickerRgb = nextChannels;
+    }
+  });
 
   function handleSolveHex() {
     if (!isValidHex(hexInput)) {
@@ -276,8 +341,8 @@ const faqs = [
                   <input
                     type="color"
                     bind:value={pickerColor}
-                    class="w-24 h-24 appearance-none rounded-xl border-2 border-slate-300 cursor-pointer shadow-sm"
-                    style="-webkit-appearance: none; appearance: none; padding: 2px;"
+                    class="h-24 w-24 appearance-none rounded-xl border-2 border-slate-300 bg-white cursor-pointer shadow-sm"
+                    style="-webkit-appearance: none; appearance: none;"
                   />
                 </div>
                 <div class="flex-1 space-y-3">
@@ -288,6 +353,24 @@ const faqs = [
                       <span class="font-mono text-lg font-bold text-slate-900">{pickerColor}</span>
                     </div>
                   </div>
+                  <div>
+                    <label for="colorfle-picker-hex" class="text-xs font-semibold uppercase tracking-wider text-slate-400">Hex Input</label>
+                    <input
+                      id="colorfle-picker-hex"
+                      type="text"
+                      value={pickerHexInput}
+                      inputmode="text"
+                      autocapitalize="off"
+                      autocomplete="off"
+                      spellcheck="false"
+                      placeholder="#ff0000"
+                      class="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 font-mono text-sm text-slate-900"
+                      oninput={(event) => updatePickerHexInput((event.currentTarget as HTMLInputElement).value)}
+                    />
+                  </div>
+                  <p class="text-sm leading-6 text-slate-500">
+                    If your mobile browser limits the native picker, type a hex value here or use the RGB sliders below to reach the exact shade.
+                  </p>
                   <button
                     type="button"
                     class="w-full sm:w-auto rounded-xl bg-pink-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-pink-500 transition-colors shadow-sm"
@@ -295,6 +378,51 @@ const faqs = [
                   >
                     Use This Color
                   </button>
+                </div>
+              </div>
+
+              <div class="grid gap-3">
+                <div class="grid grid-cols-[4rem_1fr_3rem] items-center gap-3">
+                  <label for="colorfle-red" class="text-sm font-semibold text-slate-700">Red</label>
+                  <input
+                    id="colorfle-red"
+                    type="range"
+                    min="0"
+                    max="255"
+                    value={pickerRgb.r}
+                    class="w-full accent-rose-500"
+                    oninput={(event) =>
+                      updatePickerChannel('r', Number((event.currentTarget as HTMLInputElement).value))}
+                  />
+                  <span class="text-right font-mono text-sm text-slate-600">{pickerRgb.r}</span>
+                </div>
+                <div class="grid grid-cols-[4rem_1fr_3rem] items-center gap-3">
+                  <label for="colorfle-green" class="text-sm font-semibold text-slate-700">Green</label>
+                  <input
+                    id="colorfle-green"
+                    type="range"
+                    min="0"
+                    max="255"
+                    value={pickerRgb.g}
+                    class="w-full accent-emerald-500"
+                    oninput={(event) =>
+                      updatePickerChannel('g', Number((event.currentTarget as HTMLInputElement).value))}
+                  />
+                  <span class="text-right font-mono text-sm text-slate-600">{pickerRgb.g}</span>
+                </div>
+                <div class="grid grid-cols-[4rem_1fr_3rem] items-center gap-3">
+                  <label for="colorfle-blue" class="text-sm font-semibold text-slate-700">Blue</label>
+                  <input
+                    id="colorfle-blue"
+                    type="range"
+                    min="0"
+                    max="255"
+                    value={pickerRgb.b}
+                    class="w-full accent-sky-500"
+                    oninput={(event) =>
+                      updatePickerChannel('b', Number((event.currentTarget as HTMLInputElement).value))}
+                  />
+                  <span class="text-right font-mono text-sm text-slate-600">{pickerRgb.b}</span>
                 </div>
               </div>
             </div>

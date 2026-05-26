@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-26T20:00:49.744Z",
-  "sourceUrl": "https://colordle.ryantanen.com/colors.json",
+  "generatedAt": "2026-05-26T22:17:32.556Z",
+  "sourceUrl": "https://color-answers-worker.colordle.workers.dev/api/colordle/range",
   "startDate": "2023-08-07",
   "dayOffset": 500,
-  "entryCount": 1016,
-  "latestDate": "2026-05-18",
+  "entryCount": 1025,
+  "latestDate": "2026-05-27",
   "colors": [
     "night sky",
     "smoke",
@@ -1021,7 +1021,16 @@
     "white",
     "blue purple",
     "cobalt",
-    "tangerine"
+    "tangerine",
+    "sage green",
+    "spa",
+    "avocado",
+    "oxford blue",
+    "evergreen",
+    "storm",
+    "celeste",
+    "cadet",
+    "velvet"
   ],
   "availableDateStrings": [
     "2023-08-07",
@@ -2039,7 +2048,16 @@
     "2026-05-15",
     "2026-05-16",
     "2026-05-17",
-    "2026-05-18"
+    "2026-05-18",
+    "2026-05-19",
+    "2026-05-20",
+    "2026-05-21",
+    "2026-05-22",
+    "2026-05-23",
+    "2026-05-24",
+    "2026-05-25",
+    "2026-05-26",
+    "2026-05-27"
   ],
   "entries": [
     {
@@ -10168,6 +10186,78 @@
       "color": {
         "name": "Tangerine",
         "hex": "#ff9300"
+      }
+    },
+    {
+      "date": "2026-05-19",
+      "dayNum": 1516,
+      "color": {
+        "name": "Sage Green",
+        "hex": "#887766"
+      }
+    },
+    {
+      "date": "2026-05-20",
+      "dayNum": 1517,
+      "color": {
+        "name": "Spa",
+        "hex": "#ceece7"
+      }
+    },
+    {
+      "date": "2026-05-21",
+      "dayNum": 1518,
+      "color": {
+        "name": "Avocado",
+        "hex": "#568203"
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "dayNum": 1519,
+      "color": {
+        "name": "Oxford Blue",
+        "hex": "#002147"
+      }
+    },
+    {
+      "date": "2026-05-23",
+      "dayNum": 1520,
+      "color": {
+        "name": "Evergreen",
+        "hex": "#125b49"
+      }
+    },
+    {
+      "date": "2026-05-24",
+      "dayNum": 1521,
+      "color": {
+        "name": "Storm",
+        "hex": "#000b44"
+      }
+    },
+    {
+      "date": "2026-05-25",
+      "dayNum": 1522,
+      "color": {
+        "name": "Celeste",
+        "hex": "#b2ffff"
+      }
+    },
+    {
+      "date": "2026-05-26",
+      "dayNum": 1523,
+      "color": {
+        "name": "Cadet",
+        "hex": "#536872"
+      }
+    },
+    {
+      "date": "2026-05-27",
+      "dayNum": 1524,
+      "color": {
+        "name": "Velvet",
+        "hex": "#750851"
       }
     }
   ]

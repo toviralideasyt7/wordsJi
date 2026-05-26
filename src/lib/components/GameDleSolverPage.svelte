@@ -1,4 +1,5 @@
 <script lang="ts">
+        import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { GAME_SOLVER_CONFIGS, getSolverCrossLinks } from '$lib/game-dle/config';
         import { gameSolverSeoContent } from '$lib/game-dle/seo-content';
@@ -24,8 +25,7 @@
         const numericStates: FeedbackState[] = [null, 'green', 'yellow_up', 'yellow_down', 'red'];
 
         let characters = $state<CharacterRecord[]>([]);
-        let solverStarted = $state(false);
-        let loading = $state(false);
+        let loading = $state(true);
         let errorMessage = $state<string | null>(null);
         let searchQuery = $state('');
         let showSuggestions = $state(false);
@@ -77,7 +77,6 @@
         const webPageSchema = $derived(generateWebPageSchema(pageTitle, pageDescription, pageUrl));
 
         async function loadCharacters(dataFile: string): Promise<void> {
-                solverStarted = true;
                 loading = true;
                 errorMessage = null;
                 searchQuery = '';
@@ -106,11 +105,9 @@
                 }
         }
 
-        function startSolver(): void {
-                if (!solverStarted) {
-                        void loadCharacters(config.dataFile);
-                }
-        }
+        onMount(() => {
+                void loadCharacters(config.dataFile);
+        });
 
         function normalizeValue(value: unknown, attr: AttributeConfig): string | number | string[] {
                 if (value === null || value === undefined) {
@@ -542,24 +539,7 @@
                 </section>
 
                 <section class="rounded-3xl border border-slate-200 bg-white shadow-lg p-5 md:p-6 mb-8" style="min-height: 580px;">
-                        {#if !solverStarted}
-                                <div class="h-[540px] flex flex-col items-center justify-center gap-5 text-center">
-                                        <div class="max-w-xl">
-                                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Ready when you are</p>
-                                                <h2 class="mt-3 text-3xl font-black text-slate-900">Start the {config.name} solver</h2>
-                                                <p class="mt-3 text-slate-600">
-                                                        Character data loads only when you open the solver, so the page stays fast while keeping the same tool available.
-                                                </p>
-                                        </div>
-                                        <button
-                                                type="button"
-                                                onclick={startSolver}
-                                                class="rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white hover:bg-slate-800 transition-colors"
-                                        >
-                                                Start Solver
-                                        </button>
-                                </div>
-                        {:else if loading}
+                        {#if loading}
                                 <div class="h-[540px] flex flex-col items-center justify-center gap-3">
                                         <div class="w-10 h-10 rounded-full border-4 border-slate-300 border-t-slate-700 animate-spin"></div>
                                         <p class="text-sm text-slate-600">Loading {config.name} characters...</p>

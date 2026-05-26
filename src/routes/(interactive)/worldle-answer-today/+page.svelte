@@ -85,6 +85,8 @@
       />
     </div>
 
+    <GeneratedTodayArticle articleKey="worldle-answer-today" articleDate={data.todayDate} />
+
     <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
@@ -115,6 +117,7 @@
       <FAQSection faqs={data.faqEntries} title="Worldle Answers For The Last 10 Days" />
     </div>
 
+    {#if false}
     <article class="mt-10 space-y-8">
       <section class="rounded-3xl border border-slate-200 bg-white p-5 sm:p-8 shadow-xl shadow-slate-200/60">
         <h2 class="text-3xl font-black tracking-tight text-slate-900">Reading the shape today</h2>
@@ -179,8 +182,7 @@
         </div>
       </section>
     </article>
-
-    <GeneratedTodayArticle articleKey="worldle-answer-today" articleDate={data.todayDate} />
+    {/if}
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

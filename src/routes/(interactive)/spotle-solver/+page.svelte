@@ -1,4 +1,5 @@
 <script lang="ts">
+        import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
         import { generateBreadcrumbSchema } from '$lib/seo';
@@ -18,6 +19,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
 
         let dataLoaded = $state(false);
         let dataLoading = $state(false);
+        let loadError = $state('');
         let artists = $state<SpotleArtist[]>([]);
         let searchQuery = $state('');
         let showDropdown = $state(false);
@@ -64,6 +66,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         async function loadSpotleData() {
                 if (dataLoaded || dataLoading) return;
                 dataLoading = true;
+                loadError = '';
                 try {
                         const response = await fetch('/spotle_data.json');
                         if (!response.ok) {
@@ -74,11 +77,16 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                         dataLoaded = true;
                 } catch (error) {
                         console.error('Spotle data load error', error);
+                        loadError = 'The Spotle artist database could not load right now. Try reloading the page.';
                         dataLoaded = true;
                 } finally {
                         dataLoading = false;
                 }
         }
+
+        onMount(() => {
+                void loadSpotleData();
+        });
 
         const searchResults = $derived.by(() => {
                 const query = searchQuery.trim().toLowerCase();
@@ -205,21 +213,21 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
 
                 {#if !dataLoaded}
                         <div class="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-lg">
-                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Performance optimized</p>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Loading</p>
                                 <h2 class="mt-3 text-2xl font-black text-slate-900">Spotle solver database</h2>
                                 <p class="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-                                        The page content is ready now. Load the artist database when you want to start filtering guesses.
+                                        The artist pool is loading automatically so the solver can render as soon as it is ready.
                                 </p>
-                                <button
-                                        type="button"
-                                        class="mt-5 inline-flex min-h-12 items-center justify-center rounded-full bg-teal-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-teal-600/20 transition hover:-translate-y-0.5 hover:bg-teal-500 disabled:cursor-wait disabled:opacity-70"
-                                        disabled={dataLoading}
-                                        onclick={loadSpotleData}
-                                >
-                                        {dataLoading ? 'Loading Spotle data...' : 'Start Spotle solver'}
-                                </button>
+                                <div class="mt-5 inline-flex min-h-12 items-center justify-center rounded-full bg-teal-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-teal-600/20">
+                                        Loading Spotle data...
+                                </div>
                         </div>
                 {:else}
+                        {#if loadError}
+                                <div class="mb-6 rounded-2xl border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700 shadow-sm">
+                                        {loadError}
+                                </div>
+                        {/if}
                         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                                 <section class="lg:col-span-4 space-y-6">
                                         <div class="bg-white border border-slate-200 rounded-3xl p-5 shadow-lg">

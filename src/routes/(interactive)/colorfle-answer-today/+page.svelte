@@ -238,6 +238,13 @@
         </div>
       </section>
 
+      <GeneratedTodayArticle
+        articleKey="colorfle-answer-today"
+        articleDate={data.dateKey ?? ''}
+        fallbackTitle={`Colorfle notes for ${data.formattedDate}`}
+        fallbackSummary={data.meta.description}
+      />
+
       <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div>
@@ -292,6 +299,7 @@
         </div>
       </section>
 
+      {#if false}
       <article class="mt-8 space-y-8">
         <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 class="text-3xl font-black tracking-tight text-slate-900">What changed on this page</h2>
@@ -326,13 +334,7 @@
           </div>
         </section>
       </article>
-
-      <GeneratedTodayArticle
-        articleKey="colorfle-answer-today"
-        articleDate={data.dateKey ?? ''}
-        fallbackTitle={`Colorfle notes for ${data.formattedDate}`}
-        fallbackSummary={data.meta.description}
-      />
+      {/if}
 
       <div class="mt-8">
         <AuthorCard

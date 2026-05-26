@@ -55,12 +55,7 @@ export const load: PageServerLoad = async () => {
       image: 'https://wordsolverx.com/author-wordsolverx.webp',
       jobTitle: 'Word Puzzle Analyst',
       knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-      sameAs: [
-        'https://www.linkedin.com/in/preston-hayes-wordsolverx/',
-        'https://x.com/WordSolverX',
-        'https://www.facebook.com/wordsolverx/',
-        'https://t.me/wordsolverx'
-      ]
+      sameAs: ['https://www.pinterest.com/wordsolverx/']
     },
     publisher: {
       '@type': 'Organization',

@@ -4,13 +4,13 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
+  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
-  import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
 
   let { data } = $props();
   let historySearch = $state('');
@@ -19,9 +19,7 @@
   const publishedDate = $derived(data.publishedDate ?? null);
   const requestedDateLabel = $derived(data.requestedFormattedDate ?? data.formattedDate ?? 'today');
   const answerDateLabel = $derived(data.formattedDate ?? requestedDateLabel);
-  const generatedArticle = $derived(data.generatedArticle ?? null);
-  const hasGeneratedArticle = $derived(Boolean(generatedArticle?.articleHtml));
-  const generatedBonusHints = $derived(generatedArticle?.bonusHints ?? []);
+  const generatedBonusHints = $derived(data.generatedArticle?.bonusHints ?? []);
   const historyEntries = $derived(data.last100Days ?? []);
   const noscriptAnswer = $derived(
     `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim() || null
@@ -182,20 +180,13 @@
         </section>
       {/if}
 
-      {#if hasGeneratedArticle}
-        <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Daily write-up</p>
-          <h2 class="mt-2 text-3xl font-black text-slate-900">
-            {generatedArticle?.title ?? `Colordle notes for ${answerDateLabel}`}
-          </h2>
-          {#if generatedArticle?.summary}
-            <p class="mt-4 text-lg leading-8 text-slate-600">{generatedArticle.summary}</p>
-          {/if}
-          <div class="prose prose-lg mt-6 max-w-none prose-headings:text-slate-900 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-indigo-600">
-            {@html sanitizeGeneratedArticleHtml(generatedArticle?.articleHtml ?? '')}
-          </div>
-        </section>
-      {/if}
+      <GeneratedTodayArticle
+        articleKey="colordle-answer-today"
+        articleDate={data.dateKey}
+        eyebrow="Daily write-up"
+        fallbackTitle={`Colordle notes for ${answerDateLabel}`}
+        fallbackSummary={data.meta?.description ?? ''}
+      />
 
       <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

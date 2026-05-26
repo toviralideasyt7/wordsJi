@@ -16,7 +16,7 @@
   class="mx-auto w-full max-w-4xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg dark:border-slate-800 dark:bg-slate-900"
   aria-labelledby="author-heading"
 >
-  <div class="flex items-start gap-4 p-5 sm:gap-6 sm:p-7">
+  <div class="flex flex-col items-center gap-4 p-5 text-center sm:flex-row sm:items-start sm:gap-6 sm:p-7 sm:text-left">
     <div class="shrink-0 rounded-3xl bg-gradient-to-br from-teal-50 via-white to-sky-50 p-2 shadow-sm ring-1 ring-black/5 dark:from-teal-950/30 dark:via-slate-900 dark:to-sky-950/30 dark:ring-white/10">
       <img
         src={image}
@@ -40,9 +40,9 @@
         {description}
       </p>
       <!-- E-E-A-T: External profile links so readers and Google can verify the author's identity -->
-      <div class="mt-3 flex flex-wrap gap-3">
+      <div class="mt-3 flex flex-wrap justify-center gap-3 sm:justify-start">
         {#each PRESTON_HAYES_AUTHOR_SAME_AS as profileUrl}
-          {@const label = profileUrl.includes('linkedin.com') ? 'LinkedIn' : profileUrl.includes('x.com') || profileUrl.includes('twitter.com') ? 'X (Twitter)' : profileUrl.includes('facebook.com') ? 'Facebook' : profileUrl.includes('t.me') ? 'Telegram' : 'Profile'}
+          {@const label = profileUrl.includes('pinterest.com') ? 'Pinterest' : 'Profile'}
           <a
             href={profileUrl}
             target="_blank"

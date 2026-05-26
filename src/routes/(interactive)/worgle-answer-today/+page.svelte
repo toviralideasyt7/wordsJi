@@ -160,6 +160,8 @@
                         </div>
                 </section>
 
+                <GeneratedTodayArticle articleKey="worgle-answer-today" articleDate={data.todayKey} />
+
                 <section class="mt-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                         <h2 class="text-2xl font-black text-slate-900">Recent Worgle answers</h2>
                         <p class="mt-3 text-base leading-7 text-slate-600">
@@ -178,6 +180,7 @@
                         </div>
                 </section>
 
+                {#if false}
                 <!-- SEO Article -->
                 <article class="mt-10 space-y-8">
                         <section class="rounded-[2rem] border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
@@ -363,9 +366,9 @@
                                 </div>
                         </section>
                 </article>
+                {/if}
 
                 <div class="mt-12">
-                        <GeneratedTodayArticle articleKey="worgle-answer-today" articleDate={data.todayKey} />
                         <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}

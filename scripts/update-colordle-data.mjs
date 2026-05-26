@@ -11,6 +11,9 @@ const projectRoot = path.resolve(__dirname, '..');
 
 const COLORDLE_SOURCE_URL =
 	process.env.COLORDLE_SOURCE_URL ?? 'https://colordle.ryantanen.com/colors.json';
+const COLOR_ANSWERS_API_BASE = (
+	process.env.COLOR_ANSWERS_API_BASE ?? 'https://color-answers-worker.colordle.workers.dev'
+).replace(/\/+$/, '');
 const START_DATE = '2023-08-07';
 const DAY_OFFSET = 500;
 const JST_TIME_ZONE = 'Asia/Tokyo';
@@ -77,7 +80,7 @@ function getExpectedLatestDate(now = new Date()) {
 	return `${values.year}-${values.month}-${values.day}`;
 }
 
-function buildDataset(colors) {
+function buildDataset(colors, sourceUrl = COLORDLE_SOURCE_URL) {
 	const availableDateStrings = colors.map((_, index) => buildDateKey(index));
 	const entries = colors.map((name, index) => ({
 		date: availableDateStrings[index],
@@ -87,7 +90,7 @@ function buildDataset(colors) {
 
 	return {
 		generatedAt: new Date().toISOString(),
-		sourceUrl: COLORDLE_SOURCE_URL,
+		sourceUrl,
 		startDate: START_DATE,
 		dayOffset: DAY_OFFSET,
 		entryCount: entries.length,
@@ -145,8 +148,39 @@ async function loadFallbackColors() {
 	throw new Error('No existing Colordle dataset is available for fallback.');
 }
 
-async function writeDataset(colors) {
-	const dataset = buildDataset(colors);
+async function fetchWorkerColors(fromDateKey, toDateKey) {
+	const response = await fetch(
+		`${COLOR_ANSWERS_API_BASE}/api/colordle/range?from=${fromDateKey}&to=${toDateKey}`,
+		{
+			headers: {
+				accept: 'application/json',
+				'cache-control': 'no-cache',
+				'user-agent':
+					'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 WordSolverX Colordle Worker Sync'
+			}
+		}
+	);
+
+	if (!response.ok) {
+		throw new Error(`Colordle worker API responded with ${response.status}`);
+	}
+
+	const payload = await response.json();
+	if (!Array.isArray(payload) || payload.length === 0) {
+		throw new Error('Colordle worker API returned an empty range');
+	}
+
+	return payload
+		.slice()
+		.sort((left, right) => String(left.date).localeCompare(String(right.date)))
+		.map((entry) => ({
+			date: String(entry.date),
+			colorName: String(entry.color_name)
+		}));
+}
+
+async function writeDataset(colors, sourceUrl = COLORDLE_SOURCE_URL) {
+	const dataset = buildDataset(colors, sourceUrl);
 
 	await mkdir(path.dirname(targetPath), { recursive: true });
 	await mkdir(path.dirname(staticDataPath), { recursive: true });
@@ -162,6 +196,7 @@ async function main() {
 	let outputMode = 'fresh source data';
 	let failureMessage = '';
 	let shouldMarkFailure = false;
+	let datasetSourceUrl = COLORDLE_SOURCE_URL;
 	const existingColors = await loadFallbackColors();
 
 	try {
@@ -169,6 +204,7 @@ async function main() {
 	} catch (error) {
 		colors = existingColors;
 		outputMode = 'cached fallback data';
+		datasetSourceUrl = COLORDLE_SOURCE_URL;
 		failureMessage = error instanceof Error ? error.message : String(error);
 		shouldMarkFailure = true;
 		console.warn(
@@ -181,6 +217,7 @@ async function main() {
 		const remoteCount = colors.length;
 		colors = existingColors;
 		outputMode = 'cached fallback data';
+		datasetSourceUrl = COLORDLE_SOURCE_URL;
 		failureMessage = `Colordle source returned ${remoteCount} colors, which is shorter than the local dataset (${existingColors.length}).`;
 		shouldMarkFailure = true;
 	}
@@ -190,11 +227,51 @@ async function main() {
 
 	if (!shouldMarkFailure && remoteLatestDate < expectedLatestDate) {
 		outputMode = 'stale source data';
+		datasetSourceUrl = COLORDLE_SOURCE_URL;
 		failureMessage = `Colordle source is only available through ${remoteLatestDate}; expected at least ${expectedLatestDate}.`;
 		shouldMarkFailure = true;
 	}
 
-	const dataset = await writeDataset(colors);
+	if (shouldMarkFailure) {
+		try {
+			const missingStartDate = buildDateKey(existingColors.length);
+			const workerEntries = await fetchWorkerColors(missingStartDate, expectedLatestDate);
+			const mergedWorkerColors = [...existingColors];
+			let expectedNextDate = missingStartDate;
+			let workerMergeSucceeded = workerEntries.length > 0;
+
+			for (const entry of workerEntries) {
+				if (entry.date < expectedNextDate) {
+					continue;
+				}
+
+				if (entry.date !== expectedNextDate) {
+					workerMergeSucceeded = false;
+					break;
+				}
+
+				mergedWorkerColors.push(entry.colorName);
+				expectedNextDate = buildDateKey(mergedWorkerColors.length);
+			}
+
+			const workerLatestDate = buildDateKey(mergedWorkerColors.length - 1);
+
+			if (workerMergeSucceeded && workerLatestDate >= expectedLatestDate) {
+				colors = mergedWorkerColors;
+				outputMode = 'live worker data';
+				datasetSourceUrl = `${COLOR_ANSWERS_API_BASE}/api/colordle/range`;
+				failureMessage = '';
+				shouldMarkFailure = false;
+			}
+		} catch (error) {
+			console.warn(
+				`Failed to refresh Colordle data from ${COLOR_ANSWERS_API_BASE}. Reusing the best local dataset available.`,
+				error
+			);
+		}
+	}
+
+	const dataset = await writeDataset(colors, datasetSourceUrl);
 
 	if (shouldMarkFailure) {
 		await markUpdateFailure(

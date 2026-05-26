@@ -10,8 +10,6 @@
   let isLoading = $state(false);
   let errorMessage = $state('');
   let cleanup: (() => void) | undefined;
-  let fallbackTimer: number | null = null;
-  let fallbackFrame: number | null = null;
 
   function prepareShadowStyles(css: string) {
     return css
@@ -22,46 +20,11 @@
       .replace(/\.shadow-body/g, '.wasm-body');
   }
 
-  function clearFallbackStart() {
-    if (fallbackFrame !== null) {
-      cancelAnimationFrame(fallbackFrame);
-      fallbackFrame = null;
-    }
-
-    if (fallbackTimer !== null) {
-      clearTimeout(fallbackTimer);
-      fallbackTimer = null;
-    }
-  }
-
-  function scheduleFallbackStart() {
-    if (typeof window === 'undefined' || isStarted || isLoading) {
-      return;
-    }
-
-    clearFallbackStart();
-
-    fallbackFrame = window.requestAnimationFrame(() => {
-      fallbackFrame = null;
-      if (host && !isStarted && !isLoading) {
-        void start();
-      }
-    });
-
-    fallbackTimer = window.setTimeout(() => {
-      fallbackTimer = null;
-      if (host && !isStarted && !isLoading) {
-        void start();
-      }
-    }, 1200);
-  }
-
   async function start() {
     if (!host || isStarted || isLoading) {
       return;
     }
 
-    clearFallbackStart();
     isStarted = true;
     isLoading = true;
     errorMessage = '';
@@ -97,43 +60,18 @@
   }
 
   onMount(() => {
-    if (typeof window === 'undefined') return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting && !isStarted && !isLoading) {
-            void start();
-            return;
-          }
-        }
-      },
-      { rootMargin: '200px', threshold: 0.05 }
-    );
-
-    if (host) {
-      observer.observe(host);
-      const rect = host.getBoundingClientRect();
-      if (rect.top <= window.innerHeight + 200 && rect.bottom >= -200) {
-        void start();
-      } else {
-        scheduleFallbackStart();
-      }
-    }
-
+    void start();
     return () => {
-      observer.disconnect();
-      clearFallbackStart();
+      cleanup?.();
     };
   });
 
   onDestroy(() => {
-    clearFallbackStart();
     cleanup?.();
   });
 </script>
 
-{#if !isStarted}
+{#if !isStarted || isLoading}
   <WordlebotSkeleton {config} />
 {/if}
 

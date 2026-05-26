@@ -82,15 +82,15 @@
     />
 
     {#if distinctGeneratedArticle}
-      <section class="mt-12 rounded-3xl border border-slate-100 bg-white p-8 shadow-lg">
+      <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's notes</p>
         <h2 class="mt-2 text-3xl font-bold text-slate-900">
           {distinctGeneratedArticle.title || "Today's Wordle Breakdown"}
         </h2>
         {#if distinctGeneratedArticle.summary}
-          <p class="mt-4 text-lg leading-8 text-slate-600">{distinctGeneratedArticle.summary}</p>
+          <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{distinctGeneratedArticle.summary}</p>
         {/if}
-        <div class="prose prose-lg mt-6 max-w-none">
+        <div class="prose mt-5 max-w-none prose-slate prose-h2:mb-3 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-black prose-h2:text-slate-900 prose-h3:mb-2 prose-h3:mt-6 prose-h3:text-lg prose-h3:font-bold prose-h3:text-slate-900 prose-p:my-4 prose-p:text-base prose-p:leading-7 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-teal-600">
           {@html sanitizeGeneratedArticleHtml(distinctGeneratedArticle.articleHtml ?? '')}
         </div>
       </section>

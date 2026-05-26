@@ -1,0 +1,245 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e10]: W
+        - generic [ref=e11]: WordSolverX
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Today's Answers" [ref=e14] [cursor=pointer]:
+          - /url: /today
+        - link "Solvers" [ref=e15] [cursor=pointer]:
+          - /url: /solver
+        - link "Archives" [ref=e16] [cursor=pointer]:
+          - /url: /archive
+        - link "Guides" [ref=e17] [cursor=pointer]:
+          - /url: /guides
+        - link "About" [ref=e18] [cursor=pointer]:
+          - /url: /about
+  - main [ref=e19]:
+    - main [ref=e20]:
+      - generic [ref=e22]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - link "Home" [ref=e26] [cursor=pointer]:
+                - /url: /
+                - img [ref=e27]
+                - generic [ref=e30]: Home
+            - listitem [ref=e31]:
+              - img [ref=e32]
+              - generic [ref=e34]: 5 Letter Wordle Solver
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Wordle solver by word length
+          - heading "5-Letter Wordle Solver" [level=1] [ref=e37]
+          - paragraph [ref=e38]: Use the 5-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.
+          - generic [ref=e39]:
+            - generic [ref=e40]: 5 letters
+            - generic [ref=e41]: Hard mode
+            - generic [ref=e42]: Fast clue filtering
+          - link "See Wordle answer today" [ref=e43] [cursor=pointer]:
+            - /url: /wordle-answer-today
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - heading "5-Letter Wordle Solver" [level=2] [ref=e47]
+          - paragraph [ref=e48]: Type a guess, match the clue tiles to your puzzle, then review the ranked answers.
+        - generic [ref=e52]:
+          - generic [ref=e53]: C
+          - generic [ref=e54]: R
+          - generic [ref=e55]: A
+          - generic [ref=e56]: "N"
+          - generic [ref=e57]: E
+        - generic [ref=e90]: Loading interactive solver…
+      - generic [ref=e95]:
+        - heading "5-Letter Wordle Solver FAQs" [level=2] [ref=e96]
+        - generic [ref=e97]:
+          - group [ref=e98]:
+            - generic "How does the 5-letter Wordle solver work?" [ref=e99] [cursor=pointer]:
+              - generic [ref=e100]: How does the 5-letter Wordle solver work?
+              - img [ref=e101]
+          - group [ref=e103]:
+            - generic "Why does this page only show 5-letter words?" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: Why does this page only show 5-letter words?
+              - img [ref=e106]
+          - group [ref=e108]:
+            - generic "What is the best starting word for 5-letter Wordle?" [ref=e109] [cursor=pointer]:
+              - generic [ref=e110]: What is the best starting word for 5-letter Wordle?
+              - img [ref=e111]
+          - group [ref=e113]:
+            - generic "How does hard mode work with the 5-letter solver?" [ref=e114] [cursor=pointer]:
+              - generic [ref=e115]: How does hard mode work with the 5-letter solver?
+              - img [ref=e116]
+          - group [ref=e118]:
+            - generic "How many possible 5-letter answers are there?" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: How many possible 5-letter answers are there?
+              - img [ref=e121]
+          - group [ref=e123]:
+            - generic "What about duplicate letters at 5 letters?" [ref=e124] [cursor=pointer]:
+              - generic [ref=e125]: What about duplicate letters at 5 letters?
+              - img [ref=e126]
+          - group [ref=e128]:
+            - generic "Can I use this solver for daily Wordle?" [ref=e129] [cursor=pointer]:
+              - generic [ref=e130]: Can I use this solver for daily Wordle?
+              - img [ref=e131]
+          - group [ref=e133]:
+            - generic "Does the 5-letter solver work for Wordle variants?" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]: Does the 5-letter solver work for Wordle variants?
+              - img [ref=e136]
+          - group [ref=e138]:
+            - generic "How does letter frequency affect 5-letter strategy?" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]: How does letter frequency affect 5-letter strategy?
+              - img [ref=e141]
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - heading "How to use the 5-letter Wordle solver" [level=2] [ref=e145]
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: "1"
+              - heading "Type your guess" [level=3] [ref=e149]
+              - paragraph [ref=e150]: Enter the 5-letter word you played in Wordle.
+            - generic [ref=e151]:
+              - generic [ref=e152]: "2"
+              - heading "Match the clue colors" [level=3] [ref=e153]
+              - paragraph [ref=e154]: Tap each tile until it matches the gray, yellow, or green result from your game.
+            - generic [ref=e155]:
+              - generic [ref=e156]: "3"
+              - heading "Review the ranked answers" [level=3] [ref=e157]
+              - paragraph [ref=e158]: Run the solver to see the best next guesses and the most likely remaining answers.
+        - article [ref=e159]:
+          - generic [ref=e160]:
+            - heading "Why 5-letter is the canonical Wordle length" [level=2] [ref=e161]
+            - generic [ref=e162]:
+              - paragraph [ref=e163]: 5-letter Wordle has roughly 2,300 accepted answers — the sweet spot between too few options (making it trivial) and too many (making it impossible without a solver).
+              - paragraph [ref=e164]: The 2,300-word pool is large enough to require systematic elimination but small enough that good starting words get you most of the way. The solver handles the last mile.
+              - paragraph [ref=e165]: This is the format the NYT Wordle uses, which means most strategy content, starting word discussions, and solver tools are optimized for 5 letters.
+          - generic [ref=e166]:
+            - 'heading "CRANE vs SLATE vs ADIEU: the starting word debate" [level=2] [ref=e167]'
+            - generic [ref=e168]:
+              - paragraph [ref=e169]: CRANE has been the classic 5-letter starter for years because it hits five common letters (C, R, A, N, E) with good position spread. No letter repeats, no rare consonants.
+              - paragraph [ref=e170]: SLATE is a strong alternative with S, L, A, T, E — four common letters and one less common (L). It performs similarly to CRANE in letter frequency analysis.
+              - paragraph [ref=e171]: ADIEU is vowel-heavy (A, D, I, E, U — four vowels) which gives you fast vowel information but risks wasting a tile on U if the answer has few vowels. Use it when your variant seems vowel-rich.
+          - generic [ref=e172]:
+            - heading "Letter frequency patterns at 5 letters" [level=2] [ref=e173]
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: E, A, R, O, T, L, I, S, N, C, U, are the most common 5-letter letters in roughly that order. Getting a green on E, A, or R is high-value because they appear in the majority of answers.
+              - paragraph [ref=e176]: Rare letters like Q, X, Z, and J appear in fewer than 2% of 5-letter answers. Avoid starting with them unless you are guessing based on confirmed clue information.
+              - paragraph [ref=e177]: The solver ranks candidates by letter frequency within the 5-letter pool specifically. This means the top suggestion after your first guess is optimized for 5-letter Wordle, not generic English.
+          - generic [ref=e178]:
+            - 'heading "Duplicate letters at 5 letters: TEETH, PRESS,llama" [level=2] [ref=e179]'
+            - generic [ref=e180]:
+              - paragraph [ref=e181]: TEETH, PRESS,llama — duplicate letters are surprisingly common at 5 letters. They fool people because you expect five different positions and the mixed feedback (some green, some yellow) seems contradictory.
+              - paragraph [ref=e182]: When you guess TEETH and get green-yellow-yellow-gray-gray, it means the first E is in the right position, the second and third E are in the word but wrong positions, and T and H are absent.
+              - paragraph [ref=e183]: The solver handles duplicate letter math automatically. When you set feedback for a word with repeated letters, the solver knows to treat each tile independently based on the actual answer pattern.
+          - generic [ref=e184]:
+            - heading "Why hard mode at 5 letters gets seriously hard" [level=2] [ref=e185]
+            - generic [ref=e186]:
+              - paragraph [ref=e187]: Hard mode at 5 letters requires satisfying five simultaneous locks — confirmed greens in their exact positions and confirmed yellows somewhere else in the word. One wrong lock can waste multiple guesses.
+              - paragraph [ref=e188]: The most common hard mode mistake is locking in a yellow as if it were green. A yellow means the letter is in the word but not in that position. Treating it as locked in the same spot breaks the puzzle.
+              - paragraph [ref=e189]: The solver finds valid 5-letter words that satisfy all your hard mode locks. You pick which candidate to play — the solver just ensures it is a real answer that respects your constraints.
+          - generic [ref=e190]:
+            - heading "The 2,300-word pool and when to use the solver" [level=2] [ref=e191]
+            - generic [ref=e192]:
+              - paragraph [ref=e193]: With 2,300 answers, you can usually get to the last 10-20 candidates through good starting words and systematic elimination. The solver helps at the tail end when you cannot track the overlapping constraints mentally.
+              - paragraph [ref=e194]: Two confirmed letters in the right positions (two greens) typically narrows the pool to under 50 candidates. Three greens narrows to under 10. The solver sorts those final candidates by likelihood.
+              - paragraph [ref=e195]: Use the solver when you have two or more confirmed clues and cannot easily find all remaining words that satisfy them.
+          - generic [ref=e196]:
+            - heading "Strategy pivots in 5-letter Wordle" [level=2] [ref=e197]
+            - generic [ref=e198]:
+              - paragraph [ref=e199]: "Early game: maximize information. Pick starting words that use common letters in diverse positions. CRANE or SLATE gives you the broadest feedback coverage."
+              - paragraph [ref=e200]: "Mid game: eliminate aggressively. Once you have confirmed letters, use the solver to find words that satisfy all constraints. Do not keep guessing randomly — let the elimination algorithm work."
+              - paragraph [ref=e201]: "Late game: when you have under 5 candidates, pick the one with the best letter frequency score. The solver ranks by this automatically."
+          - generic [ref=e202]:
+            - heading "Why 5 letters feels like the sweet spot" [level=2] [ref=e203]
+            - generic [ref=e204]:
+              - paragraph [ref=e205]: Five tiles is enough to have interesting letter position complexity but few enough that good starting words cover most of the information space. The game feels balanced.
+              - paragraph [ref=e206]: The 5-letter answer pool aligns with the natural vocabulary size most English speakers have. You probably know most of the 2,300 answers, which means the game feels fair even when you lose.
+              - paragraph [ref=e207]: The solver enhances the experience without breaking it. At 5 letters, you can still solve manually and feel the satisfaction — the solver just helps when you get genuinely stuck.
+  - contentinfo [ref=e208]:
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - link "W WordSolverX" [ref=e212] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e214]: W
+            - generic [ref=e215]: WordSolverX
+          - paragraph [ref=e216]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+          - generic [ref=e217]:
+            - link "Facebook" [ref=e218] [cursor=pointer]:
+              - /url: https://www.facebook.com/wordsolverx/
+              - img [ref=e219]
+            - link "Pinterest" [ref=e221] [cursor=pointer]:
+              - /url: https://www.pinterest.com/wordsolverx/
+              - img [ref=e222]
+            - link "Telegram" [ref=e224] [cursor=pointer]:
+              - /url: https://t.me/wordsolverx
+              - img [ref=e225]
+        - generic [ref=e227]:
+          - heading "Today's Answers" [level=3] [ref=e228]
+          - list [ref=e229]:
+            - listitem [ref=e230]:
+              - link "Wordle Answer" [ref=e231] [cursor=pointer]:
+                - /url: /wordle-answer-today
+            - listitem [ref=e232]:
+              - link "Quordle Answer" [ref=e233] [cursor=pointer]:
+                - /url: /quordle-answer-today
+            - listitem [ref=e234]:
+              - link "Nerdle Answer" [ref=e235] [cursor=pointer]:
+                - /url: /nerdle-answer-today
+            - listitem [ref=e236]:
+              - link "Contexto Answer" [ref=e237] [cursor=pointer]:
+                - /url: /contexto-answer-today
+            - listitem [ref=e238]:
+              - link "View All →" [ref=e239] [cursor=pointer]:
+                - /url: /today
+        - generic [ref=e240]:
+          - heading "Solver Tools" [level=3] [ref=e241]
+          - list [ref=e242]:
+            - listitem [ref=e243]:
+              - link "5-Letter Wordle Solver" [ref=e244] [cursor=pointer]:
+                - /url: /5-letter-wordle-solver
+            - listitem [ref=e245]:
+              - link "Quordle Solver" [ref=e246] [cursor=pointer]:
+                - /url: /quordle-solver
+            - listitem [ref=e247]:
+              - link "Nerdle Solver" [ref=e248] [cursor=pointer]:
+                - /url: /nerdle-solver
+            - listitem [ref=e249]:
+              - link "Wordle Analyzer" [ref=e250] [cursor=pointer]:
+                - /url: /wordle-analyzer
+            - listitem [ref=e251]:
+              - link "View All →" [ref=e252] [cursor=pointer]:
+                - /url: /solver
+        - generic [ref=e253]:
+          - heading "Resources" [level=3] [ref=e254]
+          - list [ref=e255]:
+            - listitem [ref=e256]:
+              - link "Guides & Tips" [ref=e257] [cursor=pointer]:
+                - /url: /guides
+            - listitem [ref=e258]:
+              - link "Answer Archives" [ref=e259] [cursor=pointer]:
+                - /url: /archive
+            - listitem [ref=e260]:
+              - link "About" [ref=e261] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e262]:
+              - link "Contact" [ref=e263] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e264]:
+              - link "DMCA Policy" [ref=e265] [cursor=pointer]:
+                - /url: /dmca-policy
+            - listitem [ref=e266]:
+              - link "Editorial Policy" [ref=e267] [cursor=pointer]:
+                - /url: /editorial-policy
+            - listitem [ref=e268]:
+              - link "Privacy" [ref=e269] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=e270]:
+              - button "Cookie Settings" [ref=e271]
+            - listitem [ref=e272]:
+              - link "Terms" [ref=e273] [cursor=pointer]:
+                - /url: /terms-of-service
+      - generic [ref=e274]:
+        - paragraph [ref=e275]: © 2026 WordSolverX. All rights reserved.
+        - paragraph [ref=e276]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.

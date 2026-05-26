@@ -21,6 +21,8 @@
       ? data.entries.map((entry) => `${entry.game}: ${entry.answer}`).join(' | ')
       : null
   );
+  const featuredEntry = $derived(data.hasExactEntries ? data.entries[0] ?? null : null);
+  const remainingEntries = $derived(data.hasExactEntries ? data.entries.slice(1) : []);
 </script>
 
 <svelte:head>
@@ -61,13 +63,26 @@
       </div>
     </section>
 
-    <section class="grid gap-5 sm:grid-cols-2">
+    <section class="space-y-5">
       {#if data.hasExactEntries}
-        {#each data.entries as entry}
-          <FramedAnswerCard game={entry.game} answer={entry.answer} puzzleNumber={entry.puzzleNumber} />
-        {/each}
+        {#if featuredEntry}
+          <FramedAnswerCard
+            game={featuredEntry.game}
+            answer={featuredEntry.answer}
+            puzzleNumber={featuredEntry.puzzleNumber}
+            featured={true}
+          />
+        {/if}
+
+        {#if remainingEntries.length > 0}
+          <div class="grid items-start gap-5 md:grid-cols-3">
+            {#each remainingEntries as entry}
+              <FramedAnswerCard game={entry.game} answer={entry.answer} puzzleNumber={entry.puzzleNumber} />
+            {/each}
+          </div>
+        {/if}
       {:else}
-        <div class="sm:col-span-2 rounded-3xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
+        <div class="rounded-3xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
           <h2 class="text-2xl font-black">Today's Framed answers aren't available yet</h2>
           <p class="mt-3 text-base text-amber-900">
             Today's Framed answers aren't available yet. Check back after midnight, or browse the archive for past puzzles in the meantime.
@@ -79,6 +94,9 @@
       {/if}
     </section>
 
+    <GeneratedTodayArticle articleKey="framed-answer-today" articleDate={todayKey} />
+
+    {#if false}
     <article class="space-y-8">
       <section class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
         <h2 class="text-3xl font-black tracking-tight text-slate-900">What you're looking at today</h2>
@@ -140,8 +158,8 @@
         </div>
       </section>
     </article>
+    {/if}
 
-    <GeneratedTodayArticle articleKey="framed-answer-today" articleDate={todayKey} />
     <AuthorCard
       name={PRESTON_HAYES_AUTHOR_NAME}
       image={PRESTON_HAYES_AUTHOR_IMAGE}

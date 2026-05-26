@@ -206,6 +206,9 @@
         </section>
       {/if}
 
+      <GeneratedTodayArticle articleKey="canuckle-answer-today" articleDate={data.visibleDateKey} />
+
+      {#if false}
       <!-- Thin Separator -->
       <div class="flex items-center gap-4 py-2">
         <div class="flex-1 h-px bg-slate-200"></div>
@@ -276,6 +279,8 @@
             </details>
           </div>
         </section>
+      </article>
+      {/if}
 
         <!-- Recent 30-Day Answers -->
         {#if data.last30 && data.last30.length > 0}
@@ -303,9 +308,6 @@
             </div>
           </section>
         {/if}
-      </article>
-
-      <GeneratedTodayArticle articleKey="canuckle-answer-today" articleDate={data.visibleDateKey} />
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

@@ -19,27 +19,20 @@
   } = $props();
 
   const article = $derived(getTodayPageArticle(articleKey, articleDate, { allowStaleDate }));
-
-  // Reused stored articles can still display their own saved date when it differs from the page date.
-  const displayDate = $derived(article?.date && article.date !== articleDate ? article.date : articleDate);
 </script>
 
 {#if article?.articleHtml}
-  <section class="mt-12 rounded-3xl border border-slate-100 bg-white p-8 shadow-lg">
+  <section class="mx-auto mt-10 w-full max-w-5xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
     <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">{eyebrow}</p>
-    <p class="text-xs text-slate-400 mt-1">
-      <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 align-middle"></span>
-      Updated {displayDate}
-    </p>
     <h2 class="mt-2 text-3xl font-bold text-slate-900">
       {article.title || fallbackTitle}
     </h2>
     {#if article.summary || fallbackSummary}
-      <p class="mt-4 text-lg leading-8 text-slate-600">
+      <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">
         {article.summary || fallbackSummary}
       </p>
     {/if}
-    <div class="prose prose-lg mt-6 max-w-none prose-headings:scroll-mt-28 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-teal-600">
+    <div class="prose mt-5 max-w-none prose-slate prose-headings:scroll-mt-28 prose-h2:mb-3 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-black prose-h2:text-slate-900 prose-h3:mb-2 prose-h3:mt-6 prose-h3:text-lg prose-h3:font-bold prose-h3:text-slate-900 prose-p:my-4 prose-p:text-base prose-p:leading-7 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-teal-600">
       {@html sanitizeGeneratedArticleHtml(article.articleHtml)}
     </div>
   </section>

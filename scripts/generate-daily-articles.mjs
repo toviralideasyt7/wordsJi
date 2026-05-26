@@ -17,6 +17,11 @@ const colordleDataPath = path.join(projectRoot, 'static', 'colordle_data.json');
 
 const WORDLE_API_BASE_URL =
   process.env.WORDLE_API_BASE_URL ?? 'https://api.wordsolverx.workers.dev';
+const COLOR_ANSWERS_API_BASE =
+  (process.env.COLOR_ANSWERS_API_BASE ?? 'https://color-answers-worker.colordle.workers.dev').replace(
+    /\/+$/,
+    ''
+  );
 const NVIDIA_BASE_URL = 'https://integrate.api.nvidia.com/v1';
 const DEFAULT_TIMEOUT_MS = Number.parseInt(process.env.ARTICLE_REQUEST_TIMEOUT_MS ?? '120000', 10);
 const MAX_REQUEST_ATTEMPTS = Math.max(
@@ -221,6 +226,13 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily sports-themed answer page.'
   },
   {
+    key: 'worgle-answer-today',
+    gameName: 'Worgle',
+    mode: 'generic',
+    groups: ['site', 'main'],
+    notes: 'Daily Welsh-language answer page with the current puzzle answer card, solver support, and archive links.'
+  },
+  {
     key: 'waffle-answer-today',
     gameName: 'Waffle',
     mode: 'generic',
@@ -289,6 +301,53 @@ function getTargetDate(groupName = 'site', now = new Date()) {
     hourUtc: 16,
     minuteUtc: 30,
     visibleOffsetDays: 1
+  });
+}
+
+function getDateKeyFromFixedOffset(offsetMinutes, now = new Date()) {
+  const localMs = now.getTime() + offsetMinutes * 60_000;
+  const local = new Date(localMs);
+
+  return `${local.getUTCFullYear()}-${String(local.getUTCMonth() + 1).padStart(2, '0')}-${String(local.getUTCDate()).padStart(2, '0')}`;
+}
+
+const ARTICLE_TARGET_DATE_OVERRIDES = {
+  'canuckle-answer-today': {
+    type: 'utc-boundary',
+    hourUtc: 5,
+    minuteUtc: 0,
+    visibleOffsetDays: 0
+  },
+  'colorfle-answer-today': {
+    type: 'utc-boundary',
+    hourUtc: 15,
+    minuteUtc: 0,
+    visibleOffsetDays: 1
+  },
+  'worgle-answer-today': {
+    type: 'fixed-offset',
+    offsetMinutes: 330
+  }
+};
+
+function getTargetDateForEntry(entry, now = new Date()) {
+  if (process.env.TARGET_DATE) {
+    return process.env.TARGET_DATE;
+  }
+
+  const override = ARTICLE_TARGET_DATE_OVERRIDES[entry.key];
+  if (!override) {
+    return getTargetDate(getEntryGenerationGroup(entry), now);
+  }
+
+  if (override.type === 'fixed-offset') {
+    return getDateKeyFromFixedOffset(override.offsetMinutes, now);
+  }
+
+  return getVisibleDateForBoundary(now, {
+    hourUtc: override.hourUtc,
+    minuteUtc: override.minuteUtc,
+    visibleOffsetDays: override.visibleOffsetDays
   });
 }
 
@@ -618,6 +677,29 @@ async function getColordleContext(targetDate) {
   let actualDate = targetDate;
   let fallbackReason = null;
 
+  if (!entry) {
+    try {
+      const liveEntry = await fetchJson(`${COLOR_ANSWERS_API_BASE}/api/colordle/date/${targetDate}`);
+      if (liveEntry?.color_name && liveEntry?.color_hex) {
+        entry = {
+          date: String(liveEntry.date ?? targetDate),
+          dayNum: liveEntry.day_number ?? null,
+          color: {
+            name: String(liveEntry.color_name),
+            hex: String(liveEntry.color_hex).toUpperCase()
+          }
+        };
+        actualDate = entry.date;
+        fallbackReason = 'live-api';
+      }
+    } catch (error) {
+      console.warn(
+        `Colordle live API lookup failed for ${targetDate}. Falling back to local dataset only.`,
+        error instanceof Error ? error.message : String(error)
+      );
+    }
+  }
+
   if (!entry && entries.length > 0) {
     const latestOnOrBefore = [...entries]
       .reverse()
@@ -638,6 +720,13 @@ async function getColordleContext(targetDate) {
     throw new Error(`Missing Colordle entry for ${targetDate}.`);
   }
 
+  const recentEntries = entries
+    .filter((candidate) => candidate.date <= actualDate)
+    .slice(-5);
+  if (entry && !recentEntries.some((candidate) => candidate.date === actualDate)) {
+    recentEntries.push(entry);
+  }
+
   return {
     requestedDate: targetDate,
     requestedFormattedDate: formatLongDate(targetDate),
@@ -649,17 +738,14 @@ async function getColordleContext(targetDate) {
     colorName: String(entry.color.name),
     colorHex: String(entry.color.hex).toUpperCase(),
     hueFamily: getHueFamilyFromHex(String(entry.color.hex)),
-    recentColors: entries.length
-      ? entries
-          .filter((candidate) => candidate.date <= actualDate)
-          .slice(-5)
-          .reverse()
-          .map((candidate) => ({
-            date: candidate.date,
-            colorName: String(candidate.color.name),
-            colorHex: String(candidate.color.hex).toUpperCase()
-          }))
-      : []
+    recentColors: recentEntries
+      .slice()
+      .reverse()
+      .map((candidate) => ({
+        date: candidate.date,
+        colorName: String(candidate.color.name),
+        colorHex: String(candidate.color.hex).toUpperCase()
+      }))
   };
 }
 
@@ -981,13 +1067,13 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     'Output shape:',
     '{',
     '  "title": "string",',
-    '  "summary": "40-70 words",',
+    '  "summary": "18-30 words",',
     '  "bonusHints": ["string", "string", "string", "string"],',
     '  "contentGuideHtml": "valid HTML fragment" ',
     '}',
     '',
     'Critical rules:',
-    '- `contentGuideHtml` must target 980-1150 words after HTML tags are stripped.',
+    '- `contentGuideHtml` must target 520-780 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not sound like generic AI or SEO filler.',
     '- `bonusHints` must contain exactly 4 distinct strings.',
@@ -999,6 +1085,8 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     '- Use straightforward American English.',
     '- Keep links internal to wordsolverx.com only when you actually need a link.',
     '- Avoid fake etymology or dictionary trivia unless you are highly confident from general knowledge.',
+    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
+    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
     '',
     'Required exact section order inside `contentGuideHtml`:',
     '1. `<h2>5 Hints for Today\'s Wordle</h2>` followed by `<ul class="hints-list">...</ul>`',
@@ -1049,13 +1137,13 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
     'Output shape:',
     '{',
     '  "title": "string",',
-    '  "summary": "40-70 words",',
+    '  "summary": "18-30 words",',
     '  "bonusHints": ["string", "string", "string", "string"],',
     '  "articleHtml": "valid HTML fragment"',
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must target 980-1150 words after HTML tags are stripped.',
+    '- `articleHtml` must target 480-720 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- `bonusHints` must contain exactly 4 distinct strings.',
     '- Do not use first-person gameplay anecdotes or made-up scoring data.',
@@ -1063,6 +1151,8 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
     '- Keep the writing grounded in the supplied color name, hex code, hue family, and recent history.',
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Use valid HTML with clear headings and normal paragraphs.',
+    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
+    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
     '',
     'Required section order inside `articleHtml`:',
     '1. `<h2>Today\'s Colordle answer at a glance</h2>`',
@@ -1206,12 +1296,12 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     'Output shape:',
     '{',
     '  "title": "string",',
-    '  "summary": "40-70 words",',
+    '  "summary": "18-30 words",',
     '  "articleHtml": "valid HTML fragment" ',
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must target 900-1100 words after HTML tags are stripped.',
+    '- `articleHtml` must target 420-680 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not mention AI, prompts, models, or automation.',
     '- Do not use first-person gameplay anecdotes such as "I guessed", "I burned", or "my streak".',
@@ -1220,6 +1310,11 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '- Make the article feel like a real daily update tied to the current date and the page purpose.',
     '- Keep the tone natural, specific, and non-corporate.',
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
+    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
+    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
+    '- You do not have verified answer-specific facts for this route unless they appear explicitly in the page facts below.',
+    '- Do not name the exact answer, country, movie title, color, puzzle number, silhouette detail, or board-specific clue unless it appears in verified facts.',
+    '- If exact answer facts are not supplied, refer to "the answer above", "the reveal card", "today\'s page", or "the archive/solver on this page" instead of inventing specifics.',
     '',
     'Required sections inside `articleHtml` (use these exact headings):',
     ...getGenericSections(entry).map((s, i) => `${i + 1}. ${s}`),
@@ -1543,6 +1638,17 @@ const DISALLOWED_PERSONAL_VOICE_PATTERNS = [
   /\b500\+\s+daily\b/i
 ];
 
+const DISALLOWED_UNVERIFIED_SPECIFIC_PATTERNS = [
+  /\b(?:the answer|today(?:'|’)s answer|the correct answer|the solution|the target|the movie hidden behind|the hidden movie|the country hidden behind|the color hidden behind|the word hidden behind)\b[^.?!]{0,140}\b(?:is|was|belongs to)\b/i,
+  /\b(?:puzzle|board|worldle|framed|worgle|canuckle|betweenle|countryle|phoodle|colorfle|spotle|globle|searchle|quordle|semantle)\s*#\d{3,}\b/i
+];
+
+const TEMPLATE_PLACEHOLDER_PATTERNS = [
+  /#[_a-z0-9-]+#/i,
+  /\{\{[^}]+\}\}/i,
+  /\b(?:todo|placeholder)\b/i
+];
+
 function findDisallowedPersonalVoice(html) {
   const text = stripHtml(html);
   for (const pattern of DISALLOWED_PERSONAL_VOICE_PATTERNS) {
@@ -1553,6 +1659,23 @@ function findDisallowedPersonalVoice(html) {
   }
 
   return null;
+}
+
+function findUnsupportedSpecificClaim(html) {
+  const text = stripHtml(html);
+  for (const pattern of DISALLOWED_UNVERIFIED_SPECIFIC_PATTERNS) {
+    const match = text.match(pattern);
+    if (match?.[0]) {
+      return match[0];
+    }
+  }
+
+  return null;
+}
+
+function containsTemplatePlaceholder(html) {
+  const text = stripHtml(html);
+  return TEMPLATE_PLACEHOLDER_PATTERNS.some((pattern) => pattern.test(text));
 }
 
 function isStoredArticleReusable(article, expectedDate) {
@@ -1574,7 +1697,15 @@ function isStoredArticleReusable(article, expectedDate) {
     return false;
   }
 
+  if (containsTemplatePlaceholder(html)) {
+    return false;
+  }
+
   if (findDisallowedPersonalVoice(html)) {
+    return false;
+  }
+
+  if (article.game !== 'wordle' && article.game !== 'colordle' && findUnsupportedSpecificClaim(html)) {
     return false;
   }
 
@@ -1597,11 +1728,11 @@ function validateArticlePayload(game, payload, targetDate) {
     if (!html.includes(targetDate) && !html.includes(formatLongDate(targetDate))) {
       throw new Error('Wordle HTML does not include the target date.');
     }
-    if (countWords(html) < 880) {
-      throw new Error('Wordle HTML did not reach the minimum word count (880).');
+    if (countWords(html) < 420) {
+      throw new Error('Wordle HTML did not reach the minimum word count (420).');
     }
-    if (countWords(html) > 1450) {
-      throw new Error('Wordle HTML exceeded the maximum word count (1450).');
+    if (countWords(html) > 980) {
+      throw new Error('Wordle HTML exceeded the maximum word count (980).');
     }
     const bannedPhrase = containsBannedPhrases(html);
     if (bannedPhrase) {
@@ -1622,11 +1753,11 @@ function validateArticlePayload(game, payload, targetDate) {
   const html = autoCleanGeneratedHtml(String(payload.articleHtml ?? ''));
 
   if (game === 'generic') {
-    if (countWords(html) < 650) {
-      throw new Error('Generic article HTML did not reach the minimum word count (650).');
+    if (countWords(html) < 280) {
+      throw new Error('Generic article HTML did not reach the minimum word count (280).');
     }
-    if (countWords(html) > 1400) {
-      throw new Error('Generic article HTML exceeded the maximum word count (1400).');
+    if (countWords(html) > 900) {
+      throw new Error('Generic article HTML exceeded the maximum word count (900).');
     }
     const bannedPhrase = containsBannedPhrases(html);
     if (bannedPhrase) {
@@ -1635,6 +1766,14 @@ function validateArticlePayload(game, payload, targetDate) {
     const personalVoice = findDisallowedPersonalVoice(html);
     if (personalVoice) {
       throw new Error(`Generic article HTML contains first-person gameplay claim: "${personalVoice}".`);
+    }
+    const unsupportedSpecificClaim = findUnsupportedSpecificClaim(
+      [payload.summary, html].filter(Boolean).join(' ')
+    );
+    if (unsupportedSpecificClaim) {
+      throw new Error(
+        `Generic article HTML contains unsupported answer-specific detail: "${unsupportedSpecificClaim}".`
+      );
     }
     return {
       title: normalizeWhitespace(payload.title),
@@ -1650,11 +1789,11 @@ function validateArticlePayload(game, payload, targetDate) {
   if (!html.includes(targetDate) && !html.includes(formatLongDate(targetDate))) {
     throw new Error('Colordle HTML does not include the target date.');
   }
-  if (countWords(html) < 880) {
-    throw new Error('Colordle HTML did not reach the minimum word count (880).');
+  if (countWords(html) < 360) {
+    throw new Error('Colordle HTML did not reach the minimum word count (360).');
   }
-  if (countWords(html) > 1450) {
-    throw new Error('Colordle HTML exceeded the maximum word count (1450).');
+  if (countWords(html) > 980) {
+    throw new Error('Colordle HTML exceeded the maximum word count (980).');
   }
   const bannedPhrase = containsBannedPhrases(html);
   if (bannedPhrase) {
@@ -1900,6 +2039,12 @@ function sanitizeStoredArticle(article) {
     sanitized.summary =
       normalizedSummary &&
       !containsBannedPhrases(normalizedSummary) &&
+      !containsTemplatePlaceholder(normalizedSummary) &&
+      !(
+        sanitized.game !== 'wordle' &&
+        sanitized.game !== 'colordle' &&
+        findUnsupportedSpecificClaim(normalizedSummary)
+      ) &&
       !findDisallowedPersonalVoice(normalizedSummary)
         ? normalizedSummary
         : undefined;
@@ -1915,6 +2060,18 @@ function sanitizeStoredArticle(article) {
 
   if (Array.isArray(sanitized.bonusHints)) {
     sanitized.bonusHints = normalizeHintList(sanitized.bonusHints);
+  }
+
+  const combinedHtml = String(sanitized.articleHtml ?? sanitized.contentGuideHtml ?? '');
+  if (
+    !combinedHtml.trim() ||
+    containsBannedPhrases(combinedHtml) ||
+    containsTemplatePlaceholder(combinedHtml) ||
+    findDisallowedPersonalVoice(combinedHtml) ||
+    ((sanitized.game !== 'wordle' && sanitized.game !== 'colordle') &&
+      findUnsupportedSpecificClaim(combinedHtml))
+  ) {
+    return null;
   }
 
   if (isRecord(sanitized.meta)) {
@@ -2225,8 +2382,7 @@ async function main() {
   await runConcurrent(selectedEntries, concurrency, async (entry, laneIndex) => {
     try {
       let article;
-      const entryGroup = getEntryGenerationGroup(entry);
-      const entryTargetDate = targetDatesByGroup[entryGroup] ?? targetDate;
+      const entryTargetDate = getTargetDateForEntry(entry);
       let articleDate = entry.mode === 'colordle' && colordleContext ? colordleContext.date : entryTargetDate;
 
       console.log(

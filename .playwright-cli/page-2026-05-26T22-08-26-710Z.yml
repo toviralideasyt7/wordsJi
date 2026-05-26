@@ -1,0 +1,434 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e10]: W
+        - generic [ref=e11]: WordSolverX
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Today's Answers" [ref=e14] [cursor=pointer]:
+          - /url: /today
+        - link "Solvers" [ref=e15] [cursor=pointer]:
+          - /url: /solver
+        - link "Archives" [ref=e16] [cursor=pointer]:
+          - /url: /archive
+        - link "Guides" [ref=e17] [cursor=pointer]:
+          - /url: /guides
+        - link "About" [ref=e18] [cursor=pointer]:
+          - /url: /about
+  - main [ref=e19]:
+    - main [ref=e20]:
+      - generic [ref=e21]:
+        - navigation "Breadcrumb" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - link "Home" [ref=e25] [cursor=pointer]:
+                - /url: /
+                - img [ref=e26]
+                - generic [ref=e29]: Home
+            - listitem [ref=e30]:
+              - img [ref=e31]
+              - generic [ref=e33]: Worldle Answer Today
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Worldle Answer Today
+          - heading "Worldle Answer Today (May 27, 2026)" [level=1] [ref=e37]
+          - paragraph [ref=e38]: Today's Worldle country for May 27, 2026. Got it right? Nice. Got it wrong? That's what the solver is for.
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - img "Flag of Israel" [ref=e41]
+              - generic [ref=e42]: Israel
+            - generic [ref=e44]: "Worldle #1588"
+            - generic [ref=e46]: Updates at 00:00 UTC
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: Today's Worldle answer
+              - paragraph [ref=e52]: This page is refreshed automatically for the active Worldle day. Today is May 27, 2026.
+            - generic [ref=e53]:
+              - generic [ref=e54]: "Worldle #1588"
+              - generic [ref=e56]: 2026-05-27
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - img "Flag of Israel" [ref=e60]
+                - generic [ref=e61]:
+                  - heading "Israel" [level=2] [ref=e62]
+                  - paragraph [ref=e63]: Country code IL
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - paragraph [ref=e66]: Capital
+                  - paragraph [ref=e67]: Jerusalem
+                - generic [ref=e68]:
+                  - paragraph [ref=e69]: Continent
+                  - paragraph [ref=e70]: Asia
+                - generic [ref=e71]:
+                  - paragraph [ref=e72]: Coordinates
+                  - paragraph [ref=e73]: 31.05, 34.85
+                - generic [ref=e74]:
+                  - paragraph [ref=e75]: Population
+                  - paragraph [ref=e76]: 8,655,535
+                - generic [ref=e77]:
+                  - paragraph [ref=e78]: Area
+                  - paragraph [ref=e79]: 22,072 sq km
+                - generic [ref=e80]:
+                  - paragraph [ref=e81]: Currency
+                  - paragraph [ref=e82]: Israeli new shekel
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: Quick profile
+              - generic [ref=e85]:
+                - paragraph [ref=e86]: Languages
+                - paragraph [ref=e87]: Hebrew, Arabic
+              - generic [ref=e88]:
+                - paragraph [ref=e89]: Neighbors
+                - generic [ref=e90]:
+                  - generic [ref=e91]: LB
+                  - generic [ref=e92]: SY
+                  - generic [ref=e93]: JO
+                  - generic [ref=e94]: EG
+                  - generic [ref=e95]: PS
+              - generic [ref=e96]:
+                - paragraph [ref=e97]: GDP per capita
+                - paragraph [ref=e98]: $44,707
+              - generic [ref=e99]:
+                - link "Open Wikipedia" [ref=e100] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Israel
+                - link "View on map" [ref=e101] [cursor=pointer]:
+                  - /url: https://www.google.com/maps/search/?api=1&query=31.046051,34.851612
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: More Worldle tools
+            - heading "Open the archive or solve first" [level=2] [ref=e106]
+            - paragraph [ref=e107]: Need a past Worldle answer? The archive has every country.
+          - generic [ref=e108]:
+            - link "Browse Worldle Archive" [ref=e109] [cursor=pointer]:
+              - /url: /worldle-archive
+            - link "Open Worldle Solver" [ref=e110] [cursor=pointer]:
+              - /url: /worldle-solver
+        - generic [ref=e113]:
+          - heading "Worldle Answers For The Last 10 Days" [level=2] [ref=e114]
+          - generic [ref=e115]:
+            - group [ref=e116]:
+              - generic "What was the Worldle answer on May 27, 2026?" [ref=e117] [cursor=pointer]:
+                - generic [ref=e118]: What was the Worldle answer on May 27, 2026?
+                - img [ref=e119]
+            - group [ref=e121]:
+              - generic "What was the Worldle answer on May 26, 2026?" [ref=e122] [cursor=pointer]:
+                - generic [ref=e123]: What was the Worldle answer on May 26, 2026?
+                - img [ref=e124]
+            - group [ref=e126]:
+              - generic "What was the Worldle answer on May 25, 2026?" [ref=e127] [cursor=pointer]:
+                - generic [ref=e128]: What was the Worldle answer on May 25, 2026?
+                - img [ref=e129]
+            - group [ref=e131]:
+              - generic "What was the Worldle answer on May 24, 2026?" [ref=e132] [cursor=pointer]:
+                - generic [ref=e133]: What was the Worldle answer on May 24, 2026?
+                - img [ref=e134]
+            - group [ref=e136]:
+              - generic "What was the Worldle answer on May 23, 2026?" [ref=e137] [cursor=pointer]:
+                - generic [ref=e138]: What was the Worldle answer on May 23, 2026?
+                - img [ref=e139]
+            - group [ref=e141]:
+              - generic "What was the Worldle answer on May 22, 2026?" [ref=e142] [cursor=pointer]:
+                - generic [ref=e143]: What was the Worldle answer on May 22, 2026?
+                - img [ref=e144]
+            - group [ref=e146]:
+              - generic "What was the Worldle answer on May 21, 2026?" [ref=e147] [cursor=pointer]:
+                - generic [ref=e148]: What was the Worldle answer on May 21, 2026?
+                - img [ref=e149]
+            - group [ref=e151]:
+              - generic "What was the Worldle answer on May 20, 2026?" [ref=e152] [cursor=pointer]:
+                - generic [ref=e153]: What was the Worldle answer on May 20, 2026?
+                - img [ref=e154]
+            - group [ref=e156]:
+              - generic "What was the Worldle answer on May 19, 2026?" [ref=e157] [cursor=pointer]:
+                - generic [ref=e158]: What was the Worldle answer on May 19, 2026?
+                - img [ref=e159]
+            - group [ref=e161]:
+              - generic "What was the Worldle answer on May 18, 2026?" [ref=e162] [cursor=pointer]:
+                - generic [ref=e163]: What was the Worldle answer on May 18, 2026?
+                - img [ref=e164]
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Today's notes
+          - paragraph [ref=e168]: Updated 2026-05-27
+          - 'heading "Worldle Answer Today: May 27, 2026" [level=2] [ref=e170]'
+          - paragraph [ref=e171]: The target country for May 27, 2026, sits in the Southern Hemisphere, sharing borders with nations in Southeast Asia. Players who struggle with the.
+          - generic [ref=e172]:
+            - 'heading "Worldle Answer Today: May 27, 2026" [level=2] [ref=e173]'
+            - heading "Where in the world is today's answer?" [level=2] [ref=e174]
+            - paragraph [ref=e175]: The silhouette for May 27, 2026, outlines a country defined by a long, narrow peninsula stretching southward.
+            - paragraph [ref=e176]:
+              - text: This shape is a dead giveaway for anyone familiar with the map of Southeast Asia. The target is
+              - strong [ref=e177]: Malaysia
+              - text: .
+            - paragraph [ref=e178]: It occupies the southern tip of the Asian mainland and includes the northern part of the island of Borneo.
+            - paragraph [ref=e179]: The game separates the two landmasses, but the mainland shape is the primary visual cue for this puzzle.
+            - paragraph [ref=e180]: If you guessed a country in Africa or South America, you likely missed the specific curvature of the eastern coast.
+            - paragraph [ref=e181]: The hint system will immediately push you toward the correct region if you input a wrong answer.
+            - paragraph [ref=e182]: The first guess usually yields a distance of over 2,000 km and a direction pointing northeast or southeast, depending on your starting point.
+            - paragraph [ref=e183]: Don't waste a guess on a country with a similar vertical orientation but the wrong continent.
+            - paragraph [ref=e184]:
+              - text: For players stuck on the shape, check the
+              - link "archive of past answers" [ref=e185] [cursor=pointer]:
+                - /url: /worldle-archive
+              - text: to see how often peninsulas appear. The game favors distinct coastlines over blocky borders.
+            - paragraph [ref=e186]: If you need a refresher on the region, look up the Southeast Asia geography guide to compare the outlines of Thailand, Vietnam, and Malaysia side-by-side.
+            - heading "Reading the directional clues" [level=2] [ref=e187]
+            - paragraph [ref=e188]: The percentage and arrow hints are more valuable than the distance number.
+            - paragraph [ref=e189]: On this board, a guess of 50% distance might still leave you 1,000 km away, but the arrow tells you exactly which way to pivot.
+            - paragraph [ref=e190]: For Malaysia, the arrow often points sharply south or southeast. This eliminates the vast majority of countries in the Northern Hemisphere.
+            - paragraph [ref=e191]: Many players fixate on the distance metric and ignore the angle. If you guess a country in Europe, the arrow will swing wildly.
+            - paragraph [ref=e192]: If you guess a country in India, the arrow will point almost directly east. Use these directional shifts to triangulate the position.
+            - paragraph [ref=e193]: The game doesn't lie about the bearing.
+            - paragraph [ref=e194]: A consistent eastward arrow from a western starting point means you are looking at a country on the other side of the Indian Ocean or the South China Sea.
+            - paragraph [ref=e195]: Remember that the game calculates distance from the center of your guessed country to the center of the target.
+            - paragraph [ref=e196]: A guess of a long, thin country like Chile or Norway can skew your perception of the target's location. Always account for the size of your guess.
+            - paragraph [ref=e197]: If you are off by 10 degrees in direction, you might still be in the right ocean but on the wrong continent.
+            - paragraph [ref=e198]: Check the daily hints page if the arrow logic gets confusing.
+            - heading "Mistakes that waste guesses" [level=2] [ref=e199]
+            - paragraph [ref=e200]: The most common error is guessing Indonesia. While it shares the same latitude and is a neighbor, Indonesia is an archipelago.
+            - paragraph [ref=e201]: Its silhouette looks nothing like the solid mainland shape of Malaysia. Players often confuse the two because they are both tropical and share the Malay language family.
+            - paragraph [ref=e202]: This mistake burns a guess and sends you on a tangent toward the islands of the Pacific.
+            - paragraph [ref=e203]: Another frequent slip-up is guessing Thailand. Thailand sits directly north of Malaysia and shares a similar vertical orientation.
+            - paragraph [ref=e204]: However, Thailand has a much wider northern section and a distinct "head" shape that Malaysia lacks.
+            - paragraph [ref=e205]: If your arrow points south after guessing Thailand, you are likely close, but the shape mismatch is the real clue.
+            - paragraph [ref=e206]: Don't assume similarity in border length means similarity in shape.
+            - paragraph [ref=e207]: Some players try to guess Singapore. Singapore is too small to register as a distinct silhouette in this game.
+            - paragraph [ref=e208]: The game requires a minimum landmass size to generate a playable outline.
+            - paragraph [ref=e209]: Attempting to guess microstates or city-states early in the game is a guaranteed waste of a turn. Stick to countries with recognizable coastlines.
+            - paragraph [ref=e210]: Finally, avoid guessing countries based solely on climate. Just because a country is tropical doesn't mean it is the answer.
+            - paragraph [ref=e211]: The game has featured cold countries and arid deserts just as often as rainforests. Rely on the geometry, not the weather patterns.
+            - paragraph [ref=e212]: If you are unsure, consult the border solver tool to see which nations touch the target.
+            - heading "Questions players keep asking" [level=2] [ref=e213]
+            - heading "Does the game count both parts of Malaysia?" [level=3] [ref=e214]
+            - paragraph [ref=e215]: Yes. The silhouette includes Peninsular Malaysia and East Malaysia (on Borneo).
+            - paragraph [ref=e216]: The game treats them as a single entity. The gap between the two landmasses is visible, but the outline connects them as one country.
+            - paragraph [ref=e217]: If you guess a country that only has one part, the distance will be massive, and the direction will be misleading.
+            - heading "What if I guess a country that shares a border?" [level=3] [ref=e218]
+            - paragraph [ref=e219]: Guessing a neighbor like Thailand or Indonesia is a smart strategy. It provides immediate directional feedback.
+            - paragraph [ref=e220]: If you guess Thailand and the arrow points south, you know the target is below it.
+            - paragraph [ref=e221]: If you guess Indonesia and the arrow points north, you know the target is above the archipelago. This narrows the search field significantly without using a "wild guess".
+            - heading "Why does the distance change so much between guesses?" [level=3] [ref=e222]
+            - paragraph [ref=e223]: The distance metric is a straight line from the geographic center of your guess to the center of the target.
+            - paragraph [ref=e224]: If you guess a country that is far away, the distance is large. If you guess a neighbor, the distance shrinks.
+            - paragraph [ref=e225]: The percentage shown is relative to the maximum possible distance on the map, not the distance to the next closest country.
+            - paragraph [ref=e226]: A 90% match might still be hundreds of kilometers away if the maximum distance is 20,000 km.
+            - heading "Can I play the game in hard mode?" [level=3] [ref=e227]
+            - paragraph [ref=e228]: Yes, hard mode hides the country name and silhouette, showing only the distance and direction. This version requires pure geography knowledge.
+            - paragraph [ref=e229]: For the May 27, 2026 puzzle, hard mode is brutal without knowing the peninsula shape.
+            - paragraph [ref=e230]:
+              - text: If you struggle, switch to normal mode to see the outline, or use the
+              - link "solver tool" [ref=e231] [cursor=pointer]:
+                - /url: /worldle-solver
+              - text: to input your directional hints and get a list of candidates.
+        - generic [ref=e232]:
+          - region "Preston Hayes" [ref=e233]:
+            - generic [ref=e234]:
+              - img "Photo of Preston Hayes" [ref=e236]
+              - generic [ref=e237]:
+                - paragraph [ref=e238]: Written by
+                - heading "Preston Hayes" [level=2] [ref=e239]
+                - paragraph [ref=e240]: Preston Hayes is the credited editor for WordSolverX answer pages and puzzle strategy content. His work focuses on clear answer presentation, source verification, solver guidance, and fast corrections when a game changes.
+                - link "Pinterest" [ref=e242] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/wordsolverx/
+                  - text: Pinterest
+                  - img [ref=e243]
+          - generic [ref=e245]:
+            - generic [ref=e246]: Updated Daily
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - heading "TD Today's Game Answers" [level=2] [ref=e250]:
+                  - generic [ref=e251]: TD
+                  - text: Today's Game Answers
+                - generic [ref=e252]:
+                  - link "Bt Betweenle Today" [ref=e253] [cursor=pointer]:
+                    - /url: /betweenle-answer-today
+                    - generic [ref=e254]: Bt
+                    - generic [ref=e255]: Betweenle Today
+                  - link "Ca Canuckle Today" [ref=e256] [cursor=pointer]:
+                    - /url: /canuckle-answer-today
+                    - generic [ref=e257]: Ca
+                    - generic [ref=e258]: Canuckle Today
+                  - link "Cf Colorfle Today" [ref=e259] [cursor=pointer]:
+                    - /url: /colorfle-answer-today
+                    - generic [ref=e260]: Cf
+                    - generic [ref=e261]: Colorfle Today
+                  - link "Cd Colordle Today" [ref=e262] [cursor=pointer]:
+                    - /url: /colordle-answer-today
+                    - generic [ref=e263]: Cd
+                    - generic [ref=e264]: Colordle Today
+                  - link "Cx Contexto Today" [ref=e265] [cursor=pointer]:
+                    - /url: /contexto-answer-today
+                    - generic [ref=e266]: Cx
+                    - generic [ref=e267]: Contexto Today
+                  - link "Cy Countryle Today" [ref=e268] [cursor=pointer]:
+                    - /url: /countryle-answer-today
+                    - generic [ref=e269]: Cy
+                    - generic [ref=e270]: Countryle Today
+                  - link "Do Dotadle Today" [ref=e271] [cursor=pointer]:
+                    - /url: /dotadle-answer-today
+                    - generic [ref=e272]: Do
+                    - generic [ref=e273]: Dotadle Today
+                  - link "Fr Framed Today" [ref=e274] [cursor=pointer]:
+                    - /url: /framed-answer-today
+                    - generic [ref=e275]: Fr
+                    - generic [ref=e276]: Framed Today
+                  - link "Gb Globle Today" [ref=e277] [cursor=pointer]:
+                    - /url: /globle-answer-today
+                    - generic [ref=e278]: Gb
+                    - generic [ref=e279]: Globle Today
+                  - link "Lo Loldle Today" [ref=e280] [cursor=pointer]:
+                    - /url: /loldle-answer-today
+                    - generic [ref=e281]: Lo
+                    - generic [ref=e282]: Loldle Today
+              - generic [ref=e283]:
+                - heading "AR Past Solutions Archive" [level=2] [ref=e284]:
+                  - generic [ref=e285]: AR
+                  - text: Past Solutions Archive
+                - generic [ref=e286]:
+                  - link "Ca Canuckle Archive" [ref=e287] [cursor=pointer]:
+                    - /url: /canuckle-archive
+                    - generic [ref=e288]: Ca
+                    - generic [ref=e289]: Canuckle Archive
+                  - link "Cf Colorfle Archive" [ref=e290] [cursor=pointer]:
+                    - /url: /colorfle-archive
+                    - generic [ref=e291]: Cf
+                    - generic [ref=e292]: Colorfle Archive
+                  - link "Cd Colordle Archive" [ref=e293] [cursor=pointer]:
+                    - /url: /colordle-archive
+                    - generic [ref=e294]: Cd
+                    - generic [ref=e295]: Colordle Archive
+                  - link "Cx Contexto Archive" [ref=e296] [cursor=pointer]:
+                    - /url: /contexto-archive
+                    - generic [ref=e297]: Cx
+                    - generic [ref=e298]: Contexto Archive
+                  - link "Cy Countryle Archive" [ref=e299] [cursor=pointer]:
+                    - /url: /countryle-archive
+                    - generic [ref=e300]: Cy
+                    - generic [ref=e301]: Countryle Archive
+                  - link "Fr Framed Archive" [ref=e302] [cursor=pointer]:
+                    - /url: /framed-archive
+                    - generic [ref=e303]: Fr
+                    - generic [ref=e304]: Framed Archive
+                  - link "Gb Globle Archive" [ref=e305] [cursor=pointer]:
+                    - /url: /globle-archive
+                    - generic [ref=e306]: Gb
+                    - generic [ref=e307]: Globle Archive
+                  - link "Nd Nerdle Archive" [ref=e308] [cursor=pointer]:
+                    - /url: /nerdle-archive
+                    - generic [ref=e309]: Nd
+                    - generic [ref=e310]: Nerdle Archive
+                  - link "Ph Phoodle Archive" [ref=e311] [cursor=pointer]:
+                    - /url: /phoodle-archive
+                    - generic [ref=e312]: Ph
+                    - generic [ref=e313]: Phoodle Archive
+                  - link "Pz Phrazle Archive" [ref=e314] [cursor=pointer]:
+                    - /url: /phrazle-archive
+                    - generic [ref=e315]: Pz
+                    - generic [ref=e316]: Phrazle Archive
+            - generic [ref=e317]:
+              - heading "RG Related Games" [level=2] [ref=e318]:
+                - generic [ref=e319]: RG
+                - text: Related Games
+              - generic [ref=e320]:
+                - link "Gl Globle" [ref=e321] [cursor=pointer]:
+                  - /url: /globle-answer-today
+                  - generic [ref=e322]: Gl
+                  - text: Globle
+                - link "Co Countryle" [ref=e323] [cursor=pointer]:
+                  - /url: /countryle-answer-today
+                  - generic [ref=e324]: Co
+                  - text: Countryle
+            - paragraph [ref=e326]:
+              - text: Stuck on a tricky puzzle?
+              - link "Try our 5-Letter Wordle Solver" [ref=e327] [cursor=pointer]:
+                - /url: /5-letter-wordle-solver
+              - text: to filter clues fast, rank next guesses, and move into the right 3 to 11 letter Wordle page when you need a different board size.
+  - contentinfo [ref=e328]:
+    - generic [ref=e329]:
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - link "W WordSolverX" [ref=e332] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e334]: W
+            - generic [ref=e335]: WordSolverX
+          - paragraph [ref=e336]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+          - generic [ref=e337]:
+            - link "Facebook" [ref=e338] [cursor=pointer]:
+              - /url: https://www.facebook.com/wordsolverx/
+              - img [ref=e339]
+            - link "Pinterest" [ref=e341] [cursor=pointer]:
+              - /url: https://www.pinterest.com/wordsolverx/
+              - img [ref=e342]
+            - link "Telegram" [ref=e344] [cursor=pointer]:
+              - /url: https://t.me/wordsolverx
+              - img [ref=e345]
+        - generic [ref=e347]:
+          - heading "Today's Answers" [level=3] [ref=e348]
+          - list [ref=e349]:
+            - listitem [ref=e350]:
+              - link "Wordle Answer" [ref=e351] [cursor=pointer]:
+                - /url: /wordle-answer-today
+            - listitem [ref=e352]:
+              - link "Quordle Answer" [ref=e353] [cursor=pointer]:
+                - /url: /quordle-answer-today
+            - listitem [ref=e354]:
+              - link "Nerdle Answer" [ref=e355] [cursor=pointer]:
+                - /url: /nerdle-answer-today
+            - listitem [ref=e356]:
+              - link "Contexto Answer" [ref=e357] [cursor=pointer]:
+                - /url: /contexto-answer-today
+            - listitem [ref=e358]:
+              - link "View All →" [ref=e359] [cursor=pointer]:
+                - /url: /today
+        - generic [ref=e360]:
+          - heading "Solver Tools" [level=3] [ref=e361]
+          - list [ref=e362]:
+            - listitem [ref=e363]:
+              - link "5-Letter Wordle Solver" [ref=e364] [cursor=pointer]:
+                - /url: /5-letter-wordle-solver
+            - listitem [ref=e365]:
+              - link "Quordle Solver" [ref=e366] [cursor=pointer]:
+                - /url: /quordle-solver
+            - listitem [ref=e367]:
+              - link "Nerdle Solver" [ref=e368] [cursor=pointer]:
+                - /url: /nerdle-solver
+            - listitem [ref=e369]:
+              - link "Wordle Analyzer" [ref=e370] [cursor=pointer]:
+                - /url: /wordle-analyzer
+            - listitem [ref=e371]:
+              - link "View All →" [ref=e372] [cursor=pointer]:
+                - /url: /solver
+        - generic [ref=e373]:
+          - heading "Resources" [level=3] [ref=e374]
+          - list [ref=e375]:
+            - listitem [ref=e376]:
+              - link "Guides & Tips" [ref=e377] [cursor=pointer]:
+                - /url: /guides
+            - listitem [ref=e378]:
+              - link "Answer Archives" [ref=e379] [cursor=pointer]:
+                - /url: /archive
+            - listitem [ref=e380]:
+              - link "About" [ref=e381] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e382]:
+              - link "Contact" [ref=e383] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e384]:
+              - link "DMCA Policy" [ref=e385] [cursor=pointer]:
+                - /url: /dmca-policy
+            - listitem [ref=e386]:
+              - link "Editorial Policy" [ref=e387] [cursor=pointer]:
+                - /url: /editorial-policy
+            - listitem [ref=e388]:
+              - link "Privacy" [ref=e389] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=e390]:
+              - button "Cookie Settings" [ref=e391]
+            - listitem [ref=e392]:
+              - link "Terms" [ref=e393] [cursor=pointer]:
+                - /url: /terms-of-service
+      - generic [ref=e394]:
+        - paragraph [ref=e395]: © 2026 WordSolverX. All rights reserved.
+        - paragraph [ref=e396]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.

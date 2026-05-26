@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
@@ -20,8 +21,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
 
   let guessInput = $state('');
   let percentageInput = $state('');
-  let solverStarted = $state(false);
-  let loading = $state(false);
+  let loading = $state(true);
   let loadingError = $state<string | null>(null);
   let processing = $state(false);
 
@@ -44,7 +44,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   async function ensureColordleRuntime(): Promise<ColordleRuntime | null> {
     if (colordleRuntime) return colordleRuntime;
 
-    solverStarted = true;
     loading = true;
 
     try {
@@ -124,9 +123,9 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
     if (selectedGuess && value !== selectedGuess.name) selectedGuess = null;
   }
 
-  function startSolver() {
+  onMount(() => {
     void ensureColordleRuntime();
-  }
+  });
 
   const faqs = [
     { question: 'What is the Colordle Solver?', answer: 'You type in your guess (like "Sea Green") and the percentage Colordle gave you. The solver filters the color list to show only colors that would produce that same percentage. It saves you from manually cross-referencing hundreds of colors.' },
@@ -228,24 +227,7 @@ const jsonLdSchema = JSON.stringify({
 
   <!-- Main Solver Area -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12" style="min-height: 800px;">
-    {#if !solverStarted}
-      <div class="flex flex-col items-center justify-center gap-5 rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center shadow-sm" style="min-height: 800px;">
-        <div class="max-w-xl">
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">Color data on demand</p>
-          <h2 class="mt-3 text-3xl font-black text-slate-900">Start the Colordle solver</h2>
-          <p class="mt-3 text-slate-600">
-            The full color database loads after you open the tool, keeping the first page view lighter and faster.
-          </p>
-        </div>
-        <button
-          type="button"
-          onclick={startSolver}
-          class="rounded-xl bg-teal-700 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-teal-800"
-        >
-          Start Solver
-        </button>
-      </div>
-    {:else if loading}
+    {#if loading}
       <div class="flex justify-center items-center" style="min-height: 800px;">
         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500"></div>
       </div>

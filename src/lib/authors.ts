@@ -17,10 +17,7 @@ export const PRESTON_HAYES_AUTHOR_KNOWS_ABOUT = [
 ];
 
 export const PRESTON_HAYES_AUTHOR_SAME_AS = [
-	'https://www.linkedin.com/in/preston-hayes-wordsolverx/',
-	'https://x.com/WordSolverX',
-	'https://www.facebook.com/wordsolverx/',
-	'https://t.me/wordsolverx'
+	'https://www.pinterest.com/wordsolverx/'
 ];
 
 export function getAuthorForGame(_gameName: string): string {

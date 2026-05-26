@@ -10,9 +10,7 @@ export interface SchemaOrganization {
 }
 
 export const SOCIAL_PROFILE_URLS = [
-    'https://www.facebook.com/wordsolverx/',
     'https://www.pinterest.com/wordsolverx/',
-    'https://t.me/wordsolverx',
 ];
 
 export interface SchemaWebPage {

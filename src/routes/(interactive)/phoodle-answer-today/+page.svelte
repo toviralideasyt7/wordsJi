@@ -90,6 +90,8 @@
         </a>
       </div>
 
+      <GeneratedTodayArticle articleKey="phoodle-answer-today" articleDate={data.dateKey} />
+
       <!-- Content & FAQs -->
       <article class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm">
         <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
@@ -192,8 +194,6 @@
           </div>
         </section>
       </article>
-
-      <GeneratedTodayArticle articleKey="phoodle-answer-today" articleDate={data.dateKey} />
       <div class="mb-12">
         <AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}

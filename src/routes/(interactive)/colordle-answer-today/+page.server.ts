@@ -516,6 +516,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 availableThroughFormattedDate,
                 yesterdayData,
                 last100Days,
+                dateKey: actualDateKey,
                 publishedDate: `${actualDateKey}T00:00:00Z`,
                 schemas: jsonLd,
                 gameNarrative: generateGameNarrative(color),

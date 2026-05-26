@@ -159,6 +159,8 @@
         {/if}
       </section>
 
+      <GeneratedTodayArticle articleKey="countryle-answer-today" articleDate={todayKey} />
+
       <!-- Recent Answers -->
       <section class="mt-8 rounded-[2rem] border border-teal-100 bg-white p-8 shadow-[0_20px_60px_rgba(16,185,129,0.06)] sm:p-10">
         <div class="flex flex-wrap items-center justify-between gap-4">
@@ -355,8 +357,6 @@
       </section>
 
     </article>
-
-    <GeneratedTodayArticle articleKey="countryle-answer-today" articleDate={todayKey} />
     <div class="mt-8">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
