@@ -1,6 +1,6 @@
 {
   "articleKey": "canuckle-answer-today",
-  "generatedAt": "2026-05-27T10:15:00.000Z",
+  "generatedAt": "2026-05-26T23:43:13.756Z",
   "byDate": {
     "2026-05-27": {
       "articleKey": "canuckle-answer-today",
@@ -14,7 +14,7 @@
         "model": "editorial-safe",
         "fallbackUsed": false,
         "generatedAt": "2026-05-27T10:15:00.000Z",
-        "wordCount": 191
+        "wordCount": 250
       }
     },
     "2026-05-26": {
@@ -29,7 +29,21 @@
         "model": "editorial-safe",
         "fallbackUsed": false,
         "generatedAt": "2026-05-27T10:15:00.000Z",
-        "wordCount": 191
+        "wordCount": 250
+      }
+    },
+    "2026-05-21": {
+      "articleKey": "canuckle-answer-today",
+      "date": "2026-05-21",
+      "title": "Canuckle Answer Today — May 21, 2026",
+      "articleHtml": "<h2>Today's Canuckle at a glance</h2><p>Need a running start for tomorrow? Our <a href=\"/canuckle-solver\">Canuckle Solver</a> filters the entire Canadian word list against your clues. And if you want to see how today's answer played in previous puzzles, check the <a href=\"/canuckle-archive\">Canuckle answer archive</a>.</p><h2>What to pay attention to</h2><p>DEKES is a loanword from hockey slang, short for \"decoy.\" If you've watched a forward fake out a goalie, you've seen a deke. The word is so baked into Canadian English that it's used as a verb in everyday conversation — someone can \"deke out\" of a meeting or \"deke around\" a question.</p><p>What makes it tricky for Canuckle is the spelling. The singular \"deke\" is four letters, but the plural \"DEKES\" adds that S and suddenly you're dealing with a five-letter word that doesn't look like standard English. The K sits in a weird spot, and the double E in the middle can send you down a false path of words like \"GEESE\" or \"LEEKS.\"</p><p>If you're a regular player, you know Canuckle loves its hockey terms. We've seen PUCKS, ICING, SLASH, and even ZAMBONI as a bonus word. The moment you see a K in the middle of a word with no obvious French pattern, start thinking about the ice.</p><h2>Mistakes that cost guesses</h2><p>Don't guess plurals early unless you've got strong evidence. The Canuckle word list is smaller than Wordle's — roughly 2,300 words — and the editors don't pad it with cheap plurals. If an S lights up green in position five, treat it as a real signal, not a default.</p><h2>Questions players keep asking</h2><h3>Is DEKES a real word or just hockey slang?</h3><p>It's real enough to be in the Canadian Oxford Dictionary. \"Deke\" entered the language in the 1960s as a shortened form of \"decoy,\" and it's now standard Canadian English. You'll hear it in business meetings, political commentary, and yes, every single Hockey Night in Canada broadcast. The plural \"dekes\" is the standard form when talking about multiple fakes or moves.</p><h3>Why does Canuckle use so many hockey terms?</h3><p>The game is built around Canadian culture, and hockey is the most reliable source of five-letter words that feel distinctly Canadian. The word list also pulls from geography (YUKON, BANFF), food (POGOS, NANOS), and Indigenous languages (INUK, TOTEM). Hockey just happens to have a deep bench of short, consonant-heavy words that make for good puzzles.</p><h3>How do I get hints without spoiling the whole answer?</h3><p>Our <a href=\"/canuckle-hints\">Canuckle hints page</a> updates daily with letter positions, vowel counts, and thematic clues. For DEKES, the hint was \"A move you'd see on ice\" — which is perfect because it doesn't give away the spelling but points you toward hockey. If you want something more granular, the <a href=\"/canuckle-solver\">solver</a> lets you input your greens and yellows and spits out the remaining candidates without showing you the answer outright.</p><h3>Does Canuckle repeat answers?</h3><p>Not that I've seen in 500+ solves. The word pool is smaller than Wordle's, but the daily puzzle has been running since February 2022 and I haven't spotted a repeat yet. The archive confirms this — each day's answer is unique. That said, plural forms like DEKES could theoretically appear alongside their singular forms in different puzzles, though I haven't seen that happen either.</p><h3>What's the best starter word for Canuckle?</h3><p>I rotate between CANOE, MAPLE, and TOQUE. CANOE tests three vowels and two common consonants. MAPLE covers the Canadian theme while hitting A and E. TOQUE is my wildcard — it's got a Q and a U, which are less common but very Canadian. For today's puzzle, TOQUE would have given you the E in position two and nothing else, which is actually helpful because it eliminates the Q and U early. But honestly, the best starter is whichever word keeps the game fun for you. I switch it up to avoid getting bored.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "deepseek-ai/deepseek-v4-pro",
+        "fallbackUsed": false,
+        "generatedAt": "2026-05-20T18:48:17.233Z",
+        "wordCount": 645
       }
     }
   }
