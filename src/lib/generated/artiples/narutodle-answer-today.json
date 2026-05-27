@@ -1,7 +1,22 @@
 {
   "articleKey": "narutodle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.396Z",
+  "generatedAt": "2026-05-27T06:12:11.931Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "narutodle-answer-today",
+      "date": "2026-05-27",
+      "title": "Narutodle Answer for May 27, 2026: Context, Filters, and Solver Tips",
+      "summary": "Break down today's Narutodle answer using village, rank, and chakra filters. Use the solver to verify guesses and check the archive for past reveals.",
+      "articleHtml": "<h2>Today's puzzle in context</h2>\n<p>The answer revealed on this page fits a specific slot in the Akatsuki timeline. Players relying on debut arc data will narrow the field faster than those guessing by appearance alone. This route key tracks the daily reveal for May 27, 2026, ensuring the data matches the official game server.</p>\n<p>Check the <a href=\"/narutodle-archive\">Narutodle archive</a> if you need to verify previous answers before committing to a new guess. The reveal card above confirms the correct character once the grid fills or the limit hits.</p><h2>Which attributes matter most today</h2>\n<p>Village affiliation acts as the primary gatekeeper for this puzzle. A wrong guess on the home village wastes a turn that could eliminate entire chakra natures. Rank often trips people up when ANBU titles or missing-nin status obscure the original village.</p>\n<p>Chakra nature provides the sharpest cut. If the feedback shows a mismatch on fire or wind, pivot immediately to characters with water or earth release. Do not guess another fire user just because they look similar. Use the <a href=\"/narutodle-solver\">live solver tool</a> to filter the remaining roster based on these specific traits.</p><h2>When the solver saves you time</h2>\n<p>Manual guessing fails when the pool shrinks to obscure side characters from the War Arc. The solver handles the heavy lifting by cross-referencing debut episodes with chakra types. It removes the need to memorize every minor ninja from the Hidden Mist.</p>\n<p>Input the known constraints from your first two guesses. The tool highlights the single valid option or the small cluster of possibilities. This approach prevents burning attempts on characters who share a village but differ in rank. Visit the <a href=\"/narutodle-hints\">daily hints page</a> if the solver returns too many matches.</p><h2>Questions players keep asking</h2><h3>Does the answer change at midnight?</h3>\n<p>Yes, the puzzle resets based on UTC time, which often feels like late evening in the Americas. The new answer loads automatically once the server clock ticks over. Refresh the page if the grid still shows yesterday's character.</p><h3>How many guesses do I get per day?</h3>\n<p>Standard mode allows six attempts before the game locks. Hard mode restricts hints until the first guess lands. The <a href=\"/narutodle-rules\">official rules section</a> details the differences between casual and challenge modes.</p><h3>Can I play past puzzles?</h3>\n<p>The archive mode lets you replay any date from the game's launch. This helps practice specific eras like the Chunin Exams or Pain's Assault. Select a date from the calendar view to load historical boards.</p><h3>What if the site shows an error?</h3>\n<p>Cache issues often display old data after a reset. Clear the browser cache or open the page in an incognito window. The <a href=\"/narutodle-troubleshooting\">support guide</a> covers common loading errors and mobile compatibility fixes.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "generatedAt": "2026-05-27T06:12:11.917Z",
+        "wordCount": 445
+      }
+    },
     "2026-05-25": {
       "articleKey": "narutodle-answer-today",
       "date": "2026-05-25",
