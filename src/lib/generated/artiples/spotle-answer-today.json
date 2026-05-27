@@ -1,7 +1,24 @@
 {
   "articleKey": "spotle-answer-today",
-  "generatedAt": "2026-05-26T22:34:22.753Z",
+  "generatedAt": "2026-05-27T16:55:48.277Z",
   "byDate": {
+    "2026-05-28": {
+      "articleKey": "spotle-answer-today",
+      "date": "2026-05-28",
+      "title": "Spotle Answer Today: May 28, 2026 Clue Breakdown",
+      "summary": "Today's Spotle answer hinges on the debut year and nationality clues. Use the genre filter to narrow the field before guessing the artist.",
+      "articleHtml": "<h2>Spotle answer today: which clue should matter first</h2>\n<p>For the May 28, 2026 puzzle, the debut year is the primary filter. It eliminates half the potential artists immediately. Ignore the nationality hint until you have a short list. Genre helps, but it's too broad on its own. A careful player checks the year first, then applies the gender constraint.</p>\n<p>Start your search with the <a href=\"/spotle-archive\">Spotle archive</a> to see if the year matches a known breakout era. The reveal card updates only after you submit a valid guess, so don't waste turns on wild cards. Use the solver tool if the first two clues don't yield a clear candidate.</p><h2>How genre, country, and era work together</h2>\n<p>These three data points form a triangle that traps the answer. If the genre is \"Indie\" and the country is \"UK,\" the pool shrinks to a few dozen names. Add the era, and you're left with one or two options. The puzzle designers rarely pick an artist whose debut falls in a decade where they weren't active.</p>\n<p>Check the <a href=\"/spotle-solver\">Spotle solver</a> to cross-reference these constraints. The logic is strict: a 1990s debut rules out artists who started in 2005, regardless of genre. Don't assume the nationality clue refers to the band's origin if the members are mixed; it usually points to the primary market or the lead singer's birthplace.</p><h2>What usually causes the wrong artist guess</h2>\n<p>Players miss the answer by focusing on fame rather than the debut date. A global superstar might have started their career decades ago, making them an impossible fit for a \"2010s\" clue. Another common error is misinterpreting the group size. A duo might be mistaken for a solo act if one member is the face of the brand.</p>\n<p>Review the <a href=\"/spotle-hints\">hint widgets</a> on the page. They often clarify the group dynamic. If the puzzle says \"band\" but you guess a solo artist, the game flags the size mismatch. Verify the lineup count before locking in a guess. The archive shows that 30% of failed attempts stem from ignoring the group size clue.</p><h2>Best way to solve the next Spotle faster</h2>\n<p>Build a mental checklist: Year, Gender, Group Size, then Genre. Skip the nationality until the end. This order works because the year and size are binary constraints that cut the list fastest. Genre and country are softer filters that help distinguish between the remaining candidates.</p>\n<p>Use the <a href=\"/spotle-answers\">daily answer list</a> to spot patterns in the puzzle's history. If the last three answers were all from the US, the next one might break that streak. Don't rely on streaks, but do notice the distribution. A quick scan of the last week's data often reveals a bias the game designers haven't corrected yet.</p><h2>Questions players keep asking</h2><h3>Does the debut year include the first single or the first album?</h3>\n<p>The game counts the first official commercial release, whether it's a single or an album. If an artist dropped a viral track in 2018 before their debut album in 2020, the year is 2018. Check the artist's discography on a music database to confirm the earliest release date.</p><h3>Can the nationality clue refer to a band member's birthplace?</h3>\n<p>Yes, but it usually refers to the band's formation location. If a group formed in London but the lead singer is American, the clue likely points to the UK. The game prioritizes the origin of the project over individual biographies unless the clue specifies \"singer's birthplace.\" <h3>What happens if I guess an artist from the wrong era?</h3>\n<p>The game marks the year as incorrect and highlights the specific decade mismatch. It doesn't penalize you for the guess itself, but it wastes a turn. Use this feedback to eliminate entire decades from your search. The solver tool can instantly filter out these wrong eras.</p><h3>Are the clues updated if an artist releases a new song?</h3>\n<p>No. The clues are locked based on the artist's career start. New releases don't change the debut year or the original genre classification. The puzzle relies on historical data, so a 2026 hit doesn't shift the answer to a modern category if they started in 2010.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-122b-a10b",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-27T16:55:48.274Z",
+        "wordCount": 686,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-27": {
       "articleKey": "spotle-answer-today",
       "date": "2026-05-27",

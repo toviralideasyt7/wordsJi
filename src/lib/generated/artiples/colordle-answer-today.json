@@ -1,7 +1,30 @@
 {
   "articleKey": "colordle-answer-today",
-  "generatedAt": "2026-05-26T23:10:39.580Z",
+  "generatedAt": "2026-05-27T16:42:47.940Z",
   "byDate": {
+    "2026-05-28": {
+      "articleKey": "colordle-answer-today",
+      "game": "colordle",
+      "date": "2026-05-28",
+      "title": "Colordle Answer for May 28, 2026: Ebony #313337",
+      "summary": "Today's answer is Ebony, a dark neutral hex #313337. It follows a streak of saturated tones, requiring players to strip saturation and lower value immediately.",
+      "bonusHints": [
+        "Ebony sits just below pure black on the value scale.",
+        "The red, green, and blue channels are nearly identical.",
+        "Previous guesses like Velvet or Storm will show zero green hints.",
+        "A guess of pure gray #808080 will reveal the correct hue family."
+      ],
+      "articleHtml": "<h2>Today's Colordle answer at a glance</h2>\n<p>The solution for May 28, 2026 (Day 1525) is <strong>Ebony</strong>. The hex code is <strong>#313337</strong>. This falls squarely into the dark-neutral hue family. After three days of saturated colors like Velvet and Cadet, the puzzle demands a shift to near-black tones.</p>\n<p>Players should expect a board dominated by gray and black hints. The color is not blue-black or brown-black; it is a true, flat neutral. Any guess with significant color saturation will fail to register a green hint.</p><h2>What kind of color this is</h2>\n<p>Ebony is a deep, flat neutral. It lacks the blue undertones of Storm or the purple tint of Velvet. The hex values for red, green, and blue are 49, 51, and 55 respectively. These numbers are so close they effectively cancel out any color bias.</p>\n<p>This makes Ebony one of the trickiest neutrals to land on. It sits just above pure black (#000000) but far below mid-gray. If your guess is too light, you get a yellow hint for value. Too dark, and you get nothing. The margin for error is razor-thin.</p><h2>How to narrow your guesses toward it</h2>\n<p>Start with a dark gray to establish the value floor. A guess like <code>#333333</code> is ideal. If the game returns a yellow hint for value, you know you are too dark. If it returns a green hint for hue, you are in the right family.</p>\n<p>Since the recent history includes Cadet and Storm, many players will instinctively guess blue-heavy colors. Ignore that pattern. The puzzle has reset to neutral. Use a color with zero saturation to confirm the hue family before adjusting the lightness.</p><h2>Where players usually go wrong</h2>\n<p>The most common mistake is guessing a blue-black or brown-black. The human eye often perceives dark neutrals as having a tint, but Ebony is strictly neutral. Guessing <code>#000033</code> or <code>#330000</code> will waste a turn because the hue is completely wrong.</p>\n<p>Another pitfall is overshooting the value. Players see \"dark\" and jump straight to <code>#000000</code>. Ebony is slightly lighter than that. You need to find the specific band between 30 and 40 on the RGB scale. Guessing pure black leaves you with no data on the exact shade.</p><h2>How the score logic actually helps</h2>\n<p>The color feedback system treats neutral colors differently than saturated ones. When you guess a color with low saturation, the game prioritizes value hints over hue hints. This means your first few guesses should focus on getting the brightness right.</p>\n<p>Once the value is locked in (indicated by a green value hint), the hue feedback becomes the only variable. Since Ebony has almost no hue, the game will signal this by returning gray or neutral hints for color, confirming you are looking for a flat tone.</p><h2>Questions players keep asking</h2>\n<h3>Is Ebony considered a shade of black?</h3>\n<p>Technically, yes, but in Colordle terms, it is a distinct color. It is not pure black. The hex #313337 has enough lightness to be distinguished from #000000 by the game's value algorithm.</p><h3>Why did my blue guess get no green hints?</h3>\n<p>Because Ebony is a neutral. It contains no blue, red, or green dominance. A blue guess like Storm (#000B44) will show zero green hints for hue, only value feedback if the darkness matches.</p><h3>Can I solve this in two guesses?</h3>\n<p>It is possible but rare. You need one guess to nail the exact value and another to confirm the neutral hue. Most players need three to four guesses to distinguish Ebony from other dark grays.</p><h3>Does the recent streak of dark colors matter?</h3>\n<p>Not really. The sequence from Celeste to Storm to Cadet to Velvet to Ebony shows the game cycling through extremes. The return to a neutral dark tone breaks the saturation trend, not the value trend.</p>",
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-122b-a10b",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-27T16:42:47.935Z",
+        "wordCount": 630,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-27": {
       "articleKey": "colordle-answer-today",
       "game": "colordle",
