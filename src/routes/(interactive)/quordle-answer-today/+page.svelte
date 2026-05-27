@@ -109,6 +109,7 @@
       </div>
     </article>
 
+    {#if false}
     <!-- SEO Article -->
     <article class="mt-12 space-y-8">
       <section class="bg-white dark:bg-slate-800 rounded-xl p-6 sm:p-5 sm:p-8 shadow-[0_1px_3px_rgb(0_0_0/0.04)] border border-slate-200 dark:border-slate-700">
@@ -183,6 +184,7 @@
         </div>
       </section>
     </article>
+    {/if}
 
     <GeneratedTodayArticle articleKey="quordle-answer-today" articleDate={data.dateKey} />
     <div class="mt-12">

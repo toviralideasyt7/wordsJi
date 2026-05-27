@@ -183,8 +183,6 @@
       <GeneratedTodayArticle
         articleKey="colordle-answer-today"
         articleDate={data.dateKey}
-        eyebrow="Daily write-up"
-        fallbackTitle={`Colordle notes for ${answerDateLabel}`}
         fallbackSummary={data.meta?.description ?? ''}
       />
 

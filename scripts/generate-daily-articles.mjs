@@ -1034,6 +1034,9 @@ const BANNED_PHRASE_LIST_LINES = [
   '- Use specific, concrete observations from the puzzle data provided — no generic filler',
   '- Every factual claim must be supportable from the puzzle data given or stable game rules.',
   '- Never invent percentages, difficulty ratings, private spreadsheets, Discord chatter, or long-term tracking.',
+  '- Show experience without fake first-person claims: describe what a careful daily player would notice from the answer card, clue widget, archive, or solver flow.',
+  '- Make freshness visible. Anchor at least one observation to the supplied date or the current puzzle context instead of writing an evergreen article that could run any day.',
+  '- Avoid repeating the same section rhythm across routes. Mix short paragraphs, one compact list when it helps, and direct FAQ answers only where they add value.',
   '- Write in Preston Hayes\' editorial voice without pretending to narrate Preston\'s personal gameplay.',
   '',
   'SEO STRUCTURE REQUIREMENTS:',
@@ -1203,36 +1206,217 @@ const temperatureMap = {
   other: 0.7
 };
 
+const ROUTE_SECTION_BLUEPRINTS = {
+  'betweenle-answer-today': [
+    "<h2>Betweenle answer today: what to notice before the reveal</h2>",
+    "<h2>How the alphabetical gap tightens</h2>",
+    "<h2>When the clue cards do the real work</h2>",
+    "<h2>Fast way to solve tomorrow's Betweenle</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'canuckle-answer-today': [
+    "<h2>Canuckle answer today: what stands out first</h2>",
+    "<h2>Why the Canadian angle matters on this board</h2>",
+    "<h2>Where players overguess the pattern</h2>",
+    "<h2>Simple way to play the next Canuckle cleaner</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'colordle-answer-today': [
+    "<h2>Colordle answer today: what the shade family tells you first</h2>",
+    "<h2>How to read percentage feedback without fooling yourself</h2>",
+    "<h2>Why near-miss colors waste more guesses than they seem</h2>",
+    "<h2>How to tighten the next Colordle more calmly</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'colorfle-answer-today': [
+    "<h2>Colorfle answer today: how the mix should be read</h2>",
+    "<h2>What the source colors are telling you</h2>",
+    "<h2>Why additive color logic beats random mixing</h2>",
+    "<h2>Easy adjustment path for the next Colorfle</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'contexto-answer-today': [
+    "<h2>Contexto answer today: what the rank pattern usually means</h2>",
+    "<h2>When to pivot categories instead of forcing synonyms</h2>",
+    "<h2>Why broad words beat clever words here</h2>",
+    "<h2>How to cut tomorrow's guess count</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'globle-answer-today': [
+    "<h2>Globle answer today: what the heat clues point to first</h2>",
+    "<h2>How to read warm guesses without rushing</h2>",
+    "<h2>Where the map logic usually breaks down</h2>",
+    "<h2>Better way to triangulate the next Globle</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'countryle-answer-today': [
+    "<h2>Countryle answer today: which clue should lead the solve</h2>",
+    "<h2>How population, area, and continent clues work together</h2>",
+    "<h2>What usually sends players to the wrong country</h2>",
+    "<h2>How to narrow tomorrow's Countryle faster</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'framed-answer-today': [
+    "<h2>Framed answer today: what the opening still usually gives away</h2>",
+    "<h2>How genre beats exact movie recall early</h2>",
+    "<h2>Where a single memorable frame can mislead you</h2>",
+    "<h2>How to clean up tomorrow's Framed in fewer reveals</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'quordle-answer-today': [
+    "<h2>Quordle answer today: what the boards are asking first</h2>",
+    "<h2>How to split attention across four grids</h2>",
+    "<h2>Which guesses pull double duty best</h2>",
+    "<h2>How to finish the next Quordle with fewer panicked guesses</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'nerdle-answer-today': [
+    "<h2>Nerdle answer today: what the equation structure is hinting at</h2>",
+    "<h2>How operators and digit coverage do the heavy lifting</h2>",
+    "<h2>When a tidy-looking equation is still the wrong branch</h2>",
+    "<h2>How to solve tomorrow's Nerdle more efficiently</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'phoodle-answer-today': [
+    "<h2>Phoodle answer today: what kind of kitchen word it feels like first</h2>",
+    "<h2>How to separate ingredient, dish, and technique clues</h2>",
+    "<h2>Where familiar food words become the wrong guess</h2>",
+    "<h2>How to make the next Phoodle easier</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'phrazle-answer-today': [
+    "<h2>Phrazle answer today: what the phrase structure is telling you</h2>",
+    "<h2>How to read color feedback across multiple words</h2>",
+    "<h2>Why good single words can still make bad phrase guesses</h2>",
+    "<h2>How to approach tomorrow's Phrazle with less chaos</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'searchle-answer-today': [
+    "<h2>Searchle answer today: what the prompt is really asking</h2>",
+    "<h2>How autocomplete logic narrows the answer</h2>",
+    "<h2>Why obvious phrasing usually wins</h2>",
+    "<h2>How to read tomorrow's Searchle faster</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'semantle-answer-today': [
+    "<h2>Semantle answer today: what the warm scores are pointing toward</h2>",
+    "<h2>How to explore a semantic lane on purpose</h2>",
+    "<h2>When simple words do more than precise ones</h2>",
+    "<h2>How to reset without wasting twenty guesses</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'spotle-answer-today': [
+    "<h2>Spotle answer today: which clue should matter first</h2>",
+    "<h2>How genre, country, and era work together</h2>",
+    "<h2>What usually causes the wrong artist guess</h2>",
+    "<h2>Best way to solve the next Spotle faster</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'waffle-answer-today': [
+    "<h2>Waffle answer today: how to read the solved grid</h2>",
+    "<h2>Which swaps usually unlock two words at once</h2>",
+    "<h2>Where players leak moves they did not need to spend</h2>",
+    "<h2>How to finish tomorrow's Waffle more cleanly</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'worgle-answer-today': [
+    "<h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>",
+    "<h2>How to read common Welsh digraphs without overforcing them</h2>",
+    "<h2>Where English guessing habits break the solve</h2>",
+    "<h2>How to handle tomorrow's Worgle more smoothly</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'worldle-answer-today': [
+    "<h2>Worldle answer today: what the silhouette should suggest first</h2>",
+    "<h2>How direction and distance clues narrow the shape</h2>",
+    "<h2>Why neighboring countries become the easy wrong answer</h2>",
+    "<h2>How to finish tomorrow's Worldle with fewer detours</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'dotadle-answer-today': [
+    "<h2>Dotadle answer today: which hero clues carry the most weight</h2>",
+    "<h2>How to cut the Dota roster faster</h2>",
+    "<h2>When roles help and when they mislead</h2>",
+    "<h2>Smarter way to approach tomorrow's Dotadle</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'loldle-answer-today': [
+    "<h2>LoLdle answer today: what the champion clues narrow first</h2>",
+    "<h2>How to separate universe, role, and release-year signals</h2>",
+    "<h2>Which mode usually breaks the streak</h2>",
+    "<h2>How to guess tomorrow's LoLdle more efficiently</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'narutodle-answer-today': [
+    "<h2>Narutodle answer today: which filters matter most</h2>",
+    "<h2>How village, rank, and chakra clues work together</h2>",
+    "<h2>Where Naruto knowledge gaps usually show up</h2>",
+    "<h2>How to solve tomorrow's Narutodle with fewer wild guesses</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'onepiecedle-answer-today': [
+    "<h2>OnePiecedle answer today: what the clue stack narrows first</h2>",
+    "<h2>How crew, bounty, and ability clues separate the field</h2>",
+    "<h2>Why familiar names can still be wrong here</h2>",
+    "<h2>How to clean up the next OnePiecedle faster</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'pokedle-answer-today': [
+    "<h2>Pokedle answer today: what the strongest attribute signal is</h2>",
+    "<h2>How generation, type, and stage narrow the pool</h2>",
+    "<h2>Where players confuse similar Pokemon lines</h2>",
+    "<h2>How to approach tomorrow's Pokedle more cleanly</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ],
+  'smashdle-answer-today': [
+    "<h2>Smashdle answer today: which fighter clue matters first</h2>",
+    "<h2>How universe and movement stats split the roster</h2>",
+    "<h2>Why DLC fighters cause so many misses</h2>",
+    "<h2>How to tighten the next Smashdle faster</h2>",
+    "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
+  ]
+};
+
 function getGenericSections(entry) {
+  const routeBlueprint = ROUTE_SECTION_BLUEPRINTS[entry.key];
+  if (routeBlueprint) {
+    return routeBlueprint;
+  }
+
   const sectionSets = {
     geography: [
-      "<h2>Where in the world is today's answer?</h2>",
-      "<h2>Reading the directional clues</h2>",
-      "<h2>Mistakes that waste guesses</h2>",
+      "<h2>[GAME] answer today: what the location clues imply first</h2>",
+      "<h2>How to read the directional and distance pressure</h2>",
+      "<h2>Where the easy geography guesses go wrong</h2>",
+      "<h2>How to solve the next [GAME] faster</h2>",
       "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
     ],
     word: [
-      "<h2>Today's [GAME] at a glance</h2>",
-      "<h2>What the clues are telling you</h2>",
-      "<h2>When to guess vs when to think</h2>",
+      "<h2>[GAME] answer today: what the clue pattern is pushing toward</h2>",
+      "<h2>How to read the clue pressure without rushing</h2>",
+      "<h2>When to stop guessing and start narrowing</h2>",
+      "<h2>How to make tomorrow's [GAME] easier</h2>",
       "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
     ],
     visual: [
-      "<h2>What you're looking at today</h2>",
-      "<h2>How to read the visual hints</h2>",
-      "<h2>Common wrong approaches</h2>",
+      "<h2>[GAME] answer today: what stands out before the reveal</h2>",
+      "<h2>How to read the visual signal instead of chasing noise</h2>",
+      "<h2>Common wrong reads that slow the board down</h2>",
+      "<h2>How to solve the next [GAME] more smoothly</h2>",
       "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
     ],
     gamedle: [
-      "<h2>Today's puzzle in context</h2>",
-      "<h2>Which attributes matter most today</h2>",
-      "<h2>When the solver saves you time</h2>",
+      "<h2>[GAME] answer today: what the mode cards are confirming</h2>",
+      "<h2>Which attributes deserve your attention first</h2>",
+      "<h2>Where players burn guesses on the wrong branch</h2>",
+      "<h2>When the solver genuinely saves time</h2>",
       "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
     ],
     other: [
-      "<h2>Today's [GAME] at a glance</h2>",
-      "<h2>What to pay attention to</h2>",
-      "<h2>Mistakes that cost guesses</h2>",
+      "<h2>[GAME] answer today: what matters most on this page</h2>",
+      "<h2>What to pay attention to before you reveal anything else</h2>",
+      "<h2>Mistakes that usually cost the clean solve</h2>",
+      "<h2>How to play the next [GAME] more efficiently</h2>",
       "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
     ]
   };
@@ -1301,20 +1485,30 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must target 420-680 words after HTML tags are stripped.',
+    '- `articleHtml` must target 520-780 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not mention AI, prompts, models, or automation.',
     '- Do not use first-person gameplay anecdotes such as "I guessed", "I burned", or "my streak".',
     '- Do not make up private stats, fake test runs, first-hand experiences, difficulty ratings, or percentages unless they were explicitly provided in the page facts.',
+    '- Use simple, everyday U.S. English. Sound like a sharp daily editor, not a professor or a marketer.',
     '- Keep a short evergreen explanation of what the game is, but do not let the whole article become static filler.',
     '- Make the article feel like a real daily update tied to the current date and the page purpose.',
     '- Keep the tone natural, specific, and non-corporate.',
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
     '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
+    '- After the first H2, write a direct 40-60 word paragraph that gives immediate value to the reader.',
+    '- Make that first paragraph quote-ready and self-contained so it works for featured snippets and AI citations.',
+    '- Let one section read like a believable post-game takeaway from a skilled editor: "A careful player usually notices..." is fine. Fake "I played this" language is not.',
+    '- Treat the answer card, clue widgets, archive links, and solver links on the page as verified context. Use them instead of padding the article with broad game history.',
+    '- Make each route feel structurally different. Follow the exact heading blueprint below instead of recycling one universal outline.',
+    '- Explain how a careful player would read the puzzle data, but do not pretend you personally played or solved it.',
     '- You do not have verified answer-specific facts for this route unless they appear explicitly in the page facts below.',
     '- Do not name the exact answer, country, movie title, color, puzzle number, silhouette detail, or board-specific clue unless it appears in verified facts.',
     '- If exact answer facts are not supplied, refer to "the answer above", "the reveal card", "today\'s page", or "the archive/solver on this page" instead of inventing specifics.',
+    '- Pass Google\'s Who/How/Why test in tone: make it obvious the page exists to help a player verify the answer quickly, understand the solve path, and move to the right on-site tool if needed.',
+    '- Show how the write-up was built from visible page elements only: answer card, hint widgets, archive history, solver links, and other verified page data. Do not mention prompts, models, or hidden workflow.',
+    '- Use internal links sparingly and only when they clearly help, usually to the solver, archive, or a closely related answer resource on WordSolverX.',
     '',
     'Required sections inside `articleHtml` (use these exact headings):',
     ...getGenericSections(entry).map((s, i) => `${i + 1}. ${s}`),
@@ -1948,8 +2142,10 @@ async function generateWithProviders({ game, prompt, targetDate, providers, rout
                 provider: provider.provider,
                 model,
                 fallbackUsed: model !== PRIMARY_MODEL,
+                fallbackSource: 'stored',
                 generatedAt: new Date().toISOString(),
-                wordCount: countWords(validated.contentGuideHtml ?? validated.articleHtml ?? '')
+                wordCount: countWords(validated.contentGuideHtml ?? validated.articleHtml ?? ''),
+                editorialVersion: 2
               }
             };
           } catch (error) {

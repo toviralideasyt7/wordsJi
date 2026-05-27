@@ -97,7 +97,12 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                     description: pageDescription,
                     image: [featuredImage],
                     mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today' },
-                    author: { '@type': 'Organization', name: 'WordSolverX' },
+                    author: {
+                        '@type': 'Person',
+                        name: 'Preston Hayes',
+                        url: 'https://wordsolverx.com/about#preston-hayes',
+                        image: 'https://wordsolverx.com/author-wordsolverx.webp'
+                    },
                     publisher: { '@type': 'Organization', name: 'WordSolverX' },
                     ...(latestDate ? { datePublished: `${latestDate}T00:00:00Z`, dateModified: `${latestDate}T00:00:00Z` } : {})
                 }

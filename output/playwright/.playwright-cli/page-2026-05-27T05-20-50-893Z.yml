@@ -1,0 +1,1121 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: W
+          - generic [ref=e11]: WordSolverX
+        - generic [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "Today's Answers" [ref=e14] [cursor=pointer]:
+            - /url: /today
+          - link "Solvers" [ref=e15] [cursor=pointer]:
+            - /url: /solver
+          - link "Archives" [ref=e16] [cursor=pointer]:
+            - /url: /archive
+          - link "Guides" [ref=e17] [cursor=pointer]:
+            - /url: /guides
+          - link "About" [ref=e18] [cursor=pointer]:
+            - /url: /about
+    - main [ref=e19]:
+      - generic [ref=e21]:
+        - navigation "Breadcrumb" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - link "Home" [ref=e25] [cursor=pointer]:
+                - /url: /
+                - img [ref=e26]
+                - generic [ref=e29]: Home
+            - listitem [ref=e30]:
+              - img [ref=e31]
+              - generic [ref=e33]: Colordle Answer Today
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Daily Color Puzzle
+          - heading "Colordle Answer Today (May 27, 2026)" [level=1] [ref=e36]
+          - paragraph [ref=e37]: The worker API now feeds this page directly, so the color name, hex code, and recent history all come from the same verified source.
+          - generic [ref=e38]:
+            - link "Open Solver" [ref=e39] [cursor=pointer]:
+              - /url: /colordle-solver
+            - link "Browse Archive" [ref=e40] [cursor=pointer]:
+              - /url: /colordle-archive
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - paragraph [ref=e44]: Today's answer
+              - heading "velvet" [level=2] [ref=e45]
+              - paragraph [ref=e46]: "#750851"
+              - paragraph [ref=e47]: "Puzzle #1524 for May 27, 2026"
+            - generic [ref=e48]:
+              - paragraph [ref=e49]: Yesterday
+              - paragraph [ref=e50]: cadet
+              - paragraph [ref=e51]: "#536872"
+              - paragraph [ref=e52]: May 26, 2026
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - img [ref=e57]
+                - heading "Hints & Clues" [level=2] [ref=e60]
+              - paragraph [ref=e61]: Use these clues to guess before revealing the answer!
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]:
+                    - img [ref=e66]
+                    - generic [ref=e69]: Letters
+                  - paragraph [ref=e70]: "6"
+                - generic [ref=e71]:
+                  - generic [ref=e72]:
+                    - img [ref=e73]
+                    - generic [ref=e75]: Vowels
+                  - paragraph [ref=e76]: "2"
+                - generic [ref=e77]:
+                  - generic [ref=e79]: Starts With
+                  - paragraph [ref=e80]: V
+                - generic [ref=e81]:
+                  - generic [ref=e83]: Ends With
+                  - paragraph [ref=e84]: T
+              - generic [ref=e85]:
+                - generic [ref=e86]:
+                  - img [ref=e87]
+                  - generic [ref=e90]: Meaning Hint
+                - paragraph [ref=e91]: "\"A closely woven fabric (originally of silk, now also of cotton or man-made fibres) with a thick short pile on one side. \""
+              - generic [ref=e94]: Color Preview
+          - generic [ref=e96]:
+            - paragraph [ref=e97]: Suggested solve path
+            - paragraph [ref=e98]:
+              - text: Today's puzzle felt
+              - strong [ref=e99]: pretty straightforward
+              - text: . Here is a plausible path using the same color-difference logic the solver relies on.
+            - generic [ref=e100]:
+              - generic [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: Guess 1
+                  - generic [ref=e106]: teal
+                  - generic [ref=e107]: 49.09%
+                - paragraph [ref=e108]: A low match, so the next guess should pivot harder across the spectrum.
+              - generic [ref=e111]:
+                - generic [ref=e112]:
+                  - generic [ref=e113]: Guess 2
+                  - generic [ref=e114]: navy
+                  - generic [ref=e115]: 77.11%
+                - paragraph [ref=e116]: Useful signal, but broad enough that the hue family still needed refinement.
+              - generic [ref=e119]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]: Guess 3
+                  - generic [ref=e122]: wine
+                  - generic [ref=e123]: 85.63%
+                - paragraph [ref=e124]: Close enough that the next move is usually a narrower shade in the same family.
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - generic [ref=e129]: Guess 4
+                  - generic [ref=e130]: velvet
+                  - generic [ref=e131]: 100%
+                - paragraph [ref=e132]: "Exact match. That locks in velvet at #750851."
+        - generic [ref=e133]:
+          - paragraph [ref=e134]: Extra hints
+          - heading "Fresh nudges before you peek elsewhere" [level=2] [ref=e135]
+          - generic [ref=e136]:
+            - generic [ref=e137]: This one sits between rose and plum—darker than most pinks you'll test early.
+            - generic [ref=e138]: Check your saturation logic before guessing lighter variants.
+            - generic [ref=e139]: The hue family is pink, but the value makes it tricky.
+            - generic [ref=e140]: Recent darks like Storm should help you triangulate where this falls.
+        - generic [ref=e141]:
+          - paragraph [ref=e142]: Daily write-up
+          - 'heading "Colordle Answer: Velvet (#750851) — May 27, 2026" [level=2] [ref=e143]'
+          - paragraph [ref=e144]: "Day 1524's color is Velvet, a deep magenta-pink with hex #750851. Here's how to work the board if you're stuck."
+          - generic [ref=e145]:
+            - heading "Today's Colordle answer at a glance" [level=2] [ref=e146]
+            - paragraph [ref=e147]: "The board landed on Velvet for May 27, 2026. That's hex code #750851 , sitting squarely in the pink hue family."
+            - paragraph [ref=e148]: Day 1524 isn't pulling punches—this one's a darker, saturated magenta that trips up players expecting lighter fare.
+            - paragraph [ref=e149]: If you've been working through the recent run (Cadet, Celeste, Storm, Evergreen), you know the board cycles through some variety.
+            - paragraph [ref=e150]: This one leans warm and deep.
+            - heading "What kind of color this is" [level=2] [ref=e151]
+            - paragraph [ref=e152]: Velvet isn't a soft pastel pink. It's a rich, wine-adjacent magenta with serious depth.
+            - paragraph [ref=e153]: The RGB values break down to heavy red and blue presence with minimal green—that's what gives it that velvety, almost burgundy quality.
+            - paragraph [ref=e154]: "In practical terms: if you've been testing light pinks or corals, you're probably far off. This one wants you to think darker."
+            - paragraph [ref=e155]: Think berry, not blush.
+            - paragraph [ref=e156]: The hue family confirms pink, but the low lightness value (around 34% based on
+            - paragraph [ref=e157]: that hex) means it's nowhere near a traditional pink in appearance.
+            - paragraph [ref=e158]: Players who anchor too hard on the hue name often miss the value component entirely.
+            - heading "How to narrow your guesses toward it" [level=2] [ref=e159]
+            - paragraph [ref=e160]: Start with your mid-range darks. Colors like plum, wine, and fuchsia will get you closer than anything in the peach or salmon range.
+            - paragraph [ref=e161]: "If you've already tested something close to #800040 or #6B0040, you're in the right neighborhood."
+            - paragraph [ref=e162]: The saturation is high—that's your second clue. Low-saturation grays or muted taupes won't help here. You want bold, saturated colors as inputs.
+            - paragraph [ref=e163]: "A useful narrowing tactic: test a pure red first, then add blue incrementally. Red gets you warmth; blue adds the depth."
+            - paragraph [ref=e164]: Velvet lives somewhere around 70% red, 3% green, 32% blue in normalized RGB space.
+            - heading "Where players usually go wrong" [level=2] [ref=e165]
+            - paragraph [ref=e166]: The biggest mistake is treating "pink" as license to guess light colors. The word "Velvet" sounds soft, which tricks people into reaching for pastels.
+            - paragraph [ref=e167]: Wrong direction entirely.
+            - paragraph [ref=e168]: "Another common error: confusing this with purple-adjacent colors. Yes, there's blue in the mix, but it's not a true purple."
+            - paragraph [ref=e169]: Purple guesses will show you more yellow in the feedback than Velvet does.
+            - paragraph [ref=e170]: Players also tend to undershoot the darkness. If your guesses are hovering around medium-light values, you're wasting attempts. Push darker.
+            - heading "How the score logic actually helps" [level=2] [ref=e171]
+            - paragraph [ref=e172]: The color distance scoring tells you exactly how far off each guess lands.
+            - paragraph [ref=e173]: For a color this saturated and dark, even a decent-looking hex can score poorly if it's off by 20+ points in value.
+            - paragraph [ref=e174]: Use the numeric feedback as a compass, not just a thumbs-up or thumbs-down. A score of 65 tells you you're warm but still adjusting.
+            - paragraph [ref=e175]: A score of 40 means you've got significant hue or value drift.
+            - paragraph [ref=e176]: "The key insight: for colors like Velvet, small adjustments matter more than big swings."
+            - paragraph [ref=e177]: "Moving from #700000 to #750851 is a tiny tweak that could swing your score dramatically if you're already in the right hue neighborhood."
+            - heading "Questions players keep asking" [level=2] [ref=e178]
+            - heading "Is Velvet closer to red or purple?" [level=3] [ref=e179]
+            - paragraph [ref=e180]: Red, decisively. The blue component is there to deepen and saturate, not to shift the hue toward purple. Think magenta rather than violet.
+            - heading "Why does my pink guess score so low when the hue family matches?" [level=3] [ref=e181]
+            - paragraph [ref=e182]: Because hue family only covers half the equation. Value (lightness/darkness) matters equally.
+            - paragraph [ref=e183]: A pale pink has nothing in common with Velvet beyond sharing a general hue classification.
+            - heading "What's the fastest way to bracket this color?" [level=3] [ref=e184]
+            - paragraph [ref=e185]: Test a dark neutral first to establish the value floor, then jump to a saturated red to lock the hue.
+            - paragraph [ref=e186]: From there, add blue incrementally until the score peaks. Two or three strategic guesses should get you close.
+            - heading "Does the name \"Velvet\" give any visual hint?" [level=3] [ref=e187]
+            - paragraph [ref=e188]: It suggests texture and richness, not lightness. Velvet fabrics are deep and saturated.
+            - paragraph [ref=e189]: Let the hex guide you, not the poetic implications of the color name.
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - paragraph [ref=e193]: Recent history
+              - heading "The last 100 Colordle answers" [level=2] [ref=e194]
+            - paragraph [ref=e195]: Search by date, color name, or hex code.
+          - generic [ref=e196]:
+            - searchbox "Search by date, color name, or hex code..." [ref=e197]
+            - button "Search" [ref=e198]
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - paragraph [ref=e202]: May 27, 2026
+                - paragraph [ref=e203]: Daily color
+              - generic [ref=e204]:
+                - paragraph [ref=e205]: velvet
+                - paragraph [ref=e206]: "#750851"
+            - generic [ref=e207]:
+              - generic [ref=e208]:
+                - paragraph [ref=e209]: May 26, 2026
+                - paragraph [ref=e210]: Daily color
+              - generic [ref=e211]:
+                - paragraph [ref=e212]: cadet
+                - paragraph [ref=e213]: "#536872"
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - paragraph [ref=e216]: May 25, 2026
+                - paragraph [ref=e217]: Daily color
+              - generic [ref=e218]:
+                - paragraph [ref=e219]: celeste
+                - paragraph [ref=e220]: "#b2ffff"
+            - generic [ref=e221]:
+              - generic [ref=e222]:
+                - paragraph [ref=e223]: May 24, 2026
+                - paragraph [ref=e224]: Daily color
+              - generic [ref=e225]:
+                - paragraph [ref=e226]: storm
+                - paragraph [ref=e227]: "#000b44"
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - paragraph [ref=e230]: May 23, 2026
+                - paragraph [ref=e231]: Daily color
+              - generic [ref=e232]:
+                - paragraph [ref=e233]: evergreen
+                - paragraph [ref=e234]: "#125b49"
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - paragraph [ref=e237]: May 22, 2026
+                - paragraph [ref=e238]: Daily color
+              - generic [ref=e239]:
+                - paragraph [ref=e240]: oxford blue
+                - paragraph [ref=e241]: "#002147"
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - paragraph [ref=e244]: May 21, 2026
+                - paragraph [ref=e245]: Daily color
+              - generic [ref=e246]:
+                - paragraph [ref=e247]: avocado
+                - paragraph [ref=e248]: "#568203"
+            - generic [ref=e249]:
+              - generic [ref=e250]:
+                - paragraph [ref=e251]: May 20, 2026
+                - paragraph [ref=e252]: Daily color
+              - generic [ref=e253]:
+                - paragraph [ref=e254]: spa
+                - paragraph [ref=e255]: "#ceece7"
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - paragraph [ref=e258]: May 19, 2026
+                - paragraph [ref=e259]: Daily color
+              - generic [ref=e260]:
+                - paragraph [ref=e261]: sage green
+                - paragraph [ref=e262]: "#887766"
+            - generic [ref=e263]:
+              - generic [ref=e264]:
+                - paragraph [ref=e265]: May 18, 2026
+                - paragraph [ref=e266]: Daily color
+              - generic [ref=e267]:
+                - paragraph [ref=e268]: tangerine
+                - paragraph [ref=e269]: "#ff9300"
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - paragraph [ref=e272]: May 17, 2026
+                - paragraph [ref=e273]: Daily color
+              - generic [ref=e274]:
+                - paragraph [ref=e275]: cobalt
+                - paragraph [ref=e276]: "#030aa7"
+            - generic [ref=e277]:
+              - generic [ref=e278]:
+                - paragraph [ref=e279]: May 16, 2026
+                - paragraph [ref=e280]: Daily color
+              - generic [ref=e281]:
+                - paragraph [ref=e282]: blue purple
+                - paragraph [ref=e283]: "#5729ce"
+            - generic [ref=e284]:
+              - generic [ref=e285]:
+                - paragraph [ref=e286]: May 15, 2026
+                - paragraph [ref=e287]: Daily color
+              - generic [ref=e288]:
+                - paragraph [ref=e289]: white
+                - paragraph [ref=e290]: "#ffffff"
+            - generic [ref=e291]:
+              - generic [ref=e292]:
+                - paragraph [ref=e293]: May 14, 2026
+                - paragraph [ref=e294]: Daily color
+              - generic [ref=e295]:
+                - paragraph [ref=e296]: grass
+                - paragraph [ref=e297]: "#5cac2d"
+            - generic [ref=e298]:
+              - generic [ref=e299]:
+                - paragraph [ref=e300]: May 13, 2026
+                - paragraph [ref=e301]: Daily color
+              - generic [ref=e302]:
+                - paragraph [ref=e303]: light pink
+                - paragraph [ref=e304]: "#ffd1df"
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - paragraph [ref=e307]: May 12, 2026
+                - paragraph [ref=e308]: Daily color
+              - generic [ref=e309]:
+                - paragraph [ref=e310]: cloud
+                - paragraph [ref=e311]: "#e4f0ef"
+            - generic [ref=e312]:
+              - generic [ref=e313]:
+                - paragraph [ref=e314]: May 11, 2026
+                - paragraph [ref=e315]: Daily color
+              - generic [ref=e316]:
+                - paragraph [ref=e317]: sangria
+                - paragraph [ref=e318]: "#b14566"
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - paragraph [ref=e321]: May 10, 2026
+                - paragraph [ref=e322]: Daily color
+              - generic [ref=e323]:
+                - paragraph [ref=e324]: lavender
+                - paragraph [ref=e325]: "#b56edc"
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - paragraph [ref=e328]: May 9, 2026
+                - paragraph [ref=e329]: Daily color
+              - generic [ref=e330]:
+                - paragraph [ref=e331]: mocha
+                - paragraph [ref=e332]: "#9d7651"
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - paragraph [ref=e335]: May 8, 2026
+                - paragraph [ref=e336]: Daily color
+              - generic [ref=e337]:
+                - paragraph [ref=e338]: mustard
+                - paragraph [ref=e339]: "#ceb301"
+            - generic [ref=e340]:
+              - generic [ref=e341]:
+                - paragraph [ref=e342]: May 7, 2026
+                - paragraph [ref=e343]: Daily color
+              - generic [ref=e344]:
+                - paragraph [ref=e345]: lemon
+                - paragraph [ref=e346]: "#fff700"
+            - generic [ref=e347]:
+              - generic [ref=e348]:
+                - paragraph [ref=e349]: May 6, 2026
+                - paragraph [ref=e350]: Daily color
+              - generic [ref=e351]:
+                - paragraph [ref=e352]: ice
+                - paragraph [ref=e353]: "#d6fffa"
+            - generic [ref=e354]:
+              - generic [ref=e355]:
+                - paragraph [ref=e356]: May 5, 2026
+                - paragraph [ref=e357]: Daily color
+              - generic [ref=e358]:
+                - paragraph [ref=e359]: royal blue
+                - paragraph [ref=e360]: "#4169e1"
+            - generic [ref=e361]:
+              - generic [ref=e362]:
+                - paragraph [ref=e363]: May 4, 2026
+                - paragraph [ref=e364]: Daily color
+              - generic [ref=e365]:
+                - paragraph [ref=e366]: plum
+                - paragraph [ref=e367]: "#66386a"
+            - generic [ref=e368]:
+              - generic [ref=e369]:
+                - paragraph [ref=e370]: May 3, 2026
+                - paragraph [ref=e371]: Daily color
+              - generic [ref=e372]:
+                - paragraph [ref=e373]: slate
+                - paragraph [ref=e374]: "#516572"
+            - generic [ref=e375]:
+              - generic [ref=e376]:
+                - paragraph [ref=e377]: May 2, 2026
+                - paragraph [ref=e378]: Daily color
+              - generic [ref=e379]:
+                - paragraph [ref=e380]: mint
+                - paragraph [ref=e381]: "#3eb489"
+            - generic [ref=e382]:
+              - generic [ref=e383]:
+                - paragraph [ref=e384]: May 1, 2026
+                - paragraph [ref=e385]: Daily color
+              - generic [ref=e386]:
+                - paragraph [ref=e387]: vantablack
+                - paragraph [ref=e388]: "#000100"
+            - generic [ref=e389]:
+              - generic [ref=e390]:
+                - paragraph [ref=e391]: April 30, 2026
+                - paragraph [ref=e392]: Daily color
+              - generic [ref=e393]:
+                - paragraph [ref=e394]: vermilion
+                - paragraph [ref=e395]: "#f4320c"
+            - generic [ref=e396]:
+              - generic [ref=e397]:
+                - paragraph [ref=e398]: April 29, 2026
+                - paragraph [ref=e399]: Daily color
+              - generic [ref=e400]:
+                - paragraph [ref=e401]: cool blue
+                - paragraph [ref=e402]: "#4984b8"
+            - generic [ref=e403]:
+              - generic [ref=e404]:
+                - paragraph [ref=e405]: April 28, 2026
+                - paragraph [ref=e406]: Daily color
+              - generic [ref=e407]:
+                - paragraph [ref=e408]: spelunking
+                - paragraph [ref=e409]: "#35465e"
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - paragraph [ref=e412]: April 27, 2026
+                - paragraph [ref=e413]: Daily color
+              - generic [ref=e414]:
+                - paragraph [ref=e415]: purple
+                - paragraph [ref=e416]: "#800080"
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - paragraph [ref=e419]: April 26, 2026
+                - paragraph [ref=e420]: Daily color
+              - generic [ref=e421]:
+                - paragraph [ref=e422]: sunshine
+                - paragraph [ref=e423]: "#f9d376"
+            - generic [ref=e424]:
+              - generic [ref=e425]:
+                - paragraph [ref=e426]: April 25, 2026
+                - paragraph [ref=e427]: Daily color
+              - generic [ref=e428]:
+                - paragraph [ref=e429]: kiwi
+                - paragraph [ref=e430]: "#749e4e"
+            - generic [ref=e431]:
+              - generic [ref=e432]:
+                - paragraph [ref=e433]: April 24, 2026
+                - paragraph [ref=e434]: Daily color
+              - generic [ref=e435]:
+                - paragraph [ref=e436]: light lavender
+                - paragraph [ref=e437]: "#efc0fe"
+            - generic [ref=e438]:
+              - generic [ref=e439]:
+                - paragraph [ref=e440]: April 23, 2026
+                - paragraph [ref=e441]: Daily color
+              - generic [ref=e442]:
+                - paragraph [ref=e443]: melon
+                - paragraph [ref=e444]: "#ff7855"
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - paragraph [ref=e447]: April 22, 2026
+                - paragraph [ref=e448]: Daily color
+              - generic [ref=e449]:
+                - paragraph [ref=e450]: ketchup
+                - paragraph [ref=e451]: "#9a382d"
+            - generic [ref=e452]:
+              - generic [ref=e453]:
+                - paragraph [ref=e454]: April 21, 2026
+                - paragraph [ref=e455]: Daily color
+              - generic [ref=e456]:
+                - paragraph [ref=e457]: cyan
+                - paragraph [ref=e458]: "#00ffff"
+            - generic [ref=e459]:
+              - generic [ref=e460]:
+                - paragraph [ref=e461]: April 20, 2026
+                - paragraph [ref=e462]: Daily color
+              - generic [ref=e463]:
+                - paragraph [ref=e464]: birchwood
+                - paragraph [ref=e465]: "#ccbeac"
+            - generic [ref=e466]:
+              - generic [ref=e467]:
+                - paragraph [ref=e468]: April 19, 2026
+                - paragraph [ref=e469]: Daily color
+              - generic [ref=e470]:
+                - paragraph [ref=e471]: gin
+                - paragraph [ref=e472]: "#d9dfcd"
+            - generic [ref=e473]:
+              - generic [ref=e474]:
+                - paragraph [ref=e475]: April 18, 2026
+                - paragraph [ref=e476]: Daily color
+              - generic [ref=e477]:
+                - paragraph [ref=e478]: marmalade
+                - paragraph [ref=e479]: "#d46f14"
+            - generic [ref=e480]:
+              - generic [ref=e481]:
+                - paragraph [ref=e482]: April 17, 2026
+                - paragraph [ref=e483]: Daily color
+              - generic [ref=e484]:
+                - paragraph [ref=e485]: sea moss
+                - paragraph [ref=e486]: "#2c5252"
+            - generic [ref=e487]:
+              - generic [ref=e488]:
+                - paragraph [ref=e489]: April 16, 2026
+                - paragraph [ref=e490]: Daily color
+              - generic [ref=e491]:
+                - paragraph [ref=e492]: platinum
+                - paragraph [ref=e493]: "#e5e4e2"
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - paragraph [ref=e496]: April 15, 2026
+                - paragraph [ref=e497]: Daily color
+              - generic [ref=e498]:
+                - paragraph [ref=e499]: dark mahogany
+                - paragraph [ref=e500]: "#482029"
+            - generic [ref=e501]:
+              - generic [ref=e502]:
+                - paragraph [ref=e503]: April 14, 2026
+                - paragraph [ref=e504]: Daily color
+              - generic [ref=e505]:
+                - paragraph [ref=e506]: verdigris
+                - paragraph [ref=e507]: "#43b3ae"
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - paragraph [ref=e510]: April 13, 2026
+                - paragraph [ref=e511]: Daily color
+              - generic [ref=e512]:
+                - paragraph [ref=e513]: aged pink
+                - paragraph [ref=e514]: "#c99f99"
+            - generic [ref=e515]:
+              - generic [ref=e516]:
+                - paragraph [ref=e517]: April 12, 2026
+                - paragraph [ref=e518]: Daily color
+              - generic [ref=e519]:
+                - paragraph [ref=e520]: celadon
+                - paragraph [ref=e521]: "#ace1af"
+            - generic [ref=e522]:
+              - generic [ref=e523]:
+                - paragraph [ref=e524]: April 11, 2026
+                - paragraph [ref=e525]: Daily color
+              - generic [ref=e526]:
+                - paragraph [ref=e527]: honeydew
+                - paragraph [ref=e528]: "#f0fff0"
+            - generic [ref=e529]:
+              - generic [ref=e530]:
+                - paragraph [ref=e531]: April 10, 2026
+                - paragraph [ref=e532]: Daily color
+              - generic [ref=e533]:
+                - paragraph [ref=e534]: champagne
+                - paragraph [ref=e535]: "#e9d2ac"
+            - generic [ref=e536]:
+              - generic [ref=e537]:
+                - paragraph [ref=e538]: April 9, 2026
+                - paragraph [ref=e539]: Daily color
+              - generic [ref=e540]:
+                - paragraph [ref=e541]: cucumber
+                - paragraph [ref=e542]: "#006400"
+            - generic [ref=e543]:
+              - generic [ref=e544]:
+                - paragraph [ref=e545]: April 8, 2026
+                - paragraph [ref=e546]: Daily color
+              - generic [ref=e547]:
+                - paragraph [ref=e548]: orange juice
+                - paragraph [ref=e549]: "#ff7f00"
+            - generic [ref=e550]:
+              - generic [ref=e551]:
+                - paragraph [ref=e552]: April 7, 2026
+                - paragraph [ref=e553]: Daily color
+              - generic [ref=e554]:
+                - paragraph [ref=e555]: green apple
+                - paragraph [ref=e556]: "#5edc1f"
+            - generic [ref=e557]:
+              - generic [ref=e558]:
+                - paragraph [ref=e559]: April 6, 2026
+                - paragraph [ref=e560]: Daily color
+              - generic [ref=e561]:
+                - paragraph [ref=e562]: lemon
+                - paragraph [ref=e563]: "#fff700"
+            - generic [ref=e564]:
+              - generic [ref=e565]:
+                - paragraph [ref=e566]: April 5, 2026
+                - paragraph [ref=e567]: Daily color
+              - generic [ref=e568]:
+                - paragraph [ref=e569]: pink red
+                - paragraph [ref=e570]: "#f5054f"
+            - generic [ref=e571]:
+              - generic [ref=e572]:
+                - paragraph [ref=e573]: April 4, 2026
+                - paragraph [ref=e574]: Daily color
+              - generic [ref=e575]:
+                - paragraph [ref=e576]: brown sugar
+                - paragraph [ref=e577]: "#ab764e"
+            - generic [ref=e578]:
+              - generic [ref=e579]:
+                - paragraph [ref=e580]: April 3, 2026
+                - paragraph [ref=e581]: Daily color
+              - generic [ref=e582]:
+                - paragraph [ref=e583]: sea blue
+                - paragraph [ref=e584]: "#006994"
+            - generic [ref=e585]:
+              - generic [ref=e586]:
+                - paragraph [ref=e587]: April 2, 2026
+                - paragraph [ref=e588]: Daily color
+              - generic [ref=e589]:
+                - paragraph [ref=e590]: porcelain
+                - paragraph [ref=e591]: "#dddcdb"
+            - generic [ref=e592]:
+              - generic [ref=e593]:
+                - paragraph [ref=e594]: April 1, 2026
+                - paragraph [ref=e595]: Daily color
+              - generic [ref=e596]:
+                - paragraph [ref=e597]: crimson red
+                - paragraph [ref=e598]: "#980001"
+            - generic [ref=e599]:
+              - generic [ref=e600]:
+                - paragraph [ref=e601]: March 31, 2026
+                - paragraph [ref=e602]: Daily color
+              - generic [ref=e603]:
+                - paragraph [ref=e604]: grey white
+                - paragraph [ref=e605]: "#d7d5cb"
+            - generic [ref=e606]:
+              - generic [ref=e607]:
+                - paragraph [ref=e608]: March 30, 2026
+                - paragraph [ref=e609]: Daily color
+              - generic [ref=e610]:
+                - paragraph [ref=e611]: bright purple
+                - paragraph [ref=e612]: "#be03fd"
+            - generic [ref=e613]:
+              - generic [ref=e614]:
+                - paragraph [ref=e615]: March 29, 2026
+                - paragraph [ref=e616]: Daily color
+              - generic [ref=e617]:
+                - paragraph [ref=e618]: pink orange
+                - paragraph [ref=e619]: "#ff9066"
+            - generic [ref=e620]:
+              - generic [ref=e621]:
+                - paragraph [ref=e622]: March 28, 2026
+                - paragraph [ref=e623]: Daily color
+              - generic [ref=e624]:
+                - paragraph [ref=e625]: dark rose
+                - paragraph [ref=e626]: "#b5485d"
+            - generic [ref=e627]:
+              - generic [ref=e628]:
+                - paragraph [ref=e629]: March 27, 2026
+                - paragraph [ref=e630]: Daily color
+              - generic [ref=e631]:
+                - paragraph [ref=e632]: brownish red
+                - paragraph [ref=e633]: "#9e3623"
+            - generic [ref=e634]:
+              - generic [ref=e635]:
+                - paragraph [ref=e636]: March 26, 2026
+                - paragraph [ref=e637]: Daily color
+              - generic [ref=e638]:
+                - paragraph [ref=e639]: cranberry
+                - paragraph [ref=e640]: "#9e003a"
+            - generic [ref=e641]:
+              - generic [ref=e642]:
+                - paragraph [ref=e643]: March 25, 2026
+                - paragraph [ref=e644]: Daily color
+              - generic [ref=e645]:
+                - paragraph [ref=e646]: yellow green
+                - paragraph [ref=e647]: "#c8fd3d"
+            - generic [ref=e648]:
+              - generic [ref=e649]:
+                - paragraph [ref=e650]: March 24, 2026
+                - paragraph [ref=e651]: Daily color
+              - generic [ref=e652]:
+                - paragraph [ref=e653]: lipstick red
+                - paragraph [ref=e654]: "#c0022f"
+            - generic [ref=e655]:
+              - generic [ref=e656]:
+                - paragraph [ref=e657]: March 23, 2026
+                - paragraph [ref=e658]: Daily color
+              - generic [ref=e659]:
+                - paragraph [ref=e660]: cotton candy
+                - paragraph [ref=e661]: "#ffbcd9"
+            - generic [ref=e662]:
+              - generic [ref=e663]:
+                - paragraph [ref=e664]: March 22, 2026
+                - paragraph [ref=e665]: Daily color
+              - generic [ref=e666]:
+                - paragraph [ref=e667]: burnt sienna
+                - paragraph [ref=e668]: "#a93400"
+            - generic [ref=e669]:
+              - generic [ref=e670]:
+                - paragraph [ref=e671]: March 21, 2026
+                - paragraph [ref=e672]: Daily color
+              - generic [ref=e673]:
+                - paragraph [ref=e674]: pastel pink
+                - paragraph [ref=e675]: "#dea5a4"
+            - generic [ref=e676]:
+              - generic [ref=e677]:
+                - paragraph [ref=e678]: March 20, 2026
+                - paragraph [ref=e679]: Daily color
+              - generic [ref=e680]:
+                - paragraph [ref=e681]: neon purple
+                - paragraph [ref=e682]: "#bc13fe"
+            - generic [ref=e683]:
+              - generic [ref=e684]:
+                - paragraph [ref=e685]: March 19, 2026
+                - paragraph [ref=e686]: Daily color
+              - generic [ref=e687]:
+                - paragraph [ref=e688]: bright blue
+                - paragraph [ref=e689]: "#0165fc"
+            - generic [ref=e690]:
+              - generic [ref=e691]:
+                - paragraph [ref=e692]: March 18, 2026
+                - paragraph [ref=e693]: Daily color
+              - generic [ref=e694]:
+                - paragraph [ref=e695]: platinum
+                - paragraph [ref=e696]: "#e5e4e2"
+            - generic [ref=e697]:
+              - generic [ref=e698]:
+                - paragraph [ref=e699]: March 17, 2026
+                - paragraph [ref=e700]: Daily color
+              - generic [ref=e701]:
+                - paragraph [ref=e702]: canary
+                - paragraph [ref=e703]: "#fdff63"
+            - generic [ref=e704]:
+              - generic [ref=e705]:
+                - paragraph [ref=e706]: March 16, 2026
+                - paragraph [ref=e707]: Daily color
+              - generic [ref=e708]:
+                - paragraph [ref=e709]: lead
+                - paragraph [ref=e710]: "#212121"
+            - generic [ref=e711]:
+              - generic [ref=e712]:
+                - paragraph [ref=e713]: March 15, 2026
+                - paragraph [ref=e714]: Daily color
+              - generic [ref=e715]:
+                - paragraph [ref=e716]: chalk
+                - paragraph [ref=e717]: "#edeae5"
+            - generic [ref=e718]:
+              - generic [ref=e719]:
+                - paragraph [ref=e720]: March 14, 2026
+                - paragraph [ref=e721]: Daily color
+              - generic [ref=e722]:
+                - paragraph [ref=e723]: reddish brown
+                - paragraph [ref=e724]: "#7f2b0a"
+            - generic [ref=e725]:
+              - generic [ref=e726]:
+                - paragraph [ref=e727]: March 13, 2026
+                - paragraph [ref=e728]: Daily color
+              - generic [ref=e729]:
+                - paragraph [ref=e730]: pomegranate
+                - paragraph [ref=e731]: "#b53d45"
+            - generic [ref=e732]:
+              - generic [ref=e733]:
+                - paragraph [ref=e734]: March 12, 2026
+                - paragraph [ref=e735]: Daily color
+              - generic [ref=e736]:
+                - paragraph [ref=e737]: azure
+                - paragraph [ref=e738]: "#007fff"
+            - generic [ref=e739]:
+              - generic [ref=e740]:
+                - paragraph [ref=e741]: March 11, 2026
+                - paragraph [ref=e742]: Daily color
+              - generic [ref=e743]:
+                - paragraph [ref=e744]: amethyst
+                - paragraph [ref=e745]: "#9966cc"
+            - generic [ref=e746]:
+              - generic [ref=e747]:
+                - paragraph [ref=e748]: March 10, 2026
+                - paragraph [ref=e749]: Daily color
+              - generic [ref=e750]:
+                - paragraph [ref=e751]: night sky
+                - paragraph [ref=e752]: "#292b31"
+            - generic [ref=e753]:
+              - generic [ref=e754]:
+                - paragraph [ref=e755]: March 9, 2026
+                - paragraph [ref=e756]: Daily color
+              - generic [ref=e757]:
+                - paragraph [ref=e758]: red pink
+                - paragraph [ref=e759]: "#fa2a55"
+            - generic [ref=e760]:
+              - generic [ref=e761]:
+                - paragraph [ref=e762]: March 8, 2026
+                - paragraph [ref=e763]: Daily color
+              - generic [ref=e764]:
+                - paragraph [ref=e765]: blue violet
+                - paragraph [ref=e766]: "#4e32b2"
+            - generic [ref=e767]:
+              - generic [ref=e768]:
+                - paragraph [ref=e769]: March 7, 2026
+                - paragraph [ref=e770]: Daily color
+              - generic [ref=e771]:
+                - paragraph [ref=e772]: pewter
+                - paragraph [ref=e773]: "#91a092"
+            - generic [ref=e774]:
+              - generic [ref=e775]:
+                - paragraph [ref=e776]: March 6, 2026
+                - paragraph [ref=e777]: Daily color
+              - generic [ref=e778]:
+                - paragraph [ref=e779]: coconut
+                - paragraph [ref=e780]: "#965a3e"
+            - generic [ref=e781]:
+              - generic [ref=e782]:
+                - paragraph [ref=e783]: March 5, 2026
+                - paragraph [ref=e784]: Daily color
+              - generic [ref=e785]:
+                - paragraph [ref=e786]: light teal
+                - paragraph [ref=e787]: "#b1ccc5"
+            - generic [ref=e788]:
+              - generic [ref=e789]:
+                - paragraph [ref=e790]: March 4, 2026
+                - paragraph [ref=e791]: Daily color
+              - generic [ref=e792]:
+                - paragraph [ref=e793]: springgreen
+                - paragraph [ref=e794]: "#00ff7c"
+            - generic [ref=e795]:
+              - generic [ref=e796]:
+                - paragraph [ref=e797]: March 3, 2026
+                - paragraph [ref=e798]: Daily color
+              - generic [ref=e799]:
+                - paragraph [ref=e800]: blood orange
+                - paragraph [ref=e801]: "#d1001c"
+            - generic [ref=e802]:
+              - generic [ref=e803]:
+                - paragraph [ref=e804]: March 2, 2026
+                - paragraph [ref=e805]: Daily color
+              - generic [ref=e806]:
+                - paragraph [ref=e807]: pale grey
+                - paragraph [ref=e808]: "#fdfdfe"
+            - generic [ref=e809]:
+              - generic [ref=e810]:
+                - paragraph [ref=e811]: March 1, 2026
+                - paragraph [ref=e812]: Daily color
+              - generic [ref=e813]:
+                - paragraph [ref=e814]: patinagreen
+                - paragraph [ref=e815]: "#33cca8"
+            - generic [ref=e816]:
+              - generic [ref=e817]:
+                - paragraph [ref=e818]: February 28, 2026
+                - paragraph [ref=e819]: Daily color
+              - generic [ref=e820]:
+                - paragraph [ref=e821]: wine red
+                - paragraph [ref=e822]: "#7b0323"
+            - generic [ref=e823]:
+              - generic [ref=e824]:
+                - paragraph [ref=e825]: February 27, 2026
+                - paragraph [ref=e826]: Daily color
+              - generic [ref=e827]:
+                - paragraph [ref=e828]: white blue
+                - paragraph [ref=e829]: "#cdd6db"
+            - generic [ref=e830]:
+              - generic [ref=e831]:
+                - paragraph [ref=e832]: February 26, 2026
+                - paragraph [ref=e833]: Daily color
+              - generic [ref=e834]:
+                - paragraph [ref=e835]: dove
+                - paragraph [ref=e836]: "#b3ada7"
+            - generic [ref=e837]:
+              - generic [ref=e838]:
+                - paragraph [ref=e839]: February 25, 2026
+                - paragraph [ref=e840]: Daily color
+              - generic [ref=e841]:
+                - paragraph [ref=e842]: pastel purple
+                - paragraph [ref=e843]: "#b39eb5"
+            - generic [ref=e844]:
+              - generic [ref=e845]:
+                - paragraph [ref=e846]: February 24, 2026
+                - paragraph [ref=e847]: Daily color
+              - generic [ref=e848]:
+                - paragraph [ref=e849]: ghost
+                - paragraph [ref=e850]: "#c0bfc7"
+            - generic [ref=e851]:
+              - generic [ref=e852]:
+                - paragraph [ref=e853]: February 23, 2026
+                - paragraph [ref=e854]: Daily color
+              - generic [ref=e855]:
+                - paragraph [ref=e856]: red brown
+                - paragraph [ref=e857]: "#a52a2f"
+            - generic [ref=e858]:
+              - generic [ref=e859]:
+                - paragraph [ref=e860]: February 22, 2026
+                - paragraph [ref=e861]: Daily color
+              - generic [ref=e862]:
+                - paragraph [ref=e863]: emeraldgreen
+                - paragraph [ref=e864]: "#046307"
+            - generic [ref=e865]:
+              - generic [ref=e866]:
+                - paragraph [ref=e867]: February 21, 2026
+                - paragraph [ref=e868]: Daily color
+              - generic [ref=e869]:
+                - paragraph [ref=e870]: bubble
+                - paragraph [ref=e871]: "#3dcc33"
+            - generic [ref=e872]:
+              - generic [ref=e873]:
+                - paragraph [ref=e874]: February 20, 2026
+                - paragraph [ref=e875]: Daily color
+              - generic [ref=e876]:
+                - paragraph [ref=e877]: cool
+                - paragraph [ref=e878]: "#96b3b3"
+            - generic [ref=e879]:
+              - generic [ref=e880]:
+                - paragraph [ref=e881]: February 19, 2026
+                - paragraph [ref=e882]: Daily color
+              - generic [ref=e883]:
+                - paragraph [ref=e884]: misty
+                - paragraph [ref=e885]: "#cdd2d2"
+            - generic [ref=e886]:
+              - generic [ref=e887]:
+                - paragraph [ref=e888]: February 18, 2026
+                - paragraph [ref=e889]: Daily color
+              - generic [ref=e890]:
+                - paragraph [ref=e891]: frost
+                - paragraph [ref=e892]: "#e1e4c5"
+            - generic [ref=e893]:
+              - generic [ref=e894]:
+                - paragraph [ref=e895]: February 17, 2026
+                - paragraph [ref=e896]: Daily color
+              - generic [ref=e897]:
+                - paragraph [ref=e898]: deep blue
+                - paragraph [ref=e899]: "#040273"
+        - generic [ref=e900]:
+          - heading "Frequently asked questions" [level=2] [ref=e901]
+          - generic [ref=e902]:
+            - group [ref=e903]:
+              - generic "What is the Colordle answer for May 27, 2026?" [ref=e904] [cursor=pointer]
+              - paragraph [ref=e905]:
+                - text: The answer is
+                - strong [ref=e906]: velvet
+                - text: "with hex code #750851."
+            - group [ref=e907]:
+              - generic "What does the percentage score mean in Colordle?" [ref=e908] [cursor=pointer]
+            - group [ref=e909]:
+              - generic "Where can I compare older Colordle answers?" [ref=e910] [cursor=pointer]
+        - region "Preston Hayes" [ref=e912]:
+          - generic [ref=e913]:
+            - img "Photo of Preston Hayes" [ref=e915]
+            - generic [ref=e916]:
+              - paragraph [ref=e917]: Written by
+              - heading "Preston Hayes" [level=2] [ref=e918]
+              - paragraph [ref=e919]: Preston Hayes is the credited editor for WordSolverX answer pages and puzzle strategy content. His work focuses on clear answer presentation, source verification, solver guidance, and fast corrections when a game changes.
+              - link "Pinterest" [ref=e921] [cursor=pointer]:
+                - /url: https://www.pinterest.com/wordsolverx/
+                - text: Pinterest
+                - img [ref=e922]
+        - generic [ref=e925]:
+          - generic [ref=e926]: Updated Daily
+          - generic [ref=e928]:
+            - generic [ref=e929]:
+              - heading "TD Today's Game Answers" [level=2] [ref=e930]:
+                - generic [ref=e931]: TD
+                - text: Today's Game Answers
+              - generic [ref=e932]:
+                - link "Bt Betweenle Today" [ref=e933] [cursor=pointer]:
+                  - /url: /betweenle-answer-today
+                  - generic [ref=e934]: Bt
+                  - generic [ref=e935]: Betweenle Today
+                - link "Ca Canuckle Today" [ref=e936] [cursor=pointer]:
+                  - /url: /canuckle-answer-today
+                  - generic [ref=e937]: Ca
+                  - generic [ref=e938]: Canuckle Today
+                - link "Cf Colorfle Today" [ref=e939] [cursor=pointer]:
+                  - /url: /colorfle-answer-today
+                  - generic [ref=e940]: Cf
+                  - generic [ref=e941]: Colorfle Today
+                - link "Cx Contexto Today" [ref=e942] [cursor=pointer]:
+                  - /url: /contexto-answer-today
+                  - generic [ref=e943]: Cx
+                  - generic [ref=e944]: Contexto Today
+                - link "Cy Countryle Today" [ref=e945] [cursor=pointer]:
+                  - /url: /countryle-answer-today
+                  - generic [ref=e946]: Cy
+                  - generic [ref=e947]: Countryle Today
+                - link "Do Dotadle Today" [ref=e948] [cursor=pointer]:
+                  - /url: /dotadle-answer-today
+                  - generic [ref=e949]: Do
+                  - generic [ref=e950]: Dotadle Today
+                - link "Fr Framed Today" [ref=e951] [cursor=pointer]:
+                  - /url: /framed-answer-today
+                  - generic [ref=e952]: Fr
+                  - generic [ref=e953]: Framed Today
+                - link "Gb Globle Today" [ref=e954] [cursor=pointer]:
+                  - /url: /globle-answer-today
+                  - generic [ref=e955]: Gb
+                  - generic [ref=e956]: Globle Today
+                - link "Lo Loldle Today" [ref=e957] [cursor=pointer]:
+                  - /url: /loldle-answer-today
+                  - generic [ref=e958]: Lo
+                  - generic [ref=e959]: Loldle Today
+                - link "Na Narutodle Today" [ref=e960] [cursor=pointer]:
+                  - /url: /narutodle-answer-today
+                  - generic [ref=e961]: Na
+                  - generic [ref=e962]: Narutodle Today
+            - generic [ref=e963]:
+              - heading "AR Past Solutions Archive" [level=2] [ref=e964]:
+                - generic [ref=e965]: AR
+                - text: Past Solutions Archive
+              - generic [ref=e966]:
+                - link "Ca Canuckle Archive" [ref=e967] [cursor=pointer]:
+                  - /url: /canuckle-archive
+                  - generic [ref=e968]: Ca
+                  - generic [ref=e969]: Canuckle Archive
+                - link "Cf Colorfle Archive" [ref=e970] [cursor=pointer]:
+                  - /url: /colorfle-archive
+                  - generic [ref=e971]: Cf
+                  - generic [ref=e972]: Colorfle Archive
+                - link "Cx Contexto Archive" [ref=e973] [cursor=pointer]:
+                  - /url: /contexto-archive
+                  - generic [ref=e974]: Cx
+                  - generic [ref=e975]: Contexto Archive
+                - link "Cy Countryle Archive" [ref=e976] [cursor=pointer]:
+                  - /url: /countryle-archive
+                  - generic [ref=e977]: Cy
+                  - generic [ref=e978]: Countryle Archive
+                - link "Fr Framed Archive" [ref=e979] [cursor=pointer]:
+                  - /url: /framed-archive
+                  - generic [ref=e980]: Fr
+                  - generic [ref=e981]: Framed Archive
+                - link "Gb Globle Archive" [ref=e982] [cursor=pointer]:
+                  - /url: /globle-archive
+                  - generic [ref=e983]: Gb
+                  - generic [ref=e984]: Globle Archive
+                - link "Nd Nerdle Archive" [ref=e985] [cursor=pointer]:
+                  - /url: /nerdle-archive
+                  - generic [ref=e986]: Nd
+                  - generic [ref=e987]: Nerdle Archive
+                - link "Ph Phoodle Archive" [ref=e988] [cursor=pointer]:
+                  - /url: /phoodle-archive
+                  - generic [ref=e989]: Ph
+                  - generic [ref=e990]: Phoodle Archive
+                - link "Pz Phrazle Archive" [ref=e991] [cursor=pointer]:
+                  - /url: /phrazle-archive
+                  - generic [ref=e992]: Pz
+                  - generic [ref=e993]: Phrazle Archive
+                - link "Qd Quordle Archive" [ref=e994] [cursor=pointer]:
+                  - /url: /quordle-archive
+                  - generic [ref=e995]: Qd
+                  - generic [ref=e996]: Quordle Archive
+          - generic [ref=e997]:
+            - heading "RG Related Games" [level=2] [ref=e998]:
+              - generic [ref=e999]: RG
+              - text: Related Games
+            - generic [ref=e1000]:
+              - link "Co Colorfle" [ref=e1001] [cursor=pointer]:
+                - /url: /colorfle-answer-today
+                - generic [ref=e1002]: Co
+                - text: Colorfle
+              - link "Fr Framed" [ref=e1003] [cursor=pointer]:
+                - /url: /framed-answer-today
+                - generic [ref=e1004]: Fr
+                - text: Framed
+              - link "Sp Spotle" [ref=e1005] [cursor=pointer]:
+                - /url: /spotle-answer-today
+                - generic [ref=e1006]: Sp
+                - text: Spotle
+          - paragraph [ref=e1008]:
+            - text: Stuck on a tricky puzzle?
+            - link "Try our 5-Letter Wordle Solver" [ref=e1009] [cursor=pointer]:
+              - /url: /5-letter-wordle-solver
+            - text: to filter clues fast, rank next guesses, and move into the right 3 to 11 letter Wordle page when you need a different board size.
+    - contentinfo [ref=e1010]:
+      - generic [ref=e1011]:
+        - generic [ref=e1012]:
+          - generic [ref=e1013]:
+            - link "W WordSolverX" [ref=e1014] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e1016]: W
+              - generic [ref=e1017]: WordSolverX
+            - paragraph [ref=e1018]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+            - generic [ref=e1019]:
+              - link "Facebook" [ref=e1020] [cursor=pointer]:
+                - /url: https://www.facebook.com/wordsolverx/
+                - img [ref=e1021]
+              - link "Pinterest" [ref=e1023] [cursor=pointer]:
+                - /url: https://www.pinterest.com/wordsolverx/
+                - img [ref=e1024]
+              - link "Telegram" [ref=e1026] [cursor=pointer]:
+                - /url: https://t.me/wordsolverx
+                - img [ref=e1027]
+          - generic [ref=e1029]:
+            - heading "Today's Answers" [level=3] [ref=e1030]
+            - list [ref=e1031]:
+              - listitem [ref=e1032]:
+                - link "Wordle Answer" [ref=e1033] [cursor=pointer]:
+                  - /url: /wordle-answer-today
+              - listitem [ref=e1034]:
+                - link "Quordle Answer" [ref=e1035] [cursor=pointer]:
+                  - /url: /quordle-answer-today
+              - listitem [ref=e1036]:
+                - link "Nerdle Answer" [ref=e1037] [cursor=pointer]:
+                  - /url: /nerdle-answer-today
+              - listitem [ref=e1038]:
+                - link "Contexto Answer" [ref=e1039] [cursor=pointer]:
+                  - /url: /contexto-answer-today
+              - listitem [ref=e1040]:
+                - link "View All →" [ref=e1041] [cursor=pointer]:
+                  - /url: /today
+          - generic [ref=e1042]:
+            - heading "Solver Tools" [level=3] [ref=e1043]
+            - list [ref=e1044]:
+              - listitem [ref=e1045]:
+                - link "5-Letter Wordle Solver" [ref=e1046] [cursor=pointer]:
+                  - /url: /5-letter-wordle-solver
+              - listitem [ref=e1047]:
+                - link "Quordle Solver" [ref=e1048] [cursor=pointer]:
+                  - /url: /quordle-solver
+              - listitem [ref=e1049]:
+                - link "Nerdle Solver" [ref=e1050] [cursor=pointer]:
+                  - /url: /nerdle-solver
+              - listitem [ref=e1051]:
+                - link "Wordle Analyzer" [ref=e1052] [cursor=pointer]:
+                  - /url: /wordle-analyzer
+              - listitem [ref=e1053]:
+                - link "View All →" [ref=e1054] [cursor=pointer]:
+                  - /url: /solver
+          - generic [ref=e1055]:
+            - heading "Resources" [level=3] [ref=e1056]
+            - list [ref=e1057]:
+              - listitem [ref=e1058]:
+                - link "Guides & Tips" [ref=e1059] [cursor=pointer]:
+                  - /url: /guides
+              - listitem [ref=e1060]:
+                - link "Answer Archives" [ref=e1061] [cursor=pointer]:
+                  - /url: /archive
+              - listitem [ref=e1062]:
+                - link "About" [ref=e1063] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e1064]:
+                - link "Contact" [ref=e1065] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e1066]:
+                - link "DMCA Policy" [ref=e1067] [cursor=pointer]:
+                  - /url: /dmca-policy
+              - listitem [ref=e1068]:
+                - link "Editorial Policy" [ref=e1069] [cursor=pointer]:
+                  - /url: /editorial-policy
+              - listitem [ref=e1070]:
+                - link "Privacy" [ref=e1071] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e1072]:
+                - button "Cookie Settings" [ref=e1073]
+              - listitem [ref=e1074]:
+                - link "Terms" [ref=e1075] [cursor=pointer]:
+                  - /url: /terms-of-service
+        - generic [ref=e1076]:
+          - paragraph [ref=e1077]: © 2026 WordSolverX. All rights reserved.
+          - paragraph [ref=e1078]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.
+  - region "Cookie consent" [ref=e1079]:
+    - generic [ref=e1080]:
+      - generic [ref=e1081]:
+        - paragraph [ref=e1082]: Privacy choices
+        - heading "Choose how WordSolverX loads cookies and ads" [level=2] [ref=e1083]
+        - paragraph [ref=e1084]:
+          - text: We use browser storage for site preferences, plus optional analytics and advertising scripts. Accepting enables Google Analytics and AdSense. Rejecting keeps only the site features needed to browse answer pages and tools. Details live in our
+          - link "Privacy Policy" [ref=e1085] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+      - generic [ref=e1086]:
+        - button "Reject optional cookies" [ref=e1087]
+        - button "Accept analytics and ads" [ref=e1088]

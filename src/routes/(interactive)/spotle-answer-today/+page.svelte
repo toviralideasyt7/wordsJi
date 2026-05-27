@@ -247,10 +247,13 @@
                         </div>
                 </section>
 
+                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayStr} />
+
                 <div class="mt-10">
                         <FAQSection title="Spotle Answer FAQ" faqs={faqItems} />
                 </div>
 
+                {#if false}
                 <article class="mt-10 space-y-8">
                         <section class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
                                 <h2 class="text-3xl font-black tracking-tight text-slate-900">How today's clues work</h2>
@@ -312,9 +315,12 @@
                                 </div>
                         </section>
                 </article>
+                {/if}
 
                 <div class="mt-12">
-                        <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayStr} />
+                        {#if false}
+                                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayStr} />
+                        {/if}
                         <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}

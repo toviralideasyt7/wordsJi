@@ -2,6 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import { getTodayArticleHeading } from '$lib/daily-article-content';
   import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -83,9 +84,9 @@
 
     {#if distinctGeneratedArticle}
       <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's notes</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's explanation</p>
         <h2 class="mt-2 text-3xl font-bold text-slate-900">
-          {distinctGeneratedArticle.title || "Today's Wordle Breakdown"}
+          {getTodayArticleHeading('wordle-answer-today')}
         </h2>
         {#if distinctGeneratedArticle.summary}
           <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{distinctGeneratedArticle.summary}</p>

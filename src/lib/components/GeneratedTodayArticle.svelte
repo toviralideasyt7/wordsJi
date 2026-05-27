@@ -1,13 +1,17 @@
 <script lang="ts">
-  import { getTodayPageArticle, type TodayArticleKey } from '$lib/daily-article-content';
+  import {
+    getTodayArticleHeading,
+    getTodayPageArticle,
+    type TodayArticleKey
+  } from '$lib/daily-article-content';
   import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
 
   let {
     articleKey,
     articleDate,
     allowStaleDate = false,
-    eyebrow = "Today's notes",
-    fallbackTitle = "Today's notes",
+    eyebrow = "Today's explanation",
+    fallbackTitle,
     fallbackSummary = ''
   }: {
     articleKey: TodayArticleKey;
@@ -19,13 +23,14 @@
   } = $props();
 
   const article = $derived(getTodayPageArticle(articleKey, articleDate, { allowStaleDate }));
+  const displayTitle = $derived(fallbackTitle || getTodayArticleHeading(articleKey));
 </script>
 
 {#if article?.articleHtml}
   <section class="mx-auto mt-10 w-full max-w-5xl rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
     <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">{eyebrow}</p>
     <h2 class="mt-2 text-3xl font-bold text-slate-900">
-      {article.title || fallbackTitle}
+      {displayTitle}
     </h2>
     {#if article.summary || fallbackSummary}
       <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">

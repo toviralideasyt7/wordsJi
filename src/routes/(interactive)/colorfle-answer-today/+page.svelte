@@ -241,7 +241,6 @@
       <GeneratedTodayArticle
         articleKey="colorfle-answer-today"
         articleDate={data.dateKey ?? ''}
-        fallbackTitle={`Colorfle notes for ${data.formattedDate}`}
         fallbackSummary={data.meta.description}
       />
 

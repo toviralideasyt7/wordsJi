@@ -1,0 +1,440 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "W WordSolverX" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e10]: W
+          - generic [ref=e11]: WordSolverX
+        - generic [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "Today's Answers" [ref=e14] [cursor=pointer]:
+            - /url: /today
+          - link "Solvers" [ref=e15] [cursor=pointer]:
+            - /url: /solver
+          - link "Archives" [ref=e16] [cursor=pointer]:
+            - /url: /archive
+          - link "Guides" [ref=e17] [cursor=pointer]:
+            - /url: /guides
+          - link "About" [ref=e18] [cursor=pointer]:
+            - /url: /about
+    - main [ref=e19]:
+      - main [ref=e20]:
+        - generic [ref=e21]:
+          - navigation "Breadcrumb" [ref=e22]:
+            - list [ref=e23]:
+              - listitem [ref=e24]:
+                - link "Home" [ref=e25] [cursor=pointer]:
+                  - /url: /
+                  - img [ref=e26]
+                  - generic [ref=e29]: Home
+              - listitem [ref=e30]:
+                - img [ref=e31]
+                - generic [ref=e33]: Betweenle Answer Today
+          - generic [ref=e34]:
+            - generic [ref=e35]: Betweenle Answer Today
+            - heading "Betweenle Hints and Answer Today (May 27, 2026)" [level=1] [ref=e36]
+            - paragraph [ref=e37]:
+              - text: Clues first, answer second. Reveal
+              - strong [ref=e38]: "#1168"
+              - text: when you're ready.
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - paragraph [ref=e41]: Today
+                - paragraph [ref=e42]: Wednesday, May 27, 2026
+              - generic [ref=e43]:
+                - paragraph [ref=e44]: Puzzle Number
+                - paragraph [ref=e45]: "#1168"
+              - generic [ref=e46]:
+                - paragraph [ref=e47]: Word Length
+                - paragraph [ref=e48]: 5 letters
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - paragraph [ref=e52]: Clues First
+                - heading "Today's Betweenle clues" [level=2] [ref=e53]
+              - link "Open Betweenle Solver" [ref=e54] [cursor=pointer]:
+                - /url: /betweenle-solver
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - paragraph [ref=e57]: Word Length
+                - paragraph [ref=e58]: 5 letters
+              - generic [ref=e59]:
+                - paragraph [ref=e60]: Starts With
+                - paragraph [ref=e61]: E
+              - generic [ref=e62]:
+                - paragraph [ref=e63]: Ends With
+                - paragraph [ref=e64]: T
+              - generic [ref=e65]:
+                - paragraph [ref=e66]: Vowels
+                - paragraph [ref=e67]: "2"
+              - generic [ref=e68]:
+                - paragraph [ref=e69]: Repeat Letters
+                - paragraph [ref=e70]: "Yes"
+            - generic [ref=e71]:
+              - paragraph [ref=e72]: Final answer
+              - paragraph [ref=e73]: Try the clues first. When you want the official word, use the reveal button below.
+              - generic [ref=e75]:
+                - paragraph [ref=e76]: Official Betweenle answer
+                - paragraph [ref=e77]: EXERT
+                - paragraph [ref=e78]: "Answer for Wednesday, May 27, 2026 and Betweenle puzzle #1168."
+              - button "Reveal Today's Answer" [ref=e79]
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - paragraph [ref=e83]: Previous Answers
+                - heading "Recent Betweenle answers" [level=2] [ref=e84]
+                - paragraph [ref=e85]: A quick look at the most recent Betweenle answers before today.
+              - link "Browse Archive Hub" [ref=e86] [cursor=pointer]:
+                - /url: /archive
+            - generic [ref=e87]:
+              - article [ref=e88]:
+                - paragraph [ref=e89]: Tuesday, May 26, 2026
+                - paragraph [ref=e90]: horde
+                - paragraph [ref=e91]: "Puzzle #1167"
+              - article [ref=e92]:
+                - paragraph [ref=e93]: Monday, May 25, 2026
+                - paragraph [ref=e94]: islet
+                - paragraph [ref=e95]: "Puzzle #1166"
+              - article [ref=e96]:
+                - paragraph [ref=e97]: Sunday, May 24, 2026
+                - paragraph [ref=e98]: awful
+                - paragraph [ref=e99]: "Puzzle #1165"
+              - article [ref=e100]:
+                - paragraph [ref=e101]: Saturday, May 23, 2026
+                - paragraph [ref=e102]: swarm
+                - paragraph [ref=e103]: "Puzzle #1164"
+              - article [ref=e104]:
+                - paragraph [ref=e105]: Friday, May 22, 2026
+                - paragraph [ref=e106]: forte
+                - paragraph [ref=e107]: "Puzzle #1163"
+            - generic [ref=e108]:
+              - link "Betweenle Solver" [ref=e109] [cursor=pointer]:
+                - /url: /betweenle-solver
+              - link "Practice With Solver" [ref=e110] [cursor=pointer]:
+                - /url: /betweenle-solver
+              - link "More Today Answers" [ref=e111] [cursor=pointer]:
+                - /url: /today
+            - generic [ref=e112]:
+              - paragraph [ref=e113]: Today's notes
+              - 'heading "Betweenle Answer Guide: May 27, 2026" [level=2] [ref=e114]'
+              - paragraph [ref=e115]: Master Betweenle's alphabetical sorting mechanic with targeted guess strategies that narrow possibilities faster and reduce wasted attempts.
+              - generic [ref=e116]:
+                - heading "Today's Betweenle at a glance" [level=2] [ref=e117]
+                - paragraph [ref=e118]: The puzzle presents a geographic target. Your job is to identify it using the fewest guesses possible.
+                - paragraph [ref=e119]: After each guess, Betweenle tells you whether your entry falls before or after the answer alphabetically. That's the entire feedback loop.
+                - paragraph [ref=e120]: This isn't a typical word game. You're not matching letters or finding synonyms.
+                - paragraph [ref=e121]: You're performing a binary search through geographic space, guided by alphabetical ordering. The constraint tightens with every guess.
+                - paragraph [ref=e122]: For today's session, the solver link above will take you directly to the reveal card if you're stuck.
+                - paragraph [ref=e123]: The archive navigation helps if you want to study past patterns.
+                - heading "What to pay attention to" [level=2] [ref=e124]
+                - paragraph [ref=e125]: Your first guess sets the tone.
+                - paragraph [ref=e126]: Pick something near the middle of your potential range—don't swing wild unless you're confident the answer lies in an extreme region.
+                - paragraph [ref=e127]: A well-placed first guess eliminates roughly half the remaining candidates immediately.
+                - paragraph [ref=e128]: Watch the direction indicators closely. "Before" means your guess precedes the answer in alphabetical order. "After" means the opposite.
+                - paragraph [ref=e129]: These aren't suggestions—they're precise instructions narrowing the solution space.
+                - paragraph [ref=e130]: When the feedback cycles between similar starting letters (say, two guesses both return "before"), that's valuable signal.
+                - paragraph [ref=e131]: It tells you the answer sits further down the alphabet than either attempt. Adjust accordingly.
+                - paragraph [ref=e132]: The hint system exists for a reason. If you've burned three guesses with no traction, consult the available hints rather than guessing blindly.
+                - paragraph [ref=e133]: Each hint costs less than a failed solve.
+                - heading "Mistakes that cost guesses" [level=2] [ref=e134]
+                - paragraph [ref=e135]: Players lose momentum by ignoring alphabetical position entirely. Throwing random geographic names hoping one sticks wastes guesses fast. Betweenle rewards systematic elimination, not luck.
+                - paragraph [ref=e136]: "Another frequent error: reversing the directional feedback mentally. \"Before\" feels intuitive as \"lower alphabetically,\" but some players confuse themselves mid-session, especially under time pressure."
+                - paragraph [ref=e137]: Double-check what each indicator actually means before committing to your next guess.
+                - paragraph [ref=e138]: Staying locked into a mental list too early hurts too. Once you receive two or three directional signals, rebuild your candidate set from scratch.
+                - paragraph [ref=e139]: Assumptions made on guess one often become obsolete by guess three.
+                - paragraph [ref=e140]: Finally, don't overlook the clue cards when available. They exist precisely for sessions where the alphabetical sorting alone isn't narrowing fast enough.
+                - heading "Questions players keep asking" [level=2] [ref=e141]
+                - heading "Does the puzzle ever give exact letter matches?" [level=3] [ref=e142]
+                - paragraph [ref=e143]: No. Betweenle's core mechanic is strictly alphabetical ordering—no partial matches, no positional hints, no frequency data.
+                - paragraph [ref=e144]: If you're looking for letter-level feedback, this isn't that style of puzzle.
+                - heading "How many guesses should I expect to need?" [level=3] [ref=e145]
+                - paragraph [ref=e146]: Adequate solvers typically land the answer within four to six attempts when applying basic binary search logic.
+                - paragraph [ref=e147]: Players who guess without strategy may stretch toward eight or nine. The difference is deliberate first-guess placement.
+                - heading "Are the clues randomized daily?" [level=3] [ref=e148]
+                - paragraph [ref=e149]: Yes. Each calendar date carries its own distinct puzzle configuration.
+                - paragraph [ref=e150]: The archive preserves previous days' solutions, so you can verify answers retroactively or study completed boards.
+                - heading "Can players use the solver instead of playing?" [level=3] [ref=e151]
+                - paragraph [ref=e152]: The solver exists for verification and assistance. Some players use it after exhausting their own attempts; others consult it mid-session for stubborn puzzles.
+                - paragraph [ref=e153]: The choice depends on whether you're practicing the technique or chasing the answer.
+                - paragraph [ref=e154]: Access the solver via the link embedded for this page.
+                - paragraph [ref=e155]: The archive navigation lets you compare today's board against recent history if that helps calibrate your approach.
+          - generic [ref=e158]:
+            - heading "Betweenle Answer FAQs" [level=2] [ref=e159]
+            - generic [ref=e160]:
+              - group [ref=e161]:
+                - generic "What is the Betweenle answer today?" [ref=e162] [cursor=pointer]:
+                  - generic [ref=e163]: What is the Betweenle answer today?
+                  - img [ref=e164]
+              - group [ref=e166]:
+                - generic "What was yesterday's Betweenle answer?" [ref=e167] [cursor=pointer]:
+                  - generic [ref=e168]: What was yesterday's Betweenle answer?
+                  - img [ref=e169]
+              - group [ref=e171]:
+                - generic "Can I check older Betweenle answers?" [ref=e172] [cursor=pointer]:
+                  - generic [ref=e173]: Can I check older Betweenle answers?
+                  - img [ref=e174]
+              - group [ref=e176]:
+                - generic "How should I use the clues before revealing the answer?" [ref=e177] [cursor=pointer]:
+                  - generic [ref=e178]: How should I use the clues before revealing the answer?
+                  - img [ref=e179]
+              - group [ref=e181]:
+                - generic "What time does the new Betweenle puzzle reset each day?" [ref=e182] [cursor=pointer]:
+                  - generic [ref=e183]: What time does the new Betweenle puzzle reset each day?
+                  - img [ref=e184]
+              - group [ref=e186]:
+                - generic "How is Betweenle different from Wordle?" [ref=e187] [cursor=pointer]:
+                  - generic [ref=e188]: How is Betweenle different from Wordle?
+                  - img [ref=e189]
+              - group [ref=e191]:
+                - generic "Does Betweenle repeat answers?" [ref=e192] [cursor=pointer]:
+                  - generic [ref=e193]: Does Betweenle repeat answers?
+                  - img [ref=e194]
+          - article [ref=e196]:
+            - generic [ref=e197]:
+              - heading "How Betweenle Actually Works" [level=2] [ref=e198]
+              - paragraph [ref=e199]: Two boundary words appear on screen. You type the word that fits alphabetically between them. No color tiles, no partial credit — right or wrong. The answer pool is common English words, five to eight letters, and the boundaries are real dictionary neighbors of the answer.
+              - paragraph [ref=e200]: Today's page gives you clue cards (length, first/last letter, vowel count, repeats) so you can try before revealing. The solver link at the top filters candidates when the gap is wide.
+            - generic [ref=e201]:
+              - heading "Tips That Actually Help" [level=2] [ref=e202]
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - heading "Look at the shared prefix first" [level=3] [ref=e205]
+                  - paragraph [ref=e206]: If both boundaries start with the same three letters, so does the answer. The clue card tells you first and last letter directly — that usually cuts the possibilities to a handful.
+                - generic [ref=e207]:
+                  - heading "Recognize recurring gaps" [level=3] [ref=e208]
+                  - paragraph [ref=e209]: CRANE → CREAM → CREATE shows up a lot. So do patterns around common five-letter words. The more you play, the more you recognize which alphabetical neighborhoods the game favors.
+                - generic [ref=e210]:
+                  - heading "Think about word endings" [level=3] [ref=e211]
+                  - paragraph [ref=e212]: Boundaries often share suffixes. PLAYING and POINTED — the answer probably ends in -ING or -ED and starts with PL or PO. Morphological patterns matter as much as raw alphabetical order.
+                - generic [ref=e213]:
+                  - heading "Use the solver when the gap is wide" [level=3] [ref=e214]
+                  - paragraph [ref=e215]: When boundaries are far apart (DANCE → DRAKE), you need to think through all words starting with D in that range. The solver does this instantly — faster than scrolling a dictionary.
+          - generic [ref=e216]:
+            - region "Preston Hayes" [ref=e217]:
+              - generic [ref=e218]:
+                - img "Photo of Preston Hayes" [ref=e220]
+                - generic [ref=e221]:
+                  - paragraph [ref=e222]: Written by
+                  - heading "Preston Hayes" [level=2] [ref=e223]
+                  - paragraph [ref=e224]: Preston Hayes is the credited editor for WordSolverX answer pages and puzzle strategy content. His work focuses on clear answer presentation, source verification, solver guidance, and fast corrections when a game changes.
+                  - link "Pinterest" [ref=e226] [cursor=pointer]:
+                    - /url: https://www.pinterest.com/wordsolverx/
+                    - text: Pinterest
+                    - img [ref=e227]
+            - generic [ref=e229]:
+              - generic [ref=e230]: Updated Daily
+              - generic [ref=e232]:
+                - generic [ref=e233]:
+                  - heading "TD Today's Game Answers" [level=2] [ref=e234]:
+                    - generic [ref=e235]: TD
+                    - text: Today's Game Answers
+                  - generic [ref=e236]:
+                    - link "Ca Canuckle Today" [ref=e237] [cursor=pointer]:
+                      - /url: /canuckle-answer-today
+                      - generic [ref=e238]: Ca
+                      - generic [ref=e239]: Canuckle Today
+                    - link "Cf Colorfle Today" [ref=e240] [cursor=pointer]:
+                      - /url: /colorfle-answer-today
+                      - generic [ref=e241]: Cf
+                      - generic [ref=e242]: Colorfle Today
+                    - link "Cd Colordle Today" [ref=e243] [cursor=pointer]:
+                      - /url: /colordle-answer-today
+                      - generic [ref=e244]: Cd
+                      - generic [ref=e245]: Colordle Today
+                    - link "Cx Contexto Today" [ref=e246] [cursor=pointer]:
+                      - /url: /contexto-answer-today
+                      - generic [ref=e247]: Cx
+                      - generic [ref=e248]: Contexto Today
+                    - link "Cy Countryle Today" [ref=e249] [cursor=pointer]:
+                      - /url: /countryle-answer-today
+                      - generic [ref=e250]: Cy
+                      - generic [ref=e251]: Countryle Today
+                    - link "Do Dotadle Today" [ref=e252] [cursor=pointer]:
+                      - /url: /dotadle-answer-today
+                      - generic [ref=e253]: Do
+                      - generic [ref=e254]: Dotadle Today
+                    - link "Fr Framed Today" [ref=e255] [cursor=pointer]:
+                      - /url: /framed-answer-today
+                      - generic [ref=e256]: Fr
+                      - generic [ref=e257]: Framed Today
+                    - link "Gb Globle Today" [ref=e258] [cursor=pointer]:
+                      - /url: /globle-answer-today
+                      - generic [ref=e259]: Gb
+                      - generic [ref=e260]: Globle Today
+                    - link "Lo Loldle Today" [ref=e261] [cursor=pointer]:
+                      - /url: /loldle-answer-today
+                      - generic [ref=e262]: Lo
+                      - generic [ref=e263]: Loldle Today
+                    - link "Na Narutodle Today" [ref=e264] [cursor=pointer]:
+                      - /url: /narutodle-answer-today
+                      - generic [ref=e265]: Na
+                      - generic [ref=e266]: Narutodle Today
+                - generic [ref=e267]:
+                  - heading "AR Past Solutions Archive" [level=2] [ref=e268]:
+                    - generic [ref=e269]: AR
+                    - text: Past Solutions Archive
+                  - generic [ref=e270]:
+                    - link "Ca Canuckle Archive" [ref=e271] [cursor=pointer]:
+                      - /url: /canuckle-archive
+                      - generic [ref=e272]: Ca
+                      - generic [ref=e273]: Canuckle Archive
+                    - link "Cf Colorfle Archive" [ref=e274] [cursor=pointer]:
+                      - /url: /colorfle-archive
+                      - generic [ref=e275]: Cf
+                      - generic [ref=e276]: Colorfle Archive
+                    - link "Cd Colordle Archive" [ref=e277] [cursor=pointer]:
+                      - /url: /colordle-archive
+                      - generic [ref=e278]: Cd
+                      - generic [ref=e279]: Colordle Archive
+                    - link "Cx Contexto Archive" [ref=e280] [cursor=pointer]:
+                      - /url: /contexto-archive
+                      - generic [ref=e281]: Cx
+                      - generic [ref=e282]: Contexto Archive
+                    - link "Cy Countryle Archive" [ref=e283] [cursor=pointer]:
+                      - /url: /countryle-archive
+                      - generic [ref=e284]: Cy
+                      - generic [ref=e285]: Countryle Archive
+                    - link "Fr Framed Archive" [ref=e286] [cursor=pointer]:
+                      - /url: /framed-archive
+                      - generic [ref=e287]: Fr
+                      - generic [ref=e288]: Framed Archive
+                    - link "Gb Globle Archive" [ref=e289] [cursor=pointer]:
+                      - /url: /globle-archive
+                      - generic [ref=e290]: Gb
+                      - generic [ref=e291]: Globle Archive
+                    - link "Nd Nerdle Archive" [ref=e292] [cursor=pointer]:
+                      - /url: /nerdle-archive
+                      - generic [ref=e293]: Nd
+                      - generic [ref=e294]: Nerdle Archive
+                    - link "Ph Phoodle Archive" [ref=e295] [cursor=pointer]:
+                      - /url: /phoodle-archive
+                      - generic [ref=e296]: Ph
+                      - generic [ref=e297]: Phoodle Archive
+                    - link "Pz Phrazle Archive" [ref=e298] [cursor=pointer]:
+                      - /url: /phrazle-archive
+                      - generic [ref=e299]: Pz
+                      - generic [ref=e300]: Phrazle Archive
+              - generic [ref=e301]:
+                - heading "RG Related Games" [level=2] [ref=e302]:
+                  - generic [ref=e303]: RG
+                  - text: Related Games
+                - generic [ref=e304]:
+                  - link "Wo Wordle" [ref=e305] [cursor=pointer]:
+                    - /url: /wordle-answer-today
+                    - generic [ref=e306]: Wo
+                    - text: Wordle
+                  - link "Ne Nerdle" [ref=e307] [cursor=pointer]:
+                    - /url: /nerdle-answer-today
+                    - generic [ref=e308]: Ne
+                    - text: Nerdle
+                  - link "Qu Quordle" [ref=e309] [cursor=pointer]:
+                    - /url: /quordle-answer-today
+                    - generic [ref=e310]: Qu
+                    - text: Quordle
+              - paragraph [ref=e312]:
+                - text: Stuck on a tricky puzzle?
+                - link "Try our 5-Letter Wordle Solver" [ref=e313] [cursor=pointer]:
+                  - /url: /5-letter-wordle-solver
+                - text: to filter clues fast, rank next guesses, and move into the right 3 to 11 letter Wordle page when you need a different board size.
+    - contentinfo [ref=e314]:
+      - generic [ref=e315]:
+        - generic [ref=e316]:
+          - generic [ref=e317]:
+            - link "W WordSolverX" [ref=e318] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e320]: W
+              - generic [ref=e321]: WordSolverX
+            - paragraph [ref=e322]: Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
+            - generic [ref=e323]:
+              - link "Facebook" [ref=e324] [cursor=pointer]:
+                - /url: https://www.facebook.com/wordsolverx/
+                - img [ref=e325]
+              - link "Pinterest" [ref=e327] [cursor=pointer]:
+                - /url: https://www.pinterest.com/wordsolverx/
+                - img [ref=e328]
+              - link "Telegram" [ref=e330] [cursor=pointer]:
+                - /url: https://t.me/wordsolverx
+                - img [ref=e331]
+          - generic [ref=e333]:
+            - heading "Today's Answers" [level=3] [ref=e334]
+            - list [ref=e335]:
+              - listitem [ref=e336]:
+                - link "Wordle Answer" [ref=e337] [cursor=pointer]:
+                  - /url: /wordle-answer-today
+              - listitem [ref=e338]:
+                - link "Quordle Answer" [ref=e339] [cursor=pointer]:
+                  - /url: /quordle-answer-today
+              - listitem [ref=e340]:
+                - link "Nerdle Answer" [ref=e341] [cursor=pointer]:
+                  - /url: /nerdle-answer-today
+              - listitem [ref=e342]:
+                - link "Contexto Answer" [ref=e343] [cursor=pointer]:
+                  - /url: /contexto-answer-today
+              - listitem [ref=e344]:
+                - link "View All →" [ref=e345] [cursor=pointer]:
+                  - /url: /today
+          - generic [ref=e346]:
+            - heading "Solver Tools" [level=3] [ref=e347]
+            - list [ref=e348]:
+              - listitem [ref=e349]:
+                - link "5-Letter Wordle Solver" [ref=e350] [cursor=pointer]:
+                  - /url: /5-letter-wordle-solver
+              - listitem [ref=e351]:
+                - link "Quordle Solver" [ref=e352] [cursor=pointer]:
+                  - /url: /quordle-solver
+              - listitem [ref=e353]:
+                - link "Nerdle Solver" [ref=e354] [cursor=pointer]:
+                  - /url: /nerdle-solver
+              - listitem [ref=e355]:
+                - link "Wordle Analyzer" [ref=e356] [cursor=pointer]:
+                  - /url: /wordle-analyzer
+              - listitem [ref=e357]:
+                - link "View All →" [ref=e358] [cursor=pointer]:
+                  - /url: /solver
+          - generic [ref=e359]:
+            - heading "Resources" [level=3] [ref=e360]
+            - list [ref=e361]:
+              - listitem [ref=e362]:
+                - link "Guides & Tips" [ref=e363] [cursor=pointer]:
+                  - /url: /guides
+              - listitem [ref=e364]:
+                - link "Answer Archives" [ref=e365] [cursor=pointer]:
+                  - /url: /archive
+              - listitem [ref=e366]:
+                - link "About" [ref=e367] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e368]:
+                - link "Contact" [ref=e369] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e370]:
+                - link "DMCA Policy" [ref=e371] [cursor=pointer]:
+                  - /url: /dmca-policy
+              - listitem [ref=e372]:
+                - link "Editorial Policy" [ref=e373] [cursor=pointer]:
+                  - /url: /editorial-policy
+              - listitem [ref=e374]:
+                - link "Privacy" [ref=e375] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e376]:
+                - button "Cookie Settings" [ref=e377]
+              - listitem [ref=e378]:
+                - link "Terms" [ref=e379] [cursor=pointer]:
+                  - /url: /terms-of-service
+        - generic [ref=e380]:
+          - paragraph [ref=e381]: © 2026 WordSolverX. All rights reserved.
+          - paragraph [ref=e382]: Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.
+  - region "Cookie consent" [ref=e383]:
+    - generic [ref=e384]:
+      - generic [ref=e385]:
+        - paragraph [ref=e386]: Privacy choices
+        - heading "Choose how WordSolverX loads cookies and ads" [level=2] [ref=e387]
+        - paragraph [ref=e388]:
+          - text: We use browser storage for site preferences, plus optional analytics and advertising scripts. Accepting enables Google Analytics and AdSense. Rejecting keeps only the site features needed to browse answer pages and tools. Details live in our
+          - link "Privacy Policy" [ref=e389] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+      - generic [ref=e390]:
+        - button "Reject optional cookies" [ref=e391]
+        - button "Accept analytics and ads" [ref=e392]

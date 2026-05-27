@@ -278,13 +278,18 @@
         </a>
       </div>
 
-      <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
+      {#if false}
+        <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
+      {/if}
     </section>
+
+    <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
 
   <section class="pb-12">
     <FAQSection {faqs} title="Betweenle Answer FAQs" />
   </section>
 
+  {#if false}
   <article class="space-y-8">
     <section class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
       <h2 class="text-3xl font-black tracking-tight text-slate-900">How Betweenle Actually Works</h2>
@@ -326,6 +331,7 @@
       </div>
     </section>
   </article>
+  {/if}
     <div class="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

@@ -1,7 +1,6 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
-  import { getMainDailyDateKey } from '$lib/main-daily-date';
 
   let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
 
@@ -34,11 +33,12 @@
     ]},
     { '@type': 'Article', headline: 'Smashdle Answer Today', description: "Today's Smashdle character revealed — Classic, Final Smash, and Stage mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/smashdle-answer-today.webp' } } },
   ]};
-  const todayKey = getMainDailyDateKey();
+  const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>
 
 <GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
+    {#if false}
     <article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Universe as your best filter</h2>
@@ -92,7 +92,9 @@
         </div>
       </section>
     </article>
-    <GeneratedTodayArticle articleKey="smashdle-answer-today" articleDate={todayKey} />
+    <GeneratedTodayArticle articleKey="smashdle-answer-today" articleDate={articleDate} />
+    {/if}
+    <GeneratedTodayArticle articleKey="smashdle-answer-today" articleDate={articleDate} />
   {/snippet}
 </GameDleAnswerPage>
 

@@ -276,8 +276,10 @@
       </div>
     </section>
 
+    <GeneratedTodayArticle articleKey="contexto-answer-today" articleDate={activeDate} />
     <FAQSection title="Contexto Answer FAQ" {faqs} class="pb-0" />
 
+    {#if false}
     <!-- SEO Article -->
     <article class="mt-12 space-y-8 max-w-5xl mx-auto">
       <section class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] p-6 sm:p-5 sm:p-8">
@@ -349,8 +351,11 @@
         </div>
       </section>
     </article>
+    {/if}
 
-    <GeneratedTodayArticle articleKey="contexto-answer-today" articleDate={activeDate} />
+    {#if false}
+      <GeneratedTodayArticle articleKey="contexto-answer-today" articleDate={activeDate} />
+    {/if}
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

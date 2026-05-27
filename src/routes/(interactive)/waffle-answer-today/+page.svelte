@@ -130,6 +130,7 @@
     {/if}
   </div>
 
+  {#if false}
   <!-- SEO Content Section -->
   <article class="space-y-8 mb-12">
     <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
@@ -293,6 +294,7 @@
       </div>
     </section>
   </article>
+  {/if}
 
   <GeneratedTodayArticle articleKey="waffle-answer-today" articleDate={data.dateKey} />
   <InternalLinkSection currentGame="Waffle" />

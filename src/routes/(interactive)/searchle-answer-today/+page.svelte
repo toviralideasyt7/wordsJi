@@ -213,6 +213,7 @@
       <InternalLinkSection currentGame="Searchle" />
     </div>
 
+    {#if false}
     <article class="mx-auto max-w-5xl px-4 pb-12 space-y-8">
       <section class="rounded-2xl border border-slate-200 bg-white p-5 sm:p-8 shadow-sm">
         <h2 class="text-3xl font-black tracking-tight text-slate-900">What is Searchle?</h2>
@@ -430,6 +431,7 @@
         </div>
       </section>
     </article>
+    {/if}
   </main>
 
   <FAQSection {faqs} />
