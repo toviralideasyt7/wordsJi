@@ -1,7 +1,22 @@
 {
   "articleKey": "waffle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.449Z",
+  "generatedAt": "2026-05-27T07:50:38.365Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "waffle-answer-today",
+      "date": "2026-05-27",
+      "title": "Waffle Puzzle Answer Guide: May 27, 2026",
+      "summary": "Today's Waffle grid solution explained with visual hint breakdowns and common solving mistakes to avoid.",
+      "articleHtml": "<h1>Waffle Puzzle Answer Guide: May 27, 2026</h1><h2>What you're looking at today</h2>\n<p>The solved Waffle board shows interlocking words arranged in a classic grid pattern. Each row and column contains one valid English word, and every shared letter belongs to both the horizontal and vertical word simultaneously. Today's layout features standard five-letter entries with moderate difficulty.</p><p>The archive on this page preserves today's configuration for future reference. If you landed here mid-puzzle, the solver can show exact letter positions without spoiling the full reveal.</p><h2>How to read the visual hints</h2>\n<p>Green tiles indicate letters confirmed in their correct slots. These anchors matter most when starting—you can build outward from any solid green position. Yellow tiles show letters that exist somewhere in the word but haven't found home yet. Gray tiles are simply in the way.</p><p>Drag letters to swap them. The system highlights valid drops. Focus on completing one direction first—usually whichever has more greens showing—and let those placements constrain the perpendicular words.</p><h3>Why do some letters stay yellow even after I move them?</h3>\n<p>A yellow status means the letter belongs in that word, just not that specific slot. Moving it to a new position doesn't change whether it's misplaced—it only relocates the problem. Work backward from green anchors until the yellow resolves.</p><h2>Common wrong approaches</h2>\n<p>Treating each row independently causes conflicts. Because shared letters must work for both directions, solving horizontally first and vertically second creates contradictions you'll have to undo. Instead, identify intersection points early and lock those first.</p><p>Another frequent mistake: guessing based on vowel density alone. Consonants carry the structural weight in most Waffle words. A word like CRANE needs R and N almost as much as the vowels—don't deprioritize them.</p><p>Players also stumble by ignoring word frequency. Common entries appear far more often than obscure ones. If you've got _R__E and _A__N, CRANE fits better than PRANK or GRIND in most puzzles.</p><h3>Should I start from corners or edges?</h3>\n<p>Neither is universally better, but corners give you two directional constraints immediately. An anchored corner letter limits both its row and column simultaneously. Edges offer similar advantages if the corner isn't showing greens yet.</p><h2>Questions players keep asking</h2><h3>Is there a move limit on daily Waffles?</h3>\n<p>Standard daily mode allows 15 swaps. That's enough for most solvers who approach methodically, but wasteful play drains it fast. Track your swaps consciously—if you're past 10 with unsolved rows, reconsider your strategy.</p><h3>Can I retry today's puzzle after failing?</h3>\n<p>The daily resets at midnight in your local timezone. Failed attempts don't carry over, but neither do partial solutions. Check the archive linked above to review today's exact layout when the new puzzle drops.</p><h3>Do diagonals matter in Waffle?</h3>\n<p>No. Only horizontal rows and vertical columns form words. Diagonal adjacencies are irrelevant to gameplay, though they may look misleading on screen.</p><h3>What's the best way to use the solver tool?</h3>\n<p>The solver reveals individual letters rather than dumping the complete answer. It's useful when stuck on a specific word but wanting to preserve challenge elsewhere. Open it only when you've exhausted reasonable deduction on one entry.</p><p>For practice, try working backwards from the revealed card. Identify which words gave you trouble and note what clue pattern tripped you up. That reflection improves pattern recognition faster than grinding puzzles blindly.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "generatedAt": "2026-05-27T07:50:38.362Z",
+        "wordCount": 549
+      }
+    },
     "2026-05-18": {
       "articleKey": "waffle-answer-today",
       "date": "2026-05-18",
