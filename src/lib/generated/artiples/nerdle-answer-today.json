@@ -1,7 +1,22 @@
 {
   "articleKey": "nerdle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.409Z",
+  "generatedAt": "2026-05-27T07:49:25.622Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "nerdle-answer-today",
+      "date": "2026-05-27",
+      "title": "Nerdle Answer Today: May 27, 2026",
+      "summary": "Find the verified Nerdle answer for May 27, 2026. Get equation hints, common operator traps, and solver tools to finish your daily math puzzle fast.",
+      "articleHtml": "<h2>Today's Nerdle at a glance</h2>\n<p>The May 27, 2026 puzzle demands strict adherence to order of operations. Many solvers waste guesses by treating the board like a word game rather than a math equation. The answer sits in the archive for those who hit the reveal card, but the real value comes from understanding the digit distribution.</p>\n<p>For this specific board, the equation balances a multi-digit product against a sum. Don't guess blindly; check if your proposed solution actually equals the target number before submitting. If you need the exact string, the solver tool on this page provides the verified result instantly.</p>\n<p>Use the <a href=\"/nerdle-solver\">Nerdle solver</a> if you are stuck on the first few guesses. It filters out impossible digit combinations immediately.</p><h2>What to pay attention to</h2>\n<p>Operator placement is the primary bottleneck. You will see green tiles for correct numbers, but the equals sign often shifts position based on the equation structure. A common trap is assuming the answer follows a standard \"A + B = C\" format when the puzzle might use \"A * B - C = D\".</p>\n<p>Check the digit count. If the answer requires a two-digit number, ensure your guess doesn't force a single-digit slot. The board has fixed width, and miscounting characters leads to immediate failure. Look for the <a href=\"/nerdle-answers-archive\">daily archive</a> to see how previous puzzles handled complex operator chains.</p>\n<p>Pay attention to the commutative property. If you find a valid equation, swapping the order of addition or multiplication terms might yield a different valid solution the game accepts.</p><h2>Mistakes that cost guesses</h2>\n<p>The most expensive error is ignoring the order of operations. Entering \"1 + 2 * 3 = 9\" fails because multiplication happens before addition. The game calculates strictly left-to-right only if parentheses are used, which are not allowed in standard Nerdle. You must calculate the math in your head before typing.</p>\n<p>Another frequent mistake is reusing digits that are already marked black. If a number is gray, it is gone for the day. Stop trying to force it back into the equation. This wastes a turn that could confirm a correct operator placement.</p>\n<p>Don't guess the equals sign position too early. It locks in the structure of the equation. If you place it too far left, you limit your ability to use large numbers on the right side.</p><h2>Questions players keep asking</h2><h3>Does Nerdle allow negative numbers?</h3>\n<p>No. The game does not support negative results or negative operands. Every number in the equation must be a positive integer. If your math leads to a negative value, the equation is invalid.</p><h3>Can players use the same number twice?</h3>\n<p>Yes, digits can repeat within the equation unless the game logic marks them as unavailable. However, the total count of each digit is limited by the available tiles on the keyboard. If you use a '5' twice, you cannot use it a third time.</p><h3>What happens if I get the math right but the order wrong?</h3>\n<p>The game marks the digits as yellow if they are correct but in the wrong position, and gray if they are not in the equation at all. If the math is wrong, the entire row turns black, regardless of correct digits. Precision matters more than luck.</p><h3>Where can I find past answers?</h3>\n<p>The <a href=\"/nerdle-answers-archive\">Nerdle archive</a> lists every daily puzzle since launch. You can browse by date to see how the difficulty has shifted over time. This is the best resource for spotting patterns in operator usage.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-122b-a10b",
+        "fallbackUsed": true,
+        "generatedAt": "2026-05-27T07:49:25.618Z",
+        "wordCount": 578
+      }
+    },
     "2026-05-22": {
       "articleKey": "nerdle-answer-today",
       "date": "2026-05-22",

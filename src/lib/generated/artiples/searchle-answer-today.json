@@ -1,7 +1,22 @@
 {
   "articleKey": "searchle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.429Z",
+  "generatedAt": "2026-05-27T07:48:41.919Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "searchle-answer-today",
+      "date": "2026-05-27",
+      "title": "Searchle Answer for May 27, 2026: Clues and Strategy",
+      "summary": "Find today's Searchle answer for May 27, 2026. We break down the autocomplete hints, explain the reveal mechanics, and offer strategy for narrowing down the query.",
+      "articleHtml": "<h2>Today's Searchle at a glance</h2><p>The answer for May 27, 2026, sits right above this text. Searchle pulls from Google's live autocomplete data, meaning the solution reflects what people are actually typing right now. Pop culture spikes and breaking news often drive the daily query.</p><p>Check the reveal card to confirm your guess. If you missed it, the archive link below lets you review past patterns without resetting your current streak. Use the solver tool if you need to test specific keyword combinations.</p><h2>What the clues are telling you</h2><p>Autocomplete suggestions rely on search volume and recency. A hint about a trending movie usually points to a release date or a specific actor's name. Political events generate queries that fade fast, so today's answer might not work tomorrow.</p><p>Look at the letter count in the hint box. Short queries often indicate a proper noun or a specific year. Longer phrases suggest a question format like \"how to\" or \"why did.\" The dropdown list updates as you type, narrowing the field instantly.</p><p>Ignore generic terms. The algorithm favors specificity. If the hint mentions a color, it likely modifies a noun rather than standing alone. Cross-reference the category tag with current headlines to eliminate outdated topics.</p><h2>When to guess vs when to think</h2><p>Blind guessing wastes attempts. Wait until the dropdown shows at least two matching words before committing. The game penalizes random entries by hiding the remaining letter count. Patience yields better data than speed.</p><p>Use the first two guesses to test categories. Try a broad topic like \"sports\" or \"tech\" to see how the autocomplete reacts. If the suggestions shift dramatically, you are close to the right niche. If they stay generic, pivot immediately.</p><p>Save your final attempt for a verified phrase. Do not guess a partial match hoping the system fills the rest. The answer must match the full query string exactly. Check the <a href=\"/searchle-archive\">Searchle archive</a> to see how similar puzzles resolved.</p><h2>Questions players keep asking</h2><h3>How does the autocomplete hint work?</h3><p>The hint displays the most popular completion for your partial input. It updates in real-time based on global search trends. This means the suggestion changes if you delete a letter or add a space.</p><h3>Can I play previous Searchle puzzles?</h3><p>Yes, the <a href=\"/searchle-yesterday\">yesterday's answer</a> page links to the full history. You can replay old dates without affecting your current stats. The archive preserves the original query for every day.</p><h3>Why did my correct guess not register?</h3><p>Spelling matters. Autocomplete ignores minor typos, but the game validator does not. Ensure capitalization matches the reveal card exactly. Pluralization also trips up many players, so check singular vs. plural forms.</p><h3>Does the answer change by location?</h3><p>Searchle uses a standardized US-centric dataset for consistency. Regional variations do not apply to the daily puzzle. This ensures every player sees the same target query regardless of their IP address.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "generatedAt": "2026-05-27T07:48:41.916Z",
+        "wordCount": 477
+      }
+    },
     "2026-05-22": {
       "articleKey": "searchle-answer-today",
       "date": "2026-05-22",
