@@ -1,7 +1,23 @@
 {
   "articleKey": "betweenle-answer-today",
-  "generatedAt": "2026-05-26T22:20:36.570Z",
+  "generatedAt": "2026-05-27T18:41:54.855Z",
   "byDate": {
+    "2026-05-28": {
+      "articleKey": "betweenle-answer-today",
+      "date": "2026-05-28",
+      "title": "Betweenle Answer Today: How to Read the Clues and Narrow Your Guess",
+      "articleHtml": "<p>The archive shows today's Betweenle follows the same core mechanic as every other round: you're given a target—usually a country, capital, or landmark—and the game tells you whether your guess falls alphabetically before or after it. That's the whole system. Once that clicks, the puzzle stops feeling random.</p><h2>Betweenle answer today: what to notice before the reveal</h2>\n<p>Before checking the answer card, look at which direction the hint arrow points. If it says your guess comes <em>before</em> the target, you've eliminated everything from A through whatever letter your guess starts with. That chunk of the alphabet is gone. The remaining candidates sit above your current position in the dictionary. This isn't trivia knowledge—it's positional reasoning. A careful player usually notices the pattern by day three and stops guessing wildly.</p><h2>How the alphabetical gap tightens</h2>\n<p>Each wrong guess shrinks the possible range. Start with a midpoint like a country starting with M, N, or O. The hint eliminates roughly half the alphabet in one shot. Second guess cuts another chunk. By guess three or four, most players land within a handful of options. The solver link on this page can walk you through that narrowing process if you're stuck mid-puzzle.</p><h2>When the clue cards do the real work</h2>\n<p>The clue widgets scattered across today's board aren't decoration—they're filters. Each one narrows by category, region, or population size. Stack two or three clues together and suddenly your pool shrinks from 195 countries down to a manageable list. The answer card sits at the top of the page once you've exhausted your guesses or want to verify. Archive links let you compare today's board against previous rounds and see how the difficulty shifts week to week.</p><h2>Fast way to solve tomorrow's Betweenle</h2>\n<p>Open the solver before you start guessing. Most solvers for this format let you input constraints directly—region, approximate size, any clue text you've already seen. You'll land on the answer in two moves instead of five. Save the manual guessing for when you want the challenge; use the tool when you need the win.</p><h2>Questions players keep asking</h2><h3>Does Betweenle use compass directions or alphabetical ones?</h3>\n<p>Alphabetical only. North, south, east, and west don't apply here. The arrows point toward the next letter in the alphabet, not geographic space.</p><h3>What happens if I guess the exact right answer?</h3>\n<p>The board locks and shows a success state. You won't get a directional hint because you've already landed on the target—no distance to measure.</p><h3>Can players use the archive to study past boards?</h3>\n<p>Yes. The archive link on this page connects to previous rounds. Studying those boards helps you learn which regions tend to appear and how often the puzzle favors smaller countries versus major ones.</p><h3>Do the clue cards refresh each day?</h3>\n<p>Every 24 hours brings a new target and a fresh set of clues. Nothing carries over from yesterday's board unless you bookmark the page.</p><h3>Is there a limit on how many guesses I can make?</h3>\n<p>The standard format gives you six attempts. Some archive versions offer unlimited mode, but the daily challenge caps it at six to keep the leaderboard competitive.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-27T18:41:54.853Z",
+        "wordCount": 521,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-27": {
       "articleKey": "betweenle-answer-today",
       "date": "2026-05-27",
