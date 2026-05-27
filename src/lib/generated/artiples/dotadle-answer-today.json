@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.358Z",
+  "generatedAt": "2026-05-27T22:05:51.915Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-05-27",
+      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
+      "summary": "Today's Dotadle puzzle tests your knowledge of Dota 2 heroes. Here's how to parse the clue widgets and find the right answer faster.",
+      "articleHtml": "<p>The answer card and hint widgets on today's Dotadle board offer several angles of attack. A careful player usually spots one dominant clue first—whether it's the attribute type, lane role, or ability keyword—and uses that as an anchor before filling in secondary details.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2><p>Hero clues in Dotadle typically layer information across multiple difficulty tiers. The primary attribute clue—Strength, Agility, Intelligence, or Universal—narrows the roster to roughly 25% immediately. Pair that with a role indicator like \"offlane\" or \"support,\" and you're looking at maybe 8-12 candidates instead of 124. The reveal behavior on today's page shows whether the puzzle is testing broad recognition or fine-grained matchup knowledge. If the hint widget highlights an ability name rather than a stat line, work backward from spell identity first—that's often the fastest path to a confident solve.</p><h2>How to cut the Dota roster faster</h2><p>Start with what you know cold. Attribute filters alone eliminate three-quarters of the cast. From there, lane assignment cuts another chunk—carries cluster around certain agility picks, while tanks tend toward Strength heroes. The archive link on this page lets you review past puzzles and see which clue combinations appeared most frequently. Patterns emerge: ability keywords show up more often than item interactions, and lore references tend to accompany mid-difficulty reveals rather than easy ones.</p><h2>When roles help and when they mislead</h2><p>Dota 2 heroes break the mold constantly. A hero labeled \"support\" might dominate the safelane in certain drafts, while \"carry\" designations shift based on the meta. The clue widgets sometimes specify roles loosely—if a puzzle says \"roamer,\" that's a smaller subset than \"mid.\" But don't treat role labels as gospel. Flexible picks like Mirana or Windranger appear across multiple positions depending on the game state. Cross-reference the role hint against the attribute clue before locking in your guess.</p><h2>Smarter way to approach tomorrow's Dotadle</h2><p>Bookmark the solver tool for quick verification when you're stuck between two candidates. Before opening it, note which clue types you've already eliminated—attribute, role, ability keyword, item interaction. This habit builds pattern recognition over time. Tomorrow's puzzle will likely test a different hero archetype, so reviewing today's miss patterns helps more than re-studying what you got right.</p><h2>Questions players keep asking</h2><h3>Does the attribute clue always narrow the field enough?</h3>\n<p>Not always. Universal heroes complicate things since they share traits with all three traditional attributes. When you see that tag, treat it as a wildcard and lean harder on role or ability hints instead.</p><h3>Should I check the archive before solving or after?</h3>\n<p>Before, if you're genuinely stuck. The archive shows clue frequency but doesn't spoil answers directly. After a correct solve, it's useful for confirming whether you picked the intended difficulty path.</p><h3>How do players use the solver link effectively?</h3>\n<p>Enter the clues you've confirmed, not guesses. The solver cross-references known hero data against your input. Feeding it incorrect assumptions produces misleading results.</p><h3>Why do some puzzles include item hints?</h3>\n<p>Item keywords signal higher difficulty. They're especially common in puzzles referencing late-game power spikes or signature items like Blink Dagger or BKB. Treat item clues as confirmatory rather than primary evidence.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-27T22:05:51.905Z",
+        "wordCount": 527,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-25": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-05-25",
