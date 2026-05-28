@@ -33,6 +33,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   let selectedGuess = $state<ColorData | null>(null);
   let displayLimit = $state(12);
   let colordleRuntime = $state<ColordleRuntime | null>(null);
+  let runtimeBootstrapped = $state(false);
 
   function loadColordleRuntime(): Promise<ColordleRuntime> {
     if (!colordleRuntimePromise) {
@@ -63,6 +64,12 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
     } finally {
       loading = false;
     }
+  }
+
+  function bootstrapColordleRuntime() {
+    if (runtimeBootstrapped) return;
+    runtimeBootstrapped = true;
+    void ensureColordleRuntime();
   }
 
   let suggestions = $derived.by(() => {
@@ -129,7 +136,51 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   }
 
   onMount(() => {
-    void ensureColordleRuntime();
+    const startOnInteraction = () => {
+      bootstrapColordleRuntime();
+    };
+    const scheduleIdleLoad = () => {
+      const run = () => {
+        bootstrapColordleRuntime();
+      };
+
+      if ('requestIdleCallback' in window) {
+        const idleId = window.requestIdleCallback(run, { timeout: 2000 });
+        return () => window.cancelIdleCallback(idleId);
+      }
+
+      const timeoutId = globalThis.setTimeout(run, 1200);
+      return () => globalThis.clearTimeout(timeoutId);
+    };
+
+    document.addEventListener('pointerdown', startOnInteraction, {
+      once: true,
+      passive: true,
+      capture: true
+    });
+    document.addEventListener('focusin', startOnInteraction, { once: true, capture: true });
+    window.addEventListener('keydown', startOnInteraction, { once: true });
+    const cancelIdleLoad =
+      document.readyState === 'complete'
+        ? scheduleIdleLoad()
+        : (() => {
+            let cancel = () => {};
+            const handleLoad = () => {
+              cancel = scheduleIdleLoad();
+            };
+            window.addEventListener('load', handleLoad, { once: true });
+            return () => {
+              window.removeEventListener('load', handleLoad);
+              cancel();
+            };
+          })();
+
+    return () => {
+      document.removeEventListener('pointerdown', startOnInteraction, true);
+      document.removeEventListener('focusin', startOnInteraction, true);
+      window.removeEventListener('keydown', startOnInteraction);
+      cancelIdleLoad();
+    };
   });
 
   const faqs = [
@@ -233,7 +284,10 @@ const jsonLdSchema = JSON.stringify({
   </section>
 
   <!-- Main Solver Area -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12" style="min-height: 800px;">
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12"
+    style="min-height: 800px;"
+  >
     {#if loading}
       <div class="flex justify-center items-center" style="min-height: 800px;">
         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500"></div>

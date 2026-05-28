@@ -25,7 +25,6 @@
     disableClientFetch?: boolean;
   } = $props();
 
-  let showAnswer = $state(false);
   let definition = $state<string | null>(null);
   let rhymes = $state<string[]>([]);
   let synonyms = $state<string[]>([]);
@@ -142,29 +141,50 @@
       </div>
     {/if}
 
-    <button onclick={() => (showAnswer = !showAnswer)} class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
-      {#if showAnswer}<FiChevronUp class="text-xl" /> Hide Answer{:else}<FiChevronDown class="text-xl" /> Reveal Answer{/if}
-    </button>
+    <details class="semantle-answer-details">
+      <summary class="w-full cursor-pointer list-none rounded-2xl bg-teal-600 px-6 py-4 text-white shadow-lg transition-all duration-300 hover:bg-teal-700 hover:shadow-xl">
+        <span class="flex items-center justify-center gap-2">
+          <span class="summary-closed flex items-center gap-2"><FiChevronDown class="text-xl" /> Reveal Answer</span>
+          <span class="summary-open flex items-center gap-2"><FiChevronUp class="text-xl" /> Hide Answer</span>
+        </span>
+      </summary>
 
-    <div class="answer-reveal-area" class:revealed={showAnswer}>
-      <div class="answer-text-content bg-teal-50 dark:bg-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
-        <div class="text-center">
-          <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Puzzle #{puzzleNumber} Answer</p>
-          <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 uppercase tracking-widest">{word}</h3>
+      <div class="answer-reveal-area mt-4">
+        <div class="answer-text-content bg-teal-50 dark:bg-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
+          <div class="text-center">
+            <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Puzzle #{puzzleNumber} Answer</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 uppercase tracking-widest">{word}</h3>
+          </div>
         </div>
       </div>
-    </div>
+    </details>
   </div>
 </div>
 
 <style>
+  .semantle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .semantle-answer-details .summary-open {
+    display: none;
+  }
+
+  .semantle-answer-details[open] .summary-closed {
+    display: none;
+  }
+
+  .semantle-answer-details[open] .summary-open {
+    display: inline-flex;
+  }
+
   .answer-text-content {
     filter: blur(10px);
     user-select: none;
     transition: filter 0.3s ease;
   }
 
-  .answer-reveal-area.revealed .answer-text-content {
+  .semantle-answer-details[open] .answer-text-content {
     filter: none;
     user-select: auto;
   }

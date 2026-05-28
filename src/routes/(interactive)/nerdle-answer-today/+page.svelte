@@ -13,7 +13,6 @@
 
         let { data } = $props();
 
-        let copiedToken = $state<string | null>(null);
         let h1Title = $derived(`Nerdle Answer Today ( ${data.formattedDate} )`);
         let modes = $derived((data.answerData?.modes ?? []) as NerdleModeData[]);
         const publishedDate = $derived(
@@ -31,16 +30,6 @@
                 const background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
                 const shadow = '0 4px 20px rgba(16, 185, 129, 0.4)';
                 return `animation-delay: ${index * 100}ms; background: ${background}; box-shadow: ${shadow};`;
-        }
-
-        async function copyText(text: string, token: string): Promise<void> {
-                await navigator.clipboard.writeText(text);
-                copiedToken = token;
-                setTimeout(() => {
-                        if (copiedToken === token) {
-                                copiedToken = null;
-                        }
-                }, 1400);
         }
 </script>
 
@@ -116,10 +105,12 @@
                                                                                                 </p>
                                                                                                 <button
                                                                                                         type="button"
-                                                                                                        onclick={() => copyText(answerEntry.answer, `${mode.id}-${index}`)}
+                                                                                                        data-copy-value={answerEntry.answer}
+                                                                                                        data-copy-default="Copy Answer"
+                                                                                                        data-copy-success="Copied"
                                                                                                         class="rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-500"
                                                                                                 >
-                                                                                                        {copiedToken === `${mode.id}-${index}` ? 'Copied' : 'Copy Answer'}
+                                                                                                        Copy Answer
                                                                                                 </button>
                                                                                         </div>
 

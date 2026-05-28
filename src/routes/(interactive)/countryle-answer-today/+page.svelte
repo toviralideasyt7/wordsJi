@@ -10,7 +10,6 @@
   import { getMainDailyDateKey } from '$lib/main-daily-date';
 
   let { data } = $props();
-  let revealed = $state(false);
   const todayKey = getMainDailyDateKey();
   const publishedDate = $derived(
     data.today ? `${data.today.date}T00:00:00Z` : `${todayKey}T00:00:00Z`
@@ -86,33 +85,24 @@
         <h2 class="text-center text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Today's Country</h2>
         <p class="mt-2 text-center text-sm text-slate-500">Game #{data.today.gameNumber} &middot; {data.formattedDate}</p>
 
-        <!-- Reveal Button / Country Name -->
-        <div class="mx-auto mt-8 flex flex-col items-center">
-          {#if !revealed}
-            <button
-              type="button"
-              class="group relative rounded-2xl border-2 border-dashed border-teal-300 bg-teal-50/50 px-12 py-8 transition hover:border-teal-400 hover:bg-teal-50"
-              onclick={() => (revealed = true)}
-            >
+        <details class="countryle-answer-details mx-auto mt-8 max-w-3xl">
+          <summary class="list-none">
+            <div class="group relative rounded-2xl border-2 border-dashed border-teal-300 bg-teal-50/50 px-12 py-8 text-center transition hover:border-teal-400 hover:bg-teal-50">
               <div class="flex flex-col items-center gap-3">
                 <svg class="h-10 w-10 text-teal-400 transition group-hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                <span class="text-sm font-bold text-teal-700">Click to Reveal Answer</span>
+                <span class="countryle-answer-label text-sm font-bold text-teal-700">Click to Reveal Answer</span>
+                <div class="countryle-answer-reveal flex flex-col items-center gap-2">
+                  <span class="text-4xl">{continentEmoji[data.today.country.continent] ?? '\u{1F30D}'}</span>
+                  <h3 class="text-4xl font-black tracking-tight text-teal-700 sm:text-5xl countryle-answer-word">{data.today.country.country}</h3>
+                  <p class="mt-1 rounded-full bg-teal-100 px-4 py-1 text-sm font-semibold text-teal-700">{data.today.country.continent} &middot; {data.today.country.hemisphere}</p>
+                </div>
               </div>
-            </button>
-          {:else}
-            <div class="flex flex-col items-center gap-2">
-              <span class="text-4xl">{continentEmoji[data.today.country.continent] ?? '\u{1F30D}'}</span>
-              <h3 class="text-4xl font-black tracking-tight text-teal-700 sm:text-5xl">{data.today.country.country}</h3>
-              <p class="mt-1 rounded-full bg-teal-100 px-4 py-1 text-sm font-semibold text-teal-700">{data.today.country.continent} &middot; {data.today.country.hemisphere}</p>
             </div>
-          {/if}
-        </div>
+          </summary>
 
-        <!-- Country Facts Grid (shown after reveal) -->
-        {#if revealed}
           <div class="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-3">
             <div class="rounded-2xl border border-slate-100 bg-gradient-to-b from-white to-slate-50/60 p-5 text-center">
               <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Continent</p>
@@ -148,15 +138,7 @@
               </a>
             </div>
           {/if}
-
-          <button
-            type="button"
-            class="mx-auto mt-5 block text-sm font-semibold text-teal-600 underline underline-offset-4 hover:text-teal-500"
-            onclick={() => (revealed = false)}
-          >
-            Hide answer
-          </button>
-        {/if}
+        </details>
       </section>
 
       <GeneratedTodayArticle articleKey="countryle-answer-today" articleDate={data.today?.date ?? todayKey} />
@@ -371,4 +353,42 @@
     </div>
   </div>
 </div>
+
+<style>
+  .countryle-answer-details > summary {
+    cursor: pointer;
+  }
+
+  .countryle-answer-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .countryle-answer-word {
+    filter: blur(14px);
+    transition: filter 0.3s ease;
+    user-select: none;
+  }
+
+  .countryle-answer-details .countryle-answer-reveal {
+    display: none;
+  }
+
+  .countryle-answer-details[open] .countryle-answer-label {
+    display: none;
+  }
+
+  .countryle-answer-details[open] .countryle-answer-reveal {
+    display: flex;
+  }
+
+  .countryle-answer-details[open] .countryle-answer-word {
+    filter: none;
+    user-select: auto;
+  }
+
+  .countryle-answer-details[open] > summary > div {
+    border-style: solid;
+    background: rgba(236, 253, 245, 0.95);
+  }
+</style>
 

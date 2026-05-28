@@ -16,6 +16,7 @@ describe('getLegacyTodayRedirect', () => {
 	});
 
 	it('redirects old date-folder paths to the canonical today route', () => {
+		expect(getLegacyTodayRedirect('/wordle/2022-05-06')).toBe('/wordle-answer-today');
 		expect(getLegacyTodayRedirect('/wordle/2022-11-19')).toBe('/wordle-answer-today');
 		expect(getLegacyTodayRedirect('/wordle/2022-11-19-foyer')).toBe('/wordle-answer-today');
 		expect(getLegacyTodayRedirect('/colorfle/2025-12-06')).toBe('/colorfle-answer-today');

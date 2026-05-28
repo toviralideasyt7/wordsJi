@@ -28,18 +28,8 @@
     };
   }>();
 
-  let copiedWord = $state<string | null>(null);
   const totalPuzzles = $derived(data.totalPuzzles);
   const todayPuzzle = $derived(data.todayPuzzle);
-
-  async function copyToClipboard(text: string) {
-    if (!navigator?.clipboard) return;
-    await navigator.clipboard.writeText(text);
-    copiedWord = text;
-    setTimeout(() => {
-      copiedWord = null;
-    }, 2000);
-  }
 
   function formatDisplayDate(dateKey: string): string {
     return new Date(`${dateKey}T12:00:00`).toLocaleDateString('en-US', {
@@ -159,10 +149,12 @@
         <div class="flex justify-center gap-3 flex-wrap">
           <button
             type="button"
-            onclick={() => copyToClipboard(todayPuzzle.answer.toUpperCase())}
+            data-copy-value={todayPuzzle.answer.toUpperCase()}
+            data-copy-default="Copy Answer"
+            data-copy-success="Copied"
             class="px-3 py-2 rounded-lg border border-slate-200 text-sm"
           >
-            {copiedWord === todayPuzzle.answer.toUpperCase() ? 'Copied' : 'Copy Answer'}
+            Copy Answer
           </button>
           <a
             href="/searchle-archive"

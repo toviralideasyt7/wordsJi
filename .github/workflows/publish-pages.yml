@@ -20,12 +20,13 @@ on:
   workflow_dispatch:
     inputs:
       workflow_mode:
-        description: Run a normal deploy or only generate daily articles
+        description: Run a normal deploy, refresh the whole website, or only generate daily articles
         required: false
         default: deploy
         type: choice
         options:
           - deploy
+          - full-site-refresh
           - generate-articles-only
       article_scope:
         description: For article-only runs, use the selected group or all current windows
@@ -209,25 +210,34 @@ jobs:
               resolved_skip_existing="true"
               ;;
             workflow_dispatch)
-              if [ "$WORKFLOW_MODE" = "generate-articles-only" ] || [ "$INPUT_GENERATE_ARTICLES" = "true" ]; then
-                resolved_generate="true"
-                resolved_skip_existing="true"
-              fi
-
-              if [ "$ARTICLE_SCOPE" = "all-current-windows" ]; then
+              if [ "$WORKFLOW_MODE" = "full-site-refresh" ]; then
+                resolved_group="site"
                 resolved_article_groups="site,waffle,gamedle"
+                resolved_scope="all-current-windows"
+                resolved_generate="true"
+                resolved_data_mode="full"
+                resolved_skip_existing="false"
               else
-                resolved_article_groups="$(resolve_retry_groups "$GROUP_NAME")"
-              fi
+                if [ "$WORKFLOW_MODE" = "generate-articles-only" ] || [ "$INPUT_GENERATE_ARTICLES" = "true" ]; then
+                  resolved_generate="true"
+                  resolved_skip_existing="true"
+                fi
 
-              case "$GROUP_NAME" in
-                waffle|gamedle)
-                  resolved_data_mode="retry-failed"
-                  ;;
-                *)
-                  resolved_data_mode="full"
-                  ;;
-              esac
+                if [ "$ARTICLE_SCOPE" = "all-current-windows" ]; then
+                  resolved_article_groups="site,waffle,gamedle"
+                else
+                  resolved_article_groups="$(resolve_retry_groups "$GROUP_NAME")"
+                fi
+
+                case "$GROUP_NAME" in
+                  waffle|gamedle)
+                    resolved_data_mode="retry-failed"
+                    ;;
+                  *)
+                    resolved_data_mode="full"
+                    ;;
+                esac
+              fi
               ;;
           esac
 

@@ -58,6 +58,142 @@
                         background: #0f172a;
                         color: #f8fafc;
                 }
+
+                #cookie-settings-static {
+                        position: fixed;
+                        inset-inline: 0;
+                        bottom: 0;
+                        z-index: 70;
+                        display: none;
+                        border-top: 1px solid #e2e8f0;
+                        background: rgba(255, 255, 255, 0.96);
+                        box-shadow: 0 -16px 48px rgba(15, 23, 42, 0.12);
+                        backdrop-filter: blur(12px);
+                        -webkit-backdrop-filter: blur(12px);
+                }
+
+                html[data-consent-pending='true'] #cookie-settings-static {
+                        display: block;
+                }
+
+                .cookie-settings-inner {
+                        margin: 0 auto;
+                        display: flex;
+                        max-width: 72rem;
+                        flex-direction: column;
+                        gap: 1rem;
+                        padding: 1rem;
+                }
+
+                .cookie-settings-copy {
+                        max-width: 48rem;
+                }
+
+                .cookie-settings-eyebrow {
+                        margin: 0;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+                        letter-spacing: 0.18em;
+                        text-transform: uppercase;
+                        color: #0d9488;
+                }
+
+                .cookie-settings-title {
+                        margin: 0.25rem 0 0;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                        color: #0f172a;
+                }
+
+                .cookie-settings-body {
+                        margin: 0.5rem 0 0;
+                        font-size: 0.875rem;
+                        line-height: 1.7;
+                        color: #475569;
+                }
+
+                .cookie-settings-body a {
+                        font-weight: 600;
+                        color: #0d9488;
+                }
+
+                .cookie-settings-actions {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                }
+
+                .cookie-settings-button {
+                        cursor: pointer;
+                        border-radius: 0.75rem;
+                        padding: 0.75rem 1rem;
+                        font: inherit;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+                        transition:
+                                background-color 0.2s ease,
+                                border-color 0.2s ease,
+                                color 0.2s ease;
+                }
+
+                .cookie-settings-button.secondary {
+                        border: 1px solid #cbd5e1;
+                        background: #ffffff;
+                        color: #334155;
+                }
+
+                .cookie-settings-button.secondary:hover {
+                        border-color: #94a3b8;
+                        background: #f8fafc;
+                }
+
+                .cookie-settings-button.primary {
+                        border: 1px solid #0d9488;
+                        background: #0d9488;
+                        color: #ffffff;
+                }
+
+                .cookie-settings-button.primary:hover {
+                        background: #14b8a6;
+                        border-color: #14b8a6;
+                }
+
+                body[data-theme='dark'] #cookie-settings-static {
+                        border-top-color: #334155;
+                        background: rgba(15, 23, 42, 0.96);
+                }
+
+                body[data-theme='dark'] .cookie-settings-title {
+                        color: #f8fafc;
+                }
+
+                body[data-theme='dark'] .cookie-settings-body {
+                        color: #cbd5e1;
+                }
+
+                body[data-theme='dark'] .cookie-settings-button.secondary {
+                        border-color: #475569;
+                        background: #0f172a;
+                        color: #e2e8f0;
+                }
+
+                body[data-theme='dark'] .cookie-settings-button.secondary:hover {
+                        background: #1e293b;
+                }
+
+                @media (min-width: 1024px) {
+                        .cookie-settings-inner {
+                                flex-direction: row;
+                                align-items: flex-end;
+                                justify-content: space-between;
+                                padding-inline: 2rem;
+                        }
+
+                        .cookie-settings-actions {
+                                flex-direction: row;
+                                align-items: center;
+                        }
+                }
         </style>
         <script>
                 (function () {
@@ -74,6 +210,14 @@
                                         return value === 'accepted' || value === 'rejected' ? value : null;
                                 } catch (error) {
                                         return null;
+                                }
+                        }
+
+                        function setConsentBannerVisibility(visible) {
+                                if (visible) {
+                                        document.documentElement.setAttribute('data-consent-pending', 'true');
+                                } else {
+                                        document.documentElement.removeAttribute('data-consent-pending');
                                 }
                         }
 
@@ -148,6 +292,48 @@
                                 document.head.appendChild(script);
                         }
 
+                        function scheduleAdsense() {
+                                if (window.__wordsolverxAdsenseLoaded || window.__wordsolverxAdsenseScheduled) return;
+                                window.__wordsolverxAdsenseScheduled = true;
+
+                                var interactionEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+                                var cleanup = function () {
+                                        for (var i = 0; i < interactionEvents.length; i += 1) {
+                                                window.removeEventListener(interactionEvents[i], loadAfterInteraction);
+                                        }
+                                };
+                                var loadAfterInteraction = function () {
+                                        cleanup();
+                                        loadAdsense();
+                                };
+                                var loadAfterWindowSettles = function () {
+                                        var run = function () {
+                                                cleanup();
+                                                loadAdsense();
+                                        };
+
+                                        if ('requestIdleCallback' in window) {
+                                                window.requestIdleCallback(run, { timeout: 3000 });
+                                                return;
+                                        }
+
+                                        window.setTimeout(run, 3000);
+                                };
+
+                                for (var i = 0; i < interactionEvents.length; i += 1) {
+                                        window.addEventListener(interactionEvents[i], loadAfterInteraction, {
+                                                once: true,
+                                                passive: true
+                                        });
+                                }
+
+                                if (document.readyState === 'complete') {
+                                        loadAfterWindowSettles();
+                                } else {
+                                        window.addEventListener('load', loadAfterWindowSettles, { once: true });
+                                }
+                        }
+
                         window.__wordsolverxLoadAnalytics = loadAnalytics;
                         window.__wordsolverxGetConsent = readConsent;
                         window.__wordsolverxSetConsent = function (value) {
@@ -158,10 +344,11 @@
                                 }
 
                                 dispatchConsent(value);
+                                setConsentBannerVisibility(false);
 
                                 if (value === 'accepted') {
                                         loadAnalytics();
-                                        loadAdsense();
+                                        scheduleAdsense();
                                 }
                         };
 
@@ -196,9 +383,12 @@
                                 );
                         }
 
-                        if (readConsent() === 'accepted') {
+                        var initialConsent = readConsent();
+                        setConsentBannerVisibility(initialConsent === null);
+
+                        if (initialConsent === 'accepted') {
                                 scheduleAnalytics();
-                                loadAdsense();
+                                scheduleAdsense();
                         }
 
                         function updateCardFilter(input) {
@@ -251,6 +441,15 @@
                                 var target = event.target;
                                 if (!target || !target.closest) return;
 
+                                var consentButton = target.closest('[data-consent-choice]');
+                                if (consentButton) {
+                                        var consentValue = consentButton.getAttribute('data-consent-choice');
+                                        if (consentValue === 'accepted' || consentValue === 'rejected') {
+                                                window.__wordsolverxSetConsent(consentValue);
+                                        }
+                                        return;
+                                }
+
                                 var copyButton = target.closest('[data-copy-value]');
                                 if (copyButton) {
                                         var textToCopy = copyButton.getAttribute('data-copy-value') || '';
@@ -280,6 +479,18 @@
                                 refreshAllCardFilters();
                         }
 
+                        window.addEventListener('wordsolverx:consent-open', function () {
+                                setConsentBannerVisibility(true);
+                        });
+
+                        window.addEventListener('wordsolverx:consent-updated', function (event) {
+                                var nextValue =
+                                        event && event.detail && event.detail.value !== undefined
+                                                ? event.detail.value
+                                                : readConsent();
+                                setConsentBannerVisibility(nextValue !== 'accepted' && nextValue !== 'rejected');
+                        });
+
                         window.addEventListener('pageshow', refreshAllCardFilters);
                 })();
         </script>
@@ -289,6 +500,36 @@
 
 <body data-sveltekit-preload-data="hover">
         <div style="display: contents">%sveltekit.body%</div>
+        <section id="cookie-settings-static" aria-label="Cookie consent">
+                <div class="cookie-settings-inner">
+                        <div class="cookie-settings-copy">
+                                <p class="cookie-settings-eyebrow">Privacy choices</p>
+                                <h2 class="cookie-settings-title">Choose how WordSolverX loads cookies and ads</h2>
+                                <p class="cookie-settings-body">
+                                        We use browser storage for site preferences, plus optional analytics and
+                                        advertising scripts. Accepting enables Google Analytics and AdSense. Rejecting
+                                        keeps only the site features needed to browse answer pages and tools. Details
+                                        live in our <a href="/privacy-policy">Privacy Policy</a>.
+                                </p>
+                        </div>
+                        <div class="cookie-settings-actions">
+                                <button
+                                        type="button"
+                                        class="cookie-settings-button secondary"
+                                        data-consent-choice="rejected"
+                                >
+                                        Reject optional cookies
+                                </button>
+                                <button
+                                        type="button"
+                                        class="cookie-settings-button primary"
+                                        data-consent-choice="accepted"
+                                >
+                                        Accept analytics and ads
+                                </button>
+                        </div>
+                </div>
+        </section>
 </body>
 
 </html>

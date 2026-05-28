@@ -38,20 +38,8 @@
     };
   } = $props();
 
-  let showMorningAnswer = $state(true);
-  let showAfternoonAnswer = $state(true);
-  let copiedWord = $state<string | null>(null);
   const todayKey = getMainDailyDateKey();
   const publishedDate = $derived(`${data.todayAnswers.date}T00:00:00Z`);
-
-  async function copyToClipboard(text: string) {
-    if (!navigator?.clipboard) return;
-    await navigator.clipboard.writeText(text);
-    copiedWord = text;
-    setTimeout(() => {
-      copiedWord = null;
-    }, 2000);
-  }
 </script>
 
 <svelte:head>
@@ -101,32 +89,27 @@
         <div class="p-6 text-center">
           <div class="text-xs uppercase tracking-wide text-amber-600 mb-2">Morning Puzzle</div>
           <div class="text-sm text-slate-500 mb-3">{data.todayAnswers.date}</div>
-          {#if showMorningAnswer}
-            <div class="font-mono text-3xl font-bold text-amber-600 uppercase mb-2">
-              {data.todayAnswers.morning.phrase}
-            </div>
-          {:else}
-            <div class="text-slate-400 mb-2">Answer hidden</div>
-          {/if}
-          <div class="text-xs text-slate-500 mb-4">Phrase #{data.todayAnswers.morning.index}</div>
-          <div class="flex justify-center gap-3 flex-wrap">
-            <button
-              type="button"
-              onclick={() => (showMorningAnswer = !showMorningAnswer)}
-              class="px-3 py-2 rounded-lg bg-amber-500 text-white text-sm hover:bg-amber-600"
-            >
-              {showMorningAnswer ? 'Hide Answer' : 'Reveal Answer'}
-            </button>
-            {#if showMorningAnswer}
+          <details class="phrazle-answer-details">
+            <summary class="cursor-pointer list-none rounded-lg bg-amber-500 px-3 py-2 text-sm text-white hover:bg-amber-600">
+              <span class="label-closed">Reveal Answer</span>
+              <span class="label-open">Hide Answer</span>
+            </summary>
+            <div class="phrazle-answer-content mt-4">
+              <div class="font-mono text-3xl font-bold text-amber-600 uppercase mb-2">
+                {data.todayAnswers.morning.phrase}
+              </div>
+              <div class="text-xs text-slate-500 mb-4">Phrase #{data.todayAnswers.morning.index}</div>
               <button
                 type="button"
-                onclick={() => copyToClipboard(data.todayAnswers.morning.phrase.toUpperCase())}
+                data-copy-value={data.todayAnswers.morning.phrase.toUpperCase()}
+                data-copy-default="Copy"
+                data-copy-success="Copied"
                 class="px-3 py-2 rounded-lg border border-amber-200 text-sm"
               >
-                {copiedWord === data.todayAnswers.morning.phrase.toUpperCase() ? 'Copied' : 'Copy'}
+                Copy
               </button>
-            {/if}
-          </div>
+            </div>
+          </details>
         </div>
       </div>
 
@@ -135,32 +118,27 @@
         <div class="p-6 text-center">
           <div class="text-xs uppercase tracking-wide text-indigo-600 mb-2">Afternoon Puzzle</div>
           <div class="text-sm text-slate-500 mb-3">{data.todayAnswers.date}</div>
-          {#if showAfternoonAnswer}
-            <div class="font-mono text-3xl font-bold text-indigo-600 uppercase mb-2">
-              {data.todayAnswers.afternoon.phrase}
-            </div>
-          {:else}
-            <div class="text-slate-400 mb-2">Answer hidden</div>
-          {/if}
-          <div class="text-xs text-slate-500 mb-4">Phrase #{data.todayAnswers.afternoon.index}</div>
-          <div class="flex justify-center gap-3 flex-wrap">
-            <button
-              type="button"
-              onclick={() => (showAfternoonAnswer = !showAfternoonAnswer)}
-              class="px-3 py-2 rounded-lg bg-indigo-500 text-white text-sm hover:bg-indigo-600"
-            >
-              {showAfternoonAnswer ? 'Hide Answer' : 'Reveal Answer'}
-            </button>
-            {#if showAfternoonAnswer}
+          <details class="phrazle-answer-details">
+            <summary class="cursor-pointer list-none rounded-lg bg-indigo-500 px-3 py-2 text-sm text-white hover:bg-indigo-600">
+              <span class="label-closed">Reveal Answer</span>
+              <span class="label-open">Hide Answer</span>
+            </summary>
+            <div class="phrazle-answer-content mt-4">
+              <div class="font-mono text-3xl font-bold text-indigo-600 uppercase mb-2">
+                {data.todayAnswers.afternoon.phrase}
+              </div>
+              <div class="text-xs text-slate-500 mb-4">Phrase #{data.todayAnswers.afternoon.index}</div>
               <button
                 type="button"
-                onclick={() => copyToClipboard(data.todayAnswers.afternoon.phrase.toUpperCase())}
+                data-copy-value={data.todayAnswers.afternoon.phrase.toUpperCase()}
+                data-copy-default="Copy"
+                data-copy-success="Copied"
                 class="px-3 py-2 rounded-lg border border-indigo-200 text-sm"
               >
-                {copiedWord === data.todayAnswers.afternoon.phrase.toUpperCase() ? 'Copied' : 'Copy'}
+                Copy
               </button>
-            {/if}
-          </div>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -335,3 +313,32 @@
 
   <FAQSection faqs={data.faqs} />
 </div>
+
+<style>
+  .phrazle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .phrazle-answer-details .label-open {
+    display: none;
+  }
+
+  .phrazle-answer-content {
+    filter: blur(10px);
+    user-select: none;
+    transition: filter 0.3s ease;
+  }
+
+  .phrazle-answer-details[open] .label-closed {
+    display: none;
+  }
+
+  .phrazle-answer-details[open] .label-open {
+    display: inline;
+  }
+
+  .phrazle-answer-details[open] .phrazle-answer-content {
+    filter: none;
+    user-select: auto;
+  }
+</style>

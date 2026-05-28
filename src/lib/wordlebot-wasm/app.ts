@@ -47,6 +47,26 @@ function renderError(target: HTMLElement, message: string) {
         `;
 }
 
+function scheduleWhenIdle(task: () => void, timeout = 1800) {
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+                const idleId = window.requestIdleCallback(task, { timeout });
+                return () => window.cancelIdleCallback(idleId);
+        }
+
+        const timerId = globalThis.setTimeout(task, 350);
+        return () => globalThis.clearTimeout(timerId);
+}
+
+function renderInitialResultsPlaceholder(container: HTMLElement) {
+        container.classList.remove('results-stale');
+        container.innerHTML = `
+                <div class="loading-card">
+                        Solver ready. Suggestions will appear in a moment, or click
+                        <strong>calculate next guess</strong>.
+                </div>
+        `;
+}
+
 export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageConfig) {
         let destroyed = false;
 
@@ -242,7 +262,13 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                 });
 
                 drawBoards(boardsContainer, state, storageKey, resultsContainer);
-                await solveAndRender(state, resultsContainer);
+                renderInitialResultsPlaceholder(resultsContainer);
+                resultsContainer.dataset.initialSolvePending = 'true';
+                scheduleWhenIdle(() => {
+                        if (destroyed || resultsContainer.dataset.initialSolvePending !== 'true') return;
+                        resultsContainer.dataset.initialSolvePending = 'false';
+                        void solveAndRender(state, resultsContainer);
+                });
         }
 
         async function renderCanuckleDaily() {
@@ -582,6 +608,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
         }
 
         async function solveAndRender(state: SolverState, container: HTMLElement) {
+                container.dataset.initialSolvePending = 'false';
                 container.classList.remove('results-stale');
                 container.innerHTML = '<div class="loading-card"><div class="loading-spinner"></div>Calculating suggestions...</div>';
 

@@ -13,13 +13,11 @@
     isYesterday?: boolean;
   } = $props();
 
-  let isRevealed = $state(false);
   let upperWord = $derived(word.toUpperCase());
   let dayText = $derived(isYesterday ? 'yesterday' : 'today');
 </script>
 
 <div class="mb-12">
-  <!-- Clues Section -->
   <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg mb-8">
     <h2 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
       <span class="w-2 h-8 bg-orange-500 rounded-full inline-block"></span>
@@ -40,27 +38,19 @@
         <p class="text-slate-900 font-bold text-lg">{word[word.length - 1].toUpperCase()}</p>
       </div>
     </div>
-
-    {#if !isRevealed}
-      <div class="mt-8 text-center">
-        <button
-          onclick={() => (isRevealed = true)}
-          class="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-2xl font-black text-lg shadow-xl shadow-orange-100 hover:shadow-orange-200 transform hover:-translate-y-1 transition-all active:scale-95"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-          </svg>
-          Reveal {isYesterday ? "Yesterday's" : "Today's"} Answer
-        </button>
-      </div>
-    {/if}
   </div>
 
-  <!-- Answer Section -->
-  <div class="transition-all duration-700 transform">
-    <div class="bg-orange-50 rounded-3xl p-8 border border-orange-100 shadow-xl text-center relative overflow-hidden phoodle-answer-panel" class:revealed={isRevealed}>
-      <!-- Decorative elements -->
+  <details class="phoodle-answer-details transition-all duration-700 transform">
+    <summary class="mx-auto flex w-fit cursor-pointer list-none items-center justify-center rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-10 py-4 text-lg font-black text-white shadow-xl shadow-orange-100 transition-all active:scale-95 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+      </svg>
+      <span class="label-closed">Reveal {isYesterday ? "Yesterday's" : "Today's"} Answer</span>
+      <span class="label-open">Hide Answer</span>
+    </summary>
+
+    <div class="bg-orange-50 rounded-3xl p-8 border border-orange-100 shadow-xl text-center relative overflow-hidden phoodle-answer-panel mt-8">
       <div class="absolute top-0 right-0 p-4 opacity-10">
         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
           <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
@@ -80,21 +70,37 @@
       {/if}
       {#if recipe_name}
         <div class="mt-6 inline-block px-5 py-2.5 bg-white rounded-full text-orange-700 text-sm font-bold shadow-sm border border-orange-100 italic">
-          🍴 Pro Tip: {recipe_name}
+          Pro Tip: {recipe_name}
         </div>
       {/if}
     </div>
-  </div>
+  </details>
 </div>
 
 <style>
+  .phoodle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .phoodle-answer-details .label-open {
+    display: none;
+  }
+
+  .phoodle-answer-details[open] .label-closed {
+    display: none;
+  }
+
+  .phoodle-answer-details[open] .label-open {
+    display: inline;
+  }
+
   .phoodle-answer-panel {
     filter: blur(10px);
     user-select: none;
     transition: filter 0.3s ease;
   }
 
-  .phoodle-answer-panel.revealed {
+  .phoodle-answer-details[open] .phoodle-answer-panel {
     filter: none;
     user-select: auto;
   }

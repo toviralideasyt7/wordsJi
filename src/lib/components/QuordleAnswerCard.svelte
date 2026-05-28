@@ -4,17 +4,7 @@
 
   let { date, initialData = null }: { date: Date; initialData?: QuordleData | null } = $props();
 
-  let data = $state<QuordleData | null>(null);
-  let viewAnswers = $state<Record<string, boolean>>({});
-
-  $effect(() => {
-    if (initialData) {
-      data = initialData;
-      return;
-    }
-
-    data = getQuordleDataForDate(date);
-  });
+  let data = $derived(initialData ?? getQuordleDataForDate(date));
 
   function countVowels(word: string) { return (word.match(/[AEIOU]/gi) || []).length; }
   function hasDoubleLetters(word: string) {
@@ -95,32 +85,30 @@
             </div>
           </div>
 
-          <div class="mt-8 text-center">
-            <button
-              onclick={() => (viewAnswers = { ...viewAnswers, [mode.type]: !viewAnswers[mode.type] })}
-              class="bg-slate-900 dark:bg-white dark:text-slate-900 text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-lg"
-            >
-              {viewAnswers[mode.type] ? 'Hide Answers' : `Show ${mode.title} Answers`}
-            </button>
-          </div>
+          <details class="quordle-answer-details mt-8">
+            <summary class="mx-auto flex w-fit cursor-pointer list-none items-center justify-center rounded-full bg-slate-900 px-8 py-3 font-bold text-white shadow-lg transition-transform hover:scale-105 dark:bg-white dark:text-slate-900">
+              <span class="label-closed">Show {mode.title} Answers</span>
+              <span class="label-open">Hide Answers</span>
+            </summary>
 
-          <div class="quordle-answer-spoiler mt-12" class:revealed={viewAnswers[mode.type]}>
-            <div class="answer-content">
-              <div class="text-center mb-8">
-                <div class="text-2xl font-bold text-slate-900 dark:text-white mb-2">{mode.title} Answers for {mode.num}</div>
-                <p class="text-slate-500 dark:text-slate-400">
-                  for {format(date, 'EEEE, MMMM d, yyyy')}
-                </p>
-              </div>
-              <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                {#each mode.words as word, i}
-                  <div class="{accentColor} text-white p-6 rounded-2xl text-center text-2xl font-black tracking-[0.2em] shadow-xl border-b-4 border-black/20 transform hover:-translate-y-1 transition-transform">
-                    {word}
-                  </div>
-                {/each}
+            <div class="quordle-answer-spoiler mt-12">
+              <div class="answer-content">
+                <div class="text-center mb-8">
+                  <div class="text-2xl font-bold text-slate-900 dark:text-white mb-2">{mode.title} Answers for {mode.num}</div>
+                  <p class="text-slate-500 dark:text-slate-400">
+                    for {format(date, 'EEEE, MMMM d, yyyy')}
+                  </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                  {#each mode.words as word}
+                    <div class="{accentColor} text-white p-6 rounded-2xl text-center text-2xl font-black tracking-[0.2em] shadow-xl border-b-4 border-black/20 transform hover:-translate-y-1 transition-transform">
+                      {word}
+                    </div>
+                  {/each}
+                </div>
               </div>
             </div>
-          </div>
+          </details>
         </div>
       {/if}
     {/each}
@@ -128,13 +116,29 @@
 {/if}
 
 <style>
+  .quordle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .quordle-answer-details .label-open {
+    display: none;
+  }
+
+  .quordle-answer-details[open] .label-closed {
+    display: none;
+  }
+
+  .quordle-answer-details[open] .label-open {
+    display: inline;
+  }
+
   .quordle-answer-spoiler .answer-content {
     filter: blur(10px);
     user-select: none;
     transition: filter 0.3s ease;
   }
 
-  .quordle-answer-spoiler.revealed .answer-content {
+  .quordle-answer-details[open] .quordle-answer-spoiler .answer-content {
     filter: none;
     user-select: auto;
   }

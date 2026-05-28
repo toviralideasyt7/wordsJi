@@ -20,8 +20,6 @@
     children?: Snippet;
   } = $props();
 
-  let revealed = $state(false);
-
   let clues = $derived([
     { question: `What continent is today's Globle country located on?`, answer: `The country is located on the ${country.continent} continent.` },
     { question: `How many letters are in today's Globle country name?`, answer: `The country name has ${country.name.length} letters.` },
@@ -50,38 +48,50 @@
     {/each}
   </div>
 
-  {#if !revealed}
-    <div class="text-center">
-      <button
-        onclick={() => (revealed = true)}
-        class="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-      >
-        <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
-        Reveal Answer
-      </button>
-      <p class="text-sm text-slate-500 dark:text-slate-400 mt-3">Click to see the Globle country</p>
-    </div>
-  {/if}
 </div>
 
 <!-- Answer section -->
 {#if children}
-  <div class="globle-answer-reveal" class:revealed={revealed}>
-    {@render children()}
-  </div>
+  <details class="globle-answer-details">
+    <summary class="mx-auto flex w-fit cursor-pointer list-none items-center justify-center rounded-xl bg-teal-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:bg-teal-700 hover:shadow-xl">
+      <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+      </svg>
+      <span class="label-closed">Reveal Answer</span>
+      <span class="label-open">Hide Answer</span>
+    </summary>
+    <p class="mt-3 text-center text-sm text-slate-500 dark:text-slate-400">Click to see the Globle country</p>
+    <div class="globle-answer-reveal mt-8">
+      {@render children()}
+    </div>
+  </details>
 {/if}
 
 <style>
+  .globle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .globle-answer-details .label-open {
+    display: none;
+  }
+
+  .globle-answer-details[open] .label-closed {
+    display: none;
+  }
+
+  .globle-answer-details[open] .label-open {
+    display: inline;
+  }
+
   .globle-answer-reveal {
     filter: blur(10px);
     user-select: none;
     transition: filter 0.3s ease;
   }
 
-  .globle-answer-reveal.revealed {
+  .globle-answer-details[open] .globle-answer-reveal {
     filter: none;
     user-select: auto;
   }

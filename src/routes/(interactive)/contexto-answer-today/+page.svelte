@@ -41,8 +41,6 @@
     data: { initialAnswer: ContextoAnswer | null; latestDate: string | null; error: string | null };
   } = $props();
 
-  let showAnswer = $state(false);
-
   function formatDisplayDate(dateKey: string): string {
     return new Date(`${dateKey}T12:00:00`).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -211,28 +209,21 @@
           </div>
         {:else if data.initialAnswer?.success}
           <div class="grid lg:grid-cols-[1.4fr_0.9fr] gap-6 items-start">
-            <div>
-              <div class={`rounded-2xl border-2 transition-all p-6 md:p-8 ${showAnswer ? 'bg-teal-50 dark:bg-teal-900/20 border-teal-300 dark:border-teal-600' : 'bg-slate-50 dark:bg-slate-700/50 border-dashed border-slate-300 dark:border-slate-600'}`}>
-                <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">The Contexto answer for this day</p>
-                <p
-                  class="text-4xl md:text-6xl font-black tracking-tight text-teal-700 dark:text-teal-300 capitalize contexto-answer-word"
-                  class:revealed={showAnswer}
-                >
-                  {data.initialAnswer.answer}
-                </p>
-                {#if !showAnswer}
-                  <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Click reveal when you want the answer.</p>
-                {/if}
-              </div>
+            <details class="contexto-answer-details">
+              <summary class="list-none">
+                <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-6 transition-all md:p-8 dark:border-slate-600 dark:bg-slate-700/50">
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">The Contexto answer for this day</p>
+                  <p class="text-4xl md:text-6xl font-black tracking-tight text-teal-700 dark:text-teal-300 capitalize contexto-answer-word">
+                    {data.initialAnswer.answer}
+                  </p>
+                  <p class="contexto-answer-note mt-3 text-sm text-slate-500 dark:text-slate-400">
+                    <span class="note-closed">Click reveal when you want the answer.</span>
+                    <span class="note-open">Answer revealed. Use the archive for older days.</span>
+                  </p>
+                </div>
+              </summary>
 
               <div class="flex gap-3 flex-wrap mt-5">
-                <button
-                  type="button"
-                  onclick={() => (showAnswer = !showAnswer)}
-                  class={`px-5 py-3 rounded-xl text-white font-medium ${showAnswer ? 'bg-slate-600 hover:bg-slate-700' : 'bg-teal-600 hover:bg-teal-700'}`}
-                >
-                  {showAnswer ? 'Hide Answer' : 'Reveal Answer'}
-                </button>
                 <a
                   href="/contexto-archive"
                   class="px-5 py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300"
@@ -240,7 +231,7 @@
                   Browse Archive
                 </a>
               </div>
-            </div>
+            </details>
 
             <div class="space-y-4">
               <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/50 p-5">
@@ -375,8 +366,39 @@
     user-select: none;
   }
 
-  .contexto-answer-word.revealed {
+  .contexto-answer-details[open] .contexto-answer-word {
     filter: none;
     user-select: auto;
+  }
+
+  .contexto-answer-details > summary {
+    cursor: pointer;
+  }
+
+  .contexto-answer-details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .contexto-answer-details .note-open {
+    display: none;
+  }
+
+  .contexto-answer-details[open] > summary .rounded-2xl {
+    border-style: solid;
+    border-color: #5eead4;
+    background: rgba(204, 251, 241, 0.65);
+  }
+
+  :global(body[data-theme='dark']) .contexto-answer-details[open] > summary .rounded-2xl {
+    border-color: #0f766e;
+    background: rgba(15, 118, 110, 0.2);
+  }
+
+  .contexto-answer-details[open] .note-closed {
+    display: none;
+  }
+
+  .contexto-answer-details[open] .note-open {
+    display: inline;
   }
 </style>

@@ -6,6 +6,7 @@
   let { config }: { config: WordlebotAppPageConfig } = $props();
 
   let host: HTMLDivElement | null = null;
+  let activationTarget: HTMLDivElement | null = null;
   let isStarted = $state(false);
   let isLoading = $state(false);
   let errorMessage = $state('');
@@ -60,8 +61,55 @@
   }
 
   onMount(() => {
-    void start();
+    const startOnIntent = () => {
+      void start();
+    };
+    const interactionEvents: Array<keyof HTMLElementEventMap> = ['pointerdown', 'touchstart'];
+    const removeInteractionListeners = () => {
+      if (!activationTarget) return;
+      interactionEvents.forEach((eventName) => {
+        activationTarget?.removeEventListener(eventName, startOnIntent);
+      });
+    };
+    const scheduleIdleStart = () => {
+      const run = () => {
+        removeInteractionListeners();
+        void start();
+      };
+
+      if ('requestIdleCallback' in window) {
+        const idleId = window.requestIdleCallback(run, { timeout: 2500 });
+        return () => window.cancelIdleCallback(idleId);
+      }
+
+      const timeoutId = globalThis.setTimeout(run, 1500);
+      return () => globalThis.clearTimeout(timeoutId);
+    };
+
+    interactionEvents.forEach((eventName) => {
+      activationTarget?.addEventListener(eventName, startOnIntent, { once: true, passive: true });
+    });
+    window.addEventListener('keydown', startOnIntent, { once: true });
+
+    const cancelIdleStart =
+      document.readyState === 'complete'
+        ? scheduleIdleStart()
+        : (() => {
+            let cancel = () => {};
+            const handleLoad = () => {
+              cancel = scheduleIdleStart();
+            };
+            window.addEventListener('load', handleLoad, { once: true });
+            return () => {
+              window.removeEventListener('load', handleLoad);
+              cancel();
+            };
+          })();
+
     return () => {
+      removeInteractionListeners();
+      window.removeEventListener('keydown', startOnIntent);
+      cancelIdleStart();
       cleanup?.();
     };
   });
@@ -71,30 +119,32 @@
   });
 </script>
 
-{#if !isStarted || isLoading}
-  <WordlebotSkeleton {config} />
-{/if}
+<div bind:this={activationTarget}>
+  {#if !isStarted || isLoading}
+    <WordlebotSkeleton {config} />
+  {/if}
 
-{#if errorMessage}
-  <div class="mx-auto w-full max-w-5xl px-4 py-6 text-center sm:px-6 lg:px-8">
-    <div class="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
-      {errorMessage}
-      <button
-        type="button"
-        class="ml-2 font-semibold underline"
-        onclick={() => void start()}
-      >
-        Retry
-      </button>
+  {#if errorMessage}
+    <div class="mx-auto w-full max-w-5xl px-4 py-6 text-center sm:px-6 lg:px-8">
+      <div class="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+        {errorMessage}
+        <button
+          type="button"
+          class="ml-2 font-semibold underline"
+          onclick={() => void start()}
+        >
+          Retry
+        </button>
+      </div>
     </div>
-  </div>
-{/if}
+  {/if}
 
-<div
-  bind:this={host}
-  class="solver-host block w-full"
-  style="min-height: 280px;"
-></div>
+  <div
+    bind:this={host}
+    class="solver-host block w-full"
+    style="min-height: 280px;"
+  ></div>
+</div>
 
 <style>
   .solver-host {

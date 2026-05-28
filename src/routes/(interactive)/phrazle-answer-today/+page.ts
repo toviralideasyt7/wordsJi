@@ -3,6 +3,7 @@ import { TOTAL_PHRASES, getAnswerForDate } from '$lib/phrazle/phrases';
 import { generateFAQSchema, generateHowToSchema, generateWebPageSchema } from '$lib/seo';
 
 export const prerender = true;
+export const csr = false;
 
 interface PhrazleAnswer {
 	phrase: string;
