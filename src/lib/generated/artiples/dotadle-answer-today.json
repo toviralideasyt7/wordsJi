@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-05-27T22:05:51.915Z",
+  "generatedAt": "2026-05-28T06:11:20.886Z",
   "byDate": {
+    "2026-05-28": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-05-28",
+      "title": "Dotadle Answer Today: Hero Clues That Cut the Roster Fast | WordSolverX",
+      "summary": "Today's Dotadle solution hinges on attribute and role clues. Use the reveal card and archive tools on this page to verify the hero and plan your next guess.",
+      "articleHtml": "<h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>The answer for May 28, 2026 sits above in the reveal card. Check the attribute icons and role tags first. These two data points eliminate half the roster instantly. Strength heroes with Support roles behave differently than Agility Carries in the guess matrix.</p>\n<p>Don't ignore the attack type clue. Melee versus Ranged splits the remaining pool sharply. A careful player reads the reveal card before guessing again. The archive link below the answer shows how often this specific hero appeared in past puzzles.</p>\n<h2>How to cut the Dota roster faster</h2>\n<p>Start with Universal heroes if the attribute clue stays hidden. They bridge gaps between Strength, Agility, and Intelligence pools. If the first guess returns a red attribute icon, switch to a pure attribute hero immediately. This locks down the primary stat in two moves.</p>\n<p>Use the solver tool on this page to filter by lane. Mid laners rarely double as hard Supports. The clue widget updates after every attempt. Watch for green arrows indicating a correct role but wrong hero. That signal narrows the search to a single lane assignment.</p>\n<p>Avoid guessing obscure neutrals or event-only units. The puzzle pulls from the standard competitive pool. Stick to heroes with defined lane histories. The answer above confirms a standard pick, not a niche experiment.</p>\n<h2>When roles help and when they mislead</h2>\n<p>Role tags can trick you if you assume rigid definitions. A hero marked as an Offlaner might have spent years in the Safe Lane. Meta shifts change these labels faster than the puzzle database updates. Check the release date clue if available.</p>\n<p>Some heroes flex across three different positions. Guessing one of these creates noise rather than clarity. If the feedback shows multiple yellow role indicators, pivot to a specialist. A hero who only plays Position 5 gives cleaner data.</p>\n<p>The reveal card today highlights a specific primary attribute. Trust that over your memory of a pro match from three years ago. The puzzle logic follows current wiki classifications, not temporary tournament drafts.</p>\n<h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Save your hardest guesses for the third attempt. Use the first two to test attribute and range combinations. A Melee Strength hero is a completely different bucket than a Ranged Intelligence one. This binary sorting saves time.</p>\n<p>Keep the archive tab open in a separate window. Cross-reference today's answer with last week's solutions. Patterns emerge in hero selection frequency. The developers avoid repeating the same hero within a short window.</p>\n<p>Don't rush the final guess. The timer matters less than accuracy. One precise move beats three wild swings. The solver link here helps validate your theory before you commit.</p>\n<h2>Questions players keep asking</h2>\n<h3>Does the difficulty change on weekends?</h3>\n<p>Weekend puzzles often feature fan-favorite heroes with complex histories. The clue set might include more obscure trivia. Check the hint density on the reveal card. Higher hint counts usually signal a less common pick.</p>\n<h3>Why did my role guess show yellow?</h3>\n<p>Yellow indicates the hero fills that role sometimes, but it isn't their primary tag. The puzzle prioritizes the most frequent lane assignment. Look at the hero's win-rate history in high MMR lobbies for context.</p>\n<h3>Are event heroes included in the pool?</h3>\n<p>Standard daily puzzles exclude limited-time event units. Stick to the core roster available in unranked queues. If a hero requires a special token to play, they likely won't appear as the answer.</p>\n<h3>How does the attack type clue work?</h3>\n<p>Melee and Ranged are mutually exclusive categories. A red icon here eliminates roughly forty percent of the database. Use this clue early to shrink the search space before worrying about specific abilities.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-28T06:11:20.874Z",
+        "wordCount": 611,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-27": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-05-27",
