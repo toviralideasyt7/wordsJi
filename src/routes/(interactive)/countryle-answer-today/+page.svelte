@@ -8,11 +8,22 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import { formatPopulation, formatTemperature } from '$lib/countryle';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
+  import { generateArticleSchema } from '$lib/seo';
 
   let { data } = $props();
   const todayKey = getMainDailyDateKey();
   const publishedDate = $derived(
     data.today ? `${data.today.date}T00:00:00Z` : `${todayKey}T00:00:00Z`
+  );
+  const articleSchema = $derived(
+    generateArticleSchema({
+      headline: data.meta.title,
+      description: data.meta.description,
+      url: data.meta.canonical,
+      image: `https://wordsolverx.com${data.meta.featuredImage}`,
+      datePublished: publishedDate,
+      dateModified: publishedDate
+    })
   );
 
   function formatEntryDate(dateKey: string) {
@@ -50,6 +61,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
+  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
 </svelte:head>
 
@@ -58,7 +70,7 @@
 
 <div class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
 
     {#if data.today}
       <!-- Hero -->

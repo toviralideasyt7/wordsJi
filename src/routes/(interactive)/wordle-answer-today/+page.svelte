@@ -12,6 +12,7 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import type { WordleAnswer } from '$lib/api';
+  import { stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
 
@@ -32,6 +33,9 @@
   );
   const publishedDate = $derived.by(() =>
     data.publishedDate ?? (data.wordleData?.date ? `${data.wordleData.date}T00:00:00Z` : null)
+  );
+  const cleanedSchemas = $derived(
+    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
   );
 </script>
 
@@ -63,7 +67,9 @@
     image: data.meta.socialImage,
     dateModified: data.wordleData?.date || new Date().toISOString().split('T')[0]
   })}</script>`}
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {#if cleanedSchemas}
+    {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
+  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

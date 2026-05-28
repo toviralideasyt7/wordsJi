@@ -10,6 +10,7 @@
                 PRESTON_HAYES_AUTHOR_IMAGE,
                 PRESTON_HAYES_AUTHOR_NAME
         } from '$lib/authors';
+        import { stripStructuredDataTypes } from '$lib/seo';
 
         let { data } = $props();
 
@@ -24,6 +25,9 @@
                                 mode.answers.map((answerEntry) => `${mode.name}: ${answerEntry.answer}`)
                         )
                         .join(' | ')
+        );
+        const cleanedSchemas = $derived(
+                stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
         );
 
         function getTileStyle(_char: string, index: number): string {
@@ -48,7 +52,9 @@
         <meta name="twitter:title" content={data.meta.title} />
         <meta name="twitter:description" content={data.meta.description} />
         <meta name="twitter:image" content="https://wordsolverx.com/images/nerdle-answer-today.webp" />
-        {@html `<script type="application/ld+json">${data.schemas}</script>`}
+        {#if cleanedSchemas}
+                {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
+        {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

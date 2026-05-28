@@ -3,8 +3,6 @@ import citiesData from '$lib/data/worldle/cities.json';
 import countryDetailsData from '$lib/data/worldle/country-details.json';
 import {
   generateBreadcrumbSchema,
-  generateFAQSchema,
-  generateHowToSchema,
   generateSoftwareApplicationSchema,
   generateWebPageSchema,
 } from '$lib/seo';
@@ -36,7 +34,7 @@ export const load: PageServerLoad = async () => {
   }));
 
   const pageTitle = `Worldle Answer Today (${formattedTodayDate}) - Country Answer and Map`;
-  const pageDescription = `Get Worldle hints and the confirmed Worldle answer for today, ${formattedTodayDate}. Today's country is ${todayAnswer.country.name}, with a direct link to the full Worldle archive for older puzzles.`;
+  const pageDescription = `Get Worldle hints and today's confirmed answer for ${formattedTodayDate}, plus a direct link to the full archive.`;
   const pageKeywords = `worldle answer today, worldle answer, worldle hint, worldle hint today, worldle answer for ${formattedTodayDate}`;
 
   const pageUrl = 'https://wordsolverx.com/worldle-answer-today';
@@ -73,21 +71,6 @@ export const load: PageServerLoad = async () => {
 
   const schemas = JSON.stringify([
     articleSchema,
-    generateFAQSchema(faqEntries),
-    generateHowToSchema('How to use the Worldle answer today page', [
-      {
-        name: 'Check today',
-        text: 'Read the top answer card to see the current Worldle country and quick facts.',
-      },
-      {
-        name: 'Open the archive',
-        text: 'Use the archive link on the page whenever you need to verify an older Worldle answer.',
-      },
-      {
-        name: 'Solve if needed',
-        text: 'Open the Worldle solver if you want help before revealing the answer.',
-      },
-    ]),
     generateSoftwareApplicationSchema('Worldle Answer Today', 'UtilitiesApplication'),
     generateBreadcrumbSchema([
       { name: 'Home', url: 'https://wordsolverx.com' },

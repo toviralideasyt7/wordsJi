@@ -47,6 +47,14 @@
                                 { '@type': 'ListItem', position: 2, name: 'Archive', item: 'https://wordsolverx.com/archive' },
                                 { '@type': 'ListItem', position: 3, name: 'Nerdle Archive', item: META.canonical }
                         ]
+                },
+                {
+                        '@context': 'https://schema.org',
+                        '@type': 'WebPage',
+                        name: META.title,
+                        description: META.description,
+                        url: META.canonical,
+                        image: 'https://wordsolverx.com/wordsolverx.webp'
                 }
         ]);
 

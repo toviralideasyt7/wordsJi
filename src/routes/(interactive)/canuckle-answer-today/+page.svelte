@@ -10,11 +10,20 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
+  import { stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
 
   const formattedDate = $derived(data.formattedDate ?? 'today');
   const publishedDate = $derived(`${data.visibleDateKey}T00:00:00Z`);
+  const socialImage = $derived(
+    data.meta?.featuredImage?.startsWith('http')
+      ? data.meta.featuredImage
+      : `https://wordsolverx.com${data.meta?.featuredImage ?? '/wordsolverx.webp'}`
+  );
+  const cleanedSchemas = $derived(
+    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+  );
 </script>
 
 <svelte:head>
@@ -27,7 +36,7 @@
   <meta property="og:description" content={data.meta?.description ?? ''} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://wordsolverx.com/canuckle-answer-today" />
-  <meta property="og:image" content={data.meta?.featuredImage} />
+  <meta property="og:image" content={socialImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content={`Canuckle daily word solution for ${formattedDate}`} />
@@ -35,9 +44,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta?.title ?? 'Canuckle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
-  <meta name="twitter:image" content={data.meta?.featuredImage} />
-  {#if data.schemas}
-    {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  <meta name="twitter:image" content={socialImage} />
+  {#if cleanedSchemas}
+    {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
   {/if}
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
@@ -45,7 +54,7 @@
     name: data.meta?.title ?? 'Canuckle Answer Today',
     description: data.meta?.description ?? '',
     url: 'https://wordsolverx.com/canuckle-answer-today',
-    image: data.meta?.featuredImage ?? 'https://wordsolverx.com/wordsolverx.webp',
+    image: socialImage,
     dateModified: data.todayPuzzle?.date || new Date().toISOString().split('T')[0]
   })}</script>`}
 </svelte:head>
@@ -78,7 +87,7 @@
   <div class="min-h-screen bg-slate-50/60">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
 
-      <Breadcrumbs />
+      <Breadcrumbs hideSchema={true} />
 
       <!-- Hero Section — Light Teal Gradient -->
       <section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 via-teal-700 to-emerald-800 p-8 sm:p-10 shadow-xl">

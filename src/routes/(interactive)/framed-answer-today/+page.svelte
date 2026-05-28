@@ -12,6 +12,7 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
+  import { generateArticleSchema } from '$lib/seo';
 
   let { data } = $props();
   const todayKey = getMainDailyDateKey();
@@ -23,6 +24,16 @@
   );
   const featuredEntry = $derived(data.hasExactEntries ? data.entries[0] ?? null : null);
   const remainingEntries = $derived(data.hasExactEntries ? data.entries.slice(1) : []);
+  const articleSchema = $derived(
+    generateArticleSchema({
+      headline: data.meta.title,
+      description: data.meta.description,
+      url: data.meta.canonical,
+      image: `https://wordsolverx.com${data.meta.featuredImage}`,
+      datePublished: publishedDate,
+      dateModified: publishedDate
+    })
+  );
 </script>
 
 <svelte:head>
@@ -40,6 +51,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
+  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
 </svelte:head>
 
@@ -48,7 +60,7 @@
 
 <div class="bg-slate-50 min-h-screen py-12">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
 
     <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
       <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">

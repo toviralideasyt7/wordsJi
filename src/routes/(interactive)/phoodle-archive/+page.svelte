@@ -83,14 +83,6 @@
   <meta property="og:description" content="Complete history of every Phoodle food word answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/phoodle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Phoodle Archive",
-    "description": "Complete archive of all Phoodle daily food word answers.",
-    "url": "https://wordsolverx.com/phoodle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

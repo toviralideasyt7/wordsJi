@@ -107,14 +107,6 @@
   <meta property="og:url" content="https://wordsolverx.com/colorfle-archive" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: 'Colorfle Archive',
-    description: 'Complete archive of Colorfle normal and hard answers by date.',
-    url: 'https://wordsolverx.com/colorfle-archive',
-    isPartOf: { '@type': 'WebSite', name: 'WordSolverX', url: 'https://wordsolverx.com' }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

@@ -127,14 +127,6 @@
         <meta property="og:description" content="Complete history of Spotle answers with artist details, music metadata, and date-based browsing." />
         <meta property="og:url" content="https://wordsolverx.com/spotle-archive" />
         <meta property="og:type" content="website" />
-        {@html `<script type="application/ld+json">${JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'CollectionPage',
-                name: 'Spotle Archive',
-                description: 'Complete archive of all Spotle daily artist answers.',
-                url: 'https://wordsolverx.com/spotle-archive',
-                isPartOf: { '@type': 'WebSite', name: 'WordSolverX', url: 'https://wordsolverx.com' }
-        })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

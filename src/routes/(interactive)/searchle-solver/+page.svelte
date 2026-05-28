@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import { generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
     type SearchleFeedback,
@@ -333,7 +333,7 @@
   <meta property="og:image" content="https://wordsolverx.com/images/searchle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://wordsolverx.com/searchle-solver" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
       generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
@@ -369,12 +369,12 @@
         { name: 'Searchle Solver', url: 'https://wordsolverx.com/searchle-solver' }
       ])
     ]
-  })}</script>`}
+  }), ['FAQPage', 'HowTo'])}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-purple-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+  <Breadcrumbs hideSchema={true} />
   </div>
 
   <!-- Hero Banner -->

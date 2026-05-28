@@ -5,13 +5,14 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
+        import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
         import {
                 PRESTON_HAYES_AUTHOR_DESCRIPTION,
                 PRESTON_HAYES_AUTHOR_IMAGE,
                 PRESTON_HAYES_AUTHOR_NAME
         } from '$lib/authors';
         import type { SpotleAnswer, SpotleArtist } from '$lib/spotle';
+        import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
 
         let { data }: {
                 data: {
@@ -40,11 +41,21 @@
         const todayArtist = $derived(data.todayArtist);
         const last30Days = $derived(data.last30Days);
         const faqItems = $derived(data.faqItems);
-        const schemaJson = $derived(data.schemaJson);
+        const schemaJson = $derived(stripStructuredDataTypes(data.schemaJson, ['FAQPage', 'HowTo']));
         const meta = $derived(data.meta);
         const stats = $derived(data.stats);
         const labels = $derived(data.labels);
         const publishedDate = $derived(`${data.todayAnswer?.date ?? data.todayStr}T00:00:00Z`);
+        const articleSchema = $derived(
+                generateArticleSchema({
+                        headline: meta.title,
+                        description: meta.description,
+                        url: 'https://wordsolverx.com/spotle-answer-today',
+                        image: 'https://wordsolverx.com/images/spotle-answer-today.webp',
+                        datePublished: publishedDate,
+                        dateModified: publishedDate
+                })
+        );
 
         function toSpotifyArtistUrl(uri?: string): string | null {
                 if (!uri?.startsWith('spotify:artist:')) {
@@ -69,7 +80,10 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        {@html `<script type="application/ld+json">${schemaJson}</script>`}
+        {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
+        {#if schemaJson}
+                {@html `<script type="application/ld+json">${schemaJson}</script>`}
+        {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -77,7 +91,7 @@
 
 <div class="min-h-screen bg-slate-50 px-4 py-10 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-6xl">
-                <Breadcrumbs />
+                <Breadcrumbs hideSchema={true} />
 
                 <header class="relative overflow-hidden rounded-[2rem] border border-teal-100 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.16),transparent_30%),linear-gradient(135deg,#ffffff_0%,#ecfdf5_55%,#f0fdfa_100%)] p-8 shadow-[0_28px_80px_rgba(16,185,129,0.10)] sm:p-10">
                         <div class="absolute -right-10 top-0 h-32 w-32 rounded-full bg-teal-200/40 blur-3xl"></div>

@@ -12,8 +12,6 @@
         } from '$lib/game-dle/types';
         import {
                 generateBreadcrumbSchema,
-                generateFAQSchema,
-                generateHowToSchema,
                 generateSoftwareApplicationSchema,
                 generateWebApplicationSchema,
                 generateWebPageSchema
@@ -48,22 +46,12 @@
         const pageKeywords = $derived(config.keywords.join(', '));
         const solverOgImage = $derived(`https://wordsolverx.com/og/${config.key}-solver.svg`);
 
-        const faqSchema = $derived(generateFAQSchema(seoContent.faqs));
         const breadcrumbSchema = $derived(
                 generateBreadcrumbSchema([
                         { name: 'Home', url: 'https://wordsolverx.com' },
                         { name: 'Solver Tools', url: 'https://wordsolverx.com/solver' },
                         { name: config.name }
                 ])
-        );
-        const howToSchema = $derived(
-                generateHowToSchema(
-                        `How to use ${config.name} solver`,
-                        seoContent.howToPlay.map((step) => ({
-                                name: step.step,
-                                text: step.description
-                        }))
-                )
         );
         const webApplicationSchema = $derived(
                 generateWebApplicationSchema(
@@ -497,7 +485,7 @@
         <meta name="twitter:image" content={solverOgImage} />
         {@html `<script type="application/ld+json">${JSON.stringify({
                 '@context': 'https://schema.org',
-                '@graph': [webPageSchema, webApplicationSchema, softwareSchema, breadcrumbSchema, faqSchema, howToSchema]
+                '@graph': [webPageSchema, webApplicationSchema, softwareSchema, breadcrumbSchema]
         })}</script>`}
 </svelte:head>
 

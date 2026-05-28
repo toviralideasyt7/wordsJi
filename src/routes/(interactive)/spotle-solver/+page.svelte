@@ -2,7 +2,7 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import { generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import {
@@ -148,7 +148,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         <meta property="og:site_name" content="WordSolverX" />
         <meta property="og:image" content="https://wordsolverx.com/images/spotle-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        {@html `<script type="application/ld+json">${JSON.stringify({
+        {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
                 '@context': 'https://schema.org',
                 '@graph': [
                         generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
@@ -184,12 +184,12 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                                 { name: 'Spotle Solver', url: 'https://wordsolverx.com/spotle-solver' }
                         ])
                 ]
-        })}</script>`}
+        }), ['FAQPage', 'HowTo'])}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-teal-50">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-                <Breadcrumbs />
+                        <Breadcrumbs hideSchema={true} />
         </div>
 
         <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

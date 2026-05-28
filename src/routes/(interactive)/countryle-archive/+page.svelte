@@ -4,11 +4,28 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import { formatPopulation, formatTemperature } from '$lib/countryle';
   import { getCountryleArchive, getCountryleArchiveDates } from '$lib/countryle-data';
+  import { generateCollectionPageSchema, generateWebPageSchema } from '$lib/seo';
 
   const archive = getCountryleArchive();
   const availableDates = getCountryleArchiveDates();
   let selectedDate = $state(availableDates[0] ?? '');
   const selectedEntry = $derived((selectedDate && archive[selectedDate]) || null);
+  const schemaJson = JSON.stringify([
+    generateCollectionPageSchema(
+      'Countryle Archive',
+      'Browse the Countryle archive by date and review past countries, continents, populations, coordinates, and map links from our verified answer records.',
+      'https://wordsolverx.com/countryle-archive',
+      availableDates.slice(0, 10).map((dateKey) => ({
+        name: `Countryle ${dateKey}`,
+        url: `https://wordsolverx.com/countryle-archive?date=${dateKey}`
+      }))
+    ),
+    generateWebPageSchema(
+      'Countryle Archive - Daily Country Answers History | WordSolverX',
+      'Browse the Countryle archive by date and review past countries, continents, populations, coordinates, and map links from our verified answer records.',
+      'https://wordsolverx.com/countryle-archive'
+    )
+  ]);
 </script>
 
 <svelte:head>
@@ -24,6 +41,7 @@
   <meta name="twitter:title" content="Countryle Archive" />
   <meta name="twitter:description" content="Search the saved Countryle answer archive by date." />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 
 <div class="min-h-screen py-10">

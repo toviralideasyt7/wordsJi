@@ -547,3 +547,52 @@ export function generateMetaTags(config: MetaTagsConfig): Record<string, string>
         'twitter:image': ogImage,
     };
 }
+
+export function stripStructuredDataTypes(
+    schemaJson: string | null | undefined,
+    schemaTypes: string[]
+): string | null {
+    if (!schemaJson) {
+        return null;
+    }
+
+    const blockedTypes = new Set(schemaTypes);
+    const hasBlockedType = (value: unknown): boolean =>
+        typeof value === 'object' &&
+        value !== null &&
+        '@type' in value &&
+        blockedTypes.has(String((value as Record<string, unknown>)['@type']));
+
+    try {
+        const parsed = JSON.parse(schemaJson) as unknown;
+
+        if (Array.isArray(parsed)) {
+            const filtered = parsed.filter((entry) => !hasBlockedType(entry));
+            return filtered.length > 0 ? JSON.stringify(filtered) : null;
+        }
+
+        if (
+            typeof parsed === 'object' &&
+            parsed !== null &&
+            '@graph' in parsed &&
+            Array.isArray((parsed as Record<string, unknown>)['@graph'])
+        ) {
+            const graph = ((parsed as Record<string, unknown>)['@graph'] as unknown[]).filter(
+                (entry) => !hasBlockedType(entry)
+            );
+
+            if (graph.length === 0) {
+                return null;
+            }
+
+            return JSON.stringify({
+                ...(parsed as Record<string, unknown>),
+                '@graph': graph,
+            });
+        }
+
+        return hasBlockedType(parsed) ? null : schemaJson;
+    } catch {
+        return schemaJson;
+    }
+}

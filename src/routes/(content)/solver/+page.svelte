@@ -118,15 +118,7 @@
         'Puzzle Solver Tools',
         'Directory of solver tools for word and puzzle games.',
         'https://wordsolverx.com/solver'
-      ),
-      {
-        '@type': 'FAQPage',
-        'mainEntity': faqs.map((faq) => ({
-          '@type': 'Question',
-          'name': faq.question,
-          'acceptedAnswer': { '@type': 'Answer', 'text': faq.answer }
-        }))
-      }
+      )
     ]
   })}</script>`}
 </svelte:head>

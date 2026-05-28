@@ -87,14 +87,6 @@
   <meta property="og:description" content="Complete history of every Waffle puzzle answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/waffle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Waffle Archive",
-    "description": "Complete archive of all Waffle daily puzzle answers.",
-    "url": "https://wordsolverx.com/waffle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

@@ -5,7 +5,7 @@
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { browser } from '$app/environment';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import type { Artist, AttributeFeedback, FeedbackType, Guess } from '$lib/soundmap/types';
 
         type SoundmapAlgorithm = Pick<
@@ -270,6 +270,13 @@
         const jsonLdSchema = JSON.stringify({
                 '@context': 'https://schema.org',
                 '@graph': [
+                        generateWebPageSchema(
+                                'Soundmap Solver - Artist Guesser Helper | WordSolverX',
+                                'Solve Soundmap Artist Guesser faster with the Soundmap Solver. Filter artists by debut year, popularity, genre, country, and more.',
+                                'https://wordsolverx.com/soundmap-solver',
+                                { image: 'https://wordsolverx.com/images/soundmap-solver.webp' }
+                        ),
+                        generateSoftwareApplicationSchema('Soundmap Solver', 'GameApplication'),
                         generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Soundmap Solver', [
                                 { name: 'Search for an artist', text: 'Type any artist name you guessed in the Soundmap game into the search box and select the correct match from the dropdown.' },
@@ -315,13 +322,13 @@
                 content="Free Soundmap solver with best-guess recommendations and instant candidate filtering."
         />
         <link rel="canonical" href="https://wordsolverx.com/soundmap-solver" />
-        {@html `<script type="application/ld+json">${jsonLdSchema}</script>`}
+                {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 
 <div class="soundmap-solver" class:dark={darkMode}>
         <div class="min-h-screen bg-teal-50 text-slate-900 dark:text-slate-100 transition-colors duration-300">
                 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-                        <Breadcrumbs />
+                        <Breadcrumbs hideSchema={true} />
                 </div>
 
                 <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

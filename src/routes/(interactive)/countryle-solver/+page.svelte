@@ -3,7 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     calculateDirection,
     directionLabels,
@@ -71,6 +71,13 @@
   ];
 
   const schemas = JSON.stringify([
+    generateWebPageSchema(
+      'Countryle Solver - Free Country Clue Helper | WordSolverX',
+      'Use the Countryle solver to filter countries by continent, hemisphere, temperature, population, and direction clues from the daily Countryle game.',
+      'https://wordsolverx.com/countryle-solver',
+      { image: 'https://wordsolverx.com/images/countryle-solver.webp' }
+    ),
+    generateSoftwareApplicationSchema('Countryle Solver', 'GameApplication'),
     generateFAQSchema(faqs),
     generateHowToSchema('How to use the Countryle solver', [
       { name: 'Select your guessed country', text: 'Type the country name and pick it from the dropdown.' },
@@ -145,12 +152,12 @@
   <meta name="twitter:title" content="Countryle Solver" />
   <meta name="twitter:description" content="A static Countryle solver with exact clue filtering and ranked matches." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/countryle-solver.webp" />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+  <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

@@ -6,6 +6,7 @@
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
+  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -14,6 +15,20 @@
 
   let { data } = $props();
   const publishedDate = $derived(data.publishedDate ?? `${data.dateKey}T00:00:00Z`);
+  const webPageSchema = $derived(
+    generateWebPageSchema(
+      data.meta.title,
+      data.meta.description,
+      'https://wordsolverx.com/quordle-answer-today',
+      {
+        image: 'https://wordsolverx.com/images/quordle-answer-today.webp',
+        dateModified: data.dateKey
+      }
+    )
+  );
+  const cleanedSchemas = $derived(
+    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+  );
 </script>
 
 <svelte:head>
@@ -34,7 +49,10 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/quordle-answer-today.webp" />
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
+  {#if cleanedSchemas}
+    {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
+  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

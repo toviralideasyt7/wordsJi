@@ -12,8 +12,6 @@
   import {
     generateArticleSchema,
     generateBreadcrumbSchema,
-    generateFAQSchema,
-    generateHowToSchema,
     generateWebPageSchema
   } from '$lib/seo';
   import {
@@ -104,12 +102,6 @@
     }
   ];
 
-  const faqSchema = generateFAQSchema(faqs);
-  const howToSchema = generateHowToSchema('How to use the Contexto answer page', [
-    { name: 'Check the current game', text: 'See the active Contexto date and puzzle number at the top of the page.' },
-    { name: 'Reveal the answer', text: 'Use the reveal button when you are ready to confirm the secret word.' },
-    { name: 'Open the archive', text: 'Use the archive page for older Contexto answers instead of browsing them here.' }
-  ]);
   let webPageSchema = $derived(
     generateWebPageSchema(
       metaTitle,
@@ -163,10 +155,9 @@
   <meta name="twitter:title" content={metaTitle} />
   <meta name="twitter:description" content={pageDescription} />
   <link rel="canonical" href="https://wordsolverx.com/contexto-answer-today" />
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
-  {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
-  {@html `<script type="application/ld+json">${JSON.stringify(howToSchema)}</script>`}
 </svelte:head>
 
 <AnswerPageNoscript gameName="Contexto" answer={data.initialAnswer?.answer ?? null} />

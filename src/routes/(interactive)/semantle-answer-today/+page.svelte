@@ -2,10 +2,12 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import SemantleClues from '$lib/components/SemantleClues.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
+  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -14,6 +16,20 @@
 
   let { data } = $props();
   const publishedDate = $derived(`${data.dateKey}T00:00:00Z`);
+  const webPageSchema = $derived(
+    generateWebPageSchema(
+      data.meta?.title ?? 'Semantle Answer Today',
+      data.meta?.description ?? '',
+      'https://wordsolverx.com/semantle-answer-today',
+      {
+        image: 'https://wordsolverx.com/images/semantle-answer-today.webp',
+        dateModified: data.dateKey
+      }
+    )
+  );
+  const cleanedSchemas = $derived(
+    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+  );
 </script>
 
 <svelte:head>
@@ -29,8 +45,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta?.title ?? 'Semantle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
-  {#if data.schemas}
-    {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  <meta name="twitter:image" content="https://wordsolverx.com/images/semantle-answer-today.webp" />
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
+  {#if cleanedSchemas}
+    {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
   {/if}
 </svelte:head>
 
@@ -47,6 +65,8 @@
 {:else}
   <div class="bg-slate-50 dark:bg-slate-800/30 min-h-screen font-sans">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Breadcrumbs />
+
       <header class="text-center mb-12">
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full text-teal-700 dark:text-teal-300 text-sm font-semibold mb-4">
           <span class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>

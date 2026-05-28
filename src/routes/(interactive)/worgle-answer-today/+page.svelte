@@ -3,10 +3,11 @@
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-        import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
         import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
+        import { generateArticleSchema, generateWebPageSchema } from '$lib/seo';
 
         let { data }: {
                 data: {
@@ -23,6 +24,27 @@
         let countdown = $state('00:00:00');
         let revealed = $state(false);
         const publishedDate = $derived(`${data.todayKey}T00:00:00Z`);
+        const pageSchemaJson = $derived(
+                JSON.stringify([
+                        generateWebPageSchema(
+                                data.meta.title,
+                                data.meta.description,
+                                'https://wordsolverx.com/worgle-answer-today',
+                                {
+                                        image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
+                                        dateModified: data.todayKey
+                                }
+                        ),
+                        generateArticleSchema({
+                                headline: data.meta.title,
+                                description: data.meta.description,
+                                url: 'https://wordsolverx.com/worgle-answer-today',
+                                image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
+                                datePublished: publishedDate,
+                                dateModified: publishedDate
+                        })
+                ])
+        );
 
         function getNextIstMidnight() {
                 const now = new Date();
@@ -69,6 +91,9 @@
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://wordsolverx.com/worgle-answer-today" />
         <meta property="og:image" content="https://wordsolverx.com/images/worgle-answer-today.webp" />
+        <meta property="og:site_name" content="WordSolverX" />
+        <meta name="twitter:image" content="https://wordsolverx.com/images/worgle-answer-today.webp" />
+        {@html `<script type="application/ld+json">${pageSchemaJson}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

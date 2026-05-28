@@ -9,6 +9,7 @@
     generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema,
   } from '$lib/seo';
 
@@ -52,7 +53,7 @@
 
   const pageTitle = 'Kanoodle Solver — Solve Any Kanoodle Puzzle Online';
   const pageDescription =
-    'Use the Kanoodle solver online with full board controls, hints, challenge mode, and copied solver logic. This noodle solver helps you fit 12 pieces onto a 5x11 grid directly in your browser.';
+    'Use the Kanoodle solver online to fit all 12 pieces on the board with hints, challenge mode, and fast in-browser solving.';
   const pageUrl = 'https://wordsolverx.com/kanoodle-solver';
 
   const schemas = JSON.stringify([
@@ -106,12 +107,12 @@
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/kanoodle-solver.webp" />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-white">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

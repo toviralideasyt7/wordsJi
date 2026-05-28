@@ -87,14 +87,6 @@
   <meta property="og:description" content="Complete history of every Semantle secret word. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/semantle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Semantle Archive",
-    "description": "Complete archive of all Semantle daily secret word answers.",
-    "url": "https://wordsolverx.com/semantle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

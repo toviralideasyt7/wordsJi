@@ -9,12 +9,13 @@
     generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema
   } from '$lib/seo';
 
   const pageTitle = 'Light Out Solver - Get detailed solutions';
   const pageDescription =
-    'Use this Light Out solver online to build any 2x2 to 5x5 puzzle, switch between linked and edit modes, and generate the exact optimal solve path in your browser.';
+    'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal solve path.';
   const pageUrl = 'https://wordsolverx.com/light-out-solver';
 
   const faqs = [
@@ -86,12 +87,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-white">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

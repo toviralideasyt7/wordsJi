@@ -1,6 +1,6 @@
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { TOTAL_PHRASES, getAnswerForDate } from '$lib/phrazle/phrases';
-import { generateFAQSchema, generateHowToSchema, generateWebPageSchema } from '$lib/seo';
+import { generateWebPageSchema } from '$lib/seo';
 
 export const prerender = true;
 export const csr = false;
@@ -76,12 +76,6 @@ export const load = () => {
 		}
 	];
 
-	const faqSchema = generateFAQSchema(faqs);
-	const howToSchema = generateHowToSchema('How to use the Phrazle answer page', [
-		{ name: 'Check both puzzles', text: 'Review the morning and afternoon answer cards for today’s date.' },
-		{ name: 'Reveal or copy', text: 'Use the buttons to hide, reveal, or copy either phrase.' },
-		{ name: 'Open the archive', text: 'Use the dedicated archive page when you need an older Phrazle answer pair.' }
-	]);
 	const webPageSchema = generateWebPageSchema(
 		pageTitle,
 		pageDescription,
@@ -97,6 +91,6 @@ export const load = () => {
 		pageDescription,
 		pageKeywords,
 		faqs,
-		schemas: JSON.stringify([webPageSchema, faqSchema, howToSchema])
+		schemas: JSON.stringify([webPageSchema])
 	};
 };

@@ -42,7 +42,7 @@
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
 
     <section class="mt-6 overflow-hidden rounded-[2rem] bg-gradient-to-br from-sky-700 via-blue-800 to-indigo-900 px-6 py-8 text-white shadow-2xl shadow-sky-500/20 sm:px-8 sm:py-10">
       <div class="max-w-4xl">

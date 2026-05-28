@@ -95,14 +95,6 @@
   <meta property="og:description" content="Complete history of every Colordle color answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/colordle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Colordle Archive",
-    "description": "Complete archive of all Colordle daily color answers.",
-    "url": "https://wordsolverx.com/colordle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

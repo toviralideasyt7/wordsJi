@@ -1,10 +1,12 @@
 <script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
+  import { generateArticleSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -40,6 +42,16 @@
 
   const todayKey = getMainDailyDateKey();
   const publishedDate = $derived(`${data.todayAnswers.date}T00:00:00Z`);
+  const articleSchema = $derived(
+    generateArticleSchema({
+      headline: data.metaTitle,
+      description: data.pageDescription,
+      url: 'https://wordsolverx.com/phrazle-answer-today',
+      image: 'https://wordsolverx.com/images/phrazle-answer-today.webp',
+      datePublished: publishedDate,
+      dateModified: publishedDate
+    })
+  );
 </script>
 
 <svelte:head>
@@ -56,6 +68,7 @@
   <meta name="twitter:title" content={data.metaTitle} />
   <meta name="twitter:description" content={data.pageDescription} />
   <link rel="canonical" href="https://wordsolverx.com/phrazle-answer-today" />
+  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
 </svelte:head>
 
@@ -71,6 +84,8 @@
 
 <div class="min-h-screen bg-slate-50">
   <main class="max-w-5xl mx-auto px-4 py-8">
+    <Breadcrumbs />
+
     <div class="text-center mb-8">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-sm font-medium mb-4">
         <span>{data.totalPhrases.toLocaleString('en-US')} Phrase Library</span>

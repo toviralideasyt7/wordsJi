@@ -7,7 +7,8 @@
     generateBreadcrumbSchema,
     generateFAQSchema,
     generateHowToSchema,
-    generateWebPageSchema
+    generateWebPageSchema,
+    stripStructuredDataTypes
   } from '$lib/seo';
   import {
     COLORS,
@@ -266,7 +267,7 @@ const faqs = [
   <meta name="twitter:title" content="Colorfle Solver" />
   <meta name="twitter:description" content="A static Colorfle solver for target hex matching and feedback-based elimination." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/colorfle-solver.webp" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
       generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
@@ -292,12 +293,12 @@ const faqs = [
         { name: 'Refine with feedback', text: 'After setting feedback on all three colors, click Refine. The solver filters out combinations that contradict your feedback and shows updated suggestions.' }
       ])
     ]
-  })}</script>`}
+  }), ['FAQPage', 'HowTo'])}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-pink-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+      <Breadcrumbs hideSchema={true} />
   </div>
 
   <!-- Hero Banner -->

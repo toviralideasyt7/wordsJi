@@ -87,14 +87,6 @@
   <meta property="og:description" content="Complete history of every Globle country answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/globle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Globle Archive",
-    "description": "Complete archive of all Globle daily country answers.",
-    "url": "https://wordsolverx.com/globle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

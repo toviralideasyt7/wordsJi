@@ -93,14 +93,6 @@
   <meta name="twitter:title" content="Wordle Answer Archive - All Past Solutions | WordSolverX" />
   <meta name="twitter:description" content="Complete history of every Wordle answer with calendar view." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Wordle Answer Archive",
-    "description": "Complete archive of all New York Times Wordle answers and solutions from June 2021 to present.",
-    "url": "https://wordsolverx.com/wordle-answer-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

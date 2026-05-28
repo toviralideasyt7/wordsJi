@@ -1,7 +1,5 @@
 import {
 	generateCollectionPageSchema,
-	generateFAQSchema,
-	generateHowToSchema,
 	generateSoftwareApplicationSchema,
 	generateWebPageSchema
 } from '$lib/seo';
@@ -1905,8 +1903,6 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
 export function getWordlebotStructuredData(config: WordlebotPageConfig) {
 	if (config.appConfig.pageType === 'solver') {
 		return JSON.stringify([
-			generateFAQSchema(config.faqs),
-			generateHowToSchema(config.howToTitle, config.howToSteps),
 			generateSoftwareApplicationSchema(config.title, 'GameApplication'),
 			generateWebPageSchema(config.title, config.description, config.pageUrl)
 		]);
@@ -1928,13 +1924,11 @@ export function getWordlebotStructuredData(config: WordlebotPageConfig) {
 					url: `https://wordsolverx.com${getCanucklePagePath('solver')}`
 				}
 			]),
-			generateFAQSchema(config.faqs),
 			generateWebPageSchema(config.title, config.description, config.pageUrl)
 		]);
 	}
 
 	return JSON.stringify([
-		generateFAQSchema(config.faqs),
 		generateWebPageSchema(config.title, config.description, config.pageUrl)
 	]);
 }

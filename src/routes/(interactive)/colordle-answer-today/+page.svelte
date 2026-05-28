@@ -6,6 +6,7 @@
   import ColorClues from '$lib/components/ColorClues.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -21,8 +22,22 @@
   const answerDateLabel = $derived(data.formattedDate ?? requestedDateLabel);
   const generatedBonusHints = $derived(data.generatedArticle?.bonusHints ?? []);
   const historyEntries = $derived(data.last100Days ?? []);
+  const webPageSchema = $derived(
+    generateWebPageSchema(
+      data.meta?.title ?? 'Colordle Answer Today',
+      data.meta?.description ?? '',
+      'https://wordsolverx.com/colordle-answer-today',
+      {
+        image: featuredImage.startsWith('http') ? featuredImage : `https://wordsolverx.com${featuredImage}`,
+        dateModified: data.publishedDate ?? new Date().toISOString().split('T')[0]
+      }
+    )
+  );
   const noscriptAnswer = $derived(
     `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim() || null
+  );
+  const cleanedSchemas = $derived(
+    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
   );
 
   const filteredHistory = $derived.by(() => {
@@ -58,8 +73,9 @@
   <meta name="twitter:title" content={data.meta?.title ?? 'Colordle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
   <meta name="twitter:image" content={featuredImage} />
-  {#if data.schemas}
-    {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
+  {#if cleanedSchemas}
+    {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
   {/if}
 </svelte:head>
 
@@ -87,7 +103,7 @@
 {:else}
   <div class="min-h-screen bg-slate-50">
     <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs />
+      <Breadcrumbs hideSchema={true} />
 
       <section class="mt-6 rounded-[2rem] border border-indigo-100 bg-white p-8 shadow-[0_20px_60px_rgba(79,70,229,0.08)] sm:p-10">
         <p class="text-xs font-bold uppercase tracking-[0.3em] text-indigo-500">Daily Color Puzzle</p>

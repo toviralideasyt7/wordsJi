@@ -10,12 +10,13 @@
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     generateWebApplicationSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema,
   } from '$lib/seo';
 
   const pageTitle = 'Minesweeper Solver - Free Online Safe Move Finder';
   const pageDescription =
-    'Use this free Minesweeper solver to find safe moves, mark likely mines, and analyze custom boards online. Built for fast puzzle solving with a visual board editor and smart probability hints.';
+    'Use this free Minesweeper solver to find safe moves, mark mines, and analyze custom boards with smart hints.';
   const pageUrl = 'https://wordsolverx.com/minesweeper-solver';
 
   const faqs = [
@@ -87,12 +88,12 @@
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
   <link rel="canonical" href={pageUrl} />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-slate-950">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

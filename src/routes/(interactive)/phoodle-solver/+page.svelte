@@ -9,6 +9,7 @@
     generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema
   } from '$lib/seo';
 
@@ -88,12 +89,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-white">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <!-- Hero banner section -->

@@ -15,7 +15,6 @@
   } from '$lib/authors';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateWebPageSchema,
   } from '$lib/seo';
 
@@ -69,7 +68,6 @@
 
   let schemas = $derived.by(() =>
     JSON.stringify([
-      generateFAQSchema(faqs),
       {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -145,7 +143,7 @@
 
 <main class="min-h-screen bg-slate-50 text-slate-900">
   <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
 
     <section class="mt-6 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
       <div class="inline-flex rounded-full bg-violet-100 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-violet-700">

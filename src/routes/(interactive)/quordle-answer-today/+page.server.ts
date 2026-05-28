@@ -17,20 +17,12 @@ export const load: PageServerLoad = async () => {
         return getQuordleDataForDate(date);
     }).filter(Boolean);
     const pageTitle = `Quordle Answer Today (${formattedDate}) - All Modes and Answers`;
-    const pageDescription = `Get Quordle hints and the confirmed Quordle answers for today, ${formattedDate}. Check Classic, Chill, Extreme, Sequence, Rescue, and Weekly solutions in one place.`;
+    const pageDescription = `Get Quordle answers for ${formattedDate}, including Classic, Chill, Extreme, Sequence, Rescue, and Weekly modes.`;
     const pageKeywords = `quordle answer today, quordle answer, quordle hint, quordle hint today, quordle answer for ${formattedDate}`;
-
-    const faqItems = [
-        { '@type': 'Question', name: `What is the Quordle answer for today, ${formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Quordle answer for today, ${formattedDate}, is ${todayWords}.` } },
-        { '@type': 'Question', name: `How many vowels are in today's Quordle words for ${formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Quordle words for today contain multiple vowels. Check the hints section for exact counts.` } },
-        { '@type': 'Question', name: 'When does Quordle reset?', acceptedAnswer: { '@type': 'Answer', text: 'Quordle resets every day at midnight JST for Daily modes. The Weekly puzzle resets every Monday.' } },
-        ...last10Days.map(d => ({ '@type': 'Question', name: `What was the Quordle answer for ${d!.formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Quordle answer for ${d!.formattedDate} was ${d!.d.join(', ').replace(/, ([^,]*)$/, ', and $1')}.` } })),
-    ];
 
     const jsonLd = {
         '@context': 'https://schema.org',
         '@graph': [
-            { '@type': 'FAQPage', mainEntity: faqItems },
             {
                 '@type': 'Article',
                 headline: pageTitle,

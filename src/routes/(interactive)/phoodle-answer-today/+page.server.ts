@@ -26,17 +26,6 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const pageDescription = `Get Phoodle hints and the confirmed Phoodle answer for today, ${formattedDate}. Today's food word is ${upperWord}, with recent answers and recipe context.`;
     const pageKeywords = `phoodle answer today, phoodle answer, phoodle hint, phoodle hint today, phoodle answer for ${formattedDate}`;
 
-    const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-            { '@type': 'Question', name: `What is the Phoodle answer for today, ${formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Phoodle answer for today, ${formattedDate}, is "${upperWord}".` } },
-            { '@type': 'Question', name: 'What is Phoodle?', acceptedAnswer: { '@type': 'Answer', text: 'Phoodle is a daily word puzzle game where players guess a food-related five-letter word in six attempts.' } },
-            { '@type': 'Question', name: 'When does the Phoodle puzzle reset?', acceptedAnswer: { '@type': 'Answer', text: 'A new Phoodle puzzle is available every day at midnight JST.' } },
-            ...last10Days.map(d => ({ '@type': 'Question', name: `What was the Phoodle answer for ${d!.formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Phoodle answer for ${d!.formattedDate} was "${d!.word.toUpperCase()}".` } })),
-        ],
-    };
-
     return {
         word,
         upperWord,
@@ -45,7 +34,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         formattedDate,
         dateKey: data.date.toISOString().split('T')[0],
         last10Days,
-        schemas: JSON.stringify([faqSchema]),
+        schemas: null,
         meta: {
             title: pageTitle,
             description: pageDescription,

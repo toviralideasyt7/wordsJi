@@ -37,7 +37,7 @@
 			<!-- Logo -->
 			<div class="flex items-center gap-2.5">
 				<a href="/" class="flex items-center gap-2.5 group">
-					<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-[0_2px_8px_rgb(20_184_166/0.3)] group-hover:shadow-[0_2px_12px_rgb(20_184_166/0.45)] transition-shadow duration-200">
+					<div aria-hidden="true" class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-[0_2px_8px_rgb(20_184_166/0.3)] group-hover:shadow-[0_2px_12px_rgb(20_184_166/0.45)] transition-shadow duration-200">
 						<span class="text-white font-extrabold text-sm leading-none">W</span>
 					</div>
 					<span class="text-[1.15rem] font-extrabold tracking-tight">

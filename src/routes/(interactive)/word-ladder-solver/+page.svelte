@@ -3,7 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import {
                 getDictionaryLabel,
                 isValidWordClient,
@@ -227,6 +227,12 @@
                                 applicationCategory: 'GameApplication',
                                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                         },
+                        generateWebPageSchema(
+                                'Word Ladder Solver | Mixed Paths And Filters',
+                                'Find mixed word ladder paths, search results by word, filter by steps after solving, and use manual answer limits with Our Word List, OWL2, or SOWPODS.',
+                                'https://wordsolverx.com/word-ladder-solver',
+                                { image: 'https://wordsolverx.com/images/word-ladder-solver.webp' }
+                        ),
                         generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Word Ladder Solver', [
                                 { name: 'Enter start and end words', text: 'Type two words of the same length — for example, COLD and WARM. The solver only works with equal-length words because each step changes exactly one letter.' },
@@ -264,12 +270,12 @@
                 name="twitter:description"
                 content="Find mixed ladders with Our Word List, OWL2, or SOWPODS and filter them after solving."
         />
-        {@html `<script type="application/ld+json">${jsonLd}</script>`}
+        {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLd, ['FAQPage', 'HowTo']) ?? jsonLd}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-white">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-                <Breadcrumbs />
+                <Breadcrumbs hideSchema={true} />
         </div>
 
         <!-- Hero banner section -->

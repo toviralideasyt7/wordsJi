@@ -1,10 +1,12 @@
 <script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GlobleCluesSection from '$lib/components/GlobleCluesSection.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -13,6 +15,17 @@
 
   let { data } = $props();
   const publishedDate = $derived(`${data.dateKey}T00:00:00Z`);
+  const webPageSchema = $derived(
+    generateWebPageSchema(
+      data.meta.title,
+      data.meta.description,
+      'https://wordsolverx.com/globle-answer-today',
+      {
+        image: data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp',
+        dateModified: data.dateKey
+      }
+    )
+  );
 </script>
 
 <svelte:head>
@@ -30,6 +43,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp'} />
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
 </svelte:head>
 
@@ -38,6 +52,8 @@
 
 <div class="bg-slate-50 dark:bg-slate-800/30 min-h-screen font-sans">
   <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <Breadcrumbs />
+
     <div class="text-center mb-12">
       <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 mb-4">{data.meta.title}</h1>
       <p class="text-lg text-slate-600 dark:text-slate-400">Today's Globle country and hints for {data.formattedDate}</p>

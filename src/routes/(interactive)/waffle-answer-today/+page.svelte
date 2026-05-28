@@ -2,11 +2,13 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import WaffleAnswerCard from '$lib/components/WaffleAnswerCard.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
   import FiHash from '$lib/components/icons/FiHash.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -16,6 +18,17 @@
   let { data } = $props();
   const publishedDate = $derived(data.dateKey ? `${data.dateKey}T00:00:00Z` : null);
   const noscriptAnswer = $derived(data.words?.join(', ') ?? null);
+  const webPageSchema = $derived(
+    generateWebPageSchema(
+      data.meta.title,
+      data.meta.description,
+      'https://wordsolverx.com/waffle-answer-today',
+      {
+        image: 'https://wordsolverx.com/images/waffle-answer-today.webp',
+        dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
+      }
+    )
+  );
 </script>
 
 <svelte:head>
@@ -31,6 +44,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
+  <meta name="twitter:image" content="https://wordsolverx.com/images/waffle-answer-today.webp" />
+  {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
 </svelte:head>
 
@@ -46,6 +61,8 @@
 </main>
 {:else}
 <main class="max-w-3xl mx-auto px-4 py-8">
+  <Breadcrumbs />
+
   <div class="mb-8">
     <a href="/" class="text-blue-600 hover:text-blue-800 mb-4 inline-block">&larr; Back to Home</a>
     <div class="flex items-center space-x-2 text-sm text-slate-500 mb-2">

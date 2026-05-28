@@ -4,6 +4,7 @@
   import type { FramedEntry, FramedGameConfig } from '$lib/framed';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
+  import { generateCollectionPageSchema, generateWebPageSchema } from '$lib/seo';
 
   type ArchiveEntry = FramedEntry & { game: FramedGameConfig };
 
@@ -60,6 +61,25 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
       void updateSelectedDate(availableDates[nextIndex]);
     }
   }
+
+  const schemaJson = $derived(
+    JSON.stringify([
+      generateCollectionPageSchema(
+        'Framed Archive',
+        'Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records.',
+        'https://wordsolverx.com/framed-archive',
+        availableDates.slice(0, 10).map((dateKey: string) => ({
+          name: `Framed ${dateKey}`,
+          url: `https://wordsolverx.com/framed-archive?date=${dateKey}`
+        }))
+      ),
+      generateWebPageSchema(
+        'Framed Archive - Past Framed Answers by Date | WordSolverX',
+        'Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records.',
+        'https://wordsolverx.com/framed-archive'
+      )
+    ])
+  );
 </script>
 
 <svelte:head>
@@ -75,6 +95,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   <meta name="twitter:title" content="Framed Archive" />
   <meta name="twitter:description" content="Browse static Framed answer history by date." />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 
 <div class="min-h-screen py-10">

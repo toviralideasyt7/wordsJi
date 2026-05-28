@@ -6,8 +6,6 @@ import {
 } from '$lib/color-answers-api';
 import {
 	generateBreadcrumbSchema,
-	generateFAQSchema,
-	generateHowToSchema,
 	generateSoftwareApplicationSchema,
 	generateWebPageSchema
 } from '$lib/seo';
@@ -62,38 +60,10 @@ export const load: PageServerLoad = async () => {
 	const schemas = JSON.stringify([
 		generateWebPageSchema('Colorfle Answers Today', pageDescription, pageUrl),
 		generateSoftwareApplicationSchema('Colorfle Answers Today', 'UtilitiesApplication'),
-		generateHowToSchema('How to use the Colorfle answers today page', [
-			{
-				name: 'Reveal both daily modes',
-				text: 'Open the answer cards to compare the normal three-color mix and the hard four-color mix.'
-			},
-			{
-				name: 'Check the blended target',
-				text: 'Review the computed target hex and RGB values for each mode after you inspect the source colors.'
-			},
-			{
-				name: 'Use the solver or archive',
-				text: 'Open the solver for live guesses or browse the archive for older normal and hard mode answers.'
-			}
-		]),
 		generateBreadcrumbSchema([
 			{ name: 'Home', url: 'https://wordsolverx.com' },
 			{ name: 'Today', url: 'https://wordsolverx.com/today' },
 			{ name: 'Colorfle Answer Today', url: pageUrl }
-		]),
-		generateFAQSchema([
-			{
-				question: `What are the Colorfle answers for ${formattedDate}?`,
-				answer: `Normal mode uses ${answer.normal.colors.map((color) => color.name).join(', ')}. Hard mode uses ${answer.hard.colors.map((color) => color.name).join(', ')}.`
-			},
-			{
-				question: 'Does this page include hard mode too?',
-				answer: 'Yes. The daily page now shows both normal and hard mode answers side by side with their own source colors and target previews.'
-			},
-			{
-				question: 'Can I check older Colorfle answers?',
-				answer: 'Yes. Use the Colorfle archive page to load past dates from the worker API and inspect both modes.'
-			}
 		])
 	]);
 

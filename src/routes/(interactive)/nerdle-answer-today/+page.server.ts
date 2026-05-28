@@ -99,6 +99,15 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                 },
                 {
                         '@context': 'https://schema.org',
+                        '@type': 'WebPage',
+                        name: pageTitle,
+                        description: pageDescription,
+                        url: 'https://wordsolverx.com/nerdle-answer-today',
+                        image: 'https://wordsolverx.com/images/nerdle-answer-today.webp',
+                        dateModified: answerData.date
+                },
+                {
+                        '@context': 'https://schema.org',
                         '@type': 'BreadcrumbList',
                         itemListElement: [
                                 { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },

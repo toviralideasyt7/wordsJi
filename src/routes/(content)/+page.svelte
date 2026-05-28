@@ -1,6 +1,5 @@
 <script lang="ts">
   import {
-    generateFAQSchema,
     generateSearchActionSchema,
     generateWebPageSchema
   } from '$lib/seo';
@@ -73,22 +72,6 @@
           dateModified: todayKey
         }
       ),
-      generateFAQSchema([
-        {
-          question: 'What is WordSolverX?',
-          answer:
-            'WordSolverX is a daily puzzle site with answer pages, solver tools, archives, and practical strategy help for Wordle and many related games.'
-        },
-        {
-          question: 'When are the answers updated?',
-          answer:
-            'Answer pages update on each game\'s own daily reset, so rollover times can differ between Wordle-style, geography, trivia, and visual games.'
-        },
-        {
-          question: 'Is WordSolverX free to use?',
-          answer: 'Yes, WordSolverX is free to use.'
-        }
-      ]),
     ])
   );
 </script>

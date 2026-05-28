@@ -7,6 +7,7 @@
     generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema,
   } from '$lib/seo';
   import WorldleSolverClient from '$lib/components/worldle/WorldleSolverClient.svelte';
@@ -92,12 +93,12 @@
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/worldle-solver.webp" />
-  {@html `<script type="application/ld+json">${schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

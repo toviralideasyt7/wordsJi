@@ -92,14 +92,6 @@
   <meta property="og:description" content="Complete history of every Worldle country answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/worldle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Worldle Archive",
-    "description": "Complete archive of all Worldle daily country answers.",
-    "url": "https://wordsolverx.com/worldle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

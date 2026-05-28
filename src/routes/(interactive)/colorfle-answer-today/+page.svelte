@@ -12,6 +12,7 @@
   } from '$lib/authors';
   import type { ApiColorfleModeAnswer } from '$lib/color-answers-api';
   import { getContrastColor } from '$lib/colorfle';
+  import { generateArticleSchema } from '$lib/seo';
 
   let { data } = $props();
   let revealed = $state(false);
@@ -19,6 +20,16 @@
   const publishedDate = $derived(data.publishedDate ?? null);
   const answer = $derived(data.answer ?? null);
   const recentEntries = $derived(data.recentEntries ?? []);
+  const articleSchema = $derived(
+    generateArticleSchema({
+      headline: data.meta.title,
+      description: data.meta.description,
+      url: data.meta.canonical,
+      image: `https://wordsolverx.com${data.meta.featuredImage}`,
+      datePublished: publishedDate ?? undefined,
+      dateModified: publishedDate ?? undefined
+    })
+  );
   const noscriptAnswer = $derived(
     answer
       ? `Normal: ${answer.normal.colors.map((color) => color.name).join(', ')}. Hard: ${answer.hard.colors.map((color) => color.name).join(', ')}.`
@@ -67,6 +78,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
+  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {#if data.schemas}
     {@html `<script type="application/ld+json">${data.schemas}</script>`}
   {/if}
@@ -96,7 +108,7 @@
 {:else}
   <div class="min-h-screen bg-slate-50">
     <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <Breadcrumbs />
+      <Breadcrumbs hideSchema={true} />
 
       <section class="mt-6 rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.08)] sm:p-10">
         <p class="text-xs font-bold uppercase tracking-[0.3em] text-pink-500">Daily Color Puzzle</p>

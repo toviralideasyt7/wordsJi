@@ -1,6 +1,11 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, isAfter } from 'date-fns';
+  import {
+    generateBreadcrumbSchema,
+    generateCollectionPageSchema,
+    generateWebPageSchema
+  } from '$lib/seo';
 
   let {
     gameName,
@@ -165,7 +170,33 @@
   let isPrevDisabled = $derived(
     currentMonth.getFullYear() === startDate.getFullYear() && currentMonth.getMonth() === startDate.getMonth()
   );
+  let pageTitle = $derived(`${gameName} Archive`);
+  let pageUrl = $derived(`https://wordsolverx.com${basePath}`);
+  let pageDescription = $derived(description || `Browse the complete history of all ${gameName} answers.`);
+  let archiveSchemaJson = $derived(
+    JSON.stringify([
+      generateCollectionPageSchema(
+        pageTitle,
+        pageDescription,
+        pageUrl,
+        allPuzzles.slice(0, 10).map((puzzle) => ({
+          name: `${gameName} #${puzzle.dayNum}`,
+          url: `https://wordsolverx.com${puzzle.href}`
+        }))
+      ),
+      generateWebPageSchema(pageTitle, pageDescription, pageUrl),
+      generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://wordsolverx.com' },
+        { name: 'Archive', url: 'https://wordsolverx.com/archive' },
+        { name: pageTitle, url: pageUrl }
+      ])
+    ])
+  );
 </script>
+
+<svelte:head>
+  {@html `<script type="application/ld+json">${archiveSchemaJson}</script>`}
+</svelte:head>
 
 <div class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">

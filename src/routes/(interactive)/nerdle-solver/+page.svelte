@@ -8,7 +8,8 @@
                 generateFAQSchema,
                 generateHowToSchema,
                 generateBreadcrumbSchema,
-                generateWebPageSchema
+                generateWebPageSchema,
+                stripStructuredDataTypes
         } from '$lib/seo';
 
         type GameMode = 'micro' | 'mini' | 'midi' | 'classic' | 'maxi';
@@ -457,7 +458,7 @@
                 '@context': 'https://schema.org',
                 '@graph': schemaItems
         });
-        const jsonLdScript = `<script type="application/ld+json">${jsonLd}<\/script>`;
+        const jsonLdScript = `<script type="application/ld+json">${stripStructuredDataTypes(jsonLd, ['FAQPage', 'HowTo']) ?? jsonLd}<\/script>`;
 </script>
 
 <svelte:head>
@@ -487,7 +488,7 @@
 
 <main class="min-h-screen bg-white">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-                <Breadcrumbs />
+        <Breadcrumbs hideSchema={true} />
         </div>
 
         <!-- Hero banner section -->

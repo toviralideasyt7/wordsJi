@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
 
   interface CellConstraint {
     index: number;
@@ -188,6 +188,13 @@
   ];
 
   const jsonLdSchema = JSON.stringify([
+    generateWebPageSchema(
+      'Waffle Solver - Solve Any Waffle Puzzle Instantly | WordSolverX',
+      "Solve today's Waffle puzzle with our high-performance WASM-powered solver. Auto-fill or manually enter your grid and get instant solutions.",
+      'https://wordsolverx.com/waffle-solver',
+      { image: 'https://wordsolverx.com/images/waffle-solver.webp' }
+    ),
+    generateSoftwareApplicationSchema('Waffle Solver', 'GameApplication'),
     generateFAQSchema(faqs),
     generateHowToSchema('How to use the Waffle Solver', [
       { name: 'Fill the board', text: "Type the letters from your current Waffle grid into the input cells, or click 'Auto Fill Today' to load them automatically." },
@@ -223,7 +230,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Waffle Solver" />
   <meta name="twitter:description" content="Solve today's Waffle puzzle instantly." />
-  {@html `<script type="application/ld+json">${jsonLdSchema}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 
 <!-- Toast Notification -->
@@ -235,7 +242,7 @@
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+  <Breadcrumbs hideSchema={true} />
   </div>
 
   <!-- Hero Banner -->

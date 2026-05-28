@@ -8,6 +8,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
     generateBreadcrumbSchema,
     generateFAQSchema,
     generateHowToSchema,
+    stripStructuredDataTypes,
     generateWebPageSchema
   } from '$lib/seo';
   import type { ColorData } from '$lib/colordle';
@@ -266,12 +267,12 @@ const jsonLdSchema = JSON.stringify({
   <meta name="twitter:title" content="Colordle Solver" />
   <meta name="twitter:description" content="Filter Colordle guesses by percentage similarity and find the exact color match with WordSolverX." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/colordle-solver.webp" />
-  {@html `<script type="application/ld+json">${jsonLdSchema}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+    <Breadcrumbs hideSchema={true} />
   </div>
 
   <!-- Hero Banner -->

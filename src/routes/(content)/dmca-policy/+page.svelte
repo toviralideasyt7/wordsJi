@@ -1,5 +1,14 @@
 <script lang="ts">
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
+
+  const schemaJson = JSON.stringify(
+    generateWebPageSchema(
+      'DMCA Policy - WordSolverX',
+      'Read the WordSolverX DMCA policy for copyright complaints, takedown notices, counter notices, and contact details.',
+      'https://wordsolverx.com/dmca-policy'
+    )
+  );
 </script>
 
 <svelte:head>
@@ -24,6 +33,7 @@
     content="See how to submit copyright notices and counter notices to WordSolverX."
   />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">

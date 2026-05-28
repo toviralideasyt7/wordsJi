@@ -16,16 +16,9 @@ export const load: PageServerLoad = async () => {
     const dateKey = date instanceof Date ? format(date, 'yyyy-MM-dd') : String(date).split('T')[0];
     const featuredImage = 'https://wordsolverx.com/images/globle-answer-today.webp';
     const pageTitle = `Globle Answer Today (${formattedDate}) - Country Answer and Hints`;
-    const pageDescription = `Today's Globle country revealed — ${formattedDate}. Use the color feedback, continent, subregion, and flag hints to narrow it down, or check the answer directly.`;
+    const pageDescription = `Get today's Globle country for ${formattedDate}, with flag, continent, subregion, and distance clues to help you solve.`;
     const pageKeywords = `globle answer today, globle answer, globle hint, globle hint today, globle answer for ${formattedDate}`;
-    const faqItems = [
-        { '@type': 'Question', name: `What is the Globle answer for ${formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Globle answer for ${formattedDate} is ${country.name}.` } },
-        { '@type': 'Question', name: `What are the Globle hints for ${formattedDate}?`, acceptedAnswer: { '@type': 'Answer', text: `The Globle hints include the country flag, continent, subregion, and map-distance clues that lead to ${country.name}.` } },
-        { '@type': 'Question', name: 'When does the Globle answer update?', acceptedAnswer: { '@type': 'Answer', text: 'This page updates on the Tokyo/JST day boundary at midnight JST.' } }
-    ];
-
     const jsonLd = JSON.stringify([
-        { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems },
         {
             '@context': 'https://schema.org',
             '@type': 'Article',

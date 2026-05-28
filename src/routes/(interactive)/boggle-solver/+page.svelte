@@ -4,7 +4,7 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import { generateRandomBoggleBoard, solveBoggleBoard } from '$lib/boggle-client';
 
         interface Position {
@@ -268,6 +268,12 @@
                                 applicationCategory: 'GameApplication',
                                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                         },
+                        generateWebPageSchema(
+                                'Boggle Solver - Free Board Search Tool | WordSolverX',
+                                'Find every valid word in a 3x3 to 10x10 Boggle board using the same trie and DFS logic as the source project.',
+                                'https://wordsolverx.com/boggle-solver',
+                                { image: 'https://wordsolverx.com/images/boggle-solver.webp' }
+                        ),
                         generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Boggle solver', [
                                 { name: 'Choose a board size', text: 'Pick a grid size from 3x3 to 10x10. Standard Boggle uses 4x4.' },
@@ -325,12 +331,12 @@
                 name="twitter:description"
                 content="Find all possible words in your Boggle board with the copied trie + DFS logic."
         />
-        {@html `<script type="application/ld+json">${jsonLd}</script>`}
+        {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLd, ['FAQPage', 'HowTo']) ?? jsonLd}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-white">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-                <Breadcrumbs />
+                <Breadcrumbs hideSchema={true} />
         </div>
 
         <!-- Hero banner section -->

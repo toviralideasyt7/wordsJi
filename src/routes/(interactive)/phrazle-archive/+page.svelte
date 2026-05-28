@@ -89,14 +89,6 @@
   <meta property="og:description" content="Complete history of every Phrazle phrase pair. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/phrazle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Phrazle Archive",
-    "description": "Complete archive of all Phrazle morning and afternoon answers.",
-    "url": "https://wordsolverx.com/phrazle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar

@@ -1,11 +1,12 @@
 <script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import PhoodleAnswerCard from '$lib/components/PhoodleAnswerCard.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
-  import { generateWebPageSchema } from '$lib/seo';
+  import { generateArticleSchema, generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -19,17 +20,32 @@
       "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordSolverX."
   );
   const publishedDate = $derived(data.dateKey ? `${data.dateKey}T00:00:00Z` : null);
-  let pageSchema = $derived(JSON.stringify(
-    generateWebPageSchema(
-      pageTitle,
-      pageDescription,
-      'https://wordsolverx.com/phoodle-answer-today',
-      {
+  let pageSchema = $derived(
+    JSON.stringify([
+      generateWebPageSchema(
+        pageTitle,
+        pageDescription,
+        'https://wordsolverx.com/phoodle-answer-today',
+        {
+          image: 'https://wordsolverx.com/images/phoodle-answer-today.webp',
+          dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
+        }
+      ),
+      generateArticleSchema({
+        headline: pageTitle,
+        description: pageDescription,
+        url: 'https://wordsolverx.com/phoodle-answer-today',
         image: 'https://wordsolverx.com/images/phoodle-answer-today.webp',
-        dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
-      }
-    )
-  ));
+        datePublished: publishedDate ?? undefined,
+        dateModified: publishedDate ?? undefined
+      }),
+      generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://wordsolverx.com' },
+        { name: 'Today', url: 'https://wordsolverx.com/today' },
+        { name: 'Phoodle Answer Today', url: 'https://wordsolverx.com/phoodle-answer-today' }
+      ])
+    ])
+  );
 </script>
 
 <svelte:head>
@@ -48,9 +64,6 @@
   <meta name="news_keywords" content={data.meta?.keywords ?? 'phoodle answer today, phoodle answer, phoodle hint, phoodle hint today'} />
   <link rel="canonical" href="https://wordsolverx.com/phoodle-answer-today" />
   {@html `<script type="application/ld+json">${pageSchema}</script>`}
-  {#if data.schemas}
-    {@html `<script type="application/ld+json">${data.schemas}</script>`}
-  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -69,6 +82,8 @@
 {:else}
   <div class="min-h-screen bg-slate-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Breadcrumbs hideSchema={true} />
+
       <!-- Header -->
       <header class="text-center mb-12">
         <div class="inline-flex items-center justify-center p-4 bg-orange-100 rounded-full text-orange-600 mb-6">

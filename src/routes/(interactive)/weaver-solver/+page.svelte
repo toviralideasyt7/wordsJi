@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import { generateFAQSchema, generateHowToSchema, generateBreadcrumbSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     WORDSOLVERX_WORD_LENGTHS,
     getWordLadderIndexClient,
@@ -184,6 +184,13 @@
   const jsonLdSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
+      generateWebPageSchema(
+        'Weaver Solver - Word Ladder Helper',
+        'Solve any Weaver word ladder puzzle with our free solver. Find the shortest path between two words by changing one letter at a time.',
+        'https://wordsolverx.com/weaver-solver',
+        { image: 'https://wordsolverx.com/images/weaver-solver.webp' }
+      ),
+      generateSoftwareApplicationSchema('Weaver Solver', 'GameApplication'),
       generateFAQSchema(faqs),
       generateHowToSchema('How to use the Weaver Solver', [
         { name: 'Enter the start word', text: 'Type your starting word into the top input. It turns green when the solver recognizes it as a valid dictionary word.' },
@@ -213,12 +220,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Weaver Solver" />
   <meta name="twitter:description" content="Solve Weaver word ladder puzzles instantly." />
-  {@html `<script type="application/ld+json">${jsonLdSchema}</script>`}
+        {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 
 <main class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <Breadcrumbs />
+  <Breadcrumbs hideSchema={true} />
   </div>
 
   <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">

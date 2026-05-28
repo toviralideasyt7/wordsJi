@@ -1,6 +1,7 @@
 <script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
+  import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -12,8 +13,7 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import {
-    generateFAQSchema,
-    generateHowToSchema,
+    generateArticleSchema,
     generatePersonAuthorSchema,
     generateWebPageSchema
   } from '$lib/seo';
@@ -74,12 +74,6 @@
     }
   ];
 
-  const faqSchema = generateFAQSchema(faqs);
-  const howToSchema = generateHowToSchema('How to use the Searchle answer page', [
-    { name: 'Read the prompt', text: 'Check today\u2019s Searchle prompt before revealing the answer.' },
-    { name: 'Reveal or copy the answer', text: 'Use the answer card tools to confirm the solution quickly.' },
-    { name: 'Open the archive', text: 'Use the dedicated archive page when you need an older Searchle answer.' }
-  ]);
   const webPageSchema = $derived({
     ...generateWebPageSchema(
       metaTitle,
@@ -92,6 +86,16 @@
       'https://wordsolverx.com/author-wordsolverx.webp'
     )
   });
+  const articleSchema = $derived(
+    generateArticleSchema({
+      headline: metaTitle,
+      description: pageDescription,
+      url: 'https://wordsolverx.com/searchle-answer-today',
+      image: 'https://wordsolverx.com/images/searchle-answer-today.webp',
+      datePublished: publishedDate,
+      dateModified: publishedDate
+    })
+  );
 </script>
 
 <svelte:head>
@@ -105,9 +109,8 @@
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://wordsolverx.com/searchle-answer-today" />
+  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
-  {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
-  {@html `<script type="application/ld+json">${JSON.stringify(howToSchema)}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -115,6 +118,8 @@
 
 <div class="min-h-screen bg-slate-50">
   <main class="max-w-5xl mx-auto px-4 py-8">
+    <Breadcrumbs />
+
     <div class="text-center mb-8">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-600 text-sm font-medium mb-4">
         <span>{totalPuzzles.toLocaleString('en-US')} Real Puzzles from Searchle</span>

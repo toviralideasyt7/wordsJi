@@ -152,7 +152,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
     <div>
       <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-6 flex items-center gap-2">
-        <span class="text-2xl">TD</span> Today's Game Answers
+        <span aria-hidden="true" class="text-2xl">TD</span> Today's Game Answers
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {#each answerTodayLinks as link}
@@ -162,7 +162,7 @@
               ? 'bg-teal-50 border-teal-200 dark:bg-teal-900/20 dark:border-teal-800 pointer-events-none'
               : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 hover:border-teal-400 dark:hover:border-teal-600 hover:shadow-sm'}"
           >
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{link.icon}</span>
+            <span aria-hidden="true" class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{link.icon}</span>
             <span class="font-medium {currentGame === link.name.split(' ')[0] ? 'text-teal-700 dark:text-teal-400' : 'text-slate-700 dark:text-slate-300'}">
               {link.name}
             </span>
@@ -173,7 +173,7 @@
 
     <div>
       <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-6 flex items-center gap-2">
-        <span class="text-2xl">AR</span> Past Solutions Archive
+        <span aria-hidden="true" class="text-2xl">AR</span> Past Solutions Archive
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {#each archiveLinks as link}
@@ -181,7 +181,7 @@
             href={link.href}
             class="flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-600 transition-all hover:shadow-sm"
           >
-            <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{link.icon}</span>
+            <span aria-hidden="true" class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{link.icon}</span>
             <span class="text-slate-700 dark:text-slate-300 font-medium">{link.name}</span>
           </a>
         {/each}
@@ -192,7 +192,7 @@
   {#if relatedGames.length > 0}
     <div class="mt-12">
       <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-6 flex items-center gap-2">
-        <span class="text-2xl">RG</span> Related Games
+        <span aria-hidden="true" class="text-2xl">RG</span> Related Games
       </h2>
       <div class="flex flex-wrap gap-2">
         {#each relatedGames as rg}
@@ -200,7 +200,7 @@
             href={rg.href}
             class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-teal-400 dark:hover:border-teal-600 hover:shadow-sm transition-all"
           >
-            <span class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{rg.icon}</span>
+            <span aria-hidden="true" class="inline-flex h-6 w-6 items-center justify-center rounded-md bg-slate-100 text-xs font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-200">{rg.icon}</span>
             {rg.name}
           </a>
         {/each}

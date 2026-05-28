@@ -86,14 +86,6 @@
   <meta property="og:description" content="Complete history of every Searchle answer. Browse by calendar or search." />
   <meta property="og:url" content="https://wordsolverx.com/searchle-archive" />
   <meta property="og:type" content="website" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Searchle Archive",
-    "description": "Complete archive of all Searchle daily autocomplete answers.",
-    "url": "https://wordsolverx.com/searchle-archive",
-    "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
-  })}</script>`}
 </svelte:head>
 
 <ArchiveCalendar
