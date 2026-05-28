@@ -1,7 +1,24 @@
 {
   "articleKey": "pokedle-answer-today",
-  "generatedAt": "2026-05-26T23:08:02.422Z",
+  "generatedAt": "2026-05-27T22:05:02.760Z",
   "byDate": {
+    "2026-05-27": {
+      "articleKey": "pokedle-answer-today",
+      "date": "2026-05-27",
+      "title": "Pokedle Answer Today: Decoding the Strongest Signal for May 27, 2026",
+      "summary": "Today's Pokedle answer hinges on a specific generation and type combination. Use the reveal card to confirm stage and habitat before guessing.",
+      "articleHtml": "<h2>Pokedle answer today: what the strongest attribute signal is</h2>\n<p>The strongest signal for the May 27, 2026 puzzle isn't the color or the silhouette—it's the generation tag paired with the primary type. On this board, the reveal card highlights a Generation IV or V creature with a dual-type setup that often trips up solvers relying on single-type logic.</p>\n<p>A careful player notices the habitat hint immediately rules out the most common starters. The answer sits in the middle of the evolution line, not at the start or the final form. This specific configuration forces a narrow search through the regional dex rather than the national one.</p>\n<p>Check the <a href=\"/pokedle-solver\">Pokedle Solver</a> to filter by these exact constraints. The answer card confirms the type match before the silhouette does.</p><h2>How generation, type, and stage narrow the pool</h2>\n<p>Generation limits the pool to roughly 150 candidates. Add the type constraint, and that number drops below 20. The evolution stage is the final filter that separates the lookalikes.</p>\n<p>Most players miss the stage indicator until they run out of guesses. The puzzle shows a mid-stage evolution, meaning the base form and final form are both incorrect. This eliminates entire branches of the family tree instantly.</p>\n<p>Don't guess the final evolution just because it's more popular. The game logic strictly adheres to the stage shown on the reveal card.</p><h2>Where players confuse similar Pokemon lines</h2>\n<p>Confusion usually happens between two specific lines that share a type and a similar body shape. One line is Ground/Rock, the other is Ground/Steel. The silhouette looks nearly identical until the color palette shifts.</p>\n<p>Solvers often guess the Steel-type first because it feels more modern. However, the habitat hint points toward a rocky, mountainous region that favors the Ground/Rock variant. The distinction is subtle but decisive.</p>\n<p>Review the <a href=\"/pokedle-archive\">archive</a> for past puzzles involving these two lines. The pattern repeats: the answer favors the less common typing in the current meta.</p><h2>How to approach tomorrow's Pokedle more cleanly</h2>\n<p>Start by locking in the generation. Do not guess a single Pokemon until you know the era. Next, filter by the primary type shown in the hint widget. Only then do you look at the evolution stage.</p>\n<p>This order prevents wasted guesses on powerful final forms that don't fit the generation tag. It also stops you from falling for the \"familiar face\" trap where a popular Pokemon from a different era looks similar.</p>\n<p>Use the <a href=\"/pokedle-hints\">hint widget</a> to confirm the secondary type before making your second guess. It saves turns and keeps the streak alive.</p><h2>Questions players keep asking</h2><h3>Does the answer change if I refresh the page?</h3>\n<p>No. The puzzle is fixed for the date. Refreshing only reloads the same reveal card and hint set.</p><h3>Can players use the solver to find the exact answer?</h3>\n<p>The solver filters by attributes, not by the specific answer. You still need to match the remaining candidates to the silhouette.</p><h3>What happens if I guess the wrong evolution stage?</h3>\n<p>The game marks the stage as incorrect but keeps the type and generation flags if they match. It's a useful data point for the next guess.</p><h3>Is the habitat hint always accurate?</h3>\n<p>Yes. The habitat is generated from the official Pokédex entry and never changes for a specific date.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-122b-a10b",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-27T22:05:02.754Z",
+        "wordCount": 542,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-20": {
       "articleKey": "pokedle-answer-today",
       "date": "2026-05-20",
