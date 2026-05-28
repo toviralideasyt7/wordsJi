@@ -27,8 +27,16 @@
 
 <div class="site-shell min-h-screen flex flex-col bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
         <ErrorBoundary>
-                <Navigation />
-                <main class="site-main flex-grow">
+                <a
+                        href="#main-content"
+                        class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900"
+                >
+                        Skip to main content
+                </a>
+                <header class="site-header">
+                        <Navigation />
+                </header>
+                <main id="main-content" class="site-main flex-grow">
                         {@render children()}
                 </main>
                 <Footer />

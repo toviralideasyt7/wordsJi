@@ -6,12 +6,27 @@ export interface SchemaOrganization {
     name: string;
     url: string;
     logo?: string;
+    image?: string;
+    description?: string;
     sameAs?: string[];
+    contactPoint?: Array<{
+        '@type': 'ContactPoint';
+        contactType: string;
+        email?: string;
+        url?: string;
+        availableLanguage?: string[];
+    }>;
 }
 
 export const SOCIAL_PROFILE_URLS = [
     'https://www.pinterest.com/wordsolverx/',
 ];
+
+const DEFAULT_SOCIAL_IMAGE = 'https://wordsolverx.com/wordsolverx.webp';
+const DEFAULT_CONTACT_URL = 'https://wordsolverx.com/contact';
+const DEFAULT_CONTACT_EMAIL = 'wordsolverx@gmail.com';
+const DEFAULT_ORGANIZATION_DESCRIPTION =
+    'WordSolverX publishes daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.';
 
 export interface SchemaWebPage {
     '@context': string;
@@ -19,6 +34,8 @@ export interface SchemaWebPage {
     name: string;
     description: string;
     url: string;
+    image?: string;
+    dateModified?: string;
 }
 
 export interface SchemaFAQ {
@@ -158,8 +175,19 @@ export function generateOrganizationSchema(): SchemaOrganization {
         '@type': 'Organization',
         name: 'WordSolverX',
         url: 'https://wordsolverx.com',
-        logo: 'https://wordsolverx.com/wordsolverx.webp',
+        logo: DEFAULT_SOCIAL_IMAGE,
+        image: DEFAULT_SOCIAL_IMAGE,
+        description: DEFAULT_ORGANIZATION_DESCRIPTION,
         sameAs: SOCIAL_PROFILE_URLS,
+        contactPoint: [
+            {
+                '@type': 'ContactPoint',
+                contactType: 'customer support',
+                email: DEFAULT_CONTACT_EMAIL,
+                url: DEFAULT_CONTACT_URL,
+                availableLanguage: ['English'],
+            },
+        ],
     };
 }
 
@@ -215,7 +243,11 @@ export function generateArticleSchema(config: {
 export function generateWebPageSchema(
     name: string,
     description: string,
-    url: string
+    url: string,
+    options: {
+        image?: string;
+        dateModified?: string;
+    } = {}
 ): SchemaWebPage {
     return {
         '@context': 'https://schema.org',
@@ -223,6 +255,8 @@ export function generateWebPageSchema(
         name,
         description,
         url,
+        image: options.image ?? DEFAULT_SOCIAL_IMAGE,
+        dateModified: options.dateModified ?? new Date().toISOString().split('T')[0],
     };
 }
 

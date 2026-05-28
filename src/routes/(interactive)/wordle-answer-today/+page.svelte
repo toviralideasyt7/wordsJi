@@ -60,6 +60,7 @@
     name: data.meta.title,
     description: data.meta.description,
     url: 'https://wordsolverx.com/wordle-answer-today',
+    image: data.meta.socialImage,
     dateModified: data.wordleData?.date || new Date().toISOString().split('T')[0]
   })}</script>`}
   {@html `<script type="application/ld+json">${data.schemas}</script>`}
@@ -83,18 +84,20 @@
     />
 
     {#if distinctGeneratedArticle}
-      <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's explanation</p>
-        <h2 class="mt-2 text-3xl font-bold text-slate-900">
-          {getTodayArticleHeading('wordle-answer-today')}
-        </h2>
-        {#if distinctGeneratedArticle.summary}
-          <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{distinctGeneratedArticle.summary}</p>
-        {/if}
+      <article class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
+        <header>
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's explanation</p>
+          <h2 class="mt-2 text-3xl font-bold text-slate-900">
+            {getTodayArticleHeading('wordle-answer-today')}
+          </h2>
+          {#if distinctGeneratedArticle.summary}
+            <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{distinctGeneratedArticle.summary}</p>
+          {/if}
+        </header>
         <div class="prose mt-5 max-w-none prose-slate prose-h2:mb-3 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-black prose-h2:text-slate-900 prose-h3:mb-2 prose-h3:mt-6 prose-h3:text-lg prose-h3:font-bold prose-h3:text-slate-900 prose-p:my-4 prose-p:text-base prose-p:leading-7 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-teal-600">
           {@html sanitizeGeneratedArticleHtml(distinctGeneratedArticle.articleHtml ?? '')}
         </div>
-      </section>
+      </article>
     {/if}
 
     {#if data.recentAnswers.length > 1}

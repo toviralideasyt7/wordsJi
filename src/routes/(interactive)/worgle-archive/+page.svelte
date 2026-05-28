@@ -91,6 +91,14 @@
 <svelte:head>
         <title>Worgle Archive - All Past Answers | WordSolverX</title>
         <meta name="description" content="Browse the Worgle archive by date with puzzle numbers and direct answer lookups." />
+        <meta property="og:title" content="Worgle Archive - All Past Answers | WordSolverX" />
+        <meta property="og:description" content="Browse the Worgle archive by date with puzzle numbers and direct answer lookups." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wordsolverx.com/worgle-archive" />
+        <meta property="og:site_name" content="WordSolverX" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Worgle Archive - All Past Answers | WordSolverX" />
+        <meta name="twitter:description" content="Browse the Worgle archive by date with puzzle numbers and direct answer lookups." />
         <link rel="canonical" href="https://wordsolverx.com/worgle-archive" />
 </svelte:head>
 

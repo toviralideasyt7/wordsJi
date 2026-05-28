@@ -1,5 +1,6 @@
 <script lang="ts">
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
 
   let contactType = 'Correction';
   let name = '';
@@ -56,11 +57,11 @@
       email: 'wordsolverx@gmail.com'
     },
     {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Contact WordSolverX',
-      description: 'Contact WordSolverX for support, corrections, feedback, and legal questions.',
-      url: 'https://wordsolverx.com/contact'
+      ...generateWebPageSchema(
+        'Contact WordSolverX',
+        'Contact WordSolverX for support, corrections, feedback, and legal questions.',
+        'https://wordsolverx.com/contact'
+      )
     }
   ])}</script>`}
 </svelte:head>

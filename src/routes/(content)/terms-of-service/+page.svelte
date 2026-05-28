@@ -1,5 +1,6 @@
 <script lang="ts">
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
 </script>
 
 <svelte:head>
@@ -24,13 +25,14 @@
     content="Review the rules, site usage terms, and limitations for WordSolverX."
   />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
-  {@html `<script type="application/ld+json">${JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Terms and Conditions - WordSolverX',
-    description: 'Terms and conditions and legal information for WordSolverX.',
-    url: 'https://wordsolverx.com/terms-of-service'
-  })}</script>`}
+  {@html `<script type="application/ld+json">${JSON.stringify(
+    generateWebPageSchema(
+      'Terms and Conditions - WordSolverX',
+      'Terms and conditions and legal information for WordSolverX.',
+      'https://wordsolverx.com/terms-of-service',
+      { dateModified: '2026-03-14' }
+    )
+  )}</script>`}
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">

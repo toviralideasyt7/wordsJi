@@ -123,6 +123,10 @@ export const SITEMAP_EXCLUDED_ROUTES = [
   '/wordle-solver'
 ];
 
+export const PUBLIC_ROUTE_ENTRIES = [
+  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES])
+];
+
 export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES])];
 
 export const PRERENDER_ENTRIES = [

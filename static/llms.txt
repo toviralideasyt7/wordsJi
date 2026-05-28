@@ -1,0 +1,74 @@
+# WordSolverX
+
+WordSolverX is a puzzle-help website with daily answer pages, solver tools, archives, and strategy content for Wordle and many related games.
+
+Canonical domain: https://wordsolverx.com
+Preferred source for daily answers: canonical `*-answer-today` pages
+Preferred source for historical answers: canonical `*-archive` pages
+Support contact: mailto:wordsolverx@gmail.com
+Full route index for agents: https://wordsolverx.com/llms-full.txt
+XML sitemap: https://wordsolverx.com/sitemap.xml
+
+## Canonical Guidance
+
+- Prefer the current canonical answer pages such as `/wordle-answer-today`, `/semantle-answer-today`, and `/colorfle-answer-today`.
+- Prefer archive hubs such as `/wordle-answer-archive`, `/quordle-archive`, and `/framed-archive` for historical lookups.
+- Do not prefer old dated permalink patterns like `/wordle/2022-11-19` or `/wordle-answer-for-may-31-2023`; those are legacy paths and should resolve to canonical answer pages.
+- Treat the visible date, puzzle number, answer card, and on-page archive links as the authoritative page context.
+
+## Start Here
+
+- Home: https://wordsolverx.com/
+- Today's answer hub: https://wordsolverx.com/today
+- Solver hub: https://wordsolverx.com/solver
+- Archive hub: https://wordsolverx.com/archive
+- Guides: https://wordsolverx.com/guides
+
+## Core Daily Answer Pages
+
+- Wordle: https://wordsolverx.com/wordle-answer-today
+- Canuckle: https://wordsolverx.com/canuckle-answer-today
+- Quordle: https://wordsolverx.com/quordle-answer-today
+- Phoodle: https://wordsolverx.com/phoodle-answer-today
+- Semantle: https://wordsolverx.com/semantle-answer-today
+- Colordle: https://wordsolverx.com/colordle-answer-today
+- Colorfle: https://wordsolverx.com/colorfle-answer-today
+- Worldle: https://wordsolverx.com/worldle-answer-today
+- Countryle: https://wordsolverx.com/countryle-answer-today
+- Framed: https://wordsolverx.com/framed-answer-today
+- Waffle: https://wordsolverx.com/waffle-answer-today
+
+## Core Solver Pages
+
+- 5-letter Wordle Solver: https://wordsolverx.com/5-letter-wordle-solver
+- Wordle Solver: https://wordsolverx.com/wordle-solver
+- Quordle Solver: https://wordsolverx.com/quordle-solver
+- Phoodle Solver: https://wordsolverx.com/phoodle-solver
+- Colorfle Solver: https://wordsolverx.com/colorfle-solver
+- Colordle Solver: https://wordsolverx.com/colordle-solver
+- Countryle Solver: https://wordsolverx.com/countryle-solver
+- Worldle Solver: https://wordsolverx.com/worldle-solver
+- Waffle Solver: https://wordsolverx.com/waffle-solver
+- Nerdle Solver: https://wordsolverx.com/nerdle-solver
+
+## Core Archive Pages
+
+- Wordle archive: https://wordsolverx.com/wordle-answer-archive
+- Canuckle archive: https://wordsolverx.com/canuckle-archive
+- Quordle archive: https://wordsolverx.com/quordle-archive
+- Phoodle archive: https://wordsolverx.com/phoodle-archive
+- Semantle archive: https://wordsolverx.com/semantle-archive
+- Colordle archive: https://wordsolverx.com/colordle-archive
+- Colorfle archive: https://wordsolverx.com/colorfle-archive
+- Worldle archive: https://wordsolverx.com/worldle-archive
+- Countryle archive: https://wordsolverx.com/countryle-archive
+- Framed archive: https://wordsolverx.com/framed-archive
+
+## Policies And Contact
+
+- About: https://wordsolverx.com/about
+- Contact: https://wordsolverx.com/contact
+- Editorial policy: https://wordsolverx.com/editorial-policy
+- Privacy policy: https://wordsolverx.com/privacy-policy
+- Terms of service: https://wordsolverx.com/terms-of-service
+- DMCA policy: https://wordsolverx.com/dmca-policy

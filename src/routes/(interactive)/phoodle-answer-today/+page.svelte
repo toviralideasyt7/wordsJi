@@ -5,6 +5,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import PhoodleAnswerCard from '$lib/components/PhoodleAnswerCard.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -18,13 +19,17 @@
       "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordSolverX."
   );
   const publishedDate = $derived(data.dateKey ? `${data.dateKey}T00:00:00Z` : null);
-  let pageSchema = $derived(JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: pageTitle,
-    description: pageDescription,
-    url: 'https://wordsolverx.com/phoodle-answer-today'
-  }));
+  let pageSchema = $derived(JSON.stringify(
+    generateWebPageSchema(
+      pageTitle,
+      pageDescription,
+      'https://wordsolverx.com/phoodle-answer-today',
+      {
+        image: 'https://wordsolverx.com/images/phoodle-answer-today.webp',
+        dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
+      }
+    )
+  ));
 </script>
 
 <svelte:head>

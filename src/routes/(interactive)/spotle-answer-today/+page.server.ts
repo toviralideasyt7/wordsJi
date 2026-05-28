@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { format, subDays } from 'date-fns';
 import spotleData from '../../../../static/spotle_data.json';
+import { fetchLiveSpotleToday } from '$lib/live-answer-sources';
 import {
 	COUNTRY_NAMES,
 	GENDER_NAMES,
@@ -32,27 +33,48 @@ function getArtistByName(artists: SpotleArtist[], artistName: string | undefined
 export const load: PageServerLoad = async ({ setHeaders }) => {
 	const data = spotleData as SpotleData;
 	const artists = data?.artists ?? [];
-	const answers = data?.answers ?? [];
+	const bundledAnswers = data?.answers ?? [];
 	const todayStr = formatSpotleDate(getPuzzleDateForGame('spotle'));
-	const activeAnswers = answers
+	let mergedAnswers = [...bundledAnswers];
+	let activeAnswers = mergedAnswers
 		.filter((entry) => entry.date <= todayStr)
 		.sort((a, b) => b.date.localeCompare(a.date));
 	const latestAnswer = activeAnswers[0] ?? null;
-	const todayAnswer = answers.find((entry) => entry.date === todayStr) ?? latestAnswer;
+	let todayAnswer = mergedAnswers.find((entry) => entry.date === todayStr) ?? latestAnswer;
+
+	if (!todayAnswer || todayAnswer.date !== todayStr) {
+		try {
+			const liveToday = await fetchLiveSpotleToday(todayStr);
+			if (liveToday) {
+				mergedAnswers = [...mergedAnswers.filter((entry) => entry.date !== liveToday.date), liveToday];
+				activeAnswers = mergedAnswers
+					.filter((entry) => entry.date <= todayStr)
+					.sort((a, b) => b.date.localeCompare(a.date));
+				todayAnswer = mergedAnswers.find((entry) => entry.date === todayStr) ?? activeAnswers[0] ?? null;
+			}
+		} catch (error) {
+			console.warn(
+				`Unable to refresh Spotle live answer for ${todayStr}:`,
+				error instanceof Error ? error.message : String(error)
+			);
+		}
+	}
+
 	const displayDate = todayAnswer?.date ?? todayStr;
 	const displayDateObject = parseSpotleDate(displayDate);
 	const todayArtist = getArtistByName(artists, todayAnswer?.artist);
+	const isFallback = !todayAnswer || displayDate !== todayStr || !todayArtist;
 
 	setHeaders({
 		'X-Puzzle-Date': displayDate,
-		...(!todayAnswer || !todayArtist ? { 'X-Edge-Cache-Bypass': '1' } : {})
+		...(isFallback ? { 'X-Edge-Cache-Bypass': '1' } : {})
 	});
 
 	const last30Days: SpotleDay[] = [];
 	for (let i = 0; i < 30; i += 1) {
 		const date = subDays(displayDateObject, i);
 		const dateStr = formatSpotleDate(date);
-		const answer = answers.find((entry) => entry.date === dateStr);
+		const answer = mergedAnswers.find((entry) => entry.date === dateStr);
 		if (!answer) {
 			continue;
 		}
@@ -134,6 +156,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		name: metaTitle,
 		description: metaDescription,
 		url: 'https://wordsolverx.com/spotle-answer-today',
+		image: 'https://wordsolverx.com/wordsolverx.webp',
+		dateModified: displayDate,
 		inLanguage: 'en',
 		isPartOf: {
 			'@type': 'WebSite',
@@ -159,7 +183,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		},
 		stats: {
 			totalArtists: artists.length,
-			totalAnswers: activeAnswers.length,
+			totalAnswers: mergedAnswers.length,
 			lastSyncedAt: data?.metadata?.lastSyncedAt ?? null
 		},
 		labels: {

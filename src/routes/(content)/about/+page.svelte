@@ -8,6 +8,7 @@
     PRESTON_HAYES_AUTHOR_URL,
     getPrestonHayesAuthorSchema
   } from '$lib/authors';
+  import { generateWebPageSchema } from '$lib/seo';
 
   const aboutSchemas = [
     {
@@ -18,11 +19,11 @@
       url: 'https://wordsolverx.com/about'
     },
     {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'About WordSolverX',
-      description: 'Learn about WordSolverX, its puzzle answer pages, archives, solver tools, and guides.',
-      url: 'https://wordsolverx.com/about'
+      ...generateWebPageSchema(
+        'About WordSolverX',
+        'Learn about WordSolverX, its puzzle answer pages, archives, solver tools, and guides.',
+        'https://wordsolverx.com/about'
+      )
     },
     {
       ...getPrestonHayesAuthorSchema(),

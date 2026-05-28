@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T22:15:50.344Z",
+  "generatedAt": "2026-05-28T05:23:19.594Z",
   "referenceDate": "2026-04-02",
   "modes": {
     "daily": {
@@ -8,8 +8,18 @@
       "color": "#e50914",
       "gradient": "from-red-600 to-red-900",
       "referencePuzzle": 1483,
-      "latestPuzzleNumber": 1538,
+      "latestPuzzleNumber": 1540,
       "entries": [
+        {
+          "date": "2026-05-29",
+          "puzzleNumber": 1540,
+          "answer": "The Terminal"
+        },
+        {
+          "date": "2026-05-28",
+          "puzzleNumber": 1539,
+          "answer": "Her"
+        },
         {
           "date": "2026-05-27",
           "puzzleNumber": 1538,
@@ -7708,8 +7718,18 @@
       "color": "#6366f1",
       "gradient": "from-violet-500 to-purple-700",
       "referencePuzzle": 486,
-      "latestPuzzleNumber": 541,
+      "latestPuzzleNumber": 543,
       "entries": [
+        {
+          "date": "2026-05-29",
+          "puzzleNumber": 543,
+          "answer": "Kung Fu Panda"
+        },
+        {
+          "date": "2026-05-28",
+          "puzzleNumber": 542,
+          "answer": "Eyes Wide Shut"
+        },
         {
           "date": "2026-05-27",
           "puzzleNumber": 541,
@@ -10423,8 +10443,13 @@
       "color": "#f59e0b",
       "gradient": "from-amber-500 to-orange-600",
       "referencePuzzle": 302,
-      "latestPuzzleNumber": 357,
+      "latestPuzzleNumber": 359,
       "entries": [
+        {
+          "date": "2026-05-28",
+          "puzzleNumber": 358,
+          "answer": "Gran Torino"
+        },
         {
           "date": "2026-05-27",
           "puzzleNumber": 357,
@@ -12218,8 +12243,13 @@
       "color": "#10b981",
       "gradient": "from-emerald-500 to-teal-700",
       "referencePuzzle": 252,
-      "latestPuzzleNumber": 307,
+      "latestPuzzleNumber": 309,
       "entries": [
+        {
+          "date": "2026-05-28",
+          "puzzleNumber": 308,
+          "answer": "Training Day"
+        },
         {
           "date": "2026-05-27",
           "puzzleNumber": 307,

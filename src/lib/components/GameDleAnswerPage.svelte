@@ -223,7 +223,12 @@
     name: pageTitle,
     description: pageDescription,
     url: canonicalUrl,
-    image: pageImage
+    image: pageImage,
+    ...(publishedDate
+      ? {
+          dateModified: publishedDate
+        }
+      : {})
   });
   let articleSchema = $derived({
     '@context': 'https://schema.org',
@@ -304,7 +309,7 @@
   <div class="max-w-6xl mx-auto px-3 sm:px-4 pt-6">
     <Breadcrumbs hideSchema={true} />
   </div>
-  <div class="bg-white shadow-sm">
+  <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-3 sm:px-4 py-10">
       <h1 class="text-4xl font-extrabold text-slate-900">{pageHeading}</h1>
       {#if dateStr}
@@ -315,7 +320,7 @@
         </div>
       {/if}
     </div>
-  </div>
+  </header>
 
   <div class="max-w-6xl mx-auto px-3 sm:px-4 py-8">
     {#if loading}
@@ -341,17 +346,17 @@
       </div>
     {:else}
       {#each regions as region}
-        <div class="mb-12">
+        <section class="mb-12" aria-labelledby={`${gameKey}-${region.key}-heading`}>
           <div class="mb-6 flex items-center gap-3">
             <div class={`h-8 w-1 rounded-full ${region.accent}`}></div>
-            <h2 class="text-2xl font-bold text-slate-800">{region.flag} {gameTitle} {region.label} Answers</h2>
+            <h2 id={`${gameKey}-${region.key}-heading`} class="text-2xl font-bold text-slate-800">{region.flag} {gameTitle} {region.label} Answers</h2>
           </div>
           <div class={`grid ${gridCols} gap-6`}>
             {#each modes as mode}
               {@const answer = getAnswer(mode, region.key)}
               {@const content = answer ? parseContent(answer.json_content) : null}
               {@const cfg = modeConfig[mode]}
-              <div class={`rounded-2xl border-2 ${cfg.color} ${cfg.bg} p-6 transition-all hover:shadow-lg`}>
+              <article class={`rounded-2xl border-2 ${cfg.color} ${cfg.bg} p-6 transition-all hover:shadow-lg`}>
                 <div class="mb-3 flex justify-center">
                   <div class={`flex h-12 w-12 items-center justify-center rounded-full border-2 text-2xl ${cfg.bg} ${cfg.color}`}>
                     {cfg.icon}
@@ -393,37 +398,37 @@
                 {:else}
                   <div class="py-4 text-center text-slate-500">No data available</div>
                 {/if}
-              </div>
+              </article>
             {/each}
           </div>
-        </div>
+        </section>
       {/each}
 
-      <div class="mb-12">
+      <section class="mb-12">
         {@render seoContent()}
-      </div>
+      </section>
 
-      <div class="mb-12">
+      <section class="mb-12">
         <AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}
           image={PRESTON_HAYES_AUTHOR_IMAGE}
           description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
         />
-      </div>
+      </section>
 
       <InternalLinkSection currentGame={gameTitle} />
     {/if}
   </div>
 
-  <div class="max-w-6xl mx-auto px-3 sm:px-4 py-12">
-    <h2 class="mb-6 text-center text-xl font-bold text-slate-800">More Games</h2>
-    <div class={`grid grid-cols-2 ${crossLinkColsClass} gap-4`}>
+  <aside class="max-w-6xl mx-auto px-3 sm:px-4 py-12" aria-labelledby={`${gameKey}-more-games`}>
+    <h2 id={`${gameKey}-more-games`} class="mb-6 text-center text-xl font-bold text-slate-800">More Games</h2>
+    <nav class={`grid grid-cols-2 ${crossLinkColsClass} gap-4`} aria-label="More game links">
       {#each crossLinks as link}
         <a href={link.href} class="rounded-xl bg-white p-4 text-center shadow-sm transition-shadow hover:shadow-md">
           <span class="mb-2 block text-3xl">{link.icon}</span>
           <span class="font-medium text-slate-700">{link.label}</span>
         </a>
       {/each}
-    </div>
-  </div>
+    </nav>
+  </aside>
 </div>

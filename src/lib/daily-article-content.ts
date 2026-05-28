@@ -1,5 +1,5 @@
 import dailyArticlesJson from '$lib/generated/daily-articles.json';
-import { compactGeneratedArticleParagraphs } from '$lib/generated-article-links';
+import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
 
 export type DailyArticleGame = 'wordle' | 'colordle';
 export type TodayArticleKey =
@@ -148,7 +148,7 @@ const DISALLOWED_UNSUPPORTED_SPECIFIC_PATTERNS = [
   /\b(?:the answer|today(?:'|â€™)s answer|the correct answer|the solution|the target|the movie hidden behind|the hidden movie|the country hidden behind|the color hidden behind|the word hidden behind)\b[^.?!]{0,140}\b(?:is|was|belongs to)\b/i,
   /\b(?:puzzle|board|worldle|framed|worgle|canuckle|betweenle|countryle|phoodle|colorfle|spotle|globle|searchle|quordle|semantle)\s*#\d{3,}\b/i
 ];
-const MAX_SUMMARY_WORDS = 24;
+const MAX_SUMMARY_WORDS = 36;
 
 const AUTO_PERSONAL_VOICE_REPLACEMENTS: Array<[RegExp, string]> = [
   [
@@ -244,7 +244,7 @@ function sanitizeArticleHtml(html: string): string {
     return '';
   }
 
-  return compactGeneratedArticleParagraphs(cleaned);
+  return sanitizeGeneratedArticleHtml(cleaned);
 }
 
 function sanitizeArticleSummary(
@@ -282,6 +282,11 @@ type FallbackSection = {
   paragraphs: string[];
 };
 
+type FallbackQuestion = {
+  question: string;
+  answer: string;
+};
+
 function buildSections(definitions: Array<[string, string, string]>): FallbackSection[] {
   return definitions.map(([heading, first, second]) => ({
     heading,
@@ -289,13 +294,30 @@ function buildSections(definitions: Array<[string, string, string]>): FallbackSe
   }));
 }
 
-function renderFallbackArticleHtml(sections: FallbackSection[]): string {
+function renderFallbackFaqHtml(questions: FallbackQuestion[]): string {
+  if (!questions.length) {
+    return '';
+  }
+
+  return [
+    '<h2>Questions players keep asking</h2>',
+    ...questions.map(
+      (item) => `<h3>${item.question}</h3><p>${item.answer}</p>`
+    )
+  ].join('');
+}
+
+function renderFallbackArticleHtml(
+  sections: FallbackSection[],
+  questions: FallbackQuestion[] = []
+): string {
   return sections
     .map(
       (section) =>
         `<h2>${section.heading}</h2>${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}`
     )
-    .join('');
+    .join('')
+    .concat(renderFallbackFaqHtml(questions));
 }
 
 function getFallbackGroup(articleKey: TodayArticleKey):
@@ -973,17 +995,77 @@ function buildFallbackSections(articleKey: TodayArticleKey, date: string): Fallb
   ];
 }
 
+function buildFallbackQuestions(articleKey: TodayArticleKey, date: string): FallbackQuestion[] {
+  const displayName = getTodayArticleDisplayName(articleKey);
+  const formattedDate = formatLongDate(date);
+  const group = getFallbackGroup(articleKey);
+
+  const sharedQuestions: FallbackQuestion[] = [
+    {
+      question: `Where can players check older ${displayName} answers?`,
+      answer: `Use the archive and recent-answer links attached to this page when you want to compare older ${displayName} boards by date. That is the fastest way to study patterns without relying on scattered legacy URLs.`
+    },
+    {
+      question: `Why can the date on this page differ from a player's local calendar?`,
+      answer: `Many daily games follow their own reset window instead of every reader's local midnight. The ${formattedDate} label on this page follows the live puzzle schedule that matters for the answer itself.`
+    }
+  ];
+
+  if (group === 'visual') {
+    return [
+      {
+        question: `Should players trust the visual clue or the score first on ${displayName}?`,
+        answer: `Use both, but let the measurable clue win when they disagree. Visual puzzle boards feel intuitive, yet the exact score, shade feedback, or mode data usually tells a more reliable story than a quick first impression.`
+      },
+      {
+        question: `When is the solver actually useful for ${displayName}?`,
+        answer: `The solver helps most once the broad family is already clear and the remaining problem is precision. It is less useful as a first move than it is as a way to confirm the final direction after one or two good clues.`
+      },
+      ...sharedQuestions
+    ];
+  }
+
+  if (group === 'semantic' || group === 'search') {
+    return [
+      {
+        question: `Why do ${displayName} boards feel harder than letter-matching games?`,
+        answer: `These puzzles reward idea clusters, context, and semantic direction more than spelling alone. Once players stop treating every guess like a letter test and start using categories, the board becomes much easier to read.`
+      },
+      {
+        question: `What is the best way to use this page without spoiling the next round?`,
+        answer: `Treat the write-up as a post-game review. Check the reveal only after a real attempt, then use the explanation to see which clue family mattered most so the next daily board feels less random.`
+      },
+      ...sharedQuestions
+    ];
+  }
+
+  return [
+    {
+      question: `When should players switch from guessing to using the solver for ${displayName}?`,
+      answer: `The best time is after the first strong clue lane appears and the remaining options start feeling repetitive. At that point the solver saves time because it turns vague possibilities into a smaller set of realistic moves.`
+    },
+    {
+      question: `Is it better to reveal the answer first or read the hints first on ${displayName}?`,
+      answer: `Players who want to improve usually get more value by reading the lighter hints first and using the full reveal last. That keeps the page useful as both a quick verification tool and a strategy reference for the next puzzle.`
+    },
+    ...sharedQuestions
+  ];
+}
+
 function buildFallbackArticle(articleKey: TodayArticleKey, date: string): DailyArticleContent {
   return {
     articleKey,
     date,
     title: getTodayArticleHeading(articleKey),
     summary: `A clear ${getTodayArticleDisplayName(articleKey)} explanation for ${formatLongDate(date)}, focused on clue reading, solve flow, and cleaner daily strategy.`,
-    articleHtml: renderFallbackArticleHtml(buildFallbackSections(articleKey, date)),
+    articleHtml: renderFallbackArticleHtml(
+      buildFallbackSections(articleKey, date),
+      buildFallbackQuestions(articleKey, date)
+    ),
     meta: {
       fallbackUsed: true,
       fallbackSource: 'runtime',
-      editorialVersion: 2
+      editorialVersion: 3
     }
   };
 }
@@ -1022,7 +1104,7 @@ function buildRenderableArticle(
     return null;
   }
 
-  if (strictGeneric && (htmlWordCount < 260 || htmlWordCount > 950)) {
+  if (strictGeneric && (htmlWordCount < 420 || htmlWordCount > 1500)) {
     return null;
   }
 

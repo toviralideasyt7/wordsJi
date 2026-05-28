@@ -21197,7 +21197,7 @@
     },
     {
       "date": "2026-05-25",
-      "dayNumber": 1487,
+      "dayNumber": 1486,
       "artist": "Panic! At The Disco",
       "track": "I Write Sins Not Tragedies",
       "image": "https://i.scdn.co/image/ab67616d0000b27323152d9337d6c57b116ed13a",
@@ -21205,11 +21205,27 @@
     },
     {
       "date": "2026-05-26",
-      "dayNumber": 1488,
+      "dayNumber": 1487,
       "artist": "The Doors",
       "track": "Light My Fire",
       "image": "https://i.scdn.co/image/ab67616d0000b27386339e6cd71cc2a167451ee5",
       "soundcloudUrl": "https://soundcloud.com/thedoors/light-my-fire"
+    },
+    {
+      "date": "2026-05-27",
+      "dayNumber": 1489,
+      "artist": "Camila Cabello",
+      "track": "Havana (feat. Young Thug)",
+      "image": "https://i.scdn.co/image/ab67616d0000b273370ed6a9ced20874385fb147",
+      "soundcloudUrl": "https://soundcloud.com/camilacabello/havana-feat-young-thug"
+    },
+    {
+      "date": "2026-05-28",
+      "dayNumber": 1490,
+      "artist": "Ludacris",
+      "track": "Rollout (My Business)",
+      "image": "https://i.scdn.co/image/ab67616d0000b2739bfafd29c34d738803a6a033",
+      "soundcloudUrl": "https://soundcloud.com/ludacris/rollout-my-business"
     },
     {
       "date": "2026-09-01",
@@ -22965,8 +22981,8 @@
   "metadata": {
     "startDate": "2022-03-19",
     "totalArtists": 1103,
-    "totalAnswers": 1302,
-    "lastSyncedAt": "2026-05-26T22:15:52.598Z",
+    "totalAnswers": 1304,
+    "lastSyncedAt": "2026-05-28T05:23:12.386Z",
     "source": "https://spotle.io/__data.json"
   }
 }

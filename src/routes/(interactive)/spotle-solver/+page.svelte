@@ -2,7 +2,7 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import { generateBreadcrumbSchema } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import {
@@ -123,6 +123,12 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                 showDropdown = false;
                 currentFeedback = getDefaultSpotleFeedback();
         }
+
+        const pageTitle = 'Spotle Solver - Spotify Artist Guess Helper';
+        const pageDescription =
+                'Solve Spotle faster with real-time artist filtering by rank, debut year, genre, country, group size, and gender.';
+        const pageUrl = 'https://wordsolverx.com/spotle-solver';
+        const pageImage = 'https://wordsolverx.com/images/spotle-solver.webp';
 </script>
 
 <svelte:head>
@@ -145,12 +151,9 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         {@html `<script type="application/ld+json">${JSON.stringify({
                 '@context': 'https://schema.org',
                 '@graph': [
-                        {
-                                '@type': 'WebPage',
-                                name: 'Spotle Solver',
-                                description: 'Solve Spotle faster with real-time artist filtering by rank, debut year, genre, country, group size, and gender.',
-                                url: 'https://wordsolverx.com/spotle-solver'
-                        },
+                        generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
+                                image: pageImage
+                        }),
                         {
                                 '@type': 'WebApplication',
                                 name: 'Spotle Solver',

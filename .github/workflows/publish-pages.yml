@@ -1,6 +1,6 @@
 name: Publish Pages
 
-run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
+run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
 
 on:
   push:
@@ -9,6 +9,8 @@ on:
   schedule:
     # Run after the 16:30 UTC main-game rollover used by prerendered "today" pages.
     - cron: "35 16 * * *"
+    # A second full site pass catches late-arriving main-game data before the Waffle window.
+    - cron: "45 18 * * *"
     # Retry later in the day if upstream data was not ready on the first pass.
     - cron: "30 3 * * *"
     - cron: "31 11 * * *"
@@ -71,10 +73,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     concurrency:
-      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
+      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
       cancel-in-progress: true
     env:
-      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}
+      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}
       TARGET_DATE: ${{ github.event.client_payload.target_date || github.event.inputs.target_date || '' }}
       WORKFLOW_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode || 'deploy' }}
       ARTICLE_SCOPE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && github.event.inputs.article_scope) || 'current-group' }}
@@ -154,7 +156,7 @@ jobs:
               ;;
             schedule)
               case "$EVENT_SCHEDULE" in
-                "35 16 * * *")
+                "35 16 * * *"|"45 18 * * *")
                   resolved_group="site"
                   resolved_article_groups="site"
                   resolved_data_mode="full"

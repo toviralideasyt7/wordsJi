@@ -12,7 +12,8 @@ const GAME_RUNNERS = {
   colordle: 'scripts/update-colordle-data.mjs',
   countryle: 'scripts/update-countryle-data.mjs',
   framed: 'scripts/update-framed-data.mjs',
-  spotle: 'scripts/update-spotle-data.mjs'
+  spotle: 'scripts/update-spotle-data.mjs',
+  worgle: 'scripts/update-worgle-data.mjs'
 };
 
 const excludedGames = new Set(
@@ -44,6 +45,7 @@ function runNodeScript(relativeScriptPath) {
 
 async function main() {
   const status = await readUpdateStatus(projectRoot);
+  const knownRetryGames = Object.keys(GAME_RUNNERS).filter((gameKey) => !excludedGames.has(gameKey));
   const retryableGames = Object.entries(status.games ?? {})
     .filter(([gameKey, gameStatus]) => {
       return Boolean(gameStatus?.needsRetry) && !excludedGames.has(gameKey);
@@ -52,7 +54,19 @@ async function main() {
     .filter((gameKey) => GAME_RUNNERS[gameKey]);
 
   if (retryableGames.length === 0) {
-    console.log('No previously failed dataset refreshes are waiting for retry.');
+    if (knownRetryGames.length === 0) {
+      console.log('No retry-capable dataset refreshers are available after exclusions.');
+      return;
+    }
+
+    console.log(
+      `No persisted failed refresh state was found. Re-running the retry-capable dataset refreshers instead: ${knownRetryGames.join(', ')}. Excluding: ${[...excludedGames].join(', ')}.`
+    );
+
+    for (const gameKey of knownRetryGames) {
+      await runNodeScript(GAME_RUNNERS[gameKey]);
+    }
+
     return;
   }
 

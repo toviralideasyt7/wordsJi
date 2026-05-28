@@ -2,6 +2,7 @@
   import GameCard from '$lib/components/GameCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
 
   type SolverCard = {
     name: string;
@@ -113,12 +114,11 @@
         'description': 'Advanced solver tools for word puzzles',
         'url': 'https://wordsolverx.com/solver'
       },
-      {
-        '@type': 'WebPage',
-        'name': 'Puzzle Solver Tools',
-        'description': 'Directory of solver tools for word and puzzle games.',
-        'url': 'https://wordsolverx.com/solver'
-      },
+      generateWebPageSchema(
+        'Puzzle Solver Tools',
+        'Directory of solver tools for word and puzzle games.',
+        'https://wordsolverx.com/solver'
+      ),
       {
         '@type': 'FAQPage',
         'mainEntity': faqs.map((faq) => ({
@@ -135,7 +135,7 @@
   <Breadcrumbs />
 
   <!-- Page header -->
-  <div class="mb-12">
+  <header class="mb-12">
     <div class="flex items-center gap-3 mb-4">
       <div class="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center">
         <svg class="w-5 h-5 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
@@ -148,7 +148,7 @@
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Stuck? Enter your clues and let the solver narrow it down. Every tool is free and works on your phone.
     </p>
-  </div>
+  </header>
 
   <!-- Search bar -->
   <form class="mb-10 flex max-w-2xl overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/90 shadow-sm" data-card-filter-form>
@@ -165,17 +165,19 @@
   </form>
 
   <!-- Solver card grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" aria-label="Solver pages">
     {#each solvers as solver}
-      <div
+      <li
         data-card-filter-item="solver-search"
         data-filter-section="solvers"
         data-search-text={`${solver.name} ${solver.description} ${solver.href}`}
       >
-        <GameCard name={solver.name} href={solver.href} description={solver.description} color={solver.color} icon={solver.icon} isPopular={solver.isPopular ?? false} actionText="Open Solver" />
-      </div>
+        <article class="h-full">
+          <GameCard name={solver.name} href={solver.href} description={solver.description} color={solver.color} icon={solver.icon} isPopular={solver.isPopular ?? false} actionText="Open Solver" />
+        </article>
+      </li>
     {/each}
-  </div>
+  </ul>
   <p
     class="mt-6 text-center text-slate-500 dark:text-slate-400"
     hidden
@@ -299,4 +301,3 @@
     </div>
   </article>
 </div>
-

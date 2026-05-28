@@ -9,14 +9,7 @@ const HUB_PAGES = new Set(['/today', '/solver', '/archive', '/guides']);
 const MAIN_DAILY_FALLBACK_GAME: PuzzleGame = 'wordle';
 const ROUTE_LASTMOD_GAME_MAP: Record<string, PuzzleGame> = {
 	...TODAY_ROUTE_GAME_MAP,
-	...ARCHIVE_ROUTE_GAME_MAP,
-	'/canuckle-answer-today': MAIN_DAILY_FALLBACK_GAME,
-	'/canuckle-archive': MAIN_DAILY_FALLBACK_GAME,
-	'/countryle-answer-today': MAIN_DAILY_FALLBACK_GAME,
-	'/countryle-archive': MAIN_DAILY_FALLBACK_GAME,
-	'/framed-answer-today': MAIN_DAILY_FALLBACK_GAME,
-	'/framed-archive': MAIN_DAILY_FALLBACK_GAME,
-	'/colorfle-archive': 'colorfle'
+	...ARCHIVE_ROUTE_GAME_MAP
 };
 
 function shouldIncludeUrl(url: string): boolean {

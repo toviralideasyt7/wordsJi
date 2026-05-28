@@ -247,7 +247,7 @@
                         </div>
                 </section>
 
-                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayStr} />
+                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayAnswer?.date ?? data.todayStr} />
 
                 <div class="mt-10">
                         <FAQSection title="Spotle Answer FAQ" faqs={faqItems} />
@@ -319,7 +319,7 @@
 
                 <div class="mt-12">
                         {#if false}
-                                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayStr} />
+                                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayAnswer?.date ?? data.todayStr} />
                         {/if}
                         <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}

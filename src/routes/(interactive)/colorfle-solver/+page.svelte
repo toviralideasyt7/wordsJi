@@ -3,7 +3,12 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema } from '$lib/seo';
+  import {
+    generateBreadcrumbSchema,
+    generateFAQSchema,
+    generateHowToSchema,
+    generateWebPageSchema
+  } from '$lib/seo';
   import {
     COLORS,
     COLOR_NAMES,
@@ -238,6 +243,12 @@ const faqs = [
     if (value === 'gray') return 'Gray';
     return 'Unset';
   }
+
+  const pageTitle = 'Colorfle Solver - Free Colorfle Helper Tool | WordSolverX';
+  const pageDescription =
+    'Use the Colorfle solver to match target hex colors, test Colorfle feedback, and narrow the correct three-color combination fast.';
+  const pageUrl = 'https://wordsolverx.com/colorfle-solver';
+  const pageImage = 'https://wordsolverx.com/images/colorfle-solver.webp';
 </script>
 
 <svelte:head>
@@ -258,12 +269,9 @@ const faqs = [
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebPage',
-        name: 'Colorfle Solver',
-        description: 'Solve Colorfle with target hex matching and combination elimination.',
-        url: 'https://wordsolverx.com/colorfle-solver'
-      },
+      generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
+        image: pageImage
+      }),
       {
         '@type': 'WebApplication',
         name: 'Colorfle Solver',

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
 
   const guides = [
     {
@@ -210,10 +211,11 @@
         'url': 'https://wordsolverx.com/guides'
       },
       {
-        '@type': 'WebPage',
-        'name': 'Puzzle Guides & Strategies',
-        'description': 'Strategy articles and learning content for daily puzzle fans.',
-        'url': 'https://wordsolverx.com/guides'
+        ...generateWebPageSchema(
+          'Puzzle Guides & Strategies',
+          'Strategy articles and learning content for daily puzzle fans.',
+          'https://wordsolverx.com/guides'
+        )
       }
     ]
   })}</script>`}
@@ -421,4 +423,3 @@
     </div>
   </article>
 </div>
-

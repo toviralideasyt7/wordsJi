@@ -1,6 +1,13 @@
 <script lang="ts">
-  let { data } = $props<{ data: { todayStr: string } }>();
+  import {
+    generateFAQSchema,
+    generateSearchActionSchema,
+    generateWebPageSchema
+  } from '$lib/seo';
+
+  let { data } = $props<{ data: { todayStr: string; todayKey: string } }>();
   let todayStr = $derived(data.todayStr);
+  let todayKey = $derived(data.todayKey);
 
   const answerTodayGames = [
     { name: 'Wordle Answer Today', href: '/wordle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'W', isPopular: true },
@@ -55,28 +62,35 @@
     { name: 'Spotle Solver', href: '/spotle-solver', color: 'from-teal-500 to-teal-600', icon: 'S' },
   ];
 
-  const jsonLd = JSON.stringify([
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'WordSolverX',
-      url: 'https://wordsolverx.com',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://wordsolverx.com/?q={search_term_string}'
+  let jsonLd = $derived.by(() =>
+    JSON.stringify([
+      generateSearchActionSchema('https://wordsolverx.com', 'https://wordsolverx.com/?q={search_term_string}'),
+      generateWebPageSchema(
+        'WordSolverX Homepage',
+        'Daily puzzle answers, solver tools, and Wordle resources for popular word and trivia games.',
+        'https://wordsolverx.com',
+        {
+          dateModified: todayKey
+        }
+      ),
+      generateFAQSchema([
+        {
+          question: 'What is WordSolverX?',
+          answer:
+            'WordSolverX is a daily puzzle site with answer pages, solver tools, archives, and practical strategy help for Wordle and many related games.'
         },
-        'query-input': 'required name=search_term_string'
-      }
-    },
-    { '@context': 'https://schema.org', '@type': 'WebPage', name: 'WordSolverX Homepage', description: 'Daily puzzle answers, solver tools, and Wordle resources for popular word and trivia games.', url: 'https://wordsolverx.com' },
-    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-      { '@type': 'Question', name: 'What is WordSolverX?', acceptedAnswer: { '@type': 'Answer', text: 'WordSolverX is your ultimate companion for word puzzle games like Wordle, Quordle, Phoodle, and more.' } },
-      { '@type': 'Question', name: 'When are the answers updated?', acceptedAnswer: { '@type': 'Answer', text: 'All game answers are updated daily at midnight.' } },
-      { '@type': 'Question', name: 'Is WordSolverX free to use?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, WordSolverX is 100% free.' } },
-    ]},
-  ]);
+        {
+          question: 'When are the answers updated?',
+          answer:
+            'Answer pages update on each game\'s own daily reset, so rollover times can differ between Wordle-style, geography, trivia, and visual games.'
+        },
+        {
+          question: 'Is WordSolverX free to use?',
+          answer: 'Yes, WordSolverX is free to use.'
+        }
+      ]),
+    ])
+  );
 </script>
 
 <svelte:head>
@@ -108,14 +122,14 @@
   <div class="absolute inset-0 bg-pattern-dots opacity-[0.35] dark:opacity-[0.15]"></div>
 
   <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-28 lg:pb-20">
-    <div class="text-center">
+    <header class="text-center">
       <!-- Live badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50/80 dark:bg-teal-900/30 border border-teal-200/60 dark:border-teal-700/40 mb-8 backdrop-blur-sm">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
         </span>
-        <span class="text-sm font-semibold text-teal-700 dark:text-teal-300">Updated daily at midnight</span>
+        <span class="text-sm font-semibold text-teal-700 dark:text-teal-300">Updated on each game&apos;s daily reset</span>
       </div>
 
       <!-- Main heading -->
@@ -159,19 +173,19 @@
       </form>
 
       <!-- Trust badges -->
-      <div class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8">
+      <ul class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8" aria-label="WordSolverX trust signals">
         {#each [
           { label: '100% Free', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
           { label: '24 Games', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
           { label: 'Verified Daily', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
         ] as badge}
-          <div class="flex items-center gap-2">
+          <li class="flex items-center gap-2">
             <svg class="w-5 h-5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={badge.icon} /></svg>
             <span class="text-sm font-semibold text-slate-600 dark:text-slate-400">{badge.label}</span>
-          </div>
+          </li>
         {/each}
-      </div>
-    </div>
+      </ul>
+    </header>
   </div>
 </section>
 
@@ -179,52 +193,54 @@
      TODAY'S ANSWERS SECTION
      ═══════════════════════════════════════════════════════════ -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
+  <header class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
     <div>
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
         <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         Updated for {todayStr}
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Today's Answers</h2>
-      <p class="mt-2 text-slate-500 dark:text-slate-400 max-w-xl">Verified answers for every daily puzzle, updated at midnight.</p>
+      <p class="mt-2 text-slate-500 dark:text-slate-400 max-w-xl">Verified answers for every daily puzzle, refreshed on each game&apos;s reset.</p>
     </div>
     <a href="/today" class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors shrink-0">
       View all answers
       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
     </a>
-  </div>
-  <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+  </header>
+  <ul class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" aria-label="Today's answer pages">
     {#each answerTodayGames as game}
-      <div
+      <li
         data-card-filter-item="home-search"
         data-filter-section="answers"
         data-search-text={`${game.name} ${game.href}`}
       >
-        <a
-          href={game.href}
-          class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {game.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-        >
-          <div class="flex items-start justify-between mb-3">
-            <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
-              {game.icon}
+        <article class="h-full">
+          <a
+            href={game.href}
+            class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {game.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="flex items-start justify-between mb-3">
+              <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
+                {game.icon}
+              </div>
+              {#if game.isPopular}
+                <span class="bg-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full text-slate-800 uppercase tracking-wider">
+                  Popular
+                </span>
+              {/if}
             </div>
-            {#if game.isPopular}
-              <span class="bg-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full text-slate-800 uppercase tracking-wider">
-                Popular
-              </span>
-            {/if}
-          </div>
-          <h3 class="text-sm sm:text-base font-bold text-white leading-tight">{game.name}</h3>
-          <div class="mt-2 flex items-center text-xs font-semibold text-white/80 uppercase tracking-wider group-hover:text-white transition-colors">
-            View
-            <svg class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </div>
-        </a>
-      </div>
+            <h3 class="text-sm sm:text-base font-bold text-white leading-tight">{game.name}</h3>
+            <div class="mt-2 flex items-center text-xs font-semibold text-white/80 uppercase tracking-wider group-hover:text-white transition-colors">
+              View
+              <svg class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          </a>
+        </article>
+      </li>
     {/each}
-  </div>
+  </ul>
   <p class="mt-6 text-center text-slate-500" hidden data-card-filter-empty="home-search" data-empty-scope="answers">No answer pages matched your search.</p>
 </section>
 
@@ -234,7 +250,7 @@
 <section class="relative bg-slate-50/70 dark:bg-slate-800/20 border-y border-slate-200/60 dark:border-slate-700/30">
   <div class="absolute inset-0 bg-pattern-grid opacity-[0.3] dark:opacity-[0.1]"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
+    <header class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 text-xs font-bold uppercase tracking-wider mb-3">
           <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
@@ -247,39 +263,41 @@
         View all solvers
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
       </a>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+    </header>
+    <ul class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" aria-label="Solver tools">
       {#each solverTools as tool}
-        <div
+        <li
           data-card-filter-item="home-search"
           data-filter-section="solvers"
           data-search-text={`${tool.name} ${tool.href}`}
         >
-          <a
-            href={tool.href}
-            class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {tool.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div class="flex items-start justify-between mb-3">
-              <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
-                {tool.icon}
+          <article class="h-full">
+            <a
+              href={tool.href}
+              class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {tool.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <div class="flex items-start justify-between mb-3">
+                <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
+                  {tool.icon}
+                </div>
+                {#if tool.isPopular}
+                  <span class="bg-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full text-slate-800 uppercase tracking-wider">
+                    Popular
+                  </span>
+                {/if}
               </div>
-              {#if tool.isPopular}
-                <span class="bg-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full text-slate-800 uppercase tracking-wider">
-                  Popular
-                </span>
-              {/if}
-            </div>
-            <h3 class="text-sm sm:text-base font-bold text-white leading-tight">{tool.name}</h3>
-            <div class="mt-2 flex items-center text-xs font-semibold text-white/80 uppercase tracking-wider group-hover:text-white transition-colors">
-              Open
-              <svg class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </div>
-          </a>
-        </div>
+              <h3 class="text-sm sm:text-base font-bold text-white leading-tight">{tool.name}</h3>
+              <div class="mt-2 flex items-center text-xs font-semibold text-white/80 uppercase tracking-wider group-hover:text-white transition-colors">
+                Open
+                <svg class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </a>
+          </article>
+        </li>
       {/each}
-    </div>
+    </ul>
     <p class="mt-6 text-center text-slate-500" hidden data-card-filter-empty="home-search" data-empty-scope="solvers">No solver tools matched your search.</p>
   </div>
 </section>
@@ -288,42 +306,42 @@
      WHY WORDSOLVERX — Feature cards
      ═══════════════════════════════════════════════════════════ -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-  <div class="text-center mb-14">
+  <header class="text-center mb-14">
     <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Why WordSolverX?</h2>
     <p class="mt-3 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Built by puzzle players who got tired of bouncing between ten different sites.</p>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
+  </header>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-6" aria-label="Why WordSolverX">
+    <li class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
       <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-100/40 to-transparent dark:from-teal-900/20 dark:to-transparent rounded-bl-full"></div>
-      <div class="relative">
+      <article class="relative">
         <div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
         </div>
         <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">Lightning Fast</h3>
-        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Answers are verified and published the moment each puzzle rolls over at midnight. No delays.</p>
-      </div>
-    </div>
-    <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
+        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Answers are verified and published as each puzzle rolls over. No unnecessary waiting.</p>
+      </article>
+    </li>
+    <li class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
       <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-100/40 to-transparent dark:from-amber-900/20 dark:to-transparent rounded-bl-full"></div>
-      <div class="relative">
+      <article class="relative">
         <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         </div>
         <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">Verified Accurate</h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Every answer is pulled straight from each game's source data. When we say it's right, it's right.</p>
-      </div>
-    </div>
-    <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
+      </article>
+    </li>
+    <li class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
       <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-100/40 to-transparent dark:from-cyan-900/20 dark:to-transparent rounded-bl-full"></div>
-      <div class="relative">
+      <article class="relative">
         <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-900/30 flex items-center justify-center mb-4">
           <svg class="w-6 h-6 text-cyan-600 dark:text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
         </div>
         <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-2">40+ Solvers</h3>
         <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Wordle, Quordle, Phoodle, Nerdle, Waffle, Boggle, Hangman — if it's a puzzle, we probably have a solver for it.</p>
-      </div>
-    </div>
-  </div>
+      </article>
+    </li>
+  </ul>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -345,7 +363,7 @@
       
       </p>
       <p>
-        The site updates automatically at midnight based on each game's own puzzle window. Wordle's answer, for example, resets at midnight Eastern. Some games like Betweenle and Worgle roll over at different times, so we adjust for that too. The date you see on each page reflects the actual puzzle date, not just the calendar date where you happen to be sitting.
+        The site updates automatically around each game's own puzzle window. Wordle's answer, for example, follows its reset schedule, while games like Betweenle and Worgle roll over at different times. The date you see on each page reflects the live puzzle date, not just the calendar date where you happen to be sitting.
       
 
       </p>
@@ -466,4 +484,3 @@
     </div>
   </div>
 </article>
-

@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import { generateBreadcrumbSchema } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
     type SearchleFeedback,
@@ -304,6 +304,12 @@
     }
   }
 
+  const pageTitle = 'Searchle Solver - Autocomplete Guess Helper | WordSolverX';
+  const pageDescription =
+    'Solve Searchle fast with entropy-ranked guesses, daily prompts, and feedback tracking. Find the missing autocomplete word in seconds.';
+  const pageUrl = 'https://wordsolverx.com/searchle-solver';
+  const pageImage = 'https://wordsolverx.com/images/searchle-solver.webp';
+
 </script>
 
 <svelte:head>
@@ -330,12 +336,9 @@
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebPage',
-        name: 'Searchle Solver',
-        description: 'Solve Searchle with entropy-ranked autocomplete guesses and feedback tracking.',
-        url: 'https://wordsolverx.com/searchle-solver'
-      },
+      generateWebPageSchema(pageTitle, pageDescription, pageUrl, {
+        image: pageImage
+      }),
       {
         '@type': 'WebApplication',
         name: 'Searchle Solver',

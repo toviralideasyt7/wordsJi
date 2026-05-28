@@ -8,16 +8,17 @@
     PRESTON_HAYES_AUTHOR_KNOWS_ABOUT,
     PRESTON_HAYES_AUTHOR_SAME_AS
   } from '$lib/authors';
+  import { generateWebPageSchema } from '$lib/seo';
 
   const editorialSchemas = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'WebPage',
-        name: 'Editorial Policy - WordSolverX',
-        description:
+        ...generateWebPageSchema(
+          'Editorial Policy - WordSolverX',
           'WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
-        url: 'https://wordsolverx.com/editorial-policy'
+          'https://wordsolverx.com/editorial-policy'
+        )
       },
       {
         '@type': 'Article',

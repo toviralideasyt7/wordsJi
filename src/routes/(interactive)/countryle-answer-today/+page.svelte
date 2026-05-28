@@ -159,7 +159,8 @@
         {/if}
       </section>
 
-      <GeneratedTodayArticle articleKey="countryle-answer-today" articleDate={todayKey} />
+      <GeneratedTodayArticle articleKey="countryle-answer-today" articleDate={data.today?.date ?? todayKey} />
+      
 
       <!-- Recent Answers -->
       <section class="mt-8 rounded-[2rem] border border-teal-100 bg-white p-8 shadow-[0_20px_60px_rgba(16,185,129,0.06)] sm:p-10">
@@ -242,7 +243,7 @@
               Is this page updated daily?
               <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </summary>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600">Yes. This page is updated automatically every day with the latest Countryle answer, . The answer is checked against the official Countryle answer list.</p>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">Yes. This page is updated automatically every day with the latest Countryle answer. The answer is checked against the official Countryle answer list.</p>
           </details>
           <details class="group py-5 first:pt-0 last:pb-0">
             <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900">

@@ -4,7 +4,12 @@
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import { generateHowToSchema, generateBreadcrumbSchema, generateFAQSchema } from '$lib/seo';
+  import {
+    generateBreadcrumbSchema,
+    generateFAQSchema,
+    generateHowToSchema,
+    generateWebPageSchema
+  } from '$lib/seo';
   import type { ColorData } from '$lib/colordle';
 
   type ColordleRuntime = Pick<
@@ -142,12 +147,14 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
 const jsonLdSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'WebPage',
-      name: 'Colordle Solver - Color Puzzle Helper',
-      description: 'Filter Colordle candidates by entering your guess and percentage score. Find the daily color answer faster.',
-      url: 'https://wordsolverx.com/colordle-solver'
-    },
+    generateWebPageSchema(
+      'Colordle Solver - Color Puzzle Helper',
+      'Filter Colordle candidates by entering your guess and percentage score. Find the daily color answer faster.',
+      'https://wordsolverx.com/colordle-solver',
+      {
+        image: 'https://wordsolverx.com/images/colordle-solver.webp'
+      }
+    ),
     {
       '@type': 'WebApplication',
       name: 'Colordle Solver',

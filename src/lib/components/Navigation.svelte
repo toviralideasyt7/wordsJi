@@ -25,6 +25,7 @@
 </script>
 
 <nav
+	aria-label="Primary"
 	class={`sticky top-0 z-50 transition-all duration-300 ${
 		scrolled
 			? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-700/40 shadow-[0_1px_3px_rgb(0_0_0/0.06)]'
@@ -46,24 +47,26 @@
 			</div>
 
 			<!-- Desktop Nav -->
-			<div class="hidden lg:flex lg:items-center lg:gap-0.5">
+			<ul class="hidden lg:flex lg:items-center lg:gap-0.5">
 				{#each navLinks as link}
 					{@const isActive = $page.url.pathname === link.href || (link.href !== '/' && $page.url.pathname?.startsWith(link.href))}
-					<a
-						href={link.href}
-						class={`relative px-3 py-1.5 rounded-md text-[0.8125rem] font-semibold transition-colors duration-200 ${
-							isActive
-								? 'text-teal-700 dark:text-teal-300'
-								: 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-						}`}
-					>
-						{link.name}
-						{#if isActive}
-							<span class="absolute -bottom-[9px] left-2 right-2 h-0.5 rounded-full bg-teal-500 dark:bg-teal-400"></span>
-						{/if}
-					</a>
+					<li>
+						<a
+							href={link.href}
+							class={`relative px-3 py-1.5 rounded-md text-[0.8125rem] font-semibold transition-colors duration-200 ${
+								isActive
+									? 'text-teal-700 dark:text-teal-300'
+									: 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+							}`}
+						>
+							{link.name}
+							{#if isActive}
+								<span class="absolute -bottom-[9px] left-2 right-2 h-0.5 rounded-full bg-teal-500 dark:bg-teal-400"></span>
+							{/if}
+						</a>
+					</li>
 				{/each}
-			</div>
+			</ul>
 
 			<!-- Mobile toggle -->
 			<div class="flex items-center lg:hidden">
@@ -90,20 +93,22 @@
 	<!-- Mobile menu -->
 	{#if isOpen}
 		<div class="lg:hidden border-t border-slate-200 dark:border-slate-700/50 bg-white dark:bg-slate-900 animate-slide-down">
-			<div class="px-4 py-3 space-y-0.5">
+			<ul class="px-4 py-3 space-y-0.5">
 				{#each navLinks as link}
 					{@const isActive = $page.url.pathname === link.href || (link.href !== '/' && $page.url.pathname?.startsWith(link.href))}
-					<a
-						href={link.href}
-						class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors {isActive
-							? 'text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/20'
-							: 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}"
-						onclick={() => isOpen = false}
-					>
-						{link.name}
-					</a>
+					<li>
+						<a
+							href={link.href}
+							class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors {isActive
+								? 'text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/20'
+								: 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}"
+							onclick={() => isOpen = false}
+						>
+							{link.name}
+						</a>
+					</li>
 				{/each}
-			</div>
+			</ul>
 		</div>
 	{/if}
 </nav>

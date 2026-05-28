@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PRERENDER_ENTRIES } from '../src/lib/route-registry.js';
+import { PUBLIC_ROUTE_ENTRIES } from '../src/lib/route-registry.js';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptDir, '..');
@@ -92,7 +92,7 @@ function getRouteLastModified(route) {
 
 function generateManifest() {
 	const entries = Object.fromEntries(
-		PRERENDER_ENTRIES.map((route) => [route, getRouteLastModified(route)]).filter(
+		PUBLIC_ROUTE_ENTRIES.map((route) => [route, getRouteLastModified(route)]).filter(
 			([, lastmod]) => Boolean(lastmod)
 		)
 	);

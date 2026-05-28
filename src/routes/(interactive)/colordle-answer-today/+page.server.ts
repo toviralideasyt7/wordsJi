@@ -390,7 +390,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 'X-Puzzle-Date': actualDateKey
         });
 
-        const pageTitle = `Colordle Answer Today (${formattedDate}) - Daily Color Puzzle Solution & Tips | WordSolver`;
+        const pageTitle = `Colordle Answer Today (${formattedDate}) - Daily Color Puzzle Solution & Tips | WordSolverX`;
         const pageDescription = `Verified Colordle answer for ${formattedDate} with hex code, scoring breakdown, strategy tips, and a full answer archive. Updated daily by real players.`;
         const pageKeywords = `colordle answer today, colordle color puzzle, daily color solution, colordle hex code, colordle tips, colordle archive`;
 
@@ -483,7 +483,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         '@type': 'BreadcrumbList',
                         itemListElement: [
                                 { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },
-                                { '@type': 'ListItem', position: 2, name: 'Game Answers', item: 'https://wordsolverx.com/game-answers' },
+                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordsolverx.com/today' },
                                 { '@type': 'ListItem', position: 3, name: 'Colordle Answer Today', item: 'https://wordsolverx.com/colordle-answer-today' }
                         ]
                 },
@@ -502,7 +502,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         publisher: { '@type': 'Organization', name: 'WordSolverX' },
                         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/colordle-answer-today' },
                         description: pageDescription,
-                        image: ['/colordle-answer-today.webp']
+                        image: ['https://wordsolverx.com/images/colordle-answer-today.webp']
                 }
         ]);
 

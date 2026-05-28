@@ -23,7 +23,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 '@type': 'WebPage',
                 name: `Waffle Hints and Answer for Today (${formattedDate})`,
                 description: `Get Waffle hints and the confirmed Waffle answer for today, ${formattedDate}.`,
-                url: 'https://wordsolverx.com/waffle-answer-today'
+                url: 'https://wordsolverx.com/waffle-answer-today',
+                image: 'https://wordsolverx.com/wordsolverx.webp',
+                dateModified: today.toISOString().split('T')[0]
             })
         };
     }

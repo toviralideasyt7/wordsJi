@@ -1,5 +1,6 @@
 <script lang="ts">
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+  import { generateWebPageSchema } from '$lib/seo';
 
   const archives = [
     { name: 'Wordle', href: '/wordle-answer-archive', description: 'Every NYT Wordle answer since June 2021', color: 'from-teal-500 to-teal-600', icon: 'Wd' },
@@ -53,12 +54,11 @@
         "url": "https://wordsolverx.com/archive",
         "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
       },
-      {
-        "@type": "WebPage",
-        "name": "Puzzle Answer Archive",
-        "description": "Archive hub for past puzzle answers, history pages, and answer calendars.",
-        "url": "https://wordsolverx.com/archive"
-      },
+      generateWebPageSchema(
+        "Puzzle Answer Archive",
+        "Archive hub for past puzzle answers, history pages, and answer calendars.",
+        "https://wordsolverx.com/archive"
+      ),
       {
         "@type": "ItemList",
         "name": "Puzzle archive list",
@@ -72,7 +72,7 @@
   <Breadcrumbs />
 
   <!-- Page header -->
-  <div class="mb-12">
+  <header class="mb-12">
     <div class="flex items-center gap-3 mb-4">
       <div class="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center">
         <svg class="w-5 h-5 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
@@ -85,42 +85,46 @@
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Look up any past answer by date. Every archive links to a browsable history page with puzzle numbers.
     </p>
-  </div>
+  </header>
 
   <!-- Archive card grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" aria-label="Archive pages">
     {#each archives as archive}
-      <a
-        href={archive.href}
-        class="group relative bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-600"
-      >
-        <div class="h-1 bg-gradient-to-r {archive.color}"></div>
-        <div class="p-5">
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br {archive.color} flex items-center justify-center text-white text-lg font-bold shadow-md group-hover:scale-105 transition-transform duration-200">
-              {archive.icon}
+      <li>
+        <article class="h-full">
+          <a
+            href={archive.href}
+            class="group relative block h-full bg-white dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-600"
+          >
+            <div class="h-1 bg-gradient-to-r {archive.color}"></div>
+            <div class="p-5">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br {archive.color} flex items-center justify-center text-white text-lg font-bold shadow-md group-hover:scale-105 transition-transform duration-200">
+                  {archive.icon}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
+                    {archive.name} Archive
+                  </h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                    {archive.description}
+                  </p>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-end">
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  Browse
+                  <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
             </div>
-            <div class="flex-1 min-w-0">
-              <h2 class="text-base font-bold text-slate-900 dark:text-slate-50 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
-                {archive.name} Archive
-              </h2>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
-                {archive.description}
-              </p>
-            </div>
-          </div>
-          <div class="mt-4 flex items-center justify-end">
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-              Browse
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </div>
-        </div>
-      </a>
+          </a>
+        </article>
+      </li>
     {/each}
-  </div>
+  </ul>
 
   <!-- ═══════════════════════════════════════════════════
        SEO ARTICLE CONTENT — 1500+ words
@@ -248,4 +252,3 @@
     </div>
   </article>
 </div>
-

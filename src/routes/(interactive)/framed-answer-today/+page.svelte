@@ -15,7 +15,7 @@
 
   let { data } = $props();
   const todayKey = getMainDailyDateKey();
-  const publishedDate = `${todayKey}T00:00:00Z`;
+  const publishedDate = $derived(`${data.targetDateKey ?? todayKey}T00:00:00Z`);
   const noscriptAnswer = $derived.by(() =>
     data.hasExactEntries
       ? data.entries.map((entry) => `${entry.game}: ${entry.answer}`).join(' | ')
@@ -94,7 +94,7 @@
       {/if}
     </section>
 
-    <GeneratedTodayArticle articleKey="framed-answer-today" articleDate={todayKey} />
+    <GeneratedTodayArticle articleKey="framed-answer-today" articleDate={data.targetDateKey ?? todayKey} />
 
     {#if false}
     <article class="space-y-8">

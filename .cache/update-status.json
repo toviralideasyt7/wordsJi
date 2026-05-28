@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26T22:17:32.561Z",
+  "updatedAt": "2026-05-28T05:23:19.597Z",
   "games": {
     "canuckle": {
       "needsRetry": false,
@@ -11,23 +11,26 @@
       "puzzleCount": 1480
     },
     "framed": {
-      "needsRetry": false,
-      "lastRunAt": "2026-05-26T22:15:50.349Z",
+      "needsRetry": true,
+      "lastRunAt": "2026-05-28T05:23:19.597Z",
       "lastSuccessAt": "2026-05-26T22:15:50.349Z",
-      "lastFailureAt": null,
-      "lastFailureMessage": null,
-      "failedTargets": []
+      "lastFailureAt": "2026-05-28T05:23:19.597Z",
+      "lastFailureMessage": "Failed to refresh 2 Framed puzzles.",
+      "failedTargets": [
+        "titleshot#359",
+        "poster#309"
+      ]
     },
     "countryle": {
       "needsRetry": false,
-      "lastRunAt": "2026-05-26T22:15:48.583Z",
+      "lastRunAt": "2026-05-28T05:23:11.435Z",
       "lastFailureAt": null,
       "lastFailureMessage": null,
       "failedDates": [],
       "missingDates": [],
-      "latestArchiveDate": "2026-05-27",
-      "latestDate": "2026-05-27",
-      "lastSuccessAt": "2026-05-26T22:15:48.583Z",
+      "latestArchiveDate": "2026-05-28",
+      "latestDate": "2026-05-28",
+      "lastSuccessAt": "2026-05-28T05:23:11.435Z",
       "missingCountryRefs": []
     },
     "colordle": {
@@ -42,12 +45,12 @@
     },
     "spotle": {
       "needsRetry": false,
-      "lastRunAt": "2026-05-26T22:15:52.605Z",
-      "lastSuccessAt": "2026-05-26T22:15:52.605Z",
+      "lastRunAt": "2026-05-28T05:23:12.394Z",
+      "lastSuccessAt": "2026-05-28T05:23:12.394Z",
       "lastFailureAt": null,
       "lastFailureMessage": null,
-      "latestDate": "2026-05-26",
-      "totalAnswers": 1302
+      "latestDate": "2026-05-28",
+      "totalAnswers": 1304
     }
   }
 }

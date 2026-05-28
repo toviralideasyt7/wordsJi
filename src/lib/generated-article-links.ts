@@ -1,8 +1,8 @@
-import { PRERENDER_ENTRIES } from '$lib/route-registry.js';
+import { PUBLIC_ROUTE_ENTRIES } from '$lib/route-registry.js';
 
-const validPaths = new Set(PRERENDER_ENTRIES);
-const MAX_PARAGRAPH_WORDS = 24;
-const MAX_PARAGRAPH_SENTENCES = 3;
+const validPaths = new Set(PUBLIC_ROUTE_ENTRIES);
+const MAX_PARAGRAPH_WORDS = 72;
+const MAX_PARAGRAPH_SENTENCES = 4;
 
 function normalizePath(path: string): string {
 	const trimmed = path.replace(/\/+$/, '');
@@ -134,9 +134,23 @@ export function compactGeneratedArticleParagraphs(html: string): string {
 	});
 }
 
+function pruneHeadingRuns(html: string): string {
+	let cleaned = String(html ?? '');
+	let previous = '';
+
+	while (cleaned !== previous) {
+		previous = cleaned;
+		cleaned = cleaned
+			.replace(/<(h2|h3)\b[^>]*>\s*<\/\1>/gi, '')
+			.replace(/<(h2|h3)\b[^>]*>[\s\S]*?<\/\1>(?=(?:\s|<!--[\s\S]*?-->)*<\1\b)/gi, '');
+	}
+
+	return cleaned;
+}
+
 export function sanitizeGeneratedArticleHtml(html: string): string {
 	return compactGeneratedArticleParagraphs(
-		html
+		pruneHeadingRuns(html)
 		.replace(/<h1\b([^>]*)>/gi, '<h2$1>')
 		.replace(/<\/h1>/gi, '</h2>')
 		.replace(

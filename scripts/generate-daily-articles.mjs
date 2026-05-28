@@ -48,12 +48,12 @@ const MAX_STORED_DATES_PER_ROUTE = Math.max(
   1,
   Number.parseInt(process.env.ARTICLE_MAX_STORED_DATES_PER_ROUTE ?? '45', 10) || 45
 );
-const ARTICLE_TOP_P = Number.parseFloat(process.env.ARTICLE_TOP_P ?? '0.8') || 0.8;
-const ARTICLE_TOP_K = Math.max(1, Number.parseInt(process.env.ARTICLE_TOP_K ?? '20', 10) || 20);
+const ARTICLE_TOP_P = Number.parseFloat(process.env.ARTICLE_TOP_P ?? '0.92') || 0.92;
+const ARTICLE_TOP_K = Math.max(1, Number.parseInt(process.env.ARTICLE_TOP_K ?? '40', 10) || 40);
 const ARTICLE_PRESENCE_PENALTY =
-  Number.parseFloat(process.env.ARTICLE_PRESENCE_PENALTY ?? '1.5') || 1.5;
+  Number.parseFloat(process.env.ARTICLE_PRESENCE_PENALTY ?? '0.45') || 0.45;
 const ARTICLE_REPETITION_PENALTY =
-  Number.parseFloat(process.env.ARTICLE_REPETITION_PENALTY ?? '1.0') || 1.0;
+  Number.parseFloat(process.env.ARTICLE_REPETITION_PENALTY ?? '1.05') || 1.05;
 const LOG_SNIPPET_LIMIT = 220;
 const PRIMARY_MODEL = 'qwen/qwen3.5-397b-a17b';
 const NVIDIA_MODEL_CHAIN = [
@@ -1076,7 +1076,7 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `contentGuideHtml` must target 520-780 words after HTML tags are stripped.',
+    '- `contentGuideHtml` must target 820-1200 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not sound like generic AI or SEO filler.',
     '- `bonusHints` must contain exactly 4 distinct strings.',
@@ -1088,8 +1088,9 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     '- Use straightforward American English.',
     '- Keep links internal to wordsolverx.com only when you actually need a link.',
     '- Avoid fake etymology or dictionary trivia unless you are highly confident from general knowledge.',
-    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
-    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
+    '- Prefer fuller, human paragraphs: usually 2-4 sentences, with a single-sentence paragraph only when it lands a sharp takeaway.',
+    '- Vary sentence length naturally. Avoid machine-like runs of tiny sentences, but also avoid bloated walls of text.',
+    '- Never place two H2 headings back to back. Every H2 must earn at least one substantial paragraph before the next section begins.',
     '',
     'Required exact section order inside `contentGuideHtml`:',
     '1. `<h2>5 Hints for Today\'s Wordle</h2>` followed by `<ul class="hints-list">...</ul>`',
@@ -1146,7 +1147,7 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must target 480-720 words after HTML tags are stripped.',
+    '- `articleHtml` must target 760-1100 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- `bonusHints` must contain exactly 4 distinct strings.',
     '- Do not use first-person gameplay anecdotes or made-up scoring data.',
@@ -1154,8 +1155,9 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
     '- Keep the writing grounded in the supplied color name, hex code, hue family, and recent history.',
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Use valid HTML with clear headings and normal paragraphs.',
-    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
-    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
+    '- Prefer fuller, human paragraphs: usually 2-4 sentences, with a single-sentence paragraph only when it lands a sharp takeaway.',
+    '- Vary sentence length naturally. Avoid machine-like runs of tiny sentences, but also avoid bloated walls of text.',
+    '- Never place two H2 headings back to back. Every H2 must earn at least one substantial paragraph before the next section begins.',
     '',
     'Required section order inside `articleHtml`:',
     '1. `<h2>Today\'s Colordle answer at a glance</h2>`',
@@ -1197,13 +1199,13 @@ function getGameGroup(key) {
 }
 
 const temperatureMap = {
-  wordle: 0.7,
-  colordle: 0.7,
-  gamedle: 0.7,
-  geography: 0.7,
-  word: 0.7,
-  visual: 0.7,
-  other: 0.7
+  wordle: 0.78,
+  colordle: 0.8,
+  gamedle: 0.76,
+  geography: 0.78,
+  word: 0.78,
+  visual: 0.8,
+  other: 0.77
 };
 
 const ROUTE_SECTION_BLUEPRINTS = {
@@ -1485,7 +1487,7 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '}',
     '',
     'Critical rules:',
-    '- `articleHtml` must target 520-780 words after HTML tags are stripped.',
+    '- `articleHtml` must target 780-1200 words after HTML tags are stripped.',
     '- Do not use markdown fences.',
     '- Do not mention AI, prompts, models, or automation.',
     '- Do not use first-person gameplay anecdotes such as "I guessed", "I burned", or "my streak".',
@@ -1495,8 +1497,9 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '- Make the article feel like a real daily update tied to the current date and the page purpose.',
     '- Keep the tone natural, specific, and non-corporate.',
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
-    '- Keep paragraphs visually short: 1-2 sentences is preferred, 3 only when needed.',
-    '- Keep most sentences under 16 words and avoid dense wall-of-text blocks.',
+    '- Prefer fuller, human paragraphs: usually 2-4 sentences, with a single-sentence paragraph only when it lands a sharp takeaway.',
+    '- Vary sentence length naturally. Avoid machine-like runs of tiny sentences, but also avoid bloated walls of text.',
+    '- Never place two H2 headings back to back. Every H2 must earn at least one substantial paragraph before the next section begins.',
     '- After the first H2, write a direct 40-60 word paragraph that gives immediate value to the reader.',
     '- Make that first paragraph quote-ready and self-contained so it works for featured snippets and AI citations.',
     '- Let one section read like a believable post-game takeaway from a skilled editor: "A careful player usually notices..." is fine. Fake "I played this" language is not.',
@@ -1734,7 +1737,7 @@ async function callChatCompletion({ baseUrl, apiKey, model, prompt, temperature 
         {
           role: 'system',
           content:
-            'You write for a puzzle answer site in an experienced editor voice. No fluff, no filler, no corporate speak, no "welcome to" intros, and no first-person gameplay diaries. Never claim personal playtesting, streaks, or private tracking unless the prompt explicitly provides them. You must return strictly valid JSON matching the requested shape.'
+            'You write for a puzzle answer site in an experienced editor voice. No fluff, no filler, no corporate speak, no "welcome to" intros, and no first-person gameplay diaries. Vary sentence length, keep the pacing human, and make each section feel grounded in visible page facts. Never claim personal playtesting, streaks, or private tracking unless the prompt explicitly provides them. You must return strictly valid JSON matching the requested shape.'
         },
         {
           role: 'user',

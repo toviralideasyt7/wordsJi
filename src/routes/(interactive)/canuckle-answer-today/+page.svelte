@@ -45,6 +45,7 @@
     name: data.meta?.title ?? 'Canuckle Answer Today',
     description: data.meta?.description ?? '',
     url: 'https://wordsolverx.com/canuckle-answer-today',
+    image: data.meta?.featuredImage ?? 'https://wordsolverx.com/wordsolverx.webp',
     dateModified: data.todayPuzzle?.date || new Date().toISOString().split('T')[0]
   })}</script>`}
 </svelte:head>

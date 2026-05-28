@@ -336,7 +336,7 @@
                         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                                 <div class="flex items-center gap-2">
                                         <span class="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center">SM</span>
-                                        <h1 class="text-xl font-bold">Soundmap Solver</h1>
+                                        <p class="text-xl font-bold">Soundmap Solver</p>
                                 </div>
                                 <div class="flex items-center gap-3">
                                         <button

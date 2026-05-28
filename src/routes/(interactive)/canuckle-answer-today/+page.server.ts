@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { fetchLiveCanucklePuzzle } from '$lib/live-answer-sources';
 import canuckleRaw from '$lib/wordlebot-wasm/assets/generated/canuckle-data.json';
 import type { PageServerLoad } from './$types';
 
@@ -18,29 +19,34 @@ interface CanuckleData {
 
 const canuckleData = canuckleRaw as CanuckleData;
 const canucklePuzzles = [...canuckleData.puzzles].sort((a, b) => a.index - b.index);
-const puzzleByDate = new Map(canucklePuzzles.map((puzzle) => [puzzle.date, puzzle]));
-const puzzlePositionByIndex = new Map(
-        canucklePuzzles.map((puzzle, position) => [puzzle.index, position])
-);
+const latestBundledDateKey = canucklePuzzles[canucklePuzzles.length - 1]?.date ?? null;
 
-function getLatestPuzzleOnOrBefore(dateKey: string): CanucklePuzzle | null {
-        for (let i = canucklePuzzles.length - 1; i >= 0; i -= 1) {
-                if (canucklePuzzles[i].date <= dateKey) {
-                        return canucklePuzzles[i];
+function buildPuzzlePositionMap(puzzles: CanucklePuzzle[]): Map<number, number> {
+        return new Map(puzzles.map((puzzle, position) => [puzzle.index, position]));
+}
+
+function getLatestPuzzleOnOrBefore(puzzles: CanucklePuzzle[], dateKey: string): CanucklePuzzle | null {
+        for (let i = puzzles.length - 1; i >= 0; i -= 1) {
+                if (puzzles[i].date <= dateKey) {
+                        return puzzles[i];
                 }
         }
 
         return null;
 }
 
-function getPuzzleForDate(targetDate: Date): CanucklePuzzle | null {
+function getPuzzleForDate(puzzles: CanucklePuzzle[], targetDate: Date): CanucklePuzzle | null {
         const dateKey = format(targetDate, 'yyyy-MM-dd');
-        const exact = puzzleByDate.get(dateKey);
+        const exact = puzzles.find((puzzle) => puzzle.date === dateKey) ?? null;
         if (exact) return exact;
-        return getLatestPuzzleOnOrBefore(dateKey);
+        return getLatestPuzzleOnOrBefore(puzzles, dateKey);
 }
 
-function getPreviousPuzzle(puzzle: CanucklePuzzle | null): CanucklePuzzle | null {
+function getPreviousPuzzle(
+        puzzles: CanucklePuzzle[],
+        puzzlePositionByIndex: Map<number, number>,
+        puzzle: CanucklePuzzle | null
+): CanucklePuzzle | null {
         if (!puzzle) {
                 return null;
         }
@@ -50,10 +56,14 @@ function getPreviousPuzzle(puzzle: CanucklePuzzle | null): CanucklePuzzle | null
                 return null;
         }
 
-        return canucklePuzzles[position - 1] ?? null;
+        return puzzles[position - 1] ?? null;
 }
 
-function getLast30Puzzles(basePuzzle: CanucklePuzzle | null): CanucklePuzzle[] {
+function getLast30Puzzles(
+        puzzles: CanucklePuzzle[],
+        puzzlePositionByIndex: Map<number, number>,
+        basePuzzle: CanucklePuzzle | null
+): CanucklePuzzle[] {
         if (!basePuzzle) {
                 return [];
         }
@@ -63,21 +73,39 @@ function getLast30Puzzles(basePuzzle: CanucklePuzzle | null): CanucklePuzzle[] {
                 return [];
         }
 
-        return canucklePuzzles.slice(Math.max(0, position - 29), position + 1).reverse();
+        return puzzles.slice(Math.max(0, position - 29), position + 1).reverse();
 }
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
         const today = getPuzzleDateForGame('canuckle');
         const dateKey = format(today, 'yyyy-MM-dd');
+        let puzzles = canucklePuzzles;
+        const shouldRefreshFromSource =
+                !latestBundledDateKey || latestBundledDateKey < dateKey || !puzzles.some((puzzle) => puzzle.date === dateKey);
 
-        const todayPuzzle = getPuzzleForDate(today);
+        if (shouldRefreshFromSource) {
+                try {
+                        const livePuzzle = await fetchLiveCanucklePuzzle(dateKey);
+                        if (livePuzzle && !puzzles.some((puzzle) => puzzle.index === livePuzzle.index)) {
+                                puzzles = [...puzzles, livePuzzle].sort((left, right) => left.index - right.index);
+                        }
+                } catch (error) {
+                        console.warn(
+                                `Unable to refresh Canuckle live puzzle for ${dateKey}:`,
+                                error instanceof Error ? error.message : String(error)
+                        );
+                }
+        }
+
+        const puzzlePositionByIndex = buildPuzzlePositionMap(puzzles);
+        const todayPuzzle = getPuzzleForDate(puzzles, today);
         const isFallback = todayPuzzle ? todayPuzzle.date !== dateKey : false;
         const puzzleDate = todayPuzzle ? new Date(`${todayPuzzle.date}T12:00:00Z`) : today;
         const visibleDateKey = todayPuzzle?.date ?? dateKey;
         const formattedDate = isFallback ? format(puzzleDate, 'MMMM d, yyyy') : format(today, 'MMMM d, yyyy');
 
         if (!todayPuzzle) {
-                setHeaders({ 'X-Puzzle-Date': dateKey });
+                setHeaders({ 'X-Puzzle-Date': dateKey, 'X-Edge-Cache-Bypass': '1' });
                 return {
                         error: true,
                         todayPuzzle: null,
@@ -96,12 +124,15 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 };
         }
 
-        const yesterdayPuzzle = getPreviousPuzzle(todayPuzzle);
+        const yesterdayPuzzle = getPreviousPuzzle(puzzles, puzzlePositionByIndex, todayPuzzle);
 
-        setHeaders({ 'X-Puzzle-Date': visibleDateKey });
+        setHeaders({
+                'X-Puzzle-Date': visibleDateKey,
+                ...(isFallback ? { 'X-Edge-Cache-Bypass': '1' } : {})
+        });
 
-        const last30 = getLast30Puzzles(todayPuzzle);
-        const pageTitle = `Canuckle Answer Today (${formattedDate}) - Daily Canadian Puzzle Solution & Tips | WordSolver`;
+        const last30 = getLast30Puzzles(puzzles, puzzlePositionByIndex, todayPuzzle);
+        const pageTitle = `Canuckle Answer Today (${formattedDate}) - Daily Canadian Puzzle Solution & Tips | WordSolverX`;
         const pageDescription = `Today's Canuckle answer for ${formattedDate}, yesterday's word, the Canadian fact, and a searchable archive. Updated daily by real players.`;
         const pageKeywords = `canuckle answer today, canuckle word, canuckle hint, canuckle fact, canuckle archive, canadian wordle`;
 
@@ -195,7 +226,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         '@type': 'BreadcrumbList',
                         itemListElement: [
                                 { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },
-                                { '@type': 'ListItem', position: 2, name: 'Game Answers', item: 'https://wordsolverx.com/game-answers' },
+                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordsolverx.com/today' },
                                 { '@type': 'ListItem', position: 3, name: 'Canuckle Answer Today', item: 'https://wordsolverx.com/canuckle-answer-today' }
                         ]
                 },
@@ -214,7 +245,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         publisher: { '@type': 'Organization', name: 'WordSolverX' },
                         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/canuckle-answer-today' },
                         description: pageDescription,
-                        image: ['/images/canuckle-answer-today.webp']
+                        image: ['https://wordsolverx.com/images/canuckle-answer-today.webp']
                 }
         ]);
 

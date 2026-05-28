@@ -1,8 +1,11 @@
 <script lang="ts">
   import GameCard from '$lib/components/GameCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  let { data } = $props<{ data: { todayStr: string } }>();
+  import { generateWebPageSchema } from '$lib/seo';
+
+  let { data } = $props<{ data: { todayStr: string; todayKey: string } }>();
   let todayStr = $derived(data.todayStr);
+  let todayKey = $derived(data.todayKey);
 
   const games = [
     { name: 'Wordle', href: '/wordle-answer-today', description: "Hints first, answer when you're ready.", color: 'from-teal-500 to-teal-700', icon: 'W' },
@@ -55,12 +58,12 @@
         'description': "All of today's puzzle answers for " + todayStr,
         'url': 'https://wordsolverx.com/today'
       },
-      {
-        '@type': 'WebPage',
-        'name': "Today's Puzzle Answers",
-        'description': "Hub page for all of today's verified puzzle answers.",
-        'url': 'https://wordsolverx.com/today'
-      }
+      generateWebPageSchema(
+        "Today's Puzzle Answers",
+        "Hub page for all of today's verified puzzle answers.",
+        'https://wordsolverx.com/today',
+        { dateModified: todayKey }
+      )
     ]
   })}</script>`}
 </svelte:head>
@@ -69,7 +72,7 @@
   <Breadcrumbs />
 
   <!-- Page header -->
-  <div class="mb-12">
+  <header class="mb-12">
     <div class="flex items-center gap-3 mb-4">
       <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center">
         <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -82,7 +85,7 @@
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Every daily answer on one page. Pick a game, see the answer, move on with your day.
     </p>
-  </div>
+  </header>
 
   <!-- Search bar -->
   <form class="mb-10 flex max-w-2xl overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/90 shadow-sm" data-card-filter-form>
@@ -99,13 +102,15 @@
   </form>
 
   <!-- Game card grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5" aria-label="Today's answer pages">
     {#each games as game}
-      <div data-card-filter-item="today-search" data-filter-section="answers" data-search-text={`${game.name} ${game.description} ${game.href}`}>
-        <GameCard name={game.name} href={game.href} description={game.description} color={game.color} icon={game.icon} actionText="View Answer" />
-      </div>
+      <li data-card-filter-item="today-search" data-filter-section="answers" data-search-text={`${game.name} ${game.description} ${game.href}`}>
+        <article class="h-full">
+          <GameCard name={game.name} href={game.href} description={game.description} color={game.color} icon={game.icon} actionText="View Answer" />
+        </article>
+      </li>
     {/each}
-  </div>
+  </ul>
   <p class="mt-6 text-center text-slate-500 dark:text-slate-400" hidden data-card-filter-empty="today-search" data-empty-scope="answers">No answer pages matched your search.</p>
 
   <!-- ═══════════════════════════════════════════════════
@@ -260,4 +265,3 @@
     </div>
   </article>
 </div>
-
