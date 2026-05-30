@@ -1,7 +1,24 @@
 {
   "articleKey": "contexto-answer-today",
-  "generatedAt": "2026-05-27T07:47:59.458Z",
+  "generatedAt": "2026-05-30T16:46:39.178Z",
   "byDate": {
+    "2026-05-31": {
+      "articleKey": "contexto-answer-today",
+      "date": "2026-05-31",
+      "title": "Contexto Answer Today: Rank Patterns and Smart Guessing Strategy",
+      "summary": "Understanding Contexto's semantic ranking system helps you decode rank patterns and make smarter guesses. Here's how to read today's board and cut your solve time.",
+      "articleHtml": "<p>Contexto ranks every guess by semantic distance from the target—not by spelling tricks or letter patterns. That single fact changes how you should approach every board. Today's puzzle on May 31, 2026 follows the same core logic as every other day: find the right category, then narrow within it.</p><h2>Contexto answer today: what the rank pattern usually means</h2>\n<p>When you type a guess, the number beside it tells you how close that word sits to the target in Contexto's semantic map. Lower ranks mean you're circling the right neighborhood; higher ranks mean you've wandered into a different conceptual territory entirely. A careful player notices that early guesses cluster around general concepts—things connected broadly to whatever the target represents. If your first three guesses all land in the top 500, you're probably in the right ballpark. If they're scattered across ranks 2000, 5000, and 8000, you've likely picked a weak entry point and should back up.</p>\n<p>The hint widget on today's page shows which direction your recent guesses lean. Use that signal before piling more guesses into a cold trail. The archive link in the sidebar lets you compare today's rank trajectory against previous days' solves—useful for calibrating when a rank of 847 feels promising versus when it's a dead end.</p><p>Most players waste guesses chasing synonyms when they should be checking whether they're even in the right category. The rank tells you distance, not direction—you still have to figure out which way to walk.</p><h2>When to pivot categories instead of forcing synonyms</h2>\n<p>Here's where most solvers get stuck: they find a word that ranks reasonably well, then spend five or six guesses rotating through synonyms of that word. Synonyms often sit at similar ranks because Contexto maps them semantically close together. If",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-30T16:46:39.175Z",
+        "wordCount": 292,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-27": {
       "articleKey": "contexto-answer-today",
       "date": "2026-05-27",
