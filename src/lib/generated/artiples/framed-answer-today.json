@@ -1,7 +1,24 @@
 {
   "articleKey": "framed-answer-today",
-  "generatedAt": "2026-05-27T16:51:12.933Z",
+  "generatedAt": "2026-05-31T16:47:07.813Z",
   "byDate": {
+    "2026-06-01": {
+      "articleKey": "framed-answer-today",
+      "date": "2026-06-01",
+      "title": "Framed Answer Today: What the Opening Frame Gives Away",
+      "summary": "Today's Framed puzzle rewards early genre recognition over specific plot recall. Here's how careful players read the opening stills and when to stop guessing.",
+      "articleHtml": "<p>The opening still on today's Framed puzzle tends to telegraph the era and setting before anything else. Players who anchor on production design cues—costume silhouettes, color grading patterns, architectural details—often narrow the field to two or three decades within the first frame. That speed matters because each wrong guess costs a reveal.</p><h2>Framed answer today: what the opening still usually gives away</h2><p>Most Framed openers show establishing shots rather than character close-ups. A skyline, a room interior, a field—these frames exist to set period and place. Today's puzzle follows that pattern. The first still places you in a recognizable decade within seconds if you've seen enough movies from that era. Look for automotive design, signage styles, and clothing cuts before you even think about plot. Those visual markers age slower than dialogue-dependent comedy or niche thriller plots. The archive link on today's page lets you compare how past puzzles used similar framing strategies, which trains your eye for what the game considers \"obvious\" versus \"subtle.\"</p><p>A careful player usually notices that certain production choices recur across similar release years. If the lighting feels warm and desaturated, you're often looking at late-90s through mid-2000s material. Cold, high-contrast digital sharpness points toward post-2010 work. These aren't hard rules, but they create a probability map that keeps you from chasing impossible answers.</p><h2>How genre beats exact movie recall early</h2><p>Genre identification works faster than detailed plot memory for most players. When you see action choreography in the first frame, you know you're not parsing a slow-burn drama. That categorization eliminates enormous swaths of the potential answer space without requiring you to remember the film's third act.</p><p>The clue widget on today's page sometimes hints at genre without spelling it out. Phrase choices in those hints tend toward tone indicators—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T16:47:07.808Z",
+        "wordCount": 296,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-28": {
       "articleKey": "framed-answer-today",
       "date": "2026-05-28",

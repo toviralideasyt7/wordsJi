@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-05-27T16:57:44.589Z",
+  "generatedAt": "2026-05-31T16:55:08.348Z",
   "byDate": {
+    "2026-06-01": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-06-01",
+      "title": "Worgle Answer Today: Welsh Letter Patterns and Solve Paths for June 1, 2026",
+      "summary": "Verify the Worgle answer for June 1, 2026, using our solver and archive. Learn how Welsh digraphs like DD and CH change standard guessing strategies.",
+      "articleHtml": "<h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>\n<p>The answer card above reveals the correct five-letter Welsh word for June 1, 2026. If your grid is still blank, check the solver link directly under the reveal to see valid matches for today's specific letter constraints. This page updates daily with the verified solution, so refresh if you are seeing yesterday's cache. Use the archive tool below the answer to confirm this word fits the historical sequence before moving on.</p>\n<p>Players often stare at a grayed-out 'Y' and assume they made a mistake. In Welsh, that letter acts as a vowel just as often as a consonant. Seeing it in the middle or end of a word isn't an anomaly; it is the standard structure for hundreds of common nouns. The puzzle design relies on this duality to trap solvers who treat 'Y' strictly as a consonant based on English habits.</p>\n<p>Today's puzzle likely leaned into these double-duty letters. A careful player notices that the hint widgets on this page flag specific digraphs before the final reveal. If you missed the 'DD' or 'CH' clue, the answer probably felt impossible until the last guess. The solver tool breaks these pairs down automatically, showing why certain combinations are mandatory rather than optional.</p>\n<h2>How to read common Welsh digraphs without overforcing them</h2>\n<p>Welsh treats pairs like DD, FF, LL, and RH as single letters with distinct sounds. This changes the geometry of the grid completely. When you place an 'L' in the first slot and it turns yellow, you might instinctively move it to the second or third spot. In Worgle, that yellow 'L' could belong to an 'LL' digraph that needs to stay together in a specific position.</p>\n<p>Splitting these pairs usually kills the solve path. If the answer contains 'LL', guessing a word with a single 'L' in a different spot wastes a valuable attempt. The game logic respects the orthography, meaning 'LL' occupies two boxes but functions as one phonetic unit. Ignoring this rule leads to grids full of green and yellow tiles that simply cannot form a valid word.</p>\n<p>Check the hint section on the current page for digraph warnings. Some days the puzzle highlights these pairs explicitly to save you from burning guesses on invalid splits. If no hint appears, assume the answer respects standard Welsh spelling rules where these double letters never separate. The archive shows a consistent pattern of digraph-heavy answers on Mondays, so keep that in mind for future starts.</p>\n<h2>Where English guessing habits break the solve</h2>\n<p>English speakers hunt for 'E', 'A', and 'O' as their primary vowels. This strategy fails immediately in Welsh, where 'W' and 'Y' carry the vocalic load. Starting with a word like",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T16:55:08.345Z",
+        "wordCount": 456,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-28": {
       "articleKey": "worgle-answer-today",
       "date": "2026-05-28",
