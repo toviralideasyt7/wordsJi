@@ -1,7 +1,24 @@
 {
   "articleKey": "searchle-answer-today",
-  "generatedAt": "2026-05-30T16:53:32.003Z",
+  "generatedAt": "2026-05-31T20:00:23.961Z",
   "byDate": {
+    "2026-06-01": {
+      "articleKey": "searchle-answer-today",
+      "date": "2026-06-01",
+      "title": "Searchle Answer Today: June 1, 2026",
+      "summary": "Understanding how Google's autocomplete predictions work helps solve Searchle puzzles by revealing common search patterns and popular completions.",
+      "articleHtml": "<p>Searchle lives in the gap between what you type and what Google thinks everyone else asks. Today's puzzle tests whether you can predict which autocomplete suggestion matches the hidden prompt. The reveal card shows the exact phrase—and once you see it, the logic usually clicks fast.</p><h2>Searchle answer today: what the prompt is really asking</h2>\n<p>The prompt behind today's Searchle isn't a trivia question. It's a fragment designed to trigger specific autocomplete predictions. A careful player notices that the missing words form a pattern Google has seen millions of times—usually because real people typed that exact sequence before. The answer above completes a phrase that appears regularly enough in search logs to rank as a top suggestion. When you compare the hint widget against the reveal card, you'll see the solution fits a recognizable search behavior rather than obscure knowledge.</p><h2>How autocomplete logic narrows the answer</h2>\n<p>Google's autocomplete prioritizes popularity, recency, and safety. That means the most-clicked completion almost always beats clever alternatives. On this board, the hint widget gives you the first few words of the target phrase. Your job is to finish it the way most searchers would. The solver link on this page can help you test different completions if you're stuck between two plausible options. One thing worth noting: hyphenated terms, brand names, and proper nouns tend to appear verbatim, while generic phrases get simplified. Check whether the answer uses standard capitalization or lowercase—Google often drops caps in autocomplete results.</p><h2>Why obvious phrasing usually wins</h2>\n<p>The biggest mistake players make is overthinking. Searchle rewards the boring answer. If you've narrowed it down to \"how to fix a leaky faucet\" versus \"how to fix a leaky faucet youtube tutorial,\" go with the shorter version. Autocomplete favors concise completions that match the highest volume of searches. Longer qualifiers like \"best,\" \"easy,\" or \"fast\" only appear when they meaningfully change the search intent. The archive link lets you review past puzzles to confirm this pattern holds across different categories—from cooking questions to tech troubleshooting to pop culture queries.</p><h2>How to read tomorrow's Searchle faster</h2><h2>Questions players keep asking</h2><h3>Does capitalization matter in Searchle answers?</h3>\n<p>Usually not. Google strips most capitalization in autocomplete results, so the answer typically appears in lowercase or title case depending on what makes sense grammatically. If the hint widget shows mixed casing, treat it as style guidance rather than a hard rule.</p><h3>What happens if I guess the wrong completion?</h3>\n<p>The reveal card shows the correct phrase regardless of your guess. Some players use incorrect attempts to narrow down the category or scope of the prompt. Others jump straight to the solver if they want to check their reasoning against the expected answer.</p><h3>Are Searchle prompts based on current events?</h3>\n<p>Some days yes, some days no. Pop culture, trending topics, and evergreen questions all appear. The puzzle draws from whatever generates enough search volume to register in autocomplete data. Checking the date context helps—today's puzzle may reference something specific to early June 2026.</p><h3>Can players use the solver to check partial guesses?</h3>\n<p>The solver on this page accepts your proposed completion and tells you whether it matches the target phrase. It's useful when you've narrowed it to two or three options and want confirmation without spoiling the entire answer.</p><h3>Why do some prompts have multiple plausible completions?</h3>\n<p>Autocomplete sometimes suggests several equally popular completions for the same fragment. In those cases, the puzzle designers pick one based on clarity and search volume. If you spot ambiguity, that's actually a sign you're reading the prompt correctly—you're just seeing the messiness of real search behavior reflected in the game.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T20:00:23.954Z",
+        "wordCount": 602,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-31": {
       "articleKey": "searchle-answer-today",
       "date": "2026-05-31",
