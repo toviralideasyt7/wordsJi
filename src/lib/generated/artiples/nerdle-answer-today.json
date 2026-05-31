@@ -1,7 +1,24 @@
 {
   "articleKey": "nerdle-answer-today",
-  "generatedAt": "2026-05-29T21:11:54.036Z",
+  "generatedAt": "2026-05-31T07:15:06.353Z",
   "byDate": {
+    "2026-05-31": {
+      "articleKey": "nerdle-answer-today",
+      "date": "2026-05-31",
+      "title": "Nerdle Answer Today: May 31, 2026 | Equation Hints & Solver Guide",
+      "summary": "Today's Nerdle puzzle requires careful operator placement and complete digit coverage. Here's how to read the structural hints and avoid common dead ends.",
+      "articleHtml": "<p>Today's Nerdle puzzle presents an eight-character equation where the equals sign sits at position 7. That positioning alone tells you the left side needs six characters of math before the reveal. A careful player recognizes that late equals signs often mean longer left-side expressions—sometimes involving nested operations or multiple operators packed together.</p><h2>Nerdle answer today: what the equation structure is hinting at</h2>\n<p>The eight-character constraint is tight. Every slot matters. If you're seeing an equals sign at position 7, you've got six positions to build everything that comes before it. That's enough room for a three-digit number, an operator, another two-digit number—but it's also just enough for something like a single digit, operator, single digit, operator, single digit. The difference between those paths is significant. Longer numbers on the left side reduce flexibility; shorter builds leave room for more operators, which can open up calculation paths a careless guess would miss.</p><p>Check the color feedback on your board. Tiles that went green tell you exact matches—those digits and operators are locked. Yellow tiles show up but in wrong positions. Gray tiles are absent entirely. Reading that feedback systematically matters more than any single guess. Many players waste attempts because they chase a pattern they <em>want</em> rather than reading what the board is <em>telling</em> them.</p><h2>How operators and digit coverage do the heavy lifting</h2>\n<p>Nerdle's core challenge is covering 0-9 with exactly three unique digits repeating across the equation. That constraint isn't arbitrary—it forces you to think about digit economy from the start. If your current attempt uses four different digits, you're already working against the puzzle's architecture.</p><p>Operators carry weight here. Addition and subtraction are commutative, but multiplication and division introduce strict ordering requirements. A",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T07:15:06.346Z",
+        "wordCount": 285,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-30": {
       "articleKey": "nerdle-answer-today",
       "date": "2026-05-30",
