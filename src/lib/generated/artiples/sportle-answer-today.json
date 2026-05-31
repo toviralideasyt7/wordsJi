@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-05-27T18:44:09.936Z",
+  "generatedAt": "2026-05-31T17:53:48.610Z",
   "byDate": {
+    "2026-06-01": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-06-01",
+      "title": "Sportle Answer Today: Your Quick Reference Guide",
+      "summary": "Find today's Sportle answer instantly. This guide walks through how to read the reveal, avoid common mistakes, and sharpen your next guess.",
+      "articleHtml": "<p>Every Sportle player eventually hits a board where the obvious answer doesn't match what's showing. That's when knowing how to parse this page becomes the difference between a quick verification and a wasted minute scrolling archives.</p><h2>Sportle answer today: what matters most on this page</h2>\n<p>The answer card at the top of today's Sportle board holds the single piece of information you're after. On a typical day, the reveal shows the sport, format, and enough context clues to confirm whether your current guess aligns with the intended answer. If you've already submitted a guess elsewhere, check that card first—it'll tell you immediately if you're on track or need to pivot. The archive link below the answer lets you pull historical patterns if today's clue feels familiar from a past week.</p><h2>What to pay attention to before you reveal anything else</h2>\n<p>Most players jump straight to the hint widget and skip the contextual framing above it. Big mistake on Sportle. The header text often narrows the field before you spend a hint—knowing whether you're looking at an individual sport versus a team event, or outdoor venue versus indoor arena, cuts your search space significantly. The color coding on the reveal card also carries information: position names, equipment markers, and league abbreviations all appear as distinct visual tiers. A careful player notices these layers before touching the solver tool.</p><p>When hints do appear, they're ordered by difficulty. The first hint typically identifies the sport family (think court versus field, racket versus ball). Subsequent hints add specificity around positions or famous athletes associated with the answer. Work through them sequentially rather than skipping ahead—that way you burn fewer hints and preserve your streak score for the harder boards later in the week.</p><h2>Mistakes that usually cost the clean solve</h2>\n<p>The single most common error on Sportle's daily format is confusing similar-sounding sports or positions. Goalkeeper and goaltender look interchangeable until one clue specifies ice. Similarly, midfielder and center back both cover ground in soccer, but the venue type or equipment hint will separate them quickly if you've paid attention to earlier layers.</p><p>Another trap: assuming the answer refers to American sports conventions when the puzzle draws from global athletics. A defender in rugby isn't playing the same position as a defender in basketball, even though the word appears in both sports. Check the venue hint before locking in a positional answer—the stadium or arena name often signals which league or country is in play.</p><p>Players who skip the archive link are leaving data on the table. Past Sportle boards reuse structural patterns. If you've seen a similar clue layout before, comparing the two reveals sharpens your pattern recognition for future rounds.</p><h2>How to play the next Sportle more efficiently</h2>\n<p>Before your next daily board drops, build a mental taxonomy of sports categories you'll encounter. Group answers by equipment (stick, bat, racquet, ball type), then by venue (field dimensions, court markings, water-based). That layered thinking pays off when the hint system asks you to identify sport characteristics rather than naming the exact term.</p><p>The solver tool works fastest when you've already narrowed the sport family using the initial hints. Feed it specific attributes—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T17:53:48.606Z",
+        "wordCount": 529,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-28": {
       "articleKey": "sportle-answer-today",
       "date": "2026-05-28",

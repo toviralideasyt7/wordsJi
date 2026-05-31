@@ -1,7 +1,24 @@
 {
   "articleKey": "contexto-answer-today",
-  "generatedAt": "2026-05-30T16:46:39.178Z",
+  "generatedAt": "2026-05-31T17:45:46.160Z",
   "byDate": {
+    "2026-06-01": {
+      "articleKey": "contexto-answer-today",
+      "date": "2026-06-01",
+      "title": "Contexto Answer Today: How Ranking Works and Today's Solve Strategy",
+      "summary": "Understanding Contexto's semantic ranking system helps you solve faster by targeting high-value guesses instead of wasting attempts on low-relevance words.",
+      "articleHtml": "<p>Contexto ranks your guesses by how semantically close they are to the hidden answer—not by spelling tricks or letter patterns. That distinction shapes everything about how you should approach the board.</p><p>The green number next to each guess tells you its rank. A lower rank means your word hit closer to the target's meaning. Players who study these numbers early tend to find the answer in fewer tries than those who treat Contexto like a standard word game.</p><h2>Contexto answer today: what the rank pattern usually means</h2><p>When you submit a guess, Contexto returns a numerical rank reflecting semantic distance. A word scoring in the top 50 is generally considered highly relevant. Anything above 500 often signals you're drifting into unrelated territory. Watch how your ranks cluster as you narrow down—the jumps between scores tell you whether you're getting warmer or veering off course.</p><p>A careful player usually notices that rank drops aren't always linear. Sometimes a single word will jump from rank 200 straight to rank 15, revealing a category shift you hadn't considered. That's the signal worth acting on.</p><p>Use the <a href=\"/contexto-solver\">Contexto solver</a> if you want to check which word families sit in your current range before committing to your next guess.</p><h2>When to pivot categories instead of forcing synonyms</h2><p>Players get stuck when they chase synonyms of a word that's already ranked 80. The solution might live in a completely different category—think of the hidden answer's function, location, or common associations rather than its definition.</p><p>Suppose you've guessed several animals and they're all landing around rank 150. The answer might be a type of habitat, a sound animals make, or something entirely abstract. Pivoting isn't admitting defeat; it's following the data.</p><p>Check the <a href=\"/contexto-archive\">Contexto archive</a> to see how past puzzles rewarded category shifts. Many solutions sit in adjacent concepts rather than direct synonyms.</p><h2>Why broad words beat clever words here</h2><p>Contexto rewards breadth. A general word like \"emotion\" typically ranks higher than a specific one like \"melancholy",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-05-31T17:45:46.157Z",
+        "wordCount": 330,
+        "editorialVersion": 2
+      }
+    },
     "2026-05-31": {
       "articleKey": "contexto-answer-today",
       "date": "2026-05-31",
