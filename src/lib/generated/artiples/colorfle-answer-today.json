@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-01T09:04:17.963Z",
+  "generatedAt": "2026-06-01T16:46:35.834Z",
   "byDate": {
+    "2026-06-02": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-06-02",
+      "title": "Colorfle Answer Today: How to Solve Today's Mix",
+      "summary": "Master additive color mixing in Colorfle by reading RGB values strategically. This guide walks through today's puzzle logic and common solve paths.",
+      "articleHtml": "<p>Today's Colorfle puzzle tests your understanding of how red, green, and blue light combine to produce a target color. If you've been guessing without a system, the reveal probably felt frustrating. Here's how a careful reader approaches the mix.</p><h2>Colorfle answer today: how the mix should be read</h2>\n<p>The core mechanic asks you to identify three source colors that, when mixed additively, recreate the target shown on the board. Think television pixels, not art class paint. Red plus green yields yellow. Green plus blue produces cyan. All three together hits white. Reading the target means breaking down its RGB percentages into three components that sum to those values. Players who start with the dominant channel usually narrow their options faster than those who treat every color as equally likely.</p><h2>What the source colors are telling you</h2>\n<p>Each clue widget on today's page represents a potential source color. A careful player checks whether the hints eliminate certain channels or suggest proportions. If a hint shows low blue values, that color probably isn't contributing heavily to the final mix. Archive links from previous days show patterns—some targets favor warm tones (high red and green), others skew cool (elevated blue). You don't need to memorize every combination, but noticing which channels appear most often in successful solves sharpens your eye for the next board. The solver tool can confirm your reasoning if you're stuck on a specific ratio.</p><h2>Why additive color logic beats random mixing</h2>\n<p>Random guessing treats each color as equally viable. Additive logic treats the puzzle as a math problem with visual feedback. When you see a target leaning toward magenta, you know red and blue dominate the mix. When the result looks neutral gray, all three sources sit closer to equal intensity. Players who internalize this relationship solve faster and waste fewer guesses on colors that can't mathematically contribute to the target. The reveal card confirms whether your breakdown matched reality. If it didn't, trace back which channel you misread—that's where the learning happens.</p><h2>Easy adjustment path for the next Colorfle</h2>\n<p>Before your next attempt, review what went wrong today. Did you overestimate a channel? Underestimate another? Adjust your starting hypothesis accordingly. Some players find it helpful to write down the target's approximate RGB split before looking at the source options. Others cross-reference the archive to see if similar targets appeared recently. Either way, the solver link on this page lets you test combinations without burning additional guesses. Use it as a sanity check rather than a crutch—the pattern recognition builds faster when you work through it manually first.</p><h2>Questions players keep asking</h2><h3>Does the order of my three color selections matter?</h3>\n<p>No. Additive mixing is commutative—red, green, blue in any sequence produces the same result. What matters is getting the right three colors with the correct intensity levels.</p><h3>Can I reuse a color more than once in the same solution?</h3>\n<p>Standard Colorfle rules require three distinct source colors. Reusing the same color twice would effectively reduce your equation to two variables, which rarely matches the target's complexity.</p><h3>What happens if my mix overshoots a channel value?</h3>\n<p>The reveal flags overshoot errors clearly. If your combined red value exceeds the target's red component, the puzzle registers that as incorrect. Each source contributes its full value—you can't partially apply a color.</p><h3>Are there patterns in daily targets that repeat over time?</h3>\n<p>The archive shows some recurring tendencies—certain hue families appear more frequently than others—but the game cycles through enough variation that pattern-matching alone won't guarantee solves. Understanding the underlying color math remains essential.</p><p>Check the <a href=\"#solver\">solver tool</a> linked on this page if you want to verify your working or explore alternative combinations. The <a href=\"#archive\">Colorfle archive</a> offers additional practice boards if today's target left you wanting more.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-01T16:46:35.829Z",
+        "wordCount": 625,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-01": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-06-01",
