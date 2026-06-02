@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-05-31T16:50:22.075Z",
+  "generatedAt": "2026-06-02T21:43:08.420Z",
   "byDate": {
+    "2026-06-03": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-03",
+      "title": "Phrazle Answer Today: Clues, Color Feedback, and How to Solve It",
+      "summary": "Today's Phrazle puzzle tests your ability to guess common phrases. Here's how to read the color system, avoid single-word traps, and sharpen tomorrow's solve.",
+      "articleHtml": "<p>Today's Phrazle gives you six attempts to crack a common phrase, idiom, or pop culture reference. The game shows you whether each letter lands in the right position (green), appears elsewhere in the phrase (yellow), or doesn't belong at all (gray). Read on for how to work that feedback efficiently.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The most useful thing on today's board is the blank template itself. Count the words and note their lengths before typing anything. A four-letter word followed by a three-letter word suggests something like \"cold feet\" or \"hot dog\"—short, punchy phrases that people actually say. If you see a five-word phrase, you're dealing with something longer, probably a proverb or familiar saying rather than a quick quip. The structure narrows your options faster than any individual letter ever could.</p><p>A careful player usually notices that Phrazle favors common language over obscure references. That means idioms you've heard a hundred times, famous movie titles, and well-worn proverbs. If you're staring at blanks for a phrase you genuinely don't recognize, check the archive link on this page—it may show you today's answer and help you learn from the pattern.</p><h2>How to read color feedback across multiple words</h2>\n<p>Green tiles are locked. Don't second-guess them. If the second letter of the third word turns green, build around that certainty. Yellow tiles mean the letter exists somewhere else in the phrase but in a different position. This is where players get sloppy—they see a yellow and assume it belongs exactly where they placed it. It doesn't. Move that letter to another slot or another word entirely.</p><p>Gray letters are eliminated for every remaining slot on the board. That's powerful information. If an \"E\" comes back gray, you know that letter isn't in the phrase at all. Some players waste guesses trying to squeeze a gray letter into a different spot. Skip that impulse. Gray means gone.</p><p>When you get mixed feedback—a green here, a yellow there—look for patterns across words. If \"T\" keeps showing up yellow in two-word slots, the phrase probably has more than two words, and that T belongs somewhere else. The solver tool on this page can help you test combinations without burning extra guesses.</p><h2>Why good single words can still make phrase guesses</h2>\n<p>Here's where Phrazle trips up experienced word-game players. You might land on the perfect adjective—\"golden,\" \"silent,",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-02T21:43:08.409Z",
+        "wordCount": 398,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-01": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-01",
