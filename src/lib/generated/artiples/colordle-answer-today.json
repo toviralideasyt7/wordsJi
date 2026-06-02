@@ -1,7 +1,30 @@
 {
   "articleKey": "colordle-answer-today",
-  "generatedAt": "2026-06-01T21:59:21.597Z",
+  "generatedAt": "2026-06-02T19:59:33.040Z",
   "byDate": {
+    "2026-06-03": {
+      "articleKey": "colordle-answer-today",
+      "game": "colordle",
+      "date": "2026-06-03",
+      "title": "Colordle Answer: Mint Green #487D4A — Day 1531",
+      "summary": "Mint Green #487D4A appears as day 1531's answer, a mid-tone desaturated green that tests players' ability to distinguish muted greens from earth tones.",
+      "bonusHints": [
+        "The hex value shows strong blue undertones—don't mistake this for a pure green or you'll burn guesses fast.",
+        "Think of sage leaves in afternoon light rather than mint candy or forest canopy when narrowing your palette.",
+        "If you've been cycling through bright greens, this one sits noticeably darker and less saturated on any standard color wheel.",
+        "The word 'mint' in the name is accurate but not literal—this isn't the neon mint you'd find in toothpaste branding."
+      ],
+      "articleHtml": "<h2>Today's Colordle answer at a glance</h2>\n<p>The board shows <strong>Mint Green</strong>, hex code #487D4A, appearing on June 3, 2026 as puzzle day 1531. This one lands squarely in mid-range territory—not the lightest green you'll see, not the darkest. The saturation sits at a point where quick guesses tend to overshoot either toward brighter chartreuse territory or back into more neutral olive ground.</p><h2>What kind of color this is</h2>\n<p>#487D4A breaks down to roughly 28% red, 49% green, and 29% blue. That green dominance is clear, but the red component isn't negligible—it keeps the color from feeling fresh or spring-like. Instead, this reads as earthy, settled, almost dusty in certain lighting contexts.</p>\n<p>The hue family is green, which narrows your search space considerably compared to yesterday's Highlighter yellow or the Red Velvet from two days prior. Players who've been tracking recent history will notice we're coming off three consecutive days of warmer colors before this cool pivot.</p><h2>How to narrow your guesses toward it</h2>\n<p>Start with greens that sit in the middle-dark range. Anything labeled \"forest,\" \"hunter,\" or \"emerald\" will likely read too saturated or too dark. Look instead at names like sage, moss, seafoam, or juniper. These fall closer to the desaturated-mid-tone band where #487D4A lives.</p>\n<p>If you're using a systematic approach, compare your guesses against the hex values directly. The R value around 72, G around 125, and B around 74 creates a specific signature: green-heavy but with meaningful red presence. A guess that's purely RGB(0, 128, 0) won't match because it's missing both the blue contribution and the lower intensity.</p><h2>Where players usually go wrong</h2>\n<p>The most common error with colors like Mint Green is treating the word \"mint\" as a style cue rather than a general descriptor. Mint chocolate chip ice cream looks nothing like this hex. Neither does mint牙膏 or those aggressively bright mint greens used in sports branding. The name points you in the right direction but demands calibration against actual visual output.</p>\n<p>Another trap: assuming all greens cluster together in guessing priority. After Highlighter yellow yesterday, some players may be overcorrecting toward saturated brights. This color punishes that instinct—it's muted and deliberate, not shouting for attention.</p><h2>How the score logic actually helps</h2>\n<p>The color clue system gives you partial credit even when you miss the exact shade. If your guess lands in the same hue family with similar saturation, you'll get signal that you're warm without burning turns on wildly different colors. For #487D4A specifically, watch whether your guess returns green-family flags versus neutral gray or brown responses.</p>\n<p>The guess path tracks your proximity mathematically, which means you can work backward from wrong answers. A guess that returned low scores tells you something concrete about distance in color space—not just \"wrong\" but <em>how</em> wrong and in which direction. Players who treat each clue as directional data rather than pass/fail feedback tend to converge faster.</p><h2>Questions players keep asking</h2><h3>Is Mint Green the same as sage or seafoam?</h3>\n<p>Close, but not identical. Sage typically runs slightly lighter and more gray-green. Seafoam leans more toward teal territory with higher blue values. Mint Green #487D4A sits between them—darker than sage, less blue than seafoam. The name is accurate to the hue family but represents a specific intersection within that family.</p><h3>Why did my green guess score poorly if the hue family matched?</h3>\n<p>Hue family only captures one dimension of the match. Saturation and lightness matter equally. A highly saturated green like lime or emerald might share the hue family but score poorly against this mid-tone, desaturated specimen. Check whether your guess's hex values fall within roughly ±20 on each RGB channel—if not, you're too far in at least one axis.</p><h3>Should I try earth tones or neutrals as a hedge?</h3>\n<p>Only if you've exhausted pure greens and still can't land close. The hue family clearly places this in green territory, so time spent guessing browns, grays, or tans is generally wasted unless you're deliberately testing boundaries. Stick within the green family until you narrow the saturation and lightness bands.</p><h3>What's the best starting guess for this type of color?</h3>\n<p>Something in the medium-dark, slightly muted green range works well as a first probe. Avoid extremes—neither near-white pastels nor near-black shadows. A mid-intensity green with some gray influence gives you the cleanest initial reading. From there, adjust saturation and lightness based on the score feedback before chasing minor hue shifts.</p>",
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-02T19:59:33.031Z",
+        "wordCount": 733,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-02": {
       "articleKey": "colordle-answer-today",
       "game": "colordle",
