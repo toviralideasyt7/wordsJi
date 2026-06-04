@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-06-02T21:43:08.420Z",
+  "generatedAt": "2026-06-04T16:51:03.208Z",
   "byDate": {
+    "2026-06-05": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-05",
+      "title": "Phrazle Answer Today: Clues, Patterns, and What to Watch For",
+      "summary": "Today's Phrazle puzzle tests your ability to guess common phrases from color-coded feedback. Here's how to read the board and narrow down possibilities.",
+      "articleHtml": "<p>On today's Phrazle board, the phrase structure itself gives you more information than most players realize. If the reveal shows a four-word idiom, you're working within roughly twelve to fifteen common syllables. That's tighter than you might expect.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The number of slots on the board tells you exactly how many words sit between the start and end positions. A five-slot board doesn't just mean five words—it means five distinct concept units. \"Break the ice\" occupies three slots. \"A penny for your thoughts\" takes six. That distinction matters when you're scanning your mental library of idioms.</p><p>Look at which slot positions stayed green after your final guess. Green letters in the first position point toward phrases that begin with common starting words—\"It's,\" \"Don't,\" \"The,\" \"A.\" Late-position greens tell you the phrase ends with a recognizable word form, often a noun or preposition. A careful player uses those positional hints to filter candidate phrases before typing anything.</p><p>The archive linked on this page lets you compare today's structure against previous boards. Some days favor short punchy sayings. Others load up with longer quotable constructions. Recognizing which pattern type you're facing shapes your opening guesses significantly.</p><h2>How to read color feedback across multiple words</h2>\n<p>Yellow placement in Phrazle trips up players who think like Wordle veterans. A yellow letter here means that letter exists somewhere in the phrase, but not in that specific slot. The solver tool on this site highlights which letters appear multiple times, which helps when you've got repeated characters in play.</p><p>When three out of five slots show green on a single guess, resist the urge to lock in partial solutions too early. The remaining two slots might belong to a completely different word pair than what you're assuming. I've seen players spend three subsequent guesses trying to force a fit for a word that simply isn't there.</p><p>Gray letters are underused intelligence. Each gray eliminates not just one word but an entire family of phrases containing that letter in any position. Build a running exclusion list mentally—it's faster than toggling through the hint widgets repeatedly.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>This trips up nearly everyone who comes to Phrazle from single-word guessing games. You might land on the perfect individual word—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-04T16:51:03.199Z",
+        "wordCount": 388,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-03": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-03",
