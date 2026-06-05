@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-01T16:46:35.834Z",
+  "generatedAt": "2026-06-05T18:27:54.298Z",
   "byDate": {
+    "2026-06-06": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-06-06",
+      "title": "Colorfle Answer Today: How Additive Color Mixing Works on This Puzzle",
+      "summary": "A sharp editor's breakdown of how to read RGB source colors and apply additive mixing logic to crack today's Colorfle challenge.",
+      "articleHtml": "<p>Today's Colorfle board tests your grasp of additive color mixing—the kind that happens with light, not pigment. If you've been treating it like blending paints, that's likely where things went sideways.</p><h2>Colorfle answer today: how the mix should be read</h2><p>The three source colors on this board combine additively to produce a target shade. Read each RGB value as pure light intensity: red, green, and blue channels stack rather than subtract. When all three hit maximum (255), you get white. When two overlap optimally, you land in cyan, magenta, or yellow territory. A careful player checks whether the target sits closer to white, a primary, or a secondary—and works backward from there. The <a href=\"#\">solver link</a> on this page can verify your combination against the reveal card once you've locked in a guess.</p><h2>What the source colors are telling you</h2><p>Each available color carries explicit RGB data. Look at which channels dominate. A strong red component means the target needs warmth; heavy blue signals cool tones. Where channels overlap equally, you're likely chasing neutral grays or pastels. The clue widgets embedded for this board may flag one channel as particularly important—players who catch that signal early shave unnecessary guesses. Archive viewers can compare today's setup against previous days to spot recurring patterns in how the targets rotate through the color wheel.</p><h2>Why additive color logic beats random mixing</h2><p>Subtractive mixing trips up beginners because it's intuitive for paint but backwards for screens. Additive mixing means you're adding light, not absorbing it. That shift in mental model matters: when you see a target leaning orange, you don't reach for browns—you boost red and green while keeping blue low or absent. Think in terms of channel strength, not color names. Some solvers find it helpful to translate everything into percentage values first, then convert back to hex codes for final input.</p><h2>Easy adjustment path for the next Colorfle</h2><p>If today's result missed the mark, isolate which channel was off and adjust incrementally. Overshot red? Dial it back ten to fifteen points and compensate elsewhere. Missed saturation? Push the dominant channel harder while holding others steady. Building a small reference table of successful mixes helps—tracking what channel ratios worked for similar targets turns pattern recognition into muscle memory. The <a href=\"#\">archive</a> gives you historical boards to practice this without burning daily attempts.</p><h2>Questions players keep asking</h2><h3>Can players use hex codes instead of RGB values?</h3>\n<p>Yes. Hex notation is just RGB compressed into base-16 format. #FF0000 and rgb(255, 0, 0) describe identical red. Most input fields accept either format, so work in whichever feels faster.</p><h3>What if my mix looks right on screen but fails the check?</h3>\n<p>Monitor calibration varies. What reads as correct on your display might skew slightly toward one channel. Try adjusting by single-digit increments if you're close—the tolerance window on some days is tighter than others.</p><h3>Do the three source colors ever include duplicates?</h3>\n<p>On standard daily boards, sources are distinct. However, near-white targets sometimes require two high-value channels and one moderate one, creating visual similarity even if the RGB values differ meaningfully.</p><h3>Should I prioritize getting the hue right first or the brightness?</h3>\n<p>Hue first. Brightness adjustments are typically smaller tweaks once the color family is locked. Getting the dominant channel wrong wastes more guesses than undershooting luminance.</p><h3>How does the hint system work on this puzzle?</h3>\n<p>The clue widgets highlight specific channel constraints. Some hints eliminate impossible ranges; others confirm a minimum or maximum value. Reading them sequentially before guessing prevents wasted combinations.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-05T18:27:54.291Z",
+        "wordCount": 584,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-02": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-06-02",
