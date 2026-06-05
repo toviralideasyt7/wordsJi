@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-06-04T16:51:03.208Z",
+  "generatedAt": "2026-06-05T20:37:42.574Z",
   "byDate": {
+    "2026-06-06": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-06",
+      "title": "Phrazle Answer Today: Smart Ways to Decode Today's Phrase",
+      "summary": "Today's Phrazle tests your ability to guess common phrases using color-coded feedback. Here's how experienced players break down the pattern and narrow down guesses efficiently.",
+      "articleHtml": "<p>Phrazle rewards players who think in phrases, not just words. Unlike standard word games where a single correct word wins, this puzzle asks you to crack an entire idiom, proverb, or cultural reference. The color feedback system works differently here—each tile represents part of a larger expression, so reading the board requires tracking multiple words at once. If you're landing on today's page looking for the Phrazle answer, you've likely already spent some attempts trying to decode the pattern. Let's walk through how a careful player reads that feedback and what strategy shifts help on future rounds.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The reveal card at the top of today's page shows the completed phrase. If you're checking this before attempting the puzzle yourself, stop there. The real satisfaction in Phrazle comes from working backward from partial information, not jumping to the answer. That said, once you've seen the solution—or if you're stuck mid-attempt—the structure itself often reveals why certain guesses felt close but missed.</p>\n<p>Most Phrazle answers fall into predictable categories: well-worn idioms like \"break the ice,\" famous movie quotes, song titles, or two-word compound expressions. The game rarely picks obscure references. When reviewing today's completed phrase, notice how many words appear and whether the rhythm feels familiar. A four-word phrase suggests a proverb; a three-word phrase often points to a pop culture moment. These structural cues matter more than most players realize during active play.</p><h2>How to read color feedback across multiple words</h2>\n<p>Each guess in Phrazle returns color-coded tiles for every letter in your proposed phrase. Green means a letter sits in exactly the right spot within its word. Yellow means the letter exists somewhere in the phrase but not in that slot. Gray means the letter doesn't appear at all. The tricky part: Phrazle applies this feedback per-letter across the entire phrase, which means a single guess can give you information about five, six, or even seven different positions simultaneously.</p>\n<p>Smart players treat each guess as a data-gathering operation. Early guesses should test letters that could belong to multiple words. For example, if you try \"piece of cake\" and get several greens on \"cake,\" you know that word belongs in the phrase—but you still don't know if \"piece\" or \"slice\" or something else precedes it. Spread your early testing across the phrase's potential slots rather than locking in one word too quickly.</p>\n<p>The afternoon hint widget on today's page offers additional guidance. Players who check both morning and afternoon hints report narrowing their remaining options significantly before final submission. If you skipped the hints on today's puzzle, consider giving them a look when you review the archive. They're not spoilers—they're structured nudges that preserve the solve while reducing pure trial-and-error.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>This trips up experienced crossword players more than newcomers. You might land on a perfect word for one slot—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-05T20:37:42.562Z",
+        "wordCount": 488,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-05": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-05",
