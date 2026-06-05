@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-04T06:24:23.640Z",
+  "generatedAt": "2026-06-05T06:12:56.539Z",
   "byDate": {
+    "2026-06-05": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-05",
+      "title": "Dotadle Answer Today: How to Read the Hero Clues Faster",
+      "summary": "Today's Dotadle puzzle tests your knowledge of Dota 2 hero attributes and lane assignments. Here's how to parse the clues efficiently and reach the answer.",
+      "articleHtml": "<p>Hero pool narrowing works best when you know which clue types actually eliminate options. Today's Dotadle board leans on attribute categories and flexible positioning data—two signals that behave differently depending on what else is showing on the reveal card.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>Dota 2 categorizes 124 heroes by primary attribute, and that split creates natural thirds right away. If the clue mentions Strength, you've eliminated roughly 44% of the roster in one read. Intelligence heroes occupy a similar slice, while Agility covers another chunk. Universal heroes—a newer addition to the attribute system—add a fourth category that catches solvers who rely on older mental lists.</p>\n<p>The attribute signal matters more than lane labels because lane assignments shift between patches. A hero marked as \"offlane\" in one meta might fit \"support\" or \"safe lane\" in another. Attribute stays consistent unless Valve reworks a hero's stat growth entirely. When you see an attribute hint on today's reveal card, treat it as your anchor before checking anything else.</p>\n<p>A careful player usually notices that combined clues—attribute plus some other detail—narrow faster than two loosely related hints alone. Pairing \"Strength\" with \"tanky initiation\" eliminates most Strength heroes instantly and leaves maybe eight candidates instead of forty.</p><h2>How to cut the Dota roster faster</h2>\n<p>Start with pure elimination rather than pattern matching. List every hero matching the stated attribute, then apply the next clue to that subset. This sounds obvious, but players often bounce between clues and end up reconsidering heroes they've already ruled out.</p>\n<p>For the current puzzle, if the attribute clue doesn't appear explicitly, check whether the clue uses language tied to stat-based mechanics. High armor, large health pools, or spell-focused damage all suggest Strength leanings. Burst magic damage, mana efficiency, and long-cooldown nukes point toward Intelligence. Attack speed descriptions, evasion references, or crit chance mentions land squarely in Agility territory.</p>\n<p>The <a href=\"#solver\">solver on this page</a> handles attribute filtering automatically if you're stuck mid-board. Paste your known clues and it returns heroes sorted by match likelihood. That cuts the manual scan time significantly when you're looking at a partially revealed board.</p><h2>When roles help and when they mislead</h2>\n<p>Role labels—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-05T06:12:56.520Z",
+        "wordCount": 363,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-04": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-04",
