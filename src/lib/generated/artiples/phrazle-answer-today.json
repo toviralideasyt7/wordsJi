@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-06-05T20:37:42.574Z",
+  "generatedAt": "2026-06-06T16:54:47.254Z",
   "byDate": {
+    "2026-06-07": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-07",
+      "title": "Phrazle Answer Today: June 7, 2026 Solution Guide",
+      "summary": "Master today's Phrazle puzzle with strategies for reading phrase structures, interpreting color feedback, and refining your approach for future rounds.",
+      "articleHtml": "<p>Today's Phrazle board rewards players who think in idioms rather than individual words. If you've been staring at single-word solutions, that's likely why the board hasn't cooperated.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The reveal card shows a common saying or pop culture reference—usually four to six words that form something recognizable. A careful player spots structural patterns early: verb-noun combinations, adjective-noun pairs, or mirrored phrasing like \"X and Y\" constructions. Today's puzzle leans toward action-oriented phrases, which narrows the field considerably if you're testing guesses systematically. Check the archive link on this page to see how phrase types have shifted across recent boards.</p><h2>How to read color feedback across multiple words</h2>\n<p>Each word in your guess lights up independently. Green means correct position. Yellow means the word exists somewhere but not there. Gray means it doesn't appear at all. Here's where most players stumble: they optimize one word instead of the whole phrase. If three words are green except for position two, swapping just that slot rarely works—you need to reconsider whether the entire phrase structure fits the clue pattern. The solver tool on this page lets you test partial configurations without burning additional guesses.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>You might nail three out of four words and still be wrong. That's because Phrazle isn't just about vocabulary—it's about which words combine into something recognizable. A phrase like \"break a leg\" uses common words in an unexpected pairing. Even if you identify every component, the order matters enormously. Some players keep cycling through valid words that simply don't appear together in any established idiom. When that happens, step back. The hint widget may show you how many words remain completely gray versus partially matched.</p><h2>How to approach tomorrow's Phrazle with less chaos</h2>\n<p>Start broad. Common idiom lists cover roughly eighty percent of what's fair game. Build a mental shortlist before you begin guessing: proverbs, movie titles, song lyrics, well-worn expressions. That pre-work pays off when you're down to your last two guesses and need to choose between plausible options. Another habit worth developing: note which phrase categories haven't appeared recently. If animal metaphors dominated last week, shift your baseline expectations accordingly.</p><h2>Questions players keep asking</h2><h3>Can I reuse yesterday's hints?</h3>\n<p>No. Each puzzle generates fresh color feedback based on your guesses. Yesterday's board resets entirely, so strategy from prior days won't transfer directly.</p><h3>Do repeated words ever appear in Phrazle answers?</h3>\n<p>Yes, though they're uncommon. Phrases like \"wait wait wait\" or \"no no no\" show up occasionally. If your guess includes a repeated word and gets mixed colors, treat each instance as a separate evaluation point.</p><h3>What's the maximum number of guesses allowed?</h3>\n<p>Six attempts per puzzle, standard across the daily format. That sounds generous until you're on guess five with two words locked and no clear path forward. The afternoon refresh adds another attempt window if your platform supports it.</p><h3>How does the hint system work?</h3>\n<p>Hints typically reveal letter counts, category hints, or partial word placements depending on the version you're playing. On this site, the clue widget above the answer card gives you category-level information without spoiling the exact phrase.</p><p>Players who check the morning and afternoon entries side by side often spot patterns faster on subsequent days. Bookmark the solver link if you haven't already—it handles partial matches more efficiently than manual elimination.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-06T16:54:47.241Z",
+        "wordCount": 568,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-06": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-06",
