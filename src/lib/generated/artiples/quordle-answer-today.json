@@ -1,7 +1,24 @@
 {
   "articleKey": "quordle-answer-today",
-  "generatedAt": "2026-06-07T13:19:43.005Z",
+  "generatedAt": "2026-06-07T16:53:42.171Z",
   "byDate": {
+    "2026-06-08": {
+      "articleKey": "quordle-answer-today",
+      "date": "2026-06-08",
+      "title": "Quordle Answer Today: Strategy and Hints for June 8, 2026 Boards",
+      "summary": "Get the verified Quordle answer for June 8, 2026. Learn how to manage four grids at once, pick guesses that reveal letters across all boards, and finish the daily puzzle without burning attempts.",
+      "articleHtml": "<h2>Quordle answer today: what the boards are asking first</h2>\n<p>The answer card above displays the four solution words for the June 8, 2026 daily puzzle. If you have already solved it, use the archive link below the reveal to check past results or jump straight to the solver tool if you need to verify a specific letter pattern. Players landing here usually want confirmation of the final words or a quick explanation of why a certain guess failed to clear the remaining grids.</p>\n<p>Today's set requires careful vowel placement. The four boards do not share a single dominant consonant, which forces early guesses to cast a wide net. A careful player notices that standard five-letter starters often leave one board completely dark. The solution lies in selecting words that test common endings and middle vowels simultaneously rather than chasing a single perfect match.</p>\n<p>Check the hint widget on the main game page if you are stuck on just one grid. It often highlights the most problematic board without giving away the word. For those who prefer to solve blind, the strategy section below breaks down how to approach this specific date's configuration without wasting turns.</p><h2>How to split attention across four grids</h2>\n<p>Managing four active boards feels chaotic until you stop treating them as separate puzzles. The brain naturally wants to focus on the grid with the most green tiles, but that is usually a trap. Ignoring the empty boards while celebrating one solved word burns precious attempts. The real skill involves reading the negative space. When a letter turns gray on one board, it might still be yellow on another. That distinction dictates the next move.</p>\n<p>Most players fail because they commit to a word that solves one grid perfectly but offers zero new information for the other three. On June 8, the letter distribution suggests avoiding words with duplicate letters early on. You need maximum coverage. If a guess reveals a common vowel on two boards but leaves the other two blank, it is still a successful turn. The goal is elimination, not immediate satisfaction.</p>\n<p>Look at the color patterns on your screen. If three boards show yellow hints for the same letter in different positions, do not guess that letter again immediately. Instead, find a word that places it in the remaining untested slots while introducing fresh consonants. This approach keeps all four timelines moving forward. Stalling on one board to force a solution often leads to a game over on the others.</p><h2>Which guesses pull double duty best</h2>\n<p>Effective Quordle guesses are ugly. They rarely look like words you would use in conversation. A strong utility word packs three or four distinct vowels and avoids repeating consonants unless you are testing a specific double-letter theory. Words like <em>ADIEU</em> or <em>OUIJA</em> are famous for this, but they can be risky if the puzzle leans heavily on consonants. For this date's puzzle, a balanced mix of R, S, T, L, and N paired with A, E, or O works better than an all-vowel assault.</p>\n<p>Consider the structure of the remaining unknown words. If two boards end in similar sounds, a guess targeting that suffix can clear both simultaneously. However, if the boards diverge wildly, you need a",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-07T16:53:42.153Z",
+        "wordCount": 539,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-07": {
       "articleKey": "quordle-answer-today",
       "date": "2026-06-07",
