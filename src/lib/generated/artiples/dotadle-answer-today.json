@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-05T06:12:56.539Z",
+  "generatedAt": "2026-06-08T14:58:01.886Z",
   "byDate": {
+    "2026-06-08": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-08",
+      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
+      "summary": "Primary attributes and role flexibility are the heaviest signals in Dotadle—here's how to weigh them against other hero clues.",
+      "articleHtml": "<p>Primary attributes split the Dota 2 roster into four camps: Strength, Agility, Intelligence, and Universal. That single classification eliminates roughly a quarter of all heroes immediately. For today's Dotadle puzzle, that filter alone narrows the field more than any other single clue.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2><p>When you see an attribute clue, treat it as load-bearing. Strength heroes cluster around high HP pools and melee-heavy rosters. Agility heroes skew toward carries who scale with attack speed. Intelligence heroes often fill support and nuker roles. Universal heroes—the smallest pool—span multiple archetypes and deserve extra scrutiny before elimination.</p><p>A careful player usually notices that attribute pairing reveals more than standalone classifications. A Strength hero with a support tag behaves differently than a Strength carry. Cross-reference attribute with published win rates or role prevalence only when that data appears on today's page.</p><p>The reveal card on this page typically surfaces one distinguishing trait early—whether that's movement type, attack range, or a signature ability name. Anchor your next guess to that signal before cycling through alternatives.</p><h2>How to cut the Dota roster faster</h2><p>Start with hard eliminations. If the clue rules out ranged heroes, you've just removed forty-plus options from the 124-hero pool. Lane assignment filters work similarly—offlane heroes occupy different design space than safelane carries, even when some overlap exists.</p><p>Use the solver on this page when you've narrowed to three or four candidates. Feeding partial information returns ranked possibilities rather than forcing a blind guess. Each correct elimination makes the next round faster.</p><p>Attribute-based filtering outperforms role-based filtering early because attribute categories stay fixed while role flexibility varies between patches. An Intelligence hero might be reclassified from hard support to position four mid-game depending on team composition—this fluidity makes role clues less reliable as primary filters.</p><h2>When roles help and when they mislead</h2><p>Role tags exist on a spectrum, not as rigid buckets. Dota 2 assigns primary and secondary roles to each hero, but the community meta reshapes these assignments constantly. A hero listed as",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-08T14:58:01.865Z",
+        "wordCount": 339,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-05": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-05",
