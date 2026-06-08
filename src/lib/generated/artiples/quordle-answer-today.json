@@ -1,7 +1,24 @@
 {
   "articleKey": "quordle-answer-today",
-  "generatedAt": "2026-06-07T16:53:42.171Z",
+  "generatedAt": "2026-06-08T19:16:02.402Z",
   "byDate": {
+    "2026-06-09": {
+      "articleKey": "quordle-answer-today",
+      "date": "2026-06-09",
+      "title": "Quordle Answer Today: June 9, 2026 Strategy and Solve Path",
+      "summary": "Today's Quordle boards demand efficient vowel mapping across four grids. Use the reveal card above to verify your solution and check the archive for pattern history.",
+      "articleHtml": "<h2>Quordle answer today: what the boards are asking first</h2>\n<p>The answer card displayed at the top of this page holds the verified solution for the June 9, 2026 puzzle. Check the reveal widget immediately above to confirm the four words before scrolling further if you just need the result. This daily update focuses on the structural logic required to solve these specific boards without burning through your limited guess count. Players who rush to guess common words often fail because they ignore how a single letter placement affects all four grids simultaneously. The data on this page confirms that today's set relies heavily on distinguishing between similar consonant clusters.</p><p>Efficiency matters more than luck here. A careful player notices that the hint widgets on the left side of the screen often telegraph which vowel sets are active. If the current puzzle feels stuck, cross-reference the answer above with the solver link provided in the sidebar to see where your logic diverged from the optimal path. Do not treat this as a failure; treat it as a calibration of your opening strategy for tomorrow's sequence.</p><h2>How to split attention across four grids</h2>\n<p>Quordle forces a cognitive shift that standard five-letter games do not. You are not solving four separate puzzles; you are managing one resource pool of guesses across four distinct constraints. The most common error involves fixating on a single board that looks nearly complete while neglecting the others. This tunnel vision burns guesses that could have eliminated possibilities on the remaining three grids. Look at the color patterns on your screen right now. If one board shows three green tiles but the others are still gray, stop guessing for that specific word.</p><p>Instead, throw a guess that targets the unknown letters in the other three columns, even if it breaks the nearly solved word. The game mechanics reward broad information gathering over narrow completion. Today's puzzle layout on the June 9 board demonstrates this clearly, where a shared consonant in the third position likely unlocked multiple solutions at once. Use the archive link below to review past puzzles where this",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-08T19:16:02.383Z",
+        "wordCount": 351,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-08": {
       "articleKey": "quordle-answer-today",
       "date": "2026-06-08",

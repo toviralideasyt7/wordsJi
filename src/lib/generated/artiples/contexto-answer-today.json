@@ -1,7 +1,24 @@
 {
   "articleKey": "contexto-answer-today",
-  "generatedAt": "2026-06-07T17:52:46.993Z",
+  "generatedAt": "2026-06-08T19:08:39.694Z",
   "byDate": {
+    "2026-06-09": {
+      "articleKey": "contexto-answer-today",
+      "date": "2026-06-09",
+      "title": "Contexto Answer Today: How to Read the Rank Pattern for June 9, 2026",
+      "summary": "Understanding Contexto's similarity ranking helps you narrow guesses faster. Here's how experienced players decode today's board.",
+      "articleHtml": "<p>The rank number next to each guess on Contexto tells you everything. A word sitting at position 50 is semantically twice as close to the target as one sitting at position 100. That gap isn't cosmetic—it reflects how the algorithm measures association strength. On today's board, reading that gradient carefully can shave three or four guesses off your solve.</p><h2>Contexto answer today: what the rank pattern usually means</h2><p>When you enter a guess and see a number like 847, you're looking at a percentile rank within the full word corpus. Lower numbers mean stronger semantic connection. The reveal card on this page shows where today's answer sits relative to your best guesses—if you've landed in the top 200, you're cooking. Anything past 1,500 suggests the category branch you're chasing doesn't connect to the target the way you expected.</p><p>A careful player notices when two consecutive guesses land in similar ranges—say, 312 and 318. That's not random scatter. It usually means both words live in the same mental neighborhood as the answer. You can probe deeper within that zone by testing more specific terms, or you can branch sideways into adjacent categories to triangulate the exact connection.</p><p>The archive linked from this page lets you compare today's rank distribution against previous days. Some targets reward tight, focused guessing. Others respond better to wide exploratory swings. Knowing which pattern you're facing shapes your entire approach.</p><h2>When to pivot categories instead of forcing synonyms</h2><p>Players get stuck when they treat Contexto like a thesaurus exercise. If \"happy\" gets you to rank 400, typing \"joyful\" or \"elated\" probably won't move the needle much. Those words occupy nearly identical semantic space. The algorithm sees them as near-duplicates.</p><p>Pivoting means finding a different axis of association. Happy connects to emotions, yes—but also to celebrations, positive outcomes, social situations, and facial expressions. Each of those threads leads somewhere new. One might thread directly toward the target while another loops back to familiar territory.</p><p>Use the solver on this page if you're running low on guesses and need fresh angles. Sometimes a single unexpected word drops you from rank 600 to rank 80. That jump tells you the answer lives along that particular associative chain.</p><h2>Why broad words beat clever words here</h2><p>Contexto rewards breadth early and precision later. Your opening guesses should map the semantic field quickly. Generic but relevant words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-08T19:08:39.686Z",
+        "wordCount": 394,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-08": {
       "articleKey": "contexto-answer-today",
       "date": "2026-06-08",
