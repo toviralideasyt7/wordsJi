@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-06-06T16:54:47.254Z",
+  "generatedAt": "2026-06-09T18:43:55.223Z",
   "byDate": {
+    "2026-06-10": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-10",
+      "title": "Phrazle Answer Today: June 10, 2026 Phrase Puzzle Guide",
+      "summary": "A daily editor's breakdown of how to read today's Phrazle board, interpret color feedback across words, and avoid common phrase-guessing traps.",
+      "articleHtml": "<p>The Phrazle board for June 10, 2026 presents a four-word common phrase. Players get six attempts to land on the correct combination, and each guess feeds back color-coded signals that narrow possibilities quickly—if you know how to read them.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>Most winning Phrazle answers are idioms, proverbs, or well-worn expressions people recognize instantly. A careful player notices the slot count immediately: four boxes means four words. That constraint alone rules out most five-word proverbs and narrows the field to a surprisingly small set of familiar phrases.</p>\n<p>When you see the morning reveal card populate with partial information, pay attention to which positions lock green versus which remain gray. Green tiles mean that exact word belongs in that exact spot—rarely a flexible rule in Phrazle. Yellow tiles tell you the word exists somewhere in the phrase but not in that position. Gray tiles eliminate entire vocabulary branches from consideration.</p>\n<p>The afternoon answer widget on this page serves as a checkpoint. If you've been stuck on a particular word choice, comparing your current best guess against what's shown in the archive can reveal whether you're solving toward the right semantic territory.</p><h2>How to read color feedback across multiple words</h2>\n<p>Here's where most players slow down: they treat each word independently instead of reading the board as a system. If three words turn green but one stays yellow, that lone yellow word is doing all the heavy lifting. It tells you the word exists, just not in its current slot. Swapping its position often unlocks the solution faster than abandoning a partially-green row entirely.</p>\n<p>Consider a scenario where two adjacent words turn green and two stay yellow. This pattern suggests the phrase follows a recognizable rhythm—perhaps noun-noun-verb-adjective or verb-preposition-noun-noun. Matching that rhythm against known phrase structures eliminates whole categories of guesses. \"The early bird catches the worm\" has a different cadence than \"the early bird gets the worm,\" and the color feedback will push you toward one over the other by the second or third row.</p>\n<p>The solver link embedded in this page lets you input your current best guesses and see potential matches filtered by the color constraints you've accumulated. That's faster than manually cross-referencing dictionaries against your locked letters.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>A player might land on a strong individual word—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-09T18:43:55.208Z",
+        "wordCount": 396,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-07": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-07",
