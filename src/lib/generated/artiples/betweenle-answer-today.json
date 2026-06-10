@@ -1,7 +1,24 @@
 {
   "articleKey": "betweenle-answer-today",
-  "generatedAt": "2026-06-07T17:51:26.261Z",
+  "generatedAt": "2026-06-10T21:19:59.349Z",
   "byDate": {
+    "2026-06-11": {
+      "articleKey": "betweenle-answer-today",
+      "date": "2026-06-11",
+      "title": "Betweenle Answer Today: June 11, 2026",
+      "summary": "A sharp editor's guide to reading Betweenle's alphabetical logic, narrowing the gap between guesses, and using clue cards to land on today's answer faster.",
+      "articleHtml": "<p>Betweenle operates on a simple premise that rewards systematic thinking over wild guessing. Each guess returns one of two signals: your entry falls alphabetically before the target or after it. That binary feedback makes every move a step in a deliberate narrowing process rather than a shot in the dark.</p><h2>Betweenle answer today: what to notice before the reveal</h2>\n<p>The answer sits somewhere in a defined range, and most players waste early guesses by testing entries too far from center. A careful player checks the midpoint of the current window first—if the range spans M through R, start with a word that lands near the middle of that band. Today's board shows the puzzle anchored around a geographic region, which means the answer likely falls within a narrower alphabetical band than a typical open-ended challenge. Before the reveal card appears, scan the surrounding letters for common geographic prefixes or suffixes that could fall just inside or outside your current bounds.</p><h2>How the alphabetical gap tightens</h2>\n<p>Each guess should cut the remaining possibilities roughly in half. Think of it as a living interval—your first valid guess sets the outer walls, and every subsequent entry slides one wall inward. If you're working with a range from D to K and guess F lands below the target, the new range becomes F to K. That's four potential positions eliminated in a single move instead of one.</p><p>The mistake many players make is jumping to conclusions based on partial information. They see a guess land before the target and immediately assume they need to go much higher. But the goal isn't to reach the farthest possible point—it's to methodically shrink the interval until only one option remains. On this board, the geography angle adds a layer: place names often cluster around certain letters due to common starting syllables like",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-10T21:19:59.345Z",
+        "wordCount": 305,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-08": {
       "articleKey": "betweenle-answer-today",
       "date": "2026-06-08",
