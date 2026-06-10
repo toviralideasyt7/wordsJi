@@ -1,7 +1,24 @@
 {
   "articleKey": "smashdle-answer-today",
-  "generatedAt": "2026-06-07T06:06:39.163Z",
+  "generatedAt": "2026-06-10T22:04:57.023Z",
   "byDate": {
+    "2026-06-10": {
+      "articleKey": "smashdle-answer-today",
+      "date": "2026-06-10",
+      "title": "Smashdle Answer Today: Quick Guide to Today’s Fighter Clues",
+      "summary": "A sharp daily editor breaks down how to read today’s Smashdle clues, filter by universe and movement stats, and avoid common DLC traps.",
+      "articleHtml": "<p>The answer card shows a fighter silhouette with three visible stat bars: universe origin, weight class, and jump height. For this puzzle, the universe label appears first and carries the most filtering power. A careful player will check that badge before diving into movement numbers.</p><h2>Smashdle answer today: which fighter clue matters first</h2>\n<p>On any daily Smashdle board, the reveal order tells you what the puzzle designer thought was most useful. Today’s card leads with the universe tag, which narrows the 90+ roster down to roughly 8–15 fighters depending on the franchise. Mario characters alone account for a chunk of early guesses, but third-party universes like Dragon Quest or Persona show up less frequently and often trip up players expecting only Nintendo-owned fighters. Check that first badge against the full character list before you commit to a weight-class guess.</p><h2>How universe and movement stats split the roster</h2>\n<p>Universe labels do the heavy lifting because they’re categorical. Weight class and jump count are numeric, which means you can cross-reference them against each other. If you’ve narrowed candidates to Super Smash Bros. Ultimate veterans, pull up the <a href=\"#\">character archive</a> and sort by fall speed or air acceleration. Heavy characters like King K. Rool sit at opposite ends of those scales compared to floaty ones like Jigglypuff. The solver tool on this page lets you input two stats and see which fighters match, which cuts down the manual checking significantly. Players who skip the numeric filters usually end up cycling through the same three guesses instead of working the grid systematically.</p><h2>Why DLC fighters cause so many misses</h2>\n<p>DLC characters occupy the tail end of the roster, and their unlock patterns don’t follow the base game’s franchise groupings. Min Min comes from ARMS, Steve from Minecraft, Sephiroth from Final Fantasy VII. If your hint widget shows a DLC badge, the pool shrinks to around 15 options, but those fighters span wildly different playstyles. The weight-to-jump ratio for Steve looks nothing like Terry Bogard’s, despite both being late additions. When a hint says “DLC,” treat it as a universe shorthand: you’re hunting a single franchise’s fighter, not a general tier. Most missed guesses happen when players assume DLC fighters behave like their base-roster counterparts in the same weight class.</p><h2>How to tighten the next Smashdle faster</h2>\n<p>Before you guess, open the <a href=\"#\">solver link</a> in a second tab. Input whichever two stats you trust most—usually jump count and weight—and let the tool surface candidates. That gives you a shortlist instead of a blind pick. Archive your previous sessions too; if you notice you keep missing the same universe bracket, that’s where to focus your study time. Some players maintain a quick-reference table of DLC release order, since newer additions tend to share fewer visual similarities with the original cast and are easier to misread in silhouette form.</p><h2>Questions players keep asking</h2><h3>Does the order of stat hints matter on the daily board?</h3>\n<p>Yes. The leftmost stat on the card is typically the broadest filter. Puzzle designers arrange them from most differentiating to least, so start there and work right.</p><h3>Are DLC fighters included in every daily Smashdle?</h3>\n<p>Not always. Some days restrict the pool to base-roster characters only. Check the mode indicator near the top of the page to confirm whether DLC is in play.</p><h3>What’s the fastest way to rule out wrong universes?</h3>\n<p>Use the archive link to browse by franchise tag. If you’ve already eliminated five universes, seeing the full list in one view saves more back-and-forth than guessing blindly from the main screen.</p><h3>Can I filter by multiple stats at once in the solver?</h3>\n<p>The solver accepts up to three inputs simultaneously. Pairing weight class, jump count, and gravity usually leaves just one or two viable candidates if you’ve correctly identified the universe.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-10T22:04:57.004Z",
+        "wordCount": 631,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-07": {
       "articleKey": "smashdle-answer-today",
       "date": "2026-06-07",

@@ -1,7 +1,24 @@
 {
   "articleKey": "loldle-answer-today",
-  "generatedAt": "2026-06-09T06:14:07.610Z",
+  "generatedAt": "2026-06-10T22:04:10.928Z",
   "byDate": {
+    "2026-06-10": {
+      "articleKey": "loldle-answer-today",
+      "date": "2026-06-10",
+      "title": "LoLdle Answer Today: How to Solve the June 10 Champion Puzzle",
+      "summary": "Master today's LoLdle by understanding how gender, position, and species filters narrow the 170+ champion pool efficiently using today's clue widgets.",
+      "articleHtml": "<p>The LoLdle board for June 10 throws four attribute columns at you: gender, position, species, and resource type. That's four hard constraints before you even touch the harder signals like release year or region. A careful player reads those top rows first because they eliminate the most candidates in the fewest keystrokes.</p><h2>LoLdle answer today: what the champion clues narrow first</h2><p>Gender is binary here—male or female—and cuts the roster almost exactly in half. Position adds another brutal filter. If the board shows \"Support\" as confirmed, you're looking at roughly 50 champions instead of 170+. Stack species on top (Human, Yordle, Vastaya, Celestial), and you've often got your answer down to single digits before touching the hint widgets below the main card.</p><p>The reveal card on today's page uses color-coded tiles that shift from red toward green as you refine guesses. That visual feedback loop matters—don't ignore it just because you think you know the answer. Sometimes a wrong hunch about role gets corrected faster by watching those tiles change than by reasoning through it mentally.</p><h2>How to separate universe, role, and release-year signals</h2><p>Universe and role live in different clue widgets on this page, but players conflate them constantly. Role tells you where the champion plays—Top, Jungle, Mid, ADC, Support. Universe tells you which Runeterra setting the character belongs to: Demacia, Noxus, Shurima, Bilgewater, and so on. These are independent variables. A champion can be a Mid laner from any region.</p><p>Release year is trickier because it's numerical and non-obvious. The solver link on this page can pull champion release dates if you feed it guesses, but doing it manually requires some League history knowledge. Champions released before 2014 number around 120 total. Those released in 2020 or later are easier to place because Riot changed the numbering system and started giving each champion a distinct patch identity.</p><p>Resource type—whether the champion spends mana, energy, fury, or something else—shows up in its own column. This one's underused by players who rush to the harder clues. Mana champions dominate the roster, but the energy users (Shen, Kennen, Akali, Zed) form a tight cluster that's worth isolating early if other filters leave ambiguity.</p><h2>Which mode usually breaks the streak</h2><p>Classic mode—the standard four-attribute version—is the most forgiving because you get more data points per guess. Players report more consistent streaks there compared to the other modes accessible from the navigation.</p><p>Ability mode strips out the attribute columns entirely and gives you only ability icons and descriptions. That mode punishes players who haven't memorized every champion's kit, which is most of us. Invisible mode removes visual references and leaves pure text clues—hardest for pattern matchers but doable if you know champion lore cold.</p><p>If you're maintaining a streak and feeling pressure, Classic offers the best signal-to-noise ratio. The attribute tiles give you concrete eliminations rather than interpretive clues.</p><h2>How to guess tomorrow's LoLdle more efficiently</h2><p>Build a mental checklist before you open the puzzle. Start with gender and position—that's two constraints in under five seconds. Then scan species. If you see Vastaya confirmed, your pool shrinks dramatically because there are only about fifteen champions in that category. Same logic applies to Viego's spectral forms or the various robotic champions like Orianna and Blitzcrank.</p><p>The archive link on this page lets you review past puzzles without spoiling today's answer. Skimming two weeks of historical reveals builds pattern recognition for how Riot structures these clues. You'll notice certain phrasing recurs—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-10T22:04:10.905Z",
+        "wordCount": 576,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-09": {
       "articleKey": "loldle-answer-today",
       "date": "2026-06-09",
