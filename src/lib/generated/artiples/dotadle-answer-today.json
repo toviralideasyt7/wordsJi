@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-10T22:04:58.974Z",
+  "generatedAt": "2026-06-11T22:05:13.897Z",
   "byDate": {
+    "2026-06-11": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-11",
+      "title": "Dotadle Answer Today: Best Hero Clues and Faster Solve Strategies",
+      "summary": "Today's Dotadle puzzle tests your Dota 2 hero knowledge. Here's how to read the clues that matter and cut the 124-hero roster down fast.",
+      "articleHtml": "<p>The hero clues on today's Dotadle board reward players who know which attributes define each pick. Strength heroes cluster around tanky initiators; Agility carries dominate late-game damage charts. If you're staring at five clues and unsure where to start, the attribute filter in the <a href=\"#solver\">solver tool</a> eliminates entire hero categories in one tap. That alone cuts your solve time significantly.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>Some clues on the answer card point to multiple heroes. Others narrow the field to two or three picks. The high-weight clues are the ones tied to primary attributes—Strength, Agility, Intelligence, or Universal—and any explicit role markers like \"support\" or \"offlane.\" Those details do real work. A clue that says a hero scales well into the late game combined with Intelligence primary attribute immediately removes Strength heroes from consideration, since most Int cores either farm fast or provide teamfight utility, not both.</p>\n<p>Lane assignment clues deserve extra scrutiny too. Modern Dota has blurred traditional lane lines, but the puzzle still treats safelane carry, mid lane, and support as distinct buckets. When a clue specifies a position, use it. The <a href=\"#archive\">archive page</a> shows how previous puzzles weighted these categories—you'll notice support clues appear roughly once every four boards, while core role markers show up more frequently.</p>\n<p>Watch for hybrid clues that combine two trait families. A hero described as \"durable Intelligence\" narrows the list to heroes like Ogre Magi, Shadow Shaman, or Lion—not many others fit that exact profile. That's the kind of intersection that solves itself if you build a shortlist correctly.</p><h2>How to cut the Dota roster faster</h2>\n<p>The full Dota 2 hero pool sits around 124 playable characters. Nobody processes that list fresh every day. The fastest solvers use attribute elimination before reading individual ability clues. Start by removing whichever three attributes don't apply. What remains is usually eight to fifteen heroes maximum.</p>\n<p>From there, apply role filters. The puzzle often includes one or two role-adjacent clues—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-11T22:05:13.877Z",
+        "wordCount": 329,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-10": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-10",
