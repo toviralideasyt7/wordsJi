@@ -1,7 +1,24 @@
 {
   "articleKey": "smashdle-answer-today",
-  "generatedAt": "2026-06-11T06:15:55.386Z",
+  "generatedAt": "2026-06-12T06:15:19.524Z",
   "byDate": {
+    "2026-06-12": {
+      "articleKey": "smashdle-answer-today",
+      "date": "2026-06-12",
+      "title": "Smashdle Answer Today: June 12, 2026",
+      "summary": "A sharp editor's breakdown of today's Smashdle puzzle, covering fighter clues, stat filtering, DLC traps, and speed-solving tactics.",
+      "articleHtml": "<p>The reveal card on today's Smashdle loads with four or five clues stacked against a roster of roughly ninety fighters. Most players fixate on the character silhouette or franchise tag first. That's the instinct—but it's also what keeps guess counts high when a tighter reading order would cut the board in half before the second attempt.</p><h2>Smashdle answer today: which fighter clue matters first</h2><p>Universe and weight class narrow the field more aggressively than any single visual detail. If the puzzle shows a fighter from the Fire Emblem roster, you're already working with under ten options. Pair that with a middleweight classification and you can often land on three or four plausible candidates within two guesses. The hint widgets on today's page display these filters in sequence—check whether the first visible clue is a franchise tag or a stat block. Stat blocks tell you jump count, air speed, and fall rate immediately, which cuts faster when the universe hint is vague or absent.</p><p>A careful player usually notices that the clue order isn't random. The puzzle designer wants you to eliminate large chunks of the roster early. When the first hint reads as a neutral stat profile rather than a named franchise, skip the guessing game entirely and run the numbers through the <a href=\"#solver\">solver tool linked on this page</a>. You won't find that shortcut by staring at the silhouette.</p><h2>How universe and movement stats split the roster</h2><p>Smash Bros fighters distribute unevenly across universes, and that's the feature working in your favor. Mario, Zelda, and Pokemon alone account for nearly a quarter of the full roster. Punch-Out, Ice Climber, and Mother represent tiny slivers—one or two fighters each. Landing on one of those niche universes from the first clue collapses the solution space dramatically.</p><p>Movement stats separate the cast into recognizable clusters. Fast-fallers like Fox and Captain Falcon share behavioral signatures that contrast sharply with floaty characters such as Jigglypuff and Kirby. A fighter with high jump height but low air speed behaves differently on the stage than one with the opposite profile. Today's puzzle may present these stats as bars, numerical values, or comparative descriptors. Read them as relative terms—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-12T06:15:19.503Z",
+        "wordCount": 362,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-11": {
       "articleKey": "smashdle-answer-today",
       "date": "2026-06-11",
