@@ -1,7 +1,24 @@
 {
   "articleKey": "searchle-answer-today",
-  "generatedAt": "2026-06-10T21:21:15.660Z",
+  "generatedAt": "2026-06-12T14:30:35.563Z",
   "byDate": {
+    "2026-06-12": {
+      "articleKey": "searchle-answer-today",
+      "date": "2026-06-12",
+      "title": "Searchle Answer Today: How to Solve Today's Searchle Puzzle",
+      "summary": "A sharp editor's guide to cracking Searchle's autocomplete challenge, with tips on reading prompts, narrowing guesses, and moving faster tomorrow.",
+      "articleHtml": "<p>Today's Searchle puzzle asks you to identify which Google autocomplete prediction completes the phrase shown on the board. The prompt widget displays a partial search query, and your job is picking which of five options Google would most likely suggest. If you're stuck, check the hint widget before reaching for the solver.</p><h2>Searchle answer today: what the prompt is really asking</h2>\n<p>Each Searchle round presents a fragment that could complete dozens of real searches. You're not guessing random words—you're predicting what millions of searchers have already typed. The five answer choices represent plausible completions, but only one aligns with Google's actual prediction data. Read the prompt as if you're watching someone start typing in a search bar: what would autocorrect offer first?</p>\n<p>The reveal card shows today's winning prediction once you've guessed or exhausted your attempts. Archive links let you review past rounds and see how patterns shift across categories. A careful player notices that certain prompt structures favor specific types of completions—questions get different suggestions than statements, and time-sensitive prompts pull different results than evergreen ones.</p><h2>How autocomplete logic narrows the answer</h2>\n<p>Google's autocomplete draws from search volume, trending data, and linguistic patterns. Popular completions bubble up; obscure ones stay buried. When you face five options, ask which one sounds like something thousands of people would actually search. The obvious choice wins more often than you'd think.</p>\n<p>Notice how the prompt ends. A trailing \"how\" suggests instructional content. A trailing \"why\" suggests explanatory content. The hint widget on this page sometimes nudges you toward the right category if you're genuinely stuck. The solver linked below can walk you through the elimination process if you want to understand the reasoning rather than just get the answer.</p><h2>Why obvious phrasing usually wins</h2>\n<p>Searchle rewards players who think like average Google users, not experts. The autocomplete algorithm prioritizes common language over precise terminology. If one answer uses technical jargon and another uses everyday words, bet on the everyday version. Google serves the broadest audience, so it suggests what most people type.</p>\n<p>This doesn't mean every obvious answer is correct—occasionally a niche term dominates a specific query. But those cases are rarer than players expect. When two answers feel equally plausible, split them by formality. The more conversational option typically matches Google's prediction behavior.</p><h2>How to read tomorrow's Searchle faster</h2>\n<p>Start by scanning the prompt for question words: who, what, when, where, why, how. These anchor the autocomplete direction immediately. Then look for qualifying words near the end—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-12T14:30:35.546Z",
+        "wordCount": 415,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-11": {
       "articleKey": "searchle-answer-today",
       "date": "2026-06-11",

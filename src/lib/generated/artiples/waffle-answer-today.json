@@ -1,7 +1,24 @@
 {
   "articleKey": "waffle-answer-today",
-  "generatedAt": "2026-06-11T08:24:42.438Z",
+  "generatedAt": "2026-06-12T14:35:06.487Z",
   "byDate": {
+    "2026-06-12": {
+      "articleKey": "waffle-answer-today",
+      "date": "2026-06-12",
+      "title": "Waffle Answer Today: June 12, 2026 Grid Solution",
+      "summary": "A breakdown of today's Waffle solution pattern, common swap mistakes players make, and strategies for cleaner solves going forward.",
+      "articleHtml": "<p>The <a href=\"https://wordsolverx.com/waffle-solver/\">Waffle solver</a> on this page shows today's completed grid. If you landed here mid-puzzle, work from the green letters outward—they lock in place once correct and give you anchor points for everything else.</p><h2>Waffle answer today: how to read the solved grid</h2>\n<p>Each tile for this solved layout holds two letters. One belongs to a horizontal word, one to a vertical word. When both positions are correct, the tile turns gold. Look for rows or columns where three tiles already match—that cluster usually anchors the rest of the solve because the crossing words share fewer possibilities.</p>\n<p>A careful player checks whether any letter appears in more than two tiles across the board. Letters that repeat frequently have fewer placement options, which narrows down their position faster than chasing less common consonants.</p><h2>Which swaps usually unlock two words at once</h2>\n<p>Swapping two adjacent tiles in the same row or column is the core mechanic, but the efficient move targets intersections where one tile is already correct and its neighbor isn't. Fixing that neighbor often completes an entire crossing word, flipping two tiles to gold simultaneously.</p>\n<p>Watch for corner-adjacent swaps—moving a tile near a corner can resolve both the corner's horizontal and vertical word if you've already placed most of the surrounding letters correctly. Players who swap randomly instead of targeting these junctions tend to spend two or three extra moves before landing on the obvious fix.</p><h2>Where players leak moves they did not need to spend</h2>\n<p>The biggest waste comes from swapping tiles that are already correct. Before making any move, confirm you're changing a tile that actually needs changing. On longer solves, fatigue sets in and players start second-guessing placements they made five moves ago.</p>\n<p>Another common leak: rearranging tiles in a nearly-complete row before finishing a separate incomplete row. You clear out working space but add nothing to your gold count. Complete one word cluster before touching another—you'll finish faster and avoid undoing progress.</p><h2>How to finish tomorrow's Waffle more cleanly</h2>\n<p>Start each solve by scanning for letters that appear four or more times. Those high-frequency letters constrain their possible positions heavily. Place those first, then work toward the edges where words tend to be shorter and easier to verify.</p>\n<p>If you get stuck, use the <a href=\"https://wordsolverx.com/waffle/\">hint system sparingly</a>. One hint reveals a single correct position without solving the whole puzzle. That's usually enough to unstick a stalled player without removing the challenge entirely. The archive link below lets you compare your move count against past days if you want to track improvement over time.</p><h2>Questions players keep asking</h2><h3>Do swapped tiles always stay swapped, or can I undo?</h3>\n<p>Tiles swap permanently until you swap them again. There's no automatic undo, so if you place a letter incorrectly and then build around it, you'll need to trace back through your own moves to find the error. Some players restart rather than untangle a messy mid-board.</p><h3>Why didn't my swap register even though I moved the tiles?</h3>\n<p>The game requires tiles to settle into their new positions fully. Quick drags sometimes leave tiles hovering between spots. Let go completely and wait a half-second before releasing—if the tile snaps back, the swap won't count.</p><h3>Is there a penalty for taking more moves?</h3>\n<p>No score penalty exists, but higher move counts show up in your personal history if you track solves. Some players treat a lower move count as a badge of efficiency. Others just want the gold grid and don't care about the path to get there.</p><h3>Can players use the solver to check just one row?</h3>\n<p>The <a href=\"https://wordsolverx.com/waffle-solver/\">solver tool</a> generates the full solution. It doesn't isolate individual rows or columns. For targeted help during a live solve, the hint button reveals one correct letter position at a time without spoiling the rest of the grid.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-12T14:35:06.478Z",
+        "wordCount": 637,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-11": {
       "articleKey": "waffle-answer-today",
       "date": "2026-06-11",
