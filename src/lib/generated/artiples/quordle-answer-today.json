@@ -1,7 +1,23 @@
 {
   "articleKey": "quordle-answer-today",
-  "generatedAt": "2026-06-10T16:51:03.865Z",
+  "generatedAt": "2026-06-13T07:19:24.942Z",
   "byDate": {
+    "2026-06-13": {
+      "articleKey": "quordle-answer-today",
+      "date": "2026-06-13",
+      "title": "Quordle Answer Today: Strategy for June 13, 2026 Boards",
+      "articleHtml": "<h2>Quordle answer today: what the boards are asking first</h2>\n<p>The reveal card above shows the completed solution set for June 13, 2026. Players tackling this specific daily sequence need to manage vowel scarcity across all four quadrants simultaneously. The most efficient path involves eliminating common consonants like R, S, and T in the first two moves while mapping vowel placement. If a single guess yields green tiles on three boards but nothing on the fourth, pivot immediately to a word targeting the remaining unknowns rather than chasing a perfect fit for the solved ones.</p>\n<p>Today's puzzle configuration on the main board demands a shift in standard opening logic. Most solvers start with a vowel-heavy word like ADIEU or AROSE. That approach often fails here because it burns a turn revealing letters that only apply to one or two grids. The data visible on the answer card suggests a consonant-first strategy works better when the hidden words share few common vowels. Check the hint widget below the grid; it often flags if a specific letter appears in multiple solutions, saving a guess that would otherwise go to waste.</p><h2>How to split attention across four grids</h2>\n<p>Managing four active games feels chaotic until you impose a strict scanning order. Always read the boards left-to-right, top-to-bottom, and lock that pattern into your muscle memory. When a new guess lands, your eyes should hit the top-left grid first, note the feedback, then move strictly to the top-right. Skipping around causes players to miss a yellow tile in the bottom-right corner that invalidates a planned follow-up guess. The interface groups these grids tightly, which helps, but the mental load remains high.</p>\n<p>A careful player notices that the color feedback often tells a conflicting story across the quadrants. A letter might be green in the first board, yellow in the second, and gray in the third and fourth. This specific pattern on the June 13 board indicates the letter exists in two words but in different positions, while being absent from the other two entirely. Ignoring the gray feedback in the bottom half while celebrating the green in the top half is a common error. Treat every gray tile as a hard constraint for all four words unless proven otherwise by a subsequent guess.</p>\n<p>Use the archive link located near the footer to review past sequences where this split-attention failure occurred. Seeing how previous players burned guesses by focusing on a single",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-13T07:19:24.920Z",
+        "wordCount": 406,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-11": {
       "articleKey": "quordle-answer-today",
       "date": "2026-06-11",
