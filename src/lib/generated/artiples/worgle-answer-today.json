@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-06-12T18:41:05.245Z",
+  "generatedAt": "2026-06-13T16:53:56.008Z",
   "byDate": {
+    "2026-06-14": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-06-14",
+      "title": "Worgle Answer Today: Welsh Letter Patterns and Solve Strategies",
+      "summary": "Master Welsh letter patterns in Worgle with expert strategies for handling digraphs like DD, LL, and CH that differ from standard English Wordle.",
+      "articleHtml": "<p>Worgle uses the same five-by-six grid as its English counterpart, but the vocabulary and letter frequencies are distinctly Welsh. If you're approaching today's puzzle with English Wordle instincts, you'll hit walls fast.</p><h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>\n<p>Today's answer card on this page reveals a word built around one of Welsh's most distinctive features: the frequent appearance of double consonants and digraphs. Words containing <strong>DD</strong>, <strong>LL</strong>, or <strong>CH</strong> show up far more often than their English counterparts would suggest. A careful player notices these patterns immediately when scanning the reveal—these aren't typos or anomalies, they're core to how Welsh spelling works. The hint widget may point toward a sound that's unfamiliar if you haven't studied Welsh orthography, so cross-reference against the <a href=\"/worgle-solver\">Worgle solver</a> if you're stuck on interpretation.</p><p>The reveal card shows green tiles that confirm which positions hold standard English letters versus those carrying Welsh digraphs. Some players get thrown off when a position reads as correct but doesn't match their expected English letter. That's because Welsh treats digraphs as single phonemic units—a <strong>CH</strong> occupies one tile, not two.</p><h2>How to read common Welsh digraphs without overforcing them</h2>\n<p>Think of Welsh digraphs as single sounds taking up single tiles. The most common ones worth memorizing: <strong>DD</strong> (a voiced dental fricative, like \"this\" but sharper), <strong>LL</strong> (no English equivalent—imagine saying L while forcing air between your tongue and palate), <strong>CH</strong> (unvoiced velar fricative, softer than German CH), and <strong>RH</strong> (an aspirated R that starts voiceless). Less frequent but still important: <strong>NG</strong> (one sound, not two), <strong>TH</strong> (always voiceless, never the voiced English TH), and <strong>FF</strong> (sounds like English F).</p><p>The <strong>W</strong> in Welsh can function as a vowel—think \"cwrw\" (beer) or \"twymyn\" (fever). When you see W in the reveal card, don't automatically treat it like an English consonant. Check the surrounding letters for vowel partners. The <a href=\"/worgle-archive\">Worgle archive</a> shows plenty of examples where W carries the vowel load in a word.</p><p>Reading digraphs correctly matters for elimination logic too. If you've guessed a word with CH and it shows yellow, you know that CH sound exists somewhere in the answer—not just C and H separately. That narrows your search considerably compared to treating each letter independently.</p><h2>Where English guessing habits break the solve</h2>\n<p>Most players coming from standard Wordle carry over letter value assumptions that flat-out don't apply. In English, Q basically requires U, Z is rare, and X almost never ends words. None of that holds in Welsh. Here, <strong>W</strong> and <strong>Y</strong> dominate. The letter <strong>Y</strong> acts as a vowel in many Welsh words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-13T16:53:55.998Z",
+        "wordCount": 434,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-13": {
       "articleKey": "worgle-answer-today",
       "date": "2026-06-13",
