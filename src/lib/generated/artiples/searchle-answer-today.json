@@ -1,7 +1,24 @@
 {
   "articleKey": "searchle-answer-today",
-  "generatedAt": "2026-06-12T14:30:35.563Z",
+  "generatedAt": "2026-06-15T09:49:14.800Z",
   "byDate": {
+    "2026-06-15": {
+      "articleKey": "searchle-answer-today",
+      "date": "2026-06-15",
+      "title": "Searchle Answer Today: June 15, 2026",
+      "summary": "Today's Searchle puzzle asks solvers to identify autocomplete predictions based on partial prompts. Understanding Google's ranking logic helps narrow down which popular searches match the given fragments.",
+      "articleHtml": "<p>Today's Searchle puzzle presents three partial search prompts that share a common thread. The challenge isn't just guessing what completes each phrase—it's recognizing which completions Google would actually surface as top predictions. A careful player notices that the three prompts on today's board likely reference the same underlying topic, even if their wording differs slightly.</p><h2>Searchle answer today: what the prompt is really asking</h2>\n<p>The puzzle gives you the start of three separate Google searches. Your job is to figure out which complete phrases those fragments come from. The key insight: Google ranks autocomplete suggestions by popularity, not relevance to any single person. So you're essentially trying to predict what millions of searchers have typed before you. Today's three prompts all point toward <strong>one specific thing</strong>—the shared connection between them is the real puzzle. Once you spot that pattern, filling in the individual completions becomes much simpler.</p><h2>How autocomplete logic narrows the answer</h2>\n<p>Google's autocomplete doesn't suggest random completions. It surfaces what people actually search for, weighted by frequency. That means your best guesses are usually the ones that sound like something you'd hear on the news or see trending on social media. If a completion feels obscure or hyper-specific, it's probably not the right pick. The system rewards common phrasing over clever alternatives. When you're stuck between two options, ask yourself: which one sounds like a question someone would type at 11pm while scrolling their phone? That's usually the prediction Google shows first.</p><h2>Why obvious phrasing usually wins</h2>\n<p>Searchle rewards players who think like average internet users, not experts. The platform serves autocomplete predictions to a general audience, so the most popular completions tend to be straightforward and direct. If you've narrowed your options down to a technical term versus a plain-English phrase, lean toward the plain version nine times out of ten. Today's puzzle follows that pattern—the answer uses the terminology most people actually type, not the precise language you'd find in a textbook. Check the <a href=\"#\">archive link</a> on today's page to see how previous puzzles have rewarded similar straightforward approaches.</p><h2>How to read tomorrow's Searchle faster</h2>\n<p>Speed comes from pattern recognition across multiple puzzles. After solving a few Searchles, you'll notice certain categories repeat: celebrity questions, health symptoms, product reviews,",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-15T09:49:14.782Z",
+        "wordCount": 374,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-12": {
       "articleKey": "searchle-answer-today",
       "date": "2026-06-12",
