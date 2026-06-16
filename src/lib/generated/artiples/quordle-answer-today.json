@@ -1,7 +1,24 @@
 {
   "articleKey": "quordle-answer-today",
-  "generatedAt": "2026-06-15T21:44:28.624Z",
+  "generatedAt": "2026-06-16T20:09:26.141Z",
   "byDate": {
+    "2026-06-17": {
+      "articleKey": "quordle-answer-today",
+      "date": "2026-06-17",
+      "title": "Quordle Answer Today: June 17, 2026 — Classic, Chill, Extreme & Sequence",
+      "summary": "Master the four-board challenge with targeted opening words, smart guess allocation, and a finish strategy that keeps panic out of your final rows.",
+      "articleHtml": "<p>Today's Quordle presents the same core challenge every player recognizes: four boards, one set of guesses, and letters that refuse to cooperate across all grids simultaneously. The mode selector on this page offers Classic, Chill, Extreme, Sequence, Rescue, and Weekly variants—each demanding slightly different timing and risk tolerance, but the solve logic stays consistent. Here's how a careful player reads today's board and walks away with clean completions.</p><h2>Quordle answer today: what the boards are asking first</h2>\n<p>Before diving into word selection, check the reveal card at the top of this page. The answer display shows whether you've already had a peek or are approaching fresh. If hints are active, note which letters appear gray versus colored—that tells you which boards share early commonality and which are running independent races. A careful player usually notices that two boards often resolve faster than the other pair, so resist the urge to treat all four as equal priority once results start coming in.</p>\n<p>The archive link beside the board history lets you compare today's distribution against recent days. Some players track whether certain letter positions trend harder in their personal solves, though that's observation, not prescription. What matters more: if the hint widget shows repeated vowels early, your opener should capitalize on that signal immediately rather than waiting for confirmation.</p><h2>How to split attention across four grids</h2>\n<p>Most players fail Quordle by trying to hold all four boards in memory at once. The smarter approach treats the solve as two parallel tracks: fast boards and slow boards. Your first three guesses should prioritize information density—finding letters that matter across multiple boards—while your fourth and fifth guesses shift toward rescue mode on whichever grids remain stubborn.</p>\n<p>When one board locks in early (showing four or five correct letters), move it to background status. Don't waste mental cycles confirming what you already know. Redirect that saved attention to the remaining grids, especially any showing only one or two colored squares. Those lagging boards determine whether you finish cleanly or scramble into guess seven with everything on the line.</p>\n<p>The solver tool linked on this page can help when you're stuck between plausible options. It filters guesses by letter frequency and board-specific constraints, narrowing choices without making the decision for you.</p><h2>Which guesses pull double duty best</h2>\n<p>Not all five-letter words earn their spot equally. The best Quordle openers satisfy three criteria: high vowel density, common consonant placement, and letters that appear frequently across English words. Words like TRACE, SLATE, and CRANE dominate standard lists because they test the most probable positions without wasting turns on obscure combinations.</p>\n<p>Once you've run your opener, evaluate results by board rather than globally. A letter marked gray on three boards but green on one deserves special attention—that single-board success might indicate a less common letter pattern worth pursuing further. Conversely, a gray result across all four boards eliminates a chunk of possibilities efficiently, which is exactly what good second guesses accomplish.</p>\n<p>Third guesses should introduce new consonants your first two didn't cover. If you've already tested R, S, T, L, N, E, A, O, I—your third guess needs to bring C, H, P, or U into play. Stacking duplicates wastes turns and leaves some boards completely unaddressed.</p><h2>How to finish the next Quordle with fewer panicked guesses</h2>\n<p>The difference between a comfortable win and a last-row scramble often comes down to how you handle the middle phase. Between guesses three and five, most players experience what's called",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-16T20:09:26.117Z",
+        "wordCount": 579,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-16": {
       "articleKey": "quordle-answer-today",
       "date": "2026-06-16",
