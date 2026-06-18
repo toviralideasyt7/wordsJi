@@ -1,7 +1,24 @@
 {
   "articleKey": "waffle-answer-today",
-  "generatedAt": "2026-06-12T14:35:06.487Z",
+  "generatedAt": "2026-06-18T14:44:51.185Z",
   "byDate": {
+    "2026-06-18": {
+      "articleKey": "waffle-answer-today",
+      "date": "2026-06-18",
+      "title": "Waffle Answer Today: Complete Solution Guide for June 18, 2026",
+      "summary": "A sharp editor's breakdown of today's Waffle solution, swap strategy, and where players typically waste moves on the board.",
+      "articleHtml": "<p>Today's Waffle solution sits on the board, green tiles locked into place, crossed words forming their final pattern. If you're here, you probably want to understand how the solve path works, where the tricky swaps hide, and whether your own approach matched what most players figure out.</p><h2>Waffle answer today: how to read the solved grid</h2>\n<p>The solved Waffle shows every letter in its correct position—green tiles mark letters that landed correctly, while yellow or gray indicates letters that needed movement. Reading the board from the anchor points outward helps. Most solvers find the longest intersecting words first, then use those fixed positions to constrain what adjacent words can be. Today's layout follows the standard five-by-five waffle structure with words running horizontally and vertically, meeting at shared letters that must satisfy both directions simultaneously. When you look at the reveal card above, notice which intersections forced the most adjustments—that's usually where the puzzle's difficulty concentrated.</p><p>A careful player usually notices that some green tiles create immediate pressure on their crossing words. Lock one direction's letters, and the perpendicular word suddenly has fewer viable arrangements. The archive link in the sidebar lets you compare today's solve against previous days if you want to spot patterns in how often certain letter combinations appear.</p><h2>Which swaps usually unlock two words at once</h2>\n<p>The highest-value swaps on any Waffle board are the ones that resolve two intersecting words simultaneously. When you swap a letter from a horizontal word into a vertical position (or vice versa) and both words shift toward their solution, you've found a dual unlock. These typically occur at the center of the grid where horizontal and vertical words share the most real estate, or at the corners where edge constraints force tight solutions.</p><p>Players who finish cleanly tend to scan for these intersection points before making random swaps. They ask:",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-18T14:44:51.175Z",
+        "wordCount": 309,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-12": {
       "articleKey": "waffle-answer-today",
       "date": "2026-06-12",

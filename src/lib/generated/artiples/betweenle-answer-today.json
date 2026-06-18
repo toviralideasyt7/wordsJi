@@ -1,7 +1,24 @@
 {
   "articleKey": "betweenle-answer-today",
-  "generatedAt": "2026-06-14T16:45:15.599Z",
+  "generatedAt": "2026-06-18T14:31:37.008Z",
   "byDate": {
+    "2026-06-18": {
+      "articleKey": "betweenle-answer-today",
+      "date": "2026-06-18",
+      "title": "Betweenle Answer Today: How to Read the Clues and Narrow Your Guess",
+      "summary": "Today's Betweenle puzzle uses alphabetical positioning to guide guesses. Here's how careful players read the board before the reveal and sharpen tomorrow's solve.",
+      "articleHtml": "<p>June 18, 2026's Betweenle puzzle sits on the board now. If you're checking this page, you're either verifying today's answer or looking for the edge that makes tomorrow easier. Either way, the clue cards and alphabetical feedback system give you more signal than most players use.</p><h2>Betweenle answer today: what to notice before the reveal</h2><p>The Betweenle system ranks your guesses alphabetically and shows where the target lands relative to them. A careful player notices that the position markers aren't just \"hot\" or \"cold\"—they tell you exactly which half of the remaining alphabet contains your answer. Before touching the reveal card, scan the guess history. Where does the last guess sit? Is there a wide gap above or below it? That gap represents untested territory, and today's answer likely lives in one of those empty zones.</p><p>If the board shows three guesses with positions clustered in the middle letters, the extremes are still fair game. Geography puzzles especially tend to reward players who test endpoints early. The answer card itself confirms what the positional markers implied—if you read them right, the reveal feels like validation rather than surprise.</p><h2>How the alphabetical gap tightens</h2><p>Betweenle functions like a manual binary search. Each guess doesn't just rule out that single option—it eliminates everything on one side of the alphabet. When you guess a country name starting with \"M,\" and the marker shows the answer comes after, every A through M becomes irrelevant. That's not incremental progress. That's cutting your search space in half with one entry.</p><p>The gap shrinks fastest when players ignore midpoint strategy. Guessing wildly across the alphabet wastes opportunities. Instead, pick a letter near the center of the remaining range. On June 18th's board, if previous guesses eliminated everything before \"G,\" aim for the middle of G-through-Z. The tighter the gap between your highest \"below\" result and lowest \"above\" result, the closer you are. Three sharp guesses often do what six random entries can't.</p><p>Solver tools on this page can help you test letter ranges quickly if you're stuck mid-game. Paste your known constraints and let the tool surface options you'd otherwise miss.</p><h2>When the clue cards do the real work</h2><p>The clue widgets on today's page exist for a reason. They don't hand you the answer, but they reframe the question. A category hint—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-18T14:31:37.000Z",
+        "wordCount": 386,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-15": {
       "articleKey": "betweenle-answer-today",
       "date": "2026-06-15",
