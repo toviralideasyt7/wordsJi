@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-06-19T08:49:28.381Z",
+  "generatedAt": "2026-06-19T18:31:03.693Z",
   "byDate": {
+    "2026-06-20": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-06-20",
+      "title": "Sportle Answer Today: Your Quick Reference Guide",
+      "summary": "Today's Sportle answer page helps you verify solutions, understand solve paths, and access helpful tools for the daily sports puzzle.",
+      "articleHtml": "<h2>Sportle answer today: what matters most on this page</h2><p>If you're landing here, you've already got today's Sportle board open and probably want two things fast: confirmation that your answer is correct, and a way to fill any gaps before moving on. This page keeps those needs separate. The reveal card shows the answer directly, while the hint widgets sit just below for anyone who hasn't committed yet. Most visitors scroll past both within seconds—which works fine if you only needed a quick check, but less ideal if you hit a wall mid-solve.</p><p>The solver link near the top of the page handles the heavy lifting when hints aren't enough. It doesn't hand you the answer outright; instead it walks through the pattern logic so you can apply that thinking to similar clues down the line. That's the difference between getting unblocked and getting handed something.</p><h2>What to pay attention to before you reveal anything else</h2><p>A careful player usually notices the category indicator before touching any hints. Sportle clues tend to cluster around equipment names, playing positions, venue types, and action verbs—and the board layout gives you that context before you even engage with the individual cells. That pre-scan saves time. If you know you're looking at a position-based clue, you're not chasing equipment terms. If the category leans toward venues, you're filtering for stadium and arena vocabulary instead.</p><p>The hint system works best when you use it incrementally. Pull the first hint, see if it narrows your search, then stop there. Second and third hints exist for a reason, but they also change the solve from pattern recognition into memorization. You learn more about Sportle's construction style by working through one or two levels than by pulling everything at once and watching the board solve itself.</p><h2>Mistakes that usually cost the clean solve</h2><p>Players who rush the reveal card often misread letter counts. Sportle grids sometimes compress multi-word answers into single display cells, which makes counting letters harder than it should be. Before confirming anything against the answer above, double-check whether you're reading one word or two. A three-letter answer might actually be a two-letter plus a one-letter combination sitting in adjacent cells.</p><p>Another common issue: treating similar sports terms as interchangeable. Baseball and softball share vocabulary, football and rugby overlap, but Sportle's clue construction respects league-specific distinctions more than casual players expect. A clue pointing to \"guard\" in an NBA context won't match the same cell as \"forward\" even if both are basketball positions. Stick to the specific sport the category indicates.</p><p>Ignoring the archive link costs you pattern familiarity over time. Each day's puzzle follows consistent construction logic, and reviewing yesterday's board—particularly the clue phrasing and grid arrangement—builds intuition you can't get from solving today's puzzle alone. Players who never touch the archive tend to plateau faster because they're not absorbing the underlying design patterns.</p><h2>How to play the next Sportle more efficiently</h2><p>Build a mental glossary of Sportle's clue language before you even open tomorrow's board. Terms like \"pitch,\" \"field,",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-19T18:31:03.677Z",
+        "wordCount": 505,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-19": {
       "articleKey": "sportle-answer-today",
       "date": "2026-06-19",
