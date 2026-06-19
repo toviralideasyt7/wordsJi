@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-18T06:24:42.480Z",
+  "generatedAt": "2026-06-19T22:06:10.378Z",
   "byDate": {
+    "2026-06-19": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-19",
+      "title": "Dotadle Answer Today: Hero Clues That Actually Matter",
+      "summary": "Breaking down which Dota hero attributes and lane roles give you the fastest path to today's correct answer on WordSolverX.",
+      "articleHtml": "<p>Today's Dotadle puzzle leans heavily on attribute type and typical lane assignment. If you've been cycling through heroes randomly, you're working against yourself. A few well-placed observations about how the clue widgets are structured will cut your solve time significantly.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2><p>The reveal card shows one or two defining traits rather than a full hero description. That's intentional—it's testing whether you know which Dota characteristics are load-bearing versus decorative. Primary attribute matters more than secondary stats. A hero's main stat determines their item scaling in ways that secondary attributes simply don't. When the clue widget highlights Strength, Agility, Intelligence, or Universal, treat that as your anchor point before anything else.</p><p>Lane placement narrows the field further. Support heroes cluster around a different subset than core carries. If the puzzle gives you both a lane role and an attribute, you've got maybe eight to twelve plausible heroes left. That's manageable territory for systematic elimination rather than guesswork.</p><p>Heroes like Shadow Fiend or Luna share Agility cores but diverge sharply on ability kit and typical positioning. The clue widgets on this page often emphasize what makes each hero distinct in team composition, not just raw damage output. Read those distinctions as filters, not flavor text.</p><h2>How to cut the Dota roster faster</h2><p>The Dota hero pool breaks down into roughly three attribute categories plus Universal. Each category has about 25-30% of the total roster. If you can eliminate even one attribute from consideration early, you've already removed a quarter of possible answers. The archive link on this page lets you sort past puzzles by attribute type—a useful reference for spotting patterns in how the puzzle setters think.</p><p>Focus on ability archetypes next. Ganking heroes look different from push specialists. Teamfight initiators operate differently from backline babysitters. The clue widgets tend to describe function over form—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-19T22:06:10.353Z",
+        "wordCount": 312,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-18": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-18",
