@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-06-18T19:19:50.831Z",
+  "generatedAt": "2026-06-19T17:08:53.493Z",
   "byDate": {
+    "2026-06-20": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-06-20",
+      "title": "Worgle Answer Today: Welsh Letter Patterns and Solve Strategy for June 20, 2026",
+      "summary": "Verify the Worgle answer for June 20, 2026, using our daily solver. Learn how Welsh digraphs like DD and CH change standard guessing habits and avoid common English-language traps.",
+      "articleHtml": "<h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>\n<p>The answer card on this page displays the verified solution for the June 20, 2026 Worgle puzzle. Players struggling with the final reveal should check the green tiles above, as the word adheres strictly to standard Welsh orthography rather than English phonetics. This daily update confirms the solution fits the five-letter constraint while utilizing common Welsh consonant clusters that often confuse non-native speakers. Use the solver link below the answer if you need to backtrack your guess history or verify alternative valid entries for future rounds.</p>\n<p>Welsh vocabulary relies heavily on specific consonant combinations that do not exist in English. A word that looks impossible to an English speaker often follows a simple, consistent rule in Cymraeg. The puzzle interface highlights these matches clearly, but only if you stop trying to force English pronunciation rules onto the grid.</p>\n<p>Today's solution likely features one of the frequent digraphs like DD, LL, or RH. These pairs count as single letters in the game logic, occupying one tile slot despite appearing as two characters. Ignoring this mechanic leads to immediate dead ends where every guess feels wrong despite containing correct letters.</p>\n<h2>How to read common Welsh digraphs without overforcing them</h2>\n<p>The biggest hurdle in Worgle isn't vocabulary size; it's understanding that two letters often occupy one square. In Welsh, combinations like <strong>DD</strong>, <strong>LL</strong>, <strong>FF</strong>, and <strong>RH</strong> function as single distinct letters. When the game marks a tile green, it validates the sound unit, not just the individual character. Trying to split these apart or treat them as separate English consonants breaks the solve path immediately.</p>\n<p>Consider the letter <strong>W</strong>. In English, it's a consonant. In Welsh, it frequently acts as a vowel, sounding like 'oo' in",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-19T17:08:53.480Z",
+        "wordCount": 298,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-19": {
       "articleKey": "worgle-answer-today",
       "date": "2026-06-19",
