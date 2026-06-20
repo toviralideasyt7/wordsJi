@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-06-19T08:49:01.652Z",
+  "generatedAt": "2026-06-20T07:15:26.204Z",
   "byDate": {
+    "2026-06-20": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-06-20",
+      "title": "Phrazle Answer Today: Hints, Color Feedback, and How to Solve the Daily Phrase",
+      "summary": "Today's Phrazle rewards players who think in idioms and phrases, not single words. Here's how to read the board and find the answer faster.",
+      "articleHtml": "<p>The Phrazle board doesn't care how strong your vocabulary is. It cares whether you think in complete thoughts. Today's puzzle asks you to crack a common expression—and if you've been feeding it one-word guesses, you're fighting uphill.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>A careful player usually notices the slot count before anything else. Each blank represents a word in the target phrase, but those blanks also hint at length and rhythm. A four-slot phrase like \"___ ___ ___ ___\" behaves differently than a tight three-word punch. Look at how many characters each slot holds. Longer slots often belong to articles, prepositions, or small connecting words—which means the meat of the phrase sits in the middle slots. That's not a rule, but it's a pattern worth tracking on the archive page after you solve.</p><h2>How to read color feedback across multiple words</h2>\n<p>Color feedback in Phrazle works like other phrase games: green means correct position, yellow means the word exists elsewhere, gray means gone. But here's what trips people up—color applies per word, not per letter. If you guess \"piece of cake\" and \"cake\" lights up green, that entire word is locked. You won't accidentally place individual letters from that word elsewhere. Think in blocks, not in Scrabble tiles.</p><p>When you see mixed feedback across a multi-word guess—say two greens and one gray—that tells you something specific. Either two words landed perfectly and one is completely absent, or one word is right but misplaced. Check the solver tool if you've cycled through three reasonable guesses with no full clear. Sometimes players miss a subtle anagram within the phrase itself.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>This is where Phrazle punishes Wordle instincts. You might nail individual words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-20T07:15:26.189Z",
+        "wordCount": 295,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-19": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-06-19",
