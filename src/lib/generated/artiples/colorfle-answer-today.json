@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-19T18:25:00.288Z",
+  "generatedAt": "2026-06-20T16:45:30.793Z",
   "byDate": {
+    "2026-06-21": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-06-21",
+      "title": "Colorfle Answer Today: How to Read Today's Color Mixing Solution",
+      "summary": "Master the additive color logic behind Colorfle's RGB mixing puzzle with this breakdown of today's solution and strategies for future attempts.",
+      "articleHtml": "<p>Today's Colorfle answer involves three RGB source colors mixed additively to hit the target. Reading the solution correctly means understanding why red, green, and blue combine differently than paint pigments would. The reveal card shows exactly which values work and why they land on the target.</p><h2>Colorfle answer today: how the mix should be read</h2><p>The answer card displays three distinct RGB triplets. Each represents a color channel value from 0 to 255 for red, green, and blue. When these three colors overlap using additive mixing, their combined wavelengths produce today's target shade. A careful player notices the answer isn't just three random colors—each one contributes a specific channel intensity that stacks cleanly toward the goal.</p><p>On this board, the target sits at the center of the mixing diagram. The three guesses radiate outward, showing how each source color feeds into the final result. The hint widget, if used, reveals which channels are over or under-contributing. Players who check the archive link can compare today's approach against previous days' solutions and spot patterns in how the targets shift.</p><h2>What the source colors are telling you</h2><p>Every RGB value is a recipe. A value like (255, 128, 0) means full red, half green, zero blue. When you see three of these stacked together, you're looking at three partial recipes that must sum to the target's coordinates. Some days the three sources split the load evenly. Other days one source carries most of the weight while the other two fill in gaps.</p><p>The clue widget on today's page breaks down channel-by-channel feedback. Green numbers mean you're hitting the right intensity. Red flags show which channel is overshooting or undershooting. If the hints display partial matches, that tells you some channels are correct while others need adjustment. This isn't about guessing randomly—it's about reading what the puzzle already revealed and narrowing the field.</p><p>Players who ignore the channel-level feedback tend to cycle through unrelated guesses. Those who track which channels are locked in move faster. The solver tool on this page automates that tracking if you want to test combinations quickly.</p><h2>Why additive color logic beats random mixing</h2><p>Additive mixing works by adding light, not pigment. Stack red and green light together and you get yellow. Add blue and you get white. This is fundamentally different from how paint behaves, where red and green make brown. Many players stumble because they apply paint-mixing intuition to a light-based system.</p><p>The math is straightforward: each channel sums independently. Target R value minus your current R contributions tells you what red-intensity gap remains. Same for G and B. You're not blending colors in a visual mess—you're solving three separate one-variable equations that happen to share a display.</p><p>Random mixing treats the problem as",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-20T16:45:30.775Z",
+        "wordCount": 457,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-20": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-06-20",
