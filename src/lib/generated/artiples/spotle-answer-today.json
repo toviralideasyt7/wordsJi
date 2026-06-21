@@ -1,7 +1,24 @@
 {
   "articleKey": "spotle-answer-today",
-  "generatedAt": "2026-06-19T17:07:19.751Z",
+  "generatedAt": "2026-06-21T18:20:02.260Z",
   "byDate": {
+    "2026-06-22": {
+      "articleKey": "spotle-answer-today",
+      "date": "2026-06-22",
+      "title": "Spotle Answer Today: How to Solve June 22, 2026",
+      "summary": "Genre and debut year narrow the field quickly in Spotle. Here's how careful players read the full clue stack to land the right artist.",
+      "articleHtml": "<p>The answer card on this page shows today's Spotle puzzle resolved. Whether you're checking your final guess or working backward from the reveal, here's how to read what went into it.</p><h2>Spotle answer today: which clue should matter first</h2>\n<p>Most players start with genre because it's the broadest filter. That's fine if you're guessing randomly, but a better move is to lead with debut year. Narrowing by decade or exact year cuts the candidate pool dramatically before you even touch the other clues. Genre then refines what remains into something manageable. This ordering matters more as you get deeper into the week and the puzzle difficulty tightens.</p>\n<p>On today's board, the hint widgets display genre, debut year, group size, gender, and nationality. A careful player notices that nationality often does the heaviest lifting when the genre overlaps with many artists. If the genre is rock and the nationality is Swedish, you've just eliminated ninety percent of the competition. Combine that with a debut year window and you're left with two or three plausible names at most.</p>\n<p><strong>Tip:</strong> When the archive shows multiple hints revealed over time, check the sequence. Early reveals tend to be broader; later ones are surgical. The order tells you how much the puzzle wanted to stretch things out versus landing cleanly on the first or second guess.</p><h2>How genre, country, and era work together</h2>\n<p>Spotle's five-clue structure isn't random. Each attribute is chosen because it intersects with others in ways that feel obvious once you see the answer but require real thought to predict. Genre plus country gives you regional scenes. Era plus group size tells you whether to look at solo acts dominating the charts or band configurations that peaked in certain decades. Gender adds one more constraint that eliminates half the remaining candidates instantly.</p>\n<p>The trick is recognizing which intersections are rare. A female K-pop solo artist active since 2015? That's a small list. A male British rock guitarist who debuted in 1971? The overlap with other attributes narrows fast. The solver tool on this page can handle those intersections automatically, but running them mentally first sharpens your instincts for future puzzles.</p>\n<p>One thing worth noting: era and debut year aren't always the same thing. An artist's breakout single might come years after their first release. Spotle typically uses debut year as the formal marker, but pay attention to whether the hint widget specifies",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-21T18:20:02.235Z",
+        "wordCount": 400,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-20": {
       "articleKey": "spotle-answer-today",
       "date": "2026-06-20",
