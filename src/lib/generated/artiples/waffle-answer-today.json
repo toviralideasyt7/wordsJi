@@ -1,7 +1,24 @@
 {
   "articleKey": "waffle-answer-today",
-  "generatedAt": "2026-06-19T08:49:50.861Z",
+  "generatedAt": "2026-06-22T09:39:49.726Z",
   "byDate": {
+    "2026-06-22": {
+      "articleKey": "waffle-answer-today",
+      "date": "2026-06-22",
+      "title": "Waffle Answer Today: Solved Grid and Swap Strategy for June 22, 2026",
+      "summary": "Verify the solved Waffle grid for June 22, 2026. Learn which swaps unlock multiple words, where players waste moves, and how to clean up tomorrow's solve using visible clues.",
+      "articleHtml": "<h2>Waffle answer today: how to read the solved grid</h2>\n<p>The solved grid above displays six valid words intersecting at shared letters, with green tiles marking correct placements and yellow tiles indicating letters that belong in the word but need swapping. For this June 22, 2026 puzzle, the reveal card confirms every crossing point locks the structure together, meaning one misplaced letter often breaks two words simultaneously. Check the answer card first to verify your final state before logging a win or moving to the archive.</p>\n<p>Green letters act as anchors. Once a letter turns green, it stays put. The remaining work involves cycling yellow letters along their specific word lines until every intersection satisfies both the across and down constraints. This static framework reduces the problem from guessing six unknown words to rearranging a fixed set of characters.</p>\n<p>Use the solver link below the grid if you need to test alternative arrangements without burning attempts. The tool respects the fixed green letters and only permutes the yellow ones, mirroring the actual game logic.</p><h2>Which swaps usually unlock two words at once</h2>\n<p>Intersection points are the leverage spots. A single swap at a crossing cell changes one letter for an across word and one letter for a down word. Smart players target these junctions first because a correct placement here provides immediate feedback on two fronts. If a yellow letter moves to a crossing slot and turns green, you have effectively halved the remaining uncertainty for both intersecting lines.</p>\n<p>Look for vowels at intersections. Vowels appear frequently in the center of English words, and Waffle grids often place them at crossings to maximize entanglement. Swapping an 'E' or 'A' into a central slot often resolves the surrounding consonants by elimination. If the vowel fits, the flanking letters usually snap into place quickly.</p>\n<p>Avoid shuffling end-caps early. Letters at the start or end of a word only affect one line. Save those moves for the cleanup phase after the crossings are secure. Focusing on the core first prevents the common mistake of solving one word perfectly while breaking its neighbor.</p><h2>Where players leak moves they did not need to spend</h2>\n<p>Panic swapping kills streaks. When the timer ticks or frustration builds, players tend to drag letters randomly hoping for a match. This approach ignores the constraint system. Every yellow letter has a specific destination. Random drags rarely hit that spot and often displace a letter that was already correctly positioned relative to its partner word.</p>\n<p>Another leak comes from ignoring the letter count. The game provides a precise set of characters. If you find yourself trying to force a 'Z' into a slot where no 'Z' exists in the remaining pool, you are wasting a move. Count the remaining yellows. If you have two 'S' tiles left and two open slots that require 'S', stop guessing and place them.</p>\n<p>Some solvers re-solve words they already completed. Once a word reads correctly and all its letters are green, touch it only if a crossing demand forces a change. Re-arranging a finished word to",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-22T09:39:49.714Z",
+        "wordCount": 510,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-19": {
       "articleKey": "waffle-answer-today",
       "date": "2026-06-19",
