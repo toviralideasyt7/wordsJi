@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-06-20T16:58:13.898Z",
+  "generatedAt": "2026-06-22T21:37:41.947Z",
   "byDate": {
+    "2026-06-23": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-06-23",
+      "title": "Worgle Answer Today: Welsh Letter Patterns and Solve Strategy for June 23, 2026",
+      "summary": "Verify today's Worgle answer using the reveal card above. This guide breaks down Welsh digraph patterns, common English guessing traps, and how to use the solver tools effectively.",
+      "articleHtml": "<h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>\n<p>The answer for June 23, 2026, sits directly on the reveal card at the top of this page. Check the green tiles to confirm the solution before scrolling further. If you need to verify a specific letter position or see the full word list history, the archive link below the answer card provides immediate access to past puzzles. This daily update exists to confirm the solution quickly so you can maintain your streak without second-guessing valid Welsh vocabulary.</p>\n<p>Welsh orthography creates unique friction for players accustomed to English-only word games. The presence of double letters like <strong>DD</strong>, <strong>FF</strong>, or <strong>LL</strong> often triggers false negatives in a player's mental lexicon. A careful editor notices that today's puzzle likely leverages these digraphs to force a shift in strategy. You cannot treat <strong>DD</strong> as two separate Ds; the game engine recognizes it as a single phonetic unit occupying two grid spaces. Ignoring this distinction leads to wasted guesses on words that feel right in English but do not exist in Welsh.</p>\n<p>Use the solver tool linked near the answer if your current guess list feels stuck. It filters results based on confirmed green and yellow tiles while respecting Welsh spelling rules. This approach saves time compared to manually cross-referencing a dictionary.</p><h2>How to read common Welsh digraphs without overforcing them</h2>\n<p>Digraphs are the backbone of Welsh spelling, and they behave differently than standard consonant pairs. In Worgle, <strong>CH</strong>, <strong>DD</strong>, <strong>FF</strong>, <strong>NG</strong>, <strong>LL</strong>, <strong>PH</strong>, <strong>RH</strong>, and <strong>TH</strong> count as single letters for sorting and logic, even though they take up two squares on the grid. This quirk trips up even experienced solvers who try to split them apart during the elimination phase.</p>\n<p>Consider how <strong>LL</strong> functions. It is not an L followed by another L. It is a distinct sound represented by two characters. When you place an L in a slot and it turns yellow, do not immediately assume the word contains a double L. It might just be a single L in a different position, or part of a digraph elsewhere. Conversely, if you guess a word with <strong>DD</strong> and one D turns green while the other is gray, you have likely misidentified the digraph's location. The game will not penalize you for knowing the alphabet, but it will punish you for misunderstanding how the letters pair up.</p>\n<p>Y acts as a vowel here, much like it does in English words like",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-22T21:37:41.932Z",
+        "wordCount": 420,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-21": {
       "articleKey": "worgle-answer-today",
       "date": "2026-06-21",

@@ -1,7 +1,24 @@
 {
   "articleKey": "globle-answer-today",
-  "generatedAt": "2026-06-21T16:48:45.429Z",
+  "generatedAt": "2026-06-22T21:31:30.626Z",
   "byDate": {
+    "2026-06-23": {
+      "articleKey": "globle-answer-today",
+      "date": "2026-06-23",
+      "title": "Globle Answer Today: How to Use the Heat Map Clues (June 23, 2026)",
+      "summary": "Heat map positioning reveals more than most players realize. Here's how to read the color bands correctly and narrow down today's mystery country.",
+      "articleHtml": "<p>The heat map isn't giving you a direction—it's giving you distance. That distinction matters more than most players realize when they're staring at today's board.</p><h2>Globle answer today: what the heat clues point to first</h2><p>When you guess a country and see the result, the color tells you proximity, not bearing. A deep red reading means you're within roughly 500 kilometers of today's mystery country. Orange pushes that out to about 1,500 kilometers. Yellow stretches further still, and cool blues indicate you're looking in the wrong hemisphere entirely.</p><p>The answer above sits somewhere on the globe, but the heat gradient doesn't tell you north from south. Players who chase warmth blindly tend to ping-pong between options without ever tightening the circle. Instead, note your hottest reading and ask which cardinal directions remain unexplored relative to that guess.</p><p>Archive links on this page show previous days' solutions, which helps calibrate how the algorithm interprets coastline versus inland positions. A country touching water sometimes reads differently than a landlocked neighbor at the same coordinates.</p><h2>How to read warm guesses without rushing</h2><p>Rushing costs you information. When you hit a warm reading, resist the urge to follow it immediately. Instead, treat that result as a fixed point and branch outward methodically.</p><p>If your guess landed in the orange band, try a country about 1,000 kilometers away in a different direction. Does the temperature drop or stay flat? If it drops sharply, you've learned something about where <em>not</em> to look. If it stays warm, you've confirmed a rough arc where the mystery country might sit.</p><p>Today's puzzle rewards patience over instinct. A careful player usually notices that the heat scale has subtle tiers—there's a difference between",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-22T21:31:30.604Z",
+        "wordCount": 282,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-22": {
       "articleKey": "globle-answer-today",
       "date": "2026-06-22",
