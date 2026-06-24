@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-23T21:00:00.893Z",
+  "generatedAt": "2026-06-24T16:45:34.988Z",
   "byDate": {
+    "2026-06-25": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-06-25",
+      "title": "Colorfle Answer Today: How to Read Your Mix Results",
+      "summary": "A sharp guide to reading your Colorfle results, understanding additive color logic, and adjusting your next guess with confidence.",
+      "articleHtml": "<p>Getting three guesses to nail the right RGB mix isn't about luck—it's about knowing how light behaves. Today's puzzle rewards players who think in screen colors, not paint colors.</p><h2>Colorfle answer today: how the mix should be read</h2>\n<p>The reveal card shows whether each of your three color slots landed on the correct red, green, and blue values. A slot that's exactly right means both the hue and brightness match the target. A slot that's close tells you which channel needs tweaking—you're either too high or too low on one of the three components. Check the archive link if you want to compare today's board against previous days to spot patterns in how often certain values appear.</p><h2>What the source colors are telling you</h2>\n<p>Each source color on the board feeds into the final mix through addition, not pigment. Red plus green looks yellow. Green plus blue looks cyan. All three at full strength gives you white. If your result came out darker than expected, you're probably thinking in paint math—the kind where blue plus yellow makes green. That's not how this works. Look at the hint widgets to confirm whether the system is measuring pure channel values or allowing for some tolerance around each component.</p><h2>Why additive color logic beats random mixing</h2>\n<p>Randomly picking colors wastes guesses fast. A better approach treats each RGB channel independently. Start with equal parts red, green, and blue as your baseline—that gets you gray. From there, adjust one channel at a time based on where the result sits relative to the target. If the output looks too warm, reduce red. Too cool, add it back. The solver tool on this page can help you test combinations before committing a guess, which matters when you're down to your last attempt and the difference between winning and losing comes down to a single hex value.</p><h2>Easy adjustment path for the next Colorfle</h2><ul>\n<li><strong>Start middle:</strong> Pick mid-range values for all three channels first. That gives you a neutral starting point instead of guessing from scratch.</li>\n<li><strong>Adjust one channel:</strong> Move only one slider per guess so you can isolate what actually changes the output.</li>\n<li><strong>Watch the hints:</strong> Even partial matches tell you something useful—green checkmarks mean that slot is locked, and you shouldn't touch it again.</li>\n<li><strong>Use the solver:</strong> The built-in solver lets you input your current best guess and see what adjustments get you closer without burning another attempt.</li>\n</ul><h2>Questions players keep asking</h2><h3>Does the order of my three colors matter?</h3>\n<p>No. The mix combines all three source colors together regardless of sequence. What matters is getting each individual channel value right.</p><h3>Are the RGB values measured in 0-255 or 0-1?</h3>\n<p>Most implementations use 0-255 per channel since that's standard screen color notation. Check the clue widget on today's board—if it shows values like \"128\" or \"64,\" you're working in the 0-255 range.</p><h3>What does it mean if my result is exactly right but the wrong color?</h3>\n<p>That usually means two channels swapped values. For example, if you guessed R:200 G:50 B:150 and got the same visual result with R:50 G:200 B:150, you've mixed up two channels. Go back and check which slot corresponds to which channel on the reveal card.</p><h3>Can players use the archive to study past puzzles?</h3>\n<p>Yes. The archive link on this page shows historical boards and solutions. Looking at a dozen past puzzles reveals patterns—certain targets repeat more often, and some channel combinations show up frequently as distractors. Players who track even mentally tend to converge on the right range faster on subsequent days.</p><h3>Should I ever guess wildly different colors instead of making small adjustments?</h3>\n<p>Only when you're completely off base. If your first guess produces something nowhere near the target, a dramatic change can narrow the range faster than incremental tweaks. Once you're in the ballpark, though, fine-tuning wins.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-24T16:45:34.967Z",
+        "wordCount": 640,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-24": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-06-24",
