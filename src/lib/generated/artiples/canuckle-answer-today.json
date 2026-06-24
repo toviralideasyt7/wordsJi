@@ -1,6 +1,6 @@
 {
   "articleKey": "canuckle-answer-today",
-  "generatedAt": "2026-06-24T16:44:15.614Z",
+  "generatedAt": "2026-06-24T20:25:50.984Z",
   "byDate": {
     "2026-06-25": {
       "articleKey": "canuckle-answer-today",
@@ -16,6 +16,23 @@
         "fallbackSource": "stored",
         "generatedAt": "2026-06-24T16:44:15.594Z",
         "wordCount": 858,
+        "editorialVersion": 2
+      }
+    },
+    "2026-06-24": {
+      "articleKey": "canuckle-answer-today",
+      "date": "2026-06-24",
+      "title": "Canuckle Answer Today: June 24, 2026 Solution Guide",
+      "summary": "A sharp look at today's Canuckle puzzle, the Canadian wordplay traps that catch daily players, and how to use the archive and solver tools to sharpen your next guess.",
+      "articleHtml": "<p>Today's Canuckle puzzle sits on the board with six chances to crack a distinctly Canadian five-letter word. If you're landing here to verify your guess or to figure out where you went sideways, you're in the right spot. This page breaks down the patterns worth watching, the traps that trip up even careful players, and the tools built into WordSolverX that make the next solve cleaner.</p><h2>Canuckle answer today: what stands out first</h2>\n<p>The answer above follows a pattern common in Canadian-themed puzzles: it leans on vocabulary that pulls from geography, local slang, or bilingual roots. A careful player usually notices that Canuckle's answer pool isn't just \"Canadian words\" in a vague sense—it actively rewards familiarity with terms that show up in government documents, prairie weather reports, or Quebec road signs. The reveal card confirms what kind of word you're dealing with, which makes re-reading your earlier guesses against it worthwhile before you commit to another try.</p><h2>Why the Canadian angle matters on this board</h2>\n<p>Canuckle runs on a tighter answer pool than its New York cousin—roughly 2,300 words instead of the full English lexicon. That constraint means some guesses that would fly on other boards flat-out aren't possible here. Players who treat every five-letter guess as fair game often waste turns on words that could never be the answer. The Canadian angle isn't decoration; it's a filter. Bilingual terms, provincial place names, and words tied to federal policy show up with enough regularity that keeping a mental note of those categories helps when you're stuck between two plausible options.</p><h3>Does Canuckle use the same word list every day?</h3>\n<p>Yes. Like Wordle, Canuckle draws from a fixed daily word that rotates at midnight in the user's time zone. The puzzle number visible on today's page lets you cross-reference the archive if you want to see past solutions and track which Canadian categories tend to repeat.</p><h2>Where players overguess the pattern</h2>\n<p>The most common mistake on this board is assuming Canadian-specific words will always be obvious loanwords or place names. Players latch onto obvious candidates like provinces or major cities and then get frustrated when the answer turns out to be something less headline-ready—a transit term, a utility name, or a seasonal weather word. The hint widget on today's page nudges you toward the right category without spelling it out. Ignoring that signal and chasing random starting words is how six-tries becomes seven-tries-and-a-loss.</p><p>Another trap: over-relying on letter frequency charts built from standard English corpora. Canadian English shares most of its letter distribution with American English, but the smaller answer pool creates subtle skews. Words with Q, X, and Z appear less often than general English frequency would suggest, while certain vowel-heavy terms show up more regularly because they fit Canadian geography or policy vocabulary.</p><h3>Is there a better starting word for Canuckle than generic Wordle openers?</h3>\n<p>Standard Wordle advice—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-24T20:25:50.962Z",
+        "wordCount": 479,
         "editorialVersion": 2
       }
     },
