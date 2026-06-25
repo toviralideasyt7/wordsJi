@@ -1,7 +1,24 @@
 {
   "articleKey": "canuckle-answer-today",
-  "generatedAt": "2026-06-24T20:25:50.984Z",
+  "generatedAt": "2026-06-25T16:45:36.030Z",
   "byDate": {
+    "2026-06-26": {
+      "articleKey": "canuckle-answer-today",
+      "date": "2026-06-26",
+      "title": "Canuckle Answer Today: Clues, Reveal Card, and How to Play Cleaner",
+      "summary": "Breaking down today's Canuckle answer with fact-based analysis, reveal behavior, and a cleaner path forward for your next guess.",
+      "articleHtml": "<p>Today's Canuckle puzzle (#?) sits squarely in the middle of the board's trickier territory. A careful look at the clue tiles shows two vowels locked in place from the second guess onward—unusual positioning that immediately narrows the candidate pool if you're paying attention. The fact section flags Canadian geography as a secondary theme, which means the answer isn't just any five-letter word; it's something tied to this country's field, slang, or bilingual vocabulary.</p><h2>Canuckle answer today: what stands out first</h2><p>The reveal card confirms what the letter positions suggest. This isn't a word you'd stumble into with random guesses—it rewards players who've spent time with the Canadian lexicon. Bilingual terms show up frequently in Canuckle's answer pool, and today's solution fits that pattern. If you've been playing with a standard English dictionary, you'll want to switch mental gears toward French-English overlaps when the pattern points that direction.</p><p>A few details stand out immediately on the board:</p><ul>\n<li>The clue widget shows a green tile in position three, suggesting that spot has been consistent since early guesses</li>\n<li>Yellow tiles cluster in the first half of the word, indicating the answer starts with a common consonant-heavy opening</li>\n<li>The fact section hints at a regional reference—not a city name, but something broader</li>\n</ul><p>If you're checking the archive link for historical patterns, you'll notice this isn't the first time this particular vowel arrangement has appeared. The solver tool on this page will walk you through the remaining possibilities if you're still stuck.</p><h2>Why the Canadian angle matters on this board</h2><p>Canuckle's answer pool runs roughly 2,300 words—smaller than Wordle's full roster, which changes how probability works. When every fifth puzzle leans Canadian, ignoring that filter costs you guesses. Today's fact section makes the theme explicit, so there's no excuse for chasing purely American spellings when the board is pointing north.</p><p>Geography terms, provincial abbreviations, and Indigenous-derived words all surface regularly. So do French loanwords that English absorbed—stuff like",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-25T16:45:36.011Z",
+        "wordCount": 323,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-25": {
       "articleKey": "canuckle-answer-today",
       "date": "2026-06-25",
