@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-24T16:45:34.988Z",
+  "generatedAt": "2026-06-26T07:08:04.887Z",
   "byDate": {
+    "2026-06-26": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-06-26",
+      "title": "Colorfle Answer Today: How to Read the June 26 Mix and Fix Your Guesses",
+      "summary": "Today's Colorfle puzzle relies on additive RGB logic rather than paint mixing. This guide breaks down the source colors, explains why standard intuition fails, and offers a direct path to the solution.",
+      "articleHtml": "<h2>Colorfle answer today: how the mix should be read</h2>\n<p>The solution for June 26, 2026, sits firmly within the additive color spectrum, requiring players to treat red, green, and blue as light sources rather than pigments. If your previous guesses resulted in muddy browns or dull grays, you likely subtracted light instead of adding it. The correct approach involves maximizing the intensity of the primary channels to hit the target brightness and hue shown on the reveal card. Check the solver link above if you need to verify the exact hex codes for today's specific blend.</p>\n<p>Successful players treat the grid as a lighting rig. You aren't blending paints on a palette; you are stacking flashlights. A guess that looks too dark usually means one of the three primary channels is missing entirely or set too low. The feedback tiles on this page confirm which channel is dominant, but they don't tell you the intensity. That gap is where most attempts fail. Look at the clue widget again. It highlights the presence of a channel, not its volume.</p>\n<h2>What the source colors are telling you</h2>\n<p>Source colors in this game act as binary switches for presence, not precise measurements of volume. When the interface flags a color as correct, it confirms that specific wavelength contributes to the final image. It does not mean that color makes up fifty percent of the mix. A tiny amount of blue can shift a bright yellow into a distinct white, yet the game treats that blue presence the same as a dominant blue wash. This distinction trips up anyone used to physical media.</p>\n<p>Notice how the archive links show patterns where two primaries create a secondary, but the third primary modifies the brightness. Today's puzzle likely follows that same structural rule. If you see a cyan target, you need full green and full blue. Adding red doesn't make it",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-26T07:08:04.862Z",
+        "wordCount": 315,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-25": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-06-25",
