@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-06-25T20:57:09.424Z",
+  "generatedAt": "2026-06-27T20:09:26.648Z",
   "byDate": {
+    "2026-06-28": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-06-28",
+      "title": "Sportle Answer Today: June 28, 2026 Solve Path and Hints",
+      "summary": "Verify the June 28, 2026 Sportle answer using the reveal card above. This guide breaks down common sports-term pitfalls and efficient guessing strategies for daily play.",
+      "articleHtml": "<h2>Sportle answer today: what matters most on this page</h2>\n<p>The verified answer for the June 28, 2026 Sportle puzzle sits directly in the reveal card at the top of this page. Players landing here usually need immediate confirmation of a specific sports term, equipment piece, or venue name that stalled their daily streak. The solution provided matches the official game database for this date, ensuring accuracy for those tracking long-term stats or verifying a guess before the reset timer hits.</p>\n<p>Use the solver link below the answer if you need to reconstruct the logic path that leads to this specific word. The archive tool also updates instantly once the daily puzzle closes, allowing you to cross-reference today's term with past solutions for pattern recognition.</p><h2>What to pay attention to before you reveal anything else</h2>\n<p>Sports terminology creates unique traps that generic word games do not. A careful player notices that Sportle often leans into specific equipment names or positional titles rather than broad sport categories. Today's puzzle likely hinges on a distinction between a playing surface and the building that houses it, or perhaps a specific piece of gear used in only one league.</p>\n<p>Check the letter distribution in your early guesses. If the game returns yellow tiles on common vowels but green on consonants like 'Q', 'Z', or 'X', the answer almost certainly involves specialized scoring terms or obscure athlete surnames. The hint widget on this page filters these possibilities by category, so ignore generic athletic verbs and focus on nouns that define the rules of play.</p>\n<p>Look at the silhouette or icon associated with the clue if available. Visual cues in Sportle frequently point toward the shape of the equipment rather than the action performed. A bat implies baseball or cricket, but the letter count distinguishes between the two instantly.</p><h2>Mistakes that usually cost the clean solve</h2>\n<p>The most frequent error involves pluralization. Sports answers often flip between singular and plural forms depending on whether the clue refers to the object itself or the collective set used in a match. Guessing",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-27T20:09:26.630Z",
+        "wordCount": 343,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-26": {
       "articleKey": "sportle-answer-today",
       "date": "2026-06-26",
