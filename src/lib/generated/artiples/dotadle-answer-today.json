@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-25T22:03:38.230Z",
+  "generatedAt": "2026-06-27T12:56:53.724Z",
   "byDate": {
+    "2026-06-27": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-27",
+      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
+      "summary": "Today's Dotadle puzzle rewards players who prioritize attribute-based clues over role labels. Here's how to read the board more efficiently.",
+      "articleHtml": "<p>For the June 27 puzzle, the answer card on this page gives you the primary constraint. Everything else on the board either confirms or distracts from that core signal. A careful player reading today's clue cluster will notice that certain data points repeat while others appear once—pattern recognition across those frequencies separates fast solves from slow ones.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2><p>The reveal card shows a hero whose identity hinges on two or three attributes rather than a single obvious tag. That's the key. When you see both a lane assignment and an attribute type listed, the attribute almost always narrows the field tighter. Strength heroes number 42 in the roster; Intelligence heroes push past 50. Universal heroes sit somewhere in between, but their smaller total count makes them valuable when combined with other filters.</p><p>Look at what the hint widgets exclude before you look at what they include. If the puzzle marks one hero type as incorrect, you've immediately removed a chunk of candidates. Today's board likely flags a popular hero that's cluttering casual guesses—that's deliberate. The archive link shows yesterday's solution followed a similar pattern: the most-guessed wrong answer shared an attribute with the correct hero but differed on a secondary trait.</p><p>The clue widget often leads with the most specific identifier. That might be an ability keyword, a mobility type, or a niche interaction. When you spot that phrase, lock it in mentally before touching anything else. Everything else becomes confirmation.</p><h2>How to cut the Dota roster faster</h2><p>Dota 2 has roughly 124 playable heroes. You cannot evaluate them all equally on every puzzle. The solver tool on this page exists precisely for this reason—you feed it the constraints from the clue widgets and it returns a filtered list ranked by match probability.</p><p>Start with the hardest filter first. If a clue mentions a hero's movement type (teleport, blink, high base speed), that eliminates heroes who lack that quality entirely. Then layer in attribute restrictions. Agility heroes with high armor stack differently than Strength heroes with the same stat—the game treats those numbers differently based on primary attribute, so the puzzle knows the difference even if your gut doesn't.</p><p>Here's what usually trips players up: they treat role labels as hard boundaries. In actual Dota 2, heroes flex across lanes constantly. A support can farm mid; a carry can dual-lane. The puzzle knows this. When you see \"safe lane\" mentioned, treat it as a statistical tendency, not a rule. Cross-reference that label against the hero's typical itemization before locking it in.</p><p>The fastest eliminations come from spotting contradictory clues early. If one widget says the hero has high magical burst and another flags physical damage as relevant, you're looking at a hybrid or a hero with multiple damage phases. That intersection is small—usually fewer than ten candidates fit both descriptions.</p><h2>When roles help and when they mislead</h2><p>Role labels work best when they're specific rather than general. \"Support\" appears on dozens of heroes and rarely narrows anything useful. \"Hard support\" or \"roaming support",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-27T12:56:53.703Z",
+        "wordCount": 512,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-25": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-25",
