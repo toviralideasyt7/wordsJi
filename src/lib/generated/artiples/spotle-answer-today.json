@@ -1,7 +1,24 @@
 {
   "articleKey": "spotle-answer-today",
-  "generatedAt": "2026-06-26T18:24:28.527Z",
+  "generatedAt": "2026-06-27T16:57:13.679Z",
   "byDate": {
+    "2026-06-28": {
+      "articleKey": "spotle-answer-today",
+      "date": "2026-06-28",
+      "title": "Spotle Answer Today: Which Clue Should Matter First",
+      "summary": "Today's Spotle puzzle rewards players who read the genre clue before anything else. Here's how to use that priority to land the right artist faster.",
+      "articleHtml": "<p>The genre clue sits at the top of the reveal card for a reason. On today's board, a careful player notices that genre narrows the field more aggressively than debut year or nationality combined. If you're skipping straight to the year, you're working harder than you need to.</p><h2>Spotle answer today: which clue should matter first</h2>\n<p>Genre filters the entire pool before you touch any other dimension. Today's puzzle presents genre alongside country, era, group status, and gender—but genre is the fastest cut. A rock artist from Sweden isn't the same search space as a Swedish pop act, and the solve path diverges immediately once you lock that in. The archive on this page shows recent daily answers, and you'll see genre consistently doing the heavy lifting when players report their solve times. Check your hint widget if genre alone doesn't land the answer—sometimes the subgenre marker (indie, alternative, progressive) adds the second filter you need before touching year or nationality.</p><h2>How genre, country, and era work together</h2>\n<p>These three clues form a three-axis filter system. Genre removes the noise, country removes the diaspora confusion, and era pins down the window. The trick is sequencing them correctly. Players who start with era often overcorrect—they lock into a decade and miss artists who straddled two periods or had late comebacks. Country helps less when an artist emigrated or collaborated internationally, so treat it as a tiebreaker rather than a lead. Today's page has a solver link that demonstrates this filtering live if you want to test different sequences against the actual answer card.</p><p>Group size and gender round out the remaining slots. Solo versus band matters most when genre overlaps heavily—electronic music, for instance, has both prolific solo producers and full groups. Gender becomes relevant when narrowing between similar-sounding names or when the genre skews heavily male-dominated historically. You won't need these every day, but they're the final check before committing to a guess.</p><h2>What usually causes the wrong artist guess</h2>\n<p>Players guess wrong most often because they chase the obvious name instead of the correct one. When a genre like",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-27T16:57:13.657Z",
+        "wordCount": 350,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-27": {
       "articleKey": "spotle-answer-today",
       "date": "2026-06-27",
