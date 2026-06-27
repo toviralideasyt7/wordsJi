@@ -1,7 +1,24 @@
 {
   "articleKey": "worldle-answer-today",
-  "generatedAt": "2026-06-26T07:20:58.659Z",
+  "generatedAt": "2026-06-27T17:53:13.899Z",
   "byDate": {
+    "2026-06-28": {
+      "articleKey": "worldle-answer-today",
+      "date": "2026-06-28",
+      "title": "Worldle Answer Today: June 28, 2026 Solution Guide",
+      "summary": "Today's Worldle puzzle requires reading the silhouette against directional and distance hints to identify the mystery country before neighboring guesses mislead you.",
+      "articleHtml": "<p>The silhouette on today's Worldle board carries enough visual weight to trigger an immediate instinct—but that first impression often sends players down the wrong path.</p><h2>Worldle answer today: what the silhouette should suggest first</h2>\n<p>When you load today's board, the outline presents itself with familiar edges or unexpected angles. A careful player usually notices whether the shape stretches horizontally like a pancake or stands tall and narrow. Today's mystery country has a distinctive coastline configuration that separates it from most of its continental neighbors. Before reaching for the obvious regional guess, check whether the silhouette matches a nation you've ruled out in previous sessions. The reveal card confirms your final answer, but the silhouette alone should tell you something about scale—the mystery country is neither tiny nor among the continent's largest landmasses.</p><h2>How direction and distance clues narrow the shape</h2>\n<p>The arrow indicators show relative position from your previous guesses. If the hint points northeast with a lower percentage, you're looking at a country positioned away from your current target but still within the same geographic band. Today's board rewards players who think in terms of continental quadrants rather than random global searching. Each guess builds a positional web: north-south tells you latitude, east-west tells you longitude, and the percentage reveals how far along that axis you're traveling. A guess landing southeast with 60% means you're close on both axes—adjust one variable at a time to triangulate.</p><h2>Why neighboring countries become the easy wrong answer</h2>\n<p>Players frequently stall when they lock onto a neighboring country's shape and can't distinguish it from the actual answer. The mistake comes from fixating on border proximity rather than silhouette accuracy. Today's puzzle includes a trap: the correct country shares a similar elongated form with at least two adjacent nations, but the coastline curvature differs just enough to matter. When stuck between three possibilities, use the distance metric to eliminate the outlier. The <a href=\"#archive\">archive link on this page</a> lets you review past puzzles and compare how similar shapes resolved—you'll notice the pattern quickly.</p><h2>How to finish tomorrow's Worldle with fewer detours</h2>\n<p>Start each session by identifying the continent from the silhouette's aspect ratio. Island nations and coastal states give themselves away through water boundaries; landlocked countries rely on mountain ranges or river systems for recognition. Tomorrow's puzzle will follow the same logic: make your first guess a representative nation from the suspected continent rather than a random global shot. This approach typically cuts attempts from five or six down to three or four. Bookmark the <a href=\"#solver\">solver tool linked here</a> for days when the silhouette defies immediate identification.</p><h2>Questions players keep asking</h2><h3>Does the distance percentage measure straight-line distance or travel distance?</h3>\n<p>The percentage represents directional similarity based on capital city positions, not physical distance traveled across terrain. This distinction matters when comparing guesses that fall in opposite directions from your current position.</p><h3>Can players use the same strategy for every continent?</h3>\n<p>Continental geography varies too much for a single approach. Africa and Asia demand different silhouette-reading skills than Europe or the Americas. Study the archive to see how answer distributions vary by region.</p><h3>What happens if I guess the same country twice?</h3>\n<p>Repeated guesses waste an attempt without providing new directional data. The game tracks unique guesses only, so avoid circling back to ruled-out answers.</p><h3>Is there a way to practice without affecting the streak?</h3>\n<p>The daily puzzle resets at midnight in your local timezone. Practice mode or archived puzzles let you experiment with strategies without risking your current streak count.</p><p>Use the tools above to verify today's solution and prepare for tomorrow's challenge.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-27T17:53:13.870Z",
+        "wordCount": 599,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-26": {
       "articleKey": "worldle-answer-today",
       "date": "2026-06-26",
