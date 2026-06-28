@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-06-23T18:33:25.119Z",
+  "generatedAt": "2026-06-28T07:23:38.854Z",
   "byDate": {
+    "2026-06-28": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-06-28",
+      "title": "Worgle Answer Today: June 28, 2026 Puzzle Solution",
+      "summary": "Today's Worgle answer leverages familiar Welsh letter patterns that trip up English-trained guesses. Here's how to work the board efficiently.",
+      "articleHtml": "<p>Worgle puzzles reward players who abandon English vowel expectations. Today's answer relies heavily on two letters that appear far more frequently in Welsh than in standard English word lists—and recognizing that pattern early changes everything.</p><h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2><p>The reveal card on today's page shows a five-letter Welsh word where one particular consonant cluster dominates. Players who've studied even a handful of archived Worgle puzzles notice that certain letter combinations recur with unusual frequency compared to English Wordle—today's solution follows that established rhythm. If you checked the <a href=\"#archive\">archive</a> before guessing, you already knew which letters to prioritize. Those who didn't often spent guesses on high-value English vowels that Welsh vocabulary simply doesn't favor the same way.</p><p>The hint widget on this page nudges toward that dominant pattern without spelling it out. Read it twice. Welsh orthography handles some sounds differently than English speakers expect, and today's puzzle leans into exactly that friction point. The answer above isn't obscure by Welsh standards—it's a common-enough word that most native Welsh speakers would recognize immediately. That's the key distinction: Worgle answers aren't random Welsh words pulled from a dictionary. They're everyday vocabulary, just filtered through unfamiliar spelling rules.</p><p>A careful player usually notices the solve path crystallizes once they stop treating Y as a vowel and start treating it as the versatile consonant-vowel hybrid Welsh actually uses. Today's answer makes that principle impossible to ignore.</p><h2>How to read common Welsh digraphs without overforcing them</h2><p>Welsh has several two-letter combinations that represent single sounds—digraphs like CH, DD, FF, NG, LL, PH, RH, and TH each carry their own pronunciation weight. In Worgle, these function as distinct units within the five-letter constraint, which means a word can contain both a digraph and still count as five total characters. That distinction matters enormously when you're evaluating green tiles against your remaining guess pool.</p><p>DD trips up English speakers more than any other Welsh digraph. It represents the voiced dental fricative—a",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-28T07:23:38.837Z",
+        "wordCount": 332,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-24": {
       "articleKey": "worgle-answer-today",
       "date": "2026-06-24",
