@@ -1,7 +1,24 @@
 {
   "articleKey": "smashdle-answer-today",
-  "generatedAt": "2026-06-26T13:45:45.132Z",
+  "generatedAt": "2026-06-28T06:27:44.677Z",
   "byDate": {
+    "2026-06-28": {
+      "articleKey": "smashdle-answer-today",
+      "date": "2026-06-28",
+      "title": "Smashdle Answer Today: How to Solve the June 28 Puzzle",
+      "summary": "Break down today's Smashdle using universe, weight class, and jump stats—the three filters that cut the roster fastest.",
+      "articleHtml": "<p>Today's Smashdle drops a familiar challenge: identify the fighter from limited clues. The board shows three primary data points—universe origin, weight class, and jump count. Most solvers fixate on the character silhouette or franchise icon first. That's usually the wrong move.</p><h2>Smashdle answer today: which fighter clue matters first</h2>\n<p>Weight class narrows the field more aggressively than any other single stat. The game classifies fighters into five brackets: featherweight, lightweight, middleweight, heavyweight, and super heavyweight. Each bracket contains roughly 15-25 characters depending on the current roster version. If the clue widget shows a middleweight designation, you've immediately eliminated half the playable cast.</p><p>A careful player usually notices the jump count appears alongside weight on the same display row. These two stats correlate loosely—featherweights tend toward higher jumps—but the correlation breaks often enough to matter. Don't assume a high jump count means lightweight. Some heavyweight fighters jump twice before leaving the ground.</p><p>The universe filter works best as a secondary cut. Once weight class isolates a subset, applying franchise origin removes most candidates. The trick is sequencing: weight first, then universe, then movement speed if needed. Reversing this order wastes eliminations on broad categories.</p><p><strong>Tip:</strong> Check the hint widget before committing. One free hint can confirm weight class or reveal the fighter's debut game. Either saves multiple elimination steps.</p><h2>How universe and movement stats split the roster</h2>\n<p>Movement speed sits separate from weight class in the game's stat system. A heavyweight can move fast—a few notable examples from the Mario and Sonic franchises prove that regularly. Speed becomes relevant only when weight and universe leave two or three candidates standing.</p><p>Universe groupings follow clear lines: Nintendo mainline, third-party crossover, indie addition, and echo fighters grouped under their source character. The archive page lists all fighters by origin game if you need a reference without leaving the puzzle. That resource updates with each new fighter addition, so today's roster matches what the solver shows.</p><p>Ground air ratio matters for some puzzle modes but rarely affects the daily challenge. Ignore it unless the clue explicitly mentions mobility type. The reveal card sometimes displays movement stats visually—bar graphs instead of numbers. Read those before scanning text descriptions.</p><p>When the board offers multiple universe options, treat each as a separate elimination branch. Run weight + speed against one universe, then pivot if nothing fits. This keeps your solve path clean instead of mixing filters mid-guess.</p><h2>Why DLC fighters cause so many misses</h2>\n<p>DLC additions arrive outside the base roster rotation. They don't appear in every puzzle seed, which means players unfamiliar with recent additions skip them entirely during elimination. The June 2026 roster includes several fighters added in the past year—characters that don't show up in older solve guides or archived threads.</p><p>Base roster fighters outnumber DLC roughly four to one. Statistically, the daily puzzle favors base roster characters. But",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-28T06:27:44.647Z",
+        "wordCount": 475,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-26": {
       "articleKey": "smashdle-answer-today",
       "date": "2026-06-26",
