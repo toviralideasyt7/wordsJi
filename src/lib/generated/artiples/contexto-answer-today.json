@@ -1,7 +1,24 @@
 {
   "articleKey": "contexto-answer-today",
-  "generatedAt": "2026-06-27T20:02:30.046Z",
+  "generatedAt": "2026-06-28T17:50:32.831Z",
   "byDate": {
+    "2026-06-29": {
+      "articleKey": "contexto-answer-today",
+      "date": "2026-06-29",
+      "title": "Contexto Answer Today: How Semantic Ranking Guides Your Next Guess",
+      "summary": "Understanding Contexto's distance-based ranking system helps players narrow guesses faster by targeting broader category words before niche alternatives.",
+      "articleHtml": "<p>Contexto ranks every guess by semantic distance from today's answer. A guess landing at rank 50 sits far further away than one at rank 12. That gap tells you exactly how hard you're reaching.</p><h2>Contexto answer today: what the rank pattern usually means</h2><p>The number next to your guess isn't arbitrary. It reflects how closely related your word is to the hidden answer in meaning, usage, and context. Lower ranks mean you're circling the right area of the semantic map.</p><p>A typical player who lands three guesses in the 20s has established a rough category but hasn't narrowed enough. The move from rank 15 to rank 8 often comes from switching from a general synonym to a more specific subcategory word. For example, if your guesses hover around \"animal\" and land at rank 25, trying \"mammal\" or \"predator\" might drop you into single digits.</p><p>The archive on this page lets you compare today's board against previous days. Players who track their rank trajectories notice that certain puzzle types consistently reward specificity. Others respond better to breadth first, then precision later.</p><h2>When to pivot categories instead of forcing synonyms</h2><p>Most players start with direct synonyms. That's sensible, but it hits a wall when the answer lives in a neighboring category rather than the same semantic lane. If \"sad\" gets you to rank 18, \"unhappy\" probably lands around 22—closer but not dramatically better. \"Melancholy\" might even perform worse despite feeling more sophisticated.</p><p>Pivot when you've made two solid attempts in one direction with diminishing returns. The rank tells you whether to push deeper or shift laterally. Three guesses clustered between ranks 15 and 20 suggest you're in the right neighborhood but wrong street. Try a different angle entirely.</p><p>Concrete example: if you're working on an emotion puzzle and your guesses cluster around sadness-related terms, try action words—what people do when sad, or physical symptoms. Sometimes the answer relates to consequences rather than the emotion itself.</p><h2>Why broad words beat clever words here</h2><p>Contexto rewards coverage over cleverness. A generic word like \"vehicle\" will rank higher than \"sedan",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-28T17:50:32.810Z",
+        "wordCount": 345,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-28": {
       "articleKey": "contexto-answer-today",
       "date": "2026-06-28",
