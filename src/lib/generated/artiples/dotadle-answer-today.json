@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-28T22:05:48.593Z",
+  "generatedAt": "2026-06-29T22:06:15.008Z",
   "byDate": {
+    "2026-06-29": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-06-29",
+      "title": "Dotadle Answer Today: How to Solve the Daily Hero Puzzle",
+      "summary": "Strategic breakdown of today's Dotadle puzzle with attribute-based filtering, role elimination tactics, and cross-reference techniques for faster solves.",
+      "articleHtml": "<p>A careful player scanning today's Dotadle board will notice certain clue categories land harder than others. Primary attribute flags—Strength, Agility, Intelligence, or Universal—typically eliminate a quarter of the roster in one pass. When combined with a lane hint, you can rule out half the remaining heroes before touching anything else. This piece walks through what works on today's board and how to build a solve routine that holds up tomorrow.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>Attribute filters punch hardest because they're binary. A Strength hero cannot be Agility, and an Intelligence pick eliminates every Strength option instantly. On this board, if the reveal shows any attribute marker, start there. One wrong attribute guess cascades into wasted passes across unrelated heroes. The clue widget on today's page makes attribute checking fast—run it before digging into lore or ability hints.</p>\n<p>Lane assignment ranks second in eliminatory power. Core versus support distinctions narrow the field substantially, but lane specificity (safe lane, offlane, mid) adds precision that pure role labels miss. Some heroes flex across multiple positions, so a mid-lane flag doesn't guarantee the answer sits in the traditional mid pool—it just means that position appears in recent competitive builds. Cross-reference lane hints against the attribute filter already applied for sharper cuts.</p>\n<p>Ability type clues tend to appear later in the clue sequence on most days. They matter, but chasing them before locking in attribute and lane wastes time when those early clues already point toward a small candidate set. Save ability keywords for the final pass.</p><h2>How to cut the Dota roster faster</h2>\n<p>The full Dota 2 hero roster spans over 120 playable characters. Nobody mentally indexes all of them cleanly. The solver tool on this page exists precisely for that reason—it lets you input known constraints and watch the candidate list shrink in real time. Players who skip the solver and rely on memory alone typically spend twice as long on the same puzzle.</p>\n<p>Attribute-first sequencing outperforms role-first sequencing on most days. Here's why: attribute categories are fixed and mutually exclusive. Role labels overlap constantly—a hero listed as",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-29T22:06:14.973Z",
+        "wordCount": 351,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-28": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-28",
