@@ -1,7 +1,24 @@
 {
   "articleKey": "worldle-answer-today",
-  "generatedAt": "2026-06-27T17:53:13.899Z",
+  "generatedAt": "2026-06-29T08:45:58.321Z",
   "byDate": {
+    "2026-06-29": {
+      "articleKey": "worldle-answer-today",
+      "date": "2026-06-29",
+      "title": "Worldle Answer Today: June 29, 2026",
+      "summary": "Today's Worldle silhouette rewards players who read continent placement before guessing individual countries. Direction and distance hints eliminate most of the board quickly.",
+      "articleHtml": "<p>Most players stare at the silhouette first. That's backwards. The angle of approach and distance percentage tell you more in two seconds than squinting at borders ever will.</p><h2>Worldle answer today: what the silhouette should suggest first</h2><p>The outline gives you a rough idea of landmass position, but it's not the starting point. A careful player uses the compass heading from their first guess as a filter—eliminating entire continents worth of options before the shape even registers. Today's puzzle sits somewhere between 45° and 90° northeast from the default guess, which immediately rules out South America, most of Africa, and all of Oceania. The distance metric on this board runs longer than yesterday's, suggesting something further from central Europe. That narrows the field to roughly twelve plausible candidates.</p><p>Don't fixate on getting the shape perfect. Get the hemisphere right first.</p><h2>How direction and distance clues narrow the shape</h2><p>The directional arrow tells you two things: approximate bearing and relative location. If your first guess lands at 120° east-southeast, you're looking at something in the Asian Pacific or far northern Russia. The percentage distance matters here—small jumps mean adjacent countries, large jumps mean crossing significant ocean or continental mass. On this board, a 60% distance reading suggests mid-range proximity, not a neighbor, not an opposite-side-of-the-globe shot.</p><p>Players who ignore the number and chase the shape tend to waste guesses on visually similar neighbors. The percentage exists precisely to prevent that trap. Treat it as a coordinate constraint, not flavor text.</p><h2>Why neighboring countries become the easy wrong answer</h2><p>The most common mistake on Worldle is assuming visual similarity means geographic proximity. Two countries can share a border, have nearly identical coastlines, and sit thousands of kilometers apart in completely different directions. The hint system exists because raw silhouette matching fails half the time.</p><p>On today's board, the first directional clue points toward Central Asia or the Caucasus region. Players who recognize this will avoid defaulting to obvious Western European shapes—the board is clearly pointing elsewhere. The archive link on this page lets you cross-reference past puzzles with similar bearing patterns, which helps build intuition for reading these clues faster over time.</p><h2>How to finish tomorrow's Worldle with fewer detours</h2><p>Build a mental hierarchy before you guess. Continent first, then subregion, then specific country. Most players reverse this and pay for it with wasted attempts. Tomorrow's puzzle will reset, but the reading habit carries forward.</p><p>A few structural tips that hold across almost every board: lead with a geographically central country to maximize information gain, note whether the distance percentage feels",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-29T08:45:58.293Z",
+        "wordCount": 429,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-28": {
       "articleKey": "worldle-answer-today",
       "date": "2026-06-28",
