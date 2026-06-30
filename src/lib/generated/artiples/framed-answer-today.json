@@ -1,7 +1,24 @@
 {
   "articleKey": "framed-answer-today",
-  "generatedAt": "2026-06-29T18:36:04.334Z",
+  "generatedAt": "2026-06-30T16:45:31.432Z",
   "byDate": {
+    "2026-07-01": {
+      "articleKey": "framed-answer-today",
+      "date": "2026-07-01",
+      "title": "Framed Answer Today: How Opening Frames Give Away More Than You Think",
+      "summary": "Opening stills in Framed reveal surprising amounts—genre context, production era, and visual grammar narrow the field before actors even register. Here's how to read them faster.",
+      "articleHtml": "<p>When Framed drops its first still, most players scan for actors or famous lines. That's backwards. The opening frame tells you the film's era, tone, and genre category before any face appears—and for roughly half of daily puzzles, that context alone pins the answer to two or three titles. Learning to read those background signals instead of hunting stars is what separates fast solves from wasted reveals.</p><h2>Framed answer today: what the opening still usually gives away</h2>\n<p>The first image in Framed is almost never random. Cinematography style, costume cut, set design density, and color grading all encode information a careful player reads before clicking further. A film shot in warm amber tones with shallow depth of field screams 2010s prestige drama. Muted blues and handheld shaky cam point toward found-footage horror or gritty thriller territory. These visual fingerprints don't name the movie, but they slash your candidate list dramatically. By the second or third reveal, you're often choosing between films from the same director's era rather than guessing across decades of cinema.</p><p>On today's board, the opening still carries enough production signature to anchor your search if you've been tracking similar patterns. The archive linked on this page lets you compare today's framing against recent entries—a habit that trains your eye for these distinctions faster than any amount of blind guessing.</p><h2>How genre beats exact movie recall early</h2>\n<p>Most players stumble because they try to name the exact film from memory. That's unnecessary pressure. What works better: identify the genre bucket first, then narrow within it. If the first still looks like a period piece, you eliminate every contemporary comedy and action release instantly. If the lighting suggests noir or neo-noir styling, your pool shrinks to crime dramas and thrillers from specific decades.</p><p>This approach respects how Framed actually builds difficulty. The game doesn't expect perfect film trivia—it tests visual pattern recognition. A player who knows",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-06-30T16:45:31.404Z",
+        "wordCount": 317,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-30": {
       "articleKey": "framed-answer-today",
       "date": "2026-06-30",
