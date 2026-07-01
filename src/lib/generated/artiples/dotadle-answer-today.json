@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-06-30T06:24:56.818Z",
+  "generatedAt": "2026-07-01T13:55:09.053Z",
   "byDate": {
+    "2026-07-01": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-07-01",
+      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
+      "summary": "Attribute-based clues narrow the Dota hero pool fastest on fresh boards. Start with primary stats before wrestling with ability descriptions.",
+      "articleHtml": "<p>Attribute-based clues narrow the Dota hero pool fastest on fresh boards. Strength heroes cluster around 23 names, Agility around 25, and Intelligence around 27—plus the newer Universal category. If your clue set includes primary attribute or stat growth hints, start there before wrestling with ability descriptions.</p><p>The reveal card on today's page gives you a confirmed answer, but the path worth studying is how those clues stack against each other. A careful player usually notices that some clues feel redundant while others contradict expected patterns—this tension often points toward heroes with unusual builds or recent reworks.</p><h2>How to cut the Dota roster faster</h2>\n<p>Dota 2 throws over 120 playable heroes at you. That's too many to parse by feel. The fastest filter is primary attribute—if a clue tells you the hero scales with Intelligence or hits hard through Strength, you've already carved out two-thirds of the roster before reading another word.</p><p>Lane assignment clues need more caution. The professional meta shifts constantly, and the puzzle occasionally hides answers in off-lane positions that confuse casual viewers. When a clue says \"offlane,\" check whether that's traditional or current meta positioning before locking it in.</p><h2>When roles help and when they mislead</h2>\n<p>Support and carry labels cause problems. Chen farms the jungle but also enables ganks. Hoodwink plays both ranged carry and position-four support depending on the draft. These terms describe typical playstyles, not absolute boundaries.</p><p>Look at what the clue actually emphasizes. Does it highlight teamfight presence? Pickoff potential? Sustained damage versus burst? Those distinctions separate heroes like Tidehunter from Puck in ways that simple role labels obscure.</p><h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Most solvers start with the clues and build outward. Try flipping that—assemble your full candidate list first, then eliminate against each clue. You'll spot contradictions faster and waste less time on heroes that can't possibly fit.</p><p>The <a href=\"/tools/solver\">solver on this page</a> handles filtering mechanically, but understanding why certain heroes get eliminated builds pattern recognition that pays dividends over time. When you hit a wall, the <a href=\"/archive/dotadle\">archive</a> shows how similar clue combinations resolved in previous weeks.</p><h2>Questions players keep asking</h2><h3>Does the puzzle ever include unreleased heroes?</h3>\n<p>No. The hero database updates only when the puzzle refreshes its content—not with every Dota 2 patch. Balance changes and new releases don't affect which heroes appear until the puzzle itself cycles.</p><h3>Are aghanim's scepter upgrades fair game for clues?</h3>\n<p>They come up occasionally. Clues referencing upgraded abilities or altered ultimates appear more often than you'd expect. Read carefully whether the clue describes the base kit or something that requires the shard or scepter.</p><h3>What if I can't match all clues to a single hero?</h3>\n<p>Work backward. Find the two or three strongest clues—the ones that eliminate the most candidates—and search for heroes satisfying those. Partial matches beat no matches, and sometimes a clue uses unexpected wording for a familiar mechanic.</p><h3>Do hero cosmetics or arcana affect anything in the puzzle?</h3>\n<p>Not in any version of this puzzle. The solver and clue system operate purely on hero identity and abilities. Custom visuals, voice lines, and model variations are irrelevant to finding the answer.</p><h3>How should I handle ambiguous clue phrasing?</h3>\n<p>Clue phrasing tends to repeat across puzzles. The same developer often uses identical structures for equivalent hint types. Comparing today's wording against archived examples trains your eye for what specific phrases signal.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-01T13:55:09.014Z",
+        "wordCount": 560,
+        "editorialVersion": 2
+      }
+    },
     "2026-06-30": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-06-30",
