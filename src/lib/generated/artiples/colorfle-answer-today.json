@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-06-30T16:43:14.095Z",
+  "generatedAt": "2026-07-01T18:30:06.407Z",
   "byDate": {
+    "2026-07-02": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-07-02",
+      "title": "Colorfle Answer Today: How to Read the Mix",
+      "summary": "Understanding additive color mixing is essential for solving Colorfle. Today's page reveals three RGB source colors that combine to form the target.",
+      "articleHtml": "<p>Today's Colorfle challenge asks you to identify three RGB source colors that blend together to hit a specific target. The answer sits in the reveal card above, but knowing how to read the mix properly changes everything about your approach.</p><h2>Colorfle answer today: how the mix should be read</h2>\n<p>The three source colors displayed above represent the RGB inputs that add together to create today's target. In additive color mixing, combining red, green, and blue light at full intensity produces white. Partial intensities of each channel determine the final hue you see. A careful player examines the relative brightness of each source color to understand its contribution weight before making any guesses.</p><h2>What the source colors are telling you</h2>\n<p>The clue sections on today's page break down each source color individually. Look for saturation levels and luminosity values as primary indicators of how much each channel contributes. Pure primaries (red, green, blue) carry maximum weight, while secondary and tertiary colors indicate blended contributions from multiple channels.</p>\n<p>The hint widget may highlight one or two colors that are closer to correct, helping you narrow down which sources need adjustment. If the page shows partial progress indicators, those correspond directly to the number of source colors currently matching the target's composition.</p><h2>Why additive color logic beats random mixing</h2>\n<p>Players who treat Colorfle like painting with pigments will struggle. Paint mixing follows subtractive logic where cyan, magenta, and yellow combine to create darker tones. Colorfle uses additive light mixing where RGB channels stack toward brighter results. Understanding this single distinction separates fast solvers from those who burn through attempts without progress.</p>\n<p>The reveal behavior confirms your answer by showing the exact RGB values used. Comparing those values against your guesses reveals where the logic diverged. Most mistakes stem from assuming certain color pairings work differently than they actually do in the RGB model.</p><h2>Easy adjustment path for the next Colorfle</h2>\n<p>If today's puzzle didn't click immediately, the <a href=\"https://wordsolverx.com/colorfle-solver\">Colorfle solver</a> walks through the mixing mechanics step by step. Working through one example there builds intuition faster than trial and error alone.</p>\n<p>Before tomorrow's challenge, review the <a href=\"https://wordsolverx.com/colorfle-archive\">Colorfle archive</a> to see how previous targets were constructed. Patterns emerge once you've studied five or six historical boards. You'll notice which color combinations appear frequently and how slight adjustments in brightness shift the final result.</p>\n<p>The <a href=\"https://wordsolverx.com/word-solver\">WordSolverX solver tools</a> support various puzzle types, making the site worth bookmarking for future challenges beyond Colorfle.</p><h2>Questions players keep asking</h2><h3>Does the order of the three source colors matter?</h3>\n<p>No. Additive mixing treats all three inputs simultaneously regardless of sequence. What matters is the individual RGB value of each source, not the arrangement on screen.</p><h3>Why does my monitor display different colors than what the page shows?</h3>\n<p>Monitor calibration varies between devices. If colors appear off, check your display settings. The page renders colors using standard sRGB values, so calibrated monitors show the most accurate representation.</p><h3>Can players use color picker tools to extract values from the target?</h3>\n<p>Yes. Screenshot the target, load it into an image editor with an eyedropper tool, and read the RGB values directly. This bypasses estimation entirely and works especially well when the target displays solid fills rather than gradients.</p><h3>What happens if I get all three sources wrong?</h3>\n<p>The reveal card becomes available after exhausting your attempts. Study those values carefully—they explain exactly which RGB channels you misjudged and why the combination produced the target hue.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-01T18:30:06.379Z",
+        "wordCount": 572,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-01": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-07-01",
