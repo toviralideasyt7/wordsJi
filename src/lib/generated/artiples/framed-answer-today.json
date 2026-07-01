@@ -1,7 +1,24 @@
 {
   "articleKey": "framed-answer-today",
-  "generatedAt": "2026-06-30T16:45:31.432Z",
+  "generatedAt": "2026-07-01T20:32:44.067Z",
   "byDate": {
+    "2026-07-02": {
+      "articleKey": "framed-answer-today",
+      "date": "2026-07-02",
+      "title": "Framed Answer Today: How to Solve the July 2 Movie Puzzle",
+      "summary": "Master the Framed daily puzzle with strategies for reading opening frames, using genre signals over film recall, and avoiding misleading memorable shots.",
+      "articleHtml": "<p>Opening frames in Framed tend to show establishing shots, character introductions, or title cards. These elements narrow the field fast if you know what to look for.</p><h2>Framed answer today: what the opening still usually gives away</h2><p>The first frame you see on any Framed puzzle isn't random. Directors typically open with location, era, or mood-setting imagery. On today's board, that opening shot carries enough visual weight to anchor your entire solve path before you've burned a single reveal. A careful player reads the composition first—background detail density, color grading, costume silhouette—rather than chasing the movie name immediately. This habit alone cuts unnecessary reveals on puzzles where the answer sits just outside your recent watch history.</p><h2>How genre beats exact movie recall early</h2><p>Most players over-rely on title recognition. When you blank on a specific film, genre logic keeps you in the hunt. Today's puzzle rewards that shift. The opening frame suggests period drama, which eliminates action tentpoles and contemporary comedies from consideration. You don't need to remember every Oscar nominee from 2019—you need to recognize that the lighting and set dressing read historical fiction rather than modern thriller. Archive links on this page let you cross-reference previous period-piece solutions to calibrate your eye.</p><h2>Where a single memorable frame can mislead you</h2><p>Framed pulls from iconic moments. That creates a trap: a frame so striking it overrides everything else you see. Players lock onto a celebrity face or a famous scene setup and force-fit the entire puzzle toward confirmation. The reveal card shows you exactly how many frames were available before you committed. If you're burning reveals chasing a wrong lead, that's the signal to reset and re-read the opening shot with fresh eyes. The solver tool on this page tracks your reveal count across attempts—a useful checkpoint before doubling down on a misread.</p><h2>How to clean up tomorrow's Framed in fewer reveals</h2><p>Treat each day's puzzle as calibration for the next. After you check the answer above, scroll back through your solve attempt and note where you hesitated. Most players stall at the same point: the second or third frame, when the obvious identifiers have passed but the full picture hasn't formed. Build a habit of checking the archive link after each solve. Over time, you'll notice patterns in which genres give themselves away early versus which ones hide their reveals until late. That pattern recognition compounds into faster solves with fewer burns.</p><h2>Questions players keep asking</h2><h3>Does the order of frames matter for solving?</h3><p>Yes, and it's more than just sequence. Early frames establish baseline—setting, era, tone. Middle frames introduce conflict or key characters. Late frames often lean on iconic imagery. Understanding this structure helps you allocate reveals strategically rather than clicking randomly.</p><h3>Should I skip the obvious answer if I've seen it recently?</h3><p>No. Confirmation bias works both ways. If the opening frame matches something you've watched in the last month, that's your strongest signal. Trust it unless subsequent frames actively contradict your guess.</p><h3>How many reveals does the average player need?</h3><p>Less than you'd think, once you stop guessing by actor and start reading composition. Most puzzles yield solid genre and era information in the first two frames. Solve rate improves significantly once players shift from \"name that movie\" to \"narrow the category.\"</p><h3>Can I practice on old Framed puzzles?</h3><p>The archive link on this page lets you browse previous days. That's the training ground. Pick a random past puzzle, cover the answer, and practice your frame-reading workflow before you hit today's board cold.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-01T20:32:44.038Z",
+        "wordCount": 588,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-01": {
       "articleKey": "framed-answer-today",
       "date": "2026-07-01",
