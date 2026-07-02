@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-07-01T16:56:06.676Z",
+  "generatedAt": "2026-07-02T20:17:54.832Z",
   "byDate": {
+    "2026-07-03": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-07-03",
+      "title": "Worgle Answer Today: Decoding the July 3, 2026 Puzzle",
+      "summary": "A sharp editor's guide to reading Welsh letter patterns in Worgle, sidestepping English habits, and using the solver effectively.",
+      "articleHtml": "<p>Today's Worgle answer sits above in the reveal card. If you're checking this page, you've likely already had a run at the puzzle and want to understand what the board was telling you—or you're pulling up the archive to compare notes. Either way, the answer card on this page gives you the official five-letter Welsh word. Read it alongside the pattern hints below, and you'll see how the clues fit together.</p><h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2><p>The answer card shows today's five-letter Welsh word, but the real work happens when you connect that answer to the letter-position logic Worgle runs on. A careful player notices that Welsh words behave differently from their English counterparts—certain letters appear in positions English speakers wouldn't expect, and some common Welsh digraphs don't show up where you'd guess. The hint widgets on this page flag those tricky spots if you missed them during the solve.</p><p>For this puzzle, the green squares land on letters that are genuinely frequent in Welsh. That means your next attempt at a similar pattern should account for vowel placement—Welsh relies heavily on W and Y as vowels in ways English-trained eyes read as consonants. Check the archive link to see how previous days' answers distributed their high-value letters.</p><p><strong>Quick tip:</strong> When the answer card confirms a letter in an unexpected position, cross-reference it against the solver tool. The solver filters by language rules, so it'll trim English-born guesses before you waste them.</p><h2>How to read common Welsh digraphs without overforcing them</h2><p>Welsh has letter pairs that count as single sounds—DD, LL, and occasionally TH—and these throw off solvers who treat every tile as independent. On today's board, the answer probably contained one of these digraphs, which means two adjacent tiles actually represent one phoneme. You can't rearrange them; they're locked into that order.</p><p>DD is the most commonly misunderstood. In Welsh, it makes a voiced",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-02T20:17:54.812Z",
+        "wordCount": 321,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-02": {
       "articleKey": "worgle-answer-today",
       "date": "2026-07-02",
