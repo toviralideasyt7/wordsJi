@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-07-02T13:23:30.013Z",
+  "generatedAt": "2026-07-02T16:55:55.671Z",
   "byDate": {
+    "2026-07-03": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-07-03",
+      "title": "Sportle Answer Today: Quick Verification Guide",
+      "summary": "Check your Sportle answer against today's reveal card, spot common solve pitfalls, and find the right on-site tool if you're stuck.",
+      "articleHtml": "<p>The reveal card on this page shows today's Sportle answer. If you've been working through the puzzle and want to confirm your result, start there. The answer sits above the fold—flip back to the top of the page and you'll see it.</p><h2>Sportle answer today: what matters most on this page</h2><p>The reveal card holds the confirmed answer for July 3, 2026. That's the single piece of information this page exists to deliver. Everything else here supports one goal: making sure you arrive at that answer yourself, or helping you understand why your guess didn't land.</p><p>A few things worth noting about how Sportle works compared to other daily puzzles. The format relies on sports vocabulary—team names, positions, venues, equipment terms. Players who build comfort with that lexicon tend to move faster. If certain categories feel thin, revisiting archived puzzles helps establish patterns without spoiling today's board.</p><p>The <a href=\"#archive\">archive link</a> below gives you access to past Sportle boards. That's useful when you want pattern recognition practice without touching today's solution. The solver tool handles partial inputs if you're stuck mid-board and need a directional push rather than the full answer.</p><h2>What to pay attention to before you reveal anything else</h2><p>Before touching the reveal card, scan the clue widgets. On this page, those widgets appear alongside the answer card and often break down the puzzle into category-based hints. Reading them first keeps the reveal meaningful—you're confirming pattern matches rather than absorbing a completely foreign term.</p><p>Pay attention to word length. Sportle answers tend to cluster around standard sports terminology lengths—single words, occasionally two-word phrases for team names or venue descriptors. If you've got a five-letter answer that doesn't fit any obvious equipment or position term, check whether pluralization matters or whether you're looking at an abbreviation that expanded.</p><p>The hint system on this page operates progressively. Earlier hints narrow the field; later ones approach near-definition territory. A careful player usually notices that the first hint eliminates broad categories (maybe",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-02T16:55:55.647Z",
+        "wordCount": 329,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-02": {
       "articleKey": "sportle-answer-today",
       "date": "2026-07-02",
