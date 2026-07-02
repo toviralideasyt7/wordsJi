@@ -1,7 +1,24 @@
 {
   "articleKey": "globle-answer-today",
-  "generatedAt": "2026-06-30T18:27:15.887Z",
+  "generatedAt": "2026-07-02T06:59:47.982Z",
   "byDate": {
+    "2026-07-02": {
+      "articleKey": "globle-answer-today",
+      "date": "2026-07-02",
+      "title": "Globle Answer Today: July 2, 2026",
+      "summary": "How to read today's heat map clues and triangulate toward the mystery country using central starting points on each continent.",
+      "articleHtml": "<h2>Globle answer today: what the heat clues point to first</h2><p>The heat map on today's board gives you distance information before anything else. When your first guess lands in the orange or yellow range, that's not luck—it's geography working in your favor. A warm reading means you've landed somewhere in the same hemisphere or roughly aligned latitudinally with the target. The color gradient tells you whether you're looking at a country that's north, south, east, or west of where you started.</p><p>For this puzzle, the reveal card shows a heat signature that narrows the search space considerably if you know how to read it. Players who jump straight to obvious guesses miss the triangulation advantage that warm colors provide.</p><h2>How to read warm guesses without rushing</h2><p>Heat doesn't tell you direction—it tells you proximity. That's an important distinction. A bright red result means you're close, but you still don't know whether the target lies north, south, east, or west of your guess. The temptation is to chase the warm signal immediately, narrowing in too fast based on a single data point.</p><p>A better approach treats each warm reading as one point on a circle. Your next guess should explore a different angle from the same starting region. If Mexico gave you yellow, try a guess that moves you north-south rather than east-west from that position. You're building a constellation of data points that pinpoints location through intersection.</p><h2>Where the map logic usually breaks down</h2><p>Players get into trouble when they assume geographic nearness on one axis means nearness on another. Take Brazil and South Africa—both are in the Southern Hemisphere, but they're on opposite sides of the continent. A player might see a warm reading from South Africa and assume Brazil is a logical next step because both feel \"southern.\" That assumption costs turns.</p><p>The other failure mode involves island nations and micro-states. These often register differently on the heat scale because their position relative to larger landmasses creates misleading proximity readings. When you're getting consistently warm results from island guesses, consider whether you're being pulled toward a territory rather than a sovereign nation.</p><h2>Better way to triangulate the next Globle</h2><p>The central country method works because it maximizes coverage. On each continent, there's typically one or two countries positioned roughly in the middle geographically. Starting with these gives you the broadest initial scan before you commit to directional narrowing.</p><p>From today's archive, you can see how successful solves tend to follow a pattern: broad continental sweep, then regional narrowing, then final confirmation. The <a href=\"#solver\">solver on this page</a> tracks your progress through those phases automatically.</p><h2>Questions players keep asking</h2><h3>Does the heat map update in real-time?</h3><p>Yes. Each guess refreshes the entire map, so you're always working with current data. This matters when you're making rapid sequential guesses—you want to watch how the color bands shift as you move across regions.</p><h3>What's the fastest way to reduce guesses?</h3><p>Use the central country strategy on your first three guesses—one per continent. This typically eliminates half the map within three turns. After that, focus on the warmest continent and use edge countries to bracket the target.</p><h3>Can I undo a wrong guess?</h3><p>No. Once submitted, guesses are locked. This makes the central country approach valuable—it reduces the chance you'll commit to a wrong continental path early.</p><h3>How does the archive help today's solve?</h3><p>The <a href=\"#archive\">Globle archive</a> shows patterns from past puzzles. While each day's target is random, understanding typical heat behaviors across different country positions helps you develop better intuition for reading the map. Returning players notice recurring behaviors—like how certain regional clusters always resolve together—which builds faster recognition over time.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-02T06:59:47.951Z",
+        "wordCount": 609,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-01": {
       "articleKey": "globle-answer-today",
       "date": "2026-07-01",
