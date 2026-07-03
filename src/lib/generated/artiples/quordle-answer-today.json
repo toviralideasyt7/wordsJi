@@ -1,7 +1,24 @@
 {
   "articleKey": "quordle-answer-today",
-  "generatedAt": "2026-07-02T18:23:40.201Z",
+  "generatedAt": "2026-07-03T18:17:07.642Z",
   "byDate": {
+    "2026-07-04": {
+      "articleKey": "quordle-answer-today",
+      "date": "2026-07-04",
+      "title": "Quordle Answer Today: Solve Four Boards Without Losing Your Mind",
+      "summary": "Master the four-board challenge by prioritizing high-value starting words and tracking letter states across all grids simultaneously.",
+      "articleHtml": "<p>Four Wordle boards run at once. Every guess hits all four simultaneously. That one rule changes everything about how you approach each daily puzzle.</p><h2>Quordle answer today: what the boards are asking first</h2><p>The reveal card on today's page shows four separate solutions waiting to drop. Before anything else, take thirty seconds to scan your starting word against all boards at once. A good opener should eliminate letters across multiple grids even if it only lights up green on one board. If your first guess contains letters that appear nowhere in three of the four answers, you've already spent a guess inefficiently. The solver on this page can test opening words against archived patterns if you want to see which two-letter combinations historically perform best across all four boards.</p><p>A careful player usually notices which board feels most constrained early. One grid might show five grays from your opener while another has three yellows stacking up. That's your signal. Lock that board mentally but don't abandon the others—keep feeding them information too.</p><h2>How to split attention across four grids</h2><p>Most players fail Quordle not because they guess wrong words, but because they try to hold all four boards in their head simultaneously. Pick one board as your primary tracking target and let the others fade into peripheral vision until they demand attention. When a board shows a near-complete pattern—a nearly solved word with two or three greens—shift focus there immediately. Those boards are closest to done and often need the fewest remaining guesses if you read the color feedback correctly.</p><p>The hint widget on this page gives you breathing room if you're stuck on any single board. Use it on whichever grid feels murkiest, not necessarily the one closest to solving. Sometimes clearing fog from one board unblocks your thinking for the others.</p><h2>Which guesses pull double duty best</h2><p>Some words do heavy lifting across multiple boards. A word like <em>crane</em> hits five common vowels and consonants without duplicating letters. It works well when you haven't narrowed anything down yet. As boards diverge—when one needs an S-end word while another wants something with no repeated letters—you'll need words that serve specific boards selectively.</p><p>Track which letters are dead on each board separately. A letter that's gray on three boards but unknown on the fourth becomes valuable real estate. Words containing that letter let you test the fourth board while gathering data on the others. The archive linked from this page shows how players who've tracked their games over time tend to favor this kind of cross-board elimination in their third and fourth guesses.</p><h2>How to finish the next Quordle with fewer panicked guesses</h2><p>Panic usually hits around guess six or seven when two boards remain unsolved and your mental stack of eliminated letters starts blurring together. Prevent this by maintaining a running list of what's possible on each remaining board. Even a rough mental note—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-03T18:17:07.608Z",
+        "wordCount": 485,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-03": {
       "articleKey": "quordle-answer-today",
       "date": "2026-07-03",
