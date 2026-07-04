@@ -1,7 +1,24 @@
 {
   "articleKey": "spotle-answer-today",
-  "generatedAt": "2026-07-03T18:19:06.471Z",
+  "generatedAt": "2026-07-04T17:45:01.529Z",
   "byDate": {
+    "2026-07-05": {
+      "articleKey": "spotle-answer-today",
+      "date": "2026-07-05",
+      "title": "Spotle Answer Today: How to Solve the July 5, 2026 Puzzle",
+      "summary": "Today's Spotle puzzle relies on narrowing by genre first, then using debut era and group composition to isolate the artist. Here's how to approach it.",
+      "articleHtml": "<p>Genre filters out roughly 70% of candidates before you touch any other clue. On today's Spotle board, that first signal matters more than players realize. If you've landed here looking for verification or a path forward, here's what works.</p><h2>Spotle answer today: which clue should matter first</h2>\n<p>The reveal card shows several dimensions at once—genre, nationality, debut year, group size—but treating them equally leads to second-guessing. Genre narrows fastest. A jazz artist and a punk act share no overlap regardless of when they started. Check that filter against the board's options before anything else. Once genre locks, debut era becomes the tiebreaker between remaining candidates. Group size handles the final distinction when two artists share everything else. This hierarchy isn't obvious from a glance, but it's how the puzzle's difficulty scales. Today's page likely has one clue that dominates early, and finding it first cuts your solve time noticeably.</p><h2>How genre, country, and era work together</h2>\n<p>These three clues form a chain, not a list. Nationality limits the pool geographically, which matters when two artists from the same genre debuted in overlapping years. Country alone rarely solves anything—too many nations have multiple active scenes—but combined with era, it eliminates whole branches of possibility. A German electronic artist from 1995 looks nothing like a German punk act from 1979, even if both fit the genre box. Players who jump straight to guessing based on popularity miss this connective tissue. The hint widget on this page often highlights one leg of that chain. Watch whether it points toward geography, timeline, or style—and let that steer your elimination order.</p><h2>What usually causes the wrong artist guess</h2>\n<p>Confirmation bias from familiarity. Players see a name they recognize, lock onto it, and force-fit remaining clues around that choice instead of testing against them. The puzzle doesn't care that you know this artist's discography. It cares whether the metadata matches. Another common mistake: over-weighting recency. Recent artists feel more",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-04T17:45:01.496Z",
+        "wordCount": 323,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-04": {
       "articleKey": "spotle-answer-today",
       "date": "2026-07-04",
