@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-04T06:44:47.108Z",
+  "generatedAt": "2026-07-05T12:57:58.275Z",
   "byDate": {
+    "2026-07-05": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-05",
+      "title": "Phrazle Answer Today: Clues, Color Feedback, and How to Think About Tomorrow",
+      "summary": "Today's Phrazle tests your ability to guess common phrases using color-coded feedback. Here's how to read the board, avoid common traps, and prepare for tomorrow.",
+      "articleHtml": "<p>The morning board delivered a five-word phrase today. That's longer than the four-word average you'll see most days, which means your first guess needs to cover more ground. If you started with a two-word idiom, you were working with incomplete information before the board even responded.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>Phrase length is your first real hint. A three-word answer almost always points to a well-worn expression like \"break a leg\" or \"spill the tea.\" Four words opens up proverb territory—think \"actions speak louder than words\" or \"don't count your chickens.\" Five words, like today's board, usually signals a longer quote or pop culture reference that doesn't roll off the tongue as easily. When you see five slots light up, mentally filter out the short idioms immediately. Your brain wants to land on something punchy. Fight that impulse.</p><p>The reveal card on this page shows which letters landed in green versus yellow versus gray. Green tiles tell you the exact letter and correct position—that slot is locked. Yellow tiles mean the letter exists somewhere else in the phrase. Gray tiles eliminate that letter entirely from consideration. Most players process green first, then chase yellows. The smarter reading order is actually gray, then green, then yellow. Eliminating impossible letters early prevents you from wasting guesses on letter combinations that can't work.</p><h2>How to read color feedback across multiple words</h2>\n<p>Here's where players get sloppy. They treat each word independently instead of tracking how letters distribute across the entire phrase. Suppose your first guess puts an E in the second position of a five-word phrase. That E might belong to \"before,\" \"father,\" or \"better.\" If that tile goes yellow, you know E exists elsewhere. But if the next guess places E in a different slot and it goes green, you've just mapped two instances of the same letter. Phrazle allows repeated letters within a phrase—you're not working with Wordle's strict one-per-tile logic. That's a critical difference that trips up players transferring habits from other games.</p><p>A careful player usually notices when a color pattern repeats across similar positions. If you're getting gray on the third letter of two different words, those words don't share that vowel or consonant profile. That tells you something about the phrase's rhythm. Maybe it's \"the __ __ __\" structure rather than \"__ the __ __.\" The solver tool on this page can help you test positional theories against the full dictionary without burning additional guesses.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>Players who treat Phrazle like extended Wordle tend to optimize for individual word strength. They pick strong anchor words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-05T12:57:58.248Z",
+        "wordCount": 443,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-04": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-04",
