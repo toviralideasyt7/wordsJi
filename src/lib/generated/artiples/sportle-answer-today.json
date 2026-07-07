@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-07-07T07:09:55.859Z",
+  "generatedAt": "2026-07-07T16:56:12.075Z",
   "byDate": {
+    "2026-07-08": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-07-08",
+      "title": "Sportle Answer Today: Quick Verification and Solve Path for July 8, 2026",
+      "summary": "Today's Sportle puzzle centers on sports terminology. Learn which details matter most, how to avoid common mistakes, and get answers fast.",
+      "articleHtml": "<p>Today's Sportle board tests your knowledge of sports terminology and team details. If you're checking this page, you probably already have a guess in mind and want confirmation—or you need a nudge without spoilers. Either way, here's how to work the page effectively.</p><h2>Sportle answer today: what matters most on this page</h2>\n<p>The answer card at the top of this page holds today's final word. Before touching anything else, scan the clue widget below it. That widget breaks down letter count and sometimes offers category hints—equipment type, playing surface, or position name. A careful player notices these distinctions immediately rather than scrolling through options that don't fit.</p>\n<p>If the clue says \"a piece of equipment,\" focus on gear. If it names a position, think defensive backs, forwards, or utility players. The archive link in the sidebar lets you cross-reference today's pattern against recent entries, which helps when the clue feels ambiguous.</p><h2>What to pay attention to before you reveal anything else</h2>\n<p>Most players jump straight to the answer card and miss the hint panel sitting just beneath it. On Sportle, those hints are deliberately minimal—you get one broad category and a letter count. That's intentional. The constraint forces you to triangulate from sports knowledge rather than pattern-matching.</p>\n<p>Check whether the solver tool on this page supports partial entries. Some days it does, some days it locks after a wrong guess. Knowing which mode applies today saves frustration later. The reveal behavior changes depending on how many attempts you've logged, so if you've been working offline, refresh the page once before relying on the solver's state.</p><h2>Mistakes that usually cost the clean solve</h2>\n<p>Confusing related sports trips up more players than obscure terminology does. A \"quarterback\" and a \"tailback\" share field context but differ in function. Similarly, mixing up venue names—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-07T16:56:12.047Z",
+        "wordCount": 300,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-07": {
       "articleKey": "sportle-answer-today",
       "date": "2026-07-07",
