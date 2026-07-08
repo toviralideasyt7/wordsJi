@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-07T07:07:46.712Z",
+  "generatedAt": "2026-07-08T18:15:06.435Z",
   "byDate": {
+    "2026-07-09": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-09",
+      "title": "Phrazle Answer Today: How to Read the Clues and Solve the Phrase",
+      "summary": "Master Phrazle solving with strategies for reading phrase structure, interpreting color feedback, and avoiding common guess traps.",
+      "articleHtml": "<p>Phrazle flips word puzzles on their head. Instead of hunting single words, you're chasing entire phrases—idioms, proverbs, movie lines, cultural shorthand. That changes everything about how you read the board.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The reveal card shows your target. Before overthinking individual letters, look at the shape. Is it two words? Three? A famous quote with attribution implied? Phrazle draws heavily from recognizable patterns—common sayings, song titles, branded taglines. If the phrase runs four or more words, you're likely dealing with something established rather than a creative original construction.</p><p>Count the slots before you type anything. A three-slot phrase means three distinct words. A five-slot phrase means your answer has five components. This sounds obvious, but players waste guesses by treating long phrases as single-word puzzles with extra steps. Each position gets its own letter feedback, and those colors interact across the whole phrase.</p><p>The morning and afternoon cycles give you two shots at the daily target. Treat them as separate solve windows. If you solved the morning version, the afternoon brings fresh challenge—no carryover from your morning attempts. Archive links on this page let you review past solves and spot recurring phrase types.</p><h2>How to read color feedback across multiple words</h2>\n<p>Green tiles work just like standard word games: correct letter, correct slot. But here's where Phrazle trips up players who are used to single-word grids. A green letter in word one doesn't guarantee that same letter behaves the same way in word two. Each slot is evaluated independently against the full phrase target.</p><p>Yellow tiles mean the letter exists somewhere in the phrase but not in that specific slot. This creates a layering problem. Say you get yellow on \"T\" in the second word. That T might belong in word three, or it might be a plural marker (-s, -ed) appearing elsewhere. You can't collapse all yellow feedback into a single positional theory.</p><p>Gray tiles eliminate letters from consideration—but only within that specific slot. A gray G in position one of word two doesn't kill G entirely. It just tells you G isn't in that exact spot. Experienced solvers build mental tracking boards instead of relying on the game's built-in keyboard highlighting, which conflates independent positions.</p><p>When you see mixed feedback across a multi-word phrase, prioritize confirming the strongest signal first. If three out of five slots turn green on a five-word phrase, lock those positions mentally and work the remaining two with tighter candidate sets.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>Phrazle punishes word-by-word thinking. You might land on perfect individual words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-08T18:15:06.404Z",
+        "wordCount": 436,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-07": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-07",
