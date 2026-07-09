@@ -1,7 +1,24 @@
 {
   "articleKey": "sportle-answer-today",
-  "generatedAt": "2026-07-08T20:18:20.321Z",
+  "generatedAt": "2026-07-09T16:57:30.383Z",
   "byDate": {
+    "2026-07-10": {
+      "articleKey": "sportle-answer-today",
+      "date": "2026-07-10",
+      "title": "Sportle Answer Today: Your Quick Guide for July 10, 2026",
+      "summary": "A practical look at today's Sportle puzzle, covering how to read the clues, avoid common mistakes, and verify your answer using the archive and solver tools.",
+      "articleHtml": "<p>Today's Sportle puzzle tests your knowledge of sports terminology, team names, venues, and player positions. Whether you're chasing a clean solve or just confirming what landed on the board, this guide walks through the key decision points and where the page's built-in tools save you time.</p><h2>Sportle answer today: what matters most on this page</h2><p>The answer card and reveal widget give you the confirmed result, but a careful player knows the real value sits in understanding <em>why</em> that answer fits. The clue widgets on this page break down the sports category, letter count, and any pattern hints worth noting before you commit. Check those widgets first—they often surface whether you're dealing with a single-word answer or a multi-word phrase, which changes your solving approach entirely.</p><p>If the reveal hasn't been triggered yet, the hint system gives you progressive nudges without spoiling the full answer. Most players benefit from letting the hint refresh their thinking rather than jumping straight to the solution. The archive link lets you pull yesterday's pattern if you want to compare how recent puzzles have been constructed.</p><h2>What to pay attention to before you reveal anything else</h2><p>Before touching the reveal button, scan the clue text one more time. In Sportle, the phrasing often includes positioning language—words like \"guard,\" \"forward,\" \"pitch,\" or \"court\"—that narrows the sport immediately. A clue mentioning \"the diamond\" almost certainly points to baseball; a reference to \"the gridiron\" signals American football. Those contextual markers matter more than the raw letters in many cases.</p><p>Count the answer length from the clue description. If the widget shows four letters, you're not hunting a stadium name—you're looking at something shorter: a position, a piece of equipment, or a common action verb used in that sport. Matching the letter count to plausible categories cuts your candidate list dramatically before you even open the solver.</p><p>The hint widgets refresh on a timer for some users. If you've already burned through your initial attempts, wait a few minutes before reaching for the full reveal. The incremental hints strip away ambiguity step by step rather than handing you the answer outright.</p><h2>Mistakes that usually cost the clean solve</h2><p>Players trip up most often by assuming too broad a category. When a clue references \"a ball game,\" that's not helpful—every major sport uses a ball. Look instead for the specific modifier attached to the noun. \"Beach\" before \"ball",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-09T16:57:30.355Z",
+        "wordCount": 398,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-09": {
       "articleKey": "sportle-answer-today",
       "date": "2026-07-09",
