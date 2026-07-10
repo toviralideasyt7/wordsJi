@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-07-08T18:08:37.183Z",
+  "generatedAt": "2026-07-10T16:47:19.560Z",
   "byDate": {
+    "2026-07-11": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-07-11",
+      "title": "Colorfle Answer Today: How to Read the Color Mix and Find the Solution",
+      "summary": "A practical guide to solving Colorfle puzzles using additive color logic, with tips for reading source colors and adjusting your approach.",
+      "articleHtml": "<p>Today's Colorfle puzzle asks you to identify three RGB source colors that blend together to hit a specific target. If additive color mixing isn't clicking immediately, you're not alone—but the logic is learnable once you see how the board actually communicates.</p><h2>Colorfle answer today: how the mix should be read</h2>\n<p>The puzzle presents a target color alongside several source options. Your job is to pick three sources whose combined RGB values land on that target. Think of it like overlapping flashlight beams—red, green, and blue light stack on top of each other to create white, and any combination in between produces the full spectrum of screen colors. The reveal card on today's page shows whether your three guesses landed within tolerance. Check the solver link if you want to test combinations without burning attempts.</p><h2>What the source colors are telling you</h2>\n<p>A source with high red but low green and blue signals it's contributing warmth to the final mix. If the target skews orange, one of your picks probably needs significant red plus some green. The trick is treating each source as a building block rather than trying to guess the whole answer at once. Some days the target sits squarely in the middle of available sources; other days it requires blending two dominant contributors with one minor adjustment color. The hint widget on this page sometimes narrows the field before you commit.</p><h2>Why additive color logic beats random mixing</h2>\n<p>Players who treat Colorfle like paint mixing get frustrated fast. Subtractive logic—where blue plus yellow makes green—will steer you wrong every time. Additive mixing works like screens and monitors: more color means more brightness. If you're stuck, reverse-engineer from the target. Ask yourself what RGB values the target has, then work backward to find which three sources could sum to those numbers. The archive history on this page lets you review past puzzles and notice patterns in how the targets were constructed.</p><h2>Easy adjustment path for the next Colorfle</h2>\n<p>If today's target felt off, try starting with the brightest source and subtracting it from the target to see what's left. That remainder tells you roughly what the other two colors need to cover. You can also experiment with the solver tool to run quick combinations before using a real attempt. Most players improve fastest by treating each puzzle as a mini-lesson in RGB math rather than pure intuition.</p><h2>Questions players keep asking</h2><h3>Can I reuse a source color more than once?</h3>\n<p>No—each source contributes once per attempt. The puzzle expects three distinct selections from the available pool.</p><h3>How close does my mix need to be to the target?</h3>\n<p>The reveal card shows a tolerance range. Small deviations still count as correct if they fall within acceptable RGB distance. Exact matches aren't always necessary.</p><h3>What's the best way to practice Colorfle without wasting attempts?</h3>\n<p>The solver tool lets you test combinations freely. Use it to build intuition for how different RGB values combine before committing to a real guess.</p><h3>Do the source colors change position between attempts?</h3>\n<p>No—the board layout stays fixed for each daily puzzle. Only your selection changes.</p><h3>Where can I find yesterday's Colorfle solution?</h3>\n<p>The archive link on this page stores past puzzles with their solutions. Reviewing a few rounds helps you spot recurring patterns in how targets are constructed from the available sources.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-10T16:47:19.524Z",
+        "wordCount": 556,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-09": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-07-09",
