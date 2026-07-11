@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-09T16:51:47.894Z",
+  "generatedAt": "2026-07-11T16:51:27.382Z",
   "byDate": {
+    "2026-07-12": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-12",
+      "title": "Phrazle Answer Today: How to Read Today's Phrase Clues Like a Pro",
+      "summary": "Master the color feedback system and phrase structure logic on Phrazle with tips for narrowing down today's common idiom or proverb.",
+      "articleHtml": "<p>Today's Phrazle board shows two distinct puzzles—one morning round and one afternoon round. If you're landing here to verify an answer or figure out where your guesses went sideways, here's how to read what's actually on the board.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2><p>Most players jump straight into word associations and miss the structural hints sitting right there on the reveal card. Phrazle draws heavily from common idioms, famous movie lines, and recognizable proverbs. That means the phrase length and word count matter more than you'd think. A three-word phrase behaves differently than a six-word one when you're working through color feedback.</p><p>Before you start guessing random combinations, check whether the answer above follows a standard construction. Is it a well-known saying with a verb-noun-adjective pattern? Or does it look more like a pop culture quote with a proper noun buried inside? The archive linked on this page can help you spot these patterns if you're stuck.</p><p>A careful player usually notices that shorter phrases often hide prepositions or articles that feel optional but are actually essential to the phrase matching. Don't assume you can swap \"a\" for \"the\" or drop a minor word—Phrazle expects precision.</p><h2>How to read color feedback across multiple words</h2><p>The color system works like other word puzzles but applies to entire words within the phrase, not individual letters. When you see green on a word, that word is correct and in the right position. Yellow means the word exists somewhere in the phrase but not where you placed it. Gray means that word doesn't appear for this answer at all.</p><p>The mistake many players make is treating each word independently. Your guess forms a complete phrase, and the feedback evaluates that phrase as a unit. If you've got three greens and one yellow, you're close—but the yellow word's position matters. Try moving it earlier or later in your next guess rather than replacing it entirely.</p><p>When you get multiple grays early, don't keep recycling those dead-end words. Cross them off mentally and focus on the remaining slots. The solver tool on this page can help you generate alternatives once you've narrowed down which word positions are locked.</p><h2>Why good single words can still make bad phrase guesses</h2><p>You might land on the perfect individual word—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-11T16:51:27.350Z",
+        "wordCount": 385,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-10": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-10",

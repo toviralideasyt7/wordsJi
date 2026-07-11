@@ -1,7 +1,24 @@
 {
   "articleKey": "phoodle-answer-today",
-  "generatedAt": "2026-07-09T16:49:56.421Z",
+  "generatedAt": "2026-07-11T16:50:08.684Z",
   "byDate": {
+    "2026-07-12": {
+      "articleKey": "phoodle-answer-today",
+      "date": "2026-07-12",
+      "title": "Phoodle Answer Today: What It Feels Like First — July 12, 2026",
+      "summary": "A sharp editor's guide to reading Phoodle's food-word clues, separating dish from technique, and using today's hints effectively.",
+      "articleHtml": "<p>Today's Phoodle sits somewhere between pantry inventory and restaurant menu. The five-letter format rules out most compound words, which means you're working with standalone nouns or verbs—nothing hyphenated, nothing plural. If the board's hint widgets are showing multiple categories, treat them as separate lanes of thought rather than competing guesses.</p><h2>Phoodle answer today: what kind of kitchen word it feels like first</h2>\n<p>The answer card on this page usually reveals something you've said out loud in a kitchen at least once. It's not exotic—it tends toward common cooking vocabulary. A careful player notices that the difficulty lives in specificity: \"roast\" and \"toast\" both exist in food contexts, but one fits the clue pattern while the other doesn't. Today's reveal behaves like most Phoodle answers do—the first letter locks in, then subsequent attempts narrow toward either an ingredient category or a preparation method. Check the <a href=\"#archive\">archive link</a> if you want to see how the hint sequence unfolded.</p><p>That gut feeling matters less than people think. Players who anchor on the first plausible food word often waste two or three guesses before pivoting. The board rewards systematic elimination over intuition.</p><h2>How to separate ingredient, dish, and technique clues</h2>\n<p>Phoodle clues tend to cluster around three buckets. Ingredients are things you'd find in a recipe: flour, sugar, basil, steak. Dishes are the end results: soup, pasta, curry, stew. Techniques are actions: chop, roast, blend, sear. Mixing these up leads to wasted guesses.</p><p>When a clue widget reads vague, test whether it points to a noun or verb. Technique clues almost always imply action—they want a word doing something. Ingredient clues are static; they're the stuff sitting in the bowl. Dish clues sit in between, which makes them trickier. A word like \"risotto\" could technically be ingredient (it's rice) or dish (it's dinner). Context from surrounding letters helps disambiguate.</p><p>If the hint system shows partial fills, watch where blanks appear. An early blank often signals an ingredient rather than a technique, since techniques tend to use more common consonants. This isn't a hard rule, but it's useful when you're stuck between two plausible guesses.</p><h2>Where familiar food words become the wrong guess</h2>\n<p>English borrows aggressively from cooking vocabulary, and that's where players stumble. \"Mince\" looks like a technique, and it is—but so does \"dice,\" \"julienne,\" and \"chiffonade.\" These overlap in meaning and letter patterns, which means the board can only accept one. Familiarity tricks you into assuming your word is the right word.</p><p>The same problem hits ingredients. \"Cumin\" and \"cumin",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-11T16:50:08.657Z",
+        "wordCount": 417,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-10": {
       "articleKey": "phoodle-answer-today",
       "date": "2026-07-10",
