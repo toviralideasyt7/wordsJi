@@ -1,7 +1,24 @@
 {
   "articleKey": "worgle-answer-today",
-  "generatedAt": "2026-07-11T06:04:42.289Z",
+  "generatedAt": "2026-07-12T17:47:57.853Z",
   "byDate": {
+    "2026-07-12": {
+      "articleKey": "worgle-answer-today",
+      "date": "2026-07-12",
+      "title": "Worgle Answer Today: Welsh Letter Patterns and Solve Paths for July 12, 2026",
+      "summary": "Today's Worgle answer relies on common Welsh digraphs like DD and CH. Avoid forcing English vowel patterns and use the on-page solver to verify your letter placement.",
+      "articleHtml": "<h2>Worgle answer today: what the Welsh letter pattern is hinting at</h2>\n<p>The answer card displayed above confirms the solution for July 12, 2026, utilizing standard Welsh orthography rather than English phonetic expectations. Players often miss the target because they prioritize common English vowels over the consonant clusters that define Welsh vocabulary. The reveal shows a structure where double letters or specific digraphs carry the weight of the word. Check the hint widget on this page if you need a nudge toward the correct consonant pairing before committing your final guess.</p>\n<p>Worgle operates on a strict five-letter grid, but the pool of valid words comes directly from Welsh dictionaries. This means a word like <em>DDWY</em> or <em>CHWY</em> is fair game, even if it looks like a typo to an English speaker. The puzzle today leans into this distinction. If your guesses are turning gray despite having the right letters, you are likely misplacing a digraph or treating a silent letter as active. The solver tool linked below can help you filter the remaining possibilities based on the feedback you have already received.</p>\n<h2>How to read common Welsh digraphs without overforcing them</h2>\n<p>Welsh treats certain letter pairs as single sounds, and Worgle respects this linguistic rule in its validation logic. The digraphs <strong>DD</strong>, <strong>FF</strong>, <strong>NG</strong>, <strong>NH</strong>, <strong>LL</strong>, <strong>PH</strong>, <strong>RH</strong>, and <strong>TH</strong> function as distinct units. When the game highlights a letter in yellow, it might be signaling that the pair belongs in that spot, not just one half of it. A player who splits these pairs across different tiles often burns a turn unnecessarily.</p>\n<p>Consider how <strong>LL</strong> works. It is not an L followed by another L; it is a voiceless lateral fricative. In the context of a five-letter word, placing <strong>LL</strong> at the start or end changes the entire geometry of the solve. Today's puzzle likely contains one of these fixed pairs. If you guessed a word with a single L and got a green tile, try moving it to form a double. The archive page shows that previous solutions have heavily favored words starting with these clusters. Ignoring them limits your viable word list to a tiny fraction of the actual dictionary.</p>\n<p>Do not assume the game will accept English approximations. Typing <em>LLAMA</em> might work if it is a valid Welsh loanword, but forcing an English structure onto a Welsh root usually fails. The hint system on this route is designed to flag these specific orthographic features. Use it to confirm whether a double consonant is required before you exhaust your attempts.</p>\n<h2>Where English guessing habits break the solve</h2>\n<p>English speakers bring baggage to Worgle that actively hinders progress. The biggest offender is the obsession with the vowel <strong>E</strong>. In Welsh, <strong>E</strong> is common, but <strong>Y</strong> and <strong>W</strong> act as vowels far more frequently than in English. A starting word like <em>CRANE</em> is statistically weaker than <em>CWMYN</em> or <em>GYRFF</em> because it ignores the vocalic potential of W and Y. If your first three guesses are full of E, A, and I, you are probably chasing ghosts.</p>\n<p>The letter <strong>W</strong> is another trap. In English, it is a consonant. In Welsh, it is a vowel sound equivalent to 'oo' or 'uh'. Seeing a W in the answer slot should not trigger a search for words like <em>WATER</em>. Instead, look for words where W sits in the middle or end, acting as the nucleus of the syllable. Today's answer card demonstrates this clearly. The position of the W dictates the surrounding consonants in a way that English phonotactics do not predict.</p>\n<p>also, English players tend to avoid words that look",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-397b-a17b",
+        "fallbackUsed": false,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-12T17:47:57.827Z",
+        "wordCount": 607,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-11": {
       "articleKey": "worgle-answer-today",
       "date": "2026-07-11",
