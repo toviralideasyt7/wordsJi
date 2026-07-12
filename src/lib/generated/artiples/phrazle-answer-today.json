@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-11T16:51:27.382Z",
+  "generatedAt": "2026-07-12T16:53:29.126Z",
   "byDate": {
+    "2026-07-13": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-13",
+      "title": "Phrazle Answer Today: How to Read the Clues and Make Your Best Guess",
+      "summary": "Today's Phrazle rewards careful phrase structure reading over random word guessing. Here's how to decode the board and find the answer faster.",
+      "articleHtml": "<p>The Phrazle board doesn't care about clever single words—it wants you to think in full phrases. Idioms, proverbs, and pop culture quotes fill most slots. If you're stuck on today's puzzle, the path forward runs through understanding what the phrase structure itself is trying to tell you.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>Every Phrazle answer follows a recognizable pattern—a common expression people say or hear regularly. When you look at the blank slots, count the words first. A four-slot phrase works differently than a six-slot phrase. Short answers tend toward punchy idioms: \"break the ice,\" \"bite the bullet,\" \"hit the nail.\" Longer phrases usually land as movie titles, song lyrics, or well-worn sayings.</p>\n<p>Check whether the board shows any pre-filled letters from previous attempts. Those locked-in characters aren't decorations—they're constraints that eliminate entire families of phrases. If you see a Q followed by U in the third slot, you're working with a very short list of possibilities. A careful player uses those fixed positions to filter aggressively before wasting guesses on plausible-but-wrong expressions.</p>\n<p>The reveal card on today's page confirms your final answer once you've submitted. Until then, treat every guess as an information-gathering step, not a final commitment.</p><h2>How to read color feedback across multiple words</h2>\n<p>Phrazle borrowed its color logic from word games, but phrase-length answers add complexity. Green means the letter sits in the right word AND the right position. Yellow means the letter exists somewhere in the phrase but in a different spot. Gray means the letter doesn't appear at all.</p>\n<p>The tricky part: a letter might be green in one word and yellow in another within the same guess. That tells you the letter appears twice in the phrase—once confirmed and once misplaced. Players who ignore cross-word patterns miss these signals entirely.</p>\n<p>When you get a fully gray row, resist the urge to cycle through random synonyms. Instead, catalog which letters are dead. Build a mental map of what's impossible rather than chasing what's possible. Most players waste guesses because they keep testing letters the board has already ruled out.</p>\n<p>Use the solver linked on this page if you want systematic help filtering candidates based on your exact color feedback. It won't play for you, but it removes the grunt work of manual elimination.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>Here's where most players go wrong. They find a word that feels perfect—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-12T16:53:29.095Z",
+        "wordCount": 407,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-12": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-12",
