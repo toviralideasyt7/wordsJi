@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-12T16:53:29.126Z",
+  "generatedAt": "2026-07-13T18:26:52.898Z",
   "byDate": {
+    "2026-07-14": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-14",
+      "title": "Phrazle Answer Today: July 14, 2026",
+      "summary": "Strategic breakdown of today's Phrazle phrase structure, color feedback interpretation, and why single-word confidence often misleads phrase solving.",
+      "articleHtml": "<p>Today's Phrazle puzzle tests your ability to think in idioms rather than isolated vocabulary. If you've been staring at the board wondering why solid single-word guesses aren't clicking into phrase form, you're not alone.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The reveal card above shows a multi-word phrase—typically three to five words—that follows a recognizable pattern. Common structures include verb-noun pairs, prepositional chunks, and well-worn expressions that native speakers recognize instantly. When you see partial green tiles appearing early, the puzzle is confirming that the overall construction matters as much as individual word choice. A careful player notes which positions consistently produce neutral gray before cycling through synonyms for that slot.</p><h2>How to read color feedback across multiple words</h2>\n<p>Phrazle's color system tracks each tile independently, but the interaction between adjacent words creates secondary signals. Yellow placement within a word tells you the letter exists somewhere in that word—not necessarily in that exact spot. Green locks a position permanently. The trap many solvers fall into is treating yellow as a weak signal when it actually confirms a letter belongs in the phrase entirely. Look at the middle word of today's phrase: if you received two yellows there, the letters are correct but shuffled. That narrows your options considerably compared to scattering those letters across different words.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>This is where Phrazle diverges sharply from standard word games. You might land on a perfectly valid word—correct letters, reasonable length—but the phrase demands a specific synonym or phrasing that your brain didn't select. For instance, \"get angry\" and \"lose temper\" share similar letter profiles yet only one fits today's structure. The solver tool on this page can help identify alternative word arrangements when you feel stuck on individual components. Don't force a word that works linguistically if the color feedback isn't supporting its role in the phrase.</p><h2>How to approach tomorrow's Phrazle with less chaos</h2>\n<p>Before typing anything, scan the blank positions and ask yourself: would a native speaker complete this phrase conversationally? Phrazle draws heavily from common idioms, movie quotes, and proverbs—which means the missing words are usually predictable once you identify the structure. Build a shortlist of candidate phrases that match the word count and approximate meaning. Enter your strongest option first, then let the color feedback prune possibilities rather than guessing wildly. Players who treat each attempt as information gathering solve faster than those chasing inspiration.</p><h2>Questions players keep asking</h2><h3>Does Phrazle reuse phrases from previous days?</h3>\n<p>No—the archive shows distinct daily entries, and each puzzle pulls from a rotating pool of idioms and expressions. Repeating a phrase exactly is rare, though similar themes occasionally appear across weeks.</p><h3>How many guesses do I get per day?</h3>\n<p>Standard play allows six attempts per daily phrase. Each guess submits a complete phrase attempt, not individual words. Plan accordingly—if you're down to two guesses, avoid experimental entries that could eliminate promising letter combinations.</p><h3>Can I access yesterday's puzzle after it rotates out?</h3>\n<p>The archive link on this page preserves historical puzzles. You can review past phrases, compare your solve paths, and study patterns without affecting current gameplay.</p><h3>Do hints reset the guess counter?</h3>\n<p>Hints reveal individual letters without costing an attempt. They're available through the hint widget and provide targeted assistance without penalizing your remaining guesses.</p><h3>What's the best first guess strategy?</h3>\n<p>Open with a high-frequency phrase containing common letters—avoid obscure vocabulary on opening moves. The goal is maximum color feedback, not impressing anyone with esoteric word knowledge.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-13T18:26:52.865Z",
+        "wordCount": 589,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-13": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-13",
