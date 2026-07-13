@@ -1,7 +1,24 @@
 {
   "articleKey": "framed-answer-today",
-  "generatedAt": "2026-07-12T19:59:20.414Z",
+  "generatedAt": "2026-07-13T20:06:48.170Z",
   "byDate": {
+    "2026-07-14": {
+      "articleKey": "framed-answer-today",
+      "date": "2026-07-14",
+      "title": "Framed Answer Today: July 14, 2026 - How to Solve the Movie Still Before the Fifth Reveal",
+      "summary": "Today's Framed puzzle relies on genre cues rather than obscure trivia. Learn to spot the director's style in the first three frames and skip the guesswork.",
+      "articleHtml": "<h2>Framed answer today: what the opening still usually gives away</h2><p>The answer for July 14, 2026, sits behind a sequence of frames that prioritize atmosphere over plot. Players who rush to name the film after the first two reveals often hit a wall. The opening shot usually establishes the color grade and the era, not the specific title. On this board, the lighting and aspect ratio point toward a specific decade of cinema before any dialogue appears. A careful player notices the film stock grain or the digital sharpness immediately. This visual texture eliminates half the library before you even type a letter. Don't guess the title yet; guess the director's visual signature instead.</p><p>Check the <a href=\"/framed-archive\">archive</a> to see how previous puzzles used similar lighting cues to hide the answer until the fourth reveal. The pattern repeats often: the first frame sets the mood, the second introduces a character type, and the third reveals the setting. If you miss the mood in the first step, the rest of the puzzle becomes a guessing game. Use the <a href=\"/framed-solver\">solver tool</a> only if the visual cues remain ambiguous after the third frame.</p><h2>How genre beats exact movie recall early</h2><p>Most players try to recall specific movie titles the moment they see a character. This is a trap. The puzzle engine for Framed selects frames that define a genre before they define a plot. A noir film looks different from a sci-fi epic even if both feature a lone protagonist in a dark room. The shadows, the camera angle, and the props tell you the genre first. If the frame shows a rainy street and a trench coat, you are looking at a mystery or a thriller, not a rom-com or a western. Identifying the genre narrows the search field significantly.</p><p>For today's puzzle, the visual language screams a specific sub-genre. The composition of the shot suggests a narrative focus that eliminates blockbusters from the 2010s. Instead, the framing leans toward a more intimate, character-driven story. Recognizing this distinction allows you to filter out irrelevant titles. You don't need to know the exact movie to know it isn't a superhero film. This logic holds true even if the specific actor is unrecognizable. Focus on the style of the shot, not the face in it.</p><h2>Where a single memorable frame can mislead you</h2><p>One frame often sticks in the memory while others blur. This is dangerous. A single iconic shot might belong to a famous movie, but if the surrounding frames don't match the tone, you are chasing a red herring. The puzzle rarely relies on a single",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "qwen/qwen3.5-122b-a10b",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-13T20:06:48.132Z",
+        "wordCount": 433,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-13": {
       "articleKey": "framed-answer-today",
       "date": "2026-07-13",
