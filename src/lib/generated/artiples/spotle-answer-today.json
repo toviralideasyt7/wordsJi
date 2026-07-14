@@ -1,7 +1,24 @@
 {
   "articleKey": "spotle-answer-today",
-  "generatedAt": "2026-07-13T20:09:08.221Z",
+  "generatedAt": "2026-07-14T18:03:12.581Z",
   "byDate": {
+    "2026-07-15": {
+      "articleKey": "spotle-answer-today",
+      "date": "2026-07-15",
+      "title": "Spotle Answer Today: How to Find the Right Artist Clues",
+      "summary": "Today's Spotle puzzle tests your knowledge of music artists through layered clues. Here's how to read the hint system and narrow down candidates efficiently.",
+      "articleHtml": "<p>For the July 15, 2026 Spotle puzzle, the clue stack rewards players who prioritize strategically rather than guessing from memory. Genre and debut year alone eliminate most possibilities. Group size and gender then cut the remaining pool dramatically. Nationality often serves as the final differentiator between two plausible answers.</p><h2>Spotle answer today: which clue should matter first</h2>\n<p>Genre functions as the load-bearing clue. When you identify the genre correctly, you've instantly ruled out roughly 80% of possible artists. Today's puzzle places genre at the top of the clue hierarchy, and that's deliberate—it's the widest net. If you're stuck between multiple candidates within a genre, debut year becomes your tiebreaker. A five-year gap between two artists from the same country and style isn't subtle; the puzzle expects you to notice it.</p>\n<p>A careful player usually notices that group size appears late in the reveal sequence. That positioning tells you it's high-signal but low-priority when you're still in elimination mode. Save it for when you've narrowed to two or three names.</p>\n<p>Use the <a href=\"#archive\">Spotle archive</a> to review past puzzles and see how clue ordering has shifted across recent days. Patterns emerge around which categories get revealed first versus last.</p><h2>How genre, country, and era work together</h2>\n<p>The intersection of genre, nationality, and debut year creates a three-dimensional filter. Country narrows by musical tradition and export history. Era narrows by which decades an artist was active. Together, these three clues can isolate an answer before you even touch group size or gender.</p>\n<p>Today's puzzle demonstrates this cleanly. An artist from South Korea in K-pop released tracks across the 2010s and 2020s. That's a different profile than a solo artist from Sweden who's been releasing since the 1970s. The puzzle doesn't hide these distinctions—it builds them into the clue structure deliberately.</p>\n<p>Eras matter more than many players realize.",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-14T18:03:12.537Z",
+        "wordCount": 304,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-14": {
       "articleKey": "spotle-answer-today",
       "date": "2026-07-14",
