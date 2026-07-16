@@ -1,7 +1,24 @@
 {
   "articleKey": "countryle-answer-today",
-  "generatedAt": "2026-07-14T17:52:01.755Z",
+  "generatedAt": "2026-07-16T19:51:14.405Z",
   "byDate": {
+    "2026-07-17": {
+      "articleKey": "countryle-answer-today",
+      "date": "2026-07-17",
+      "title": "Countryle Answer Today: Clue Strategy Guide for July 17, 2026",
+      "summary": "A breakdown of how to read today's Countryle hints—continent, population, area—for a faster solve and fewer wasted guesses.",
+      "articleHtml": "<p>Today's Countryle puzzle drops five distinct hint categories into your solve path: continent, hemisphere, population, area, and temperature range. Most players lock onto the continent clue within seconds and start scanning that list. That's the right instinct, but it's only the opening move.</p><h2>Countryle answer today: which clue should lead the solve</h2>\n<p>The continent signal sits at the top of every Countryle board for good reason—it eliminates roughly 80% of the world's countries in one filter. If the reveal shows Africa, you've cut the field from 195 down to around 54. That math matters when you're working against a four-guess limit. Treat the continent as your solve foundation, then layer in the other hints to triangulate.</p>\n<p>Population and area often get ignored until later rounds, but they carry disproportionate weight once you've narrowed to three or four candidates. A country with 800 million people and 3.2 million square kilometers isn't Indonesia—it's India. The temperature hint adds a final precision cut, especially useful when two similar-sized nations remain and you need something geographic to separate them.</p>\n<p>Check the archive link above the board if you're unsure whether you've interpreted the continent correctly. Some players misread Southern Hemisphere versus Northern Hemisphere early on, which cascades into wrong guesses by round two.</p><h2>How population, area, and continent clues work together</h2>\n<p>Think of these three as a coordinate system. Continent narrows the Y-axis (vertical position on the map). Population and area give you X-axis placement within that band. A small-population country in a large landmass continent points somewhere different than a high-density microstate on the same continent.</p>\n<p>Area tells you physical footprint. Population tells you settlement density. Together they reveal whether you're looking at a vast, sparsely populated nation or a cramped, densely packed one. Brazil versus Argentina illustrates this cleanly—both South American, both massive, but Brazil's population dwarfs Argentina's despite being only marginally larger in area. The ratio between these two numbers often points directly to the answer.</p>\n<p>The solver tool on this page can help you cross-reference these ratios against known countries if you're stuck between two options. Just plug in the numbers from your current hints and see which matches better.</p><h2>What usually sends players to the wrong country</h2>\n<p>Confusing hemisphere with continent trips up more players than any other mistake. Australia is in Oceania, not Asia—yet many assume it's part of the Asian continent because of regional groupings in their mental geography. Similarly, Turkey straddles Europe and Asia, so the continent hint might show partial shading or a split indicator. Players who don't notice that detail chase the wrong continental list entirely.</p>\n<p>Temperature ranges cause another common fork. A country with",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-16T19:51:14.380Z",
+        "wordCount": 441,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-15": {
       "articleKey": "countryle-answer-today",
       "date": "2026-07-15",

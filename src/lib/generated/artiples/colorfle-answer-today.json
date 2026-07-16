@@ -1,7 +1,24 @@
 {
   "articleKey": "colorfle-answer-today",
-  "generatedAt": "2026-07-15T12:55:25.933Z",
+  "generatedAt": "2026-07-16T19:50:44.562Z",
   "byDate": {
+    "2026-07-17": {
+      "articleKey": "colorfle-answer-today",
+      "date": "2026-07-17",
+      "title": "Colorfle Answer Today: How the Mix Should Be Read",
+      "summary": "Understanding additive RGB mixing is essential for solving Colorfle. Check your three input colors against the target using light-based color theory, not paint logic.",
+      "articleHtml": "<h2>Colorfle answer today: how the mix should be read</h2><p>The board shows one target color above three input slots. Each slot holds an RGB value ranging from 0 to 255 on red, green, and blue channels. When those three colors overlap using light—additive mixing—they produce the target shade. Reading the reveal means checking whether your three inputs actually blend into the shown result.</p><p>Players who check the archive link can compare their attempts against previous days. The pattern becomes clearer over time: small adjustments in any single channel shift the final mix more than you'd expect. A jump from 180 to 200 in the red channel adds noticeable warmth to the output.</p><h2>What the source colors are telling you</h2><p>Each of the three input colors carries information about where it sits in the RGB spectrum. Red-maxed inputs contribute warmth. Blue-heavy inputs push toward cooler tones. Green sits between them, affecting luminance without dominating hue. The solver tool breaks these relationships down if you're stuck on which direction to move.</p><p>Look at the saturation levels too. Desaturated inputs—colors closer to gray—have less impact on the final mix than vivid ones. A pale yellow and a bright yellow won't behave the same way even if they share the same hue angle.</p><h2>Why additive color logic beats random mixing</h2><p>Additive mixing follows predictable math. When two colored lights overlap, their channel values add together and cap at 255. This isn't like paint, where cyan plus yellow makes green. Here, red plus green makes yellow. Red plus blue makes magenta. Green plus blue makes cyan. Understanding this triplet relationship lets you reverse-engineer the target instead of guessing blindly.</p><p>Random mixing wastes attempts. Systematic mixing—working channel by channel—narrows the field quickly. If the target skews orange, you know you need strong red and moderate green with minimal blue. The solver on this page can validate that logic before you commit to a guess.</p><h2>Easy adjustment path for the next Colorfle</h2><p>Start with the dominant channel first. Identify which color family dominates the target, then pick an input that leans heavily into that channel. Use your remaining guesses to balance the secondary channels. This hierarchical approach reduces trial and error significantly.</p><p>Keep notes on what worked. A quick log of successful combinations helps when you encounter similar targets later. Even a simple record of \"warm target → high red, medium green, low blue\" builds intuition over days.</p><h2>Questions players keep asking</h2><h3>Can I reuse the same three colors across different targets?</h3><p>Not reliably. Targets vary enough that fixed combos rarely work twice. Some players find success with overlapping strategies—keeping one stable input while adjusting the others—but expect to recalibrate frequently.</p><h3>What's the best way to check my work before submitting?</h3><p>Use the solver link on this page. It validates whether your chosen inputs produce the target within acceptable tolerance. This saves attempts and confirms your color logic before committing.</p><h3>Do grayscale targets require special inputs?</h3><p>Yes. Grayscale targets need balanced RGB values where all three channels hover near the same number. Uneven channels introduce unwanted color casts. Aim for equal or nearly equal values across red, green, and blue.</p><h3>How do archive results help future solves?</h3><p>Reviewing past puzzles reveals recurring patterns in target construction. You might notice certain hue families appear more frequently, or that mid-range saturation targets behave differently than extremes. The <a href=\"/colorfle/archive\">archive link</a> gives you access to this history.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-16T19:50:44.521Z",
+        "wordCount": 566,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-15": {
       "articleKey": "colorfle-answer-today",
       "date": "2026-07-15",
