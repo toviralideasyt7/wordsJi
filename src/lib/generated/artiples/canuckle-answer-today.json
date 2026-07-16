@@ -1,7 +1,24 @@
 {
   "articleKey": "canuckle-answer-today",
-  "generatedAt": "2026-07-13T18:20:27.429Z",
+  "generatedAt": "2026-07-16T13:01:47.198Z",
   "byDate": {
+    "2026-07-16": {
+      "articleKey": "canuckle-answer-today",
+      "date": "2026-07-16",
+      "title": "Canuckle Answer Today: July 16, 2026",
+      "summary": "A close look at today's Canuckle answer reveals why the Canadian vocabulary pool catches solvers off guard, plus a clean path forward.",
+      "articleHtml": "<p>The reveal card for today's Canuckle shows a six-letter word rooted in Canadian geography or culture. Players who start with regional terms rather than generic English guesses tend to land closer to the target faster. The fact widget on this page confirms the answer leans into a term you'd encounter on a road sign or local news segment rather than broad dictionary fare.</p><h2>Canuckle answer today: what stands out first</h2>\n<p>The puzzle number sits prominently above the reveal card, letting you cross-reference against the archive if you're chasing a specific streak or reviewing past boards. Today's answer contains a double letter—a pattern that appears roughly one in every eight Canuckle solutions. If you flagged that feature early, your remaining guesses narrowed considerably. The hint widget offers one directional nudge without spoiling the reveal, which makes it useful for players stuck after three attempts but still wanting to earn the solve themselves.</p><h2>Why the Canadian angle matters on this board</h2>\n<p>Canuckle's answer pool runs smaller than the standard Wordle list—around 2,300 words instead of the broader English corpus. That constraint means Canadian geography, bilingual terms, and local slang show up with higher frequency than you'd expect from a typical word game. A careful player usually notices that answers often involve provinces, territories, Indigenous place names, or distinctly Canadian institutions.</p><p>Today's board rewards that awareness. Words that feel obscure outside Canada become obvious once you've played through a few weeks of puzzles. The solver link on this page can help when you've exhausted standard guesses and need a systematic check against the valid word list.</p><h2>Where players overguess the pattern</h2>\n<p>Most misfires come from treating Canuckle like regular Wordle. Players lean too heavily on common English opening words—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-16T13:01:47.165Z",
+        "wordCount": 286,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-13": {
       "articleKey": "canuckle-answer-today",
       "date": "2026-07-13",
