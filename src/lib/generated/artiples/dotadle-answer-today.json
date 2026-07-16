@@ -1,7 +1,24 @@
 {
   "articleKey": "dotadle-answer-today",
-  "generatedAt": "2026-07-11T22:16:16.118Z",
+  "generatedAt": "2026-07-16T22:25:57.491Z",
   "byDate": {
+    "2026-07-16": {
+      "articleKey": "dotadle-answer-today",
+      "date": "2026-07-16",
+      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
+      "summary": "Dota hero puzzles rely on clue weight distribution. Attribute type and ability keywords narrow the roster faster than role labels alone.",
+      "articleHtml": "<p>On Dotadle, clue weight varies dramatically. A single attribute hint eliminates one-third of the hero pool immediately, while an ability keyword might rule out dozens of names. Understanding which clues actually constrain the search separates fast solvers from those grinding through irrelevant options.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>Attribute type stands as the single strongest filter available on any Dotadle board. Strength heroes share bulk and initiator potential. Agility carries lean toward right-click damage scaling. Intelligence pools concentrate utility and magical burst. Universal heroes—the newest category—blur these lines, so treat them as wild cards until other clues confirm placement. When you spot an attribute marker, lock it first and build outward from there.</p><p>Ability keywords hit harder than many players expect. \"Steals intelligence\" narrows the field to Meepo, Silencer, and a handful of others. \"Blinks\" points almost exclusively toward initiators with mobility spells. The solver on this page handles keyword matching efficiently if you input partial information, but manually scanning the roster still rewards players who memorize core spell signatures. Primary attribute bonuses tied to abilities also surface frequently—watch for phrasing that hints at scaling based on the hero's own stat pool.</p><p>Lore fragments and cosmetic references tend to rank lower in elimination power. They confirm rather than constrain. A player holding three strong mechanical clues can often ignore flavor text entirely and arrive at the correct hero without reading the full prompt.</p><h2>How to cut the Dota roster faster</h2>\n<p>The Dota hero roster exceeds 120 playable characters. Systematic elimination brings that number to manageable territory within seconds. Start with hard constraints: attribute, attack type (melee versus ranged), and primary role assignment. These three filters alone typically reduce candidates below twenty.</p><p>Move next to signature mechanics. If the clue mentions illusions, the suspect list drops to Phantom Lancer, Chaos Knight, Terrorblade, Meepo, and Arc Warden. Healing reduction keywords eliminate Omniknight, Abaddon, and Dazzle from consideration. Mobility restrictions—root, hex, stun duration—further segment the remaining pool. Players who internalize the roughly thirty most mechanically distinct heroes solve faster because they recognize category borders without verification.</p><p>Item dependency clues deserve separate handling. Heroes tied to specific item powerspikes (Battle Fury farmers, Blink Dagger rushers, Radiance builders) form recognizable clusters. The reveal card on today's board may show item progression hints—these land late in the clue sequence but prove decisive when multiple candidates remain.</p><h2>When roles help and when they mislead</h2>\n<p>Dota 2 role assignments have grown fluid since Valve introduced position terminology beyond the original five-slot system. A hero labeled \"support\" in client tooltips might function as a core in specific drafts. This tension creates genuine ambiguity on Dotadle boards where clue writers pull descriptions from patch notes, wiki entries, and community guides simultaneously.</p><p>Core-to-support crossover proves most problematic. Wraith King appears as both a tanky support and a late-game carry depending on farm priority. Shadow Shaman fills either role based on team composition. When role language appears alongside mechanical clues, prioritize the mechanics. An ability description overrides a role label every time—the game itself defines heroes through their spells, not their recommended lane positions.</p><p>Lane assignment clues split more reliably than role labels. \"Safelane",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-16T22:25:57.446Z",
+        "wordCount": 527,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-11": {
       "articleKey": "dotadle-answer-today",
       "date": "2026-07-11",
