@@ -1,7 +1,24 @@
 {
   "articleKey": "contexto-answer-today",
-  "generatedAt": "2026-07-15T17:55:27.625Z",
+  "generatedAt": "2026-07-17T12:43:56.801Z",
   "byDate": {
+    "2026-07-17": {
+      "articleKey": "contexto-answer-today",
+      "date": "2026-07-17",
+      "title": "Contexto Answer Today: How Semantic Ranking Works on July 17, 2026",
+      "summary": "Understanding Contexto's distance-based ranking system helps you decode today's answer without letter-matching. Here's how to read the board.",
+      "articleHtml": "<p>Contexto doesn't care about spelling. It cares about meaning. That distinction shapes every guess you make on today's board.</p><h2>Contexto answer today: what the rank pattern usually means</h2>\n<p>The number next to each guess isn't a score—it's a rank. If your word sits at position 347, roughly 346 other guesses sit closer to today's answer in the algorithm's semantic map. A lower rank means stronger association. A jump from rank 200 to rank 800 tells you the new word lives in a different conceptual neighborhood entirely. Players who watch that number closely can feel when they're circling the right category versus drifting into adjacent territory. Today's board shows that pattern clearly if you study the hint widget before guessing.</p><h2>When to pivot categories instead of forcing synonyms</h2>\n<p>Most players start with direct synonyms. That's natural, but it hits a ceiling fast. Once you're past rank 500, synonyms of your current best guess typically cluster nearby—not because they're wrong, but because you're exploring one branch of the same tree. A careful player usually notices this plateau and asks: what broader category contains my best guess? If your rank-180 word is \"oak,\" try \"tree\" before trying \"elm.\" The algorithm rewards categorical parents over lateral siblings. The reveal card on this page confirms how far apart those two approaches land.</p><h2>Why broad words beat clever words here</h2>\n<p>Contexto rewards generality. A four-letter word that captures the essence of the answer will outperform a ten-letter synonym that requires niche knowledge. Think about how a thesaurus groups concepts—the top-level category matters more than the specific shade of meaning. On this board, players who tested abstract umbrella terms early found themselves inside the top 100 while others chased obscure vocabulary. The solver linked from this page can confirm that pattern across recent days if you cross-reference the archive.</p><h2>How to cut tomorrow's guess count</h2>\n<p>Archive data is your edge. Before guessing blind each day, check what ranked well 24 hours ago. The algorithm doesn't shift completely—it builds on established semantic clusters. If \"harbor\" hit rank 89 yesterday, related nautical or shelter concepts will perform better today. One disciplined approach: open the archive, find yesterday's top 10, and test two or three of those words first thing. Most players skip this step and waste guesses reinventing the wheel. You don't have to.</p><h2>Questions players keep asking</h2><h3>Does the hint widget reset my rank?</h3>\n<p>No. Using a hint doesn't change your position or give you credit for a guess. It's purely directional—a signal pointing toward a conceptual area worth exploring. Some players treat hints as confirmation; others use them to eliminate dead ends. Either way, your rank stays yours until you submit another guess.</p><h3>Can I trust the archive for today's puzzle?</h3>\n<p>The archive stores historical answers and guess logs. The algorithm updates daily, so yesterday's exact rankings won't transfer. But the underlying semantic relationships stay stable. Archive patterns show which word families consistently perform well—and that's useful even if today's answer differs.</p><h3>What's the fastest way to reach the top 50?</h3>\n<p>Start with hyper-general words that could describe the answer's category, material, or function. Test one broad term, note the rank, then narrow into subcategories based on that result. Speed comes from avoiding the synonym trap: don't iterate within the same conceptual box. Move laterally to adjacent categories when progress stalls.</p><h3>Should players use the solver tool or figure it out manually?</h3>\n<p>Both paths work. The solver accelerates the narrowing process by suggesting semantically proximal words based on your current rank. Manual play teaches you to read the algorithm's logic faster over time. Many experienced players use the solver when they're stuck past rank 300 and return to manual guessing once they're inside the top 100.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-17T12:43:56.769Z",
+        "wordCount": 619,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-16": {
       "articleKey": "contexto-answer-today",
       "date": "2026-07-16",
