@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-18T19:57:00.350Z",
+  "generatedAt": "2026-07-19T19:59:17.777Z",
   "byDate": {
+    "2026-07-20": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-20",
+      "title": "Phrazle Answer Today: How to Read the Clues and Solve the Puzzle",
+      "summary": "Master Phrazle by understanding phrase patterns, color feedback logic, and why single-word thinking leads players astray on this daily word game.",
+      "articleHtml": "<h2>Phrazle answer today: what the phrase structure is telling you</h2><p>Today's puzzle requires guessing a common phrase rather than isolated words. The board gives you two chances—one in the morning cycle, one in the afternoon—to land on the right idiom, proverb, or pop culture reference. Most players who struggle are fighting the game's core premise: Phrazle rewards phrase-level thinking, not vocabulary breadth.</p><p>The reveal card shows your final guess alongside color-coded tiles that tell you how close you landed. If you're landing here without solving, check the <a href=\"/phrazle-solver\">Phrazle solver</a> to reverse-engineer which common expressions fit the pattern you've already uncovered.</p><h2>How to read color feedback across multiple words</h2><p>Each tile in Phrazle represents one letter, but the game thinks in phrases. That means a green tile doesn't just mean \"correct letter in correct position\"—it means that letter belongs in that slot within that specific word, and that word belongs in that position within the phrase itself.</p><p>A careful player usually notices when two adjacent words both show yellow or green tiles. That's not coincidence. It usually signals a two-word chunk that appears in multiple common phrases. When you see that pattern, stop treating each word as an independent puzzle and start looking for phrases where those two words travel together.</p><p>The <a href=\"/phrazle-archive\">Phrazle archive</a> lets you review past puzzles and see how color patterns mapped to actual solutions. Studying ten archived boards reveals more about the feedback system than any guide can explain in prose.</p><h2>Why good single words can still make bad phrase guesses</h2><p>Players with strong vocabularies often lose Phrazle by chasing individual word quality. They think: \"This word fits the letter pattern perfectly.\" But the game isn't asking whether your word is good. It's asking whether your entire phrase matches.</p><p>Consider a four-word phrase where three letters turn green. A skilled solver might fixate on perfecting that nearly-correct word. Meanwhile, a completely different word in that same slot could unlock the intended phrase entirely. The constraint isn't individual word fitness—it's phrase-level correctness.</p><p>This is where the <a href=\"/phrazle-solver\">solver tool</a> earns its place. Feed it the letters you've confirmed, and it filters the dictionary down to phrases that actually exist in common usage. You stop arguing with the puzzle and start working within its actual possibilities.</p><h2>How to approach tomorrow's Phrazle with less chaos</h2><p>Before you touch tomorrow's board, build a short list of phrases that fit whatever morning pattern emerges. Don't commit to a guess immediately. Write down five candidates, then test the one that feels most structurally flexible—the phrase where swapping one word still leaves a recognizable expression.</p><p>Mistakes compound in Phrazle because players lock in too early. Once you've committed to a phrase framework in your head, every subsequent guess bends to defend that assumption. The players who solve consistently keep their options open through round two.</p><p>Bookmark the <a href=\"/phrazle-archive\">daily archive</a> if you want to spot patterns over time. Certain phrase structures—proverbs, movie quotes, idiomatic expressions—appear with enough regularity that familiarity helps.</p><h2>Questions players keep asking</h2><h3>Does the afternoon round use the same phrase as the morning?</h3><h3>Are there only common phrases, or can obscure references appear?</h3><p>The game leans heavily on widely-known expressions, proverbs, and pop culture lines. Obscure references occasionally surface, but they're outliers. If your guess feels too niche for general audiences, it's probably wrong.</p><h3>Is there a way to practice without affecting my daily streak?</h3><p>The <a href=\"/phrazle-solver\">solver page</a> and archive tools let you explore mechanics without touching your live daily puzzle. Use them to test strategies on old boards before committing to today's guess.</p>",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-19T19:59:17.736Z",
+        "wordCount": 591,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-19": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-19",
