@@ -1,7 +1,24 @@
 {
   "articleKey": "smashdle-answer-today",
-  "generatedAt": "2026-07-19T06:15:44.643Z",
+  "generatedAt": "2026-07-20T06:15:07.977Z",
   "byDate": {
+    "2026-07-20": {
+      "articleKey": "smashdle-answer-today",
+      "date": "2026-07-20",
+      "title": "Smashdle Answer Today: Which Fighter Clue Matters First",
+      "summary": "Universe filters narrow the Smashdle roster fastest, but jump count often separates similar characters when universe alone isn't enough.",
+      "articleHtml": "<p>For this puzzle's board, the universe tag narrows the field most aggressively. If you see Nintendo franchise markers on the reveal card, you're already cutting out roughly 70% of the playable cast before touching any stat filters. That's the move that pays off immediately.</p><h2>Smashdle answer today: which fighter clue matters first</h2><p>Universe placement hits hardest as an opening filter. Today's Smashdle board shows franchise indicators near the top of the clue stack—those logos and character silhouettes tell you which Mario, Zelda, Pokémon, Fire Emblem, or Kirby title line the fighter belongs to. A careful player uses those first because they eliminate entire branches of the roster in one pass. Weight class and jump count come after you've locked the universe down.</p><p>The reveal card on this page stacks its clues vertically, which means the order you read them shapes your solve path. Most players scan left-to-right, but vertical clue ordering often puts the most distinctive identifier at the bottom. Check that bottom clue before committing to a guess—it frequently holds the detail that separates two similarly-weighted fighters from the same universe.</p><h2>How universe and movement stats split the roster</h2><p>Super Smash Bros Ultimate's roster spans eight distinct universes at minimum, with crossover guests pushing the count higher. Each universe brings its own physics package: third-party fighters tend toward lighter weight classes, while Nintendo flagship characters cluster around medium weights. When the archive shows a fighter landing in the featherweight or heavyweight buckets, you're looking at a drastically smaller candidate pool.</p><p>Jump count separates fighters that share weight class and universe. Ganondorf and Bowser both sit in heavyweight territory, but their double-jump counts differ—one hops twice, the other once. On today's board, if the clue widget specifies jump height or air speed ranges, match those against the fighter stats table before checking final smash details. Movement metrics catch more players than damage percentages do.</p><p>The solver link on this page lets you input known filters and pull matches instantly. Players who skip the manual stat comparison often misfire on fighters sharing the same universe but different mobility profiles—like confusing Samus's floatier jumps for a lighter character's.</p><h2>Why DLC fighters cause so many misses</h2><p>DLC fighters arrive without the franchise context that anchors most guesses. When a base-game fighter appears, players instinctively check Mario, Link, Pikachu, or Kirby boxes first. But Joker from Persona or Sephiroth from Final Fantasy don't trigger that reflex—they sit outside the obvious universe clusters, and their stats borrow from unfamiliar design philosophies.</p><p>Today's Smashdle likely includes at least one post-launch fighter in the possible answer set. The clue widget sometimes hints at this by omitting traditional franchise icons or showing cross-representation markers instead. If the board lacks Nintendo branding anywhere, suspect a third-party addition.</p><p>The archive history reveals whether recent puzzles have favored base rosters or mixed in DLC. Patterns emerge there: some weeks lean heavily on Fighters Pass content, others stick to launch-day rosters. Checking yesterday's archive before guessing today can sharpen your priors.</p><h2>How to tighten the next Smashdle faster</h2><p>Build a mental shortcut for weight class before anything else. Heavyweights rarely jump well; featherweights rarely survive high-damage exchanges. That trade-off lives in every fighter's stat profile and creates immediate elimination potential when combined with jump count data.</p><p>Use the hint system conservatively. If the board offers three hints and the first one confirms universe, save the remaining two for late-game narrowing between two candidates. Burning hints early wastes information that could resolve a close call later.</p><p>The solver tool works best when you've narrowed to three or fewer possibilities. Feeding it vague criteria—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-20T06:15:07.934Z",
+        "wordCount": 600,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-19": {
       "articleKey": "smashdle-answer-today",
       "date": "2026-07-19",
