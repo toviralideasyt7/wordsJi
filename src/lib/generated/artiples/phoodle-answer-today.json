@@ -1,7 +1,24 @@
 {
   "articleKey": "phoodle-answer-today",
-  "generatedAt": "2026-07-19T17:40:03.258Z",
+  "generatedAt": "2026-07-21T16:51:12.921Z",
   "byDate": {
+    "2026-07-22": {
+      "articleKey": "phoodle-answer-today",
+      "date": "2026-07-22",
+      "title": "Phoodle Answer Today: Quick Solve Guide for July 22, 2026",
+      "summary": "A sharp editor's guide to reading today's Phoodle board, separating clue types, and finding the answer faster using the archive and solver tools.",
+      "articleHtml": "<p>The answer above looks like a standard cooking term, but it's one of those words that sits right at the edge between ingredient and technique. A careful player usually notices the letter pattern first—it follows the same shape as many common food adjectives, which makes it deceptively simple until you realize the board wants something more specific. Check the reveal card before committing.</p><h2>Phoodle answer today: what kind of kitchen word it feels like first</h2>\n<p>Today's answer reads like a word you'd see on a recipe card before it appears in a puzzle. It has that quality where your brain files it under \"kitchen basics\"—the kind of term that shows up in three different contexts across a single cookbook. The hint widget narrows it down by category, but the reveal card confirms whether you've been thinking about it as a noun when the board wanted a verb, or vice versa. That's the split-second distinction that separates a fast solve from a wasted guess.</p><h2>How to separate ingredient, dish, and technique clues</h2>\n<p>Phoodle boards mix three distinct clue types, and conflating them trips up even regular players. Ingredient clues point at raw materials—flour, lemon zest, basil. Dish clues name finished foods—risotto, paella, spanakopita. Technique clues describe actions or methods—simmer, julienne, braise.</p><p>The board doesn't label these categories. You have to read the surrounding context. If two answers sit near each other vertically, one might be the base ingredient while the other is what you do with it. Horizontal proximity often groups a dish name with its defining technique. Watch for shared letters too—a technique and its corresponding tool often overlap in ways an ingredient and a dish never would.</p><p>The hint system on this page lets you filter by broad category if you're stuck guessing randomly. That's useful when you've exhausted obvious answers and need to narrow the field methodically rather than hoping for a lucky break.</p><h2>Where familiar food words become the wrong guess</h2>\n<p>English floods us with culinary vocabulary that sounds right but lands wrong. Here's where players consistently steer off course:</p><p><strong>Cooking verbs that double as everyday words.</strong> Words like \"roast,\" \"bake,\" and \"sear\" look simple until you realize the board may want the noun form instead—roast as a cut of beef, bake as a baked good, sear as a technique already covered elsewhere. If your first guess hits the board and nothing lights up, check whether you've given the board a verb when it expected a thing.</p><p><strong>Ingredients that are also dishes.</strong> \"Risotto,",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-21T16:51:12.891Z",
+        "wordCount": 416,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-20": {
       "articleKey": "phoodle-answer-today",
       "date": "2026-07-20",
