@@ -1,7 +1,24 @@
 {
   "articleKey": "worldle-answer-today",
-  "generatedAt": "2026-07-25T16:47:45.667Z",
+  "generatedAt": "2026-07-26T19:59:43.214Z",
   "byDate": {
+    "2026-07-27": {
+      "articleKey": "worldle-answer-today",
+      "date": "2026-07-27",
+      "title": "Worldle Answer Today: Solve Faster with Direction and Distance Logic",
+      "summary": "Today's Worldle puzzle rewards players who read direction arrows and distance percentages together. Here's how to parse those clues efficiently.",
+      "articleHtml": "<p>The arrow pointing southeast combined with a 42% distance match narrows today's Worldle answer to a handful of possibilities. Most players check the wrong direction first—reading the hint system requires pairing both metrics before narrowing by continent. This guide walks through the logic without spoiling the reveal.</p><h2>Worldle answer today: what the silhouette should suggest first</h2><p>The outline alone tells you more than most players extract on their first pass. Before touching any arrow or percentage, note the general shape. Is it elongated north-to-south, compact and boxy, or sprawling across multiple coastlines? A long thin silhouette suggests a country stretched along a mountain range or coastline—think Chile, Vietnam, or Norway. A rounder shape points toward Central African nations or Balkan states.</p><p>Continent placement matters here. If your silhouette looks European but the arrow points due south from a typical starting position, you've likely misread the hint system. The archive link on this page lets you cross-reference past shapes against today's outline—a habit that trains your eye faster than random guessing.</p><p>Most solvers jump straight to the arrow. Don't. The silhouette narrows your candidate pool by at least half if you commit to reading it first.</p><h2>How direction and distance clues narrow the shape</h2><p>The directional arrow in Worldle uses compass bearings from a reference point—typically your last guess or a fixed origin. That arrow doesn't tell you where the country sits globally; it tells you where it sits relative to whatever you're comparing it against. Reading it in isolation produces noise.</p><p>Pair the arrow with the distance percentage. A 90% match means you're extremely close geographically—likely sharing a border or sitting within a few hundred kilometers. A 25% match means you're looking at two distant points on the same continent or entirely different landmasses. When the arrow says northeast and the distance reads low, you're probably looking at transcontinental confusion rather than a nearby neighbor.</p><p>The percentage isn't a confidence score. Newer players treat high percentages as",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-26T19:59:43.169Z",
+        "wordCount": 327,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-26": {
       "articleKey": "worldle-answer-today",
       "date": "2026-07-26",
