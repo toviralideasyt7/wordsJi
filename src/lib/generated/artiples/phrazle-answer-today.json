@@ -1,7 +1,24 @@
 {
   "articleKey": "phrazle-answer-today",
-  "generatedAt": "2026-07-21T18:04:47.685Z",
+  "generatedAt": "2026-07-26T16:44:54.347Z",
   "byDate": {
+    "2026-07-27": {
+      "articleKey": "phrazle-answer-today",
+      "date": "2026-07-27",
+      "title": "Phrazle Answer Today: How to Read the Board Like a Daily Player",
+      "summary": "Today's Phrazle puzzle rewards players who think in phrases rather than isolated words. Here's how to decode the color feedback and avoid common guess traps.",
+      "articleHtml": "<p>If you've been chasing individual words on Phrazle instead of thinking in full phrases, you're fighting the game instead of playing it. Today's puzzle—available on the <a href=\"#archive\">Phrazle archive</a>—puts that habit to the test immediately.</p><h2>Phrazle answer today: what the phrase structure is telling you</h2>\n<p>The board gives you four or five slots depending on the difficulty curve that day. Each slot represents a word in the target phrase, but the real signal lives in how those slots interact. When one position turns green, it's not just confirming that word—it's narrowing down the entire phrase family you're working with. A careful player usually notices that certain word combinations only exist within a handful of common expressions, idioms, or well-worn sayings. That's the leverage. You don't need to know every phrase in English. You need to recognize which phrase shape is forming.</p>\n<p>For example, if you lock in a three-letter opener and it stays gray across multiple guesses, the puzzle isn't broken—it's telling you the phrase doesn't start with that word. Check the <a href=\"#solver\">solver tool</a> if you're stuck on which direction to pivot.</p><h2>How to read color feedback across multiple words</h2>\n<p>Yellow tiles confuse more players than any other feature on this board. A yellow result means the word exists somewhere in the phrase, but not in that slot. The trap is treating yellow like a confirmation. It isn't. It's a directional hint. If \"RIVER\" comes back yellow in position two but gray everywhere else, the phrase contains that word—just not where you placed it. That shifts your mental model from \"where does this word go?\" to \"which phrase actually uses this word?\"</p>\n<p>Green tiles are locked. Treat them as immutable. Build outward from confirmed positions rather than second-guessing them. Players who keep cycling green tiles through new guesses waste attempts and narrow their remaining options unnecessarily. The <a href=\"#archive\">daily archive</a> tracks your attempt history so you can review whether you respected your greens or kept second-guessing them mid-game.</p><h2>Why good single words can still make bad phrase guesses</h2>\n<p>This trips up experienced word gamers more than beginners. You might land on the perfect individual word—",
+      "bonusHints": [],
+      "meta": {
+        "provider": "nvidia",
+        "model": "minimaxai/minimax-m2.7",
+        "fallbackUsed": true,
+        "fallbackSource": "stored",
+        "generatedAt": "2026-07-26T16:44:54.306Z",
+        "wordCount": 354,
+        "editorialVersion": 2
+      }
+    },
     "2026-07-22": {
       "articleKey": "phrazle-answer-today",
       "date": "2026-07-22",
