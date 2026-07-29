@@ -1753,8 +1753,19 @@ function buildSolverChips(game: WordlebotGameConfig, wordLength?: number) {
 export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConfig {
         const game = getWordlebotGame('wordle');
         const pageUrl = `https://wordsolverx.com${getWordleLengthSolverPath(wordLength)}`;
-        const title = `${wordLength}-Letter Wordle Solver`;
-        const description = `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
+        // SEO audit chapter 6.4: the 5-letter solver page had 12,869 Bing impressions but
+        // only 33 clicks (0.26% CTR) — far below the site-wide average — because the title
+        // was generic ("5-Letter Wordle Solver | WordSolverX"). Someone Googling "wordle
+        // solver 5 letters" has a Wordle puzzle in front of them and wants to enter their
+        // green/yellow/gray tiles to get candidate words. The title should promise exactly
+        // that. For the 5-letter page specifically (the highest-traffic per-length page),
+        // use the intent-driven title. Other lengths keep the simpler form.
+        const title = wordLength === 5
+                ? `Wordle Solver - Find Today's 5-Letter Word from Your Clues`
+                : `${wordLength}-Letter Wordle Solver`;
+        const description = wordLength === 5
+                ? `Enter your green, yellow, and gray tiles to find the 5-letter Wordle answer. Free Wordle solver that ranks the best next guesses from your clues.`
+                : `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
 
         return {
                 appConfig: { pageType: 'solver', game: 'wordle', wordLength },

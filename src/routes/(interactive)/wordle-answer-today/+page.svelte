@@ -124,7 +124,7 @@
             <tbody class="bg-white divide-y divide-gray-200">
               {#each data.recentAnswers as answer}
                 <tr class="transition-colors hover:bg-gray-50 {answer.date === data.wordleData?.date ? 'bg-green-50/50' : ''}">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">#{answer.id}</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">#{answer.days_since_launch ?? answer.id}</td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{formatDateForFAQ(answer.date)}</td>
                   <td class="px-6 py-4 whitespace-nowrap">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800">
@@ -136,6 +136,13 @@
             </tbody>
           </table>
         </div>
+        <!-- SEO audit chapter 9.3.3: outbound citation to the canonical source (NYT Wordle).
+             Dofollow link to the official game is a credibility signal — it shows the content
+             is researched rather than scraped, and associates the site with the canonical
+             source entity. 30-minute content update across top answer pages, costs nothing. -->
+        <p class="mt-6 text-sm text-gray-500">
+          Source: <a href="https://www.nytimes.com/games/wordle/index.html" class="text-teal-600 hover:text-teal-700 font-medium underline" rel="external">NYT Wordle</a> — the official daily word puzzle from The New York Times.
+        </p>
       </section>
     {/if}
 

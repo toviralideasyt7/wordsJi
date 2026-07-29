@@ -99,7 +99,12 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     };
 
     const pageTitle = `Wordle Answer Today (${formattedDate}) - Hints and Answer #${wordleNumber}`;
-    const pageDescription = `Get Wordle hints and the confirmed Wordle answer for today, ${formattedDate}. See the full solution for Wordle #${wordleNumber}, plus clue details and recent answers.`;
+    // SEO audit chapter 7.2 Lever 2: put the answer directly in the meta description so it
+    // shows in Bing's search snippet without a click. Bing shows the meta description
+    // verbatim (unlike Google, which often rewrites it). For daily-answer queries, the
+    // user wants the answer immediately — an answer-visible snippet dramatically
+    // increases CTR even at the same rank.
+    const pageDescription = `Today's Wordle answer for ${formattedDate} is ${wordleWord.toUpperCase()}. Plus hints, clue breakdown, and recent answers for Wordle #${wordleNumber}.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

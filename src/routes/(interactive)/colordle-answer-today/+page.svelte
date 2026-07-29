@@ -283,6 +283,12 @@
         </div>
       </section>
 
+      <!-- SEO audit chapter 9.3.3: outbound citation to the canonical source.
+           Dofollow link to the official Colordle game is a credibility signal. -->
+      <p class="mt-8 text-sm text-gray-500 dark:text-gray-400 px-4">
+        Source: <a href="https://colordle.com/" class="text-teal-600 hover:text-teal-700 dark:text-teal-400 font-medium underline" rel="external">Colordle</a> — the official daily color guessing game.
+      </p>
+
       <div class="mt-12">
         <AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}
