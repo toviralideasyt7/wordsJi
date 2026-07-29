@@ -9,6 +9,12 @@
 /sportle-archive https://wordsolverx.com/spotle-archive 301
 /sportle-solver https://wordsolverx.com/spotle-solver 301
 
+# Bug #4 fix (SEO audit): /thirdle-solver merged into /spotle-wordle-solver
+# Both are short Wordle-style puzzles served by the same wordlebot-wasm engine.
+# /spotle-solver (music Spotle) and /nerdle-solver remain separate unique pages.
+/thirdle-solver https://wordsolverx.com/spotle-wordle-solver 301
+/thirdle-solver/* https://wordsolverx.com/spotle-wordle-solver 301
+
 # Legacy dated answer permalinks to canonical today routes
 /betweenle/* https://wordsolverx.com/betweenle-answer-today 301
 /betweenle-answer/* https://wordsolverx.com/betweenle-answer-today 301

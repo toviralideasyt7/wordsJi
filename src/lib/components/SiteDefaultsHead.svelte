@@ -18,7 +18,6 @@
   <meta property="og:image:alt" content="WordSolverX - Daily Puzzle Answers and Solver Tools" />
   <meta name="twitter:site" content="@WordSolverX" />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="apple-touch-icon" href="/wordsolverx-favicon.webp" />
   <link rel="alternate" hreflang="en" href={currentUrl} />
   <link rel="alternate" hreflang="x-default" href={currentUrl} />

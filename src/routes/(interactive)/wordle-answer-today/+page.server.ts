@@ -54,7 +54,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     });
 
     const wordleWord = normalizedWordleData?.solution || '';
-    const wordleNumber = normalizedWordleData?.id || fallbackNumber;
+    // Bug #1 fix (SEO audit): use days_since_launch (real NYT puzzle number) instead of id (D1 row PK)
+    const wordleNumber = normalizedWordleData?.days_since_launch || fallbackNumber;
     const formattedDate = normalizedWordleData?.date ? formatDate(new Date(normalizedWordleData.date)) : fallbackDate;
 
     const vowelCount = wordleWord.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length;

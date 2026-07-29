@@ -36,7 +36,7 @@
     { name: 'Light Out Solver', href: '/light-out-solver', description: 'Interactive Lights Out solver with linked toggle mode, edit mode, and optimal step cards.', color: 'from-teal-500 to-cyan-600', icon: 'Lo' },
     { name: 'Phoodle Solver', href: '/phoodle-solver', description: 'WASM-powered Phoodle helper with the same standalone food-word solving logic.', color: 'from-orange-500 to-red-500', icon: 'Ph' },
     { name: 'Minesweeper Solver', href: '/minesweeper-solver', description: 'Online Minesweeper solver with board editing, safe move detection, and mine probability hints.', color: 'from-indigo-500 to-violet-700', icon: 'Ms', isPopular: true },
-    { name: 'Thirdle Solver', href: '/thirdle-solver', description: '3-letter Wordle-style solver with fast clue filtering and ranked next guesses.', color: 'from-lime-500 to-teal-600', icon: 'Th' },
+    { name: 'Thirdle Solver', href: '/spotle-wordle-solver', description: '3-letter Wordle-style solver with fast clue filtering and ranked next guesses. Now part of the Spotle Wordle solver page.', color: 'from-lime-500 to-teal-600', icon: 'Th' },
     { name: 'Hardle Solver', href: '/hardle-solver', description: 'Variant solver where green and yellow clue roles can swap.', color: 'from-red-500 to-orange-600', icon: 'Hd' },
     { name: 'Warmle Solver', href: '/warmle-solver', description: 'Alphabet-distance Wordle solver with adjustable Warmle distance.', color: 'from-amber-500 to-rose-500', icon: 'Wa' },
     { name: 'Woodle Solver', href: '/woodle-solver', description: 'Count-based Wordle helper with exact and misplaced totals.', color: 'from-stone-500 to-amber-700', icon: 'Wd' },

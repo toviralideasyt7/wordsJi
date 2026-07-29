@@ -60,7 +60,6 @@ export const EVERGREEN_STATIC_ROUTES = [
   '/quordle-solver',
   '/dordle-solver',
   '/octordle-solver',
-  '/thirdle-solver',
   '/hardle-solver',
   '/warmle-solver',
   '/woodle-solver',

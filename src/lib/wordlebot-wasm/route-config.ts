@@ -1,41 +1,41 @@
 import {
-	generateCollectionPageSchema,
-	generateSoftwareApplicationSchema,
-	generateWebPageSchema
+        generateCollectionPageSchema,
+        generateSoftwareApplicationSchema,
+        generateWebPageSchema
 } from '$lib/seo';
 import { getMainDailyDate, getMainDailyDateKey, getMainDailyDateLabel } from '$lib/main-daily-date';
 import {
-	getBestLengthForWordlebotGame,
-	getWordlebotGame,
-	WORDLEBOT_GAMES
+        getBestLengthForWordlebotGame,
+        getWordlebotGame,
+        WORDLEBOT_GAMES
 } from './game-config';
 import {
-	getCanucklePagePath,
-	getGameForVariantRoute,
-	getWordleLengthSolverPath,
-	WORDLEBOT_WORDLE_SOLVER_LENGTHS,
-	type WordlebotVariantRouteSlug
+        getCanucklePagePath,
+        getGameForVariantRoute,
+        getWordleLengthSolverPath,
+        WORDLEBOT_WORDLE_SOLVER_LENGTHS,
+        type WordlebotVariantRouteSlug
 } from './routes';
 import type { WordlebotGameConfig, WordlebotPageConfig } from './types';
 
 function sentenceCaseGame(game: WordlebotGameConfig) {
-	return game.slug === 'w-peaks' ? 'Wordle Peaks' : game.name;
+        return game.slug === 'w-peaks' ? 'Wordle Peaks' : game.name;
 }
 
 function getBoardLabel(game: WordlebotGameConfig) {
-	return `${game.boards} board${game.boards === 1 ? '' : 's'}`;
+        return `${game.boards} board${game.boards === 1 ? '' : 's'}`;
 }
 
 function getLengthLabel(game: WordlebotGameConfig, wordLength?: number) {
-	if (game.slug === 'wordle' && wordLength) {
-		return `${wordLength} letters`;
-	}
+        if (game.slug === 'wordle' && wordLength) {
+                return `${wordLength} letters`;
+        }
 
-	if (game.lengths.length === 1) {
-		return `${game.lengths[0]} letters`;
-	}
+        if (game.lengths.length === 1) {
+                return `${game.lengths[0]} letters`;
+        }
 
-	return `${Math.min(...game.lengths)}-${Math.max(...game.lengths)} letters`;
+        return `${Math.min(...game.lengths)}-${Math.max(...game.lengths)} letters`;
 }
 
 function buildSolverFaqs(game: WordlebotGameConfig, wordLength?: number) {
@@ -1584,6 +1584,71 @@ if (wordLength === 3) {
       ? `${title} asks you to solve ${game.boards} linked boards with the same guesses, so strong suggestions need to gather information across every unsolved grid instead of helping only one board.`
       : `${title} still rewards efficient information gathering, but the solver handles the filtering work as soon as you match the clue pattern correctly.`;
 
+  // Bug #4 fix (SEO audit): /thirdle-solver merged into /spotle-wordle-solver.
+  // Add a Thirdle-specific section so the merged page covers both games.
+  if (game.slug === 'spotle') {
+    return [
+      {
+        title: 'How the Spotle Wordle solver helps',
+        paragraphs: [
+          'This Spotle Wordle solver narrows the answer list by applying your guesses to the puzzle rules, then ranking the next plays that should reveal the most useful information.',
+          'Spotle Wordle is a blank-clue variant of Wordle. Some tiles come back with no color at all, which means the clue is hidden. The solver handles that blank-clue state alongside the usual gray, yellow, and green feedback so you can keep narrowing even when the game refuses to give you information.',
+          'The suggestions are ranked by how much new information each candidate would reveal on the next guess, weighted toward words that are themselves likely to be the answer.'
+        ]
+      },
+      {
+        title: 'Why blank clues change your strategy',
+        paragraphs: [
+          'In standard Wordle every tile gives you one of three signals: absent, present, or correct. Spotle Wordle adds a fourth state — blank — which means the game chose not to tell you anything about that letter in that position.',
+          'A blank tile is not the same as a gray tile. Gray means the letter is not in the answer. Blank means the game is hiding the result. The solver treats these differently: gray eliminates the letter entirely, while blank leaves the letter in the candidate pool but does not constrain its position.',
+          'This means your elimination strategy has to be more conservative. The solver accounts for that by keeping blank-clue letters in the candidate set instead of removing them, which preserves the words that are still possible answers.'
+        ]
+      },
+      {
+        title: 'Thirdle — 3-letter Wordle solver (now on this page)',
+        paragraphs: [
+          'Thirdle is a 3-letter Wordle variant. The shorter word length makes each guess much more constraining: with only three positions to fill, a single green tile can cut the candidate list dramatically. The same solver engine that powers Spotle Wordle also handles Thirdle, which is why both games now share this page.',
+          'If you arrived here from /thirdle-solver, you are in the right place. The solver below supports both the blank-clue Spotle Wordle rules and the standard 3-letter Wordle rules used by Thirdle. Pick the game mode in the solver interface and enter your clues as usual.',
+          'Thirdle strategy favors opening words that use the most common 3-letter patterns. Because the word list is small, the solver can usually narrow to a handful of candidates after just one or two guesses with accurate feedback.'
+        ]
+      },
+      {
+        title: 'How to use the solver efficiently',
+        paragraphs: [
+          'Double-check your clue colors before running the solver after each guess. A single incorrect color setting throws off the entire elimination and will give you wrong suggestions.',
+          'For Spotle Wordle specifically: if a tile comes back blank, leave it blank in the solver. Do not default it to gray. Treating a blank as a gray is the most common mistake and silently eliminates the correct answer from the candidate list.',
+          'Use words that maximize information early. Starting with words that have common letters and diverse positions gives you the best chance of getting green or yellow feedback on multiple tiles — and forces the blank-clue tiles to reveal which letters they are hiding.'
+        ]
+      },
+      {
+        title: 'How Spotle Wordle and Thirdle differ from standard Wordle',
+        paragraphs: [
+          'Standard Wordle gives you full feedback on every tile: gray, yellow, or green. Spotle Wordle withholds some of that feedback, which means you have to work harder for the same amount of information.',
+          'Thirdle shortens the word from five letters to three. That sounds easier, but the smaller candidate pool means a single wrong guess can leave you with no useful information. The solver is especially valuable here because it tracks every constraint precisely.',
+          'Both games are served by the same wordlebot-wasm engine, which is why they share this solver page. The engine handles the different feedback modes and word lengths without you having to switch tools.'
+        ]
+      },
+      {
+        title: 'Strategy tips for Spotle Wordle and Thirdle',
+        paragraphs: [
+          'For Spotle Wordle: start with words that have common letters in diverse positions. This forces the blank-clue tiles to reveal themselves faster, because the more letters you test, the more blanks the game has to assign.',
+          'For Thirdle: opening guesses matter a lot. Pick words that cover the most common 3-letter consonant-vowel-consonant patterns, since most Thirdle answers follow that shape.',
+          'In both games, when stuck, use the solver to find words that fit your current clues. Do not guess randomly — let the elimination algorithm do the work. The solver ranks its suggestions by likelihood, so the top candidate is usually a strong play.'
+        ]
+      },
+      {
+        title: 'Common mistakes to avoid',
+        paragraphs: [
+          'Treating a blank Spotle tile as gray is the single biggest mistake. Gray means the letter is not in the answer. Blank means the game is hiding the clue. These are very different constraints and the solver handles them differently.',
+          'Setting wrong feedback colors is the next most common mistake. Always verify your clue colors against the game before running the solver.',
+          'Using a word that contradicts your own clues wastes a guess. If the solver shows a word with a letter you already marked as gray, you have a feedback error somewhere.',
+          'Not resetting when starting a new puzzle. Clear all previous guesses and feedback before using the solver for a fresh game to avoid carry-over contamination.'
+        ]
+      }
+    ];
+  }
+
+
   const lengthLine =
     game.slug === 'wordle' && wordLength
       ? `${wordLength}-letter Wordle boards have a very different answer pool from classic 5-letter Wordle, so this dedicated page loads straight into the right solver and keeps the clues focused on that exact length.`
@@ -1646,319 +1711,319 @@ if (wordLength === 3) {
 }
 
 function buildSolverKeywords(game: WordlebotGameConfig, wordLength?: number) {
-	const base = sentenceCaseGame(game).toLowerCase();
+        const base = sentenceCaseGame(game).toLowerCase();
 
-	if (game.slug === 'wordle' && wordLength) {
-		return [
-			`${wordLength} letter wordle solver`,
-			`${wordLength} letter wordle helper`,
-			`${wordLength} letter wordle answer finder`,
-			`${wordLength} letter word finder`,
-			'wordsolverx wordle solver'
-		];
-	}
+        if (game.slug === 'wordle' && wordLength) {
+                return [
+                        `${wordLength} letter wordle solver`,
+                        `${wordLength} letter wordle helper`,
+                        `${wordLength} letter wordle answer finder`,
+                        `${wordLength} letter word finder`,
+                        'wordsolverx wordle solver'
+                ];
+        }
 
-	if (game.slug === 'spotle') {
-		return [
-			'spotle wordle solver',
-			'spotle word game solver',
-			'blank clue wordle solver',
-			'spotle answer helper',
-			'wordsolverx spotle wordle'
-		];
-	}
+        if (game.slug === 'spotle') {
+                return [
+                        'spotle wordle solver',
+                        'spotle word game solver',
+                        'blank clue wordle solver',
+                        'spotle answer helper',
+                        'wordsolverx spotle wordle'
+                ];
+        }
 
-	return [
-		`${base} solver`,
-		`${base} helper`,
-		`${base} answer finder`,
-		`${base} clue solver`,
-		`wordsolverx ${base}`
-	];
+        return [
+                `${base} solver`,
+                `${base} helper`,
+                `${base} answer finder`,
+                `${base} clue solver`,
+                `wordsolverx ${base}`
+        ];
 }
 
 function buildSolverChips(game: WordlebotGameConfig, wordLength?: number) {
-	if (game.slug === 'wordle' && wordLength) {
-		return [`${wordLength} letters`, 'Hard mode', 'Fast clue filtering'];
-	}
+        if (game.slug === 'wordle' && wordLength) {
+                return [`${wordLength} letters`, 'Hard mode', 'Fast clue filtering'];
+        }
 
-	return [getBoardLabel(game), getLengthLabel(game, wordLength), 'Ranked next guesses'];
+        return [getBoardLabel(game), getLengthLabel(game, wordLength), 'Ranked next guesses'];
 }
 
 export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConfig {
-	const game = getWordlebotGame('wordle');
-	const pageUrl = `https://wordsolverx.com${getWordleLengthSolverPath(wordLength)}`;
-	const title = `${wordLength}-Letter Wordle Solver`;
-	const description = `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
+        const game = getWordlebotGame('wordle');
+        const pageUrl = `https://wordsolverx.com${getWordleLengthSolverPath(wordLength)}`;
+        const title = `${wordLength}-Letter Wordle Solver`;
+        const description = `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
 
-	return {
-		appConfig: { pageType: 'solver', game: 'wordle', wordLength },
-		title,
-		eyebrow: 'Wordle solver by word length',
-		description,
-		pageUrl,
-		keywords: buildSolverKeywords(game, wordLength),
-		faqTitle: `${title} FAQs`,
-		faqs: buildSolverFaqs(game, wordLength),
-		howToTitle: `How to use the ${wordLength}-letter Wordle solver`,
-		howToSteps: [
-			{ name: 'Type your guess', text: `Enter the ${wordLength}-letter word you played in Wordle.` },
-			{ name: 'Match the clue colors', text: 'Tap each tile until it matches the gray, yellow, or green result from your game.' },
-			{ name: 'Review the ranked answers', text: 'Run the solver to see the best next guesses and the most likely remaining answers.' }
-		],
-		sections: buildSolverSections(game, wordLength),
-		chips: buildSolverChips(game, wordLength),
-		cta:
-			wordLength === 5
-				? {
-						label: 'See Wordle answer today',
-						href: '/wordle-answer-today'
-					}
-				: {
-						label: 'Open 5-letter Wordle solver',
-						href: getWordleLengthSolverPath(5)
-					}
-	};
+        return {
+                appConfig: { pageType: 'solver', game: 'wordle', wordLength },
+                title,
+                eyebrow: 'Wordle solver by word length',
+                description,
+                pageUrl,
+                keywords: buildSolverKeywords(game, wordLength),
+                faqTitle: `${title} FAQs`,
+                faqs: buildSolverFaqs(game, wordLength),
+                howToTitle: `How to use the ${wordLength}-letter Wordle solver`,
+                howToSteps: [
+                        { name: 'Type your guess', text: `Enter the ${wordLength}-letter word you played in Wordle.` },
+                        { name: 'Match the clue colors', text: 'Tap each tile until it matches the gray, yellow, or green result from your game.' },
+                        { name: 'Review the ranked answers', text: 'Run the solver to see the best next guesses and the most likely remaining answers.' }
+                ],
+                sections: buildSolverSections(game, wordLength),
+                chips: buildSolverChips(game, wordLength),
+                cta:
+                        wordLength === 5
+                                ? {
+                                                label: 'See Wordle answer today',
+                                                href: '/wordle-answer-today'
+                                        }
+                                : {
+                                                label: 'Open 5-letter Wordle solver',
+                                                href: getWordleLengthSolverPath(5)
+                                        }
+        };
 }
 
 export function getVariantSolverPageConfig(variant: WordlebotVariantRouteSlug): WordlebotPageConfig {
-	const gameSlug = getGameForVariantRoute(variant);
-	const game = getWordlebotGame(gameSlug);
-	const routePath = `/${variant}-solver`;
-	const pageUrl = `https://wordsolverx.com${routePath}`;
-	const title = game.slug === 'spotle' ? 'Spotle Wordle Solver' : `${sentenceCaseGame(game)} Solver`;
-	const description =
-		game.slug === 'canuckle'
-			? 'Use the Canuckle solver to filter the Canadian answer list, rank strong next guesses, and move quickly between the answer today, archive, and solver pages.'
-			: game.slug === 'spotle'
-				? 'Use the Spotle Wordle solver with blank-clue support, fast candidate filtering, and dedicated next-guess ranking.'
-				: `Use the ${sentenceCaseGame(game)} solver with built-in clue matching, length switching where available, and fast next-guess suggestions.`;
+        const gameSlug = getGameForVariantRoute(variant);
+        const game = getWordlebotGame(gameSlug);
+        const routePath = `/${variant}-solver`;
+        const pageUrl = `https://wordsolverx.com${routePath}`;
+        const title = game.slug === 'spotle' ? 'Spotle Wordle Solver' : `${sentenceCaseGame(game)} Solver`;
+        const description =
+                game.slug === 'canuckle'
+                        ? 'Use the Canuckle solver to filter the Canadian answer list, rank strong next guesses, and move quickly between the answer today, archive, and solver pages.'
+                        : game.slug === 'spotle'
+                                ? 'Use the Spotle Wordle solver with blank-clue support, fast candidate filtering, and dedicated next-guess ranking.'
+                                : `Use the ${sentenceCaseGame(game)} solver with built-in clue matching, length switching where available, and fast next-guess suggestions.`;
 
-	const cta =
-		game.slug === 'canuckle'
-			? { label: 'See Canuckle answer today', href: getCanucklePagePath('today') }
-			: game.slug === 'quordle'
-				? { label: 'View Quordle answer today', href: '/quordle-answer-today' }
-				: undefined;
+        const cta =
+                game.slug === 'canuckle'
+                        ? { label: 'See Canuckle answer today', href: getCanucklePagePath('today') }
+                        : game.slug === 'quordle'
+                                ? { label: 'View Quordle answer today', href: '/quordle-answer-today' }
+                                : undefined;
 
-	return {
-		appConfig: {
-			pageType: 'solver',
-			game: game.slug,
-			wordLength: getBestLengthForWordlebotGame(game.slug, 5)
-		},
-		title,
-		eyebrow: game.boards > 1 ? 'Multi-board puzzle solver' : 'Interactive puzzle solver',
-		description,
-		pageUrl,
-		keywords: buildSolverKeywords(game),
-		faqTitle: `${title} FAQs`,
-		faqs: buildSolverFaqs(game),
-		howToTitle: `How to use the ${title.toLowerCase()}`,
-		howToSteps: [
-			{ name: 'Add the guess you played', text: 'Enter the word you used before setting any clue feedback.' },
-			{ name: 'Match every board or clue state', text: 'Tap each tile or count selector until the board matches the result you saw in the game.' },
-			{ name: 'Calculate the next move', text: 'Run the solver to see the strongest next guesses and the remaining likely answers.' }
-		],
-		sections: buildSolverSections(game),
-		chips: buildSolverChips(game),
-		cta
-	};
+        return {
+                appConfig: {
+                        pageType: 'solver',
+                        game: game.slug,
+                        wordLength: getBestLengthForWordlebotGame(game.slug, 5)
+                },
+                title,
+                eyebrow: game.boards > 1 ? 'Multi-board puzzle solver' : 'Interactive puzzle solver',
+                description,
+                pageUrl,
+                keywords: buildSolverKeywords(game),
+                faqTitle: `${title} FAQs`,
+                faqs: buildSolverFaqs(game),
+                howToTitle: `How to use the ${title.toLowerCase()}`,
+                howToSteps: [
+                        { name: 'Add the guess you played', text: 'Enter the word you used before setting any clue feedback.' },
+                        { name: 'Match every board or clue state', text: 'Tap each tile or count selector until the board matches the result you saw in the game.' },
+                        { name: 'Calculate the next move', text: 'Run the solver to see the strongest next guesses and the remaining likely answers.' }
+                ],
+                sections: buildSolverSections(game),
+                chips: buildSolverChips(game),
+                cta
+        };
 }
 
 export function getCanuckleTodayPageConfig(): WordlebotPageConfig {
-	const targetDate = getMainDailyDate();
-	const visibleDateKey = getMainDailyDateKey(targetDate);
-	const displayDate = getMainDailyDateLabel(targetDate);
+        const targetDate = getMainDailyDate();
+        const visibleDateKey = getMainDailyDateKey(targetDate);
+        const displayDate = getMainDailyDateLabel(targetDate);
 
-	return {
-		appConfig: { pageType: 'canuckle-daily', visibleDateKey },
-		title: 'Canuckle Answer Today',
-		displayTitle: `Canuckle Answer Today (${displayDate})`,
-		metaTitle: `Canuckle Answer Today (${displayDate}) - Answer and Canadian Fact`,
-		eyebrow: 'Daily Canuckle answer, fact, and puzzle number',
-		description:
-			"See the Canuckle answer today, check the current puzzle number, and read the matching Canadian fact with quick links to the archive and solver.",
-		pageUrl: `https://wordsolverx.com${getCanucklePagePath('today')}`,
-		keywords: [
-			'canuckle answer today',
-			'canuckle today',
-			'canuckle puzzle today',
-			'canuckle hint today',
-			'wordsolverx canuckle'
-		],
-		faqTitle: 'Canuckle Answer Today FAQs',
-		faqs: [
-			{
-				question: 'How is the Canuckle answer today page calculated?',
-				answer:
-					'This page follows the same Canuckle date schedule as the live game, including the original 2022 launch window and the restarted daily sequence.'
-			},
-			{
-				question: 'Can I move from Canuckle today to the solver?',
-				answer:
-					'Yes. The Canuckle solver is linked directly from this page so you can go from the answer today view to clue-based solving in one click.'
-			},
-			{
-				question: 'Does the Canuckle answer today page also link to the archive?',
-				answer:
-					'Yes. You can switch from today’s answer to the Canuckle archive to review older puzzle numbers, dates, answers, and facts.'
-			}
-		],
-		howToTitle: 'How to use the Canuckle answer today page',
-		howToSteps: [
-			{ name: 'Check the puzzle number', text: "Use the page to confirm today's Canuckle index and date." },
-			{ name: 'Reveal the answer when needed', text: 'Open the answer panel only when you want to see the current solution.' },
-			{ name: 'Jump to the archive or solver', text: 'Use the page tabs to move between the Canuckle archive and solver quickly.' }
-		],
-		sections: [
-			{
-				title: 'What you get on this Canuckle answer today page',
-				paragraphs: [
-					'This page is built for fast daily lookup. It highlights the live Canuckle puzzle number, the matching date, and the Canadian fact tied to that answer.',
-					'Because the answer today route is separated from the solver and archive, it is easier for both users and search engines to understand what the page is for.'
-				]
-			},
-			{
-				title: 'Where to go after checking today’s answer',
-				paragraphs: [
-					'Open the Canuckle solver if you want clue-based help instead of a direct reveal. That page lets you enter guesses, mark feedback, and narrow the answer list quickly.',
-					'If you are researching earlier puzzles, the Canuckle archive gives you a searchable history of dates, answers, and facts without leaving WordSolverX.'
-				]
-			}
-		],
-		chips: ['Answer today', 'Daily fact', 'Puzzle number'],
-		cta: {
-			label: 'Browse Canuckle archive',
-			href: getCanucklePagePath('archive')
-		}
-	};
+        return {
+                appConfig: { pageType: 'canuckle-daily', visibleDateKey },
+                title: 'Canuckle Answer Today',
+                displayTitle: `Canuckle Answer Today (${displayDate})`,
+                metaTitle: `Canuckle Answer Today (${displayDate}) - Answer and Canadian Fact`,
+                eyebrow: 'Daily Canuckle answer, fact, and puzzle number',
+                description:
+                        "See the Canuckle answer today, check the current puzzle number, and read the matching Canadian fact with quick links to the archive and solver.",
+                pageUrl: `https://wordsolverx.com${getCanucklePagePath('today')}`,
+                keywords: [
+                        'canuckle answer today',
+                        'canuckle today',
+                        'canuckle puzzle today',
+                        'canuckle hint today',
+                        'wordsolverx canuckle'
+                ],
+                faqTitle: 'Canuckle Answer Today FAQs',
+                faqs: [
+                        {
+                                question: 'How is the Canuckle answer today page calculated?',
+                                answer:
+                                        'This page follows the same Canuckle date schedule as the live game, including the original 2022 launch window and the restarted daily sequence.'
+                        },
+                        {
+                                question: 'Can I move from Canuckle today to the solver?',
+                                answer:
+                                        'Yes. The Canuckle solver is linked directly from this page so you can go from the answer today view to clue-based solving in one click.'
+                        },
+                        {
+                                question: 'Does the Canuckle answer today page also link to the archive?',
+                                answer:
+                                        'Yes. You can switch from today’s answer to the Canuckle archive to review older puzzle numbers, dates, answers, and facts.'
+                        }
+                ],
+                howToTitle: 'How to use the Canuckle answer today page',
+                howToSteps: [
+                        { name: 'Check the puzzle number', text: "Use the page to confirm today's Canuckle index and date." },
+                        { name: 'Reveal the answer when needed', text: 'Open the answer panel only when you want to see the current solution.' },
+                        { name: 'Jump to the archive or solver', text: 'Use the page tabs to move between the Canuckle archive and solver quickly.' }
+                ],
+                sections: [
+                        {
+                                title: 'What you get on this Canuckle answer today page',
+                                paragraphs: [
+                                        'This page is built for fast daily lookup. It highlights the live Canuckle puzzle number, the matching date, and the Canadian fact tied to that answer.',
+                                        'Because the answer today route is separated from the solver and archive, it is easier for both users and search engines to understand what the page is for.'
+                                ]
+                        },
+                        {
+                                title: 'Where to go after checking today’s answer',
+                                paragraphs: [
+                                        'Open the Canuckle solver if you want clue-based help instead of a direct reveal. That page lets you enter guesses, mark feedback, and narrow the answer list quickly.',
+                                        'If you are researching earlier puzzles, the Canuckle archive gives you a searchable history of dates, answers, and facts without leaving WordSolverX.'
+                                ]
+                        }
+                ],
+                chips: ['Answer today', 'Daily fact', 'Puzzle number'],
+                cta: {
+                        label: 'Browse Canuckle archive',
+                        href: getCanucklePagePath('archive')
+                }
+        };
 }
 
 export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
-	const visibleDateKey = getMainDailyDateKey();
+        const visibleDateKey = getMainDailyDateKey();
 
-	return {
-		appConfig: { pageType: 'canuckle-archive', visibleDateKey },
-		title: 'Canuckle Archive',
-		eyebrow: 'Search past Canuckle answers by date or puzzle number',
-		description:
-			'Browse the Canuckle archive with puzzle numbers, dates, answers, and Canadian facts in one searchable page built for quick lookups.',
-		pageUrl: 'https://wordsolverx.com/canuckle-archive',
-		keywords: [
-			'canuckle archive',
-			'canuckle answers',
-			'past canuckle puzzles',
-			'canuckle answer history',
-			'wordsolverx canuckle archive'
-		],
-		faqTitle: 'Canuckle Archive FAQs',
-		faqs: [
-			{
-				question: 'Can I search old Canuckle answers here?',
-				answer:
-					'Yes. The Canuckle archive lets you search by puzzle number, date, answer, or fact text so you can find earlier entries quickly.'
-			},
-			{
-				question: 'Does this page include the full Canuckle answer history?',
-				answer:
-					'The archive covers the visible Canuckle puzzle range available from the current dataset, including dates, answers, and facts for each indexed puzzle.'
-			},
-			{
-				question: 'Can I jump from the archive to the Canuckle solver?',
-				answer:
-					'Yes. The archive keeps the Canuckle solver and answer today page close by so you can move between research and solving without opening a separate tool.'
-			}
-		],
-		howToTitle: 'How to use the Canuckle archive',
-		howToSteps: [
-			{ name: 'Search by date or answer', text: 'Use the archive search box to filter by puzzle number, date, answer, or fact text.' },
-			{ name: 'Open any archive entry', text: 'Expand a puzzle card to read the full Canuckle fact, answer, and available distribution details.' },
-			{ name: 'Switch to today or the solver', text: 'Use the top tabs to move between the live answer page and the Canuckle solver when needed.' }
-		],
-		sections: [
-			{
-				title: 'Why the Canuckle archive matters',
-				paragraphs: [
-					'Past Canuckle answers help you avoid repeats, confirm puzzle dates, and revisit older Canadian facts without digging through daily posts one by one.',
-					'Keeping the archive on a permanent route also gives Google a clearer archive destination than a long list of thin date pages.'
-				]
-			},
-			{
-				title: 'What makes this archive easy to use',
-				paragraphs: [
-					'The page loads into a searchable list so you can scan large sections of Canuckle history quickly on desktop or mobile.',
-					'Because the archive lives alongside the dedicated answer today and solver routes, the full Canuckle section now has a cleaner internal-linking structure for both users and crawlers.'
-				]
-			}
-		],
-		chips: ['Archive page', 'Searchable answers', 'Date lookup'],
-		cta: {
-			label: 'See Canuckle answer today',
-			href: getCanucklePagePath('today')
-		}
-	};
+        return {
+                appConfig: { pageType: 'canuckle-archive', visibleDateKey },
+                title: 'Canuckle Archive',
+                eyebrow: 'Search past Canuckle answers by date or puzzle number',
+                description:
+                        'Browse the Canuckle archive with puzzle numbers, dates, answers, and Canadian facts in one searchable page built for quick lookups.',
+                pageUrl: 'https://wordsolverx.com/canuckle-archive',
+                keywords: [
+                        'canuckle archive',
+                        'canuckle answers',
+                        'past canuckle puzzles',
+                        'canuckle answer history',
+                        'wordsolverx canuckle archive'
+                ],
+                faqTitle: 'Canuckle Archive FAQs',
+                faqs: [
+                        {
+                                question: 'Can I search old Canuckle answers here?',
+                                answer:
+                                        'Yes. The Canuckle archive lets you search by puzzle number, date, answer, or fact text so you can find earlier entries quickly.'
+                        },
+                        {
+                                question: 'Does this page include the full Canuckle answer history?',
+                                answer:
+                                        'The archive covers the visible Canuckle puzzle range available from the current dataset, including dates, answers, and facts for each indexed puzzle.'
+                        },
+                        {
+                                question: 'Can I jump from the archive to the Canuckle solver?',
+                                answer:
+                                        'Yes. The archive keeps the Canuckle solver and answer today page close by so you can move between research and solving without opening a separate tool.'
+                        }
+                ],
+                howToTitle: 'How to use the Canuckle archive',
+                howToSteps: [
+                        { name: 'Search by date or answer', text: 'Use the archive search box to filter by puzzle number, date, answer, or fact text.' },
+                        { name: 'Open any archive entry', text: 'Expand a puzzle card to read the full Canuckle fact, answer, and available distribution details.' },
+                        { name: 'Switch to today or the solver', text: 'Use the top tabs to move between the live answer page and the Canuckle solver when needed.' }
+                ],
+                sections: [
+                        {
+                                title: 'Why the Canuckle archive matters',
+                                paragraphs: [
+                                        'Past Canuckle answers help you avoid repeats, confirm puzzle dates, and revisit older Canadian facts without digging through daily posts one by one.',
+                                        'Keeping the archive on a permanent route also gives Google a clearer archive destination than a long list of thin date pages.'
+                                ]
+                        },
+                        {
+                                title: 'What makes this archive easy to use',
+                                paragraphs: [
+                                        'The page loads into a searchable list so you can scan large sections of Canuckle history quickly on desktop or mobile.',
+                                        'Because the archive lives alongside the dedicated answer today and solver routes, the full Canuckle section now has a cleaner internal-linking structure for both users and crawlers.'
+                                ]
+                        }
+                ],
+                chips: ['Archive page', 'Searchable answers', 'Date lookup'],
+                cta: {
+                        label: 'See Canuckle answer today',
+                        href: getCanucklePagePath('today')
+                }
+        };
 }
 
 export function getWordlebotStructuredData(config: WordlebotPageConfig) {
-	if (config.appConfig.pageType === 'solver') {
-		return JSON.stringify([
-			generateSoftwareApplicationSchema(config.title, 'GameApplication'),
-			generateWebPageSchema(config.title, config.description, config.pageUrl)
-		]);
-	}
+        if (config.appConfig.pageType === 'solver') {
+                return JSON.stringify([
+                        generateSoftwareApplicationSchema(config.title, 'GameApplication'),
+                        generateWebPageSchema(config.title, config.description, config.pageUrl)
+                ]);
+        }
 
-	if (config.appConfig.pageType === 'canuckle-archive') {
-		return JSON.stringify([
-			generateCollectionPageSchema(config.title, config.description, config.pageUrl, [
-				{
-					name: 'Canuckle Answer Today',
-					url: `https://wordsolverx.com${getCanucklePagePath('today')}`
-				},
-				{
-					name: 'Canuckle Archive',
-					url: `https://wordsolverx.com${getCanucklePagePath('archive')}`
-				},
-				{
-					name: 'Canuckle Solver',
-					url: `https://wordsolverx.com${getCanucklePagePath('solver')}`
-				}
-			]),
-			generateWebPageSchema(config.title, config.description, config.pageUrl)
-		]);
-	}
+        if (config.appConfig.pageType === 'canuckle-archive') {
+                return JSON.stringify([
+                        generateCollectionPageSchema(config.title, config.description, config.pageUrl, [
+                                {
+                                        name: 'Canuckle Answer Today',
+                                        url: `https://wordsolverx.com${getCanucklePagePath('today')}`
+                                },
+                                {
+                                        name: 'Canuckle Archive',
+                                        url: `https://wordsolverx.com${getCanucklePagePath('archive')}`
+                                },
+                                {
+                                        name: 'Canuckle Solver',
+                                        url: `https://wordsolverx.com${getCanucklePagePath('solver')}`
+                                }
+                        ]),
+                        generateWebPageSchema(config.title, config.description, config.pageUrl)
+                ]);
+        }
 
-	return JSON.stringify([
-		generateWebPageSchema(config.title, config.description, config.pageUrl)
-	]);
+        return JSON.stringify([
+                generateWebPageSchema(config.title, config.description, config.pageUrl)
+        ]);
 }
 
 export function getWordlebotGameIndexLinks() {
-	return WORDLEBOT_GAMES.map((game) => {
-		if (game.slug === 'wordle') {
-			return WORDLEBOT_WORDLE_SOLVER_LENGTHS.map((length) => ({
-				name: `${length}-Letter Wordle Solver`,
-				href: getWordleLengthSolverPath(length)
-			}));
-		}
+        return WORDLEBOT_GAMES.map((game) => {
+                if (game.slug === 'wordle') {
+                        return WORDLEBOT_WORDLE_SOLVER_LENGTHS.map((length) => ({
+                                name: `${length}-Letter Wordle Solver`,
+                                href: getWordleLengthSolverPath(length)
+                        }));
+                }
 
-		if (game.slug === 'spotle') {
-			return [{ name: 'Spotle Wordle Solver', href: '/spotle-wordle-solver' }];
-		}
+                if (game.slug === 'spotle') {
+                        return [{ name: 'Spotle Wordle Solver', href: '/spotle-wordle-solver' }];
+                }
 
-		if (game.slug === 'canuckle') {
-			return [
-				{ name: 'Canuckle Answer Today', href: getCanucklePagePath('today') },
-				{ name: 'Canuckle Archive', href: getCanucklePagePath('archive') },
-				{ name: 'Canuckle Solver', href: getCanucklePagePath('solver') }
-			];
-		}
+                if (game.slug === 'canuckle') {
+                        return [
+                                { name: 'Canuckle Answer Today', href: getCanucklePagePath('today') },
+                                { name: 'Canuckle Archive', href: getCanucklePagePath('archive') },
+                                { name: 'Canuckle Solver', href: getCanucklePagePath('solver') }
+                        ];
+                }
 
-		return [
-			{
-				name: `${sentenceCaseGame(game)} Solver`,
-				href: `/${game.slug}-solver`
-			}
-		];
-	}).flat();
+                return [
+                        {
+                                name: `${sentenceCaseGame(game)} Solver`,
+                                href: `/${game.slug}-solver`
+                        }
+                ];
+        }).flat();
 }

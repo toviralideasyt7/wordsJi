@@ -1,8 +1,10 @@
 import { format, subDays } from 'date-fns';
 import { applyDailyRolloverGrace } from '$lib/rollover-grace';
 
-// The first NYT Wordle was #219 on February 15, 2022
-export const WORDLE_NYT_START_DATE = new Date('2022-02-15');
+// The first NYT Wordle was #219 on January 24, 2022 (verified via NYT API:
+//   https://www.nytimes.com/svc/wordle/v2/2022-01-24.json -> days_since_launch=219, solution=knoll)
+// Earlier comment said Feb 15, 2022 — that was Wordle #241, not #219. Fixed per SEO audit Bug #1.
+export const WORDLE_NYT_START_DATE = new Date('2022-01-24');
 export const WORDLE_NYT_START_NUMBER = 219;
 
 export function getWordleNumber(date: Date): number {

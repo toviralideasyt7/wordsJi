@@ -20,10 +20,10 @@ Disallow: /private/
 
 User-agent: *
 Allow: /
+Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /_app/
 Disallow: /build/
 
 User-agent: GPTBot
