@@ -586,7 +586,13 @@
 			</button>
 		</div>
 
-		{#if showResult}
+	{#if loading}
+		<div class="w-full max-w-md mx-auto mt-6 p-8 text-center rounded-2xl bg-white shadow-lg border border-slate-100">
+			<div class="w-10 h-10 mx-auto border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin"></div>
+			<p class="mt-4 text-base font-semibold text-slate-700">Calculating next guess…</p>
+			<p class="mt-1 text-sm text-slate-500">Filtering the word list against your clues.</p>
+		</div>
+	{:else if showResult}
 			<div bind:this={suggestionsRef}>
 				<Suggestions {suggestions} {possibilities} onSelectWord={useSuggestion} />
 			</div>

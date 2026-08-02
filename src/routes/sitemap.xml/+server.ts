@@ -16,33 +16,6 @@ function shouldIncludeUrl(url: string): boolean {
         return !BLOCKED_URL_PATTERNS.some((pattern) => url.includes(pattern));
 }
 
-interface SitemapEntry {
-        priority: string;
-        changefreq: string;
-}
-
-function classifyUrl(path: string): SitemapEntry {
-        if (path === '/') {
-                return { priority: '1.0', changefreq: 'daily' };
-        }
-        if (path.endsWith('-answer-today')) {
-                return { priority: '0.9', changefreq: 'daily' };
-        }
-        if (path.endsWith('-archive')) {
-                return { priority: '0.7', changefreq: 'weekly' };
-        }
-        if (path.endsWith('-solver') || path.endsWith('-analyzer')) {
-                return { priority: '0.8', changefreq: 'weekly' };
-        }
-        if (CONTENT_PAGES.has(path)) {
-                return { priority: '0.5', changefreq: 'monthly' };
-        }
-        if (HUB_PAGES.has(path)) {
-                return { priority: '0.8', changefreq: 'daily' };
-        }
-        return { priority: '0.6', changefreq: 'weekly' };
-}
-
 function getPuzzleRouteLastModified(path: string): string | null {
         const game = ROUTE_LASTMOD_GAME_MAP[path];
         if (!game) {
@@ -83,10 +56,9 @@ function generateSitemap(): string {
         const urls = SITEMAP_ENTRIES.filter(shouldIncludeUrl)
                 .map((url: string) => {
                         const fullUrl = url.startsWith('http') ? url : `https://wordsolverx.com${url}`;
-                        const { priority, changefreq } = classifyUrl(url);
                         const lastmod = getLastModified(url);
 
-                        let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>`;
+                        let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>`;
 
                         if (url === '/') {
                                 entry += `\n    <image:image>\n      <image:loc>https://wordsolverx.com/wordsolverx.webp</image:loc>\n    </image:image>`;

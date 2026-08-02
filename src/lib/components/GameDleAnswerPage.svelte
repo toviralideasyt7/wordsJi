@@ -288,8 +288,8 @@
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:site_name" content="WordSolverX" />
   <meta property="og:image" content={pageImage} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="768" />
+  <meta property="og:image:height" content="319" />
   <meta property="og:image:alt" content={`${gameTitle} hints and answers for today`} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />

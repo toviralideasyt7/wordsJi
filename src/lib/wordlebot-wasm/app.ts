@@ -612,6 +612,17 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                 container.classList.remove('results-stale');
                 container.innerHTML = '<div class="loading-card"><div class="loading-spinner"></div>Calculating suggestions...</div>';
 
+                // Yield to the browser so the loading spinner paints before the synchronous
+                // WASM solve blocks the main thread. Without this the old results stay frozen
+                // on screen until compute finishes, making the tool look unresponsive.
+                await new Promise<void>((resolve) => {
+                        if ('requestAnimationFrame' in window) {
+                                requestAnimationFrame(() => setTimeout(resolve, 0));
+                        } else {
+                                setTimeout(resolve, 0);
+                        }
+                });
+
                 const key = state.game === 'canuckle' ? 'canuckle' : `len${state.wordLength}`;
                 const solve = await getSolveFunction(key);
                 const response = solve({

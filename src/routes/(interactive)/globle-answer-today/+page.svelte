@@ -6,7 +6,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GlobleCluesSection from '$lib/components/GlobleCluesSection.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
-  import { generateWebPageSchema } from '$lib/seo';
+  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -44,7 +44,7 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp'} />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

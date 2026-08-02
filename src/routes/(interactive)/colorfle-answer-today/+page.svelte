@@ -12,7 +12,7 @@
   } from '$lib/authors';
   import type { ApiColorfleModeAnswer } from '$lib/color-answers-api';
   import { getContrastColor } from '$lib/colorfle';
-  import { generateArticleSchema } from '$lib/seo';
+  import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   let revealed = $state(false);
@@ -80,7 +80,7 @@
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
   {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {#if data.schemas}
-    {@html `<script type="application/ld+json">${data.schemas}</script>`}
+    {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
   {/if}
 </svelte:head>
 

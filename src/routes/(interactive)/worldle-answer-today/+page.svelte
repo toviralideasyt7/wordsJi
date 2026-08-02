@@ -12,6 +12,7 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
+  import { stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   const publishedDate = $derived(`${data.todayDate}T00:00:00Z`);
@@ -34,7 +35,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/worldle-answer-today.webp" />
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

@@ -24,7 +24,6 @@ Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /build/
 
 User-agent: GPTBot
 Allow: /
@@ -32,6 +31,11 @@ Disallow: /api/
 Disallow: /admin/
 
 User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-agent: ClaudeBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/

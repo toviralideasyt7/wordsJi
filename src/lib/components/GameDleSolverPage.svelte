@@ -476,8 +476,6 @@
         <meta property="og:url" content={pageUrl} />
         <meta property="og:site_name" content="WordSolverX" />
         <meta property="og:image" content={solverOgImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`${config.name} Solver Tool`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />

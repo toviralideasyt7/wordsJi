@@ -6,7 +6,7 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
-  import { generateArticleSchema } from '$lib/seo';
+  import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -69,7 +69,7 @@
   <meta name="twitter:description" content={data.pageDescription} />
   <link rel="canonical" href="https://wordsolverx.com/phrazle-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

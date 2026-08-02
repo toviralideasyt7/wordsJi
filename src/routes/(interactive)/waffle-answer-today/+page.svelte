@@ -8,7 +8,7 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
   import FiHash from '$lib/components/icons/FiHash.svelte';
-  import { generateWebPageSchema } from '$lib/seo';
+  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -46,7 +46,7 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/waffle-answer-today.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />

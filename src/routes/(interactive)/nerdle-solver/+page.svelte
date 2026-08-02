@@ -723,9 +723,13 @@
                                         <button
                                                 onclick={refreshSolver}
                                                 disabled={isCalculating}
-                                                class="w-full max-w-md mx-auto block py-5 px-8 bg-gradient-to-r from-teal-700 to-teal-900 hover:from-teal-700 hover:via-teal-700 hover:to-teal-700 text-white font-black text-2xl rounded-2xl shadow-2xl transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                                                class="w-full max-w-md mx-auto flex items-center justify-center gap-3 py-5 px-8 bg-gradient-to-r from-teal-700 to-teal-900 hover:from-teal-700 hover:via-teal-700 hover:to-teal-700 text-white font-black text-2xl rounded-2xl shadow-2xl transition-all transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                                         >
-                                                {isCalculating ? 'Calculating...' : guesses.length > 0 ? 'Calculate Best Equation' : 'Get Opening Suggestions'}
+                                                {#if isCalculating}
+                                                        <div class="w-7 h-7 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                                                {:else}
+                                                        {guesses.length > 0 ? 'Calculate Best Equation' : 'Get Opening Suggestions'}
+                                                {/if}
                                         </button>
                                 </div>
 
@@ -747,7 +751,13 @@
                                                 </div>
                                         </div>
 
-                                        {#if topSuggestion}
+                                        {#if isCalculating}
+                                                <div class="rounded-xl border border-slate-200 bg-white px-5 py-10 text-center">
+                                                        <div class="w-10 h-10 mx-auto border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin"></div>
+                                                        <p class="mt-4 text-base font-semibold text-slate-700">Calculating best equation…</p>
+                                                        <p class="mt-1 text-sm text-slate-500">Ranking next guesses from the solver worker.</p>
+                                                </div>
+                                        {:else if topSuggestion}
                                                 <div class="rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50 to-white p-5 mb-4">
                                                         <div class="flex items-center justify-between gap-3 mb-4">
                                                                 <div>

@@ -8,7 +8,7 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import { formatPopulation, formatTemperature } from '$lib/countryle';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
-  import { generateArticleSchema } from '$lib/seo';
+  import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   const todayKey = getMainDailyDateKey();
@@ -62,7 +62,7 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
   {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
-  {@html `<script type="application/ld+json">${data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
