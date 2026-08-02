@@ -173,7 +173,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                         state.game === 'wordle'
                                 ? 'solver-container wordle-solver-container'
                                 : state.game === 'canuckle'
-                                        ? 'solver-container canuckle-daily-container'
+                                        ? 'solver-container canuckle-solver-container'
                                         : 'solver-container';
 
                 target.innerHTML = `
