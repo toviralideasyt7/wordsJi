@@ -71,6 +71,33 @@
         activationTarget?.removeEventListener(eventName, startOnIntent);
       });
     };
+
+    // Preload the app module, styles, and the page-specific WASM solver + dictionary
+    // during idle — non-blocking. This does NOT run any solve logic (suggestions are
+    // unchanged); it only resolves the dynamic imports so that when start() fires on
+    // interaction/idle, the modules are already cached and the app mounts + renders
+    // its first suggestions with no cold-import delay.
+    let preloadStarted = false;
+    const runPreload = () => {
+      if (preloadStarted) return;
+      preloadStarted = true;
+      void Promise.all([
+        import('$lib/wordlebot-wasm/styles.css?raw'),
+        import('$lib/wordlebot-wasm/app').then(({ preloadSolverAssets }) => preloadSolverAssets(config))
+      ]).catch(() => {
+        // Best-effort: real errors surface when the app actually mounts.
+        preloadStarted = false;
+      });
+    };
+    const schedulePreload = () => {
+      if ('requestIdleCallback' in window) {
+        const idleId = window.requestIdleCallback(() => runPreload(), { timeout: 4000 });
+        return () => window.cancelIdleCallback(idleId);
+      }
+      const timeoutId = globalThis.setTimeout(runPreload, 600);
+      return () => globalThis.clearTimeout(timeoutId);
+    };
+
     const scheduleIdleStart = () => {
       const run = () => {
         removeInteractionListeners();
@@ -91,6 +118,22 @@
     });
     window.addEventListener('keydown', startOnIntent, { once: true });
 
+    // Kick off the non-blocking preload as soon as the page is done loading (or now).
+    const cancelPreload =
+      document.readyState === 'complete'
+        ? schedulePreload()
+        : (() => {
+            let cancel = () => {};
+            const handleLoad = () => {
+              cancel = schedulePreload();
+            };
+            window.addEventListener('load', handleLoad, { once: true });
+            return () => {
+              window.removeEventListener('load', handleLoad);
+              cancel();
+            };
+          })();
+
     const cancelIdleStart =
       document.readyState === 'complete'
         ? scheduleIdleStart()
@@ -109,6 +152,7 @@
     return () => {
       removeInteractionListeners();
       window.removeEventListener('keydown', startOnIntent);
+      cancelPreload();
       cancelIdleStart();
       cleanup?.();
     };

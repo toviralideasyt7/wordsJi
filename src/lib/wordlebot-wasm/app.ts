@@ -764,6 +764,29 @@ async function getSolveFunction(key: string) {
         return mod.solve;
 }
 
+/**
+ * Preload (without solving) the WASM solver module + dictionary dataset for a page's
+ * game/length. Safe to call during browser idle: it only resolves dynamic imports and
+ * caches them — it runs zero solve logic, so suggestions are unchanged. When the app
+ * later mounts and calls solveAndRender(), the modules are already cached and the first
+ * solve starts immediately instead of waiting on a cold import + dataset fetch.
+ */
+export async function preloadSolverAssets(config: WordlebotAppPageConfig) {
+        try {
+                if (config.pageType === 'canuckle-daily' || config.pageType === 'canuckle-archive') {
+                        await Promise.all([getSolveFunction('canuckle'), getDatasetForGame('canuckle', 5)]);
+                        return;
+                }
+                const game = config.game;
+                const gameConfig = getWordlebotGame(game);
+                const length = getBestLengthForWordlebotGame(game, config.wordLength ?? gameConfig.lengths[0]);
+                const key = `len${length}`;
+                await Promise.all([getSolveFunction(key), getDatasetForGame(game, length)]);
+        } catch {
+                // Preload is best-effort; real errors surface when the app actually mounts.
+        }
+}
+
 async function getCanuckleData() {
         if (!canuckleDataPromise) {
                 canuckleDataPromise = import('./assets/generated/canuckle-data.json').then(
