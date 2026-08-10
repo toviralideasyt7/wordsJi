@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T05:23:19.597Z",
+  "updatedAt": "2026-08-10T20:01:56.957Z",
   "games": {
     "canuckle": {
       "needsRetry": false,
@@ -45,12 +45,12 @@
     },
     "spotle": {
       "needsRetry": false,
-      "lastRunAt": "2026-05-28T05:23:12.394Z",
-      "lastSuccessAt": "2026-05-28T05:23:12.394Z",
+      "lastRunAt": "2026-08-10T20:01:56.956Z",
+      "lastSuccessAt": "2026-08-10T20:01:56.956Z",
       "lastFailureAt": null,
       "lastFailureMessage": null,
-      "latestDate": "2026-05-28",
-      "totalAnswers": 1304
+      "latestDate": "2026-08-10",
+      "totalAnswers": 1311
     }
   }
 }

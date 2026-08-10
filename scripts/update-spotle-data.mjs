@@ -16,10 +16,17 @@ function toIsoDate(dateStr) {
   return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }
 
-function resolveRefs(flat, value) {
+function resolveRefs(flat, value, active = new Set()) {
   if (typeof value === 'number' && Number.isInteger(value) && value >= 0 && value < flat.length) {
     const resolved = flat[value];
-    return resolved === undefined ? value : resolveRefs(flat, resolved);
+    if (resolved === undefined || resolved === null || typeof resolved !== 'object') {
+      return resolved === undefined ? value : resolved;
+    }
+    if (active.has(value)) return value;
+    active.add(value);
+    const out = resolveRefs(flat, resolved, active);
+    active.delete(value);
+    return out;
   }
 
   if (Array.isArray(value)) {

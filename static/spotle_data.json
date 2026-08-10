@@ -21228,6 +21228,62 @@
       "soundcloudUrl": "https://soundcloud.com/ludacris/rollout-my-business"
     },
     {
+      "date": "2026-08-04",
+      "dayNumber": 1557,
+      "artist": "Ozuna",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/98/f4/e3/98f4e35b-eedd-193d-2635-68615c791f67/697691883953.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-05",
+      "dayNumber": 1558,
+      "artist": "Britney Spears",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/38/8b/7a/388b7a8f-10ff-a4e0-7624-65e29ac6a793/828765374828.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-06",
+      "dayNumber": 1559,
+      "artist": "Mary J. Blige",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/bc/ba/dd/bcbadd95-9fff-b93e-b03c-84d11e9382e2/06UMGIM00908.rgb.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-07",
+      "dayNumber": 1560,
+      "artist": "Beabadoobee",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/39/cb/28/39cb28c2-f48d-5e69-1469-592a7ac1dd11/192641938047_Cover.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-08",
+      "dayNumber": 1561,
+      "artist": "Willie Nelson",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/78/a5/e4/78a5e4a0-0a43-18fa-6c36-25ecd4587c1f/dj.gomnsxgu.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-09",
+      "dayNumber": 1563,
+      "artist": "Prince",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c1/b6/79/c1b679f5-d59d-1b3e-62ab-514de20f06c6/093624912002.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
+      "date": "2026-08-10",
+      "dayNumber": 1564,
+      "artist": "Tate McRae",
+      "track": "",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/23/07/92/23079247-25be-3098-ef53-78e7d0fe7406/196871341653.jpg/600x600bb.jpg",
+      "soundcloudUrl": ""
+    },
+    {
       "date": "2026-09-01",
       "dayNumber": 1628,
       "artist": "Lady Gaga"
@@ -22981,8 +23037,8 @@
   "metadata": {
     "startDate": "2022-03-19",
     "totalArtists": 1103,
-    "totalAnswers": 1304,
-    "lastSyncedAt": "2026-05-28T05:23:12.386Z",
+    "totalAnswers": 1311,
+    "lastSyncedAt": "2026-08-10T20:01:56.949Z",
     "source": "https://spotle.io/__data.json"
   }
 }
