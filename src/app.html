@@ -194,9 +194,8 @@
         </style>
         <script>
                 (function () {
-                        var GA_ID = 'G-8QRMXK049Z';
-                        var ADSENSE_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8421191784631095';
-                        var CONSENT_KEY = 'wordsolverx-consent-v1';
+var GA_ID = 'G-8QRMXK049Z';
+                                                var CONSENT_KEY = 'wordsolverx-consent-v1';
 
                         window.dataLayer = window.dataLayer || [];
                         window.__wordsolverxQueuedGtagCalls = window.__wordsolverxQueuedGtagCalls || [];
@@ -278,59 +277,6 @@
                                 document.head.appendChild(script);
                         }
 
-                        function loadAdsense() {
-                                if (window.__wordsolverxAdsenseLoaded) return;
-                                window.__wordsolverxAdsenseLoaded = true;
-
-                                var script = document.createElement('script');
-                                script.async = true;
-                                script.src = ADSENSE_SRC;
-                                script.crossOrigin = 'anonymous';
-                                document.head.appendChild(script);
-                        }
-
-                        function scheduleAdsense() {
-                                if (window.__wordsolverxAdsenseLoaded || window.__wordsolverxAdsenseScheduled) return;
-                                window.__wordsolverxAdsenseScheduled = true;
-
-                                var interactionEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
-                                var cleanup = function () {
-                                        for (var i = 0; i < interactionEvents.length; i += 1) {
-                                                window.removeEventListener(interactionEvents[i], loadAfterInteraction);
-                                        }
-                                };
-                                var loadAfterInteraction = function () {
-                                        cleanup();
-                                        loadAdsense();
-                                };
-                                var loadAfterWindowSettles = function () {
-                                        var run = function () {
-                                                cleanup();
-                                                loadAdsense();
-                                        };
-
-                                        if ('requestIdleCallback' in window) {
-                                                window.requestIdleCallback(run, { timeout: 3000 });
-                                                return;
-                                        }
-
-                                        window.setTimeout(run, 3000);
-                                };
-
-                                for (var i = 0; i < interactionEvents.length; i += 1) {
-                                        window.addEventListener(interactionEvents[i], loadAfterInteraction, {
-                                                once: true,
-                                                passive: true
-                                        });
-                                }
-
-                                if (document.readyState === 'complete') {
-                                        loadAfterWindowSettles();
-                                } else {
-                                        window.addEventListener('load', loadAfterWindowSettles, { once: true });
-                                }
-                        }
-
                         window.__wordsolverxLoadAnalytics = loadAnalytics;
                         window.__wordsolverxGetConsent = readConsent;
                         window.__wordsolverxSetConsent = function (value) {
@@ -345,7 +291,6 @@
 
                                 if (value === 'accepted') {
                                         loadAnalytics();
-                                        scheduleAdsense();
                                 }
                         };
 
@@ -385,7 +330,6 @@
 
                         if (initialConsent === 'accepted') {
                                 scheduleAnalytics();
-                                scheduleAdsense();
                         }
 
                         function updateCardFilter(input) {
@@ -493,7 +437,7 @@
         </script>
 
 %sveltekit.head%
-		<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTo5ZDU1NDdhMS1iNDBlLTQ2MWUtOTIzZS04MmY5N2Q5ZGQxZTg=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+        <script type="text/javascript" async="async" data-noptimize="1" data-cfasync="false" src="//scripts.scriptwrapper.com/tags/ac0e6549-a401-4cca-8916-4b05721e7169.js"></script>
 </head>
 
 <body data-sveltekit-preload-data="hover">
@@ -505,7 +449,7 @@
                                 <h2 class="cookie-settings-title">Cookies &amp; ads</h2>
                                 <p class="cookie-settings-body">
                                         We use storage for site preferences plus optional analytics and ads. Accept
-                                        enables Google Analytics &amp; AdSense; reject keeps browsing only. See our
+                                        enables Google Analytics; reject keeps browsing only. See our
                                         <a href="/privacy-policy">Privacy Policy</a>.
                                 </p>
                         </div>

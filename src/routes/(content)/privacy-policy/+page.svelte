@@ -77,8 +77,8 @@
 
       <h2>4. Analytics and Advertising</h2>
       <p>
-        WordSolverX uses optional third-party services for analytics and advertising. Those services are
-        not loaded until you accept them through our cookie consent banner.
+        WordSolverX uses optional third-party services for analytics. Those services are not loaded
+        until you accept them through our cookie consent banner.
       </p>
 
       <h3>Google Analytics</h3>
@@ -88,23 +88,19 @@
         information according to its own privacy documentation.
       </p>
 
-      <h3>Google AdSense</h3>
+      <h3>Advertising</h3>
       <p>
-        If you accept advertising cookies, we may load Google AdSense to display advertisements on the
-        site. Google and its partners may use cookies or similar technologies to serve ads based on your
-        visits to this site and other sites.
+        WordSolverX displays advertisements served by our advertising partner (Mediavine) through its
+        script at scripts.scriptwrapper.com. Our partner and its advertising network may use cookies or
+        similar technologies to serve ads based on your visits to this site and other sites.
       </p>
       <ul>
         <li>
-          Google&apos;s use of advertising cookies may enable it and its partners to serve ads based on your
-          visit to this site and/or other sites on the internet.
+          Our advertising partner manages its own consent controls for ad personalization in line with
+          industry frameworks.
         </li>
         <li>
-          You can learn more about Google&apos;s advertising controls at
-          <a href="https://adssettings.google.com/authenticated" rel="noopener noreferrer" target="_blank">Google Ads Settings</a>.
-        </li>
-        <li>
-          You can learn more about additional ad industry opt-out tools at
+          You can learn more about ad industry opt-out tools at
           <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info/choices</a>.
         </li>
       </ul>

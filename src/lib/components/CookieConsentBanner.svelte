@@ -75,7 +75,7 @@
 				<h2 class="mt-1 text-lg font-bold text-slate-900 dark:text-slate-50">Choose how WordSolverX loads cookies and ads</h2>
 				<p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
 					We use browser storage for site preferences, plus optional analytics and advertising scripts.
-					Accepting enables Google Analytics and AdSense. Rejecting keeps only the site features needed
+					Accepting enables Google Analytics. Rejecting keeps only the site features needed
 					to browse answer pages and tools. Details live in our <a class="font-semibold text-teal-600 hover:text-teal-500" href="/privacy-policy">Privacy Policy</a>.
 				</p>
 			</div>
