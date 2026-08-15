@@ -437,6 +437,10 @@ function getArticleScope() {
   return raw || 'current-group';
 }
 
+// Generation is DISABLED as of 2026-08-15 via the master switch in
+// .github/workflows/publish-pages.yml (ENABLE_DAILY_ARTICLE_GENERATION is forced to
+// 'false' there). All of this writing logic is kept intact for the planned
+// human-written static articles; delete the workflow override to re-enable.
 function shouldGenerateArticles() {
   return String(process.env.ENABLE_DAILY_ARTICLE_GENERATION ?? 'false').toLowerCase() === 'true';
 }

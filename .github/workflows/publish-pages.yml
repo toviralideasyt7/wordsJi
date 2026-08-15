@@ -52,7 +52,7 @@ on:
         default: true
         type: boolean
       generate_articles:
-        description: Generate daily articles before deploy
+        description: Generate daily articles before deploy (currently disabled by the generation master switch)
         required: false
         default: false
         type: boolean
@@ -91,7 +91,12 @@ jobs:
       NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       AGENT_ROUTER_TOKENS: ${{ secrets.AGENT_ROUTER_TOKENS }}
       AGENT_ROUTER_TOKEN: ${{ secrets.AGENT_ROUTER_TOKEN }}
-      ENABLE_DAILY_ARTICLE_GENERATION: ${{ github.event_name == 'repository_dispatch' || github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.generate_articles == 'true') }}
+      # ARTICLE GENERATION MASTER SWITCH — DISABLED (2026-08-15).
+      # The AI writing pipeline (scripts/generate-daily-articles.mjs) is kept intact but turned
+      # off: the pipeline only publishes answers now. Human-written static articles are planned
+      # later. To re-enable, restore the old expression here and remove the override in
+      # "Resolve Publish Strategy".
+      ENABLE_DAILY_ARTICLE_GENERATION: 'false'
       ARTICLE_MAX_CONCURRENCY: 6
       ARTICLE_MAX_ATTEMPTS: 3
       ARTICLE_REQUEST_TIMEOUT_MS: 120000
@@ -241,6 +246,11 @@ jobs:
               ;;
           esac
 
+          # ARTICLE GENERATION MASTER SWITCH — DISABLED (2026-08-15).
+          # The full strategy logic above is preserved, but generation is forced off so the
+          # pipeline only publishes answers. Delete this line to re-enable generation.
+          resolved_generate="false"
+
           {
             echo "GROUP_NAME=$resolved_group"
             echo "ARTICLE_GROUPS_TO_GENERATE=$resolved_article_groups"
@@ -348,6 +358,9 @@ jobs:
         if: env.WORKFLOW_MODE == 'generate-articles-only' || steps.canary.outputs.skip != 'true'
         run: npm ci --prefer-offline --no-audit
 
+      # Manual-only generation path. Automatic generation is disabled (see the master switch
+      # in "Resolve Publish Strategy"); this step still works when you explicitly dispatch the
+      # workflow with workflow_mode=generate-articles-only.
       - name: Generate Daily Articles Only
         if: env.WORKFLOW_MODE == 'generate-articles-only'
         env:

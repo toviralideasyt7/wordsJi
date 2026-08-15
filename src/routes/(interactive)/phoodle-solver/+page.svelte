@@ -2,7 +2,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import FAQSection from '$lib/components/FAQSection.svelte';
   import PhoodleSolverClient from '$lib/components/phoodle/PhoodleSolverClient.svelte';
   import {
     generateBreadcrumbSchema,
@@ -112,128 +111,7 @@
 
   <PhoodleSolverClient />
 
-  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">What is Phoodle?</h2>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        Phoodle is a daily word game launched in May 2022 by cookbook author Josh Laurito. It takes the Wordle format — 5 letters, 6 guesses, green-yellow-gray feedback — and restricts the answer list to food-related words only. Every daily answer is something connected to cooking, ingredients, dishes, or the kitchen.
-      </p>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        The game is free to play at phoodle.org and resets at midnight local time. Past answers include words like PASTA, BREAD, MANGO, OLIVE, STEAK, CREAM, LEMON, SALAD, FLOUR, and SUGAR. If you cook regularly, you already have a head start.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        After each guess, tiles turn green (correct letter, correct spot), yellow (wrong position), or gray (not in the word). Same mechanics as Wordle, but the food-only word list changes how you approach every guess.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">How Phoodle Differs from Wordle</h2>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        The biggest difference is the word list. Wordle pulls from roughly 2,300 possible answers across all English vocabulary. Phoodle uses a much smaller set — only food words. Every answer is an ingredient, cooking technique, dish name, kitchen tool, or something else tied to food culture.
-      </p>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        Generic Wordle openers like CRANE and SLATE are wasteful here — CRANE is not a food word, so it can never be the answer. Once you know a few letters, you can narrow candidates fast because the food domain is constrained. If you see _OAST with a green O and A, you're looking at ROAST or TOAST.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        Vowels A, E, and O dominate. Common food letters include R, S, T, L, and N. Letters Q, X, Z, and J rarely show up. You can exploit this frequency skew to eliminate large chunks of the word list with each guess.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">Best Opening Words for Phoodle</h2>
-      <div class="space-y-5">
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center">1</span>
-          <div>
-            <h3 class="font-bold text-slate-900">STEAK — the strongest opener</h3>
-            <p class="text-slate-600 mt-1 text-sm">Tests S, T, E, A, and K — four of the most common food-word letters. It's a valid Phoodle answer, so it could hit on guess one.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center">2</span>
-          <div>
-            <h3 class="font-bold text-slate-900">SPICE — high-coverage alternative</h3>
-            <p class="text-slate-600 mt-1 text-sm">Covers S, P, I, C, E. P and C appear in PASTA, CREAM, PEACH, CHILI, SCOOP, and CRISP — worth testing early.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-100 text-teal-700 font-bold flex items-center justify-center">3</span>
-          <div>
-            <h3 class="font-bold text-slate-900">BREAD, OLIVE, MELON as backups</h3>
-            <p class="text-slate-600 mt-1 text-sm">BREAD hits B, R, E, A, D. OLIVE tests O, L, I, V, E. MELON covers M, E, L, O, N. Rotate these if you like varied openers.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 font-bold flex items-center justify-center">4</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Avoid repeated-letter openers</h3>
-            <p class="text-slate-600 mt-1 text-sm">ONION tests only 3 unique letters (O, N, I). You want 4–5 distinct letters per guess to maximize information from each attempt.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">How the Phoodle Solver Works</h2>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        This solver runs the same standalone WASM bundle from the original Phoodle solver project. No server round-trips — the entire word list and elimination logic live inside the WebAssembly module that loads in your browser.
-      </p>
-      <p class="text-slate-600 leading-relaxed mb-4">
-        Enter the word you guessed, tap each letter tile to set its color (gray = absent, yellow = present, green = correct), and the WASM module filters the word list against your feedback, scores every remaining candidate by information value, and returns ranked suggestions.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        Results come back in under 50ms. You can enter feedback from multiple guesses at once. Tap any suggestion to load it directly into the guess input — no typing required.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">Common Phoodle Answer Categories</h2>
-      <p class="text-slate-600 leading-relaxed mb-6">
-        Phoodle answers cluster around specific categories. Knowing them helps you guess more efficiently — one strategic guess can rule out entire groups.
-      </p>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Ingredients and Staples</h3>
-          <p class="text-slate-600 text-sm">FLOUR, SUGAR, HONEY, LEMON, OLIVE, BASIL, ONION, BUTTER, CREAM — the largest category by far.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Cooking Methods</h3>
-          <p class="text-slate-600 text-sm">GRILL, ROAST, STEAM, BOIL, BLEND, SEAR, POACH. High-frequency letters make these good openers too.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Dishes and Prepared Foods</h3>
-          <p class="text-slate-600 text-sm">PASTA, SALAD, PIZZA, STEW, CURRY, CREPE, BREAD. Satisfying to guess once a few letters lock in.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Kitchen Tools</h3>
-          <p class="text-slate-600 text-sm">WHISK, SPOON, KNIFE, PLATE, GRATER, LADLE, TONGS. WHISK and GRATER test uncommon letters worth trying.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Fruits and Vegetables</h3>
-          <p class="text-slate-600 text-sm">MANGO, PEACH, APPLE, GRAPE, MELON, GUAVA. Many share the -EACH and -ANGO patterns.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl p-5">
-          <h3 class="font-bold text-slate-900 mb-2">Food Descriptors</h3>
-          <p class="text-slate-600 text-sm">SWEET, CRISP, FRESH, TANGY, CHUNK, CRUST, MOIST. Trickier because they describe food rather than name it.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl">
-      <FAQSection class="py-0" {faqs} title="Phoodle Solver FAQs" />
-    </div>
-
-    <section class="rounded-3xl bg-slate-100 p-8 text-center space-y-6">
-      <h2 class="text-2xl font-bold text-slate-900">More Solvers</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="/5-letter-wordle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Wordle Solver</a>
-        <a href="/squaredle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Squaredle Solver</a>
-        <a href="/waffle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Waffle Solver</a>
-        <a href="/nerdle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Nerdle Solver</a>
-        <a href="/hangman-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Hangman Solver</a>
-      </div>
-    </section>
-  </div>
+  
 
     <div class="mt-12">
       <AuthorCard

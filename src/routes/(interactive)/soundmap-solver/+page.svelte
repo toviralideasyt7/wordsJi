@@ -4,7 +4,6 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { browser } from '$app/environment';
-        import FAQSection from '$lib/components/FAQSection.svelte';
         import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import type { Artist, AttributeFeedback, FeedbackType, Guess } from '$lib/soundmap/types';
 
@@ -809,62 +808,7 @@
     </div>
   </main>
 
-                <div class="max-w-6xl mx-auto px-4 pb-12">
-                        <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl"><FAQSection {faqs} /></div>
-
-                        <!-- SEO Content -->
-                        <div class="space-y-8 mt-8">
-                                <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-                                        <h2 class="text-2xl font-bold mb-5 text-slate-900">What is Soundmap?</h2>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                Soundmap is a daily music artist guessing game. You get a mystery artist and up to 8 guesses to identify them. After each guess, the game reveals how close you were across 6 attributes: debut year, Spotify popularity rank, number of members, genre, country of origin, and gender.
-                                        </p>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                The game covers hundreds of artists across pop, rock, hip-hop, electronic, and other genres. Some are solo acts from the 1960s; others are modern bands or groups. The mix makes it genuinely hard without help.
-                                        </p>
-                                        <p class="text-slate-600 leading-relaxed">
-                                                The solver tracks all 6 attributes simultaneously. After 2-3 guesses with accurate feedback, the candidate list typically drops to under 10 artists.
-                                        </p>
-                                </div>
-
-                                <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-                                        <h2 class="text-2xl font-bold mb-5 text-slate-900">Reading the directional clues</h2>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                Two attributes use directional hints instead of just right/wrong. Debut year shows Earlier or Later — if you guessed an artist who debuted in 1995 and you see Later, the target debuted after 1995. Popularity uses Higher or Lower — if you see Higher, the target artist ranks higher (lower number) in Spotify popularity than your guess.
-                                        </p>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                Close for country means the same geographic region. Guessing a UK artist when the answer is Irish might return Close. Guessing an American when the answer is Canadian might also return Close.
-                                        </p>
-                                        <p class="text-slate-600 leading-relaxed">
-                                                Members and gender are binary — Correct or Wrong. Genre uses Correct or Wrong too, though genre categories can be broad (Rock covers everything from indie to metal).
-                                        </p>
-                                </div>
-
-                                <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-                                        <h2 class="text-2xl font-bold mb-5 text-slate-900">How the best-guess algorithm works</h2>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                The solver calculates the best next guess by looking at all remaining candidates and testing each possible artist as a guess. For each test, it simulates every possible feedback outcome and counts how many candidates would survive each outcome.
-                                        </p>
-                                        <p class="text-slate-600 mb-4 leading-relaxed">
-                                                The best guess is the one that produces the smallest average candidate pool across all possible outcomes. This is the minimax strategy — it minimizes the worst-case scenario. In practice, it usually halves the candidate pool or better with each guess.
-                                        </p>
-                                        <p class="text-slate-600 leading-relaxed">
-                                                Recommended first guesses are pre-calculated before you start. They score well against the full artist database — typically resolving the puzzle in 3-4 guesses from a cold start.
-                                        </p>
-                                </div>
-
-                                <!-- Internal links -->
-                                <div class="rounded-3xl bg-slate-100 p-8 text-center space-y-6">
-                                        <h2 class="text-2xl font-bold text-slate-900">More game solvers</h2>
-                                        <div class="flex flex-wrap justify-center gap-3">
-                                                <a href="/loldle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Loldle Solver</a>
-                                                <a href="/pokedle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Pokedle Solver</a>
-                                                <a href="/wordle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Wordle Solver</a>
-                                                <a href="/nerdle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Nerdle Solver</a>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
+                
 
                 {#if showHelp}
                         <div class="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">

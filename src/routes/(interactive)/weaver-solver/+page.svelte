@@ -3,7 +3,6 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import FAQSection from '$lib/components/FAQSection.svelte';
         import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     WORDSOLVERX_WORD_LENGTHS,
@@ -375,116 +374,7 @@
 
   </div>
 
-  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">What the Weaver game actually is</h2>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        Weaver gives you two words of the same length and asks you to get from one to the other by changing exactly one letter per step. Every intermediate word has to be real. COLD → CORD → WORD → WARD → WARM is a classic example — four steps, four valid words.
-      </p>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        The daily version picks one word pair. You try to beat it in fewer steps than the par. Some pairs have an obvious path. Others send you hunting through less common words before you find the right bridge.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        The concept goes back to 1879. Lewis Carroll invented it and called them Doublets, published in Vanity Fair magazine. His first example: HEAD → HEAL → TEAL → TELL → TALL → TAIL. Same rule, same structure — just no leaderboard.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">When the path isn't obvious</h2>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        Short words look easy. Three-letter pairs like CAT → DOG feel approachable, but CAT and DOG share no letters. You need a bridge word, then another, then another. CAT → BAT → BAD → BAG → BOG → DOG — five steps for what looked like a simple hop.
-      </p>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        Longer words have more letters to change but also more options at each step. A seven-letter word can swap any of seven positions, each producing a potential neighbor. The search space is bigger, but there are also more paths through it.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        The hardest puzzles involve words with unusual letter patterns — lots of uncommon consonants, or vowel combinations that only appear in a few words. There might be only one valid intermediate word at a certain step, and if you don't know it, you're stuck.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">How the solver finds the shortest path</h2>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        The solver uses bidirectional breadth-first search. It explores outward from both the start word and end word at the same time and stops the moment the two fronts meet. This is faster than searching from one end alone, especially for longer words.
-      </p>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        BFS guarantees the shortest path. It checks every path of length N before any path of length N+1. The first time a word appears in both frontiers, that's the meeting point — and you know it's optimal because no shorter path could have been missed.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        The word graph is built by comparing every word of the target length to every other. Two words are connected if they differ by exactly one letter. For 4-letter words, that graph has tens of thousands of edges. The solver navigates it in under a second.
-      </p>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">Patterns that actually help</h2>
-      <div class="space-y-5">
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-100 text-blue-700 font-bold flex items-center justify-center">1</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Work from both ends</h3>
-            <p class="text-slate-600 mt-1 text-sm">Think about what words are one step from your start, and what words are one step from your target. If any word appears on both lists, you've found a two-step path.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center">2</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Change vowels last</h3>
-            <p class="text-slate-600 mt-1 text-sm">Consonant swaps tend to preserve word meaning and stay in the dictionary. Changing the vowel often jumps into a different word family with fewer connections.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-violet-100 text-violet-700 font-bold flex items-center justify-center">3</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Know your three-letter words</h3>
-            <p class="text-slate-600 mt-1 text-sm">Short words like OAT, EAT, EAR, OAR, OAK form dense clusters. If your path goes through one of these, you often have several options for the next step.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-100 text-blue-700 font-bold flex items-center justify-center">4</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Avoid rare words as bridges</h3>
-            <p class="text-slate-600 mt-1 text-sm">A valid dictionary word isn't always useful. If only one other word connects to it, it's a dead end in disguise. Look for words with many neighbors.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center">5</span>
-          <div>
-            <h3 class="font-bold text-slate-900">Use the solver to learn</h3>
-            <p class="text-slate-600 mt-1 text-sm">After you've tried a puzzle, look at the solver's path. Pay attention to which bridge words it chose. Those words tend to be highly connected — knowing them helps on future puzzles.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
-      <h2 class="text-3xl font-bold text-slate-900 mb-5">Why some word pairs have no path</h2>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        Not every pair of same-length words is connected. The word graph can have disconnected components — islands of words that can only reach each other and not the broader network.
-      </p>
-      <p class="text-slate-600 mb-4 leading-relaxed">
-        Unusual words with uncommon letter patterns often end up isolated. They might have only one or two neighbors in the graph, and those neighbors might not connect back to the main component.
-      </p>
-      <p class="text-slate-600 leading-relaxed">
-        The daily Weaver game is designed to avoid this. Puzzle creators pick pairs from the connected core of the word graph. If the solver tells you no path exists, one of your words is probably spelled differently than expected, or it's not in the dictionary the solver uses.
-      </p>
-    </section>
-
-    <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl">
-      <FAQSection class="py-0" title="Weaver Solver FAQ" {faqs} />
-    </div>
-
-    <section class="rounded-3xl bg-slate-100 p-8 text-center space-y-6">
-      <h2 class="text-2xl font-bold text-slate-900">More Solvers</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="/word-ladder-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Word Ladder Solver</a>
-        <a href="/5-letter-wordle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Wordle Solver</a>
-        <a href="/squaredle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Squaredle Solver</a>
-        <a href="/boggle-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Boggle Solver</a>
-        <a href="/hangman-solver" class="px-5 py-2.5 bg-white rounded-xl font-semibold text-slate-700 shadow-sm hover:shadow-md transition-shadow">Hangman Solver</a>
-      </div>
-    </section>
-  </div>
+  
 
     <div class="mt-12">
       <AuthorCard

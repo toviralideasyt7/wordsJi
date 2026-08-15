@@ -30,13 +30,6 @@
         let guesses = $state<GuessFeedback[]>([]);
         let showHowTo = $state(true);
 
-        let expandedSections = $state({
-                howToPlay: false,
-                tips: false,
-                faqs: false,
-                strategies: false
-        });
-
         const config = $derived(GAME_SOLVER_CONFIGS[gameKey]);
         const seoContent = $derived(gameSolverSeoContent[gameKey]);
         const crossLinks = $derived(getSolverCrossLinks(gameKey));
@@ -70,12 +63,6 @@
                 searchQuery = '';
                 guesses = [];
                 showHowTo = true;
-                expandedSections = {
-                        howToPlay: false,
-                        tips: false,
-                        faqs: false,
-                        strategies: false
-                };
 
                 try {
                         const response = await fetch(dataFile);
@@ -457,12 +444,6 @@
                 return '--';
         }
 
-        function toggleSection(section: keyof typeof expandedSections): void {
-                expandedSections = {
-                        ...expandedSections,
-                        [section]: !expandedSections[section]
-                };
-        }
 </script>
 
 <svelte:head>
@@ -770,106 +751,5 @@
                         {/if}
                 </section>
 
-                <section class="space-y-4 mb-8">
-                        <div class="rounded-3xl border border-slate-200 bg-white shadow-md p-6">
-                                <h2 class="text-2xl font-black text-slate-900">{seoContent.title}</h2>
-                                <p class="text-slate-600 mt-1">{seoContent.description}</p>
-                                <div class="mt-4 space-y-4">
-                                        {#each seoContent.introduction as paragraph}
-                                                <p class="text-slate-700 leading-relaxed">{paragraph}</p>
-                                        {/each}
-                                </div>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-                                <button
-                                        type="button"
-                                        onclick={() => toggleSection('howToPlay')}
-                                        class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-                                >
-                                        <h3 class="text-lg font-semibold text-slate-900">How to Play {config.name}</h3>
-                                        <span class="text-xs font-semibold text-slate-500">{expandedSections.howToPlay ? 'Hide' : 'Show'}</span>
-                                </button>
-                                {#if expandedSections.howToPlay}
-                                        <div class="border-t border-slate-200 px-5 py-4 space-y-4">
-                                                {#each seoContent.howToPlay as step, index}
-                                                        <div class="flex gap-3">
-                                                                <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold shrink-0">
-                                                                        {index + 1}
-                                                                </div>
-                                                                <div>
-                                                                        <p class="font-semibold text-slate-900">{step.step}</p>
-                                                                        <p class="text-sm text-slate-600 mt-1">{step.description}</p>
-                                                                </div>
-                                                        </div>
-                                                {/each}
-                                        </div>
-                                {/if}
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-                                <button
-                                        type="button"
-                                        onclick={() => toggleSection('tips')}
-                                        class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-                                >
-                                        <h3 class="text-lg font-semibold text-slate-900">Pro Tips</h3>
-                                        <span class="text-xs font-semibold text-slate-500">{expandedSections.tips ? 'Hide' : 'Show'}</span>
-                                </button>
-                                {#if expandedSections.tips}
-                                        <div class="border-t border-slate-200 px-5 py-4 space-y-3">
-                                                {#each seoContent.tips as tip, index}
-                                                        <p class="text-sm text-slate-700">
-                                                                <span class="inline-block rounded-full bg-amber-100 text-amber-800 text-xs font-semibold px-2 py-0.5 mr-2">
-                                                                        Tip {index + 1}
-                                                                </span>
-                                                                {tip}
-                                                        </p>
-                                                {/each}
-                                        </div>
-                                {/if}
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-                                <button
-                                        type="button"
-                                        onclick={() => toggleSection('strategies')}
-                                        class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-                                >
-                                        <h3 class="text-lg font-semibold text-slate-900">Advanced Strategies</h3>
-                                        <span class="text-xs font-semibold text-slate-500">{expandedSections.strategies ? 'Hide' : 'Show'}</span>
-                                </button>
-                                {#if expandedSections.strategies}
-                                        <div class="border-t border-slate-200 px-5 py-4 space-y-3">
-                                                {#each seoContent.strategies as strategy}
-                                                        <div class="rounded-xl border border-violet-200 bg-violet-50 p-3 text-sm text-slate-700">
-                                                                {strategy}
-                                                        </div>
-                                                {/each}
-                                        </div>
-                                {/if}
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-                                <button
-                                        type="button"
-                                        onclick={() => toggleSection('faqs')}
-                                        class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-slate-50 transition-colors"
-                                >
-                                        <h3 class="text-lg font-semibold text-slate-900">Frequently Asked Questions</h3>
-                                        <span class="text-xs font-semibold text-slate-500">{expandedSections.faqs ? 'Hide' : 'Show'}</span>
-                                </button>
-                                {#if expandedSections.faqs}
-                                        <div class="border-t border-slate-200 px-5 py-4 space-y-4">
-                                                {#each seoContent.faqs as faq}
-                                                        <div class="pb-4 border-b border-slate-100 last:border-0 last:pb-0">
-                                                                <p class="font-semibold text-slate-900">{faq.question}</p>
-                                                                <p class="text-sm text-slate-600 mt-1">{faq.answer}</p>
-                                                        </div>
-                                                {/each}
-                                        </div>
-                                {/if}
-                        </div>
-                </section>
         </div>
 </div>
