@@ -7567,4 +7567,1177 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/wordle-solver", label: "Wordle Solver" }
     ]
   },
+
+  'octordle-solver': {
+    key: 'octordle-solver',
+    eyebrow: 'Octordle Solver Guide',
+    intro:
+      "Octordle is Wordle played eight times at once: eight five-letter words share one 13-guess budget, and every guess you type appears on all eight boards at the same time. That single shared budget is what makes Octordle genuinely different from Wordle — you are not solving eight puzzles, you are solving one allocation problem with eight answers. The Octordle solver treats it exactly that way: it filters all eight candidate lists in parallel and shows you which words earn progress on the most boards. Here is how the math works and the strategy that finishes most Octordle grids inside the limit.",
+    sections: [
+      {
+        heading: "Why eight boards change everything",
+        paragraphs: [
+          "In Wordle you have six guesses for one word. In Octordle you have 13 guesses for eight words — which sounds generous until you notice the trade-off. A guess that only helps one board costs a turn the other seven boards also needed, and a guess that helps several boards is worth several turns at once.",
+          "That is the core Octordle skill: every guess should earn progress on as many boards as possible. The solver ranks every candidate by how much information it would reveal across all eight remaining word lists, so a solid common word beats a clever narrow one every time.",
+          "The 13-guess budget works out to roughly one to two guesses per board, but the real arithmetic is different: three or four opening guesses that sweep the alphabet, then one or two targeted guesses per unresolved board."
+        ],
+        callout: {
+          title: "Shared guesses, multiplied value",
+          body: "A guess that hits three boards is worth three turns. That is the whole game — spend the opening sweeping letters, then finish boards with targeted words."
+        }
+      },
+      {
+        heading: "The opening salvo: three guesses, twenty letters",
+        paragraphs: [
+          "The strongest Octordle opening is a sequence of common words that covers as many distinct high-frequency letters as possible. Because every guess plays on every board, the first three guesses can expose more than twenty different letters across the eight answers.",
+          "A typical salvo uses words built from the most common English letters — E, A, R, I, O, T, N, S, L, C, U, D — arranged so that each guess's letters barely repeat. The solver surfaces the best salvo automatically, but the principle is what matters: maximize distinct letters per guess.",
+          "After the salvo you will have a rough picture of every board. Some will already show one or two green letters; others will still be a sea of gray. That uneven picture tells you exactly where to aim next."
+        ],
+        list: {
+          title: "What a good Octordle salvo does",
+          items: [
+            "Covers 20+ distinct letters in three guesses",
+            "Favors E, A, R, I, O, T, N, S, L, C, U, D over rare letters",
+            "Leaves every board with at least one visible clue",
+            "Sets up the second wave of targeted guesses",
+            "Costs only three of your 13 turns"
+          ]
+        }
+      },
+      {
+        heading: "The second wave: finish the boards that are almost done",
+        paragraphs: [
+          "After the salvo, score each board by how close it looks. A board with two or three green letters is close; a board with nothing but grays is still wide open. The solver shows this pressure directly in its ranked suggestions.",
+          "The efficient order is usually to finish the two or three most advanced boards first, because the words that solve them are short and information-rich — each one also reveals more letters for the stuck boards.",
+          "Every time you solve a board, stop guessing its letters and let it ride. From that point your guesses are free to focus entirely on the remaining boards, which is exactly how strong players climb out of the middle of the game."
+        ]
+      },
+      {
+        heading: "When to pivot into vertical mode",
+        paragraphs: [
+          "Octordle players describe two phases: horizontal, where every guess sweeps all boards, and vertical, where you commit to solving one board at a time. The switch happens when the remaining boards have too few candidates to share a common guess.",
+          "The solver flags that moment. When its suggestions start converging on a single board rather than spreading across several, the shared-guess phase is over — pick the most solvable board and drive it to completion.",
+          "Vertical mode is also where the 13-guess budget gets tight. Each board still open costs one to two targeted guesses, and the solver's ranking tells you which board can be closed with the fewest of them."
+        ],
+        callout: {
+          title: "Read the convergence",
+          body: "When ranked suggestions stop spreading across boards, stop spreading your guesses too. Commit to the closest board and close it."
+        }
+      },
+      {
+        heading: "Scoring the final boards without wasting turns",
+        paragraphs: [
+          "The last two or three boards are where Octordle games are lost. With three boards open and four guesses left, you cannot afford a guess that helps only one of them.",
+          "Look for a word that could plausibly be the answer to two boards at once — if a single guess finishes two boards, it effectively buys you a free turn. The solver's scoring weighs exactly this kind of double-value word ahead of single-board candidates.",
+          "And when you truly have no shared word left, choose the board with the fewest remaining candidates and take it down with the most informative guess — a word that rules out the maximum number of possibilities even if it cannot be the answer itself."
+        ]
+      },
+      {
+        heading: "Octordle answers, archives, and the daily grid",
+        paragraphs: ["Octordle publishes one new set of eight words every day, and the community tracks those answer sets the way Wordle players track their own daily word. Knowing a past Octordle answer set is mostly bragging rights, but the pattern data is genuinely useful: the game reuses common five-letter words across days, and the answer habits show up in the archive.","The solver itself is date-agnostic — it will filter the eight boards for any puzzle, today or past. What the daily cadence changes is your preparation: the same opener works every day, because high-frequency letters never stop being high-frequency.","That is the real Octordle edge. The answers change daily, but the letter math does not, and the solver is built entirely on the letter math."]
+      },
+      {
+        heading: "Common Octordle mistakes and how to avoid them",
+        paragraphs: ["The most common Octordle mistake is playing a narrow guess too early. A word that could only ever be the answer to one board is a luxury you cannot afford in the first half of the game, when all eight boards are still wide open. The solver’s ranking punishes exactly this: narrow words score low while boards are unshaped, and only rise once the field has narrowed enough that their specificity is worth the cost.","The second mistake is ignoring the pressure of the 13-guess budget until it is too late. Players who play the first six guesses as if they were playing Wordle often reach the halfway point with six boards still unresolved and only seven guesses left. The solver surfaces the pressure by showing the candidate count per board, so you can see the budget being spent in real time.","The third mistake is refusing to pivot. When the solver’s suggestions start converging on a single board, that is the signal to switch from horizontal sweeping to vertical finishing, and players who keep sweeping past that point burn guesses on boards that are already nearly solved. Learning to read the convergence is the difference between a comfortable Octordle win and a frustrating near-miss.","Finally, do not open with the same word every single day if it stops working. Octordle answers are drawn from a shared pool of common five-letter words, and a salvo that covers high-frequency letters is never wrong, but a salvo you have memorized can bias your reading of the boards. Let the solver’s ranked salvo guide the first three guesses and you will never open into a dead end."]
+      }
+    ],
+    faqHeading: "Octordle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Octordle?",
+        answer:
+          "Octordle is a Wordle variant with eight hidden words played at once. Every guess applies to all eight boards, and you have 13 guesses total to solve all of them."
+      },
+      {
+        question: "How many guesses do you get in Octordle?",
+        answer:
+          "Thirteen guesses for eight boards. The daily Octordle also offers extra lives that give you more chances, but the core 13-guess budget is the standard game."
+      },
+      {
+        question: "Is Octordle eight separate Wordle games?",
+        answer:
+          "Not quite. Each board is a normal five-letter Wordle puzzle, but the guesses are shared, which turns the game into an allocation problem: every guess must earn progress on as many boards as possible."
+      },
+      {
+        question: "What is the best Octordle opening?",
+        answer:
+          "A three-word salvo built from high-frequency letters, like CRANE, SLOTH, and BUILD. Each guess should add mostly new letters so the first three turns cover 20 or more distinct letters across the eight boards."
+      },
+      {
+        question: "How does the Octordle solver work?",
+        answer:
+          "The solver maintains a candidate list for each of the eight boards, filters all eight in parallel as you enter feedback, and ranks the next guess by how much progress it earns across every remaining list."
+      },
+      {
+        question: "Can I use the solver for past Octordle puzzles?",
+        answer:
+          "Yes. The solver works on any position, not just today's puzzle — enter your guesses and the clue colors you saw, and it will filter the candidate lists regardless of the date."
+      }
+    ],
+    relatedLinks: [
+      { href: "/quordle-solver", label: "Quordle Solver" },
+      { href: "/dordle-solver", label: "Dordle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" }
+    ]
+  },
+
+  'dordle-solver': {
+    key: 'dordle-solver',
+    eyebrow: 'Dordle Solver Guide',
+    intro:
+      "Dordle is Wordle doubled: two five-letter words, one shared guess per turn, and seven attempts to solve both boards. Seven guesses sounds like a lot until you remember that a single guess that only helps one board effectively costs both boards a turn. The Dordle solver filters the two candidate lists in parallel and ranks every suggestion by how much it reveals on both boards at once — which is the only way to win reliably inside seven turns. Here is how the game's budget works and the strategy the solver encodes.",
+    sections: [
+      {
+        heading: "The seven-guess budget, split two ways",
+        paragraphs: [
+          "Dordle's arithmetic is simple: seven guesses, two answers. If you treat it as two separate Wordle games you need twelve guesses and you lose. If you treat it as one shared game, seven turns is enough — but only when most guesses earn progress on both boards.",
+          "The solver's ranking encodes that math. A candidate word is scored by how much information it reveals across both candidate lists combined, not on a single board, so the suggestions naturally favor words that work for both puzzles.",
+          "Early in the game the two boards are nearly identical — both are full five-letter dictionaries. That is the moment when shared guesses are cheapest and most valuable, which is why the opening matters more in Dordle than in Wordle."
+        ],
+        callout: {
+          title: "One guess, two boards",
+          body: "A guess that reveals letters on both boards is worth two turns. Spend the first few guesses on words with high-value letters, and the budget stops being tight."
+        }
+      },
+      {
+        heading: "Openers that hit both boards",
+        paragraphs: [
+          "The same opening logic that works in Wordle works in Dordle, with one twist: you want the opening word to be a plausible answer to either board, so its feedback is useful in both columns.",
+          "Classic five-letter openers like CRANE, SLATE, or ADIEU are strong because they cover common vowels and consonants without repeating letters. Any green or yellow you get applies to a word that could appear on either board.",
+          "A two-word opening — CRANE then a word using the uncovered letters — usually leaves you with a good shape of both boards by turn two, with five turns left and plenty of information to work with."
+        ],
+        list: {
+          title: "Signs a Dordle opening is working",
+          items: [
+            "The first guess returns feedback on both boards",
+            "Most letters in the opening are common ones",
+            "By turn two, each board shows at least one colored tile",
+            "You still have five guesses for two partially solved boards"
+          ]
+        }
+      },
+      {
+        heading: "Reading two feedback grids at once",
+        paragraphs: [
+          "The unique skill in Dordle is reading two grids simultaneously. One guess produces two feedback rows — one per board — and they rarely agree. A letter that is green on board one can be gray on board two.",
+          "The solver removes the mental load: you tap the colors for each board, and it keeps two completely separate candidate lists. Your job is just to enter what you saw; the solver handles the bookkeeping of what is true on which board.",
+          "The discipline that matters is not mixing them up. A letter's color on board one has zero bearing on board two, and players who let one board's feedback bleed into their mental model of the other are the ones who run out of turns."
+        ]
+      },
+      {
+        heading: "When one board is solved and the other is stuck",
+        paragraphs: [
+          "The most common Dordle failure is the asymmetric endgame: board one solved by turn four, board two still a mystery with three turns left. That is winnable, but only with maximum-information guesses.",
+          "Once a board is solved, every remaining guess is a single-board game with a shrinking budget. Use each guess to eliminate as many candidates as possible, even if the word you type is not the answer — the solver ranks candidates by elimination power for exactly this situation.",
+          "If two guesses remain and the board still has several candidates, look for a word that could be the answer itself rather than an elimination play. The solver balances both options and tells you which is safer."
+        ]
+      },
+      {
+        heading: "The solver's double-board scoring, explained",
+        paragraphs: [
+          "Behind the scenes, the Dordle solver scores each candidate word against both remaining lists and reports a combined value. A word that is a plausible answer on board one and reveals strong letters on board two scores far higher than a word that only solves one board.",
+          "That combined score is why the solver's suggestions sometimes look odd — a word that is not the answer to either board can still be the best guess because of what it reveals across both.",
+          "It also explains the solver's endgame behavior. When the two boards share almost no candidates, the ranking switches to single-board mode automatically, exactly as a strong human player would."
+        ]
+      },
+      {
+        heading: "Dordle answers, dailies, and the two-word record",
+        paragraphs: ["Dordle releases one two-word puzzle per day, and its answer pairs are a small but revealing dataset: the two words rarely share letters, which is exactly what a good pair looks like from the game designer’s side — two words that force you to sweep a wide letter set.","The solver handles any daily or past Dordle position the same way: maintain both boards, filter both lists, and rank the shared guesses. The daily cadence only changes which words are in play, never the arithmetic.","Players who track the daily answers build a feel for the pairings the game favors, which makes their opening guesses slightly sharper — and the solver keeps the process honest by always suggesting the highest-value shared guess."]
+      },
+      {
+        heading: "Common Dordle mistakes and how to avoid them",
+        paragraphs: ["The classic Dordle mistake is solving one board first and then treating the second as a fresh Wordle. Once a board is solved, your guesses no longer earn double value, and a six-guess-per-board mindset burns the shared budget. The solver’s combined scoring exists precisely to keep both boards in play for as long as possible.","The second mistake is repeating letters across your opening words. Dordle rewards coverage, and two openers that share three letters cover barely more ground than one. The solver’s opening suggestions are chosen to add new letters each turn, so the first three guesses give you the widest possible view of both answers.","The third mistake is over-trusting a single board’s feedback. A green letter on board one does nothing for board two, and players who mentally merge the two boards end up with candidates that cannot possibly be right. The solver keeps the boards strictly separate, and you should too.","The winning pattern is disciplined: sweep with high-value openers, read both grids independently, and when the boards diverge, spend each guess where it earns the most — which the ranked suggestion list tells you at a glance."]
+      },
+      {
+        heading: "Dordle solver settings and word lengths",
+        paragraphs: ["The Dordle solver supports the same word lengths the game uses, and the double-board filter scales to each one: two candidate lists, filtered in parallel, ranked by combined value. A longer Dordle changes the word pool, not the arithmetic.","For archived puzzles, the solver works on any date — log each board’s feedback as you saw it and the two lists stay perfectly separate. The seven-guess discipline that wins the daily is identical for every puzzle in the archive."]
+      },
+      {
+        heading: "Why Dordle is the perfect bridge game",
+        paragraphs: ["Dordle sits exactly between Wordle and the multi-board monsters: one extra board, one extra guess, and the shared-guess mechanic that makes it interesting without being overwhelming. Players who master the two-board discipline find Quordle and Octordle far less intimidating afterward.","The solver bridges the same gap — it teaches the combined-value ranking that the bigger games need, on a scale where you can actually follow what it is doing. Learn Dordle with the solver and the eight-board game stops being a wall."]
+      }
+    ],
+    faqHeading: "Dordle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Dordle?",
+        answer:
+          "Dordle is a Wordle variant with two hidden five-letter words. You make one guess per turn and receive feedback on both boards, with seven total guesses to solve both words."
+      },
+      {
+        question: "How many guesses do you get in Dordle?",
+        answer:
+          "Seven guesses for two boards. Because guesses are shared, the effective budget per board is about three and a half turns — which is why shared-letter openers matter so much."
+      },
+      {
+        question: "Can one guess help both Dordle boards?",
+        answer:
+          "Yes, and that is the entire strategy. A guess that reveals letters on both boards is effectively two turns in one, so the solver ranks words by their combined value across both candidate lists."
+      },
+      {
+        question: "What is the best Dordle opening word?",
+        answer:
+          "The same high-value openers that work in Wordle, like CRANE or SLATE, work in Dordle because they cover common letters and could plausibly be either answer."
+      },
+      {
+        question: "Does the Dordle solver keep the boards separate?",
+        answer:
+          "Yes. It maintains an independent candidate list for each board and filters them separately as you enter each board's feedback, so a green on board one never contaminates board two's candidates."
+      },
+      {
+        question: "Is Dordle harder than Wordle?",
+        answer:
+          "The words are equally common, but the shared-guess mechanic makes it harder: a guess that only helps one board wastes half its value, so you must think about both answers with every turn."
+      }
+    ],
+    relatedLinks: [
+      { href: "/quordle-solver", label: "Quordle Solver" },
+      { href: "/octordle-solver", label: "Octordle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" }
+    ]
+  },
+
+  'xordle-solver': {
+    key: 'xordle-solver',
+    eyebrow: 'Xordle Solver Guide',
+    intro:
+      "Xordle is the Wordle variant that hides two words behind one row of feedback. You type a normal five-letter guess, and each position comes back showing the merged result of two hidden letters — one from each of the two secret words. Decoding that merged clue is the whole game, and it is exactly what the Xordle solver does for you: it keeps candidate lists for both hidden words, tries every possible split of the merged feedback, and tells you which words are still alive after each guess. Here is how the merge works and how to read it.",
+    sections: [
+      {
+        heading: "How the Xordle merge works",
+        paragraphs: [
+          "In Xordle, two five-letter words are hidden, and each of your guesses is scored against both of them at once. The feedback row you see merges the two results position by position, so a single colored tile can represent two different letters.",
+          "The solver's job starts with decoding: for every position, it enumerates the possible hidden letters that could have produced the tile you saw, and then it intersects that possibility set with both candidate dictionaries.",
+          "That decoding is where human players lose. A green tile means at least one of the two hidden words has that exact letter in that position, but you cannot tell which word — and a yellow tile is even more ambiguous, because it could come from either hidden word in either position."
+        ],
+        callout: {
+          title: "One tile, two truths",
+          body: "Every Xordle tile is a merge of two verdicts. The solver enumerates every split, so you never have to guess which word produced the color."
+        }
+      },
+      {
+        heading: "The nine-guess budget and the two-word picture",
+        paragraphs: [
+          "Xordle gives you nine guesses, which is generous compared with Wordle's six — but the information per guess is genuinely murkier, because the merge hides which word is which.",
+          "The first two or three guesses should be ordinary high-frequency openers, exactly like Wordle. The merge is hardest to read early, when both candidate lists are still huge, and a normal salvo narrows both lists at once.",
+          "The solver's ranked suggestions in the opening look like normal Wordle openers for the same reason: with both dictionaries full, the best move is still to sweep the most common letters."
+        ],
+        list: {
+          title: "Reading the merged clues correctly",
+          items: [
+            "A green tile means one of the two words has that letter in that spot",
+            "A yellow tile means the letter exists somewhere in one of the two words",
+            "A gray tile means the letter is in neither word — the only unambiguous verdict",
+            "Double green on a position means both words have that letter there",
+            "The same guess is scored against both words, so every tile is two verdicts in one"
+          ]
+        }
+      },
+      {
+        heading: "Why gray tiles are your best friends",
+        paragraphs: [
+          "The only fully unambiguous Xordle feedback is gray: it means the letter is absent from both hidden words. Every gray you collect removes that letter from both dictionaries at once, which is why a guess full of common letters is still the right play even though the colors are hard to read.",
+          "The solver leans on grays heavily in its scoring. A candidate guess that would confirm or deny a high-value letter in both lists scores better than one that only probes a single board.",
+          "As the game progresses, the balance shifts: once you have a decent picture of both words, greens and yellows start to dominate the ranking because they finally have enough context to pin down specific words."
+        ]
+      },
+      {
+        heading: "The endgame: resolving the split",
+        paragraphs: [
+          "With a few guesses left, the ambiguity concentrates in the split itself — you may know the exact set of letters but not which word owns which. That is when the solver's candidate enumeration earns its keep.",
+          "It maintains two separate filtered lists and reports them side by side, so you can see the two words converging. When a word appears on both lists, the solver flags it: that word is consistent with every clue for both hidden answers.",
+          "The final guesses in Xordle are often confirmations rather than discoveries — you play words that distinguish the two remaining candidates, and the solver tells you which word the feedback points to."
+        ]
+      },
+      {
+        heading: "The strategy that wins Xordle",
+        paragraphs: [
+          "Phase one, guesses one to three: sweep common letters with standard openers and let the solver decode the merged rows into two live candidate lists. Phase two, guesses four to six: probe the letters the merge left ambiguous, using words that would split the candidates cleanly.",
+          "Phase three, guesses seven to nine: resolve the two words. By then the solver usually has each word narrowed to a handful of candidates, and the feedback from your probe guesses identifies which is which.",
+          "The discipline that wins Xordle is never trying to out-think the merge. Enter the feedback exactly as shown, let the solver enumerate every split, and spend your guesses on words the solver ranks — the merge is decodable, but only systematically."
+        ]
+      },
+      {
+        heading: "Xordle answers and the two-word merge in practice",
+        paragraphs: ["Every Xordle puzzle hides two five-letter words, and the daily answers show the game’s taste: pairs of common words that share few letters, so the merged feedback stays readable. The solver’s two candidate lists mirror exactly that structure.","What makes Xordle answers interesting to study is the pair logic — the game picks words that are independently common but collectively distinctive, which is why the merge never collapses into an unreadable mess.","Whether you are solving today’s puzzle or replaying an archived one, the solver applies the same decoding: enumerate every split of the merged tiles, keep both lists consistent, and rank the next guess by how cleanly it would split the survivors."]
+      },
+      {
+        heading: "Common Xordle mistakes and how to avoid them",
+        paragraphs: ["The most common Xordle mistake is reading the merged tile as if it belonged to a single word. A green tile in position three does not mean your letter is correct in your word — it means one of the two hidden words has that letter there, and the solver exists to keep both interpretations alive.","The second mistake is ignoring gray tiles as a source of truth. Because gray is the only unambiguous verdict, it is the strongest evidence you have, and players who treat it as weakly as they treat ambiguous greens lose the game’s one reliable anchor.","The third mistake is guessing a word that is not a plausible answer to either hidden word. With nine guesses the budget feels generous, but every wasted probe costs you the resolution phase, when you actually need two or three turns to separate the final candidates.","The solver keeps the two candidate lists visible as they converge, so you always know how much ambiguity is left. When both lists are down to a handful of words, spend your probes distinguishing them rather than discovering new letters — the discovery phase is over."]
+      },
+      {
+        heading: "Xordle solver settings and word lengths",
+        paragraphs: ["The Xordle solver supports every word length the game uses, and the merge-decoding logic scales to each one: every merged tile is enumerated into its possible splits, and both hidden-word lists are filtered against all of them.","For past puzzles, the solver works on any date — enter the merged feedback exactly as shown, and the two candidate lists rebuild from scratch. The nine-guess budget is the same for every puzzle, and the decode-first discipline that wins the daily never changes."]
+      }
+    ],
+    faqHeading: "Xordle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Xordle?",
+        answer:
+          "Xordle is a Wordle variant where two hidden five-letter words share one feedback row per guess. Each colored tile merges the verdicts from both hidden words, so a single tile can hide two different letters."
+      },
+      {
+        question: "How many guesses do you get in Xordle?",
+        answer:
+          "Nine guesses, compared with six in Wordle. The extra turns compensate for the ambiguity of the merged feedback."
+      },
+      {
+        question: "How does merged feedback work in Xordle?",
+        answer:
+          "Every position of your guess is scored against both hidden words at once and the results are merged into one tile. A green tile means at least one hidden word has that letter in that position; only a gray tile is fully unambiguous."
+      },
+      {
+        question: "What does the Xordle solver do differently?",
+        answer:
+          "It keeps separate candidate lists for the two hidden words, enumerates every possible split of each merged tile, and filters both lists against all of them — decoding the merge exhaustively instead of by intuition."
+      },
+      {
+        question: "What is the best Xordle opening?",
+        answer:
+          "Standard high-frequency openers like CRANE or SLATE work well because they narrow both hidden word lists at once and produce the most readable early merge."
+      },
+      {
+        question: "Can the solver handle any Xordle position?",
+        answer:
+          "Yes. It works for any puzzle date and any word length the game uses — enter your guesses and the merged colors, and it maintains both candidate lists from there."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/dordle-solver", label: "Dordle Solver" },
+      { href: "/quordle-solver", label: "Quordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/w-peaks-solver", label: "Wordle Peaks Solver" }
+    ]
+  },
+
+  'fibble-solver': {
+    key: 'fibble-solver',
+    eyebrow: 'Fibble Solver Guide',
+    intro:
+      "Fibble is the Wordle variant with a liar problem: in every clue you receive, one tile is deliberately wrong. The game shows you the usual green, yellow, and gray verdicts, but exactly one of them is a fib, and figuring out which one — without being able to ask — is what makes Fibble genuinely harder than Wordle. The Fibble solver handles the deception the only reliable way: instead of trusting any single clue, it keeps every candidate word that is consistent with all but one tile of every clue. Here is how the lie mechanic works and how the solver thinks about it.",
+    sections: [
+      {
+        heading: "The one-lie rule, exactly as it works",
+        paragraphs: [
+          "In Fibble, each of your clues contains exactly one false tile. The other four verdicts are honest. You never know which position lied — the game simply guarantees that exactly one of the five tiles in each clue row is not the real verdict.",
+          "That guarantee is what makes Fibble solvable at all. If the game could lie any number of times, the information would be worthless; with exactly one lie per clue, the truth is always a single correction away.",
+          "The practical effect is a branching problem: every clue suggests five possible corrected versions, one per position, and the real answer must satisfy one of them — while also satisfying similar corrected versions of every other clue you have."
+        ],
+        callout: {
+          title: "One correction per clue",
+          body: "Every Fibble clue is one flip away from the truth. The solver tracks every possible correction at once, so the real answer can never hide behind the lie."
+        }
+      },
+      {
+        heading: "Why this breaks a normal Wordle solver",
+        paragraphs: [
+          "A standard Wordle solver assumes every tile is true, so a single lie filters out the real answer and leaves only wrong words. That is why Fibble needs its own logic: the candidate filter has to tolerate one contradiction per clue.",
+          "The Fibble solver's rule is simple to state and powerful in practice: a word stays alive if, for each clue, it contradicts at most one tile of that clue. Words that contradict two or more tiles of a single clue are eliminated, because a clue can only contain one lie.",
+          "Running that rule across several clues narrows the field dramatically. Each new clue must be consistent with the answer except for one position, which is a far tighter constraint than it sounds."
+        ]
+      },
+      {
+        heading: "The nine-guess budget buys room to probe",
+        paragraphs: [
+          "Fibble gives you nine guesses instead of Wordle's six, and that extra room exists precisely because the lies eat information. The solver treats guesses as probes: each turn is designed to either reveal the answer or shrink the ambiguity about which tiles lied.",
+          "A well-chosen probe word deliberately uses letters whose verdicts are informative even if one is wrong. Because you get nine turns, you can afford the redundancy of probing a letter twice — a repeated letter whose verdict changes tells you which clue lied.",
+          "The solver's ranking reflects this: it scores words by how well they would distinguish the remaining candidates under every possible lie placement, not just under the honest reading."
+        ],
+        list: {
+          title: "How to probe a suspected lie",
+          items: [
+            "Replay a letter that returned green or yellow in an earlier clue",
+            "If the second verdict contradicts the first, one of the two clues lied",
+            "Use a word that repeats the contested letter in a different position",
+            "Keep probing until exactly one reading remains consistent with every clue",
+            "Let the solver show which candidates survive each interpretation"
+          ]
+        }
+      },
+      {
+        heading: "How the solver tracks every possible truth",
+        paragraphs: [
+          "The heart of the Fibble solver is its consistency check. For every candidate word in the dictionary, it counts how many tiles of each clue the word contradicts. A candidate survives a clue if that count is zero or one, and it survives the game only if it survives every clue that way.",
+          "As clues accumulate, the solver also reasons about where the lies could have been: if a candidate matches a clue exactly except for one flipped position, the solver notes that position as a possible lie site. Across many candidates, the lie sites converge.",
+          "By the end of the game, the solver usually has the answer pinned with one clear lie identified per clue — the same information a perfect human player would have deduced by careful cross-checking, but reached in seconds."
+        ]
+      },
+      {
+        heading: "The Fibble mindset: trust patterns, not tiles",
+        paragraphs: [
+          "The biggest mistake Fibble players make is treating a clue as gospel. One tile per clue is wrong by design, so the winning mindset is to look for the interpretation that makes everything else consistent.",
+          "The solver embodies that mindset: it never commits to a reading of a clue, it keeps every reading alive until the evidence eliminates it, and it only surfaces candidates that survive all of the surviving readings.",
+          "Play with that discipline and Fibble is a puzzle about consistency rather than luck. The lies stop being traps and become just another constraint — the one that makes the game interesting."
+        ]
+      },
+      {
+        heading: "Fibble answers and the daily lie, tracked",
+        paragraphs: ["Each Fibble puzzle is a five-letter word plus its daily lie pattern, and the community’s answer logs make an interesting study: the lie placement is random, but the answers themselves skew toward the common end of the dictionary — the game wants you to beat the deception, not the vocabulary.","That answer bias is a quiet advantage for the solver. Because the candidate pool is mostly common words, the consistency check converges faster than it would on an obscure list.","For players, the takeaway is to trust the solver’s surviving-candidate list and not to overthink the lie. One tile per clue is wrong, everything else is honest, and the consistent reading always wins."]
+      },
+      {
+        heading: "Common Fibble mistakes and how to avoid them",
+        paragraphs: ["The most common Fibble mistake is treating every clue as gospel. The whole point of the game is that one tile per clue is wrong, and players who commit to the literal reading of an early clue will find the answer eluding them all game. The solver never commits, and neither should you.","The second mistake is wasting the nine-guess budget. Because the lies eat information, every guess must be a probe — a word that would clarify which reading is real. Guessing the first word that looks plausible is how streaks die in Fibble.","The third mistake is ignoring the one-lie guarantee. Some players assume the game could lie any number of times and give up on deduction entirely, but the guarantee is what makes the puzzle solvable: every clue is one correction away from truth, and the solver’s consistency check exploits exactly that.","The winning pattern is procedural: log each clue, let the solver keep every candidate consistent with all-but-one-tile of every clue, probe the contested letters, and watch the survivor list converge. Played that way, Fibble is a consistency puzzle rather than a coin flip."]
+      },
+      {
+        heading: "Fibble solver settings and word lengths",
+        paragraphs: ["The Fibble solver supports the word lengths the game uses, and the lie-tolerance filter scales to each one: a candidate survives a clue if it contradicts at most one tile of it, at any length.","For archived puzzles, the solver works on any date — log each clue and the one-lie filter rebuilds the candidate set exactly as it does for today’s daily. The nine-guess probing discipline is identical whether the puzzle is fresh or months old."]
+      }
+    ],
+    faqHeading: "Fibble Solver FAQ",
+    faqs: [
+      {
+        question: "What is Fibble?",
+        answer:
+          "Fibble is a Wordle variant where every clue contains exactly one deliberately wrong tile. You see the usual green, yellow, and gray verdicts, but one position in each clue is a lie."
+      },
+      {
+        question: "How many lies are in each Fibble clue?",
+        answer:
+          "Exactly one per clue. The game guarantees one false tile per row, which makes the puzzle solvable: every clue is one correction away from the truth."
+      },
+      {
+        question: "How many guesses do you get in Fibble?",
+        answer:
+          "Nine guesses, three more than standard Wordle. The extra turns are there to compensate for the information lost to the lies."
+      },
+      {
+        question: "How does the Fibble solver deal with the lies?",
+        answer:
+          "Instead of trusting any single tile, the solver keeps every word that contradicts at most one tile per clue. A candidate is eliminated only if it contradicts two or more tiles of a single clue."
+      },
+      {
+        question: "Can I beat Fibble without a solver?",
+        answer:
+          "Yes, by probing: replay contested letters in later guesses and cross-check verdicts. When a repeated letter's verdict changes, one of the clues lied, and the consistent reading eventually pins the answer."
+      },
+      {
+        question: "Does the solver work for every Fibble puzzle?",
+        answer:
+          "Yes, for any date and word length. Enter each guess and its clue, and the solver maintains the full set of lie-tolerant candidates from start to finish."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/hardle-solver", label: "Hardle Solver" },
+      { href: "/warmle-solver", label: "Warmle Solver" },
+      { href: "/xordle-solver", label: "Xordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'warmle-solver': {
+    key: 'warmle-solver',
+    eyebrow: 'Warmle Solver Guide',
+    intro:
+      "Warmle is the Wordle variant where yellow means something completely different: instead of \"right letter, wrong position,\" a yellow tile means the letter is alphabetically close to the answer letter in that same position. The game literally tells you when you are getting warm. That small rule change turns Warmle into a game about the alphabet — every yellow tile is a directional hint, and a gray tile means the answer letter is far away rather than absent. The Warmle solver applies that logic to a full dictionary, ranking guesses by how much alphabetic distance they reveal. Here is how the mechanic works and how to use it.",
+    sections: [
+      {
+        heading: "Yellow means close, not misplaced",
+        paragraphs: [
+          "In standard Wordle a yellow tile means the letter exists elsewhere in the word. In Warmle a yellow tile means the letter you guessed is alphabetically near the true letter in the same position — usually within a small distance threshold that the solver lets you set.",
+          "That flips the meaning of the board completely. A yellow on the first letter means the answer's first letter is close to yours in the alphabet, not that your letter appears somewhere else.",
+          "The practical upshot: a Warmle board reads like a set of five mini-riddles, each one a position where the alphabet has been narrowed to a small window around your guess."
+        ],
+        callout: {
+          title: "Warmth is positional",
+          body: "Warmle's yellow is about one position only: it says the true letter in that exact spot sits close to your letter in the alphabet. Use it to walk toward the letter, position by position."
+        }
+      },
+      {
+        heading: "Reading the three verdicts in Warmle",
+        paragraphs: [
+          "Green works exactly as in Wordle: the letter is correct in that position. Yellow means alphabetically close in that same position. Gray means the true letter is far away alphabetically — and crucially, it does not mean the letter is absent from the word.",
+          "The gray nuance matters more than any other detail in Warmle. A gray on a common letter like A in the first position tells you the answer's first letter is far from A — toward the other end of the alphabet — but says nothing about whether A appears elsewhere.",
+          "Because distance is relative, the same tile means different things depending on your guess. The solver standardizes this by computing, for every candidate word, the exact alphabetic distance between your guessed letter and the candidate's letter at each position."
+        ]
+      },
+      {
+        heading: "The distance threshold, and why it matters",
+        paragraphs: [
+          "Warmle defines \"close\" with a distance threshold — commonly around three or four positions in the alphabet. The Warmle solver exposes that setting so your feedback matches the game's exact rule.",
+          "If the game uses a threshold of three, a guessed letter within three alphabet steps of the true letter counts as yellow, and anything farther is gray. Getting the threshold wrong makes every subsequent deduction wrong, which is why the solver lets you tune it.",
+          "The threshold also shapes strategy: with a larger threshold, yellow tiles are easy to get but weak as hints; with a smaller one, yellows are rarer but each one pins the letter to a very tight window."
+        ],
+        list: {
+          title: "Warmle clue-reading checklist",
+          items: [
+            "Green: exact match in that position — lock it",
+            "Yellow: the true letter is alphabetically near yours in that spot",
+            "Gray: the true letter is alphabetically far — walk the other way",
+            "Gray does NOT remove your letter from the word entirely",
+            "Match the solver's distance setting to the game's threshold"
+          ]
+        }
+      },
+      {
+        heading: "How the solver walks the alphabet",
+        paragraphs: [
+          "The Warmle solver treats each position independently. For every candidate word it computes how your guess's letter compares with the candidate's letter at each position, then keeps only the candidates whose distances match every verdict you entered.",
+          "The ranking then rewards guesses that split the alphabet cleanly. A probe letter near the middle of a position's remaining window reveals the most information whether the verdict is yellow or gray.",
+          "That is why the solver's suggestions sometimes look like odd words: in Warmle, a word full of mid-alphabet letters in the right positions is far more valuable than a common word with extreme letters."
+        ]
+      },
+      {
+        heading: "The winning Warmle strategy",
+        paragraphs: [
+          "Open with a word that spreads letters across the alphabet rather than clustering them — you want a first clue that tells you about the extremes and the middle of the alphabet at once.",
+          "When a position returns yellow, your next guess for that position should be a letter a couple of steps toward where the true letter might be, effectively walking toward it. The solver shows the remaining window for each position, so you always know which direction to walk.",
+          "And when a position returns gray, do not waste a guess trying letters near your first choice — jump to the opposite end of the window. Each gray cuts the alphabet in half for that position, which is exactly the elimination the solver counts on."
+        ]
+      },
+      {
+        heading: "Warmle answers and the alphabet’s daily walk",
+        paragraphs: ["Warmle answers are ordinary five-letter words, but the game’s feedback makes them feel like a different species: every clue is a set of five alphabetic distances rather than a set of letter verdicts. Studying past answers reveals why the game works — most five-letter words sit comfortably in the mid-alphabet, so the warmth mechanic stays meaningful all game.","The solver’s per-position windows are exactly the tool the daily game rewards. Each new Warmle puzzle is a fresh walk through the alphabet, and the solver walks it faster than any human can.","Keep the distance threshold matched to the game and the solver will land most dailies inside the six-guess budget, with the answer usually appearing on its ranked list two or three turns before you would have found it by hand."]
+      },
+      {
+        heading: "Common Warmle mistakes and how to avoid them",
+        paragraphs: ["The most common Warmle mistake is carrying over Wordle instincts: treating yellow as misplaced and gray as absent. Both readings are wrong in Warmle, and players who do not unlearn them will draw conclusions that point in entirely the wrong direction. Warmle yellow is a proximity signal; Warmle gray is a distance signal.","The second mistake is guessing clustered letters. In Wordle, a word full of common letters is a good opener; in Warmle, the same word tells you almost nothing, because all its letters live in the same alphabet region. The solver’s ranking corrects for this by preferring words spread across the alphabet.","The third mistake is ignoring the distance threshold. If the game uses a threshold of three and you assume four, half your yellows will be misread as grays, and every deduction downstream will be wrong. Matching the setting is not optional — it is the difference between solving and flailing.","The winning pattern is to walk, not guess: read each position’s remaining window, probe its midpoint, and use every yellow as a step toward the true letter. The solver shows the windows, so the walk is always visible."]
+      },
+      {
+        heading: "Warmle solver settings and word lengths",
+        paragraphs: ["The Warmle solver exposes the distance threshold and supports every word length the game uses. The threshold must match the game’s rule exactly, because every yellow-and-gray deduction flows from it; the length setting only changes which dictionary loads.","For past puzzles, the solver works on any date — enter the clues with the correct threshold and the alphabet windows rebuild from scratch. The walk-the-alphabet strategy that wins the daily is the same for every archived puzzle."]
+      }
+    ],
+    faqHeading: "Warmle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Warmle?",
+        answer:
+          "Warmle is a Wordle variant where yellow tiles mean the guessed letter is alphabetically close to the true letter in the same position, rather than meaning the letter is misplaced."
+      },
+      {
+        question: "What does yellow mean in Warmle?",
+        answer:
+          "Yellow means the answer letter in that exact position is alphabetically near your guessed letter, usually within a small distance threshold. It is a warmth hint, not a misplaced-letter hint."
+      },
+      {
+        question: "What does gray mean in Warmle?",
+        answer:
+          "Gray means the true letter in that position is alphabetically far from your guess. Unlike Wordle, it does not mean your letter is absent from the word."
+      },
+      {
+        question: "How does the Warmle solver work?",
+        answer:
+          "It computes the alphabetic distance between your guessed letters and every candidate word's letters at each position, keeps only the candidates consistent with all verdicts, and ranks guesses by how much alphabetic information they would reveal."
+      },
+      {
+        question: "Why is there a distance setting in the solver?",
+        answer:
+          "The game defines \"close\" with a threshold. The solver's distance setting lets you match that threshold exactly so its deductions line up with the feedback you actually received."
+      },
+      {
+        question: "What is the best Warmle opening?",
+        answer:
+          "A word whose letters are spread across the alphabet, so your first clue maps the extremes and the middle at once. Clustered letters waste the warmth mechanic."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/hardle-solver", label: "Hardle Solver" },
+      { href: "/woodle-solver", label: "Woodle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" }
+    ]
+  },
+
+  'hardle-solver': {
+    key: 'hardle-solver',
+    eyebrow: 'Hardle Solver Guide',
+    intro:
+      "Hardle is the Wordle variant that makes you question your own eyes: the clue tiles can swap roles. The game shows the usual green, yellow, and gray verdicts, but on some guesses the greens and yellows are deliberately exchanged, so a tile that looks green may really be telling you the letter is misplaced. The Hardle solver handles the uncertainty by keeping every candidate that is consistent with at least one possible assignment of the swapped tiles. Here is how the mechanic works and why it rewires normal Wordle instincts.",
+    sections: [
+      {
+        heading: "The swap rule, stated plainly",
+        paragraphs: [
+          "In Hardle you get eight guesses instead of six, and the reason is the trick: for some of your clues, the green and yellow verdicts are swapped before you see them. A letter that is correctly placed may light up yellow, and a misplaced letter may light up green.",
+          "The game does not tell you which clues are swapped, which is the entire difficulty. You have to solve the word while holding multiple interpretations of the board in your head at once.",
+          "Gray tiles stay honest — a gray always means the letter is absent. That one anchor is what makes Hardle solvable, and it is the first thing the solver leans on."
+        ],
+        callout: {
+          title: "Greens and yellows are negotiable",
+          body: "In Hardle, green and yellow can swap. Gray is the only verdict you can fully trust, so the solver builds every deduction around grays first."
+        }
+      },
+      {
+        heading: "Why this breaks standard Wordle logic",
+        paragraphs: [
+          "A standard Wordle solver assumes a green tile pins a letter to a position. In Hardle that assumption is unsafe, so the solver tracks two readings of every colored tile: the literal one and the swapped one.",
+          "A candidate word stays alive if it matches at least one consistent reading of every clue. If a word contradicts every possible reading of a single clue, it is eliminated — but it only needs one viable reading to survive.",
+          "That relaxation makes the candidate set larger and the deductions slower than in Wordle, which is precisely why Hardle gives you two extra guesses."
+        ]
+      },
+      {
+        heading: "The eight-guess budget and how to spend it",
+        paragraphs: [
+          "Eight guesses is the game's acknowledgment that each clue carries less trustworthy information. The solver spends that budget on redundancy: it favors probes that clarify which readings are real.",
+          "Replaying a letter that came back green or yellow in an earlier clue is the strongest probe. If the second verdict contradicts the first, you now know one of the clues was swapped and you can discard its misleading reading.",
+          "The solver ranks words by how much they would resolve the swap ambiguity, not just by how many letters they test — the two goals are different in Hardle."
+        ],
+        list: {
+          title: "Hardle probe guidelines",
+          items: [
+            "Trust grays absolutely — they are never swapped",
+            "Replay green or yellow letters to detect swapped clues",
+            "Prefer words that repeat a contested letter in a new position",
+            "Discard a clue's literal reading once a contradiction appears",
+            "Spend the last guesses confirming, not exploring"
+          ]
+        }
+      },
+      {
+        heading: "How the solver models both readings",
+        paragraphs: [
+          "The Hardle solver's core loop is simple: for each clue, build the set of readings that candidate words could have produced, and keep every candidate that survives at least one full interpretation.",
+          "As clues accumulate, the solver also tracks which clues are likely swapped. If a candidate requires clue three to be read as swapped but handles clue one and two literally, the solver notes that consistency and carries it forward.",
+          "By the end of the game, the surviving candidates usually share a single coherent story: the word, plus which clues lied about their colors. That story is exactly what a perfect human player would reconstruct."
+        ]
+      },
+      {
+        heading: "The Hardle mindset: hold every interpretation",
+        paragraphs: [
+          "The players who lose Hardle are the ones who commit to a reading of an early clue and stop questioning it. The winning mindset is the opposite: every colored tile is a hypothesis, and hypotheses get confirmed or discarded by later evidence.",
+          "The solver never commits. It keeps every candidate that any coherent interpretation allows, and it only narrows when the evidence genuinely rules readings out.",
+          "Play with that patience and Hardle becomes a puzzle about deduction under uncertainty — which is harder than Wordle, but exactly as fair. The truth is always in there, recoverable from the clues you have."
+        ]
+      },
+      {
+        heading: "Hardle answers and the swapped-clue dailies",
+        paragraphs: ["Every Hardle puzzle is a five-letter word whose clues are occasionally swapped, and the daily answers show the game’s fairness: the words themselves are common, so the difficulty comes entirely from the unreliable feedback rather than obscure vocabulary.","That design choice is good news for the solver. A common-word pool means the two-readings filter stays tight, and the surviving candidates converge quickly once you have two or three clues logged.","It is also the right way to think about Hardle as a player: the answer is never the hard part, the interpretation is. Trust the grays, probe the colored tiles, and let the solver hold every reading until the evidence settles it."]
+      },
+      {
+        heading: "Common Hardle mistakes and how to avoid them",
+        paragraphs: ["The most common Hardle mistake is trusting the first green you see. In Hardle, green can be swapped with yellow, so an early green is a hypothesis, not a fact. Players who anchor their deductions to an early green usually find themselves defending a position that the later clues quietly contradict.","The second mistake is ignoring grays. Gray is the one honest verdict in Hardle, and it is also the least exciting one, so it gets ignored. The solver does the opposite: it builds its foundation on grays and treats every colored tile as negotiable.","The third mistake is failing to probe. With eight guesses, you have room to replay a contested letter — and when the repeated letter returns a contradictory verdict, you have caught a swapped clue. Players who never probe spend the whole game guessing under a fog they could have lifted in one turn.","The winning pattern is skeptical but systematic: log every clue, let the solver hold every coherent reading, probe the contested letters, and only commit when the surviving candidates agree on a single story. Hardle rewards patience, and the solver makes patience cheap."]
+      },
+      {
+        heading: "Hardle solver settings and word lengths",
+        paragraphs: ["The Hardle solver supports the same word lengths the game uses, and it applies the two-reading filter to every length the same way. Whether the daily Hardle is a five-letter puzzle or one of the longer variants, the mechanics do not change: grays are honest, greens and yellows are negotiable, and the candidate filter tolerates one swapped reading per clue.","If you are replaying an archived Hardle puzzle, the solver works on any date — enter the guesses and clues exactly as the game showed them, and the two-reading filter rebuilds the candidate set from scratch. The length setting only changes which dictionary loads, not the logic."]
+      },
+      {
+        heading: "The reward for playing Hardle carefully",
+        paragraphs: ["Hardle’s swapped colors feel like an attack on your confidence, but the game is scrupulously fair: gray never lies, the words are common, and every clue is decodable with enough cross-checking. Players who embrace the skeptical method find that Hardle sharpens their whole word-game toolkit.","The solver exists to make that method fast. It holds every reading, probes the contested letters, and never lets a swapped clue hide the truth — which is exactly the assurance a careful Hardle player wants. Load the daily, log the clues, and let the solver keep every reading alive until only one word survives."]
+      }
+    ],
+    faqHeading: "Hardle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Hardle?",
+        answer:
+          "Hardle is a Wordle variant where green and yellow clue tiles can be swapped on some guesses. A correctly placed letter may appear yellow, and a misplaced letter may appear green."
+      },
+      {
+        question: "How many guesses do you get in Hardle?",
+        answer:
+          "Eight guesses, two more than standard Wordle, to compensate for the unreliable color feedback."
+      },
+      {
+        question: "Are gray tiles always honest in Hardle?",
+        answer:
+          "Yes. Gray always means the letter is absent from the answer. It is the only fully trustworthy verdict, which is why the solver builds its deductions around grays first."
+      },
+      {
+        question: "How does the Hardle solver handle swapped colors?",
+        answer:
+          "It keeps every candidate word that is consistent with at least one reading of each clue — literal or swapped — and only eliminates words that contradict every possible reading of a clue."
+      },
+      {
+        question: "What is the best strategy for Hardle?",
+        answer:
+          "Probe: replay letters that returned green or yellow in earlier clues. When a repeated letter's verdict contradicts the first one, you have caught a swapped clue and can discard its misleading reading."
+      },
+      {
+        question: "Is Hardle harder than Wordle?",
+        answer:
+          "Yes, by design. The unreliable colors reduce the information per guess, so the game grants two extra guesses and rewards careful cross-checking over raw intuition."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/fibble-solver", label: "Fibble Solver" },
+      { href: "/warmle-solver", label: "Warmle Solver" },
+      { href: "/woodle-solver", label: "Woodle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'woodle-solver': {
+    key: 'woodle-solver',
+    eyebrow: 'Woodle Solver Guide',
+    intro:
+      "Woodle is the Wordle variant that strips the board down to numbers: instead of a colored tile for every letter, each guess comes back with just two counts — how many of your letters are in the exact right spot, and how many are in the word but misplaced. That is all the feedback you get. No positions, no colors, no hints about which letters earned which verdict. The Woodle solver plays the same information-poor game and wins anyway, because it knows how to squeeze every bit of signal out of a pair of numbers. Here is how the feedback works and how the solver extracts meaning from it.",
+    sections: [
+      {
+        heading: "Count-only feedback, and why it is brutal",
+        paragraphs: [
+          "In Woodle, after each guess you learn exactly two numbers: the count of exact matches and the count of misplaced letters. You do not learn which positions are exact, which letters are misplaced, or which letters are absent.",
+          "That single change removes the scaffolding Wordle players rely on. A green tile in Wordle pins a letter to a position; in Woodle, a count of two exacts leaves you guessing which two of the five positions are right.",
+          "The information is still there — it is just compressed. Every pair of numbers is a constraint on the answer, and the solver's skill is expanding that constraint into a full filter over the dictionary."
+        ],
+        callout: {
+          title: "Two numbers, every clue",
+          body: "Exact count and misplaced count are all Woodle gives you. The solver turns those two numbers into a precise filter — every candidate must produce exactly those counts against your guess."
+        }
+      },
+      {
+        heading: "What a count pair actually tells you",
+        paragraphs: [
+          "Suppose you guess CRANE and the game says one exact, two misplaced. The answer contains C, R, A, N, or E somewhere — exactly three of those five letters, no more — and exactly one of them sits in the position CRANE put it.",
+          "That narrows the dictionary enormously, because most five-letter words share almost no letters with CRANE. The solver computes the intersection instantly: any candidate whose overlap with your guess is not exactly three letters is gone.",
+          "The counts also imply what is absent: if the total is three, the other two guessed letters are not in the answer at all. Woodle makes you deduce absence from arithmetic instead of showing it to you."
+        ],
+        list: {
+          title: "Decoding a Woodle count pair",
+          items: [
+            "Exact + misplaced = how many of your letters are in the answer",
+            "The remaining guessed letters are absent entirely",
+            "Exact count = how many are in the right positions",
+            "The two numbers together must match for a word to stay alive",
+            "Repeated letters change the arithmetic — the solver handles them"
+          ]
+        }
+      },
+      {
+        heading: "How the solver filters on two numbers",
+        paragraphs: [
+          "The Woodle solver runs the same check a careful human would run, across the whole dictionary: for every candidate word, it computes the exact-match count and the misplaced count against your guess, and keeps the word only if both numbers match the feedback you received.",
+          "That is a much weaker filter than Wordle's colored tiles, which is why Woodle games run longer. The solver compensates by ranking guesses for information: the best guess splits the surviving candidates into the most even distribution of count pairs.",
+          "A guess whose possible count pairs are spread evenly across the candidates tells you more than a guess whose pairs clump. That entropy-based ranking is the solver's real engine."
+        ]
+      },
+      {
+        heading: "The eight-guess budget and opening strategy",
+        paragraphs: [
+          "Woodle gives you eight guesses, and you will need them. The opening should be a word whose count pair is maximally informative — again a common-letter word, because the overlap arithmetic does the work.",
+          "The solver's opening suggestions look like Wordle openers for a reason: CRANE, SLATE, and their cousins spread letters so that any count pair narrows the field meaningfully.",
+          "Because each clue eliminates fewer words than in Wordle, expect the game to feel like a slow grind. The solver keeps the candidate count visible so you can watch it shrink turn by turn."
+        ]
+      },
+      {
+        heading: "The Woodle strategy the solver teaches",
+        paragraphs: [
+          "The winning Woodle pattern is to alternate between discovering letters and placing them. Early guesses are discovery plays — high-overlap words that teach you which letters exist. Later guesses are placement plays — words built from known letters that reveal position via the exact count.",
+          "Once you know the letter set, the exact count becomes your positioning tool: try the letters in new arrangements and read the exact number to see how close you are.",
+          "The solver automates the whole loop, but following it by hand is a genuine skill — and players who learn Woodle's arithmetic usually find their Wordle play sharpens too, because they stop relying on colored tiles and start thinking about what the numbers imply."
+        ]
+      },
+      {
+        heading: "Woodle answers and the count-only daily grind",
+        paragraphs: ["Woodle answers are common five-letter words, but with count-only feedback every daily puzzle turns into an arithmetic exercise. The game’s choice of common answers is deliberate: obscure words would make the count pair almost unreadable, while common words keep the overlap math meaningful.","The solver turns the grind into a routine: log each guess and its two numbers, watch the candidate count drop, and let the ranking pick the next probe. Most dailies resolve inside the eight-guess budget with room to spare.","The discipline the game teaches carries over to every other wordle variant — once you have learned to think in terms of what the numbers imply, colored tiles feel like luxury."]
+      },
+      {
+        heading: "Common Woodle mistakes and how to avoid them",
+        paragraphs: ["The most common Woodle mistake is trying to play it like Wordle — expecting position information from every clue. Woodle gives you numbers, not positions, and players who keep waiting for a green tile to pin a letter down will find themselves out of guesses before the shape of the word ever appears.","The second mistake is ignoring the arithmetic. The sum of the two counts tells you how many of your guessed letters are in the answer, and the exact count tells you how many are placed. Players who do not do the subtraction are playing with half the information.","The third mistake is repeating a guessed letter early. With count-only feedback, a repeated letter wastes one of your five probes — you could have learned about two letters instead of one, and in an eight-guess game, wasted probes compound.","The winning pattern is to alternate discovery and placement: first learn the letter set with high-overlap words, then place those letters with the exact count as your guide. The solver’s ranked suggestions automate both phases, and the candidate counter keeps you honest about how much is left."]
+      },
+      {
+        heading: "Woodle solver settings and word lengths",
+        paragraphs: ["The Woodle solver accepts the exact-and-misplaced count pair for every guess and applies the same arithmetic to every word length the game supports. Longer words change the numbers, not the method: the overlap math and the exact count still filter the dictionary precisely.","For archived puzzles, the solver works on any date — log each guess and its two numbers, and the candidate counter shows the field shrinking turn by turn. The count-pair discipline is identical whether you are playing today’s daily or a puzzle from months ago."]
+      },
+      {
+        heading: "Why Woodle rewards arithmetic players",
+        paragraphs: ["Woodle strips away the colors and leaves the math, and players who enjoy that trade find the game quietly elegant: every clue is a clean two-number constraint, and the answer is whatever word satisfies all of them. There is no luck in Woodle, only overlap arithmetic.","The solver runs that arithmetic across the whole dictionary in an instant, which is why it lands most dailies inside eight guesses. And the habit it teaches — reading counts as constraints — makes every other word game feel easier."]
+      }
+    ],
+    faqHeading: "Woodle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Woodle?",
+        answer:
+          "Woodle is a Wordle variant that gives only two numbers as feedback per guess: how many of your letters are exact matches and how many are misplaced. There are no per-position colors."
+      },
+      {
+        question: "How does Woodle feedback work?",
+        answer:
+          "After each guess you receive a count of exact matches and a count of misplaced letters. The sum tells you how many of your guessed letters are in the answer, and the exact count tells you how many are correctly placed."
+      },
+      {
+        question: "Is Woodle harder than Wordle?",
+        answer:
+          "Yes. The compressed feedback removes position information from every clue, so each guess eliminates fewer candidates. Woodle grants eight guesses to make up for it."
+      },
+      {
+        question: "How does the Woodle solver work?",
+        answer:
+          "It computes the exact and misplaced counts for every candidate word against your guess and keeps only the words whose counts match your feedback exactly. Its ranking favors guesses that split the remaining candidates evenly."
+      },
+      {
+        question: "What is the best Woodle opening?",
+        answer:
+          "A common five-letter word with high-frequency, non-repeating letters, such as CRANE or SLATE. The overlap arithmetic against such words produces the most informative count pairs."
+      },
+      {
+        question: "Can the solver handle repeated letters?",
+        answer:
+          "Yes. Repeated letters change how exact and misplaced counts are computed, and the solver applies the correct arithmetic for each candidate word, including duplicates."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/warmle-solver", label: "Warmle Solver" },
+      { href: "/hardle-solver", label: "Hardle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/w-peaks-solver", label: "Wordle Peaks Solver" }
+    ]
+  },
+
+  'w-peaks-solver': {
+    key: 'w-peaks-solver',
+    eyebrow: 'Wordle Peaks Solver Guide',
+    intro:
+      "Wordle Peaks swaps letters for altitudes: instead of guessing letters, you guess a five-letter word and the game tells you, for each position, whether the true letter comes earlier or later in the alphabet than your guess. Every tile is a directional arrow — the answer letter is higher or lower than what you played. That makes Wordle Peaks a search problem rather than a vocabulary drill: each guess is a probe that cuts the alphabet in half at every position at once. The Wordle Peaks solver runs that binary search across the whole dictionary and shows you the word before you even realize the peaks are closing in.",
+    sections: [
+      {
+        heading: "How the peaks feedback works",
+        paragraphs: [
+          "In Wordle Peaks you play a normal five-letter word, and each position comes back as one of three verdicts: the answer letter matches yours exactly, the answer letter is earlier in the alphabet than yours, or the answer letter is later.",
+          "The directional verdict is the whole game. A tile that says earlier narrows that position's possible letters to everything below your guess; a tile that says later narrows it to everything above.",
+          "With five positions active at once, every guess cuts five windows of the alphabet simultaneously. Played well, the answer emerges in a handful of turns because each position's window halves with every probe."
+        ],
+        callout: {
+          title: "Five binary searches at once",
+          body: "Every Wordle Peaks guess halves the alphabet window in each of the five positions. That is the whole game — the solver just does the halving faster."
+        }
+      },
+      {
+        heading: "The six-guess budget and the midpoint rule",
+        paragraphs: [
+          "Wordle Peaks gives you six guesses, the same as Wordle, and the math works out: each position's window starts at 26 letters and can be halved about four times before it collapses, so six guesses is exactly enough when you probe near the middle.",
+          "The golden rule is to guess the midpoint of each position's remaining window. If the answer letter is later, you have discarded the lower half; if earlier, the upper half. Guessing near the edges wastes the halving.",
+          "The solver always knows every position's remaining window and picks words whose letters sit at the midpoints — that is why its suggestions feel like they are reading the answer from the board."
+        ],
+        list: {
+          title: "Wordle Peaks opening guidelines",
+          items: [
+            "Play letters near the alphabet's middle in most positions",
+            "A word like ROUTE or POINT spreads mid-alphabet letters across all five positions",
+            "Watch for green — an exact hit locks a position permanently",
+            "Treat each earlier-or-later verdict as a half-alphabet elimination",
+            "By guess four, most windows are down to a handful of letters"
+          ]
+        }
+      },
+      {
+        heading: "Why the solver is nearly unbeatable here",
+        paragraphs: [
+          "Wordle Peaks is the most solver-friendly of all the wordle variants because its feedback is arithmetic. The solver maintains the exact letter window for each of the five positions, intersects those windows with the dictionary, and reports the remaining candidates.",
+          "The ranking then applies the midpoint rule perfectly: among the surviving dictionary words, it prefers the one whose letters are closest to the centers of their windows, because that guess is guaranteed to eliminate the most letters regardless of the verdict.",
+          "The result is a game where a six-guess budget almost always finishes the word — often with guesses to spare, because the midpoint strategy never wastes a turn on a lopsided probe."
+        ]
+      },
+      {
+        heading: "Reading the board like the solver does",
+        paragraphs: [
+          "You can beat Wordle Peaks without the solver by adopting its discipline. After each clue, write down the remaining window for each position — everything below or above your guess — and only consider dictionary words whose letters all fall inside their windows.",
+          "The green tiles are anchors: once a position is exact, it is solved forever and its window is a single letter. The directional tiles are the movers, and they should be re-probed at their midpoints.",
+          "The discipline that wins is never guessing a letter outside a window. Every guess inside the windows is productive; every guess outside is a wasted turn, and in a six-guess game there are no wasted turns to spare."
+        ]
+      },
+      {
+        heading: "The strategy in three phases",
+        paragraphs: [
+          "Phase one, guesses one and two: probe the middle of the alphabet in all five positions with a word like ROUTE, then another mid-alphabet word that uses letters the first probe did not cover.",
+          "Phase two, guesses three and four: the windows have collapsed to a few letters each, so play dictionary words that fit all five windows at once. The solver lists exactly these words, usually a small set.",
+          "Phase three, guesses five and six: confirm. With two or three candidates left, a single well-placed probe usually distinguishes them, and the solver's top suggestion is typically the answer itself."
+        ]
+      },
+      {
+        heading: "Wordle Peaks answers and the daily descent",
+        paragraphs: ["Wordle Peaks answers are five-letter words, but the game’s directional feedback makes each daily puzzle a descent from the full alphabet to a single word. The daily answers tend to be ordinary words — the game’s difficulty is in the search, not the vocabulary.","The solver’s window tracking is built for exactly this daily rhythm: five windows, one per position, collapsing with every probe. Enter today’s clues and the remaining-window readout shows you how close the answer is.","Players who follow the midpoint rule by hand usually land the daily in five or six guesses. With the solver, the same puzzle typically resolves in four — the window math simply runs faster."]
+      },
+      {
+        heading: "Common Wordle Peaks mistakes and how to avoid them",
+        paragraphs: ["The most common Wordle Peaks mistake is guessing letters near the edges of the alphabet. An opener full of X’s and Z’s returns verdicts that barely narrow the windows, because there is almost nothing below an X to rule out. The solver’s midpoint rule exists for exactly this reason: edge letters waste the halving.","The second mistake is ignoring the windows between guesses. Wordle Peaks is a search problem, and the search state is the set of five alphabet windows. Players who guess by feel instead of by window usually end up repeating letters that were already ruled out.","The third mistake is treating an early green as a free pass. It is — but only for that one position. The other four windows still need their own probes, and players who fixate on the solved position lose track of the four active searches.","The winning pattern is arithmetic: track five windows, probe each window’s midpoint, and only play dictionary words whose letters all fit their windows. Six guesses is enough for that pattern every time, and the solver runs it faster than any human."]
+      },
+      {
+        heading: "Wordle Peaks solver settings and word lengths",
+        paragraphs: ["The Wordle Peaks solver tracks the alphabet window for every position at every word length the game supports. Longer words mean more windows to track, but each one still halves with every midpoint probe, so the solver’s six-guess math scales naturally.","For past puzzles, the solver works on any date — enter the earlier-or-later verdicts you saw, and the window tracker rebuilds the search state from scratch. The midpoint rule that wins the daily is the same rule that wins every archived puzzle."]
+      },
+      {
+        heading: "The search, not the vocabulary",
+        paragraphs: ["Wordle Peaks is the rare word game that tests search skill instead of vocabulary. The answer words are ordinary; the challenge is the five simultaneous binary searches, and players who treat it as an arithmetic problem rather than a spelling test win consistently.","That is the solver’s whole approach: five windows, midpoint probes, dictionary intersection. It is the purest expression of the search mindset on the site, and the daily is usually over by guess four."]
+      }
+    ],
+    faqHeading: "Wordle Peaks Solver FAQ",
+    faqs: [
+      {
+        question: "What is Wordle Peaks?",
+        answer:
+          "Wordle Peaks is a Wordle variant where each tile tells you whether the answer letter is earlier or later in the alphabet than your guess, instead of showing a color for misplaced or absent letters."
+      },
+      {
+        question: "How does Wordle Peaks feedback work?",
+        answer:
+          "Each position returns one of three verdicts: exact match, the answer letter is earlier in the alphabet, or the answer letter is later. Every non-exact verdict halves the remaining alphabet window for that position."
+      },
+      {
+        question: "How many guesses do you get in Wordle Peaks?",
+        answer:
+          "Six guesses, the same as Wordle. The binary-search nature of the feedback makes six turns sufficient when you probe near the middle of each position's window."
+      },
+      {
+        question: "How does the Wordle Peaks solver work?",
+        answer:
+          "It maintains the exact remaining letter window for every position, intersects those windows with the dictionary, and ranks candidate words by how close their letters are to the midpoints of their windows."
+      },
+      {
+        question: "What is the best Wordle Peaks opening?",
+        answer:
+          "A word whose letters sit near the middle of the alphabet in all five positions, such as ROUTE or POINT, so the first verdict halves every window at once."
+      },
+      {
+        question: "Can you solve Wordle Peaks without a solver?",
+        answer:
+          "Yes. Track each position's remaining window by hand, only play dictionary words whose letters fit every window, and always probe near the middle — the answer emerges in four to six guesses."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/warmle-solver", label: "Warmle Solver" },
+      { href: "/xordle-solver", label: "Xordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-solver", label: "Quordle Solver" }
+    ]
+  },
+
+  'spotle-wordle-solver': {
+    key: 'spotle-wordle-solver',
+    eyebrow: 'Spotle Wordle Solver Guide',
+    intro:
+      "Spotle Wordle is the wordlebot's five-letter variant with rank-based feedback: every letter in your guess comes back as green, yellow, gray, or blank depending on where it sits in the answer, but with the twist that the verdicts are computed against a ranked letter model rather than plain position logic. The same page also covers Thirdle, the three-letter Wordle with three guesses, because the two games share the same solver engine. Whether you are untangling a five-letter Spotle Wordle or cracking a three-letter Thirdle, the solver filters the exact candidate pool your game uses. Here is how both modes work.",
+    sections: [
+      {
+        heading: "Spotle Wordle feedback, explained",
+        paragraphs: [
+          "Spotle Wordle plays like Wordle with an extra verdict: each tile can be green, yellow, gray, or blank. The blank tile is the game's signature — it carries a different meaning from gray, and reading the difference is the first skill.",
+          "Green means the letter is exactly right in that position. Yellow means the letter belongs to the answer but sits elsewhere. Gray rules the letter out. Blank is the rank-based signal that sets Spotle Wordle apart from standard Wordle.",
+          "The solver accepts all four verdicts per tile, so whatever the game shows you, the candidate filter can consume it exactly as-is."
+        ],
+        callout: {
+          title: "Four verdicts, one filter",
+          body: "Spotle Wordle tiles come in green, yellow, gray, and blank. The solver consumes all four exactly as shown, so you never have to translate the game's feedback."
+        }
+      },
+      {
+        heading: "Thirdle: the three-letter sprint",
+        paragraphs: [
+          "Thirdle is Wordle compressed: three-letter words, three guesses, and no mercy. With only three turns, there is no room for a discovery phase — every guess must both test letters and position them.",
+          "The solver treats Thirdle as its own mode because the dictionary and the strategy are different. Three-letter words repeat letters more often and share more letters with each other, so the overlap math is tighter.",
+          "Your first Thirdle guess should be a high-frequency three-letter word that could plausibly be the answer, because in three guesses there is no second chance to sweep the alphabet."
+        ],
+        list: {
+          title: "Thirdle essentials",
+          items: [
+            "Three guesses for a three-letter word",
+            "Open with a common word that could be the answer itself",
+            "Vowels are scarce — guess them early",
+            "Repeated letters are common in three-letter words",
+            "The solver narrows the three-letter dictionary with every clue"
+          ]
+        }
+      },
+      {
+        heading: "One solver, two games",
+        paragraphs: [
+          "The same solver page handles both modes because both games filter the same way: feed in guesses and verdicts, and the engine eliminates every word that contradicts them. The difference is the dictionary and the budget.",
+          "In Spotle Wordle mode the solver works against the five-letter pool with six guesses and the full four-verdict system. In Thirdle mode it switches to the three-letter dictionary with three guesses and standard green-yellow-gray logic.",
+          "If you arrived at this page from an old Thirdle link, you are in the right place — the two games share this solver, and the interface lets you pick the mode before you start."
+        ]
+      },
+      {
+        heading: "The strategy that wins both modes",
+        paragraphs: [
+          "For Spotle Wordle, treat the blank verdict as your richest signal: a blank narrows the letter's possible meanings far more than a gray, so build your model of the answer around which positions came back blank.",
+          "For Thirdle, speed is everything. Guess a common word first, then use the solver's candidate list to find a second guess that splits the survivors evenly — the third guess should be the answer itself.",
+          "In both modes the solver's ranked suggestions do the heavy lifting: they tell you which word reveals the most information next, which is the difference between playing reactively and playing to win."
+        ]
+      },
+      {
+        heading: "How the solver ranks its suggestions",
+        paragraphs: [
+          "The ranking engine scores each candidate word by how evenly its possible feedback splits the remaining dictionary. A word that could plausibly return several different verdict patterns is more informative than one whose verdict is predictable.",
+          "That is the same information-theory logic that powers the best Wordle solvers, adapted to the four-verdict system of Spotle Wordle and the compressed three-guess budget of Thirdle.",
+          "The result is a suggestion list that reads like a pro player's thought process: first a word that splits the field, then the word that closes the remaining gap, then the answer."
+        ]
+      },
+      {
+        heading: "Spotle Wordle and Thirdle answers, both modes daily",
+        paragraphs: ["Spotle Wordle releases a five-letter daily, and Thirdle releases its own three-letter sprint — two puzzles, two budgets, one solver page. The daily answers in both games stick to common words, which keeps the feedback readable and the games fair.","The dual-mode page means a single bookmark covers both dailies: use Spotle Wordle mode for the five-letter puzzle with its four verdicts, then switch to Thirdle mode for the three-guess sprint.","It is the rare solver page that genuinely covers two games, and the reason it works is that both games share the same elimination engine — the dictionaries and budgets differ, the logic does not."]
+      },
+      {
+        heading: "Common Spotle Wordle and Thirdle mistakes",
+        paragraphs: ["The most common Spotle Wordle mistake is treating the blank verdict as a gray. The blank tile is the game’s rank-based signal and carries meaning that gray does not, so conflating the two destroys the model you are building. The solver consumes all four verdicts exactly as shown, which is why its candidate lists stay accurate while hand-played models drift.","The most common Thirdle mistake is wasting the first guess. With only three turns, there is no discovery phase — your first word must both test letters and position them, which means opening with a common word that could plausibly be the answer itself.","The shared mistake across both modes is ignoring the ranked suggestions. The solver ranks words by how evenly their possible feedback would split the survivors, which is the difference between playing reactively and playing with a plan.","The winning pattern for both games is the same: log every clue faithfully, read the ranked list, and play the top suggestion that fits everything you know. In Thirdle that usually means the answer by guess three; in Spotle Wordle, comfortably inside six."]
+      },
+      {
+        heading: "Spotle Wordle and Thirdle solver settings",
+        paragraphs: ["The solver’s mode selector is the one setting that matters: Spotle Wordle mode loads the five-letter dictionary with the four-verdict system, and Thirdle mode loads the three-letter dictionary with the three-guess budget. Switching modes does not reset your entered guesses, so you can experiment without losing your place.","Both modes work on any puzzle date, because the elimination engine is date-agnostic. Whether you are chasing today’s five-letter daily or a past three-letter Thirdle, the ranked suggestions are always computed from the guesses you have actually entered."]
+      },
+      {
+        heading: "One page, two dailies, no waiting",
+        paragraphs: ["The practical payoff of the merged page is that a single bookmark covers both daily puzzles. When the Spotle Wordle answer is eluding you and the Thirdle sprint is already running, you switch modes on the same page, log both games’ clues, and get ranked suggestions for each without navigating anywhere.","That convenience is the reason the page exists, and it is also the reason the solver’s dual-mode design matters: two games, two dictionaries, two budgets, one consistent elimination engine under the hood. It is the kind of small structural win that keeps the solver open in a tab all week, ready for whichever daily fires first."]
+      }
+    ],
+    faqHeading: "Spotle Wordle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Spotle Wordle?",
+        answer:
+          "Spotle Wordle is a five-letter Wordle variant with four verdicts per tile — green, yellow, gray, and blank — where the blank tile is a rank-based signal that standard Wordle does not have."
+      },
+      {
+        question: "What is Thirdle?",
+        answer:
+          "Thirdle is a three-letter Wordle variant with just three guesses. It shares this solver page with Spotle Wordle, so you can pick either mode before you start."
+      },
+      {
+        question: "What does the blank tile mean in Spotle Wordle?",
+        answer:
+          "The blank verdict is the game's rank-based signal, distinct from gray. The solver consumes it exactly as the game shows it, so you never need to translate the feedback yourself."
+      },
+      {
+        question: "How many guesses do you get in each mode?",
+        answer:
+          "Spotle Wordle gives you six guesses for a five-letter word. Thirdle gives you three guesses for a three-letter word — a deliberately brutal sprint."
+      },
+      {
+        question: "How does the solver work for both games?",
+        answer:
+          "It maintains the correct dictionary for the selected mode — five-letter words for Spotle Wordle, three-letter words for Thirdle — and eliminates every candidate that contradicts your guesses and verdicts."
+      },
+      {
+        question: "I used an old Thirdle link. Am I in the right place?",
+        answer:
+          "Yes. Thirdle was merged into this solver page, which supports both the standard three-letter Thirdle rules and the Spotle Wordle five-letter mode. Pick the mode in the interface and enter your clues as usual."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/spotle-solver", label: "Spotle Solver" },
+      { href: "/quordle-solver", label: "Quordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/hardle-solver", label: "Hardle Solver" }
+    ]
+  },
+
+  'canuckle-solver': {
+    key: 'canuckle-solver',
+    eyebrow: 'Canuckle Solver Guide',
+    intro:
+      "Canuckle is Canada's Wordle: a five-letter word, six guesses, and the same green-yellow-gray feedback, but the answer always comes from a Canadian word list and every puzzle is tied to a daily Canadian fact. The twist that trips up new players is the third color — Canuckle uses brown instead of yellow for misplaced letters, and the clue colors have their own Canadian flavor. The Canuckle solver draws from the same Canadian-words dataset the game uses, so every suggestion it makes is a legal daily answer. Here is how the game works, what the colors mean, and how to use the solver without breaking the game's spirit.",
+    sections: [
+      {
+        heading: "The Canadian word list is the real twist",
+        paragraphs: [
+          "Canuckle's answers are drawn from a curated list of Canadian words — place names, hockey terms, foods, and everyday vocabulary with a distinctly Canadian flavor. That is the real difference from Wordle, more than the brown tile.",
+          "A solver that used a generic English dictionary would suggest words that can never be Canuckle answers, which is why this solver loads the Canadian word list specifically.",
+          "For players, the Canadian list changes the opening math slightly: certain letter combinations and word shapes appear more often than in the general English dictionary, and repeated exposure to the list teaches you the game's vocabulary habits."
+        ],
+        callout: {
+          title: "Canadian words only",
+          body: "Every Canuckle answer comes from a Canadian word list. The solver uses that same list, so its suggestions are always legal daily answers — never dictionary filler."
+        }
+      },
+      {
+        heading: "Brown, yellow, and green: the clue colors",
+        paragraphs: [
+          "Green means the letter is correct in that position, exactly as in Wordle. Yellow means the letter is in the answer but in a different position. Brown is Canuckle's version of gray — the letter is not in the answer at all.",
+          "New players often misread brown as a second \"in the word\" color, which wrecks their deductions. Brown is a ban: that letter is out, full stop.",
+          "The solver matches the game's exact coloring, so you tap the tiles to match what Canuckle showed you and the candidate filter does the rest."
+        ],
+        list: {
+          title: "Canuckle color cheat sheet",
+          items: [
+            "Green: letter correct in that exact position",
+            "Yellow: letter in the word, wrong position",
+            "Brown: letter not in the word at all",
+            "Each puzzle is tied to a daily Canadian fact",
+            "The solver accepts all three colors exactly as shown"
+          ]
+        }
+      },
+      {
+        heading: "The daily fact, the puzzle number, and the history",
+        paragraphs: [
+          "Every Canuckle puzzle is anchored to a real Canadian fact related to the answer word — a person, place, event, or piece of culture. The fact is not just trivia; it is a legitimate solving hint for players who know their Canada.",
+          "Canuckle also numbers its puzzles. The sequence started in February 2022, paused, and restarted under a new schedule, so the puzzle number you see on the today page reflects the current daily sequence from the restart.",
+          "The solver does not need the fact or the number to work — it filters on word evidence alone — but the page keeps both visible so you can confirm which puzzle you are solving and enjoy the fact after you win."
+        ]
+      },
+      {
+        heading: "How to use the Canuckle solver",
+        paragraphs: [
+          "Enter the guess you played, then tap each tile until it matches the brown, yellow, or green result you saw in the game. The solver eliminates impossible answers from the Canadian list and ranks the best next guesses.",
+          "The ranked list is the payoff: the top suggestion is the word that would reveal the most information next, which is the difference between hoping and knowing in a six-guess game.",
+          "You can also use the solver for archive puzzles — it works on any past Canuckle position, not just today's, so a stuck old puzzle is never more than a few taps from a solution."
+        ]
+      },
+      {
+        heading: "The strategy that wins Canuckle",
+        paragraphs: [
+          "Open with a common five-letter word that could plausibly be a Canadian answer — words like NORTH, LAKES, or MAPLE are both common and thematically on-brand, and they carry high-frequency letters.",
+          "Respect the brown tiles absolutely: every brown bans a letter for the rest of the game, and the solver treats them as hard eliminations.",
+          "Then let the solver's rankings drive: each turn, play the highest-ranked word that fits everything you know. Six guesses is enough for most Canuckle puzzles, and with the Canadian list loaded, the suggestions are always words the game could actually use."
+        ]
+      },
+      {
+        heading: "Canuckle answers, archives, and the daily fact",
+        paragraphs: ["Canuckle publishes one Canadian word per day, and its archive is a record of the country in five-letter increments — hockey terms, place names, foods, and the everyday vocabulary of Canadian English. The daily fact that comes with each puzzle is the flavor that keeps players coming back.","The solver works on any of these puzzles, today or archived, because it filters the same Canadian word list the game uses. The brown tiles ban letters, the yellow tiles relocate them, and the green tiles lock them.","Whether you play for the word or the fact, the solver keeps your streak alive — log the clues, read the ranked list, and take the daily Canadian win."]
+      },
+      {
+        heading: "Common Canuckle mistakes and how to avoid them",
+        paragraphs: ["The most common Canuckle mistake is misreading brown as a partial match. New players see a third color and assume it carries a third meaning, but brown is simply Canuckle’s gray — the letter is not in the word, and treating it as anything else poisons the candidate filter.","The second mistake is using a generic English dictionary mindset. Canuckle answers come from a Canadian word list, and words that feel natural in the US or UK are often not in the pool at all. The solver removes that guesswork by loading the Canadian list directly.","The third mistake is ignoring the daily fact. The fact is a legitimate hint — knowing that today’s answer relates to a hockey term, a prairie city, or a Canadian food genuinely narrows the candidate pool for players who know their country.","The winning pattern is to open with a thematically safe, letter-rich word, respect every brown as a hard ban, and let the solver’s Canadian-list rankings carry the endgame. Six guesses is enough for nearly every Canuckle daily when the pool is the right pool."]
+      },
+      {
+        heading: "Canuckle solver settings and word lengths",
+        paragraphs: ["Canuckle uses five-letter words only, so the solver always loads the full five-letter Canadian list and does not need a length switcher. That single-list design keeps the suggestions fast and always legal.","The solver works on any Canuckle position, today or archived. Enter your guesses, tap the tiles to match the brown, yellow, and green you saw, and the Canadian-list filter rebuilds the candidate set instantly — the same process that wins today’s daily wins every puzzle in the archive."]
+      },
+      {
+        heading: "Why Canuckle players keep the solver open",
+        paragraphs: ["The daily fact makes Canuckle feel personal, and the solver lets you enjoy it without the frustration of a stuck board. Players keep the page open, play the word honestly, and only reach for the solver when the brown tiles pile up.","When they do, the Canadian list guarantees the suggestions are real answers, the archive support covers any past puzzle, and the six-guess budget almost always closes the daily. That combination — respect for the game, honesty of the list, and speed of the solve — is why the solver is a fixture for Canuckle regulars."]
+      }
+    ],
+    faqHeading: "Canuckle Solver FAQ",
+    faqs: [
+      {
+        question: "What is Canuckle?",
+        answer:
+          "Canuckle is a Canadian-themed Wordle variant: five-letter words, six guesses, and brown-yellow-green clue colors, with every answer drawn from a Canadian word list and tied to a daily Canadian fact."
+      },
+      {
+        question: "What does brown mean in Canuckle?",
+        answer:
+          "Brown means the letter is not in the answer at all — it is Canuckle's version of Wordle's gray. Yellow means the letter is in the word but misplaced, and green means it is exactly right."
+      },
+      {
+        question: "Does the Canuckle solver use the same word list as the game?",
+        answer:
+          "Yes. It draws from the same Canadian-words dataset that Canuckle uses, so any suggestion the solver makes is a valid daily answer."
+      },
+      {
+        question: "How many guesses do you get in Canuckle?",
+        answer:
+          "Six guesses for a five-letter word, the same budget as Wordle."
+      },
+      {
+        question: "Can I use the solver for archive puzzles?",
+        answer:
+          "Yes. The solver works on any Canuckle position, past or present — enter your guesses and their clue colors, and it will filter the Canadian list accordingly."
+      },
+      {
+        question: "Why does Canuckle include a daily Canadian fact?",
+        answer:
+          "Each puzzle is tied to a real Canadian fact related to the answer word, giving the game an educational angle rooted in Canadian culture, geography, and history."
+      }
+    ],
+    relatedLinks: [
+      { href: "/canuckle-answer-today", label: "Canuckle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/quordle-solver", label: "Quordle Solver" }
+    ]
+  },
 };

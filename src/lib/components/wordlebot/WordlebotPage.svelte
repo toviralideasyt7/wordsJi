@@ -11,15 +11,27 @@
         let { config }: { config: WordlebotPageConfig } = $props();
 
         let structuredData = $derived(getWordlebotStructuredData(config));
+        const SOLVER_ARTICLE_KEYS: Record<string, string> = {
+                canuckle: 'canuckle-solver',
+                hardle: 'hardle-solver',
+                warmle: 'warmle-solver',
+                woodle: 'woodle-solver',
+                'w-peaks': 'w-peaks-solver',
+                xordle: 'xordle-solver',
+                fibble: 'fibble-solver',
+                dordle: 'dordle-solver',
+                quordle: 'quordle-solver',
+                octordle: 'octordle-solver',
+                spotle: 'spotle-wordle-solver'
+        };
+
         let isWordleLengthPage = $derived(
                 config.appConfig.pageType === 'solver' && config.appConfig.game === 'wordle'
         );
         let isCanuckleTodayPage = $derived(config.appConfig.pageType === 'canuckle-daily');
         let solverArticleKey = $derived(
                 config.appConfig.pageType === 'solver'
-                        ? config.appConfig.game === 'quordle'
-                                ? 'quordle-solver'
-                                : 'wordle-solver'
+                        ? SOLVER_ARTICLE_KEYS[config.appConfig.game] ?? 'wordle-solver'
                         : null
         );
         let isCanuckleArchivePage = $derived(config.appConfig.pageType === 'canuckle-archive');
