@@ -2,8 +2,6 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import { getTodayArticleHeading } from '$lib/daily-article-content';
-  import { sanitizeGeneratedArticleHtml } from '$lib/generated-article-links';
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
@@ -21,16 +19,6 @@
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   }
 
-  function normalizeHtml(html: string | null | undefined): string {
-    return (html ?? '').replace(/\s+/g, ' ').trim();
-  }
-
-  const distinctGeneratedArticle = $derived(
-    data.generatedArticle?.articleHtml &&
-      normalizeHtml(data.generatedArticle.articleHtml) !== normalizeHtml(data.wordleData?.content_guide)
-      ? data.generatedArticle
-      : null
-  );
   const publishedDate = $derived.by(() =>
     data.publishedDate ?? (data.wordleData?.date ? `${data.wordleData.date}T00:00:00Z` : null)
   );
@@ -84,27 +72,9 @@
       formattedDate={data.formattedDate}
       pageContext="today"
       contentGuide={data.wordleData?.content_guide}
-      bonusHints={data.generatedArticle?.bonusHints ?? []}
       socialImage={data.directSocialImage}
       youtubeVideoUrl={data.wordleData?.youtube_video_url}
     />
-
-    {#if distinctGeneratedArticle}
-      <article class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:mt-12 sm:p-8">
-        <header>
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-teal-600">Today's explanation</p>
-          <h2 class="mt-2 text-3xl font-bold text-slate-900">
-            {getTodayArticleHeading('wordle-answer-today')}
-          </h2>
-          {#if distinctGeneratedArticle.summary}
-            <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">{distinctGeneratedArticle.summary}</p>
-          {/if}
-        </header>
-        <div class="prose mt-5 max-w-none prose-slate prose-h2:mb-3 prose-h2:mt-8 prose-h2:text-2xl prose-h2:font-black prose-h2:text-slate-900 prose-h3:mb-2 prose-h3:mt-6 prose-h3:text-lg prose-h3:font-bold prose-h3:text-slate-900 prose-p:my-4 prose-p:text-base prose-p:leading-7 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-teal-600">
-          {@html sanitizeGeneratedArticleHtml(distinctGeneratedArticle.articleHtml ?? '')}
-        </div>
-      </article>
-    {/if}
 
     {#if data.recentAnswers.length > 1}
       <section class="mt-12 bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden">

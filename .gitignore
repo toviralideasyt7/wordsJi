@@ -28,3 +28,6 @@ vite.config.ts.timestamp-*
 .cf-profile
 .cache/
 .opencode/
+
+# GSC audit scratch outputs
+.freebuff/

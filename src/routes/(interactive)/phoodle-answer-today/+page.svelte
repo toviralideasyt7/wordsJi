@@ -5,7 +5,6 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import PhoodleAnswerCard from '$lib/components/PhoodleAnswerCard.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import { generateArticleSchema, generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -109,8 +108,6 @@
           Browse Archive
         </a>
       </div>
-
-      <GeneratedTodayArticle articleKey="phoodle-answer-today" articleDate={data.dateKey} />
 
       <!-- Content & FAQs -->
       <article class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm">

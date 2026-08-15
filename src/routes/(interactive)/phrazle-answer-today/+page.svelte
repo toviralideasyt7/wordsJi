@@ -4,7 +4,6 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -173,7 +172,6 @@
       </div>
     </div>
 
-    <GeneratedTodayArticle articleKey="phrazle-answer-today" articleDate={todayKey} />
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

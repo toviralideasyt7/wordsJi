@@ -5,7 +5,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
-        import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
         import {
                 PRESTON_HAYES_AUTHOR_DESCRIPTION,
                 PRESTON_HAYES_AUTHOR_IMAGE,
@@ -261,8 +260,6 @@
                         </div>
                 </section>
 
-                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayAnswer?.date ?? data.todayStr} />
-
                 <div class="mt-10">
                         <FAQSection title="Spotle Answer FAQ" faqs={faqItems} />
                 </div>
@@ -332,9 +329,6 @@
                 {/if}
 
                 <div class="mt-12">
-                        {#if false}
-                                <GeneratedTodayArticle articleKey="spotle-answer-today" articleDate={data.todayAnswer?.date ?? data.todayStr} />
-                        {/if}
                         <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}

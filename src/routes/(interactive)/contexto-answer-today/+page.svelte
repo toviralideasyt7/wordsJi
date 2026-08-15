@@ -2,7 +2,6 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
     formatContextoDate,
@@ -258,7 +257,6 @@
       </div>
     </section>
 
-    <GeneratedTodayArticle articleKey="contexto-answer-today" articleDate={activeDate} />
     <FAQSection title="Contexto Answer FAQ" {faqs} class="pb-0" />
 
     {#if false}
@@ -335,9 +333,6 @@
     </article>
     {/if}
 
-    {#if false}
-      <GeneratedTodayArticle articleKey="contexto-answer-today" articleDate={activeDate} />
-    {/if}
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

@@ -67,25 +67,23 @@
       <h2>3. Browser Storage and Site Preferences</h2>
       <p>
         Some WordSolverX tools store preferences directly in your browser so the experience works
-        smoothly the next time you visit. Examples include solver settings, selected modes, word length
-        choices, and your cookie consent preference.
+        smoothly the next time you visit. Examples include solver settings, selected modes, and word
+        length choices.
       </p>
       <p>
-        These settings remain on your device until you clear them through your browser or update them
-        through our cookie settings banner.
+        These settings remain on your device until you clear them through your browser.
       </p>
 
       <h2>4. Analytics and Advertising</h2>
       <p>
-        WordSolverX uses optional third-party services for analytics. Those services are not loaded
-        until you accept them through our cookie consent banner.
+        WordSolverX uses third-party services for analytics and advertising.
       </p>
 
       <h3>Google Analytics</h3>
       <p>
-        If you accept analytics cookies, we may load Google Analytics to understand aggregate traffic,
-        page usage, and general site performance. Google may process device, browser, and usage
-        information according to its own privacy documentation.
+        We may load Google Analytics to understand aggregate traffic, page usage, and general site
+        performance. Google may process device, browser, and usage information according to its own
+        privacy documentation.
       </p>
 
       <h3>Advertising</h3>
@@ -107,9 +105,9 @@
 
       <h2>5. Cookie Choices</h2>
       <p>
-        WordSolverX shows a cookie consent banner that lets you accept or reject optional analytics and
-        advertising scripts. Rejecting optional cookies does not stop the site from working; it only keeps
-        those optional third-party services from loading.
+        You can manage cookies and similar storage through your browser settings. Most browsers let you
+        block or delete cookies, though doing so may affect how third-party services behave on this and
+        other sites.
       </p>
 
       <h2>6. Embedded and Third-Party Content</h2>
@@ -123,7 +121,7 @@
       <p>We may use the information described in this policy to:</p>
       <ul>
         <li>Operate, maintain, and improve WordSolverX</li>
-        <li>Remember simple tool and consent preferences in your browser</li>
+        <li>Remember simple tool preferences in your browser</li>
         <li>Respond to support, correction, legal, or business inquiries</li>
         <li>Review technical issues, abuse, and security events</li>
         <li>Measure site traffic and ad delivery when you have accepted optional cookies</li>
@@ -164,7 +162,7 @@
 
       <h2>13. Contact</h2>
       <p>
-        If you have questions about this Privacy Policy, cookie settings, or advertising disclosures,
+        If you have questions about this Privacy Policy or advertising disclosures,
         contact <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
       </p>
     </div>

@@ -3,7 +3,6 @@ import {
         getColordleTodayFromApi
 } from '$lib/color-answers-api';
 import { colorDiff, hexToRgb, type RGB } from '$lib/colordle';
-import { getColordleDailyArticle } from '$lib/daily-article-content';
 import { format, subDays } from 'date-fns';
 import type { PageServerLoad } from './$types';
 
@@ -382,9 +381,6 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 last100Days,
                 actualDateKey
         } = todayData;
-        const generatedArticleCandidate = getColordleDailyArticle(actualDateKey);
-        const generatedArticle =
-                generatedArticleCandidate?.date === actualDateKey ? generatedArticleCandidate : null;
 
         setHeaders({
                 'X-Puzzle-Date': actualDateKey
@@ -523,7 +519,6 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 publishedDate: `${actualDateKey}T00:00:00Z`,
                 schemas: jsonLd,
                 gameNarrative: generateGameNarrative(color),
-                generatedArticle,
                 meta: {
                         title: pageTitle,
                         description: pageDescription,

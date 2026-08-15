@@ -5,7 +5,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import WorldleCountryCard from '$lib/components/worldle/WorldleCountryCard.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -85,8 +84,6 @@
         subheadline={`This page is refreshed automatically for the active Worldle day. Today is ${data.formattedTodayDate}.`}
       />
     </div>
-
-    <GeneratedTodayArticle articleKey="worldle-answer-today" articleDate={data.todayDate} />
 
     <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

@@ -1,6 +1,5 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
 
   let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
 
@@ -86,9 +85,7 @@
         </div>
       </section>
     </article>
-    <GeneratedTodayArticle articleKey="narutodle-answer-today" articleDate={articleDate} />
     {/if}
-    <GeneratedTodayArticle articleKey="narutodle-answer-today" articleDate={articleDate} />
   {/snippet}
 </GameDleAnswerPage>
 

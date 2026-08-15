@@ -3,7 +3,6 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -249,12 +248,6 @@
           {/each}
         </div>
       </section>
-
-      <GeneratedTodayArticle
-        articleKey="colorfle-answer-today"
-        articleDate={data.dateKey ?? ''}
-        fallbackSummary={data.meta.description}
-      />
 
       <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
         <div class="flex flex-wrap items-center justify-between gap-4">

@@ -3,7 +3,6 @@
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
         import type { NerdleModeData } from '$lib/nerdle-answers';
         import {
                 PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -190,7 +189,6 @@
                                 </div>
                         </section>
 
-                        <GeneratedTodayArticle articleKey="nerdle-answer-today" articleDate={data.answerData.date} />
                         <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}

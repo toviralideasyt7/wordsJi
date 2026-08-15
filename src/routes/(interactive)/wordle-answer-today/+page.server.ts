@@ -3,7 +3,6 @@ import { getWordleNumber, formatDate } from '$lib/utils';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import type { WordleAnswer } from '$lib/api';
 import { generatePersonAuthorSchema } from '$lib/seo';
-import { getWordleDailyArticle } from '$lib/daily-article-content';
 import type { PageServerLoad } from './$types';
 
 interface TodayApiResponse extends WordleAnswer {
@@ -34,11 +33,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     // and use an absolute production URL only for metadata.
     const directSocialImage = STATIC_WORDLE_TODAY_IMAGE_PATH;
     const socialImageUrl = `${SITE_URL}${STATIC_WORDLE_TODAY_IMAGE_PATH}`;
-    const generatedArticle = getWordleDailyArticle(wordleData?.date ?? todayKey);
     const normalizedWordleData = wordleData
         ? {
             ...wordleData,
-            content_guide: generatedArticle?.contentGuideHtml ?? wordleData.content_guide,
             social_image: directSocialImage,
             social_image_direct: directSocialImage
         }
@@ -114,7 +111,6 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         formattedDate,
         recentAnswers,
         directSocialImage,
-        generatedArticle,
         hintFaqs,
         publishedDate: new Date(normalizedWordleData?.date || today).toISOString(),
         schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),

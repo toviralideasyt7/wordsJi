@@ -5,7 +5,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import { formatBetweenleDate } from '$lib/betweenle/logic';
   import type { BetweenleDailyAnswer } from '$lib/betweenle/types';
   import {
@@ -276,12 +275,7 @@
         </a>
       </div>
 
-      {#if false}
-        <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
-      {/if}
     </section>
-
-    <GeneratedTodayArticle articleKey="betweenle-answer-today" articleDate={data.todayAnswer.date} />
 
   <section class="pb-12">
     <FAQSection {faqs} title="Betweenle Answer FAQs" />

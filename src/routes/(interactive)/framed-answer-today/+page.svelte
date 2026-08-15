@@ -4,7 +4,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import {
@@ -105,8 +104,6 @@
         </div>
       {/if}
     </section>
-
-    <GeneratedTodayArticle articleKey="framed-answer-today" articleDate={data.targetDateKey ?? todayKey} />
 
     {#if false}
     <article class="space-y-8">

@@ -3,7 +3,6 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -215,8 +214,6 @@
           </p>
         </section>
       {/if}
-
-      <GeneratedTodayArticle articleKey="canuckle-answer-today" articleDate={data.visibleDateKey} />
 
       {#if false}
       <!-- Thin Separator -->

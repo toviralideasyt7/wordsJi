@@ -5,7 +5,6 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -199,7 +198,6 @@
     </div>
 
 
-    <GeneratedTodayArticle articleKey="searchle-answer-today" articleDate={data.todayPuzzle.date} />
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

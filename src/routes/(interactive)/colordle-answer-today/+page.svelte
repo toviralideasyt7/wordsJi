@@ -4,7 +4,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -20,7 +19,6 @@
   const publishedDate = $derived(data.publishedDate ?? null);
   const requestedDateLabel = $derived(data.requestedFormattedDate ?? data.formattedDate ?? 'today');
   const answerDateLabel = $derived(data.formattedDate ?? requestedDateLabel);
-  const generatedBonusHints = $derived(data.generatedArticle?.bonusHints ?? []);
   const historyEntries = $derived(data.last100Days ?? []);
   const webPageSchema = $derived(
     generateWebPageSchema(
@@ -181,26 +179,6 @@
           </div>
         {/if}
       </section>
-
-      {#if generatedBonusHints.length > 0}
-        <section class="mt-8 rounded-[2rem] border border-fuchsia-100 bg-white p-6 shadow-[0_20px_60px_rgba(217,70,239,0.06)] sm:p-8">
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-fuchsia-500">Extra hints</p>
-          <h2 class="mt-2 text-2xl font-black text-slate-900">Fresh nudges before you peek elsewhere</h2>
-          <div class="mt-6 grid gap-3 md:grid-cols-2">
-            {#each generatedBonusHints as hint}
-              <div class="rounded-2xl border border-fuchsia-100 bg-fuchsia-50/70 px-4 py-4 text-sm leading-6 text-slate-700">
-                {hint}
-              </div>
-            {/each}
-          </div>
-        </section>
-      {/if}
-
-      <GeneratedTodayArticle
-        articleKey="colordle-answer-today"
-        articleDate={data.dateKey}
-        fallbackSummary={data.meta?.description ?? ''}
-      />
 
       <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

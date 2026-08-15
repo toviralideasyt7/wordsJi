@@ -12,7 +12,6 @@
     formattedDate,
     pageContext,
     contentGuide,
-    bonusHints = [],
     socialImage,
     youtubeVideoUrl,
   }: {
@@ -22,13 +21,11 @@
     formattedDate: string;
     pageContext: 'today' | 'archive';
     contentGuide?: string | null;
-    bonusHints?: string[];
     socialImage?: string | null;
     youtubeVideoUrl?: string | null;
   } = $props();
 
   let isRevealed = $state(false);
-  let showBonusHints = $state(false);
   let currentUrl = $state('');
   let analysisEl: HTMLDivElement | undefined = $state();
 
@@ -266,39 +263,6 @@
             {@html hintsHtml}
           </div>
         </div>
-      {/if}
-
-      {#if bonusHints.length > 0}
-        <section class="mb-8 max-w-3xl mx-auto rounded-xl border border-teal-200 dark:border-teal-800/40 bg-teal-50/70 dark:bg-teal-900/20 p-6 shadow-sm">
-          <div class="mb-3 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div class="flex items-center gap-3">
-              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-600 text-white shadow-sm">
-                <span class="text-lg font-bold">+</span>
-              </div>
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-teal-700 dark:text-teal-300">Extra Hint Pass</p>
-                <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100">Fresh hints if you still want one more nudge</h2>
-              </div>
-            </div>
-            <button
-              type="button"
-              class="inline-flex items-center justify-center rounded-full bg-teal-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-teal-500"
-              aria-expanded={showBonusHints}
-              onclick={() => (showBonusHints = !showBonusHints)}
-            >
-              {showBonusHints ? 'Hide extra hints' : 'Reveal extra hints'}
-            </button>
-          </div>
-          {#if showBonusHints}
-            <ul class="space-y-3">
-              {#each bonusHints as hint}
-                <li class="rounded-2xl bg-white dark:bg-slate-800 px-4 py-3 text-sm leading-6 text-slate-700 dark:text-slate-300 shadow-sm ring-1 ring-teal-200 dark:ring-teal-800/40">
-                  {hint}
-                </li>
-              {/each}
-            </ul>
-          {/if}
-        </section>
       {/if}
 
       <!-- 3. YouTube Video -->

@@ -3,7 +3,6 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import QuordleAnswerCard from '$lib/components/QuordleAnswerCard.svelte';
-  import GeneratedTodayArticle from '$lib/components/GeneratedTodayArticle.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -204,7 +203,6 @@
     </article>
     {/if}
 
-    <GeneratedTodayArticle articleKey="quordle-answer-today" articleDate={data.dateKey} />
     <div class="mt-12">
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

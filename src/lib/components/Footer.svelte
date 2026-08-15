@@ -1,13 +1,3 @@
-<script lang="ts">
-	function openCookieSettings() {
-		if (typeof window === 'undefined') {
-			return;
-		}
-
-		window.dispatchEvent(new CustomEvent('wordsolverx:consent-open'));
-	}
-</script>
-
 <footer class="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
@@ -78,7 +68,6 @@
 					<li><a href="/dmca-policy" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">DMCA Policy</a></li>
 					<li><a href="/editorial-policy" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Editorial Policy</a></li>
 					<li><a href="/privacy-policy" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Privacy</a></li>
-					<li><button type="button" class="text-left text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors" onclick={openCookieSettings}>Cookie Settings</button></li>
 					<li><a href="/terms-of-service" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Terms</a></li>
 				</ul>
 			</nav>
