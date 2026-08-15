@@ -3,9 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-        import FAQSection from '$lib/components/FAQSection.svelte';
         import {
-                generateFAQSchema,
                 generateHowToSchema,
                 generateBreadcrumbSchema,
                 generateWebPageSchema,
@@ -387,43 +385,6 @@
                 return () => window.removeEventListener('keydown', handleKeyDown);
         });
 
-        const faqs = [
-                {
-                        question: 'What is Nerdle?',
-                        answer:
-                                'Nerdle is a daily math puzzle game where you guess a hidden equation instead of a word. Created by Richard and Marcus Mann, it gives you 6 attempts to find the correct equation. Feedback uses colored tiles: green means the right character in the right spot, purple means the character exists but in the wrong position, and black means the character is not in the equation at all.'
-                },
-                {
-                        question: 'How do I play Nerdle?',
-                        answer:
-                                'Enter a mathematically valid equation of the correct length for your chosen mode. After each guess, the tiles change color to show how close you are. Green tiles are correct and in the right position. Purple tiles are in the equation but in a different spot. Black tiles are not in the equation at all. Use this feedback to narrow down the answer within 6 guesses.'
-                },
-                {
-                        question: 'What counts as a valid Nerdle equation?',
-                        answer:
-                                'A valid Nerdle equation must be mathematically correct — both sides of the equals sign must compute to the same value. It must contain exactly one equals sign, use only digits 0-9 and the operators +, -, *, / (Maxi mode adds brackets and powers), and be the correct length for the mode you are playing. Commutative solutions are accepted — for example, 3+5=8 and 5+3=8 are both valid.'
-                },
-                {
-                        question: 'What are the differences between Nerdle modes?',
-                        answer:
-                                'Micro uses 5 characters (e.g. 2+1=3), Mini uses 6 (e.g. 4*7=28), Midi uses 7 (e.g. 6-1*4=2), Classic uses 8 (e.g. 43-28=15), and Maxi uses 10 (e.g. 239-171=68 with brackets and powers). Longer modes have dramatically larger equation pools — Classic has over 17,000 possible equations while Micro has a much smaller set, making each guess more impactful in shorter modes.'
-                },
-                {
-                        question: 'Does the Nerdle solver work on mobile?',
-                        answer:
-                                'Yes. The solver runs entirely in the browser with no app to install. It works on phones, tablets, and desktops. The on-screen keypad and tile-tap feedback system are designed for touch screens, and the layout adapts to smaller displays. Just open the page in your mobile browser, select your mode, and start solving.'
-                },
-                {
-                        question: 'Is the Nerdle solver free to use?',
-                        answer:
-                                'Yes, completely free with no sign-up, no ads blocking functionality, and no usage limits. The solver processes your feedback through a worker that calculates entropy-ranked suggestions for every valid equation in the pool. You can use it for every daily puzzle across all five modes without paying anything.'
-                },
-                {
-                        question: 'How does the solver choose its suggestions?',
-                        answer:
-                                'The solver uses an entropy-based algorithm. It evaluates every equation in the valid pool and calculates how much information each one would reveal across all possible feedback patterns. Equations that split the remaining pool most evenly — meaning they narrow down the most candidates regardless of what feedback you get — receive the highest entropy scores and appear at the top of the suggestion list.'
-                }
-        ];
 
         const schemaItems = [
                 {
@@ -435,7 +396,6 @@
                         applicationCategory: 'GameApplication',
                         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                 },
-                generateFAQSchema(faqs),
                 generateHowToSchema('How to use the Nerdle solver', [
                         { name: 'Select your mode', text: 'Choose Micro, Mini, Midi, Classic, or Maxi to match the Nerdle game you are playing.' },
                         { name: 'Enter your guess', text: 'Type or tap the equation you used in Nerdle and add it to the board.' },
@@ -841,7 +801,6 @@
                 
 
                 <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl">
-                        <FAQSection class="py-0" {faqs} title="Nerdle Solver FAQs" />
                 </div>
 
                 <section class="rounded-3xl bg-slate-100 p-8 text-center space-y-6">

@@ -4,7 +4,7 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { browser } from '$app/environment';
-        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import type { Artist, AttributeFeedback, FeedbackType, Guess } from '$lib/soundmap/types';
 
         type SoundmapAlgorithm = Pick<
@@ -232,39 +232,6 @@
                 }
         });
 
-        const faqs = [
-                {
-                        question: 'What is the Soundmap Solver?',
-                        answer:
-                                'Soundmap Solver is a free tool that helps you solve the Soundmap Artist Guesser game. You enter each artist you guess and mark the feedback the game gives you. The solver filters the full artist database and shows you which artists still fit.'
-                },
-                {
-                        question: 'How does the feedback system work?',
-                        answer:
-                                'For each attribute — debut year, popularity, members, genre, country, gender — click the feedback button to cycle through: Wrong, Correct, Close, and directional hints (Earlier/Later or Higher/Lower). Match what the game shows you, then add the guess.'
-                },
-                {
-                        question: 'Does the solver work for every artist?',
-                        answer:
-                                'The solver includes the complete Soundmap artist database. Every time you add a guess with feedback, it recalculates all remaining candidates and suggests the best next guess.'
-                },
-                {
-                        question: 'Is this tool free to use?',
-                        answer: 'Yes, the Soundmap Solver is completely free with no login required.'
-                },
-                {
-                        question: 'What does "Close" mean for country?',
-                        answer: 'Close for the country attribute means the target artist is from a nearby region, not the exact same country as your guess. For example, guessing a French artist when the answer is Italian might return Close.'
-                },
-                {
-                        question: 'What is the best first guess in Soundmap?',
-                        answer: 'The solver calculates recommended first guesses based on which artists split the remaining candidate pool most evenly. These are shown in the Recommended First Guesses section when you have not yet added any guess.'
-                },
-                {
-                        question: 'Why does my candidate count not go to 1?',
-                        answer: 'If multiple artists share very similar attributes (same debut year, genre, country), the feedback you receive may not distinguish between them. Keep guessing the recommended artist to eliminate candidates one by one.'
-                },
-        ];
 
         const jsonLdSchema = JSON.stringify({
                 '@context': 'https://schema.org',
@@ -276,7 +243,6 @@
                                 { image: 'https://wordsolverx.com/images/soundmap-solver.webp' }
                         ),
                         generateSoftwareApplicationSchema('Soundmap Solver', 'GameApplication'),
-                        generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Soundmap Solver', [
                                 { name: 'Search for an artist', text: 'Type any artist name you guessed in the Soundmap game into the search box and select the correct match from the dropdown.' },
                                 { name: 'Set the feedback for each attribute', text: 'For each category shown — debut year, popularity, members, genre, country, gender — click the button to cycle through Wrong, Correct, Close, and directional hints until it matches what the game returned.' },

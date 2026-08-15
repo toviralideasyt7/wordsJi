@@ -4,6 +4,8 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -115,6 +117,10 @@
         </p>
       </section>
     {/if}
+
+    <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['wordle-answer-today']} />
+    </div>
 
     <div class="mt-12">
       <AuthorCard

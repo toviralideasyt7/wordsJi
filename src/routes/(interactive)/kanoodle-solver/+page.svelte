@@ -5,50 +5,12 @@
   import KanoodleGame from '$lib/components/kanoodle/KanoodleGame.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     stripStructuredDataTypes,
     generateWebPageSchema,
   } from '$lib/seo';
 
-  const faqs = [
-    {
-      question: 'What is the Kanoodle solver and how do you use it?',
-      answer:
-        'The Kanoodle solver is an online tool and playable board that helps you solve the 12-piece Kanoodle puzzle. Drag or click a piece, rotate or flip it, then place it on the 5 by 11 board until every cell is filled.',
-    },
-    {
-      question: 'Does this noodle solver find real Kanoodle solutions?',
-      answer:
-        'Yes. This noodle solver uses the copied Kanoodle solver logic from the original implementation to test solvability, reveal hints, solve the board, and count multiple valid solutions.',
-    },
-    {
-      question: 'Can I generate easier or harder Kanoodle puzzles?',
-      answer:
-        'Yes. Use the New Puzzle controls to start a board with 1 to 6 pieces already placed. Fewer pre-placed pieces means a harder puzzle.',
-    },
-    {
-      question: 'Does this Kanoodle solver work on mobile?',
-      answer:
-        'Yes. The layout is responsive and supports tap-to-select plus tap-to-place if dragging is less convenient on your device.',
-    },
-    {
-      question: 'How does the backtracking solver work?',
-      answer:
-        'The solver places one piece at a time, checks whether the remaining empty cells are still reachable, and backtracks immediately if a dead end is detected. This connectivity check is what makes it fast — it stops exploring paths that can never lead to a full board.',
-    },
-    {
-      question: 'What is the difference between Hint, Solve, and Count Solutions?',
-      answer:
-        'Hint places one more piece and stops, letting you continue manually. Solve fills the entire board in one action. Count Solutions finds every valid completion — useful when you want to know whether your current layout has one answer or many.',
-    },
-    {
-      question: 'Does this solver work for Kanoodle Genius or Kanoodle Extreme?',
-      answer:
-        'The solver handles the original Kanoodle 5x11 flat board. Kanoodle Genius adds a 3D pyramid mode which is not supported. Kanoodle Extreme adds a sliding puzzle element that this solver does not handle.',
-    },
-  ];
 
   const pageTitle = 'Kanoodle Solver — Solve Any Kanoodle Puzzle Online';
   const pageDescription =
@@ -56,7 +18,6 @@
   const pageUrl = 'https://wordsolverx.com/kanoodle-solver';
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to solve Kanoodle online', [
       {
         name: 'Select a piece',

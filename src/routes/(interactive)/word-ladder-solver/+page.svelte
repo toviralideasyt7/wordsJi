@@ -2,7 +2,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import {
                 getDictionaryLabel,
                 isValidWordClient,
@@ -183,36 +183,6 @@
                 }
         }
 
-        const faqs = [
-                {
-                        question: 'What is a word ladder?',
-                        answer: 'A word ladder transforms one word into another by changing exactly one letter at a time, and each intermediate step must be a valid word. Lewis Carroll invented the puzzle in 1879 under the name "Doublets." The classic example turns HEAD into TAIL in 5 steps: HEAD → HEAL → TEAL → TELL → TALL → TAIL.'
-                },
-                {
-                        question: 'Why does my word pair have no solution?',
-                        answer: 'Most unsolvable pairs hit a dead end because no valid word in the dictionary bridges two consecutive steps. BRICK → STONE, for instance, requires changing 5 of 5 letters, and the intermediate words simply do not exist in standard dictionaries. Try switching to a larger dictionary like SOWPODS, which includes more obscure words that might create a path.'
-                },
-                {
-                        question: 'What is the difference between the three dictionaries?',
-                        answer: 'Our Word List uses the same word sets as the game Weaver for 3–12 letter words. OWL2 is the official US Scrabble dictionary — smaller but widely accepted. SOWPODS combines OWL2 with the international Scrabble list, adding thousands of words valid in UK and Commonwealth play. A pair that has no solution in OWL2 might have one in SOWPODS.'
-                },
-                {
-                        question: 'Why does the solver return paths with different step counts?',
-                        answer: 'Mixed mode finds the shortest paths first, then continues searching for longer paths that use different words. The shortest path from COLD to WARM takes 4 steps, but a 5-step path might travel through words like WORD and FARM that the 4-step path skips. Mixed mode shows you both, so you can pick the route you find most interesting.'
-                },
-                {
-                        question: 'How do I filter results after solving?',
-                        answer: 'Two post-solve filters are available. The step-count buttons at the top of the results show only paths with that exact number of steps. The word search box lets you type any word — only paths containing that word appear. Combine both filters to narrow things down fast.'
-                },
-                {
-                        question: 'Does the solver guarantee the shortest possible ladder?',
-                        answer: 'Yes. The solver uses breadth-first search, which explores all 1-step paths before any 2-step paths, all 2-step paths before any 3-step paths, and so on. The first complete path it finds is always the shortest. If no path exists in the chosen dictionary, it tells you so.'
-                },
-                {
-                        question: 'Can I solve ladders longer than 4-letter words?',
-                        answer: 'Yes. Our Word List supports 3 to 12 letter words. OWL2 and SOWPODS support even longer words. Longer words have more letter positions to change, which means more potential intermediate words — but also more ways to hit dead ends. Try WELCOME → GOODBYE for a real challenge.'
-                }
-        ];
 
         const jsonLd = JSON.stringify({
                 '@context': 'https://schema.org',
@@ -232,7 +202,6 @@
                                 'https://wordsolverx.com/word-ladder-solver',
                                 { image: 'https://wordsolverx.com/images/word-ladder-solver.webp' }
                         ),
-                        generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Word Ladder Solver', [
                                 { name: 'Enter start and end words', text: 'Type two words of the same length — for example, COLD and WARM. The solver only works with equal-length words because each step changes exactly one letter.' },
                                 { name: 'Pick a dictionary', text: 'Choose Our Word List for Weaver-compatible results, OWL2 for US Scrabble words, or SOWPODS for the widest international word set.' },

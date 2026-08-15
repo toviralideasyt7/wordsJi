@@ -5,7 +5,6 @@
   import LightsOutSolverClient from '$lib/components/lightsout/LightsOutSolverClient.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     stripStructuredDataTypes,
@@ -17,41 +16,8 @@
     'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal solve path.';
   const pageUrl = 'https://wordsolverx.com/light-out-solver';
 
-  const faqs = [
-    {
-      question: 'How does this Light Out solver work?',
-      answer:
-        'The solver uses Gaussian elimination over GF(2) — modular arithmetic where 1+1=0 — to find the optimal move sequence. This is the same algorithm that proves every 5x5 board is solvable.'
-    },
-    {
-      question: 'What is the difference between Linked Toggle and Edit Puzzle?',
-      answer:
-        'Linked Toggle behaves like the real game: clicking a light flips it plus its neighbors. Edit Puzzle lets you set up any custom board one light at a time without the neighbor effect.'
-    },
-    {
-      question: 'Can I solve random puzzles and manual board setups?',
-      answer:
-        'Yes. Generate random boards, recreate a puzzle you already have, then solve it and review every step as a mini-board sequence.'
-    },
-    {
-      question: 'Are all Lights Out boards solvable?',
-      answer:
-        'Every 5x5 Lights Out board is solvable — this is mathematically proven. Smaller boards (2x2, 3x3, 4x4) are also always solvable with the standard toggle pattern (self plus 4 neighbors).'
-    },
-    {
-      question: 'What is the chase-the-lights method?',
-      answer:
-        'It is a manual technique where you solve the top row first, then use the second row to fix the first, the third row to fix the second, and so on. It works for most boards but does not guarantee the fewest moves.'
-    },
-    {
-      question: 'Can I use the solver on my phone?',
-      answer:
-        'Yes. The board and step cards are fully responsive. Tap cells to toggle lights, then tap Solve to get the optimal path.'
-    }
-  ];
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Light Out solver', [
       { name: 'Choose a board size', text: 'Pick a size from 2 by 2 up to 5 by 5.' },
       { name: 'Build or randomize the board', text: 'Use linked play or edit mode to create the puzzle state you want to solve.' },

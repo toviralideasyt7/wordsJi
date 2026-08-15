@@ -5,7 +5,6 @@
   import SquaredleSolverClient from '$lib/components/squaredle/SquaredleSolverClient.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     stripStructuredDataTypes,
@@ -19,41 +18,8 @@
   pageDescription =
     'Use the Squaredle solver to load today\u2019s board or paste a custom grid and find every valid word path.';
 
-  const faqs = [
-    {
-      question: 'Does the Squaredle solver use the compressed dictionary from the original project?',
-      answer:
-        'Yes. The solver loads the same compressed words_alpha dictionary and solves the board in the browser once that dictionary is ready.'
-    },
-    {
-      question: 'Can I load today\'s official Squaredle puzzle?',
-      answer:
-        'Yes. The page includes the same today-puzzle scraping flow as the source project, then solves the official board locally after loading it.'
-    },
-    {
-      question: 'What does Solve Official do?',
-      answer:
-        'Solve Official narrows the results to the known valid and bonus words for today\'s official Squaredle board, so you can compare against the real puzzle list.'
-    },
-    {
-      question: 'How is Squaredle different from Boggle?',
-      answer:
-        'Squaredle has a daily board format, word categories (common and bonus), and a star system. Boggle uses random boards, a timer, and no word categories. The letter adjacency rules are similar, but the gameplay feels different because Squaredle is about completeness — finding every word — rather than speed.'
-    },
-    {
-      question: 'What counts as a valid word in Squaredle?',
-      answer:
-        'Words must be at least 4 letters long (the minimum length varies by board). Each letter can only be used once per word. The path can go in any of the 8 directions (including diagonals) but cannot revisit a cell.'
-    },
-    {
-      question: 'How many words does a typical Squaredle board contain?',
-      answer:
-        'A standard 4x4 board usually has 40-80 valid words. Larger boards can have over 100. The "Load today" feature shows you exactly how many common and bonus words exist for the daily puzzle.'
-    }
-  ];
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Squaredle solver', [
       { name: 'Enter or paste a board', text: 'Type one letter per cell or paste the whole board from a screenshot or copied grid.' },
       { name: 'Load today’s official puzzle if needed', text: 'Use Load today to pull in the current official Squaredle board and word list.' },

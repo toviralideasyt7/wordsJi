@@ -3,7 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
 
   interface CellConstraint {
     index: number;
@@ -176,15 +176,6 @@
     return 'bg-white text-slate-900 border-2 border-slate-200 shadow-sm hover:border-amber-400';
   }
 
-  const faqs = [
-    { question: 'How does the Waffle Solver work?', answer: 'Enter the letters from your Waffle grid and mark each cell green or yellow based on what the game shows. Click Solve, and the WASM engine tests every valid letter arrangement against the dictionary to find all solutions that fit.' },
-    { question: 'Can I solve past Waffles?', answer: "Yes. Use the date picker next to the 'Auto Fill Today' button to load and solve Waffle puzzles from any previous day." },
-    { question: 'Is it free to use?', answer: 'The Waffle Solver is completely free. No sign-up, no limits.' },
-    { question: 'What do the colors mean?', answer: 'Green means the letter is already in the correct position. Yellow means the letter belongs in that word (row or column) but is in the wrong spot. White or gray means the letter does not belong in that specific word.' },
-    { question: 'Why does the solver sometimes find more than one solution?', answer: 'Occasionally the grid constraints allow multiple valid letter arrangements. Each result shown satisfies all the color hints and uses only real English words. You can try all of them in the game.' },
-    { question: 'What does Auto Fill Today do?', answer: "Auto Fill Today fetches today's Waffle puzzle from the official Waffle API and fills the grid automatically, including starting colors. You skip manual entry entirely." },
-    { question: 'How many swaps does a perfect Waffle score take?', answer: 'Every Waffle puzzle is solvable in exactly 10 swaps, which earns a 5-star score. Each extra swap costs half a star. Knowing the target arrangement from the solver lets you plan the most efficient route.' },
-  ];
 
   const jsonLdSchema = JSON.stringify([
     generateWebPageSchema(
@@ -194,7 +185,6 @@
       { image: 'https://wordsolverx.com/images/waffle-solver.webp' }
     ),
     generateSoftwareApplicationSchema('Waffle Solver', 'GameApplication'),
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Waffle Solver', [
       { name: 'Fill the board', text: "Type the letters from your current Waffle grid into the input cells, or click 'Auto Fill Today' to load them automatically." },
       { name: 'Set the colors', text: 'Click each cell to cycle through white, yellow, and green to match what the Waffle game shows you.' },

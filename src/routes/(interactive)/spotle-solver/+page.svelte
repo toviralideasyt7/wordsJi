@@ -26,32 +26,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         let guesses = $state<SpotleGuess[]>([]);
         let currentFeedback = $state(getDefaultSpotleFeedback());
 
-        const faqs = [
-                {
-                        question: 'What is Spotle?',
-                        answer: 'Spotle is a daily music guessing game where you try to identify a mystery Spotify artist in 10 guesses or fewer. After each guess, you get feedback on multiple attributes like rank, debut year, genre, country, group size, and gender — similar to Wordle but for music artists.'
-                },
-                {
-                        question: 'How does the Spotle solver work?',
-                        answer: 'Search for an artist you want to guess, then set the feedback colors (green/yellow/gray) and arrows (higher/lower) for each attribute to match what the game shows. Click "Add Guess" and the solver filters the entire artist pool in real time, showing only candidates that match all your clues.'
-                },
-                {
-                        question: 'Does the solver use the same artist data as Spotle?',
-                        answer: 'The solver draws from the same pool of popular Spotify artists that the game uses. Its filtering logic matches Spotle\'s attribute comparison rules — including proximity thresholds for yellow feedback and the direction arrows for numeric attributes.'
-                },
-                {
-                        question: 'Can I use the solver for the daily Spotle puzzle?',
-                        answer: 'Yes. Enter your guesses and feedback exactly as they appear in today\'s Spotle game. The solver filters candidates in real time, so you can narrow down the answer within a few guesses regardless of which artist was chosen.'
-                },
-                {
-                        question: 'What do the green, yellow, and gray feedback colors mean in Spotle?',
-                        answer: 'Green means the attribute matches exactly — same genre, same country, same rank number. Yellow means the attribute is close — similar but not exact, like a nearby rank or a related genre. Gray means the attribute is wrong and the mystery artist\'s value is far from your guess.'
-                },
-                {
-                        question: 'How many guesses does it usually take to solve Spotle?',
-                        answer: 'With the solver, most players identify the artist in 3-4 guesses. The real-time filtering eliminates large portions of the artist pool after each guess, so you converge quickly. Without a solver, players typically need 5-7 guesses, and many fail to solve within the 10-guess limit.'
-                }
-        ];
 
         const solverLinks = [
                 { href: '/wordle-solver', label: 'Wordle Solver' },
@@ -159,14 +133,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                                 applicationCategory: 'GameApplication',
                                 operatingSystem: 'Any',
                                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
-                        },
-                        {
-                                '@type': 'FAQPage',
-                                mainEntity: faqs.map((faq) => ({
-                                        '@type': 'Question',
-                                        name: faq.question,
-                                        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
-                                }))
                         },
                         {
                                 '@type': 'HowTo',

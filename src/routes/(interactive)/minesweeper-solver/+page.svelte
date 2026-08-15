@@ -5,7 +5,6 @@
   import MinesweeperSolverClient from '$lib/components/minesweeper/MinesweeperSolverClient.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     generateWebApplicationSchema,
@@ -18,31 +17,8 @@
     'Use this free Minesweeper solver to find safe moves, mark mines, and analyze custom boards with smart hints.';
   const pageUrl = 'https://wordsolverx.com/minesweeper-solver';
 
-  const faqs = [
-    {
-      question: 'How do I use this Minesweeper solver?',
-      answer:
-        'Match the board size and mine count to your game, enter the revealed numbers and flagged mines, then click Find Next Move. The Minesweeper solver marks forced safe cells and forced mine cells directly on the board.',
-    },
-    {
-      question: 'What do the green and red markers mean?',
-      answer:
-        'Green markers are safe squares the solver says can be clicked safely. Red markers are mine locations the solver can prove. If there is no forced move, the solver marks the safest candidates with a question mark.',
-    },
-    {
-      question: 'Can this Minesweeper solver handle custom board sizes?',
-      answer:
-        'Yes. You can change the width, height, and total mine count before resetting the board. That makes the tool useful for beginner, intermediate, expert, and custom Minesweeper layouts.',
-    },
-    {
-      question: 'Does this Minesweeper solver work on mobile?',
-      answer:
-        'Yes. The board editor and solver controls are responsive, so you can use the Minesweeper solver on desktop and mobile browsers without installing anything.',
-    },
-  ];
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Minesweeper solver', [
       {
         name: 'Match your puzzle setup',

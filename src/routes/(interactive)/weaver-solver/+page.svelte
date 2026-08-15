@@ -3,7 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     WORDSOLVERX_WORD_LENGTHS,
     getWordLadderIndexClient,
@@ -149,36 +149,6 @@
     return classes;
   }
 
-  const faqs = [
-    {
-      question: 'What is Weaver?',
-      answer: 'Weaver is a daily word ladder game where you change one letter at a time to get from a start word to a target word. Every step must be a real word. The goal is to do it in as few steps as possible.',
-    },
-    {
-      question: 'How does the Weaver Solver work?',
-      answer: 'Type your start word and end word. The solver detects the word length, loads the right word list, and runs a breadth-first search to find every shortest path between the two words. Results appear automatically — no button needed.',
-    },
-    {
-      question: 'What word lengths does the solver support?',
-      answer: 'The solver handles 3 to 12 letter words. Both words must be the same length. Type them in and the correct word list loads automatically.',
-    },
-    {
-      question: 'Why does the solver show multiple paths?',
-      answer: 'Sometimes there are several routes of equal length between two words. The solver shows up to 5 shortest paths so you can pick the one that uses words you prefer.',
-    },
-    {
-      question: 'What happens when no path exists?',
-      answer: 'Some word pairs have no valid connection in the dictionary. If that happens, the solver tells you directly. It means there is no sequence of single-letter changes that connects those two words through real words.',
-    },
-    {
-      question: 'Is this the same algorithm as the Weaver game uses?',
-      answer: 'The solver uses bidirectional BFS, which is faster than a single-direction search. It explores from both ends simultaneously and stops when the two fronts meet. The result is always the true shortest path.',
-    },
-    {
-      question: 'Can I use this for any word ladder puzzle, not just Weaver?',
-      answer: 'Yes. The underlying algorithm works for any word ladder problem. If you have a word pair from a different game or puzzle book, just type them in. As long as both words are the same length and in the dictionary, the solver will find the path.',
-    },
-  ];
 
   const jsonLdSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -190,7 +160,6 @@
         { image: 'https://wordsolverx.com/images/weaver-solver.webp' }
       ),
       generateSoftwareApplicationSchema('Weaver Solver', 'GameApplication'),
-      generateFAQSchema(faqs),
       generateHowToSchema('How to use the Weaver Solver', [
         { name: 'Enter the start word', text: 'Type your starting word into the top input. It turns green when the solver recognizes it as a valid dictionary word.' },
         { name: 'Enter the end word', text: 'Type the target word in the bottom input. Both words must be the same length between 3 and 12 letters.' },

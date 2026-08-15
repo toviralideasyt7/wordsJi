@@ -4,7 +4,6 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     stripStructuredDataTypes,
@@ -12,38 +11,6 @@
   } from '$lib/seo';
   import WorldleSolverClient from '$lib/components/worldle/WorldleSolverClient.svelte';
 
-  const faqs = [
-    {
-      question: 'How does the Worldle solver narrow down countries?',
-      answer:
-        'It compares each candidate country against the distance and direction clues you enter from your guesses. Countries that fail both checks for any hint are removed, and the rest are ranked by how closely they match all clues.',
-    },
-    {
-      question: 'What clues should I enter from the Worldle game?',
-      answer:
-        'Add the country you guessed, the distance shown by Worldle, and the compass direction arrow from your guess to the answer. If you want, you can also include the proximity percentage as an extra ranking signal.',
-    },
-    {
-      question: 'Does the solver run on the server?',
-      answer:
-        'No. This tool runs entirely in your browser, so results update locally as you add or remove hints.',
-    },
-    {
-      question: 'Why are there still multiple possible answers sometimes?',
-      answer:
-        'Worldle clues can overlap. One hint often leaves many countries that are close enough, so adding a second or third hint usually collapses the list quickly.',
-    },
-    {
-      question: 'Does the solver include territories and small island nations?',
-      answer:
-        'Yes. The database includes overseas territories and small island nations that Worldle uses, like French Polynesia, Saint Helena, and New Caledonia.',
-    },
-    {
-      question: 'Can I remove a clue if I entered it wrong?',
-      answer:
-        'Yes. Each clue you add has a remove button. Delete any clue and the candidate list recalculates immediately with the remaining hints.',
-    },
-  ];
 
   const pageTitle = 'Worldle Solver - Solve Worldle With Distance And Direction Clues | WordSolverX';
   const pageDescription =
@@ -51,7 +18,6 @@
   const pageUrl = 'https://wordsolverx.com/worldle-solver';
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Worldle solver', [
       {
         name: 'Choose a guessed country',
@@ -114,7 +80,7 @@
   </section>
 
   <div class="mx-auto max-w-5xl px-4 pb-4 sm:px-6 lg:px-8">
-    <WorldleSolverClient {faqs} />
+    <WorldleSolverClient />
   </div>
 
   

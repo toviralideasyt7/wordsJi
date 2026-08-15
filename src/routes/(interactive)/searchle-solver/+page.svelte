@@ -2,7 +2,6 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { onMount } from 'svelte';
-  import FAQSection from '$lib/components/FAQSection.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import { generateBreadcrumbSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
@@ -51,32 +50,6 @@
   let searchleRuntime = $state<SearchleRuntime | null>(null);
   const dailyPuzzle = $derived(data.dailyPuzzle);
 
-  const faqs = [
-    {
-      question: 'What is Searchle?',
-      answer: 'Searchle is a daily puzzle game based on Google autocomplete suggestions. You see a partial search query with a blank and must guess the most common autocomplete word. Feedback shows green, yellow, or gray for each letter — same mechanic as Wordle, but the answers come from real Google search data.'
-    },
-    {
-      question: 'How does the Searchle solver work?',
-      answer: 'Type the partial search prompt (use ... for the blank), hit Solve, and the solver returns entropy-ranked autocomplete candidates. Pick a word, mark each letter green/yellow/gray to match the game feedback, and submit. The solver re-filters after each guess, shrinking the candidate pool until you find the answer.'
-    },
-    {
-      question: 'Does the solver use the same autocomplete data as Searchle?',
-      answer: 'The solver uses the same kind of Google autocomplete data that Searchle pulls from. Its word pool covers common search completions, so the suggestions line up with what the game treats as valid answers.'
-    },
-    {
-      question: 'Can I use the solver for the daily Searchle puzzle?',
-      answer: 'Yes. Click "Play Daily" to load today\'s prompt automatically. Then enter your guesses and feedback just like you would for any other prompt. The solver handles daily puzzles the same way it handles custom prompts.'
-    },
-    {
-      question: 'What do green, yellow, and gray mean in Searchle?',
-      answer: 'Green means the letter is correct and in the right position. Yellow (partial) means the letter appears in the answer but in a different position. Gray (absent) means the letter is not in the answer at all. Click each letter tile to cycle through these states.'
-    },
-    {
-      question: 'How many guesses does it usually take to solve Searchle?',
-      answer: 'Most players solve Searchle in 2-4 guesses when using the solver. The entropy-ranked first suggestion often gets close to the answer, and the feedback filter narrows it down quickly. Without a solver, players typically need 4-6 guesses.'
-    }
-  ];
 
   const solverLinks = [
     { href: '/wordle-solver', label: 'Wordle Solver' },
@@ -347,14 +320,6 @@
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       },
       {
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: { '@type': 'Answer', text: faq.answer }
-        }))
-      },
-      {
         '@type': 'HowTo',
         name: 'How to use the Searchle solver',
         step: [
@@ -588,7 +553,6 @@
     
 
     <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl mt-12">
-      <FAQSection title="Searchle Solver FAQ" {faqs} class="py-0" />
     </div>
 
     <div class="mt-8 bg-slate-100 rounded-2xl p-6 sm:p-8 text-center space-y-6">

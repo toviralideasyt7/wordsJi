@@ -2,7 +2,6 @@
   import { onMount } from 'svelte';
   import { tick } from 'svelte';
 
-  import FAQSection from '$lib/components/FAQSection.svelte';
   import {
     WORLDLE_DIRECTIONS,
     calculateProximity,
@@ -18,32 +17,6 @@
     WorldleSolverResult,
   } from '$lib/worldle/types';
 
-  let {
-    faqs = [
-      {
-        question: 'How does the Worldle solver narrow down countries?',
-        answer:
-          'It compares each candidate country against the distance and direction clues you enter from your guesses. Countries that fail both checks for any hint are removed, and the rest are ranked by how closely they match all clues.',
-      },
-      {
-        question: 'What clues should I enter from the Worldle game?',
-        answer:
-          'Add the country you guessed, the distance shown by Worldle, and the compass direction arrow from your guess to the answer. If you want, you can also include the proximity percentage as an extra ranking signal.',
-      },
-      {
-        question: 'Does the solver run on the server?',
-        answer:
-          'No. This tool runs entirely in your browser, so results update locally as you add or remove hints.',
-      },
-      {
-        question: 'Why are there still multiple possible answers sometimes?',
-        answer:
-          'Worldle clues can overlap. One hint often leaves many countries that are close enough, so adding a second or third hint usually collapses the list quickly.',
-      },
-    ],
-  }: {
-    faqs?: Array<{ question: string; answer: string }>;
-  } = $props();
 
   let countries = $state<WorldleCountry[]>([]);
   let countriesLoaded = $state(false);
@@ -421,7 +394,4 @@
     </div>
   </section>
 
-  <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl shadow-slate-200/60 dark:border-slate-700 dark:bg-slate-800 dark:shadow-none">
-    <FAQSection class="py-0" {faqs} title="Worldle Solver FAQs" />
-  </div>
 </div>

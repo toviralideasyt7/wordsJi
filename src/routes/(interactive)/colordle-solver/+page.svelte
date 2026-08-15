@@ -5,7 +5,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     stripStructuredDataTypes,
     generateWebPageSchema
@@ -183,17 +182,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
     };
   });
 
-  const faqs = [
-    { question: 'What is the Colordle Solver?', answer: 'You type in your guess (like "Sea Green") and the percentage Colordle gave you. The solver filters the color list to show only colors that would produce that same percentage. It saves you from manually cross-referencing hundreds of colors.' },
-    { question: 'How accurate is the percentage calculation?', answer: 'It uses Delta E CIE2000 in LAB color space — the same formula Colordle itself uses. A score of 85% from the solver means the same as 85% in the game.' },
-    { question: 'Is this solver cheating?', answer: "It's a utility, not cheating. Think of it like a crossword dictionary. If you want to learn how hex codes and color distance work, you'll pick that up naturally by using it." },
-    { question: 'Where do you get the list of color names?', answer: 'The list comes from a large open-source color database with thousands of named colors. It includes obscure names like Gamboge, Celadon, and Amaranth that Colordle actually uses.' },
-    { question: 'Can I use this solver on mobile?', answer: 'Yes. It works on phones, tablets, and desktop. The color grid is touch-friendly and the input fields are sized for mobile.' },
-{ question: 'How many guesses does it usually take?', answer: 'With the solver, most people get it in 2-3 guesses. Without help, it varies wildly — some colors are just harder to pin down if you don\'t know the specific name.' },
-{ question: 'Why do some color names have multiple words?', answer: 'Colordle uses a large color database that includes compound names like "Sea Green", "Pale Turquoise", and "Deep Sky Blue." These are standard CSS color names. When searching, partial matches work — typing "sea" finds "Sea Green."' },
-{ question: 'Can I solve multiple Colordle puzzles with this tool?', answer: 'Yes. The solver does not store any data between sessions. Each puzzle is independent. Refresh the page to start fresh with a new puzzle.' },
-{ question: 'What happens if I enter the wrong percentage?', answer: 'Entering an incorrect percentage filters out colors that should stay in the candidate list. If your filtered results suddenly look wrong, double-check the percentage from the game. The most common mistake is mixing up tens and ones digits.' },
-];
 
 const jsonLdSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -214,7 +202,6 @@ const jsonLdSchema = JSON.stringify({
       operatingSystem: 'Any',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
     },
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Colordle Solver', [
       { name: 'Make your first guess in Colordle', text: 'Start with a broad color like Red, Blue, or Yellow. These span the color wheel and give you the most information about the target hue.' },
       { name: 'Note the similarity percentage', text: 'Colordle tells you how close your guess is as a percentage. Higher means closer. Write down the color name and percentage.' },

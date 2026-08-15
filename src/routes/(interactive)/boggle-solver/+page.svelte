@@ -3,7 +3,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-        import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+        import { generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
         import { generateRandomBoggleBoard, solveBoggleBoard } from '$lib/boggle-client';
 
         interface Position {
@@ -228,32 +228,6 @@
                 selectedWord = null;
         }
 
-        const faqs = [
-                {
-                        question: 'What board sizes does the Boggle solver support?',
-                        answer: 'Any grid from 3x3 to 10x10. Standard Boggle is 4x4, Big Boggle is 5x5. Smaller boards finish faster but have fewer words. Larger boards produce more words but take a moment longer to solve.'
-                },
-                {
-                        question: 'What is the difference between Classic and Revised dice?',
-                        answer: 'Classic dice use the original 1972 Boggle letter distribution. Revised dice use the updated Hasbro distribution that slightly increases vowel frequency. Both produce valid boards. Choose "Random" if you want each letter picked independently by frequency.'
-                },
-                {
-                        question: 'How does the Boggle solver find words?',
-                        answer: 'It builds a trie from a dictionary of over 100,000 words, then runs a depth-first search from every cell on the board. Each path checks the trie as it goes, so it prunes dead ends early instead of checking every possible path.'
-                },
-                {
-                        question: 'Can I share a Boggle board with someone?',
-                        answer: 'Yes. After solving, click "Share Board URL" to copy a link that includes the board letters and size. Anyone who opens that link sees the same board already solved.'
-                },
-                {
-                        question: 'Does the Boggle solver count the Q tile correctly?',
-                        answer: 'Yes. In standard Boggle the Q die shows "Qu" and counts as two letters. The solver handles this the same way the physical game does.'
-                },
-                {
-                        question: 'Is this Boggle solver free?',
-                        answer: 'Yes, completely free. No sign-up, no ads, no limits. Pick a board size, enter letters or generate one, and solve.'
-                }
-        ];
 
         const jsonLd = JSON.stringify({
                 '@context': 'https://schema.org',
@@ -273,7 +247,6 @@
                                 'https://wordsolverx.com/boggle-solver',
                                 { image: 'https://wordsolverx.com/images/boggle-solver.webp' }
                         ),
-                        generateFAQSchema(faqs),
                         generateHowToSchema('How to use the Boggle solver', [
                                 { name: 'Choose a board size', text: 'Pick a grid size from 3x3 to 10x10. Standard Boggle uses 4x4.' },
                                 { name: 'Enter or generate letters', text: 'Type your board letters manually or click Random to generate a board with proper Boggle dice distribution.' },

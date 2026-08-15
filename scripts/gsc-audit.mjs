@@ -181,11 +181,39 @@ async function main() {
     method: 'POST',
     body: { startDate: dateStr(90), endDate: dateStr(0), dimensions: ['query'], rowLimit: 1000 },
   });
-  const queryRows = (queries.json.rows || []).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position }));
+  const queryRows = (queries.json.rows || []).map((r) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, ctr: r.ctr ?? (r.impressions ? r.clicks / r.impressions : 0), position: r.position }));
   queryRows.sort((a, b) => b.clicks - a.clicks);
   console.log(`\nTOP QUERIES (${queryRows.length} total, top 25 by clicks):`);
-  queryRows.slice(0, 25).forEach((r) => console.log(`  ${Math.round(r.clicks).toString().padStart(5)} clk ${Math.round(r.impressions).toString().padStart(7)} imp ${r.position.toFixed(1).padStart(5)} pos "${r.query}"`));
+  queryRows.slice(0, 25).forEach((r) => console.log(`  ${Math.round(r.clicks).toString().padStart(5)} clk ${Math.round(r.impressions).toString().padStart(7)} imp ${(r.ctr * 100).toFixed(1).padStart(5)}% ctr ${r.position.toFixed(1).padStart(5)} pos "${r.query}"`));
+
+  // Keyword opportunity: impressions without clicks (ranking but not winning).
+  const opportunities = queryRows
+    .filter((r) => r.impressions >= 100 && r.position <= 25)
+    .map((r) => ({ ...r, potentialClicks: Math.round(r.impressions * (0.15 - r.ctr)) }))
+    .sort((a, b) => b.potentialClicks - a.potentialClicks);
+  console.log(`\nKEYWORD OPPORTUNITIES (impressions>=100, pos<=25, biggest click upside first):`);
+  opportunities.slice(0, 30).forEach((r) =>
+    console.log(
+      `  ${Math.round(r.impressions).toString().padStart(7)} imp ${Math.round(r.clicks).toString().padStart(4)} clk ${(r.ctr * 100).toFixed(1).padStart(5)}% ctr ${r.position.toFixed(1).padStart(5)} pos +${String(r.potentialClicks).padStart(3)} upside "${r.query}"`
+    )
+  );
+
+  // Near-miss: good position (2-6) but CTR far below the ~15% reference → title/meta/snippet problem.
+  const nearMisses = queryRows
+    .filter((r) => r.position >= 2 && r.position <= 6 && r.impressions >= 50 && r.ctr < 0.10)
+    .sort((a, b) => b.impressions - a.impressions);
+  console.log(`\nNEAR-MISS (pos 2-6 but CTR < 10% — fix titles/descriptions/featured snippets):`);
+  nearMisses.slice(0, 20).forEach((r) =>
+    console.log(
+      `  ${Math.round(r.impressions).toString().padStart(7)} imp ${(r.ctr * 100).toFixed(1).padStart(5)}% ctr ${r.position.toFixed(1).padStart(5)} pos "${r.query}"`
+    )
+  );
+
   fs.writeFileSync(path.join(OUT_DIR, 'queries.json'), JSON.stringify(queryRows, null, 2));
+  fs.writeFileSync(
+    path.join(OUT_DIR, 'keyword-opportunities.json'),
+    JSON.stringify({ opportunities, nearMisses }, null, 2)
+  );
 
   // 5) URL Inspection for the sample
   console.log('\nURL INSPECTION:');

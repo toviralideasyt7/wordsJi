@@ -5,7 +5,6 @@
   import PhoodleSolverClient from '$lib/components/phoodle/PhoodleSolverClient.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateSoftwareApplicationSchema,
     stripStructuredDataTypes,
@@ -17,46 +16,8 @@
     'Use the Phoodle solver to enter your guesses, match the feedback colors, and get the best next food-word suggestions with the original WASM solver logic.';
   const pageUrl = 'https://wordsolverx.com/phoodle-solver';
 
-  const faqs = [
-    {
-      question: 'Does this Phoodle solver use the original WASM logic?',
-      answer:
-        'Yes. This page uses the same standalone WASM solver bundle from the original Phoodle solver project, so the starter and suggestion logic stays the same.'
-    },
-    {
-      question: 'How do I enter my Phoodle feedback?',
-      answer:
-        'Add the guess you used in the game, then tap each letter tile until it matches the color you saw in Phoodle: absent, present, or correct.'
-    },
-    {
-      question: 'Can I click a suggestion to reuse it?',
-      answer:
-        'Yes. Tapping a suggested word or a possible answer loads it into the guess input so you can add it quickly as your next try.'
-    },
-    {
-      question: 'What makes Phoodle different from Wordle?',
-      answer:
-        'Phoodle only uses food-related words — ingredients, dishes, cooking terms, and kitchen items. The green-yellow-gray feedback system is the same, but the restricted word list means standard Wordle strategies like starting with CRANE or SLATE are less effective.'
-    },
-    {
-      question: 'How many guesses do I get in Phoodle?',
-      answer:
-        'You get 6 guesses, same as Wordle. The solver typically finds the answer within 3 attempts when you enter feedback accurately, which leaves plenty of room for error.'
-    },
-    {
-      question: 'Does the Phoodle solver work on mobile?',
-      answer:
-        'Yes. The solver runs entirely in the browser with WASM, so it works on any device without installing anything. Just open the page, enter your guesses, and get suggestions.'
-    },
-    {
-      question: 'What time does Phoodle reset?',
-      answer:
-        'Phoodle resets at midnight local time. A new food word appears every day, and the solver updates its suggestions based on whatever puzzle is current.'
-    }
-  ];
 
   const schemas = JSON.stringify([
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Phoodle solver', [
       { name: 'Add your guess', text: 'Enter the 5-letter word you tried in Phoodle.' },
       { name: 'Match the feedback', text: 'Tap each tile until it matches the result from the game.' },

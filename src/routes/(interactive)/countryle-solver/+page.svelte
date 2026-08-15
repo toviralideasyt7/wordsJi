@@ -2,7 +2,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import { generateBreadcrumbSchema, generateFAQSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { generateBreadcrumbSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     calculateDirection,
     directionLabels,
@@ -42,32 +42,6 @@
 
   const filteredResults = $derived(filterCountriesByHints(countries, hints));
 
-  const faqs = [
-    {
-      question: 'How do I use the Countryle solver?',
-      answer: 'Pick the country you guessed in the real game, then enter the exact feedback for hemisphere, continent, temperature, population, and compass direction. Each clue reduces the matching countries.'
-    },
-    {
-      question: 'Does the Countryle solver use the same clue logic?',
-      answer: 'Yes. The filtering logic uses the same comparison rules as the source project, including the direction tolerance and percentage-based population thresholds.'
-    },
-    {
-      question: 'Can I solve old Countryle puzzles too?',
-      answer: 'Yes. The solver works for any Countryle date as long as you enter the clue feedback from that puzzle.'
-    },
-    {
-      question: 'What do the temperature clues mean?',
-      answer: '"Hotter" means the target country has a higher average temperature than your guess. "A bit hotter" means it is slightly warmer. "Same" means similar average temperature. The thresholds match the original Countryle game.'
-    },
-    {
-      question: 'Which direction does the compass arrow point?',
-      answer: 'The arrow points FROM your guessed country TOWARD the target country. If you guess France and the arrow points East, the answer is east of France — like Turkey or Russia.'
-    },
-    {
-      question: 'What is the best country to guess first?',
-      answer: 'Countries near the center of continents work well because they produce useful directional clues. Turkey, Algeria, and Kazakhstan are strong openers — they split the world into manageable regions after a single guess.'
-    }
-  ];
 
   const schemas = JSON.stringify([
     generateWebPageSchema(
@@ -77,7 +51,6 @@
       { image: 'https://wordsolverx.com/images/countryle-solver.webp' }
     ),
     generateSoftwareApplicationSchema('Countryle Solver', 'GameApplication'),
-    generateFAQSchema(faqs),
     generateHowToSchema('How to use the Countryle solver', [
       { name: 'Select your guessed country', text: 'Type the country name and pick it from the dropdown.' },
       { name: 'Set the clue feedback', text: 'Toggle hemisphere, continent, temperature, population, and direction to match what Countryle showed you.' },

@@ -2,10 +2,8 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-  import FAQSection from '$lib/components/FAQSection.svelte';
   import {
     generateBreadcrumbSchema,
-    generateFAQSchema,
     generateHowToSchema,
     generateWebPageSchema,
     stripStructuredDataTypes
@@ -46,48 +44,6 @@
   let pickerHexInput = $state('#ff0000');
   let pickerRgb = $state<RgbChannels>({ r: 255, g: 0, b: 0 });
 
-const faqs = [
-        {
-                question: 'What is Colorfle?',
-                answer: 'Colorfle is a daily color puzzle game where you see a target hex color and must find the three source colors that mix to produce it. You have 6 guesses to find the correct combination. Each guess shows three color swatches, and you receive feedback indicating how close each source color is to the actual answer.'
-        },
-        {
-                question: 'How does the Colorfle solver work?',
-                answer: 'The Colorfle solver supports both directions: start from a visible target hex to find the best matching source colors, or enter feedback from your guesses to narrow the remaining combinations.'
-        },
-        {
-                question: 'What is the difference between hex-solving and feedback-solving modes?',
-                answer: 'Hex-solving works when you have a target color but no guesses yet. Enter the hex, get the top 5 closest three-color combinations. Feedback-solving works after you have made guesses and marked each swatch with green, yellow, or gray. Click Refine to filter out combinations that contradict your feedback.'
-        },
-        {
-                question: 'Does the solver use the same Colorfle mixing logic?',
-                answer: 'Yes. The solver uses the same color list, weighted mixing model, and feedback filtering logic from the source Colorfle project.'
-        },
-        {
-                question: 'Why does the solver show multiple suggestions instead of one answer?',
-                answer: 'Colorfle uses three source colors that mix together, so multiple combinations can produce similar target colors. The solver shows the top 5 matches ranked by similarity. Use the feedback from each guess to refine the list and converge on the exact answer.'
-        },
-        {
-                question: 'What do the green, yellow, and gray feedback colors mean in Colorfle?',
-                answer: 'Green means the color channel matches exactly — you have the right value. Yellow means you are close but not exact — the correct value is nearby. Gray means you are far off on that channel. Click each color swatch in the guess row to cycle through feedback states.'
-        },
-        {
-                question: 'Can I use the color picker instead of typing a hex code?',
-                answer: 'Yes. Click "Pick a Color Instead" below the hex input to open a visual color picker. Select any color, then click "Use This Color" to submit it as your target hex. This is useful when you can see the target color on screen but do not know its hex value.'
-        },
-        {
-                question: 'How does color mixing work in Colorfle?',
-                answer: 'Colorfle uses weighted RGB channel mixing. Each source color contributes to the final target by averaging its red, green, and blue channels with specific weights. The solver mirrors this exact mixing model so suggestions match what you would see in the actual game.'
-        },
-        {
-                question: 'Why might a suggestion have a low similarity score?',
-                answer: 'Similarity scores below 90% mean the three-color combination produces a noticeably different color than your target. This usually happens with mid-range targets where many combinations cluster together. Lower similarity does not mean the answer is wrong — it means the solver is showing you the closest matches from a limited color palette.'
-        },
-        {
-                question: 'What should I do when refine returns no matches?',
-                answer: 'Double-check your feedback settings. If even one swatch has incorrect feedback, the refine step will eliminate all valid combinations. Make sure green means exact match, yellow means close but not exact, and gray means far off. If you are stuck, clear your guesses and start over with a new hex or suggestion.'
-        }
-];
 
   const solverLinks = [
     { href: '/colorfle-answer-today', label: 'Colorfle Answer Today' },
@@ -280,7 +236,6 @@ const faqs = [
         operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       },
-      generateFAQSchema(faqs),
       generateBreadcrumbSchema([
         { name: 'Home', url: 'https://wordsolverx.com' },
         { name: 'Solver', url: 'https://wordsolverx.com/solver' },
@@ -515,7 +470,6 @@ const faqs = [
 
 
 <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl">
-        <FAQSection class="py-0" title="Colorfle Solver FAQ" {faqs} />
     </div>
 
     <section class="rounded-3xl bg-slate-100 p-8 text-center space-y-6">
