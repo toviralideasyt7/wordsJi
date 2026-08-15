@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import {
     generateBreadcrumbSchema,
@@ -487,6 +489,8 @@ const jsonLdSchema = JSON.stringify({
   
 
     <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['colordle-solver']} />
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

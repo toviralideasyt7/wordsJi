@@ -3,6 +3,8 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import { formatBetweenleDate } from '$lib/betweenle/logic';
@@ -325,6 +327,9 @@
   </article>
   {/if}
     <div class="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
+      <StaticArticle content={ARTICLE_CONTENT['betweenle-answer-today']} vars={{ date: data.todaySeoDate, answer: data.todayAnswer.word.toUpperCase() }} />
+
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

@@ -5,6 +5,8 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -199,6 +201,9 @@
 
 
     <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['searchle-answer-today']} vars={{ date: todayLabel, answer: todayPuzzle.answer.toUpperCase() }} />
+
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

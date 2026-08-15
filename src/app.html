@@ -31,9 +31,13 @@
                         -moz-osx-font-smoothing: grayscale;
                 }
 
-                a {
-                        color: inherit;
-                        text-decoration: none;
+                /* Keep links unstyled by default, but inside @layer base so Tailwind
+                   color utilities (e.g. text-white on dark cards) still win in the cascade. */
+                @layer base {
+                        a {
+                                color: inherit;
+                                text-decoration: none;
+                        }
                 }
 
                 img {

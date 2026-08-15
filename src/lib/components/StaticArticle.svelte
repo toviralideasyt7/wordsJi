@@ -144,6 +144,7 @@
         {#each content.relatedLinks as link}
           <a
             href={link.href}
+            style="color: #ffffff"
             class="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white transition hover:bg-white/15 hover:border-white/25"
           >
             <span class="font-semibold">{link.label}</span>

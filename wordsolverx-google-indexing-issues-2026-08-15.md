@@ -184,3 +184,21 @@ Source: `wordsolverx.com_KeywordReport_8_15_2026 (1).csv`. Volume by game: wordl
 **Live articles (18 wired, typecheck 0/0, tests 7/7):** wordle, quordle, nerdle, spotle, contexto, colordle, globle, semantle, waffle, phoodle, phrazle, canuckle, worldle (today pages) + wordle-solver, quordle-solver, minesweeper-solver, betweenle-solver, squaredle-solver (solvers). Colordle — the #2 Bing keyword pool and the deindex concern you flagged — is now covered with day-number + date + hex targeting.
 
 **Remaining (each unique blueprint, 900–1,300 words currently; top up to 1,500):** GameDle today pages (loldle, dotadle, narutodle, pokedle, smashdle, onepiecedle), sportle, betweenle/colorfle/framed/searchle/worgle/countryle today pages, ~15 remaining solver pages, and the **archive pages** (wordle-answer-archive = the 1,415-imp "all wordle answers 2025" keyword).
+
+### 7.7 Final rollout — 2026-08-16 (all 47 articles live, 1,500+ words each)
+
+**All remaining pages now have their static article. 47/47 registry entries, every today + solver page wired, `npm run check` 0/0, tests 7/7, production build passes.**
+
+**New today-page articles (6, dated `{date}`/`{answer}` vars wired):** betweenle, colorfle, countryle, framed, searchle, worgle — each targets its dated Bing queries (e.g., "Betweenle answer for {date}", "Colorfle answer for {date}" with hex, "Framed answer for {date}" with year/director).
+
+**New solver articles (23):** colordle (274 imp @ pos 2.1 — highest CTR opportunity), spotle, weaver, light-out (879 imp @ 3.7), kanoodle, hangman, boggle, nerdle, worldle, countryle, colorfle, waffle, phoodle, searchle, word-ladder, soundmap, all-wordle + all 6 GameDle solvers (smashdle 4,763 imp, loldle, pokedle, narutodle, dotadle, onepiecedle). Each has a unique H2 blueprint, FAQ schema, and internal-link hub.
+
+**GameDle answer-today pages (6, content group):** the human-written `{#if false}` content blocks were **re-enabled** (smashdle, loldle, pokedle, narutodle, dotadle, onepiecedle) — these already had quality per-game prose + FAQ, now visible and crawlable.
+
+**Word-count top-up:** every article is now **1,500+ words** (measured: 1,503–2,068). Three top-up passes added unique sections per page drawn from the Bing FAQ keyword data — e.g. "what is today's wordle answer" (2,396 imp), "colordle hint" (874 imp), "phoodle hint today" (120 imp), "wordle helper 5 letters", "minesweeper helper".
+
+**New scripts (keep for the pipeline):** `add-articles-b1..b4.mjs` (article batches), `topup-b1..b4.mjs` (word-count passes), `wire-articles.mjs` (page wiring), `bing-faq-keywords.mjs` (live Bing keyword miner, key `696b6fcae...`).
+
+**Remaining known gaps (next targets):** the archive pages (`wordle-answer-archive` — 1,415-imp "all wordle answers 2025" with 0 clicks), and the Wordle title/meta CTR fix for the pos-5–8 cluster (~8k impressions/month at 1–2% CTR). Sportle redirects to spotle (covered); onepiedle and all-wordle-solver redirect to canonical pages (covered).
+
+**Final top-up + uniqueness pass (8/16):** all 59 articles now measure **1,503–1,976 words** (26 articles received one final unique section; every H2 heading is unique across the entire registry — no shared templates, verified programmatically). Archive pages got game-specific headings ("The Quordle archive and the daily four-board game", etc.) instead of the shared "The archive and the daily game". `svelte-check` 0/0, tests 7/7, production Cloudflare build passes.

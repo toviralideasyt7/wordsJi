@@ -2,6 +2,8 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import {
@@ -341,6 +343,9 @@
       {/if}
 
       <div class="mt-8">
+        <StaticArticle content={ARTICLE_CONTENT['colorfle-answer-today']} vars={{ date: data.formattedDate, answer: data.answer?.normal?.targetColor?.hex ?? '' }} />
+
+
         <AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}
           image={PRESTON_HAYES_AUTHOR_IMAGE}

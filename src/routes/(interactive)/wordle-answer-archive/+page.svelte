@@ -1,5 +1,7 @@
 <script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
@@ -317,6 +319,10 @@
       <h4 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-6 mb-2">How often is this archive updated?</h4>
       <p>The archive table above is baked into the page at build time, so it is current as of the last site rebuild. For today's answer — which may not be in the table yet if the site has not rebuilt today — use the calendar above or visit <a href="/wordle-answer-today" class="text-teal-600 hover:text-teal-700 underline">/wordle-answer-today</a>. The calendar fetches the answer for any selected date directly from the live API.</p>
     </div>
+  </div>
+
+  <div class="mt-12">
+    <StaticArticle content={ARTICLE_CONTENT['wordle-answer-archive']} />
   </div>
 
   <div class="mt-12">

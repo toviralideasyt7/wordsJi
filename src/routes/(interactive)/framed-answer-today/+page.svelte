@@ -2,6 +2,8 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -168,6 +170,10 @@
       </section>
     </article>
     {/if}
+
+    <StaticArticle content={ARTICLE_CONTENT['framed-answer-today']} vars={{ date: data.formattedDate, answer: data.entries?.[0]?.answer ?? '' }} />
+
+
 
     <AuthorCard
       name={PRESTON_HAYES_AUTHOR_NAME}

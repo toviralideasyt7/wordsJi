@@ -37,7 +37,7 @@
 
 <GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
-    {#if false}
+    {#if true}
     <article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Universe as your best filter</h2>

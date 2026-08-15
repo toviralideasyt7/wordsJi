@@ -3,6 +3,8 @@
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { generateBreadcrumbSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import {
                 COUNTRY_NAMES,
@@ -452,6 +454,8 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         
 
     <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['spotle-solver']} />
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

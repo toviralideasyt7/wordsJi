@@ -1,5 +1,7 @@
 <script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -651,6 +653,8 @@
 </div>
 
     <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['word-ladder-solver']} />
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

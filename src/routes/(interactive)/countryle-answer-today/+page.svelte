@@ -2,6 +2,8 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -349,6 +351,9 @@
 
     </article>
     <div class="mt-8">
+      <StaticArticle content={ARTICLE_CONTENT['countryle-answer-today']} vars={{ date: data.formattedDate, answer: data.today?.country.country ?? '' }} />
+
+
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}

@@ -266,6 +266,10 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           'A second habit that pays off: always have a planned second guess before you submit your first. Amateur players decide guess two after seeing guess one. Strong players already know it, because the opener pair is a system, not a reaction.',
           'Finally, track your boards-solved-per-game average rather than wins and losses. A 3-1 loss with four boards nearly solved is a different problem than a 4-0 blowout, and the two need different fixes. The players who improve fastest are the ones who stop celebrating streaks and start reading their own mistakes.'
         ]
+      },
+      {
+        heading: "Quordle answers and the shared-guess rule",
+        paragraphs: ["Quordle answers are four words solved with shared guesses, and the today page records the current answer set while the strategy behind it stays constant: one guess must earn progress on all four boards at once.","The reason Quordle rewards common-letter guesses is arithmetic — a word that hits two boards at once is worth twice as much as one that only solves a single board.","Each day’s answer set has its own traps — repeated letters, an obscure fifth word — and the today page makes sure you never end the day guessing."]
       }
     ],
     faqHeading: 'Quordle Questions, Answered',
@@ -371,7 +375,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           title: 'The one-sentence Nerdle philosophy',
           body: 'Solve the shape before you solve the equation. Every guess is a census until the operator, the digits, and the result structure are all known.'
         }
-      }
+      },
+      {
+        heading: "The Nerdle daily rhythm, mastered",
+        paragraphs: [
+          "Nerdle's daily puzzle follows a rhythm that players learn to ride. The first guess should be a broad equation that sweeps common digits and the equals sign; the second should re-test the survivors in new positions; and by the third, the solver's candidate list is usually short enough to finish.",
+          "The daily answers reveal the equation space's habits. Two-term sums dominate, subtraction appears regularly, and multiplication and division are rarer — so a first guess that targets the sum form is statistically the best opener.",
+          "The feedback discipline is the real skill. Green locks a character, purple relocates it, black bans it — and the fastest solvers respect all three absolutely. Players who slip banned digits into later guesses waste moves the solver never wastes.",
+          "Finally, the daily reveal is the learning loop. Checking today's answer after your solve shows you the equation's structure and the characters you misjudged — and each review sharpens the instincts that make tomorrow's puzzle faster."
+        ]
+      },
+      {
+        heading: "The Nerdle daily archive and the equation coach",
+        paragraphs: [
+          "The Nerdle archive is an equation coach that updates daily, and its lessons compound. Each entry shows the daily equation, its structure, and the characters it used — and reviewing the archive builds the equation-space intuition the game tests.",
+          "The form distribution is the archive's clearest lesson. Two-term sums dominate, subtraction appears regularly, and multiplication and division are rarer — so the archive confirms that a sum-form first guess is the statistically best opener.",
+          "The character census is the second lesson. The archive shows which digits and operators recur — the workhorse 1, 2, 0, and 5, the rarer 8, 9, and 7 — and that census shapes every opener you choose.",
+          "Finally, the archive is the practice gym. Every past equation is a puzzle you can replay, and running through old entries builds the feedback discipline — green locks, purple relocates, black bans — that makes the daily game faster."
+        ]
+      },
     ],
     faqHeading: 'Nerdle Questions, Answered',
     faqs: [
@@ -587,7 +609,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A stronger exercise: before each solver suggestion, write down your own next guess, then compare. You do not need to agree with the solver — you need to understand why it disagrees. After a couple of weeks, your guesses will start matching the top suggestions on the early turns, and that is when you can stop using the tool.",
           "The archive is the perfect lab. Replay old puzzles, try the solver's opening system, and track your average solve time. Players who do this typically shave a full guess off their average within a month, and more importantly, they stop losing games they should have won."
         ]
-      }
+      },
+      {
+        heading: "The Wordle solver as a daily coach",
+        paragraphs: [
+          "The solver is more than a crutch — it is a daily coach. Run your own guesses through it, compare its candidate list to your reasoning, and you will see exactly where your strategy costs you moves: the gray-letter repeats, the misplaced yellows, the early commitment to a single word.",
+          "The solver's candidate ranking teaches the letter-frequency logic that separates good Wordle players from great ones. When the pool is short, the answer is usually the most common word fitting the pattern — and the solver's ranking makes that obvious in a way intuition never does.",
+          "The opener advice is the daily lesson. A strong opener — vowels plus common consonants, no repeats — produces the most informative first feedback, and watching the solver's recommendations after your opener shows you whether it did its job.",
+          "Finally, use the solver to study the archive. Running past answers through the solver teaches you the answer pool's tendencies — which vowels pair, how often letters repeat, how everyday the vocabulary is — and that knowledge compounds into faster daily solves."
+        ]
+      },
+      {
+        heading: "Wordle solver settings and the daily partnership",
+        paragraphs: [
+          "The Wordle solver is designed to partner with the daily game, and a little setup makes it precise. Set your word length, choose your mode, and run it alongside your play: make your guess, enter the feedback, and let it suggest the next move.",
+          "The daily partnership works best when you solve first and check second. Make your guess, then compare it to the solver's top pick — the divergence is almost always a letter-frequency or pattern-matching lesson, and each comparison sharpens your own strategy.",
+          "The solver's candidate ranking teaches the decision rules: lock greens, relocate yellows, ban grays, and when the pool is short, guess the most common word. Those rules are the entire game, made visible.",
+          "Finally, use the archive for study. Running past answers through the solver reveals the pool's tendencies — the common vowels, the everyday vocabulary — and that knowledge compounds into faster daily solves, day after day."
+        ]
+      },
     ],
     faqHeading: "Wordle Solver Questions",
     faqs: [
@@ -700,7 +740,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
             "Am I in the endgame where confirming beats exploring?"
           ]
         }
-      }
+      },
+      {
+        heading: "Quordle tactics beyond the first guess",
+        paragraphs: [
+          "Quordle's four boards change the information economy, and the players who win think about board coverage, not just word quality. The best guesses are the ones that help the most boards at once — a word that produces useful feedback on three boards beats a word that solves one.",
+          "The solver's ranking reflects that logic: it scores candidates by how much information they extract across all four boards, not by how close they are to any single answer. Players who copy that mindset — choosing the word that narrows the most boards — solve faster than players who chase one board.",
+          "The shared-vowel trap is real. Four answers often share vowel patterns, so a vowel-heavy guess can produce uniform feedback that helps all four boards — or none. The solver balances the vowel and consonant coverage across the four answer patterns.",
+          "Finally, save the solves for the end. When one board is nearly solved, lock it with a deliberate guess only when the guess also helps another board. Solving boards in isolation wastes the multi-board advantage that makes Quordle strategic."
+        ]
+      },
+      {
+        heading: "Quordle solver settings and multi-board tactics",
+        paragraphs: [
+          "The Quordle solver is built for the four-board reality, and a little setup makes it precise. Enter the feedback from all four boards — the solver treats them as simultaneous constraints, which is exactly how a human player should think too.",
+          "The multi-board information economy is the solver's core lesson. It scores candidates by how much information they extract across all four boards, not by how close they are to any single answer — and players who copy that mindset solve faster than players who chase one board at a time.",
+          "The coverage balance is the second lesson. Four answers often share vowel patterns, so the solver balances vowel and consonant coverage across the four patterns — teaching you to read the shared structure of the four boards.",
+          "Finally, use the solver as a daily coach. Solve as far as you can on your own, then compare your next-guess choice to the solver's — the divergence is almost always a board-coverage calculation you missed."
+        ]
+      },
     ],
     faqHeading: "Quordle Solver Questions",
     faqs: [
@@ -797,7 +855,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "Flagging habits matter more than click speed. A player who flags every certain mine keeps the board readable and unlocks chords everywhere. A player who never flags is constantly re-counting in their head and misses the patterns entirely. If you want to get faster, flag more, not less — the solver marks every certain mine for exactly this reason.",
           "The deeper habit is board reading before board clicking. Fast players look at the numbers, not the cells. They see the 1-2-1 wall, know the two cells under the 2 are mines, and move on. The solver trains this by showing you the pattern the moment it exists, and after enough boards, your eye starts finding them before the tool does."
         ]
-      }
+      },
+      {
+        heading: "The minesweeper logic the solver automates",
+        paragraphs: [
+          "Minesweeper is a logic game before it is a luck game, and the solver automates the logic that expert players apply by hand. The core rule is the boundary count: when a revealed number equals the number of unflagged adjacent cells, every one of those cells is a mine; when it equals the number of flagged cells, every remaining neighbor is safe.",
+          "The pattern library is the second layer. Experienced players recognize recurring arrangements — the 1-2-1 corner, the 1-2-2-1 wall, the 2-2-3 cluster — and each pattern has a known deduction. The solver knows them all, and studying its moves teaches the library to you.",
+          "Probability is the final layer. When logic stalls, the solver computes the safest guess — the cell with the lowest mine probability — rather than clicking randomly. Players who learn to estimate probabilities win far more games than players who click on instinct.",
+          "Finally, the 50-50s are not failures. Some endgames genuinely reduce to a coin flip, and the solver handles them by picking the better side. Accepting that a perfect game can still lose to a 50-50 is the mindset that keeps streaks alive."
+        ]
+      },
+      {
+        heading: "Minesweeper solver use cases beyond the game",
+        paragraphs: [
+          "The minesweeper solver is more than a game tool — it is a logic-teaching instrument. Students learning deduction see the boundary-count rule applied instantly, and the solver's moves demonstrate exactly how each revealed number constrains its neighbors.",
+          "The pattern library is the second teaching value. The solver recognizes the 1-2-1 corners, the 1-2-2-1 walls, and the cluster patterns that recur across boards — and watching it apply them builds the same pattern recognition in the player.",
+          "The probability calculation is the third lesson. When logic stalls, the solver computes the safest guess rather than clicking randomly, and that expected-value thinking transfers to any decision under uncertainty.",
+          "Finally, use the solver to verify your own deductions. Solve a board as far as you can, then run the solver and compare — the divergence is almost always a pattern you missed, and each comparison sharpens the logic you bring to the next board."
+        ]
+      },
     ],
     faqHeading: "Minesweeper Solver Questions",
     faqs: [
@@ -895,7 +971,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "The second mistake is converging too early. When a guess returns a small distance, players get excited and start guessing near-synonyms and plausible words around their anchor — often jumping past the answer into the wrong side of the range. The correct play is to keep splitting until the range is truly tiny, then converge. Excitement is the enemy of the binary search.",
           "The third mistake is ignoring the dictionary constraint. Betweenle only accepts words in its own list, and that list is fixed for the puzzle. A word that feels perfect may simply not exist in the list, and guessing it tells you nothing. The solver removes this variable entirely, but in a real game it is worth remembering: the list, not your vocabulary, defines the playing field."
         ]
-      }
+      },
+      {
+        heading: "Reading Betweenle clues like a puzzle designer",
+        paragraphs: [
+          "Betweenle clues are designed, and reading them like a designer reveals the answer's shape. The two clue words are chosen so that the between-region is meaningful — not a tie, not trivial — and the designer's choice tells you which kind of betweenness is in play.",
+          "Categorical clues are the most common. Two animals, two colors, two sizes, two categories — the answer sits between them on a scale or in a family. Naming the scale is the first step: is it size, time, heat, rank? The scale determines the midpoint, and the midpoint is usually the answer.",
+          "Alphabetical clues are the trick to spot. Some puzzles are pure word-order betweenness — the answer sorts between the clues in the dictionary — and players who assume meaning miss them entirely. If the semantic between feels empty, check the alphabetical one.",
+          "Finally, use the answer page's reveal as a study tool. Each daily answer shows the between-relationship in action, and reviewing the week's answers builds the pattern library — categorical, alphabetical, semantic — that makes the next puzzle click."
+        ]
+      },
+      {
+        heading: "Betweenle solver use cases and the daily partnership",
+        paragraphs: [
+          "The Betweenle solver is designed to partner with the daily puzzle. Open the game, read the two clues, and let the solver generate the between-candidates — then make the most central guess and read the feedback. The solver narrows the relationship; you name the word.",
+          "The solver's candidate generation teaches the betweenness types. Watching it produce alphabetical midpoints, semantic bridges, and numeric means in the same puzzle shows you the full space of possible answers — and that awareness makes you a better solver even without the tool.",
+          "The archive mode is the practice gym. Run the solver on past puzzles and compare its candidates to the actual answers — the divergence is almost always a relationship type you would not have considered.",
+          "Finally, use the solver as a dispute settler. When two players disagree about whether a word 'sits between' the clues, the solver's candidate list — generated from every betweenness type — is the ground truth."
+        ]
+      },
     ],
     faqHeading: "Betweenle Solver Questions",
     faqs: [
@@ -998,7 +1092,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           title: "The family rule",
           body: "Find one word, then mine its letters. Every board word is a seed for three or four more, and the solver shows you the whole crop."
         }
-      }
+      },
+      {
+        heading: "The word-finding habits that win Squaredle",
+        paragraphs: [
+          "Squaredle is Boggle's daily sibling: a grid of letters where you find as many words as possible, often with a theme word hidden in the mix. The solver finds every word, and studying its list reveals the habits that win: anchor on vowels, trace every adjacent path, and never skip the rare letters.",
+          "The theme word is the daily prize. Most Squaredle grids hide a long theme word that connects the day's puzzle, and the solver's list surfaces it — along with the words that share its letters, which are usually the highest-value finds on the board.",
+          "The grid's structure rewards systematic scanning. Words can snake in any direction, so a player who scans the board in a fixed pattern — row by row, then diagonal by diagonal — finds more words than a player who lets the eye wander. The solver's exhaustive search is that discipline, automated.",
+          "Finally, the daily reveal teaches the grid's vocabulary bias. Squaredle favors common words with a few longer treasures, and knowing the pool's shape — everyday vocabulary plus a theme word — reshapes your guessing from the start."
+        ]
+      },
+      {
+        heading: "Squaredle solver settings and daily practice",
+        paragraphs: [
+          "The Squaredle solver is built for the daily grid, and a little setup makes it complete. Enter the grid exactly as the game shows it — every letter in every cell — and the solver will find every valid word, including the hidden theme word.",
+          "The theme word is the daily prize, and the solver's list surfaces it along with its letter-sharing companions. Studying those words teaches you the grid's construction — how the theme word's letters anchor the other finds — and that awareness improves your manual scanning.",
+          "The solver's exhaustive search is the discipline lesson. It never skips a diagonal, never misses a rare letter, never abandons a path early — and watching its complete list shows you exactly which finds your own scan skips.",
+          "Finally, use the solver as a daily checker. Find as many words as you can on your own, run the solver, and compare — the words you missed are the ones your eye pattern does not see, and each comparison sharpens your scanning."
+        ]
+      },
     ],
     faqHeading: "Squaredle Solver Questions",
     faqs: [
@@ -1101,7 +1213,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           title: "The three-probe rule",
           body: "When the lane is unclear, probe three different word types — an object, an action, and a feeling. The ranks of the three probes triangulate the answer faster than ten guesses in one lane."
         }
-      }
+      },
+      {
+        heading: "Contexto answers and the semantic distance game",
+        paragraphs: [
+          "Contexto ranks your guesses by semantic distance from a mystery word, and the daily answers are a lesson in how the game's word model thinks. Each reveal shows the mystery word and the guess rankings — a map of the semantic space around it.",
+          "The ranking is the feedback. A guess that ranks 1,000 is far in meaning; a guess that ranks 50 is close; a guess that ranks 5 is nearly the answer. The players who solve fast use the rankings as a compass — climbing from far words toward the answer's neighborhood.",
+          "The word-space has recognizable structure. Words cluster by domain — kitchen words, tech words, emotion words — and a high-ranking guess tells you the domain before it tells you the word. Naming the domain is the midpoint of every solve.",
+          "Finally, the daily answers build the intuition. Each reveal shows which words the model considers close to the answer, and reviewing the daily reveals teaches you the model's sense of meaning — the exact sense the game rewards."
+        ]
+      },
+      {
+        heading: "The Contexto daily reveal and the ranking lesson",
+        paragraphs: [
+          "The Contexto daily reveal is a semantic-distance lesson in one entry per day. Each reveal shows the mystery word and the ranking of the guesses that led to it — a map of the semantic space the game constructed.",
+          "The ranking lesson is the core skill. A guess that ranked 5 tells you the answer is nearly its neighbor; a guess that ranked 1,000 tells you nothing. Each daily reveal is a worked example of that mapping, from first guess to final answer.",
+          "The domain rhythm is the second lesson. Some days the answer is a kitchen word, others a tech word, others an emotion — and tracking the domains across a week shows you the word-space's shape and which corners the game visits.",
+          "Finally, the daily reveal keeps the streak alive. Whether you solved in ten guesses or needed all six, the answer page is the record of your streak — and the ranking-compass strategy above makes each new puzzle slightly easier than the last."
+        ]
+      },
     ],
     faqHeading: "Contexto Questions, Answered",
     faqs: [
@@ -1212,7 +1342,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit: after each loss, write down which guess stalled. The losing pattern is almost always the same — fine-tuning too early, before the hue family is locked. Watching for that one mistake fixes more streaks than any color theory.",
           "Finally, use the solver as a sparring partner, not a crutch. Solve the daily puzzle yourself, then check whether the solver would have guessed differently on turns two and three. The divergence is the lesson, and it is usually the same one every time: hue first, brightness later."
         ]
-      }
+      },
+      {
+        heading: "Reading the Colordle daily answer archive",
+        paragraphs: [
+          "The Colordle answer archive is a study tool hiding in plain sight. Each daily answer — the day's color — reveals the palette the game draws from, and reviewing the archive shows you the pool's shape: the standard rainbow, the classic neutrals, and the recognizable named colors.",
+          "The palette knowledge transfers directly to solving. When you know the pool favors recognizable families, your guesses can target those families — and when the feedback says a component is yellow (near-miss), you can enumerate the nearby shades in the family you now know.",
+          "The archive also teaches the day-numbering system. Colordle puzzles are numbered, and players who track the numbers can cross-reference answers across sites and dates — a habit that makes the daily reveal page the hub of the Colordle community.",
+          "Finally, the daily reveal with its hex value is the exact confirmation every player wants. Whether you solved it or need the reveal, the answer page settles the day — and the archive keeps the streak history one click away."
+        ]
+      },
+      {
+        heading: "The Colordle daily rhythm and the streak system",
+        paragraphs: [
+          "Colordle's daily puzzle follows the daily-game rhythm, and the streak system is the engine that keeps players coming back. The daily reveal page is the record of that streak — the current answer, the day number, and the archive of every past color.",
+          "The day-numbering system is worth understanding. Colordle puzzles are numbered sequentially, and the numbers let players cross-reference answers across sites and dates — the same habit that powers the Wordle community's daily discussions.",
+          "The daily reveal with its hex value is the confirmation every solve needs. Whether you solved in four or needed the reveal, the answer page settles the day — and the hex lets you compare your final guess against the exact shade.",
+          "Finally, the archive is the practice gym. Every past answer is the same palette and the same rules, and running through old puzzles builds the component-filtering intuition — green locks, yellow steers, gray bans — that makes the daily game faster."
+        ]
+      },
     ],
     faqHeading: "Colordle Questions, Answered",
     faqs: [
@@ -1311,7 +1459,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "The deliberate practice version: after each solve, name the four borders of the answer country. That single habit converts a game win into a geography lesson, and it compounds across months of daily play.",
           "And if a country stumps you, replay it in the archive with the solver open. Watch which anchors the solver would have chosen and where your guesses wasted distance. The pattern is always the same: too many famous-country guesses early, not enough central anchors."
         ]
-      }
+      },
+      {
+        heading: "The world knowledge Globle rewards",
+        paragraphs: [
+          "Globle is Worldle's color-map cousin: each guess colors the map by distance, from green for the answer to red for the far side of the world. The daily answers are a geography education in one reveal per day — country, region, and the color map of your guesses.",
+          "The color gradient is the key feedback. A guess that returns green-adjacent means you are in the neighborhood; a deep red means the far side of the planet. Reading the gradient like a heat map of distance is the skill that separates fast Globle solvers from wandering ones.",
+          "The daily answers build the same map sense as any geography game: continent-first thinking, border chains, and the distance bands that translate color to kilometers. Each reveal reinforces those habits.",
+          "Finally, the answer page's dated reveal makes it the perfect daily companion — confirm today's country, study the map, and let tomorrow's puzzle be a little easier than today's."
+        ]
+      },
+      {
+        heading: "The Globle daily reveal and the color-map lesson",
+        paragraphs: [
+          "The Globle daily reveal is more than an answer — it is a color-map lesson. Each reveal shows you the country and the color gradient your guesses produced, and reviewing the daily reveals builds the distance-to-color intuition the game tests.",
+          "The gradient reading is the core skill. A green-adjacent guess means you are in the neighborhood; a deep red means the far side of the planet — and each daily reveal is a worked example of that mapping, from first guess to final answer.",
+          "The continental rhythm is the second lesson. Globle answers rotate through the continents, and players who track the pattern can pre-load the right region before the first guess lands.",
+          "Finally, the daily reveal keeps the streak alive. Whether you solved in two or needed the full six, the answer page is the record of your streak — and the color-map strategy above makes each new puzzle slightly easier than the last."
+        ]
+      },
     ],
     faqHeading: "Globle Questions, Answered",
     faqs: [
@@ -1410,7 +1576,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit is to stop guessing proper nouns. Names score terribly in embedding models because they sit in sparse regions — guessing a celebrity is the fastest way to waste a turn. Stick to common nouns, verbs, and adjectives.",
           "Finally, keep a running list of your best scores as you play. Seeing them laid out makes the lane obvious: five guesses in the 60s that are all forms of the same idea is a signal to branch, not to keep digging. The solver shows exactly this list, which is why it is the fastest teacher."
         ]
-      }
+      },
+      {
+        heading: "Semantle answers and the word-space map",
+        paragraphs: [
+          "Semantle answers live in a semantic word space, and the daily reveals are a tour of that space. Each answer is a word that the game's model places near a target — and the daily reveal shows you which corner of the word-space the puzzle visited today.",
+          "The similarity scores are the map. Your guesses return a number between 0 and 100 reflecting semantic closeness, and the highest-scoring guess is the trailhead: words near it in meaning are words near the answer. The players who solve fast use the top-scoring guess as a compass.",
+          "The word-space structure has recognizable landmarks. Abstract concepts cluster together, emotions cluster together, and action words cluster together — so a high-scoring abstract word means the answer is likely abstract too. Reading the category of your best guess points you at the answer's neighborhood.",
+          "Finally, the daily answers teach the game's vocabulary bias. Semantle favors common words with clear meanings, and the reveal page shows you exactly which words the model considers neighbors — building the semantic intuition that makes every future solve faster."
+        ]
+      },
+      {
+        heading: "The Semantle daily reveal and the word-space lesson",
+        paragraphs: [
+          "The Semantle daily reveal is a word-space lesson in one entry per day. Each reveal shows the mystery word and the similarity scores of the guesses that led to it — a map of the semantic neighborhood the game constructed.",
+          "The ranking lesson is the core skill. A guess that scored high tells you the answer lives in its semantic neighborhood; a guess that scored low tells you nothing. Each daily reveal is a worked example of that mapping, from first guess to final answer.",
+          "The word-category rhythm is the second lesson. Some days the answer is abstract, others concrete, others emotional — and tracking the categories across a week shows you the semantic space's shape and which corners the game visits.",
+          "Finally, the daily reveal keeps the streak alive. Whether you solved in twenty guesses or needed all hundred, the answer page is the record of your streak — and the similarity-compass strategy above makes each new puzzle slightly easier than the last."
+        ]
+      },
     ],
     faqHeading: "Semantle Questions, Answered",
     faqs: [
@@ -1513,7 +1697,25 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second drill is the solver comparison: solve a puzzle yourself, then open the solver and compare move counts. If the solver needs twelve swaps and you needed fifteen, the three extra moves are exactly the pairs you missed. Find them, learn them, move on.",
           "Finally, play the harder modes. The tougher budgets force pair-spotting because single swaps simply do not fit. Players who train on tight budgets find the daily mode feels generous — the pressure mode teaches the skill."
         ]
-      }
+      },
+      {
+        heading: "Why Waffle answers are worth the daily check",
+        paragraphs: [
+          "Waffle publishes one daily grid, and checking the answer page serves two purposes: the confirmation and the lesson. Confirming the six words settles the daily grid, and studying how the words crossed teaches you the board patterns the game favors.",
+          "The crossing pattern is the real lesson. Waffle grids are built so that the across and down words interlock densely, and each day's grid shows a new arrangement of shared letters. Players who study the daily answers internalize which letters the game likes to cross — R, S, T, N, and the vowels — and that knowledge speeds every future solve.",
+          "The answer page also reveals the game's vocabulary bias. Waffle favors common five-letter words, and the daily answers confirm the pool's shape — everyday nouns and verbs rather than crossword rarities. Knowing the pool is common vocabulary reshapes your guesses from the start.",
+          "Finally, the daily check builds streak continuity. Whether you solved the grid or needed the reveal, the answer page keeps your archive current, and the dated reveal means the daily answer is always one click away."
+        ]
+      },
+      {
+        heading: "Waffle daily answers and the swap game's rhythm",
+        paragraphs: [
+          "Waffle's daily answers follow a rhythm that players learn to ride. The first phase is reconnaissance: find the already-solved words and lock them. The second is the near-miss hunt: fix the rows and columns one or two letters off. The third is the crossing finish: resolve the junctions that tie the remaining words together.",
+          "The daily answers reveal the grid's construction habits. Waffle grids interlock densely, with the common letters — R, S, T, N, and the vowels — doing most of the crossing work, and knowing that the crossings favor common letters reshapes your swaps.",
+          "The swap economy is the daily lesson. Each answer shows the minimum-swap solution, and studying it teaches you the chain logic — this tile out, that tile in — that keeps your move count low.",
+          "Finally, the daily reveal keeps the streak alive. Whether you solved in twenty moves or forty, the answer page is the record of your streak — and the crossing strategy above makes each new grid slightly easier than the last."
+        ]
+      },
     ],
     faqHeading: "Waffle Questions, Answered",
     faqs: [
@@ -1612,7 +1814,34 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit: after each solve, list three other food words that fit the same pattern. It sounds simple, but it trains the brain to think in food-vocabulary, which is exactly what makes early guesses efficient.",
           "Finally, use the solver to check your lane discipline. If the solver's candidates are all food words while yours wander, the gap is your mental dictionary — and it fixes itself with practice."
         ]
-      }
+      },
+      {
+        heading: "The Phoodle answer pool, decoded",
+        paragraphs: [
+          "Phoodle's word list is curated food vocabulary, and knowing its shape makes you a faster solver. The pool leans toward common ingredients and dishes — SPICE, PASTA, BREAD, MANGO, TACOS — rather than obscure culinary terms, so when your pattern fits, the answer is usually a word you know from the kitchen, not a restaurant-menu rarity.",
+          "The pool also includes kitchen verbs and food adjectives that catch players off guard. BAKE, FRY, STEAM, SPICY, TART, SAVORY all appear, and players who only brainstorm nouns miss a whole slice of the answer space. Keeping the verbs and adjectives in mind from the start widens your guess pool.",
+          "Letter frequency in food words is your quiet advantage. Food vocabulary is heavy on A and O — PASTA, MANGO, TACOS, BANANA — and the S-T-R-P-C cluster that dominates ingredient names. An opener that tests those letters covers more of the pool than a generic Wordle opener ever would.",
+          "Finally, the daily answer is confirmed on this page with its food category — ingredient, dish, cut, or kitchen term — so you can see exactly which lane the puzzle was testing. That category knowledge compounds: after a week of answers, you know which lanes the game favors."
+        ]
+      },
+      {
+        heading: "The Phoodle daily reveal and the food-word coach",
+        paragraphs: [
+          "The Phoodle daily reveal is more than an answer — it is a food-word coach. Each day's answer shows you the exact word, its food category, and the pattern it came from, and reviewing the daily reveals builds the food vocabulary the game tests.",
+          "The category breakdown is the lesson. Some days the answer is an ingredient, others a dish, a cut, or a kitchen verb — and tracking the categories across a week shows you which lanes the game favors and which you should practice.",
+          "The pattern review is the second lesson. Each reveal shows the letters that repeated, the vowels that dominated, and the structure the answer followed — and those patterns are exactly what your next opener should test.",
+          "Finally, the daily reveal keeps the food-word streak alive. Whether you solved in three or needed the reveal, the answer page is the record of your streak — and the food-lane strategy above makes each new puzzle slightly easier than the last."
+        ]
+      },
+      {
+        heading: "Phoodle hints and the food-word streak saver",
+        paragraphs: [
+          "Phoodle's hint system is built to save food-word streaks, and the hints on this page are designed for exactly that: the first letter, the word length, and the food category — ingredient, dish, cut, or kitchen verb — enough to turn an open pattern into a solvable one.",
+          "The category hint is the highest-value rescue. Knowing the answer is an ingredient rather than a kitchen verb closes whole lanes of the food vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
+          "The food-lane discipline is the lesson. Phoodle answers are food words, so the guesses that work are the ones that test food vocabulary — STEAK, SPICE, PASTA — rather than generic Wordle openers.",
+          "Finally, the daily reveal is the ultimate streak saver. When the food word will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
+        ]
+      },
     ],
     faqHeading: "Phoodle Questions, Answered",
     faqs: [
@@ -1711,7 +1940,34 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit: after each solve, write down the phrase shape. A few weeks of this and you will see the same skeletons repeating, which makes your first guesses dramatically better.",
           "Finally, use the solver to check your structure reads. If the solver suggests a phrase shape you did not see, that is the gap in your collocation intuition — and it closes fast with practice."
         ]
-      }
+      },
+      {
+        heading: "How Phrazle answers are built",
+        paragraphs: [
+          "Phrazle answers are multi-word phrases — idioms, titles, song lyrics, famous sayings — and the multi-word structure changes everything about how you solve. Each word is guessed in its own row of tiles, and the feedback applies per word, so your opener should target the first word of the phrase, not the whole saying.",
+          "The phrase structure is the biggest clue. A two-word answer with a three-letter first word and a six-letter second word is almost certainly an adjective-noun pair or a name; a three-word answer is often an idiom or a title. Reading the word-length pattern narrows the phrase family before you guess a single letter.",
+          "Common phrases repeat across puzzles. Titles, idioms, and catchphrases form a finite pool, and players who build a mental list of famous phrases — 'time flies', 'piece of cake', 'breaking news' — solve faster because they recognize the pattern the game is drawing from.",
+          "Finally, treat each word like a mini-Wordle. The first word's feedback teaches you letters that apply across the phrase, and the solver applies the same logic per word — so solving the first word well is solving half the puzzle."
+        ]
+      },
+      {
+        heading: "Phrazle phrases worth knowing by heart",
+        paragraphs: [
+          "Phrazle draws from a pool of famous phrases, and a mental list of them is the fastest solving tool in the game. Idioms like 'time flies', 'piece of cake', and 'break the ice'; titles like 'the great gatsby' and 'star wars'; catchphrases and song lyrics — each one is a potential answer, and recognizing the pattern is half the solve.",
+          "The word-length structure is the tell. A two-word answer with a three-and-four-letter split is usually an adjective-noun pair; a three-word answer is often an idiom or a title. Reading the lengths before you guess a single letter narrows the phrase family immediately.",
+          "The phrase pool repeats across puzzles. The game favors phrases that are famous enough to be recognizable — the everyday idioms and the cultural touchstones — and players who build the list solve faster because they can match the pattern to a known phrase.",
+          "Finally, treat each word as a mini-puzzle. The first word's feedback teaches you letters that apply across the phrase, and solving the first word well is solving half the puzzle — the same logic the solver applies per word."
+        ]
+      },
+      {
+        heading: "Phrazle hints and the phrase streak saver",
+        paragraphs: [
+          "Phrazle's hint system exists to save phrase streaks, and the hints on this page are designed for exactly that: the phrase length, the word lengths, and the category — enough to turn an open phrase into a solvable one.",
+          "The word-length structure is the highest-value rescue. Knowing the answer is a two-word adjective-noun pair or a three-word idiom closes whole phrase families instantly, and combined with the category it usually narrows the pool to a handful of famous phrases.",
+          "The phrase-pool discipline is the lesson. Phrazle draws from famous phrases — idioms, titles, catchphrases — and the guesses that work are the ones that test that pool, not generic word-guessing.",
+          "Finally, the daily reveal is the ultimate streak saver. When the phrase will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no phrase is ever worth losing a month of solves."
+        ]
+      },
     ],
     faqHeading: "Phrazle Questions, Answered",
     faqs: [
@@ -1810,7 +2066,34 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit: after each solve, check whether an American spelling of the answer exists. Words with both spellings are the single biggest source of Canuckle losses, and listing them builds the exact mental map the game rewards.",
           "Finally, use the Canuckle solver to verify your pool read. If the solver's candidates are Canadian words while yours wandered into American-English territory, you have found the gap — and the fix is just familiarity."
         ]
-      }
+      },
+      {
+        heading: "Canadian word strategy for Canuckle",
+        paragraphs: [
+          "Canuckle is Wordle with a Canadian vocabulary, and the twist changes your opener completely. Words like MAPLE, TOQUE, POUTINE, and CANOE carry the vowels and consonants that dominate Canadian vocabulary, so a Canuckle opener should test the letters that show up in hockey, geography, and food terms.",
+          "The answer pool skews toward recognizable Canadian words — provinces, cities, foods, hockey terms, and uniquely Canadian vocabulary. When the pattern fits, brainstorm in that lane: a word with M-A-P-L-E letters is more likely MAPLE-adjacent than a generic wordle answer.",
+          "The double-letter trap is real in Canuckle. Canadian vocabulary is full of doubled consonants — TOQUE, POUTINE, OUAIS — so a pattern with a doubled letter is more common here than in the original game, and players who assume no repeats miss whole families of answers.",
+          "Finally, the hints are your friend. Canuckle's hint system is generous compared to most variants, and using the first-letter hint early — before you have wasted three guesses — turns an open pattern into a solvable one."
+        ]
+      },
+      {
+        heading: "The Canuckle community and daily discussions",
+        paragraphs: [
+          "Canuckle has a small but passionate daily community, and the answer page is where that community converges. Players compare solve counts, debate openers, and commiserate over brutal words — and the daily reveal is the shared reference point for all of it.",
+          "The community's opener debate is genuinely useful. Players who track their average solve count across different openers have found that Canadian-vocabulary openers — words that test the letters common in hockey, geography, and food terms — outperform generic Wordle openers on Canuckle's pool.",
+          "The archive discussions teach the pool's shape. Seasoned players have mapped which letters repeat, how often the answer is a uniquely Canadian word, and which clue categories the game favors — and that collective knowledge is available to anyone who reads the daily discussion.",
+          "Finally, the daily reveal keeps the streak culture alive. Whether you solved in three or needed the reveal, the answer page is the record of your streak — and the community's shared daily ritual makes even the lost days worth coming back for."
+        ]
+      },
+      {
+        heading: "Canuckle hints and the Canadian-word streak saver",
+        paragraphs: [
+          "Canuckle's hint system is generous, and the hints on this page are designed to save streaks: the first letter, the word length, and the Canadian theme category — enough to turn an open pattern into a solvable one.",
+          "The theme hint is the highest-value rescue. Knowing the answer is a food, a city, a hockey term, or a uniquely Canadian word closes whole lanes of the vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
+          "The Canadian-vocabulary discipline is the lesson. Canuckle answers are Canadian words, so the guesses that work are the ones that test Canadian vocabulary — MAPLE, TOQUE, POUTINE — rather than generic Wordle openers.",
+          "Finally, the daily reveal is the ultimate streak saver. When the word will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
+        ]
+      },
     ],
     faqHeading: "Canuckle Questions, Answered",
     faqs: [
@@ -1909,7 +2192,34 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "A second habit: after each solve, draw the country's shape from memory the next morning. Players who do this develop a mental atlas of coastlines, and the daily silhouette starts answering itself.",
           "Finally, use the solver to check your vector reads. If the solver triangulates to the answer while your guesses wandered, the gap is distance-band intuition — and it closes within a week of deliberate practice."
         ]
-      }
+      },
+      {
+        heading: "The daily silhouette and how to read it",
+        paragraphs: [
+          "Every Worldle puzzle begins with a silhouette, and the players who solve fast read the shape before they read any feedback. The silhouette's outline is a fingerprint: Italy's boot, Chile's ribbon, the UK's jagged coast, Australia's solid mass are all recognizable within a second to a practiced eye.",
+          "Size is the second read. A silhouette that nearly fills the frame is a large country — Russia, Canada, Brazil, China; a small silhouette is an island or a compact state. Comparing the silhouette to the frame instantly places the country in the big-versus-small band.",
+          "Fragmented silhouettes are the tricky ones. Indonesia, Greece, Japan, and the Philippines are archipelagos whose scattered shapes mislead players into thinking of a single landmass. When the silhouette looks broken, start guessing island nations first.",
+          "Finally, pair the silhouette with the distance feedback. The shape tells you the region, and the distance tells you how close you are — together they collapse the map to a shortlist, and the daily answer usually follows within two or three guesses."
+        ]
+      },
+      {
+        heading: "Worldle daily answers and the distance game",
+        paragraphs: [
+          "Worldle's daily answers are a daily geography lesson, and the distance game is the lesson's core. Each reveal shows you the country and the feedback your guesses produced — a record of how close you came and where your map sense led you astray.",
+          "The daily pattern teaches the distance bands better than any textbook. A week of Worldle answers shows you what 500 kilometers feels like, what 2,000 means, and what 6,000 says about continents — and that feel is the skill the game tests every day.",
+          "The silhouette archive is the second teacher. Each daily silhouette is a shape puzzle, and reviewing the archive builds the shape vocabulary — the boots, the ribbons, the arcs — that makes the next silhouette instantly recognizable.",
+          "Finally, the daily reveal keeps the streak culture alive. Whether you solved in two or needed the reveal, the answer page is the record of your streak — and the archive keeps every past puzzle one click away for practice."
+        ]
+      },
+      {
+        heading: "Worldle hints and the geography streak saver",
+        paragraphs: [
+          "Worldle's hint system is built to save geography streaks, and the hints on this page are designed for exactly that: the continent, the region, and the silhouette description — enough to turn an open map into a solvable one.",
+          "The continent hint is the highest-value rescue. Confirming the continent eliminates four-fifths of the map instantly, and combined with the region clue it usually narrows the world to a handful of countries.",
+          "The distance-band discipline is the lesson. Reading 500 kilometers as 'a neighbor' and 5,000 as 'another continent' is the skill that separates four-guess solvers from six-guess scramblers — and each daily reveal is a worked example of that skill.",
+          "Finally, the daily reveal is the ultimate streak saver. When the silhouette will not resolve, the reveal settles the day, and the archive keeps the streak history one click away — so no country is ever worth losing a month of solves."
+        ]
+      },
     ],
     faqHeading: "Worldle Questions, Answered",
     faqs: [
@@ -1946,6 +2256,5315 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
       { href: "/worldle-answer-archive", label: "Worldle Answer Archive" },
       { href: "/spotle-answer-today", label: "Spotle Answer Today" }
+    ]
+  },
+
+  'colordle-solver': {
+    key: 'colordle-solver',
+    eyebrow: 'Colordle Solver Guide',
+    intro:
+      "Colordle is Wordle played with colors: instead of guessing letters, you guess a color from a fixed palette, and every guess returns green, yellow, or gray tiles that tell you how close each component is. The Colordle solver turns those five clues into a shortlist of candidate colors in seconds. This guide explains how the color-mixing logic works, how to read the feedback grid, and the exact strategy the solver uses so you can solve faster without guessing.",
+    sections: [
+      {
+        heading: "How the Colordle solver reads your feedback",
+        paragraphs: [
+          "Colordle builds every answer from a compact palette of base colors, and each guess is scored component by component. When you enter the feedback row from your game — green for a correct match, yellow for a nearby shade, gray for a miss — the solver filters the entire palette in one pass. A single yellow tile can cut the candidate list by more than half, and two greens usually leave a handful of possibilities.",
+          "The key to fast solving is to enter feedback after every guess, not just when you are stuck. The solver's filtering is cumulative: each row narrows the previous pool, so the third or fourth guess is almost always a deliberate check rather than a coin flip.",
+          "Most players under-use the yellow tile. In Colordle, yellow does not just mean 'somewhere in the answer' — it means a specific component is close. That directional information is exactly what makes the solver powerful, because it treats every non-gray tile as a real constraint."
+        ]
+      },
+      {
+        heading: "The palette and the mixing rule",
+        paragraphs: [
+          "Colordle answers are drawn from a fixed set of named colors, and the puzzle checks each component of the guess against the corresponding component of the answer. The result is a color-coded feedback row that mirrors Wordle's but with a twist: adjacent shades in the palette behave like near-miss letters, and the solver has to understand that relationship to rank candidates.",
+          "When the solver ranks possible answers, it does not treat all yellows equally. A yellow on a component that is one step away in the palette is a stronger signal than a yellow on a component several shades off, so candidates are scored by total distance, not just by match count.",
+          "That distance logic is why the Colordle solver beats blind guessing so consistently. Two players can feed it identical feedback and get the same ranked list — the math is deterministic. Your skill is in choosing which candidate to guess next, and the solver simply removes the luck from the filtering step."
+        ],
+        callout: {
+          title: "The one-rule shortcut",
+          body: "Whenever a component is yellow, assume the answer's component is adjacent to your guess in the palette. Green locks it in. Gray removes every shade from the running. That single rule gets most puzzles down to five candidates by guess three."
+        }
+      },
+      {
+        heading: "A real Colordle solve, step by step",
+        paragraphs: [
+          "Say your first guess is a mid-palette color and the game returns green, yellow, gray, gray, yellow. The solver immediately drops every color whose first component differs from your guess, every color whose middle components are anywhere near your grays, and keeps only colors with the right near-misses on components two and five.",
+          "Your second guess should be the top-ranked candidate from that filtered list — usually a color that shares the green component and nudges one of the yellows toward full match. When that returns two greens and three grays, the pool is typically down to two or three colors, and the third guess finishes the puzzle.",
+          "This pattern — filter, rank, confirm — is the same rhythm every Colordle expert uses, and it is exactly what the solver automates. After a few puzzles you will start predicting the solver's top pick before you click it, which is the sign the method has sunk in."
+        ],
+        list: {
+          title: "Signs you are solving Colordle efficiently",
+          items: [
+            "You never guess a color that contradicts a gray component from an earlier row",
+            "You use yellows to steer, not just to confirm",
+            "You can predict which colors survive a given feedback row",
+            "You finish most puzzles in four guesses or fewer"
+          ]
+        }
+      },
+      {
+        heading: "Colordle solver vs. playing by intuition",
+        paragraphs: [
+          "The biggest difference between the solver and intuition is consistency. Intuition drifts when you play late at night or when you recognize a color you like; the solver applies the same distance math to every single row, every day.",
+          "That matters more in Colordle than in Wordle because the palette is small and the components are few. Once the pool is down to six or seven colors, intuition stops helping — the remaining candidates are all plausible. The solver's ranking breaks the tie using distance, which is information you already have but are not using.",
+          "None of this makes the solver a replacement for playing. The satisfaction of Colordle is still yours. But if your goal is accuracy — a perfect daily streak, a better average guess count — the solver is the fastest way to get there."
+        ]
+      },
+      {
+        heading: "Using the Colordle solver with today's puzzle",
+        paragraphs: [
+          "The solver works with any Colordle puzzle, including the daily one on the answer page. Open the game, make your first guess, copy the feedback into the solver, and let it suggest the next move. Most players land today's answer in four moves or fewer when they combine the solver with a sensible opener.",
+          "For the daily puzzle specifically, the fastest openers are colors that split the palette evenly: a mid-tone that mixes a strong component from each end. A good first guess should return feedback that narrows the pool hard regardless of the answer, and the solver's candidate list after row one will show you whether your opener did its job.",
+          "If you play the archive, the same rules apply. Old puzzles use the same palette and the same scoring, so the solver is just as effective on Colordle day 1400 as it is on today's puzzle."
+        ],
+        callout: {
+          title: "Streak-saving tip",
+          body: "If you are one guess away from losing a streak, do not panic-guess. Enter the current feedback row into the solver, look at the top two candidates, and pick the one that survives the most hypothetical next clues."
+        }
+      },
+      {
+        heading: "The Colordle solver's answer pool",
+        paragraphs: [
+          "The solver draws from the same named-color palette the game uses, so it never suggests a color that cannot be the answer. That guarantee is what separates it from a generic color picker: every candidate the solver lists is a real, valid Colordle answer color.",
+          "Because the palette is small and fixed, the solver can pre-compute the distance between every pair of colors at startup. That makes filtering instant, even on older devices, and it means the ranked list you see is exact — not a heuristic approximation.",
+          "If you ever want to check your own reasoning, the solver doubles as a teaching tool. Guess a color, note its score, and watch which candidates survive. Over time you will internalize the palette's structure and start seeing the near-miss patterns before the solver does."
+        ]
+      },
+      {
+        heading: "Common mistakes the solver fixes",
+        paragraphs: [
+          "The most common mistake is ignoring grays. In Colordle, a gray component eliminates every color that shares that component's neighborhood, and players who keep guessing colors with a grayed-out component are effectively wasting moves. The solver never makes that error.",
+          "The second mistake is misreading yellows as mere confirmations. A yellow component is a direction, not a pat on the back, and treating it as directional information is what collapses the candidate list. The solver scores yellows by distance, which is the difference between narrowing to ten candidates and narrowing to three.",
+          "The third mistake is reopening solved components. Once a component is green, it should stay green in every later guess. Players under pressure sometimes 'improve' a locked component and break the row; the solver enforces locked components as hard constraints, which keeps your later guesses valid."
+        ],
+        list: {
+          title: "Three rules for a perfect Colordle game",
+          items: [
+            "Never guess a color with a grayed-out component",
+            "Treat every yellow as directional feedback",
+            "Never touch a component that is already green"
+          ]
+        }
+      },
+      {
+        heading: "Why Colordle solvers rank so well in search",
+        paragraphs: [
+          "People search for Colordle answers and hints every single day — 'colordle answer', 'colordle answer today', 'colordle hint' are among the most-typed daily puzzle queries. A solver page that explains how feedback works, shows the palette logic, and links to today's answer naturally serves that traffic.",
+          "This guide is written to be useful on its own, not padded for keywords. If you came here looking for today's Colordle answer, the answer card and the hint section cover it; if you came to get better at the game, the strategy sections above are the payoff. Both intents are served by one page, which is exactly what search engines reward.",
+          "Bookmark the solver and check back when you are stuck, or when you want to verify that your intuition matches the math. Colordle is a five-minute game, and the solver keeps those five minutes from ever turning into a lost streak."
+        ]
+      }
+    ],
+    faqHeading: "Colordle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Colordle solver work?",
+        answer:
+          "You enter the feedback row from your game — green, yellow, and gray tiles for each component — and the solver filters the entire color palette down to the candidates that match all your clues, ranked by how close each one is."
+      },
+      {
+        question: "What does a yellow tile mean in Colordle?",
+        answer:
+          "A yellow tile means that component is close to the answer but not an exact match — typically an adjacent shade in the palette. The solver uses that proximity to rank candidates."
+      },
+      {
+        question: "Can the Colordle solver find today's answer?",
+        answer:
+          "The solver narrows down the palette based on your feedback. For the exact daily answer, check the Colordle answer today page, which reveals the solution and hints for today's puzzle."
+      },
+      {
+        question: "Does the solver work for old Colordle puzzles?",
+        answer:
+          "Yes. Every Colordle puzzle uses the same palette and scoring rules, so the solver works for the archive and for any past daily puzzle."
+      },
+      {
+        question: "How many guesses should a Colordle take?",
+        answer:
+          "With the solver's filtering strategy, most puzzles are solved in three to five guesses. Using a palette-splitting opener and entering feedback every round is the key."
+      }
+    ],
+    relatedLinks: [
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/colorfle-answer-today", label: "Colorfle Answer Today" },
+      { href: "/colorfle-solver", label: "Colorfle Solver" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'spotle-solver': {
+    key: 'spotle-solver',
+    eyebrow: 'Spotle Solver Guide',
+    intro:
+      "Spotle is the daily game where you identify a mystery Spotify artist in ten guesses using clues like rank, debut year, genre, country, and group size. The Spotle solver turns those attribute clues into a live-filtered candidate list, so you can solve faster and learn the artists' chart logic as you play. Here is how the solver works, how to read its output, and the strategy that wins most puzzles by guess six or seven.",
+    sections: [
+      {
+        heading: "How the Spotle solver filters the artist pool",
+        paragraphs: [
+          "Spotle compares your guessed artist to the answer across a handful of attributes — chart rank, debut year, genre, country, group size, and gender. Each attribute comes back green (exact), yellow (close), or gray (wrong), and the solver applies those verdicts to the entire artist database in real time.",
+          "What makes the solver powerful is that it understands the yellow thresholds. In Spotle, yellow does not mean 'somewhere in the list' — it means the value is within a specific proximity window, like a rank within a few positions or a debut year within a few years. The solver encodes those exact thresholds, so its filtering is precise rather than approximate.",
+          "Every time you add a clue, the pool shrinks. The first guess alone usually cuts thousands of artists down to a few hundred; by the fourth or fifth clue, the ranked list is short enough that a music fan can recognize the answer instantly."
+        ]
+      },
+      {
+        heading: "The attribute cheat sheet",
+        paragraphs: [
+          "Rank is the sharpest filter in Spotle because it is a continuous number. If your guess lands yellow on rank, the answer is close to that position — check the neighbors on the chart, not the whole list. A green rank with a yellow country is a different animal entirely: the chart position is locked, and you only need to disambiguate between nearby acts from adjacent countries.",
+          "Debut year behaves like rank but slower. Charts move weekly while careers span decades, so debut year narrows a generation of artists, not a single slot. Use it to rule out entire eras before you start guessing specific names.",
+          "Genre and country are categorical, which means they are either right or wrong — but Spotle's yellow on genres means 'related genre', like pop for dance pop. The solver treats those related-genre yellows as strong evidence, because they point at the artist's musical neighborhood even when the exact label misses."
+        ],
+        list: {
+          title: "Best first guesses in Spotle",
+          items: [
+            "A giant act everyone knows — think Taylor Swift, Drake, or Bad Bunny — because its feedback is maximally informative",
+            "An artist with an unusual debut year, so the year clue splits the field hard",
+            "A solo artist, so the group-size attribute becomes a clean binary test",
+            "Avoid obscure picks early: they waste a clue and their feedback barely narrows the pool"
+          ]
+        }
+      },
+      {
+        heading: "A real Spotle solve, move by move",
+        paragraphs: [
+          "Open with a household-name artist. Suppose the game returns green on country, yellow on debut year, gray on genre, and yellow on rank. The solver immediately discards every artist outside your country, every act whose debut year is far from your guess, and keeps only chart neighbors with a related genre.",
+          "The second guess should be a candidate from the top of the ranked list — ideally an artist you think could be the answer, because that way the feedback doubles as a check. When it comes back green on genre and closer on rank, the pool is usually down to a handful of names.",
+          "From there, the group-size attribute is the tiebreaker. If your top two candidates differ in whether they are a band or a solo act, one more guess settles it, and the reveal is a formality. Most solves finish between guess six and eight when you trust the ranked list instead of hopping around the chart."
+        ]
+      },
+      {
+        heading: "Reading the solver's ranked list",
+        paragraphs: [
+          "The solver does not just dump candidates — it orders them by how well they satisfy your clues, with exact matches first and near-misses below. The top of the list is where you should guess, not the middle.",
+          "If the top candidate does not feel right, do not scroll deep. Instead, reconsider your clues: a misread yellow or a wrong gray can silently poison the filter. Re-entering the feedback row accurately is more valuable than scanning a hundred names.",
+          "The solver also lets you check hypotheticals before committing. Play 'what if this is the answer' — the feedback it would generate tells you whether guessing that artist would be a wasted move or a decisive one. That forward-looking habit is what separates strong Spotle players from the pack."
+        ],
+        callout: {
+          title: "The ten-guess safety net",
+          body: "Spotle gives you ten guesses — more than most daily games. Use the first two to establish rank, year, and country, then let the solver's ranked list carry you. You only need the full ten on brutally obscure days."
+        }
+      },
+      {
+        heading: "Spotle solver vs. streaming charts knowledge",
+        paragraphs: [
+          "Knowing music helps, but it is not enough. Even a well-read listener cannot hold the full chart in their head, and the solver's value is that it holds the chart for you — thousands of artists, their debut years, their genres, their countries — and applies your clues instantly.",
+          "Your music knowledge still decides the game. The solver suggests; you recognize. When the pool is down to twelve artists, the solver cannot tell you which one it is, but a fan of that era or region usually can.",
+          "That division of labor is why the solver feels fair: it removes the memory burden without removing the fun. You still have to think, connect, and recognize — you just do not have to memorize the entire Spotify catalog to play well."
+        ]
+      },
+      {
+        heading: "Common mistakes the Spotle solver catches",
+        paragraphs: [
+          "The most common mistake is treating yellow as a vague 'maybe'. In Spotle, yellow on rank means within a tight window — act on it by guessing a chart neighbor, not a distant name. The solver makes that window explicit in its filtering.",
+          "The second mistake is ignoring the group-size attribute. Solo versus band is a clean split that most players leave until late, but checking it early can halve the pool in one move.",
+          "The third mistake is re-guessing artists you already ruled out. It sounds obvious, but under pressure players cycle back to familiar names. The solver simply never suggests a candidate your clues have eliminated."
+        ],
+        list: {
+          title: "Three habits of fast Spotle players",
+          items: [
+            "Enter every clue as soon as the game gives it to you",
+            "Guess from the top of the ranked list, not from memory alone",
+            "Use group size and country as early tiebreakers"
+          ]
+        }
+      },
+      {
+        heading: "Why the Spotle solver pages rank in search",
+        paragraphs: [
+          "Every day, players type 'spotle answer today' and 'spotle solver' into Google and Bing looking for exactly this page. The answer-today page covers the daily reveal, while this solver page serves the players who want to crack the puzzle themselves with a smarter process.",
+          "Both pages are written to answer real questions — how feedback works, what yellow means, which openers are best — so they earn clicks from people who are actually stuck, not just browsing. That is the kind of content search engines index and keep indexed.",
+          "Bookmark the solver for the days when the answer is a deep-cut artist. On those days, the ranked list is the difference between a solved puzzle and a frustrating streak-breaker."
+        ]
+      },
+      {
+        heading: "Spotle artist pools and clue values",
+        paragraphs: ["Spotle draws from a pool of well-known Spotify artists, and the solver filters that pool with the game’s own attributes — rank, debut year, genre, country, group size, and gender. Each attribute is a clue with a value, and the solver treats them all as constraints.","The rank attribute is the sharpest filter because it is a number: the game tells you higher or lower, and each arrow halves the remaining range.","The solver combines every arrow and every green or yellow tile into one candidate list, so by the fifth guess you are usually looking at the answer."]
+      }
+    ],
+    faqHeading: "Spotle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Spotle solver work?",
+        answer:
+          "You enter the attribute feedback from your guesses — green, yellow, or gray for rank, debut year, genre, country, group size, and gender — and the solver filters the artist database down to the candidates that match all your clues."
+      },
+      {
+        question: "What does yellow mean in Spotle?",
+        answer:
+          "Yellow means the attribute is close but not exact. For rank and debut year it is a tight proximity window; for genres it means a related genre like pop for dance pop."
+      },
+      {
+        question: "How many guesses does a Spotle take?",
+        answer:
+          "Most solves finish between six and eight guesses when you enter every clue and guess from the solver's ranked list. The game gives you ten guesses as a safety net."
+      },
+      {
+        question: "Does the solver use the same artist data as the game?",
+        answer:
+          "The solver draws from the same pool of artists and applies the same attribute comparison rules, so its candidates are always valid answers."
+      },
+      {
+        question: "Can I use the solver for past Spotle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical for every puzzle, so the solver works for archive and past daily games too."
+      }
+    ],
+    relatedLinks: [
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'weaver-solver': {
+    key: 'weaver-solver',
+    eyebrow: 'Weaver Word Ladder Solver',
+    intro:
+      "Weaver is the daily word-ladder puzzle: you start with one four-letter word, finish on another, and every step must be a real word that differs by exactly one letter. The Weaver solver finds a valid path between any two words in seconds, so you can check your own ladder, learn new routes, and understand the graph of English words underneath the game. Here is how it works and how to use it.",
+    sections: [
+      {
+        heading: "How the Weaver solver finds a path",
+        paragraphs: [
+          "Weaver's board is a graph: every four-letter English word is a node, and two words are connected when they differ by exactly one letter. The solver runs a shortest-path search across that graph, so the route it returns is the fewest steps possible between your start and end words.",
+          "That search is the same algorithm that powers GPS navigation and network routing — breadth-first search, which fans outward from the start word until it reaches the target. Because it explores in layers, the first path it finds is guaranteed to be the shortest.",
+          "The practical consequence is that the solver never returns a meandering route. If it says the answer is four steps, four steps is the minimum — no player is going to beat it with a five-step ladder, because five is longer than the floor."
+        ]
+      },
+      {
+        heading: "Reading the solver's ladder",
+        paragraphs: [
+          "The solver outputs an ordered list of words from start to finish, each one a single letter away from the last. The step between any two consecutive words is the constraint to check — change one letter, keep the rest, and the result must still be a word.",
+          "Many of the solver's ladders use common words, but some steps are surprisingly obscure, like 'dore' or 'gite'. That is the nature of the graph: sometimes the only bridge between two regions of the word universe is a rare tile.",
+          "If you want a ladder you can actually use in the game, prefer the solver's path when it sticks to everyday vocabulary. If the daily puzzle is stingy with common words, the solver's exact path is still your best route — the game accepts any valid English word, rare or not."
+        ],
+        callout: {
+          title: "The one-letter rule",
+          body: "Every Weaver step changes exactly one letter and must produce a real word. Two-letter changes are illegal, so the solver's paths always obey the strict one-letter adjacency the game enforces."
+        }
+      },
+      {
+        heading: "Strategy: how to solve Weaver without the solver",
+        paragraphs: [
+          "Start by thinking about the end word's letters. Your final step must land on it, so the move before it must be a word that shares three of its letters. List those near-neighbors and work backward.",
+          "Then do the same for the start word: enumerate the words one letter away and see which direction feels productive. Weaver rewards breadth — knowing six words that rhyme with your current word gives you six exits from a dead end.",
+          "Vowels are the classic bottleneck. Words with unusual vowel patterns (like 'aeon' or 'eaux') have few neighbors, so good players route around vowel-heavy words early and save them for the final approach."
+        ],
+        list: {
+          title: "Signs you are improving at Weaver",
+          items: [
+            "You can name three neighbors of any common four-letter word instantly",
+            "You stop visiting words you have already used",
+            "You plan two steps ahead instead of reacting one step at a time",
+            "You recognize dead-end words (few neighbors) before stepping onto them"
+          ]
+        }
+      },
+      {
+        heading: "The Weaver solver as a learning tool",
+        paragraphs: [
+          "The most underrated use of the solver is checking your own ladder before submitting. If the game rejects your final answer, compare your path to the solver's and see exactly where your chain broke — the illegal step is usually a one-letter slip you can fix immediately.",
+          "The solver also teaches word families. Run it between words you would never connect — 'cold' to 'warm', 'love' to 'hate' — and study the bridges. Those middle words become future stepping stones in real games.",
+          "Over time, players who study solver paths internalize the graph's structure: which letters connect easily, which vowels trap you, which consonants pair up. That knowledge transfers directly to faster manual solves."
+        ]
+      },
+      {
+        heading: "Why the Weaver solver page ranks in search",
+        paragraphs: [
+          "Weaver players search for 'weaver solver' and 'weaver word solver' when they are mid-puzzle and stuck, which means this page answers a time-sensitive need. A solver that returns a valid path instantly is exactly the resource those searchers want.",
+          "The page is also useful cold: the strategy sections explain how ladders work, what the one-letter rule is, and how to get better, so it earns traffic from learners as well as from people stuck on a specific puzzle.",
+          "Bookmark it for the hard days. Some Weaver puzzles have long minimum paths that feel impossible by intuition — on those days, the solver's route is the difference between a solved puzzle and a streak broken by a dead end."
+        ]
+      },
+      {
+        heading: "Common mistakes the Weaver solver prevents",
+        paragraphs: [
+          "The classic mistake is moving backward. Players get stuck, retreat to an earlier word, and then realize they have wasted three moves. The solver's shortest path never revisits a word, so its ladders are always monotonic progress toward the target.",
+          "The second mistake is trying to force a word that is not in the game's dictionary. The solver only uses valid English words, so every step it suggests is a legal move — no rejected submissions.",
+          "The third mistake is ignoring the end word's neighbors. Players climb away from the target without a plan for the final approach, then run out of steps. The solver plans the landing zone from the start."
+        ]
+      },
+      {
+        heading: "The word graph, understood",
+        paragraphs: [
+          "Weaver is a window into the graph of English words, and understanding that graph makes you a better solver. Every four-letter word is a node; every pair differing by one letter is an edge; and a Weaver puzzle is a path through that graph. The solver finds the shortest path — and you can learn to see paths too.",
+          "The graph's structure has patterns. Words cluster around vowel cores, so most edges involve changing one consonant or one vowel while keeping the rest. Words with unusual patterns — QUIZ, JINX, ZANY — sit at the graph's edge with almost no neighbors, which is why they are dead ends.",
+          "Bridge words are the hidden art. Some words connect regions that would otherwise be separate — a rare word like DORE or GITE can be the only bridge between two word neighborhoods. The solver uses them, and studying solver paths teaches you the bridges that recur.",
+          "Finally, practice with the archive. Every past Weaver puzzle is a path through the graph, and reviewing the solver's routes builds your internal map of the word space — which words connect, which letters rotate freely, which routes are shortest."
+        ]
+      },
+      {
+        heading: "Weaver solver settings and the dictionary match",
+        paragraphs: [
+          "The Weaver solver is most accurate when its dictionary matches the game's. The standard English dictionary is right for the daily puzzle, but themed games — US English, UK English, a restricted word list — benefit from matching the solver's pool to the game's.",
+          "The dictionary match matters because Weaver is a graph game: the solver's graph is built from its dictionary, and a graph built from the same words as the game produces ladders that always land. A mismatched dictionary might suggest a rung the game rejects.",
+          "The word-length setting is the second adjustment. The daily puzzle is four letters, but the solver handles five- and six-letter ladders too — the graph just gets bigger and the paths longer.",
+          "Finally, use the solver's path display as a teaching tool. Seeing the exact chain between two words — the vowel rotations, the consonant swaps, the bridge words — builds the ladder-building intuition that makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "Weaver Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Weaver solver work?",
+        answer:
+          "It builds a graph of four-letter English words where two words are connected if they differ by exactly one letter, then runs a shortest-path search to find the fewest-step route between your start and end words."
+      },
+      {
+        question: "What is the one-letter rule in Weaver?",
+        answer:
+          "Every step must change exactly one letter and the result must be a real English word. You cannot change two letters or use made-up words."
+      },
+      {
+        question: "Can the Weaver solver be used on any puzzle?",
+        answer:
+          "Yes — the solver works for any pair of four-letter words, including the daily puzzle, practice boards, and custom challenges."
+      },
+      {
+        question: "Is the solver's path always the shortest?",
+        answer:
+          "Yes. The solver uses a breadth-first search, which guarantees the first path it finds is the minimum number of steps between the two words."
+      },
+      {
+        question: "Does Weaver use a limited dictionary?",
+        answer:
+          "Weaver uses a curated list of common English words. The solver uses a compatible dictionary so every step it suggests is a valid move."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/word-ladder-solver", label: "Word Ladder Solver" },
+      { href: "/boggle-solver", label: "Boggle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" }
+    ]
+  },
+
+  'light-out-solver': {
+    key: 'light-out-solver',
+    eyebrow: 'Lights Out Solver',
+    intro:
+      "Lights Out is the puzzle where pressing a tile toggles it and its four neighbors, and you win by turning every light off. The Lights Out solver computes the exact set of presses that solves any board, using the linear algebra that underlies the game. This guide explains how the math works, how to use the solver, and the strategy that lets you solve small boards by hand.",
+    sections: [
+      {
+        heading: "How the Lights Out solver thinks",
+        paragraphs: [
+          "Lights Out is a linear puzzle: pressing a tile twice cancels out, and the order of presses does not matter, only which tiles you press. That property turns the game into a system of equations over a tiny number system where every value is on or off, 0 or 1.",
+          "The solver sets up those equations — one per light — and solves them with Gaussian elimination over the two-element field. The solution is the exact set of presses that extinguishes every light, computed in milliseconds regardless of board size.",
+          "Because the puzzle is linear, the solver's answer is provably correct. If the solver says press tiles A, B, and C, then pressing exactly those tiles — in any order — extinguishes the board. That certainty is what makes the solver feel magical and why it never fails on solvable boards."
+        ],
+        callout: {
+          title: "Why order does not matter",
+          body: "In Lights Out, every tile is its own toggle. Pressing a tile twice returns the board to its original state, so a solution is just a set of tiles, not a sequence. The solver exploits exactly that."
+        }
+      },
+      {
+        heading: "Reading the solver's output",
+        paragraphs: [
+          "The solver displays the answer as a grid of presses — often the original board with the tiles you need to press highlighted. Press them once each, in any order, and every light goes out.",
+          "Some solutions are unique, and some boards have several equivalent solutions. The solver returns one correct set; if you prefer a different shape of presses, you can often find an alternate solution by flipping a known pattern — the all-on row pattern, for example, changes the solution set without changing the outcome.",
+          "If the board has no solution — which happens on some generated puzzles — the solver tells you rather than guessing. That honesty is a feature: it saves you from pressing tiles forever on an impossible board."
+        ]
+      },
+      {
+        heading: "The strategy behind every Lights Out solve",
+        paragraphs: [
+          "The classic manual strategy is to clear the board row by row from the top. Look at each light in the top row, and press the tile directly below it to turn it off. This pushes the problem down one row at a time until only the bottom row has lights on.",
+          "Then you solve the bottom row by pressing tiles in the top row — the positions that map to each bottom light. This 'chasing the lights' method solves every solvable board, and the solver's algorithm is essentially a rigorous version of that chase.",
+          "For small boards (3×3 or 4×4), you can also solve by pattern memory: certain configurations have well-known solutions that veterans recognize on sight. The solver effectively gives you that recognition for any board."
+        ],
+        list: {
+          title: "The chase method, step by step",
+          items: [
+            "Start at the top row and turn each light off by pressing the tile below it",
+            "Repeat for every row, pushing the lights downward",
+            "When only the bottom row remains, solve it with presses in the top row",
+            "Press the flagged top-row tiles once and the whole board clears"
+          ]
+        }
+      },
+      {
+        heading: "Why the Lights Out solver is useful beyond puzzles",
+        paragraphs: [
+          "Lights Out appears everywhere: in game collections, as a bonus minigame, in competitive puzzle speedruns, and even in math classes as an introduction to linear algebra over finite fields. The solver is equally useful in every setting.",
+          "Students can use it to check homework: set up a board, run the solver, and verify that the equation system's solution matches the presses the puzzle expects. Seeing Gaussian elimination produce an actual game solution makes the abstract math concrete.",
+          "Speedrunners use the solver to learn optimal routes — knowing the exact press set ahead of time lets them practice the motion without the trial and error."
+        ]
+      },
+      {
+        heading: "Solving Lights Out by hand like the solver",
+        paragraphs: [
+          "The key insight to internalize is that each press affects exactly five tiles — itself and its four orthogonal neighbors. Edge and corner tiles affect fewer, which is why corners are the easiest to reason about and centers the hardest.",
+          "Work from the top down, and when you reach the bottom row, note the pattern of remaining lights. That pattern determines your top-row presses: the mapping is fixed per board size, and veterans memorize it for their favorite size.",
+          "Once you have chased the lights, the second pass is clean. The solver automates both passes, but practicing the chase by hand on small boards builds the intuition that makes the solver's answers feel obvious in hindsight."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Lights Out searches",
+        paragraphs: [
+          "People search for 'lights out solver' whenever a puzzle stumps them — from a phone game to a classroom assignment — and this page delivers the answer instantly, with the reasoning explained. That combination of utility and explanation is exactly what earns rankings.",
+          "The page covers the gamut of search intents: the player who just wants the answer, the student who wants the math, and the curious player who wants to solve by hand. Each intent is served by a different section of this guide.",
+          "Bookmark it for the next time a board resists you. The solver will clear it in one press set, and the chase method above will make you faster at the game forever after."
+        ]
+      },
+      {
+        heading: "The math that makes Lights Out tick",
+        paragraphs: [
+          "Lights Out is a math puzzle wearing a game's disguise, and understanding the math makes the game trivial. Every press toggles a tile and its neighbors, pressing a tile twice cancels out, and the order of presses never matters — properties that make the puzzle a linear system over a two-value algebra.",
+          "That linear structure means every solvable board has a press set, and the solver finds it with Gaussian elimination — the same algorithm behind solving simultaneous equations. The math is the reason the solver is exact: no guessing, no heuristics, just the solution.",
+          "The chase method is the manual version of the same logic. Clearing the board row by row, pushing the lights downward, and then solving the bottom row with top-row presses is a hand-computable form of the solver's elimination — and practicing it builds the intuition the math formalizes.",
+          "Finally, the parity rule is worth internalizing. Some boards are unsolvable, and the solver detects them rather than pressing forever. Knowing that some configurations have no solution saves you from the classic trap of pressing tiles endlessly on an impossible board."
+        ]
+      },
+      {
+        heading: "Lights Out solver settings and board sizes",
+        paragraphs: [
+          "The Lights Out solver handles every board size from the classic 5×5 to the 3×3 mini boards and custom layouts. The linear algebra scales perfectly — the equations just get bigger — so the solver's answer is exact on any grid.",
+          "The board-size difference is worth understanding. Small boards have fewer possible states, which makes them feel random; large boards have more structure, which makes the chase method more effective. The solver handles both, but your manual strategy should adapt to the size.",
+          "The solver's no-solution detection is the honesty feature. Some boards genuinely cannot be solved, and the solver tells you instead of pressing forever — saving you from the classic trap of grinding on an impossible configuration.",
+          "Finally, use the solver as a linear-algebra coach. Watching it convert a board into equations and solve them shows you the math behind the game — and that understanding transfers to the puzzle, the classroom, and every future Lights Out you meet."
+        ]
+      },
+    ],
+    faqHeading: "Lights Out Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Lights Out solver work?",
+        answer:
+          "Lights Out is a linear puzzle, so the solver converts every light into an equation over a two-value system and solves them with Gaussian elimination. The result is the exact set of tiles to press."
+      },
+      {
+        question: "Does the order of presses matter in Lights Out?",
+        answer:
+          "No. Pressing a tile twice cancels out, so a solution is a set of tiles rather than a sequence. You can press them in any order."
+      },
+      {
+        question: "Can every Lights Out board be solved?",
+        answer:
+          "No — some configurations have no solution. The solver detects these and tells you instead of pressing tiles forever."
+      },
+      {
+        question: "What is the chase method?",
+        answer:
+          "A manual strategy where you clear the board row by row from the top, pushing the remaining lights downward until only the bottom row is lit, then solve it with top-row presses."
+      },
+      {
+        question: "Does the solver work for any board size?",
+        answer:
+          "Yes. The linear algebra scales to any grid, from small 3×3 boards to large custom layouts."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/minesweeper-solver", label: "Minesweeper Solver" },
+      { href: "/kanoodle-solver", label: "Kanoodle Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/word-ladder-solver", label: "Word Ladder Solver" }
+    ]
+  },
+
+  'kanoodle-solver': {
+    key: 'kanoodle-solver',
+    eyebrow: 'Kanoodle Solver Guide',
+    intro:
+      "Kanoodle is the 3D puzzle game where twelve oddly shaped pieces must fit together on a small board according to a puzzle card. The Kanoodle solver finds a valid placement for any card, so you can check a solution, learn how the pieces interlock, and understand the spatial logic the game rewards. Here is how it works and how to get better at the game itself.",
+    sections: [
+      {
+        heading: "How the Kanoodle solver places the pieces",
+        paragraphs: [
+          "Kanoodle pieces are polyomino-like shapes that occupy a fixed set of cells in 3D space, and a puzzle is a target silhouette on a 5×11 board. The solver treats each piece as a shape with every possible rotation and reflection, then searches for an arrangement that covers the board exactly.",
+          "That search is backtracking: the solver places pieces one at a time, checks whether the partial arrangement can still be completed, and backtracks the moment a dead end appears. On Kanoodle-sized boards this search is fast, so the solver returns a full solution in a blink.",
+          "Because the solver explores systematically, it never misses a solution — if a puzzle card is solvable, the solver finds a placement. That completeness is what makes it a trustworthy checker for your own attempts."
+        ]
+      },
+      {
+        heading: "Reading a Kanoodle solution",
+        paragraphs: [
+          "The solver displays the board with each piece shaded in its own color, so you can see exactly where every piece goes and how it is oriented. Match the colored regions on your physical board and the puzzle is solved.",
+          "Some puzzles have multiple valid solutions. The solver returns one; if your own layout differs but also fills the board, both are correct. The game only cares that the pieces fit the silhouette.",
+          "The trickiest part of copying a solution is orientation — pieces in 3D can face up or down, or be rotated in the plane. The solver's coloring makes those orientations explicit, so you can mirror each piece precisely."
+        ],
+        callout: {
+          title: "The 12-piece rule",
+          body: "Every Kanoodle puzzle uses the same twelve pieces; only the target shape changes. Learn each piece's shape cold and the game becomes a fitting exercise rather than a mystery."
+        }
+      },
+      {
+        heading: "Kanoodle strategy without the solver",
+        paragraphs: [
+          "Start with the largest pieces. The biggest shapes have the fewest possible placements, so committing them early reduces the search space dramatically. Good players place the 'S', the 'L', and the long bars first.",
+          "Then fill the corners and edges. Corner cells can only be covered by pieces that fit flush against the board's boundary, so locking the perimeter early exposes the interior for the flexible small pieces.",
+          "Watch the parity of the board. Each piece covers a fixed number of cells, and if your partial placement leaves a hole the remaining pieces cannot fill, you have to backtrack. Recognizing those dead ends early is the skill that separates decent players from Kanoodle experts."
+        ],
+        list: {
+          title: "Pieces to place first",
+          items: [
+            "The long straight bars — fewest orientations, easiest to commit",
+            "The large L-shaped pieces that dominate the corners",
+            "The chunky blocks that anchor the center",
+            "Save the small, twisty pieces for the final fill"
+          ]
+        }
+      },
+      {
+        heading: "Why the Kanoodle solver helps you learn",
+        paragraphs: [
+          "The best use of the solver is comparison: solve a puzzle as far as you can, then look at where the solver placed pieces differently from you. The divergence is almost always instructive — the solver tends to place a piece in a spot you dismissed, and seeing why it works trains your spatial eye.",
+          "The solver also demystifies the 'impossible' puzzles. Kanoodle's hardest cards look unsolvable until you see the solution, and studying those reveals the unconventional orientations — pieces flipped in 3D, or rotated past where you thought they could go — that the game is built around.",
+          "After a few solved puzzles you start seeing the board as interlocking regions instead of twelve independent shapes, and that gestalt is the whole point of the game."
+        ]
+      },
+      {
+        heading: "Common mistakes the Kanoodle solver fixes",
+        paragraphs: [
+          "The most common mistake is orientation rigidity — assuming a piece only fits one way when it can be rotated and flipped. The solver explores every orientation, and its solutions often use flipped versions of pieces you would not have considered.",
+          "The second mistake is perimeter neglect. Players fill the interior first, then discover the boundary cannot be covered. The solver locks the edges early, which is why its solutions always complete.",
+          "The third mistake is refusing to backtrack. Kanoodle rewards undoing a piece you were attached to. The solver backtracks constantly, and you should too — a piece that feels 'placed' but blocks everything else has to come out."
+        ]
+      },
+      {
+        heading: "Why the Kanoodle solver page ranks in search",
+        paragraphs: [
+          "Kanoodle owners search for 'kanoodle solver' and 'kanoodle solutions' when a puzzle card defeats them — often mid-flight or at the kitchen table with the physical game. This page answers with an instant, verified placement plus the reasoning to improve.",
+          "The guide also serves parents and teachers using Kanoodle as a spatial-reasoning tool: the strategy section explains the logic in plain terms that can be taught to kids.",
+          "Bookmark it for puzzle 148 and the other notorious late-game cards. The solver will show you the placement, and the strategy above will make you faster on every card after."
+        ]
+      },
+      {
+        heading: "Kanoodle pieces and their personalities",
+        paragraphs: [
+          "Each of Kanoodle's twelve pieces has a personality, and knowing them makes the game dramatically easier. The long bars are the planners — they have the fewest placements and lock the board's structure early. The L-shaped pieces are the corner-kings, hugging the edges. The chunky blocks are the fillers that anchor the center once the perimeter is set.",
+          "The twisty small pieces are the finishers. They have the most orientations, which makes them the hardest to place blind — but also the most flexible, which is why expert players save them for the final fill. When you see a puzzle that looks impossible, it is almost always because a small piece needs to be flipped or rotated in a way you have not tried.",
+          "Color-coding your physical set helps: assign each piece a color in your mind, and 'see' the board as twelve colored regions instead of twelve shapes. That mental recolor is exactly how the solver displays its solutions, and it is the fastest way to translate a solved layout to your physical board.",
+          "Finally, practice the notorious cards. Puzzle 148 and the other late-game challenges exist to teach the unconventional orientations — and once you have seen one piece flipped in 3D, you start seeing the possibility everywhere."
+        ]
+      },
+      {
+        heading: "Kanoodle solver settings and 3D orientation",
+        paragraphs: [
+          "The Kanoodle solver's 3D orientation handling is its most valuable feature. Pieces can be flipped, rotated, and inverted in space, and the solver explores every orientation — so its solutions often use placements you would never consider by hand.",
+          "The orientation lesson is the transferable skill. Kanoodle's hardest puzzles are hard because a piece needs to be flipped in 3D, and watching the solver's solutions teaches you to see those flips — the top-down view that hides a piece's underside, the rotation that changes its footprint.",
+          "The solver's backtracking discipline is the second lesson. It places pieces one at a time and retreats the moment a placement blocks completion — and players who copy that willingness to undo solve far more puzzles than players who force a bad piece.",
+          "Finally, use the solver as a checker. Arrange your own solution, run the solver, and compare — the divergence is almost always an orientation you missed, and each comparison trains the spatial eye the game rewards."
+        ]
+      },
+      {
+        heading: "Kanoodle puzzle levels and piece shapes",
+        paragraphs: ["Kanoodle puzzles are built from 12 distinct 3D pieces, and the solver works with the same constraint the physical game uses: every piece must fit the board exactly, with no gaps and no overlap.","The solver’s value is spatial — it tries every orientation and position for every piece, which is the exhaustive search a human cannot run by hand. Most Kanoodle boards have a unique solution, and the solver finds it.","It also explains the solve by showing the placement order, which turns a frustrating level into a lesson in how the pieces interlock."]
+      }
+    ],
+    faqHeading: "Kanoodle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Kanoodle solver work?",
+        answer:
+          "It tries every piece in every rotation and reflection, placing them one at a time and backtracking the moment a placement cannot be completed, until it finds a full arrangement that covers the board."
+      },
+      {
+        question: "Does the Kanoodle solver work for all puzzle cards?",
+        answer:
+          "If a card is solvable, the solver finds a placement. If a card is genuinely impossible, the solver exhausts its search and tells you."
+      },
+      {
+        question: "Are there multiple solutions to a Kanoodle puzzle?",
+        answer:
+          "Many cards have several valid arrangements. The solver returns one complete solution, but any layout that fills the silhouette is correct."
+      },
+      {
+        question: "How many pieces does Kanoodle use?",
+        answer:
+          "The game uses twelve distinct pieces, and every puzzle card is a target silhouette those twelve pieces must fill on the 5×11 board."
+      },
+      {
+        question: "What is the fastest way to get better at Kanoodle?",
+        answer:
+          "Place the largest pieces first, lock the corners and edges, and practice backtracking early. Studying solver solutions shows you unconventional orientations to learn."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/light-out-solver", label: "Lights Out Solver" },
+      { href: "/minesweeper-solver", label: "Minesweeper Solver" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/word-ladder-solver", label: "Word Ladder Solver" }
+    ]
+  },
+
+  'hangman-solver': {
+    key: 'hangman-solver',
+    eyebrow: 'Hangman Solver Guide',
+    intro:
+      "Hangman is a game of letters, but really it is a game of information: every wrong guess tightens the noose, and the best players maximize what each guess reveals. The Hangman solver applies that logic perfectly — it picks the letter that splits the remaining word list most evenly, then narrows with every correct and incorrect guess. Here is how it works and how to think like it.",
+    sections: [
+      {
+        heading: "How the Hangman solver chooses letters",
+        paragraphs: [
+          "The solver keeps a running list of every word that matches the revealed pattern. After each guess it filters that list — a correct letter keeps only words with that letter in that position, a wrong letter drops every word containing it.",
+          "The choice of next letter is the smart part. The solver does not pick the most common letter overall; it picks the letter that splits the current candidate list most evenly. A letter that appears in half the candidates halves the list no matter how the game answers — that is the information-maximizing move.",
+          "This 'balanced split' strategy is provably optimal for minimizing worst-case guesses, and it is why the solver wins far more games than a human who guesses 'E' every time out of habit."
+        ],
+        callout: {
+          title: "Guess for information, not for luck",
+          body: "A letter that splits the candidate list in half is worth more than a letter that is likely right but tells you nothing when it misses. The solver always chooses the splitter."
+        }
+      },
+      {
+        heading: "Using the solver mid-game",
+        paragraphs: [
+          "Enter the current pattern — the revealed letters and the blanks — plus any letters you have already guessed. The solver shows the remaining candidate words and its recommended next letter.",
+          "When the candidate list is long, trust the solver's letter over your intuition. When it shrinks below a handful of words, switch to pattern-matching: read the candidates and guess the one that fits the theme, or check whether any candidate shares letters with the revealed pattern.",
+          "The solver also flags when a word is effectively certain — when every candidate shares the same next-best letter, the choice is forced and safe."
+        ],
+        list: {
+          title: "When to trust the solver's letter",
+          items: [
+            "Early game, when the candidate list is hundreds of words long",
+            "After a wrong guess, when you need to recover information fast",
+            "When two letters tie — pick either, the solver's split math still holds",
+            "Always avoid repeating a letter you already guessed"
+          ]
+        }
+      },
+      {
+        heading: "The mathematics of a good hangman guess",
+        paragraphs: [
+          "Imagine a candidate list of 100 words. Guessing a letter that appears in 90 of them is exciting — but if the game says 'no', you are left with 10 words and little new information. Guessing a letter that appears in 50 leaves you with 50 either way, which is a much better deal.",
+          "This is why 'E' is not always the best opener in a themed hangman game. E appears in almost every word, so a miss barely narrows the list. In a word list full of E's, the solver instead picks a letter like 'T', 'A', or 'O' that splits the theme's vocabulary.",
+          "The solver computes this split for every unguessed letter on every turn, so its recommendation adapts to the actual word list — not to a generic frequency table."
+        ]
+      },
+      {
+        heading: "Why word lists matter in hangman",
+        paragraphs: [
+          "The solver's accuracy depends on the dictionary it filters. A themed game — animals, cities, foods — needs a themed word list, and the solver lets you switch lists to match the game's theme.",
+          "A common English dictionary is the right default: it is what most hangman games draw from, and its frequency structure is what the split strategy is built for.",
+          "If the game is using proper nouns (like famous people or places), the solver's generic dictionary still works, but its guesses improve when you can tell it the theme. Knowing your opponent's word source is half the battle in hangman."
+        ]
+      },
+      {
+        heading: "Common mistakes the Hangman solver prevents",
+        paragraphs: [
+          "The classic mistake is guessing letters from personal habit — E, T, A — instead of from the candidate list. The solver only guesses letters that actively shrink the list.",
+          "The second mistake is forgetting the pattern. Players get caught up in a promising letter and ignore that it cannot fit the revealed blanks. The solver hard-constrains every guess to the pattern.",
+          "The third mistake is wasting guesses on consonants when the vowels are already known. Once you know the vowels, the solver pivots to the consonants that discriminate between remaining candidates."
+        ]
+      },
+      {
+        heading: "Why the Hangman solver page ranks in search",
+        paragraphs: [
+          "'Hangman solver' is a perennial search — players stuck on a tricky word, students mid-homework, and party-game players who refuse to lose. The solver answers in one click with the exact next letter and the candidate list.",
+          "The strategy sections also serve the players who want to win without the tool: the split logic, the word-list insight, and the pattern-first approach are all things you can apply in any hangman game.",
+          "Bookmark it for the next time the word is seven letters, the theme is obscure, and you are one wrong guess from the noose."
+        ]
+      },
+      {
+        heading: "Winning hangman without a dictionary",
+        paragraphs: [
+          "You do not need a solver to win hangman — you need the split strategy it uses. The core rule is simple: never guess a letter that appears in almost every word. E, T, A, and I are exciting guesses, but when they are present in most words, a miss barely narrows the list and a hit barely narrows it either.",
+          "The winning pattern is to guess the letters that split the field: J, X, Z, Q, and the less common vowels. A letter that appears in a third of the words is worth more than a letter that appears in 90 percent, because it halves the list no matter how the game answers.",
+          "Position matters once you have revealed letters. When the pattern is _O_E, the O and E are known, and the discriminating letters are the consonants that fit between them — R, M, N, D, C, L. Guessing those in order usually cracks the word in two or three moves.",
+          "Finally, read the phrase structure. If the puzzle is a multi-word phrase, the word lengths are the first clue, and the solver's pattern filter — matching revealed letters across all words — is the exact logic you should apply by hand."
+        ]
+      },
+      {
+        heading: "Hangman solver settings and word-list selection",
+        paragraphs: [
+          "The Hangman solver is most accurate when its word list matches the game you are playing. The common-English default is right for most hangman games, but if you are playing a themed game — animals, cities, foods, sports — switch the solver's list to match the theme and its guesses improve dramatically.",
+          "The list selection matters because hangman is a filter game: the solver's candidate pool is its whole world, and a pool that matches the game's dictionary produces near-perfect guesses while a mismatched pool wastes moves on words that can never be the answer.",
+          "For classroom or party games, the common-English list is the safe choice — most hangman games draw from it, and its frequency structure is what the split strategy is built for.",
+          "Finally, use the solver's candidate display as a learning tool. Reading the surviving word list after each guess teaches you the dictionary's shape — which letters cluster, which patterns dominate — and that awareness makes you a better guesser even without the tool."
+        ]
+      },
+      {
+        heading: "Hangman answer dictionaries and word lists",
+        paragraphs: ["Hangman solvers work off word lists, and the size of the list is the whole game: a small dictionary solves fast but misses words, while a large dictionary covers every answer but takes more guesses to lock in. The solver balances both by scoring every remaining word.","It ranks candidates by how much information a guess would reveal — letters that split the remaining set most evenly win. That is the same logic a strong human player uses, applied to the entire dictionary in milliseconds.","For a stubborn puzzle, the solver’s list also shows the words that remain, which is often enough to spot the answer yourself."]
+      }
+    ],
+    faqHeading: "Hangman Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Hangman solver work?",
+        answer:
+          "It keeps a list of every word matching the revealed pattern, filters it after each guess, and recommends the letter that splits the remaining candidates most evenly to maximize information."
+      },
+      {
+        question: "What is the best first letter in hangman?",
+        answer:
+          "There is no universal best letter — it depends on the word list. The solver picks the letter that halves the candidate list, which often beats habit-guessing E or T."
+      },
+      {
+        question: "Does the solver support themed word lists?",
+        answer:
+          "Yes. You can switch between a common English dictionary and themed lists so the candidate pool matches the game you are playing."
+      },
+      {
+        question: "Why did the solver guess a letter that is not common?",
+        answer:
+          "Because uncommon letters often split the candidate list better. A letter in half the candidates is more valuable than a letter in 90% of them.",
+      },
+      {
+        question: "Can the solver guarantee a win?",
+        answer:
+          "No solver can guarantee a win on an arbitrary word, but the split strategy minimizes worst-case guesses and wins far more often than intuition-based play."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/boggle-solver", label: "Boggle Solver" },
+      { href: "/word-ladder-solver", label: "Word Ladder Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" }
+    ]
+  },
+
+  'betweenle-answer-today': {
+    key: 'betweenle-answer-today',
+    eyebrow: 'Betweenle Answer & Strategy Guide',
+    intro:
+      "Betweenle is the daily word game where the answer hides between two clue words — its letters, position, or category sit between the pair in a way you have to deduce. Every puzzle reveals a fresh answer, and players searching for the Betweenle answer for {date}, today's Betweenle solution, or Betweenle hints can find it all here. This guide covers today's answer, how the between-clue mechanic works, and the strategy that makes the puzzle click.",
+    sections: [
+      {
+        heading: "The Betweenle answer for {date}",
+        paragraphs: [
+          "Today's Betweenle answer for {date} is revealed on this page, confirmed against the official puzzle. Players who search for the Betweenle answer for {date}, today's Betweenle word, or the Betweenle solution for {date} will find the same answer here, whether they are catching up on a missed puzzle or double-checking their own solve.",
+          "The answer card at the top shows the solution along with the two clue words, so you can see exactly how the between relationship worked. If you are still solving, the hint section gives you the first letter and the category without spoiling the full word.",
+          "Betweenle answers change daily, so the {date} puzzle has a single correct word — the same one across every mirror of the game. Bookmark this page and the daily answer will always be one click away."
+        ],
+        callout: {
+          title: "Daily refresh",
+          body: "A new Betweenle puzzle publishes each day. The answer for {date} is live now — and the page always updates to the current puzzle, so the URL stays the same while the answer rolls over."
+        }
+      },
+      {
+        heading: "How the between mechanic works",
+        paragraphs: [
+          "The heart of Betweenle is the relationship between two clue words and the answer. In some puzzles the answer falls alphabetically between the clues; in others it sits between them on a category spectrum, like a shade between two colors or a size between two extremes.",
+          "The clues are chosen so that the between region is meaningful — not a tie, and not obvious. A good puzzle makes you think 'what sits between these two?' and rewards players who consider multiple kinds of betweenness: alphabetical, semantic, numeric, or positional.",
+          "Once you internalize that the answer must relate to both clues, the puzzle becomes a two-constraint search rather than a guessing game. The answer has to make sense with the first clue and with the second, and the intersection of those two constraints is usually small."
+        ]
+      },
+      {
+        heading: "Betweenle strategy for faster solves",
+        paragraphs: [
+          "Start by naming the obvious between-candidates for the two clues. If the clues are low and high, list the midpoints; if they are two colors, name the blend; if they are two categories, name the bridge term. Your first answer should be the most central candidate you can think of.",
+          "Then test the edges. If your midpoint is wrong, the answer is likely off-center — closer to one clue than the other. Move your guess toward the clue that feels underrepresented, and the feedback will confirm the direction.",
+          "Keep the relationship loose early and tighten it as you go. The first guess rarely nails the exact rule, but it tells you which kind of betweenness is in play, and that alone halves the remaining candidates."
+        ],
+        list: {
+          title: "Kinds of betweenness to check",
+          items: [
+            "Alphabetical: the answer sorts between the two clue words",
+            "Semantic: the answer's meaning bridges the clues' meanings",
+            "Numeric: the answer is a midpoint, mean, or median value",
+            "Positional: the answer sits between the clues on a spectrum or scale"
+          ]
+        }
+      },
+      {
+        heading: "Solving Betweenle with hints instead of spoilers",
+        paragraphs: [
+          "Many players want help without the full answer, and the hint section on this page is built for that: it reveals the first letter, the word length, and the category of the between-relationship without naming the word.",
+          "Use the first-letter hint to prune your candidate list, then use the category hint to decide which kind of betweenness applies. Together they turn a blind guess into a reasoned deduction, and the satisfaction of the solve stays intact.",
+          "If you are truly stuck, the full answer is always there — one more scroll down. There is no shame in the reveal; even Betweenle veterans check the answer on brutal days."
+        ]
+      },
+      {
+        heading: "Common mistakes in Betweenle",
+        paragraphs: [
+          "The most common mistake is assuming the betweenness is always alphabetical. Many puzzles use semantic or categorical relationships, and players who only think alphabetically get stuck on puzzles that are really about shades of meaning.",
+          "The second mistake is ignoring one clue. A guess that relates beautifully to the first clue but ignores the second is almost always wrong, because the puzzle's whole point is that the answer sits between both.",
+          "The third mistake is over-thinking. When the between region is genuinely small — two or three candidates — the fastest path is to guess all of them rather than agonize. The game rewards volume when the pool is tiny."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Betweenle searches",
+        paragraphs: [
+          "Every day, players search for the Betweenle answer for the current date, and this page is written to answer that exact query with a clear reveal, dated correctly, and updated daily. The dated phrasing — 'Betweenle answer for {date}' — matches how people actually search.",
+          "The page also serves learners: the strategy sections explain the between-mechanic in plain language, so it earns traffic from new players and curious solvers, not just people grabbing the answer.",
+          "Because the answer is announced daily and the page is static and crawlable, search engines index it as the go-to Betweenle resource — exactly the setup that keeps a daily-answer page ranked and clicked."
+        ]
+      },
+      {
+        heading: "The daily Betweenle pattern, week by week",
+        paragraphs: [
+          "Betweenle answers repeat structural patterns that a daily player learns to expect. Some weeks the puzzle leans alphabetical — the answer sorts between the clue words; other weeks it leans semantic, with the answer bridging the clues' meanings. Reading which pattern the day is using is half the solve.",
+          "The clue selection is the tell. Two clue words from the same category — two animals, two colors, two sizes — almost always mean a categorical between; two clues from different categories mean the answer is a bridge between worlds. Naming the relationship before you guess the word turns the puzzle into a two-step deduction.",
+          "The daily answers also reveal the game's vocabulary bias. Betweenle favors common words with clear midpoints, and the pool avoids the obscure — so when you are down to two candidates, the everyday word wins almost every time.",
+          "Finally, track your own solves. The players who improve fastest at Betweenle are the ones who review their misses, because each miss teaches a new kind of betweenness — and the daily reveal is the perfect review tool."
+        ]
+      },
+      {
+        heading: "The Betweenle archive and the pattern library",
+        paragraphs: [
+          "The Betweenle archive is a pattern library that updates daily, and its lessons compound. Each entry shows the answer, the two clues, and the between-relationship — and reviewing the archive builds the pattern recognition the game tests.",
+          "The relationship types are the archive's clearest lesson. Some answers sit alphabetically between their clues, others semantically, others numerically — and tracking the types across a week shows you which the game favors and which you should practice.",
+          "The vocabulary bias is the second lesson. Betweenle favors common words with clear midpoints, and the archive confirms the pool's shape — everyday vocabulary rather than obscure terms — so the famous candidate wins when you are down to two.",
+          "Finally, the archive is the practice gym. Every past answer is a puzzle you can replay, and running through old entries builds the betweenness intuition — the scale-naming, the midpoint-finding, the relationship-reading — that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Betweenle answers and the between rule",
+        paragraphs: ["Betweenle answers sit between two clue words, and the today page records the current answer alongside the clue pair that defined it. Understanding the between rule is the whole game: the answer relates to both clues, which is a much tighter constraint than either clue alone.","The puzzle rewards breadth — the wider your vocabulary across categories, the faster the middle word appears. And because the clues change daily, no two Betweenle puzzles play the same.","The today page keeps the answer and the clues together, so you can see exactly how the rule resolved for that day’s pair."]
+      }
+    ],
+    faqHeading: "Betweenle FAQ",
+    faqs: [
+      {
+        question: "What is the Betweenle answer for {date}?",
+        answer:
+          "The Betweenle answer for {date} is shown at the top of this page, confirmed against the official daily puzzle. The answer changes every day."
+      },
+      {
+        question: "How does Betweenle work?",
+        answer:
+          "Betweenle gives you two clue words, and the answer is a word that sits between them — alphabetically, semantically, numerically, or positionally. You deduce the between-relationship and guess the answer."
+      },
+      {
+        question: "Where can I find Betweenle hints?",
+        answer:
+          "This page includes a hint section with the first letter, word length, and relationship category, letting you solve without a full spoiler."
+      },
+      {
+        question: "Is there an official Betweenle archive?",
+        answer:
+          "Many players track past answers in community archives. This page covers the current daily puzzle, and the Betweenle solver works for any past word too."
+      },
+      {
+        question: "What does the between rule mean in practice?",
+        answer:
+          "It means the answer must relate to both clue words and sit between them in some measurable way — the intersection of two constraints that narrows the candidate list dramatically."
+      }
+    ],
+    relatedLinks: [
+      { href: "/betweenle-solver", label: "Betweenle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" }
+    ]
+  },
+
+  'colorfle-answer-today': {
+    key: 'colorfle-answer-today',
+    eyebrow: 'Colorfle Answer & Guide',
+    intro:
+      "Colorfle is the daily color puzzle where you guess a target color from a palette using distance feedback — each guess tells you how far your color is from the answer, in a warm or cool direction. Players looking for the Colorfle answer for {date}, today's Colorfle color, or Colorfle hints will find the daily reveal plus a complete strategy guide here. Here is today's answer and how to get better at the game.",
+    sections: [
+      {
+        heading: "The Colorfle answer for {date}",
+        paragraphs: [
+          "Today's Colorfle answer for {date} is revealed on this page, confirmed against the official puzzle. The answer card shows the target color's name and its hex value, so you can match it exactly — and players searching for the Colorfle color for {date} or today's Colorfle answer will find the same result.",
+          "Colorfle publishes one new color daily, and the {date} puzzle has a single target. The reveal card updates with the date, so the page always shows the current answer while keeping the same clean URL for bookmarks.",
+          "If you are still solving, the hint section gives the color's family — warm, cool, or neutral — plus its general position on the palette, without giving away the exact shade."
+        ],
+        callout: {
+          title: "Hex-exact reveals",
+          body: "Every Colorfle answer on this page includes its exact hex value, so you can match the shade precisely — no more guessing whether the answer was this green or that green."
+        }
+      },
+      {
+        heading: "How Colorfle feedback works",
+        paragraphs: [
+          "Colorfle scores your guess by distance in color space: the game tells you whether the answer is warmer or cooler, lighter or darker, more saturated or less, relative to your guess. Each piece of feedback is a direction, not a verdict.",
+          "That directional feedback is the key to solving. A 'warmer' answer means every subsequent guess should shift toward the red-orange side of the wheel; a 'darker' answer means you move down the lightness scale. The game is a guided search through color space.",
+          "Understanding the color model matters: hue, saturation, and lightness are the three axes you are navigating. Fix two of them with early guesses and only one axis remains — that is when the puzzle gets easy."
+        ]
+      },
+      {
+        heading: "A Colorfle solving strategy",
+        paragraphs: [
+          "Open with a mid-palette color — something neutral, mid-lightness, mid-saturation — because its feedback is informative in every direction. A guess at the edge of the palette can only be 'warmer' or 'cooler' toward the center, wasting half the information.",
+          "On your second guess, move boldly along the axes the feedback flagged. If the answer is warmer and darker, jump a meaningful distance in both directions rather than nudging — the feedback range is wide, and small moves burn guesses.",
+          "By guess three or four you should be in the neighborhood. Now switch from big moves to precise ones: correct the remaining lightness, nudge saturation, and the answer falls within a few shades. Most Colorfle puzzles resolve in five or six guesses with this rhythm."
+        ],
+        list: {
+          title: "The Colorfle opener checklist",
+          items: [
+            "Pick a mid-lightness, mid-saturation color",
+            "Avoid palette edges — they waste directional feedback",
+            "Include both warm and cool components so either verdict is useful",
+            "Prefer a color whose name you know, so you can reason about its position"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes in Colorfle",
+        paragraphs: [
+          "The biggest mistake is making tiny adjustments. Colorfle's feedback spans a wide range, and players who nudge one step at a time run out of guesses long before reaching the target. Move big early, refine late.",
+          "The second mistake is ignoring one axis. If the game says 'darker' but you keep guessing equally-light colors with different hues, you are wasting every guess. Fix lightness before you fuss over hue.",
+          "The third mistake is treating saturation feedback as unimportant. Saturation is often the last axis people check, but a grayish target with a vivid guess is extremely common — nailing saturation early collapses the final search."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Colorfle searches",
+        paragraphs: [
+          "Colorfle players search for today's answer, yesterday's shade, and hints — all dated queries that this page answers directly with the {date} reveal, hex value, and strategy. The dated title and content match real search behavior.",
+          "The guide also serves color-curious players who want to understand the game better: the feedback mechanics and strategy sections explain the puzzle in terms anyone can apply.",
+          "Because the page updates daily and stays static and indexable, it is the natural first result for Colorfle answer queries — the exact setup that keeps daily-game pages ranked."
+        ]
+      },
+      {
+        heading: "Why Colorfle answers are worth checking",
+        paragraphs: [
+          "Colorfle publishes one precise color per day, and the answer page is the only place you can confirm the exact shade — its name, its hex value, and its position on the wheel. Players who check the daily answer build a mental catalog of what Colorfle considers 'a color', and that catalog makes future solves dramatically faster.",
+          "The hex value is the real gem. Most daily color games leave you with a vague memory of a hue; Colorfle's answer gives you the exact digital definition, so you can compare it against your guesses and see precisely where your color intuition drifted.",
+          "The daily reveal also teaches the palette's structure. Over a week of answers, you notice the game favors recognizable families — the standard rainbow plus the classic neutrals — rather than obscure designer shades, and that knowledge reshapes your opener choices.",
+          "And when the streak is on the line, the answer page is the safety net every player needs. A quick check beats a lost streak, and the page's dated reveal means the answer is always one click away, formatted for the exact day you are playing."
+        ]
+      },
+      {
+        heading: "Colorfle hints and the art of the near-solve",
+        paragraphs: [
+          "Colorfle's hint system exists to turn a hard puzzle into a satisfying one, and the hints on this page are designed for exactly that: the color family, the position on the palette, and the lightness level — enough to steer your solve without spoiling the shade.",
+          "The near-solve is where the skill lives. When every axis is nearly right — the family correct, the lightness close, only the saturation slightly off — the answer is usually the exact shade your guess becomes after one small nudge. Recognizing that moment and making the tiny correction is the mark of a strong Colorfle player.",
+          "The daily reveal with its hex value is the confirmation every near-solve needs. Compare the hex to your final guess and you will see precisely where your color intuition drifted — a lesson that compounds into faster future solves.",
+          "Finally, the archive is the practice gym. Past answers are the same palette and the same rules, and running through old puzzles builds the axis intuition — hue, saturation, lightness — that the daily game tests."
+        ]
+      },
+      {
+        heading: "Colorfle hex values and the color-exact culture",
+        paragraphs: [
+          "The Colorfle answer page's hex values anchor a color-exact culture that the rest of the daily-game world does not have. Where Wordle players say 'it was blue', Colorfle players say 'it was #3B7DD8' — and that precision changes how the community talks about the game.",
+          "The hex lets you compare your final guess against the exact target, which is the sharpest possible feedback. A hex comparison shows you precisely where your color intuition drifted — two digits in the green channel, one in the blue — and each comparison sharpens that intuition.",
+          "The hex also enables the archive's power. Past answers are recorded as exact values, so the archive is a searchable history of the palette — every color the game has ever chosen, in exact digital form.",
+          "Finally, the hex-exact reveal makes the daily check satisfying. Whether you solved in four or needed the reveal, the answer page settles the day with a shade you can match precisely — no more 'close enough' color guessing."
+        ]
+      },
+    ],
+    faqHeading: "Colorfle FAQ",
+    faqs: [
+      {
+        question: "What is the Colorfle answer for {date}?",
+        answer:
+          "The Colorfle answer for {date} — including its name and exact hex value — is revealed at the top of this page. A new color publishes every day."
+      },
+      {
+        question: "How do you play Colorfle?",
+        answer:
+          "You guess a color and the game tells you how far you are in each direction — warmer or cooler, lighter or darker, more or less saturated — until you land on the exact target."
+      },
+      {
+        question: "How many guesses do you get in Colorfle?",
+        answer:
+          "Colorfle gives you a set number of guesses per day, typically around six, so big directional moves early and precise refinements late are the winning pattern."
+      },
+      {
+        question: "What do the Colorfle hints on this page include?",
+        answer:
+          "The hint section gives the color family (warm, cool, or neutral), general position on the palette, and lightness level — enough to solve without the reveal."
+      },
+      {
+        question: "Why does the Colorfle answer have a hex value?",
+        answer:
+          "The hex value is the exact digital definition of the color, which lets you match the shade precisely and compare it to your own guesses."
+      }
+    ],
+    relatedLinks: [
+      { href: "/colorfle-solver", label: "Colorfle Solver" },
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/colordle-solver", label: "Colordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" }
+    ]
+  },
+
+  'countryle-answer-today': {
+    key: 'countryle-answer-today',
+    eyebrow: 'Countryle Answer & Guide',
+    intro:
+      "Countryle is the daily geography puzzle where you guess a country and the game shows you how close you are — distance, direction, and borders all give clues. Players searching for the Countryle answer for {date}, today's Countryle country, or Countryle hints will find the daily reveal plus a full geography strategy guide here. Here is today's answer and how to master the map.",
+    sections: [
+      {
+        heading: "The Countryle answer for {date}",
+        paragraphs: [
+          "Today's Countryle answer for {date} is confirmed on this page, straight from the official daily puzzle. The answer card shows the country's name, flag, and continent, so players looking for the Countryle country for {date} or today's Countryle answer can check the reveal instantly.",
+          "Countryle publishes one new country per day, and the {date} puzzle has a single target shared by every player worldwide. The reveal updates with the date while the URL stays constant, so this is the page to bookmark for daily answers.",
+          "For players still solving, the hint section gives the continent, the first letter, and a region clue — enough to narrow the map without spoiling the country."
+        ],
+        callout: {
+          title: "Daily geography reveal",
+          body: "The Countryle answer for {date} is live now — country, flag, and continent, updated every day on this same URL."
+        }
+      },
+      {
+        heading: "How Countryle gives you clues",
+        paragraphs: [
+          "Countryle's core mechanic is distance: after each guess, the game tells you how far your country is from the answer, usually in kilometers, along with a direction arrow. That combination — distance plus bearing — is a powerful filter that no other daily game matches.",
+          "Neighboring countries give the sharpest feedback. When you guess a country that borders the answer, the game often confirms it explicitly, collapsing the search to a handful of adjacent states.",
+          "The distance readout is absolute, so every guess teaches you something even when it is far off. A 5,000-km miss still pins the answer to a hemisphere; a 200-km miss pins it to a region."
+        ]
+      },
+      {
+        heading: "Countryle strategy for geography fans",
+        paragraphs: [
+          "Open with a central country — something in the middle of a continent, like the DRC, Kazakhstan, or Brazil — because its distance feedback divides the world cleanly into directions. An island or peninsula answer makes central guesses less useful, so vary your openers.",
+          "Then use distance bands to eliminate continents. A guess in South America that returns 8,000 km means the answer is nowhere near; a guess that returns 400 km means you are in the neighborhood and should switch to border logic.",
+          "Once you are within a few hundred kilometers, think in borders: list the countries bordering your last guess and pick the one whose direction matches the arrow. Two or three border checks will usually land the answer."
+        ],
+        list: {
+          title: "The geography quick-reference",
+          items: [
+            "Distance over 4,000 km: you are on the wrong continent — jump continents",
+            "Distance under 1,000 km: think in borders and regions",
+            "Distance under 200 km: check direct neighbors against the direction arrow",
+            "A border confirmation is the strongest possible clue — act on it immediately"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes in Countryle",
+        paragraphs: [
+          "The most common mistake is ignoring the direction arrow. Two countries can be the same distance away but in opposite directions, and players who only read the number wander the wrong way for several guesses.",
+          "The second mistake is staying on one continent out of habit. If the feedback says your guess is 7,000 km away, the answer is almost certainly on another continent — jump, don't nudge.",
+          "The third mistake is forgetting islands and microstates. Answers like Fiji, Malta, or Andorra look impossible when you are guessing mainland countries, but they follow the same distance logic — a small distance band around a tiny country is still a solvable region."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Countryle searches",
+        paragraphs: [
+          "Geography players search for the Countryle answer for the current date every day, and this page answers with a clean reveal, correct date handling, and the country's continent and flag. The dated phrasing matches how people search.",
+          "The strategy sections serve a second audience — players who want to improve at the game — so the page earns traffic beyond the daily reveal and ranks as a full Countryle resource.",
+          "Daily updates on a static, indexable URL are exactly the pattern search engines trust, which is why this page is positioned to rank and stay ranked."
+        ]
+      },
+      {
+        heading: "Reading Countryle feedback like a map reader",
+        paragraphs: [
+          "Countryle's feedback is pure cartography: distance, direction, and borders. The players who solve fastest read the numbers like a map reader rather than a gamer — a 2,000-kilometer reading with a northeast arrow means 'same continent, northern half', and the answer is usually a country you can name from that band alone.",
+          "The continent check is the biggest lever. Most Countryle formats tell you when you are on the right continent, and honoring that single verdict — switching continents the moment you are wrong — is worth more than any other habit. Players who stay in their home region out of comfort lose two or three guesses every puzzle.",
+          "Borders are the endgame. Once you are inside a thousand kilometers, the fastest play is neighbor logic: list the countries bordering your last guess and pick the one the arrow favors. The distance band around a border chain is tiny, and a neighbor confirmation is effectively a solve.",
+          "Finally, learn the shape of the answer pool. Countryle answers skew toward recognizable countries — the G20, the popular travel destinations, the geopolitically significant states — not the obscure microstates. When you are guessing between a famous country and an obscure one, the famous one wins almost every time."
+        ]
+      },
+      {
+        heading: "Building the geography sense Countryle rewards",
+        paragraphs: [
+          "Countryle is a geography quiz in disguise, and the daily answers are the fastest way to build the map sense it rewards. Each reveal shows you a country, its continent, and its region — and reviewing the daily answers builds the mental atlas that makes future solves faster.",
+          "The continent-first habit is the foundation. Most players lose Countryle by ignoring continent feedback and staying in their home region; the players who solve fast switch continents the moment the game tells them they are wrong, and the daily answers reinforce that discipline.",
+          "Borders are the second layer. Each daily answer is a chance to learn a country's neighbors, and the border chains — Brazil's ten, Germany's nine, the DRC's nine — are the endgame weapons that turn medium-distance feedback into a solve.",
+          "Finally, the distance bands are the transferable skill. Reading 500 kilometers as 'a neighbor' and 5,000 as 'another continent' is a map-reading habit that transfers from Countryle to Worldle, Globle, and every geography game — and the daily answers train it."
+        ]
+      },
+      {
+        heading: "The Countryle daily archive and its lessons",
+        paragraphs: [
+          "The Countryle archive is a geography textbook that updates daily, and its lessons compound. Each entry shows a country, its continent, its region, and the feedback pattern of the solve — and reviewing the archive builds the map sense the game tests.",
+          "The continental rhythm is the archive's clearest lesson. The daily answers rotate through the continents, and players who track the rhythm can pre-load the right region — European weeks, African weeks, Asian weeks — before the first clue lands.",
+          "The border chains are the second lesson. Each archive entry is a chance to learn a country's neighbors, and the border knowledge — Brazil's ten, Germany's nine, the DRC's nine — is the endgame weapon that turns medium-distance feedback into a solve.",
+          "Finally, the archive is the practice gym. Every past answer is a puzzle you can replay, and running through old entries builds the distance-band intuition — the 500-kilometer neighbor feel — that makes the daily game faster."
+        ]
+      },
+    ],
+    faqHeading: "Countryle FAQ",
+    faqs: [
+      {
+        question: "What is the Countryle answer for {date}?",
+        answer:
+          "The Countryle answer for {date} — country name, flag, and continent — is revealed at the top of this page. A new country publishes daily."
+      },
+      {
+        question: "How do you play Countryle?",
+        answer:
+          "You guess a country and the game tells you the distance to the answer plus a direction, narrowing the map until you land on the target country."
+      },
+      {
+        question: "What do the Countryle hints include?",
+        answer:
+          "Hints give the continent, first letter, and region — enough to make an educated solve without spoiling the exact country."
+      },
+      {
+        question: "Is the Countryle answer the same for everyone?",
+        answer:
+          "Yes. Countryle publishes one country per day, shared by all players worldwide, so the answer for {date} is identical everywhere."
+      },
+      {
+        question: "What is the best first guess in Countryle?",
+        answer:
+          "A central country like Brazil, Kazakhstan, or the DRC, because its distance feedback divides the map into clear directions and eliminates continents quickly."
+      }
+    ],
+    relatedLinks: [
+      { href: "/worldle-answer-today", label: "Worldle Answer Today" },
+      { href: "/globle-answer-today", label: "Globle Answer Today" },
+      { href: "/countryle-solver", label: "Countryle Solver" },
+      { href: "/worldle-solver", label: "Worldle Solver" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'framed-answer-today': {
+    key: 'framed-answer-today',
+    eyebrow: 'Framed Answer & Movie Guide',
+    intro:
+      "Framed is the daily movie-guessing game where each frame reveals a little more of a mystery film, and you have six chances to name it. Players searching for the Framed answer for {date}, today's Framed movie, or Framed hints will find the daily reveal plus a full movie-identification strategy guide here. Here is today's answer and how to recognize films frame by frame.",
+    sections: [
+      {
+        heading: "The Framed answer for {date}",
+        paragraphs: [
+          "Today's Framed answer for {date} is confirmed on this page from the official daily puzzle. The reveal card shows the movie title, its release year, and the director, so players looking for the Framed movie for {date} or today's Framed answer can check the reveal instantly.",
+          "Framed publishes one new movie per day, and the {date} puzzle is the same film for every player. The reveal updates daily on a fixed URL, so bookmark this page for the fastest daily answer.",
+          "If you are still playing, the hint section gives the decade, the genre, and a famous scene description — enough to steer your guess without naming the film."
+        ],
+        callout: {
+          title: "Daily movie reveal",
+          body: "The Framed answer for {date} is live now — title, year, and director, updated every day on this same page."
+        }
+      },
+      {
+        heading: "How Framed rewards film knowledge",
+        paragraphs: [
+          "Framed shows you a sequence of frames from a movie, each one progressively more revealing. The first frame is usually a wide shot or an establishing image; the later frames show faces, props, and recognizable scenes.",
+          "The game is a test of visual memory plus deduction. Recognizing an actor, a location, or a distinctive prop early is the difference between a first-frame solve and a sixth-frame scramble.",
+          "Directors with strong visual signatures — Wes Anderson's symmetry, Christopher Nolan's IMAX scale, Tarantino's compositions — are deliberately common answers because their frames are recognizable on their own."
+        ]
+      },
+      {
+        heading: "A Framed solving strategy",
+        paragraphs: [
+          "On the first frame, name any strong visual element: an actor you recognize, an iconic building, a distinctive costume, a famous color palette. Write down everything, because the answer usually connects to at least one early element.",
+          "Use the frame count as information. Movies that solve in one frame are visually iconic; movies that need six frames are often obscure or have generic-looking scenes. Adjust your guessing accordingly.",
+          "Think in genres and decades. If the frames show film grain and vintage cars, narrow to the era before you narrow to the title. Combining era, genre, and one recognizable element usually produces the answer by frame three or four."
+        ],
+        list: {
+          title: "Clues to extract from every frame",
+          items: [
+            "Actors and their recognizable faces",
+            "Locations — cities, landmarks, distinctive sets",
+            "Era cues — costumes, cars, film stock, aspect ratio",
+            "Props and objects the film is famous for",
+            "Color grading and visual style"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes in Framed",
+        paragraphs: [
+          "The biggest mistake is guessing too early without committing to clues. One frame with a familiar actor can mislead if you do not check the era and genre — a modern actor in a period film is a different movie entirely.",
+          "The second mistake is ignoring the sequence. Later frames are deliberately more revealing, so if you are stuck on frame three, the answer is probably a movie you know but cannot place from its opening — the fourth or fifth frame will fix that.",
+          "The third mistake is guessing sequels without evidence. Players often name the sequel when the clue points to the original, or vice versa. Verify the specific movie — its year and director — before you commit."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Framed searches",
+        paragraphs: [
+          "Movie fans search for the Framed answer for the current date every day, and this page delivers with a clean reveal, the correct date, and the film's year and director. The dated phrasing matches real search behavior.",
+          "The guide also serves casual players who want to improve: the frame-reading strategy and film-knowledge tips apply to every daily puzzle, making this a full Framed resource rather than just an answer dump.",
+          "A daily-updated, static, indexable page is exactly what search engines keep ranked — which is why this page is positioned to hold its spot for Framed answer queries."
+        ]
+      },
+      {
+        heading: "Films that appear in Framed again and again",
+        paragraphs: [
+          "Framed's daily answer pool favors films with instantly recognizable frames — and knowing which movies those are is the single biggest edge. Iconic opening shots, famous locations, and distinctive color palettes make certain films appear more often than their box office would suggest.",
+          "The pattern is strongest with auteur directors. Wes Anderson's symmetrical compositions, Tarantino's trunk shots, Nolan's IMAX cityscapes, and the Coens' wide establishing frames are all visually distinctive enough to identify from a single frame — and Framed leans on them.",
+          "Period and genre films are also over-represented, because their production design makes frames unmistakable: a 1970s police procedural, a 1950s musical, or a sci-fi film with a signature spaceship interior identifies itself faster than a modern drama with neutral lighting.",
+          "When the first frame stumps you, name the era and the genre out loud before you guess. A film with film grain, vintage cars, and period costumes is almost certainly a classic — and once you know it is a classic, the answer is usually a famous title you have seen a dozen times, just not in the last five minutes."
+        ]
+      },
+      {
+        heading: "Building the film knowledge Framed rewards",
+        paragraphs: [
+          "Framed tests visual memory, and the players who solve fast have built a mental gallery of iconic frames. The most useful knowledge is not plot — it is imagery: famous opening shots, distinctive locations, signature props, and the color palettes that identify a film in a single glance.",
+          "Directors are the strongest index. Auteur films are over-represented in the answer pool because their frames are recognizable on their own — Wes Anderson's symmetry, Nolan's scale, Tarantino's compositions, the Coens' wide shots. Learning each director's visual signature pays off across dozens of puzzles.",
+          "Era and genre are the second index. A frame with film grain and period cars is almost certainly a classic; a frame with neon and modern glass is a contemporary film. Naming the era and genre before you name the title turns a hard puzzle into a manageable one.",
+          "Finally, use the frame count deliberately. The later frames exist to reveal the film, and if you are stuck on frame three, the answer is usually a film you know — the fourth or fifth frame will surface the face or the location that makes it click."
+        ]
+      },
+      {
+        heading: "The Framed daily reveal and the movie-memory coach",
+        paragraphs: [
+          "The Framed daily reveal is more than an answer — it is a movie-memory coach. Each day's reveal shows you the film, its year, its director, and the frames that led to it, and reviewing the daily reveals builds the visual-memory library the game tests.",
+          "The director index is the lesson. Auteur films appear regularly because their frames are recognizable on their own, and tracking which directors the game favors — Anderson, Nolan, Tarantino, the Coens — tells you which visual signatures to study.",
+          "The era-genre review is the second lesson. Each reveal shows a film's era and genre, and tracking them across a week reveals the pool's rhythm — the classic-heavy weeks, the genre rotations — that pre-loads your guessing.",
+          "Finally, the daily reveal keeps the streak alive. Whether you solved on frame one or needed all six, the answer page is the record of your streak — and the frame-reading strategy above makes each new puzzle slightly easier than the last."
+        ]
+      },
+      {
+        heading: "Framed answer movies and first-frame hints",
+        paragraphs: ["Framed answers are movies, and the game reveals one frame at a time — the fewer frames you need, the better your score. The today page keeps the current movie’s answer clear, but the real skill is reading the early frames: a distinctive set design, a recognizable actor, or a famous camera shot all narrow the film instantly.","Genre is the first thing to identify, because a western, an animated film, and a heist thriller share almost no candidates. Decade is the second cut.","With those two locked, the remaining possibilities are usually a handful of films, and the answer page confirms which one it was."]
+      }
+    ],
+    faqHeading: "Framed FAQ",
+    faqs: [
+      {
+        question: "What is the Framed answer for {date}?",
+        answer:
+          "The Framed answer for {date} — movie title, release year, and director — is revealed at the top of this page. A new film publishes daily."
+      },
+      {
+        question: "How do you play Framed?",
+        answer:
+          "Framed shows you progressively revealing frames from a mystery movie. You have six chances to name the film, with each new frame giving more visual clues."
+      },
+      {
+        question: "What hints does this page give without spoiling?",
+        answer:
+          "The hint section gives the decade, genre, and a scene description — enough to guide your solve without revealing the title."
+      },
+      {
+        question: "How many guesses do you get in Framed?",
+        answer:
+          "You get six guesses per daily puzzle, matching the six frames. Each wrong guess moves you to the next, more revealing frame."
+      },
+      {
+        question: "What is the best strategy for Framed?",
+        answer:
+          "Extract every clue — actors, locations, era, props, style — from the first frame, then combine era and genre with one recognizable element to narrow the film."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/framed-archive", label: "Framed Archive" },
+      { href: "/searchle-answer-today", label: "Searchle Answer Today" },
+      { href: "/globle-answer-today", label: "Globle Answer Today" }
+    ]
+  },
+
+  'searchle-answer-today': {
+    key: 'searchle-answer-today',
+    eyebrow: 'Searchle Answer & Guide',
+    intro:
+      "Searchle is the daily game where you reverse-engineer a search query: you guess a search phrase and the game ranks it, telling you how close you are to the mystery query. Players looking for the Searchle answer for {date}, today's Searchle query, or Searchle hints will find the daily reveal plus a full search-thinking strategy guide here. Here is today's answer and how to think like a search engine.",
+    sections: [
+      {
+        heading: "The Searchle answer for {date}",
+        paragraphs: [
+          "Today's Searchle answer for {date} is confirmed on this page from the official puzzle. The reveal shows the exact query, its topic, and why it ranks the way it does, so players searching for the Searchle query for {date} or today's Searchle answer can check it instantly.",
+          "Searchle publishes one new query per day, and the {date} puzzle is the same search phrase for everyone. The reveal updates daily on a fixed URL, so this is the page to bookmark.",
+          "For players still solving, the hint section gives the topic category and the approximate word count of the query — enough to steer your phrasing without spoiling it."
+        ],
+        callout: {
+          title: "Daily query reveal",
+          body: "The Searchle answer for {date} is live now — the exact search query, updated every day on this same URL."
+        }
+      },
+      {
+        heading: "How Searchle scoring works",
+        paragraphs: [
+          "Searchle ranks your guessed query against the mystery query using search relevance — the closer your words match the target's intent, the higher you rank. You see your position after every guess, which is the feedback loop the whole game runs on.",
+          "The game rewards understanding search intent, not just keywords. 'Best pizza' and 'pizza near me' are different queries, and Searchle will rank them apart because their intent differs.",
+          "Search engines treat word order, phrasing, and specificity as signals. The game mirrors that: a precise query like 'best italian pizza recipe' ranks closer to the target than the vague 'pizza' ever will."
+        ]
+      },
+      {
+        heading: "A Searchle solving strategy",
+        paragraphs: [
+          "Start broad and specific at the same time: guess the general topic first — 'football', 'recipes', 'history' — to locate the neighborhood, then add modifiers on the next guesses to climb the ranking.",
+          "Watch how your rank moves. If a guess jumps you from position 40 to position 8, you added the right kind of words; if the rank barely moves, your phrasing is pointed the wrong way.",
+          "Think about how people actually search the topic. The mystery query is usually a realistic, everyday search phrase, not an academic string — so 'how to' constructions, question formats, and common modifiers are high-probability guesses."
+        ],
+        list: {
+          title: "High-value query modifiers",
+          items: [
+            "'how to' constructions for how-to queries",
+            "Question formats ('what is', 'when did')",
+            "Specificity words ('best', 'top', 'free', 'easy')",
+            "Location words for local intent ('near me', city names)",
+            "Year or time qualifiers when the query is trending"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes in Searchle",
+        paragraphs: [
+          "The biggest mistake is guessing essay-length queries. Real search phrases are short — two to five words is the sweet spot — and long queries almost always rank poorly against the target.",
+          "The second mistake is ignoring intent shifts. Adding a word that changes the meaning ('pizza' vs 'pizza recipe') is a different query, and Searchle will rank it accordingly. Match intent before you match keywords.",
+          "The third mistake is repeating the same phrasing pattern. If 'best X' keeps missing, the target is probably phrased as a question or a how-to — change the construction, not just the words."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Searchle searches",
+        paragraphs: [
+          "Searchle players search for the daily answer and hints, and this page delivers both with the correct date handling and a clean reveal. The dated phrasing matches how people search for daily-game answers.",
+          "The guide also serves players who want to understand the search logic behind the game — the intent and phrasing sections explain Searchle in a way that transfers directly to SEO and real search behavior.",
+          "A daily-updated, static, indexable page with genuine utility is the pattern search engines reward, positioning this page to rank and stay ranked for Searchle queries."
+        ]
+      },
+      {
+        heading: "How the daily Searchle prompt works",
+        paragraphs: [
+          "Each day's Searchle puzzle pairs a prompt — the start of a Google autocomplete phrase — with the answer that completes it. Understanding the prompt-answer relationship is the real skill: the prompt sets the topic and the intent, and the answer is the word or phrase the search engine actually completes it with.",
+          "The best players read the prompt like a sentence fragment and predict the most likely completion. 'how to make' most often completes with a food or craft; 'what is the best' completes with a product category or destination; 'why is my' completes with a problem and its object. Genre-guessing the completion is the fastest route to the answer.",
+          "The prompt also tells you the answer's part of speech. A prompt ending in 'the' wants a noun; one ending in 'to' wants a verb; one ending in 'my' wants a noun-phrase. Watching that grammatical slot narrows the answer from the entire dictionary to a single part of speech.",
+          "When you are stuck, work the other direction: think of famous completions for the prompt, then check which one feels like something thousands of people actually search. The daily answer is almost always a high-volume, recognizable completion — the kind of phrase that appears in autocomplete drop-downs everywhere."
+        ]
+      },
+      {
+        heading: "Searchle answer patterns across the archive",
+        paragraphs: [
+          "The Searchle archive reveals consistent patterns in how daily answers are built. The most common structure is the how-to phrase — 'how to make', 'how to fix', 'how to lose' — followed by the comparison phrase — 'best', 'top', 'vs' — and the definition phrase — 'what is', 'meaning of'.",
+          "The second pattern is topical clustering. Answers cluster around whatever people are searching that month: seasonal questions, trending news, evergreen how-tos. A player who follows the current search zeitgeist can predict the topic family before the prompt is even revealed.",
+          "The third pattern is the grammatical slot. The prompt usually ends at a natural completion point — a preposition, a determiner, a verb — and the answer is the word that grammatically completes it. Reading the prompt's grammar narrows the answer to a part of speech before you think about content.",
+          "Finally, the answers are almost always high-volume phrases — the kind of searches with real monthly traffic. The game wants recognizable completions, so the answer is rarely an obscure string; it is the phrase millions of people actually type."
+        ]
+      },
+      {
+        heading: "The Searchle daily rhythm and the answer check",
+        paragraphs: [
+          "Searchle's daily puzzle follows a rhythm: guess the broad topic, read the rank, add a modifier, climb. The players who solve fastest are the ones who treat the rank like a compass — a big jump means the target's vocabulary is nearby, and a flat rank means the phrasing needs to change.",
+          "The daily answers reveal the pool's bias. Mystery queries are realistic everyday searches — how-to phrases, comparison phrases, question phrases — rather than academic strings, so guessing like a person typing into a search box is the winning instinct.",
+          "The answer check is the learning loop. Reviewing today's target after your solve shows you the phrase structure you misjudged — the word order, the modifiers, the intent — and each review sharpens the search-thinking the game rewards.",
+          "Finally, use the archive for practice. Past puzzles are the same format and the same logic, and reviewing old targets builds the pattern library — the query structures, the modifier clusters, the intent families — that makes each new puzzle faster."
+        ]
+      },
+      {
+        heading: "Searchle answers by month and geography",
+        paragraphs: ["Searchle answers trace a geography path, and the today page keeps the current answer clear while the archive side reveals the month’s pattern. The game alternates answer types — cities, countries, landmarks — and knowing the current type changes how you approach the clues.","When the answer is a city, the solver zooms into the region the clues imply; when it is a landmark, the pool shifts to famous sites. Either way, the clue order tells you how close you are.","Bookmark the today page for the answer and keep the solver open for the next puzzle."]
+      }
+    ],
+    faqHeading: "Searchle FAQ",
+    faqs: [
+      {
+        question: "What is the Searchle answer for {date}?",
+        answer:
+          "The Searchle answer for {date} — the exact search query — is revealed at the top of this page. A new query publishes daily."
+      },
+      {
+        question: "How do you play Searchle?",
+        answer:
+          "You guess a search query and the game ranks your guess against the mystery query, showing how close your phrasing is to the target."
+      },
+      {
+        question: "What hints does the Searchle page give?",
+        answer:
+          "The hint section gives the topic category and approximate query length, letting you steer your phrasing without spoiling the answer."
+      },
+      {
+        question: "How is Searchle scored?",
+        answer:
+          "Searchle scores by search relevance: the closer your query's words and intent match the target, the higher your rank after each guess."
+      },
+      {
+        question: "What is the best strategy for Searchle?",
+        answer:
+          "Start with the broad topic, watch how your rank moves, and add realistic search modifiers — 'how to', questions, and specificity words — to climb toward the target."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/searchle-solver", label: "Searchle Solver" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" }
+    ]
+  },
+
+  'worgle-answer-today': {
+    key: 'worgle-answer-today',
+    eyebrow: 'Worgle Answer & Guide',
+    intro:
+      "Worgle is the daily word game with its own twist on the classic formula, and players searching for the Worgle answer for {date}, today's Worgle word, or Worgle hints will find the daily reveal plus a complete strategy guide here. Here is today's answer and how to crack the Worgle rule set.",
+    sections: [
+      {
+        heading: "The Worgle answer for {date}",
+        paragraphs: [
+          "Today's Worgle answer for {date} is confirmed on this page from the official daily puzzle. The reveal card shows the word, its letter pattern, and its puzzle number, so players looking for the Worgle word for {date} or today's Worgle answer can check the reveal instantly.",
+          "Worgle publishes one new word per day, and the {date} puzzle is the same word for every player. The reveal updates daily on a fixed URL, so bookmark this page for the fastest daily answer.",
+          "If you are still solving, the hint section gives the word's first letter, length, and letter-frequency profile — enough to narrow the possibilities without spoiling the word."
+        ],
+        callout: {
+          title: "Daily word reveal",
+          body: "The Worgle answer for {date} is live now — word, pattern, and puzzle number, updated every day on this same URL."
+        }
+      },
+      {
+        heading: "How Worgle differs from Wordle",
+        paragraphs: [
+          "Worgle keeps the daily-five-letter core but changes the feedback rules — the exact difference varies by version, and understanding your version's rule set is the first step to solving. Some versions give positional feedback, others weight letter frequency, and others reward specific patterns.",
+          "The daily format is the same as Wordle: one puzzle per day, one answer, a streak to protect. That shared structure is why Worgle answers are searched for with the same dated queries.",
+          "The key skill is noticing which feedback rule your version uses. Play a practice word, read the verdicts carefully, and adapt — the rule set determines which openers and strategies actually work."
+        ]
+      },
+      {
+        heading: "A Worgle solving strategy",
+        paragraphs: [
+          "Open with a word that covers the most common letters — the same logic that works in Wordle applies: vowels plus frequent consonants like R, S, T, N. A strong opener gives you information about five letters at once.",
+          "Use the feedback to build a constraint set: letters in the word, letters in the right position, letters to avoid. Every guess should add at least one new letter to your picture of the answer.",
+          "When you have two or three confirmed letters, switch from information-gathering to pattern-matching: list the five-letter words that fit the confirmed pattern and guess the most likely one. The answer is usually a common word, so familiarity beats obscurity."
+        ],
+        list: {
+          title: "The Worgle opener checklist",
+          items: [
+            "Two or three vowels, including a high-frequency vowel",
+            "Common consonants: R, S, T, N, L",
+            "No repeated letters in your first guess",
+            "A word whose pattern you can reason about if it scores well"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes in Worgle",
+        paragraphs: [
+          "The most common mistake is ignoring the rule differences. Players who assume Worgle is Wordle exactly will misread the feedback and chase the wrong letters — always confirm the rule set first.",
+          "The second mistake is repeating letters too early. Duplicates waste information in the first two guesses, when every tile should be teaching you about a new letter.",
+          "The third mistake is guessing obscure words. Worgle answers, like Wordle's, are almost always common English words — if you are guessing 'quixotic', you are probably overthinking a simple five-letter answer."
+        ]
+      },
+      {
+        heading: "Why this page ranks for Worgle searches",
+        paragraphs: [
+          "Worgle players search for the daily answer and hints, and this page delivers both with correct date handling and a clean reveal. The dated phrasing — 'Worgle answer for {date}' — matches how daily-game players actually search.",
+          "The strategy guide serves a second audience of players who want to improve, so the page earns traffic beyond the daily reveal and ranks as a full Worgle resource.",
+          "Daily updates on a static, indexable page are the pattern search engines trust, positioning this page to rank and stay ranked."
+        ]
+      },
+      {
+        heading: "What to do when today's Worgle is hard",
+        paragraphs: [
+          "Every daily-word player hits the wall: a Worgle answer that refuses to emerge from your constraint set. The first rescue move is to stop guessing and list. Write down the confirmed letters, the positions that are ruled out, and the letters you know are absent — then read the list as a pattern and brainstorm five-letter words that fit it.",
+          "The second move is to test a deliberately common word even if it feels unlikely. Daily puzzles favor everyday vocabulary, and a word you consider 'too boring' is often exactly right. If your confirmed letters are A, R, and E with R in position two, the answer is probably a familiar word like GRAPE or BRAVE, not a crossword rarity.",
+          "The third move is to use the hint system deliberately. The first letter is the highest-value hint because it turns an open pattern into a closed one — 'starts with B, contains A and R' is a puzzle, while 'contains A and R' is a needle in a haystack.",
+          "And when the streak is on the line, remember that the reveal is not a failure. Checking today's answer after a genuine attempt teaches you the word list's tendencies — which vowels pair, which letters repeat, how often the answer is an everyday verb — and those lessons make tomorrow's solve faster."
+        ]
+      },
+      {
+        heading: "How to check yesterday's Worgle answer",
+        paragraphs: [
+          "The Worgle archive on this page keeps the full history of daily answers, so checking yesterday's word — or any past puzzle — is one click away. The archive is the perfect tool for the player who missed a day, wants to confirm a streak, or is studying the word list's tendencies.",
+          "Reviewing past answers is the fastest way to learn the pool. A week of Worgle answers shows you which letters repeat, how often the answer is a common verb versus a noun, and which vowel pairs the game favors — knowledge that makes each new puzzle slightly easier than the last.",
+          "The archive also settles disputes. When the group cannot agree on what yesterday's word was, the dated archive entries are the ground truth, formatted with the same date labels you saw while playing.",
+          "Finally, use the archive as a practice tool. Pick a past puzzle you never solved, open it, and solve it now — the practice is identical to the daily game, and the archive gives you unlimited puzzles instead of one per day."
+        ]
+      },
+      {
+        heading: "Worgle hint usage and the streak saver",
+        paragraphs: [
+          "Worgle's hint system exists to save streaks, and the hints on this page are designed for exactly that: the first letter, the word length, and the letter-frequency profile — enough to turn an open pattern into a solvable one.",
+          "The first-letter hint is the highest-value rescue. A confirmed starting letter closes half the pattern space instantly, and combined with the length and frequency profile, it usually narrows the pool to a handful of everyday words.",
+          "The hint-before-guessing discipline is the lesson. Players who check the hints after two failed guesses save more streaks than players who check them after five — the hints are a nudge, not a crutch, and using them early keeps the solve satisfying.",
+          "Finally, the daily reveal is the ultimate streak saver. When the word simply will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
+        ]
+      },
+      {
+        heading: "Worgle answer word patterns",
+        paragraphs: ["Worgle answers are words, and the daily answer follows the same construction rules as the rest of the wordle family: five letters, no proper nouns, and a real dictionary word. The patterns that matter are structural — vowel positions, repeated letters, and the consonant clusters the game favors.","A Worgle answer rarely repeats the previous day’s opener, and answers that start with common consonants like S, C, or B appear more often than rare letters.","If you track the answers over time, those tendencies become a real guessing edge, and the today page keeps the current answer front and center while the solver handles the hard cases."]
+      }
+    ],
+    faqHeading: "Worgle FAQ",
+    faqs: [
+      {
+        question: "What is the Worgle answer for {date}?",
+        answer:
+          "The Worgle answer for {date} — the exact word and puzzle number — is revealed at the top of this page. A new word publishes daily."
+      },
+      {
+        question: "How do you play Worgle?",
+        answer:
+          "Worgle follows the daily-word format with its own feedback rules. You guess the daily word using the verdicts the game gives you, one puzzle per day."
+      },
+      {
+        question: "What hints does the Worgle page give?",
+        answer:
+          "The hint section gives the first letter, word length, and letter-frequency profile, letting you solve without the full reveal."
+      },
+      {
+        question: "Is Worgle the same as Wordle?",
+        answer:
+          "Worgle shares Wordle's daily format but has its own feedback rule set, so check the specific version you are playing before you commit to a strategy."
+      },
+      {
+        question: "What is the best Worgle opener?",
+        answer:
+          "A common five-letter word with two or three vowels, no repeats, and frequent consonants like R, S, T, and N — the same information-maximizing logic that works in Wordle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/canuckle-answer-today", label: "Canuckle Answer Today" }
+    ]
+  },
+
+  'boggle-solver': {
+    key: 'boggle-solver',
+    eyebrow: 'Boggle Solver Guide',
+    intro:
+      "Boggle is the dice-shaker word game where you race to find as many words as possible in a 4×4 grid of letters — adjacent letters connect, and words must be three letters or longer. The Boggle solver finds every valid word in any grid, so you can check your finds, settle disputes, and learn the hidden words the dice almost always contain. Here is how it works and how it makes you a faster player.",
+    sections: [
+      {
+        heading: "How the Boggle solver scans the grid",
+        paragraphs: [
+          "The solver treats the 4×4 board as a graph: every cell is a node, and each cell connects to its eight neighbors — horizontally, vertically, and diagonally. It walks every possible path of adjacent letters, checking each sequence against a dictionary as it goes.",
+          "That walk is a depth-first search with early pruning: the moment a letter sequence cannot start any dictionary word, the solver stops following that path. Pruning is what makes the search instant instead of astronomical, because raw path counts explode exponentially with length.",
+          "The result is the complete word list for your grid — every valid word of three letters or more, with no duplicates and no invented words. If the solver says a word is there, it is there, and the solver can even show you the exact path of cells that spells it."
+        ],
+        callout: {
+          title: "The eight-neighbor rule",
+          body: "In Boggle, letters connect horizontally, vertically, and diagonally — eight neighbors per cell. Diagonal connections are where the hidden words live, and the solver uses all eight directions."
+        }
+      },
+      {
+        heading: "Reading the solver's word list",
+        paragraphs: [
+          "The solver lists every findable word, usually grouped by length, so you can instantly see the long words you missed — the four-letter minimum for official play, plus the five, six, and seven-letter treasures that win rounds.",
+          "Long words are the real points in Boggle. A six-letter word beats two four-letter words, and the solver's list is sorted to surface the long finds first. When the group shouts 'it's not a word!', the solver settles it with authority.",
+          "The solver also marks the words you already found, so you can review exactly what the rest of the group missed and why — usually a diagonal connection through a letter you did not think to use."
+        ]
+      },
+      {
+        heading: "Boggle strategy without the solver",
+        paragraphs: [
+          "Train yourself to spot the grid's rare letters first. Q, X, J, Z, and K are in few words, so the words containing them are easy wins — most players overlook them entirely under time pressure.",
+          "Scan in rings around each vowel. Every Boggle word contains at least one vowel, so anchoring on the vowel cells and tracing every adjacent path is the systematic approach experts use.",
+          "Look for suffixes and prefixes as you scan. If you see a path spelling 'BURN', the extensions — BURNS, BURNED, BURNING — are often reachable through the neighboring cells, and each extension is a separate word.",
+          "Finally, remember the corners. Corner cells have only three neighbors, which makes them entry points for words that snake along the board's edge — and edge paths are exactly what other players miss."
+        ],
+        list: {
+          title: "Winning habits from fast Boggle players",
+          items: [
+            "Hunt rare letters (Q, X, J, Z, K) early — they are low-competition points",
+            "Anchor on vowels and trace every adjacent path",
+            "Extend found words with suffixes whenever the letters allow",
+            "Never skip the corners and edges of the board",
+            "Keep a running mental list to avoid re-finding the same word"
+          ]
+        }
+      },
+      {
+        heading: "How the solver teaches better play",
+        paragraphs: [
+          "Run the solver on a few random boards and study the words you missed. The patterns repeat: missed words are usually long, diagonal, or built around a rare letter — exactly the three categories above.",
+          "The solver also exposes the difference between your board vision and the dictionary's. Many missed words are common words you know perfectly well — you just did not see them in the grid. Training your eye to connect letters in unfamiliar orders is the transferable skill.",
+          "Speed matters too. The solver finds words in milliseconds; you have three minutes. Practicing against the solver's list — trying to match it before time runs out — is the fastest way to build real Boggle speed."
+        ]
+      },
+      {
+        heading: "Common mistakes the Boggle solver fixes",
+        paragraphs: [
+          "The classic mistake is reusing a letter cell. Boggle words cannot reuse a cell — each letter is used once per word. Players routinely 'find' words that pass through the same cell twice, and the solver never makes that error.",
+          "The second mistake is skipping the diagonal neighbors. Words like 'tread' that zigzag diagonally are invisible to players who only check horizontal and vertical paths. The solver's eight-direction search finds them every time.",
+          "The third mistake is claiming words not in the dictionary. The solver uses a standard English dictionary, so its list is the ground truth for disputes — no more arguing about whether a word counts."
+        ]
+      },
+      {
+        heading: "Why the Boggle solver page ranks in search",
+        paragraphs: [
+          "Boggle players search for solvers mid-game and mid-argument — 'boggle solver', 'boggle word finder', 'find words in this boggle board'. This page answers instantly with the complete list plus the strategy to play better without the tool.",
+          "The guide also serves teachers and parents using Boggle as a spelling and vocabulary exercise: the strategy sections explain the game in a way that transfers directly to classroom play.",
+          "Bookmark it for family game night. When the timer stops and the debate starts, the solver is the referee — and the strategy above will quietly make you the best player at the table."
+        ]
+      },
+      {
+        heading: "The Boggle vocabulary that wins games",
+        paragraphs: [
+          "Boggle rewards vocabulary range, but not the way most players think — the winning words are the short and medium finds, not the obscure sevens. A strong player finds every four-letter word in the grid, and those common finds are where the points actually accumulate.",
+          "The prefixes and suffixes are the hidden multiplier. Words like RUN extend to RUNS, RUNNER, and RUNNING when the neighboring letters allow, and each extension is a separate word worth its own points. Players who scan for extensions double their find rate without new vocabulary.",
+          "Rare letters are the strategic gift. Q, X, J, Z, and K appear in few words, so the words containing them are contested less — and a word like QUIZ or JINX that the rest of the table misses is a pure point swing in your favor.",
+          "Finally, learn the three- and four-letter backbone. The most common English trigrams and tetragrams — THE, AND, ING, ENT, ION — form the skeleton of the board, and players who can spot them instantly find words everywhere."
+        ]
+      },
+      {
+        heading: "Boggle solver settings and game variants",
+        paragraphs: [
+          "The Boggle solver supports the game's variants, and a little setup makes it accurate. The standard 4×4 board is the default, but the solver also handles the Big Boggle 5×5 and the 3×3 mini boards — the logic is identical, only the grid size and dictionary change.",
+          "Minimum word length is a setting worth checking. Official Boggle counts three-letter words, but house rules often start at four, and the solver lets you match your table's rule so its list matches your scoring.",
+          "The dictionary selection matters for themed play. The standard English dictionary is right for most games, but a themed list — animals, geography, science — makes the solver's finds match the game's vocabulary.",
+          "Finally, use the solver's path display as a learning tool. Seeing the exact cell-path of a word you missed teaches you the diagonal connections your eye skips — and that awareness transfers directly to faster manual play."
+        ]
+      },
+      {
+        heading: "Boggle board finders and word scoring",
+        paragraphs: ["Boggle answers are words found in a 4×4 grid, and the solver scans every path through the board against a dictionary, scoring each find by length — the longer the word, the more points.","The solver’s real value is coverage: it finds the words a human eye misses, especially the long ones that swing a game. Most rounds hide at least one five- or six-letter word in an unexpected corner.","It also respects the game’s rules — each cube can be used once per word, and adjacent cubes connect — so every result is a legal Boggle find, not a dictionary dump."]
+      }
+    ],
+    faqHeading: "Boggle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Boggle solver work?",
+        answer:
+          "It treats the board as a graph of connected cells and walks every adjacent path of letters, checking each against a dictionary and pruning dead ends to return the complete list of valid words."
+      },
+      {
+        question: "Can Boggle words reuse a letter?",
+        answer:
+          "No. Each cell can be used once per word. The solver respects this rule, so every word it returns is a legal Boggle find."
+      },
+      {
+        question: "Does the Boggle solver include diagonal words?",
+        answer:
+          "Yes — it checks all eight directions (horizontal, vertical, and diagonal), which is where the hidden words usually live."
+      },
+      {
+        question: "What is the minimum word length in Boggle?",
+        answer:
+          "Official Boggle play counts words of three letters or more. The solver returns all valid words at or above that length."
+      },
+      {
+        question: "Is the solver's dictionary standard?",
+        answer:
+          "The solver uses a standard English dictionary, making it the ground truth for settling disputes about whether a word counts."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/hangman-solver", label: "Hangman Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/word-ladder-solver", label: "Word Ladder Solver" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'nerdle-solver': {
+    key: 'nerdle-solver',
+    eyebrow: 'Nerdle Solver Guide',
+    intro:
+      "Nerdle is Wordle with arithmetic: you have six guesses to find an eight-character equation, and every digit, operator, and equals sign comes back green, purple, or black. The Nerdle solver filters the entire space of valid equations after every guess, so you can crack the daily puzzle fast and learn the math behind better guessing. Here is how it works, the equations it knows, and the strategy that beats most daily puzzles by guess four.",
+    sections: [
+      {
+        heading: "How the Nerdle solver narrows the equation space",
+        paragraphs: [
+          "A Nerdle answer is a valid equation: eight characters, one equals sign, and an arithmetic relationship that actually evaluates. The solver maintains a list of every valid equation that matches your feedback, and each guess filters that list to a fraction of its size.",
+          "The power of the solver is in the character-level feedback. Each of the eight tiles is either green (correct and in place), purple (in the equation but misplaced), or black (not in the equation at all). The solver applies all eight verdicts simultaneously, which is dramatically more information than Wordle's five letters.",
+          "With a well-chosen first guess, the solver can cut the equation space by 90 percent in a single move. By guess three, most daily puzzles are down to a handful of candidate equations, and guess four is a formality."
+        ],
+        callout: {
+          title: "Eight tiles of feedback",
+          body: "Every Nerdle guess returns eight independent verdicts — one per character. The solver consumes all eight at once, which is why it narrows so much faster than letter-based games."
+        }
+      },
+      {
+        heading: "The Nerdle character census",
+        paragraphs: [
+          "A smart first guess should cover the characters that appear in most valid equations. The classic opener is something like 12+35=47 or 98-76=22 — guesses that sweep in multiple digits, an operator, and the equals sign.",
+          "Digits appear unevenly in equations: 1, 2, and 0 are workhorses, while 9 and 8 appear less often but still frequently. Operators matter more: + and - appear in a majority of equations, while * and / are rarer and therefore more informative when they hit.",
+          "The equals sign is the anchor. Every equation has exactly one, so a green equals sign locks the entire left/right split of the equation, which halves the search space by itself."
+        ],
+        list: {
+          title: "Characters worth sweeping early",
+          items: [
+            "1, 2, and 0 — the most common digits in valid equations",
+            "+ and - — the most common operators, found in most equations",
+            "The equals sign — anchors the whole structure",
+            "A repeated character, to test whether duplicates are allowed in the answer"
+          ]
+        }
+      },
+      {
+        heading: "A real Nerdle solve, step by step",
+        paragraphs: [
+          "Open with a broad equation like 12+35=47. Suppose the game returns green on the 1, green on the +, black on most digits, and purple on the 5. The solver instantly knows the equation starts with 1, uses plus, contains 5 somewhere, and avoids the blacked-out digits.",
+          "Your second guess should cover the surviving characters in new positions — say 15+26=41, which re-tests 1 and 5 while sweeping fresh digits and another operator slot. The feedback tightens the net: now you know where the plus goes and which digits are actually in play.",
+          "By guess three the solver usually lists fewer than ten equations. Pick the most likely, verify it evaluates correctly, and the daily puzzle is solved with two guesses to spare. This rhythm — sweep, re-test, verify — is the same one every Nerdle expert uses."
+        ]
+      },
+      {
+        heading: "Why purple duplicates confuse players",
+        paragraphs: [
+          "Purple in Nerdle means the character is in the equation but not in this position — and a character can appear more than once. A purple 2 could mean one 2 elsewhere, or two 2s, one of which is elsewhere.",
+          "This ambiguity trips up players who treat purple like Wordle's yellow. The solver handles it rigorously: it keeps equations with the right character counts, whether the duplication resolves or not.",
+          "If you are playing without the solver, use a guess that repeats a purple character in a new position — that single test resolves the duplicate question and usually collapses the candidate list."
+        ]
+      },
+      {
+        heading: "Common mistakes the Nerdle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing equations with no equals-sign anchor. A guess without '=' wastes a full tile of feedback. Every guess should be a real, valid equation — that is what makes the feedback meaningful.",
+          "The second mistake is ignoring the black tiles. A black digit is banned for the rest of the game, yet players keep slipping banned digits into later guesses. The solver hard-excludes blacked characters.",
+          "The third mistake is committing to an operator too early. Players who lock in '*' after one purple tile miss that the equation might use a different operator entirely. The solver keeps all operator possibilities open until the feedback settles it."
+        ],
+        list: {
+          title: "Three rules for a fast Nerdle",
+          items: [
+            "Every guess must be a valid eight-character equation",
+            "Never reuse a blacked-out character",
+            "Resolve purple duplicates with a deliberate test guess"
+          ]
+        }
+      },
+      {
+        heading: "Why the Nerdle solver page ranks in search",
+        paragraphs: [
+          "Players search for the Nerdle answer and hints daily, and the solver page serves the ones who want to crack it themselves — 'nerdle solver', 'nerdle answer today', 'nerdle today' are all daily queries this page and its siblings answer.",
+          "The solver is also a teaching tool: the strategy sections explain the equation space, character census, and purple-rule in plain math, which earns traffic from players who want to improve rather than just copy answers.",
+          "Bookmark it for the days the equation fights back. The solver will crack it, and the strategy above will make you faster on every puzzle after."
+        ]
+      },
+      {
+        heading: "The Nerdle equation census, memorized",
+        paragraphs: [
+          "Nerdle answers are eight-character equations, and the equation space has a structure you can learn. The most common form is the two-term sum — 12+34=46 — followed by subtraction, then multiplication and division. Knowing the form distribution tells you what to guess first.",
+          "The digit census is the second lesson. Digits appear unevenly in valid equations: 1, 2, 0, and 5 are workhorses, while 8, 9, and 7 appear less often. An opener that sweeps the common digits — 12+35=47 — covers more of the space than an opener with a rare digit.",
+          "The equals sign is the anchor. Every equation has exactly one, and its position splits the equation into left and right sides of specific lengths. A green equals sign locks the structure; a purple one tells you the split is different than you guessed.",
+          "Finally, respect the black tiles. A blacked-out digit is banned for the rest of the game, and the fastest solvers are the ones who never reuse a banned character — a discipline the solver enforces on every single guess."
+        ]
+      },
+      {
+        heading: "Nerdle solver settings and operator coverage",
+        paragraphs: [
+          "The Nerdle solver is built around the equation space, and a little setup makes it precise. Enter the feedback from each guess — green, purple, black — and the solver filters the valid equation list with all eight verdicts at once.",
+          "The operator coverage is the solver's core lesson. It knows that plus and minus dominate the equation space while multiply and divide are rarer, and it sweeps the common operators first — the same logic that makes 12+35=47 the community's favorite opener.",
+          "The digit census is the second lesson. The solver favors the workhorse digits — 1, 2, 0, and 5 — in its suggestions, because they appear in far more valid equations than 8, 9, or 7.",
+          "Finally, use the solver as an equation coach. Watching it filter the space teaches you the form distribution, the character census, and the feedback discipline in action — and that understanding makes you faster even without the tool."
+        ]
+      },
+      {
+        heading: "Nerdle answer speed and daily records",
+        paragraphs: ["Nerdle rewards both accuracy and speed, and the solver’s equation census is built for the first guess that tells you the most: it evaluates every legal eight-character equation and picks the one that splits the answer space most evenly.","Once the tiles come back, the solver applies green, purple, and black results to the entire census and re-ranks the survivors — each round shrinking the field toward the answer.","That is why the solver finishes most puzzles inside the daily limit with guesses to spare: it never wastes a guess on an equation it can already rule out."]
+      }
+    ],
+    faqHeading: "Nerdle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Nerdle solver work?",
+        answer:
+          "It maintains the full list of valid eight-character equations and filters it with every guess's eight tile verdicts — green, purple, and black — until the answer is the only candidate left."
+      },
+      {
+        question: "What does purple mean in Nerdle?",
+        answer:
+          "Purple means the character is in the equation but in a different position. A purple character may also appear more than once in the answer."
+      },
+      {
+        question: "What is a good first guess in Nerdle?",
+        answer:
+          "A broad equation that sweeps common digits, an operator, and the equals sign — like 12+35=47 — maximizes the information from your first eight tiles."
+      },
+      {
+        question: "Can the solver solve the daily Nerdle?",
+        answer:
+          "Yes. The solver works on any valid equation puzzle, including the daily one, usually solving within three to five guesses."
+      },
+      {
+        question: "Why do black tiles matter so much?",
+        answer:
+          "A black tile bans that character for the rest of the game. Respecting bans is the single biggest accuracy lever in Nerdle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" }
+    ]
+  },
+
+  'worldle-solver': {
+    key: 'worldle-solver',
+    eyebrow: 'Worldle Solver Guide',
+    intro:
+      "Worldle is the daily geography game that shows you a country's silhouette and gives you six guesses, with distance and direction feedback on every miss. The Worldle solver identifies the country from your distance clues, so you can check your geography instinct, learn the feedback rules, and get faster at reading the map. Here is how it works and how to think like a cartographer.",
+    sections: [
+      {
+        heading: "How the Worldle solver identifies the country",
+        paragraphs: [
+          "Worldle gives you a silhouette and then distance feedback: every wrong guess reports how many kilometers your country is from the answer, plus a direction. The solver maintains a map of every country's location and filters by distance and bearing after each guess.",
+          "The distance readout is the key signal. A guess 500 km away means the answer is a neighbor or near-neighbor; a guess 8,000 km away means another continent entirely. The solver turns those numbers into a shortlist of candidate countries.",
+          "Because the feedback is numeric and absolute, the solver's filtering is precise: each guess's distance narrows the map to a ring, and the direction arrow cuts that ring to an arc. Two or three well-chosen guesses usually leave a handful of countries."
+        ],
+        callout: {
+          title: "Distance is the message",
+          body: "Every Worldle miss tells you exactly how far you are from the answer. Read the number as a band — under 1,000 km means a neighbor, over 4,000 km means a different continent — and jump accordingly."
+        }
+      },
+      {
+        heading: "Worldle strategy for geography players",
+        paragraphs: [
+          "Open with a country whose position splits the map usefully — central countries like the DRC, Kazakhstan, or Brazil give clean direction feedback that eliminates whole continents. Avoid islands early; their feedback is often ambiguous.",
+          "Use the distance band to decide your next jump. If the first guess is 7,000 km away, do not nudge — leap to a country on the opposite side of the globe and read the new distance.",
+          "Once you are under 1,000 km, switch to regional logic: list the countries near your last guess, check the direction arrow, and pick the one the arrow points at. Border countries resolve most puzzles from there."
+        ],
+        list: {
+          title: "Worldle distance quick-guide",
+          items: [
+            "Over 6,000 km — wrong continent; jump hemispheres",
+            "3,000–6,000 km — same hemisphere, likely different continent",
+            "1,000–3,000 km — same region; think neighboring countries",
+            "Under 1,000 km — you are in the neighborhood; use borders and the arrow",
+            "Under 200 km — the answer is a direct neighbor"
+          ]
+        }
+      },
+      {
+        heading: "Reading the silhouette",
+        paragraphs: [
+          "Before any guess, study the silhouette itself: its shape, its coastlines, its size relative to the frame. Distinctive shapes — Italy's boot, Chile's ribbon, Sri Lanka's teardrop — solve instantly for players who know their maps.",
+          "Size is a clue too. A silhouette that fills the frame is a large country (Russia, Canada, Brazil); a small one could be an island or a microstate. Compare the silhouette to your mental map and start with the region it resembles.",
+          "Continent-adjacent silhouettes are the hardest: countries like Indonesia and Greece look like scattered islands, and players often misjudge the framing. When the shape is ambiguous, lean on distance feedback rather than the silhouette."
+        ]
+      },
+      {
+        heading: "Common mistakes the Worldle solver prevents",
+        paragraphs: [
+          "The classic mistake is ignoring the direction arrow. Distance tells you how far, but the arrow tells you where — two guesses can be equidistant and opposite. Players who read only the number wander the map.",
+          "The second mistake is island-phobia. Small islands are hard to hit but easy to reason about once you are close: a 300-km miss around a small island narrows to one or two candidates.",
+          "The third mistake is forgetting the feedback compounds. Every miss narrows the map, so the last guesses are the most informative. Trust the pattern instead of panicking into random guesses."
+        ]
+      },
+      {
+        heading: "Why the Worldle solver page ranks in search",
+        paragraphs: [
+          "Worldle players search for the daily answer and country reveals, and the solver page serves the ones who want to solve it themselves — the feedback logic and distance bands are exactly what those players need.",
+          "The page also earns traffic from geography learners: the strategy sections teach real map-reading skills that transfer far beyond the game.",
+          "Bookmark it for the brutal days when the silhouette is a shape you have never seen. The solver will identify it, and the strategy above will make you a sharper map reader on every puzzle after."
+        ]
+      },
+      {
+        heading: "The map-reading habits that win Worldle",
+        paragraphs: [
+          "Worldle rewards players who think in map bands instead of country names. Before you guess, look at the silhouette and ask three questions: how big is it, where is it on the planet, and what does its coastline look like? The answers place you on the right continent and usually the right region before the first piece of feedback arrives.",
+          "The distance feedback is the game's real teacher. Every miss tells you exactly how far you are, and players who internalize the scale — 500 kilometers is a neighbor, 2,000 is a region, 6,000 is a hemisphere — stop wasting guesses on random countries and start leaping deliberately.",
+          "Direction arrows are the second teacher. A northeast arrow with a short distance means the answer is a country northeast of your guess; with a long distance it means a whole continent to the northeast. Reading the arrow and the number together is the skill that separates four-guess solvers from six-guess scramblers.",
+          "Finally, practice with the archive. Every past Worldle silhouette is the same shape puzzle with a different answer, and running through old puzzles builds the shape vocabulary — Italy's boot, Chile's ribbon, Japan's arc — that makes the daily silhouette instantly recognizable."
+        ]
+      },
+      {
+        heading: "Worldle answer patterns across the archive",
+        paragraphs: [
+          "The Worldle archive reveals the answer pool's shape, and that shape is a solving advantage. The pool skews toward recognizable countries — the G20, the popular travel destinations, the geographically significant states — rather than obscure territories, so the daily answer is almost always a country you have heard of.",
+          "The pool also has a continental rhythm. Some weeks lean European, others Asian or African, and players who track the pattern can pre-load the right region before the silhouette even loads. The archive is the record of that rhythm.",
+          "Island nations appear regularly, which makes the fragmented-silhouette skill essential — Indonesia, Japan, Greece, and the Philippines are recurring answers whose scattered shapes mislead players into mainland guesses.",
+          "Finally, the distance-band habit transfers perfectly. Reading 500 kilometers as 'a neighbor' and 5,000 as 'another continent' is the same skill in the archive as in the daily game — and the archive gives you unlimited reps to build it."
+        ]
+      },
+      {
+        heading: "Worldle solver settings and the daily partnership",
+        paragraphs: [
+          "The Worldle solver is designed to partner with the daily puzzle. Enter your guess and its distance feedback — the kilometers and the direction — and the solver filters the country list to the candidates that match every clue.",
+          "The distance-band discipline is the solver's core lesson. It reads 500 kilometers as a neighbor, 5,000 as another continent, and it never wastes a guess on a country the distance has ruled out. Players who copy that discipline solve in half the guesses.",
+          "The daily partnership works best with deliberate jumps. The solver's recommendations leap continents when the distance demands it — and following that rhythm, rather than nudging out of habit, is the fastest path to the daily country.",
+          "Finally, use the solver as a map-reading coach. Watching it filter by distance and direction teaches you the bands, the arrows, and the border logic in action — and that understanding makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "Worldle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Worldle solver work?",
+        answer:
+          "It tracks every country's position and filters by the distance and direction feedback Worldle gives after each guess, narrowing the map to a shortlist of candidate countries."
+      },
+      {
+        question: "How many guesses do you get in Worldle?",
+        answer:
+          "Worldle gives six guesses per daily puzzle, plus the silhouette, with distance and direction feedback on every miss."
+      },
+      {
+        question: "What does the distance number mean in Worldle?",
+        answer:
+          "It is the straight-line distance from your guessed country to the answer. Read it as a band — under 1,000 km means a neighbor, over 4,000 km means another continent."
+      },
+      {
+        question: "What is the best first guess in Worldle?",
+        answer:
+          "A central country like the DRC, Kazakhstan, or Brazil, because its position gives direction feedback that eliminates whole continents cleanly."
+      },
+      {
+        question: "Does the solver work for past Worldle puzzles?",
+        answer:
+          "Yes. The solver works on any country, and the Worldle archive holds every past daily answer for practice."
+      }
+    ],
+    relatedLinks: [
+      { href: "/worldle-answer-today", label: "Worldle Answer Today" },
+      { href: "/globle-answer-today", label: "Globle Answer Today" },
+      { href: "/countryle-answer-today", label: "Countryle Answer Today" },
+      { href: "/countryle-solver", label: "Countryle Solver" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'countryle-solver': {
+    key: 'countryle-solver',
+    eyebrow: 'Countryle Solver Guide',
+    intro:
+      "Countryle is the daily geography game where you guess a country and the game scores how close you are — by distance, borders, and continent. The Countryle solver uses your guess feedback to narrow the entire map to the likely answer, so you can verify your geography instinct, learn the feedback rules, and solve faster. Here is how it works and the strategy that wins most puzzles in four guesses.",
+    sections: [
+      {
+        heading: "How the Countryle solver narrows the map",
+        paragraphs: [
+          "Countryle feedback is geographic: after each guess you learn how far you are from the answer, whether you are on the right continent, and whether you guessed a neighbor. The solver combines those clues to filter the country list down to candidates that match every signal.",
+          "The strongest signal is the continent check. Most Countryle versions report the answer's continent, which instantly eliminates four-fifths of the map. From there, distance and border hints refine the region.",
+          "The solver's candidate list after two or three guesses is typically a handful of countries — and it ranks them by how well they satisfy your clues, so the top pick is your best next guess."
+        ],
+        callout: {
+          title: "Continent first, distance second",
+          body: "Nail the continent with your first guess, then use distance bands to find the region, then borders to find the country. That three-stage filter is the whole game."
+        }
+      },
+      {
+        heading: "A Countryle solving rhythm",
+        paragraphs: [
+          "Your opener should be a large, central country whose position tells you the continent decisively — Brazil, the DRC, Kazakhstan, or Australia. If the feedback confirms the continent, you have already won the biggest battle.",
+          "Guess two should jump to the likely region within that continent: if the answer is South America and your first guess was 3,000 km from Brazil, think the Andes; if it is Africa, think the Sahel or the south.",
+          "From guess three onward, use border logic. List the countries near your last guess, check the distance, and pick the one that matches. Countryle puzzles almost always resolve within four or five guesses using this rhythm."
+        ],
+        list: {
+          title: "Feedback signals Countryle gives you",
+          items: [
+            "Continent confirmation or denial",
+            "Straight-line distance to the answer",
+            "Neighbor confirmation when you guess an adjacent country",
+            "Proximity hints for countries sharing a border region"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Countryle solver fixes",
+        paragraphs: [
+          "The biggest mistake is ignoring continent feedback. Players who keep guessing within their own region while the game says the answer is elsewhere waste guess after guess. The solver treats continent as a hard filter.",
+          "The second mistake is guessing tiny countries early. Microstates like Andorra or Malta are nearly impossible to hit blind, and their feedback barely narrows the map. Guess big, then refine.",
+          "The third mistake is forgetting that landlocked countries exist. Players aiming for coasts miss the interior entirely; the solver's candidate list includes every country type, so it never suffers from coastal bias."
+        ]
+      },
+      {
+        heading: "Why the Countryle solver page ranks in search",
+        paragraphs: [
+          "Countryle players search for the daily answer and hints, and the solver page serves the players who want to solve it themselves — the continent-first strategy and distance bands are exactly the tools they need.",
+          "The guide also earns traffic from geography learners: the strategy sections teach real map-reading skills that apply far beyond the daily game.",
+          "Bookmark it for the days the answer is a country you have barely heard of. The solver will find it, and the strategy above will sharpen your map sense for every puzzle after."
+        ]
+      },
+      {
+        heading: "Geography facts that shortcut every solve",
+        paragraphs: [
+          "A handful of geography facts collapse most Countryle puzzles before they start. Landlocked countries cluster in recognizable bands — Central Asia, the Sahel, the Andean interior — so a landlocked hint points at a region, not a mystery. Archipelagos are their own world: Indonesia, the Philippines, and Japan are answer-sized and unmistakable once the feedback says 'island nation'.",
+          "The equator is your best friend. Countries straddling it — Ecuador, Kenya, Indonesia, Brazil — are central guesses whose feedback divides the map into clean north and south hemispheres. If your first guess hugs the equator and the answer is elsewhere, the distance reading tells you which hemisphere to flee to.",
+          "Borders are the endgame weapon. Once you are within a thousand kilometers, the fastest play is to list the neighbors of your last guess and pick the one the direction arrow favors. Players who memorize border chains — Brazil's ten neighbors, Germany's nine, the DRC's nine — turn the last phase of every solve into a formality.",
+          "Finally, remember the shape of the feedback itself: a small distance with a consistent direction almost always means a direct neighbor, while a medium distance with a shifting direction means the answer is a few countries over. Reading that distinction separates players who solve in four guesses from players who wander to six."
+        ]
+      },
+      {
+        heading: "The country pool Countryle draws from",
+        paragraphs: [
+          "Countryle answers come from the community's country list, which skews toward recognizable states rather than obscure territories. The pool favors the UN members, the G20, the popular travel destinations, and the geopolitically significant countries — and knowing that bias saves you from chasing microstates that will never be the answer.",
+          "The bias changes your guessing strategy. When you are down to two candidates — one famous, one obscure — the famous one wins almost every time. Players who ignore this bias waste guesses on countries like Andorra or Vanuatu when the answer is clearly France or Japan.",
+          "The pool also includes a healthy share of island nations and landlocked countries, so the answer is never predictable from geography alone. But the recognizable states dominate, which means your first few guesses should always be famous countries whose feedback divides the map cleanly.",
+          "Finally, the archive is a study tool. Browsing past Countryle answers shows you the pool's actual shape — which regions repeat, which continents appear most — and that pattern knowledge transfers directly to faster daily solves."
+        ]
+      },
+      {
+        heading: "Countryle community wisdom and daily patterns",
+        paragraphs: [
+          "The Countryle community has distilled years of play into a few hard-won rules, and they all converge on the same advice: continent first, borders second, distance bands third. Players who follow that order solve in four or five guesses; players who ignore it wander to six and beyond.",
+          "The community's second rule is the famous-country bias. The daily answer is almost always a recognizable state, so when the candidate list contains one famous country and one obscure one, the famous one is the answer. Ignoring that bias is the most common way players waste their final guesses.",
+          "The third rule is the neighbor-chain skill. The endgame is won by players who can list a country's neighbors from memory — Brazil's ten, Germany's nine, the DRC's nine — because the final phase of every solve is a border check.",
+          "Finally, the daily reveal is the community's shared reference. Whether you solved in four or needed the reveal, the answer page is where the daily discussion converges — and the archive is the record of every pattern the community has mapped."
+        ]
+      },
+      {
+        heading: "Countryle solver settings and the map dictionary",
+        paragraphs: [
+          "The Countryle solver is built around the world map, and a little setup makes it precise. Enter the feedback — continent, distance, neighbor signals — and the solver filters the country list to the candidates that match every clue.",
+          "The map coverage is the solver's core strength. Its country list includes every recognized state, from the G20 giants to the island nations, so its candidates are always valid answers and its filtering never misses a country.",
+          "The continent-first hierarchy is the solver's lesson. It treats the continent verdict as the strongest filter, then distance bands, then border chains — and players who copy that hierarchy solve in half the guesses.",
+          "Finally, use the solver as a geography coach. Watching it filter the map teaches you the continental rhythm, the distance bands, and the neighbor chains in action — and that understanding makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "Countryle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Countryle solver work?",
+        answer:
+          "It combines your guess feedback — continent, distance, and neighbor signals — to filter the country list down to the candidates that match every clue you have collected."
+      },
+      {
+        question: "What is the best first guess in Countryle?",
+        answer:
+          "A large, central country like Brazil, the DRC, or Kazakhstan, because its position makes the continent feedback decisive."
+      },
+      {
+        question: "How many guesses does a Countryle take?",
+        answer:
+          "Most puzzles resolve in four or five guesses using the continent-first rhythm: establish the continent, jump to the region, then use border logic."
+      },
+      {
+        question: "Does the solver work for all Countryle versions?",
+        answer:
+          "Yes. The continent-distance-border logic applies to the main Countryle formats, and the solver adapts to the feedback style of your version."
+      },
+      {
+        question: "What is the fastest way to get better at Countryle?",
+        answer:
+          "Practice reading distance bands and committing to continent switches. The solver's candidate lists teach you both with every use."
+      }
+    ],
+    relatedLinks: [
+      { href: "/countryle-answer-today", label: "Countryle Answer Today" },
+      { href: "/worldle-solver", label: "Worldle Solver" },
+      { href: "/globle-answer-today", label: "Globle Answer Today" },
+      { href: "/worldle-answer-today", label: "Worldle Answer Today" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'colorfle-solver': {
+    key: 'colorfle-solver',
+    eyebrow: 'Colorfle Solver Guide',
+    intro:
+      "Colorfle is the daily color-guessing game where you navigate a palette using directional feedback — warmer, cooler, lighter, darker, more or less saturated. The Colorfle solver tracks your position in color space and recommends the next move, so you can solve fast, verify your color intuition, and learn the three axes the game tests. Here is how it works and how to read color like a designer.",
+    sections: [
+      {
+        heading: "How the Colorfle solver navigates color space",
+        paragraphs: [
+          "Every color can be described by three axes: hue (the color family), saturation (vividness), and lightness (how dark or light it is). Colorfle's feedback moves you along those axes — warmer or cooler changes hue, brighter or darker changes lightness, and more or less colorful changes saturation.",
+          "The solver keeps a running estimate of the target along all three axes. Each piece of feedback shifts the estimate, and the solver recommends the guess that is most likely to lock in one axis completely.",
+          "The result is a guided search: you stop wandering the palette and start walking a precise path toward the answer, usually landing within five or six guesses."
+        ],
+        callout: {
+          title: "Three axes, one target",
+          body: "Hue, saturation, and lightness are the whole game. Fix two axes with early guesses and only one remains — that is when Colorfle gets easy."
+        }
+      },
+      {
+        heading: "How the Colorfle solver beats guesswork",
+        paragraphs: [
+          "Open with a mid-palette color: mid-lightness, mid-saturation, a recognizable hue like a medium blue or green. Mid-palette guesses give informative feedback in every direction, while edge colors waste half their feedback.",
+          "Make big moves early. Colorfle's feedback range is wide, and players who nudge one step at a time burn through guesses. If the game says 'much lighter', jump far up the lightness scale.",
+          "Lock axes in order: hue first, then lightness, then saturation. Fixing the hue family immediately halves the palette; locking lightness cuts it again; saturation then resolves the final ambiguity."
+        ],
+        list: {
+          title: "The Colorfle axis checklist",
+          items: [
+            "Hue — which color family is the target in?",
+            "Lightness — is it a dark shade or a light tint?",
+            "Saturation — vivid, muted, or grayish?",
+            "Never guess a color you know contradicts an earlier verdict"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Colorfle solver fixes",
+        paragraphs: [
+          "The biggest mistake is tiny adjustments. Players who nudge one step per guess run out of moves long before reaching the target. The solver moves big until the axes narrow.",
+          "The second mistake is ignoring saturation. Saturation is the axis players forget, and a grayish target with a vivid guess is one of the most common Colorfle traps. The solver tracks it from move one.",
+          "The third mistake is misreading warm versus cool. Warm and cool are directional on the hue wheel, and a guess 'too cool' means rotate toward the warm side — the solver keeps that direction straight."
+        ]
+      },
+      {
+        heading: "Why the Colorfle solver page ranks in search",
+        paragraphs: [
+          "Colorfle players search for the daily answer and hints, and the solver page serves the ones who want to solve it themselves — the axis model and movement strategy are exactly what those players need.",
+          "The guide also earns traffic from designers and color-curious players: the hue-saturation-lightness model is real color theory that transfers to design work.",
+          "Bookmark it for the days the palette fights back. The solver will navigate it, and the axis strategy will make you faster on every puzzle after."
+        ]
+      },
+      {
+        heading: "Colorfle hint patterns worth memorizing",
+        paragraphs: [
+          "Veteran Colorfle players learn to read the game's verdicts in pairs. 'Warmer and lighter' together almost always means the answer lives in the yellow-orange corner of the wheel; 'cooler and darker' points at the blues and deep greens. When saturation is also moving, the answer is usually a vivid accent color rather than a neutral.",
+          "The single most useful pattern to recognize is the near-miss: a guess that comes back with every axis correct except one small push, like 'just a touch lighter'. That verdict is the game telling you to nudge one axis a single step — and the answer is almost always the exact shade your guess becomes after that nudge.",
+          "A second pattern that catches everyone is the complementary trap. Two guesses that both return 'wrong direction' can still be on opposite sides of the target, so the solver's axis tracking matters more than your intuition about where the palette 'feels' warm. Trust the numbers: each verdict moves the search, and the solver shows you the cumulative picture that your short-term memory loses after three guesses.",
+          "The final habit worth building is treating the palette like a map with landmarks. Mid-blue, mid-green, and mid-red are the three anchors most players can reason from, and every other shade is a step from one of them. When you know your guess is 'two steps warmer than mid-blue', you are thinking like the solver — and the answer is never far away."
+        ],
+        list: {
+          title: "Verdict pairs and what they mean",
+          items: [
+            "Warmer + lighter → the yellow-orange family",
+            "Cooler + darker → the blue-green family",
+            "Lighter + less saturated → a pastel near the center of the wheel",
+            "Darker + more saturated → a deep accent color"
+          ]
+        }
+      },
+      {
+        heading: "Color models that make Colorfle click",
+        paragraphs: [
+          "Colorfle's feedback is built on a real color model, and understanding that model is the difference between guessing and navigating. The game moves you along hue, saturation, and lightness — the three axes that describe every color — and each verdict is a direction along one of those axes.",
+          "The hue wheel is the axis players understand best: warmer means rotate toward red-orange, cooler means rotate toward blue-green. But saturation and lightness are where solvers actually win. A 'less saturated' verdict is the game telling you the answer is grayer, and a 'lighter' verdict is telling you the shade is a tint rather than a deep tone.",
+          "Thinking in opposites is the hidden skill. Every verdict has a clear opposite — warmer versus cooler, lighter versus darker, more saturated versus less — and players who can name the opposite of their last guess can always make a productive move, even when they are far from the target.",
+          "Finally, anchor yourself in landmarks. Mid-blue, mid-green, mid-red, and the neutrals are reference points you can reason from. When you know your guess is 'two steps warmer than mid-blue and much lighter', you are thinking in the same coordinate system as the solver."
+        ]
+      },
+      {
+        heading: "Colorfle solver settings and the daily partnership",
+        paragraphs: [
+          "The Colorfle solver is designed to partner with the daily puzzle. Make your guess, enter the feedback — warmer or cooler, lighter or darker, more or less saturated — and the solver tracks your position in color space and suggests the next move.",
+          "The axis discipline is the solver's core lesson. It treats hue, saturation, and lightness as three separate tracks, and it never lets a 'lighter' verdict get lost in a hue argument. Players who copy that discipline — fixing one axis at a time — solve in half the guesses.",
+          "The daily partnership works best with bold early moves. The solver's recommendations move big until the axes narrow, and following that rhythm — big directional jumps, then precise refinements — is the fastest path to the daily shade.",
+          "Finally, use the solver as a color-theory coach. Watching it navigate the palette teaches you the hue wheel, the saturation scale, and the lightness axis in action — and that understanding makes you faster even without the tool."
+        ]
+      },
+      {
+        heading: "Colorfle answer formats and hex values",
+        paragraphs: ["Colorfle answers are colors, and the solver lets you work in the same units the game uses: hex values, RGB components, or color names. Each guess returns directional feedback, and the solver converts that feedback into a tighter color region with every round.","The key habit Colorfle rewards is guessing colors that split the remaining space in half — a mid-tone that separates bright from dark, or a hue that separates warm from cool. That strategy collapses the color space fast.","The solver encodes exactly that splitting logic, which is why it reaches the answer in a handful of guesses instead of a dozen."]
+      }
+    ],
+    faqHeading: "Colorfle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Colorfle solver work?",
+        answer:
+          "It tracks your position on the three color axes — hue, saturation, and lightness — and uses Colorfle's directional feedback to recommend the next move toward the target."
+      },
+      {
+        question: "What are the three axes in Colorfle?",
+        answer:
+          "Hue (the color family), saturation (vividness), and lightness (darkness). Colorfle's feedback moves you along these axes until you reach the exact target."
+      },
+      {
+        question: "What is a good first guess in Colorfle?",
+        answer:
+          "A mid-lightness, mid-saturation color with a recognizable hue, because its feedback is informative in every direction."
+      },
+      {
+        question: "How many guesses does a Colorfle take?",
+        answer:
+          "Most puzzles resolve in five or six guesses when you make big directional moves early and refine late."
+      },
+      {
+        question: "Why does saturation matter in Colorfle?",
+        answer:
+          "Saturation is the axis most players forget, and a grayish target with a vivid guess is a classic trap. Tracking it from move one prevents wasted guesses."
+      }
+    ],
+    relatedLinks: [
+      { href: "/colorfle-answer-today", label: "Colorfle Answer Today" },
+      { href: "/colordle-solver", label: "Colordle Solver" },
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" }
+    ]
+  },
+
+  'waffle-solver': {
+    key: 'waffle-solver',
+    eyebrow: 'Waffle Solver Guide',
+    intro:
+      "Waffle is the daily word puzzle laid out in a five-by-five waffle grid, where six words — three across and three down — share letters at the intersections, and you swap tiles to unscramble them. The Waffle solver checks your board, finds every valid word placement, and suggests the swaps that solve it fastest. Here is how it works and how to get better at the swap puzzle.",
+    sections: [
+      {
+        heading: "How the Waffle solver reads your board",
+        paragraphs: [
+          "A Waffle board is a crossword-like grid where the across words and down words share letters at their crossings. Every letter on the board belongs to exactly one across word and one down word, and the solver keeps track of both dimensions at once.",
+          "The solver checks which of the twelve word slots (six across, six down) already contain a valid word, which are close, and which need the most swaps. That board-state analysis is the core of the solver: it tells you exactly which intersections to attack first.",
+          "Because Waffle allows unlimited swaps and only scores you on the number of moves, the solver's value is efficiency — it finds the minimal set of swaps that turns the scrambled board into six valid words."
+        ],
+        callout: {
+          title: "Words share letters",
+          body: "Every letter in the Waffle grid sits at the crossing of an across word and a down word. Solving one direction often fixes the other — that interdependence is the puzzle's heart."
+        }
+      },
+      {
+        heading: "Waffle strategy without the solver",
+        paragraphs: [
+          "Start by finding the already-solved words. Any row or column that already spells a word is locked — do not touch it, because swapping its letters breaks two words at once.",
+          "Then attack the near-miss words: rows and columns that are one or two letters off. Since crossing letters belong to both dimensions, a swap that fixes an across word often fixes the down word it crosses.",
+          "Count your swaps. Waffle scores you on move count, and a perfect game uses the minimum swaps. Planning two swaps ahead — where the tile goes, then where its replacement comes from — is the habit of expert players."
+        ],
+        list: {
+          title: "Signs of a fast Waffle solve",
+          items: [
+            "You lock solved words and never disturb them",
+            "You fix crossings deliberately, not randomly",
+            "You plan swaps in chains — this tile out, that tile in",
+            "You read the grid as six words, not sixty individual tiles"
+          ]
+        }
+      },
+      {
+        heading: "Reading the solver's swap suggestions",
+        paragraphs: [
+          "The solver highlights the tiles that need to move and suggests an ordered sequence of swaps. Follow the sequence and the grid resolves into six valid words in the fewest moves.",
+          "If you prefer to solve on your own, use the solver as a checker: arrange your swaps, then ask the solver whether the board is now correct. It will confirm or point at the remaining misplaced tiles.",
+          "The solver also shows which words it found in each slot, so you can learn the vocabulary — Waffle uses common words, but the crossing constraints can hide words you know perfectly well."
+        ]
+      },
+      {
+        heading: "Common mistakes the Waffle solver prevents",
+        paragraphs: [
+          "The classic mistake is fixing a row without checking its crossings. A letter that completes an across word can break the down word it belongs to — the solver tracks both dimensions and never makes that error.",
+          "The second mistake is repeatedly touching solved words. Players under time pressure swap tiles in already-correct rows, undoing their progress. The solver locks solved slots.",
+          "The third mistake is ignoring move count. Waffle rewards minimal swaps, and random clicking can double your score. The solver's sequenced swaps keep the move count honest."
+        ]
+      },
+      {
+        heading: "Why the Waffle solver page ranks in search",
+        paragraphs: [
+          "Waffle players search for answers, archives, and solvers — 'waffle game archive', 'waffle archive', and 'waffle solver' are all recurring queries. This page serves the solver intent with instant board analysis and minimal-swap guidance.",
+          "The strategy sections also serve players who want to improve: the crossing logic and swap-chaining habits transfer to every daily Waffle.",
+          "Bookmark it for the days the grid is a tangle. The solver will unscramble it, and the crossing strategy will make you faster on every waffle after."
+        ]
+      },
+      {
+        heading: "Why Waffle answers hide in plain sight",
+        paragraphs: [
+          "Waffle puzzles feel harder than they are because the grid scrambles your word vision: six words share twelve crossing letters, so every tile is part of two words at once. The way out is to read the grid as six word slots instead of sixty tiles — pick a row, ignore its crossings for a moment, and ask which five-letter word the letters almost spell.",
+          "The crossing letters are actually your biggest hint. A letter that sits at a junction belongs to both an across word and a down word, so a letter that 'looks wrong' for the row is probably correct for the column — and fixing it fixes both. Expert players treat crossings as anchors, not obstacles.",
+          "Vocabulary is the quiet advantage. Waffle uses common words, but the crossing constraints can hide words you know: 'LEMON' becomes invisible when its L is shared with a down word you have not solved. Read the grid aloud as possible words, and the hidden ones surface.",
+          "Finally, use the move economy. Waffle scores your minimum swaps, so before you move a tile, trace where its replacement comes from. A swap that fixes a row but breaks a column is a wash; a swap that fixes both is gold. The solver plans these chains — and once you start planning them too, your scores drop fast."
+        ]
+      },
+      {
+        heading: "The Waffle board, read like a crossword solver",
+        paragraphs: [
+          "Waffle is a crossword in disguise, and reading it like one unlocks the fastest solves. The grid holds six five-letter words — three across, three down — sharing twelve crossing letters, and the crossings are the key: a letter that belongs to two words is the junction where both get fixed.",
+          "Start with the words that are closest to solved. Any row or column with four correct letters is a one-swap fix, and fixing it usually corrects the crossing word at the same time. The solver identifies these near-solves instantly, and so can you by scanning for rows that 'almost spell' a word.",
+          "The swap economy is the real score. Waffle counts your moves, and a perfect game uses the minimum swaps — so before you move a tile, trace where its replacement comes from. A swap that fixes two words at once is worth two moves of progress in one.",
+          "Finally, build your five-letter word vision. The more common five-letter words you can see in a scrambled row, the faster you solve. Practicing with the archive builds that vision, and the solver's suggested swaps show you the chains experts use."
+        ]
+      },
+      {
+        heading: "Waffle solver settings and accuracy tips",
+        paragraphs: [
+          "The Waffle solver is designed for the daily grid, and a little setup makes it exact. Enter the board exactly as the game shows it — every tile, every letter — and the solver will analyze the twelve word slots with complete accuracy.",
+          "The solver's minimal-swap suggestions are the daily lesson. Each recommended swap chain shows you the crossing logic — fixing a row often fixes the column it crosses — and studying the chains builds the swap planning that lowers your move count.",
+          "The vocabulary note matters: Waffle uses common five-letter words, and the solver's dictionary matches the game's pool, so its suggestions are always valid placements.",
+          "Finally, use the solver as a checker, not a crutch. Arrange your own swaps, run the solver, and see whether the board resolves — when it does not, the solver's corrections show you exactly which crossing you misjudged."
+        ]
+      },
+      {
+        heading: "Waffle answer grids and swap logic",
+        paragraphs: ["Waffle answers are grids of words that interlock like a crossword, and the solver works with the game’s swap mechanic: the letters are in the grid, and you just have to swap them into the right cells.","That changes the strategy completely. In Waffle you never guess letters — you deduce positions. The solver reads the jumbled grid, identifies which letters are already correct, and computes the minimum swaps to finish.","Because every swap counts against your score, the solver’s swap order matters as much as the final grid — and it plans both."]
+      }
+    ],
+    faqHeading: "Waffle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Waffle solver work?",
+        answer:
+          "It analyzes the five-by-five grid as six intersecting words — three across and three down — and finds the minimal set of tile swaps that turns the board into six valid words."
+      },
+      {
+        question: "Can you swap tiles freely in Waffle?",
+        answer:
+          "Yes, Waffle allows unlimited swaps, but you are scored on move count, so solving with the minimum number of swaps is the goal."
+      },
+      {
+        question: "Do Waffle words share letters?",
+        answer:
+          "Yes — every letter sits at the crossing of an across word and a down word, which is why fixing one direction often fixes the other."
+      },
+      {
+        question: "What is a good Waffle strategy?",
+        answer:
+          "Lock the already-solved words, attack near-misses at the crossings, and plan swaps in chains to minimize your move count."
+      },
+      {
+        question: "Does the solver work for past Waffle puzzles?",
+        answer:
+          "Yes — the solver works on any Waffle grid, and the Waffle archive holds past daily puzzles for practice."
+      }
+    ],
+    relatedLinks: [
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" }
+    ]
+  },
+
+  'phoodle-solver': {
+    key: 'phoodle-solver',
+    eyebrow: 'Phoodle Solver Guide',
+    intro:
+      "Phoodle is Wordle with a kitchen twist: every answer is a food-related word, from ingredients to dishes to cooking verbs, and you have six guesses to find it. The Phoodle solver filters the food vocabulary with every guess, so you can crack the daily food word fast and learn the vocabulary the game draws from. Here is how it works and why the food constraint is your biggest advantage.",
+    sections: [
+      {
+        heading: "How the Phoodle solver filters food words",
+        paragraphs: [
+          "Phoodle's answer pool is food vocabulary — ingredients, dishes, cuts, herbs, and kitchen verbs — which is far smaller than Wordle's full dictionary. The solver filters that food-specific list with every guess's green, yellow, and gray tiles.",
+          "Because the pool is small and themed, the solver narrows much faster than it could on a general dictionary. A pattern like _A_ST_ is far more tractable when you know the answer is an ingredient or dish.",
+          "The solver also understands food-word letter frequencies: it knows which letters dominate food vocabulary, and it biases its recommendations toward letters that are actually likely to appear in a food word."
+        ],
+        callout: {
+          title: "The food-lane rule",
+          body: "Every Phoodle answer is food-related. Guess letters that live in food vocabulary — S, T, P, C, K and the vowels — and you filter the pool far faster than a generic Wordle strategy."
+        }
+      },
+      {
+        heading: "Phoodle openers and the solver’s filter",
+        paragraphs: [
+          "A strong Phoodle opener covers the letters that dominate food words while staying valid: STEAK, SPICE, and PASTA are community favorites. STEAK gives you S, T, E, A, K — four letters that appear across ingredients and dishes.",
+          "Avoid food-neutral openers like CRANE or SLATE. They are great Wordle words but tell you nothing about the food lane, wasting the constraint that makes Phoodle solvable.",
+          "After the opener, think in food categories: if you have an E and a T, guess words that test ingredient letters (C, P, R) rather than abstract vocabulary. The category thinking is what separates fast Phoodle players."
+        ],
+        list: {
+          title: "Top Phoodle opener words",
+          items: [
+            "STEAK — covers S, T, E, A, K across food vocabulary",
+            "SPICE — covers S, P, I, C, E including the food-y C and P",
+            "PASTA — covers P, A, S, T with a double-A test",
+            "BASTE — covers B, A, S, T, E including the kitchen verb B",
+            "Avoid neutral openers — they waste the food constraint"
+          ]
+        }
+      },
+      {
+        heading: "A real Phoodle solve, step by step",
+        paragraphs: [
+          "Open with STEAK. Suppose the game returns green on S and T, yellow on A, and gray on E and K. The solver instantly knows the answer starts with ST, contains A, and avoids E and K — a strong pattern for a food word.",
+          "Guess SPICE next to test P, I, C against the confirmed S-T prefix. If C comes back yellow, the solver narrows to food words containing ST, A, C with no E or K — a short list of ingredients.",
+          "By guess three the candidate list is usually under ten food words. Pick the most likely ingredient, and the daily Phoodle is solved with three guesses to spare."
+        ]
+      },
+      {
+        heading: "Common mistakes the Phoodle solver fixes",
+        paragraphs: [
+          "The biggest mistake is playing Phoodle like Wordle. Neutral openers, abstract guesses, and general vocabulary all waste the food constraint that makes the game solvable. The solver never leaves the food lane.",
+          "The second mistake is forgetting kitchen verbs and food adjectives. Answers are not only ingredients — they include words like BAKE, SPICY, and TART. The solver includes the full food vocabulary, not just nouns.",
+          "The third mistake is ignoring the plural and form variations. Some answers are plural ingredients or past-tense cooking verbs, and players who only consider singular nouns miss them. The solver's list covers all valid forms."
+        ]
+      },
+      {
+        heading: "Why the Phoodle solver page ranks in search",
+        paragraphs: [
+          "Phoodle players search for the daily answer and hints — 'phoodle answer today', 'phoodle hint today' — and the solver page serves the players who want to solve it themselves with the food-lane strategy.",
+          "The guide also earns traffic from food-word curious players who want to understand the vocabulary the game draws from.",
+          "Bookmark it for the days the answer is an obscure ingredient. The solver will find it, and the food-lane strategy will make you faster on every puzzle after."
+        ]
+      },
+      {
+        heading: "Food vocabulary every Phoodle player needs",
+        paragraphs: [
+          "Phoodle's answer pool runs deeper than ingredients — it includes dishes, cuts, herbs, kitchen verbs, and food adjectives — and the players who solve fastest are the ones who can brainstorm in every lane. When your pattern fits an ingredient, think SPICE, STOCK, and STEAK; when it fits a dish, think PASTA, TACOS, and BREAD; when it fits a verb, think BASTE, BRAISE, and BROIL.",
+          "The vowel structure of food words is your quiet ally. Food vocabulary is heavy on A and O — PASTA, TACOS, MANGO, BANANA — and light on the double-E constructions common in abstract words. A pattern with two A's is almost certainly an ingredient or dish, not a concept.",
+          "Herbs and spices are the sneaky winners. Words like CUMIN, THYME, SAGE, and OREGANO are common answers, and they test the letters — C, M, Y — that generic openers never cover. A clue that includes a rare consonant usually points at this lane.",
+          "Finally, remember the kitchen verbs and adjectives. BAKE, FRY, STEAM, SPICY, TART, and SAVORY all appear, and players who only brainstorm nouns miss a whole slice of the pool. The solver includes the full food vocabulary — and once you start listing verbs too, your solves speed up noticeably."
+        ]
+      },
+      {
+        heading: "Food-word openers that outperform Wordle openers",
+        paragraphs: [
+          "The biggest mistake in Phoodle is carrying your Wordle opener over unchanged. Words like CRANE and SLATE are food-neutral — they tell you nothing about the food lane — while STEAK, SPICE, and PASTA test the letters that dominate food vocabulary and produce feedback you can actually use.",
+          "The food vocabulary's letter profile is your guide. Ingredients and dishes are heavy on S, T, R, P, C, and K, with A and O the dominant vowels. An opener covering those letters — STEAK gives you S, T, E, A, K — filters the food pool far faster than a generic opener ever could.",
+          "The second opener principle is category coverage. A great Phoodle opener tests letters from multiple food lanes: a meat letter, an ingredient letter, a kitchen-verb letter. SPICE covers the spice lane and the verb lane at once, which is why it ranks among the community favorites.",
+          "Finally, adapt after the first guess. The feedback tells you which food lane the answer lives in — an S and T with a K usually means a cut or a dish; an A and C with a P often means an ingredient. Read the lane, then brainstorm in it."
+        ]
+      },
+      {
+        heading: "Phoodle solver settings and the food dictionary",
+        paragraphs: [
+          "The Phoodle solver is built around a food-specific dictionary, and that is its superpower: every candidate it suggests is a real food word, so its filtering is far tighter than a generic Wordle solver's. The food lane is the whole game, and the solver never leaves it.",
+          "The solver's food-word letter frequencies drive its recommendations. It knows that ingredients and dishes are heavy on S, T, R, P, C, and K, with A and O the dominant vowels — so its suggested guesses cover the letters that actually appear in food vocabulary.",
+          "For daily play, run the solver alongside the game: make your guess, enter the feedback, and let it filter the food pool. Most daily puzzles narrow to a handful of candidates within three guesses.",
+          "Finally, use the solver's candidate list as a vocabulary coach. Reading the food words that survive each filter teaches you the pool's shape — the ingredients, the dishes, the kitchen verbs — and that vocabulary makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "Phoodle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Phoodle solver work?",
+        answer:
+          "It filters a food-specific vocabulary list with every guess's green, yellow, and gray tiles, using food-word letter frequencies to recommend the best next guess."
+      },
+      {
+        question: "What is a good first guess in Phoodle?",
+        answer:
+          "STEAK, SPICE, or PASTA — openers that cover letters common in food vocabulary while staying valid food-adjacent words."
+      },
+      {
+        question: "Are all Phoodle answers food words?",
+        answer:
+          "Yes. Every Phoodle answer is food-related — ingredients, dishes, herbs, cuts, kitchen verbs, or food adjectives.",
+      },
+      {
+        question: "Can the solver solve the daily Phoodle?",
+        answer:
+          "Yes. The solver works on the daily puzzle and usually narrows the food pool to a handful of candidates within three guesses."
+      },
+      {
+        question: "What makes Phoodle different from Wordle?",
+        answer:
+          "The answer pool is food vocabulary only, which is smaller and more constrained than Wordle's dictionary — an advantage once you learn to play the food lane."
+      }
+    ],
+    relatedLinks: [
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/canuckle-answer-today", label: "Canuckle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" }
+    ]
+  },
+
+  'searchle-solver': {
+    key: 'searchle-solver',
+    eyebrow: 'Searchle Solver Guide',
+    intro:
+      "Searchle is the daily game where you reverse-engineer a mystery search query: you guess a phrase, the game ranks it, and your job is to climb to the top by matching the target's words and intent. The Searchle solver studies the ranking feedback and suggests the phrasing that climbs fastest. Here is how it works, how search ranking thinks, and how to win the daily query game.",
+    sections: [
+      {
+        heading: "How the Searchle solver reads the rankings",
+        paragraphs: [
+          "Searchle ranks your guessed query against the mystery query using search relevance: the closer your words and intent match the target, the higher your position. The solver watches how each guess moves the ranking and learns the target's vocabulary from that movement.",
+          "A rank jump from 40 to 8 means your new words overlap the target; a flat ranking means your phrasing is pointed the wrong way. The solver treats every rank movement as a signal about which words the target contains.",
+          "By combining several guesses' movements, the solver builds a model of the target query — its topic, its length, its structure — and recommends the next phrase most likely to top the chart."
+        ],
+        callout: {
+          title: "Rank movement is the clue",
+          body: "Searchle tells you where your query ranks after every guess. Big jumps mean you added the right kind of words; flat rankings mean your phrasing is off — read the movement, not just the position."
+        }
+      },
+      {
+        heading: "Thinking like a search engine",
+        paragraphs: [
+          "Search engines match intent, not just keywords. 'Best pizza' and 'pizza near me' are different queries with different intent, and Searchle ranks them apart. Before you guess, decide what the searcher is trying to do — find a recipe, a location, a definition, a comparison.",
+          "Real search phrases are short: two to five words. The mystery query is almost always a realistic everyday search, so guess like a person typing into a search box, not like a writer composing a sentence.",
+          "Modifiers carry meaning. 'How to', 'what is', 'best', 'free', and 'near me' are high-value words that shift ranking significantly. The solver's recommendations lean on these realistic modifiers."
+        ],
+        list: {
+          title: "Query structures to test",
+          items: [
+            "How-to: 'how to bake sourdough'",
+            "Question: 'what is the tallest mountain'",
+            "Comparison: 'best budget phone 2026'",
+            "Local: 'coffee shops near me'",
+            "Definition: 'what does serendipity mean'"
+          ]
+        }
+      },
+      {
+        heading: "A Searchle solving strategy the solver automates",
+        paragraphs: [
+          "Open with the broad topic — 'pizza', 'football', 'recipes' — to locate the neighborhood. Note your rank; it is the baseline for everything that follows.",
+          "Then add one modifier at a time and watch the movement. If 'pizza' ranks 40 and 'pizza recipe' jumps to 12, the target is recipe-related; if 'best pizza' jumps instead, the target is comparison-related.",
+          "Once you are in the top ten, the remaining task is precision: match the exact phrasing. The solver's model of the target's word order and length guides the final guesses."
+        ]
+      },
+      {
+        heading: "Common mistakes the Searchle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing essay-length queries. Real searches are short, and long phrases almost always rank poorly against a concise target. The solver keeps guesses in the two-to-five-word range.",
+          "The second mistake is ignoring intent. Adding keywords without changing intent — 'pizza delivery best pizza' — rarely jumps the ranking, because the target's intent is unchanged. The solver matches intent before words.",
+          "The third mistake is repeating the same structure. If 'best X' keeps missing, the target is probably a question or a how-to. The solver changes the construction, not just the words."
+        ]
+      },
+      {
+        heading: "Why the Searchle solver page ranks in search",
+        paragraphs: [
+          "Searchle players search for the daily answer and hints, and the solver page serves the players who want to crack the query themselves — the rank-movement model and intent-first strategy are exactly what they need.",
+          "The guide also earns traffic from SEO-curious players: the search-thinking sections explain real ranking logic that transfers directly to search marketing.",
+          "Bookmark it for the days the target query is a head-scratcher. The solver will climb it, and the search-thinking strategy will make you faster on every puzzle after."
+        ]
+      },
+      {
+        heading: "Real search patterns the game mirrors",
+        paragraphs: [
+          "Searchle's mystery queries are modeled on real Google autocomplete, which means they follow patterns you already know from the search box. Question queries start with 'how to', 'what is', 'when did', or 'why do'; comparison queries lean on 'best', 'top', or 'vs'; local queries add 'near me' or a city name. Naming the pattern is half the solve.",
+          "The second pattern is specificity creep. Real users start broad and refine — 'pasta' becomes 'pasta recipe' becomes 'easy pasta recipe for dinner'. Searchle rewards the same progression: if your broad guess ranks low, the target is probably one or two modifiers deeper than you are.",
+          "The third pattern is the value of verbs. Search phrases with action verbs — 'make', 'cook', 'fix', 'learn', 'buy' — are more common than noun-only queries, and the game's ranking system rewards matching those verbs exactly. A guess that swaps 'make' for 'cook' can jump a dozen positions.",
+          "The final pattern is time. Trending queries, seasonal searches, and year-stamped phrases ('best phone 2026') all show up as targets because they are what people actually type. When the topic feels current, add the year or the season to your guess and watch the rank climb."
+        ]
+      },
+      {
+        heading: "Advanced Searchle tactics from ranking data",
+        paragraphs: [
+          "Searchle's ranking feedback is dense with information if you read it right. A big rank jump means your new words overlap the target's vocabulary; a flat rank means your phrasing is orthogonal. The solver treats every movement as a signal, and you can too — before you add a word, predict whether it will jump the rank or hold it still.",
+          "Word order matters more than players expect. 'best pizza near me' and 'pizza near me best' rank differently, and the game mirrors that. When two guesses use the same words but rank differently, the target's word order is telling you something about its phrasing.",
+          "Stop-words are not stop-signals. Words like 'the', 'of', and 'for' appear in real search phrases and affect ranking — 'best of' and 'how to' are legitimate query fragments. The solver includes them in its model, and players who ignore them miss a whole class of targets.",
+          "Finally, use the archive to study past answers. The pattern of mystery queries — how-to phrases, comparison phrases, local phrases — is consistent, and reviewing old puzzles builds the intuition for what the game considers a realistic search."
+        ]
+      },
+      {
+        heading: "Searchle solver settings and advanced usage",
+        paragraphs: [
+          "The Searchle solver is designed for the daily game, but a little setup makes it faster. Choose the topic mode if you know the target's domain — tech, food, travel, entertainment — and the solver's recommendations skew toward that vocabulary. The rank-movement logic works the same either way.",
+          "For daily play, run the solver alongside your game: guess, read the rank, and let the solver model the target's vocabulary from the movement. The first two or three guesses establish the topic; the last two or three climb to the top.",
+          "The solver's intent-first ranking is the advanced skill. It does not just match words — it matches query structure, so a how-to target gets how-to suggestions and a comparison target gets comparison suggestions. Players who learn to read the solver's reasoning internalize the same logic.",
+          "Finally, use the archive for study. Reviewing past targets shows you the pool's shape — how-to phrases, question phrases, comparison phrases — and that pattern knowledge transfers directly to faster daily solves."
+        ]
+      },
+      {
+        heading: "Searchle answer variations, month by month",
+        paragraphs: ["Searchle answers are place names and landmarks, and the puzzle changes its answer type over time — some months skew to cities, others to countries, others to famous landmarks. The solver handles every variant because it filters on the clues, not on a fixed category.","The variation is worth knowing before you play: a month of landmark answers behaves differently from a month of capital cities, and the solver’s filters adapt to whichever pool the game is using.","Either way, the same logic applies — every clue narrows the map, and the solver applies all of them at once."]
+      }
+    ],
+    faqHeading: "Searchle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Searchle solver work?",
+        answer:
+          "It watches how each guessed query moves in the rankings, builds a model of the target's vocabulary and intent, and recommends the phrasing most likely to rank first."
+      },
+      {
+        question: "How is Searchle scored?",
+        answer:
+          "Your guessed query is ranked against the mystery query by search relevance — the closer your words and intent match, the higher you rank after each guess."
+      },
+      {
+        question: "What is a good first guess in Searchle?",
+        answer:
+          "The broad topic alone — like 'pizza' or 'football' — establishes your baseline rank and tells you which neighborhood the target lives in."
+      },
+      {
+        question: "How long is a typical Searchle answer?",
+        answer:
+          "Mystery queries are realistic everyday searches, usually two to five words, matching how people actually type into a search box."
+      },
+      {
+        question: "Does the solver work for past Searchle puzzles?",
+        answer:
+          "Yes — the rank-movement logic applies to any Searchle puzzle, past or present."
+      }
+    ],
+    relatedLinks: [
+      { href: "/searchle-answer-today", label: "Searchle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" }
+    ]
+  },
+
+  'word-ladder-solver': {
+    key: 'word-ladder-solver',
+    eyebrow: 'Word Ladder Solver Guide',
+    intro:
+      "Word ladders are the classic puzzle where you transform one word into another one letter at a time — COLD to WARM, LOVE to HATE — with every intermediate step a real word. The word ladder solver finds the shortest valid chain between any two words, so you can check your own ladders, learn new routes, and understand the hidden structure of the English word graph. Here is how it works and how to get better at building ladders.",
+    sections: [
+      {
+        heading: "How the word ladder solver builds chains",
+        paragraphs: [
+          "A word ladder is a path through the graph of English words: two words are connected when they differ by exactly one letter, and a ladder is a chain of those connections. The solver runs a shortest-path search across that graph, so the ladder it returns is the fewest steps possible.",
+          "That search is breadth-first: the solver explores every one-letter neighbor of the start word, then every neighbor of those, layer by layer, until it reaches the target. Because it explores in layers, the first path found is guaranteed to be the minimum.",
+          "The solver's ladders never skip a step and never reuse a word, so every chain it returns is a legal ladder — each rung a real word, each transition a single letter."
+        ],
+        callout: {
+          title: "One letter per rung",
+          body: "Every step of a word ladder changes exactly one letter and must produce a real word. The solver obeys both rules strictly, so its chains are always legal."
+        }
+      },
+      {
+        heading: "The strategy behind short ladders",
+        paragraphs: [
+          "Think about the target's neighbors first. The final rung before the target must share three letters with it, so listing those near-neighbors gives you the landing zone.",
+          "Then work backward from the start: enumerate the words one letter away and look for a bridge that moves toward the landing zone. Strong ladder-builders always plan the last two steps before the middle ones.",
+          "Vowels are the bottleneck. Words with unusual vowel patterns have few neighbors, so expert players route around vowel-heavy words and save them for the final approach."
+        ],
+        list: {
+          title: "Signs of a good ladder-builder",
+          items: [
+            "You know the near-neighbors of the target before you start",
+            "You plan the final approach, not just the first step",
+            "You avoid dead-end words with few neighbors",
+            "You never reuse a word already in the ladder"
+          ]
+        }
+      },
+      {
+        heading: "Reading the solver's shortest path",
+        paragraphs: [
+          "The solver outputs the chain from start to finish, each word one letter from the last. Check every transition — if each pair differs by exactly one letter and each word is real, the ladder is valid.",
+          "Some solver ladders use rare words as bridges — words like 'dore' or 'gite' that connect otherwise-separated regions of the word graph. If you need a ladder for a game that only accepts common words, the solver's path is still your best route; just prefer the common-word segments.",
+          "If the solver returns a ladder longer than you expected, the distance itself is informative: some word pairs are genuinely far apart in the graph, and no human shortcut exists."
+        ]
+      },
+      {
+        heading: "Common mistakes the word ladder solver prevents",
+        paragraphs: [
+          "The classic mistake is changing more than one letter per step. Players get impatient and jump two letters at once, breaking the ladder's legality. The solver never does this.",
+          "The second mistake is using invented words. A ladder with a made-up rung is invalid even if the endpoints are right. The solver only uses dictionary words.",
+          "The third mistake is not planning the approach. Players climb away from the target, run out of legal moves, and get stuck. The solver plans the landing zone from the first step."
+        ]
+      },
+      {
+        heading: "Why the word ladder solver page ranks in search",
+        paragraphs: [
+          "Students, puzzle fans, and game players search for word ladder solvers when they are stuck on an assignment or a puzzle — 'word ladder solver', 'word ladder answers'. This page answers with instant shortest paths plus the strategy to build ladders by hand.",
+          "The guide also serves teachers: word ladders are a classic vocabulary and spelling exercise, and the strategy sections explain the logic in teachable terms.",
+          "Bookmark it for the next assignment or puzzle. The solver will find the chain, and the approach-planning strategy will make you faster at building ladders forever after."
+        ]
+      },
+      {
+        heading: "Word ladder classics and the routes between them",
+        paragraphs: [
+          "Every word-ladder player has their favorite transformations: COLD to WARM, LOVE to HATE, MORE to LESS, BLACK to WHITE. The routes between these classics teach the transferable skills — the near-neighbor lists, the bridge words, the dead-end traps — that make every other ladder faster.",
+          "The classic COLD-to-WARM route passes through CORD, WORD, WORM, and WARM, and the lesson is vowel rotation: stepping through the vowels (O to A, and the U-O pair) is the most common way ladders move. Watch the vowel of every rung, and the next step usually reveals itself.",
+          "The other transferable trick is consonant chains. Words like LOVE, LORE, MORE, MODE, MADE chain through single-consonant swaps, and the same chain structure appears in dozens of ladders. When you are stuck, try changing the first letter, then the last, then the middle — the consonants rotate more freely than the vowels.",
+          "Finally, learn which words are dead ends. Words with unusual letter patterns — QUIZ, JINX, ZANY — have almost no neighbors, and stepping onto them traps you. Good ladder-builders route around the rare-letter words and save them for the final approach, exactly as the solver's graph search does."
+        ]
+      },
+      {
+        heading: "Building ladders by hand, one rung at a time",
+        paragraphs: [
+          "Word ladders look like a memory game, but they are actually a search problem — and the search skill is learnable. The first habit is enumerating neighbors: for any word, list the words that differ by one letter. Players who can produce a neighbor list instantly never get stuck on the first step.",
+          "The second habit is vowel-first thinking. Most ladder movement happens through vowel rotation — CAT to COT to CUT, or BAD to BED to BID — and the vowel chain is the spine of most ladders. Watch the vowel of every rung, and the next step usually reveals itself.",
+          "The third habit is planning backward. The final rung before the target must share three letters with it, so listing the target's neighbors before you start gives you a landing zone to aim at — and the middle of the ladder becomes a route to that zone.",
+          "Finally, avoid the dead ends. Words with rare letters or unusual patterns have few neighbors, and stepping onto them traps you. Good ladder-builders route around them — exactly the logic the solver's graph search applies."
+        ]
+      },
+      {
+        heading: "Word ladder variants and solver settings",
+        paragraphs: [
+          "Word ladders come in variants, and the solver handles the main ones. The classic four-letter ladder is the default, but the same logic applies to five-, six-, and seven-letter ladders — the graph just gets bigger and the paths longer.",
+          "Dictionary selection matters. The standard English dictionary is right for most puzzles, but some games use a themed or restricted list, and matching the solver's dictionary to the game's makes every rung valid.",
+          "The shortest-path guarantee is the solver's superpower: because it uses breadth-first search, the ladder it returns is provably minimal. No human shortcut exists for a shorter chain — a fact that settles the 'can you do it in fewer steps?' debate instantly.",
+          "Finally, use the solver's paths as a learning tool. Studying the routes between classic pairs — COLD to WARM, LOVE to HATE — teaches the vowel rotations, the consonant chains, and the bridge words that make you a better ladder-builder by hand."
+        ]
+      },
+    ],
+    faqHeading: "Word Ladder Solver FAQ",
+    faqs: [
+      {
+        question: "How does the word ladder solver work?",
+        answer:
+          "It builds a graph of English words where two words connect when they differ by exactly one letter, then runs a shortest-path search to find the minimum-step ladder between your words."
+      },
+      {
+        question: "What is the rule for a valid word ladder step?",
+        answer:
+          "Each step changes exactly one letter and must produce a real English word. You cannot change two letters or use made-up words."
+      },
+      {
+        question: "Is the solver's ladder always the shortest?",
+        answer:
+          "Yes. The solver uses breadth-first search, which guarantees the first path it finds is the minimum number of steps between the two words."
+      },
+      {
+        question: "Why do some ladders use unusual words?",
+        answer:
+          "Rare words sometimes form the only bridge between two regions of the word graph. The solver's path is still the shortest legal route, even when a rung is uncommon."
+      },
+      {
+        question: "Does the solver work for any word pair?",
+        answer:
+          "Yes, for any two words of the same length that exist in the dictionary. Some pairs are far apart in the graph, so their ladders are naturally long."
+      }
+    ],
+    relatedLinks: [
+      { href: "/weaver-solver", label: "Weaver Solver" },
+      { href: "/boggle-solver", label: "Boggle Solver" },
+      { href: "/hangman-solver", label: "Hangman Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'soundmap-solver': {
+    key: 'soundmap-solver',
+    eyebrow: 'Soundmap Artist Guesser Guide',
+    intro:
+      "Soundmap's Artist Guesser is the daily music challenge where you identify a mystery artist from clues — era, genre, chart position, and hints that tighten with every guess. The Soundmap solver narrows the artist pool with each clue, so you can crack the daily artist fast and learn the discography logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the Soundmap solver narrows the artist pool",
+        paragraphs: [
+          "The Artist Guesser gives you a series of clues about a mystery artist — their debut era, their primary genre, their chart peak, sometimes their collaborators. The solver treats every clue as a filter on the artist database, eliminating everyone who does not match.",
+          "Era clues are the coarsest and most powerful filter: knowing the artist debuted in the 1990s removes everyone from other decades. Genre narrows further, and chart peak, nationality, and collaborator hints finish the job.",
+          "The solver ranks the surviving candidates by how well they fit every clue, so the top of the list is your best next guess — and usually the answer itself."
+        ],
+        callout: {
+          title: "Every clue is a filter",
+          body: "Soundmap's hints are not decoration — each one eliminates a chunk of the artist pool. Feed them into the solver as they appear and the candidate list collapses fast."
+        }
+      },
+      {
+        heading: "A Soundmap solving strategy",
+        paragraphs: [
+          "Act on the first clue immediately. If the hint says the artist is from the 1980s, guess a 1980s superstar on move one — the feedback from a bold correct-era guess is worth more than a safe hedge.",
+          "Stack clues before guessing obscure artists. The early hints are broad, but the late hints are specific — a collaborator name or a signature album can make the answer obvious. Wait for the specific clues before you reach.",
+          "Think in artist careers, not just names. The game rewards knowing when an artist debuted, what they are known for, and who they worked with — the same knowledge that powers every music-trivia game."
+        ],
+        list: {
+          title: "Clues Soundmap tends to give",
+          items: [
+            "Debut decade or era",
+            "Primary genre or subgenre",
+            "Chart peak or hit songs",
+            "Nationality or scene",
+            "Notable collaborators or label"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Soundmap solver fixes",
+        paragraphs: [
+          "The biggest mistake is ignoring early clues. Players who guess randomly until the hints pile up waste moves that a bold era-aligned guess would have used productively. The solver filters from clue one.",
+          "The second mistake is over-fitting a single clue. An artist who matches the genre but debuted in the wrong decade is not the answer — every clue has to fit. The solver enforces all constraints simultaneously.",
+          "The third mistake is guessing the same artist repeatedly. When a candidate fails, the game's feedback usually tells you why; the solver drops eliminated artists permanently."
+        ]
+      },
+      {
+        heading: "Why the Soundmap solver page ranks in search",
+        paragraphs: [
+          "Soundmap players search for the daily artist and hints — 'soundmap artist guesser', 'soundmap solver' — and this page serves both the reveal and the solving strategy.",
+          "The guide also earns traffic from music fans who want to get better at artist-guessing games generally: the clue-stacking and era-first logic transfer to every music trivia game.",
+          "Bookmark it for the days the artist is a deep cut. The solver will find them, and the clue-stacking strategy will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "The music knowledge that wins Soundmap",
+        paragraphs: [
+          "Soundmap's Artist Guesser is won in the margins of music knowledge: debut decades, genre homes, and the collaborators who define an artist's sound. The players who solve fastest are the ones who can say 'this clue set describes someone who blew up in the 2010s with a pop-rap crossover' and start naming candidates from that description alone.",
+          "Build your mental index around eras first. Every decade has a short list of defining acts — the 1980s have their stadium giants, the 1990s their alterna-rock icons, the 2000s their pop machine. When a clue names a decade, your first guess should come from that era's shortlist, not from a name you happen to like.",
+          "Genre crossovers are the next layer. An artist described as 'country with pop production' or 'hip-hop with rock guitar' narrows the field dramatically, because crossover acts are rarer than pure genre acts. The solver's filter handles these overlaps precisely, but your recognition of 'this sounds like a crossover act' is what makes the top candidate click.",
+          "Collaborators are the final, sharpest clue. When a hint names a producer, a duet partner, or a label family, you are usually one step from the answer. Learning the common collaborator pairs — the super-producers and their signature artists — turns the last clue from a hint into a reveal."
+        ]
+      },
+      {
+        heading: "When to trust a clue versus when to guess",
+        paragraphs: [
+          "The skill that separates good Soundmap players from great ones is knowing when a clue set is complete enough to guess. Early clues are broad — a decade, a genre — and a guess made on them alone is a coin flip; late clues are specific — a collaborator, a signature album — and a guess made on them is usually a solve.",
+          "A practical rule: guess boldly on the first clue if it is an era, because the feedback from a bold era-aligned guess teaches you more than a safe hedge. Then wait for the specific clues before committing to an obscure artist.",
+          "Watch for the crossover tells. A clue that mentions two genres, or a nationality plus a genre, is the game hinting at a crossover act — and crossover acts are rare enough that naming the pool of them is usually enough to find the answer.",
+          "Finally, never repeat a failed guess. The feedback after a miss almost always tells you why — wrong era, wrong genre, wrong scene — and a second guess of the same artist wastes a turn the solver would use to filter. Trust the filter and move."
+        ]
+      },
+      {
+        heading: "Soundmap solver settings and daily use",
+        paragraphs: [
+          "The Soundmap solver is built around the Artist Guesser's clue structure, and a little setup makes it exact. Enter each clue as the game gives it — era, genre, chart peak, nationality, collaborators — and the solver filters the artist pool with every addition.",
+          "The clue-stacking discipline is the solver's core lesson. Each clue is a filter, and the order you enter them barely matters — what matters is entering them all before you guess an obscure artist. The solver never guesses without the full clue set, and neither should you.",
+          "The daily partnership works best when you guess boldly and check often. Make your move, add the new clue, and let the solver update the pool — the candidate list after clue three is usually short enough to finish.",
+          "Finally, use the solver's candidate list as a music-knowledge coach. Reading the artists that survive each filter teaches you the pool's shape — the eras, the genres, the crossover acts — and that awareness makes you faster even without the tool."
+        ]
+      },
+      {
+        heading: "Soundmap answers across the artist pool",
+        paragraphs: [
+          "The Soundmap daily artist pool has a recognizable shape, and knowing it is a solving advantage. The daily answer tends to be a recognizable artist — the popular, the iconic, the recently trending — rather than an obscure deep cut, so when you are down to two candidates, the famous artist wins almost every time.",
+          "The era rhythm is worth tracking. Some weeks lean heavily on one decade — the 1980s, the 1990s, the 2010s — and players who follow the pattern can pre-load the right era before the first clue lands.",
+          "The genre clusters are the second pattern. Pop, hip-hop, rock, and country answers rotate through the week, and knowing which genre the game favors tells you where to guess first.",
+          "Finally, the daily reveal is the learning loop. Checking today's artist after your solve shows you the clues you misread — the era you misjudged, the genre you overshot — and each review sharpens the music knowledge that compounds into faster solves."
+        ]
+      },
+    ],
+    faqHeading: "Soundmap Artist Guesser FAQ",
+    faqs: [
+      {
+        question: "How does the Soundmap solver work?",
+        answer:
+          "It treats every hint as a filter on the artist database — era, genre, chart peak, nationality, collaborators — and ranks the artists that satisfy all your clues."
+      },
+      {
+        question: "What clues does the Artist Guesser give?",
+        answer:
+          "Clues include debut era, primary genre, chart performance, nationality, and collaborators — each one narrowing the artist pool."
+      },
+      {
+        question: "What is a good first guess in Soundmap?",
+        answer:
+          "A bold guess that matches the first clue — if the hint says a decade, guess that decade's biggest superstar to maximize the feedback from move one."
+      },
+      {
+        question: "Does the solver work for the daily artist?",
+        answer:
+          "Yes — the solver filters the same artist pool the game draws from, so its candidates are always valid answers."
+      },
+      {
+        question: "What is the fastest way to get better?",
+        answer:
+          "Stack clues before guessing obscure artists, act on era hints immediately, and learn the careers behind the names — debut decade, genre, and collaborators."
+      }
+    ],
+    relatedLinks: [
+      { href: "/spotle-solver", label: "Spotle Solver" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/framed-answer-today", label: "Framed Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" }
+    ]
+  },
+
+  'all-wordle-solver': {
+    key: 'all-wordle-solver',
+    eyebrow: 'All Wordle Solver Guide',
+    intro:
+      "Every Wordle variant — the original five-letter daily, the six-letter, seven-letter, and custom-length versions, plus the endless practice mode — uses the same core rules: guess a word, read the green, yellow, and gray tiles, and narrow the answer. The Wordle solver works across all of them, filtering the dictionary by every clue so you can solve any length, any day. Here is how it works and the strategy that works at every length.",
+    sections: [
+      {
+        heading: "How the Wordle solver works at any length",
+        paragraphs: [
+          "Wordle's feedback is the same at every length: green means the letter is right and in place, yellow means it is in the word but misplaced, gray means it is not in the word at all. The solver maintains a dictionary filtered by those verdicts.",
+          "The solver scales naturally to any word length — five letters, six letters, seven, or custom — because the filtering logic does not depend on the length, only on the clues. Longer words have bigger dictionaries, but the same rules apply.",
+          "Every guess narrows the candidate list: greens lock positions, yellows relocate letters, grays ban them. The solver applies all the clues simultaneously, so by guess three or four the answer is usually down to a handful of words."
+        ],
+        callout: {
+          title: "Length does not change the rules",
+          body: "Green locks, yellow relocates, gray bans — at five letters, six letters, or ten. Master the feedback logic once and every Wordle variant opens up."
+        }
+      },
+      {
+        heading: "The opener that works everywhere",
+        paragraphs: [
+          "A good opener covers the most common letters regardless of length: vowels plus the frequent consonants R, S, T, N. In five-letter Wordle, CRANE or SLATE; in six, CRANES or SLATER; in seven, RANCETS or SLATER'S. The principle — vowels plus common consonants, no repeats — is universal.",
+          "The first guess is information-gathering, not a solve attempt. Its job is to tell you which of the common letters the answer contains, and the best openers maximize that information.",
+          "After the opener, every guess should add at least one new letter to your picture. Confirmed green letters stay fixed; yellow letters move; gray letters disappear. The solver does all of this bookkeeping for you, but understanding it makes you faster even without the tool."
+        ],
+        list: {
+          title: "Universal opener principles",
+          items: [
+            "Two or three vowels, including a high-frequency vowel",
+            "Common consonants: R, S, T, N, L",
+            "No repeated letters in the first guess",
+            "Vary the opener occasionally so you see different feedback"
+          ]
+        }
+      },
+      {
+        heading: "A solve at any length, step by step",
+        paragraphs: [
+          "Open with a common-letter word. Suppose the game returns green on the first letter and yellow on the second, with the rest gray. The solver instantly knows the answer starts with that letter, contains the second letter elsewhere, and avoids all the grayed letters.",
+          "Your second guess should keep the green and relocate the yellow while sweeping fresh common letters. The feedback tightens: now you know the second letter's new position is wrong too, and the answer's shape is emerging.",
+          "By guess three, the pattern usually matches a short list of dictionary words. Pick the most common one, and the puzzle is solved with guesses to spare — at five letters or ten."
+        ]
+      },
+      {
+        heading: "Common mistakes the Wordle solver prevents",
+        paragraphs: [
+          "The classic mistake is repeating a gray letter. Once a letter is confirmed absent, every guess that includes it wastes a slot. The solver never suggests a word containing a banned letter.",
+          "The second mistake is locking a yellow letter too early. Yellow means 'in the word, wrong place' — you have to move it. Players who keep the yellow letter in the same spot chase the same wrong pattern.",
+          "The third mistake is ignoring letter frequency late in the game. When the candidate list is short, the answer is usually the most common word fitting the pattern. The solver ranks candidates by likelihood, not just validity."
+        ]
+      },
+      {
+        heading: "Why this solver page ranks in search",
+        paragraphs: [
+          "'Wordle solver', '5 letter wordle solver', and 'wordle helper' are searched thousands of times a day, and this page answers the full range — the solver itself plus the strategy that works at every word length.",
+          "The guide also serves learners: the feedback logic, opener principles, and letter-frequency reasoning are the same skills that make players good at Wordle without any tool.",
+          "Bookmark it for the days the answer is stubborn. The solver will crack it, and the strategy above will make you a sharper guesser at every length, every day."
+        ]
+      },
+      {
+        heading: "Wordle variants and how the solver adapts",
+        paragraphs: [
+          "The Wordle family is larger than most players realize: the daily five-letter original, the six- and seven-letter variants, the custom-length solvers, the quordle multi-board versions, and the endless practice modes all run on the same green-yellow-gray feedback. The one thing that changes is the dictionary size and the word length.",
+          "Longer words change your opener strategy. In five-letter Wordle, a vowel-heavy opener like CRANE is ideal; in six letters, CRANES or SLATER covers the same letters plus a bonus; in seven, RANCETS or TRANCES extends the pattern. The principle — vowels plus common consonants, no repeats — scales to every length.",
+          "Multi-board variants like Quordle change the information economy. With four boards, a single guess produces four sets of feedback, and the solver's job is to pick the word that helps the most boards at once. The solver treats all four verdicts as simultaneous constraints, which is exactly how a human player should think too.",
+          "Practice modes are where the solver's real value shows. Endless play lets you test openers, compare strategies, and measure your average guess count — and running the solver alongside teaches you which of your habits cost you moves."
+        ]
+      },
+      {
+        heading: "Wordle solver setup for your exact variant",
+        paragraphs: [
+          "The solver works out of the box for every Wordle variant, but a little setup makes it faster. Set your word length first — five, six, seven, or custom — so the dictionary matches your game. Then choose your mode: daily, practice, or archive. The filtering logic is identical; only the pool changes.",
+          "For daily play, run the solver alongside your game: make your guess, enter the feedback, and let it suggest the next move. Most players solve in three or four guesses with this rhythm, and the solver's candidate list teaches you which openers earn their keep.",
+          "For practice mode, use the solver as a sparring partner. Solve as far as you can on your own, then compare your reasoning to the solver's candidate list — the divergence is almost always a lesson about letter frequency or pattern matching.",
+          "Finally, use the archive for study. Running past answers through the solver reveals the pool's tendencies — the common vowels, the everyday vocabulary, the repeat letters — and that knowledge transfers directly to faster daily solves."
+        ]
+      },
+      {
+        heading: "Wordle solver glossary and feedback reference",
+        paragraphs: [
+          "A quick glossary makes the solver — and the game — clearer. Green locks a letter in place; yellow places it in the word but mislocates it; gray bans it entirely. The solver applies all three absolutely, and so should you.",
+          "The candidate list is the solver's live dictionary: every word that matches your clues, ranked by likelihood. Reading it after each guess shows you exactly which letters are doing the work and which are still in play.",
+          "The opener is your first guess — the information-gathering move that covers the common letters. The midgame is the narrowing phase, where each guess adds constraints. The endgame is the pattern-match, where the pool is short and the most common word usually wins.",
+          "Finally, keep the variant in mind. Five-letter daily Wordle, six-letter variants, and multi-board Quordle all share the feedback rules but differ in dictionary size — and the solver adapts to each, exactly as your strategy should."
+        ]
+      },
+    ],
+    faqHeading: "Wordle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Wordle solver work?",
+        answer:
+          "It filters a dictionary by your green, yellow, and gray tiles — locking greens, relocating yellows, banning grays — until the candidate list narrows to the answer."
+      },
+      {
+        question: "Does the solver work for different word lengths?",
+        answer:
+          "Yes. The filtering logic is identical at every length, from five-letter daily Wordle to six-, seven-, and custom-length variants."
+      },
+      {
+        question: "What is a good first Wordle guess?",
+        answer:
+          "A word with two or three vowels, common consonants like R, S, T, and N, and no repeated letters — CRANE and SLATE are the classic openers."
+      },
+      {
+        question: "What does each tile color mean in Wordle?",
+        answer:
+          "Green means the letter is correct and in place, yellow means it is in the word but misplaced, and gray means it is not in the word at all."
+      },
+      {
+        question: "Can the solver solve the daily Wordle?",
+        answer:
+          "Yes. The solver works on the daily puzzle and any variant, usually narrowing to a handful of candidates within three or four guesses."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/5-letter-wordle-solver", label: "5 Letter Wordle Solver" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" }
+    ]
+  },
+
+  'smashdle-solver': {
+    key: 'smashdle-solver',
+    eyebrow: 'Smashdle Solver Guide',
+    intro:
+      "Smashdle is the daily Super Smash Bros. guessing game where you identify a mystery fighter using attributes like universe, weight class, and jump count — across Classic, Emoji, Silhouette, Final Smash, and Kirby Copy modes. The Smashdle solver filters the entire Ultimate roster with every clue, so you can crack the daily fighter fast and learn the roster logic the game rewards. Here is how it works and the strategy that wins most days by guess four.",
+    sections: [
+      {
+        heading: "How the Smashdle solver narrows the roster",
+        paragraphs: [
+          "Smashdle scores your guessed fighter against the answer across attributes — universe, weight class, jump count, and more — with green, yellow, and gray verdicts per attribute. The solver applies those verdicts to the full Ultimate roster, eliminating every fighter that contradicts a single clue.",
+          "Universe is the sharpest filter. The roster spans Mario, Zelda, Kirby, Pokémon, and dozens of third-party franchises, and locking the universe can cut the pool by 90 percent in one move.",
+          "Weight class and jump count are the tiebreakers. Two fighters from the same universe often share a weight class, so the solver uses the rarer attributes — jump count, final smash type — to split the survivors."
+        ],
+        callout: {
+          title: "Universe first, stats second",
+          body: "Nail the universe with your first guess, then use weight, jumps, and final smash to split the survivors. That two-stage filter is the whole game."
+        }
+      },
+      {
+        heading: "The Smashdle modes and how they change play",
+        paragraphs: [
+          "Classic mode gives you the standard attribute grid — universe, weight, jumps. Emoji and Silhouette modes test visual recognition instead, showing you the fighter's icon or outline and letting your knowledge of the roster do the work.",
+          "Final Smash mode reveals the fighter's special move, which is often the fastest solve in the game: every Final Smash is tied to its fighter, and recognizing 'the beam that turns everyone into trophies' is an instant answer.",
+          "Kirby Copy mode shows the ability Kirby copies from the fighter — a hat, a power, a signature weapon. Each mode rewards a different kind of roster knowledge, and the solver's filtering logic works across all of them."
+        ],
+        list: {
+          title: "Smashdle modes at a glance",
+          items: [
+            "Classic — attribute grid: universe, weight, jumps, and more",
+            "Emoji — identify the fighter from their emoji icon",
+            "Silhouette — identify the fighter from their outline",
+            "Final Smash — identify the fighter from their special move",
+            "Kirby Copy — identify the fighter from Kirby's copied ability"
+          ]
+        }
+      },
+      {
+        heading: "A real Smashdle solve, step by step",
+        paragraphs: [
+          "Open with a fighter you know well — Mario, Link, or Kirby — because the feedback on a familiar fighter is easy to read. Suppose the game returns green on universe, yellow on weight, and gray on jumps: you now know the answer's universe, and you have ruled out the jump count entirely.",
+          "Your second guess should be a fighter from the confirmed universe whose weight differs from your opener. The yellow weight tells you which direction to move, and the solver's list of surviving universe-mates guides the pick.",
+          "By guess three, the roster is usually down to a handful of fighters from one universe, and the remaining attribute — Final Smash type, or a specific weight class — settles it. Most Classic solves finish by guess four."
+        ]
+      },
+      {
+        heading: "Common mistakes the Smashdle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across universes instead of confirming one. Players who bounce between Mario, Pokémon, and Zelda fighters never lock a universe, so the pool never collapses. The solver forces universe confirmation first.",
+          "The second mistake is ignoring jump count. Jumps are the rarest discriminator — most fighters have one, a handful have two or three — so a jump verdict eliminates nearly the entire roster instantly. Players underuse it.",
+          "The third mistake is forgetting the DLC fighters. Kazuya, Sephiroth, Sora, and Pyra/Mythra come from franchises many players do not know, which makes them sneaky answers. The solver's roster includes every DLC fighter, so its candidates are always valid."
+        ]
+      },
+      {
+        heading: "Why the Smashdle solver page ranks in search",
+        paragraphs: [
+          "Smashdle is searched every day — 'smashdle', 'smashdle answers', 'smashdle answers today' — and this page serves the players who want to solve the daily fighter with a smarter process: the attribute filtering and mode strategy are exactly what they need.",
+          "The guide also earns traffic from Smash fans who want to improve: the universe-first strategy and roster knowledge tips transfer to every mode and to the actual game.",
+          "Bookmark it for the days the answer is a deep-cut DLC fighter. The solver will find them, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "Learning the Smash roster like the solver does",
+        paragraphs: [
+          "Smashdle is won by players who can enumerate the roster by attribute instead of by memory. The most useful mental index is by universe: Mario, Zelda, Pokémon, Kirby, Fire Emblem, and the third-party guests each form a recognizable cluster, and being able to list a universe's fighters on demand turns a green universe verdict into a near-solve.",
+          "Weight class is the second index. Ultimate's fighters span featherweight to super heavyweight, and knowing which fighters sit at the extremes — Jigglypuff at the light end, Bowser and K. Rool at the heavy end — lets a single weight verdict eliminate half the roster.",
+          "Jump count is the secret weapon. Most fighters have one jump; a handful have two or more, and the multi-jump club — Kirby, Meta Knight, Pit, King Dedede — is small enough to enumerate from memory. A jump verdict that is not 'one' usually lands on a name instantly.",
+          "Finally, learn the Final Smash roster. Every fighter's special is unique, and the Final Smash mode becomes a two-second solve for anyone who knows the iconic moves — the beam, the transformation, the cutscene-style finishers that the game loves to feature."
+        ]
+      },
+      {
+        heading: "Smashdle daily answers and the roster's habits",
+        paragraphs: [
+          "The Smashdle daily answers reveal the roster's habits, and those habits are a solving advantage. The daily puzzle tends to feature recognizable fighters — the iconic, the popular, the recently added — rather than obscure echo fighters, so when you are down to two candidates, the famous fighter wins almost every time.",
+          "The modes rotate through the week, and each mode rewards a different kind of knowledge. Classic tests attributes; Emoji and Silhouette test visual recognition; Final Smash tests move memory; Kirby Copy tests ability knowledge. Players who practice all five modes build the complete roster knowledge that makes every mode faster.",
+          "The universe bias is worth tracking. Some weeks lean Nintendo-heavy, others lean third-party — and players who follow the pattern can pre-load the right franchise before the first clue lands.",
+          "Finally, the daily reveal is the learning loop. Checking today's fighter after your solve shows you the attributes you misjudged, and each review sharpens the roster knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "Smashdle solver settings and the roster dictionary",
+        paragraphs: [
+          "The Smashdle solver is built around the Ultimate roster, and a little setup makes it precise. Enter the attribute feedback — universe, weight, jumps, Final Smash — and the solver filters the full roster with every clue.",
+          "The roster coverage is the solver's core strength. Its fighter list includes every universe and every DLC addition — Kazuya, Sephiroth, Sora, Pyra/Mythra — so its candidates are always valid answers, and its filtering never misses a fighter you have forgotten.",
+          "The mode awareness is the solver's second strength. It works across Classic, Emoji, Silhouette, Final Smash, and Kirby Copy — because the underlying roster logic is the same, only the clue type changes.",
+          "Finally, use the solver as a roster coach. Watching it filter the fighters teaches you which universes hold which fighters, which weight classes cluster where, and which Final Smashes belong to whom — and that knowledge makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "Smashdle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Smashdle solver work?",
+        answer:
+          "It applies your attribute verdicts — universe, weight, jumps, and more — to the full Ultimate roster, eliminating every fighter that contradicts a clue until the answer is the only candidate left."
+      },
+      {
+        question: "What are the Smashdle modes?",
+        answer:
+          "Classic (attribute grid), Emoji, Silhouette, Final Smash, and Kirby Copy — each testing a different kind of fighter knowledge, all solvable with the same filtering logic."
+      },
+      {
+        question: "How many fighters are in the Smashdle pool?",
+        answer:
+          "The full Super Smash Bros. Ultimate roster — over 80 fighters including every DLC addition like Kazuya, Sephiroth, Sora, and Pyra/Mythra."
+      },
+      {
+        question: "What is the best first guess in Smashdle?",
+        answer:
+          "A fighter you know well — Mario, Link, or Kirby — because the feedback on a familiar fighter is easy to read and the universe verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past Smashdle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'loldle-solver': {
+    key: 'loldle-solver',
+    eyebrow: 'LoLdle Solver Guide',
+    intro:
+      "LoLdle is the daily League of Legends guessing game where you identify a mystery champion from attributes like region, role, gender, species, and resource type — in Classic, Ability, Emoji, and Splash Art modes. The LoLdle solver filters the entire champion roster with every clue, so you can crack the daily champion fast and learn the lore logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the LoLdle solver narrows the champion pool",
+        paragraphs: [
+          "LoLdle scores your guessed champion against the answer across attributes — region, role, gender, species, resource — with green, yellow, and gray verdicts. The solver applies those verdicts to the full champion roster, eliminating every champion that contradicts any clue.",
+          "Region is the strongest filter. League's world spans Demacia, Noxus, Piltover, Zaun, Ionia, and a dozen more regions, and locking the region can cut the pool by three-quarters in one move.",
+          "Role and resource are the tiebreakers. Two champions from the same region often share a role, so the solver uses the rarer attributes — species, gender, release year — to split the survivors.",
+        ],
+        callout: {
+          title: "Region first, role second",
+          body: "Lock the region with your first guess, then use role, resource, and species to split the survivors. That staged filter is the fastest path to the answer."
+        }
+      },
+      {
+        heading: "The LoLdle modes and their logic",
+        paragraphs: [
+          "Classic mode gives you the full attribute grid — region, role, gender, species, resource — and rewards champions you know in detail. Ability mode shows the champion's ability icon and tests your memory of every kit in the game.",
+          "Emoji mode is a visual game: the champion is represented by a small set of emojis that encode their lore and gameplay. Recognizing 'the masked shadow assassin' from a mask emoji is the fastest possible solve.",
+          "Splash Art mode reveals a tiny crop of the champion's splash art and tests how well you know the game's art. Each mode rewards a different kind of knowledge, and the solver's filtering works across all of them."
+        ],
+        list: {
+          title: "LoLdle modes at a glance",
+          items: [
+            "Classic — full attribute grid: region, role, gender, species, resource",
+            "Ability — identify the champion from their ability icons",
+            "Emoji — identify the champion from lore-based emoji",
+            "Splash Art — identify the champion from a crop of their splash art"
+          ]
+        }
+      },
+      {
+        heading: "A real LoLdle solve, step by step",
+        paragraphs: [
+          "Open with a champion you know cold — Ahri, Garen, or Yasuo — because the feedback on a familiar champion is easy to read. Suppose the game returns green on region, yellow on role, and gray on species: you now know the region, and the species verdict eliminates entire classes of champions.",
+          "Your second guess should be a champion from the confirmed region with a different role and species, which the solver's surviving list makes easy to pick.",
+          "By guess three, the pool is usually down to a handful of champions from one region, and the remaining attribute — resource type or gender — settles it. Most Classic solves finish by guess four or five."
+        ]
+      },
+      {
+        heading: "Common mistakes the LoLdle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across regions. Players who bounce between champions from different parts of Runeterra never lock a region, so the pool never collapses. The solver forces region confirmation first.",
+          "The second mistake is ignoring species. Species — human, spirit, void-born, undead — is a coarse filter that eliminates whole classes instantly. Players underuse it because they focus on role.",
+          "The third mistake is forgetting that some champions share everything but their release year. When two champions match every clue, the solver's candidate ranking — which weighs recent releases — breaks the tie."
+        ]
+      },
+      {
+        heading: "Why the LoLdle solver page ranks in search",
+        paragraphs: [
+          "LoLdle players search for the daily champion and answers — 'loldle answers', 'loldle answers today' — and this page serves the players who want to solve with a smarter process: the attribute filtering and region-first strategy are exactly what they need.",
+          "The guide also earns traffic from League fans who want to improve: the lore-based attribute knowledge transfers to every mode and to the game itself.",
+          "Bookmark it for the days the answer is a champion you have never played. The solver will find them, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "Building your LoLdle attribute memory",
+        paragraphs: [
+          "The fastest way to improve at LoLdle is to build a mental table of the champion pool sorted by the attributes the game tests. Start with regions: Demacia, Noxus, Ionia, Piltover and Zaun, the Shadow Isles, Targon, the Void, and the rest. Being able to say 'that champion is from Ionia' on sight halves the pool before you ever see the feedback.",
+          "Then layer roles on top of regions. Most regions have a recognizable cast of roles — Ionia has its duelists and mages, Noxus its brawlers and assassins, Piltover its inventors and marksmen. When a clue confirms a region, run through that region's role list and you are usually looking at a shortlist of five or six names.",
+          "The third layer is species and gender, which players chronically underuse. Species — human, vastaya, spirit, void-born, undead — is a coarse filter that eliminates whole classes instantly. A human champion can never be a vastaya, and confirming 'not human' removes most of the pool in one verdict.",
+          "Finally, learn the resource system: mana, energy, rage, and resource-less champions. It is the attribute that most resembles trivia — players know it less than they think — but it is also one of the most discriminating, because champions sharing a region and role rarely share a resource type."
+        ]
+      },
+      {
+        heading: "The LoLdle daily rhythm, mastered",
+        paragraphs: [
+          "LoLdle's daily puzzle follows a rhythm that players learn to ride. The first guess should be a champion you know in detail — the feedback on a familiar champion is easy to read, and the region verdict is the strongest filter. The second guess should come from the confirmed region with a different role or species. The third usually lands on a shortlist.",
+          "The daily answers also reveal the pool's bias. League's roster is huge, but the daily puzzle tends to feature recognizable champions — the popular, the iconic, the recently reworked — rather than deep-cut fillers. When you are down to two candidates, the famous champion wins almost every time.",
+          "The modes rotate, and each mode rewards a different knowledge. Classic tests attributes; Ability tests kit memory; Emoji tests lore; Splash Art tests art recognition. Players who practice all four modes build the complete champion knowledge that makes every mode faster.",
+          "Finally, the daily reveal is the learning loop. Checking today's champion after your solve shows you the attributes you misjudged — and each review sharpens the roster knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "LoLdle solver settings and the champion dictionary",
+        paragraphs: [
+          "The LoLdle solver is built around the champion roster, and a little setup makes it precise. Enter the attribute feedback — region, role, gender, species, resource — and the solver filters the full champion pool with every clue.",
+          "The roster coverage is the solver's core strength. Its champion list includes every region of Runeterra, every role, and every species — so its candidates are always valid answers, and its filtering never misses a champion you have forgotten exists.",
+          "The attribute hierarchy is the solver's lesson. It treats region as the strongest filter, then role, then species and gender — and players who copy that hierarchy — locking the region before anything else — solve in half the guesses.",
+          "Finally, use the solver as a lore coach. Watching it filter the roster teaches you which champions live in which regions, which roles they play, and which species they belong to — and that knowledge makes you faster even without the tool."
+        ]
+      },
+    ],
+    faqHeading: "LoLdle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the LoLdle solver work?",
+        answer:
+          "It applies your attribute verdicts — region, role, gender, species, and resource — to the full champion roster, eliminating every champion that contradicts a clue until the answer remains."
+      },
+      {
+        question: "What are the LoLdle modes?",
+        answer:
+          "Classic (attribute grid), Ability (ability icons), Emoji (lore-based emoji), and Splash Art (cropped splash art) — each testing a different kind of champion knowledge."
+      },
+      {
+        question: "How many champions are in the LoLdle pool?",
+        answer:
+          "The pool covers the full League of Legends roster — over 160 champions across every region of Runeterra, including all recent releases."
+      },
+      {
+        question: "What is the best first guess in LoLdle?",
+        answer:
+          "A champion you know in detail — Ahri, Garen, or Yasuo — because the feedback on a familiar champion is easy to read and the region verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past LoLdle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'pokedle-solver': {
+    key: 'pokedle-solver',
+    eyebrow: 'Pokedle Solver Guide',
+    intro:
+      "Pokedle is the daily Pokémon guessing game where you identify a mystery Pokémon from attributes like type, generation, height, weight, and evolution stage. The Pokedle solver filters the entire Pokédex with every clue, so you can crack the daily Pokémon fast and learn the dex logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the Pokedle solver narrows the Pokédex",
+        paragraphs: [
+          "Pokedle scores your guessed Pokémon against the answer across attributes — type, generation, height, weight, evolution — with green, yellow, and gray verdicts. The solver applies those verdicts to the full Pokédex, eliminating every Pokémon that contradicts a single clue.",
+          "Type is the strongest filter. With eighteen types and the dual-type combinations, a confirmed type can cut the dex by more than half in one move.",
+          "Height and weight are the tiebreakers. Two Pokémon of the same type and generation often differ in size, so the solver uses the numeric attributes — and their yellow proximity windows — to split the survivors.",
+        ],
+        callout: {
+          title: "Type first, numbers second",
+          body: "Lock the type with your first guess, then use generation, height, and weight to split the survivors. That staged filter is the fastest path to the answer."
+        }
+      },
+      {
+        heading: "A real Pokedle solve, step by step",
+        paragraphs: [
+          "Open with a Pokémon you know cold — Pikachu, Charizard, or Eevee — because the feedback on a familiar Pokémon is easy to read. Suppose the game returns green on type, yellow on height, and gray on generation: you now know the type, and the generation verdict eliminates entire eras of the dex.",
+          "Your second guess should be a Pokémon of the confirmed type with a different size and generation, which the solver's surviving list makes easy to pick.",
+          "By guess three, the pool is usually down to a handful of Pokémon of one type, and the remaining attribute — weight or evolution stage — settles it. Most solves finish by guess four or five."
+        ]
+      },
+      {
+        heading: "The numeric attributes and their windows",
+        paragraphs: [
+          "Height and weight are continuous, so Pokedle gives proximity feedback: yellow means the answer is within a set window of your guess's value. The solver encodes those exact windows, so a yellow height genuinely tells you the answer is close in size.",
+          "This proximity logic is the most underused skill in Pokedle. Players treat a yellow height as a vague 'sort of close', when it actually pins the answer to a narrow size band.",
+          "Generation is categorical and coarse — one of nine eras — making it the second-best filter after type. Confirming the generation eliminates four-fifths of the dex immediately."
+        ],
+        list: {
+          title: "Pokedle attributes at a glance",
+          items: [
+            "Type — the strongest filter, with dual-type combinations",
+            "Generation — one of nine eras, coarse and powerful",
+            "Height — numeric, with a yellow proximity window",
+            "Weight — numeric, with a yellow proximity window",
+            "Evolution stage — basic, middle, or final form"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Pokedle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across types. Players who bounce between different types never lock the strongest filter, so the pool never collapses. The solver forces type confirmation first.",
+          "The second mistake is ignoring the proximity windows. A yellow height is a precise band, not a vague hint — the solver treats it as a hard numeric constraint.",
+          "The third mistake is forgetting evolution stage. Stage is a clean three-way split — basic, middle, final — that players routinely ignore, and confirming it early can halve the remaining pool."
+        ]
+      },
+      {
+        heading: "Why the Pokedle solver page ranks in search",
+        paragraphs: [
+          "Pokedle players search for the daily answer — 'pokedle answers', 'pokedle answer today' — and this page serves the players who want to solve with a smarter process: the type-first filtering and proximity logic are exactly what they need.",
+          "The guide also earns traffic from Pokémon fans who want to improve: the dex knowledge and attribute strategy transfer to every mode and to the games themselves.",
+          "Bookmark it for the days the answer is an obscure dex entry. The solver will find it, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "Pokémon facts that end Pokedle quickly",
+        paragraphs: [
+          "Pokedle rewards the kind of Pokédex knowledge that sits at the intersection of type and shape. The fastest players think in type families first: the starters, the fossil lines, the legendaries, the Eeveelutions each form recognizable groups, and a confirmed type plus a generation hint usually lands inside one of those groups.",
+          "Height and weight are the underused precision tools. Most players know that Onix is tall and Snorlax is heavy, but the game's yellow windows make the numbers precise: a yellow height is a band, not a vibe. When the solver says the answer is within a few centimeters of your guess, the candidate list is down to a handful of similar-sized Pokémon.",
+          "Evolution stage is the cleanest binary you are ignoring. Basic, middle, and final forms split the dex into three bands, and confirming the stage eliminates two-thirds of all Pokémon in one verdict. Players who check stage early solve faster than players who only chase types.",
+          "Finally, remember that regional forms and cross-generation evolutions exist. A hint that fits a Kanto Pokémon might actually point at its Hisuian or Galarian form — the solver's dex includes all of them, and knowing they exist keeps you from discarding the right answer."
+        ]
+      },
+      {
+        heading: "Reading Pokedle feedback like a dex tracker",
+        paragraphs: [
+          "Pokedle's feedback is a dex-entry in motion: each verdict narrows the Pokédex toward the answer. The type verdict is the biggest filter, but the way it lands matters — a yellow type means the answer shares a type family, like fire for a fire-fighting dual type, and players who only read green and gray miss the family connections.",
+          "The numeric attributes are precision tools. Height and weight come back with yellow proximity windows, and a yellow height is a band — the answer is within a set range of your guess. When the solver says 'close in height', the candidate list is small, and the answer is usually a Pokémon of similar stature.",
+          "Generation is the era filter. Nine generations of Pokémon form distinct pools, and confirming the generation eliminates eight-ninths of the dex. Players who skip generation hints in favor of types are missing the second-best filter in the game.",
+          "Finally, keep the form variants in mind. Alolan, Galarian, Hisuian, and Paldean forms share names with their originals but differ in type and stats — and the solver's dex includes them all, so a hint that 'fits' a Kanto Pokémon might actually point at its regional form."
+        ]
+      },
+      {
+        heading: "Pokedle daily answers and the dex's habits",
+        paragraphs: [
+          "Pokedle's daily answers reveal the Pokédex's habits, and those habits are a solving advantage. The daily puzzle tends to feature recognizable Pokémon — the iconic, the popular, the recently featured — rather than obscure dex fillers, so when you are down to two candidates, the famous Pokémon wins almost every time.",
+          "The type rhythm is worth tracking. Some weeks lean fire and water, others psychic and ghost — and players who follow the pattern can pre-load the right type before the first clue lands.",
+          "The generation bias is the community's shared reference. Knowing which generations the game favors tells you where to guess first, and the daily reveals keep that knowledge fresh.",
+          "Finally, the daily reveal is the learning loop. Checking today's Pokémon after your solve shows you the attributes you misjudged, and each review sharpens the dex knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "Pokedle answer types and generations",
+        paragraphs: ["Pokedle answers are Pokemon, and the daily puzzle spans all generations — so the solver’s filters cover type, generation, height, weight, and the other attributes the game uses for its clues.","The generation filter is the fastest cut: locking a generation narrows the pool to a few hundred candidates, and adding the type usually finishes the job. The solver applies those filters in real time, so the candidate list shrinks with every clue you enter.","Whether the daily Pokemon is a Kanto classic or a Paldea newcomer, the solver’s pool covers it."]
+      }
+    ],
+    faqHeading: "Pokedle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Pokedle solver work?",
+        answer:
+          "It applies your attribute verdicts — type, generation, height, weight, and evolution — to the full Pokédex, eliminating every Pokémon that contradicts a clue until the answer remains."
+      },
+      {
+        question: "What attributes does Pokedle use?",
+        answer:
+          "Type, generation, height, weight, and evolution stage — with green, yellow, and gray verdicts for each, including proximity windows on the numeric attributes."
+      },
+      {
+        question: "How many Pokémon are in the Pokedle pool?",
+        answer:
+          "The pool covers the full national Pokédex — over a thousand Pokémon across all nine generations, including regional forms and evolutions."
+      },
+      {
+        question: "What is the best first guess in Pokedle?",
+        answer:
+          "A Pokémon you know cold — Pikachu, Charizard, or Eevee — because the feedback on a familiar Pokémon is easy to read and the type verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past Pokedle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'narutodle-solver': {
+    key: 'narutodle-solver',
+    eyebrow: 'Narutodle Solver Guide',
+    intro:
+      "Narutodle is the daily Naruto guessing game where you identify a mystery character from attributes like village, clan, rank, and jutsu type. The Narutodle solver filters the entire shinobi roster with every clue, so you can crack the daily character fast and learn the lore logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the Narutodle solver narrows the roster",
+        paragraphs: [
+          "Narutodle scores your guessed character against the answer across attributes — village, clan, rank, and jutsu — with green, yellow, and gray verdicts. The solver applies those verdicts to the full character roster, eliminating every shinobi that contradicts any clue.",
+          "Village is the strongest filter. The world spans Konoha, Suna, Kiri, Kumo, Iwa, and the Akatsuki, and locking the village can cut the pool by two-thirds in one move.",
+          "Clan and rank are the tiebreakers. Two shinobi from the same village often share a rank, so the solver uses the rarer attributes — clan, jutsu type — to split the survivors.",
+        ],
+        callout: {
+          title: "Village first, clan second",
+          body: "Lock the village with your first guess, then use clan, rank, and jutsu to split the survivors. That staged filter is the fastest path to the answer."
+        }
+      },
+      {
+        heading: "A real Narutodle solve, step by step",
+        paragraphs: [
+          "Open with a character you know cold — Naruto, Sasuke, or Kakashi — because the feedback on a familiar character is easy to read. Suppose the game returns green on village, yellow on rank, and gray on clan: you now know the village, and the clan verdict eliminates entire family lines.",
+          "Your second guess should be a character from the confirmed village with a different clan and rank, which the solver's surviving list makes easy to pick.",
+          "By guess three, the pool is usually down to a handful of shinobi from one village, and the remaining attribute — jutsu type or rank — settles it. Most solves finish by guess four or five."
+        ]
+      },
+      {
+        heading: "The lore attributes and how to read them",
+        paragraphs: [
+          "Village and clan are categorical: either the character belongs or they do not, with no proximity. That makes them the cleanest filters, and the solver treats them as hard exclusions.",
+          "Rank is a coarse scale — Genin, Chunin, Jonin, Kage, and the special ranks like Anbu — which splits the roster into tiers. Confirming the rank eliminates everyone outside it.",
+          "Jutsu type tests how well you know the moves: taijutsu, ninjutsu, genjutsu, and the signature kekkei genkai abilities. It is the finest filter, and the solver uses it to break ties between otherwise-identical candidates."
+        ],
+        list: {
+          title: "Narutodle attributes at a glance",
+          items: [
+            "Village — Konoha, Suna, Kiri, Kumo, Iwa, Akatsuki, and more",
+            "Clan — Uchiha, Uzumaki, Hyuga, Nara, and the rest",
+            "Rank — Genin through Kage, plus special ranks",
+            "Jutsu type — taijutsu, ninjutsu, genjutsu, kekkei genkai"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Narutodle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across villages. Players who bounce between Konoha and Akatsuki characters never lock the strongest filter, so the pool never collapses. The solver forces village confirmation first.",
+          "The second mistake is ignoring clan. Clan is a precise categorical filter that eliminates entire family lines instantly. Players underuse it because they focus on rank.",
+          "The third mistake is forgetting the filler and movie characters. The roster is bigger than the main cast, and obscure characters are sneaky answers. The solver's list includes the full roster, so its candidates are always valid."
+        ]
+      },
+      {
+        heading: "Why the Narutodle solver page ranks in search",
+        paragraphs: [
+          "Narutodle players search for the daily answer — 'narutodle answers', 'narutodle answers today' — and this page serves the players who want to solve with a smarter process: the village-first filtering and clan logic are exactly what they need.",
+          "The guide also earns traffic from Naruto fans who want to improve: the lore knowledge and attribute strategy transfer to every mode and to the series itself.",
+          "Bookmark it for the days the answer is a deep-cut side character. The solver will find them, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "Naruto roster knowledge that solves fast",
+        paragraphs: [
+          "Narutodle rewards knowing the ninja world's organization chart. The villages are the biggest filter — Konoha holds the main cast, Suna holds the sand siblings, Kiri the swordsmen, Kumo the jinchuriki hosts — so associating a village with its famous shinobi lets you jump straight to the right neighborhood.",
+          "Clans are the next layer of shorthand. Uchiha, Uzumaki, Hyuga, Nara, Akimichi, and Inuzuka each have a handful of members, and knowing which clan belongs to which village collapses the candidate list immediately. A green clan verdict with a known village is often a one-guess solve.",
+          "Rank is the coarse tier everyone forgets. Genin, Chunin, Jonin, Kage, and the special classes like Anbu split the roster into clear bands, and confirming the rank eliminates everyone outside it. Players who never consider rank are missing a filter that works on every single puzzle.",
+          "Finally, keep the era in mind. Characters from Part I, Shippuden, and the Boruto era are distinct sets, and a 'debut era' hint — when the game gives one — halves the roster before any other attribute. The solver tracks all of it, but your recognition of 'this is an old-school Part I character' makes the final guess feel effortless."
+        ]
+      },
+      {
+        heading: "How the Naruto story structure helps you solve",
+        paragraphs: [
+          "Narutodle answers are characters from the Naruto and Shippuden timeline, and the story's structure is a solving aid. Characters cluster by era — Part I, Shippuden, and the Boruto era — so a debut-era hint, when the game gives one, places the character in time before any other attribute is confirmed.",
+          "The village system is the strongest organizational tool. Konoha, Suna, Kiri, Kumo, Iwa, and the Akatsuki each have a recognizable cast, and knowing which village a character calls home lets you jump straight to the right neighborhood of the roster.",
+          "Clan knowledge is the next layer. Uchiha, Uzumaki, Hyuga, Nara, and the other clans are small enough to enumerate from memory, and a green clan verdict with a known village is usually a two-guess solve.",
+          "Finally, remember the villains. The Akatsuki and the other antagonist groups are a distinct slice of the pool, and players who only brainstorm heroes get stuck when the answer is an Akatsuki member. The solver's roster includes every faction — and so should your mental list."
+        ]
+      },
+      {
+        heading: "Narutodle daily answers and the ninja world's habits",
+        paragraphs: [
+          "Narutodle's daily answers reveal the ninja world's habits, and those habits are a solving advantage. The daily puzzle tends to feature recognizable characters — the main cast, the iconic villains, the popular side characters — rather than background filler, so when you are down to two candidates, the famous character wins almost every time.",
+          "The village bias is worth tracking. Some weeks lean Konoha-heavy, others lean Akatsuki — and players who follow the pattern can pre-load the right faction before the first clue lands.",
+          "The clan knowledge is the community's shared reference. Knowing which clans belong to which villages is the difference between a shortlist of five and a roster-wide search — and the daily reveals keep that knowledge fresh.",
+          "Finally, the daily reveal is the learning loop. Checking today's character after your solve shows you the attributes you misjudged, and each review sharpens the Naruto knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "Narutodle day numbers and answer streaks",
+        paragraphs: ["Narutodle answers are Naruto characters, and the daily puzzle is numbered so players can track streaks and compare results. The day number matters more than most players realize: it anchors discussions, lets you search for a specific puzzle’s answer, and makes the archive navigable.","The solver does not care about the day number — it filters purely on the clues the game gives you — but the page keeps the numbering visible so you can confirm which puzzle you are solving.","Between the daily puzzle and the solver, the full loop is covered: play the numbered game, get stuck, filter the character pool, and keep your streak alive."]
+      }
+    ],
+    faqHeading: "Narutodle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Narutodle solver work?",
+        answer:
+          "It applies your attribute verdicts — village, clan, rank, and jutsu type — to the full character roster, eliminating every shinobi that contradicts a clue until the answer remains."
+      },
+      {
+        question: "What attributes does Narutodle use?",
+        answer:
+          "Village, clan, rank, and jutsu type — with green, yellow, and gray verdicts for each attribute."
+      },
+      {
+        question: "How many characters are in the Narutodle pool?",
+        answer:
+          "The pool covers the full Naruto and Naruto Shippuden roster — main cast, side characters, villains, and movie characters alike."
+      },
+      {
+        question: "What is the best first guess in Narutodle?",
+        answer:
+          "A character you know cold — Naruto, Sasuke, or Kakashi — because the feedback on a familiar character is easy to read and the village verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past Narutodle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'dotadle-solver': {
+    key: 'dotadle-solver',
+    eyebrow: 'Dotadle Solver Guide',
+    intro:
+      "Dotadle is the daily Dota 2 guessing game where you identify a mystery hero from attributes like primary attribute, role, lane, and release year. The Dotadle solver filters the entire hero pool with every clue, so you can crack the daily hero fast and learn the roster logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the Dotadle solver narrows the hero pool",
+        paragraphs: [
+          "Dotadle scores your guessed hero against the answer across attributes — primary attribute (strength, agility, intelligence), role, lane, and release year — with green, yellow, and gray verdicts. The solver applies those verdicts to the full hero pool, eliminating every hero that contradicts a clue.",
+          "Primary attribute is the strongest filter. One-third of the pool is strength, one-third agility, one-third intelligence, so confirming the attribute cuts the pool by two-thirds in one move.",
+          "Role and lane are the tiebreakers. Two strength heroes often share a lane, so the solver uses the rarer attributes — release year, attack type — to split the survivors.",
+        ],
+        callout: {
+          title: "Attribute first, lane second",
+          body: "Lock the primary attribute with your first guess, then use role, lane, and release year to split the survivors. That staged filter is the fastest path to the answer."
+        }
+      },
+      {
+        heading: "A real Dotadle solve, step by step",
+        paragraphs: [
+          "Open with a hero you know cold — Pudge, Invoker, or Crystal Maiden — because the feedback on a familiar hero is easy to read. Suppose the game returns green on attribute, yellow on role, and gray on lane: you now know the primary attribute, and the lane verdict eliminates entire positions.",
+          "Your second guess should be a hero of the confirmed attribute with a different role and lane, which the solver's surviving list makes easy to pick.",
+          "By guess three, the pool is usually down to a handful of heroes of one attribute, and the remaining clue — release year or attack type — settles it. Most solves finish by guess four or five."
+        ]
+      },
+      {
+        heading: "The Dota attributes and how to read them",
+        paragraphs: [
+          "Primary attribute is categorical and perfectly split: strength, agility, and intelligence each hold about a third of the pool. Confirming it is the single biggest move in the game.",
+          "Role and lane overlap — a hero can be support and mid, or carry and safe lane — so the solver treats them as soft filters that rank candidates rather than eliminate them outright.",
+          "Release year is the fine filter. The oldest heroes date to the original Dota, while recent additions like Ringmaster and Kez are new. Year proximity — the yellow window — is the solver's tiebreaker when everything else matches."
+        ],
+        list: {
+          title: "Dotadle attributes at a glance",
+          items: [
+            "Primary attribute — strength, agility, or intelligence",
+            "Role — carry, support, initiator, nuker, and more",
+            "Lane — safe, mid, off, or roaming",
+            "Release year — from the original roster to the newest patch heroes",
+            "Attack type — melee or ranged"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the Dotadle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across attributes. Players who bounce between strength and intelligence heroes never lock the strongest filter, so the pool never collapses. The solver forces attribute confirmation first.",
+          "The second mistake is ignoring release year. Year is a precise discriminator that players overlook — confirming the era of the hero eliminates decades of releases instantly.",
+          "The third mistake is forgetting melee versus ranged. It is a clean binary split that the solver uses early to halve the pool, but players rarely enter it into their reasoning."
+        ]
+      },
+      {
+        heading: "Why the Dotadle solver page ranks in search",
+        paragraphs: [
+          "Dotadle players search for the daily answer — 'dotadle answers', 'dotadle answers today' — and this page serves the players who want to solve with a smarter process: the attribute-first filtering and year logic are exactly what they need.",
+          "The guide also earns traffic from Dota fans who want to improve: the hero knowledge and attribute strategy transfer to every mode and to the game itself.",
+          "Bookmark it for the days the answer is a niche support. The solver will find them, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "Dota hero knowledge that ends the game early",
+        paragraphs: [
+          "Dotadle is solved by knowing the hero pool's skeleton: the primary attributes, the lanes, and the eras. Strength heroes cluster in the initiators and the durable cores; agility heroes own the carries and the attack-speed scaling; intelligence heroes dominate the supports and the nukers. Naming the attribute narrows the pool by a third instantly.",
+          "Lane identity is the next filter. Safe lane, mid, off, and roaming each have a recognizable cast — the mids are the flashy spellcasters, the offs are the tanky disruptors, the safes are the farm-heavy carries. A lane verdict with a confirmed attribute usually leaves a short list.",
+          "Release era is the fine discriminator that players forget. The original Dota roster, the early Dota 2 additions, and the modern patch heroes are distinct generations, and a year hint — when the game gives one — places the hero in time before any other attribute is confirmed.",
+          "Finally, melee versus ranged is the cleanest binary in the game, and it is the attribute players enter last. A quick melee check halves the remaining pool, and combining it with attribute and lane usually produces the answer by guess four."
+        ]
+      },
+      {
+        heading: "The Dota hero pool, indexed for solving",
+        paragraphs: [
+          "Dotadle rewards knowing the hero pool's structure, and the primary attribute split — strength, agility, intelligence — is the master index. Each third of the pool has a personality: strength heroes are the initiators and durable cores, agility heroes the carries and scaling attackers, intelligence heroes the supports and spellcasters.",
+          "Lane identity is the second index. The safe lane, mid, off, and roaming positions each have a recognizable cast, and a lane verdict with a confirmed attribute usually leaves a shortlist. Learning which heroes call which lane home is the fastest way to turn feedback into a solve.",
+          "Attack type is the cleanest binary in the game. Melee versus ranged splits the pool in half, and it is the attribute players enter last — a habit the solver breaks by treating it as an early filter.",
+          "Finally, learn the eras. The original Dota roster, the early Dota 2 additions, and the modern patch heroes are distinct generations, and a release-era hint places the hero in time before any other attribute is confirmed."
+        ]
+      },
+      {
+        heading: "Dotadle daily answers and the hero pool's habits",
+        paragraphs: [
+          "Dotadle's daily answers reveal the hero pool's habits, and those habits are a solving advantage. The daily puzzle tends to feature recognizable heroes — the iconic, the popular, the recently added — rather than obscure fillers, so when you are down to two candidates, the famous hero wins almost every time.",
+          "The attribute rhythm is worth tracking. Some weeks lean strength-heavy, others agility or intelligence — and players who follow the pattern can pre-load the right attribute before the first clue lands.",
+          "The lane knowledge is the community's shared reference. Knowing which heroes call which lane home is the difference between a shortlist of five and a pool-wide search — and the daily reveals keep that knowledge fresh.",
+          "Finally, the daily reveal is the learning loop. Checking today's hero after your solve shows you the attributes you misjudged, and each review sharpens the Dota knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "Dotadle hero hints and roles",
+        paragraphs: ["Dotadle answers are Dota 2 heroes, and the game’s hints run through the hero data the game itself uses: primary attribute, role, attack type, and the hero’s lore. The solver mirrors those hints exactly, so a clue about a hero’s attribute cuts the pool the same way it does in the game.","The highest-value hint is the hero role — support, carry, or initiator — because it splits the roster into clean buckets. Attribute is the second cut, and lore is the tiebreaker when the pool is nearly empty.","Feed the hints in the order the game gives them, and the solver will show you the shortlist shrinking to the answer."]
+      }
+    ],
+    faqHeading: "Dotadle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the Dotadle solver work?",
+        answer:
+          "It applies your attribute verdicts — primary attribute, role, lane, and release year — to the full hero pool, eliminating every hero that contradicts a clue until the answer remains."
+      },
+      {
+        question: "What attributes does Dotadle use?",
+        answer:
+          "Primary attribute (strength, agility, intelligence), role, lane, release year, and attack type — with green, yellow, and gray verdicts for each."
+      },
+      {
+        question: "How many heroes are in the Dotadle pool?",
+        answer:
+          "The pool covers the full Dota 2 roster — over 120 heroes, from the original roster to the newest patch additions."
+      },
+      {
+        question: "What is the best first guess in Dotadle?",
+        answer:
+          "A hero you know cold — Pudge, Invoker, or Crystal Maiden — because the feedback on a familiar hero is easy to read and the attribute verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past Dotadle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'onepiecedle-solver': {
+    key: 'onepiecedle-solver',
+    eyebrow: 'OnePieceDle Solver Guide',
+    intro:
+      "OnePieceDle is the daily One Piece guessing game where you identify a mystery character from attributes like crew, role, and arc. The OnePieceDle solver filters the entire pirate roster with every clue, so you can crack the daily character fast and learn the lore logic the game rewards. Here is how it works and the strategy that wins most days.",
+    sections: [
+      {
+        heading: "How the OnePieceDle solver narrows the roster",
+        paragraphs: [
+          "OnePieceDle scores your guessed character against the answer across attributes — crew, role, and arc — with green, yellow, and gray verdicts. The solver applies those verdicts to the full character roster, eliminating every pirate that contradicts any clue.",
+          "Crew is the strongest filter. The world spans the Straw Hats, the Marines, the Yonko crews, the Seven Warlords, and dozens more organizations, and locking the crew can cut the pool by three-quarters in one move.",
+          "Role and arc are the tiebreakers. Two characters from the same crew often share a role, so the solver uses the rarer attributes — debut arc, bounty tier — to split the survivors.",
+        ],
+        callout: {
+          title: "Crew first, arc second",
+          body: "Lock the crew with your first guess, then use role and debut arc to split the survivors. That staged filter is the fastest path to the answer."
+        }
+      },
+      {
+        heading: "A real OnePieceDle solve, step by step",
+        paragraphs: [
+          "Open with a character you know cold — Luffy, Zoro, or Nami — because the feedback on a familiar character is easy to read. Suppose the game returns green on crew, yellow on role, and gray on arc: you now know the crew, and the arc verdict eliminates entire sagas of the story.",
+          "Your second guess should be a character from the confirmed crew with a different role and arc, which the solver's surviving list makes easy to pick.",
+          "By guess three, the pool is usually down to a handful of characters from one crew, and the remaining attribute — debut arc or bounty — settles it. Most solves finish by guess four or five."
+        ]
+      },
+      {
+        heading: "The One Piece attributes and how to read them",
+        paragraphs: [
+          "Crew is categorical: the character either belongs to the organization or they do not, with no proximity. That makes it the cleanest filter, and the solver treats it as a hard exclusion.",
+          "Role is a coarse scale — captain, swordsman, navigator, cook, doctor, and the villain archetypes — which splits the roster into tiers. Confirming the role eliminates everyone outside it.",
+          "Debut arc tests how well you know the story's structure: East Blue, Alabasta, Skypiea, Water 7, Marineford, Dressrosa, Wano, and beyond. It is the fine filter the solver uses to break ties."
+        ],
+        list: {
+          title: "OnePieceDle attributes at a glance",
+          items: [
+            "Crew — Straw Hats, Marines, Yonko crews, Warlords, and more",
+            "Role — captain, swordsman, navigator, villain, and more",
+            "Debut arc — East Blue through the current saga",
+            "Bounty tier — from rookie bounties to the Yonko billions"
+          ]
+        }
+      },
+      {
+        heading: "Common mistakes the OnePieceDle solver fixes",
+        paragraphs: [
+          "The biggest mistake is guessing across crews. Players who bounce between Straw Hats and Marine characters never lock the strongest filter, so the pool never collapses. The solver forces crew confirmation first.",
+          "The second mistake is ignoring debut arc. Arc is a precise categorical filter that eliminates entire eras of the story instantly. Players underuse it because they focus on crew.",
+          "The third mistake is forgetting the minor crews. The roster is bigger than the main cast, and obscure side characters are sneaky answers. The solver's list includes the full roster, so its candidates are always valid."
+        ]
+      },
+      {
+        heading: "Why the OnePieceDle solver page ranks in search",
+        paragraphs: [
+          "OnePieceDle players search for the daily answer — 'onepiecedle answers', 'onepiecedle answers today' — and this page serves the players who want to solve with a smarter process: the crew-first filtering and arc logic are exactly what they need.",
+          "The guide also earns traffic from One Piece fans who want to improve: the lore knowledge and attribute strategy transfer to every mode and to the series itself.",
+          "Bookmark it for the days the answer is a deep-cut side character. The solver will find them, and the strategy above will make you faster on every daily guess after."
+        ]
+      },
+      {
+        heading: "The One Piece roster, organized for solving",
+        paragraphs: [
+          "OnePieceDle is won by knowing the pirate world's structure, not by reciting trivia. The biggest divide is crew: the Straw Hats, the Marines, the Yonko crews, the Seven Warlords, and the revolutionary army are the five buckets most answers fall into, and naming the bucket with your first guess is half the puzzle.",
+          "Within the Straw Hats alone, the roles are a fast filter: captain, swordsman, navigator, cook, doctor, shipwright, musician, archeologist, and sniper. A green crew verdict plus a yellow role verdict usually leaves two or three candidates from the ten-person crew — and one more attribute finishes it.",
+          "The Marines and the Yonko crews reward a different kind of knowledge: hierarchy. Knowing that the Admirals, the Vice Admirals, and the Yonko commanders form named ranks lets you use a 'rank' hint to jump straight to the right tier of the organization.",
+          "Finally, arcs are the timeline filter. A character's debut arc — East Blue, Alabasta, Skypiea, Water 7, Marineford, Dressrosa, Wano — places them in the story, and confirming the arc eliminates every character who appeared later. Players who know the arc order solve obscure characters in half the guesses."
+        ]
+      },
+      {
+        heading: "One Piece arcs as a solving timeline",
+        paragraphs: [
+          "The One Piece story's arc structure is the best organizational tool for OnePieceDle. Characters cluster by debut arc — East Blue, Alabasta, Skypiea, Water 7, Marineford, Dressrosa, Wano — and placing a character in their debut arc eliminates everyone who appeared later.",
+          "Arc knowledge also tells you the character's context. East Blue characters are the originals; Alabasta added the Baroque Works villains; Water 7 brought the CP9 agents; Marineford is the war arc's colossal cast. Naming the arc names the character's world.",
+          "The crews are the second index. The Straw Hats, the Marines, the Yonko crews, the Warlords, and the Revolutionary Army each have a recognizable cast, and locking the crew with your first guess is the single highest-value move in the game.",
+          "Finally, remember that the pool is not just heroes. Villains, side characters, and the great pirate captains are all answers, and players who only brainstorm protagonists get stuck on the antagonist-heavy puzzles."
+        ]
+      },
+      {
+        heading: "The OnePieceDle daily rhythm and community lore",
+        paragraphs: [
+          "OnePieceDle's daily puzzle follows the same rhythm as its sibling games: a familiar first guess, a crew confirmation, and a shortlist by guess three. The daily answers also reveal the pool's bias — recognizable characters from the major crews appear far more often than deep-cut side characters.",
+          "The community has mapped the roster's habits, and the wisdom converges on the same rules: crew first, arc second, role third. Players who follow that order solve in four or five guesses; players who guess by favorite-character instinct wander.",
+          "The arc timeline is the community's shared reference. Knowing which characters debuted in East Blue versus Wano is the difference between a shortlist of five and a roster-wide search — and the daily reveals keep that timeline fresh.",
+          "Finally, the daily reveal is the learning loop. Checking today's character after your solve shows you the attributes you misjudged, and each review sharpens the One Piece knowledge that compounds into faster solves."
+        ]
+      },
+      {
+        heading: "One Piecedle character clues, explained",
+        paragraphs: ["One Piecedle answers are One Piece characters, and the solver’s filters mirror the game’s clue set: debut arc, crew affiliation, ability type, and the character’s role in the story. Each clue type narrows the pool differently, and knowing which filter cuts hardest is the skill the solver teaches.","For example, crew affiliation is decisive early — the Straw Hat pool is small, so locking the crew first usually halves the candidates. Ability type matters most late, when only a handful of characters remain.","Combining the filters in the right order is the difference between a lucky guess and a guaranteed solve, and the solver applies that ordering automatically."]
+      }
+    ],
+    faqHeading: "OnePieceDle Solver FAQ",
+    faqs: [
+      {
+        question: "How does the OnePieceDle solver work?",
+        answer:
+          "It applies your attribute verdicts — crew, role, and debut arc — to the full character roster, eliminating every pirate that contradicts a clue until the answer remains."
+      },
+      {
+        question: "What attributes does OnePieceDle use?",
+        answer:
+          "Crew, role, and debut arc — with green, yellow, and gray verdicts for each attribute."
+      },
+      {
+        question: "How many characters are in the OnePieceDle pool?",
+        answer:
+          "The pool covers the full One Piece roster — Straw Hats, Marines, Yonko crews, Warlords, and side characters across every arc."
+      },
+      {
+        question: "What is the best first guess in OnePieceDle?",
+        answer:
+          "A character you know cold — Luffy, Zoro, or Nami — because the feedback on a familiar character is easy to read and the crew verdict is the strongest filter."
+      },
+      {
+        question: "Does the solver work for past OnePieceDle puzzles?",
+        answer:
+          "Yes — the attribute logic is identical every day, so the solver works for any past or future puzzle."
+      }
+    ],
+    relatedLinks: [
+      { href: "/onepiecedle-answer-today", label: "OnePieceDle Answer Today" },
+      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" }
+    ]
+  },
+
+  'wordle-answer-archive': {
+    key: 'wordle-answer-archive',
+    eyebrow: 'Wordle Answer Archive',
+    intro:
+      "Every Wordle answer ever published, in one place: the complete archive of daily solutions from the very first puzzle in June 2021 through today, searchable by date, word, or puzzle number. Whether you are looking for all Wordle answers in 2025, the full list of Wordle answers 2024, a specific answer from months ago, or tomorrow's Wordle answer, this page has the complete, verified record — updated daily.",
+    sections: [
+      {
+        heading: "Every Wordle answer, from puzzle #1 to today",
+        paragraphs: [
+          "Wordle has published a new answer every single day since June 19, 2021, and this archive holds the complete list — every word, every date, every puzzle number. The full table below is rendered on the page, not hidden behind clicks, so search engines and players alike can read the entire history.",
+          "Looking for all Wordle answers in 2025? The archive is organized by date, so you can scroll to any year, any month, any day. The search box also finds any answer by word, date, or puzzle number — type a date like 2025-06-15, a word like STORM, or a number like 1356, and the list filters instantly.",
+          "The archive is verified from the official Wordle source and updated daily, so the record is accurate and complete. Every answer you see here is the real daily solution — no guesswork, no fan lists, no editorializing."
+        ],
+        list: {
+          title: "What the archive contains",
+          items: [
+            "Every daily Wordle answer since puzzle #1 (June 19, 2021)",
+            "The date and puzzle number for every answer",
+            "A searchable table — filter by date, word, or puzzle number",
+            "All Wordle answers for 2021, 2022, 2023, 2024, 2025, and 2026",
+            "The current daily answer, linked from today's page"
+          ]
+        }
+      },
+      {
+        heading: "All Wordle answers 2025 and 2026",
+        paragraphs: [
+          "The 2025 and 2026 answer sets are the most searched-for years in the archive, and both are fully covered here. All Wordle answers 2025 — every daily solution from January 1, 2025 through December 31, 2025 — are listed in order, and the 2026 answers continue the sequence day by day.",
+          "Many players search for the 2025 list to study patterns: which letters repeat, how often answers are verbs versus nouns, and how the word list cycles. The archive makes that study easy — read the year in order and the tendencies jump out.",
+          "The 2026 answers are updated live, so this page is also the place to find today's Wordle answer, yesterday's Wordle answer, or the answer for any future date once the official puzzle publishes it. Bookmark the archive and the daily page together, and you never miss a solution again."
+        ],
+        callout: {
+          title: "Archive + today, together",
+          body: "Bookmark this archive for the full history and the wordle-answer-today page for the current daily answer. Between the two, every Wordle answer — past, present, and future — is one click away."
+        }
+      },
+      {
+        heading: "How to search the Wordle answer list",
+        paragraphs: [
+          "The archive table supports three search styles. Search by date with the format YYYY-MM-DD to jump straight to a specific day; search by word to find any solution ever used (type CRANE and every puzzle that used it appears); or search by puzzle number to pinpoint a specific puzzle in the sequence.",
+          "The table is also scrollable as a plain chronological list, so you can browse the entire history year by year. Each row shows the puzzle number, the date, and the answer — the complete record in the cleanest possible format.",
+          "For the daily flow, use the calendar view to click any date and load that puzzle's answer instantly. The calendar is the fastest way to answer 'what was the Wordle on my birthday?' or any other specific date question."
+        ]
+      },
+      {
+        heading: "Why the archive matters for Wordle players",
+        paragraphs: [
+          "The archive is more than a lookup tool — it is the reference that settles every Wordle argument. Did a word repeat this year? Was a specific answer used in 2024? What puzzle number was on a certain date? The archive answers all of them with verified data.",
+          "For streak-keepers, the archive is the safety net. If you missed a day and want to reconstruct the sequence, or you want to confirm your memory of an old answer, the complete list is here.",
+          "For students of the game, the archive is a dataset. The full answer list reveals Wordle's patterns — the common letters, the repeating structures, the everyday vocabulary — and studying it makes you a better guesser, whether you use the solver or not."
+        ]
+      },
+      {
+        heading: "The Wordle answer list, by the numbers",
+        paragraphs: [
+          "Wordle has published more than 1,800 daily answers since its debut, and the archive holds every one of them. That means more than 1,800 five-letter words, more than 1,800 dates, and a complete record of the puzzle's evolution.",
+          "The list shows the puzzle's vocabulary habits in aggregate: answers are almost always common English words, letters like E, A, R, and T appear most often, and repeats are rare but not impossible — the archive is where you can verify exactly which words have appeared more than once.",
+          "Whether you want the full Wordle answers list for a school project, a streak reconstruction, or just the answer for today, this archive is the single source of truth — complete, verified, and updated every day."
+        ]
+      },
+      {
+        heading: "Answers for today, yesterday, and tomorrow",
+        paragraphs: [
+          "The archive covers every date, so the daily questions are all answered here: today's Wordle answer is the last row of the list, yesterday's is right above it, and any future date's answer appears the moment the official puzzle publishes it.",
+          "For today's answer specifically, the wordle-answer-today page gives you the reveal plus hints, the puzzle number, and the answer context — while this archive gives you the full history around it.",
+          "Players searching for the Wordle answer for today, the Wordle answer yesterday, or any dated variant — 'wordle answer June 26', 'wordle 7/15/26', 'wordle answer today 2026' — will find the exact answer in this archive, formatted with the same date labels they searched with."
+        ]
+      },
+      {
+        heading: "Beyond Wordle: the answer archive family",
+        paragraphs: [
+          "Wordle started the daily-answer genre, but the site covers the whole family: Quordle's four-board answers, Nerdle's equations, Colordle's colors, and every other daily game each has its own answer page and archive. The internal links below take you to each one.",
+          "Each game's archive follows the same model — complete history, searchable, verified, updated daily — so if you play more than one daily game, the archives are your one-stop record for all of them.",
+          "Start with the Wordle archive to explore the full answer list, then branch out to the other games. Every daily puzzle's history is one click away."
+        ]
+      },
+      {
+        heading: "The full Wordle answer list, verified and daily",
+        paragraphs: [
+          "Every row in this archive is verified against the official Wordle source and added the moment the daily puzzle publishes, so the list is always complete and always current. There are no guesses, no community approximations, and no placeholder words — if it is in the table, it was the real answer that day.",
+          "The verification matters more than players realize. Many sites publish speculative or incorrect Wordle answer lists, and following one of those can wreck a streak or teach you the wrong patterns. This archive is built to be the trustworthy reference: every answer cross-checked, every date exact, every puzzle number sequential.",
+          "The list also updates automatically, so you never have to wonder whether today's answer has been added yet. Open the page any time after the daily reveal and the newest row is already there — yesterday, today, and the full history behind them."
+        ]
+      },
+    ],
+    faqHeading: "Wordle Answer Archive FAQ",
+    faqs: [
+      {
+        question: "Where can I find all Wordle answers 2025?",
+        answer:
+          "The complete list of every 2025 Wordle answer is in this archive, listed in chronological order with dates and puzzle numbers, plus a search box that filters by word, date, or number."
+      },
+      {
+        question: "How far back does the Wordle answer archive go?",
+        answer:
+          "The archive covers every daily answer since Wordle's first puzzle on June 19, 2021 — more than 1,800 solutions, updated daily."
+      },
+      {
+        question: "Can I search the archive by date or word?",
+        answer:
+          "Yes — the search box filters by date (YYYY-MM-DD), by word (e.g. CRANE), or by puzzle number, and the calendar view lets you click any date to load its answer."
+      },
+      {
+        question: "Is the archive the same as the daily answer page?",
+        answer:
+          "The archive holds the full history; the wordle-answer-today page shows today's answer with hints and context. They link to each other, so both are one click away."
+      },
+      {
+        question: "Does the archive include future Wordle answers?",
+        answer:
+          "Future answers appear the moment the official puzzle publishes. The archive is updated daily from the official source, so the record is always current."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'wordle-analyzer': {
+    key: 'wordle-analyzer',
+    eyebrow: 'Wordle Analyzer Guide',
+    intro:
+      "The Wordle Analyzer is the tool that grades every move you make: paste in a finished game and it replays each guess, scores it against the solver's optimal play, checks your hard-mode discipline, and shows exactly where you lost moves. This guide explains how the analysis works, how to read your grade, and the habits the analyzer will teach you.",
+    sections: [
+      {
+        heading: "How the Wordle Analyzer scores your game",
+        paragraphs: [
+          "The analyzer replays your Wordle move by move, and for each guess it compares your choice to what the solver would have played from the same position. It scores two things: whether your guess was a valid candidate for the clues you had, and whether it maximized the information available at that moment.",
+          "The core metric is expected remaining candidates. A great guess cuts the candidate list in half or better; a mediocre guess barely narrows it; a bad guess — one that repeats a gray letter or ignores a green anchor — wastes a move entirely. The analyzer's grade is an average of those per-move scores.",
+          "The result is a game grade that reads like a report card: where you played perfectly, where you were solid, and the exact moves that cost you. The point is not to shame your solves — it is to show you the pattern of where your strategy leaks moves."
+        ],
+        callout: {
+          title: "The one-number report",
+          body: "Your analyzer grade distills an entire game into one score: how efficiently you narrowed the candidates. A perfect game is a perfect information curve; every leak shows up as a dip in that curve."
+        }
+      },
+      {
+        heading: "Reading your hard-mode report",
+        paragraphs: [
+          "Hard mode changes the rules: every guess must use the confirmed greens, include the confirmed yellows, and never touch gray letters. The analyzer checks your hard-mode discipline on every single move — and most players fail it more often than they realize.",
+          "The classic hard-mode violations are the analyzer's favorite catches: guessing a word that drops a confirmed green, reusing a gray letter, or moving a yellow letter into a position you already ruled out. Each violation is flagged at the exact move, with the rule that was broken.",
+          "If you play normal mode, the analyzer still grades you — but it highlights where hard-mode discipline would have saved you. Many players discover they are accidentally playing hard mode anyway, and the report shows them the moves where they relaxed."
+        ]
+      },
+      {
+        heading: "The moves that cost you, exposed",
+        paragraphs: [
+          "The analyzer's most valuable output is the specific-move feedback. When your grade dips, it shows you the alternative: 'this guess kept 14 candidates; the solver's pick would have kept 5.' That single comparison teaches more than a hundred articles about Wordle strategy.",
+          "The most common leak it finds is guess reuse — playing the same word family twice, or re-guessing a word you already eliminated. The second is ignoring the candidate list: guessing a word that cannot possibly be the answer because it contradicts your clues.",
+          "The third leak is the endgame fumble: with the pool down to two or three words, players hesitate and guess a word that is not even in the pool. The analyzer flags it instantly, and the pattern becomes obvious after one or two reports."
+        ],
+        list: {
+          title: "Leaks the analyzer catches",
+          items: [
+            "Repeating a gray letter in a later guess",
+            "Dropping a confirmed green anchor",
+            "Re-guessing a word already eliminated",
+            "Guessing a word that contradicts your clues",
+            "Hesitating in the endgame with a non-candidate"
+          ]
+        }
+      },
+      {
+        heading: "Using the analyzer to get better, not just graded",
+        paragraphs: [
+          "The analyzer is a training tool disguised as a report card. After each game, read the flagged moves and ask one question: 'what information did I ignore here?' The answer is usually the same — a gray letter, a green anchor, or the candidate list — and naming it once makes you stop doing it.",
+          "The share links are the community feature: your game renders as a spoiler-safe summary you can post anywhere, with your grade as the headline. Comparing grades with friends turns the daily puzzle into a friendly competition, and competition is the best motivator for improvement.",
+          "Track your grades over a week. The trend is the real signal: if your average grade climbs, your opening, your clue-reading, and your endgame are all improving together. If it stalls, the analyzer's flagged patterns tell you exactly which habit to fix next."
+        ]
+      },
+      {
+        heading: "Why the Wordle Analyzer page ranks in search",
+        paragraphs: [
+          "'Wordle analyzer' and 'Wordle replay' are searched by players who have finished their solve and want to know how they did — a time-sensitive intent this page serves instantly with the paste-and-grade flow.",
+          "The page also earns traffic from players who want to improve: the strategy sections above explain the same information logic the analyzer scores, so the page is useful even before a game is pasted.",
+          "Bookmark it for the days you want proof of your streak's quality, not just its length. The analyzer turns every daily solve into a lesson."
+        ]
+      },
+      {
+        heading: "The strategy the analyzer grades you on",
+        paragraphs: [
+          "The analyzer's scoring is built on the same information logic that powers the best Wordle openers. A great first guess covers the most common letters — two or three vowels plus R, S, T, N — because that guess returns the most informative feedback no matter what the answer is. The analyzer rewards openers that cut the candidate list hard, and it shows you when your opener underperformed.",
+          "The midgame is where most grades leak. After the opener, every guess should add a new letter to your picture, keep confirmed greens locked, and relocate yellows — and the analyzer flags each move that fails to do all three at once. Players who think they are playing well discover that two or three midgame moves were quietly wasted.",
+          "The endgame is the grade's final exam. With the pool down to a handful of words, the analyzer checks whether you guessed from the candidate list or from habit — and players who guess the same word every time they reach a pattern get the same penalty every time. Reading the flagged endgame moves once fixes the habit for good.",
+          "The beauty of the analyzer is that it turns these abstract principles into concrete, per-move feedback. You do not need to study information theory — you need to read one report and see exactly which of your moves wasted information."
+        ]
+      },
+      {
+        heading: "From grade to habit: what to change first",
+        paragraphs: [
+          "If your first analyzer report shows a middling grade, resist the urge to change everything at once. The report's flagged moves point at your single biggest leak — usually one pattern, like reusing gray letters or ignoring the candidate list — and fixing that one habit lifts your grade more than any other single change.",
+          "The second pass focuses on your opener. The analyzer shows you what your opener actually returned in information terms, and most players discover their favorite opener underperforms. Switching to a vowel-plus-common-consonants opener like CRANE or SLATE is the single highest-leverage change in the whole game.",
+          "The third pass is the endgame. Once your opener and midgame are solid, the analyzer's remaining flags cluster at the finish — the hesitation, the non-candidate guess, the failure to commit. Fixing the endgame takes your best games from good to perfect.",
+          "The grading loop is the point: play, analyze, fix one thing, repeat. A week of that loop moves your average grade more than a month of reading strategy articles — because the feedback is about your specific moves, not about generic advice."
+        ]
+      },
+      {
+        heading: "Wordle analyzer reports that change your game",
+        paragraphs: ["The analyzer turns your Wordle history into a real report: opening-guess performance, average solve length, letter-hitting accuracy, and the positions where your guesses most often go wrong.","The most useful number is your average solve length — anything under four is strong, and the analyzer shows exactly which guess is costing you that extra try.","It also exposes habits you cannot see from memory, like always choosing the same starter letter or ignoring repeated letters. Fix those, and your average drops quickly — the report gives you the target, and the solver gives you the method."]
+      }
+    ],
+    faqHeading: "Wordle Analyzer FAQ",
+    faqs: [
+      {
+        question: "How does the Wordle Analyzer work?",
+        answer:
+          "It replays your game move by move, comparing each guess to optimal play, checking hard-mode discipline, and scoring how efficiently you narrowed the candidate list."
+      },
+      {
+        question: "What does my analyzer grade mean?",
+        answer:
+          "The grade averages your per-move efficiency: great guesses that cut the candidate list in half score high, while wasted moves that ignore clues drag the grade down."
+      },
+      {
+        question: "Does the analyzer support hard mode?",
+        answer:
+          "Yes — it checks hard-mode rules on every move and flags violations, and it also shows where hard-mode discipline would have helped in normal mode."
+      },
+      {
+        question: "Can I share my analysis?",
+        answer:
+          "Yes — the tool generates spoiler-safe share links with your grade as the headline, so you can post results anywhere without leaking the answer."
+      },
+      {
+        question: "Is the analyzer the same as the solver?",
+        answer:
+          "No. The solver tells you what to guess next; the analyzer grades the guesses you already made and shows where you lost moves."
+      }
+    ],
+    relatedLinks: [
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/5-letter-wordle-solver", label: "5 Letter Wordle Solver" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" }
+    ]
+  },
+
+  'waffle-archive': {
+    key: 'waffle-archive',
+    eyebrow: 'Waffle Archive Guide',
+    intro:
+      "The Waffle archive is the complete record of every daily Waffle grid — all six words for each puzzle, organized by date, searchable, and free to browse. Whether you are looking for the Waffle game archive to replay an old puzzle, checking the Waffle answers for a specific date, or studying how the grids are built, this page has the full history. Here is how to use it and what the archive teaches you.",
+    sections: [
+      {
+        heading: "Every Waffle grid, in one place",
+        paragraphs: [
+          "Waffle publishes one new grid every day, and this archive holds the complete sequence — every puzzle, every date, every set of six words. The full history is here, rendered on the page and searchable by date or word.",
+          "The archive is the answer to the 'Waffle game archive' searches that players type every day: the complete record of past puzzles, organized so you can jump to any date in seconds.",
+          "Each entry shows the date, the puzzle's six words, and the grid structure — the across words and the down words that made up the daily challenge. Browsing the archive is also a study session: you see exactly how the game builds its interlocking grids."
+        ],
+        callout: {
+          title: "The complete Waffle record",
+          body: "Every daily Waffle grid from the game's launch to today — six words per puzzle, searchable by date or word, and free to browse."
+        }
+      },
+      {
+        heading: "How to search the Waffle archive",
+        paragraphs: [
+          "The archive supports two search styles. Search by date to jump to a specific day's grid, or search by word to find every puzzle that used a particular five-letter word — type LEMON and every grid containing it appears.",
+          "The list view shows the puzzles in chronological order, so you can scroll through the entire history or scan for patterns across weeks. Each row links to the grid details for that date.",
+          "For the daily flow, use the calendar to click any date and load that puzzle's words instantly. The calendar is the fastest way to answer 'what was the Waffle on my birthday?'"
+        ]
+      },
+      {
+        heading: "What the Waffle archive teaches you",
+        paragraphs: [
+          "Browsing the archive reveals the game's construction habits. Waffle grids interlock densely, with common letters — R, S, T, N, and the vowels — doing most of the crossing work, and the archive shows that pattern across hundreds of puzzles.",
+          "The vocabulary bias is the second lesson. Waffle favors common five-letter words, and the archive confirms the pool's shape — everyday nouns and verbs rather than crossword rarities. Knowing the pool is common vocabulary reshapes your guesses from the start.",
+          "The move economy is the third lesson. Each archived grid shows the words, and replaying them lets you practice minimal-swap solving — the crossing logic that keeps your move count low."
+        ],
+        list: {
+          title: "Archive study patterns",
+          items: [
+            "Track which letters the game uses for crossings",
+            "Confirm the vocabulary bias — everyday words dominate",
+            "Replay old grids to practice minimal-swap solving",
+            "Study how across and down words share their letters"
+          ]
+        }
+      },
+      {
+        heading: "The Waffle archive and the daily game",
+        paragraphs: [
+          "The archive pairs with the daily Waffle page: the daily page gives you today's grid and answer, while the archive holds everything before it. Between the two, every Waffle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net. Missed a day? Replay it from the archive. Want to confirm an old answer? The record is here. The archive keeps your Waffle history complete.",
+          "For learners, the archive is unlimited practice. Every past grid is a puzzle you can replay, and replaying old grids builds the crossing logic and swap planning that make the daily game faster."
+        ]
+      },
+      {
+        heading: "Waffle archive searches, answered",
+        paragraphs: [
+          "Players search for the Waffle archive in several distinct ways, and this page answers all of them. 'Waffle game archive' and 'Waffle archive' are the general searches — the complete history, answered by the full list below. 'Waffle word game archive' narrows to the word-game format, and 'today's Waffle answers' points at the daily page this archive feeds.",
+          "The date-specific searches are the second family: 'waffle answer for a specific date', 'waffle June 23 answer', and the past-puzzle queries all resolve to a calendar click on this page. The calendar is the fastest way to answer any dated Waffle question.",
+          "The word-specific searches are the third family: players who remember a word from an old grid and want to find the puzzle that used it. The archive's word search answers that instantly, finding every grid that contained a particular five-letter word.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Waffle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the minimal-swap trainer",
+        paragraphs: [
+          "The Waffle archive is the best minimal-swap trainer in the genre, because every archived grid is a puzzle you can replay with move-count goals. Load an old date, set a target — can you solve it in fewer swaps than your last attempt? — and the archive becomes a personal practice mode.",
+          "The crossing logic is what replaying teaches. Every archived grid shows how the six words share their letters, and replaying the same grid a second time reveals the crossings you missed the first pass — the junctions where fixing one word fixed another.",
+          "The vocabulary vision is the second benefit. Waffle grids favor common five-letter words, and replaying archived grids builds the ability to see those words in scrambled rows — the 'almost LEMON' recognition that makes the daily game faster.",
+          "Finally, the archive lets you study the game's construction. Browsing how across and down words interlock across hundreds of grids shows you the letters the game uses as crossings — R, S, T, N, and the vowels — and knowing the crossings reshapes your swaps from the first move."
+        ]
+      },
+      {
+        heading: "Waffle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Waffle, then check the archive for yesterday's grid and replay it — the contrast between today's fresh solve and yesterday's cold replay is the fastest pattern-recognition training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for the current grid. Players who keep both in their daily rotation never lose track of the sequence, and the archive's chronological list makes the connection obvious — every day slots into the record.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old grid contained, the archived entry is the ground truth, with all six words recorded for the date in question.",
+          "Finally, use the search box for vocabulary study. Type a letter combination like 'QU' and see every archived grid that used it — the results show you which rare-letter words the game actually favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Waffle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Waffle archive entries reveals the game's rhythm. The daily grids cycle through recognizable word families — food words, nature words, action verbs — and the archive's chronological view makes that cycling visible in a way a single day never can.",
+          "The crossing pattern is the archive's clearest annual lesson. Across hundreds of grids, the same letters do the crossing work — R, S, T, N, and the vowels — and the archive shows that consistency puzzle after puzzle. Players who internalize it start solving the crossings before they read the words.",
+          "The vocabulary confirms the everyday bias. A year of answers is full of common five-letter words — LEMON, BRAVE, TIGER, PASTA — and almost free of crossword rarities. The archive is the proof, and the proof reshapes your guessing: common words first, always.",
+          "Finally, the annual view shows the game's difficulty rhythm. Some weeks run easy — the words all but assemble themselves — and others run hard, with grids whose crossings fight every swap. Recognizing the rhythm helps you pace yourself: on hard weeks, plan swaps in chains and accept a higher move count."
+        ]
+      },
+    ],
+    faqHeading: "Waffle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Waffle game archive?",
+        answer:
+          "This page holds the complete Waffle archive — every daily grid's six words, organized by date and searchable by date or word."
+      },
+      {
+        question: "How far back does the Waffle archive go?",
+        answer:
+          "The archive covers every daily Waffle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search the archive by date or word?",
+        answer:
+          "Yes — search by date to jump to a specific day, or by word to find every puzzle that used a particular five-letter word."
+      },
+      {
+        question: "Can I replay old Waffle puzzles?",
+        answer:
+          "Yes — each archived entry shows the grid's six words, and you can replay any past puzzle to practice minimal-swap solving."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each new daily Waffle grid is added to the archive as soon as it publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/squaredle-solver", label: "Squaredle Solver" },
+      { href: "/wordle-solver", label: "Wordle Solver" },
+      { href: "/weaver-solver", label: "Weaver Solver" }
+    ]
+  },
+
+  'quordle-archive': {
+    key: 'quordle-archive',
+    eyebrow: 'Quordle Archive Guide',
+    intro:
+      "The Quordle archive is the complete record of every daily Quordle puzzle — all four answers for each date, searchable and free to browse. Whether you are looking for the Quordle answers for a specific day, replaying an old four-board challenge, or studying how Quordle sequences its answers, this page has the full history. Here is how to use it and what it teaches you.",
+    sections: [
+      {
+        heading: "Every Quordle puzzle, archived",
+        paragraphs: [
+          "Quordle publishes four answers every day, and this archive holds the complete sequence — every puzzle, every date, all four answers per day. The full history is here, rendered on the page and searchable by date or word.",
+          "Each entry shows the date and the four answers that made up that day's challenge. Browsing the archive reveals the game's answer habits — the letter patterns, the repeated structures, the everyday vocabulary it favors.",
+          "The archive is the answer to the 'Quordle archive' searches players type when they want to revisit a past challenge or confirm an old answer."
+        ],
+        callout: {
+          title: "Four answers per day, all archived",
+          body: "Every daily Quordle puzzle's four answers, organized by date and searchable — the complete history of the game."
+        }
+      },
+      {
+        heading: "How to use the Quordle archive",
+        paragraphs: [
+          "Search by date to load a specific day's four answers, or search by word to find every puzzle that used a particular answer. The calendar view lets you click any date and see its four words instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history or compare answers across weeks to spot the game's vocabulary patterns.",
+          "For practice, each archived day is a replayable challenge: load the date, cover the answers, and try to solve all four boards with the daily guess economy."
+        ]
+      },
+      {
+        heading: "What the Quordle archive teaches",
+        paragraphs: [
+          "The archive reveals Quordle's answer-selection habits. The four daily answers often share vowel patterns, which is exactly why a vowel-heavy opener helps multiple boards at once — and the archive makes that sharing visible.",
+          "The vocabulary bias is the second lesson. Quordle answers are common English words, and the archive confirms the pool's shape — everyday vocabulary rather than obscure fillers.",
+          "The sequence logic is the third lesson. Seeing hundreds of days of answer sets shows you how the game balances the four boards — the mixed letter coverage, the shared structures — and that understanding improves your multi-board guessing."
+        ],
+        list: {
+          title: "Quordle archive study patterns",
+          items: [
+            "Track shared vowels across the four daily answers",
+            "Confirm the common-word vocabulary bias",
+            "Replay old days to practice the multi-board economy",
+            "Study how the four answers distribute their letters"
+          ]
+        }
+      },
+      {
+        heading: "The Quordle archive and the daily four-board game",
+        paragraphs: [
+          "The archive pairs with the Quordle daily page: the daily page gives you today's four answers, while the archive holds everything before it. Between the two, every Quordle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old answer, the record is here.",
+          "For learners, the archive is unlimited practice — every past four-board challenge is replayable, and replaying builds the multi-board thinking that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Quordle archive searches, answered",
+        paragraphs: [
+          "The 'Quordle archive' search is the game's most-searched archive query, and this page is built to answer it completely: the full history of daily four-answer puzzles, organized by date and searchable by date or word.",
+          "The second search family is the date-specific query — 'quordle answer for a date', 'todays quordle answer' — which resolves to the calendar and the daily page this archive feeds. Every dated question has a one-click answer here.",
+          "The third family is the answer-specific query: players who remember a word from an old four-board puzzle and want to find the day it appeared. The archive's word search answers that instantly.",
+          "Each search intent is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Quordle answer record."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the multi-board trainer",
+        paragraphs: [
+          "The Quordle archive is the best multi-board trainer in the genre, because every archived day is a four-board challenge you can replay with the daily guess economy. Load an old date, cover the answers, and practice solving all four boards in nine guesses or fewer.",
+          "The shared-vowel logic is what replaying teaches. Quordle's four daily answers often share vowel patterns, and replaying archived days shows you how a vowel-heavy opener helps multiple boards at once — the coverage thinking that separates good Quordle players from great ones.",
+          "The coverage balance is the second benefit. Replaying archived days trains you to choose guesses that narrow the most boards, not just the board you are closest to — the multi-board priority the solver uses and the archive makes visible.",
+          "Finally, the archive lets you study the answer-selection habits. Browsing hundreds of days of four-answer sets shows you how the game balances letter coverage across the boards, and that understanding reshapes your opener choices from the first guess."
+        ]
+      },
+      {
+        heading: "Quordle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Quordle, then check the archive for yesterday's four answers and replay them — the contrast between today's fresh solve and yesterday's cold replay is the fastest multi-board training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's four answers. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's answers were, the archived entry is the ground truth, with all four words recorded for the date.",
+          "Finally, use the search box for coverage study. Type a word and see every day that used it — the results show you how answers repeat and share letters across days, and that knowledge reshapes your multi-board guessing."
+        ]
+      },
+      {
+        heading: "Quordle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Quordle archive entries reveals the game's rhythm. Each day's four answers form a set with its own personality — some days share vowel patterns, others spread their letters wide — and the archive's chronological view makes that variety visible.",
+          "The coverage pattern is the archive's clearest annual lesson. Across hundreds of days, the four answers distribute their letters deliberately — the game balances common letters across the boards rather than clustering them — and the archive shows that balance puzzle after puzzle.",
+          "The vocabulary confirms the everyday bias. A year of answers is full of common English words, and almost free of obscure fillers. The archive is the proof, and the proof reshapes your guessing: solve the common words first, and let the coverage logic guide your multi-board guesses.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — all four boards yield to a standard opener — and others run hard, with one board hiding a tricky word. Recognizing the rhythm helps you pace yourself: on hard weeks, save your solves and let the shared guesses do the work."
+        ]
+      },
+      {
+        heading: "The Quordle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Quordle keep one habit: solve today, replay yesterday. The daily game gives you the fresh four-board challenge; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your multi-board practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's four answers are one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the coverage logic starts to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+    ],
+    faqHeading: "Quordle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Quordle archive?",
+        answer:
+          "This page holds the complete Quordle archive — every daily puzzle's four answers, organized by date and searchable by date or word."
+      },
+      {
+        question: "How far back does the Quordle archive go?",
+        answer:
+          "The archive covers every daily Quordle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Quordle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's four answers, or by word to find every puzzle that used a particular answer."
+      },
+      {
+        question: "Can I replay old Quordle puzzles?",
+        answer:
+          "Yes — each archived day is replayable: load the date, cover the answers, and solve all four boards with the daily guess economy."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's four answers are added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-solver", label: "Quordle Solver" },
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'spotle-archive': {
+    key: 'spotle-archive',
+    eyebrow: 'Spotle Archive Guide',
+    intro:
+      "The Spotle archive is the complete record of every daily Spotle puzzle — the mystery artist for each date, plus the movie-mode answers, searchable and free to browse. Whether you are looking for past Spotle answers, replaying an old artist-guessing challenge, or studying the game's answer pool, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Spotle answer, archived",
+        paragraphs: [
+          "Spotle publishes a new mystery artist every day, and this archive holds the complete sequence — every date, every artist, plus the movie-mode answers. The full history is here, rendered on the page and searchable by date or name.",
+          "Each entry shows the date and the artist that was the answer that day. Browsing the archive reveals the game's answer habits — the eras it favors, the genres it visits, the recognizable names it prefers.",
+          "The archive is the answer to the 'Spotle archive' and 'Spotle movies archive' searches players type when they want to revisit a past challenge or confirm an old artist."
+        ],
+        callout: {
+          title: "Every daily artist, in the record",
+          body: "The complete Spotle history — the daily artist and movie-mode answers for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Spotle archive",
+        paragraphs: [
+          "Search by date to load a specific day's artist, or search by name to find every puzzle that featured a particular musician. The calendar view lets you click any date and see its answer instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's selection patterns across weeks and months.",
+          "For practice, each archived day is replayable: load the date, and try to identify the artist from the same attribute clues the daily game gives."
+        ]
+      },
+      {
+        heading: "What the Spotle archive teaches",
+        paragraphs: [
+          "The archive reveals Spotle's artist-selection habits. The daily answers skew toward recognizable, chart-relevant artists — the popular, the iconic, the recently trending — and the archive makes that bias visible.",
+          "The attribute logic is the second lesson. Reviewing past answers shows you how the game's attributes — rank, debut year, genre, country — map onto real artists, and that mapping improves your guessing.",
+          "The era rhythm is the third lesson. Some weeks lean heavily on one decade or genre, and tracking the archive's rhythm lets you pre-load the right era before the first clue lands."
+        ],
+        list: {
+          title: "Spotle archive study patterns",
+          items: [
+            "Track which eras and genres the game favors",
+            "Confirm the recognizable-artist bias",
+            "Replay old days to practice attribute reading",
+            "Study how rank and debut-year clues map to real artists"
+          ]
+        }
+      },
+      {
+        heading: "The Spotle archive and the daily artist hunt",
+        paragraphs: [
+          "The archive pairs with the Spotle daily page: the daily page gives you today's artist, while the archive holds everything before it. Between the two, every Spotle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old artist, the record is here.",
+          "For learners, the archive is unlimited practice — every past artist is replayable, and replaying builds the attribute-reading that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Spotle archive searches, answered",
+        paragraphs: [
+          "Spotle players search for the archive in several distinct ways, and this page answers all of them. 'Spotle archive' is the general search — the complete artist history, answered by the list below. 'Spotle movies archive' is the movie-mode search, covered here too, since the archive includes both modes.",
+          "The date-specific searches are the second family: 'spotle answer for a date', 'spotle answer June 9', and the past-artist queries all resolve to a calendar click on this page.",
+          "The artist-specific searches are the third family: players who remember a musician from an old puzzle and want to find the day they appeared. The archive's name search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Spotle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the attribute trainer",
+        paragraphs: [
+          "The Spotle archive is the best attribute-reading trainer in the genre, because every archived day is an artist puzzle you can replay with the ten-guess economy. Load an old date and try to identify the artist from the same rank, debut-year, genre, country, and group-size clues the daily game gives.",
+          "The attribute logic is what replaying teaches. Every archived artist shows you how rank, era, and genre map onto real musicians, and replaying builds the mental index — which artists debuted when, which genres they live in, which countries they come from — that makes the daily game faster.",
+          "The clue-stacking discipline is the second benefit. Replaying archived days trains you to act on the first clue immediately and stack the rest before guessing obscure artists — the discipline that separates fast solvers from wanderers.",
+          "Finally, the archive lets you study the selection habits. Browsing the artist history shows you which eras and genres the game favors, and that knowledge lets you pre-load the right era before the first clue lands."
+        ]
+      },
+      {
+        heading: "Spotle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Spotle, then check the archive for yesterday's artist and replay the attribute logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest artist-knowledge training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's artist. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's artist was, the archived entry is the ground truth, with the artist recorded for the date.",
+          "Finally, use the search box for era study. Type a decade and see every archived artist from that era — the results show you which eras the game favors, and that knowledge lets you pre-load the right era before the first clue lands."
+        ]
+      },
+      {
+        heading: "Spotle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Spotle archive entries reveals the game's rhythm. The daily artists cycle through eras and genres — pop-heavy weeks, hip-hop weeks, rock weeks — and the archive's chronological view makes that cycling visible in a way a single day never can.",
+          "The era pattern is the archive's clearest annual lesson. Across hundreds of days, the game leans on recognizable, chart-relevant artists, and the archive shows the era rotation — the 1980s runs, the 1990s runs, the 2010s dominance.",
+          "The attribute logic confirms the daily game's design. Each archived artist's rank, debut year, and genre slot into the attribute grid the solver uses, and the archive shows how those attributes actually map onto real musicians — the exact knowledge the daily game tests.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the artists are household names — and others run hard, with deep cuts and crossover acts. Recognizing the rhythm helps you pace yourself: on hard weeks, stack the clues before you guess."
+        ]
+      },
+      {
+        heading: "The Spotle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Spotle keep one habit: solve today, replay yesterday. The daily game gives you the fresh artist; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your artist practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's artist is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the attribute clues start to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Browsing the Spotle archive by artist",
+        paragraphs: ["The Spotle archive records every daily artist answer, and browsing it by artist or date reveals the game’s selection habits — the mix of global pop stars, decades of legacy acts, and the occasional deep cut.","Each archived answer is searchable by artist name, which is how most players use it: a past puzzle comes up in conversation, and the archive confirms the artist in one search.","The archive also doubles as a study tool — scanning the artist history builds the mental pool the daily game draws from, which makes future Spotle puzzles noticeably easier."]
+      }
+    ],
+    faqHeading: "Spotle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Spotle archive?",
+        answer:
+          "This page holds the complete Spotle archive — the daily artist for every date, searchable by date or artist name."
+      },
+      {
+        question: "Does the archive include movie-mode answers?",
+        answer:
+          "Yes — the archive covers both the daily artist mode and the movie-mode answers, so every Spotle puzzle is in the record."
+      },
+      {
+        question: "Can I search Spotle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's artist, or by name to find every puzzle that featured a particular musician."
+      },
+      {
+        question: "Can I replay old Spotle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice attribute reading on past artists."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's artist is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/spotle-solver", label: "Spotle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" }
+    ]
+  },
+
+  'semantle-archive': {
+    key: 'semantle-archive',
+    eyebrow: 'Semantle Archive Guide',
+    intro:
+      "The Semantle archive is the complete record of every daily Semantle puzzle — the mystery word for each date, searchable and free to browse. Whether you are looking for past Semantle answers, replaying an old semantic-distance challenge, or studying the game's word-space, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Semantle word, archived",
+        paragraphs: [
+          "Semantle publishes a new mystery word every day, and this archive holds the complete sequence — every date, every word. The full history is here, rendered on the page and searchable by date or word.",
+          "Each entry shows the date and the word that was the answer that day. Browsing the archive reveals the game's answer habits — the abstract concepts it favors, the common vocabulary it prefers, the semantic neighborhoods it visits.",
+          "The archive is the reference for the players who track Semantle's answers and want to revisit past puzzles or confirm an old word."
+        ],
+        callout: {
+          title: "Every daily word, in the record",
+          body: "The complete Semantle history — the mystery word for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Semantle archive",
+        paragraphs: [
+          "Search by date to load a specific day's word, or search by word to find every puzzle that used a particular answer. The calendar view lets you click any date and see its word instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's selection patterns.",
+          "For practice, each archived day is replayable: load the date and try to reach the word using the similarity scores, exactly as the daily game works."
+        ]
+      },
+      {
+        heading: "What the Semantle archive teaches",
+        paragraphs: [
+          "The archive reveals Semantle's answer-selection habits. The daily words are common vocabulary with clear meanings — the kind of words that sit at the center of the word-space rather than the edges.",
+          "The semantic-neighborhood lesson is the second value. Reviewing past answers shows you which words the model considers neighbors, and that mapping builds the semantic intuition the game rewards.",
+          "The category rhythm is the third lesson. Some days the answer is abstract, others concrete, others emotional — and tracking the archive's rhythm shows you which corners of the word-space the game visits."
+        ],
+        list: {
+          title: "Semantle archive study patterns",
+          items: [
+            "Track the abstract-versus-concrete rhythm",
+            "Confirm the common-vocabulary bias",
+            "Study which words the model treats as neighbors",
+            "Replay old days to practice the similarity compass"
+          ]
+        }
+      },
+      {
+        heading: "The Semantle archive and the daily similarity chase",
+        paragraphs: [
+          "The archive pairs with the Semantle daily page: the daily page gives you today's word, while the archive holds everything before it. Between the two, every Semantle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old word, the record is here.",
+          "For learners, the archive is unlimited practice — every past word is replayable, and replaying builds the similarity reading that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Semantle archive searches, answered",
+        paragraphs: [
+          "Semantle players search for the archive in several distinct ways, and this page answers all of them. 'Semantle archive' is the general search — the complete word history, answered by the list below. 'Semantle answer' and 'Semantle answer today' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'semantle answer for a date', 'semantle May 16 answer', and the numbered-puzzle queries — 'semantle 1466' — all resolve to a calendar click or a word search on this page.",
+          "The word-specific searches are the third family: players who remember a word from an old puzzle and want to find the day it appeared. The archive's word search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Semantle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the similarity trainer",
+        paragraphs: [
+          "The Semantle archive is the best similarity-reading trainer in the genre, because every archived day is a word puzzle you can replay with the same scoring system. Load an old date and try to reach the mystery word using the similarity scores, exactly as the daily game works.",
+          "The compass logic is what replaying teaches. Every archived word shows you which guesses scored high and which scored low, and replaying builds the semantic intuition — which word families cluster, which categories the game favors — that makes the daily game faster.",
+          "The high-score anchor discipline is the second benefit. Replaying archived days trains you to anchor on your highest-scoring guess and explore its semantic neighborhood, rather than jumping between unrelated guesses — the discipline that separates fast solvers from random walkers.",
+          "Finally, the archive lets you study the selection habits. Browsing the word history shows you the abstract-versus-concrete rhythm, and that knowledge lets you pre-load the right category before the first guess lands."
+        ]
+      },
+      {
+        heading: "Semantle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Semantle, then check the archive for yesterday's word and replay the similarity logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest semantic training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's word. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's word was, the archived entry is the ground truth.",
+          "Finally, use the search box for category study. Type a word and see the archived days that used it or its neighbors — the results show you the semantic neighborhoods the game favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Semantle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Semantle archive entries reveals the game's rhythm. The daily words cycle through semantic categories — abstract concepts, concrete objects, emotions, actions — and the archive's chronological view makes that cycling visible.",
+          "The category pattern is the archive's clearest annual lesson. Across hundreds of days, the game visits every corner of the word-space, and the archive shows the rotation — the abstract weeks, the concrete weeks, the emotional weeks.",
+          "The vocabulary confirms the common-word bias. A year of answers is full of everyday English words with clear meanings, and almost free of obscure terms. The archive is the proof, and the proof reshapes your guessing: common words with central meanings first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the answer's neighborhood is reachable in a few guesses — and others run hard, with answers tucked into the word-space's edges. Recognizing the rhythm helps you pace yourself: on hard weeks, anchor on your highest-scoring guess and explore its neighborhood."
+        ]
+      },
+      {
+        heading: "The Semantle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Semantle keep one habit: solve today, replay yesterday. The daily game gives you the fresh word; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your semantic practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's word is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the similarity compass starts to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Semantle similarity scores, decoded",
+        paragraphs: ["Semantle answers are ranked by embedding similarity, and the archive records each day’s word alongside the community’s score history. Understanding those scores is the real skill: a similarity of 20 means the word is close in meaning, while 5 means the search is still wide open.","The archive shows the full distribution — which guesses reached the high teens, how many guesses the community needed, and where the answer’s semantic neighbors live.","Players who study past archives build an intuition for how the embedding space works, which makes their next daily puzzle dramatically easier to navigate."]
+      }
+    ],
+    faqHeading: "Semantle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Semantle archive?",
+        answer:
+          "This page holds the complete Semantle archive — the mystery word for every date, searchable by date or word."
+      },
+      {
+        question: "How far back does the Semantle archive go?",
+        answer:
+          "The archive covers every daily Semantle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Semantle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's word, or by word to find every puzzle that used a particular answer."
+      },
+      {
+        question: "Can I replay old Semantle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice the similarity compass on past words."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's word is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'colordle-archive': {
+    key: 'colordle-archive',
+    eyebrow: 'Colordle Archive Guide',
+    intro:
+      "The Colordle archive is the complete record of every daily Colordle puzzle — the color answer for each date, with its hex value, searchable and free to browse. Whether you are looking for past Colordle answers, a specific day's color, or the full day-number history players search for, this page has it all. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Colordle color, archived",
+        paragraphs: [
+          "Colordle publishes one new color every day, and this archive holds the complete sequence — every date, every color, every hex value. The full history is here, rendered on the page and searchable by date or color name.",
+          "Each entry shows the date, the day number, and the exact color with its hex value. Browsing the archive reveals the game's palette habits — the recognizable color families it favors, the neutrals it mixes in, the named colors it prefers.",
+          "The archive is the reference for the players who search for 'colordle day 1441 answer' style queries — the day-number history is all here, cross-referenced with dates."
+        ],
+        callout: {
+          title: "The full color history, hex-exact",
+          body: "Every daily Colordle color — date, day number, and exact hex — searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Colordle archive",
+        paragraphs: [
+          "Search by date to load a specific day's color, by day number to find the puzzle numbered that day, or by color name to find every puzzle that used it. The calendar view lets you click any date and see its color instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's palette selection patterns.",
+          "The hex values make the archive uniquely precise: every archived color is recorded exactly, so the archive doubles as a searchable history of the game's entire palette."
+        ]
+      },
+      {
+        heading: "What the Colordle archive teaches",
+        paragraphs: [
+          "The archive reveals Colordle's palette habits. The daily colors skew toward recognizable families — the standard rainbow plus the classic neutrals — and the archive makes that bias visible across hundreds of puzzles.",
+          "The day-number system is the second lesson. Colordle puzzles are numbered sequentially, and the archive's day-number cross-reference lets you find any puzzle by its number — the exact search style the community uses.",
+          "The palette structure is the third lesson. Reviewing past answers shows you the full set of colors the game draws from, and knowing the palette makes your guesses far more efficient."
+        ],
+        list: {
+          title: "Colordle archive study patterns",
+          items: [
+            "Track the color families the game favors",
+            "Use the day-number cross-reference for community-style searches",
+            "Study the full palette the game draws from",
+            "Replay old days to practice the component-filtering logic"
+          ]
+        }
+      },
+      {
+        heading: "The Colordle archive and the daily color hunt",
+        paragraphs: [
+          "The archive pairs with the Colordle daily page: the daily page gives you today's color, while the archive holds everything before it. Between the two, every Colordle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old color, the hex-exact record is here.",
+          "For learners, the archive is unlimited practice — every past color is replayable, and replaying builds the palette knowledge that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Colordle archive searches, answered",
+        paragraphs: [
+          "Colordle players search for the archive in several distinct ways, and this page answers all of them. 'Colordle archive' is the general search — the complete color history, answered by the list below. 'Colordle answer' and 'Colordle answer today' point to the daily pages this archive feeds.",
+          "The day-number searches are the second family, and they are uniquely Colordle: 'colordle day 1441 answer', 'colordle hint 1455', and the numbered-puzzle queries all resolve to the archive's day-number cross-reference.",
+          "The date-specific searches are the third family: 'colordle answer for a date', 'colordle 2/22/2026 answer', and the past-color queries all resolve to a calendar click on this page.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the day-number search — and together they make the archive the complete Colordle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the palette trainer",
+        paragraphs: [
+          "The Colordle archive is the best palette-reading trainer in the genre, because every archived day is a color puzzle you can replay with the same component logic. Load an old date and try to reach the color using the green-yellow-gray feedback, exactly as the daily game works.",
+          "The palette logic is what replaying teaches. Every archived color shows you the exact shade with its hex value, and replaying builds the palette knowledge — which families the game favors, which neutrals it mixes in — that makes the daily game faster.",
+          "The hex-exact discipline is the second benefit. Every archived answer is recorded precisely, so replaying lets you compare your final guess against the exact target and see precisely where your color intuition drifted.",
+          "Finally, the archive lets you study the day-number system. Browsing the color history shows you how the puzzles are numbered and cross-referenced, and that knowledge makes the community-style searches — 'colordle day 1441 answer' — work directly."
+        ]
+      },
+      {
+        heading: "Colordle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Colordle, then check the archive for yesterday's color and replay the component logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest palette training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's color. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's color was, the archived entry is the ground truth, with the exact hex recorded.",
+          "Finally, use the day-number search for community-style queries. Type a day number and see the exact puzzle and color it refers to — the results make the 'colordle day 1441 answer' searches work directly."
+        ]
+      },
+      {
+        heading: "Colordle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Colordle archive entries reveals the game's rhythm. The daily colors cycle through the palette families — reds and oranges, blues and greens, the neutrals — and the archive's chronological view makes that cycling visible.",
+          "The palette pattern is the archive's clearest annual lesson. Across hundreds of days, the game favors recognizable color families, and the archive shows the rotation — the warm weeks, the cool weeks, the neutral interludes.",
+          "The hex values confirm the palette's shape. A year of archived answers is full of named, recognizable colors — the standard rainbow plus the classic neutrals — and the archive's hex-exact records make that shape precise. The proof reshapes your guessing: named colors first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the colors are mid-palette anchors — and others run hard, with subtle shades that test your saturation eye. Recognizing the rhythm helps you pace yourself: on hard weeks, move big early and refine late."
+        ]
+      },
+      {
+        heading: "The Colordle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Colordle keep one habit: solve today, replay yesterday. The daily game gives you the fresh color; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your palette practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's color is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the component feedback starts to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Colordle day numbers across the full archive",
+        paragraphs: ["Colordle numbers its puzzles by day, and the archive preserves that numbering so any past answer can be found by day number alone. That numbering is the language the community uses — searches like “colordle day 1441 answer” point straight at a specific puzzle.","The archive lists every day’s color with its name and hex value, which is exactly what players need when a hue is hard to describe.","Between the daily answer page and the full archive, every Colordle puzzle is one click away."]
+      }
+    ],
+    faqHeading: "Colordle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Colordle archive?",
+        answer:
+          "This page holds the complete Colordle archive — the color answer for every date with its hex value, searchable by date, day number, or color name."
+      },
+      {
+        question: "How far back does the Colordle archive go?",
+        answer:
+          "The archive covers every daily Colordle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Colordle answers by day number?",
+        answer:
+          "Yes — the archive cross-references every day number with its date, so community-style searches like 'colordle day 1441 answer' work directly."
+      },
+      {
+        question: "Does the archive include hex values?",
+        answer:
+          "Yes — every archived color is recorded with its exact hex value, making the archive a precise searchable history of the game's palette."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's color is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/colordle-answer-today", label: "Colordle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/colordle-solver", label: "Colordle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/colorfle-answer-today", label: "Colorfle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'phoodle-archive': {
+    key: 'phoodle-archive',
+    eyebrow: 'Phoodle Archive Guide',
+    intro:
+      "The Phoodle archive is the complete record of every daily Phoodle puzzle — the food word for each date, searchable and free to browse. Whether you are looking for past Phoodle answers, replaying an old food-word challenge, or studying the vocabulary the game draws from, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Phoodle food word, archived",
+        paragraphs: [
+          "Phoodle publishes one new food word every day, and this archive holds the complete sequence — every date, every word. The full history is here, rendered on the page and searchable by date or word.",
+          "Each entry shows the date and the food word that was the answer that day. Browsing the archive reveals the game's answer habits — the ingredients it favors, the dishes it mixes in, the kitchen verbs and adjectives it uses.",
+          "The archive is the reference for players who track Phoodle's answers and want to revisit past puzzles or confirm an old word."
+        ],
+        callout: {
+          title: "Every food word, in the record",
+          body: "The complete Phoodle history — the food word for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Phoodle archive",
+        paragraphs: [
+          "Search by date to load a specific day's word, or search by word to find every puzzle that used a particular food term. The calendar view lets you click any date and see its answer instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's vocabulary patterns.",
+          "For practice, each archived day is replayable: load the date and try to solve the food word using the same feedback rules as the daily game."
+        ]
+      },
+      {
+        heading: "What the Phoodle archive teaches",
+        paragraphs: [
+          "The archive reveals Phoodle's vocabulary habits. The daily answers skew toward common food words — ingredients, dishes, and kitchen terms — and the archive makes that bias visible.",
+          "The category mix is the second lesson. Some days the answer is an ingredient, others a dish, a cut, or a kitchen verb — and tracking the archive's mix shows you which lanes the game favors.",
+          "The letter patterns are the third lesson. Food vocabulary is heavy on A and O, with the S-T-R-P-C-K cluster dominating ingredient names, and the archive confirms those patterns across hundreds of puzzles."
+        ],
+        list: {
+          title: "Phoodle archive study patterns",
+          items: [
+            "Track the ingredient-versus-dish-versus-verb rhythm",
+            "Confirm the common-food-word bias",
+            "Study the vowel patterns of food vocabulary",
+            "Replay old days to practice the food-lane strategy"
+          ]
+        }
+      },
+      {
+        heading: "The Phoodle archive and the daily food word",
+        paragraphs: [
+          "The archive pairs with the Phoodle daily page: the daily page gives you today's food word, while the archive holds everything before it. Between the two, every Phoodle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old word, the record is here.",
+          "For learners, the archive is unlimited practice — every past food word is replayable, and replaying builds the vocabulary that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Phoodle archive searches, answered",
+        paragraphs: [
+          "Phoodle players search for the archive in several distinct ways, and this page answers all of them. 'Phoodle archive' is the general search — the complete food-word history, answered by the list below. 'Phoodle answer today' and 'phoodle hint today' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'phoodle answer for a date', 'phoodle hint June 17', 'phoodle mar 15 2026' — all resolve to a calendar click on this page.",
+          "The word-specific searches are the third family: players who remember a food word from an old puzzle and want to find the day it appeared. The archive's word search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Phoodle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the food-lane trainer",
+        paragraphs: [
+          "The Phoodle archive is the best food-vocabulary trainer in the genre, because every archived day is a food-word puzzle you can replay with the same feedback rules. Load an old date and try to solve the word using the green-yellow-gray tiles, exactly as the daily game works.",
+          "The food-lane logic is what replaying teaches. Every archived word shows you the ingredient, dish, cut, or kitchen verb that was the answer, and replaying builds the vocabulary — which lanes the game favors, which letters dominate food words — that makes the daily game faster.",
+          "The category discipline is the second benefit. Replaying archived days trains you to brainstorm in the right food lane — ingredient versus dish versus verb — rather than guessing generically, the discipline that separates fast solvers from wanderers.",
+          "Finally, the archive lets you study the letter patterns. Browsing the word history shows you the vowel-heavy structure of food vocabulary — the A and O dominance, the S-T-R-P-C-K cluster — and that knowledge reshapes your openers from the first guess."
+        ]
+      },
+      {
+        heading: "Phoodle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Phoodle, then check the archive for yesterday's food word and replay the food-lane logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest vocabulary training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's word. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's word was, the archived entry is the ground truth.",
+          "Finally, use the search box for category study. Type a food word and see every archived day that used it — the results show you which lanes the game favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Phoodle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Phoodle archive entries reveals the game's rhythm. The daily words cycle through the food lanes — ingredients, dishes, cuts, kitchen verbs — and the archive's chronological view makes that cycling visible.",
+          "The category pattern is the archive's clearest annual lesson. Across hundreds of days, the game leans on recognizable food vocabulary, and the archive shows the lane rotation — the ingredient weeks, the dish weeks, the verb weeks.",
+          "The vocabulary confirms the food-word bias. A year of answers is full of common kitchen words — SPICE, PASTA, BREAD, MANGO — and almost free of obscure culinary terms. The archive is the proof, and the proof reshapes your guessing: common food words first, always.",
+          "Finally, the annual view shows the letter patterns. Food vocabulary's A-and-O dominance and its S-T-R-P-C-K cluster repeat across the year, and seeing them in hundreds of archived answers makes the pattern unforgettable — the exact knowledge that powers your openers."
+        ]
+      },
+      {
+        heading: "The Phoodle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Phoodle keep one habit: solve today, replay yesterday. The daily game gives you the fresh food word; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your vocabulary practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's word is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the food lanes start to feel familiar — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Phoodle answer themes by day of the week",
+        paragraphs: ["Phoodle answers are food words, and the archive makes the game’s theming visible. The daily word stays firmly in food vocabulary — ingredients, dishes, kitchen tools — but the archive reveals the mix: some days favor a common ingredient, others an international dish, others a kitchen verb.","Tracking the archive also exposes repetition habits. Food vocabulary is finite, and over the full history you will see favorite words return, which is useful intelligence for players who want to guess smarter, not just faster.","The archive is the definitive record of that theming, kept clean and searchable."]
+      }
+    ],
+    faqHeading: "Phoodle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Phoodle archive?",
+        answer:
+          "This page holds the complete Phoodle archive — the food word for every date, searchable by date or word."
+      },
+      {
+        question: "How far back does the Phoodle archive go?",
+        answer:
+          "The archive covers every daily Phoodle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Phoodle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's food word, or by word to find every puzzle that used a particular term."
+      },
+      {
+        question: "Can I replay old Phoodle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice the food-lane strategy on past words."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's food word is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/canuckle-answer-today", label: "Canuckle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'phrazle-archive': {
+    key: 'phrazle-archive',
+    eyebrow: 'Phrazle Archive Guide',
+    intro:
+      "The Phrazle archive is the complete record of every daily Phrazle puzzle — the phrase answer for each date, searchable and free to browse. Whether you are looking for past Phrazle answers, replaying an old phrase challenge, or studying the sayings the game draws from, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Phrazle phrase, archived",
+        paragraphs: [
+          "Phrazle publishes one new phrase every day, and this archive holds the complete sequence — every date, every multi-word answer. The full history is here, rendered on the page and searchable by date or phrase.",
+          "Each entry shows the date and the phrase that was the answer that day. Browsing the archive reveals the game's answer habits — the idioms it favors, the titles it mixes in, the everyday sayings it prefers.",
+          "The archive is the reference for players who track Phrazle's answers and want to revisit past puzzles or confirm an old phrase."
+        ],
+        callout: {
+          title: "Every phrase, in the record",
+          body: "The complete Phrazle history — the phrase answer for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Phrazle archive",
+        paragraphs: [
+          "Search by date to load a specific day's phrase, or search by phrase to find every puzzle that used a particular saying. The calendar view lets you click any date and see its answer instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's phrase selection patterns.",
+          "For practice, each archived day is replayable: load the date and try to solve the phrase word by word, exactly as the daily game works."
+        ]
+      },
+      {
+        heading: "What the Phrazle archive teaches",
+        paragraphs: [
+          "The archive reveals Phrazle's phrase-selection habits. The daily answers skew toward famous, recognizable phrases — idioms, titles, catchphrases — and the archive makes that bias visible.",
+          "The structure mix is the second lesson. Some answers are two-word adjective-noun pairs, others three-word idioms, and tracking the archive's mix shows you the phrase families the game favors.",
+          "The vocabulary is the third lesson. The phrases use common words, which is exactly why the daily game rewards everyday vocabulary — and the archive confirms it across hundreds of puzzles."
+        ],
+        list: {
+          title: "Phrazle archive study patterns",
+          items: [
+            "Track the idiom-versus-title-versus-catchphrase mix",
+            "Confirm the famous-phrase bias",
+            "Study the two-word versus three-word structures",
+            "Replay old days to practice word-by-word solving"
+          ]
+        }
+      },
+      {
+        heading: "The Phrazle archive and the daily phrase game",
+        paragraphs: [
+          "The archive pairs with the Phrazle daily page: the daily page gives you today's phrase, while the archive holds everything before it. Between the two, every Phrazle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old phrase, the record is here.",
+          "For learners, the archive is unlimited practice — every past phrase is replayable, and replaying builds the phrase recognition that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Phrazle archive searches, answered",
+        paragraphs: [
+          "Phrazle players search for the archive in several distinct ways, and this page answers all of them. 'Phrazle archive' is the general search — the complete phrase history, answered by the list below. 'Phrazle answer today' and 'phrazle hint today' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'phrazle answer for a date', 'phrazle answer June 18', and the past-phrase queries all resolve to a calendar click on this page.",
+          "The phrase-specific searches are the third family: players who remember a saying from an old puzzle and want to find the day it appeared. The archive's phrase search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Phrazle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the phrase trainer",
+        paragraphs: [
+          "The Phrazle archive is the best phrase-recognition trainer in the genre, because every archived day is a multi-word puzzle you can replay with the same word-by-word feedback. Load an old date and try to solve the phrase exactly as the daily game works.",
+          "The phrase-pool logic is what replaying teaches. Every archived answer shows you the idiom, title, or catchphrase that was the solution, and replaying builds the recognition — which phrase families the game favors, which structures repeat — that makes the daily game faster.",
+          "The word-length discipline is the second benefit. Replaying archived days trains you to read the phrase structure — the two-word adjective-noun pairs, the three-word idioms — before guessing a single letter, the discipline that separates fast solvers from scramblers.",
+          "Finally, the archive lets you study the vocabulary. Browsing the phrase history shows you the common words the game favors, and that knowledge reshapes your guessing from the first word."
+        ]
+      },
+      {
+        heading: "Phrazle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Phrazle, then check the archive for yesterday's phrase and replay the word-by-word logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest phrase training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's phrase. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's phrase was, the archived entry is the ground truth.",
+          "Finally, use the search box for structure study. Type a phrase and see every archived day that used it — the results show you the phrase families the game favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Phrazle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Phrazle archive entries reveals the game's rhythm. The daily phrases cycle through the phrase families — idioms, titles, catchphrases, sayings — and the archive's chronological view makes that cycling visible.",
+          "The structure pattern is the archive's clearest annual lesson. Across hundreds of days, the game alternates between two-word pairs and three-word idioms, and the archive shows the structure rotation — the adjective-noun weeks, the verb-phrase weeks.",
+          "The vocabulary confirms the famous-phrase bias. A year of answers is full of recognizable sayings and everyday words, and almost free of obscure constructions. The archive is the proof, and the proof reshapes your guessing: famous phrases first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the phrases are household idioms — and others run hard, with titles and sayings that test your cultural recall. Recognizing the rhythm helps you pace yourself: on hard weeks, read the word-length structure before you guess."
+        ]
+      },
+      {
+        heading: "The daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Phrazle keep one habit: solve today, replay yesterday. The daily game gives you the fresh challenge; the archive gives you a cold replay of the previous phrase. Doing both in the same sitting doubles your practice without adding time — the same feedback rules, the same word-by-word logic, twice the reps.",
+          "The archive makes that habit effortless. Yesterday's phrase is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the phrase families start to feel familiar — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Phrazle answers tracked across the web",
+        paragraphs: ["Because Phrazle publishes one phrase each day, answer-tracker sites, Discord bots, and daily puzzle communities all maintain their own Phrazle logs. The consistency of those records is worth understanding: the official daily answer is fixed at publication time, so every reputable tracker shows the same phrase for the same date.","This archive is that same record, kept directly on the page and updated without the ads, popups, and redirects that riddle the third-party trackers. When a community thread asks what a past phrase was, this page is the cleanest place to confirm it."]
+      }
+    ],
+    faqHeading: "Phrazle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Phrazle archive?",
+        answer:
+          "This page holds the complete Phrazle archive — the phrase answer for every date, searchable by date or phrase."
+      },
+      {
+        question: "How far back does the Phrazle archive go?",
+        answer:
+          "The archive covers every daily Phrazle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Phrazle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's phrase, or by phrase to find every puzzle that used a particular saying."
+      },
+      {
+        question: "Can I replay old Phrazle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice word-by-word solving on past phrases."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's phrase is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/canuckle-answer-today", label: "Canuckle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'nerdle-archive': {
+    key: 'nerdle-archive',
+    eyebrow: 'Nerdle Archive Guide',
+    intro:
+      "The Nerdle archive is the complete record of every daily Nerdle puzzle — the equation answer for each date, searchable and free to browse. Whether you are looking for past Nerdle answers, replaying an old equation challenge, or studying the arithmetic the game favors, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Nerdle equation, archived",
+        paragraphs: [
+          "Nerdle publishes one new equation every day, and this archive holds the complete sequence — every date, every eight-character answer. The full history is here, rendered on the page and searchable by date or equation.",
+          "Each entry shows the date and the equation that was the answer that day. Browsing the archive reveals the game's answer habits — the two-term sums it favors, the subtraction it mixes in, the structure of its equations.",
+          "The archive is the reference for players who track Nerdle's answers and want to revisit past puzzles or confirm an old equation."
+        ],
+        callout: {
+          title: "Every equation, in the record",
+          body: "The complete Nerdle history — the equation answer for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Nerdle archive",
+        paragraphs: [
+          "Search by date to load a specific day's equation, or search by equation to find every puzzle that used a particular string. The calendar view lets you click any date and see its answer instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's equation patterns.",
+          "For practice, each archived day is replayable: load the date and try to solve the equation using the same green-purple-black feedback as the daily game."
+        ]
+      },
+      {
+        heading: "What the Nerdle archive teaches",
+        paragraphs: [
+          "The archive reveals Nerdle's equation habits. The daily answers skew toward two-term sums — the classic a+b=c form — and the archive confirms that the sum form dominates the answer space.",
+          "The digit census is the second lesson. Digits appear unevenly in valid equations — 1, 2, 0, and 5 are workhorses, while 8, 9, and 7 appear less often — and the archive makes that census visible.",
+          "The structure lesson is the third. Reviewing past equations shows you how the equals sign splits them, how operators distribute, and how the equation space is actually shaped."
+        ],
+        list: {
+          title: "Nerdle archive study patterns",
+          items: [
+            "Track the two-term-sum dominance",
+            "Study the digit census across hundreds of equations",
+            "Confirm the operator distribution — plus and minus lead",
+            "Replay old days to practice the feedback discipline"
+          ]
+        }
+      },
+      {
+        heading: "The Nerdle archive and the daily equation",
+        paragraphs: [
+          "The archive pairs with the Nerdle daily page: the daily page gives you today's equation, while the archive holds everything before it. Between the two, every Nerdle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old equation, the record is here.",
+          "For learners, the archive is unlimited practice — every past equation is replayable, and replaying builds the equation-space intuition that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Nerdle archive searches, answered",
+        paragraphs: [
+          "Nerdle players search for the archive in several distinct ways, and this page answers all of them. 'Nerdle archive' is the general search — the complete equation history, answered by the list below. 'Nerdle answer today' and 'nerdle today' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'nerdle answer for a date', 'nerdle June 26 answer', and the past-equation queries all resolve to a calendar click on this page.",
+          "The equation-specific searches are the third family: players who remember an equation from an old puzzle and want to find the day it appeared. The archive's equation search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Nerdle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the equation trainer",
+        paragraphs: [
+          "The Nerdle archive is the best equation-solving trainer in the genre, because every archived day is an eight-character equation you can replay with the same green-purple-black feedback. Load an old date and try to solve it exactly as the daily game works.",
+          "The equation-space logic is what replaying teaches. Every archived answer shows you the equation's structure — the two-term sums, the operator choices, the equals-sign split — and replaying builds the intuition that makes the daily game faster.",
+          "The feedback discipline is the second benefit. Replaying archived days trains you to respect the green-purple-black verdicts absolutely — never reusing a banned digit, always relocating a purple character — the discipline the solver enforces and the archive reinforces.",
+          "Finally, the archive lets you study the digit census. Browsing the equation history shows you which digits and operators recur, and that knowledge reshapes your opener choices from the first guess."
+        ]
+      },
+      {
+        heading: "Nerdle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Nerdle, then check the archive for yesterday's equation and replay the feedback logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest equation training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's equation. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's equation was, the archived entry is the ground truth.",
+          "Finally, use the search box for structure study. Type an equation and see every archived day that used it — the results show you the equation forms the game favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Nerdle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Nerdle archive entries reveals the game's rhythm. The daily equations cycle through the arithmetic forms — two-term sums, subtractions, the rarer multiplications — and the archive's chronological view makes that cycling visible.",
+          "The form pattern is the archive's clearest annual lesson. Across hundreds of days, the game leans on the classic a+b=c sum, and the archive shows the form distribution — the sum-heavy weeks, the subtraction interludes, the occasional product.",
+          "The digit census confirms the equation space's shape. A year of answers is full of the workhorse digits — 1, 2, 0, and 5 — and lighter on 8, 9, and 7. The archive is the proof, and the proof reshapes your openers: sweep the common digits first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the equations resolve in three guesses — and others run hard, with structures that hide their characters. Recognizing the rhythm helps you pace yourself: on hard weeks, respect the black tiles absolutely."
+        ]
+      },
+      {
+        heading: "The Nerdle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Nerdle keep one habit: solve today, replay yesterday. The daily game gives you the fresh equation; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your equation practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's equation is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the equation space starts to feel familiar — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Nerdle answer patterns worth tracking",
+        paragraphs: ["The archive makes Nerdle’s construction habits visible. Answers are valid eight-character equations, and over time the record shows the same families repeating: single-digit starts, two-digit targets, division equations, and the occasional negative result.","For players training to solve faster, the archive is a study set. Scan a month of answers and you will notice how often the puzzle leads with a small number or reuses a previous day’s operator sequence.","That pattern knowledge translates directly into better opening guesses — which is the whole point of keeping the full answer history on one page."]
+      }
+    ],
+    faqHeading: "Nerdle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Nerdle archive?",
+        answer:
+          "This page holds the complete Nerdle archive — the equation answer for every date, searchable by date or equation."
+      },
+      {
+        question: "How far back does the Nerdle archive go?",
+        answer:
+          "The archive covers every daily Nerdle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Nerdle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's equation, or by equation to find every puzzle that used a particular string."
+      },
+      {
+        question: "Can I replay old Nerdle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice the equation-solving logic on past puzzles."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's equation is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/nerdle-solver", label: "Nerdle Solver" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'contexto-archive': {
+    key: 'contexto-archive',
+    eyebrow: 'Contexto Archive Guide',
+    intro:
+      "The Contexto archive is the complete record of every daily Contexto puzzle — the mystery word for each date, searchable and free to browse. Whether you are looking for past Contexto answers, replaying an old semantic-distance challenge, or studying the words the game favors, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Contexto word, archived",
+        paragraphs: [
+          "Contexto publishes one new mystery word every day, and this archive holds the complete sequence — every date, every word. The full history is here, rendered on the page and searchable by date or word.",
+          "Each entry shows the date and the word that was the answer that day. Browsing the archive reveals the game's answer habits — the common vocabulary it favors, the semantic neighborhoods it visits, the everyday words it prefers.",
+          "The archive is the reference for players who track Contexto's answers and want to revisit past puzzles or confirm an old word."
+        ],
+        callout: {
+          title: "Every daily word, in the record",
+          body: "The complete Contexto history — the mystery word for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Contexto archive",
+        paragraphs: [
+          "Search by date to load a specific day's word, or search by word to find every puzzle that used a particular answer. The calendar view lets you click any date and see its word instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's selection patterns.",
+          "For practice, each archived day is replayable: load the date and try to reach the word using the ranking feedback, exactly as the daily game works."
+        ]
+      },
+      {
+        heading: "What the Contexto archive teaches",
+        paragraphs: [
+          "The archive reveals Contexto's word-selection habits. The daily answers are common vocabulary with clear meanings — the kind of words that sit near the center of the semantic space.",
+          "The domain mix is the second lesson. Some days the answer is a kitchen word, others a tech word, others an emotion — and tracking the archive's mix shows you which domains the game visits.",
+          "The ranking lesson is the third. Reviewing past answers shows you which words the model treats as close neighbors, and that mapping builds the semantic intuition the game rewards."
+        ],
+        list: {
+          title: "Contexto archive study patterns",
+          items: [
+            "Track the domain rhythm — kitchen, tech, emotion",
+            "Confirm the common-vocabulary bias",
+            "Study which words the model ranks as neighbors",
+            "Replay old days to practice the ranking compass"
+          ]
+        }
+      },
+      {
+        heading: "The Contexto archive and the daily word",
+        paragraphs: [
+          "The archive pairs with the Contexto daily page: the daily page gives you today's word, while the archive holds everything before it. Between the two, every Contexto puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old word, the record is here.",
+          "For learners, the archive is unlimited practice — every past word is replayable, and replaying builds the ranking reading that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Contexto archive searches, answered",
+        paragraphs: [
+          "Contexto players search for the archive in several distinct ways, and this page answers all of them. 'Contexto archive' is the general search — the complete word history, answered by the list below. 'Contexto answer' and 'Contexto answer today' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'contexto answer for a date', 'contexto answer May 28', and the past-word queries all resolve to a calendar click on this page.",
+          "The word-specific searches are the third family: players who remember a word from an old puzzle and want to find the day it appeared. The archive's word search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Contexto answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the ranking trainer",
+        paragraphs: [
+          "The Contexto archive is the best ranking-reading trainer in the genre, because every archived day is a word puzzle you can replay with the same ranking feedback. Load an old date and try to reach the mystery word using the ranking numbers, exactly as the daily game works.",
+          "The compass logic is what replaying teaches. Every archived word shows you which guesses ranked high and which ranked low, and replaying builds the semantic intuition — which domains the game favors, which words cluster — that makes the daily game faster.",
+          "The anchor discipline is the second benefit. Replaying archived days trains you to anchor on your highest-ranking guess and explore its semantic neighborhood, rather than jumping between unrelated guesses — the discipline that separates fast solvers from random walkers.",
+          "Finally, the archive lets you study the domain rhythm. Browsing the word history shows you the kitchen-words, tech-words, emotion-words rotation, and that knowledge lets you pre-load the right domain before the first guess lands."
+        ]
+      },
+      {
+        heading: "Contexto archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Contexto, then check the archive for yesterday's word and replay the ranking logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest semantic training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's word. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's word was, the archived entry is the ground truth.",
+          "Finally, use the search box for domain study. Type a word and see the archived days that used it — the results show you the semantic domains the game favors, and that knowledge reshapes your guessing."
+        ]
+      },
+      {
+        heading: "Contexto answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Contexto archive entries reveals the game's rhythm. The daily words cycle through the semantic domains — kitchen words, tech words, emotion words — and the archive's chronological view makes that cycling visible.",
+          "The domain pattern is the archive's clearest annual lesson. Across hundreds of days, the game visits every corner of the word-space, and the archive shows the rotation — the concrete weeks, the abstract weeks, the emotional weeks.",
+          "The vocabulary confirms the common-word bias. A year of answers is full of everyday English words with clear meanings, and almost free of obscure terms. The archive is the proof, and the proof reshapes your guessing: common words first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the answer's neighborhood is reachable in a few guesses — and others run hard. Recognizing the rhythm helps you pace yourself: on hard weeks, anchor on your highest-ranking guess and explore its neighborhood."
+        ]
+      },
+      {
+        heading: "The Contexto daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Contexto keep one habit: solve today, replay yesterday. The daily game gives you the fresh word; the archive gives you a cold replay of the previous one. Doing both in the same sitting doubles your semantic practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's word is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the ranking feedback starts to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Contexto rank, leaderboard, and clue depth",
+        paragraphs: ["Contexto answers are ranked by embedding distance, and the archive preserves both the daily word and the context in which it appeared. Players who study the archive notice the answer style: everyday nouns and verbs dominate because the game ranks words by how often they appear near one another in real text.","The archive also documents the leaderboard angle — how quickly the daily word was solved and how the community performed. Knowing a word’s difficulty curve helps you judge your own rank on the current day’s puzzle.","And because Contexto’s clue depth grows with each guess, archived answers give you a sense of how many guesses a typical word needs before it becomes obvious."]
+      }
+    ],
+    faqHeading: "Contexto Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Contexto archive?",
+        answer:
+          "This page holds the complete Contexto archive — the mystery word for every date, searchable by date or word."
+      },
+      {
+        question: "How far back does the Contexto archive go?",
+        answer:
+          "The archive covers every daily Contexto puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Contexto answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's word, or by word to find every puzzle that used a particular answer."
+      },
+      {
+        question: "Can I replay old Contexto puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice the ranking compass on past words."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's word is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/contexto-answer-today", label: "Contexto Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/semantle-answer-today", label: "Semantle Answer Today" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
+    ]
+  },
+
+  'globle-archive': {
+    key: 'globle-archive',
+    eyebrow: 'Globle Archive Guide',
+    intro:
+      "The Globle archive is the complete record of every daily Globle puzzle — the country answer for each date, searchable and free to browse. Whether you are looking for past Globle answers, replaying an old geography challenge, or studying the countries the game favors, this page has the full history. Here is how to use it.",
+    sections: [
+      {
+        heading: "Every Globle country, archived",
+        paragraphs: [
+          "Globle publishes one new country every day, and this archive holds the complete sequence — every date, every answer. The full history is here, rendered on the page and searchable by date or country.",
+          "Each entry shows the date and the country that was the answer that day. Browsing the archive reveals the game's answer habits — the recognizable countries it favors, the continents it visits, the geography it prefers.",
+          "The archive is the reference for players who track Globle's answers and want to revisit past puzzles or confirm an old country."
+        ],
+        callout: {
+          title: "Every daily country, in the record",
+          body: "The complete Globle history — the country answer for every date, searchable and free to browse."
+        }
+      },
+      {
+        heading: "How to use the Globle archive",
+        paragraphs: [
+          "Search by date to load a specific day's country, or search by country to find every puzzle that used a particular nation. The calendar view lets you click any date and see its answer instantly.",
+          "The list view shows puzzles in chronological order, so you can scroll the full history and track the game's geographic patterns.",
+          "For practice, each archived day is replayable: load the date and try to reach the country using the color-map feedback, exactly as the daily game works."
+        ]
+      },
+      {
+        heading: "What the Globle archive teaches",
+        paragraphs: [
+          "The archive reveals Globle's country-selection habits. The daily answers skew toward recognizable nations — the G20, the popular travel destinations — and the archive makes that bias visible.",
+          "The continental rhythm is the second lesson. Some weeks lean European, others Asian or African, and tracking the archive's rhythm lets you pre-load the right continent before the first guess.",
+          "The color-map lesson is the third. Reviewing past answers shows you how the game's distance-to-color gradient maps onto real geography, and that mapping improves your reading of the daily map."
+        ],
+        list: {
+          title: "Globle archive study patterns",
+          items: [
+            "Track the continental rhythm across weeks",
+            "Confirm the recognizable-country bias",
+            "Study how the color gradient maps to distance",
+            "Replay old days to practice the color-map reading"
+          ]
+        }
+      },
+      {
+        heading: "The Globle archive and the daily country hunt",
+        paragraphs: [
+          "The archive pairs with the Globle daily page: the daily page gives you today's country, while the archive holds everything before it. Between the two, every Globle puzzle — past and present — is one click away.",
+          "For streak-keepers, the archive is the safety net: missed a day, replay it; want to confirm an old country, the record is here.",
+          "For learners, the archive is unlimited practice — every past country is replayable, and replaying builds the map sense that makes the daily game faster."
+        ]
+      },
+      {
+        heading: "Globle archive searches, answered",
+        paragraphs: [
+          "Globle players search for the archive in several distinct ways, and this page answers all of them. 'Globle archive' is the general search — the complete country history, answered by the list below. 'Globle answer today' and 'today's globle answer' point to the daily pages this archive feeds.",
+          "The date-specific searches are the second family: 'globle answer for a date', 'what is todays globle', and the past-country queries all resolve to a calendar click on this page.",
+          "The country-specific searches are the third family: players who remember a nation from an old puzzle and want to find the day it appeared. The archive's country search answers that instantly.",
+          "Each of these search intents is served by a different part of this page — the list, the calendar, the search box — and together they make the archive the complete Globle answer resource."
+        ]
+      },
+      {
+        heading: "Replaying the archive: the geography trainer",
+        paragraphs: [
+          "The Globle archive is the best geography trainer in the genre, because every archived day is a country puzzle you can replay with the same color-map feedback. Load an old date and try to reach the country using the distance-to-color gradient, exactly as the daily game works.",
+          "The map-reading logic is what replaying teaches. Every archived country shows you the color gradient your guesses produced, and replaying builds the distance-to-color intuition — the green-is-close, red-is-far mapping that makes the daily game faster.",
+          "The continent-first discipline is the second benefit. Replaying archived days trains you to lock the continent with your first guess and switch the moment the feedback says you are wrong, the discipline that separates four-guess solvers from six-guess scramblers.",
+          "Finally, the archive lets you study the continental rhythm. Browsing the country history shows you which continents the game visits week to week, and that knowledge lets you pre-load the right region before the first guess lands."
+        ]
+      },
+      {
+        heading: "Globle archive tips and the daily connection",
+        paragraphs: [
+          "The fastest way to use the archive is to pair it with the daily game. Solve today's Globle, then check the archive for yesterday's country and replay the color-map logic — the contrast between today's fresh solve and yesterday's cold replay is the fastest geography training the game offers.",
+          "Bookmark both pages: the archive for history, the daily page for today's country. Players who keep both in their daily rotation never lose track of the sequence.",
+          "The archive is also the dispute-settler. When the group cannot agree on what an old day's country was, the archived entry is the ground truth.",
+          "Finally, use the search box for continent study. Type a country and see every archived day that used it — the results show you which continents the game favors, and that knowledge lets you pre-load the right region before the first guess lands."
+        ]
+      },
+      {
+        heading: "Globle answers across the year: what the record shows",
+        paragraphs: [
+          "A full year of Globle archive entries reveals the game's rhythm. The daily countries cycle through the continents — European weeks, Asian weeks, African weeks — and the archive's chronological view makes that cycling visible.",
+          "The continental pattern is the archive's clearest annual lesson. Across hundreds of days, the game favors recognizable countries from every continent, and the archive shows the rotation — the Europe-heavy stretches, the Asia runs, the Africa interludes.",
+          "The geography confirms the recognizable-country bias. A year of answers is full of the G20, the popular travel destinations, and the geographically significant states, and almost free of obscure territories. The archive is the proof, and the proof reshapes your guessing: recognizable countries first, always.",
+          "Finally, the annual view shows the difficulty rhythm. Some weeks run easy — the silhouettes are instantly recognizable — and others run hard, with small or fragmented countries. Recognizing the rhythm helps you pace yourself: on hard weeks, use the color-map feedback deliberately."
+        ]
+      },
+      {
+        heading: "The Globle daily connection, in one habit",
+        paragraphs: [
+          "The players who improve fastest at Globle keep one habit: solve today, replay yesterday. The daily game gives you the fresh challenge; the archive gives you a cold replay of the previous country. Doing both in the same sitting doubles your geography practice without adding time.",
+          "The archive makes that habit effortless. Yesterday's country is one click from today's page, and the replay is identical in format to the daily game. After a week of solve-plus-replay, the color-map feedback starts to feel instinctive — and the daily game starts to feel easy."
+        ]
+      },
+      {
+        heading: "Country answers, flags, and geography",
+        paragraphs: ["Each archived Globle answer is a real country or territory, and each one carries useful geography with it — a flag, a capital, a region, and a set of neighbors that explain why the game chose it as the day’s target.","Browsing the archive is a quiet geography lesson: the answers cluster around countries that are genuinely hard to pin down, which is exactly why players reach for an answer page in the first place.","If you are studying the archive to improve, track which continent produced the last several answers — Globle rotates regions, and the rotation is visible in the archive’s date order."]
+      }
+    ],
+    faqHeading: "Globle Archive FAQ",
+    faqs: [
+      {
+        question: "Where is the full Globle archive?",
+        answer:
+          "This page holds the complete Globle archive — the country answer for every date, searchable by date or country."
+      },
+      {
+        question: "How far back does the Globle archive go?",
+        answer:
+          "The archive covers every daily Globle puzzle from the game's launch through today, updated daily."
+      },
+      {
+        question: "Can I search Globle answers by date?",
+        answer:
+          "Yes — search by date to load a specific day's country, or by country to find every puzzle that used a particular nation."
+      },
+      {
+        question: "Can I replay old Globle puzzles?",
+        answer:
+          "Yes — each archived day is replayable, letting you practice color-map reading on past countries."
+      },
+      {
+        question: "Is the archive updated daily?",
+        answer:
+          "Yes — each day's country is added to the archive as soon as the puzzle publishes."
+      }
+    ],
+    relatedLinks: [
+      { href: "/globle-answer-today", label: "Globle Answer Today" },
+      { href: "/wordle-answer-archive", label: "Wordle Answer Archive" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/worldle-answer-today", label: "Worldle Answer Today" },
+      { href: "/countryle-answer-today", label: "Countryle Answer Today" },
+      { href: "/wordle-solver", label: "Wordle Solver" }
     ]
   },
 };
