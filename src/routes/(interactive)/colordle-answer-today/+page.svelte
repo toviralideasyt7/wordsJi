@@ -5,6 +5,8 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -268,7 +270,16 @@
       </p>
 
       <div class="mt-12">
-        <AuthorCard
+        <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['colordle-answer-today']} vars={{
+          date: data.formattedDate,
+          answer: data.color?.name ?? '',
+          hex: data.color?.hex ?? '',
+          dayNum: data.dayNum ? String(data.dayNum) : ''
+        }} />
+</div>
+
+<AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}
           image={PRESTON_HAYES_AUTHOR_IMAGE}
           description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

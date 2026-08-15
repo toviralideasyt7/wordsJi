@@ -5,116 +5,402 @@ import { readFile, writeFile } from 'node:fs/promises';
 const registryPath = 'src/lib/content/registry.ts';
 
 // Each entry is a full TS object literal WITHOUT the trailing comma, keyed by route.
+// NOTE: all prose strings are DOUBLE-QUOTED so apostrophes need no escaping.
 const ENTRIES = {};
 
-ENTRIES['quordle-answer-today'] = `  'quordle-answer-today': {
-    key: 'quordle-answer-today',
-    eyebrow: 'Quordle Strategy Guide',
+ENTRIES['phoodle-answer-today'] = `  'phoodle-answer-today': {
+    key: 'phoodle-answer-today',
+    eyebrow: 'Phoodle Strategy Guide',
     intro:
-      'Quordle makes you solve four Wordle-style boards with one shared set of nine guesses. That changes everything: your opener has to serve four boards at once, and every guess after it is a resource you cannot afford to waste on a single grid. This guide covers board allocation, opener systems, and the endgame habits that separate streaks from blowups.',
+      "Phoodle is Wordle with a food twist: every answer is a food-related word, from ingredients to dishes to kitchen verbs. You get six guesses and the same green, yellow, gray feedback. This guide covers how the food-word constraint changes your strategy, why your opener should be different from Wordle's, and how to read the answer for {date} without spoiling the solve.",
     sections: [
       {
-        heading: 'The four-board math that changes every decision',
+        heading: "The food constraint is your biggest advantage",
         paragraphs: [
-          'Quordle looks like Wordle with extra grids, but the strategy is a different sport. In Wordle you spend guesses on information for one board. In Quordle, the same nine-guess budget has to cover four boards, so a guess that only helps one grid is a luxury you usually cannot afford.',
-          'The key number is 2.25 — the average number of boards a guess must advance to solve all four inside nine tries. In practice that means good Quordle players never chase a single board early. They look for guesses that sit in the overlap of two or three boards at once, and they let boards solve themselves in parallel.',
-          'The payoff of parallel play is huge. A player who solves board one on guess three and boards two and three on guess five has already banked most of the game before the fourth board even needs attention. A player who tunnels on board one until guess six has spent two-thirds of the budget and learned almost nothing about the other three.'
+          "Phoodle's word list is drawn from food vocabulary, which means the answer pool is far smaller than Wordle's. That is not a disadvantage — it is a filter you should exploit. The word must be food-related: an ingredient like SPICE, a dish like PASTA, a cut like STEAK, or a verb like BASTE.",
+          "The practical effect is that some guesses that are great in Wordle are wasted in Phoodle. Words like CRANE or SLATE are food-neutral — they tell you nothing about the food lane. A Phoodle opener should bias toward letters that appear in food words: S, T, R, P, C, K, and the vowels.",
+          "Once you know the answer is a food word, the candidate list collapses. A pattern like _A_ST_ is far more tractable when you know it is an ingredient or dish than when it could be anything. The constraint narrows the search exactly where Wordle players wish they had one."
         ]
       },
       {
-        heading: 'Openers that cover four boards instead of one',
+        heading: "The Phoodle answer for {date}",
         paragraphs: [
-          'A good single-game Wordle opener just needs five strong letters. A good Quordle opener needs letters that are likely to hit on four different boards — which mostly means the same thing, done deliberately. You want two or three vowels and the most common consonants, spread across positions so the four boards have different things to work with.',
-          'The community has settled on a two-guess opener pair rather than a single word: play STARE, then follow with a second word that reuses the vowels in new positions while testing fresh consonants. Words like CLOWN, PILOT, or MONEY pair with STARE to cover nearly every common letter across the alphabet.',
-          'Do not open with the same word on all four boards if the game lets you choose different openers per board — and in the version on this site, you do not need to: you make one guess per round that applies to all boards simultaneously. So the real skill is picking one guess per round that lands across as many boards as possible.'
+          "Today's Phoodle answer is the food word for {date}, revealed on this page. Players searching for the Phoodle answer for {date}, today's Phoodle word, or Phoodle hints for {date} will find the answer here, confirmed from the official source.",
+          "The answer card at the top shows the word with its food category — ingredient, dish, cut, or kitchen term — so you know exactly which lane the puzzle was testing. The {date} puzzle has one answer, and it is the same word across every mirror of the game.",
+          "If you are still solving, the hint card gives you the category, the first letter, and the letter pattern without revealing the word. Finish the solve yourself, then check the reveal when you are ready."
         ],
         callout: {
-          title: 'The opener rule',
-          body: 'Pick an opener that covers the five most common letters, then a second guess that tests the next five. Whatever those two guesses reveal across the four boards decides which boards get your attention first — not your favorite word.'
+          title: "The food-lane rule",
+          body: "Every Phoodle guess should test letters that live in food vocabulary. SPICE, PASTA, STEAK, and BASTE are the anchors; guessing neutral words wastes the constraint."
         }
       },
       {
-        heading: 'How to read four boards of feedback at once',
+        heading: "Phoodle openers that actually help",
         paragraphs: [
-          'When you submit a guess in Quordle, every board lights up with its own green, yellow, and gray feedback. Reading them side by side is the real game. A letter that comes back yellow on all four boards is a gift — it means the same letter sits in all four answers, just in different spots.',
-          'The fastest way to get lost is to treat the boards as independent. They are not. The guesses are shared, so a letter that is gray on board one but yellow on board three tells you to stop worrying about board one and start relocating that letter on board three.',
-          'A practical reading order: check greens first (they lock letters and positions for free), then count which boards each yellow letter belongs to, then decide which board is furthest from solved and give it a targeted guess. The board with the fewest confirmed letters is almost always the one that decides the game.'
+          "A strong Phoodle opener covers the letters that dominate food words while staying valid: STEAK, SPICE, and PASTA are the community favorites. STEAK gives you S, T, E, A, K — four letters that appear across ingredients and dishes, plus the K that shows up in BAKED, STOCK, and KITCHEN-adjacent words.",
+          "SPICE is the other classic because it tests the C that appears in nearly every food category and the P that shows up in PASTA, PEACH, and PEPPER. One guess, and you have bracketed a huge share of the food dictionary.",
+          "The second guess should relocate yellows and test the remaining food-heavy letters. If your opener gave you yellow T and E, follow with a word that moves them while testing R, L, and N — the letters of STEW, ROAST, and LEMON."
         ],
         list: {
-          title: 'Signals that should change your plan mid-game',
+          title: "Food letters worth testing early",
           items: [
-            'A letter yellow on two or more boards: relocate it on all of them in one guess',
-            'A board with three greens by guess four: it is nearly solved, leave it alone',
-            'A board with nothing but grays by guess four: it needs an emergency information guess, not a solve attempt',
-            'Two boards sharing the same pattern (same letter, same position): they likely share the word skeleton, so one guess can crack both'
+            "S and T: they open SPICE, STEAK, STEW, STOCK, and dozens more",
+            "P and C: PASTA, PEACH, PICKLE, CREAM, CIDER, CUSTARD",
+            "K: BAKED, STOCK, KITCHEN, KALE, SOUP-STARTERS",
+            "The vowels A and E: they carry most food words",
+            "Avoid Q, X, Z in the opener — rare in the food dictionary"
           ]
         }
       },
       {
-        heading: 'The endgame: converting three boards without panicking',
+        heading: "Common Phoodle mistakes",
         paragraphs: [
-          'Quordle endgames are won by players who know when to stop gathering information. If two boards are solved and the third has one green with four open spots, stop playing the field and start testing real words. At five or six guesses left, an elimination guess is a guess you cannot afford.',
-          'The opposite failure is also common: players who finally solve three boards, look at the fourth with two guesses left, and freeze. Do the math before you freeze. If the remaining board has one locked letter and the answer is probably one of three words, guess the most likely one now — you still have one guess left for the runner-up.',
-          'Sequence mode changes the endgame completely: boards must be solved in order, so you cannot let board one sit while board four is nearly done. If you play Sequence, adjust your allocation — early guesses should deliberately avoid solving board four before board one is finished.'
-        ],
-        callout: {
-          title: 'The one-line Quordle philosophy',
-          body: 'Every guess should either solve a board or make two boards easier. The players who run out of guesses are the ones still making single-board guesses on round seven.'
-        }
-      },
-      {
-        heading: 'Mode-by-mode notes: chill, extreme, sequence, and rescue',
-        paragraphs: [
-          'Chill mode keeps the same four-board structure but gives you more breathing room with a gentler dictionary and more forgiving word selection. Treat it as the training wheels version: play it to internalize the allocation habits above without pressure.',
-          'Extreme mode is where the shared-guess math bites hardest. The dictionary is tighter and the answers lean obscure, so the opener pair matters more than ever. Expect to lean on elimination guesses you would never play in normal mode.',
-          'Sequence mode forces board-by-board completion, which flips the strategy: you want your early guesses to avoid solving board four too early, and you want to bank board one as fast as possible. Some players deliberately play weaker openers in Sequence to control which board finishes first.',
-          'Rescue mode lets you recover boards you would otherwise fail, at the cost of score. The strategic lesson stays the same — the boards that get rescued are almost always the ones that were ignored on rounds two through five while a favorite board got all the attention.'
+          "The most common mistake is playing Phoodle like Wordle. The food constraint is a gift, and players who ignore it burn guesses on letters that never appear in food words. Every gray Q, X, or Z you test is a guess the answer pool never needed.",
+          "The second mistake is forgetting the kitchen verbs. Phoodle answers are not only ingredients — they include BAKE, BASTE, KNEAD, STEAM, and STIR. Players who only think of foods run out of guesses on verb answers that the constraint should have made obvious.",
+          "The third mistake is ignoring the category once it is visible. If the pattern clearly fits an ingredient, stop considering dishes. The solver on this site models the whole food dictionary, which is exactly why its candidates always stay in the right lane."
         ]
       },
       {
-        heading: 'Practice habits that turn Quordle into a solvable puzzle',
+        heading: "Practicing Phoodle with the archive",
         paragraphs: [
-          'Quordle rewards repetition more than raw vocabulary. The archive of past puzzles on this site is the fastest training tool: replay games and force yourself to write down, after each guess, which board you were trying to help and why. You will notice the pattern within a week — most losses come from allocation, not word knowledge.',
-          'A second habit that pays off: always have a planned second guess before you submit your first. Amateur players decide guess two after seeing guess one. Strong players already know it, because the opener pair is a system, not a reaction.',
-          'Finally, track your boards-solved-per-game average rather than wins and losses. A 3-1 loss with four boards nearly solved is a different problem than a 4-0 blowout, and the two need different fixes. The players who improve fastest are the ones who stop celebrating streaks and start reading their own mistakes.'
+          "The archive keeps every past Phoodle answer, which makes it the best training ground for the food lane. Replay old puzzles and note which answers were verbs versus ingredients — the mix will surprise you, and knowing it changes your late-game guesses.",
+          "A second habit: after each solve, list three other food words that fit the same pattern. It sounds simple, but it trains the brain to think in food-vocabulary, which is exactly what makes early guesses efficient.",
+          "Finally, use the solver to check your lane discipline. If the solver's candidates are all food words while yours wander, the gap is your mental dictionary — and it fixes itself with practice."
         ]
       }
     ],
-    faqHeading: 'Quordle Questions, Answered',
+    faqHeading: "Phoodle Questions, Answered",
     faqs: [
       {
-        question: 'How many guesses do you get in Quordle?',
+        question: "What is the Phoodle answer for {date}?",
         answer:
-          'Nine guesses total, shared across all four boards. The same guess is applied to every board at once, which is why parallel play matters.'
+          "The Phoodle answer for {date} is revealed on this page — it is a food-related word, and it is the same across every source."
       },
       {
-        question: 'What is the best opening pair for Quordle?',
+        question: "How do you play Phoodle?",
         answer:
-          'A common strong pair is STARE followed by CLOWN or PILOT. Together they cover most of the alphabet, and the four boards each get useful vowels and consonants to work with.'
+          "Guess a five-letter word and get green, yellow, and gray feedback like Wordle, but every answer is food-related — ingredients, dishes, cuts, and kitchen verbs."
       },
       {
-        question: 'How is Quordle different from Wordle?',
+        question: "What is the best first word in Phoodle?",
         answer:
-          'Wordle is one board with six guesses. Quordle is four boards sharing nine guesses, which forces you to allocate guesses across boards instead of solving one at a time.'
+          "STEAK and SPICE are the community favorites. They cover the letters that dominate food vocabulary and produce useful feedback for the food lane."
       },
       {
-        question: 'How do I stop failing Quordle on the last board?',
+        question: "Are Phoodle answers always food words?",
         answer:
-          'Stop ignoring the lagging board until the end. Track which board has the fewest confirmed letters after each guess and give it a targeted guess before the final rounds.'
+          "Yes — the answer list is food vocabulary only. That includes ingredients, dishes, cuts, and kitchen verbs like BAKE and KNEAD."
       },
       {
-        question: 'Does Quordle have different modes?',
+        question: "Can I play old Phoodle puzzles?",
         answer:
-          'Yes — chill, extreme, sequence, and rescue modes each change the rules slightly. Sequence mode is the hardest strategic shift because boards must be solved in order.'
+          "Yes. The archive keeps past answers, and the Phoodle solver works on any of them for practice or verification."
       }
     ],
     relatedLinks: [
-      { href: '/wordle-answer-today', label: 'Wordle Answer Today' },
-      { href: '/nerdle-answer-today', label: 'Nerdle Answer Today' },
-      { href: '/quordle-solver', label: 'Quordle Solver' },
-      { href: '/phoodle-answer-today', label: 'Phoodle Answer Today' },
-      { href: '/waffle-answer-today', label: 'Waffle Answer Today' },
-      { href: '/semantle-answer-today', label: 'Semantle Answer Today' }
+      { href: "/phoodle-solver", label: "Phoodle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" },
+      { href: "/phoodle-answer-archive", label: "Phoodle Answer Archive" }
+    ]
+  }`;
+
+ENTRIES['phrazle-answer-today'] = `  'phrazle-answer-today': {
+    key: 'phrazle-answer-today',
+    eyebrow: 'Phrazle Strategy Guide',
+    intro:
+      "Phrazle is the daily game where you guess a common phrase instead of a single word — you solve multiple words at once with Wordle-style color feedback, and the daily puzzle runs two sessions: morning and afternoon. This guide covers multi-word guessing, how to read feedback across several words, and the exact answer for {date} when you need it.",
+    sections: [
+      {
+        heading: "Multi-word guessing changes everything",
+        paragraphs: [
+          "Phrazle replaces the single five-letter target with a phrase of two or three words, and every guess must be a phrase of the same shape. That one change rewrites the strategy: you are no longer hunting letters, you are hunting word boundaries and common collocations.",
+          "The feedback still works per letter, but it now spans several words. A yellow letter in word two tells you something different from a yellow in word one, because the phrase structure constrains where words can go. The guess that teaches you the most is often the one that tests a common phrase shape, not the one that tests the most letters.",
+          "The practical upshot: vocabulary still matters, but collocation knowledge matters more. Players who read and hear English constantly have an edge that raw word-list memory cannot match, because phrases like 'big deal', 'hard time', and 'first thing' are the answer pool."
+        ]
+      },
+      {
+        heading: "The Phrazle answer for {date}",
+        paragraphs: [
+          "Today's Phrazle answers for {date} — both the morning and afternoon sessions — are revealed on this page. Players searching for the Phrazle answer for {date}, today's Phrazle, or the Phrazle morning and afternoon answers will find both phrases here, confirmed from the official source.",
+          "The answer cards at the top show each session's phrase separately, so you can check the morning puzzle without spoiling the afternoon one. Both answers are the same across every mirror of the game.",
+          "If you are still solving the morning session, the hint card gives you the phrase length, the first word, and the key letters without revealing the whole phrase."
+        ],
+        callout: {
+          title: "Two sessions, two answers",
+          body: "Phrazle runs morning and afternoon puzzles every day. {date} has both answers on this page — check the session you are playing, not the other one."
+        }
+      },
+      {
+        heading: "How to guess a phrase before you know the words",
+        paragraphs: [
+          "The opening move in Phrazle is not a clever phrase — it is a structural probe. Guess a phrase that fills common word slots: a two-word opener like 'large tree' or 'first time' tests the most common letters across both positions, and the feedback tells you which word carries the action.",
+          "Once one word starts resolving, use its letters to disambiguate the phrase type. A green first letter with a common article position points to a two-word collocation, while a mid-sentence structure points to a three-word idiom. The phrase shape is half the puzzle.",
+          "The solver on this page does the heavy lifting by modeling common phrases: it filters the phrase dictionary by your feedback and ranks candidates by how much they narrow the field. Its top suggestion on turn three is usually the actual phrase, because collocations resolve fast once the shape is known."
+        ],
+        list: {
+          title: "Phrase shapes that resolve quickly",
+          items: [
+            "Article + noun: 'the end', 'a lot', 'the way'",
+            "Adjective + noun: 'big deal', 'new year', 'hard time'",
+            "Verb + noun: 'make sense', 'take care', 'give up'",
+            "Two-word idioms: 'right now', 'all day', 'good luck'",
+            "Three-word idioms: 'by the way', 'in the end', 'out of time'"
+          ]
+        }
+      },
+      {
+        heading: "Common Phrazle mistakes",
+        paragraphs: [
+          "The most common mistake is playing it like Wordle and guessing single words, which the game rejects — every guess must match the phrase shape. Players waste their first two turns learning this and spend the rest catching up.",
+          "The second mistake is ignoring common small words. Articles, prepositions, and pronouns carry most phrases, and guessing 'the' early is not a waste — it resolves the phrase structure faster than any content word.",
+          "The third mistake is fixating on the content word while the glue words stay unknown. A phrase like 'in the end' is solved by its structure, not its nouns. The solver demonstrates this every game: its guesses prioritize phrase shape over raw letter coverage."
+        ]
+      },
+      {
+        heading: "Practicing Phrazle for faster solves",
+        paragraphs: [
+          "The archive keeps both sessions for past days, which makes it the best place to learn phrase patterns. Replay a week of puzzles and note how often the answer was a two-word collocation you already knew — the game is recognition, not recall.",
+          "A second habit: after each solve, write down the phrase shape. A few weeks of this and you will see the same skeletons repeating, which makes your first guesses dramatically better.",
+          "Finally, use the solver to check your structure reads. If the solver suggests a phrase shape you did not see, that is the gap in your collocation intuition — and it closes fast with practice."
+        ]
+      }
+    ],
+    faqHeading: "Phrazle Questions, Answered",
+    faqs: [
+      {
+        question: "What is the Phrazle answer for {date}?",
+        answer:
+          "Phrazle runs two sessions daily. The {date} answers — morning and afternoon — are both revealed on this page."
+      },
+      {
+        question: "How do you play Phrazle?",
+        answer:
+          "Guess a phrase that matches the puzzle's word structure. Each guess returns green, yellow, and gray feedback per letter, and you solve all the words of the phrase within the guess limit."
+      },
+      {
+        question: "What is the best first guess in Phrazle?",
+        answer:
+          "A structural probe like 'first time' or 'large tree' — a common phrase shape that tests the most frequent letters across both word positions."
+      },
+      {
+        question: "Does Phrazle have two puzzles a day?",
+        answer:
+          "Yes. Phrazle publishes a morning and an afternoon session, each with its own phrase and its own answer."
+      },
+      {
+        question: "Can I play past Phrazle puzzles?",
+        answer:
+          "Yes. The archive keeps both sessions for past days, and the Phrazle solver works on any of them."
+      }
+    ],
+    relatedLinks: [
+      { href: "/phrazle-solver", label: "Phrazle Solver" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/waffle-answer-today", label: "Waffle Answer Today" },
+      { href: "/phrazle-answer-archive", label: "Phrazle Answer Archive" }
+    ]
+  }`;
+
+ENTRIES['canuckle-answer-today'] = `  'canuckle-answer-today': {
+    key: 'canuckle-answer-today',
+    eyebrow: 'Canuckle Strategy Guide',
+    intro:
+      "Canuckle is Canada's daily word game — same green, yellow, gray feedback as Wordle, but the answer pool is Canadian English, which means spelling differences and hockey-adjacent vocabulary show up more than you expect. You also get a Canadian fact with every puzzle. This guide covers the spelling differences that trip up non-Canadians and the answer for {date}.",
+    sections: [
+      {
+        heading: "The Canadian-English pool changes your guess list",
+        paragraphs: [
+          "Canuckle answers come from Canadian English, which shares most of its vocabulary with American English but carries real differences: colour-style spellings, hockey and geography words, and everyday terms that lean British. The pool is smaller than Wordle's, and that is the lever.",
+          "The spelling differences matter most. Canadian English keeps the U in colour, flavour, and honour, and uses -re endings in words like centre and theatre. If your pattern shows a possible -OR or -ER ending, consider the Canadian variant — it may be the difference between the answer and a rejected guess.",
+          "The game also leans into Canadian culture: hockey terms, provinces, and uniquely Canadian words appear more often than random chance would suggest. Players who know the pool spend fewer guesses on words that would be strong Wordle guesses but weak Canuckle ones."
+        ]
+      },
+      {
+        heading: "The Canuckle answer for {date}",
+        paragraphs: [
+          "Today's Canuckle answer for {date} is revealed on this page. Players searching for the Canuckle answer for {date}, today's Canuckle, or the Canuckle word of the day will find the answer here, confirmed from the official source, along with the daily Canadian fact.",
+          "The answer card at the top shows the word, its puzzle number, and the fact the game attached to it — the fact is a fun check that you found the right source. The {date} puzzle has one answer, and it is the same across every mirror of the game.",
+          "If you are still solving, the hint card gives you the Canadian angle — whether the word leans hockey, geography, spelling, or everyday vocabulary — without revealing the answer."
+        ],
+        callout: {
+          title: "The U-in-colour rule",
+          body: "When a pattern could end in -OR or -ER, test the Canadian spelling first. ColouR-style answers appear often enough to matter, and the solver models the Canadian pool exactly."
+        }
+      },
+      {
+        heading: "Openers tuned for the Canuckle pool",
+        paragraphs: [
+          "The best Canuckle openers overlap with Wordle but bias toward Canadian vocabulary: STARE and CRANE still work, but adding a C early pays off because Canadian words lean on C (CANADA, CANOE, COAST, CAPITAL). An opener like SCARE tests C, S, A, R, E in one shot.",
+          "The second guess should probe the Canadian markers: a U, an H, or a K. Words like TOUGH or MOUNT test the spellings and hockey-adjacent vocabulary that distinguish the pool. One early probe saves the late-game confusion that costs non-Canadian players their streaks.",
+          "The key is to treat Canuckle as its own game, not as Wordle with a flag. The feedback rules are identical; the answer pool is not. Players who internalize that difference solve in five guesses instead of missing at six."
+        ],
+        list: {
+          title: "Canadian markers worth probing early",
+          items: [
+            "C: appears across Canada-themed answers and everyday words",
+            "U: colour, flavour, honour — the spelling difference that matters",
+            "H: hockey, harvest, harbour, and other H-heavy answers",
+            "K: skating-adjacent and short Canadian words",
+            "Skip Q, X, Z until the pattern demands them"
+          ]
+        }
+      },
+      {
+        heading: "Common Canuckle mistakes",
+        paragraphs: [
+          "The most common mistake is guessing American spellings. If the pattern fits both 'flavor' and 'flavour', the Canadian pool almost always wants the U version — and players who insist on the American spelling burn the final guess.",
+          "The second mistake is ignoring the fact. The daily Canadian fact is a clue, not decoration: a hockey fact points to a hockey-adjacent word, a geography fact points to a province or landmark. The solver treats the fact as part of the input, and you should too.",
+          "The third mistake is over-correcting. Not every answer is hockey or a U-word — most Canuckle answers are ordinary English words shared with Wordle. The Canadian bias sharpens your odds; it does not replace the standard wordplay."
+        ]
+      },
+      {
+        heading: "Practicing Canuckle with the archive",
+        paragraphs: [
+          "The archive keeps every past Canuckle answer, and replaying it is the fastest way to learn the pool. Note which answers were Canadian-specific versus shared vocabulary — the ratio will sharpen your opener choices.",
+          "A second habit: after each solve, check whether an American spelling of the answer exists. Words with both spellings are the single biggest source of Canuckle losses, and listing them builds the exact mental map the game rewards.",
+          "Finally, use the Canuckle solver to verify your pool read. If the solver's candidates are Canadian words while yours wandered into American-English territory, you have found the gap — and the fix is just familiarity."
+        ]
+      }
+    ],
+    faqHeading: "Canuckle Questions, Answered",
+    faqs: [
+      {
+        question: "What is today's Canuckle answer?",
+        answer:
+          "Today's Canuckle answer for {date} is revealed on this page, with the daily Canadian fact. It is the same word across every source."
+      },
+      {
+        question: "How do you play Canuckle?",
+        answer:
+          "Same rules as Wordle — six guesses, green/yellow/gray feedback — but the answer pool is Canadian English, including U-spellings and Canadian culture words."
+      },
+      {
+        question: "What is the best first word in Canuckle?",
+        answer:
+          "SCARE is a strong opener because it tests C, S, A, R, E — covering the Canadian C-bias and the most common letters in one guess."
+      },
+      {
+        question: "Does Canuckle use American or British spellings?",
+        answer:
+          "Canadian English, which keeps the U in colour and flavour and uses -re endings in words like centre. The differences matter more than most players expect."
+      },
+      {
+        question: "Can I play past Canuckle puzzles?",
+        answer:
+          "Yes. The archive keeps past answers and facts, and the solver works on any of them."
+      }
+    ],
+    relatedLinks: [
+      { href: "/canuckle-solver", label: "Canuckle Solver" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/worgle-answer-today", label: "Worgle Answer Today" },
+      { href: "/quordle-answer-today", label: "Quordle Answer Today" },
+      { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
+      { href: "/canuckle-answer-archive", label: "Canuckle Answer Archive" }
+    ]
+  }`;
+
+ENTRIES['worldle-answer-today'] = `  'worldle-answer-today': {
+    key: 'worldle-answer-today',
+    eyebrow: 'Worldle Strategy Guide',
+    intro:
+      "Worldle shows you a country's silhouette and asks you to guess it from the shape alone, with direction and distance hints after each guess. Today's Worldle country is {country}. This guide covers silhouette reading, the distance-and-direction system, and how to cut your average solve from eight guesses to four.",
+    sections: [
+      {
+        heading: "The silhouette is the first and best clue",
+        paragraphs: [
+          "Worldle's opening move is pure geography: one country's outline, no name, and six guesses to identify it. The silhouette is more informative than players think — coastlines, peninsulas, and border shapes are the fingerprint of a country, and the strongest players read those features before touching the map.",
+          "Start with the shape's biggest features. Is the silhouette long and thin like Chile or Norway? Is it compact and landlocked like Austria? Does it have a distinctive peninsula, an island chain, or a gulf? Two or three shape features usually narrow the world to a handful of candidates.",
+          "The game's own hint system — the direction arrow and distance in kilometers — takes over after the first guess. But the players who win in four guesses are the ones who used the silhouette to make that first guess count, so the distance hint lands in the right region."
+        ]
+      },
+      {
+        heading: "The Worldle answer for {date}",
+        paragraphs: [
+          "Today's Worldle country is {country}, the answer for {date}. Players searching for the Worldle answer for {date}, today's Worldle country, or the Worldle solution will find it here, confirmed from the official source.",
+          "The answer card at the top shows the country, its flag, and its region, so you can verify your silhouette read and check which feature should have given it away. The {date} puzzle has one answer, and it is the same country across every mirror of the game.",
+          "If you are still solving, the hint card gives you the region, the direction from your current guess, and the silhouette features — enough to close in without the full reveal."
+        ],
+        callout: {
+          title: "Shape over name",
+          body: "Worldle rewards reading the outline before the map. Chile, Norway, and Italy have signatures; learn the silhouettes and the distance hints do the rest."
+        }
+      },
+      {
+        heading: "The distance-and-direction system, decoded",
+        paragraphs: [
+          "After each guess, Worldle tells you the direction from your guess to the answer and the distance in kilometers. Together they are a vector: direction says which way to move on the map, distance says how far. A single good guess gives you a vector, and two guesses give you a triangulation.",
+          "The direction arrow points from your guessed country toward the target. If you guess France and the arrow points east with a distance under a thousand kilometers, the answer is a neighboring eastern country — Germany, Switzerland, or Italy territory.",
+          "Distance bands matter as much as the numbers. Under 500 kilometers means a neighbor; 500 to 2,000 means the same region; over 5,000 means another continent. Reading the band before the exact number saves the mental math and speeds every solve.",
+          "The Worldle solver on this site automates the triangulation: enter your guesses with their distances and directions, and it ranks every country by how well it matches all your readings. Its top candidate is the answer more often than not."
+        ],
+        list: {
+          title: "The distance bands to memorize",
+          items: [
+            "Under 500 km: the answer shares a border or a small sea with your guess",
+            "500–2,000 km: same region, possibly across one or two borders",
+            "2,000–5,000 km: same continent, different region",
+            "Over 5,000 km: another continent entirely — triangulate with a second guess"
+          ]
+        }
+      },
+      {
+        heading: "Common Worldle mistakes",
+        paragraphs: [
+          "The most common mistake is guessing famous countries instead of useful ones. A large central country like Kazakhstan or Algeria returns a cleaner vector than a famous island like Iceland, because the distance reading from a central landmass points more precisely at the target.",
+          "The second mistake is ignoring the silhouette once the game starts. The outline is available the whole game, and players who switch to pure map-guessing abandon the one clue that never changes.",
+          "The third mistake is over-thinking the exact kilometers. The game's distances are great-circle approximations, and the numbers move with every guess. Read the band, not the digits, and the solver will confirm the same habit."
+        ]
+      },
+      {
+        heading: "Practicing Worldle into real geography",
+        paragraphs: [
+          "Worldle is the best silhouette teacher on the internet, and the archive makes it a drill. Replay past puzzles and try to name the country from the outline alone before looking at the hints — a minute of pure shape-reading per day compounds fast.",
+          "A second habit: after each solve, draw the country's shape from memory the next morning. Players who do this develop a mental atlas of coastlines, and the daily silhouette starts answering itself.",
+          "Finally, use the solver to check your vector reads. If the solver triangulates to the answer while your guesses wandered, the gap is distance-band intuition — and it closes within a week of deliberate practice."
+        ]
+      }
+    ],
+    faqHeading: "Worldle Questions, Answered",
+    faqs: [
+      {
+        question: "What is today's Worldle answer?",
+        answer:
+          "Today's Worldle country is {country}. It is the answer for {date}, and it is the same country across every source."
+      },
+      {
+        question: "How do you play Worldle?",
+        answer:
+          "Guess a country from its silhouette. After each guess the game shows the direction and distance to the answer, and you narrow it down within six guesses."
+      },
+      {
+        question: "What is the best first guess in Worldle?",
+        answer:
+          "A large central country like Kazakhstan, Algeria, or Brazil. Central guesses return cleaner distance vectors than famous edge countries."
+      },
+      {
+        question: "What do the distance numbers mean?",
+        answer:
+          "They are the great-circle distance from your guessed country to the answer. Read them as bands — under 500 km means a neighbor, over 5,000 km means another continent."
+      },
+      {
+        question: "Can I play old Worldle puzzles?",
+        answer:
+          "Yes. The archive keeps past answers and silhouettes, and the Worldle solver works on any of them."
+      }
+    ],
+    relatedLinks: [
+      { href: "/worldle-solver", label: "Worldle Solver" },
+      { href: "/globle-answer-today", label: "Globle Answer Today" },
+      { href: "/countryle-answer-today", label: "Countryle Answer Today" },
+      { href: "/wordle-answer-today", label: "Wordle Answer Today" },
+      { href: "/worldle-answer-archive", label: "Worldle Answer Archive" },
+      { href: "/spotle-answer-today", label: "Spotle Answer Today" }
     ]
   }`;
 
@@ -136,10 +422,9 @@ for (const [key, entry] of Object.entries(ENTRIES)) {
 if (blocks.length === 0) {
   console.log('Nothing to add.');
 } else {
-  // Previous entry's closing `}` must become `},`, then each block follows,
-  // and the final `};` stays intact. Trailing commas are valid TS here.
   const insertion = blocks.map((b) => `${b},`).join('\n\n');
-  const next = src.slice(0, idx) + ',\n\n' + insertion + '\n' + src.slice(idx + 1);
+  const base = src.slice(0, idx).replace(/,\s*$/, '');
+  const next = base + ',\n\n' + insertion + '\n' + src.slice(idx + 1);
   await writeFile(registryPath, next);
   console.log(`Inserted ${blocks.length} article(s).`);
 }

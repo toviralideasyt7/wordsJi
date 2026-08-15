@@ -5,6 +5,8 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import SemantleClues from '$lib/components/SemantleClues.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -195,7 +197,11 @@
       {/if}
 
       <div class="mb-12">
-        <AuthorCard
+        <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['semantle-answer-today']} vars={{ date: data.formattedDate, number: data.puzzleNumber ? String(data.puzzleNumber) : '' }} />
+</div>
+
+<AuthorCard
           name={PRESTON_HAYES_AUTHOR_NAME}
           image={PRESTON_HAYES_AUTHOR_IMAGE}
           description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

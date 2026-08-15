@@ -4,6 +4,8 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -315,7 +317,11 @@
             </div>
           </section>
         {/if}
-      <AuthorCard
+      <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['canuckle-answer-today']} vars={{ date: data.formattedDate }} />
+</div>
+
+<AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

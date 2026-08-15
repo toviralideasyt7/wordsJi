@@ -5,6 +5,8 @@
         import { getWordlebotStructuredData } from '$lib/wordlebot-wasm/route-config';
         import { getCanucklePagePath } from '$lib/wordlebot-wasm/routes';
         import type { WordlebotPageConfig } from '$lib/wordlebot-wasm/types';
+        import StaticArticle from '$lib/components/StaticArticle.svelte';
+        import { ARTICLE_CONTENT } from '$lib/content/registry';
 
         let { config }: { config: WordlebotPageConfig } = $props();
 
@@ -13,6 +15,13 @@
                 config.appConfig.pageType === 'solver' && config.appConfig.game === 'wordle'
         );
         let isCanuckleTodayPage = $derived(config.appConfig.pageType === 'canuckle-daily');
+        let solverArticleKey = $derived(
+                config.appConfig.pageType === 'solver'
+                        ? config.appConfig.game === 'quordle'
+                                ? 'quordle-solver'
+                                : 'wordle-solver'
+                        : null
+        );
         let isCanuckleArchivePage = $derived(config.appConfig.pageType === 'canuckle-archive');
         let isCanuckleSolverPage = $derived(
                 config.appConfig.pageType === 'solver' && config.appConfig.game === 'canuckle'
@@ -276,6 +285,12 @@
                 </div>
 
                 <div class="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+                        <div class="pt-10">
+                                {#if solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
+                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
+                                {/if}
+                        </div>
+
                         <div class="rounded-[2rem] border border-slate-200 bg-white/85 p-2 shadow-[0_24px_70px_rgba(148,163,184,0.12)]">
                                 <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
                         </div>

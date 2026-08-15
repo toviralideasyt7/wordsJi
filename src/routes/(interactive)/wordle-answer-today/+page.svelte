@@ -119,7 +119,14 @@
     {/if}
 
     <div class="mt-12">
-      <StaticArticle content={ARTICLE_CONTENT['wordle-answer-today']} />
+      <StaticArticle
+        content={ARTICLE_CONTENT['wordle-answer-today']}
+        vars={{
+          date: data.formattedDate,
+          answer: data.wordleWord?.toUpperCase() ?? '',
+          number: data.wordleNumber ? String(data.wordleNumber) : ''
+        }}
+      />
     </div>
 
     <div class="mt-12">

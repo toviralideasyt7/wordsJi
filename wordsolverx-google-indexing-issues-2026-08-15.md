@@ -99,3 +99,88 @@ There are no tricks left. The March 2024 spam update ("scaled content abuse"), t
 ## 6. Security note
 
 The service-account JSON (private key) was pasted into chat and saved at `C:\Users\akasa\Downloads\wordsolverx-svelte-31eaccc3daae.json`. It has not been committed to the repo (the audit script reads it from `GSC_CREDENTIALS_PATH` only). **Recommend rotating the key in Google Cloud IAM** since it was shared in plaintext, and keep the file out of the repo (`Downloads` is fine; add it to `.gitignore` if ever copied in).
+
+---
+
+## 7. Update — 2026-08-15 (static article rollout + keyword research)
+
+### 7.1 Bing API key: invalid
+The provided Bing key (`10d2656a9b2b4aa1a55544f9664f4a07`) is **rejected by every Bing endpoint**: `InvalidApiKey` on the Webmaster JSON API (`/webmaster/api.svc/json/GetUserSites`), 401 on Search API v7, 404 on legacy hosts. The key is either expired, mistyped, or for a different Bing service (note: Bing Search API v7 was retired Aug 11, 2025). **Action: generate a fresh key** in Bing Webmaster Tools → Settings → API Access, and I can re-run the impression/click pull against `GetKeywordStats`.
+
+### 7.2 Keyword research (fallback: Google Search Console, 90-day, real data)
+`scripts/gsc-keywords.mjs` (auth: service account) pulled 622 queries / 3,421 impressions / **3 clicks** for wordsolverx.com:
+
+**Where Google already shows you (impressions but zero clicks — pages buried at positions 30–90):**
+- `wordle solver` — 441 imp @ pos 84
+- `wordfinderx` — 192 imp @ pos 32
+- `wordsolver` — 164 imp @ pos 65
+- `word solver` — 97 imp @ pos 78
+- `wordle solver online` — 72 imp @ pos 88
+- `worlde solver` (typo) — 58 imp @ pos 80
+- `wordle answer finder` — 51 imp @ pos 80 · `wordle finder` — 50 imp
+- `betweenle solver` — 42 imp @ **pos 46** (closest to page 1–2 of any keyword)
+- `squaredle solver` — 37 imp · `squardle solver` (typo) — 18 imp
+- `quordle solver` — 17 imp @ pos 62 · `wordle solver today` — 21 imp
+
+**Interpretation:** Google already associates the domain with solver intent — the *homepage* gets surfaced, but nothing ranks high enough to click. These solver-tool keywords are the highest-value targets for the new static articles: each solver page's article should own its `[game] solver` / `[game] solver online` / `[game] helper` phrase set, on both Google and Bing.
+
+### 7.3 Static article system (built)
+- `src/lib/components/StaticArticle.svelte` — prerendered, semantic `<article>` renderer: snippet-bait intro, varied H2 sections, styled callouts/lists, visible (never accordion-hidden) FAQ + FAQPage JSON-LD, and a dark "More WordSolverX tools" internal-link hub. Fully static in the HTML output (no client JS needed) → indexable.
+- `src/lib/content/registry.ts` — typed registry, one entry per route, each with its own H2 blueprint (no shared templates across pages).
+- `scripts/add-articles.mjs` — appends new article entries to the registry.
+
+**Live now (wired + typechecked):**
+| Page | Words | Angle (unique structure) |
+|---|---|---|
+| wordle-answer-today | 1,624 | elimination vs guessing, opener logic, yellow-tile anchoring, patterns, hard mode |
+| quordle-answer-today | 1,414 | 2.25 boards-per-guess math, shared-guess allocation, mode notes |
+| nerdle-answer-today | 1,329 | equation census, purple duplicates, tidy-equation trap |
+| spotle-answer-today | 1,471 | attribute binary search, arrows, endgame shortlist |
+
+(Quordle/Nerdle/Spotle will be topped up past 1,500 words in the next pass.)
+
+### 7.4 Content roadmap (remaining pages)
+Each remaining page gets a **unique** H2 blueprint; the ones with live impressions are priority order:
+
+1. **wordle-solver** — target: `wordle solver`, `wordle solver online`, `wordle helper`, `wordle answer finder`, `wordle finder`. Angle: how a solver works, letter-frequency elimination, when to use it, ethics of using one.
+2. **betweenle-solver** — target: `betweenle solver` (pos 46!). Angle: alphabetical-distance logic, word index math.
+3. **squaredle-solver** — target: `squaredle solver`, `squardle solver`. Angle: word-path finding, 8-direction rules, bonus words.
+4. **quordle-solver** — target: `quordle solver`. Angle: cross-board letter sharing, multi-board elimination.
+5. **Today pages (no Google impressions yet):** worldle, colordle, colorfle, framed, semantle, contexto, searchle, phoodle, phrazle, canuckle, worgle, waffle, betweenle, countryle, globle + 6 GameDle (loldle, dotadle, narutodle, pokedle, smashdle, onepiecedle) + sportle. Target the `[game] answer today` / `[game] hints` / `[game] answer archive` phrase set.
+6. **Remaining solvers:** hangman, nerdle, boggle, word-ladder, worldle, spotle, colordle, colorfle, countryle, phoodle, searchle, semantle, contexto, weaver, minesweeper, kanoodle, light-out, waffle, soundmap, wordle-analyzer, word-length/variant pages.
+
+**How to add the next page:** write its entry in `scripts/add-articles.mjs` → `node scripts/add-articles.mjs` → add `import StaticArticle` + `<StaticArticle content={ARTICLE_CONTENT['<route>']} />` before the AuthorCard in the page → `npm run check`.
+
+### 7.5 Bing data (working key) + live articles update
+New Bing key (`696b6fca...`) works — wordsolverx.com verified. CSV `wordsolverx.com_KeywordReport_8_15_2026.csv` (228 keywords, **20,741 impressions / 636 clicks**):
+
+**Bing ranks the site page 1–2 for the Wordle cluster but CTR is the leak** (benchmark ~10% at pos 2.4):
+- `wordle answer today` 2,922 imp / 2.3% CTR @ pos 6.3 · `todays wordle` 2,054 / 1.0% @ 7.7
+- `today's wordle answer` 1,918 / **9.9%** @ 2.4 · `today's wordle` 1,884 / 2.1% @ 5.2
+- `wordle today` 1,525 / 0.6% @ 7.4 · `todays wordle answer` 895 / 1.8% @ 5.1 · `wordle answer` 482 / 1.2% @ 8.8
+- **Opportunities:** `wordle solver 5 letters` 302 imp @ 7.2 · `minesweeper solver` 279 imp @ 4.2 · `contexto answer` 140 · `globle answer today` 138 · `nerdle today` 133 · `spotle answer today` 95 · dated queries (`wordle 8/12/26`, `wordle hints august 8 2026`)
+
+**Action implied:** optimize the wordle-answer-today TITLE/meta to win the snippet for the pos-5–8 cluster (that alone is ~8k impressions/month at 1–2% → 8–15% potential), and the new articles below cover the solver/other-game clusters.
+
+**Live articles added this pass (10 total now, all wired + typecheck 0/0, tests 7/7):**
+| Key | Words | Targets (from real data) |
+|---|---|---|
+| wordle-solver (all wordlebot solver pages, keyed by game) | 1,340 | `wordle solver`, `wordle solver 5 letters`, `wordle helper` |
+| quordle-solver (wordlebot variant) | 1,262 | `quordle solver` |
+| minesweeper-solver | 1,170 | `minesweeper solver` (pos 4.2!) |
+| betweenle-solver | 1,214 | `betweenle solver` |
+| squaredle-solver | 1,241 | `squaredle solver` |
+| contexto-answer-today | 1,271 | `contexto answer`, `contexto answer today` |
+
+Still to write (next passes): globle, worldle, colordle, colorfle, framed, semantle, searchle, phoodle, phrazle, canuckle, worgle, waffle, betweenle-today, countryle, sportle + 6 GameDle today pages + remaining solvers (nerdle, hangman, boggle, word-ladder, worldle, spotle, colordle, colorfle, countryle, phoodle, searchle, semantle, contexto, weaver, kanoodle, light-out, waffle, soundmap, wordle-analyzer). Each must stay 1,400–1,600 words with a unique H2 blueprint; top up the six above to 1,500+ in the next pass.
+
+### 7.6 Full Bing report (7–8 months, 2,747 keywords / 176,141 impressions / 5,913 clicks) + rollout status
+Source: `wordsolverx.com_KeywordReport_8_15_2026 (1).csv`. Volume by game: wordle 134,918 · **colordle 15,153** · smashdle 5,219 · minesweeper 4,965 · globle 2,681 · spotle 2,037 · waffle 1,223 · contexto 971 · semantle 868 · kanoodle 774 · nerdle 717 · betweenle 667 · onepiecedle 466 · phoodle 424 · phrazle 387 · canuckle 324 · weaver 234 · hangman 213 · narutodle 213 · squaredle 175 · searchle 174 · pokedle 128 · worldle 67.
+
+**Dated/archive keyword patterns (huge untapped pool):** `wordle answer today 2026` 1,580 imp · `all wordle answers 2025` 1,415 imp @ pos 4.3 (0 clicks!) · `list of wordle answers 2025` 817 · `wordle june 26 answer` 776 · `wordle 7/15/26` 567 · `wordle july 1 answer` 469 · `future wordle answers 2025` 447 · plus colordle's day-number format (`colordle day 1441 answer`). **These target the archive pages and the daily dated sections — next optimization target.**
+
+**Article system upgrades this pass:** Table of Contents (anchored, auto-generated when >3 sections), `{date}/{answer}/{dayNum}/{number}/{hex}` variable substitution from live page data, so every today page now covers its dated/community keyword variants (e.g., "colordle day 1623 answer", "the Wordle answer for August 15, 2026 is QUACK, puzzle #1879").
+
+**Live articles (18 wired, typecheck 0/0, tests 7/7):** wordle, quordle, nerdle, spotle, contexto, colordle, globle, semantle, waffle, phoodle, phrazle, canuckle, worldle (today pages) + wordle-solver, quordle-solver, minesweeper-solver, betweenle-solver, squaredle-solver (solvers). Colordle — the #2 Bing keyword pool and the deindex concern you flagged — is now covered with day-number + date + hex targeting.
+
+**Remaining (each unique blueprint, 900–1,300 words currently; top up to 1,500):** GameDle today pages (loldle, dotadle, narutodle, pokedle, smashdle, onepiecedle), sportle, betweenle/colorfle/framed/searchle/worgle/countryle today pages, ~15 remaining solver pages, and the **archive pages** (wordle-answer-archive = the 1,415-imp "all wordle answers 2025" keyword).

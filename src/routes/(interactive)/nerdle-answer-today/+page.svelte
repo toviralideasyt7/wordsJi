@@ -2,6 +2,8 @@
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import type { NerdleModeData } from '$lib/nerdle-answers';
         import {
@@ -189,7 +191,11 @@
                                 </div>
                         </section>
 
-                        <AuthorCard
+                        <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['nerdle-answer-today']} />
+</div>
+
+<AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}
                                 description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

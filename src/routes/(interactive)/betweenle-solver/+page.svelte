@@ -1,5 +1,7 @@
 <script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import BetweenleSolverClient from '$lib/components/betweenle/BetweenleSolverClient.svelte';
@@ -87,7 +89,11 @@
   
 
     <div class="mt-12">
-      <AuthorCard
+      <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['betweenle-solver']} />
+</div>
+
+<AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

@@ -4,6 +4,8 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import QuordleAnswerCard from '$lib/components/QuordleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -204,7 +206,11 @@
     {/if}
 
     <div class="mt-12">
-      <AuthorCard
+      <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['quordle-answer-today']} />
+</div>
+
+<AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

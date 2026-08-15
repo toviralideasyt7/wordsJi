@@ -3,6 +3,8 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GlobleCluesSection from '$lib/components/GlobleCluesSection.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -188,7 +190,11 @@
     {/if}
 
     <div class="mt-12">
-      <AuthorCard
+      <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['globle-answer-today']}        vars={{ date: data.formattedDate, country: data.country?.name ?? '' }} />
+</div>
+
+<AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

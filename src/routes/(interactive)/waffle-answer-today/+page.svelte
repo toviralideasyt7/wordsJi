@@ -5,6 +5,8 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import WaffleAnswerCard from '$lib/components/WaffleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
   import FiHash from '$lib/components/icons/FiHash.svelte';
   import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -316,7 +318,11 @@
 
 
     <div class="mt-12">
-      <AuthorCard
+      <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['waffle-answer-today']} vars={{ date: data.formattedDate, answer: data.solution ?? '' }} />
+</div>
+
+<AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}
         image={PRESTON_HAYES_AUTHOR_IMAGE}
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}

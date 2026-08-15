@@ -2,6 +2,8 @@
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
@@ -329,7 +331,11 @@
                 {/if}
 
                 <div class="mt-12">
-                        <AuthorCard
+                        <div class="mt-12">
+  <StaticArticle content={ARTICLE_CONTENT['spotle-answer-today']} />
+</div>
+
+<AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}
                                 image={PRESTON_HAYES_AUTHOR_IMAGE}
                                 description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
