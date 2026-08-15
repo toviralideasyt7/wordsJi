@@ -3,6 +3,8 @@
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
   import type { FramedEntry, FramedGameConfig } from '$lib/framed';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
+import StaticArticle from '$lib/components/StaticArticle.svelte';
+import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import { generateCollectionPageSchema, generateWebPageSchema } from '$lib/seo';
 
@@ -167,6 +169,10 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
       <p>That's not the intended use, but plenty of players have added movies to their watchlist after a Framed puzzle stumped them.</p>
     </div>
   </div>
+
+    <div class="mt-12">
+      <StaticArticle content={ARTICLE_CONTENT['framed-archive']} />
+    </div>
 
     <div class="mt-12">
       <AuthorCard

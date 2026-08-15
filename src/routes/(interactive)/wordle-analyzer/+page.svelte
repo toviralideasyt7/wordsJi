@@ -1,4 +1,6 @@
 <script lang="ts">
+        import StaticArticle from '$lib/components/StaticArticle.svelte';
+        import { ARTICLE_CONTENT } from '$lib/content/registry';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import WordleAnalyzerClient from '$lib/components/wordle-analyzer/WordleAnalyzerClient.svelte';
         import {
@@ -118,6 +120,6 @@
         <WordleAnalyzerClient />
 
         <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
-                
+                <StaticArticle content={ARTICLE_CONTENT['wordle-analyzer']} />
         </div>
 </main>

@@ -147,10 +147,17 @@
                                                         <p class="leading-7 text-slate-600">{step.text}</p>
                                                 </div>
                                         {/each}
-                                </div>
-                        </div>
+                                </div>                                        </div>
 
                 </section>
+
+                <div class="mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
+                        <div class="pt-4">
+                                {#if solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
+                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
+                                {/if}
+                        </div>
+                </div>
         </main>
 {:else if isCanuckleFamilyPage}
         <main class="min-h-screen bg-[linear-gradient(180deg,#fff8f7_0%,#ffffff_42%,#f8fafc_100%)]">
@@ -224,6 +231,12 @@
                 </div>
 
                 <div class="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+                        <div class="pt-10">
+                                {#if isCanuckleSolverPage && solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
+                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
+                                {/if}
+                        </div>
+
                         <div class="rounded-[2rem] border border-rose-100 bg-white p-2 shadow-[0_24px_70px_rgba(239,68,68,0.08)]">
                                 <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
                         </div>

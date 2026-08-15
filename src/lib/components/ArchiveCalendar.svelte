@@ -6,6 +6,8 @@
     generateCollectionPageSchema,
     generateWebPageSchema
   } from '$lib/seo';
+  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import { ARTICLE_CONTENT } from '$lib/content/registry';
 
   let {
     gameName,
@@ -28,6 +30,25 @@
     description?: string;
     onSelectDate?: ((dateKey: string) => void) | null;
   } = $props();
+
+  const ARCHIVE_ARTICLE_KEYS: Record<string, string> = {
+    'Spotle': 'spotle-archive',
+    'Worgle': 'worgle-archive',
+    'Colordle': 'colordle-archive',
+    'Colorfle': 'colorfle-archive',
+    'Contexto': 'contexto-archive',
+    'Globle': 'globle-archive',
+    'Phoodle': 'phoodle-archive',
+    'Phrazle': 'phrazle-archive',
+    'Quordle': 'quordle-archive',
+    'Searchle': 'searchle-archive',
+    'Semantle': 'semantle-archive',
+    'Waffle': 'waffle-archive',
+    'Worldle': 'worldle-archive',
+    'Wordle': 'wordle-answer-archive'
+  };
+  let articleKey = $derived(ARCHIVE_ARTICLE_KEYS[gameName] ?? null);
+  let articleContent = $derived(articleKey ? ARTICLE_CONTENT[articleKey] ?? null : null);
 
   const today = new Date();
   let currentMonth = $state(new Date(today.getFullYear(), today.getMonth(), 1));
@@ -396,6 +417,13 @@
             </div>
           {/if}
         </div>
+      </div>
+    {/if}
+
+    <!-- SEO Article -->
+    {#if articleContent}
+      <div class="mt-12">
+        <StaticArticle content={articleContent} />
       </div>
     {/if}
 
