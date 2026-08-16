@@ -5317,11 +5317,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/smashdle-answer-today-updated", label: "Smashdle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },
@@ -5442,11 +5442,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/smashdle-answer-today-updated", label: "Smashdle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },
@@ -5572,11 +5572,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/smashdle-answer-today-updated", label: "Smashdle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },
@@ -5701,11 +5701,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/smashdle-answer-today-updated", label: "Smashdle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },
@@ -5831,11 +5831,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/smashdle-answer-today", label: "Smashdle Answer Today" },
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/smashdle-answer-today-updated", label: "Smashdle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },
@@ -5960,11 +5960,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/onepiecedle-answer-today", label: "OnePieceDle Answer Today" },
-      { href: "/loldle-answer-today", label: "LoLdle Answer Today" },
-      { href: "/pokedle-answer-today", label: "Pokedle Answer Today" },
-      { href: "/narutodle-answer-today", label: "Narutodle Answer Today" },
-      { href: "/dotadle-answer-today", label: "Dotadle Answer Today" },
+      { href: "/onepiecedle-answer-today-updated", label: "OnePieceDle Answer Today" },
+      { href: "/loldle-answer-today-updated", label: "LoLdle Answer Today" },
+      { href: "/pokedle-answer-today-updated", label: "Pokedle Answer Today" },
+      { href: "/narutodle-answer-today-updated", label: "Narutodle Answer Today" },
+      { href: "/dotadle-answer-today-updated", label: "Dotadle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" }
     ]
   },

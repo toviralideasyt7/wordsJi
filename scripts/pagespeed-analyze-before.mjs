@@ -306,12 +306,12 @@ function isInteractiveRoute(route) {
 		'/solver',
 		'/terms-of-service',
 		'/today',
-		'/dotadle-answer-today',
-		'/loldle-answer-today',
-		'/narutodle-answer-today',
-		'/onepiecedle-answer-today',
-		'/pokedle-answer-today',
-		'/smashdle-answer-today'
+		'/dotadle-answer-today-updated',
+		'/loldle-answer-today-updated',
+		'/narutodle-answer-today-updated',
+		'/onepiecedle-answer-today-updated',
+		'/pokedle-answer-today-updated',
+		'/smashdle-answer-today-updated'
 	]);
 	return !contentRoutes.has(route);
 }

@@ -28,11 +28,11 @@ const EVERGREEN_STATIC_ROUTES = [
 const TODAY_STATIC_ROUTES = [
   '/today','/betweenle-answer-today','/canuckle-answer-today','/colorfle-answer-today',
   '/colordle-answer-today','/contexto-answer-today','/countryle-answer-today',
-  '/dotadle-answer-today','/framed-answer-today','/globle-answer-today',
-  '/loldle-answer-today','/narutodle-answer-today','/nerdle-answer-today',
-  '/onepiecedle-answer-today','/phoodle-answer-today','/phrazle-answer-today',
-  '/pokedle-answer-today','/quordle-answer-today','/searchle-answer-today',
-  '/semantle-answer-today','/smashdle-answer-today','/spotle-answer-today',
+  '/dotadle-answer-today-updated','/framed-answer-today','/globle-answer-today',
+  '/loldle-answer-today-updated','/narutodle-answer-today-updated','/nerdle-answer-today',
+  '/onepiecedle-answer-today-updated','/phoodle-answer-today','/phrazle-answer-today',
+  '/pokedle-answer-today-updated','/quordle-answer-today','/searchle-answer-today',
+  '/semantle-answer-today','/smashdle-answer-today-updated','/spotle-answer-today',
   '/worgle-answer-today','/waffle-answer-today','/worldle-answer-today'
 ];
 

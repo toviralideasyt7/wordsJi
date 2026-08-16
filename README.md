@@ -33,12 +33,12 @@ Static pages providing the solutions for daily puzzles.
 -   **Globle**: `/globle-answer-today`, `/globle-archive`
 -   **Colordle**: `/colordle-answer-today`, `/colordle-answer-yesterday`, `/colordle-archive`
 -   **Other Games**:
-    -   `/loldle-answer-today` (League of Legends)
-    -   `/dotadle-answer-today` (Dota 2)
-    -   `/pokedle-answer-today` (Pokemon)
-    -   `/smashdle-answer-today` (Smash Bros)
-    -   `/narutodle-answer-today` (Naruto)
-    -   `/onepiecedle-answer-today` (One Piece)
+    -   `/loldle-answer-today-updated` (League of Legends)
+    -   `/dotadle-answer-today-updated` (Dota 2)
+    -   `/pokedle-answer-today-updated` (Pokemon)
+    -   `/smashdle-answer-today-updated` (Smash Bros)
+    -   `/narutodle-answer-today-updated` (Naruto)
+    -   `/onepiecedle-answer-today-updated` (One Piece)
     -   `/binance-wotd-solver` (Binance Word of the Day)
 
 ### ℹ️ Info & Utility

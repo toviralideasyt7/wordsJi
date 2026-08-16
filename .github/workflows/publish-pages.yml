@@ -271,7 +271,7 @@ jobs:
             site) echo "path=" >> "$GITHUB_OUTPUT" ;;
             main) echo "path=/wordle-answer-today" >> "$GITHUB_OUTPUT" ;;
             waffle) echo "path=/waffle-answer-today" >> "$GITHUB_OUTPUT" ;;
-            gamedle) echo "path=/narutodle-answer-today" >> "$GITHUB_OUTPUT" ;;
+            gamedle) echo "path=/narutodle-answer-today-updated" >> "$GITHUB_OUTPUT" ;;
             *) echo "path=" >> "$GITHUB_OUTPUT" ;;
           esac
 

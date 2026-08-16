@@ -102,7 +102,7 @@ const SAMPLE_URLS = [
   '/about',
   '/contact',
   '/wordle-answer-archive',
-  '/loldle-answer-today',
+  '/loldle-answer-today-updated',
 ];
 
 async function main() {

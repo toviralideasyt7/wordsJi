@@ -38,12 +38,12 @@ const globalSeoPaths = [
   "/contact",
 ];
 const gamedlePaths = [
-  "/narutodle-answer-today",
-  "/loldle-answer-today",
-  "/dotadle-answer-today",
-  "/pokedle-answer-today",
-  "/smashdle-answer-today",
-  "/onepiecedle-answer-today",
+  "/narutodle-answer-today-updated",
+  "/loldle-answer-today-updated",
+  "/dotadle-answer-today-updated",
+  "/pokedle-answer-today-updated",
+  "/smashdle-answer-today-updated",
+  "/onepiecedle-answer-today-updated",
 ];
 const wafflePaths = ["/waffle-answer-today", "/waffle-archive"];
 const mainPaths = [

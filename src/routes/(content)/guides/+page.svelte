@@ -87,32 +87,32 @@
         {
           game: 'LoLdle',
           description: 'Identify League of Legends champions using quote, ability, and splash clues.',
-          links: [{ href: '/loldle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/loldle-answer-today-updated', label: "Today's answer" }]
         },
         {
           game: 'Dotadle',
           description: 'Daily Dota character challenge with mode-based hints and region-specific answers.',
-          links: [{ href: '/dotadle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/dotadle-answer-today-updated', label: "Today's answer" }]
         },
         {
           game: 'Narutodle',
           description: 'Guess Naruto characters by quote and art clues with daily rotating answers.',
-          links: [{ href: '/narutodle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/narutodle-answer-today-updated', label: "Today's answer" }]
         },
         {
           game: 'Onepiecedle',
           description: 'One Piece character guessing with clue modes that test memory and recognition.',
-          links: [{ href: '/onepiecedle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/onepiecedle-answer-today-updated', label: "Today's answer" }]
         },
         {
           game: 'Pokedle',
           description: 'Pokemon-themed daily guessing puzzle for types, forms, and iconic clues.',
-          links: [{ href: '/pokedle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/pokedle-answer-today-updated', label: "Today's answer" }]
         },
         {
           game: 'Smashdle',
           description: 'Guess Smash characters with fighter clues and daily updated answer pools.',
-          links: [{ href: '/smashdle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/smashdle-answer-today-updated', label: "Today's answer" }]
         }
       ]
     },

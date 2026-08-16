@@ -10,12 +10,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const GAMEDLE_DIR = `${__dirname}/../src/routes/(content)`;
 
 const GAMEDLE_PAGES = [
-  'narutodle-answer-today',
-  'pokedle-answer-today',
-  'smashdle-answer-today',
-  'onepiecedle-answer-today',
-  'dotadle-answer-today',
-  'loldle-answer-today',
+  'narutodle-answer-today-updated',
+  'pokedle-answer-today-updated',
+  'smashdle-answer-today-updated',
+  'onepiecedle-answer-today-updated',
+  'dotadle-answer-today-updated',
+  'loldle-answer-today-updated',
 ];
 
 function splitLongParagraph(html, maxWords = 80) {

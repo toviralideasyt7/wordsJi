@@ -17,10 +17,10 @@
     { key: 'europe', label: 'Europe', flag: '🇪🇺', accent: 'bg-pink-500' },
   ];
   const crossLinks = [
-    { href: '/narutodle-answer-today', icon: '🍥', label: 'Narutodle' },
-    { href: '/loldle-answer-today', icon: '⚔️', label: 'LoLdle' },
-    { href: '/pokedle-answer-today', icon: '⚡', label: 'Pokedle' },
-    { href: '/dotadle-answer-today', icon: '🛡️', label: 'Dotadle' },
+    { href: '/narutodle-answer-today-updated', icon: '🍥', label: 'Narutodle' },
+    { href: '/loldle-answer-today-updated', icon: '⚔️', label: 'LoLdle' },
+    { href: '/pokedle-answer-today-updated', icon: '⚡', label: 'Pokedle' },
+    { href: '/dotadle-answer-today-updated', icon: '🛡️', label: 'Dotadle' },
   ];
   const schemas = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
@@ -30,7 +30,7 @@
       { '@type': 'Question', name: 'When does Smashdle reset?', acceptedAnswer: { '@type': 'Answer', text: 'Smashdle resets daily at midnight UTC.' } },
       { '@type': 'Question', name: 'Is Smashdle free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Smashdle is completely free to play in your browser.' } },
     ]},
-    { '@type': 'Article', headline: 'Smashdle Answer Today', description: "Today's Smashdle character revealed — Classic, Final Smash, and Stage mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/smashdle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'Smashdle Answer Today', description: "Today's Smashdle character revealed — Classic, Final Smash, and Stage mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/smashdle-answer-today.webp' } } },
   ]};
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
 const GAME_DLE_REWRITES = {
-  'loldle-answer-today': `<article class="space-y-8">
+  'loldle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">How today's clues work</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
@@ -65,7 +65,7 @@ const GAME_DLE_REWRITES = {
       </section>
     </article>`,
 
-  'dotadle-answer-today': `<article class="space-y-8">
+  'dotadle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Today's puzzle at a glance</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
@@ -119,7 +119,7 @@ const GAME_DLE_REWRITES = {
       </section>
     </article>`,
 
-  'narutodle-answer-today': `<article class="space-y-8">
+  'narutodle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Reading between the clue lines</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
@@ -173,7 +173,7 @@ const GAME_DLE_REWRITES = {
       </section>
     </article>`,
 
-  'onepiecedle-answer-today': `<article class="space-y-8">
+  'onepiecedle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Today's character breakdown</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
@@ -227,7 +227,7 @@ const GAME_DLE_REWRITES = {
       </section>
     </article>`,
 
-  'pokedle-answer-today': `<article class="space-y-8">
+  'pokedle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Gen 1 attributes that matter most</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
@@ -281,7 +281,7 @@ const GAME_DLE_REWRITES = {
       </section>
     </article>`,
 
-  'smashdle-answer-today': `<article class="space-y-8">
+  'smashdle-answer-today-updated': `<article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
         <h2 class="text-3xl font-bold text-slate-900 mb-6">Universe as your best filter</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">

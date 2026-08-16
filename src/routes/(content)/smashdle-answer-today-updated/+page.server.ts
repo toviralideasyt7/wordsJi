@@ -96,7 +96,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                     headline: pageTitle,
                     description: pageDescription,
                     image: [featuredImage],
-                    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today' },
+                    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today-updated' },
                     author: {
                         '@type': 'Person',
                         name: 'Preston Hayes',

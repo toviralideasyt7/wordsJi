@@ -114,7 +114,7 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily country answer page with directional and comparison hints.'
   },
   {
-    key: 'dotadle-answer-today',
+    key: 'dotadle-answer-today-updated',
     gameName: 'Dotadle',
     mode: 'generic',
     groups: ['gamedle'],
@@ -135,14 +135,14 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily mystery country page with geography hints and archive links.'
   },
   {
-    key: 'loldle-answer-today',
+    key: 'loldle-answer-today-updated',
     gameName: 'LoLdle',
     mode: 'generic',
     groups: ['gamedle'],
     notes: 'Daily League of Legends answer page with multiple modes and character-focused hints.'
   },
   {
-    key: 'narutodle-answer-today',
+    key: 'narutodle-answer-today-updated',
     gameName: 'Narutodle',
     mode: 'generic',
     groups: ['gamedle'],
@@ -156,7 +156,7 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily math puzzle answer page with equation-first solving guidance.'
   },
   {
-    key: 'onepiecedle-answer-today',
+    key: 'onepiecedle-answer-today-updated',
     gameName: 'OnePiecedle',
     mode: 'generic',
     groups: ['gamedle'],
@@ -177,7 +177,7 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily phrase page with morning and afternoon answers.'
   },
   {
-    key: 'pokedle-answer-today',
+    key: 'pokedle-answer-today-updated',
     gameName: 'Pokedle',
     mode: 'generic',
     groups: ['gamedle'],
@@ -205,7 +205,7 @@ const TODAY_ARTICLE_REGISTRY = [
     notes: 'Daily semantic-word page with clue widgets and answer explanation.'
   },
   {
-    key: 'smashdle-answer-today',
+    key: 'smashdle-answer-today-updated',
     gameName: 'Smashdle',
     mode: 'generic',
     groups: ['gamedle'],
@@ -1339,42 +1339,42 @@ const ROUTE_SECTION_BLUEPRINTS = {
     "<h2>How to finish tomorrow's Worldle with fewer detours</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'dotadle-answer-today': [
+  'dotadle-answer-today-updated': [
     "<h2>Dotadle answer today: which hero clues carry the most weight</h2>",
     "<h2>How to cut the Dota roster faster</h2>",
     "<h2>When roles help and when they mislead</h2>",
     "<h2>Smarter way to approach tomorrow's Dotadle</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'loldle-answer-today': [
+  'loldle-answer-today-updated': [
     "<h2>LoLdle answer today: what the champion clues narrow first</h2>",
     "<h2>How to separate universe, role, and release-year signals</h2>",
     "<h2>Which mode usually breaks the streak</h2>",
     "<h2>How to guess tomorrow's LoLdle more efficiently</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'narutodle-answer-today': [
+  'narutodle-answer-today-updated': [
     "<h2>Narutodle answer today: which filters matter most</h2>",
     "<h2>How village, rank, and chakra clues work together</h2>",
     "<h2>Where Naruto knowledge gaps usually show up</h2>",
     "<h2>How to solve tomorrow's Narutodle with fewer wild guesses</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'onepiecedle-answer-today': [
+  'onepiecedle-answer-today-updated': [
     "<h2>OnePiecedle answer today: what the clue stack narrows first</h2>",
     "<h2>How crew, bounty, and ability clues separate the field</h2>",
     "<h2>Why familiar names can still be wrong here</h2>",
     "<h2>How to clean up the next OnePiecedle faster</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'pokedle-answer-today': [
+  'pokedle-answer-today-updated': [
     "<h2>Pokedle answer today: what the strongest attribute signal is</h2>",
     "<h2>How generation, type, and stage narrow the pool</h2>",
     "<h2>Where players confuse similar Pokemon lines</h2>",
     "<h2>How to approach tomorrow's Pokedle more cleanly</h2>",
     "<h2>Questions players keep asking</h2> with at least 4 <h3> question headings"
   ],
-  'smashdle-answer-today': [
+  'smashdle-answer-today-updated': [
     "<h2>Smashdle answer today: which fighter clue matters first</h2>",
     "<h2>How universe and movement stats split the roster</h2>",
     "<h2>Why DLC fighters cause so many misses</h2>",
@@ -1433,8 +1433,8 @@ function getGenericSections(entry) {
 }
 
 const GAME_CUSTOM_INSTRUCTIONS = {
-  'loldle-answer-today': 'Focus on champion attributes (gender, position, species). League has 170+ champions — emphasize how the solver helps narrow from that massive pool.',
-  'dotadle-answer-today': 'Dota 2 heroes have flexible lane assignments and primary attributes. Mention Strength/Agility/Intelligence/Universal hero differences.',
+  'loldle-answer-today-updated': 'Focus on champion attributes (gender, position, species). League has 170+ champions — emphasize how the solver helps narrow from that massive pool.',
+  'dotadle-answer-today-updated': 'Dota 2 heroes have flexible lane assignments and primary attributes. Mention Strength/Agility/Intelligence/Universal hero differences.',
   'nerdle-answer-today': 'Nerdle uses equations, not words. Focus on digit coverage, operator placement, and equals sign positioning. Give specific equation-building advice.',
   'quordle-answer-today': 'Quordle is four Wordle boards sharing guesses. Key insight: guesses must serve all four boards simultaneously.',
   'worldle-answer-today': 'Worldle shows country silhouettes with directional/percentage hints. Discuss how continent knowledge beats raw geography trivia.',
@@ -1453,10 +1453,10 @@ const GAME_CUSTOM_INSTRUCTIONS = {
   'waffle-answer-today': 'Rearrange letters into crossing words. Focus on the green (correct) letters first to anchor your solve.',
   'worgle-answer-today': 'Welsh-language Wordle. W, Y, and DD are very common in Welsh vocabulary.',
   'colordle-answer-today': 'Guess a named color. Score reflects perceptual distance in color space. Knowing color families narrows faster than random guessing.',
-  'pokedle-answer-today': 'Pokemon answers. Generation, type, evolution stage, and habitat are the key attributes.',
-  'narutodle-answer-today': 'Naruto characters. Village, rank, chakra nature, and debut arc are the strongest filters.',
-  'onepiecedle-answer-today': 'One Piece characters. Crew affiliation, bounty range, devil fruit status, and haki type are key discriminators.',
-  'smashdle-answer-today': 'Smash Bros fighters. Universe, weight class, and jump count are the most reliable filters.',
+  'pokedle-answer-today-updated': 'Pokemon answers. Generation, type, evolution stage, and habitat are the key attributes.',
+  'narutodle-answer-today-updated': 'Naruto characters. Village, rank, chakra nature, and debut arc are the strongest filters.',
+  'onepiecedle-answer-today-updated': 'One Piece characters. Crew affiliation, bounty range, devil fruit status, and haki type are key discriminators.',
+  'smashdle-answer-today-updated': 'Smash Bros fighters. Universe, weight class, and jump count are the most reliable filters.',
   'sportle-answer-today': 'Sports-themed words. Think equipment, positions, venues, and sports terminology.'
 };
 

@@ -96,7 +96,7 @@
   function prettifyRoute(route: string) {
     return route
       .replace(/^\//, '')
-      .replace(/-answer-today$/, '')
+      .replace(/-answer-today(-updated)?$/, '')
       .replace(/-archive$/, '')
       .split('-')
       .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
@@ -133,12 +133,15 @@
     .filter((link) => link.name.split(' ')[0] !== currentGame)
     .slice(0, 10);
 
+  // GameDle answer pages were renamed to the -updated permalink (old URLs 301
+  // to the new ones), so those related links must use the -updated suffix.
+  const GAMEDLE_ANSWER_SUFFIX_KEYS = new Set(['loldle', 'dotadle', 'pokedle', 'smashdle', 'narutodle', 'onepiecedle']);
   const currentGameKey = $derived(currentGame.toLowerCase().replace(/\s+/g, ''));
   const relatedGameKeys = $derived((GAME_CLUSTERS[currentGameKey] ?? []).slice(0, 5));
   const relatedGames = $derived(
     relatedGameKeys.map((key) => ({
       name: GAME_DISPLAY_NAMES[key] ?? key,
-      href: `/${key}-answer-today`,
+      href: GAMEDLE_ANSWER_SUFFIX_KEYS.has(key) ? `/${key}-answer-today-updated` : `/${key}-answer-today`,
       icon: (GAME_DISPLAY_NAMES[key] ?? key).slice(0, 2)
     }))
   );

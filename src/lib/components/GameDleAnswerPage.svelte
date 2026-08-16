@@ -82,7 +82,7 @@
   let error = $derived(data?.error ?? null);
   let dateStr = $derived(data?.dateStr ?? '');
 
-  let canonicalUrl = $derived(`https://wordsolverx.com/${gameKey}-answer-today`);
+  let canonicalUrl = $derived(`https://wordsolverx.com/${gameKey}-answer-today-updated`);
   let seoDate = $derived(dateStr ? dateStr.replace(/^[^,]+,\s*/, '') : '');
   let publishedDate = $derived(answers[0]?.date ?? '');
   let pageTitle = $derived(

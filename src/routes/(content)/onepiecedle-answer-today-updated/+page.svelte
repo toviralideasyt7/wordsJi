@@ -15,11 +15,11 @@
     { key: 'europe', label: 'Europe', flag: '🇪🇺', accent: 'bg-orange-500' },
   ];
   const crossLinks = [
-    { href: '/narutodle-answer-today', icon: '🍥', label: 'Narutodle' },
-    { href: '/loldle-answer-today', icon: '⚔️', label: 'LoLdle' },
-    { href: '/pokedle-answer-today', icon: '⚡', label: 'Pokedle' },
-    { href: '/smashdle-answer-today', icon: '🎮', label: 'Smashdle' },
-    { href: '/dotadle-answer-today', icon: '🛡️', label: 'Dotadle' },
+    { href: '/narutodle-answer-today-updated', icon: '🍥', label: 'Narutodle' },
+    { href: '/loldle-answer-today-updated', icon: '⚔️', label: 'LoLdle' },
+    { href: '/pokedle-answer-today-updated', icon: '⚡', label: 'Pokedle' },
+    { href: '/smashdle-answer-today-updated', icon: '🎮', label: 'Smashdle' },
+    { href: '/dotadle-answer-today-updated', icon: '🛡️', label: 'Dotadle' },
   ];
   const schemas = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
@@ -29,7 +29,7 @@
       { '@type': 'Question', name: 'Does OnePiecedle cover the entire One Piece series?', acceptedAnswer: { '@type': 'Answer', text: 'OnePiecedle draws from characters across the entire One Piece manga and anime, from East Blue to the latest arcs.' } },
       { '@type': 'Question', name: 'Is OnePiecedle free to play?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, OnePiecedle is completely free to play in your browser.' } },
     ]},
-    { '@type': 'Article', headline: 'OnePiecedle Answer Today', description: "Today's Onepiecedle character revealed — Character, Devil Fruit, and Wanted Poster mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/onepiecedle-answer-today' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/onepiecedle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'OnePiecedle Answer Today', description: "Today's Onepiecedle character revealed — Character, Devil Fruit, and Wanted Poster mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/onepiecedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/onepiecedle-answer-today.webp' } } },
   ]};
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

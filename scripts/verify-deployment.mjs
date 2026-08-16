@@ -30,13 +30,13 @@ const checks = [
   },
   {
     name: 'Narutodle Answer Today',
-    path: '/narutodle-answer-today',
+    path: '/narutodle-answer-today-updated',
     mustContain: ['What is Narutodle?', 'p-5'],
     mustNotContain: [],
   },
   {
     name: 'Dotadle Answer Today',
-    path: '/dotadle-answer-today',
+    path: '/dotadle-answer-today-updated',
     mustContain: ['What is Dotadle?', 'p-5'],
     mustNotContain: [],
   },

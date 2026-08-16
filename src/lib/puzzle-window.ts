@@ -270,12 +270,12 @@ export const TODAY_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
         '/spotle-answer-today': 'spotle',
         '/worgle-answer-today': 'worgle',
         '/colorfle-answer-today': 'colorfle',
-        '/dotadle-answer-today': 'dotadle',
-        '/loldle-answer-today': 'loldle',
-        '/narutodle-answer-today': 'narutodle',
-        '/onepiecedle-answer-today': 'onepiecedle',
-        '/pokedle-answer-today': 'pokedle',
-        '/smashdle-answer-today': 'smashdle'
+        '/dotadle-answer-today-updated': 'dotadle',
+        '/loldle-answer-today-updated': 'loldle',
+        '/narutodle-answer-today-updated': 'narutodle',
+        '/onepiecedle-answer-today-updated': 'onepiecedle',
+        '/pokedle-answer-today-updated': 'pokedle',
+        '/smashdle-answer-today-updated': 'smashdle'
 };
 
 export const ARCHIVE_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {

@@ -25,7 +25,7 @@ const pageMap = [
   { page: '/5-letter-wordle-solver', re: /wordle solver|wordle helper|5 letter wordle|wordle 5|wordle word finder|word finder for wordle|wordle solving|wordle tools|wordle finder|wordle guesser|wordle clue solver|wordle solved|wordle answer finder|wordle tool/ },
   { page: '/colordle-answer-today', re: /colordle/ },
   { page: '/minesweeper-solver', re: /minesweeper/ },
-  { page: '/smashdle-answer-today', re: /smashdle/ },
+  { page: '/smashdle-answer-today-updated', re: /smashdle/ },
   { page: '/globle-answer-today', re: /globle/ },
   { page: '/spotle-answer-today', re: /spotle/ },
   { page: '/lights-out-solver', re: /lights out/ },
