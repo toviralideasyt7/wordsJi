@@ -88,7 +88,7 @@
 </script>
 
 <svelte:head>
-  <title>Colordle Archive - Complete Color Answer History | WordSolverX</title>
+  <title>Colordle Archive - Complete Color Answer History</title>
   <meta name="description" content="Browse the complete archive of all Colordle color answers. Calendar view with search and direct links to every past color puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/colordle-archive" />
   <meta property="og:title" content="Colordle Archive - All Past Color Answers" />

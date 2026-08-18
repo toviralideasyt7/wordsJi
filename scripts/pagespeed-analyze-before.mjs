@@ -127,18 +127,6 @@ const codeMappings = [
 			'Do not load the full Squaredle dictionary on mount; defer it until the user loads today or clicks solve, and prefer compressed static delivery.'
 	},
 	{
-		name: 'Wordle analyzer worker data',
-		match: (route) => route === '/wordle-analyzer',
-		files: [
-			'src/routes/(interactive)/wordle-analyzer/+page.svelte',
-			'src/lib/components/wordle-analyzer/WordleAnalyzerClient.svelte',
-			'src/lib/workers/wordle-analyzer.worker.ts',
-			'static/data/wordle-analyzer/word-data.json'
-		],
-		fix:
-			'Start analyzer worker and fetch analyzer datasets only when the user begins analysis, not during initial render.'
-	},
-	{
 		name: 'Archive and static dataset pages',
 		match: (route) => route.endsWith('-archive') || route === '/archive',
 		files: ['src/lib/archive-data.ts', 'src/lib/archive-client.ts', 'src/lib/components/ArchiveCalendar.svelte'],

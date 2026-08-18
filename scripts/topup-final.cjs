@@ -116,14 +116,6 @@ const sections = {
       'Whether the daily Pokemon is a Kanto classic or a Paldea newcomer, the solver\u2019s pool covers it.'
     ]
   },
-  'wordle-analyzer': {
-    heading: 'Wordle analyzer reports that change your game',
-    paragraphs: [
-      'The analyzer turns your Wordle history into a real report: opening-guess performance, average solve length, letter-hitting accuracy, and the positions where your guesses most often go wrong.',
-      'The most useful number is your average solve length — anything under four is strong, and the analyzer shows exactly which guess is costing you that extra try.',
-      'It also exposes habits you cannot see from memory, like always choosing the same starter letter or ignoring repeated letters. Fix those, and your average drops quickly — the report gives you the target, and the solver gives you the method.'
-    ]
-  },
   'searchle-answer-today': {
     heading: 'Searchle answers by month and geography',
     paragraphs: [

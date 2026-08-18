@@ -22,7 +22,6 @@ const pages = [
   ['src/routes/(interactive)/hangman-solver/+page.svelte', '<article class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">'],
   ['src/routes/(interactive)/boggle-solver/+page.svelte', '<article class="mt-10 space-y-10 max-w-5xl mx-auto">'],
   ['src/routes/(interactive)/nerdle-solver/+page.svelte', '<article class="space-y-10">'],
-  ['src/routes/(interactive)/wordle-analyzer/+page.svelte', '<article class="space-y-10">'],
   ['src/routes/(interactive)/searchle-solver/+page.svelte', '<section class="mt-12 space-y-10">'],
   ['src/routes/(interactive)/colordle-solver/+page.svelte', WRAPPER],
   ['src/routes/(interactive)/colorfle-solver/+page.svelte', WRAPPER],

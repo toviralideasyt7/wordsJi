@@ -244,7 +244,7 @@
                                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                         },
                         generateWebPageSchema(
-                                'Boggle Solver - Free Board Search Tool | WordSolverX',
+                                'Boggle Solver - Free Board Search Tool',
                                 'Find every valid word in a 3x3 to 10x10 Boggle board using the same trie and DFS logic as the source project.',
                                 'https://wordsolverx.com/boggle-solver',
                                 { image: 'https://wordsolverx.com/images/boggle-solver.webp' }

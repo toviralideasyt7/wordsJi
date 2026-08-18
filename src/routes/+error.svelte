@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>{status} Error | WordSolverX</title>
+	<title>{status} Error</title>
 	<meta name="description" content="Oops! Looks like you've landed on a missing page." />
 	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>

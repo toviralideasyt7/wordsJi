@@ -115,7 +115,6 @@ This file is a fuller agent-facing route index for WordSolverX. Prefer canonical
 - https://wordsolverx.com/weaver-solver
 - https://wordsolverx.com/woodle-solver
 - https://wordsolverx.com/word-ladder-solver
-- https://wordsolverx.com/wordle-analyzer
 - https://wordsolverx.com/wordle-solver
 - https://wordsolverx.com/worldle-solver
 - https://wordsolverx.com/xordle-solver

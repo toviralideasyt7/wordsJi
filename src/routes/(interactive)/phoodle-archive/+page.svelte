@@ -76,7 +76,7 @@
 </script>
 
 <svelte:head>
-  <title>Phoodle Archive - Complete Food Word Answer History | WordSolverX</title>
+  <title>Phoodle Archive - Complete Food Word Answer History</title>
   <meta name="description" content="Browse the complete archive of all Phoodle food word answers. Calendar view with search and direct links to every past food puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/phoodle-archive" />
   <meta property="og:title" content="Phoodle Archive - All Past Food Word Answers" />

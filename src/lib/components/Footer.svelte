@@ -52,7 +52,6 @@
 					<li><a href="/5-letter-wordle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">5-Letter Wordle Solver</a></li>
 					<li><a href="/quordle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Quordle Solver</a></li>
 					<li><a href="/nerdle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Nerdle Solver</a></li>
-					<li><a href="/wordle-analyzer" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Wordle Analyzer</a></li>
 					<li><a href="/solver" class="text-sm text-teal-600 dark:text-teal-400 font-medium hover:text-teal-700 dark:hover:text-teal-300 transition-colors">View All &rarr;</a></li>
 				</ul>
 			</nav>

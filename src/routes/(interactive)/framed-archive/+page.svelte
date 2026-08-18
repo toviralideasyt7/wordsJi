@@ -76,7 +76,7 @@ import { ARTICLE_CONTENT } from '$lib/content/registry';
         }))
       ),
       generateWebPageSchema(
-        'Framed Archive - Past Framed Answers by Date | WordSolverX',
+        'Framed Archive - Past Framed Answers by Date',
         'Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records.',
         'https://wordsolverx.com/framed-archive'
       )
@@ -85,7 +85,7 @@ import { ARTICLE_CONTENT } from '$lib/content/registry';
 </script>
 
 <svelte:head>
-  <title>Framed Archive - Past Framed Answers by Date | WordSolverX</title>
+  <title>Framed Archive - Past Framed Answers by Date</title>
   <meta name="description" content="Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records." />
   <link rel="canonical" href="https://wordsolverx.com/framed-archive" />
   <meta property="og:title" content="Framed Archive - Past Framed Answers by Date" />

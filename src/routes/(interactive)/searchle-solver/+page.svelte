@@ -279,7 +279,7 @@
     }
   }
 
-  const pageTitle = 'Searchle Solver - Autocomplete Guess Helper | WordSolverX';
+  const pageTitle = 'Searchle Solver - Autocomplete Guess Helper';
   const pageDescription =
     'Solve Searchle fast with entropy-ranked guesses, daily prompts, and feedback tracking. Find the missing autocomplete word in seconds.';
   const pageUrl = 'https://wordsolverx.com/searchle-solver';
@@ -288,7 +288,7 @@
 </script>
 
 <svelte:head>
-  <title>Searchle Solver - Autocomplete Guess Helper | WordSolverX</title>
+  <title>Searchle Solver - Autocomplete Guess Helper</title>
   <meta
     name="description"
     content="Solve Searchle fast with entropy-ranked guesses, daily prompts, and feedback tracking. Find the missing autocomplete word in seconds."

@@ -101,7 +101,7 @@
 </script>
 
 <svelte:head>
-  <title>Wordle Answer Archive - Complete List of All Solutions by Date | WordSolverX</title>
+  <title>Wordle Answer Archive - Complete List of All Solutions by Date</title>
   <meta name="description" content="The complete Wordle answer archive: every solution since June 2021, organized by year with puzzle numbers, dates, and editors. Search by date or puzzle number. Updated daily." />
   <link rel="canonical" href="https://wordsolverx.com/wordle-answer-archive" />
   <meta property="og:title" content="Wordle Answer Archive - Complete List of All Solutions" />
@@ -110,7 +110,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Wordle Answer Archive - All Past Solutions | WordSolverX" />
+  <meta name="twitter:title" content="Wordle Answer Archive - All Past Solutions" />
   <meta name="twitter:description" content="Complete history of every Wordle answer with year-by-year tables and search." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
 </svelte:head>

@@ -80,7 +80,7 @@
 </script>
 
 <svelte:head>
-  <title>Quordle Archive - Complete Four-Word Answer History | WordSolverX</title>
+  <title>Quordle Archive - Complete Four-Word Answer History</title>
   <meta name="description" content="Browse the complete archive of all Quordle answers. Calendar view with search and direct links to every past four-word puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/quordle-archive" />
   <meta property="og:title" content="Quordle Archive - All Past Four-Word Answers" />

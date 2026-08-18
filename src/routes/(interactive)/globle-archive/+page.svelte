@@ -80,7 +80,7 @@
 </script>
 
 <svelte:head>
-  <title>Globle Archive - Complete Country Answer History | WordSolverX</title>
+  <title>Globle Archive - Complete Country Answer History</title>
   <meta name="description" content="Browse the complete archive of all Globle country answers. Calendar view with search and direct links to every past geography puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/globle-archive" />
   <meta property="og:title" content="Globle Archive - All Past Country Answers" />

@@ -85,7 +85,7 @@
 </script>
 
 <svelte:head>
-  <title>Worldle Archive - Complete Country Answer History | WordSolverX</title>
+  <title>Worldle Archive - Complete Country Answer History</title>
   <meta name="description" content="Browse the complete archive of all Worldle answers. Calendar view with direct access to every past country silhouette puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/worldle-archive" />
   <meta property="og:title" content="Worldle Archive - All Past Country Answers" />

@@ -203,7 +203,7 @@
     return 'Unset';
   }
 
-  const pageTitle = 'Colorfle Solver - Free Colorfle Helper Tool | WordSolverX';
+  const pageTitle = 'Colorfle Solver - Free Colorfle Helper Tool';
   const pageDescription =
     'Use the Colorfle solver to match target hex colors, test Colorfle feedback, and narrow the correct three-color combination fast.';
   const pageUrl = 'https://wordsolverx.com/colorfle-solver';
@@ -211,7 +211,7 @@
 </script>
 
 <svelte:head>
-  <title>Colorfle Solver - Free Colorfle Helper Tool | WordSolverX</title>
+  <title>Colorfle Solver - Free Colorfle Helper Tool</title>
   <meta name="description" content="Use the Colorfle solver to match target hex colors, test Colorfle feedback, and narrow the correct three-color combination fast." />
   <meta name="keywords" content="colorfle solver, colorfle helper, colorfle answer, colorfle color solver" />
   <link rel="canonical" href="https://wordsolverx.com/colorfle-solver" />

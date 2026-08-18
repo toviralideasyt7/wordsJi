@@ -24,7 +24,6 @@
 
   const solvers: SolverCard[] = [
     ...wordleLengthSolvers,
-    { name: 'Wordle Analyzer', href: '/wordle-analyzer', description: 'Replay a finished Wordle, compare every turn to an AI line, and generate spoiler-safe recap links.', color: 'from-teal-500 via-teal-500 to-sky-600', icon: 'WA', isPopular: true },
     { name: 'Canuckle Solver', href: '/canuckle-solver', description: 'Dedicated Canuckle solver with the Canadian answer list plus linked answer today and archive pages.', color: 'from-rose-500 to-red-600', icon: 'Ca', isPopular: true },
     { name: 'Nerdle Solver', href: '/nerdle-solver', description: 'All-modes equation solver for Micro, Mini, Midi, Classic, and Maxi Nerdle.', color: 'from-teal-500 to-teal-600', icon: 'Nd', isPopular: true },
     { name: 'Worldle Solver', href: '/worldle-solver', description: 'Geography solver for Worldle using distance and direction clues.', color: 'from-sky-500 to-blue-700', icon: 'Wr', isPopular: true },
@@ -93,16 +92,16 @@
 </script>
 
 <svelte:head>
-  <title>Puzzle Solver Tools - Wordle, Betweenle, Quordle & More | WordSolverX</title>
+  <title>Puzzle Solver Tools - Wordle, Betweenle, Quordle & More</title>
   <meta name="description" content="Free puzzle solver tools for 3 to 11 letter Wordle, Canuckle, Quordle, Betweenle, Phoodle, Waffle, Colordle, and more with fast clue-based filtering." />
   <link rel="canonical" href="https://wordsolverx.com/solver" />
-  <meta property="og:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More | WordSolverX" />
+  <meta property="og:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
   <meta property="og:description" content="Use free solver tools for 3 to 11 letter Wordle, Canuckle, Betweenle, Worldle, Quordle, Phoodle, Waffle, Colordle, and more daily puzzle games." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wordsolverx.com/solver" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More | WordSolverX" />
+  <meta name="twitter:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
   <meta name="twitter:description" content="Find the right puzzle solver fast with WordSolverX's full collection of free clue-based tools for Wordle, Canuckle, Quordle, and more." />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({

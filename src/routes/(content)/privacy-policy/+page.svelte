@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy - WordSolverX</title>
+  <title>Privacy Policy</title>
   <meta
     name="description"
     content="Read the WordSolverX privacy policy for browser storage, analytics, advertising disclosures, cookie choices, and contact information."
   />
   <link rel="canonical" href="https://wordsolverx.com/privacy-policy" />
-  <meta property="og:title" content="Privacy Policy - WordSolverX" />
+  <meta property="og:title" content="Privacy Policy" />
   <meta
     property="og:description"
     content="Review how WordSolverX handles browser storage, analytics, advertising, and privacy requests."
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://wordsolverx.com/privacy-policy" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy - WordSolverX" />
+  <meta name="twitter:title" content="Privacy Policy" />
   <meta
     name="twitter:description"
     content="See how WordSolverX handles privacy, cookie preferences, analytics, and advertising disclosures."
@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Privacy Policy - WordSolverX',
+      'Privacy Policy',
       'Privacy policy and data handling information for WordSolverX.',
       'https://wordsolverx.com/privacy-policy',
       { dateModified: '2026-05-26' }

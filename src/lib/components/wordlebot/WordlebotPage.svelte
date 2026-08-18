@@ -55,7 +55,7 @@
 </script>
 
 <svelte:head>
-        <title>{seoTitle} | WordSolverX</title>
+        <title>{seoTitle}</title>
         <meta name="description" content={config.description} />
         <meta name="keywords" content={config.keywords.join(', ')} />
         {#if isCanuckleTodayPage}
@@ -64,13 +64,13 @@
                         content="canuckle answer today, canuckle today, canuckle answer, canuckle puzzle today"
                 />
         {/if}
-        <meta property="og:title" content={`${seoTitle} | WordSolverX`} />
+        <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={config.description} />
         <meta property="og:type" content={ogType} />
         <meta property="og:url" content={config.pageUrl} />
         <meta property="og:site_name" content="WordSolverX" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${seoTitle} | WordSolverX`} />
+        <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={config.description} />
         <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
         <link rel="canonical" href={config.pageUrl} />

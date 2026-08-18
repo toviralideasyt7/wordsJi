@@ -15,14 +15,14 @@
     '@graph': [
       {
         ...generateWebPageSchema(
-          'Editorial Policy - WordSolverX',
+          'Editorial Policy',
           'WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
           'https://wordsolverx.com/editorial-policy'
         )
       },
       {
         '@type': 'Article',
-        headline: 'Editorial Policy - WordSolverX',
+        headline: 'Editorial Policy',
         description:
           'WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
         url: 'https://wordsolverx.com/editorial-policy',
@@ -54,13 +54,13 @@
 </script>
 
 <svelte:head>
-  <title>Editorial Policy - WordSolverX</title>
+  <title>Editorial Policy</title>
   <meta
     name="description"
     content="WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and correct mistakes."
   />
   <link rel="canonical" href="https://wordsolverx.com/editorial-policy" />
-  <meta property="og:title" content="Editorial Policy - WordSolverX" />
+  <meta property="og:title" content="Editorial Policy" />
   <meta
     property="og:description"
     content="WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and correct mistakes."
@@ -72,7 +72,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="WordSolverX Editorial Policy" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Editorial Policy - WordSolverX" />
+  <meta name="twitter:title" content="Editorial Policy" />
   <meta
     name="twitter:description"
     content="Learn how WordSolverX verifies answers, handles generated article text, and publishes corrections."

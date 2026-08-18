@@ -32,16 +32,16 @@
 </script>
 
 <svelte:head>
-  <title>Puzzle Answer Archives | WordSolverX</title>
+  <title>Puzzle Answer Archives</title>
   <meta name="description" content="Browse archive pages for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
   <link rel="canonical" href="https://wordsolverx.com/archive" />
-  <meta property="og:title" content="Puzzle Answer Archive - All Solutions | WordSolverX" />
+  <meta property="og:title" content="Puzzle Answer Archive - All Solutions" />
   <meta property="og:description" content="Browse full answer history, archive calendars, and past solutions for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
   <meta property="og:url" content="https://wordsolverx.com/archive" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Puzzle Answer Archive - All Solutions | WordSolverX" />
+  <meta name="twitter:title" content="Puzzle Answer Archive - All Solutions" />
   <meta name="twitter:description" content="Explore complete answer archives and calendar lookups for Wordle, Canuckle, and the most popular daily puzzle games." />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({

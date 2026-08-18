@@ -94,7 +94,6 @@ const SAMPLE_URLS = [
   '/canuckle-answer-today',
   '/5-letter-wordle-solver',
   '/quordle-solver',
-  '/wordle-analyzer',
   '/today',
   '/archive',
   '/guides',

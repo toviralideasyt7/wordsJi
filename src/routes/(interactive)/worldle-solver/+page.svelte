@@ -14,7 +14,7 @@
   import WorldleSolverClient from '$lib/components/worldle/WorldleSolverClient.svelte';
 
 
-  const pageTitle = 'Worldle Solver - Solve Worldle With Distance And Direction Clues | WordSolverX';
+  const pageTitle = 'Worldle Solver - Your Free AI Solver';
   const pageDescription =
     'Use the WordSolverX Worldle Solver to filter countries by distance, direction, and proximity clues. This Worldle helper runs instantly in your browser.';
   const pageUrl = 'https://wordsolverx.com/worldle-solver';

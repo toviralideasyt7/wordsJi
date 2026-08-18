@@ -239,7 +239,7 @@
                 '@context': 'https://schema.org',
                 '@graph': [
                         generateWebPageSchema(
-                                'Soundmap Solver - Artist Guesser Helper | WordSolverX',
+                                'Soundmap Solver - Artist Guesser Helper',
                                 'Solve Soundmap Artist Guesser faster with the Soundmap Solver. Filter artists by debut year, popularity, genre, country, and more.',
                                 'https://wordsolverx.com/soundmap-solver',
                                 { image: 'https://wordsolverx.com/images/soundmap-solver.webp' }
@@ -261,7 +261,7 @@
 </script>
 
 <svelte:head>
-        <title>Soundmap Solver - Artist Guesser Helper | WordSolverX</title>
+        <title>Soundmap Solver - Artist Guesser Helper</title>
         <meta
                 name="description"
                 content="Solve Soundmap Artist Guesser faster with the Soundmap Solver. Filter artists by debut year, popularity, genre, country, and more."

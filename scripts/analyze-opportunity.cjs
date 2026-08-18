@@ -29,7 +29,6 @@ const pageMap = [
   { page: '/globle-answer-today', re: /globle/ },
   { page: '/spotle-answer-today', re: /spotle/ },
   { page: '/lights-out-solver', re: /lights out/ },
-  { page: '/wordle-analyzer', re: /wordle analyzer/ },
   { page: '/semantle-answer-today', re: /semantle/ },
   { page: '/kanoodle-solver', re: /kanoodle/ },
   { page: '/waffle-archive', re: /waffle/ },

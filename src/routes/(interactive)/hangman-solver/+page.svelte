@@ -13,7 +13,7 @@
     generateWebPageSchema
   } from '$lib/seo';
 
-  const pageTitle = 'Hangman Solver - Free Online Word Finder & Hint Tool | WordSolverX';
+  const pageTitle = 'Hangman Solver - Free Online Word Finder & Hint Tool';
   const pageDescription =
     'Use this Hangman solver to enter your pattern and letters, then get ranked answers and the best next guess.';
   const pageUrl = 'https://wordsolverx.com/hangman-solver';

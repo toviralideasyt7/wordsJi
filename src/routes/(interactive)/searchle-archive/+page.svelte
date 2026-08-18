@@ -79,7 +79,7 @@
 </script>
 
 <svelte:head>
-  <title>Searchle Archive - Complete Prompt Answer History | WordSolverX</title>
+  <title>Searchle Archive - Complete Prompt Answer History</title>
   <meta name="description" content="Browse the complete archive of all Searchle answers. Calendar view with direct access to past autocomplete prompts and confirmed answers." />
   <link rel="canonical" href="https://wordsolverx.com/searchle-archive" />
   <meta property="og:title" content="Searchle Archive - All Past Answers" />

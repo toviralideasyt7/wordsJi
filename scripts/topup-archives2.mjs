@@ -5,15 +5,6 @@ import { readFile, writeFile } from 'node:fs/promises';
 const registryPath = 'src/lib/content/registry.ts';
 
 const SECTIONS = {
-  'wordle-analyzer': {
-    heading: "From grade to habit: what to change first",
-    paragraphs: [
-      "If your first analyzer report shows a middling grade, resist the urge to change everything at once. The report's flagged moves point at your single biggest leak — usually one pattern, like reusing gray letters or ignoring the candidate list — and fixing that one habit lifts your grade more than any other single change.",
-      "The second pass focuses on your opener. The analyzer shows you what your opener actually returned in information terms, and most players discover their favorite opener underperforms. Switching to a vowel-plus-common-consonants opener like CRANE or SLATE is the single highest-leverage change in the whole game.",
-      "The third pass is the endgame. Once your opener and midgame are solid, the analyzer's remaining flags cluster at the finish — the hesitation, the non-candidate guess, the failure to commit. Fixing the endgame takes your best games from good to perfect.",
-      "The grading loop is the point: play, analyze, fix one thing, repeat. A week of that loop moves your average grade more than a month of reading strategy articles — because the feedback is about your specific moves, not about generic advice."
-    ]
-  },
   'waffle-archive': {
     heading: "Replaying the archive: the minimal-swap trainer",
     paragraphs: [

@@ -16,7 +16,7 @@ const EVERGREEN_STATIC_ROUTES = [
   '/warmle-solver','/woodle-solver','/w-peaks-solver','/xordle-solver',
   '/fibble-solver','/spotle-wordle-solver','/searchle-solver','/smashdle-solver',
   '/solver','/soundmap-solver','/spotle-solver','/squaredle-solver','/terms-of-service',
-  '/waffle-solver','/weaver-solver','/word-ladder-solver','/wordle-analyzer',
+  '/waffle-solver','/weaver-solver','/word-ladder-solver',
   '/wordle-solver','/worldle-solver','/3-letter-wordle-solver','/4-letter-wordle-solver',
   '/5-letter-wordle-solver','/6-letter-wordle-solver','/7-letter-wordle-solver',
   '/8-letter-wordle-solver','/9-letter-wordle-solver','/10-letter-wordle-solver',

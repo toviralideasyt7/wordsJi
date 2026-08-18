@@ -80,7 +80,7 @@
 </script>
 
 <svelte:head>
-  <title>Semantle Archive - Complete Secret Word Answer History | WordSolverX</title>
+  <title>Semantle Archive - Complete Secret Word Answer History</title>
   <meta name="description" content="Browse the complete archive of all Semantle secret word answers. Calendar view with search and direct links to every past semantic puzzle solution." />
   <link rel="canonical" href="https://wordsolverx.com/semantle-archive" />
   <meta property="og:title" content="Semantle Archive - All Past Secret Word Answers" />

@@ -26,13 +26,13 @@
 </script>
 
 <svelte:head>
-  <title>Contact WordSolverX | Support, Feedback, and Corrections</title>
+  <title>Contact | Support, Feedback, and Corrections</title>
   <meta
     name="description"
     content="Contact WordSolverX for support, corrections, privacy questions, legal notices, or general feedback about our puzzle pages and solver tools."
   />
   <link rel="canonical" href="https://wordsolverx.com/contact" />
-  <meta property="og:title" content="Contact WordSolverX | Support, Feedback, and Corrections" />
+  <meta property="og:title" content="Contact | Support, Feedback, and Corrections" />
   <meta
     property="og:description"
     content="Reach WordSolverX by email for corrections, support, legal notices, and puzzle site feedback."
@@ -41,7 +41,7 @@
   <meta property="og:url" content="https://wordsolverx.com/contact" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact WordSolverX | Support, Feedback, and Corrections" />
+  <meta name="twitter:title" content="Contact | Support, Feedback, and Corrections" />
   <meta
     name="twitter:description"
     content="Get in touch with WordSolverX for support, feedback, correction requests, and legal notices."

@@ -43,7 +43,7 @@ export const load: PageServerLoad = async () => {
 			publishedDate: null,
 			schemas: null,
 			meta: {
-				title: 'Colorfle Answers Today | WordSolverX',
+				title: 'Colorfle Answers Today',
 				description: 'Colorfle normal and hard mode answers are temporarily unavailable.',
 				keywords: 'colorfle answer today, colorfle answer, colorfle archive, colorfle solver',
 				canonical: 'https://wordsolverx.com/colorfle-answer-today',

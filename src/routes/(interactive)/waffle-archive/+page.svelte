@@ -80,7 +80,7 @@
 </script>
 
 <svelte:head>
-  <title>Waffle Archive - Complete Waffle Puzzle Answer History | WordSolverX</title>
+  <title>Waffle Archive - Complete Waffle Puzzle Answer History</title>
   <meta name="description" content="Browse the complete archive of all Waffle puzzle answers. Calendar view with search and direct links to every past waffle grid solution." />
   <link rel="canonical" href="https://wordsolverx.com/waffle-archive" />
   <meta property="og:title" content="Waffle Archive - All Past Waffle Answers" />

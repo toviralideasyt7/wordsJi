@@ -5,15 +5,6 @@ import { readFile, writeFile } from 'node:fs/promises';
 const registryPath = 'src/lib/content/registry.ts';
 
 const SECTIONS = {
-  'wordle-analyzer': {
-    heading: "The strategy the analyzer grades you on",
-    paragraphs: [
-      "The analyzer's scoring is built on the same information logic that powers the best Wordle openers. A great first guess covers the most common letters — two or three vowels plus R, S, T, N — because that guess returns the most informative feedback no matter what the answer is. The analyzer rewards openers that cut the candidate list hard, and it shows you when your opener underperformed.",
-      "The midgame is where most grades leak. After the opener, every guess should add a new letter to your picture, keep confirmed greens locked, and relocate yellows — and the analyzer flags each move that fails to do all three at once. Players who think they are playing well discover that two or three midgame moves were quietly wasted.",
-      "The endgame is the grade's final exam. With the pool down to a handful of words, the analyzer checks whether you guessed from the candidate list or from habit — and players who guess the same word every time they reach a pattern get the same penalty every time. Reading the flagged endgame moves once fixes the habit for good.",
-      "The beauty of the analyzer is that it turns these abstract principles into concrete, per-move feedback. You do not need to study information theory — you need to read one report and see exactly which of your moves wasted information."
-    ]
-  },
   'waffle-archive': {
     heading: "Waffle archive searches, answered",
     paragraphs: [

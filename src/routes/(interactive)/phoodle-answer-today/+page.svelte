@@ -15,7 +15,7 @@
   } from '$lib/authors';
 
   let { data } = $props();
-  let pageTitle = $derived(data.meta?.title ?? "Phoodle Answer Today | WordSolverX");
+  let pageTitle = $derived(data.meta?.title ?? "Phoodle Answer Today");
   let pageDescription = $derived(
     data.meta?.description ??
       "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordSolverX."

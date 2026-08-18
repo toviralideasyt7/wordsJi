@@ -23,7 +23,7 @@
       }))
     ),
     generateWebPageSchema(
-      'Countryle Archive - Daily Country Answers History | WordSolverX',
+      'Countryle Archive - Daily Country Answers History',
       'Browse the Countryle archive by date and review past countries, continents, populations, coordinates, and map links from our verified answer records.',
       'https://wordsolverx.com/countryle-archive'
     )
@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-  <title>Countryle Archive - Daily Country Answers History | WordSolverX</title>
+  <title>Countryle Archive - Daily Country Answers History</title>
   <meta name="description" content="Browse the Countryle archive by date and review past countries, continents, populations, coordinates, and map links from our verified answer records." />
   <link rel="canonical" href="https://wordsolverx.com/countryle-archive" />
   <meta property="og:title" content="Countryle Archive - Daily Country Answers History" />

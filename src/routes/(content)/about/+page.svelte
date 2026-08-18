@@ -39,13 +39,13 @@
 </script>
 
 <svelte:head>
-  <title>About WordSolverX | Puzzle Answers, Archives, and Solver Tools</title>
+  <title>About | Puzzle Answers, Archives, and Solver Tools</title>
   <meta
     name="description"
     content="Learn about WordSolverX and how we publish daily puzzle answers, archives, solver tools, and puzzle guides."
   />
   <link rel="canonical" href="https://wordsolverx.com/about" />
-  <meta property="og:title" content="About WordSolverX | Puzzle Answers, Archives, and Solver Tools" />
+  <meta property="og:title" content="About | Puzzle Answers, Archives, and Solver Tools" />
   <meta
     property="og:description"
     content="See what WordSolverX offers, which puzzle tools we cover, and how the site stays updated."
@@ -54,7 +54,7 @@
   <meta property="og:url" content="https://wordsolverx.com/about" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About WordSolverX | Puzzle Answers, Archives, and Solver Tools" />
+  <meta name="twitter:title" content="About | Puzzle Answers, Archives, and Solver Tools" />
   <meta
     name="twitter:description"
     content="Learn about WordSolverX, our puzzle resources, and how the site helps players every day."

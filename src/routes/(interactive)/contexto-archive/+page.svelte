@@ -87,7 +87,7 @@
 </script>
 
 <svelte:head>
-  <title>Contexto Archive - Complete Secret Word History | WordSolverX</title>
+  <title>Contexto Archive - Complete Secret Word History</title>
   <meta name="description" content="Browse the complete archive of all Contexto answers. Calendar view with direct access to past secret words and game numbers." />
   <link rel="canonical" href="https://wordsolverx.com/contexto-archive" />
   <meta property="og:title" content="Contexto Archive - All Past Answers" />

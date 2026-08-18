@@ -82,7 +82,7 @@
 </script>
 
 <svelte:head>
-  <title>Phrazle Archive - Complete Phrase Answer History | WordSolverX</title>
+  <title>Phrazle Archive - Complete Phrase Answer History</title>
   <meta name="description" content="Browse the complete archive of all Phrazle answers. Calendar view with direct access to both the morning and afternoon phrase for each date." />
   <link rel="canonical" href="https://wordsolverx.com/phrazle-archive" />
   <meta property="og:title" content="Phrazle Archive - All Past Answers" />

@@ -47,7 +47,7 @@
 
   const schemas = JSON.stringify([
     generateWebPageSchema(
-      'Countryle Solver - Free Country Clue Helper | WordSolverX',
+      'Countryle Solver - Free Country Clue Helper',
       'Use the Countryle solver to filter countries by continent, hemisphere, temperature, population, and direction clues from the daily Countryle game.',
       'https://wordsolverx.com/countryle-solver',
       { image: 'https://wordsolverx.com/images/countryle-solver.webp' }
@@ -112,7 +112,7 @@
 </script>
 
 <svelte:head>
-  <title>Countryle Solver - Free Country Clue Helper | WordSolverX</title>
+  <title>Countryle Solver - Free Country Clue Helper</title>
   <meta name="description" content="Use the Countryle solver to filter countries by continent, hemisphere, temperature, population, and direction clues from the daily Countryle game." />
   <meta name="keywords" content="countryle solver, countryle helper, countryle country solver, countryle clues" />
   <link rel="canonical" href="https://wordsolverx.com/countryle-solver" />

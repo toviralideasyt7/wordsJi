@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-  <title>Terms and Conditions - WordSolverX</title>
+  <title>Terms and Conditions</title>
   <meta
     name="description"
     content="Review the WordSolverX terms and conditions for using our puzzle answer pages, archives, guides, and solver tools."
   />
   <link rel="canonical" href="https://wordsolverx.com/terms-of-service" />
-  <meta property="og:title" content="Terms and Conditions - WordSolverX" />
+  <meta property="og:title" content="Terms and Conditions" />
   <meta
     property="og:description"
     content="Read the current terms and conditions for using WordSolverX and its puzzle tools."
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://wordsolverx.com/terms-of-service" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Terms and Conditions - WordSolverX" />
+  <meta name="twitter:title" content="Terms and Conditions" />
   <meta
     name="twitter:description"
     content="Review the rules, site usage terms, and limitations for WordSolverX."
@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Terms and Conditions - WordSolverX',
+      'Terms and Conditions',
       'Terms and conditions and legal information for WordSolverX.',
       'https://wordsolverx.com/terms-of-service',
       { dateModified: '2026-03-14' }

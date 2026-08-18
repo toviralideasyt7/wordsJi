@@ -93,7 +93,7 @@
 </script>
 
 <svelte:head>
-  <title>Colorfle Archive - Normal and Hard Answers by Date | WordSolverX</title>
+  <title>Colorfle Archive - Normal and Hard Answers by Date</title>
   <meta
     name="description"
     content="Browse the full Colorfle archive with API-backed normal and hard answers for every date since launch."

@@ -77,16 +77,16 @@
 </script>
 
 <svelte:head>
-  <title>WordSolverX | Daily Puzzle Answers, Solvers & Wordle Tools</title>
+  <title>Daily Puzzle Answers, Solvers & Wordle Tools</title>
   <meta name="description" content="Get daily puzzle answers, smart solver tools, archives, and practice modes for Wordle, Betweenle, Worldle, Quordle, Phoodle, Colordle, and more on WordSolverX." />
   <link rel="canonical" href="https://wordsolverx.com/" />
-  <meta property="og:title" content="WordSolverX | Daily Puzzle Answers, Solvers & Wordle Tools" />
+  <meta property="og:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta property="og:description" content="Find daily answers, puzzle solvers, archives, and free practice tools for Wordle and dozens of popular daily games." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wordsolverx.com/" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="WordSolverX | Daily Puzzle Answers, Solvers & Wordle Tools" />
+  <meta name="twitter:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta name="twitter:description" content="Daily answers, archives, and free solver tools for Wordle, Betweenle, Quordle, Phoodle, and more." />
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${jsonLd}</script>`}

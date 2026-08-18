@@ -120,7 +120,7 @@
 </script>
 
 <svelte:head>
-        <title>Spotle Archive - Complete Artist Answer History | WordSolverX</title>
+        <title>Spotle Archive - Complete Artist Answer History</title>
         <meta name="description" content="Browse the full Spotle archive by date, with artist details and stored music metadata for past answers." />
         <link rel="canonical" href="https://wordsolverx.com/spotle-archive" />
         <meta property="og:title" content="Spotle Archive - All Past Artist Answers" />

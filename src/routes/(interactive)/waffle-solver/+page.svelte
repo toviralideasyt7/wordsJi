@@ -181,7 +181,7 @@
 
   const jsonLdSchema = JSON.stringify([
     generateWebPageSchema(
-      'Waffle Solver - Solve Any Waffle Puzzle Instantly | WordSolverX',
+      'Waffle Solver - Solve Any Waffle Puzzle Instantly',
       "Solve today's Waffle puzzle with our high-performance WASM-powered solver. Auto-fill or manually enter your grid and get instant solutions.",
       'https://wordsolverx.com/waffle-solver',
       { image: 'https://wordsolverx.com/images/waffle-solver.webp' }
@@ -208,7 +208,7 @@
 </script>
 
 <svelte:head>
-  <title>Waffle Solver - Solve Any Waffle Puzzle Instantly | WordSolverX</title>
+  <title>Waffle Solver - Solve Any Waffle Puzzle Instantly</title>
   <meta name="description" content="Solve today's Waffle puzzle with our high-performance WASM-powered solver. Auto-fill or manually enter your grid and get instant solutions." />
   <meta name="keywords" content="Waffle Solver, Waffle Answer, Waffle Puzzle, Waffle Game Helper, Waffle Cheat" />
   <link rel="canonical" href="https://wordsolverx.com/waffle-solver" />
