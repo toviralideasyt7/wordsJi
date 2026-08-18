@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import {
   ARCHIVE_STATIC_ROUTES,
   TODAY_STATIC_ROUTES,
+  SITEMAP_ENTRIES,
 } from "../../src/lib/route-registry.js";
 
 const repoRoot = process.cwd();
@@ -154,12 +155,7 @@ const globalPaths = changedFiles.some((filePath) =>
   : [];
 const groupPaths = getGroupPaths(groupName);
 
-const indexNowPaths = unique([
-  ...alwaysPaths,
-  ...groupPaths,
-  ...globalPaths,
-  ...changedRoutePaths,
-]);
+const indexNowPaths = unique([...SITEMAP_ENTRIES, ...alwaysPaths]);
 const inspectionPaths =
   enableGoogleInspection &&
   Number.isFinite(inspectionLimit) &&
