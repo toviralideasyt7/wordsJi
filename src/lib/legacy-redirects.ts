@@ -100,10 +100,14 @@ export function getLegacyTodayRedirect(pathname: string): string | null {
 
 	const datedSlugMatch = LEGACY_DATED_SLUG_PATH.exec(pathname);
 	if (datedSlugMatch?.groups?.game && datedSlugMatch.groups.legacyDate) {
-		const todayRoute = getTodayRouteForLegacyGame(datedSlugMatch.groups.game);
-		const parsedDate = parseLegacyMonthDate(datedSlugMatch.groups.legacyDate);
-		if (todayRoute && parsedDate) {
-			return todayRoute;
+		// Wordle's /wordle-answer-for-month-day-year pages are now real prerendered pages,
+		// so they must not be redirected. Other games still redirect to their "today" route.
+		if (datedSlugMatch.groups.game.toLowerCase() !== 'wordle') {
+			const todayRoute = getTodayRouteForLegacyGame(datedSlugMatch.groups.game);
+			const parsedDate = parseLegacyMonthDate(datedSlugMatch.groups.legacyDate);
+			if (todayRoute && parsedDate) {
+				return todayRoute;
+			}
 		}
 	}
 
