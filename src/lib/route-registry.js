@@ -123,13 +123,28 @@ export const PUBLIC_ROUTE_ENTRIES = [
   ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES])
 ];
 
-export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES])];
+export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES, '/wordle/*'])];
 
-// --- Wordle dated answer pages (/wordle-answer-for/YYYY-MM-DD) ---
+// --- Wordle dated answer pages (/wordle-answer-for-month-day-year) ---
 // Wordle launched 2021-06-19. We prerender one page per past date up to YESTERDAY
 // only — "today" always lives on /wordle-answer-today, so we never generate a page
 // for the current puzzle. The Wordle rollover is 16:30 UTC (+30s grace); after that
 // boundary the visible puzzle date advances by one day (visibleDateOffsetDays = 1).
+const WORDLE_MONTH_NAMES = [
+	'january',
+	'february',
+	'march',
+	'april',
+	'may',
+	'june',
+	'july',
+	'august',
+	'september',
+	'october',
+	'november',
+	'december'
+];
+
 function buildWordleDatedAnswerRoutes(now = new Date()) {
 	const routes = [];
 	const rolloverBoundary = Date.UTC(
@@ -150,10 +165,9 @@ function buildWordleDatedAnswerRoutes(now = new Date()) {
 
 	const cursor = new Date(Date.UTC(2021, 5, 19)); // Wordle #1
 	while (cursor <= end) {
-		const y = cursor.getUTCFullYear();
-		const m = String(cursor.getUTCMonth() + 1).padStart(2, '0');
-		const d = String(cursor.getUTCDate()).padStart(2, '0');
-		routes.push(`/wordle-answer-for/${y}-${m}-${d}`);
+		routes.push(
+			`/wordle-answer-for-${WORDLE_MONTH_NAMES[cursor.getUTCMonth()]}-${cursor.getUTCDate()}-${cursor.getUTCFullYear()}`
+		);
 		cursor.setUTCDate(cursor.getUTCDate() + 1);
 	}
 	return routes;

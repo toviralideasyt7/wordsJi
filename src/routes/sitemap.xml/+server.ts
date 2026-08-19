@@ -1,6 +1,7 @@
 import { formatPuzzleDateKey, getPuzzleDateForGame, TODAY_ROUTE_GAME_MAP, ARCHIVE_ROUTE_GAME_MAP, type PuzzleGame } from '$lib/puzzle-window';
 import { GENERATED_SITEMAP_LASTMOD } from '$lib/generated/sitemap-lastmod';
 import { SITEMAP_ENTRIES } from '$lib/route-registry';
+import { parseMonthDayYearKey, toArchiveDateKey } from '$lib/archive-page';
 
 const BLOCKED_URL_PATTERNS = ['/create-custom-wordle', '/custom-wordle', '/admin', '/api/', '/private'];
 
@@ -40,8 +41,12 @@ function capToToday(value: string): string {
 }
 
 function getDatedAnswerLastModified(path: string): string | null {
-        const match = path.match(/^\/wordle-answer-for\/(\d{4}-\d{2}-\d{2})$/);
-        return match ? match[1] : null;
+        const prefix = '/wordle-answer-for-';
+        if (!path.startsWith(prefix)) {
+                return null;
+        }
+        const date = parseMonthDayYearKey(path.slice(prefix.length));
+        return date ? toArchiveDateKey(date) : null;
 }
 
 function getLastModified(path: string): string {

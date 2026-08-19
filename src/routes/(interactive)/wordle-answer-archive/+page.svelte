@@ -10,6 +10,12 @@
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import type { WordleAnswer } from '$lib/api';
   import { formatDate } from '$lib/utils';
+import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+
+  function datedLink(iso: string): string {
+    const date = parseArchiveDateKey(iso);
+    return date ? `/wordle-answer-for-${toMonthDayYearKey(date)}` : `/wordle-answer-archive`;
+  }
 
   interface WordleArchivePayload {
     selectedDateKey: string | null;
@@ -223,7 +229,7 @@
               {#each filteredAnswers.slice(0, 500) as a}
                 <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
                   <td class="px-4 py-3 whitespace-nowrap text-sm font-bold text-slate-900 dark:text-slate-100">#{a.puzzleNumber ?? '—'}</td>
-                  <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600 dark:text-slate-300"><a href="/wordle-answer-for/{a.date}" class="text-teal-600 hover:text-teal-700 dark:text-teal-400 font-medium underline">{a.date}</a></td>
+                  <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600 dark:text-slate-300"><a href={datedLink(a.date)} class="text-teal-600 hover:text-teal-700 dark:text-teal-400 font-medium underline">{a.date}</a></td>
                   <td class="px-4 py-3 whitespace-nowrap">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
                       {a.solution?.toUpperCase()}
@@ -262,7 +268,7 @@
                   {#each yearGroup.answers as a}
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
                       <td class="px-4 py-3 whitespace-nowrap text-sm font-bold text-slate-900 dark:text-slate-100">#{a.puzzleNumber ?? '—'}</td>
-                      <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600 dark:text-slate-300"><a href="/wordle-answer-for/{a.date}" class="text-teal-600 hover:text-teal-700 dark:text-teal-400 font-medium underline">{a.date}</a></td>
+                      <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600 dark:text-slate-300"><a href={datedLink(a.date)} class="text-teal-600 hover:text-teal-700 dark:text-teal-400 font-medium underline">{a.date}</a></td>
                       <td class="px-4 py-3 whitespace-nowrap">
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">
                           {a.solution?.toUpperCase()}

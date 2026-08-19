@@ -1,5 +1,5 @@
 import { redirect, type Handle, type HandleServerError } from '@sveltejs/kit';
-import { getLegacyTodayRedirect } from '$lib/legacy-redirects';
+import { getLegacyDatedRedirect, getLegacyTodayRedirect } from '$lib/legacy-redirects';
 import {
         ARCHIVE_ROUTE_GAME_MAP,
         TODAY_ROUTE_GAME_MAP,
@@ -203,6 +203,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 
         if (LEGACY_SITEMAP_PATH.test(normalizedPathname)) {
                 throw redirect(301, '/sitemap.xml');
+        }
+
+        const legacyDatedRedirect = getLegacyDatedRedirect(normalizedPathname);
+        if (legacyDatedRedirect) {
+                throw redirect(301, legacyDatedRedirect);
         }
 
         const legacyTodayRedirect = getLegacyTodayRedirect(normalizedPathname);

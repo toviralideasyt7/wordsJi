@@ -1,4 +1,4 @@
-import { parseArchiveDateKey } from '$lib/archive-page';
+import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
 import { TODAY_ROUTE_GAME_MAP } from '$lib/puzzle-window';
 
 const LEGACY_MONTH_DATE_PATTERN = /^(?<month>[a-z]+)-(?<day>\d{1,2})-(?<year>\d{4})$/i;
@@ -121,4 +121,22 @@ export function getLegacyTodayRedirect(pathname: string): string | null {
 	}
 
 	return null;
+}
+
+export function getLegacyDatedRedirect(pathname: string): string | null {
+	const match = LEGACY_GAME_DATE_PATH.exec(pathname);
+	if (!match?.groups?.game || !match.groups.isoDate) {
+		return null;
+	}
+
+	if (match.groups.game.toLowerCase() !== 'wordle') {
+		return null;
+	}
+
+	const date = parseArchiveDateKey(match.groups.isoDate);
+	if (!date) {
+		return null;
+	}
+
+	return `/wordle-answer-for-${toMonthDayYearKey(date)}`;
 }
