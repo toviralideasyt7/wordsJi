@@ -7,7 +7,7 @@
 	let message = $derived(page.error?.message || 'Page not found');
 	
 	const gameLinks = [
-		{ name: '5-Letter Wordle Solver', url: '/5-letter-wordle-solver', icon: '📝', color: 'from-teal-500 to-teal-700' },
+		{ name: '5-Letter Wordle Solver', url: '/wordle-solver', icon: '📝', color: 'from-teal-500 to-teal-700' },
 		{ name: 'Quordle Solver', url: '/quordle-solver', icon: '🔢', color: 'from-blue-500 to-indigo-600' },
 		{ name: 'Phoodle Answer', url: '/phoodle-answer-today', icon: '🍳', color: 'from-orange-400 to-red-500' },
 		{ name: 'Semantle Answer', url: '/semantle-answer-today', icon: '🧠', color: 'from-purple-500 to-fuchsia-600' }

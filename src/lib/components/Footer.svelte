@@ -49,7 +49,7 @@
 			<nav aria-label="Solver footer links">
 				<h3 class="text-xs font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider mb-4">Solver Tools</h3>
 				<ul class="space-y-2.5">
-					<li><a href="/5-letter-wordle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">5-Letter Wordle Solver</a></li>
+					<li><a href="/wordle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">5-Letter Wordle Solver</a></li>
 					<li><a href="/quordle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Quordle Solver</a></li>
 					<li><a href="/nerdle-solver" class="text-sm text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Nerdle Solver</a></li>
 					<li><a href="/solver" class="text-sm text-teal-600 dark:text-teal-400 font-medium hover:text-teal-700 dark:hover:text-teal-300 transition-colors">View All &rarr;</a></li>

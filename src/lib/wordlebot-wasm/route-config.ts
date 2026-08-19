@@ -1,6 +1,6 @@
 import {
         generateCollectionPageSchema,
-        generateSoftwareApplicationSchema,
+        generateArticleSchema,
         generateWebPageSchema
 } from '$lib/seo';
 import { getMainDailyDate, getMainDailyDateKey, getMainDailyDateLabel } from '$lib/main-daily-date';
@@ -1979,7 +1979,11 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
 export function getWordlebotStructuredData(config: WordlebotPageConfig) {
         if (config.appConfig.pageType === 'solver') {
                 return JSON.stringify([
-                        generateSoftwareApplicationSchema(config.title, 'GameApplication'),
+                        generateArticleSchema({
+                                headline: config.title,
+                                description: config.description,
+                                url: config.pageUrl
+                        }),
                         generateWebPageSchema(config.title, config.description, config.pageUrl)
                 ]);
         }

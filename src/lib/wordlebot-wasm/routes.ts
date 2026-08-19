@@ -61,7 +61,8 @@ export function getVariantRouteForGame(game: WordlebotGameSlug): string {
 }
 
 export function getWordleLengthSolverPath(wordLength: number): string {
-        return `/${wordLength}-letter-wordle-solver`;
+        if (wordLength === 5) return '/wordle-solver';
+	return `/${wordLength}-letter-wordle-solver`;
 }
 
 export function getCanucklePagePath(page: 'today' | 'archive' | 'solver'): string {

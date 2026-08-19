@@ -316,7 +316,6 @@ export const LONG_CACHE_STATIC_PATHS = new Set([
         '/wordle-solver',
         '/3-letter-wordle-solver',
         '/4-letter-wordle-solver',
-        '/5-letter-wordle-solver',
         '/6-letter-wordle-solver',
         '/7-letter-wordle-solver',
         '/8-letter-wordle-solver',

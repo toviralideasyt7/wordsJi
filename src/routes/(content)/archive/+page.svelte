@@ -246,7 +246,7 @@
       <a href="/today" class="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl shadow-md shadow-teal-500/20 hover:-translate-y-0.5 transition-all text-sm">
         See Today's Answers
       </a>
-      <a href="/5-letter-wordle-solver" class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm">
+      <a href="/wordle-solver" class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-sm">
         Try 5-Letter Wordle Solver
       </a>
     </div>

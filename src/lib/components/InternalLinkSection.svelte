@@ -214,7 +214,7 @@
   <div class="mt-12 text-center p-6 bg-gradient-to-r from-teal-50 to-blue-50 dark:from-teal-900/10 dark:to-blue-900/10 rounded-2xl border border-blue-100 dark:border-blue-900/30">
     <p class="text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
       Stuck on a tricky puzzle?
-      <a href="/5-letter-wordle-solver" class="text-blue-700 dark:text-blue-300 hover:underline mx-1 font-bold">Try our 5-Letter Wordle Solver</a>
+      <a href="/wordle-solver" class="text-blue-700 dark:text-blue-300 hover:underline mx-1 font-bold">Try our 5-Letter Wordle Solver</a>
       to filter clues fast, rank next guesses, and move into the right 3 to 11 letter Wordle page when you need a different board size.
     </p>
   </div>

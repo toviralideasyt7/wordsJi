@@ -36,7 +36,7 @@
   ];
 
   const solverTools = [
-    { name: '5-Letter Wordle Solver', href: '/5-letter-wordle-solver', color: 'from-teal-500 to-teal-600', icon: '5', isPopular: true },
+    { name: '5-Letter Wordle Solver', href: '/wordle-solver', color: 'from-teal-500 to-teal-600', icon: '5', isPopular: true },
     { name: 'Nerdle Solver', href: '/nerdle-solver', color: 'from-teal-500 to-teal-600', icon: 'Nd', isPopular: true },
     { name: 'Betweenle Solver', href: '/betweenle-solver', color: 'from-indigo-500 to-fuchsia-700', icon: 'Bt', isPopular: true },
     { name: 'Colorfle Solver', href: '/colorfle-solver', color: 'from-fuchsia-500 to-pink-600', icon: 'Cf', isPopular: true },

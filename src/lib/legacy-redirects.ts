@@ -5,7 +5,7 @@ const LEGACY_MONTH_DATE_PATTERN = /^(?<month>[a-z]+)-(?<day>\d{1,2})-(?<year>\d{
 
 const EXACT_CANONICAL_REDIRECTS: Record<string, string> = {
 	'/canuckle': '/canuckle-answer-today',
-	'/wordle-solver': '/5-letter-wordle-solver',
+	'/5-letter-wordle-solver': '/wordle-solver',
 	'/wordle/2022-05-06': '/wordle-answer-today'
 };
 

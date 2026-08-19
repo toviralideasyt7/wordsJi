@@ -95,7 +95,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/wordle-answer-today' },
     };
 
-    const pageTitle = `Wordle Answer Today (${formattedDate}) - Answer #${wordleNumber}`;
+    const answerSuffix = wordleWord ? ` - ${wordleWord.toUpperCase()}` : ` - Answer #${wordleNumber}`;
+    const pageTitle = `Wordle Answer Today (${formattedDate})${answerSuffix}`;
     // SEO audit chapter 7.2 Lever 2: put the answer directly in the meta description so it
     // shows in Bing's search snippet without a click. Bing shows the meta description
     // verbatim (unlike Google, which often rewrites it). For daily-answer queries, the

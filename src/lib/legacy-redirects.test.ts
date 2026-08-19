@@ -30,7 +30,7 @@ describe('getLegacyTodayRedirect', () => {
 			'/spotle-answer-today'
 		);
 		expect(getLegacyTodayRedirect('/canuckle')).toBe('/canuckle-answer-today');
-		expect(getLegacyTodayRedirect('/wordle-solver')).toBe('/5-letter-wordle-solver');
+		expect(getLegacyTodayRedirect('/5-letter-wordle-solver')).toBe('/wordle-solver');
 	});
 
 	it('ignores unsupported or invalid legacy paths', () => {

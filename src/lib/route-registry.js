@@ -81,7 +81,6 @@ export const EVERGREEN_STATIC_ROUTES = [
   '/worldle-solver',
   '/3-letter-wordle-solver',
   '/4-letter-wordle-solver',
-  '/5-letter-wordle-solver',
   '/6-letter-wordle-solver',
   '/7-letter-wordle-solver',
   '/8-letter-wordle-solver',
@@ -117,8 +116,7 @@ export const API_RUNTIME_ROUTES = [
 ];
 
 export const SITEMAP_EXCLUDED_ROUTES = [
-  '/canuckle',
-  '/wordle-solver'
+  '/canuckle'
 ];
 
 export const PUBLIC_ROUTE_ENTRIES = [

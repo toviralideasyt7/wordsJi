@@ -50,7 +50,6 @@ export const GENERATED_SITEMAP_LASTMOD: Record<string, string> = {
 	"/worldle-solver": "2026-08-18",
 	"/3-letter-wordle-solver": "2026-08-10",
 	"/4-letter-wordle-solver": "2026-08-10",
-	"/5-letter-wordle-solver": "2026-08-10",
 	"/6-letter-wordle-solver": "2026-08-10",
 	"/7-letter-wordle-solver": "2026-08-10",
 	"/8-letter-wordle-solver": "2026-08-10",

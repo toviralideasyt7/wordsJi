@@ -9,7 +9,7 @@
       description: 'Learn the best starting words, elimination strategies, and how to solve Wordle in 3 guesses or fewer.',
       gradient: 'from-teal-500 to-teal-600',
       icon: '🟩',
-      link: '/5-letter-wordle-solver',
+      link: '/wordle-solver',
       linkText: 'Try 5-Letter Wordle Solver',
     },
     {

@@ -652,7 +652,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/quordle-solver", label: "Quordle Solver" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
-      { href: "/5-letter-wordle-solver", label: "5 Letter Wordle Solver" }
+      { href: "/wordle-solver", label: "5 Letter Wordle Solver" }
     ]
   },
   'quordle-solver': {
@@ -4969,7 +4969,7 @@ heading: "When I skip the Worldle solver",
     ],
     relatedLinks: [
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
-      { href: "/5-letter-wordle-solver", label: "5 Letter Wordle Solver" },
+      { href: "/wordle-solver", label: "5 Letter Wordle Solver" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
       { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
