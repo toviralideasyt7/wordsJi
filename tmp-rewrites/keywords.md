@@ -1,0 +1,73 @@
+# Bing/GSC keyword targets per registry key (real impression data, Aug 2026)
+
+Primary keyword first, then variants. Cover naturally per playbook rule 6.
+
+- wordle-answer-today: wordle answer today · today's wordle answer · todays wordle · wordle today answer · what is today's wordle answer · wordle answer today 2026 · daily wordle answer · wordle puzzle number · dated forms (wordle august 19 2026, wordle 8/19/26)
+- wordle-solver: wordle solver · wordle solver 5 letters · 5 letter wordle solver · wordle solver online · wordle helper · wordle answer finder · wordle finder
+- wordle-answer-archive: all wordle answers 2025 · list of wordle answers 2025 · every wordle answer to date · wordle answer archive · past wordle answers
+- colordle-answer-today: colordle answer · colordle answer today · colordle hint · what is the colordle answer today · todays colordle · colordle day {dayNum} answer · colordle hex
+- colordle-solver: colordle solver · colordle helper · colordle color solver
+- colordle-archive: colordle archive · colordle past answers · colordle day number list
+- smashdle-solver: smashdle · smashdle answers · smashdle answer today · smashdle hints
+- minesweeper-solver: minesweeper solver · minesweeper helper · minesweeper puzzle solver
+- globle-answer-today: globle answer today · today's globle answer · globle answer of the day · globle hints
+- globle-archive: globle archive · past globle answers · globle answer list
+- spotle-answer-today: spotle answer today · spotle answer · spotle movie · spotle hints
+- spotle-solver: spotle solver · spotle helper · spotle unlimited solver
+- nerdle-answer-today: nerdle today · nerdle answer today · maxi nerdle · nerdle equation today
+- nerdle-solver: nerdle solver · nerdle helper · nerdle answer finder
+- nerdle-archive: nerdle archive · past nerdle answers · nerdle answer list
+- kanoodle-solver: kanoodle · kanoodle solver · kanoodle puzzle answers · kanoodle genius
+- semantle-answer-today: semantle · semantle answer · semantle answer today · semantle hint
+- semantle-archive: semantle archive · past semantle answers
+- light-out-solver: lights out solver · lights out puzzle solver · light out game solver · lights out helper
+- waffle-answer-today: waffle answer today · waffle daily answer · waffle game answer
+- waffle-archive: waffle game archive · wafflearchive · waffle word game archive · waffle archives · past waffle answers
+- waffle-solver: waffle solver · waffle game solver · waffle daily solver
+- contexto-answer-today: contexto answer · contexto answer today · contexto · contexto today · contexto hint
+- contexto-solver: contexto solver · contexto helper · contexto answer finder
+- contexto-archive: contexto archive · past contexto answers · contexto answer list
+- betweenle-answer-today: betweenle · betweenle answer today · betweenle hints
+- betweenle-solver: betweenle solver · betweenle helper · betweenle answer finder
+- squaredle-solver: squaredle solver · squardle solver · squaredle helper
+- phoodle-answer-today: phoodle hint today · phoodle · phoodle answer today · phoodle hints
+- phoodle-solver: phoodle solver · phoodle helper
+- phrazle-answer-today: phrazle answer today · phrazle answer · phrazle hints
+- canuckle-answer-today: canuckle answer today · canuckle answer · canuckle hints
+- canuckle-solver: canuckle solver · canuckle helper
+- weaver-solver: weaver solver · weaver game · weaver word game answers
+- hangman-solver: hangman solver · hangman word solver
+- searchle-answer-today: searchle · searchle answer today
+- searchle-solver: searchle solver · searchle helper
+- onepiecedle-solver: onepiecedle answers · onepiecedle answers today · onepiecedle
+- narutodle-solver: narutodle answers · narutodle answers today · narutodle
+- pokedle-solver: pokedle answers · pokedle answers today · pokedle
+- loldle-solver: loldle · loldle answers · loldle answer today
+- dotadle-solver: dotadle · dotadle answers · dotadle answer today
+- word-ladder-solver: word ladder solver · word ladder puzzle · word ladder answers
+- worldle-answer-today: worldle · worldle answer today · worldle map game
+- worldle-solver: worldle solver · worldle helper
+- worldle-archive: worldle archive · past worldle answers
+- boggle-solver: boggle solver · boggle 4x4 solver · boggle word finder
+- dordle-solver: dordle solver · dordle answer · daily dordle
+- octordle-solver: octordle solver · octordle answer · 8 wordle
+- xordle-solver: xordle solver · xordle
+- fibble-solver: fibble solver · fibble wordle
+- warmle-solver: warmle solver · warmle
+- hardle-solver: hardle solver · hardle wordle
+- woodle-solver: woodle solver · woodle
+- w-peaks-solver: wordle peaks · peaks wordle · wordle peaks solver
+- spotle-wordle-solver: spotle wordle · thirdle · 3 letter wordle
+- all-wordle-solver: all wordle solver · wordle variants · wordle like games solver
+- soundmap-solver: soundmap artist guesser · soundmap game · soundmap hints
+- weaver/hangman/others: as above
+- globle/worldle/countryle/colorfle/framed/worgle/searchle/countryle archives+today: same pattern — "[game] answer today", "[game] archive", "[game] hints"
+- countryle-answer-today: countryle answer today · countryle hints · countryle
+- colorfle-answer-today: colorfle answer today · colorfle hint · colorfle
+- framed-answer-today: framed answer today · framed movie game · framed hints
+- worgle-answer-today: worgle answer today · worgle
+- quordle-answer-today: quordle answer today · quordle hints · quordle
+- quordle-solver: quordle solver · quordle helper · quordle answer finder
+- quordle-archive: quordle archive · past quordle answers
+- spotle-archive: spotle archive · past spotle answers
+- phoodle-archive / phrazle-archive / waffle-archive / worgle-archive / searchle-archive / colorfle-archive / countryle-archive / framed-archive / contexto-archive / semantle-archive / nerdle-archive / globle-archive / worldle-archive: "[game] archive", "past [game] answers", "[game] answer list"
