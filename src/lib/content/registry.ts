@@ -185,79 +185,91 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
   },
   'quordle-answer-today': {
     key: 'quordle-answer-today',
-    eyebrow: 'Quordle Strategy Guide',
+    eyebrow: 'Quordle Answers Today, From a Daily Four-Board Player',
     intro:
-      'Quordle makes you solve four Wordle-style boards with one shared set of nine guesses. That changes everything: your opener has to serve four boards at once, and every guess after it is a resource you cannot afford to waste on a single grid. This guide covers board allocation, opener systems, and the endgame habits that separate streaks from blowups.',
+      "I've lost more Quordle streaks to a single ignored board than to any word I didn't know. The game hands you nine guesses to solve four Wordle-style boards at once, and the whole trick is that your guesses are shared — every turn has to earn its keep on all four grids, not just the one you're winning. Today's Quordle answer set is in the reveal card up top. Below is everything I've learned from playing it every morning: how I read four boards of feedback without going cross-eyed, the opener pair I stopped second-guessing, and the allocation habit that finally killed my habit of blowing the last board.",
     sections: [
       {
-        heading: 'The four-board math that changes every decision',
+        heading: "The ignored board that kept ending my streak",
         paragraphs: [
-          'Quordle looks like Wordle with extra grids, but the strategy is a different sport. In Wordle you spend guesses on information for one board. In Quordle, the same nine-guess budget has to cover four boards, so a guess that only helps one grid is a luxury you usually cannot afford.',
-          'The key number is 2.25 — the average number of boards a guess must advance to solve all four inside nine tries. In practice that means good Quordle players never chase a single board early. They look for guesses that sit in the overlap of two or three boards at once, and they let boards solve themselves in parallel.',
-          'The payoff of parallel play is huge. A player who solves board one on guess three and boards two and three on guess five has already banked most of the game before the fourth board even needs attention. A player who tunnels on board one until guess six has spent two-thirds of the budget and learned almost nothing about the other three.'
+          "My losses had one shape. I'd solve three boards by guess five, feel like I was cruising, and then watch the fourth board eat my last four guesses because I'd been ignoring it since round two. The answer was never a word I didn't know. It was a board I hadn't looked at in three turns.",
+          "That's the first thing to unlearn: Quordle is not four Wordles. In Wordle, one guess serves one board. In Quordle, the same guess serves four. A guess that only helps a single grid is a luxury you can almost never afford, especially early, and I spent months playing as if I could.",
+          "The fix turned out to be mechanical. After every guess, I name the board with the fewest confirmed letters, and the next guess has to do something for it. Not solve it — just give it information. That one habit moved my loss rate more than a year of trying to play smarter."
         ]
       },
       {
-        heading: 'Openers that cover four boards instead of one',
+        heading: "The 2.25 number that runs the whole game",
         paragraphs: [
-          'A good single-game Wordle opener just needs five strong letters. A good Quordle opener needs letters that are likely to hit on four different boards — which mostly means the same thing, done deliberately. You want two or three vowels and the most common consonants, spread across positions so the four boards have different things to work with.',
-          'The community has settled on a two-guess opener pair rather than a single word: play STARE, then follow with a second word that reuses the vowels in new positions while testing fresh consonants. Words like CLOWN, PILOT, or MONEY pair with STARE to cover nearly every common letter across the alphabet.',
-          'Do not open with the same word on all four boards if the game lets you choose different openers per board — and in the version on this site, you do not need to: you make one guess per round that applies to all boards simultaneously. So the real skill is picking one guess per round that lands across as many boards as possible.'
+          "The number I think about is 2.25. With nine guesses to finish four boards, every guess has to advance about two and a quarter boards on average. I didn't read that anywhere; I worked it out the hard way during a week where I kept running out of guesses one board short.",
+          "What the number really means is that good players never tunnel on a single board early. They hunt for guesses that sit in the overlap of two or three boards at once, and they let the boards solve themselves in parallel. A letter that helps two boards at once is worth twice as much as one that only helps one.",
+          "The payoff is real. Solve board one on guess three and boards two and three on guess five, and you've banked most of the game before the fourth board even needs attention. Tunnel on board one until guess six, and you've spent two-thirds of your budget learning almost nothing about the other three."
+        ]
+      },
+      {
+        heading: "The opener pair I stopped second-guessing",
+        paragraphs: [
+          "I used to open with a word I just liked, and I'd justify it to myself. Then I noticed the same two-word system kept showing up in my best games, so I stopped being clever and just committed to it.",
+          "Play STARE first, then follow with a second word that reuses the vowels in new positions while testing fresh consonants — CLOWN, PILOT, or MONEY all work. Between them you've swept most of the alphabet, and all four boards get useful vowels and consonants to chew on before you've made a single real decision.",
+          "In the version on this site you make one guess per round that applies to every board at once, so there's no per-board opener to choose. The skill is picking a single guess each round that lands across as many boards as possible."
         ],
         callout: {
-          title: 'The opener rule',
-          body: 'Pick an opener that covers the five most common letters, then a second guess that tests the next five. Whatever those two guesses reveal across the four boards decides which boards get your attention first — not your favorite word.'
+          title: "The opener rule",
+          body: "First guess covers the five most common letters, second guess tests the next five. What those two guesses reveal across the four boards — not my favorite word — decides which boards get my attention."
         }
       },
       {
-        heading: 'How to read four boards of feedback at once',
+        heading: "How I read four boards of feedback without going cross-eyed",
         paragraphs: [
-          'When you submit a guess in Quordle, every board lights up with its own green, yellow, and gray feedback. Reading them side by side is the real game. A letter that comes back yellow on all four boards is a gift — it means the same letter sits in all four answers, just in different spots.',
-          'The fastest way to get lost is to treat the boards as independent. They are not. The guesses are shared, so a letter that is gray on board one but yellow on board three tells you to stop worrying about board one and start relocating that letter on board three.',
-          'A practical reading order: check greens first (they lock letters and positions for free), then count which boards each yellow letter belongs to, then decide which board is furthest from solved and give it a targeted guess. The board with the fewest confirmed letters is almost always the one that decides the game.'
+          "When you submit a guess, all four boards light up at once, and reading them side by side is the actual game. My order matters: greens first, because they lock letters and positions for free. Then I count which boards each yellow letter belongs to. Then I find the board furthest from solved and aim the next guess at it.",
+          "A letter that comes back yellow on two or more boards is a gift. It means that letter sits in several answers at once, just in different spots, and one well-built guess can relocate it everywhere at the same time.",
+          "The fastest way to lose the thread is to treat the boards as independent. They aren't. The guesses are shared, so a letter that's gray on board one but yellow on board three is telling you to forget board one and start relocating that letter on board three."
         ],
         list: {
-          title: 'Signals that should change your plan mid-game',
+          title: "Board signals that change my plan mid-game",
           items: [
-            'A letter yellow on two or more boards: relocate it on all of them in one guess',
-            'A board with three greens by guess four: it is nearly solved, leave it alone',
-            'A board with nothing but grays by guess four: it needs an emergency information guess, not a solve attempt',
-            'Two boards sharing the same pattern (same letter, same position): they likely share the word skeleton, so one guess can crack both'
+            "A letter yellow on two or more boards: relocate it everywhere in one guess",
+            "A board with three greens by guess four: it's nearly solved, leave it alone",
+            "A board with nothing but grays by guess four: it needs an information guess, not a solve attempt",
+            "Two boards sharing the same pattern: they likely share a word skeleton, so one guess can crack both"
           ]
         }
       },
       {
-        heading: 'The endgame: converting three boards without panicking',
+        heading: "The endgame: stop gathering, start solving",
         paragraphs: [
-          'Quordle endgames are won by players who know when to stop gathering information. If two boards are solved and the third has one green with four open spots, stop playing the field and start testing real words. At five or six guesses left, an elimination guess is a guess you cannot afford.',
-          'The opposite failure is also common: players who finally solve three boards, look at the fourth with two guesses left, and freeze. Do the math before you freeze. If the remaining board has one locked letter and the answer is probably one of three words, guess the most likely one now — you still have one guess left for the runner-up.',
-          'Sequence mode changes the endgame completely: boards must be solved in order, so you cannot let board one sit while board four is nearly done. If you play Sequence, adjust your allocation — early guesses should deliberately avoid solving board four before board one is finished.'
+          "Endgames are won by knowing when to stop collecting information. Two boards solved and a third with one green and four open spots? Stop playing the field and start testing real words. With five or six guesses left, a pure elimination guess is a guess I can't afford.",
+          "The opposite failure is just as common. People solve three boards, stare at the fourth with two guesses left, and freeze. Do the math before you freeze. If the remaining board has one locked letter and the answer is probably one of three words, guess the most likely one now — you still have a guess left for the runner-up.",
+          "Sequence mode flips this on its head, because boards have to be solved in order. I deliberately keep board four from finishing early there, and I bank board one as fast as I can. Same game, completely different allocation."
         ],
         callout: {
-          title: 'The one-line Quordle philosophy',
-          body: 'Every guess should either solve a board or make two boards easier. The players who run out of guesses are the ones still making single-board guesses on round seven.'
+          title: "The one-line version",
+          body: "Every guess should either solve a board or make two boards easier. The people who run out of guesses are the ones still making single-board guesses on round seven."
         }
       },
       {
-        heading: 'Mode-by-mode notes: chill, extreme, sequence, and rescue',
+        heading: "Chill, extreme, sequence, and rescue — four different games",
         paragraphs: [
-          'Chill mode keeps the same four-board structure but gives you more breathing room with a gentler dictionary and more forgiving word selection. Treat it as the training wheels version: play it to internalize the allocation habits above without pressure.',
-          'Extreme mode is where the shared-guess math bites hardest. The dictionary is tighter and the answers lean obscure, so the opener pair matters more than ever. Expect to lean on elimination guesses you would never play in normal mode.',
-          'Sequence mode forces board-by-board completion, which flips the strategy: you want your early guesses to avoid solving board four too early, and you want to bank board one as fast as possible. Some players deliberately play weaker openers in Sequence to control which board finishes first.',
-          'Rescue mode lets you recover boards you would otherwise fail, at the cost of score. The strategic lesson stays the same — the boards that get rescued are almost always the ones that were ignored on rounds two through five while a favorite board got all the attention.'
+          "Chill mode is the training-wheels version: same four-board structure, gentler dictionary, more forgiving words. I play it when I want the allocation reps without the pressure.",
+          "Extreme mode is where the shared-guess math bites hardest. The dictionary is tighter and the answers lean obscure, so the opener pair matters more than ever, and I lean on elimination guesses I'd never touch in normal mode.",
+          "Sequence forces board-by-board completion, which is the biggest strategic shift of the four. Early guesses should avoid solving board four too early, and board one gets banked as fast as possible. Some players run deliberately weaker openers in Sequence just to control which board finishes first.",
+          "Rescue mode lets you claw back boards you'd otherwise fail, at a score cost. The lesson stays the same: the boards that need rescuing are almost always the ones ignored on rounds two through five while a favorite board hogged the attention."
         ]
       },
       {
-        heading: 'Practice habits that turn Quordle into a solvable puzzle',
+        heading: "The practice habit that mattered more than vocabulary",
         paragraphs: [
-          'Quordle rewards repetition more than raw vocabulary. The archive of past puzzles on this site is the fastest training tool: replay games and force yourself to write down, after each guess, which board you were trying to help and why. You will notice the pattern within a week — most losses come from allocation, not word knowledge.',
-          'A second habit that pays off: always have a planned second guess before you submit your first. Amateur players decide guess two after seeing guess one. Strong players already know it, because the opener pair is a system, not a reaction.',
-          'Finally, track your boards-solved-per-game average rather than wins and losses. A 3-1 loss with four boards nearly solved is a different problem than a 4-0 blowout, and the two need different fixes. The players who improve fastest are the ones who stop celebrating streaks and start reading their own mistakes.'
+          "Quordle rewards repetition more than raw word knowledge. The archive on this site is the fastest training tool I've found: I replay old games and force myself to write down, after each guess, which board I was trying to help and why. The pattern shows up within a week — almost every loss is an allocation failure, not a word I didn't know.",
+          "The second habit pays off quietly: I always have my second guess planned before I submit the first. Amateur players decide guess two after seeing guess one. Strong players already know it, because the opener pair is a system, not a reaction.",
+          "I also track boards-solved-per-game instead of wins and losses. A 3-1 loss where all four boards were nearly done is a different problem than a 4-0 blowout, and they need different fixes. The players who improve fastest are the ones who stop celebrating streaks and start reading their own mistakes."
         ]
       },
       {
         heading: "Quordle answers and the shared-guess rule",
-        paragraphs: ["Quordle answers are four words solved with shared guesses, and the today page records the current answer set while the strategy behind it stays constant: one guess must earn progress on all four boards at once.","The reason Quordle rewards common-letter guesses is arithmetic — a word that hits two boards at once is worth twice as much as one that only solves a single board.","Each day’s answer set has its own traps — repeated letters, an obscure fifth word — and the today page makes sure you never end the day guessing."]
+        paragraphs: [
+          "Quordle answers are four words solved with one shared pool of guesses, and the today page records the current answer set while the strategy behind it stays constant: a guess has to earn progress on all four boards at once.",
+          "The reason Quordle rewards common-letter guesses is arithmetic. A word that hits two boards at once is worth twice as much as one that only solves a single board, and over nine guesses that compounds into the difference between cruising and running dry.",
+          "Each day's answer set has its own traps — a repeated letter here, an obscure fifth word there — and the today page is where I make sure I never end the day guessing."
+        ]
       }
     ],
     faqHeading: 'Quordle Questions, Answered',
@@ -265,27 +277,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: 'How many guesses do you get in Quordle?',
         answer:
-          'Nine guesses total, shared across all four boards. The same guess is applied to every board at once, which is why parallel play matters.'
+          "Nine total, shared across all four boards. The same guess is applied to every board at once, which is exactly why parallel play — helping several boards with one guess — matters more than raw vocabulary."
       },
       {
         question: 'What is the best opening pair for Quordle?',
         answer:
-          'A common strong pair is STARE followed by CLOWN or PILOT. Together they cover most of the alphabet, and the four boards each get useful vowels and consonants to work with.'
+          "STARE followed by CLOWN or PILOT is the pair I settled on. Together they sweep most of the alphabet, and all four boards come away with useful vowels and consonants before you've made a single real decision."
       },
       {
         question: 'How is Quordle different from Wordle?',
         answer:
-          'Wordle is one board with six guesses. Quordle is four boards sharing nine guesses, which forces you to allocate guesses across boards instead of solving one at a time.'
+          "Wordle is one board and six guesses. Quordle is four boards sharing nine guesses, which forces you to allocate guesses across boards instead of solving one at a time. A guess that only helps one board is a guess you usually can't afford."
       },
       {
         question: 'How do I stop failing Quordle on the last board?',
         answer:
-          'Stop ignoring the lagging board until the end. Track which board has the fewest confirmed letters after each guess and give it a targeted guess before the final rounds.'
+          "Stop ignoring the lagging board until the end. After each guess, name the board with the fewest confirmed letters, and make the next guess do something for it. Nearly every last-board loss I've had traces back to that board going dark on rounds two through five."
       },
       {
         question: 'Does Quordle have different modes?',
         answer:
-          'Yes — chill, extreme, sequence, and rescue modes each change the rules slightly. Sequence mode is the hardest strategic shift because boards must be solved in order.'
+          "Yes — chill, extreme, sequence, and rescue. Sequence is the hardest strategic shift because boards must be solved in order, which changes how you allocate your early guesses completely."
       }
     ],
     relatedLinks: [
@@ -297,6 +309,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: '/semantle-answer-today', label: 'Semantle Answer Today' }
     ]
   },
+
 
   'nerdle-answer-today': {
     key: 'nerdle-answer-today',
