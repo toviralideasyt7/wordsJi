@@ -39,6 +39,11 @@ function capToToday(value: string): string {
         return value > todayStr ? todayStr : value;
 }
 
+function getDatedAnswerLastModified(path: string): string | null {
+        const match = path.match(/^\/wordle-answer-for\/(\d{4}-\d{2}-\d{2})$/);
+        return match ? match[1] : null;
+}
+
 function getLastModified(path: string): string {
         // Hub pages (/, /today, /archive, /guides) and static content pages should
         // never have a future lastmod — cap to today's UTC date.
@@ -49,7 +54,7 @@ function getLastModified(path: string): string {
         // Answer-today and archive pages intentionally track the NYT puzzle date,
         // which is one day ahead of UTC after 16:30 UTC. This is intentional design
         // (chapter 4.2) — do NOT cap these.
-        return getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME));
+        return getDatedAnswerLastModified(path) ?? getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME));
 }
 
 function generateSitemap(): string {

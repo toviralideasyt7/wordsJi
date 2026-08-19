@@ -125,8 +125,44 @@ export const PUBLIC_ROUTE_ENTRIES = [
 
 export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES])];
 
+// --- Wordle dated answer pages (/wordle-answer-for/YYYY-MM-DD) ---
+// Wordle launched 2021-06-19. We prerender one page per past date up to YESTERDAY
+// only — "today" always lives on /wordle-answer-today, so we never generate a page
+// for the current puzzle. The Wordle rollover is 16:30 UTC (+30s grace); after that
+// boundary the visible puzzle date advances by one day (visibleDateOffsetDays = 1).
+function buildWordleDatedAnswerRoutes(now = new Date()) {
+	const routes = [];
+	const rolloverBoundary = Date.UTC(
+		now.getUTCFullYear(),
+		now.getUTCMonth(),
+		now.getUTCDate(),
+		16,
+		30,
+		30,
+		0
+	);
+	const offsetDays = now.getTime() >= rolloverBoundary ? 1 : 0;
+	const todayPuzzle = new Date(
+		Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + offsetDays)
+	);
+	const end = new Date(todayPuzzle);
+	end.setUTCDate(end.getUTCDate() - 1);
+
+	const cursor = new Date(Date.UTC(2021, 5, 19)); // Wordle #1
+	while (cursor <= end) {
+		const y = cursor.getUTCFullYear();
+		const m = String(cursor.getUTCMonth() + 1).padStart(2, '0');
+		const d = String(cursor.getUTCDate()).padStart(2, '0');
+		routes.push(`/wordle-answer-for/${y}-${m}-${d}`);
+		cursor.setUTCDate(cursor.getUTCDate() + 1);
+	}
+	return routes;
+}
+
+export const WORDLE_DATED_ANSWER_ROUTES = buildWordleDatedAnswerRoutes();
+
 export const PRERENDER_ENTRIES = [
-  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES])
+  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_DATED_ANSWER_ROUTES])
 ];
 
 export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
