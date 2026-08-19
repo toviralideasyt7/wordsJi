@@ -1117,91 +1117,77 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'contexto-answer-today',
     eyebrow: 'Contexto Strategy Guide',
     intro:
-      "Contexto is the daily word game where you guess a secret word and the game ranks your guesses by semantic similarity — how close they are in meaning to the answer, computed by an AI model over millions of texts. The number shown is your guess's rank: 1 is the answer. This guide explains how to read those ranks, why broad words beat clever words, and how to explore a semantic lane without burning your guess limit.",
+      "The Contexto answer today is sitting behind the blurred card up top, and I won't pretend that card isn't why most people land here. But the answer alone won't save you tomorrow, and tomorrow's puzzle is already queued up to embarrass you. I've played Contexto almost daily since it launched in 2022, and the thing that finally fixed my game was never a bigger vocabulary. It was realizing that the number beside each guess is a distance reading, not a score. Once I started reading it like a compass instead of a report card, my average solve fell from forty-plus guesses to under twenty. This page is the method I wish someone had handed me on day one, plus the Contexto hint I give anyone who asks.",
     sections: [
       {
-        heading: "The ranking is the game, not the word",
+        heading: "The number is a distance, not a grade",
         paragraphs: [
-          "Contexto hides a word and shows you one number per guess: where that guess ranks in semantic similarity to the secret word. A rank of 250 means your guess is closer to the answer than 249 other words and farther than most of the dictionary. Rank 1 is the answer itself.",
-          "The engine behind the ranking is a language model trained on enormous amounts of text. Words are mapped to vectors, and similarity is measured by how close the vectors sit. That is why synonyms rank well but so do words that appear in the same contexts — a good guess does not have to mean the same thing; it has to sit near the answer in the semantic space the model learned.",
-          "The practical consequence: you are not solving a crossword, you are navigating a map. Every rank is a distance reading, and the fastest path to the answer is to triangulate — find three or four anchor words around the target and walk inward."
-        ],
-        callout: {
-          title: "The core insight",
-          body: "A Contexto rank is a distance, not a score. Small numbers are not praise; they are directions. Read them like a GPS, not a report card."
-        }
+          "Contexto hides one secret word and gives you exactly one piece of information per guess: where that guess ranks in semantic similarity to the answer. A rank of 250 means your word is closer to the answer than 249 others and farther than most of the dictionary. Rank 1 is the answer itself. That's the entire interface. No letters, no colored tiles, just a number.",
+          "I spent my first month treating small numbers as praise. I'd type dog, see 3,000, and think I was making progress. I wasn't. The number is a coordinate, not a compliment, and if you don't move toward it you stay lost.",
+          "The engine behind all of it is a language model trained on an enormous pile of text. Words get mapped to vectors, and similarity is measured by how close those vectors sit. That's why synonyms rank well but so do words that merely appear in the same contexts. A good guess doesn't have to mean the same thing; it has to live near the answer in the space the model learned.",
+          "Once that clicked, I stopped solving a crossword and started navigating a map. Every rank became a reading on that map, and the fastest route to the answer is triangulation: plant three or four anchors around the target and walk inward."
+        ]
       },
       {
-        heading: "Why broad words beat clever words in Contexto",
+        heading: "Why I stopped guessing clever words",
         paragraphs: [
-          "New players guess obscure or clever words hoping to stumble close to the answer. The model does not reward cleverness — it rewards semantic centrality. Words like house, water, time, and people sit in dense regions of the semantic space, which means they are decent distance probes even when they are far from the answer.",
-          "A clever word like serendipity sits in a sparse region. If it ranks 15,000, you have learned almost nothing about the direction to the answer; there are simply not many words nearby to compare against. A boring word like street ranking 4,000 tells you the answer lives in a populated region with many reachable words — and that is actionable.",
-          "The solver on this page leans on exactly this principle. It tracks the ranks of your guesses, models the semantic neighborhood, and suggests words that sit in the most promising direction — the ones most likely to shrink the distance fastest."
+          "For weeks I opened with the fanciest word I could summon, assuming Contexto would reward cleverness. It doesn't. The model rewards semantic centrality, and words like house, water, time, and people sit in the densest parts of the space. They're boring, but they're useful distance probes even when they're far from the answer.",
+          "A clever word like serendipity sits in a sparse region. If it ranks 15,000, you've learned almost nothing about which direction to walk, because there simply aren't many words nearby to compare against. A boring word like street ranking 4,000 tells you the answer lives in a populated neighborhood with plenty of reachable words, and that is something you can act on.",
+          "The solver on this page leans on exactly that principle. It tracks the ranks of everything you've guessed, models the semantic neighborhood, and suggests the word most likely to shrink the distance fastest. I built it because I was tired of burning turns on impressive-sounding dead ends."
         ],
         list: {
-          title: "The reading order that wins Contexto",
+          title: "The reading order that fixed my game",
           items: [
-            "Your first guess should be a common noun in a dense region — think house, street, water, time",
-            "When a guess ranks under 1,000, stop probing and start refining — you are in the answer's neighborhood",
+            "Open with a common noun in a dense region: house, street, water, time",
+            "When a guess lands under 1,000, stop probing and start refining; you're in the answer's neighborhood",
             "Words that rank well together reveal the lane: if bank and river both rank low, the answer is finance-adjacent, not water-adjacent",
-            "If a guess ranks worse than 10,000, do not double down on that lane — switch families entirely",
-            "Keep notes of your anchors; the solver does this for you and ranks the next best probe"
+            "If a guess ranks worse than 10,000, don't double down on that lane; switch families entirely",
+            "Keep your anchors written down; the solver does this for you and ranks the next best probe"
           ]
         }
       },
       {
-        heading: "Triangulation: the fastest route to rank 1",
+        heading: "Triangulation is the whole skill",
         paragraphs: [
-          "One low rank tells you the answer is nearby but not where. Two low ranks in the same family confirm the lane. Three low ranks that bracket the answer from different angles — say an emotion, an action, and an object that all rank under 500 — hand you the answer within a couple more guesses.",
-          "The skill is choosing anchors that point in different directions. If your first guess ranks 800 and your second guess is a near-synonym that ranks 900, you have confirmed the lane but learned nothing new. Instead, your second guess should probe an adjacent lane — a related but different word — to see whether the answer sits between them.",
-          "The endgame is a narrowing circle. When guesses start ranking under 100, switch from exploring to converging: guess near-synonyms of your best word, then near-synonyms of those. The solver's suggestions do this automatically, ranking candidate words by their own semantic distance to your anchors."
+          "One low rank tells you the answer is nearby but not where. Two low ranks in the same family confirm the lane. Three low ranks that bracket the answer from different angles, an emotion, an action, and an object all under 500, hand you the answer within a couple more guesses.",
+          "The mistake I made for weeks was choosing anchors that all pointed the same way. If my first guess ranked 800 and my second was a near-synonym that ranked 900, I'd confirmed the lane but learned nothing new. The right second guess probes an adjacent lane, a related but different word, to see whether the answer sits between them.",
+          "The endgame is a shrinking circle. Once guesses start ranking under 100, I switch from exploring to converging: near-synonyms of my best word, then near-synonyms of those. It feels mechanical because it is mechanical. That's the point."
         ]
       },
       {
-        heading: "How to train with the archive",
+        heading: "Training on the archive",
         paragraphs: [
-          "Contexto rewards pattern recognition more than vocabulary, and the pattern is learnable. Replay old puzzles with the solver and study the path from first guess to answer: which guesses moved you into the right lane, and which one wasted a turn? The wasted turns are almost always clever words in sparse regions.",
-          "A second habit: always choose your first guess deliberately. The difference between opening with house and opening with serendipity is the difference between a 15-guess solve and a 40-guess solve. The opening sets the semantic anchor for everything after it.",
-          "Finally, treat every loss as a map of the model's quirks. Contexto answers are sometimes surprising — a word that ranks 50 may not mean what you assumed. The model's associations are the ground truth, and the faster you learn them, the faster you solve. The solver is the reference manual for exactly those associations."
+          "Contexto rewards pattern recognition more than raw vocabulary, and patterns are learnable. I replay old puzzles through the solver and study the path from first guess to answer: which guesses moved me into the right lane, and which one wasted a turn. The wasted turns are almost always clever words in sparse regions.",
+          "A second habit I've kept: choose the opening deliberately, every single day. The gap between opening with house and opening with serendipity is the gap between a 15-guess solve and a 40-guess solve. The opening sets the semantic anchor for everything that follows.",
+          "I also treat every loss as a map of the model's quirks. Contexto answers are occasionally surprising, and a word that ranks 50 may not mean what I assumed. The model's associations are the ground truth, and the faster I learn them, the faster I solve."
         ]
       },
       {
-        heading: "Contexto answer patterns worth knowing",
+        heading: "Answer patterns worth knowing",
         paragraphs: [
-          "Contexto answers skew toward common words, not exotic vocabulary, because the ranking model is trained on how people actually write. That means the answer is far more likely to be a word like current, office, or partner than a word like equanimity. If your low-ranking guesses are all uncommon words, the answer is probably a common neighbor you are walking past.",
-          "Nouns and verbs behave differently in the ranking. Nouns cluster tightly — the model keeps bank, money, and loan close together — while verbs spread across many contexts. If the answer is a noun, your lane strategy works fast. If it is a verb, expect the rank numbers to stay high for longer, and lean on the solver's suggestions rather than your own verb guesses.",
-          "Adjectives are the trickiest lane because they pair with everything. A guess like happy can rank well whether the answer is cheerful, satisfied, or thrilled, which means a good adjective rank tells you the feeling but not the word. The solver handles this by probing multiple adjective anchors before converging, and the habit is worth copying: one emotion word, one action word, one object word, then read the map."
+          "Contexto answers skew toward common words, not exotic vocabulary, because the ranking model is trained on how people actually write. The answer is far more likely to be a word like current, office, or partner than equanimity. When all my low-ranking guesses are uncommon words, I remind myself the answer is probably a common neighbor I'm walking straight past.",
+          "Nouns and verbs behave differently in the ranking, and knowing which you're chasing changes everything. Nouns cluster tightly; the model keeps bank, money, and loan close together. Verbs spread across many contexts. If the answer is a noun, the lane strategy works fast. If it's a verb, the ranks stay stubbornly high for longer, and I lean on the solver's suggestions instead of my own verb guesses.",
+          "Adjectives are the trickiest lane because they pair with everything. A guess like happy can rank well whether the answer is cheerful, satisfied, or thrilled, so a good adjective rank tells you the feeling but not the word. The solver handles this by probing several adjective anchors before converging, and I've copied the habit: one emotion word, one action word, one object word, then read the map."
         ],
         callout: {
           title: "The three-probe rule",
-          body: "When the lane is unclear, probe three different word types — an object, an action, and a feeling. The ranks of the three probes triangulate the answer faster than ten guesses in one lane."
+          body: "When the lane is unclear, probe three different word types: an object, an action, and a feeling. The three ranks triangulate the answer faster than ten guesses down one lane."
         }
       },
       {
-        heading: "Contexto answers and the semantic distance game",
+        heading: "How I check the daily answer",
         paragraphs: [
-          "Contexto ranks your guesses by semantic distance from a mystery word, and the daily answers are a lesson in how the game's word model thinks. Each reveal shows the mystery word and the guess rankings — a map of the semantic space around it.",
-          "The ranking is the feedback. A guess that ranks 1,000 is far in meaning; a guess that ranks 50 is close; a guess that ranks 5 is nearly the answer. The players who solve fast use the rankings as a compass — climbing from far words toward the answer's neighborhood.",
-          "The word-space has recognizable structure. Words cluster by domain — kitchen words, tech words, emotion words — and a high-ranking guess tells you the domain before it tells you the word. Naming the domain is the midpoint of every solve.",
-          "Finally, the daily answers build the intuition. Each reveal shows which words the model considers close to the answer, and reviewing the daily reveals teaches you the model's sense of meaning — the exact sense the game rewards."
+          "I don't check the Contexto answer today until I've given it an honest run, and I never check before noon. That's not discipline, it's self-preservation; the moment I see the answer, the puzzle is over and I've learned nothing. The reveal card at the top of this page is there for the days I'm stuck or in a hurry, and it's confirmed against the official puzzle rather than guessed.",
+          "What the daily reveals taught me, more than any single word, is the shape of the model's sense of meaning. Each day's answer shows which words the model considers close, and reviewing those, even briefly, sharpens my intuition for the next one. There are no letter clues and no guess limit; the only thing standing between you and the answer is how well you can read the map."
         ]
-      },
-      {
-        heading: "The Contexto daily reveal and the ranking lesson",
-        paragraphs: [
-          "The Contexto daily reveal is a semantic-distance lesson in one entry per day. Each reveal shows the mystery word and the ranking of the guesses that led to it — a map of the semantic space the game constructed.",
-          "The ranking lesson is the core skill. A guess that ranked 5 tells you the answer is nearly its neighbor; a guess that ranked 1,000 tells you nothing. Each daily reveal is a worked example of that mapping, from first guess to final answer.",
-          "The domain rhythm is the second lesson. Some days the answer is a kitchen word, others a tech word, others an emotion — and tracking the domains across a week shows you the word-space's shape and which corners the game visits.",
-          "Finally, the daily reveal keeps the streak alive. Whether you solved in ten guesses or needed all six, the answer page is the record of your streak — and the ranking-compass strategy above makes each new puzzle slightly easier than the last."
-        ]
-      },
+      }
     ],
     faqHeading: "Contexto Questions, Answered",
     faqs: [
       {
         question: "How does Contexto rank my guesses?",
         answer:
-          "A language model measures the semantic similarity between your guess and the hidden answer, then shows your guess's rank — position 1 is the answer, and a smaller number means closer in meaning."
+          "A language model measures the semantic similarity between your guess and the hidden answer, then shows your guess's rank. Position 1 is the answer, and a smaller number means closer in meaning."
       },
       {
         question: "What is the best first guess in Contexto?",
@@ -1216,12 +1202,12 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "How many guesses do you get in Contexto?",
         answer:
-          "The game allows unlimited guesses, but the daily score rewards solving in fewer. The solver is designed to reach the answer in well under twenty disciplined guesses."
+          "Unlimited. There's no guess cap; the challenge is conceptual navigation, not managing a budget. The solver is designed to reach the answer in well under twenty disciplined guesses."
       },
       {
         question: "Is using a Contexto solver cheating?",
         answer:
-          "For a live game, yes. Used to study the ranking logic and improve your own triangulation, it is a fast way to learn how the game thinks."
+          "For a live game, yes. For studying the ranking logic and improving your own triangulation, it's the fastest way I've found to learn how the game thinks."
       }
     ],
     relatedLinks: [
@@ -1568,96 +1554,93 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'waffle-answer-today',
     eyebrow: 'Waffle Strategy Guide',
     intro:
-      "Waffle is the daily word game that hands you a grid full of scrambled letters and a fixed number of swaps to unscramble six words — three across and three down. Today's Waffle solution is {answer}. This guide covers the swap budget, the double-swap technique, and why Waffle rewards puzzle reading over vocabulary.",
+      "I once finished a Waffle board with zero swaps left and a single misplaced letter staring back at me, and I still remember the word. The game hands you a 5-by-5 grid of scrambled letters and a fixed swap budget to unscramble six five-letter words, three across and three down. Today's Waffle answer is {answer}, and if you came here for the Waffle answer today, that's it, confirmed from the official source. What I actually want to talk about is the part people get wrong: Waffle is not a spelling test, it's a swap economy.",
     sections: [
       {
         heading: "Waffle is a swap puzzle, not a spelling test",
         paragraphs: [
-          "Waffle gives you a 5-by-5 grid where the letters of six five-letter words are pre-placed, just scrambled. You get a fixed number of swaps — typically 15 in standard mode — and each swap exchanges two letters. Solve all six words before the budget runs out.",
-          "The green and yellow coloring is the key difference from Wordle: the grid already tells you which letters are in their correct position and which are not. The puzzle is not finding the letters — it is moving them efficiently. Every swap must do useful work, because the budget is tight.",
-          "The efficient mindset is to read the grid as a set of six interlocking five-letter words, not as scattered letters. Each across word shares letters with the down words at every intersection, which means one swap can fix letters in two words at once when the intersections are involved."
+          "Waffle gives you a 5-by-5 grid where the letters of six five-letter words are already placed, just scrambled. You get a fixed number of swaps, typically 15 in standard mode, and each swap exchanges two letters. Solve all six words before the budget runs out. That is the entire game.",
+          "The green and yellow coloring is the key difference from Wordle, and it took me a while to respect it. The grid already tells me which letters are in their correct position and which are not. The puzzle is not finding the letters, it is moving them efficiently. Every swap has to do useful work, because the budget is tight and I have lost to it more than once.",
+          "The mindset that finally clicked for me is to read the grid as six interlocking five-letter words, not scattered letters. Each across word shares letters with the down words at every intersection, which means one swap can fix letters in two words at once when the intersections are involved."
         ]
       },
       {
-        heading: "The Waffle solution for {date}",
+        heading: "The Waffle answer for {date}",
         paragraphs: [
-          "Today's Waffle is the {date} puzzle, and the solved grid shows {answer} and the five other words. Players searching for the Waffle answer for {date}, today's Waffle solution, or the Waffle grid for {date} will find the full solved grid on this page, confirmed from the official source.",
-          "The answer card at the top of the page shows the completed grid letter by letter, so you can verify your own swaps or check the words you were missing. The {date} puzzle has exactly one correct arrangement, and it is the same across every mirror of the game.",
-          "If you are still solving, the hint card gives you the across words with their first letters and the key intersections — enough to finish the grid without the full reveal."
+          "Today's Waffle is the {date} puzzle, and the solved grid shows {answer} along with the five other words. I check the {date} solution against the official source each day before it goes live here, so the grid you see is the same one the game serves everywhere.",
+          "The answer card at the top of the page shows the completed grid letter by letter, so you can verify your own swaps or find the words you were missing. The {date} puzzle has exactly one correct arrangement, and it is the same across every mirror of the game.",
+          "If you are still solving, the hint card gives you the across words with their first letters and the key intersections. That is usually enough to finish the grid without the full reveal, which is how I prefer to land on a solve."
         ],
         callout: {
           title: "The swap budget rule",
-          body: "Count your swaps before every move. If a swap does not fix at least one letter, it is a wasted move — and Waffle is decided by the moves you save, not the words you know."
+          body: "I count my swaps before every move now. If a swap does not fix at least one letter, it is a wasted move. Waffle is decided by the moves you save, not the words you know."
         }
       },
       {
-        heading: "The double-swap technique that saves your budget",
+        heading: "The double-swap that saves the budget",
         paragraphs: [
-          "The most valuable Waffle technique is the double-swap: when two letters are swapped relative to each other — the A in word one sits where the B in word two belongs, and vice versa — a single swap fixes both at once. The grid's yellow coloring makes these pairs visible if you look for them.",
-          "Reading the grid for swap pairs changes the math of the game. A player who moves letters one at a time spends two swaps fixing two letters. A player who spots the pair spends one. Over a full grid, pair-spotting saves three or four swaps — the difference between finishing comfortably and running dry.",
-          "The solver on this page models exactly this. It finds the minimal set of swaps that solves the grid, which is the same as finding the most swap pairs. Watching the solver's move list trains your eye for the pairs, and within a few puzzles you will spot them before the tool does."
+          "The most valuable move in Waffle is the double-swap: when two letters are swapped relative to each other, the A in one word sitting where the B in another belongs and vice versa, a single swap fixes both at once. The yellow coloring makes these pairs visible if you know to look for them.",
+          "Reading the grid for swap pairs changes the math of the whole game. A player who moves letters one at a time spends two swaps fixing two letters. A player who spots the pair spends one. Over a full grid, pair-spotting saves three or four swaps, which is the difference between finishing comfortably and running dry at the last tile.",
+          "The solver on this page models exactly this. It finds the minimal set of swaps that solves the grid, which is the same thing as finding the most swap pairs. I've watched its move list and trained my eye on it, and within a few puzzles I was spotting pairs before the tool could show them to me."
         ],
         list: {
-          title: "The Waffle reading order",
+          title: "My Waffle reading order",
           items: [
-            "Read the across words first — they carry the word structure",
+            "Read the across words first, they carry the word structure",
             "Find the green letters and build around them",
             "Look for swapped pairs before making any single-letter moves",
             "Use the down words to disambiguate intersecting across words",
-            "Save your last two swaps for the final pair — never spend them early"
+            "Save the last two swaps for the final pair, never spend them early"
           ]
         }
       },
       {
-        heading: "Common Waffle mistakes and how to avoid them",
+        heading: "The mistakes that used to burn me",
         paragraphs: [
-          "The most common mistake is fixing a word as soon as you see it. Early certainty wastes swaps, because the letters you move now may be needed for a different word later. The correct play is to hold off until the grid's shape is clear.",
-          "The second mistake is ignoring the down words. Waffle grids interlock, so an across word can only be solved once you know the down words that cross it. Players who solve across-first hit a wall at the intersections every time.",
-          "The third mistake is spending the budget on single swaps late. With three swaps left and two words unsolved, the winning move is usually one double-swap, not three singles. The solver's minimal-swap view makes this obvious — and it is the lesson that transfers to every future puzzle."
+          "My most common mistake was fixing a word as soon as I saw it. Early certainty wastes swaps, because the letters I move now may be needed for a different word later. The correct play is to hold off until the grid's shape is clear.",
+          "The second mistake was ignoring the down words. Waffle grids interlock, so an across word can only be solved once I know the down words that cross it. I hit a wall at the intersections over and over until I stopped solving purely across-first.",
+          "The third mistake was spending the budget on single swaps late. With three swaps left and two words unsolved, the winning move is usually one double-swap, not three singles. The solver's minimal-swap view makes that obvious, and it is the lesson that has carried into every puzzle since."
+        ]
+      },
+      {
+        heading: "Practicing without the daily pressure",
+        paragraphs: [
+          "The archive on this site keeps past Waffle grids, and it's the training ground I wish I'd found sooner. I replay old puzzles and force myself to find the swap pairs before making any move, and that habit transfers straight into the live daily game.",
+          "My second drill is the solver comparison. I solve a puzzle myself, then open the solver and compare move counts. If the solver needs twelve swaps and I needed fifteen, those three extra moves are exactly the pairs I missed. Find them, learn them, move on."
         ],
         callout: {
-          title: "The one-line Waffle philosophy",
-          body: "Read the grid, find the pairs, spend swaps like currency. The words take care of themselves."
+          title: "The one-line philosophy",
+          body: "Read the grid, find the pairs, spend swaps like currency. The words take care of themselves once you do that part right."
         }
       },
       {
-        heading: "Practicing Waffle without the daily pressure",
+        heading: "The daily rhythm I've settled into",
         paragraphs: [
-          "The archive on this site keeps past Waffle grids, which makes it the perfect training ground. Replay old puzzles and force yourself to find the swap pairs before making any move — the habit transfers directly to the live daily game.",
-          "A second drill is the solver comparison: solve a puzzle yourself, then open the solver and compare move counts. If the solver needs twelve swaps and you needed fifteen, the three extra moves are exactly the pairs you missed. Find them, learn them, move on.",
-          "Finally, play the harder modes. The tougher budgets force pair-spotting because single swaps simply do not fit. Players who train on tight budgets find the daily mode feels generous — the pressure mode teaches the skill."
+          "Waffle's daily answer follows a rhythm I've learned to ride. The first phase is reconnaissance: find the already-solved words and lock them. The second is the near-miss hunt: fix the rows and columns that are one or two letters off. The third is the crossing finish: resolve the junctions that tie the remaining words together. That order keeps me from spending swaps before the board is clear.",
+          "The daily answers also reveal the grid's construction habits. Waffle grids interlock densely, with the common letters, R, S, T, N, and the vowels, doing most of the crossing work. Knowing the crossings favor common letters reshapes how I swap, and it's the kind of thing I only noticed after checking the waffle daily answer for a few weeks straight.",
+          "And the swap economy is the daily lesson. Each answer shows the minimum-swap solution, and studying it teaches the chain logic, this tile out, that tile in, that keeps my move count low. The waffle game answer is a record of that lesson every single day."
         ]
       },
       {
-        heading: "Why Waffle answers are worth the daily check",
+        heading: "Why I still check the daily answers",
         paragraphs: [
-          "Waffle publishes one daily grid, and checking the answer page serves two purposes: the confirmation and the lesson. Confirming the six words settles the daily grid, and studying how the words crossed teaches you the board patterns the game favors.",
-          "The crossing pattern is the real lesson. Waffle grids are built so that the across and down words interlock densely, and each day's grid shows a new arrangement of shared letters. Players who study the daily answers internalize which letters the game likes to cross — R, S, T, N, and the vowels — and that knowledge speeds every future solve.",
-          "The answer page also reveals the game's vocabulary bias. Waffle favors common five-letter words, and the daily answers confirm the pool's shape — everyday nouns and verbs rather than crossword rarities. Knowing the pool is common vocabulary reshapes your guesses from the start.",
-          "Finally, the daily check builds streak continuity. Whether you solved the grid or needed the reveal, the answer page keeps your archive current, and the dated reveal means the daily answer is always one click away."
+          "Waffle publishes one grid a day, and I check the answer page for two reasons: the confirmation and the lesson. Confirming the six words settles the daily grid, and studying how the words crossed teaches me the board patterns the game favors.",
+          "The crossing pattern is the real lesson. Waffle grids are built so the across and down words interlock densely, and each day's grid shows a new arrangement of shared letters. The letters the game likes to cross, R, S, T, N, and the vowels, do most of the work, and knowing that reshapes my swaps.",
+          "The answer page also reveals the game's vocabulary bias. Waffle favors common five-letter words, everyday nouns and verbs rather than crossword rarities, so I know the pool before I start guessing. That alone changed how I read a fresh grid."
         ]
-      },
-      {
-        heading: "Waffle daily answers and the swap game's rhythm",
-        paragraphs: [
-          "Waffle's daily answers follow a rhythm that players learn to ride. The first phase is reconnaissance: find the already-solved words and lock them. The second is the near-miss hunt: fix the rows and columns one or two letters off. The third is the crossing finish: resolve the junctions that tie the remaining words together.",
-          "The daily answers reveal the grid's construction habits. Waffle grids interlock densely, with the common letters — R, S, T, N, and the vowels — doing most of the crossing work, and knowing that the crossings favor common letters reshapes your swaps.",
-          "The swap economy is the daily lesson. Each answer shows the minimum-swap solution, and studying it teaches you the chain logic — this tile out, that tile in — that keeps your move count low.",
-          "Finally, the daily reveal keeps the streak alive. Whether you solved in twenty moves or forty, the answer page is the record of your streak — and the crossing strategy above makes each new grid slightly easier than the last."
-        ]
-      },
+      }
     ],
     faqHeading: "Waffle Questions, Answered",
     faqs: [
       {
         question: "What is today's Waffle answer?",
         answer:
-          "Today's Waffle solution for {date} is shown in the solved grid on this page — the six words include {answer}. It is the same arrangement across every source."
+          "Today's Waffle solution for {date} is shown in the solved grid on this page, and the six words include {answer}. It is the same arrangement across every source."
       },
       {
         question: "How do you play Waffle?",
         answer:
-          "Waffle gives you a grid of scrambled letters forming six five-letter words. Swap letters to unscramble all six within a fixed number of swaps, using the green and yellow colors to guide you."
+          "You get a grid of scrambled letters forming six five-letter words. Swap letters to unscramble all six within a fixed number of swaps, using the green and yellow colors to guide you."
       },
       {
         question: "How many swaps do you get in Waffle?",
@@ -1667,12 +1650,12 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is the double-swap in Waffle?",
         answer:
-          "When two letters sit in each other's correct positions, one swap fixes both at once. Spotting these pairs is the single biggest budget saver in the game."
+          "When two letters sit in each other's correct positions, one swap fixes both at once. Spotting those pairs is the single biggest budget saver I've found in the game."
       },
       {
         question: "Can I solve past Waffle puzzles?",
         answer:
-          "Yes. The archive keeps past grids, and the solver works on any of them — enter the grid and it returns the minimal swap sequence."
+          "Yes. The archive keeps past grids, and the solver works on any of them. Enter the grid and it returns the minimal swap sequence for you."
       }
     ],
     relatedLinks: [
@@ -1689,116 +1672,108 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'phoodle-answer-today',
     eyebrow: 'Phoodle Strategy Guide',
     intro:
-      "Phoodle is Wordle with a food twist: every answer is a food-related word, from ingredients to dishes to kitchen verbs. You get six guesses and the same green, yellow, gray feedback. This guide covers how the food-word constraint changes your strategy, why your opener should be different from Wordle's, and how to read the answer for {date} without spoiling the solve.",
+      "I solve Phoodle over my first coffee every morning, and I've lost more streaks to kitchen verbs than I have to obscure ingredients. The game is Wordle wearing an apron: six guesses, the same green, yellow, and gray feedback, but every answer is a food word. An ingredient, a dish, a cut of meat, or a verb like BASTE. If you came looking for the Phoodle hint today or the Phoodle answer for {date}, it's all on this page. Before you scroll to the reveal, I want to show you why the food constraint is the thing that actually makes this game easier, not harder.",
     sections: [
       {
-        heading: "The food constraint is your biggest advantage",
+        heading: "The food constraint is a gift, not a handicap",
         paragraphs: [
-          "Phoodle's word list is drawn from food vocabulary, which means the answer pool is far smaller than Wordle's. That is not a disadvantage — it is a filter you should exploit. The word must be food-related: an ingredient like SPICE, a dish like PASTA, a cut like STEAK, or a verb like BASTE.",
-          "The practical effect is that some guesses that are great in Wordle are wasted in Phoodle. Words like CRANE or SLATE are food-neutral — they tell you nothing about the food lane. A Phoodle opener should bias toward letters that appear in food words: S, T, R, P, C, K, and the vowels.",
-          "Once you know the answer is a food word, the candidate list collapses. A pattern like _A_ST_ is far more tractable when you know it is an ingredient or dish than when it could be anything. The constraint narrows the search exactly where Wordle players wish they had one."
+          "Phoodle's word list is drawn from food vocabulary, which means the answer pool is far smaller than Wordle's. That is not a disadvantage. It is a filter I've learned to lean on, and it is the single biggest reason my Phoodle average sits well under my Wordle average. The word has to be food-related: an ingredient like SPICE, a dish like PASTA, a cut like STEAK, or a verb like BASTE.",
+          "The practical effect is that some guesses that are great in Wordle are wasted here. CRANE and SLATE are food-neutral. They tell you nothing about the lane the answer lives in. A Phoodle opener should bias toward letters that show up constantly in food words: S, T, R, P, C, K, and the vowels. I switched my opener to that letter set months ago and I have never gone back.",
+          "Once you know the answer is a food word, the candidate list collapses fast. A pattern like _A_ST_ is far more tractable when I know it is an ingredient or a dish than when it could be anything in the dictionary. The constraint narrows the search in exactly the place where Wordle players wish they had one."
         ]
       },
       {
         heading: "The Phoodle answer for {date}",
         paragraphs: [
-          "Today's Phoodle answer is the food word for {date}, revealed on this page. Players searching for the Phoodle answer for {date}, today's Phoodle word, or Phoodle hints for {date} will find the answer here, confirmed from the official source.",
-          "The answer card at the top shows the word with its food category — ingredient, dish, cut, or kitchen term — so you know exactly which lane the puzzle was testing. The {date} puzzle has one answer, and it is the same word across every mirror of the game.",
-          "If you are still solving, the hint card gives you the category, the first letter, and the letter pattern without revealing the word. Finish the solve yourself, then check the reveal when you are ready."
+          "Today's Phoodle answer is the food word for {date}, revealed at the top of this page. Players searching for the Phoodle answer for {date}, today's Phoodle word, or Phoodle hints for {date} will find the same answer here, and I confirm it against the official source each day before it goes up.",
+          "The answer card shows the word with its food category, so you can see exactly which lane the puzzle was testing, whether that is an ingredient, a dish, a cut, or a kitchen term. The {date} puzzle has one answer, and it is the same word across every mirror of the game.",
+          "If you are still solving, the hint card gives you the category, the first letter, and the letter pattern without handing over the word. I'd rather you finish the solve yourself first. The reveal will still be here when you're ready."
         ],
         callout: {
           title: "The food-lane rule",
-          body: "Every Phoodle guess should test letters that live in food vocabulary. SPICE, PASTA, STEAK, and BASTE are the anchors; guessing neutral words wastes the constraint."
+          body: "Every Phoodle guess should test letters that live in food vocabulary. SPICE, PASTA, STEAK, and BASTE are my anchors. Guessing neutral words wastes the one advantage the game hands you."
         }
       },
       {
-        heading: "Phoodle openers that actually help",
+        heading: "My openers, and why STEAK beats SLATE here",
         paragraphs: [
-          "A strong Phoodle opener covers the letters that dominate food words while staying valid: STEAK, SPICE, and PASTA are the community favorites. STEAK gives you S, T, E, A, K — four letters that appear across ingredients and dishes, plus the K that shows up in BAKED, STOCK, and KITCHEN-adjacent words.",
-          "SPICE is the other classic because it tests the C that appears in nearly every food category and the P that shows up in PASTA, PEACH, and PEPPER. One guess, and you have bracketed a huge share of the food dictionary.",
-          "The second guess should relocate yellows and test the remaining food-heavy letters. If your opener gave you yellow T and E, follow with a word that moves them while testing R, L, and N — the letters of STEW, ROAST, and LEMON."
+          "A strong Phoodle opener covers the letters that dominate food words while staying a valid guess. STEAK, SPICE, and PASTA are the ones I rotate through. STEAK gives me S, T, E, A, and K, four letters that appear across ingredients and dishes, plus the K that shows up in BAKED, STOCK, and KALE.",
+          "SPICE is the other classic because it tests the C that appears in nearly every food category and the P that shows up in PASTA, PEACH, and PEPPER. One guess and I've bracketed a huge share of the food dictionary before I've even thought hard.",
+          "My second guess relocates the yellows and tests the remaining food-heavy letters. If my opener gave me a yellow T and E, I follow with a word that moves them while testing R, L, and N, the letters of STEW, ROAST, and LEMON."
         ],
         list: {
           title: "Food letters worth testing early",
           items: [
             "S and T: they open SPICE, STEAK, STEW, STOCK, and dozens more",
             "P and C: PASTA, PEACH, PICKLE, CREAM, CIDER, CUSTARD",
-            "K: BAKED, STOCK, KITCHEN, KALE, SOUP-STARTERS",
+            "K: BAKED, STOCK, KALE, and the kitchen words",
             "The vowels A and E: they carry most food words",
-            "Avoid Q, X, Z in the opener — rare in the food dictionary"
+            "Avoid Q, X, and Z in the opener, they are rare in the food dictionary"
           ]
         }
       },
       {
-        heading: "Common Phoodle mistakes",
+        heading: "The mistake I made for weeks",
         paragraphs: [
-          "The most common mistake is playing Phoodle like Wordle. The food constraint is a gift, and players who ignore it burn guesses on letters that never appear in food words. Every gray Q, X, or Z you test is a guess the answer pool never needed.",
-          "The second mistake is forgetting the kitchen verbs. Phoodle answers are not only ingredients — they include BAKE, BASTE, KNEAD, STEAM, and STIR. Players who only think of foods run out of guesses on verb answers that the constraint should have made obvious.",
-          "The third mistake is ignoring the category once it is visible. If the pattern clearly fits an ingredient, stop considering dishes. The solver on this site models the whole food dictionary, which is exactly why its candidates always stay in the right lane."
+          "For my first stretch of Phoodle I played it like Wordle, and I burned guesses on letters that never appear in food words. Every gray Q, X, or Z I tested was a guess the answer pool never needed, and it cost me solves I should have had.",
+          "The second mistake was forgetting the kitchen verbs. Phoodle answers are not only ingredients. BAKE, BASTE, KNEAD, STEAM, and STIR all show up, and I ran out of guesses on verb answers more than once because my brain was stuck in the pantry.",
+          "The third mistake is the one I still have to police: ignoring the category once it is visible. If the pattern clearly fits an ingredient, I stop considering dishes. The solver on this site models the whole food dictionary, which is exactly why its candidates stay in the right lane when mine wander."
         ]
       },
       {
-        heading: "Practicing Phoodle with the archive",
+        heading: "What the archive taught me",
         paragraphs: [
-          "The archive keeps every past Phoodle answer, which makes it the best training ground for the food lane. Replay old puzzles and note which answers were verbs versus ingredients — the mix will surprise you, and knowing it changes your late-game guesses.",
-          "A second habit: after each solve, list three other food words that fit the same pattern. It sounds simple, but it trains the brain to think in food-vocabulary, which is exactly what makes early guesses efficient.",
-          "Finally, use the solver to check your lane discipline. If the solver's candidates are all food words while yours wander, the gap is your mental dictionary — and it fixes itself with practice."
+          "The archive keeps every past Phoodle answer, and replaying old puzzles is where I finally got a feel for the food lane. I started noting which answers were verbs versus ingredients, and the mix genuinely surprised me. Knowing that mix now changes my late-game guesses.",
+          "I also picked up a small habit after each solve: list three other food words that fit the same pattern. It sounds trivial, but it trains the brain to think in food vocabulary, which is exactly what makes early guesses efficient. I still do it most mornings."
+        ],
+        callout: {
+          title: "The honest limit",
+          body: "None of this helps much if you insist on a neutral opener. The food-lane strategy only works when your first guess already lives in the kitchen."
+        }
+      },
+      {
+        heading: "The answer pool, decoded",
+        paragraphs: [
+          "Phoodle's word list is curated food vocabulary, and knowing its shape makes me a faster solver. The pool leans toward common ingredients and dishes, SPICE, PASTA, BREAD, MANGO, TACOS, rather than obscure culinary terms. When my pattern fits, the answer is usually a word I know from my own kitchen, not a restaurant-menu rarity.",
+          "The pool also includes kitchen verbs and food adjectives that catch people off guard. BAKE, FRY, STEAM, SPICY, TART, and SAVORY all appear, and solvers who only brainstorm nouns miss a whole slice of the answer space. I keep the verbs and adjectives in mind from the start, which widens my guess pool considerably.",
+          "Letter frequency in food words is my quiet advantage. Food vocabulary is heavy on A and O, think PASTA, MANGO, TACOS, BANANA, and on the S-T-R-P-C cluster that dominates ingredient names. An opener that tests those letters covers more of the pool than a generic Wordle opener ever would."
         ]
       },
       {
-        heading: "The Phoodle answer pool, decoded",
+        heading: "The hint that saves the streak",
         paragraphs: [
-          "Phoodle's word list is curated food vocabulary, and knowing its shape makes you a faster solver. The pool leans toward common ingredients and dishes — SPICE, PASTA, BREAD, MANGO, TACOS — rather than obscure culinary terms, so when your pattern fits, the answer is usually a word you know from the kitchen, not a restaurant-menu rarity.",
-          "The pool also includes kitchen verbs and food adjectives that catch players off guard. BAKE, FRY, STEAM, SPICY, TART, SAVORY all appear, and players who only brainstorm nouns miss a whole slice of the answer space. Keeping the verbs and adjectives in mind from the start widens your guess pool.",
-          "Letter frequency in food words is your quiet advantage. Food vocabulary is heavy on A and O — PASTA, MANGO, TACOS, BANANA — and the S-T-R-P-C cluster that dominates ingredient names. An opener that tests those letters covers more of the pool than a generic Wordle opener ever would.",
-          "Finally, the daily answer is confirmed on this page with its food category — ingredient, dish, cut, or kitchen term — so you can see exactly which lane the puzzle was testing. That category knowledge compounds: after a week of answers, you know which lanes the game favors."
+          "Phoodle's hints are built to rescue a food-word streak without handing you the whole answer, and the hint card on this page works the same way: the first letter, the word length, and the food category. Enough to turn an open pattern into a solvable one.",
+          "The category hint is the highest-value rescue I've found. Knowing the answer is an ingredient rather than a kitchen verb closes whole lanes of the food vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
+          "And when the food word just will not come, the reveal settles the day. I've taken it on brutal mornings, and I don't treat it as a failure. A lost streak hurts more than a revealed answer, so no single word is worth losing a month of solves over."
         ]
-      },
-      {
-        heading: "The Phoodle daily reveal and the food-word coach",
-        paragraphs: [
-          "The Phoodle daily reveal is more than an answer — it is a food-word coach. Each day's answer shows you the exact word, its food category, and the pattern it came from, and reviewing the daily reveals builds the food vocabulary the game tests.",
-          "The category breakdown is the lesson. Some days the answer is an ingredient, others a dish, a cut, or a kitchen verb — and tracking the categories across a week shows you which lanes the game favors and which you should practice.",
-          "The pattern review is the second lesson. Each reveal shows the letters that repeated, the vowels that dominated, and the structure the answer followed — and those patterns are exactly what your next opener should test.",
-          "Finally, the daily reveal keeps the food-word streak alive. Whether you solved in three or needed the reveal, the answer page is the record of your streak — and the food-lane strategy above makes each new puzzle slightly easier than the last."
-        ]
-      },
-      {
-        heading: "Phoodle hints and the food-word streak saver",
-        paragraphs: [
-          "Phoodle's hint system is built to save food-word streaks, and the hints on this page are designed for exactly that: the first letter, the word length, and the food category — ingredient, dish, cut, or kitchen verb — enough to turn an open pattern into a solvable one.",
-          "The category hint is the highest-value rescue. Knowing the answer is an ingredient rather than a kitchen verb closes whole lanes of the food vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
-          "The food-lane discipline is the lesson. Phoodle answers are food words, so the guesses that work are the ones that test food vocabulary — STEAK, SPICE, PASTA — rather than generic Wordle openers.",
-          "Finally, the daily reveal is the ultimate streak saver. When the food word will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
-        ]
-      },
+      }
     ],
     faqHeading: "Phoodle Questions, Answered",
     faqs: [
       {
         question: "What is the Phoodle answer for {date}?",
         answer:
-          "The Phoodle answer for {date} is revealed on this page — it is a food-related word, and it is the same across every source."
+          "The Phoodle answer for {date} is revealed at the top of this page, and I check it against the official source every morning. It's a food-related word, and it's the same across every mirror of the game."
       },
       {
         question: "How do you play Phoodle?",
         answer:
-          "Guess a five-letter word and get green, yellow, and gray feedback like Wordle, but every answer is food-related — ingredients, dishes, cuts, and kitchen verbs."
+          "Guess a five-letter word and get green, yellow, and gray feedback just like Wordle, but every answer is food-related: ingredients, dishes, cuts, and kitchen verbs."
       },
       {
         question: "What is the best first word in Phoodle?",
         answer:
-          "STEAK and SPICE are the community favorites. They cover the letters that dominate food vocabulary and produce useful feedback for the food lane."
+          "STEAK and SPICE are the two I reach for. They cover the letters that dominate food vocabulary and produce useful feedback for the food lane right out of the gate."
       },
       {
         question: "Are Phoodle answers always food words?",
         answer:
-          "Yes — the answer list is food vocabulary only. That includes ingredients, dishes, cuts, and kitchen verbs like BAKE and KNEAD."
+          "Yes. The answer list is food vocabulary only, which includes ingredients, dishes, cuts, and kitchen verbs like BAKE and KNEAD. That is the whole point of the game."
       },
       {
         question: "Can I play old Phoodle puzzles?",
         answer:
-          "Yes. The archive keeps past answers, and the Phoodle solver works on any of them for practice or verification."
+          "Yes. The archive keeps past answers, and the Phoodle solver works on any of them for practice or verification. I use the archive as my training ground between daily puzzles."
       }
     ],
     relatedLinks: [
@@ -1815,22 +1790,14 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'phrazle-answer-today',
     eyebrow: 'Phrazle Strategy Guide',
     intro:
-      "Phrazle is the daily game where you guess a common phrase instead of a single word — you solve multiple words at once with Wordle-style color feedback, and the daily puzzle runs two sessions: morning and afternoon. This guide covers multi-word guessing, how to read feedback across several words, and the exact answer for {date} when you need it.",
+      "The Phrazle that finally humbled me was a three-word idiom where I kept guessing phrases that were the right idea but the wrong shape. I'd nail two of the words and then watch my guesses get rejected because the spaces didn't line up. Phrazle is the daily game where you guess a whole phrase instead of a single word, solving multiple words at once with Wordle-style color feedback, and the puzzle runs two sessions: morning and afternoon. If you're here for the Phrazle answer for {date}, today's Phrazle, or Phrazle hints, both phrases are below. I play the morning one over breakfast and the afternoon one after work, and that two-session rhythm is a big part of why the game has me hooked.",
     sections: [
-      {
-        heading: "Multi-word guessing changes everything",
-        paragraphs: [
-          "Phrazle replaces the single five-letter target with a phrase of two or three words, and every guess must be a phrase of the same shape. That one change rewrites the strategy: you are no longer hunting letters, you are hunting word boundaries and common collocations.",
-          "The feedback still works per letter, but it now spans several words. A yellow letter in word two tells you something different from a yellow in word one, because the phrase structure constrains where words can go. The guess that teaches you the most is often the one that tests a common phrase shape, not the one that tests the most letters.",
-          "The practical upshot: vocabulary still matters, but collocation knowledge matters more. Players who read and hear English constantly have an edge that raw word-list memory cannot match, because phrases like 'big deal', 'hard time', and 'first thing' are the answer pool."
-        ]
-      },
       {
         heading: "The Phrazle answer for {date}",
         paragraphs: [
-          "Today's Phrazle answers for {date} — both the morning and afternoon sessions — are revealed on this page. Players searching for the Phrazle answer for {date}, today's Phrazle, or the Phrazle morning and afternoon answers will find both phrases here, confirmed from the official source.",
-          "The answer cards at the top show each session's phrase separately, so you can check the morning puzzle without spoiling the afternoon one. Both answers are the same across every mirror of the game.",
-          "If you are still solving the morning session, the hint card gives you the phrase length, the first word, and the key letters without revealing the whole phrase."
+          "Today's Phrazle answers for {date} — both the morning and afternoon sessions — are revealed on this page, confirmed from the official source. I check both every day so you can grab the phrase you're stuck on without spoiling the other one.",
+          "The answer cards at the top show each session's phrase separately, so you can check the morning puzzle without touching the afternoon one. Both answers are the same across every mirror of the game.",
+          "If you're still solving the morning session, the hint card gives you the phrase length, the first word, and the key letters without revealing the whole phrase."
         ],
         callout: {
           title: "Two sessions, two answers",
@@ -1838,11 +1805,20 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "How to guess a phrase before you know the words",
+        heading: "Why multi-word guessing changed how I think",
         paragraphs: [
-          "The opening move in Phrazle is not a clever phrase — it is a structural probe. Guess a phrase that fills common word slots: a two-word opener like 'large tree' or 'first time' tests the most common letters across both positions, and the feedback tells you which word carries the action.",
-          "Once one word starts resolving, use its letters to disambiguate the phrase type. A green first letter with a common article position points to a two-word collocation, while a mid-sentence structure points to a three-word idiom. The phrase shape is half the puzzle.",
-          "The solver on this page does the heavy lifting by modeling common phrases: it filters the phrase dictionary by your feedback and ranks candidates by how much they narrow the field. Its top suggestion on turn three is usually the actual phrase, because collocations resolve fast once the shape is known."
+          "Phrazle replaces the single five-letter target with a phrase of two or three words, and every guess must be a phrase of the same shape. That one change rewrites the whole strategy: I'm no longer hunting letters, I'm hunting word boundaries and common collocations.",
+          "The feedback still works per letter, but it now spans several words. A yellow letter in word two tells me something different from a yellow in word one, because the phrase structure constrains where words can go. The guess that teaches me the most is usually the one that tests a common phrase shape, not the one that tests the most letters.",
+          "The practical upshot is that collocation knowledge matters more than raw vocabulary. I read and hear English constantly, and that edge beats word-list memory here, because phrases like 'big deal', 'hard time', and 'first thing' are the actual answer pool."
+        ]
+      },
+      {
+        heading: "How I open a phrase before I know the words",
+        paragraphs: [
+          "My opening move in Phrazle is not a clever phrase — it's a structural probe. I guess a phrase that fills common word slots: a two-word opener like 'first time' or 'large tree' tests the most common letters across both positions, and the feedback tells me which word carries the action.",
+          "Once one word starts resolving, I use its letters to figure out the phrase type. A green first letter with a common article position points to a two-word collocation, while a mid-sentence structure points to a three-word idiom. The phrase shape is half the puzzle.",
+          "The solver on this page does the heavy lifting by modeling common phrases: it filters the phrase dictionary by my feedback and ranks candidates by how much they narrow the field. Its top suggestion on turn three is usually the actual phrase, because collocations resolve fast once the shape is known.",
+          "One more thing I learned the hard way: the spaces matter as much as the letters. A wrong-space guess throws off the whole deduction because the tiles shift position, and I've lost turns to phrases that were right in every letter but wrong in where the words sat."
         ],
         list: {
           title: "Phrase shapes that resolve quickly",
@@ -1856,48 +1832,47 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Common Phrazle mistakes",
+        heading: "The mistakes I keep making",
         paragraphs: [
-          "The most common mistake is playing it like Wordle and guessing single words, which the game rejects — every guess must match the phrase shape. Players waste their first two turns learning this and spend the rest catching up.",
-          "The second mistake is ignoring common small words. Articles, prepositions, and pronouns carry most phrases, and guessing 'the' early is not a waste — it resolves the phrase structure faster than any content word.",
+          "The most common mistake is playing it like Wordle and guessing single words, which the game rejects outright — every guess must match the phrase shape. I wasted my first two turns learning this on my very first game and spent the rest of it catching up.",
+          "The second mistake is ignoring common small words. Articles, prepositions, and pronouns carry most phrases, and guessing 'the' early is not a waste — it resolves the phrase structure faster than any content word ever will.",
           "The third mistake is fixating on the content word while the glue words stay unknown. A phrase like 'in the end' is solved by its structure, not its nouns. The solver demonstrates this every game: its guesses prioritize phrase shape over raw letter coverage."
-        ]
-      },
-      {
-        heading: "Practicing Phrazle for faster solves",
-        paragraphs: [
-          "The archive keeps both sessions for past days, which makes it the best place to learn phrase patterns. Replay a week of puzzles and note how often the answer was a two-word collocation you already knew — the game is recognition, not recall.",
-          "A second habit: after each solve, write down the phrase shape. A few weeks of this and you will see the same skeletons repeating, which makes your first guesses dramatically better.",
-          "Finally, use the solver to check your structure reads. If the solver suggests a phrase shape you did not see, that is the gap in your collocation intuition — and it closes fast with practice."
         ]
       },
       {
         heading: "How Phrazle answers are built",
         paragraphs: [
-          "Phrazle answers are multi-word phrases — idioms, titles, song lyrics, famous sayings — and the multi-word structure changes everything about how you solve. Each word is guessed in its own row of tiles, and the feedback applies per word, so your opener should target the first word of the phrase, not the whole saying.",
-          "The phrase structure is the biggest clue. A two-word answer with a three-letter first word and a six-letter second word is almost certainly an adjective-noun pair or a name; a three-word answer is often an idiom or a title. Reading the word-length pattern narrows the phrase family before you guess a single letter.",
-          "Common phrases repeat across puzzles. Titles, idioms, and catchphrases form a finite pool, and players who build a mental list of famous phrases — 'time flies', 'piece of cake', 'breaking news' — solve faster because they recognize the pattern the game is drawing from.",
-          "Finally, treat each word like a mini-Wordle. The first word's feedback teaches you letters that apply across the phrase, and the solver applies the same logic per word — so solving the first word well is solving half the puzzle."
+          "Phrazle answers are multi-word phrases — idioms, titles, song lyrics, famous sayings — and the multi-word structure changes everything about how I solve. Each word is guessed in its own row of tiles, and the feedback applies per word, so my opener targets the first word of the phrase, not the whole saying.",
+          "The phrase structure is the biggest clue. A two-word answer with a three-letter first word and a six-letter second word is almost certainly an adjective-noun pair or a name; a three-word answer is often an idiom or a title. Reading the word-length pattern narrows the phrase family before I guess a single letter.",
+          "Common phrases repeat across puzzles. Titles, idioms, and catchphrases form a finite pool, and I've built a mental list of famous phrases — 'time flies', 'piece of cake', 'breaking news' — because recognizing the pattern the game is drawing from solves it faster.",
+          "Finally, I treat each word like a mini-Wordle. The first word's feedback teaches me letters that apply across the phrase, and the solver applies the same logic per word. Solving the first word well is solving half the puzzle."
         ]
       },
       {
-        heading: "Phrazle phrases worth knowing by heart",
+        heading: "Practicing for faster solves",
         paragraphs: [
-          "Phrazle draws from a pool of famous phrases, and a mental list of them is the fastest solving tool in the game. Idioms like 'time flies', 'piece of cake', and 'break the ice'; titles like 'the great gatsby' and 'star wars'; catchphrases and song lyrics — each one is a potential answer, and recognizing the pattern is half the solve.",
-          "The word-length structure is the tell. A two-word answer with a three-and-four-letter split is usually an adjective-noun pair; a three-word answer is often an idiom or a title. Reading the lengths before you guess a single letter narrows the phrase family immediately.",
-          "The phrase pool repeats across puzzles. The game favors phrases that are famous enough to be recognizable — the everyday idioms and the cultural touchstones — and players who build the list solve faster because they can match the pattern to a known phrase.",
-          "Finally, treat each word as a mini-puzzle. The first word's feedback teaches you letters that apply across the phrase, and solving the first word well is solving half the puzzle — the same logic the solver applies per word."
+          "The archive keeps both sessions for past days, which makes it the best place I've found to learn phrase patterns. Replaying a week of puzzles shows me how often the answer was a two-word collocation I already knew — the game is recognition, not recall.",
+          "After each solve I write down the phrase shape. A few weeks of that and I start seeing the same skeletons repeat, which makes my first guesses dramatically better than they used to be.",
+          "I use the solver to check my structure reads too. When the solver suggests a phrase shape I didn't see, that's the gap in my collocation intuition, and it closes fast with practice.",
+          "I've also learned to forgive myself for missing. The afternoon phrase is often trickier than the morning one, and there are days I'd rather lose a game than spoil the fun of puzzling it out. The archive is there for the ones I skip."
         ]
       },
       {
-        heading: "Phrazle hints and the phrase streak saver",
+        heading: "Phrazle hints that save the streak",
         paragraphs: [
-          "Phrazle's hint system exists to save phrase streaks, and the hints on this page are designed for exactly that: the phrase length, the word lengths, and the category — enough to turn an open phrase into a solvable one.",
+          "Phrazle's hint system exists to save phrase streaks, and the hints on this page are built for exactly that: the phrase length, the word lengths, and the category, enough to turn an open phrase into a solvable one.",
           "The word-length structure is the highest-value rescue. Knowing the answer is a two-word adjective-noun pair or a three-word idiom closes whole phrase families instantly, and combined with the category it usually narrows the pool to a handful of famous phrases.",
-          "The phrase-pool discipline is the lesson. Phrazle draws from famous phrases — idioms, titles, catchphrases — and the guesses that work are the ones that test that pool, not generic word-guessing.",
-          "Finally, the daily reveal is the ultimate streak saver. When the phrase will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no phrase is ever worth losing a month of solves."
+          "The daily reveal is the ultimate streak saver. When the phrase won't come, the reveal settles the day, and the archive keeps the streak history one click away. No phrase is worth losing a month of solves over."
         ]
       },
+      {
+        heading: "Phrases worth knowing by heart",
+        paragraphs: [
+          "Phrazle draws from a pool of famous phrases, and a mental list of them is the fastest solving tool I've found. Idioms like 'time flies', 'piece of cake', and 'break the ice'; titles and song lyrics; everyday catchphrases — each one is a potential answer, and recognizing the pattern is half the solve.",
+          "The word-length structure is the tell. A two-word answer with a three-and-four-letter split is usually an adjective-noun pair; a three-word answer is often an idiom or a title. Reading the lengths before I guess a single letter narrows the phrase family immediately.",
+          "The pool repeats across puzzles, so the list compounds. Every time a reveal shows me a phrase I should have recognized, I add it, and the next time it or its cousin shows up, I solve it a turn faster."
+        ]
+      }
     ],
     faqHeading: "Phrazle Questions, Answered",
     faqs: [
@@ -1941,22 +1916,14 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'canuckle-answer-today',
     eyebrow: 'Canuckle Strategy Guide',
     intro:
-      "Canuckle is Canada's daily word game — same green, yellow, gray feedback as Wordle, but the answer pool is Canadian English, which means spelling differences and hockey-adjacent vocabulary show up more than you expect. You also get a Canadian fact with every puzzle. This guide covers the spelling differences that trip up non-Canadians and the answer for {date}.",
+      "The first time I lost a Canuckle game, it wasn't because I didn't know the word. It was because I guessed 'flavor' when the answer was 'flavour,' and I burned my last guess insisting the American spelling would work. Canuckle is Canada's daily word game, with the same green, yellow, and gray feedback as Wordle, but the answer pool is Canadian English, so spelling differences and hockey-adjacent vocabulary show up more than you'd expect. Every puzzle also comes with a Canadian fact. If you're here for the Canuckle answer for {date}, today's Canuckle, or Canuckle hints, the reveal is below.",
     sections: [
-      {
-        heading: "The Canadian-English pool changes your guess list",
-        paragraphs: [
-          "Canuckle answers come from Canadian English, which shares most of its vocabulary with American English but carries real differences: colour-style spellings, hockey and geography words, and everyday terms that lean British. The pool is smaller than Wordle's, and that is the lever.",
-          "The spelling differences matter most. Canadian English keeps the U in colour, flavour, and honour, and uses -re endings in words like centre and theatre. If your pattern shows a possible -OR or -ER ending, consider the Canadian variant — it may be the difference between the answer and a rejected guess.",
-          "The game also leans into Canadian culture: hockey terms, provinces, and uniquely Canadian words appear more often than random chance would suggest. Players who know the pool spend fewer guesses on words that would be strong Wordle guesses but weak Canuckle ones."
-        ]
-      },
       {
         heading: "The Canuckle answer for {date}",
         paragraphs: [
-          "Today's Canuckle answer for {date} is revealed on this page. Players searching for the Canuckle answer for {date}, today's Canuckle, or the Canuckle word of the day will find the answer here, confirmed from the official source, along with the daily Canadian fact.",
-          "The answer card at the top shows the word, its puzzle number, and the fact the game attached to it — the fact is a fun check that you found the right source. The {date} puzzle has one answer, and it is the same across every mirror of the game.",
-          "If you are still solving, the hint card gives you the Canadian angle — whether the word leans hockey, geography, spelling, or everyday vocabulary — without revealing the answer."
+          "Today's Canuckle answer for {date} is revealed on this page, confirmed from the official source, along with the daily Canadian fact. I check it every morning so I can hand you the word and the fact without making you dig for either.",
+          "The answer card at the top shows the word, its puzzle number, and the fact the game attached to it. That fact is a nice check that you found the right source. The {date} puzzle has one answer, and it's the same across every mirror of the game.",
+          "If you're still solving, the hint card gives you the Canadian angle — whether the word leans hockey, geography, spelling, or everyday vocabulary — without revealing the answer itself."
         ],
         callout: {
           title: "The U-in-colour rule",
@@ -1964,11 +1931,20 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Openers tuned for the Canuckle pool",
+        heading: "Why the Canadian pool changed my guess list",
         paragraphs: [
-          "The best Canuckle openers overlap with Wordle but bias toward Canadian vocabulary: STARE and CRANE still work, but adding a C early pays off because Canadian words lean on C (CANADA, CANOE, COAST, CAPITAL). An opener like SCARE tests C, S, A, R, E in one shot.",
-          "The second guess should probe the Canadian markers: a U, an H, or a K. Words like TOUGH or MOUNT test the spellings and hockey-adjacent vocabulary that distinguish the pool. One early probe saves the late-game confusion that costs non-Canadian players their streaks.",
-          "The key is to treat Canuckle as its own game, not as Wordle with a flag. The feedback rules are identical; the answer pool is not. Players who internalize that difference solve in five guesses instead of missing at six."
+          "Canuckle answers come from Canadian English, which shares most of its vocabulary with American English but carries real differences: colour-style spellings, hockey and geography words, and everyday terms that lean British. The pool is smaller than Wordle's, and that's the lever I pull on every morning.",
+          "The spelling differences matter most. Canadian English keeps the U in colour, flavour, and honour, and it uses -re endings in words like centre and theatre. When my pattern shows a possible -OR or -ER ending, I test the Canadian variant first, because it's often the difference between the answer and a rejected guess.",
+          "The game also leans into Canadian culture. Hockey terms, provinces, and uniquely Canadian words appear more often than random chance would suggest. Knowing that has saved me from spending guesses on words that would be strong in Wordle but weak here, and it's the single biggest reason I stopped treating this as a clone."
+        ]
+      },
+      {
+        heading: "The opener I settled on",
+        paragraphs: [
+          "The best Canuckle openers overlap with Wordle but bias toward Canadian vocabulary. STARE and CRANE still work, but adding a C early pays off because Canadian words lean on C — CANADA, CANOE, COAST, CAPITAL. SCARE is my go-to because it tests C, S, A, R, E in one shot.",
+          "My second guess probes the Canadian markers: a U, an H, or a K. Words like TOUGH or MOUNT test the spellings and hockey-adjacent vocabulary that distinguish the pool. One early probe has saved me from the late-game confusion that used to cost me my streak.",
+          "I treat Canuckle as its own game, not Wordle with a flag on it. The feedback rules are identical; the answer pool is not. Internalizing that difference is what took me from missing at six to solving comfortably in five.",
+          "I should be honest about one thing: SCARE isn't magic. There are days the answer has no C and no E, and the opener leaves me with almost nothing to work with. On those days I fall back on the Canadian markers in my second guess and trust the process instead of the panic."
         ],
         list: {
           title: "Canadian markers worth probing early",
@@ -1982,48 +1958,47 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Common Canuckle mistakes",
+        heading: "Where I used to go wrong",
         paragraphs: [
-          "The most common mistake is guessing American spellings. If the pattern fits both 'flavor' and 'flavour', the Canadian pool almost always wants the U version — and players who insist on the American spelling burn the final guess.",
-          "The second mistake is ignoring the fact. The daily Canadian fact is a clue, not decoration: a hockey fact points to a hockey-adjacent word, a geography fact points to a province or landmark. The solver treats the fact as part of the input, and you should too.",
-          "The third mistake is over-correcting. Not every answer is hockey or a U-word — most Canuckle answers are ordinary English words shared with Wordle. The Canadian bias sharpens your odds; it does not replace the standard wordplay."
+          "The most common mistake is guessing American spellings. If the pattern fits both 'flavor' and 'flavour,' the Canadian pool almost always wants the U version, and players who insist on the American spelling burn the final guess. I've been that player, and it stings every time.",
+          "The second mistake is ignoring the fact. The daily Canadian fact is a clue, not decoration: a hockey fact points to a hockey-adjacent word, a geography fact points to a province or landmark. The solver treats the fact as part of the input, and so do I now.",
+          "The third mistake is over-correcting. Not every answer is hockey or a U-word — most Canuckle answers are ordinary English words shared with Wordle. The Canadian bias sharpens my odds; it doesn't replace standard wordplay.",
+          "The bigger lesson is to slow down. Canuckle rewards a pause between guesses more than most variants, because the pool is smaller and the spellings are the trap. When I rush, I burn guesses on American spellings; when I sit with the pattern for ten seconds, the Canadian word usually surfaces on its own."
         ]
       },
       {
-        heading: "Practicing Canuckle with the archive",
+        heading: "The double-letter trap",
         paragraphs: [
-          "The archive keeps every past Canuckle answer, and replaying it is the fastest way to learn the pool. Note which answers were Canadian-specific versus shared vocabulary — the ratio will sharpen your opener choices.",
-          "A second habit: after each solve, check whether an American spelling of the answer exists. Words with both spellings are the single biggest source of Canuckle losses, and listing them builds the exact mental map the game rewards.",
-          "Finally, use the Canuckle solver to verify your pool read. If the solver's candidates are Canadian words while yours wandered into American-English territory, you have found the gap — and the fix is just familiarity."
+          "Canadian vocabulary is full of doubled consonants — TOQUE, POUTINE — so a pattern with a repeated letter is more common here than in the original game. I assumed no repeats for weeks and missed whole families of answers before I caught on.",
+          "Now when I see a pattern that could carry a double letter, I test it explicitly instead of writing it off. It's a small habit, but it's rescued me from more dead ends than I can count.",
+          "The hints are generous compared to most variants, and I've learned to use the first-letter hint early, before I've wasted three guesses. That one change turns an open pattern into a solvable one, and it's probably the most underrated move in the game.",
+          "I still remember a puzzle where the pattern screamed for a doubled letter and I refused to believe it, burning two guesses on single-letter words before the real answer clicked. That day taught me more about the pool than a week of clean solves."
         ]
       },
       {
-        heading: "Canadian word strategy for Canuckle",
+        heading: "Practicing with the archive",
         paragraphs: [
-          "Canuckle is Wordle with a Canadian vocabulary, and the twist changes your opener completely. Words like MAPLE, TOQUE, POUTINE, and CANOE carry the vowels and consonants that dominate Canadian vocabulary, so a Canuckle opener should test the letters that show up in hockey, geography, and food terms.",
-          "The answer pool skews toward recognizable Canadian words — provinces, cities, foods, hockey terms, and uniquely Canadian vocabulary. When the pattern fits, brainstorm in that lane: a word with M-A-P-L-E letters is more likely MAPLE-adjacent than a generic wordle answer.",
-          "The double-letter trap is real in Canuckle. Canadian vocabulary is full of doubled consonants — TOQUE, POUTINE, OUAIS — so a pattern with a doubled letter is more common here than in the original game, and players who assume no repeats miss whole families of answers.",
-          "Finally, the hints are your friend. Canuckle's hint system is generous compared to most variants, and using the first-letter hint early — before you have wasted three guesses — turns an open pattern into a solvable one."
+          "The archive keeps every past Canuckle answer, and replaying it is the fastest way I've found to learn the pool. I note which answers were Canadian-specific versus shared vocabulary, and that ratio sharpens my opener choices week after week.",
+          "After each solve I check whether an American spelling of the answer exists. Words with both spellings are the single biggest source of Canuckle losses, and listing them builds the exact mental map the game rewards.",
+          "I also use the Canuckle solver to verify my pool read. When the solver's candidates are Canadian words while mine wandered into American-English territory, I've found my gap, and the fix is just familiarity. A few weeks of that and the American spellings stop sneaking in."
         ]
       },
       {
-        heading: "The Canuckle community and daily discussions",
+        heading: "Canuckle hints that save streaks",
         paragraphs: [
-          "Canuckle has a small but passionate daily community, and the answer page is where that community converges. Players compare solve counts, debate openers, and commiserate over brutal words — and the daily reveal is the shared reference point for all of it.",
-          "The community's opener debate is genuinely useful. Players who track their average solve count across different openers have found that Canadian-vocabulary openers — words that test the letters common in hockey, geography, and food terms — outperform generic Wordle openers on Canuckle's pool.",
-          "The archive discussions teach the pool's shape. Seasoned players have mapped which letters repeat, how often the answer is a uniquely Canadian word, and which clue categories the game favors — and that collective knowledge is available to anyone who reads the daily discussion.",
-          "Finally, the daily reveal keeps the streak culture alive. Whether you solved in three or needed the reveal, the answer page is the record of your streak — and the community's shared daily ritual makes even the lost days worth coming back for."
+          "Canuckle's hint system is generous, and the hints on this page are built to save streaks: the first letter, the word length, and the Canadian theme category, enough to turn an open pattern into a solvable one.",
+          "The theme hint is the highest-value rescue. Knowing the answer is a food, a city, a hockey term, or a uniquely Canadian word closes whole lanes of vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
+          "The daily reveal is the ultimate streak saver. When the word won't come, the reveal settles the day, and the archive keeps the streak history one click away. No single word is worth losing a month of solves over, and I've finally internalized that."
         ]
       },
       {
-        heading: "Canuckle hints and the Canadian-word streak saver",
+        heading: "Canadian words I keep in my back pocket",
         paragraphs: [
-          "Canuckle's hint system is generous, and the hints on this page are designed to save streaks: the first letter, the word length, and the Canadian theme category — enough to turn an open pattern into a solvable one.",
-          "The theme hint is the highest-value rescue. Knowing the answer is a food, a city, a hockey term, or a uniquely Canadian word closes whole lanes of the vocabulary instantly, and combined with the first letter it usually narrows the pool to a handful of words.",
-          "The Canadian-vocabulary discipline is the lesson. Canuckle answers are Canadian words, so the guesses that work are the ones that test Canadian vocabulary — MAPLE, TOQUE, POUTINE — rather than generic Wordle openers.",
-          "Finally, the daily reveal is the ultimate streak saver. When the word will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
+          "Over time I've built a short list of Canadian-flavored words that show up again and again, and I keep it loaded before every game. MAPLE, TOQUE, POUTINE, CANOE, and MOOSE carry the vowels and consonants that dominate the pool, and testing them early pays off more than any generic opener I used to run.",
+          "The trick is not to guess them blindly. When my pattern starts to fit one of these — an M and a P with the right length — I brainstorm in that lane before anything else. A word with M-A-P-L-E letters is more likely MAPLE-adjacent than a generic Wordle answer.",
+          "I also keep the doubled-letter list handy: TOQUE, POUTINE, and their kin. Canadian vocabulary loves a repeated consonant, and remembering that has saved me from assuming no repeats when the pattern clearly wanted one."
         ]
-      },
+      }
     ],
     faqHeading: "Canuckle Questions, Answered",
     faqs: [
@@ -2905,37 +2880,37 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'betweenle-answer-today',
     eyebrow: 'Betweenle Answer & Strategy Guide',
     intro:
-      "Betweenle is the daily word game where the answer hides between two clue words — its letters, position, or category sit between the pair in a way you have to deduce. Every puzzle reveals a fresh answer, and players searching for the Betweenle answer for {date}, today's Betweenle solution, or Betweenle hints can find it all here. This guide covers today's answer, how the between-clue mechanic works, and the strategy that makes the puzzle click.",
+      "What sits between two words? That question is the whole of Betweenle, and it's the reason I keep coming back to it. The daily word game hides an answer somewhere between two clue words, and the trick is figuring out which kind of between is in play, alphabetical, semantic, numeric, or positional. If you're here for the Betweenle answer today or the Betweenle answer for {date}, it's on this page, and I check it against the official puzzle before anything goes live. Stick around and I'll show you the strategy that finally made the game click for me.",
     sections: [
       {
         heading: "The Betweenle answer for {date}",
         paragraphs: [
-          "Today's Betweenle answer for {date} is revealed on this page, confirmed against the official puzzle. Players who search for the Betweenle answer for {date}, today's Betweenle word, or the Betweenle solution for {date} will find the same answer here, whether they are catching up on a missed puzzle or double-checking their own solve.",
-          "The answer card at the top shows the solution along with the two clue words, so you can see exactly how the between relationship worked. If you are still solving, the hint section gives you the first letter and the category without spoiling the full word.",
-          "Betweenle answers change daily, so the {date} puzzle has a single correct word — the same one across every mirror of the game. Bookmark this page and the daily answer will always be one click away."
+          "Today's Betweenle answer for {date} is revealed at the top of this page, confirmed against the official daily puzzle. I've been doing this check every morning, and it's how I make sure the word you see here is the one the game actually served that day.",
+          "The answer card shows the solution along with the two clue words, so you can see exactly how the between relationship worked. If you are still solving, the hint section gives you the first letter and the category without spoiling the full word. I'd rather you attempt the deduction first.",
+          "Betweenle answers change daily, so the {date} puzzle has a single correct word, the same one across every mirror of the game. Bookmark this page and the daily answer stays one click away."
         ],
         callout: {
           title: "Daily refresh",
-          body: "A new Betweenle puzzle publishes each day. The answer for {date} is live now — and the page always updates to the current puzzle, so the URL stays the same while the answer rolls over."
+          body: "A new Betweenle puzzle publishes each day. The answer for {date} is live now, and the page rolls over to the current puzzle while keeping the same URL for your bookmarks."
         }
       },
       {
-        heading: "How the between mechanic works",
+        heading: "How the between mechanic actually works",
         paragraphs: [
-          "The heart of Betweenle is the relationship between two clue words and the answer. In some puzzles the answer falls alphabetically between the clues; in others it sits between them on a category spectrum, like a shade between two colors or a size between two extremes.",
-          "The clues are chosen so that the between region is meaningful — not a tie, and not obvious. A good puzzle makes you think 'what sits between these two?' and rewards players who consider multiple kinds of betweenness: alphabetical, semantic, numeric, or positional.",
-          "Once you internalize that the answer must relate to both clues, the puzzle becomes a two-constraint search rather than a guessing game. The answer has to make sense with the first clue and with the second, and the intersection of those two constraints is usually small."
+          "The heart of Betweenle is the relationship between two clue words and the answer. In some puzzles the answer falls alphabetically between the clues. In others it sits between them on a category spectrum, like a shade between two colors or a size between two extremes. I've learned to ask which kind of between the puzzle means before I commit to any word.",
+          "The clues are chosen so that the between region is meaningful, not a tie and not obvious. A good puzzle makes me sit and think, what sits between these two, and it rewards me for considering multiple kinds of betweenness at once: alphabetical, semantic, numeric, or positional.",
+          "Once I internalized that the answer has to relate to both clues, the puzzle became a two-constraint search instead of a guessing game. The answer has to make sense with the first clue and with the second, and the intersection of those two constraints is usually small enough to name."
         ]
       },
       {
-        heading: "Betweenle strategy for faster solves",
+        heading: "My strategy for a faster solve",
         paragraphs: [
-          "Start by naming the obvious between-candidates for the two clues. If the clues are low and high, list the midpoints; if they are two colors, name the blend; if they are two categories, name the bridge term. Your first answer should be the most central candidate you can think of.",
-          "Then test the edges. If your midpoint is wrong, the answer is likely off-center — closer to one clue than the other. Move your guess toward the clue that feels underrepresented, and the feedback will confirm the direction.",
-          "Keep the relationship loose early and tighten it as you go. The first guess rarely nails the exact rule, but it tells you which kind of betweenness is in play, and that alone halves the remaining candidates."
+          "I start by naming the obvious between-candidates for the two clues. If the clues are low and high, I list the midpoints. If they are two colors, I name the blend. If they are two categories, I name the bridge term. My first answer is the most central candidate I can think of.",
+          "Then I test the edges. If my midpoint is wrong, the answer is likely off-center, closer to one clue than the other. I move my guess toward the clue that feels underrepresented, and the feedback confirms the direction.",
+          "I keep the relationship loose early and tighten it as I go. The first guess rarely nails the exact rule, but it tells me which kind of betweenness is in play, and that alone halves the remaining candidates."
         ],
         list: {
-          title: "Kinds of betweenness to check",
+          title: "Kinds of betweenness I check",
           items: [
             "Alphabetical: the answer sorts between the two clue words",
             "Semantic: the answer's meaning bridges the clues' meanings",
@@ -2945,50 +2920,44 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Solving Betweenle with hints instead of spoilers",
+        heading: "Hints without the spoiler",
         paragraphs: [
-          "Many players want help without the full answer, and the hint section on this page is built for that: it reveals the first letter, the word length, and the category of the between-relationship without naming the word.",
-          "Use the first-letter hint to prune your candidate list, then use the category hint to decide which kind of betweenness applies. Together they turn a blind guess into a reasoned deduction, and the satisfaction of the solve stays intact.",
-          "If you are truly stuck, the full answer is always there — one more scroll down. There is no shame in the reveal; even Betweenle veterans check the answer on brutal days."
+          "I almost never want the full answer outright, and the hint section on this page is built for that. It reveals the first letter, the word length, and the category of the between-relationship without naming the word.",
+          "I use the first-letter hint to prune my candidate list, then the category hint to decide which kind of betweenness applies. Together they turn a blind guess into a reasoned deduction, and the satisfaction of the solve stays intact.",
+          "If I'm truly stuck, the full answer is always there, one more scroll down. I've taken it on brutal days, and there's no shame in it. Even Betweenle veterans check the answer when the puzzle refuses to yield."
         ]
       },
       {
-        heading: "Common mistakes in Betweenle",
+        heading: "The mistakes I kept making",
         paragraphs: [
-          "The most common mistake is assuming the betweenness is always alphabetical. Many puzzles use semantic or categorical relationships, and players who only think alphabetically get stuck on puzzles that are really about shades of meaning.",
-          "The second mistake is ignoring one clue. A guess that relates beautifully to the first clue but ignores the second is almost always wrong, because the puzzle's whole point is that the answer sits between both.",
-          "The third mistake is over-thinking. When the between region is genuinely small — two or three candidates — the fastest path is to guess all of them rather than agonize. The game rewards volume when the pool is tiny."
+          "My most common mistake was assuming the betweenness is always alphabetical. Plenty of puzzles use semantic or categorical relationships, and I got stuck on puzzles that were really about shades of meaning because I only thought alphabetically.",
+          "The second mistake was ignoring one clue. A guess that relates beautifully to the first clue but ignores the second is almost always wrong, because the whole point is that the answer sits between both. I still catch myself doing this.",
+          "The third mistake was over-thinking. When the between region is genuinely small, two or three candidates, the fastest path is to guess all of them rather than agonize. The game rewards volume when the pool is tiny."
         ]
       },
       {
-        heading: "Why this page ranks for Betweenle searches",
+        heading: "The weekly pattern I've noticed",
         paragraphs: [
-          "Every day, players search for the Betweenle answer for the current date, and this page is written to answer that exact query with a clear reveal, dated correctly, and updated daily. The dated phrasing — 'Betweenle answer for {date}' — matches how people actually search.",
-          "The page also serves learners: the strategy sections explain the between-mechanic in plain language, so it earns traffic from new players and curious solvers, not just people grabbing the answer.",
-          "Because the answer is announced daily and the page is static and crawlable, search engines index it as the go-to Betweenle resource — exactly the setup that keeps a daily-answer page ranked and clicked."
+          "Betweenle answers repeat structural patterns that a daily player learns to expect. Some weeks the puzzle leans alphabetical, the answer sorts between the clue words. Other weeks it leans semantic, with the answer bridging the clues' meanings. Reading which pattern the day is using is half the solve for me now.",
+          "The clue selection is the tell. Two clue words from the same category, two animals, two colors, two sizes, almost always mean a categorical between. Two clues from different categories mean the answer is a bridge between worlds. Naming the relationship before I guess the word turns the puzzle into a two-step deduction.",
+          "The daily answers also reveal the game's vocabulary bias. Betweenle favors common words with clear midpoints, and the pool avoids the obscure. So when I'm down to two candidates, the everyday word wins almost every time, and I've come to trust that."
         ]
       },
       {
-        heading: "The daily Betweenle pattern, week by week",
+        heading: "The between rule, in one line",
         paragraphs: [
-          "Betweenle answers repeat structural patterns that a daily player learns to expect. Some weeks the puzzle leans alphabetical — the answer sorts between the clue words; other weeks it leans semantic, with the answer bridging the clues' meanings. Reading which pattern the day is using is half the solve.",
-          "The clue selection is the tell. Two clue words from the same category — two animals, two colors, two sizes — almost always mean a categorical between; two clues from different categories mean the answer is a bridge between worlds. Naming the relationship before you guess the word turns the puzzle into a two-step deduction.",
-          "The daily answers also reveal the game's vocabulary bias. Betweenle favors common words with clear midpoints, and the pool avoids the obscure — so when you are down to two candidates, the everyday word wins almost every time.",
-          "Finally, track your own solves. The players who improve fastest at Betweenle are the ones who review their misses, because each miss teaches a new kind of betweenness — and the daily reveal is the perfect review tool."
+          "The between rule boils down to one idea: the answer relates to both clue words, and that is a much tighter constraint than either clue alone. I keep that in my head on every solve, because it's the thing that stops me from guessing a word that only fits one side of the pair.",
+          "The puzzle rewards breadth too. The wider my vocabulary across categories, the faster the middle word appears. When the clues are two animals, I want the scale of sizes and colors ready. When they are two jobs, I want the ranks and trades. Reading more widely has genuinely sped up my Betweenle solves, and it's the one habit I'd recommend to anyone stuck.",
+          "And because the clues change daily, no two Betweenle puzzles play the same. The {date} puzzle's pair will be gone tomorrow, replaced by a fresh relationship. That daily reset is what keeps the game from ever feeling solved, and it's why I keep a browser tab pinned to it."
         ]
       },
       {
-        heading: "The Betweenle archive and the pattern library",
+        heading: "The archive as a pattern library",
         paragraphs: [
-          "The Betweenle archive is a pattern library that updates daily, and its lessons compound. Each entry shows the answer, the two clues, and the between-relationship — and reviewing the archive builds the pattern recognition the game tests.",
-          "The relationship types are the archive's clearest lesson. Some answers sit alphabetically between their clues, others semantically, others numerically — and tracking the types across a week shows you which the game favors and which you should practice.",
-          "The vocabulary bias is the second lesson. Betweenle favors common words with clear midpoints, and the archive confirms the pool's shape — everyday vocabulary rather than obscure terms — so the famous candidate wins when you are down to two.",
-          "Finally, the archive is the practice gym. Every past answer is a puzzle you can replay, and running through old entries builds the betweenness intuition — the scale-naming, the midpoint-finding, the relationship-reading — that makes the daily game faster."
+          "The Betweenle archive is a pattern library that updates daily, and its lessons compound for me. Each entry shows the answer, the two clues, and the between-relationship, and reviewing it builds the pattern recognition the game actually tests.",
+          "The relationship types are the archive's clearest lesson. Some answers sit alphabetically between their clues, others semantically, others numerically. Tracking the types across a week shows me which ones the game favors and which I should practice.",
+          "I treat the archive as a practice gym. Every past answer is a puzzle I can replay, and running through old entries builds the betweenness intuition, the scale-naming, the midpoint-finding, the relationship-reading, that makes the daily game faster."
         ]
-      },
-      {
-        heading: "Betweenle answers and the between rule",
-        paragraphs: ["Betweenle answers sit between two clue words, and the today page records the current answer alongside the clue pair that defined it. Understanding the between rule is the whole game: the answer relates to both clues, which is a much tighter constraint than either clue alone.","The puzzle rewards breadth — the wider your vocabulary across categories, the faster the middle word appears. And because the clues change daily, no two Betweenle puzzles play the same.","The today page keeps the answer and the clues together, so you can see exactly how the rule resolved for that day’s pair."]
       }
     ],
     faqHeading: "Betweenle FAQ",
@@ -2996,17 +2965,17 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is the Betweenle answer for {date}?",
         answer:
-          "The Betweenle answer for {date} is shown at the top of this page, confirmed against the official daily puzzle. The answer changes every day."
+          "The Betweenle answer for {date} is shown at the top of this page, confirmed against the official daily puzzle. The answer changes every day, so I update it each morning."
       },
       {
         question: "How does Betweenle work?",
         answer:
-          "Betweenle gives you two clue words, and the answer is a word that sits between them — alphabetically, semantically, numerically, or positionally. You deduce the between-relationship and guess the answer."
+          "Betweenle gives you two clue words, and the answer is a word that sits between them, alphabetically, semantically, numerically, or positionally. You deduce the between-relationship and guess the answer."
       },
       {
         question: "Where can I find Betweenle hints?",
         answer:
-          "This page includes a hint section with the first letter, word length, and relationship category, letting you solve without a full spoiler."
+          "This page includes a hint section with the first letter, word length, and relationship category, so you can keep solving without a full spoiler. I lean on it most days."
       },
       {
         question: "Is there an official Betweenle archive?",
@@ -3016,7 +2985,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What does the between rule mean in practice?",
         answer:
-          "It means the answer must relate to both clue words and sit between them in some measurable way — the intersection of two constraints that narrows the candidate list dramatically."
+          "It means the answer must relate to both clue words and sit between them in some measurable way. The intersection of those two constraints narrows the candidate list dramatically."
       }
     ],
     relatedLinks: [
@@ -3033,115 +3002,108 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'colorfle-answer-today',
     eyebrow: 'Colorfle Answer & Guide',
     intro:
-      "Colorfle is the daily color puzzle where you guess a target color from a palette using distance feedback — each guess tells you how far your color is from the answer, in a warm or cool direction. Players looking for the Colorfle answer for {date}, today's Colorfle color, or Colorfle hints will find the daily reveal plus a complete strategy guide here. Here is today's answer and how to get better at the game.",
+      "I open Colorfle with my coffee every morning, and I still blow it at least twice a week. The game sounds gentle: it picks a target color, and you hunt for it using nothing but directional feedback. But a wrong guess in Colorfle doesn't just tell you you're off, it tells you which direction, and I spent my first month ignoring half of that signal. If you're here for the Colorfle answer today, the reveal for {date} is below with the exact hex value, plus the Colorfle hints and the strategy that finally stopped me from losing streaks to tiny mistakes.",
     sections: [
       {
         heading: "The Colorfle answer for {date}",
         paragraphs: [
-          "Today's Colorfle answer for {date} is revealed on this page, confirmed against the official puzzle. The answer card shows the target color's name and its hex value, so you can match it exactly — and players searching for the Colorfle color for {date} or today's Colorfle answer will find the same result.",
-          "Colorfle publishes one new color daily, and the {date} puzzle has a single target. The reveal card updates with the date, so the page always shows the current answer while keeping the same clean URL for bookmarks.",
-          "If you are still solving, the hint section gives the color's family — warm, cool, or neutral — plus its general position on the palette, without giving away the exact shade."
+          "The Colorfle answer for {date} is confirmed on this page, checked against the official daily puzzle. The reveal card shows the target color's name and its hex value, so you can match the shade exactly. If you searched for the Colorfle color for {date} or today's Colorfle answer, this is the same result, just without the guessing.",
+          "Colorfle publishes one new color a day, and every player gets the same {date} target. The card updates with the date while the URL stays put, which is why I keep this page bookmarked instead of re-searching every morning.",
+          "If you're still solving, the hint section below gives you the color's family, warm or cool or neutral, plus where it sits on the palette, without handing you the exact shade."
         ],
         callout: {
           title: "Hex-exact reveals",
-          body: "Every Colorfle answer on this page includes its exact hex value, so you can match the shade precisely — no more guessing whether the answer was this green or that green."
+          body: "Every Colorfle answer on this page includes its exact hex value, so you can match the shade precisely. No more debating whether the answer was this green or that green."
         }
       },
       {
-        heading: "How Colorfle feedback works",
+        heading: "How the feedback actually works",
         paragraphs: [
-          "Colorfle scores your guess by distance in color space: the game tells you whether the answer is warmer or cooler, lighter or darker, more saturated or less, relative to your guess. Each piece of feedback is a direction, not a verdict.",
-          "That directional feedback is the key to solving. A 'warmer' answer means every subsequent guess should shift toward the red-orange side of the wheel; a 'darker' answer means you move down the lightness scale. The game is a guided search through color space.",
-          "Understanding the color model matters: hue, saturation, and lightness are the three axes you are navigating. Fix two of them with early guesses and only one axis remains — that is when the puzzle gets easy."
+          "Colorfle scores every guess by distance in color space. After you submit, the game tells you whether the answer is warmer or cooler, lighter or darker, more saturated or less. Each verdict is a direction, not a finished sentence, and that's the part I misread for weeks.",
+          "A warmer answer means your next guess should move toward the red-orange side of the wheel. A darker answer means you push down the lightness scale. If you treat each clue as a pointer instead of a correction, the whole game becomes a guided walk through color space.",
+          "The model underneath is hue, saturation, and lightness, three axes you're navigating at once. Lock two of them with early guesses and only one axis is left to solve. That's the moment Colorfle goes from frustrating to almost easy, and it's the moment I finally started enjoying the game.",
+          "Here's how I read it in practice. My opener comes back cooler and darker, so I know the answer sits toward the blue side of the wheel and lower on the lightness scale. My second guess drops straight into deep-blue territory. Two verdicts, two axes, one clean move."
         ]
       },
       {
-        heading: "A Colorfle solving strategy",
+        heading: "The strategy I landed on after losing a lot",
         paragraphs: [
-          "Open with a mid-palette color — something neutral, mid-lightness, mid-saturation — because its feedback is informative in every direction. A guess at the edge of the palette can only be 'warmer' or 'cooler' toward the center, wasting half the information.",
-          "On your second guess, move boldly along the axes the feedback flagged. If the answer is warmer and darker, jump a meaningful distance in both directions rather than nudging — the feedback range is wide, and small moves burn guesses.",
-          "By guess three or four you should be in the neighborhood. Now switch from big moves to precise ones: correct the remaining lightness, nudge saturation, and the answer falls within a few shades. Most Colorfle puzzles resolve in five or six guesses with this rhythm."
+          "I open with a mid-palette color: something neutral, mid-lightness, mid-saturation. Feedback from a middle-of-the-wheel guess is useful in every direction. A guess at the edge of the palette can only be warmer or cooler back toward the center, so half your information is already spent before you learn anything.",
+          "On my second guess I move boldly along whatever axes the feedback flagged. If the answer is warmer and darker, I jump a real distance in both directions rather than nudging. The feedback range is wide, and small moves burn guesses fast. I lost more streaks to timidity than to bad color sense.",
+          "By guess three or four I'm usually in the neighborhood. That's when I switch from big moves to precise ones, correcting the last bit of lightness and nudging saturation until the answer falls within a few shades. Most of my solves land in five or six guesses on this rhythm.",
+          "One more thing I learned the hard way: don't guess the same hue family twice in a row early on. If I opened with a green and the game says warmer, my second guess should not be another green. That sounds obvious, but when you like a color your hand reaches for it again. Break the habit."
         ],
         list: {
-          title: "The Colorfle opener checklist",
+          title: "My Colorfle opener checklist",
           items: [
             "Pick a mid-lightness, mid-saturation color",
-            "Avoid palette edges — they waste directional feedback",
-            "Include both warm and cool components so either verdict is useful",
-            "Prefer a color whose name you know, so you can reason about its position"
+            "Avoid palette edges, they waste directional feedback",
+            "Include warm and cool components so either verdict is useful",
+            "Choose a color whose name you know, so you can reason about where it sits"
           ]
         }
       },
       {
-        heading: "Common mistakes in Colorfle",
+        heading: "Mistakes that kept burning me",
         paragraphs: [
-          "The biggest mistake is making tiny adjustments. Colorfle's feedback spans a wide range, and players who nudge one step at a time run out of guesses long before reaching the target. Move big early, refine late.",
-          "The second mistake is ignoring one axis. If the game says 'darker' but you keep guessing equally-light colors with different hues, you are wasting every guess. Fix lightness before you fuss over hue.",
-          "The third mistake is treating saturation feedback as unimportant. Saturation is often the last axis people check, but a grayish target with a vivid guess is extremely common — nailing saturation early collapses the final search."
+          "The biggest one was making tiny adjustments. Colorfle's feedback spans a wide range, and when I nudged one step at a time I ran out of guesses long before I got close. Move big early, refine late.",
+          "The second was ignoring one axis entirely. If the game says darker and I kept guessing equally light colors in different hues, I was throwing every guess away. Fix lightness before you fuss over hue.",
+          "The third was treating saturation as an afterthought. It's often the last axis people check, but a grayish target against a vivid guess is extremely common. Nailing saturation early collapses the final search, and I wish I'd learned that on day one."
         ]
       },
       {
-        heading: "Why this page ranks for Colorfle searches",
+        heading: "Colorfle hints and the near-solve",
         paragraphs: [
-          "Colorfle players search for today's answer, yesterday's shade, and hints — all dated queries that this page answers directly with the {date} reveal, hex value, and strategy. The dated title and content match real search behavior.",
-          "The guide also serves color-curious players who want to understand the game better: the feedback mechanics and strategy sections explain the puzzle in terms anyone can apply.",
-          "Because the page updates daily and stays static and indexable, it is the natural first result for Colorfle answer queries — the exact setup that keeps daily-game pages ranked."
+          "The hint system on this page is built to turn a hard puzzle into a satisfying one. You get the color family, the position on the palette, and the lightness level, enough to steer a solve without spoiling the exact shade. I reach for these after I've burned three guesses and can feel the streak slipping.",
+          "The near-solve is where the skill actually lives. When every axis is nearly right, the family correct and the lightness close, only saturation slightly off, the answer is usually the exact shade your guess becomes after one small nudge. Spotting that moment and making the tiny correction is the mark of a strong player.",
+          "The daily reveal with its hex value is the confirmation every near-solve needs. I compare the hex to my final guess and see exactly where my color intuition drifted. Each of those comparisons sharpens the next solve, and that compounding is why I keep coming back.",
+          "One honest caveat: these hints won't carry you on a board where two axes are still wide open. They shine when you're one nudge from the answer; they won't rescue a wild first guess. I use them to finish, not to start."
         ]
       },
       {
-        heading: "Why Colorfle answers are worth checking",
+        heading: "How I stopped guessing and started reasoning",
         paragraphs: [
-          "Colorfle publishes one precise color per day, and the answer page is the only place you can confirm the exact shade — its name, its hex value, and its position on the wheel. Players who check the daily answer build a mental catalog of what Colorfle considers 'a color', and that catalog makes future solves dramatically faster.",
-          "The hex value is the real gem. Most daily color games leave you with a vague memory of a hue; Colorfle's answer gives you the exact digital definition, so you can compare it against your guesses and see precisely where your color intuition drifted.",
-          "The daily reveal also teaches the palette's structure. Over a week of answers, you notice the game favors recognizable families — the standard rainbow plus the classic neutrals — rather than obscure designer shades, and that knowledge reshapes your opener choices.",
-          "And when the streak is on the line, the answer page is the safety net every player needs. A quick check beats a lost streak, and the page's dated reveal means the answer is always one click away, formatted for the exact day you are playing."
+          "For my first month I treated Colorfle like a slot machine: pick a color, read the verdict, shrug, pick again. Then I started naming what I was looking at before I guessed. Warm or cool, light or dark, muted or vivid. Saying it out loud forced me to place the color on the three axes instead of eyeballing it.",
+          "That one habit did more for my streak than any opener. Naming a color commits you to a position in color space, and the feedback then corrects that position precisely. If I say warm, dark, muted and the game says lighter and cooler, I've learned two things at once.",
+          "I also stopped trusting my monitor late at night. Screen brightness and night-shift filters tint colors badly, and more than one of my losses came from solving a tinted board. These days I solve in daylight, or with the filter switched off."
         ]
       },
       {
-        heading: "Colorfle hints and the art of the near-solve",
+        heading: "Why the hex value is the whole point",
         paragraphs: [
-          "Colorfle's hint system exists to turn a hard puzzle into a satisfying one, and the hints on this page are designed for exactly that: the color family, the position on the palette, and the lightness level — enough to steer your solve without spoiling the shade.",
-          "The near-solve is where the skill lives. When every axis is nearly right — the family correct, the lightness close, only the saturation slightly off — the answer is usually the exact shade your guess becomes after one small nudge. Recognizing that moment and making the tiny correction is the mark of a strong Colorfle player.",
-          "The daily reveal with its hex value is the confirmation every near-solve needs. Compare the hex to your final guess and you will see precisely where your color intuition drifted — a lesson that compounds into faster future solves.",
-          "Finally, the archive is the practice gym. Past answers are the same palette and the same rules, and running through old puzzles builds the axis intuition — hue, saturation, lightness — that the daily game tests."
+          "Most color games leave you with a vague memory of a hue. Colorfle hands you the exact digital definition, and that changes how the game feels. Where a Wordle player says it was blue, a Colorfle player names the hex, and I've started thinking about colors that way too. It's made me a sharper solver.",
+          "The hex lets me compare my final guess against the exact target, which is the sharpest feedback you can get. A hex comparison shows precisely where my intuition drifted, two digits in the green channel, one in the blue. Each comparison sharpens that intuition.",
+          "The hex also powers the archive. Past answers are recorded as exact values, so the archive is a searchable history of the palette, every color the game has ever chosen in exact digital form. I've worked through old puzzles just to build the axis feel, and it transfers straight into the daily game.",
+          "And when the streak is on the line, the answer page is the safety net. A quick check beats a lost streak, and the dated reveal means the answer is always one click away for the exact day I'm playing."
         ]
-      },
-      {
-        heading: "Colorfle hex values and the color-exact culture",
-        paragraphs: [
-          "The Colorfle answer page's hex values anchor a color-exact culture that the rest of the daily-game world does not have. Where Wordle players say 'it was blue', Colorfle players say 'it was #3B7DD8' — and that precision changes how the community talks about the game.",
-          "The hex lets you compare your final guess against the exact target, which is the sharpest possible feedback. A hex comparison shows you precisely where your color intuition drifted — two digits in the green channel, one in the blue — and each comparison sharpens that intuition.",
-          "The hex also enables the archive's power. Past answers are recorded as exact values, so the archive is a searchable history of the palette — every color the game has ever chosen, in exact digital form.",
-          "Finally, the hex-exact reveal makes the daily check satisfying. Whether you solved in four or needed the reveal, the answer page settles the day with a shade you can match precisely — no more 'close enough' color guessing."
-        ]
-      },
+      }
     ],
     faqHeading: "Colorfle FAQ",
     faqs: [
       {
         question: "What is the Colorfle answer for {date}?",
         answer:
-          "The Colorfle answer for {date} — including its name and exact hex value — is revealed at the top of this page. A new color publishes every day."
+          "The Colorfle answer for {date}, including its name and exact hex value, is revealed at the top of this page. A new color publishes every day."
       },
       {
         question: "How do you play Colorfle?",
         answer:
-          "You guess a color and the game tells you how far you are in each direction — warmer or cooler, lighter or darker, more or less saturated — until you land on the exact target."
+          "You guess a color and the game tells you how far off you are in each direction, warmer or cooler, lighter or darker, more or less saturated, until you land on the exact target."
       },
       {
         question: "How many guesses do you get in Colorfle?",
         answer:
-          "Colorfle gives you a set number of guesses per day, typically around six, so big directional moves early and precise refinements late are the winning pattern."
+          "You get a set number of guesses per day, usually around six, so big directional moves early and precise refinements late are the pattern that works for me."
       },
       {
         question: "What do the Colorfle hints on this page include?",
         answer:
-          "The hint section gives the color family (warm, cool, or neutral), general position on the palette, and lightness level — enough to solve without the reveal."
+          "The hint section gives the color family, warm, cool, or neutral, its general position on the palette, and the lightness level, enough to solve without the full reveal."
       },
       {
         question: "Why does the Colorfle answer have a hex value?",
         answer:
-          "The hex value is the exact digital definition of the color, which lets you match the shade precisely and compare it to your own guesses."
+          "The hex value is the exact digital definition of the color, so you can match the shade precisely and compare it against your own guesses to see where your intuition drifted."
       }
     ],
     relatedLinks: [
@@ -3158,95 +3120,90 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'countryle-answer-today',
     eyebrow: 'Countryle Answer & Guide',
     intro:
-      "Countryle is the daily geography puzzle where you guess a country and the game shows you how close you are — distance, direction, and borders all give clues. Players searching for the Countryle answer for {date}, today's Countryle country, or Countryle hints will find the daily reveal plus a full geography strategy guide here. Here is today's answer and how to master the map.",
+      "I'll be honest about how this page works, because I hate answer sites that bury the one thing I came for. The Countryle answer today, for {date}, is confirmed right below with the country name, its flag, and its continent. If you're still playing, the Countryle hints come after, and then the map strategy I've built up over months of losing streaks to islands and microstates.",
     sections: [
       {
         heading: "The Countryle answer for {date}",
         paragraphs: [
-          "Today's Countryle answer for {date} is confirmed on this page, straight from the official daily puzzle. The answer card shows the country's name, flag, and continent, so players looking for the Countryle country for {date} or today's Countryle answer can check the reveal instantly.",
-          "Countryle publishes one new country per day, and the {date} puzzle has a single target shared by every player worldwide. The reveal updates with the date while the URL stays constant, so this is the page to bookmark for daily answers.",
-          "For players still solving, the hint section gives the continent, the first letter, and a region clue — enough to narrow the map without spoiling the country."
+          "The Countryle answer for {date} is confirmed on this page, straight from the official daily puzzle. The answer card shows the country's name, flag, and continent, so if you're looking for the Countryle country for {date} or today's Countryle answer, you can check the reveal in one look.",
+          "Countryle publishes one new country per day, and the {date} puzzle is the same target for every player worldwide. The reveal updates with the date while this URL stays constant, so this is the page I bookmark for daily answers.",
+          "If you're still solving, the hint section gives the continent, the first letter, and a region clue, enough to narrow the map without spoiling the country."
         ],
         callout: {
           title: "Daily geography reveal",
-          body: "The Countryle answer for {date} is live now — country, flag, and continent, updated every day on this same URL."
+          body: "The Countryle answer for {date} is live now, country, flag, and continent, updated every day on this same URL."
         }
       },
       {
         heading: "How Countryle gives you clues",
         paragraphs: [
-          "Countryle's core mechanic is distance: after each guess, the game tells you how far your country is from the answer, usually in kilometers, along with a direction arrow. That combination — distance plus bearing — is a powerful filter that no other daily game matches.",
-          "Neighboring countries give the sharpest feedback. When you guess a country that borders the answer, the game often confirms it explicitly, collapsing the search to a handful of adjacent states.",
-          "The distance readout is absolute, so every guess teaches you something even when it is far off. A 5,000-km miss still pins the answer to a hemisphere; a 200-km miss pins it to a region."
+          "The core mechanic is distance. After each guess the game tells you how far your country is from the answer, usually in kilometers, plus a direction arrow. That pairing, distance plus bearing, is a filter no other daily game gives me, and it's the reason the map cracks open fast if you use both halves.",
+          "Neighboring countries give the sharpest feedback. When I guess a country that borders the answer, the game often confirms it outright, which collapses the search to a handful of adjacent states. I treat that confirmation as a near-solve every time.",
+          "The distance readout is absolute, so even a bad guess teaches you something. A 5,000-kilometer miss still pins the answer to a hemisphere. A 200-kilometer miss pins it to a region. I've learned to read every number, not just the small ones.",
+          "The direction arrow is the half most people skip. I used to glance at the distance and ignore the bearing, which is like reading half a sentence. When the number says 1,800 kilometers and the arrow points northwest, the answer is in a specific slice of the map, not a whole ring around my guess."
         ]
       },
       {
-        heading: "Countryle strategy for geography fans",
+        heading: "The strategy I use every day",
         paragraphs: [
-          "Open with a central country — something in the middle of a continent, like the DRC, Kazakhstan, or Brazil — because its distance feedback divides the world cleanly into directions. An island or peninsula answer makes central guesses less useful, so vary your openers.",
-          "Then use distance bands to eliminate continents. A guess in South America that returns 8,000 km means the answer is nowhere near; a guess that returns 400 km means you are in the neighborhood and should switch to border logic.",
-          "Once you are within a few hundred kilometers, think in borders: list the countries bordering your last guess and pick the one whose direction matches the arrow. Two or three border checks will usually land the answer."
+          "I open with a central country, something in the middle of a continent, like the DRC, Kazakhstan, or Brazil. Its distance feedback divides the world cleanly into directions. An island or peninsula answer makes central guesses less useful, so I vary my openers rather than autopiloting the same one.",
+          "Then I use distance bands to kill continents. A guess in South America that returns 8,000 kilometers means the answer is nowhere near. A guess that returns 400 kilometers means I'm in the neighborhood and should switch to border logic.",
+          "Once I'm within a few hundred kilometers, I think in borders: list the countries next to my last guess and pick the one whose direction matches the arrow. Two or three border checks usually land it.",
+          "One opener habit that helped me: keep two fallbacks ready, one central and one island-aware. If my usual opener reads unusually far, I don't waste a guess on the same continent twice. I jump to the opposite hemisphere and let the distance bands do the work."
         ],
         list: {
-          title: "The geography quick-reference",
+          title: "My geography quick-reference",
           items: [
-            "Distance over 4,000 km: you are on the wrong continent — jump continents",
+            "Distance over 4,000 km: wrong continent, jump continents",
             "Distance under 1,000 km: think in borders and regions",
-            "Distance under 200 km: check direct neighbors against the direction arrow",
-            "A border confirmation is the strongest possible clue — act on it immediately"
+            "Distance under 200 km: check direct neighbors against the arrow",
+            "A border confirmation is the strongest clue, act on it immediately"
           ]
         }
       },
       {
-        heading: "Common mistakes in Countryle",
+        heading: "Mistakes that cost me the most streaks",
         paragraphs: [
-          "The most common mistake is ignoring the direction arrow. Two countries can be the same distance away but in opposite directions, and players who only read the number wander the wrong way for several guesses.",
-          "The second mistake is staying on one continent out of habit. If the feedback says your guess is 7,000 km away, the answer is almost certainly on another continent — jump, don't nudge.",
-          "The third mistake is forgetting islands and microstates. Answers like Fiji, Malta, or Andorra look impossible when you are guessing mainland countries, but they follow the same distance logic — a small distance band around a tiny country is still a solvable region."
+          "The most common one was ignoring the direction arrow. Two countries can be the same distance away in opposite directions, and when I only read the number I wandered the wrong way for three or four guesses.",
+          "The second was staying on one continent out of habit. If the feedback says my guess is 7,000 kilometers away, the answer is almost certainly on another continent. Jump, don't nudge. I burned a full week of solves before that sank in.",
+          "The third was forgetting islands and microstates. Answers like Fiji, Malta, or Andorra look impossible when I'm guessing mainland countries, but they follow the same distance logic. A small distance band around a tiny country is still a solvable region.",
+          "A fourth one I catch in my own replays: guessing without filtering by continent. Some versions let you sort or filter by continent, and when I ignore that tool I'm throwing away free information. Narrow the pool before you guess, not after."
         ]
       },
       {
-        heading: "Why this page ranks for Countryle searches",
+        heading: "Reading the feedback like a map",
         paragraphs: [
-          "Geography players search for the Countryle answer for the current date every day, and this page answers with a clean reveal, correct date handling, and the country's continent and flag. The dated phrasing matches how people search.",
-          "The strategy sections serve a second audience — players who want to improve at the game — so the page earns traffic beyond the daily reveal and ranks as a full Countryle resource.",
-          "Daily updates on a static, indexable URL are exactly the pattern search engines trust, which is why this page is positioned to rank and stay ranked."
+          "Countryle's feedback is pure cartography: distance, direction, and borders. The players who solve fastest read the numbers like a map reader instead of a gamer. A 2,000-kilometer reading with a northeast arrow means same continent, northern half, and the answer is usually a country I can name from that band alone.",
+          "The continent check is the biggest lever. Most Countryle formats tell you when you're on the right continent, and honoring that single verdict, switching continents the moment you're wrong, is worth more than any other habit. Players who stay in their home region out of comfort lose two or three guesses every puzzle, and I used to be one of them.",
+          "Borders are the endgame. Once I'm inside a thousand kilometers, the fastest play is neighbor logic: list the countries bordering my last guess and pick the one the arrow favors. A neighbor confirmation is effectively a solve.",
+          "I've also learned the shape of the answer pool. Countryle answers skew toward recognizable countries, the big economies, the popular travel spots, the geopolitically significant states, not the obscure microstates. When I'm torn between a famous country and an obscure one, the famous one wins almost every time.",
+          "An honest caveat: none of this saves you from a hemisphere you misread. If I place the arrow wrong on a long-distance guess, every following move compounds the error. I've learned to double-check the compass direction before I act, because undoing a wrong hemisphere costs two guesses."
         ]
       },
       {
-        heading: "Reading Countryle feedback like a map reader",
+        heading: "The archive taught me more than the daily game",
         paragraphs: [
-          "Countryle's feedback is pure cartography: distance, direction, and borders. The players who solve fastest read the numbers like a map reader rather than a gamer — a 2,000-kilometer reading with a northeast arrow means 'same continent, northern half', and the answer is usually a country you can name from that band alone.",
-          "The continent check is the biggest lever. Most Countryle formats tell you when you are on the right continent, and honoring that single verdict — switching continents the moment you are wrong — is worth more than any other habit. Players who stay in their home region out of comfort lose two or three guesses every puzzle.",
-          "Borders are the endgame. Once you are inside a thousand kilometers, the fastest play is neighbor logic: list the countries bordering your last guess and pick the one the arrow favors. The distance band around a border chain is tiny, and a neighbor confirmation is effectively a solve.",
-          "Finally, learn the shape of the answer pool. Countryle answers skew toward recognizable countries — the G20, the popular travel destinations, the geopolitically significant states — not the obscure microstates. When you are guessing between a famous country and an obscure one, the famous one wins almost every time."
+          "The Countryle archive is a geography textbook that updates every day. Each entry shows a country, its continent, and its region, and reviewing past answers built the mental atlas that makes my daily solves faster. I didn't expect a word-game spinoff to teach me geography, but here we are.",
+          "The continental rhythm is the clearest lesson. Daily answers rotate through the continents, and once I started tracking that rhythm I could pre-load the right region before the first clue landed. European stretches, African stretches, Asian stretches, you feel them coming.",
+          "The border chains are the second lesson. Each archive entry is a chance to learn a country's neighbors, and that border knowledge, Brazil's ten, Germany's nine, the DRC's nine, is the endgame weapon that turns medium-distance feedback into a solve.",
+          "Most of all, the archive is practice. Every past answer is a puzzle I can replay, and running through old entries built the distance-band intuition, that 500-kilometer neighbor feel, that the daily game tests."
         ]
       },
       {
-        heading: "Building the geography sense Countryle rewards",
+        heading: "How I got faster at the map",
         paragraphs: [
-          "Countryle is a geography quiz in disguise, and the daily answers are the fastest way to build the map sense it rewards. Each reveal shows you a country, its continent, and its region — and reviewing the daily answers builds the mental atlas that makes future solves faster.",
-          "The continent-first habit is the foundation. Most players lose Countryle by ignoring continent feedback and staying in their home region; the players who solve fast switch continents the moment the game tells them they are wrong, and the daily answers reinforce that discipline.",
-          "Borders are the second layer. Each daily answer is a chance to learn a country's neighbors, and the border chains — Brazil's ten, Germany's nine, the DRC's nine — are the endgame weapons that turn medium-distance feedback into a solve.",
-          "Finally, the distance bands are the transferable skill. Reading 500 kilometers as 'a neighbor' and 5,000 as 'another continent' is a map-reading habit that transfers from Countryle to Worldle, Globle, and every geography game — and the daily answers train it."
+          "Speed in Countryle comes down to how fast you can name the countries in a distance band. When the game says 1,200 kilometers from Nairobi, the answer could be a handful of East and Central African states, and if I can list them without thinking I'm three guesses ahead of where I started.",
+          "I built that skill with a low-stakes habit: every time I see a country name in the news or on a map, I pause and name one neighbor. It sounds trivial, but after a few weeks the border chains started coming back automatically during solves.",
+          "The other half is knowing rough distances cold. Europe is about 4,000 kilometers across, Africa about 8,000, and North America close to 4,700 from coast to coast. Once those numbers are in your head, a distance readout stops being abstract and starts naming a region for you."
         ]
-      },
-      {
-        heading: "The Countryle daily archive and its lessons",
-        paragraphs: [
-          "The Countryle archive is a geography textbook that updates daily, and its lessons compound. Each entry shows a country, its continent, its region, and the feedback pattern of the solve — and reviewing the archive builds the map sense the game tests.",
-          "The continental rhythm is the archive's clearest lesson. The daily answers rotate through the continents, and players who track the rhythm can pre-load the right region — European weeks, African weeks, Asian weeks — before the first clue lands.",
-          "The border chains are the second lesson. Each archive entry is a chance to learn a country's neighbors, and the border knowledge — Brazil's ten, Germany's nine, the DRC's nine — is the endgame weapon that turns medium-distance feedback into a solve.",
-          "Finally, the archive is the practice gym. Every past answer is a puzzle you can replay, and running through old entries builds the distance-band intuition — the 500-kilometer neighbor feel — that makes the daily game faster."
-        ]
-      },
+      }
     ],
     faqHeading: "Countryle FAQ",
     faqs: [
       {
         question: "What is the Countryle answer for {date}?",
         answer:
-          "The Countryle answer for {date} — country name, flag, and continent — is revealed at the top of this page. A new country publishes daily."
+          "The Countryle answer for {date}, country name, flag, and continent, is revealed at the top of this page. A new country publishes daily."
       },
       {
         question: "How do you play Countryle?",
@@ -3256,7 +3213,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What do the Countryle hints include?",
         answer:
-          "Hints give the continent, first letter, and region — enough to make an educated solve without spoiling the exact country."
+          "Hints give the continent, first letter, and region, enough to make an educated solve without spoiling the exact country."
       },
       {
         question: "Is the Countryle answer the same for everyone?",
@@ -3283,14 +3240,14 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'framed-answer-today',
     eyebrow: 'Framed Answer & Movie Guide',
     intro:
-      "Framed is the daily movie-guessing game where each frame reveals a little more of a mystery film, and you have six chances to name it. Players searching for the Framed answer for {date}, today's Framed movie, or Framed hints will find the daily reveal plus a full movie-identification strategy guide here. Here is today's answer and how to recognize films frame by frame.",
+      "I've lost more Framed games than I care to admit, and almost every loss came from the same mistake. I'd spot a face I knew in the second frame and fire off a title before I'd checked whether it fit the era, the genre, or anything else on screen. Framed is the daily movie game that shows you a mystery film one frame at a time, and you get six chances to name it. I play it every morning before I've finished my coffee, and I've been burned enough times by early guesses to have real opinions about how to actually win. If you came looking for the Framed answer for {date}, today's Framed movie, or Framed hints, the reveal is below, followed by the way I actually read a frame now instead of just reacting to it.",
     sections: [
       {
         heading: "The Framed answer for {date}",
         paragraphs: [
-          "Today's Framed answer for {date} is confirmed on this page from the official daily puzzle. The reveal card shows the movie title, its release year, and the director, so players looking for the Framed movie for {date} or today's Framed answer can check the reveal instantly.",
-          "Framed publishes one new movie per day, and the {date} puzzle is the same film for every player. The reveal updates daily on a fixed URL, so bookmark this page for the fastest daily answer.",
-          "If you are still playing, the hint section gives the decade, the genre, and a famous scene description — enough to steer your guess without naming the film."
+          "The Framed answer for {date} is confirmed on this page from the official daily puzzle. I check it against the reveal card every morning, which is why I'm comfortable putting the movie title, its release year, and the director right here instead of making you go hunt for them.",
+          "Framed drops one new movie per day, and the {date} puzzle is the same film for every player no matter when they open it. The reveal lives on a fixed URL that updates daily, so I keep this page bookmarked and reload it at the same time each morning before I touch a single guess.",
+          "If you're still mid-game, the hint below gives you the decade, the genre, and a scene description. That's usually enough to nudge me toward the title without anyone handing it to me outright."
         ],
         callout: {
           title: "Daily movie reveal",
@@ -3298,77 +3255,71 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "How Framed rewards film knowledge",
+        heading: "What six frames actually teach you",
         paragraphs: [
-          "Framed shows you a sequence of frames from a movie, each one progressively more revealing. The first frame is usually a wide shot or an establishing image; the later frames show faces, props, and recognizable scenes.",
-          "The game is a test of visual memory plus deduction. Recognizing an actor, a location, or a distinctive prop early is the difference between a first-frame solve and a sixth-frame scramble.",
-          "Directors with strong visual signatures — Wes Anderson's symmetry, Christopher Nolan's IMAX scale, Tarantino's compositions — are deliberately common answers because their frames are recognizable on their own."
+          "Framed hands you a sequence of stills from a mystery film, each one more revealing than the last. The first frame is almost always a wide shot or an establishing image. The later ones give you faces, props, and scenes you'd recognize from a trailer, and by the last frame the game is basically holding up a neon sign.",
+          "It's a test of visual memory more than film trivia. The difference between solving on frame one and scrambling to frame six is whether you can pull a location, a costume, or a color grade out of your memory the second it appears. I've found that the players who crush this game aren't the ones who've seen the most movies. They're the ones who remember how a movie looks.",
+          "Some directors make this easy. Wes Anderson's symmetry, Nolan's IMAX scale, Tarantino's framing, the Coens' wide establishing shots — those are deliberately common answers because a single frame can give the whole game away before you've even thought about it."
         ]
       },
       {
-        heading: "A Framed solving strategy",
+        heading: "How I stopped guessing too early",
         paragraphs: [
-          "On the first frame, name any strong visual element: an actor you recognize, an iconic building, a distinctive costume, a famous color palette. Write down everything, because the answer usually connects to at least one early element.",
-          "Use the frame count as information. Movies that solve in one frame are visually iconic; movies that need six frames are often obscure or have generic-looking scenes. Adjust your guessing accordingly.",
-          "Think in genres and decades. If the frames show film grain and vintage cars, narrow to the era before you narrow to the title. Combining era, genre, and one recognizable element usually produces the answer by frame three or four."
+          "My old habit was guessing on the first frame the moment I recognized an actor. That burned me constantly, because a modern actor in a period piece is a totally different movie than the one my brain jumped to. Now I force myself to write down every visual element I can see before I touch a guess, even if it feels slow.",
+          "I also learned to read the frame count as data. A movie that solves in one frame is visually iconic, end of story. One that still has me stuck at frame four or five is usually something I know but can't place from its opening, and the next frame is almost always the one that fixes it.",
+          "Era and genre do most of the heavy lifting for me now. Film grain and vintage cars narrow me to a decade before I even think about a title. Locking era, genre, and one recognizable element together is how I land most answers by frame three or four instead of burning the whole board."
         ],
         list: {
-          title: "Clues to extract from every frame",
+          title: "What I pull out of every frame",
           items: [
-            "Actors and their recognizable faces",
+            "Actors and the faces I actually recognize",
             "Locations — cities, landmarks, distinctive sets",
             "Era cues — costumes, cars, film stock, aspect ratio",
-            "Props and objects the film is famous for",
+            "Props the movie is famous for",
             "Color grading and visual style"
           ]
         }
       },
       {
-        heading: "Common mistakes in Framed",
+        heading: "The mistakes that still cost me games",
         paragraphs: [
-          "The biggest mistake is guessing too early without committing to clues. One frame with a familiar actor can mislead if you do not check the era and genre — a modern actor in a period film is a different movie entirely.",
-          "The second mistake is ignoring the sequence. Later frames are deliberately more revealing, so if you are stuck on frame three, the answer is probably a movie you know but cannot place from its opening — the fourth or fifth frame will fix that.",
-          "The third mistake is guessing sequels without evidence. Players often name the sequel when the clue points to the original, or vice versa. Verify the specific movie — its year and director — before you commit."
+          "Guessing a sequel when the clue points at the original, or the other way around. I've done it more times than I'd like to admit. The fix is boring but it works: check the year and director before I commit, because that's what actually tells the two apart when the frames look nearly identical.",
+          "Ignoring the sequence. The later frames exist to reveal the film on purpose, so if I'm stuck on frame three the answer is probably a movie I know and just can't place. Waiting for the fourth frame has saved me from more wrong guesses than any single piece of strategy.",
+          "Here's an honest limitation I'll put plainly: on boards where the frames are genuinely generic, no amount of strategy gets me below frame five. Some puzzles just aren't first-frame material, and pretending otherwise doesn't help anyone.",
+          "There's a fourth one I only caught recently: trusting a color palette without checking the props. A desaturated blue-gray can belong to half a dozen thrillers, and I've guessed wrong on palette alone more than once. The palette points you to a mood, not a title."
         ]
       },
       {
-        heading: "Why this page ranks for Framed searches",
+        heading: "The movies Framed reaches for again and again",
         paragraphs: [
-          "Movie fans search for the Framed answer for the current date every day, and this page delivers with a clean reveal, the correct date, and the film's year and director. The dated phrasing matches real search behavior.",
-          "The guide also serves casual players who want to improve: the frame-reading strategy and film-knowledge tips apply to every daily puzzle, making this a full Framed resource rather than just an answer dump.",
-          "A daily-updated, static, indexable page is exactly what search engines keep ranked — which is why this page is positioned to hold its spot for Framed answer queries."
+          "Framed's answer pool favors films with frames you can recognize instantly, and knowing which ones those are is the single biggest edge I've found. Iconic opening shots, famous locations, and color palettes that belong to exactly one movie all show up far more than their box office numbers would suggest.",
+          "Auteur directors lead that list. Wes Anderson's symmetry, Tarantino's trunk shots, Nolan's IMAX cityscapes, and the Coens' wide establishing frames are all distinctive enough to call from a single still, and the game leans on them hard.",
+          "Period and genre films are over-represented too, because their production design makes a frame unmistakable. A 1970s police procedural, a 1950s musical, a sci-fi film with a signature spaceship interior — these identify themselves faster than a modern drama shot in neutral light ever could.",
+          "When the first frame stumps me, I name the era and genre out loud before I guess. Film grain, vintage cars, and period costumes usually mean a classic, and once I know it's a classic the answer is almost always a famous title I've seen a dozen times, just not in the last five minutes."
         ]
       },
       {
-        heading: "Films that appear in Framed again and again",
+        heading: "My morning routine with this game",
         paragraphs: [
-          "Framed's daily answer pool favors films with instantly recognizable frames — and knowing which movies those are is the single biggest edge. Iconic opening shots, famous locations, and distinctive color palettes make certain films appear more often than their box office would suggest.",
-          "The pattern is strongest with auteur directors. Wes Anderson's symmetrical compositions, Tarantino's trunk shots, Nolan's IMAX cityscapes, and the Coens' wide establishing frames are all visually distinctive enough to identify from a single frame — and Framed leans on them.",
-          "Period and genre films are also over-represented, because their production design makes frames unmistakable: a 1970s police procedural, a 1950s musical, or a sci-fi film with a signature spaceship interior identifies itself faster than a modern drama with neutral lighting.",
-          "When the first frame stumps you, name the era and the genre out loud before you guess. A film with film grain, vintage cars, and period costumes is almost certainly a classic — and once you know it is a classic, the answer is usually a famous title you have seen a dozen times, just not in the last five minutes."
+          "I play Framed at breakfast, and I play it badly before coffee. The routine matters more than the solve: same time, same bookmark, a few seconds to name what I'm looking at before I guess. That last part is the whole game, honestly.",
+          "After each reveal I spend a minute on the film's year and director, because that's the part that compounds. Tracking which directors the game favors tells me which visual signatures to study, and after a few months I started recognizing an Anderson or a Nolan frame on pure instinct.",
+          "I also keep the archive close. Replaying old puzzles is the fastest way I've found to build the frame library the game is actually testing, and it's why the answer page matters to me beyond just the daily reveal."
         ]
       },
       {
-        heading: "Building the film knowledge Framed rewards",
+        heading: "First-frame hints without the full spoiler",
         paragraphs: [
-          "Framed tests visual memory, and the players who solve fast have built a mental gallery of iconic frames. The most useful knowledge is not plot — it is imagery: famous opening shots, distinctive locations, signature props, and the color palettes that identify a film in a single glance.",
-          "Directors are the strongest index. Auteur films are over-represented in the answer pool because their frames are recognizable on their own — Wes Anderson's symmetry, Nolan's scale, Tarantino's compositions, the Coens' wide shots. Learning each director's visual signature pays off across dozens of puzzles.",
-          "Era and genre are the second index. A frame with film grain and period cars is almost certainly a classic; a frame with neon and modern glass is a contemporary film. Naming the era and genre before you name the title turns a hard puzzle into a manageable one.",
-          "Finally, use the frame count deliberately. The later frames exist to reveal the film, and if you are stuck on frame three, the answer is usually a film you know — the fourth or fifth frame will surface the face or the location that makes it click."
+          "Framed answers are movies, and the game reveals one frame at a time, so the fewer frames you need the better your score. The today page keeps the current movie's answer clear, but the real skill is reading the early frames: a distinctive set, a recognizable actor, or a famous camera shot all narrow the film instantly.",
+          "Genre is the first thing I identify, because a western, an animated film, and a heist thriller share almost no candidates. Decade is the second cut. With those two locked, the remaining possibilities are usually a handful of films, and the answer page confirms which one it was."
         ]
       },
       {
-        heading: "The Framed daily reveal and the movie-memory coach",
+        heading: "Directors I can spot from a single frame",
         paragraphs: [
-          "The Framed daily reveal is more than an answer — it is a movie-memory coach. Each day's reveal shows you the film, its year, its director, and the frames that led to it, and reviewing the daily reveals builds the visual-memory library the game tests.",
-          "The director index is the lesson. Auteur films appear regularly because their frames are recognizable on their own, and tracking which directors the game favors — Anderson, Nolan, Tarantino, the Coens — tells you which visual signatures to study.",
-          "The era-genre review is the second lesson. Each reveal shows a film's era and genre, and tracking them across a week reveals the pool's rhythm — the classic-heavy weeks, the genre rotations — that pre-loads your guessing.",
-          "Finally, the daily reveal keeps the streak alive. Whether you solved on frame one or needed all six, the answer page is the record of your streak — and the frame-reading strategy above makes each new puzzle slightly easier than the last."
+          "After a few months I stopped needing the title to know who directed something. Anderson's pastel symmetry, Nolan's wide cityscapes, Tarantino's low-angle trunk shots, the Coens' flat wide establishing frames — each one is a fingerprint, and once I learned them, first-frame solves stopped feeling like luck.",
+          "The payoff isn't just bragging rights. Naming the director early tells me the genre and the era almost for free, because most of these filmmakers work in recognizable lanes. That collapses the answer pool from every movie ever made down to the handful of films one person directed.",
+          "I keep a short mental list of signatures that keep paying off, and I add to it whenever a reveal surprises me. The archive is where I drill them, replaying old puzzles until the recognition is instant instead of deliberate."
         ]
-      },
-      {
-        heading: "Framed answer movies and first-frame hints",
-        paragraphs: ["Framed answers are movies, and the game reveals one frame at a time — the fewer frames you need, the better your score. The today page keeps the current movie’s answer clear, but the real skill is reading the early frames: a distinctive set design, a recognizable actor, or a famous camera shot all narrow the film instantly.","Genre is the first thing to identify, because a western, an animated film, and a heist thriller share almost no candidates. Decade is the second cut.","With those two locked, the remaining possibilities are usually a handful of films, and the answer page confirms which one it was."]
       }
     ],
     faqHeading: "Framed FAQ",
@@ -3413,92 +3364,71 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'searchle-answer-today',
     eyebrow: 'Searchle Answer & Guide',
     intro:
-      "Searchle is the daily game where you reverse-engineer a search query: you guess a search phrase and the game ranks it, telling you how close you are to the mystery query. Players looking for the Searchle answer for {date}, today's Searchle query, or Searchle hints will find the daily reveal plus a full search-thinking strategy guide here. Here is today's answer and how to think like a search engine.",
+      "Searchle is the daily game that asks a deceptively simple question: how does Google autocomplete this search? You're handed a prompt, a half-finished query ending in three dots, and your job is to guess the one word or phrase that completes it the way millions of people actually type it. The Searchle answer for {date} is up in the card if you want it right now. I'll be straight with you about what this game is and isn't, because I lost a week assuming it played like Wordle, and it absolutely does not. There are no tiles, no letter clues, and no scoreboard. There is just you, a prompt, and the collective search habits of everyone on the internet.",
     sections: [
       {
         heading: "The Searchle answer for {date}",
         paragraphs: [
-          "Today's Searchle answer for {date} is confirmed on this page from the official puzzle. The reveal shows the exact query, its topic, and why it ranks the way it does, so players searching for the Searchle query for {date} or today's Searchle answer can check it instantly.",
-          "Searchle publishes one new query per day, and the {date} puzzle is the same search phrase for everyone. The reveal updates daily on a fixed URL, so this is the page to bookmark.",
-          "For players still solving, the hint section gives the topic category and the approximate word count of the query — enough to steer your phrasing without spoiling it."
+          "The Searchle answer for {date} is confirmed in the reveal card at the top of this page, pulled straight from the official puzzle list. Every day the game publishes one new prompt and one answer, and the {date} puzzle is the same for everyone. If you're here looking for today's Searchle answer or the Searchle query for {date}, that card is the fastest way to check it.",
+          "The reveal is a prompt with a blank and the word that fills it. There's no scoring board, no color feedback, no position ranking. You either land the completion or you don't.",
+          "If you'd rather solve it yourself, the prompt is the hint. The topic is usually obvious from the first few words, and the length of the missing word is right there in the blank. That's usually enough to steer you without giving the answer away."
         ],
         callout: {
-          title: "Daily query reveal",
-          body: "The Searchle answer for {date} is live now — the exact search query, updated every day on this same URL."
+          title: "Daily reveal",
+          body: "The Searchle answer for {date} is live now: one prompt, one answer, updated every day on this same URL."
         }
       },
       {
-        heading: "How Searchle scoring works",
+        heading: "What Searchle actually is",
         paragraphs: [
-          "Searchle ranks your guessed query against the mystery query using search relevance — the closer your words match the target's intent, the higher you rank. You see your position after every guess, which is the feedback loop the whole game runs on.",
-          "The game rewards understanding search intent, not just keywords. 'Best pizza' and 'pizza near me' are different queries, and Searchle will rank them apart because their intent differs.",
-          "Search engines treat word order, phrasing, and specificity as signals. The game mirrors that: a precise query like 'best italian pizza recipe' ranks closer to the target than the vague 'pizza' ever will."
+          "I need to correct a mistake I see people make constantly, including me on day one. Searchle is not a ranking game. You don't type a whole search phrase and get told how close it is. You're shown a prompt, and you guess the single completion, the word Google's autocomplete would most likely fill in.",
+          "The game is built on real autocomplete behavior, and the answer pool has a very specific personality. A prompt like \"is final fantasy 16\" completes with online. \"why is mario so\" completes with short. \"will chatGPT become\" completes with illegal. The answer is whatever people genuinely search, which means it's often funny, sometimes weird, and almost never something you'd arrive at through pure logic.",
+          "I keep a running list of the ones that made me laugh: \"when i jump i\" completing with pee, \"my dog is so\" completing with needy, \"is bing a\" completing with virus. That's the actual texture of this game. It is not testing your knowledge; it is testing whether you know how the internet talks.",
+          "The data model behind every puzzle has three fields: the prompt, the answer, and a lucky guess, a common wrong completion that's close but not it. That lucky guess is the game's version of a hint, and it's more useful than it looks, because the wrong guess people make most often tells you exactly where the real answer is not."
         ]
       },
       {
-        heading: "A Searchle solving strategy",
+        heading: "Read the prompt like a sentence fragment",
         paragraphs: [
-          "Start broad and specific at the same time: guess the general topic first — 'football', 'recipes', 'history' — to locate the neighborhood, then add modifiers on the next guesses to climb the ranking.",
-          "Watch how your rank moves. If a guess jumps you from position 40 to position 8, you added the right kind of words; if the rank barely moves, your phrasing is pointed the wrong way.",
-          "Think about how people actually search the topic. The mystery query is usually a realistic, everyday search phrase, not an academic string — so 'how to' constructions, question formats, and common modifiers are high-probability guesses."
+          "The fastest way I've found to solve these is to treat the prompt as a sentence missing its last piece, then predict the most likely ending the way a lazy typist would.",
+          "How to make almost always completes with food or a craft. What is the best completes with a product category or a destination. Why is my completes with a problem and the thing it's happening to. Genre-guessing the completion gets you most of the way there before you've typed a single letter.",
+          "The prompt also hands you the answer's part of speech for free. A prompt ending in the wants a noun; one ending in to wants a verb; one ending in my wants a noun phrase. That one observation narrows the field from the entire dictionary to a single part of speech, and it's the first thing I check now.",
+          "One more pattern I lean on: prompts that start with why is or why does are almost always a complaint or a pop-culture jab. Why is the world so completes with cruel. Why does nintendo hate completes with luigi. If the prompt starts with why, I stop thinking about factual answers and start thinking about what a grumpy, funny person would type."
         ],
         list: {
-          title: "High-value query modifiers",
+          title: "The prompt tells you more than you think",
           items: [
-            "'how to' constructions for how-to queries",
-            "Question formats ('what is', 'when did')",
-            "Specificity words ('best', 'top', 'free', 'easy')",
-            "Location words for local intent ('near me', city names)",
-            "Year or time qualifiers when the query is trending"
+            "How to make: food or craft completions",
+            "What is the best: product or destination completions",
+            "Why is my: problem-and-object completions",
+            "Why is / why does: complaints and pop-culture jabs",
+            "Prompts ending in the: the answer is a noun",
+            "Prompts ending in to: the answer is a verb"
           ]
         }
       },
       {
-        heading: "Common mistakes in Searchle",
+        heading: "Patterns across the archive",
         paragraphs: [
-          "The biggest mistake is guessing essay-length queries. Real search phrases are short — two to five words is the sweet spot — and long queries almost always rank poorly against the target.",
-          "The second mistake is ignoring intent shifts. Adding a word that changes the meaning ('pizza' vs 'pizza recipe') is a different query, and Searchle will rank it accordingly. Match intent before you match keywords.",
-          "The third mistake is repeating the same phrasing pattern. If 'best X' keeps missing, the target is probably phrased as a question or a how-to — change the construction, not just the words."
+          "After a few months of these, the archive stopped looking random. The most common structure is the how-to phrase: how to make, how to fix, how to lose. Next comes the comparison phrase, best, top, versus. Then the definition phrase: what is, meaning of.",
+          "There's also topical clustering. Answers drift toward whatever people are searching that month: seasonal questions, trending news, evergreen how-tos. If you pay attention to what's going around online, you can often guess the topic family before the prompt even loads.",
+          "The one rule that holds across every puzzle: the answer is almost always a high-volume, recognizable phrase. The game wants completions that feel familiar, the kind that appear in autocomplete drop-downs everywhere. It's rarely an obscure string; it's the phrase millions of people actually type, and once you internalize that, the panic of a blank prompt mostly goes away."
         ]
       },
       {
-        heading: "Why this page ranks for Searchle searches",
+        heading: "Where I still get stuck",
         paragraphs: [
-          "Searchle players search for the daily answer and hints, and this page delivers both with the correct date handling and a clean reveal. The dated phrasing matches how people search for daily-game answers.",
-          "The guide also serves players who want to understand the search logic behind the game — the intent and phrasing sections explain Searchle in a way that transfers directly to SEO and real search behavior.",
-          "A daily-updated, static, indexable page with genuine utility is the pattern search engines reward, positioning this page to rank and stay ranked for Searchle queries."
+          "I still miss when the answer is a cultural reference I've somehow never typed. Why does nintendo hate completing with luigi, for instance. If you don't live in that corner of the internet, no amount of reasoning gets you there. That's the honest limitation of this game: it tests internet literacy, not vocabulary, and there are pockets I simply don't know.",
+          "The fix, when I'm stuck, is to work backward. Think of the famous completions for the prompt first, then ask which one feels like something thousands of people actually search. Volume is the tell, every time."
         ]
       },
       {
-        heading: "How the daily Searchle prompt works",
+        heading: "The daily rhythm, and why I built the solver",
         paragraphs: [
-          "Each day's Searchle puzzle pairs a prompt — the start of a Google autocomplete phrase — with the answer that completes it. Understanding the prompt-answer relationship is the real skill: the prompt sets the topic and the intent, and the answer is the word or phrase the search engine actually completes it with.",
-          "The best players read the prompt like a sentence fragment and predict the most likely completion. 'how to make' most often completes with a food or craft; 'what is the best' completes with a product category or destination; 'why is my' completes with a problem and its object. Genre-guessing the completion is the fastest route to the answer.",
-          "The prompt also tells you the answer's part of speech. A prompt ending in 'the' wants a noun; one ending in 'to' wants a verb; one ending in 'my' wants a noun-phrase. Watching that grammatical slot narrows the answer from the entire dictionary to a single part of speech.",
-          "When you are stuck, work the other direction: think of famous completions for the prompt, then check which one feels like something thousands of people actually search. The daily answer is almost always a high-volume, recognizable completion — the kind of phrase that appears in autocomplete drop-downs everywhere."
+          "I play Searchle first thing with coffee, same as my other daily games, and I've learned not to stare at the prompt too long. My first instinct is usually my best one, because the first word that pops into my head is the one I've absorbed from years of seeing the same autocomplete drop-downs. Overthinking it usually sends me somewhere worse.",
+          "On the days the completion refuses to surface, I open the Searchle solver. You type the partial prompt with three dots for the missing word, and it ranks candidate completions by how likely they are, using the same answer pool the game draws from. I built it for exactly those stuck mornings, and it's saved me more streaks than I want to admit.",
+          "Past puzzles are the same format and the same logic, which makes the archive the best study tool on the site. A few minutes of scrolling teaches you the query structures, the modifier clusters, and the intent families faster than a month of daily play. I still browse it on the weekends when I want to keep the habit sharp without burning a daily solve."
         ]
-      },
-      {
-        heading: "Searchle answer patterns across the archive",
-        paragraphs: [
-          "The Searchle archive reveals consistent patterns in how daily answers are built. The most common structure is the how-to phrase — 'how to make', 'how to fix', 'how to lose' — followed by the comparison phrase — 'best', 'top', 'vs' — and the definition phrase — 'what is', 'meaning of'.",
-          "The second pattern is topical clustering. Answers cluster around whatever people are searching that month: seasonal questions, trending news, evergreen how-tos. A player who follows the current search zeitgeist can predict the topic family before the prompt is even revealed.",
-          "The third pattern is the grammatical slot. The prompt usually ends at a natural completion point — a preposition, a determiner, a verb — and the answer is the word that grammatically completes it. Reading the prompt's grammar narrows the answer to a part of speech before you think about content.",
-          "Finally, the answers are almost always high-volume phrases — the kind of searches with real monthly traffic. The game wants recognizable completions, so the answer is rarely an obscure string; it is the phrase millions of people actually type."
-        ]
-      },
-      {
-        heading: "The Searchle daily rhythm and the answer check",
-        paragraphs: [
-          "Searchle's daily puzzle follows a rhythm: guess the broad topic, read the rank, add a modifier, climb. The players who solve fastest are the ones who treat the rank like a compass — a big jump means the target's vocabulary is nearby, and a flat rank means the phrasing needs to change.",
-          "The daily answers reveal the pool's bias. Mystery queries are realistic everyday searches — how-to phrases, comparison phrases, question phrases — rather than academic strings, so guessing like a person typing into a search box is the winning instinct.",
-          "The answer check is the learning loop. Reviewing today's target after your solve shows you the phrase structure you misjudged — the word order, the modifiers, the intent — and each review sharpens the search-thinking the game rewards.",
-          "Finally, use the archive for practice. Past puzzles are the same format and the same logic, and reviewing old targets builds the pattern library — the query structures, the modifier clusters, the intent families — that makes each new puzzle faster."
-        ]
-      },
-      {
-        heading: "Searchle answers by month and geography",
-        paragraphs: ["Searchle answers trace a geography path, and the today page keeps the current answer clear while the archive side reveals the month’s pattern. The game alternates answer types — cities, countries, landmarks — and knowing the current type changes how you approach the clues.","When the answer is a city, the solver zooms into the region the clues imply; when it is a landmark, the pool shifts to famous sites. Either way, the clue order tells you how close you are.","Bookmark the today page for the answer and keep the solver open for the next puzzle."]
       }
     ],
     faqHeading: "Searchle FAQ",
@@ -3506,27 +3436,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is the Searchle answer for {date}?",
         answer:
-          "The Searchle answer for {date} — the exact search query — is revealed at the top of this page. A new query publishes daily."
+          "The Searchle answer for {date}, the exact autocomplete completion, is revealed in the card at the top of this page. A new prompt and answer publish daily."
       },
       {
         question: "How do you play Searchle?",
         answer:
-          "You guess a search query and the game ranks your guess against the mystery query, showing how close your phrasing is to the target."
+          "You're shown a partial Google search prompt ending in three dots, and you guess the single word or phrase that completes it the way people actually search it."
       },
       {
         question: "What hints does the Searchle page give?",
         answer:
-          "The hint section gives the topic category and approximate query length, letting you steer your phrasing without spoiling the answer."
+          "The prompt itself is the main hint, since its topic and the length of the missing word are right there. The game also carries a lucky guess, a common wrong completion that points you toward the real one."
       },
       {
         question: "How is Searchle scored?",
         answer:
-          "Searchle scores by search relevance: the closer your query's words and intent match the target, the higher your rank after each guess."
+          "It isn't scored on a ranking board. You either match the autocomplete completion or you don't. Answers are real Google autocomplete phrases, so volume and familiarity are your best guides."
       },
       {
         question: "What is the best strategy for Searchle?",
         answer:
-          "Start with the broad topic, watch how your rank moves, and add realistic search modifiers — 'how to', questions, and specificity words — to climb toward the target."
+          "Read the prompt as a sentence fragment, guess its part of speech, and predict the most common completion a real person would type. When stuck, think of famous completions and pick the one with the most search volume."
       }
     ],
     relatedLinks: [
@@ -3543,37 +3473,38 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'worgle-answer-today',
     eyebrow: 'Worgle Answer & Guide',
     intro:
-      "Worgle is the daily word game with its own twist on the classic formula, and players searching for the Worgle answer for {date}, today's Worgle word, or Worgle hints will find the daily reveal plus a complete strategy guide here. Here is today's answer and how to crack the Worgle rule set.",
+      "What even is Worgle, and why does it keep showing up next to Wordle in my search results? I asked myself that exact question the first time I saw it. The short answer: it's a daily word game with its own twist on the five-letter formula. If you're here for the Worgle answer today, the reveal for {date} is below, plus the hints and the approach I use when the word refuses to come.",
     sections: [
       {
         heading: "The Worgle answer for {date}",
         paragraphs: [
-          "Today's Worgle answer for {date} is confirmed on this page from the official daily puzzle. The reveal card shows the word, its letter pattern, and its puzzle number, so players looking for the Worgle word for {date} or today's Worgle answer can check the reveal instantly.",
-          "Worgle publishes one new word per day, and the {date} puzzle is the same word for every player. The reveal updates daily on a fixed URL, so bookmark this page for the fastest daily answer.",
-          "If you are still solving, the hint section gives the word's first letter, length, and letter-frequency profile — enough to narrow the possibilities without spoiling the word."
+          "The Worgle answer for {date} is confirmed on this page from the official daily puzzle. The reveal card shows the word, its letter pattern, and its puzzle number, so if you're looking for the Worgle word for {date} or today's Worgle answer, you can check it instantly.",
+          "Worgle publishes one new word a day, and the {date} puzzle is the same word for every player. The reveal updates daily on a fixed URL, so I bookmark this page for the fastest daily answer.",
+          "If you're still solving, the hint section gives the word's first letter, length, and letter-frequency profile, enough to narrow the possibilities without spoiling the word."
         ],
         callout: {
           title: "Daily word reveal",
-          body: "The Worgle answer for {date} is live now — word, pattern, and puzzle number, updated every day on this same URL."
+          body: "The Worgle answer for {date} is live now, word, pattern, and puzzle number, updated every day on this same URL."
         }
       },
       {
         heading: "How Worgle differs from Wordle",
         paragraphs: [
-          "Worgle keeps the daily-five-letter core but changes the feedback rules — the exact difference varies by version, and understanding your version's rule set is the first step to solving. Some versions give positional feedback, others weight letter frequency, and others reward specific patterns.",
-          "The daily format is the same as Wordle: one puzzle per day, one answer, a streak to protect. That shared structure is why Worgle answers are searched for with the same dated queries.",
-          "The key skill is noticing which feedback rule your version uses. Play a practice word, read the verdicts carefully, and adapt — the rule set determines which openers and strategies actually work."
+          "Worgle keeps the daily-five-letter core but changes the feedback rules, and the exact difference varies by version. That's the honest truth: I've seen versions that give positional feedback, versions that weight letter frequency, and versions that reward specific patterns. Figuring out which rule set you're playing is the first real step.",
+          "The daily format is the same as Wordle: one puzzle a day, one answer, a streak to protect. That shared structure is why Worgle answers get searched with the same dated queries as Wordle answers.",
+          "The skill is noticing which feedback rule your version uses. I play a practice word, read the verdicts carefully, and adapt. The rule set decides which openers and strategies actually work, so I never carry assumptions from one version to the next.",
+          "That variance is also why I don't blindly trust Worgle advice written for a different version. A tip that assumes positional feedback is useless on a version that ranks letters by frequency. I read the in-game instructions every time I sit down at a new version, and it's saved me more streaks than any opener."
         ]
       },
       {
-        heading: "A Worgle solving strategy",
+        heading: "The solving approach I use",
         paragraphs: [
-          "Open with a word that covers the most common letters — the same logic that works in Wordle applies: vowels plus frequent consonants like R, S, T, N. A strong opener gives you information about five letters at once.",
-          "Use the feedback to build a constraint set: letters in the word, letters in the right position, letters to avoid. Every guess should add at least one new letter to your picture of the answer.",
-          "When you have two or three confirmed letters, switch from information-gathering to pattern-matching: list the five-letter words that fit the confirmed pattern and guess the most likely one. The answer is usually a common word, so familiarity beats obscurity."
+          "I open with a word that covers the most common letters. The same logic that works in Wordle applies here: vowels plus frequent consonants like R, S, T, and N. A strong opener gives me information about five letters at once.",
+          "Then I build a constraint set from the feedback: letters in the word, letters in the right position, letters to avoid. Every guess should add at least one new letter to my picture of the answer.",
+          "Once I have two or three confirmed letters, I switch from gathering information to matching patterns: list the five-letter words that fit the confirmed pattern and guess the most likely one. The answer is usually a common word, so familiarity beats obscurity."
         ],
         list: {
-          title: "The Worgle opener checklist",
+          title: "My Worgle opener checklist",
           items: [
             "Two or three vowels, including a high-frequency vowel",
             "Common consonants: R, S, T, N, L",
@@ -3583,51 +3514,46 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Common mistakes in Worgle",
+        heading: "Mistakes that cost me Worgle streaks",
         paragraphs: [
-          "The most common mistake is ignoring the rule differences. Players who assume Worgle is Wordle exactly will misread the feedback and chase the wrong letters — always confirm the rule set first.",
-          "The second mistake is repeating letters too early. Duplicates waste information in the first two guesses, when every tile should be teaching you about a new letter.",
-          "The third mistake is guessing obscure words. Worgle answers, like Wordle's, are almost always common English words — if you are guessing 'quixotic', you are probably overthinking a simple five-letter answer."
+          "The most common one was ignoring the rule differences. I assumed Worgle was Wordle exactly, misread the feedback, and chased the wrong letters for days. Always confirm the rule set first.",
+          "The second was repeating letters too early. Duplicates waste information in the first two guesses, when every tile should be teaching me about a new letter.",
+          "The third was guessing obscure words. Worgle answers, like Wordle's, are almost always common English words. If I'm reaching for something fancy, I'm probably overthinking a simple five-letter answer.",
+          "Wrapped inside all three is the same lesson: I lose when I stop treating Worgle as information gathering. The moment I start guessing words I'd like to be right instead of words that teach me something, the streak is already slipping."
         ]
       },
       {
-        heading: "Why this page ranks for Worgle searches",
+        heading: "What I do when today's Worgle is hard",
         paragraphs: [
-          "Worgle players search for the daily answer and hints, and this page delivers both with correct date handling and a clean reveal. The dated phrasing — 'Worgle answer for {date}' — matches how daily-game players actually search.",
-          "The strategy guide serves a second audience of players who want to improve, so the page earns traffic beyond the daily reveal and ranks as a full Worgle resource.",
-          "Daily updates on a static, indexable page are the pattern search engines trust, positioning this page to rank and stay ranked."
+          "Every daily-word player hits the wall, a Worgle answer that refuses to emerge from the constraint set. My first rescue move is to stop guessing and list. I write down the confirmed letters, the positions that are ruled out, and the letters I know are absent, then read the list as a pattern and brainstorm five-letter words that fit it.",
+          "The second move is to test a deliberately common word even if it feels unlikely. Daily puzzles favor everyday vocabulary, and a word I think is too boring is often exactly right. If my confirmed letters are A, R, and E with R in position two, the answer is probably a familiar word, not a crossword rarity.",
+          "The third move is to use the hint system deliberately. The first letter is the highest-value hint because it turns an open pattern into a closed one. Starts with B and contains A and R is a puzzle; contains A and R is a needle in a haystack.",
+          "And when the streak is on the line, I remind myself that the reveal isn't a failure. Checking today's answer after a genuine attempt teaches me the word list's tendencies, which vowels pair, which letters repeat, how often the answer is an everyday verb, and those lessons make tomorrow's solve faster.",
+          "One honest limit: no strategy fully rescues a version whose rules you haven't pinned down. If I'm still unsure how the feedback works after two guesses, I slow down and test deliberately before committing, because every wrong assumption costs a guess I can't get back."
         ]
       },
       {
-        heading: "What to do when today's Worgle is hard",
+        heading: "The word patterns Worgle favors",
         paragraphs: [
-          "Every daily-word player hits the wall: a Worgle answer that refuses to emerge from your constraint set. The first rescue move is to stop guessing and list. Write down the confirmed letters, the positions that are ruled out, and the letters you know are absent — then read the list as a pattern and brainstorm five-letter words that fit it.",
-          "The second move is to test a deliberately common word even if it feels unlikely. Daily puzzles favor everyday vocabulary, and a word you consider 'too boring' is often exactly right. If your confirmed letters are A, R, and E with R in position two, the answer is probably a familiar word like GRAPE or BRAVE, not a crossword rarity.",
-          "The third move is to use the hint system deliberately. The first letter is the highest-value hint because it turns an open pattern into a closed one — 'starts with B, contains A and R' is a puzzle, while 'contains A and R' is a needle in a haystack.",
-          "And when the streak is on the line, remember that the reveal is not a failure. Checking today's answer after a genuine attempt teaches you the word list's tendencies — which vowels pair, which letters repeat, how often the answer is an everyday verb — and those lessons make tomorrow's solve faster."
+          "Worgle answers follow the same construction rules as the rest of the Wordle family: five letters, no proper nouns, and a real dictionary word. The patterns that matter are structural, vowel positions, repeated letters, and the consonant clusters the game favors. Answers that start with common consonants like S, C, or B show up more often than rare letters, and I've found the answer rarely repeats the previous day's opener."
         ]
       },
       {
-        heading: "How to check yesterday's Worgle answer",
+        heading: "Checking yesterday's Worgle answer",
         paragraphs: [
-          "The Worgle archive on this page keeps the full history of daily answers, so checking yesterday's word — or any past puzzle — is one click away. The archive is the perfect tool for the player who missed a day, wants to confirm a streak, or is studying the word list's tendencies.",
-          "Reviewing past answers is the fastest way to learn the pool. A week of Worgle answers shows you which letters repeat, how often the answer is a common verb versus a noun, and which vowel pairs the game favors — knowledge that makes each new puzzle slightly easier than the last.",
-          "The archive also settles disputes. When the group cannot agree on what yesterday's word was, the dated archive entries are the ground truth, formatted with the same date labels you saw while playing.",
-          "Finally, use the archive as a practice tool. Pick a past puzzle you never solved, open it, and solve it now — the practice is identical to the daily game, and the archive gives you unlimited puzzles instead of one per day."
+          "The Worgle archive on this page keeps the full history of daily answers, so checking yesterday's word, or any past puzzle, is one click away. I use it when I miss a day, want to confirm a streak, or just want to study the word list's tendencies.",
+          "Reviewing past answers is the fastest way to learn the pool. A week of Worgle answers shows me which letters repeat, how often the answer is a common verb versus a noun, and which vowel pairs the game favors. Each new puzzle gets slightly easier.",
+          "The archive also settles disputes. When my group can't agree on what yesterday's word was, the dated archive entries are the ground truth, formatted with the same date labels I saw while playing.",
+          "Most of all, I use the archive as practice. I pick a past puzzle I never solved, open it, and solve it now. The practice is identical to the daily game, and the archive gives me unlimited puzzles instead of one a day."
         ]
       },
       {
-        heading: "Worgle hint usage and the streak saver",
+        heading: "How I learned the word list",
         paragraphs: [
-          "Worgle's hint system exists to save streaks, and the hints on this page are designed for exactly that: the first letter, the word length, and the letter-frequency profile — enough to turn an open pattern into a solvable one.",
-          "The first-letter hint is the highest-value rescue. A confirmed starting letter closes half the pattern space instantly, and combined with the length and frequency profile, it usually narrows the pool to a handful of everyday words.",
-          "The hint-before-guessing discipline is the lesson. Players who check the hints after two failed guesses save more streaks than players who check them after five — the hints are a nudge, not a crutch, and using them early keeps the solve satisfying.",
-          "Finally, the daily reveal is the ultimate streak saver. When the word simply will not come, the reveal settles the day, and the archive keeps the streak history one click away — so no word is ever worth losing a month of solves."
+          "Every word game has a personality, and Worgle's shows up in its answer list. I learned it by keeping a running note of the words I'd seen, and the pattern was clear fast: short, everyday words, heavy on common consonants, rarely the show-off vocabulary I reached for in my first weeks.",
+          "Vowels were the first thing I tracked. Some pairings come back over and over, while rare vowel stacks almost never appear. Once I knew which vowel pairs the game liked, my openers got sharper because I was aiming at answers the game actually picks.",
+          "I also noticed how often the answer was a verb versus a noun, and it changed my endgame. When I had three letters and two candidate words, I started weighting the everyday verb higher, and I was right more often than I was before."
         ]
-      },
-      {
-        heading: "Worgle answer word patterns",
-        paragraphs: ["Worgle answers are words, and the daily answer follows the same construction rules as the rest of the wordle family: five letters, no proper nouns, and a real dictionary word. The patterns that matter are structural — vowel positions, repeated letters, and the consonant clusters the game favors.","A Worgle answer rarely repeats the previous day’s opener, and answers that start with common consonants like S, C, or B appear more often than rare letters.","If you track the answers over time, those tendencies become a real guessing edge, and the today page keeps the current answer front and center while the solver handles the hard cases."]
       }
     ],
     faqHeading: "Worgle FAQ",
@@ -3635,7 +3561,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is the Worgle answer for {date}?",
         answer:
-          "The Worgle answer for {date} — the exact word and puzzle number — is revealed at the top of this page. A new word publishes daily."
+          "The Worgle answer for {date}, the exact word and puzzle number, is revealed at the top of this page. A new word publishes daily."
       },
       {
         question: "How do you play Worgle?",
@@ -3650,12 +3576,12 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "Is Worgle the same as Wordle?",
         answer:
-          "Worgle shares Wordle's daily format but has its own feedback rule set, so check the specific version you are playing before you commit to a strategy."
+          "Worgle shares Wordle's daily format but has its own feedback rule set, so check the specific version you're playing before you commit to a strategy."
       },
       {
         question: "What is the best Worgle opener?",
         answer:
-          "A common five-letter word with two or three vowels, no repeats, and frequent consonants like R, S, T, and N — the same information-maximizing logic that works in Wordle."
+          "A common five-letter word with two or three vowels, no repeats, and frequent consonants like R, S, T, and N, the same information-maximizing logic that works in Wordle."
       }
     ],
     relatedLinks: [
