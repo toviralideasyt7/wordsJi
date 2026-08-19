@@ -48,7 +48,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			: recentEntries;
 
 	const formattedDate = formatDisplayDate(displayDateKey);
-	const pageTitle = `Countryle Answer Today (${formattedDate}) - Country Answer and Clues`;
+	const pageTitle = `Countryle Answer Today (${formattedDate}) - Answer & Clues`;
 	const pageDescription = today
 		? `Get today's Countryle answer for ${formattedDate}. See the country, key clues, and quick links to the archive and Countryle solver.`
 		: "Get today's Countryle answer, archive access, and the Countryle solver.";

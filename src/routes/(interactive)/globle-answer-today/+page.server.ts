@@ -15,7 +15,7 @@ export const load: PageServerLoad = async () => {
     const { country, formattedDate, date } = data;
     const dateKey = date instanceof Date ? format(date, 'yyyy-MM-dd') : String(date).split('T')[0];
     const featuredImage = 'https://wordsolverx.com/images/globle-answer-today.webp';
-    const pageTitle = `Globle Answer Today (${formattedDate}) - Country Answer and Hints`;
+    const pageTitle = `Globle Answer Today (${formattedDate}) - Answer & Hints`;
     const pageDescription = `Get today's Globle country for ${formattedDate}, with flag, continent, subregion, and distance clues to help you solve.`;
     const pageKeywords = `globle answer today, globle answer, globle hint, globle hint today, globle answer for ${formattedDate}`;
     const jsonLd = JSON.stringify([

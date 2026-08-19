@@ -386,7 +386,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 'X-Puzzle-Date': actualDateKey
         });
 
-        const pageTitle = `Colordle Answer Today (${formattedDate}) - Daily Color Puzzle Solution & Tips`;
+        const pageTitle = `Colordle Answer Today (${formattedDate}) - Answer & Hints`;
         // SEO audit chapter 6.2 / 7.2 Lever 2: put the answer (color name + hex) directly
         // in the meta description so it shows in Bing's search snippet without a click.
         // Pattern copied from the #1 organic competitor colordleanswer.today.

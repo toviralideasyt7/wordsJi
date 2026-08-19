@@ -20,7 +20,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
         const date = subDays(today, i + 1);
         return getSemantleDataForDate(date);
     }).filter(Boolean);
-    const pageTitle = `Semantle Answer Today (${formattedDate}) - Word and Clue Breakdown`;
+    const pageTitle = `Semantle Answer Today (${formattedDate}) - Answer & Hint`;
     const pageDescription = `Get Semantle hints and the confirmed Semantle answer for today, ${formattedDate}. Today's secret word is ${word} and this is puzzle #${puzzleNumber}.`;
     const pageKeywords = `semantle answer today, semantle answer, semantle hint, semantle hint today, semantle answer for ${formattedDate}`;
 

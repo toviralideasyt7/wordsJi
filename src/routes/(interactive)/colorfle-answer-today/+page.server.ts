@@ -53,7 +53,7 @@ export const load: PageServerLoad = async () => {
 	}
 
 	const formattedDate = answer.formattedDate;
-	const pageTitle = `Colorfle Answers Today (${formattedDate}) - Normal and Hard Mode`;
+	const pageTitle = `Colorfle Answers Today (${formattedDate}) - Answer & Hints`;
 	const pageDescription = `Get today's Colorfle answers for ${formattedDate}, including both normal and hard mode color mixes, weights, and blended target hex values.`;
 	const pageUrl = 'https://wordsolverx.com/colorfle-answer-today';
 
