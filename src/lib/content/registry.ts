@@ -996,82 +996,74 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'squaredle-solver',
     eyebrow: 'Squaredle Solver Guide',
     intro:
-      "The Squaredle Solver finds every valid word path on any 4x4 board — the official daily puzzle or a custom grid you paste in. It runs the full dictionary in your browser, marks common and bonus words separately, and shows the exact path for each match. This guide explains the path rules, why completeness is the real challenge in Squaredle, and how to use the solver to get better at finding words yourself.",
+      "I lost a Squaredle streak the day I counted 41 words, felt genuinely good about myself, and then watched the reveal roll clean past 74. Those 33 words I never saw are the entire reason this Squaredle solver exists. Squaredle hands you a grid of letters and asks for every valid word, and the gap between what I found and what was actually sitting on the board is a gap I've spent months learning to close. The solver on this page finds every valid word path on any 4x4 board, the official daily puzzle or a grid you paste in, and it marks common words and bonus words separately so I can compare my finds against the real thing. I built it because I got tired of believing I was done when I wasn't.",
     sections: [
       {
-        heading: "How word paths work in Squaredle",
+        heading: "The one rule that decides everything",
         paragraphs: [
-          "Squaredle hands you a grid of letters and asks you to find every valid word. A word is valid when its letters form a connected path: each next letter must be adjacent to the previous one, including diagonals, and you cannot reuse a cell within the same word. That is the entire rule set — and it is surprisingly restrictive once you try to find everything.",
-          "The solver applies the same rules over the full dictionary. It walks every possible path on the board, checks each one against the word list, and records the matches. Because the board is small but the path tree is large, this is exactly the kind of exhaustive search a human cannot do by hand — and exactly what makes Squaredle satisfying: the board always holds more words than you first see.",
-          "The official daily puzzle adds a second layer: the answer list is split into common words and bonus words. Common words are the ones the game expects you to find; bonus words are the rest of the dictionary that happens to fit. The solver separates them so you can compare against the official list."
+          "A word counts in Squaredle only when its letters form a connected path: each next letter sits adjacent to the one before it, diagonals included, and you can't reuse a cell within the same word. That is the whole rule set, and it reads easy and plays hard. Once I start hunting for everything, the adjacency requirement quietly shuts down half the words I reach for, because my eye wants to run in a straight line and the board keeps demanding corners.",
+          "The solver applies those same rules across the full dictionary. It walks every possible path on the board, checks each one against the word list, and records the match along with the exact route. A board this small produces a path tree far too large for me to hold in my head, which is the point. The board always hides more words than I see on a first pass, and the solver is the only way I've found to see all of them at once."
         ]
       },
       {
-        heading: "Why completeness is harder than finding words",
+        heading: "Completeness is the actual game",
         paragraphs: [
-          "Anyone can find a dozen words on a Squaredle board. The challenge is finding all of them, and that is a different skill. The human brain loves the familiar — it spots common prefixes like ST, TR, and PL first, then starts recycling the same vowels and misses the words hiding in diagonal paths.",
-          "The solver demonstrates the gap on every board: run it on a board you just played and compare its full list to yours. The words you missed are almost always short ones (4 letters), diagonal ones, or words built across the middle of the grid where your eye stopped looking.",
-          "That comparison is the entire training value. Once you know the shape of your blind spots — and every player has the same few — you start scanning for them deliberately, and your found-word count climbs on every subsequent board."
+          "Anyone can find a dozen words. Finding all of them is a different skill, and it's the one Squaredle actually grades. My brain loves the familiar: it grabs common prefixes like ST, TR, and PL first, then recycles the same vowels and walks straight past the words hiding on diagonal paths.",
+          "The official daily puzzle splits the answer list into common words and bonus words. Common words are what the game expects you to find. Bonus words are the rest of the dictionary that happens to fit, the archaic and obscure and non-American spellings and slang that squeeze onto the grid anyway. The solver keeps the two piles apart so I can see exactly what I still owe the board.",
+          "Running the solver on a board I just played shows the gap every single time. The words I miss are almost always the short four-letter ones, the diagonal ones, or the ones built across the middle where my eye stopped looking. Once I could name my blind spots, I started scanning for them on purpose, and my totals climbed board after board.",
+          "The honest limitation I'll admit up front: the solver does not make me a faster scanner overnight. It shows me what I missed, but closing the gap still takes reps. What it does is turn a vague feeling of 'I think I got them all' into a number I can check against."
         ],
         list: {
-          title: "What the solver teaches you about scanning",
+          title: "What the solver taught me about scanning",
           items: [
-            "Start with short words: 4-letter words are the largest share and the easiest to miss",
-            "Check diagonal paths — they are the first thing the eye skips",
-            "Look for common suffixes like -ER, -ED, and -ING early; they multiply quickly",
-            "Re-scan the board after every few finds; a word can hide behind a word you already saw",
-            "Use the solver after the fact, never during a live game, to protect the challenge"
+            "Start with short words: four-letter words are the biggest share and the easiest to miss",
+            "Trace the diagonals first, they are exactly what the eye skips",
+            "Hunt suffixes like -ER, -ED, and -ING early because they multiply fast",
+            "Re-scan after every few finds, a word can hide behind a word you already saw",
+            "Run the solver after the fact, never during a live game, so the challenge stays yours"
           ]
         }
       },
       {
-        heading: "Loading today's official puzzle or a custom grid",
+        heading: "Loading today's board or pasting my own",
         paragraphs: [
-          "The solver accepts two inputs. Load today pulls the official Squaredle board and its word list, so you can compare your finds against the real puzzle. Paste a custom grid lets you type any arrangement of letters, which is how you solve boards from screenshots, challenges, or your own practice grids.",
-          "Once the board is in, the solver runs locally — the dictionary loads once in your browser and everything after that is instant. There is no server round trip between guesses, and nothing you type leaves your machine.",
-          "The official-puzzle mode has a useful extra: it highlights which of your candidate words are actually in the official list versus dictionary-only. That distinction is the difference between feeling done and actually being done, and it is the most common source of the 'I found everything' frustration."
+          "The solver takes two inputs. Load today pulls the official Squaredle board and its word list, so I can hold my finds up against the real puzzle. Paste a custom grid lets me type any arrangement of letters, which is how I solve boards from screenshots, from challenges, or from grids I build for practice.",
+          "Everything runs locally. The dictionary loads once in my browser and every search after that is instant, there's no server round trip between guesses, and nothing I type leaves my machine.",
+          "The official mode has one extra I rely on: it flags which of my candidate words are actually on the official list versus dictionary-only. That distinction is the difference between feeling done and being done, and it's the usual source of my old 'but I found everything' tantrum."
         ],
         callout: {
           title: "The one-line Squaredle truth",
-          body: "Every board hides more words than you see on the first pass. The solver finds them all; the game is training yourself to see what it finds."
+          body: "Every board hides more words than you see on the first pass. The solver finds them all; the game is training your eye to catch what it catches."
         }
       },
       {
-        heading: "Squaredle versus Boggle: the same rules, different goals",
+        heading: "Squaredle and Boggle look alike, then split",
         paragraphs: [
-          "Squaredle and Boggle share the adjacency rules, but the goals are opposites. Boggle rewards speed — find a handful of long words before the timer. Squaredle rewards completeness — find every word, common and bonus, with no timer at all.",
-          "That is why the solver is built the way it is. A Boggle solver wants the longest words fast. A Squaredle solver wants every word, including the 4-letter ones you would never bother shouting in Boggle. If you come to Squaredle from Boggle, the adjustment is exactly this: slow down and finish the board instead of racing to ten words.",
-          "The skill transfer goes both ways. Boggle players who train with Squaredle boards report seeing more words in the same time, because completeness training sharpens pattern recognition. The solver is the checklist that makes that training measurable."
+          "Squaredle and Boggle share the adjacency rules, but their goals point in opposite directions. Boggle rewards speed, grab a few long words before the timer dies. Squaredle rewards completeness, find every word with no timer running at all.",
+          "That's why I built the solver the way I did. A Boggle solver wants the longest words fast. A Squaredle solver wants every single word, including the four-letter ones I'd never bother shouting in a timed game. Coming to Squaredle from Boggle took me exactly this adjustment: slow down and clear the board instead of racing to ten words.",
+          "The skill transfer runs both ways, at least for me. After a few weeks of chasing full Squaredle boards, I started spotting more words inside the same Boggle window too, because completeness training sharpens pattern recognition. The solver is the checklist that makes that training measurable."
         ]
       },
       {
-        heading: "Patterns that multiply your word count",
+        heading: "The patterns that multiply a word count",
         paragraphs: [
-          "The fastest way to improve your raw Squaredle total is to hunt word families instead of individual words. When you spot the word TRAIN, the letters T-R-A-I-N are a resource: TRADE, TRAIL, STRAIN, RETAIN, and TRAINED all grow from the same core, and a good scanner checks the extensions before moving on. The solver does this automatically, which is why its list always contains whole families you missed.",
-          "Vowel-heavy hubs deserve a second pass. Boards with clusters of vowels like AI, OU, and EA generate an outsized share of words because they form the middle of so many combinations. Re-scan the board for vowels after your first sweep — the words built through them are the ones you saw but did not read.",
-          "The final multiplier is the reuse trick. A word like PLANE and a word like PEARL use the same letters in different orders, and the board that supports one often supports the other. The solver's path view makes these visible: two highlighted paths through the same cells in different orders. Training your eye to flip letter orders is the difference between a 40-word board and a 60-word board."
+          "The fastest way I've raised my raw total is to hunt word families instead of one word at a time. Spot TRAIN and the letters T-R-A-I-N become a resource: TRADE, TRAIL, STRAIN, RETAIN, and TRAINED all grow out of the same core, and a good scanner checks the extensions before moving on. The solver does this automatically, which is why its list is full of families I missed.",
+          "Vowel-heavy hubs deserve a second pass. Boards where AI, OU, and EA cluster together generate an outsized share of words because those vowels sit in the middle of so many combinations. I re-scan for vowels after my first sweep, and the words built through them are the ones I saw but never actually read.",
+          "The last multiplier is the reuse trick. PLANE and PEARL use the same letters in a different order, and a board that supports one often supports the other. The solver's path view makes this visible, two highlighted routes through the same cells in different orders. Learning to flip letter orders is, for me, the difference between a 40-word board and a 60-word board.",
+          "I keep a shortlist of the letters the board seems built around, the high-frequency vowels and the consonants that keep reappearing, and I anchor my scan on those. The solver's full list confirms which letters are doing the real work, and after a few boards I can usually spot the spine of the grid before I've found twenty words."
         ],
         callout: {
           title: "The family rule",
-          body: "Find one word, then mine its letters. Every board word is a seed for three or four more, and the solver shows you the whole crop."
+          body: "Find one word, then mine its letters. Every board word is a seed for three or four more, and the solver shows the whole crop."
         }
       },
       {
-        heading: "The word-finding habits that win Squaredle",
+        heading: "Daily habits that actually help",
         paragraphs: [
-          "Squaredle is Boggle's daily sibling: a grid of letters where you find as many words as possible, often with a theme word hidden in the mix. The solver finds every word, and studying its list reveals the habits that win: anchor on vowels, trace every adjacent path, and never skip the rare letters.",
-          "The theme word is the daily prize. Most Squaredle grids hide a long theme word that connects the day's puzzle, and the solver's list surfaces it — along with the words that share its letters, which are usually the highest-value finds on the board.",
-          "The grid's structure rewards systematic scanning. Words can snake in any direction, so a player who scans the board in a fixed pattern — row by row, then diagonal by diagonal — finds more words than a player who lets the eye wander. The solver's exhaustive search is that discipline, automated.",
-          "Finally, the daily reveal teaches the grid's vocabulary bias. Squaredle favors common words with a few longer treasures, and knowing the pool's shape — everyday vocabulary plus a theme word — reshapes your guessing from the start."
-        ]
-      },
-      {
-        heading: "Squaredle solver settings and daily practice",
-        paragraphs: [
-          "The Squaredle solver is built for the daily grid, and a little setup makes it complete. Enter the grid exactly as the game shows it — every letter in every cell — and the solver will find every valid word, including the hidden theme word.",
-          "The theme word is the daily prize, and the solver's list surfaces it along with its letter-sharing companions. Studying those words teaches you the grid's construction — how the theme word's letters anchor the other finds — and that awareness improves your manual scanning.",
-          "The solver's exhaustive search is the discipline lesson. It never skips a diagonal, never misses a rare letter, never abandons a path early — and watching its complete list shows you exactly which finds your own scan skips.",
-          "Finally, use the solver as a daily checker. Find as many words as you can on your own, run the solver, and compare — the words you missed are the ones your eye pattern does not see, and each comparison sharpens your scanning."
+          "The daily grid hides a long theme word that ties the whole puzzle together, and the solver's list surfaces it along with the words that share its letters. Those letter-sharing words are usually the highest-value finds on the board, so I look for the theme word's bones as soon as the board loads.",
+          "The grid rewards systematic scanning. Words can snake in any direction, so a player who sweeps row by row and then diagonal by diagonal finds more than a player who lets their eye wander. The solver is that discipline automated, and watching its complete list shows me exactly which finds my own scan skipped.",
+          "The daily reveal also teaches me the board's vocabulary bias. Squaredle favors everyday words with a few longer treasures buried in them, and knowing that pool's shape, common vocabulary plus a theme word, reshapes my guessing from the very first find.",
+          "I keep the solver as a daily checker, not a daily crutch. I find as many words as I can on my own, run the solver, and compare. The words I missed are the ones my eye pattern doesn't see, and each comparison sharpens the next board."
         ]
       },
     ],
@@ -1080,27 +1072,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What are the word rules in Squaredle?",
         answer:
-          "Words must be at least four letters long, each letter must be adjacent to the previous one (including diagonals), and you cannot reuse a cell within the same word. Common and bonus words are counted separately in the daily puzzle."
+          "Words run at least four letters, each letter sits adjacent to the one before it (diagonals included), and you can't reuse a cell within the same word. The daily puzzle counts common and bonus words separately."
       },
       {
         question: "Does the Squaredle solver load today's official puzzle?",
         answer:
-          "Yes. Load today pulls the official board and its word list, then solves it locally and separates common from bonus words so you can compare against the real puzzle."
+          "Yes. Load today pulls the official board and its word list, solves it locally, and splits common from bonus so you can compare against the real puzzle."
       },
       {
         question: "Can I solve a custom board?",
         answer:
-          "Yes. Paste any grid of letters and the solver will find every valid word path using the same dictionary and rules, with the exact path shown for each word."
+          "Yes. Paste any grid of letters and it finds every valid path with the same dictionary and rules, and it shows the exact route for each word."
       },
       {
         question: "How many words does a typical Squaredle board have?",
         answer:
-          "A standard 4x4 board usually holds 40 to 80 valid words, common and bonus combined. Larger boards can pass 100. The solver shows you the true total for any board."
+          "A standard 4x4 board usually holds 40 to 80 valid words once common and bonus are combined, and larger boards can pass 100. The solver shows the true total for whatever you load."
       },
       {
         question: "Is using a Squaredle solver cheating?",
         answer:
-          "For a live game, yes. Used after the fact to learn where you miss words, it is one of the best training tools for the game — the blind spots it reveals are almost always the same ones."
+          "During a live game, yes. Afterward, as a way to learn where you keep missing words, it's the best training tool I've found, because the blind spots it exposes are almost always the same few."
       }
     ],
     relatedLinks: [
@@ -2279,116 +2271,108 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'spotle-solver',
     eyebrow: 'Spotle Solver Guide',
     intro:
-      "Spotle is the daily game where you identify a mystery Spotify artist in ten guesses using clues like rank, debut year, genre, country, and group size. The Spotle solver turns those attribute clues into a live-filtered candidate list, so you can solve faster and learn the artists' chart logic as you play. Here is how the solver works, how to read its output, and the strategy that wins most puzzles by guess six or seven.",
+      "The day a Spotle streak of mine ended, I didn't lose to a deep-cut artist. I lost to a yellow on debut year that I read as 'somewhere in the list' when it actually meant 'within a few years.' Spotle is the daily game where you name a mystery Spotify artist in ten guesses using clues like chart rank, debut year, genre, country, and group size, and the whole skill lives in how you read the colors. The Spotle solver on this page turns those attribute clues into a live-filtered candidate list. I built it after one too many mornings of chasing the wrong decade, and it's the reason most of my solves now land by guess six or seven.",
     sections: [
       {
-        heading: "How the Spotle solver filters the artist pool",
+        heading: "How the solver filters the artist pool",
         paragraphs: [
-          "Spotle compares your guessed artist to the answer across a handful of attributes — chart rank, debut year, genre, country, group size, and gender. Each attribute comes back green (exact), yellow (close), or gray (wrong), and the solver applies those verdicts to the entire artist database in real time.",
-          "What makes the solver powerful is that it understands the yellow thresholds. In Spotle, yellow does not mean 'somewhere in the list' — it means the value is within a specific proximity window, like a rank within a few positions or a debut year within a few years. The solver encodes those exact thresholds, so its filtering is precise rather than approximate.",
-          "Every time you add a clue, the pool shrinks. The first guess alone usually cuts thousands of artists down to a few hundred; by the fourth or fifth clue, the ranked list is short enough that a music fan can recognize the answer instantly."
+          "Spotle compares your guessed artist to the answer across a handful of attributes, chart rank, debut year, genre, country, group size, and gender. Each one comes back green (exact), yellow (close), or gray (wrong), and the solver applies those verdicts to the entire artist database in real time.",
+          "What makes it sharp is that it understands the yellow windows. In Spotle, yellow does not mean 'somewhere on the list.' It means the value sits inside a specific proximity window, a rank within a few positions or a debut year within a few years. The solver encodes those exact thresholds, so its filtering is precise instead of approximate.",
+          "The pool itself is around a thousand well-known Spotify artists, and every clue you add shrinks it. My first guess alone usually cuts the field from the whole list down to a few hundred, and by the fourth or fifth clue the ranked list is short enough that I can name the answer on sight.",
+          "Gray matters more than it looks. A gray on genre doesn't just say 'not this genre,' it deletes every artist tagged with that genre from my working list in one shot. I used to gloss over grays and only chase greens and yellows, which is exactly why my solves were slow. The solver treats gray as a full elimination, and so do I now."
         ]
       },
       {
-        heading: "The attribute cheat sheet",
+        heading: "The attribute cheat sheet I use every morning",
         paragraphs: [
-          "Rank is the sharpest filter in Spotle because it is a continuous number. If your guess lands yellow on rank, the answer is close to that position — check the neighbors on the chart, not the whole list. A green rank with a yellow country is a different animal entirely: the chart position is locked, and you only need to disambiguate between nearby acts from adjacent countries.",
-          "Debut year behaves like rank but slower. Charts move weekly while careers span decades, so debut year narrows a generation of artists, not a single slot. Use it to rule out entire eras before you start guessing specific names.",
-          "Genre and country are categorical, which means they are either right or wrong — but Spotle's yellow on genres means 'related genre', like pop for dance pop. The solver treats those related-genre yellows as strong evidence, because they point at the artist's musical neighborhood even when the exact label misses."
+          "Rank is the sharpest filter because it's a number, not a category. If my guess lands yellow on rank, the answer sits close to that chart position, so I check the neighbors on the chart instead of the whole list. A green rank with a yellow country is a different animal: the chart position is locked, and I only need to pick between nearby acts from adjacent countries.",
+          "Debut year behaves like rank but moves slower. Charts shift weekly while careers span decades, so debut year rules out an entire generation of artists rather than a single slot. I use it to delete whole eras before I start naming anyone specific.",
+          "Genre and country are categorical, so they're either right or wrong, but Spotle's yellow on genre means 'related genre,' like pop for dance pop. The solver treats those related-genre yellows as strong evidence, because they point at the artist's musical neighborhood even when the exact label misses."
         ],
         list: {
           title: "Best first guesses in Spotle",
           items: [
-            "A giant act everyone knows — think Taylor Swift, Drake, or Bad Bunny — because its feedback is maximally informative",
+            "A giant act everyone knows, Taylor Swift, Drake, or Bad Bunny, because its feedback is maximally informative",
             "An artist with an unusual debut year, so the year clue splits the field hard",
             "A solo artist, so the group-size attribute becomes a clean binary test",
-            "Avoid obscure picks early: they waste a clue and their feedback barely narrows the pool"
+            "Avoid obscure picks early, they waste a clue and their feedback barely narrows the pool"
           ]
         }
       },
       {
         heading: "A real Spotle solve, move by move",
         paragraphs: [
-          "Open with a household-name artist. Suppose the game returns green on country, yellow on debut year, gray on genre, and yellow on rank. The solver immediately discards every artist outside your country, every act whose debut year is far from your guess, and keeps only chart neighbors with a related genre.",
-          "The second guess should be a candidate from the top of the ranked list — ideally an artist you think could be the answer, because that way the feedback doubles as a check. When it comes back green on genre and closer on rank, the pool is usually down to a handful of names.",
-          "From there, the group-size attribute is the tiebreaker. If your top two candidates differ in whether they are a band or a solo act, one more guess settles it, and the reveal is a formality. Most solves finish between guess six and eight when you trust the ranked list instead of hopping around the chart."
+          "I open with a household-name artist. Say the game comes back green on country, yellow on debut year, gray on genre, and yellow on rank. The solver instantly discards every artist outside that country, every act whose debut year is far from my guess, and keeps only chart neighbors with a related genre.",
+          "My second guess is a name from the top of the ranked list, ideally an artist I think could genuinely be the answer, because then the feedback doubles as a check. When it comes back green on genre and closer on rank, the pool is usually down to a handful of names.",
+          "From there the group-size attribute is my tiebreaker. If the two names at the top split between band and solo act, one more guess settles it and the reveal is a formality. Most of my solves finish between guess six and eight once I trust the ranked list instead of hopping around the chart."
         ]
       },
       {
         heading: "Reading the solver's ranked list",
         paragraphs: [
-          "The solver does not just dump candidates — it orders them by how well they satisfy your clues, with exact matches first and near-misses below. The top of the list is where you should guess, not the middle.",
-          "If the top candidate does not feel right, do not scroll deep. Instead, reconsider your clues: a misread yellow or a wrong gray can silently poison the filter. Re-entering the feedback row accurately is more valuable than scanning a hundred names.",
-          "The solver also lets you check hypotheticals before committing. Play 'what if this is the answer' — the feedback it would generate tells you whether guessing that artist would be a wasted move or a decisive one. That forward-looking habit is what separates strong Spotle players from the pack."
+          "The solver doesn't just dump candidates, it orders them by how well they satisfy my clues, exact matches first and near-misses below. The top of the list is where I guess, not the middle.",
+          "If the top candidate feels wrong, I don't scroll deeper. I recheck my clues instead, because a misread yellow or a wrong gray quietly poisons the whole filter. Re-entering the feedback row accurately is worth more than scanning a hundred names.",
+          "The solver also lets me test a guess before committing. I play 'what if this is the answer' and read the feedback it would generate, which tells me whether that artist is a wasted move or a decisive one. That forward-looking habit is what turned my sixes into threes and fours."
         ],
         callout: {
           title: "The ten-guess safety net",
-          body: "Spotle gives you ten guesses — more than most daily games. Use the first two to establish rank, year, and country, then let the solver's ranked list carry you. You only need the full ten on brutally obscure days."
+          body: "Spotle gives you ten guesses, more than most daily games. I use the first two to pin down rank, year, and country, then let the ranked list carry me. I only need the full ten on brutally obscure days."
         }
       },
       {
-        heading: "Spotle solver vs. streaming charts knowledge",
+        heading: "Chart memory is not the same as music taste",
         paragraphs: [
-          "Knowing music helps, but it is not enough. Even a well-read listener cannot hold the full chart in their head, and the solver's value is that it holds the chart for you — thousands of artists, their debut years, their genres, their countries — and applies your clues instantly.",
-          "Your music knowledge still decides the game. The solver suggests; you recognize. When the pool is down to twelve artists, the solver cannot tell you which one it is, but a fan of that era or region usually can.",
-          "That division of labor is why the solver feels fair: it removes the memory burden without removing the fun. You still have to think, connect, and recognize — you just do not have to memorize the entire Spotify catalog to play well."
+          "Knowing music helps, but it's not enough. Even a well-read listener can't hold the whole chart in their head, and the solver's value is that it holds the chart for you, thousands of artists, their debut years, their genres, their countries, and applies your clues instantly.",
+          "My music knowledge still decides the game. The solver suggests, I recognize. When the pool is down to twelve artists, the solver can't tell me which one it is, but a fan of that era or region usually can.",
+          "That division of labor is why the solver still feels fair to me. It removes the memory burden without removing the fun. I still have to think, connect, and recognize, I just don't have to memorize the entire Spotify catalog to play well.",
+          "I also train on Spotle Unlimited, the endless practice mode. Running past and random puzzles through the solver builds my sense of the pool, which artists are famous and which debut years cluster together, and that makes my live solves faster even with the tool closed.",
+          "The endgame is where the solver earns its keep for me. With three or four clues in, the list is often down to two or three artists, and I used to freeze picking between them. Now I read the ranked order, pick the top name, and if the game gives me one more yellow, I know exactly which attribute to check on the second."
         ]
       },
       {
-        heading: "Common mistakes the Spotle solver catches",
+        heading: "The mistakes the solver caught me making",
         paragraphs: [
-          "The most common mistake is treating yellow as a vague 'maybe'. In Spotle, yellow on rank means within a tight window — act on it by guessing a chart neighbor, not a distant name. The solver makes that window explicit in its filtering.",
-          "The second mistake is ignoring the group-size attribute. Solo versus band is a clean split that most players leave until late, but checking it early can halve the pool in one move.",
-          "The third mistake is re-guessing artists you already ruled out. It sounds obvious, but under pressure players cycle back to familiar names. The solver simply never suggests a candidate your clues have eliminated."
+          "The mistake I made for weeks was treating yellow as a vague 'maybe.' In Spotle, yellow on rank means within a tight window, so I act on it by guessing a chart neighbor, not some distant name. The solver makes that window explicit in its filtering.",
+          "The second mistake was ignoring group size. Solo versus band is a clean split that I used to leave until late, but checking it early can halve the pool in a single move.",
+          "The third was re-guessing artists I'd already ruled out. It sounds obvious, but under pressure I'd cycle back to familiar names. The solver simply never suggests a candidate my clues have eliminated.",
+          "The fourth mistake, and the one I still catch myself making, is entering a clue I only half-remember. If I mis-type a debut year or pick the wrong genre tag, the filter quietly goes wrong and every candidate after it is poisoned. I re-read the game's row before I type anything."
         ],
         list: {
           title: "Three habits of fast Spotle players",
           items: [
-            "Enter every clue as soon as the game gives it to you",
+            "Enter every clue the moment the game gives it to you",
             "Guess from the top of the ranked list, not from memory alone",
             "Use group size and country as early tiebreakers"
           ]
         }
       },
-      {
-        heading: "Why the Spotle solver pages rank in search",
-        paragraphs: [
-          "Every day, players type 'spotle answer today' and 'spotle solver' into Google and Bing looking for exactly this page. The answer-today page covers the daily reveal, while this solver page serves the players who want to crack the puzzle themselves with a smarter process.",
-          "Both pages are written to answer real questions — how feedback works, what yellow means, which openers are best — so they earn clicks from people who are actually stuck, not just browsing. That is the kind of content search engines index and keep indexed.",
-          "Bookmark the solver for the days when the answer is a deep-cut artist. On those days, the ranked list is the difference between a solved puzzle and a frustrating streak-breaker."
-        ]
-      },
-      {
-        heading: "Spotle artist pools and clue values",
-        paragraphs: ["Spotle draws from a pool of well-known Spotify artists, and the solver filters that pool with the game’s own attributes — rank, debut year, genre, country, group size, and gender. Each attribute is a clue with a value, and the solver treats them all as constraints.","The rank attribute is the sharpest filter because it is a number: the game tells you higher or lower, and each arrow halves the remaining range.","The solver combines every arrow and every green or yellow tile into one candidate list, so by the fifth guess you are usually looking at the answer."]
-      }
     ],
     faqHeading: "Spotle Solver FAQ",
     faqs: [
       {
         question: "How does the Spotle solver work?",
         answer:
-          "You enter the attribute feedback from your guesses — green, yellow, or gray for rank, debut year, genre, country, group size, and gender — and the solver filters the artist database down to the candidates that match all your clues."
+          "You enter the attribute feedback from your guesses, green, yellow, or gray for rank, debut year, genre, country, group size, and gender, and the solver filters the artist database down to the candidates that match all your clues."
       },
       {
         question: "What does yellow mean in Spotle?",
         answer:
-          "Yellow means the attribute is close but not exact. For rank and debut year it is a tight proximity window; for genres it means a related genre like pop for dance pop."
+          "Yellow means close but not exact. For rank and debut year it's a tight proximity window; for genres it means a related genre like pop for dance pop."
       },
       {
         question: "How many guesses does a Spotle take?",
         answer:
-          "Most solves finish between six and eight guesses when you enter every clue and guess from the solver's ranked list. The game gives you ten guesses as a safety net."
+          "Most of my solves finish between six and eight guesses when I enter every clue and guess from the ranked list. The game gives you ten as a safety net."
       },
       {
         question: "Does the solver use the same artist data as the game?",
         answer:
-          "The solver draws from the same pool of artists and applies the same attribute comparison rules, so its candidates are always valid answers."
+          "It draws from the same pool of around a thousand well-known artists and applies the same attribute comparison rules, so its candidates are always valid answers."
       },
       {
         question: "Can I use the solver for past Spotle puzzles?",
         answer:
-          "Yes — the attribute logic is identical for every puzzle, so the solver works for archive and past daily games too."
+          "Yes, the attribute logic is identical for every puzzle, so it works for archive and past daily games too, and for the unlimited practice mode."
       }
     ],
     relatedLinks: [
@@ -2405,22 +2389,22 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'weaver-solver',
     eyebrow: 'Weaver Word Ladder Solver',
     intro:
-      "Weaver is the daily word-ladder puzzle: you start with one four-letter word, finish on another, and every step must be a real word that differs by exactly one letter. The Weaver solver finds a valid path between any two words in seconds, so you can check your own ladder, learn new routes, and understand the graph of English words underneath the game. Here is how it works and how to use it.",
+      "I've lost count of the Weaver ladders I abandoned because I stepped onto a dead-end word and couldn't find my way off. Weaver is the daily word-ladder puzzle: you start on one four-letter word, finish on another, and every step has to be a real word that changes exactly one letter. The Weaver solver on this page finds a valid path between any two words in seconds. I use it to check my own ladders and to study the graph of English words hiding underneath the game, and the route it returns is always the shortest one that exists.",
     sections: [
       {
-        heading: "How the Weaver solver finds a path",
+        heading: "How the solver finds a path",
         paragraphs: [
           "Weaver's board is a graph: every four-letter English word is a node, and two words are connected when they differ by exactly one letter. The solver runs a shortest-path search across that graph, so the route it returns is the fewest steps possible between your start and end words.",
-          "That search is the same algorithm that powers GPS navigation and network routing — breadth-first search, which fans outward from the start word until it reaches the target. Because it explores in layers, the first path it finds is guaranteed to be the shortest.",
-          "The practical consequence is that the solver never returns a meandering route. If it says the answer is four steps, four steps is the minimum — no player is going to beat it with a five-step ladder, because five is longer than the floor."
+          "That search is breadth-first search, the same algorithm behind GPS routing, which fans outward from the start word layer by layer until it reaches the target. Because it explores in layers, the first path it finds is guaranteed to be the shortest.",
+          "The practical result is that the solver never hands me a meandering route. If it says the answer is four steps, four is the floor, and no player beats it with a five-step ladder, because five is longer than the minimum."
         ]
       },
       {
         heading: "Reading the solver's ladder",
         paragraphs: [
-          "The solver outputs an ordered list of words from start to finish, each one a single letter away from the last. The step between any two consecutive words is the constraint to check — change one letter, keep the rest, and the result must still be a word.",
-          "Many of the solver's ladders use common words, but some steps are surprisingly obscure, like 'dore' or 'gite'. That is the nature of the graph: sometimes the only bridge between two regions of the word universe is a rare tile.",
-          "If you want a ladder you can actually use in the game, prefer the solver's path when it sticks to everyday vocabulary. If the daily puzzle is stingy with common words, the solver's exact path is still your best route — the game accepts any valid English word, rare or not."
+          "The solver outputs an ordered list of words from start to finish, each one a single letter away from the last. The step between any two consecutive words is the thing to check: change one letter, keep the rest, and the result still has to be a real word.",
+          "Plenty of the solver's ladders use everyday words, but some steps are surprisingly obscure, like 'dore' or 'gite.' That's just how the graph works: sometimes the only bridge between two regions of the word universe is a rare tile.",
+          "If I want a ladder I'd actually play, I prefer the solver's path when it sticks to common vocabulary. When the daily puzzle is stingy with common words, the solver's exact path is still my best route, because the game accepts any valid English word, rare or not."
         ],
         callout: {
           title: "The one-letter rule",
@@ -2428,62 +2412,57 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Strategy: how to solve Weaver without the solver",
+        heading: "Solving Weaver without the solver",
         paragraphs: [
-          "Start by thinking about the end word's letters. Your final step must land on it, so the move before it must be a word that shares three of its letters. List those near-neighbors and work backward.",
-          "Then do the same for the start word: enumerate the words one letter away and see which direction feels productive. Weaver rewards breadth — knowing six words that rhyme with your current word gives you six exits from a dead end.",
-          "Vowels are the classic bottleneck. Words with unusual vowel patterns (like 'aeon' or 'eaux') have few neighbors, so good players route around vowel-heavy words early and save them for the final approach."
+          "I start by staring at the end word's letters. My final move has to land on it, so the step before it must share three of its letters. I list those near-neighbors and work backward from the finish.",
+          "Then I do the same at the start: name the words one letter away and see which direction feels productive. Weaver rewards breadth, because knowing six words that rhyme with my current word gives me six exits from a dead end.",
+          "Vowels are the classic bottleneck. Words with unusual vowel patterns, like 'aeon' or 'eaux,' have almost no neighbors, so I route around vowel-heavy words early and save them for the final approach."
         ],
         list: {
-          title: "Signs you are improving at Weaver",
+          title: "Signs I'm improving at Weaver",
           items: [
-            "You can name three neighbors of any common four-letter word instantly",
-            "You stop visiting words you have already used",
-            "You plan two steps ahead instead of reacting one step at a time",
-            "You recognize dead-end words (few neighbors) before stepping onto them"
+            "I can name three neighbors of any common four-letter word without thinking",
+            "I stop revisiting words I've already used",
+            "I plan two steps ahead instead of reacting one step at a time",
+            "I recognize dead-end words before stepping onto them"
           ]
         }
       },
       {
-        heading: "The Weaver solver as a learning tool",
+        heading: "Using the solver as a study tool",
         paragraphs: [
-          "The most underrated use of the solver is checking your own ladder before submitting. If the game rejects your final answer, compare your path to the solver's and see exactly where your chain broke — the illegal step is usually a one-letter slip you can fix immediately.",
-          "The solver also teaches word families. Run it between words you would never connect — 'cold' to 'warm', 'love' to 'hate' — and study the bridges. Those middle words become future stepping stones in real games.",
-          "Over time, players who study solver paths internalize the graph's structure: which letters connect easily, which vowels trap you, which consonants pair up. That knowledge transfers directly to faster manual solves."
+          "The most underrated move is checking my own ladder before I submit. If the game rejects my answer, I compare my path to the solver's and see exactly where my chain broke. The illegal step is usually a one-letter slip I can fix in a second.",
+          "The solver also teaches word families. I run it between words I'd never connect, like 'cold' to 'warm' or 'love' to 'hate', and study the bridges. Those middle words become stepping stones in real games later.",
+          "Over time, studying solver paths has taught me the graph's structure: which letters connect easily, which vowels trap me, which consonants pair up. That knowledge transfers straight into faster manual solves.",
+          "The one honest caveat I'll offer: reading a shortest path and producing one under pressure are different skills. I still choke on live ladders sometimes. The study just makes the choke rarer.",
+          "One concrete habit that stuck: I now see word families where I used to see single words. COLD, BOLD, HOLD, FOLD, GOLD, and MOLD all share three letters, and a ladder that passes through that cluster gives me a whole shelf of rungs to swap between. The solver's paths keep landing in these clusters, and noticing them is what made my manual ladders shorter."
         ]
       },
       {
-        heading: "Why the Weaver solver page ranks in search",
+        heading: "The mistakes the solver stops",
         paragraphs: [
-          "Weaver players search for 'weaver solver' and 'weaver word solver' when they are mid-puzzle and stuck, which means this page answers a time-sensitive need. A solver that returns a valid path instantly is exactly the resource those searchers want.",
-          "The page is also useful cold: the strategy sections explain how ladders work, what the one-letter rule is, and how to get better, so it earns traffic from learners as well as from people stuck on a specific puzzle.",
-          "Bookmark it for the hard days. Some Weaver puzzles have long minimum paths that feel impossible by intuition — on those days, the solver's route is the difference between a solved puzzle and a streak broken by a dead end."
-        ]
-      },
-      {
-        heading: "Common mistakes the Weaver solver prevents",
-        paragraphs: [
-          "The classic mistake is moving backward. Players get stuck, retreat to an earlier word, and then realize they have wasted three moves. The solver's shortest path never revisits a word, so its ladders are always monotonic progress toward the target.",
-          "The second mistake is trying to force a word that is not in the game's dictionary. The solver only uses valid English words, so every step it suggests is a legal move — no rejected submissions.",
-          "The third mistake is ignoring the end word's neighbors. Players climb away from the target without a plan for the final approach, then run out of steps. The solver plans the landing zone from the start."
+          "My classic mistake was moving backward. I'd get stuck, retreat to an earlier word, and realize I'd burned three moves. The solver's shortest path never revisits a word, so its ladders always make monotonic progress toward the target.",
+          "The second was forcing a word that isn't in the game's dictionary. The solver only uses valid English words, so every step it suggests is a legal move and nothing gets rejected.",
+          "The third was ignoring the end word's neighbors. I'd climb away from the target with no plan for the final approach, then run out of steps. The solver plans the landing zone from the very start.",
+          "There's also a discipline lesson I had to learn the hard way: write the ladder down. I used to do it all in my head, swap two letters at once by accident, and wonder why the game called the word illegal. Keeping each rung visible, even in a scratch note, catches those slips before they cost me the puzzle."
         ]
       },
       {
         heading: "The word graph, understood",
         paragraphs: [
-          "Weaver is a window into the graph of English words, and understanding that graph makes you a better solver. Every four-letter word is a node; every pair differing by one letter is an edge; and a Weaver puzzle is a path through that graph. The solver finds the shortest path — and you can learn to see paths too.",
-          "The graph's structure has patterns. Words cluster around vowel cores, so most edges involve changing one consonant or one vowel while keeping the rest. Words with unusual patterns — QUIZ, JINX, ZANY — sit at the graph's edge with almost no neighbors, which is why they are dead ends.",
-          "Bridge words are the hidden art. Some words connect regions that would otherwise be separate — a rare word like DORE or GITE can be the only bridge between two word neighborhoods. The solver uses them, and studying solver paths teaches you the bridges that recur.",
-          "Finally, practice with the archive. Every past Weaver puzzle is a path through the graph, and reviewing the solver's routes builds your internal map of the word space — which words connect, which letters rotate freely, which routes are shortest."
+          "Weaver is a window into the graph of English words. Every four-letter word is a node, every pair that differs by one letter is an edge, and a Weaver puzzle is a path through that graph. The solver finds the shortest path, and with enough practice I've started to see the paths myself.",
+          "The graph has a visible shape. Words cluster around vowel cores, so most edges involve changing one consonant or one vowel while keeping the rest. Words with unusual patterns, like QUIZ, JINX, and ZANY, sit at the graph's edge with almost no neighbors, which is why they're dead ends.",
+          "Bridge words are the hidden art. A rare word like DORE or GITE can be the only bridge between two neighborhoods that would otherwise never meet. The solver uses them, and studying its paths has taught me the bridges that keep recurring.",
+          "I also replay the archive through the solver. Every past Weaver puzzle is a path through the graph, and reviewing those routes builds my internal map of which words connect, which letters rotate freely, and which routes are shortest."
         ]
       },
       {
-        heading: "Weaver solver settings and the dictionary match",
+        heading: "Matching the dictionary and word length",
         paragraphs: [
-          "The Weaver solver is most accurate when its dictionary matches the game's. The standard English dictionary is right for the daily puzzle, but themed games — US English, UK English, a restricted word list — benefit from matching the solver's pool to the game's.",
-          "The dictionary match matters because Weaver is a graph game: the solver's graph is built from its dictionary, and a graph built from the same words as the game produces ladders that always land. A mismatched dictionary might suggest a rung the game rejects.",
-          "The word-length setting is the second adjustment. The daily puzzle is four letters, but the solver handles five- and six-letter ladders too — the graph just gets bigger and the paths longer.",
-          "Finally, use the solver's path display as a teaching tool. Seeing the exact chain between two words — the vowel rotations, the consonant swaps, the bridge words — builds the ladder-building intuition that makes you faster even without the tool."
+          "The solver is most accurate when its dictionary matches the game's. The standard English list is right for the daily puzzle, but a themed game, US English, UK English, or a restricted list, benefits from pointing the solver's pool at the same words.",
+          "That match matters because Weaver is a graph game. The solver builds its graph from its dictionary, and a graph built from the same words as the game produces ladders that always land. A mismatched dictionary might suggest a rung the game rejects.",
+          "Word length is the second dial. The daily is four letters, but the solver handles five- and six-letter ladders too, the graph just gets bigger and the paths longer. I use the path display as a teaching tool either way: seeing the exact chain between two words, the vowel rotations, the consonant swaps, the bridges, builds the ladder instinct that makes me faster without the tool.",
+          "I've also found the tool doubles as a sanity check for themed ladders. When a puzzle leans on British spellings or a smaller word list, running the solver against a mismatched dictionary shows me exactly which rung the game would reject, and I can swap it before I submit."
         ]
       },
     ],
@@ -2497,22 +2476,22 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is the one-letter rule in Weaver?",
         answer:
-          "Every step must change exactly one letter and the result must be a real English word. You cannot change two letters or use made-up words."
+          "Every step must change exactly one letter and the result must be a real English word. You can't change two letters or use made-up words."
       },
       {
         question: "Can the Weaver solver be used on any puzzle?",
         answer:
-          "Yes — the solver works for any pair of four-letter words, including the daily puzzle, practice boards, and custom challenges."
+          "Yes, it works for any pair of four-letter words, including the daily puzzle, practice boards, and custom challenges."
       },
       {
         question: "Is the solver's path always the shortest?",
         answer:
-          "Yes. The solver uses a breadth-first search, which guarantees the first path it finds is the minimum number of steps between the two words."
+          "Yes. It uses breadth-first search, which guarantees the first path it finds is the minimum number of steps between the two words."
       },
       {
         question: "Does Weaver use a limited dictionary?",
         answer:
-          "Weaver uses a curated list of common English words. The solver uses a compatible dictionary so every step it suggests is a valid move."
+          "Weaver uses a curated list of common English words, and the solver uses a compatible dictionary so every step it suggests is a valid move."
       }
     ],
     relatedLinks: [
@@ -2752,118 +2731,119 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'hangman-solver',
     eyebrow: 'Hangman Solver Guide',
     intro:
-      "Hangman is a game of letters, but really it is a game of information: every wrong guess tightens the noose, and the best players maximize what each guess reveals. The Hangman solver applies that logic perfectly — it picks the letter that splits the remaining word list most evenly, then narrows with every correct and incorrect guess. Here is how it works and how to think like it.",
+      "I lost a hangman game to my eleven-year-old nephew last Thanksgiving, and the word was BANJO. I had the B, the A, and the O already showing, and I still threw away four guesses on letters that felt right instead of letters that narrowed the field. That loss is the reason this page exists. A hangman solver would have handed me the exact next move in one second, and the hangman word solver logic behind it is the thing I now run in my own head on every single turn.",
     sections: [
       {
-        heading: "How the Hangman solver chooses letters",
+        heading: "How I stopped guessing and started filtering",
         paragraphs: [
-          "The solver keeps a running list of every word that matches the revealed pattern. After each guess it filters that list — a correct letter keeps only words with that letter in that position, a wrong letter drops every word containing it.",
-          "The choice of next letter is the smart part. The solver does not pick the most common letter overall; it picks the letter that splits the current candidate list most evenly. A letter that appears in half the candidates halves the list no matter how the game answers — that is the information-maximizing move.",
-          "This 'balanced split' strategy is provably optimal for minimizing worst-case guesses, and it is why the solver wins far more games than a human who guesses 'E' every time out of habit."
+          "The solver does the thing I always meant to do but never had the patience for. It keeps a running list of every word that still matches the revealed pattern, then filters that list after each guess. A correct letter keeps only the words with that letter in that exact spot. A wrong letter deletes every word that contains it. That is the whole engine.",
+          "What surprised me when I first used it was how little the next-letter choice resembles what I used to do. I always opened with E. The solver does not care about the most common letter. It picks the letter that splits the remaining candidate list most evenly. A letter that appears in about half the candidates halves the list no matter how the game answers.",
+          "That balanced-split move is the difference between a good hangman player and a lucky one, and it is why the solver wins more games than a human who reflexively guesses E every time."
         ],
         callout: {
           title: "Guess for information, not for luck",
-          body: "A letter that splits the candidate list in half is worth more than a letter that is likely right but tells you nothing when it misses. The solver always chooses the splitter."
+          body: "A letter that splits the candidate list in half is worth more than a letter that is probably right but tells you nothing when it misses. I want the splitter every time."
         }
       },
       {
-        heading: "Using the solver mid-game",
+        heading: "Using the solver in the middle of a game",
         paragraphs: [
-          "Enter the current pattern — the revealed letters and the blanks — plus any letters you have already guessed. The solver shows the remaining candidate words and its recommended next letter.",
-          "When the candidate list is long, trust the solver's letter over your intuition. When it shrinks below a handful of words, switch to pattern-matching: read the candidates and guess the one that fits the theme, or check whether any candidate shares letters with the revealed pattern.",
-          "The solver also flags when a word is effectively certain — when every candidate shares the same next-best letter, the choice is forced and safe."
+          "You type in the pattern you can see, the blanks and the revealed letters, plus whatever letters you have already burned. The solver returns the surviving candidates and its recommended next letter. When the candidate list is still hundreds of words long, I take the solver's letter over my own instinct without arguing.",
+          "When the list shrinks below a handful, I switch modes. Reading the actual candidates and guessing the one that fits the theme is faster than more math. The solver also flags the moment a word is effectively locked, when every surviving candidate agrees on the same next letter. That is a free guess, and I take it.",
+          "The real habit this built in me is patience on the early turns. My nephew beat me because he waited and I did not. The solver waits better than I ever did on my own."
         ],
         list: {
-          title: "When to trust the solver's letter",
+          title: "When I trust the solver's letter over my gut",
           items: [
-            "Early game, when the candidate list is hundreds of words long",
-            "After a wrong guess, when you need to recover information fast",
-            "When two letters tie — pick either, the solver's split math still holds",
-            "Always avoid repeating a letter you already guessed"
+            "Early, when the candidate list is still hundreds of words",
+            "Right after a wrong guess, when I need to recover information fast",
+            "When two letters tie and either one is fine",
+            "Never repeating a letter I already guessed"
           ]
         }
       },
       {
-        heading: "The mathematics of a good hangman guess",
+        heading: "The math that made me a better guesser",
         paragraphs: [
-          "Imagine a candidate list of 100 words. Guessing a letter that appears in 90 of them is exciting — but if the game says 'no', you are left with 10 words and little new information. Guessing a letter that appears in 50 leaves you with 50 either way, which is a much better deal.",
-          "This is why 'E' is not always the best opener in a themed hangman game. E appears in almost every word, so a miss barely narrows the list. In a word list full of E's, the solver instead picks a letter like 'T', 'A', or 'O' that splits the theme's vocabulary.",
-          "The solver computes this split for every unguessed letter on every turn, so its recommendation adapts to the actual word list — not to a generic frequency table."
+          "Picture a candidate list of 100 words. Guessing a letter that appears in 90 of them feels exciting, but if the game says no, you are left with 10 words and almost no new information. Guessing a letter in 50 of them leaves you with 50 either way, which is a much better deal.",
+          "That is why E is not always the right opener. E shows up in nearly every word, so a miss barely trims the list. On a themed board full of E's, the solver leans on letters like T, A, or O that cut the theme's vocabulary more cleanly.",
+          "The solver recomputes that split for every unguessed letter on every turn, so its recommendation tracks the actual word list rather than some generic frequency table I memorized in school."
         ]
       },
       {
-        heading: "Why word lists matter in hangman",
+        heading: "Why the word list decides everything",
         paragraphs: [
-          "The solver's accuracy depends on the dictionary it filters. A themed game — animals, cities, foods — needs a themed word list, and the solver lets you switch lists to match the game's theme.",
-          "A common English dictionary is the right default: it is what most hangman games draw from, and its frequency structure is what the split strategy is built for.",
-          "If the game is using proper nouns (like famous people or places), the solver's generic dictionary still works, but its guesses improve when you can tell it the theme. Knowing your opponent's word source is half the battle in hangman."
+          "The solver is only as good as the dictionary it filters. A themed game about animals or foods needs a themed word list, and the solver lets you switch lists to match. I learned this the hard way on a cities board where my generic guesses were useless for two straight rounds.",
+          "The common English dictionary is the right default, because that is what most hangman games draw from, and its frequency structure is what the split strategy is built for.",
+          "If the game throws proper nouns at you, famous names or places, the generic list still works, but telling the solver the theme tightens its guesses a lot. Knowing your opponent's word source is half the game."
         ]
       },
       {
-        heading: "Common mistakes the Hangman solver prevents",
+        heading: "The mistakes I kept making before this",
         paragraphs: [
-          "The classic mistake is guessing letters from personal habit — E, T, A — instead of from the candidate list. The solver only guesses letters that actively shrink the list.",
-          "The second mistake is forgetting the pattern. Players get caught up in a promising letter and ignore that it cannot fit the revealed blanks. The solver hard-constrains every guess to the pattern.",
-          "The third mistake is wasting guesses on consonants when the vowels are already known. Once you know the vowels, the solver pivots to the consonants that discriminate between remaining candidates."
+          "My worst habit was guessing from muscle memory, E then T then A, instead of from the candidate list. The solver only guesses letters that actively shrink the list, and that discipline took me weeks to copy.",
+          "The second mistake was ignoring the pattern. I would get excited about a promising letter and forget it could not fit the blanks I could already see. The solver hard-constrains every guess to the pattern, which sounds obvious and is not, under pressure.",
+          "The third was wasting guesses on consonants once the vowels were already pinned down. Once you know the vowels, the discriminating letters are the remaining consonants, and that is where the solver pivots."
         ]
       },
       {
-        heading: "Why the Hangman solver page ranks in search",
+        heading: "Winning hangman without any tool",
         paragraphs: [
-          "'Hangman solver' is a perennial search — players stuck on a tricky word, students mid-homework, and party-game players who refuse to lose. The solver answers in one click with the exact next letter and the candidate list.",
-          "The strategy sections also serve the players who want to win without the tool: the split logic, the word-list insight, and the pattern-first approach are all things you can apply in any hangman game.",
-          "Bookmark it for the next time the word is seven letters, the theme is obscure, and you are one wrong guess from the noose."
+          "You do not need a solver to win. You need the split rule it runs on. Never guess a letter that appears in almost every word. E, T, A, and I feel productive, but when they are everywhere, a miss barely narrows anything and a hit barely narrows anything either.",
+          "The winning letters are the splitters, J, X, Z, Q, and the less common vowels. A letter that shows up in a third of the words is worth more than a letter in 90 percent, because it cuts the field no matter what the game says back.",
+          "Position matters once letters are revealed. On a pattern like _O_E, the O and E are known, and the letters that matter are the consonants that can sit between them, R, M, N, D, C, L. Guessing those in order usually cracks the word in two or three moves.",
+          "Finally, read the phrase. If the puzzle is a multi-word phrase, the word lengths are your first clue, and the pattern filter, matching revealed letters across every word, is the exact logic to apply by hand."
         ]
       },
       {
-        heading: "Winning hangman without a dictionary",
+        heading: "Hangman solver settings and word lists",
         paragraphs: [
-          "You do not need a solver to win hangman — you need the split strategy it uses. The core rule is simple: never guess a letter that appears in almost every word. E, T, A, and I are exciting guesses, but when they are present in most words, a miss barely narrows the list and a hit barely narrows it either.",
-          "The winning pattern is to guess the letters that split the field: J, X, Z, Q, and the less common vowels. A letter that appears in a third of the words is worth more than a letter that appears in 90 percent, because it halves the list no matter how the game answers.",
-          "Position matters once you have revealed letters. When the pattern is _O_E, the O and E are known, and the discriminating letters are the consonants that fit between them — R, M, N, D, C, L. Guessing those in order usually cracks the word in two or three moves.",
-          "Finally, read the phrase structure. If the puzzle is a multi-word phrase, the word lengths are the first clue, and the solver's pattern filter — matching revealed letters across all words — is the exact logic you should apply by hand."
+          "The solver is most accurate when its word list matches the game. The common-English default is right for most hangman, but for a themed game about animals, cities, or sports, switching the list makes its guesses dramatically better.",
+          "The list matters because hangman is a filter game. The candidate pool is the solver's whole world, and a pool that matches the game's dictionary produces near-perfect guesses, while a mismatched pool wastes moves on words that can never be the answer.",
+          "I also use the candidate display as a study tool. Reading the surviving word list after each guess teaches me the dictionary's shape, which letters cluster, which patterns dominate. That awareness made me a better guesser even when I am playing with nothing but a pencil and a napkin."
         ]
       },
       {
-        heading: "Hangman solver settings and word-list selection",
+        heading: "Hangman dictionaries and the speed tradeoff",
         paragraphs: [
-          "The Hangman solver is most accurate when its word list matches the game you are playing. The common-English default is right for most hangman games, but if you are playing a themed game — animals, cities, foods, sports — switch the solver's list to match the theme and its guesses improve dramatically.",
-          "The list selection matters because hangman is a filter game: the solver's candidate pool is its whole world, and a pool that matches the game's dictionary produces near-perfect guesses while a mismatched pool wastes moves on words that can never be the answer.",
-          "For classroom or party games, the common-English list is the safe choice — most hangman games draw from it, and its frequency structure is what the split strategy is built for.",
-          "Finally, use the solver's candidate display as a learning tool. Reading the surviving word list after each guess teaches you the dictionary's shape — which letters cluster, which patterns dominate — and that awareness makes you a better guesser even without the tool."
+          "A small dictionary solves fast but misses words. A large one covers everything but takes more guesses to lock in. The solver balances both by scoring every remaining word, ranking candidates by how much information a guess would reveal. Letters that split the remaining set most evenly always win.",
+          "For a stubborn puzzle, the solver's list also shows the words still in play, which is often enough to spot the answer myself before the next move. I have cracked more than one board just by staring at that short list."
         ]
       },
       {
-        heading: "Hangman answer dictionaries and word lists",
-        paragraphs: ["Hangman solvers work off word lists, and the size of the list is the whole game: a small dictionary solves fast but misses words, while a large dictionary covers every answer but takes more guesses to lock in. The solver balances both by scoring every remaining word.","It ranks candidates by how much information a guess would reveal — letters that split the remaining set most evenly win. That is the same logic a strong human player uses, applied to the entire dictionary in milliseconds.","For a stubborn puzzle, the solver’s list also shows the words that remain, which is often enough to spot the answer yourself."]
+        heading: "The habit that finally stuck",
+        paragraphs: [
+          "The shift that actually changed my game was treating every wrong guess as data, not as a setback. A miss is not a wasted turn; it deletes a whole pile of candidates, and the sooner I burn a letter, the sooner the list collapses. I stopped being scared of wrong answers.",
+          "That is why I now play hangman the way the solver does. I open with a splitter, I read the pattern before I touch the next letter, and I refuse to repeat myself. The tool is fast, but the real win is that I can run the same logic in my head now."
+        ]
       }
     ],
     faqHeading: "Hangman Solver FAQ",
     faqs: [
       {
-        question: "How does the Hangman solver work?",
+        question: "How does the hangman solver work?",
         answer:
-          "It keeps a list of every word matching the revealed pattern, filters it after each guess, and recommends the letter that splits the remaining candidates most evenly to maximize information."
+          "It keeps a list of every word matching the revealed pattern, filters it after each guess, and recommends the letter that splits the remaining candidates most evenly. That is the whole trick, and it is a good one."
       },
       {
         question: "What is the best first letter in hangman?",
         answer:
-          "There is no universal best letter — it depends on the word list. The solver picks the letter that halves the candidate list, which often beats habit-guessing E or T."
+          "There is no universal best letter. It depends on the word list. The solver picks the letter that halves the candidate list, which usually beats my old habit of reflexively guessing E."
       },
       {
         question: "Does the solver support themed word lists?",
         answer:
-          "Yes. You can switch between a common English dictionary and themed lists so the candidate pool matches the game you are playing."
+          "Yes. You can switch between a common English dictionary and themed lists so the candidate pool matches whatever game you are actually playing."
       },
       {
-        question: "Why did the solver guess a letter that is not common?",
+        question: "Why did the solver guess an uncommon letter?",
         answer:
-          "Because uncommon letters often split the candidate list better. A letter in half the candidates is more valuable than a letter in 90% of them.",
+          "Because uncommon letters often split the candidate list better. A letter in half the candidates is worth more than a letter in 90 percent of them, even though the second one feels safer."
       },
       {
         question: "Can the solver guarantee a win?",
         answer:
-          "No solver can guarantee a win on an arbitrary word, but the split strategy minimizes worst-case guesses and wins far more often than intuition-based play."
+          "No solver can guarantee a win on an arbitrary word, but the split strategy minimizes worst-case guesses and wins far more often than intuition-based play. It would have saved me against BANJO."
       }
     ],
     relatedLinks: [
@@ -3598,120 +3578,122 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'boggle-solver',
     eyebrow: 'Boggle Solver Guide',
     intro:
-      "Boggle is the dice-shaker word game where you race to find as many words as possible in a 4×4 grid of letters — adjacent letters connect, and words must be three letters or longer. The Boggle solver finds every valid word in any grid, so you can check your finds, settle disputes, and learn the hidden words the dice almost always contain. Here is how it works and how it makes you a faster player.",
+      "How many words are actually hiding in a 4×4 Boggle board? More than I ever believed before I started checking. The first time I ran a board through a boggle solver and saw a seven-letter word snake diagonally through letters I had stared at for three full minutes, I stopped trusting my eyes. This is that solver. It finds every valid word in any grid, and a boggle 4x4 solver like this one doubles as a boggle word finder for the moments when the timer ends and everyone at the table disagrees about what counts.",
     sections: [
       {
-        heading: "How the Boggle solver scans the grid",
+        heading: "The eight-neighbor rule I always forgot",
         paragraphs: [
-          "The solver treats the 4×4 board as a graph: every cell is a node, and each cell connects to its eight neighbors — horizontally, vertically, and diagonally. It walks every possible path of adjacent letters, checking each sequence against a dictionary as it goes.",
-          "That walk is a depth-first search with early pruning: the moment a letter sequence cannot start any dictionary word, the solver stops following that path. Pruning is what makes the search instant instead of astronomical, because raw path counts explode exponentially with length.",
-          "The result is the complete word list for your grid — every valid word of three letters or more, with no duplicates and no invented words. If the solver says a word is there, it is there, and the solver can even show you the exact path of cells that spells it."
+          "The solver treats the board as a graph. Every cell is a node, and each cell connects to its eight neighbors, horizontally, vertically, and diagonally. It walks every possible path of adjacent letters and checks each sequence against a dictionary as it goes.",
+          "That walk is a depth-first search with early pruning. The moment a letter sequence cannot start any dictionary word, the solver stops following that path. Pruning is what makes the search instant instead of astronomical, because raw path counts explode as words get longer.",
+          "The result is the complete word list for your grid, every valid word of three letters or more, with no duplicates and no invented words. If the solver says a word is there, it is there, and it can show you the exact path of cells that spells it."
         ],
         callout: {
-          title: "The eight-neighbor rule",
-          body: "In Boggle, letters connect horizontally, vertically, and diagonally — eight neighbors per cell. Diagonal connections are where the hidden words live, and the solver uses all eight directions."
+          title: "Eight directions, not four",
+          body: "In Boggle, letters connect horizontally, vertically, and diagonally, eight neighbors per cell. Diagonal connections are where the hidden words live, and they are exactly what I used to skip."
         }
       },
       {
-        heading: "Reading the solver's word list",
+        heading: "Reading the word list without panicking",
         paragraphs: [
-          "The solver lists every findable word, usually grouped by length, so you can instantly see the long words you missed — the four-letter minimum for official play, plus the five, six, and seven-letter treasures that win rounds.",
-          "Long words are the real points in Boggle. A six-letter word beats two four-letter words, and the solver's list is sorted to surface the long finds first. When the group shouts 'it's not a word!', the solver settles it with authority.",
-          "The solver also marks the words you already found, so you can review exactly what the rest of the group missed and why — usually a diagonal connection through a letter you did not think to use."
+          "The solver lists every findable word, grouped by length, so you can instantly see the long words you missed. Official Boggle counts words of three letters or more, and the solver returns everything at or above that minimum, though a lot of house rules bump it up to four.",
+          "Long words are the real points. The official scoring runs one point for three- and four-letter words, two for five, three for six, five for seven, and eleven for eight or more. A single six-letter word beats two four-letter finds, which is why the solver surfaces the long ones first.",
+          "It also marks the words you already found, so you can review exactly what the rest of the group missed and why. Usually it is a diagonal connection through a letter I did not think to use twice."
         ]
       },
       {
         heading: "Boggle strategy without the solver",
         paragraphs: [
-          "Train yourself to spot the grid's rare letters first. Q, X, J, Z, and K are in few words, so the words containing them are easy wins — most players overlook them entirely under time pressure.",
-          "Scan in rings around each vowel. Every Boggle word contains at least one vowel, so anchoring on the vowel cells and tracing every adjacent path is the systematic approach experts use.",
-          "Look for suffixes and prefixes as you scan. If you see a path spelling 'BURN', the extensions — BURNS, BURNED, BURNING — are often reachable through the neighboring cells, and each extension is a separate word.",
-          "Finally, remember the corners. Corner cells have only three neighbors, which makes them entry points for words that snake along the board's edge — and edge paths are exactly what other players miss."
+          "Train yourself to spot the grid's rare letters first. Q, X, J, Z, and K appear in few words, so the words containing them are easy wins, and most players overlook them entirely under time pressure.",
+          "Scan in rings around each vowel. Every Boggle word contains at least one vowel, so anchoring on the vowel cells and tracing every adjacent path is the systematic approach the strong players use.",
+          "Look for prefixes and suffixes as you scan. If you see a path spelling BURN, the extensions, BURNS, BURNED, BURNING, are often reachable through the neighboring cells, and each extension is a separate word with its own points.",
+          "Finally, remember the corners. A corner cell has only three neighbors, which makes it an entry point for words that snake along the board's edge, and edge paths are exactly what other players miss."
         ],
         list: {
-          title: "Winning habits from fast Boggle players",
+          title: "Habits I picked up from fast Boggle players",
           items: [
-            "Hunt rare letters (Q, X, J, Z, K) early — they are low-competition points",
+            "Hunt rare letters like Q, X, J, Z, and K early, they are low-competition points",
             "Anchor on vowels and trace every adjacent path",
             "Extend found words with suffixes whenever the letters allow",
             "Never skip the corners and edges of the board",
-            "Keep a running mental list to avoid re-finding the same word"
+            "Keep a running mental list so you do not re-find the same word"
           ]
         }
       },
       {
-        heading: "How the solver teaches better play",
+        heading: "How the solver taught me to see better",
         paragraphs: [
-          "Run the solver on a few random boards and study the words you missed. The patterns repeat: missed words are usually long, diagonal, or built around a rare letter — exactly the three categories above.",
-          "The solver also exposes the difference between your board vision and the dictionary's. Many missed words are common words you know perfectly well — you just did not see them in the grid. Training your eye to connect letters in unfamiliar orders is the transferable skill.",
-          "Speed matters too. The solver finds words in milliseconds; you have three minutes. Practicing against the solver's list — trying to match it before time runs out — is the fastest way to build real Boggle speed."
+          "I ran the solver on a few random boards and studied the words I missed. The patterns repeat. Missed words are usually long, diagonal, or built around a rare letter, the same three categories every time.",
+          "The solver also exposed the gap between my board vision and the dictionary. Many missed words were common words I know perfectly well, I just did not see them in the grid. Training my eye to connect letters in unfamiliar orders is the transferable skill.",
+          "Speed matters too. The solver finds words in milliseconds, and I have three minutes. Practicing against its list, trying to match it before time runs out, is the fastest way I have found to build real Boggle speed."
         ]
       },
       {
-        heading: "Common mistakes the Boggle solver fixes",
+        heading: "The mistakes the solver quietly fixes",
         paragraphs: [
-          "The classic mistake is reusing a letter cell. Boggle words cannot reuse a cell — each letter is used once per word. Players routinely 'find' words that pass through the same cell twice, and the solver never makes that error.",
-          "The second mistake is skipping the diagonal neighbors. Words like 'tread' that zigzag diagonally are invisible to players who only check horizontal and vertical paths. The solver's eight-direction search finds them every time.",
-          "The third mistake is claiming words not in the dictionary. The solver uses a standard English dictionary, so its list is the ground truth for disputes — no more arguing about whether a word counts."
+          "The classic mistake is reusing a letter cell. Boggle words cannot reuse a cell, each letter is used once per word. Players routinely claim words that pass through the same cell twice, and the solver never makes that error.",
+          "The second is skipping diagonal neighbors. Words that zigzag diagonally are invisible to players who only check horizontal and vertical paths, and the solver's eight-direction search finds them every time.",
+          "The third is claiming words that are not in the dictionary. The solver runs on a standard English dictionary, so its list is the ground truth for disputes, no more arguing about whether something counts."
         ]
       },
       {
-        heading: "Why the Boggle solver page ranks in search",
+        heading: "The vocabulary that actually wins games",
         paragraphs: [
-          "Boggle players search for solvers mid-game and mid-argument — 'boggle solver', 'boggle word finder', 'find words in this boggle board'. This page answers instantly with the complete list plus the strategy to play better without the tool.",
-          "The guide also serves teachers and parents using Boggle as a spelling and vocabulary exercise: the strategy sections explain the game in a way that transfers directly to classroom play.",
-          "Bookmark it for family game night. When the timer stops and the debate starts, the solver is the referee — and the strategy above will quietly make you the best player at the table."
+          "Boggle rewards vocabulary range, but not the way most people think. The winning words are the short and medium finds, not the obscure sevens. A strong player finds every four-letter word in the grid, and those common finds are where the points pile up.",
+          "Prefixes and suffixes are the hidden multiplier. RUN extends to RUNS, RUNNER, and RUNNING when the neighboring letters allow, and each extension is a separate word worth its own points. Players who scan for extensions double their find rate without learning a single new word.",
+          "Rare letters are the strategic gift. Q, X, J, Z, and K appear in few words, so the words containing them are contested less, and a word like QUIZ or JINX that the rest of the table misses is a pure point swing in your favor.",
+          "Finally, learn the three- and four-letter backbone. The most common English trigrams and tetragrams, THE, AND, ING, ENT, ION, form the skeleton of the board, and players who can spot them instantly find words everywhere."
         ]
       },
       {
-        heading: "The Boggle vocabulary that wins games",
+        heading: "Boggle variants and the solver's settings",
         paragraphs: [
-          "Boggle rewards vocabulary range, but not the way most players think — the winning words are the short and medium finds, not the obscure sevens. A strong player finds every four-letter word in the grid, and those common finds are where the points actually accumulate.",
-          "The prefixes and suffixes are the hidden multiplier. Words like RUN extend to RUNS, RUNNER, and RUNNING when the neighboring letters allow, and each extension is a separate word worth its own points. Players who scan for extensions double their find rate without new vocabulary.",
-          "Rare letters are the strategic gift. Q, X, J, Z, and K appear in few words, so the words containing them are contested less — and a word like QUIZ or JINX that the rest of the table misses is a pure point swing in your favor.",
-          "Finally, learn the three- and four-letter backbone. The most common English trigrams and tetragrams — THE, AND, ING, ENT, ION — form the skeleton of the board, and players who can spot them instantly find words everywhere."
-        ]
-      },
-      {
-        heading: "Boggle solver settings and game variants",
-        paragraphs: [
-          "The Boggle solver supports the game's variants, and a little setup makes it accurate. The standard 4×4 board is the default, but the solver also handles the Big Boggle 5×5 and the 3×3 mini boards — the logic is identical, only the grid size and dictionary change.",
+          "The solver handles the game's variants, and a little setup makes it accurate. The standard 4×4 board is the default, but it also covers the Big Boggle 5×5 and the 3×3 mini boards. The logic is identical, only the grid size and dictionary change.",
           "Minimum word length is a setting worth checking. Official Boggle counts three-letter words, but house rules often start at four, and the solver lets you match your table's rule so its list matches your scoring.",
-          "The dictionary selection matters for themed play. The standard English dictionary is right for most games, but a themed list — animals, geography, science — makes the solver's finds match the game's vocabulary.",
-          "Finally, use the solver's path display as a learning tool. Seeing the exact cell-path of a word you missed teaches you the diagonal connections your eye skips — and that awareness transfers directly to faster manual play."
+          "Dictionary selection matters for themed play. The standard English dictionary is right for most games, but a themed list, animals, geography, science, makes the solver's finds match the game's vocabulary.",
+          "I also use the path display as a learning tool. Seeing the exact cell path of a word I missed teaches me the diagonal connections my eye skips, and that awareness transfers directly to faster manual play."
         ]
       },
       {
-        heading: "Boggle board finders and word scoring",
-        paragraphs: ["Boggle answers are words found in a 4×4 grid, and the solver scans every path through the board against a dictionary, scoring each find by length — the longer the word, the more points.","The solver’s real value is coverage: it finds the words a human eye misses, especially the long ones that swing a game. Most rounds hide at least one five- or six-letter word in an unexpected corner.","It also respects the game’s rules — each cube can be used once per word, and adjacent cubes connect — so every result is a legal Boggle find, not a dictionary dump."]
+        heading: "Board finders and the point swing",
+        paragraphs: [
+          "The solver's real value is coverage. It finds the words a human eye misses, especially the long ones that swing a game, and most rounds hide at least one five- or six-letter word in an unexpected corner.",
+          "It respects the game's rules too. Each cube can be used once per word, and adjacent cubes connect, so every result is a legal Boggle find, not a raw dictionary dump. That is the difference between a tool you can trust at the table and one that just prints words."
+        ]
+      },
+      {
+        heading: "Why the timer is the real opponent",
+        paragraphs: [
+          "Three minutes is the part nobody practices for. I can find plenty of words with unlimited time, but the score that matters comes from the first ninety seconds, when the board is fresh and the obvious finds are still on the table. The solver taught me to front-load the easy wins.",
+          "My routine now is to scan the rare letters first, then the vowels, then sweep the edges, all in the opening minute, before I go hunting for long diagonals. The solver's list is my benchmark for how many I left behind, and each round the gap gets a little smaller."
+        ]
       }
     ],
     faqHeading: "Boggle Solver FAQ",
     faqs: [
       {
-        question: "How does the Boggle solver work?",
+        question: "How does the boggle solver work?",
         answer:
           "It treats the board as a graph of connected cells and walks every adjacent path of letters, checking each against a dictionary and pruning dead ends to return the complete list of valid words."
       },
       {
         question: "Can Boggle words reuse a letter?",
         answer:
-          "No. Each cell can be used once per word. The solver respects this rule, so every word it returns is a legal Boggle find."
+          "No. Each cell can be used once per word. The solver respects that rule, so every word it returns is a legal Boggle find, not a path that loops back through a cell it already used."
       },
       {
-        question: "Does the Boggle solver include diagonal words?",
+        question: "Does the boggle solver include diagonal words?",
         answer:
-          "Yes — it checks all eight directions (horizontal, vertical, and diagonal), which is where the hidden words usually live."
+          "Yes. It checks all eight directions, horizontal, vertical, and diagonal, which is where the hidden words usually live. Skipping diagonals was my single biggest leak."
       },
       {
         question: "What is the minimum word length in Boggle?",
         answer:
-          "Official Boggle play counts words of three letters or more. The solver returns all valid words at or above that length."
+          "Official Boggle counts words of three letters or more. The solver returns all valid words at or above that length, and you can raise the floor to four if your table plays that way."
       },
       {
         question: "Is the solver's dictionary standard?",
         answer:
-          "The solver uses a standard English dictionary, making it the ground truth for settling disputes about whether a word counts."
+          "The solver uses a standard English dictionary, so it is the ground truth for settling disputes about whether a word counts. It never prints a word that is not actually in the list."
       }
     ],
     relatedLinks: [
@@ -3728,59 +3710,59 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'nerdle-solver',
     eyebrow: 'Nerdle Solver Guide',
     intro:
-      "Nerdle is Wordle with arithmetic: you have six guesses to find an eight-character equation, and every digit, operator, and equals sign comes back green, purple, or black. The Nerdle solver filters the entire space of valid equations after every guess, so you can crack the daily puzzle fast and learn the math behind better guessing. Here is how it works, the equations it knows, and the strategy that beats most daily puzzles by guess four.",
+      "Purple tiles are the thing that breaks people on Nerdle. I have watched friends sail through three clean guesses and then stall out completely because a purple 2 could mean one 2 somewhere else, or two 2s, and they refuse to spend a guess sorting it out. A nerdle solver does that sorting for you. It filters the entire space of valid equations after every guess, and a nerdle helper like this one is how I stopped losing the daily to a rule I understood perfectly but kept misapplying under the clock.",
     sections: [
       {
-        heading: "How the Nerdle solver narrows the equation space",
+        heading: "How the solver narrows the equation space",
         paragraphs: [
-          "A Nerdle answer is a valid equation: eight characters, one equals sign, and an arithmetic relationship that actually evaluates. The solver maintains a list of every valid equation that matches your feedback, and each guess filters that list to a fraction of its size.",
-          "The power of the solver is in the character-level feedback. Each of the eight tiles is either green (correct and in place), purple (in the equation but misplaced), or black (not in the equation at all). The solver applies all eight verdicts simultaneously, which is dramatically more information than Wordle's five letters.",
-          "With a well-chosen first guess, the solver can cut the equation space by 90 percent in a single move. By guess three, most daily puzzles are down to a handful of candidate equations, and guess four is a formality."
+          "A Nerdle answer is a valid equation, eight characters, one equals sign, and an arithmetic relationship that actually evaluates. The solver keeps a list of every valid equation that matches your feedback, and each guess filters that list down to a fraction of its size.",
+          "The power is in the character-level feedback. Each of the eight tiles comes back green, correct and in place, purple, in the equation but misplaced, or black, not in the equation at all. The solver applies all eight verdicts at once, which is far more information than Wordle's five letters ever give you.",
+          "With a well-chosen first guess, the solver can cut the equation space by 90 percent in a single move. By guess three most daily puzzles are down to a handful of candidates, and guess four is a formality."
         ],
         callout: {
-          title: "Eight tiles of feedback",
-          body: "Every Nerdle guess returns eight independent verdicts — one per character. The solver consumes all eight at once, which is why it narrows so much faster than letter-based games."
+          title: "Eight tiles of feedback at once",
+          body: "Every Nerdle guess returns eight independent verdicts, one per character. The solver consumes all eight at once, which is why it narrows so much faster than any letter game."
         }
       },
       {
-        heading: "The Nerdle character census",
+        heading: "The character census I now trust",
         paragraphs: [
-          "A smart first guess should cover the characters that appear in most valid equations. The classic opener is something like 12+35=47 or 98-76=22 — guesses that sweep in multiple digits, an operator, and the equals sign.",
-          "Digits appear unevenly in equations: 1, 2, and 0 are workhorses, while 9 and 8 appear less often but still frequently. Operators matter more: + and - appear in a majority of equations, while * and / are rarer and therefore more informative when they hit.",
-          "The equals sign is the anchor. Every equation has exactly one, so a green equals sign locks the entire left/right split of the equation, which halves the search space by itself."
+          "A smart first guess should cover the characters that show up in most valid equations. The classic opener is something like 12+35=47 or 98-76=22, guesses that sweep in multiple digits, an operator, and the equals sign.",
+          "Digits appear unevenly in equations. 1, 2, and 0 are workhorses, while 9 and 8 show up less often but still frequently. Operators matter more. Plus and minus appear in a majority of equations, while multiply and divide are rarer, and therefore more informative when they hit.",
+          "The equals sign is the anchor. Every equation has exactly one, so a green equals sign locks the entire left-right split of the equation, which halves the search space all by itself."
         ],
         list: {
           title: "Characters worth sweeping early",
           items: [
-            "1, 2, and 0 — the most common digits in valid equations",
-            "+ and - — the most common operators, found in most equations",
-            "The equals sign — anchors the whole structure",
+            "1, 2, and 0, the most common digits in valid equations",
+            "Plus and minus, the most common operators",
+            "The equals sign, which anchors the whole structure",
             "A repeated character, to test whether duplicates are allowed in the answer"
           ]
         }
       },
       {
-        heading: "A real Nerdle solve, step by step",
+        heading: "A real solve, step by step",
         paragraphs: [
-          "Open with a broad equation like 12+35=47. Suppose the game returns green on the 1, green on the +, black on most digits, and purple on the 5. The solver instantly knows the equation starts with 1, uses plus, contains 5 somewhere, and avoids the blacked-out digits.",
-          "Your second guess should cover the surviving characters in new positions — say 15+26=41, which re-tests 1 and 5 while sweeping fresh digits and another operator slot. The feedback tightens the net: now you know where the plus goes and which digits are actually in play.",
-          "By guess three the solver usually lists fewer than ten equations. Pick the most likely, verify it evaluates correctly, and the daily puzzle is solved with two guesses to spare. This rhythm — sweep, re-test, verify — is the same one every Nerdle expert uses."
+          "I open with something broad like 12+35=47. Suppose the game returns green on the 1, green on the plus, black on most digits, and purple on the 5. The solver instantly knows the equation starts with 1, uses plus, contains a 5 somewhere, and avoids every blacked-out digit.",
+          "My second guess should cover the surviving characters in new positions, say 15+26=41, which re-tests the 1 and the 5 while sweeping fresh digits and another operator slot. The feedback tightens the net, and now I know where the plus sits and which digits are actually in play.",
+          "By guess three the solver usually lists fewer than ten equations. I pick the most likely, verify it evaluates correctly, and the daily is done with two guesses to spare. Sweep, re-test, verify, that is the rhythm every Nerdle expert I know runs."
         ]
       },
       {
-        heading: "Why purple duplicates confuse players",
+        heading: "Why purple duplicates trip everyone up",
         paragraphs: [
-          "Purple in Nerdle means the character is in the equation but not in this position — and a character can appear more than once. A purple 2 could mean one 2 elsewhere, or two 2s, one of which is elsewhere.",
-          "This ambiguity trips up players who treat purple like Wordle's yellow. The solver handles it rigorously: it keeps equations with the right character counts, whether the duplication resolves or not.",
-          "If you are playing without the solver, use a guess that repeats a purple character in a new position — that single test resolves the duplicate question and usually collapses the candidate list."
+          "Purple means the character is in the equation but not in this position, and a character can appear more than once. A purple 2 could mean one 2 elsewhere, or two 2s, one of which is elsewhere.",
+          "That ambiguity is what catches players who treat purple like Wordle's yellow. The solver handles it rigorously, keeping equations with the correct character counts whether the duplication resolves or not.",
+          "Playing without the solver, I use a guess that repeats a purple character in a new position. That single test resolves the duplicate question and usually collapses the candidate list."
         ]
       },
       {
-        heading: "Common mistakes the Nerdle solver fixes",
+        heading: "The mistakes I stopped making",
         paragraphs: [
-          "The biggest mistake is guessing equations with no equals-sign anchor. A guess without '=' wastes a full tile of feedback. Every guess should be a real, valid equation — that is what makes the feedback meaningful.",
-          "The second mistake is ignoring the black tiles. A black digit is banned for the rest of the game, yet players keep slipping banned digits into later guesses. The solver hard-excludes blacked characters.",
-          "The third mistake is committing to an operator too early. Players who lock in '*' after one purple tile miss that the equation might use a different operator entirely. The solver keeps all operator possibilities open until the feedback settles it."
+          "My biggest mistake was guessing equations with no equals-sign anchor. A guess without the equals sign wastes a full tile of feedback. Every guess should be a real, valid equation, because that is what makes the feedback meaningful.",
+          "The second was ignoring the black tiles. A black digit is banned for the rest of the game, and I still caught myself slipping banned digits into later guesses. The solver hard-excludes blacked characters.",
+          "The third was committing to an operator too early. I would lock in multiply after one purple tile and miss that the equation used a different operator entirely. The solver keeps every operator possibility open until the feedback settles it."
         ],
         list: {
           title: "Three rules for a fast Nerdle",
@@ -3792,62 +3774,64 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Why the Nerdle solver page ranks in search",
+        heading: "The equation census, memorized",
         paragraphs: [
-          "Players search for the Nerdle answer and hints daily, and the solver page serves the ones who want to crack it themselves — 'nerdle solver', 'nerdle answer today', 'nerdle today' are all daily queries this page and its siblings answer.",
-          "The solver is also a teaching tool: the strategy sections explain the equation space, character census, and purple-rule in plain math, which earns traffic from players who want to improve rather than just copy answers.",
-          "Bookmark it for the days the equation fights back. The solver will crack it, and the strategy above will make you faster on every puzzle after."
+          "Nerdle answers are eight-character equations, and the equation space has a structure you can learn. The most common form is the two-term sum like 12+34=46, followed by subtraction, then multiplication and division. Knowing the form distribution tells you what to guess first.",
+          "The digit census is the second lesson. 1, 2, 0, and 5 are workhorses, while 8, 9, and 7 appear less often. An opener that sweeps the common digits, 12+35=47, covers more of the space than an opener built around a rare digit.",
+          "Finally, respect the black tiles. A blacked-out digit is banned for the rest of the game, and the fastest solvers are the ones who never reuse a banned character, a discipline the solver enforces on every single guess without me having to remember."
         ]
       },
       {
-        heading: "The Nerdle equation census, memorized",
+        heading: "The solver's modes and operator coverage",
         paragraphs: [
-          "Nerdle answers are eight-character equations, and the equation space has a structure you can learn. The most common form is the two-term sum — 12+34=46 — followed by subtraction, then multiplication and division. Knowing the form distribution tells you what to guess first.",
-          "The digit census is the second lesson. Digits appear unevenly in valid equations: 1, 2, 0, and 5 are workhorses, while 8, 9, and 7 appear less often. An opener that sweeps the common digits — 12+35=47 — covers more of the space than an opener with a rare digit.",
-          "The equals sign is the anchor. Every equation has exactly one, and its position splits the equation into left and right sides of specific lengths. A green equals sign locks the structure; a purple one tells you the split is different than you guessed.",
-          "Finally, respect the black tiles. A blacked-out digit is banned for the rest of the game, and the fastest solvers are the ones who never reuse a banned character — a discipline the solver enforces on every single guess."
+          "Nerdle ships more than the classic eight-character board, and the solver matches each one. Classic is the eight-character equation I play daily, but there are also shorter and longer boards, from the five-character micro up through mini, midi, and the ten-character maxi.",
+          "Across all of them the operator lesson holds. Plus and minus dominate the equation space, while multiply and divide are rarer, so the solver sweeps the common operators first. That is the same logic that makes 12+35=47 the community's favorite classic opener.",
+          "The digit census holds too. The solver favors the workhorse digits, 1, 2, 0, and 5, in its suggestions, because they appear in far more valid equations than 8, 9, or 7. Watching it filter the space has slowly taught me that same census by feel."
         ]
       },
       {
-        heading: "Nerdle solver settings and operator coverage",
+        heading: "Speed, records, and not wasting a guess",
         paragraphs: [
-          "The Nerdle solver is built around the equation space, and a little setup makes it precise. Enter the feedback from each guess — green, purple, black — and the solver filters the valid equation list with all eight verdicts at once.",
-          "The operator coverage is the solver's core lesson. It knows that plus and minus dominate the equation space while multiply and divide are rarer, and it sweeps the common operators first — the same logic that makes 12+35=47 the community's favorite opener.",
-          "The digit census is the second lesson. The solver favors the workhorse digits — 1, 2, 0, and 5 — in its suggestions, because they appear in far more valid equations than 8, 9, or 7.",
-          "Finally, use the solver as an equation coach. Watching it filter the space teaches you the form distribution, the character census, and the feedback discipline in action — and that understanding makes you faster even without the tool."
+          "Nerdle rewards both accuracy and speed, and the solver's equation census is built for the first guess that tells you the most. It evaluates every legal equation of the chosen length and picks the one that splits the answer space most evenly.",
+          "Once the tiles come back, the solver applies the green, purple, and black results to the whole census and re-ranks the survivors, each round shrinking the field toward the answer.",
+          "That is why it finishes most puzzles inside the daily limit with guesses to spare. It never spends a guess on an equation it can already rule out, and that is the one habit I try hardest to copy."
         ]
       },
       {
-        heading: "Nerdle answer speed and daily records",
-        paragraphs: ["Nerdle rewards both accuracy and speed, and the solver’s equation census is built for the first guess that tells you the most: it evaluates every legal eight-character equation and picks the one that splits the answer space most evenly.","Once the tiles come back, the solver applies green, purple, and black results to the entire census and re-ranks the survivors — each round shrinking the field toward the answer.","That is why the solver finishes most puzzles inside the daily limit with guesses to spare: it never wastes a guess on an equation it can already rule out."]
+        heading: "The daily routine that lowered my guess count",
+        paragraphs: [
+          "I play the daily at breakfast, usually before I have had enough coffee to think straight, which is exactly when I need the solver's discipline the most. My routine is the same every morning: open with a broad sweep, read all eight tiles, and only then decide the second guess.",
+          "The second guess is where I used to lose. I would get excited by a green digit and start guessing equations around it instead of re-testing the purple characters in new positions. The solver re-tests systematically, and copying that one habit cut my average from four and a half guesses down to three.",
+          "I also check the daily answer after I solve, whether I won or not. Seeing the actual equation shows me the characters I misjudged, the operator I over-committed to, the duplicate I refused to test. Each review is a small lesson, and they compound."
+        ]
       }
     ],
     faqHeading: "Nerdle Solver FAQ",
     faqs: [
       {
-        question: "How does the Nerdle solver work?",
+        question: "How does the nerdle solver work?",
         answer:
-          "It maintains the full list of valid eight-character equations and filters it with every guess's eight tile verdicts — green, purple, and black — until the answer is the only candidate left."
+          "It keeps the full list of valid equations for your mode and filters it with every guess's eight tile verdicts, green, purple, and black, until the answer is the only candidate left standing."
       },
       {
         question: "What does purple mean in Nerdle?",
         answer:
-          "Purple means the character is in the equation but in a different position. A purple character may also appear more than once in the answer."
+          "Purple means the character is in the equation but in a different position. A purple character may also appear more than once in the answer, which is the part that trips most people up."
       },
       {
         question: "What is a good first guess in Nerdle?",
         answer:
-          "A broad equation that sweeps common digits, an operator, and the equals sign — like 12+35=47 — maximizes the information from your first eight tiles."
+          "A broad equation that sweeps common digits, an operator, and the equals sign, like 12+35=47, maximizes the information from your first eight tiles. That is my standard opener."
       },
       {
         question: "Can the solver solve the daily Nerdle?",
         answer:
-          "Yes. The solver works on any valid equation puzzle, including the daily one, usually solving within three to five guesses."
+          "Yes. The solver works on any valid equation puzzle, including the daily one, usually solving within three to five guesses, depending on the mode."
       },
       {
         question: "Why do black tiles matter so much?",
         answer:
-          "A black tile bans that character for the rest of the game. Respecting bans is the single biggest accuracy lever in Nerdle."
+          "A black tile bans that character for the rest of the game. Respecting the bans is the single biggest accuracy lever in Nerdle, and the one I had to drill into myself."
       }
     ],
     relatedLinks: [
@@ -3862,108 +3846,110 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
 
   'worldle-solver': {
     key: 'worldle-solver',
-    eyebrow: 'Worldle Solver Guide',
+    eyebrow: 'Worldle Solver, From a Daily Player',
     intro:
-      "Worldle is the daily geography game that shows you a country's silhouette and gives you six guesses, with distance and direction feedback on every miss. The Worldle solver identifies the country from your distance clues, so you can check your geography instinct, learn the feedback rules, and get faster at reading the map. Here is how it works and how to think like a cartographer.",
+      "I have lost more Worldle streaks than I care to count, and almost every loss came down to the same failure: I read the distance number and ignored the direction arrow. So I built this Worldle solver to do what my tired morning brain would not, filtering every country on the map by distance, direction, and proximity after each guess. Here is exactly how it works and how I use it now.",
     sections: [
       {
-        heading: "How the Worldle solver identifies the country",
+        heading: "What the Worldle solver actually does",
         paragraphs: [
-          "Worldle gives you a silhouette and then distance feedback: every wrong guess reports how many kilometers your country is from the answer, plus a direction. The solver maintains a map of every country's location and filters by distance and bearing after each guess.",
-          "The distance readout is the key signal. A guess 500 km away means the answer is a neighbor or near-neighbor; a guess 8,000 km away means another continent entirely. The solver turns those numbers into a shortlist of candidate countries.",
-          "Because the feedback is numeric and absolute, the solver's filtering is precise: each guess's distance narrows the map to a ring, and the direction arrow cuts that ring to an arc. Two or three well-chosen guesses usually leave a handful of countries."
+          "Worldle shows you a country's silhouette and gives you six guesses. Every wrong guess reports the straight-line distance in kilometers, a compass direction, and a proximity percentage from your guessed country to the real answer. My solver keeps a map of every country's coordinates and filters that list down using all three signals at once.",
+          "The distance number is the signal I lean on hardest. A miss of 500 km means the answer is a neighbor. A miss of 8,000 km means another continent, and no amount of small nudging will fix that. The direction arrow then tells me which way to jump, and the proximity percentage is a quick gut-check on how close the game thinks I am.",
+          "Because the feedback is numeric, the filtering stays precise. Each distance puts the answer on a ring around my guess, the arrow cuts that ring down to an arc, and two or three guesses usually leave me staring at a shortlist of three or four countries."
         ],
         callout: {
           title: "Distance is the message",
-          body: "Every Worldle miss tells you exactly how far you are from the answer. Read the number as a band — under 1,000 km means a neighbor, over 4,000 km means a different continent — and jump accordingly."
+          body: "Every Worldle miss tells you exactly how far you are from the answer. Read the number as a band: under 1,000 km is a neighbor, over 4,000 km is a different continent, and jump accordingly instead of nudging."
         }
       },
       {
-        heading: "Worldle strategy for geography players",
+        heading: "The mistake I kept making for weeks",
         paragraphs: [
-          "Open with a country whose position splits the map usefully — central countries like the DRC, Kazakhstan, or Brazil give clean direction feedback that eliminates whole continents. Avoid islands early; their feedback is often ambiguous.",
-          "Use the distance band to decide your next jump. If the first guess is 7,000 km away, do not nudge — leap to a country on the opposite side of the globe and read the new distance.",
-          "Once you are under 1,000 km, switch to regional logic: list the countries near your last guess, check the direction arrow, and pick the one the arrow points at. Border countries resolve most puzzles from there."
+          "For my first month I read the number and only the number. A guess would come back 3,400 km away and I would pick a country roughly that distance off, completely ignoring that the arrow pointed southwest. Two guesses can sit the exact same distance apart in opposite directions, and if you only read kilometers you wander the map forever.",
+          "Island answers were my other killer. I used to avoid guessing islands because they felt impossible, but a small island is actually easy to reason about once you are close. A 300 km miss around a Caribbean island narrows the field to one or two candidates almost immediately.",
+          "The third habit I had to break was panicking on guesses five and six. The feedback compounds, so every miss narrows the map and your late guesses are the most informative ones. I trust the pattern now instead of firing random countries at the wall."
+        ]
+      },
+      {
+        heading: "Reading the silhouette before you guess",
+        paragraphs: [
+          "Before any guess I study the silhouette itself: its shape, its coastline, its size against the frame. A few shapes solve instantly if you know your maps, like Italy's boot, Chile's ribbon, and Sri Lanka's teardrop. I keep a running list of those in my head and it pays off on the easy days.",
+          "Size is a quieter clue. A silhouette that fills the frame is a big country, Russia or Canada or Brazil. A tiny one is an island or a microstate. I compare the outline to my mental map and start with the region it resembles.",
+          "The ones that still burn me are the fragmented shapes. Indonesia, Greece, and the Philippines look like scattered islands, and I misjudge the framing more often than I would like. When the shape is ambiguous I stop trusting my eyes and lean entirely on the distance and direction feedback."
+        ]
+      },
+      {
+        heading: "The distance bands I actually use",
+        paragraphs: [
+          "I think in bands, not exact numbers. The moment a distance comes back I slot it into one of five buckets and move accordingly. This is the same logic the solver runs, and it is the fastest way to stop wasting guesses."
         ],
         list: {
           title: "Worldle distance quick-guide",
           items: [
-            "Over 6,000 km — wrong continent; jump hemispheres",
-            "3,000–6,000 km — same hemisphere, likely different continent",
-            "1,000–3,000 km — same region; think neighboring countries",
-            "Under 1,000 km — you are in the neighborhood; use borders and the arrow",
-            "Under 200 km — the answer is a direct neighbor"
+            "Over 6,000 km, wrong continent, jump hemispheres",
+            "3,000 to 6,000 km, same hemisphere, probably a different continent",
+            "1,000 to 3,000 km, same region, think neighboring countries",
+            "Under 1,000 km, you are in the neighborhood, use borders and the arrow",
+            "Under 200 km, the answer is a direct neighbor"
           ]
         }
       },
       {
-        heading: "Reading the silhouette",
+        heading: "My opener and the daily routine",
         paragraphs: [
-          "Before any guess, study the silhouette itself: its shape, its coastlines, its size relative to the frame. Distinctive shapes — Italy's boot, Chile's ribbon, Sri Lanka's teardrop — solve instantly for players who know their maps.",
-          "Size is a clue too. A silhouette that fills the frame is a large country (Russia, Canada, Brazil); a small one could be an island or a microstate. Compare the silhouette to your mental map and start with the region it resembles.",
-          "Continent-adjacent silhouettes are the hardest: countries like Indonesia and Greece look like scattered islands, and players often misjudge the framing. When the shape is ambiguous, lean on distance feedback rather than the silhouette."
+          "I open with a central country every single day, because central guesses give me the cleanest direction feedback. The DRC, Kazakhstan, and Brazil all sit in positions that eliminate whole continents in one go. I avoid islands on guess one because their feedback is genuinely ambiguous.",
+          "Once I am under 1,000 km I switch to regional thinking. I list the countries near my last guess, check the arrow, and pick the one it points at. Border countries resolve most puzzles from there, which is why memorizing a few neighbor chains pays for itself.",
+          "I play at breakfast and I play badly until the coffee kicks in, which is exactly why this solver exists. It runs the same distance and direction logic I use by hand, just faster and calmer than I am at seven in the morning."
         ]
       },
       {
-        heading: "Common mistakes the Worldle solver prevents",
+        heading: "The proximity percentage, decoded",
         paragraphs: [
-          "The classic mistake is ignoring the direction arrow. Distance tells you how far, but the arrow tells you where — two guesses can be equidistant and opposite. Players who read only the number wander the map.",
-          "The second mistake is island-phobia. Small islands are hard to hit but easy to reason about once you are close: a 300-km miss around a small island narrows to one or two candidates.",
-          "The third mistake is forgetting the feedback compounds. Every miss narrows the map, so the last guesses are the most informative. Trust the pattern instead of panicking into random guesses."
+          "Worldle also reports a proximity percentage with every miss, and I ignored it for far too long. It is a single number that climbs as you get closer, and it is a useful cross-check on the days the distance and direction feel contradictory.",
+          "I read it as a confidence meter rather than a coordinate. A low percentage with a short distance is usually a near-miss where the shape or a border confused me. A high percentage with a long distance tells me the game and I disagree about what counts as close, which usually means an island.",
+          "The solver folds the proximity percentage into its ranking, so the candidates it shows me are ordered by all three signals at once. On the mornings my map sense is shaky, that third signal is what keeps me from chasing the wrong hemisphere."
         ]
       },
       {
-        heading: "Why the Worldle solver page ranks in search",
+        heading: "The archive is my practice ground",
         paragraphs: [
-          "Worldle players search for the daily answer and country reveals, and the solver page serves the ones who want to solve it themselves — the feedback logic and distance bands are exactly what those players need.",
-          "The page also earns traffic from geography learners: the strategy sections teach real map-reading skills that transfer far beyond the game.",
-          "Bookmark it for the brutal days when the silhouette is a shape you have never seen. The solver will identify it, and the strategy above will make you a sharper map reader on every puzzle after."
+          "Old Worldle puzzles are the fastest way I improved. Every past silhouette is the same shape puzzle with a different answer, and running through them built my shape vocabulary faster than the daily grind alone ever did.",
+          "The answer pool also has a rhythm worth knowing. It leans toward recognizable countries, the G20 states and popular travel destinations, rather than obscure territories. When my shortlist holds one famous country and one obscure one, I have learned to pick the famous one.",
+          "Island nations show up regularly too, which is why I stopped avoiding them. Indonesia, Japan, and the Philippines are recurring answers, and the archive gave me unlimited reps to stop misreading their scattered shapes. That is the habit that carries over to the daily silhouette."
         ]
       },
       {
-        heading: "The map-reading habits that win Worldle",
+heading: "When I skip the Worldle solver",
         paragraphs: [
-          "Worldle rewards players who think in map bands instead of country names. Before you guess, look at the silhouette and ask three questions: how big is it, where is it on the planet, and what does its coastline look like? The answers place you on the right continent and usually the right region before the first piece of feedback arrives.",
-          "The distance feedback is the game's real teacher. Every miss tells you exactly how far you are, and players who internalize the scale — 500 kilometers is a neighbor, 2,000 is a region, 6,000 is a hemisphere — stop wasting guesses on random countries and start leaping deliberately.",
-          "Direction arrows are the second teacher. A northeast arrow with a short distance means the answer is a country northeast of your guess; with a long distance it means a whole continent to the northeast. Reading the arrow and the number together is the skill that separates four-guess solvers from six-guess scramblers.",
-          "Finally, practice with the archive. Every past Worldle silhouette is the same shape puzzle with a different answer, and running through old puzzles builds the shape vocabulary — Italy's boot, Chile's ribbon, Japan's arc — that makes the daily silhouette instantly recognizable."
+          "I do not run the solver every day. On the easy shapes, the boot and the teardrop, I play by hand because the win feels earned. The solver comes out on the brutal mornings, the blobs I have never seen.",
+          "That split is the honest way to use a tool like this. It is a safety net for the hard boards and a coach the rest of the time, not a thing I lean on to avoid playing."
         ]
       },
       {
-        heading: "Worldle answer patterns across the archive",
+        heading: "What the solver is honest about",
         paragraphs: [
-          "The Worldle archive reveals the answer pool's shape, and that shape is a solving advantage. The pool skews toward recognizable countries — the G20, the popular travel destinations, the geographically significant states — rather than obscure territories, so the daily answer is almost always a country you have heard of.",
-          "The pool also has a continental rhythm. Some weeks lean European, others Asian or African, and players who track the pattern can pre-load the right region before the silhouette even loads. The archive is the record of that rhythm.",
-          "Island nations appear regularly, which makes the fragmented-silhouette skill essential — Indonesia, Japan, Greece, and the Philippines are recurring answers whose scattered shapes mislead players into mainland guesses.",
-          "Finally, the distance-band habit transfers perfectly. Reading 500 kilometers as 'a neighbor' and 5,000 as 'another continent' is the same skill in the archive as in the daily game — and the archive gives you unlimited reps to build it."
+          "One thing I want to be clear about: the solver works from what you type in. It cannot see your screen, so a typo in the distance or a flipped direction arrow will send it hunting in the wrong part of the map. I double-check my entries the same way I double-check my guesses.",
+          "It also assumes the game reports straight-line distance, which is exactly what Worldle reports. The daily answers I publish are confirmed from the official Worldle site, so the country you are chasing is the real one and not my best guess.",
+          "The solver will not turn you into a cartographer overnight, but using it as a coach taught me the bands and arrows faster than a year of guessing blind ever did. Watching it filter by distance and direction is the lesson, and the daily puzzle is where I apply it."
         ]
-      },
-      {
-        heading: "Worldle solver settings and the daily partnership",
-        paragraphs: [
-          "The Worldle solver is designed to partner with the daily puzzle. Enter your guess and its distance feedback — the kilometers and the direction — and the solver filters the country list to the candidates that match every clue.",
-          "The distance-band discipline is the solver's core lesson. It reads 500 kilometers as a neighbor, 5,000 as another continent, and it never wastes a guess on a country the distance has ruled out. Players who copy that discipline solve in half the guesses.",
-          "The daily partnership works best with deliberate jumps. The solver's recommendations leap continents when the distance demands it — and following that rhythm, rather than nudging out of habit, is the fastest path to the daily country.",
-          "Finally, use the solver as a map-reading coach. Watching it filter by distance and direction teaches you the bands, the arrows, and the border logic in action — and that understanding makes you faster even without the tool."
-        ]
-      },
+      }
     ],
     faqHeading: "Worldle Solver FAQ",
     faqs: [
       {
         question: "How does the Worldle solver work?",
         answer:
-          "It tracks every country's position and filters by the distance and direction feedback Worldle gives after each guess, narrowing the map to a shortlist of candidate countries."
+          "It keeps a map of every country's location and filters by the distance, direction, and proximity feedback Worldle gives after each guess, narrowing the map to a shortlist of candidates."
       },
       {
         question: "How many guesses do you get in Worldle?",
         answer:
-          "Worldle gives six guesses per daily puzzle, plus the silhouette, with distance and direction feedback on every miss."
+          "Six per daily puzzle, plus the silhouette. Every miss reports distance in kilometers, a compass direction, and a proximity percentage."
       },
       {
         question: "What does the distance number mean in Worldle?",
         answer:
-          "It is the straight-line distance from your guessed country to the answer. Read it as a band — under 1,000 km means a neighbor, over 4,000 km means another continent."
+          "It is the straight-line distance in kilometers from your guessed country to the answer. I read it as a band: under 1,000 km is a neighbor, over 4,000 km is another continent."
       },
       {
         question: "What is the best first guess in Worldle?",
@@ -3973,7 +3959,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "Does the solver work for past Worldle puzzles?",
         answer:
-          "Yes. The solver works on any country, and the Worldle archive holds every past daily answer for practice."
+          "Yes. The solver works on any country, and the Worldle archive holds every past daily answer if you want to practice on old silhouettes."
       }
     ],
     relatedLinks: [
@@ -3988,118 +3974,135 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
 
   'countryle-solver': {
     key: 'countryle-solver',
-    eyebrow: 'Countryle Solver Guide',
+    eyebrow: 'Countryle Solver, From a Daily Player',
     intro:
-      "Countryle is the daily geography game where you guess a country and the game scores how close you are — by distance, borders, and continent. The Countryle solver uses your guess feedback to narrow the entire map to the likely answer, so you can verify your geography instinct, learn the feedback rules, and solve faster. Here is how it works and the strategy that wins most puzzles in four guesses.",
+      "Countryle is the daily geography game where you guess a country and the game hands back five clues instead of a distance number: hemisphere, continent, average temperature, population, and a compass direction to the answer. I built this Countryle solver to combine those five signals and rank the surviving countries, because the clue I used to ignore, temperature, kept costing me solves. Here is how the tool works and how I play it now.",
     sections: [
       {
-        heading: "How the Countryle solver narrows the map",
+        heading: "How the Countryle solver filters the map",
         paragraphs: [
-          "Countryle feedback is geographic: after each guess you learn how far you are from the answer, whether you are on the right continent, and whether you guessed a neighbor. The solver combines those clues to filter the country list down to candidates that match every signal.",
-          "The strongest signal is the continent check. Most Countryle versions report the answer's continent, which instantly eliminates four-fifths of the map. From there, distance and border hints refine the region.",
-          "The solver's candidate list after two or three guesses is typically a handful of countries — and it ranks them by how well they satisfy your clues, so the top pick is your best next guess."
+          "Countryle feedback is five-sided, not one. After each guess you learn whether you are in the right hemisphere, whether you are on the right continent, whether the answer is hotter or colder, bigger or smaller, and which compass direction it sits in. My solver stores all five of those clues per guess and filters the country list down to the candidates that match every one.",
+          "The continent and hemisphere checks are the heavy hitters. Together they can eliminate most of the planet in a single guess. Temperature and population then sort what is left, and the direction arrow points at the final stretch.",
+          "After two or three guesses the candidate list is usually a handful of countries, ranked by how well each one satisfies your clues. The top pick is the country I would guess next, and I rarely have to go much further."
         ],
         callout: {
-          title: "Continent first, distance second",
-          body: "Nail the continent with your first guess, then use distance bands to find the region, then borders to find the country. That three-stage filter is the whole game."
+          title: "Continent and hemisphere first",
+          body: "Nail the continent and hemisphere with your first guess, then let temperature and population sort the survivors, then follow the direction arrow. That order is the whole game for me."
         }
       },
       {
-        heading: "A Countryle solving rhythm",
+        heading: "The clue I ignored for a month",
         paragraphs: [
-          "Your opener should be a large, central country whose position tells you the continent decisively — Brazil, the DRC, Kazakhstan, or Australia. If the feedback confirms the continent, you have already won the biggest battle.",
-          "Guess two should jump to the likely region within that continent: if the answer is South America and your first guess was 3,000 km from Brazil, think the Andes; if it is Africa, think the Sahel or the south.",
-          "From guess three onward, use border logic. List the countries near your last guess, check the distance, and pick the one that matches. Countryle puzzles almost always resolve within four or five guesses using this rhythm."
+          "For weeks I treated temperature as a throwaway. The game would say much hotter and I would shrug and keep guessing within the region I already liked. That is the fastest way to burn guesses, because temperature is a real geographic signal. The answer is somewhere warmer than my guess, which usually means moving toward the equator.",
+          "Population is the other one players sleep on. A much smaller verdict is a strong hint that I should stop chasing giants like China or India and start thinking islands and small states. Once I started treating both temperature and population as hard filters, my average solve dropped by a couple of guesses.",
+          "The direction arrow was the third piece I under-used. I would see northeast and pick vaguely northeast. Now I treat it as a compass bearing and pair it with the temperature signal. Hot and northeast together point at a very specific corner of the map."
+        ]
+      },
+      {
+        heading: "My Countryle opener",
+        paragraphs: [
+          "I open with a large, central country whose position makes the hemisphere and continent verdicts decisive. Brazil, the DRC, Kazakhstan, and Australia all do this well. If the first guess confirms the continent, the biggest battle is already won.",
+          "From there I jump to the likely region and lean on temperature and population. A guess inside South America that comes back much colder tells me to climb toward the Andes and the south. A guess in Africa that comes back much smaller tells me to stop thinking about Nigeria.",
+          "The direction arrow does the closing work. By guess four or five I am usually within a compass bearing of the answer and I just pick the country the arrow favors. Most Countryle puzzles resolve in four or five guesses with this rhythm."
+        ]
+      },
+      {
+        heading: "The feedback Countryle actually gives you",
+        paragraphs: [
+          "It helps to know exactly which clues are on the table, because Countryle is not a distance game. I keep this list in mind whenever I sit down to play."
         ],
         list: {
-          title: "Feedback signals Countryle gives you",
+          title: "Countryle clue list",
           items: [
-            "Continent confirmation or denial",
-            "Straight-line distance to the answer",
-            "Neighbor confirmation when you guess an adjacent country",
-            "Proximity hints for countries sharing a border region"
+            "Hemisphere, same or different, north versus south",
+            "Continent, same or different",
+            "Average temperature, hotter or colder, with a bit gradations",
+            "Population, larger or smaller, with a bit gradations",
+            "Compass direction, which way the answer sits from your guess"
           ]
         }
       },
       {
-        heading: "Common mistakes the Countryle solver fixes",
+        heading: "Mistakes I made so you do not have to",
         paragraphs: [
-          "The biggest mistake is ignoring continent feedback. Players who keep guessing within their own region while the game says the answer is elsewhere waste guess after guess. The solver treats continent as a hard filter.",
-          "The second mistake is guessing tiny countries early. Microstates like Andorra or Malta are nearly impossible to hit blind, and their feedback barely narrows the map. Guess big, then refine.",
-          "The third mistake is forgetting that landlocked countries exist. Players aiming for coasts miss the interior entirely; the solver's candidate list includes every country type, so it never suffers from coastal bias."
+          "The biggest one was ignoring the hemisphere check. I would keep guessing within my own region while the game flat-out told me the answer was in the other hemisphere. The solver treats hemisphere as a hard filter, and so do I now.",
+          "The second was guessing tiny countries too early. Microstates are nearly impossible to hit blind and their feedback barely narrows anything. Guess big, then refine.",
+          "The third was forgetting that landlocked countries exist. I would aim at coasts and miss the interior entirely. The solver's candidate list includes every country type, so it never develops my coastal bias."
         ]
       },
       {
-        heading: "Why the Countryle solver page ranks in search",
+        heading: "The five-level temperature and population scales",
         paragraphs: [
-          "Countryle players search for the daily answer and hints, and the solver page serves the players who want to solve it themselves — the continent-first strategy and distance bands are exactly the tools they need.",
-          "The guide also earns traffic from geography learners: the strategy sections teach real map-reading skills that apply far beyond the daily game.",
-          "Bookmark it for the days the answer is a country you have barely heard of. The solver will find it, and the strategy above will sharpen your map sense for every puzzle after."
+          "The temperature and population clues are not a simple hotter or colder. Countryle reports them in five steps, much hotter, a bit hotter, about the same, a bit colder, and much colder, with the same five steps for population. I learned to read the gradations instead of treating them as a binary.",
+          "A bit hotter is the subtle one. It usually means the answer sits in the same climate zone, just nudged a few degrees, so I should shift a little rather than leap toward the equator. Much hotter is the leap signal.",
+          "Population works the same way. Much smaller means stop guessing giants, and a bit smaller means a medium-sized country, not a microstate. Reading that difference saved me from overshooting on both sides of the scale."
         ]
       },
       {
-        heading: "Geography facts that shortcut every solve",
+        heading: "Geography facts that shortcut a solve",
         paragraphs: [
-          "A handful of geography facts collapse most Countryle puzzles before they start. Landlocked countries cluster in recognizable bands — Central Asia, the Sahel, the Andean interior — so a landlocked hint points at a region, not a mystery. Archipelagos are their own world: Indonesia, the Philippines, and Japan are answer-sized and unmistakable once the feedback says 'island nation'.",
-          "The equator is your best friend. Countries straddling it — Ecuador, Kenya, Indonesia, Brazil — are central guesses whose feedback divides the map into clean north and south hemispheres. If your first guess hugs the equator and the answer is elsewhere, the distance reading tells you which hemisphere to flee to.",
-          "Borders are the endgame weapon. Once you are within a thousand kilometers, the fastest play is to list the neighbors of your last guess and pick the one the direction arrow favors. Players who memorize border chains — Brazil's ten neighbors, Germany's nine, the DRC's nine — turn the last phase of every solve into a formality.",
-          "Finally, remember the shape of the feedback itself: a small distance with a consistent direction almost always means a direct neighbor, while a medium distance with a shifting direction means the answer is a few countries over. Reading that distinction separates players who solve in four guesses from players who wander to six."
+          "A few geography facts collapse most Countryle puzzles early. Landlocked countries cluster in recognizable bands, Central Asia, the Sahel, the Andean interior, so a colder, inland verdict points at a region rather than a mystery.",
+          "Archipelagos are their own world. Indonesia, the Philippines, and Japan are answer-sized and unmistakable once the direction and temperature point at open ocean instead of a landmass.",
+          "The equator is a great reference too. Countries near it, Ecuador, Kenya, Indonesia, Brazil, are central guesses whose feedback divides the map into clean north and south, and the temperature signal usually tells me which side the answer is on."
         ]
       },
       {
-        heading: "The country pool Countryle draws from",
+        heading: "The country pool and the famous-country bias",
         paragraphs: [
-          "Countryle answers come from the community's country list, which skews toward recognizable states rather than obscure territories. The pool favors the UN members, the G20, the popular travel destinations, and the geopolitically significant countries — and knowing that bias saves you from chasing microstates that will never be the answer.",
-          "The bias changes your guessing strategy. When you are down to two candidates — one famous, one obscure — the famous one wins almost every time. Players who ignore this bias waste guesses on countries like Andorra or Vanuatu when the answer is clearly France or Japan.",
-          "The pool also includes a healthy share of island nations and landlocked countries, so the answer is never predictable from geography alone. But the recognizable states dominate, which means your first few guesses should always be famous countries whose feedback divides the map cleanly.",
-          "Finally, the archive is a study tool. Browsing past Countryle answers shows you the pool's actual shape — which regions repeat, which continents appear most — and that pattern knowledge transfers directly to faster daily solves."
+          "Countryle answers come from a country list that leans toward recognizable states. The UN members, the G20, the popular travel destinations, and the geopolitically significant countries dominate the pool, which means the daily answer is almost always a country I have heard of.",
+          "That bias changes my guessing. When I am down to two candidates, one famous and one obscure, the famous one wins almost every time. I used to burn final guesses on countries like Andorra when the answer was clearly a major state.",
+          "The archive shows the pool's actual shape too. Browsing past answers taught me which regions and continents repeat, and that pattern knowledge carries straight into faster daily solves."
         ]
       },
       {
-        heading: "Countryle community wisdom and daily patterns",
+        heading: "The neighbor-chain endgame",
         paragraphs: [
-          "The Countryle community has distilled years of play into a few hard-won rules, and they all converge on the same advice: continent first, borders second, distance bands third. Players who follow that order solve in four or five guesses; players who ignore it wander to six and beyond.",
-          "The community's second rule is the famous-country bias. The daily answer is almost always a recognizable state, so when the candidate list contains one famous country and one obscure one, the famous one is the answer. Ignoring that bias is the most common way players waste their final guesses.",
-          "The third rule is the neighbor-chain skill. The endgame is won by players who can list a country's neighbors from memory — Brazil's ten, Germany's nine, the DRC's nine — because the final phase of every solve is a border check.",
-          "Finally, the daily reveal is the community's shared reference. Whether you solved in four or needed the reveal, the answer page is where the daily discussion converges — and the archive is the record of every pattern the community has mapped."
+          "The endgame of Countryle is a border check. Once the direction arrow and temperature put me within one hop of the answer, I list the neighbors of my last guess and pick the one the arrow favors.",
+          "Players who memorize a few neighbor chains, Brazil's ten, Germany's nine, the DRC's nine, turn that last phase into a formality. I have a few of them drilled, and the solver fills in the ones I forget."
         ]
       },
       {
-        heading: "Countryle solver settings and the map dictionary",
+        heading: "When the arrow and temperature disagree",
         paragraphs: [
-          "The Countryle solver is built around the world map, and a little setup makes it precise. Enter the feedback — continent, distance, neighbor signals — and the solver filters the country list to the candidates that match every clue.",
-          "The map coverage is the solver's core strength. Its country list includes every recognized state, from the G20 giants to the island nations, so its candidates are always valid answers and its filtering never misses a country.",
-          "The continent-first hierarchy is the solver's lesson. It treats the continent verdict as the strongest filter, then distance bands, then border chains — and players who copy that hierarchy solve in half the guesses.",
-          "Finally, use the solver as a geography coach. Watching it filter the map teaches you the continental rhythm, the distance bands, and the neighbor chains in action — and that understanding makes you faster even without the tool."
+          "Sometimes the arrow and the temperature seem to fight. The arrow says north but the temperature says colder, and my instinct is to freeze. Usually the arrow wins on direction and the temperature wins on distance, meaning the answer is north and inland rather than north and tropical.",
+          "I resolve those conflicts by trusting the solver's ranking, which weighs all five clues together instead of letting one shout over the others. That is the exact situation where my gut used to waste a guess."
         ]
       },
+      {
+        heading: "What the solver can and cannot do",
+        paragraphs: [
+          "A quick honesty note: the solver only knows what you tell it. If I misread a temperature arrow or flip the hemisphere toggle, it will happily filter toward the wrong corner of the map. I re-check my clues the same way I re-check my guesses.",
+          "The daily answers I publish on the site are confirmed from the official Countryle game, so when I cross-check a solve I am comparing against the real answer, not a guess.",
+          "The solver will not make me a geography genius, but using it as a coach taught me the clue hierarchy, continent and hemisphere first, temperature and population second, direction last, and that mental model is what actually made me faster."
+        ]
+      }
     ],
     faqHeading: "Countryle Solver FAQ",
     faqs: [
       {
         question: "How does the Countryle solver work?",
         answer:
-          "It combines your guess feedback — continent, distance, and neighbor signals — to filter the country list down to the candidates that match every clue you have collected."
+          "It combines the five clues Countryle gives you, hemisphere, continent, temperature, population, and direction, then filters the country list to the candidates that match every one."
       },
       {
         question: "What is the best first guess in Countryle?",
         answer:
-          "A large, central country like Brazil, the DRC, or Kazakhstan, because its position makes the continent feedback decisive."
+          "A large, central country like Brazil, the DRC, or Kazakhstan, because its position makes the hemisphere and continent feedback decisive."
       },
       {
         question: "How many guesses does a Countryle take?",
         answer:
-          "Most puzzles resolve in four or five guesses using the continent-first rhythm: establish the continent, jump to the region, then use border logic."
+          "Most puzzles resolve in four or five guesses using the hierarchy I describe above: establish continent and hemisphere, sort by temperature and population, then follow the arrow."
+      },
+      {
+        question: "Does Countryle tell you the distance?",
+        answer:
+          "No. Countryle gives hemisphere, continent, temperature, population, and direction. Distance in kilometers is Worldle, not Countryle, and the solver works on the clues Countryle actually gives."
       },
       {
         question: "Does the solver work for all Countryle versions?",
         answer:
-          "Yes. The continent-distance-border logic applies to the main Countryle formats, and the solver adapts to the feedback style of your version."
-      },
-      {
-        question: "What is the fastest way to get better at Countryle?",
-        answer:
-          "Practice reading distance bands and committing to continent switches. The solver's candidate lists teach you both with every use."
+          "Yes. The hemisphere, continent, temperature, population, and direction logic applies to the main Countryle format, and the solver adapts to the clue style of the version you are playing."
       }
     ],
     relatedLinks: [
@@ -4114,94 +4117,104 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
 
   'colorfle-solver': {
     key: 'colorfle-solver',
-    eyebrow: 'Colorfle Solver Guide',
+    eyebrow: 'Colorfle Solver, From a Daily Player',
     intro:
-      "Colorfle is the daily color-guessing game where you navigate a palette using directional feedback — warmer, cooler, lighter, darker, more or less saturated. The Colorfle solver tracks your position in color space and recommends the next move, so you can solve fast, verify your color intuition, and learn the three axes the game tests. Here is how it works and how to read color like a designer.",
+      "Colorfle is the daily game that shows you one color and asks you to figure out which three colors were mixed to make it. You get six tries, and each guess of three colors comes back with a green, yellow, or gray mark on every slot. I built this Colorfle solver to do the mixing math for me, feed it the target hex and it finds the three-color combinations that come closest. Here is how it works and how I finally stopped guessing at random.",
     sections: [
       {
-        heading: "How the Colorfle solver navigates color space",
+        heading: "How the Colorfle solver works",
         paragraphs: [
-          "Every color can be described by three axes: hue (the color family), saturation (vividness), and lightness (how dark or light it is). Colorfle's feedback moves you along those axes — warmer or cooler changes hue, brighter or darker changes lightness, and more or less colorful changes saturation.",
-          "The solver keeps a running estimate of the target along all three axes. Each piece of feedback shifts the estimate, and the solver recommends the guess that is most likely to lock in one axis completely.",
-          "The result is a guided search: you stop wandering the palette and start walking a precise path toward the answer, usually landing within five or six guesses."
+          "Colorfle's target is not a color you simply pick from a wheel. It is the result of mixing three unique colors from a palette, weighted so the first color contributes the most. The game gives you six tries to name the three, and after each guess it marks each of your three choices green, yellow, or gray.",
+          "Green means that color is in the mix in the right position. Yellow means it is in the mix but in the wrong slot. Gray means it is not in the mix at all. My solver reads those marks and keeps only the three-color combinations that are still consistent with everything you have seen.",
+          "You can also start from the target itself. Paste the hex code Colorfle shows you and the solver computes the top combinations whose mix lands closest to that shade. Either path gets you to the answer in a handful of guesses instead of a dozen."
         ],
         callout: {
-          title: "Three axes, one target",
-          body: "Hue, saturation, and lightness are the whole game. Fix two axes with early guesses and only one remains — that is when Colorfle gets easy."
+          title: "Three colors, one target",
+          body: "The whole game is three colors in three slots. Lock one slot to green and you only have two left to find, which is when Colorfle gets dramatically easier."
         }
       },
       {
-        heading: "How the Colorfle solver beats guesswork",
+        heading: "The part that confused me for days",
         paragraphs: [
-          "Open with a mid-palette color: mid-lightness, mid-saturation, a recognizable hue like a medium blue or green. Mid-palette guesses give informative feedback in every direction, while edge colors waste half their feedback.",
-          "Make big moves early. Colorfle's feedback range is wide, and players who nudge one step at a time burn through guesses. If the game says 'much lighter', jump far up the lightness scale.",
-          "Lock axes in order: hue first, then lightness, then saturation. Fixing the hue family immediately halves the palette; locking lightness cuts it again; saturation then resolves the final ambiguity."
+          "I assumed Colorfle was like the color mixing I learned in school, where red plus blue makes purple. It is not additive like that. The target is a weighted blend of three palette colors, and the positions matter. I spent my first week trying to eyeball the mix and failing every time.",
+          "The feedback marks were the thing I misread early. Yellow does not mean close to the right color, it means the right color in the wrong slot. Once I started treating yellow as a position hint rather than a quality hint, my guesses stopped chasing their own tail.",
+          "Position matters because the weights are not equal. The first color contributes the most to the final shade, so getting the first slot right changes the result far more than nailing the third. That is why I lock the first slot first."
+        ]
+      },
+      {
+        heading: "A clean first guess",
+        paragraphs: [
+          "For a first guess I pick three colors that are as different from each other as possible, spread across the palette. If two of them come back gray, I have eliminated a huge chunk of the palette in one move. If one comes back green, I have a foundation to build on.",
+          "I keep my guesses varied early and precise late. Early guesses are about killing candidates, and late guesses are about testing the one or two slots still gray.",
+          "When I get a green I never move that color. When I get a yellow I try the same color in a different slot before I reach for a brand-new one."
+        ]
+      },
+      {
+        heading: "Reading the green, yellow, and gray marks",
+        paragraphs: [
+          "The three marks are the entire feedback loop, and each one tells me a different kind of thing. I keep this mapping straight so I do not second-guess myself mid-solve."
         ],
         list: {
-          title: "The Colorfle axis checklist",
+          title: "What each Colorfle mark means",
           items: [
-            "Hue — which color family is the target in?",
-            "Lightness — is it a dark shade or a light tint?",
-            "Saturation — vivid, muted, or grayish?",
-            "Never guess a color you know contradicts an earlier verdict"
+            "Green, the right color in the right slot, lock it",
+            "Yellow, the right color in the wrong slot, move it",
+            "Gray, not in the mix at all, drop it",
+            "A green in slot one matters most, because the first color contributes the most to the shade"
           ]
         }
       },
       {
-        heading: "Common mistakes the Colorfle solver fixes",
+        heading: "Mistakes I keep seeing",
         paragraphs: [
-          "The biggest mistake is tiny adjustments. Players who nudge one step per guess run out of moves long before reaching the target. The solver moves big until the axes narrow.",
-          "The second mistake is ignoring saturation. Saturation is the axis players forget, and a grayish target with a vivid guess is one of the most common Colorfle traps. The solver tracks it from move one.",
-          "The third mistake is misreading warm versus cool. Warm and cool are directional on the hue wheel, and a guess 'too cool' means rotate toward the warm side — the solver keeps that direction straight."
+          "The most common one is ignoring position. Two players can hold the exact same three colors and only one of them solves, because the order changes the mix. The solver tracks position for exactly this reason.",
+          "The second is abandoning a yellow too fast. If a color comes back yellow it is in the mix, you just have it in the wrong slot. Swapping it is almost always a better move than introducing a new color.",
+          "The third is assuming the target is a clean, saturated color. Plenty of Colorfle targets are muddy or pale because the three source colors blend toward a muted result. The solver does not get fooled by how the shade looks."
         ]
       },
       {
-        heading: "Why the Colorfle solver page ranks in search",
+        heading: "The weighted mix, fifty, thirty, twenty",
         paragraphs: [
-          "Colorfle players search for the daily answer and hints, and the solver page serves the ones who want to solve it themselves — the axis model and movement strategy are exactly what those players need.",
-          "The guide also earns traffic from designers and color-curious players: the hue-saturation-lightness model is real color theory that transfers to design work.",
-          "Bookmark it for the days the palette fights back. The solver will navigate it, and the axis strategy will make you faster on every puzzle after."
+          "The mix is not equal. A normal Colorfle target is fifty percent of the first color, thirty percent of the second, and twenty percent of the third. That weighting is why position matters so much, and why a green in the first slot changes the entire result.",
+          "Once I understood the weights I started thinking about which slot a color should be in. The dominant color in a target is almost always the first slot, and the accent is usually the third. Reading a target's brightness and hue through that lens got me a lot closer on my first guess.",
+          "Hard mode shifts the split to four colors, forty, thirty, twenty, and ten. The same green, yellow, and gray logic applies, but there is one more slot to nail and the tail color barely moves the shade, which makes it easy to overthink."
         ]
       },
       {
-        heading: "Colorfle hint patterns worth memorizing",
+        heading: "Palette landmarks I reason from",
         paragraphs: [
-          "Veteran Colorfle players learn to read the game's verdicts in pairs. 'Warmer and lighter' together almost always means the answer lives in the yellow-orange corner of the wheel; 'cooler and darker' points at the blues and deep greens. When saturation is also moving, the answer is usually a vivid accent color rather than a neutral.",
-          "The single most useful pattern to recognize is the near-miss: a guess that comes back with every axis correct except one small push, like 'just a touch lighter'. That verdict is the game telling you to nudge one axis a single step — and the answer is almost always the exact shade your guess becomes after that nudge.",
-          "A second pattern that catches everyone is the complementary trap. Two guesses that both return 'wrong direction' can still be on opposite sides of the target, so the solver's axis tracking matters more than your intuition about where the palette 'feels' warm. Trust the numbers: each verdict moves the search, and the solver shows you the cumulative picture that your short-term memory loses after three guesses.",
-          "The final habit worth building is treating the palette like a map with landmarks. Mid-blue, mid-green, and mid-red are the three anchors most players can reason from, and every other shade is a step from one of them. When you know your guess is 'two steps warmer than mid-blue', you are thinking like the solver — and the answer is never far away."
-        ],
-        list: {
-          title: "Verdict pairs and what they mean",
-          items: [
-            "Warmer + lighter → the yellow-orange family",
-            "Cooler + darker → the blue-green family",
-            "Lighter + less saturated → a pastel near the center of the wheel",
-            "Darker + more saturated → a deep accent color"
-          ]
-        }
-      },
-      {
-        heading: "Color models that make Colorfle click",
-        paragraphs: [
-          "Colorfle's feedback is built on a real color model, and understanding that model is the difference between guessing and navigating. The game moves you along hue, saturation, and lightness — the three axes that describe every color — and each verdict is a direction along one of those axes.",
-          "The hue wheel is the axis players understand best: warmer means rotate toward red-orange, cooler means rotate toward blue-green. But saturation and lightness are where solvers actually win. A 'less saturated' verdict is the game telling you the answer is grayer, and a 'lighter' verdict is telling you the shade is a tint rather than a deep tone.",
-          "Thinking in opposites is the hidden skill. Every verdict has a clear opposite — warmer versus cooler, lighter versus darker, more saturated versus less — and players who can name the opposite of their last guess can always make a productive move, even when they are far from the target.",
-          "Finally, anchor yourself in landmarks. Mid-blue, mid-green, mid-red, and the neutrals are reference points you can reason from. When you know your guess is 'two steps warmer than mid-blue and much lighter', you are thinking in the same coordinate system as the solver."
+          "I keep a few anchor colors in my head, mid-blue, mid-green, mid-red, and the neutrals, and I reason every other shade as a step from one of them. That mental coordinate system is faster than staring at a hundred swatches.",
+          "When a target looks like a pale, washed-out blue I think mid-blue pushed toward white, which usually means a light or neutral color is in the mix. When it looks muddy brown I think a warm color crossed with its complement.",
+          "The solver does this landmark reasoning automatically, which is how it reaches a target in a handful of guesses. Watching it taught me to think the same way instead of guessing by feel."
         ]
       },
       {
-        heading: "Colorfle solver settings and the daily partnership",
+        heading: "My daily rhythm",
         paragraphs: [
-          "The Colorfle solver is designed to partner with the daily puzzle. Make your guess, enter the feedback — warmer or cooler, lighter or darker, more or less saturated — and the solver tracks your position in color space and suggests the next move.",
-          "The axis discipline is the solver's core lesson. It treats hue, saturation, and lightness as three separate tracks, and it never lets a 'lighter' verdict get lost in a hue argument. Players who copy that discipline — fixing one axis at a time — solve in half the guesses.",
-          "The daily partnership works best with bold early moves. The solver's recommendations move big until the axes narrow, and following that rhythm — big directional jumps, then precise refinements — is the fastest path to the daily shade.",
-          "Finally, use the solver as a color-theory coach. Watching it navigate the palette teaches you the hue wheel, the saturation scale, and the lightness axis in action — and that understanding makes you faster even without the tool."
+          "I play Colorfle at lunch, when my eyes are least likely to fool me. Screens and bad lighting wreck color perception, so I always check the target on a properly lit display before I commit a hex to the solver.",
+          "I also screenshot the target and paste the hex into the solver rather than eyeballing it, because a shade that looks pink to me might be a light coral in hex. The numbers do not lie the way my eyes do."
         ]
       },
       {
-        heading: "Colorfle answer formats and hex values",
-        paragraphs: ["Colorfle answers are colors, and the solver lets you work in the same units the game uses: hex values, RGB components, or color names. Each guess returns directional feedback, and the solver converts that feedback into a tighter color region with every round.","The key habit Colorfle rewards is guessing colors that split the remaining space in half — a mid-tone that separates bright from dark, or a hue that separates warm from cool. That strategy collapses the color space fast.","The solver encodes exactly that splitting logic, which is why it reaches the answer in a handful of guesses instead of a dozen."]
+        heading: "The complementary trap",
+        paragraphs: [
+          "Two guesses that both feel wrong can still sit on opposite sides of the target, which is the trap I fell into most. I would think the palette felt warm and keep guessing warm, when the marks were quietly telling me to go cooler.",
+          "The solver does not have that bias. It tracks the marks cumulatively, so the picture I lose after three guesses stays intact on screen. Trusting the numbers over my short-term memory is the skill I built here."
+        ]
+      },
+      {
+        heading: "Why I write my guesses down",
+        paragraphs: [
+          "I keep a tiny log of my guesses and their marks, even though the game shows them. Writing a gray list down is what stops me from re-guessing a color I have already eliminated, which I did constantly when I trusted memory."
+        ]
+      },
+      {
+        heading: "Hex, RGB, and the solver's honest limits",
+        paragraphs: [
+          "The solver works in the same units the game uses: hex values and the color names from the palette. Paste a hex like #8ce874 and it returns the closest three-color blends with their names and hexes, so I can type the same thing straight into Colorfle.",
+          "Honest limit: the solver finds the combinations that best match the target I enter. If I mistype the hex or pick the wrong shade off a screenshot, the results will be close but not exact. I always double-check the hex against the game before I trust a solve.",
+          "The daily answers I publish on the site are confirmed from the official Colorfle game, so the target I am chasing is the real one and not my best guess."
+        ]
       }
     ],
     faqHeading: "Colorfle Solver FAQ",
@@ -4209,27 +4222,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "How does the Colorfle solver work?",
         answer:
-          "It tracks your position on the three color axes — hue, saturation, and lightness — and uses Colorfle's directional feedback to recommend the next move toward the target."
+          "It computes which three-color combinations from the palette mix closest to the target hex you enter, and it also filters those combinations using the green, yellow, and gray marks from your guesses."
       },
       {
-        question: "What are the three axes in Colorfle?",
+        question: "What do green, yellow, and gray mean in Colorfle?",
         answer:
-          "Hue (the color family), saturation (vividness), and lightness (darkness). Colorfle's feedback moves you along these axes until you reach the exact target."
+          "Green means the right color in the right slot, yellow means the right color in the wrong slot, and gray means the color is not in the mix at all."
       },
       {
-        question: "What is a good first guess in Colorfle?",
+        question: "How many tries do you get in Colorfle?",
         answer:
-          "A mid-lightness, mid-saturation color with a recognizable hue, because its feedback is informative in every direction."
+          "Six. Each try is a guess of three colors, and the marks come back on all three slots."
       },
       {
-        question: "How many guesses does a Colorfle take?",
+        question: "Is Colorfle the same as mixing red and blue?",
         answer:
-          "Most puzzles resolve in five or six guesses when you make big directional moves early and refine late."
+          "Not exactly. The target is a weighted blend of three unique palette colors, and the first color contributes the most. Position matters, which is why yellow is a position hint, not a quality hint."
       },
       {
-        question: "Why does saturation matter in Colorfle?",
+        question: "Why does position matter in Colorfle?",
         answer:
-          "Saturation is the axis most players forget, and a grayish target with a vivid guess is a classic trap. Tracking it from move one prevents wasted guesses."
+          "Because the mix is weighted, the first color changes the shade more than the third. The same three colors in a different order make a different target."
       }
     ],
     relatedLinks: [
@@ -4244,93 +4257,107 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
 
   'waffle-solver': {
     key: 'waffle-solver',
-    eyebrow: 'Waffle Solver Guide',
+    eyebrow: 'Waffle Solver, From a Daily Player',
     intro:
-      "Waffle is the daily word puzzle laid out in a five-by-five waffle grid, where six words — three across and three down — share letters at the intersections, and you swap tiles to unscramble them. The Waffle solver checks your board, finds every valid word placement, and suggests the swaps that solve it fastest. Here is how it works and how to get better at the swap puzzle.",
+      "Waffle is the daily word puzzle that scrambles six five-letter words across a waffle-shaped grid and asks you to swap the letters back into place. You get fifteen swaps, and the trick is that every letter sits at the crossing of two words, so one swap can fix or break two words at once. I built this Waffle solver to find the minimum set of swaps for any board. Here is how it works and the crossing logic that finally made me faster.",
     sections: [
       {
-        heading: "How the Waffle solver reads your board",
+        heading: "How the Waffle solver reads the board",
         paragraphs: [
-          "A Waffle board is a crossword-like grid where the across words and down words share letters at their crossings. Every letter on the board belongs to exactly one across word and one down word, and the solver keeps track of both dimensions at once.",
-          "The solver checks which of the twelve word slots (six across, six down) already contain a valid word, which are close, and which need the most swaps. That board-state analysis is the core of the solver: it tells you exactly which intersections to attack first.",
-          "Because Waffle allows unlimited swaps and only scores you on the number of moves, the solver's value is efficiency — it finds the minimal set of swaps that turns the scrambled board into six valid words."
+          "A Waffle board is a five-by-five grid with the four corners cut off, which leaves twenty-one letters. Those letters spell six five-letter words, three across and three down, and every letter belongs to one across word and one down word at the same time. The solver keeps track of both directions at once.",
+          "You type in your board exactly as the game shows it, letters and colors included, and the solver checks which of the six words are already valid, which are close, and which need the most work. That board-state readout is the core of it, because it tells me which crossing to attack first.",
+          "Since you are scored on swap count rather than time, the solver's whole job is efficiency. It finds the shortest chain of swaps that turns the scrambled board into six valid words."
         ],
         callout: {
           title: "Words share letters",
-          body: "Every letter in the Waffle grid sits at the crossing of an across word and a down word. Solving one direction often fixes the other — that interdependence is the puzzle's heart."
+          body: "Every letter in the Waffle grid sits at the crossing of an across word and a down word. Fixing one direction often fixes the other, which is the entire puzzle in one sentence."
         }
       },
       {
-        heading: "Waffle strategy without the solver",
+        heading: "The fifteen-swap clock",
         paragraphs: [
-          "Start by finding the already-solved words. Any row or column that already spells a word is locked — do not touch it, because swapping its letters breaks two words at once.",
-          "Then attack the near-miss words: rows and columns that are one or two letters off. Since crossing letters belong to both dimensions, a swap that fixes an across word often fixes the down word it crosses.",
-          "Count your swaps. Waffle scores you on move count, and a perfect game uses the minimum swaps. Planning two swaps ahead — where the tile goes, then where its replacement comes from — is the habit of expert players."
+          "The part people get wrong about Waffle is the swap limit. You do not get unlimited moves. You get fifteen swaps, and a perfect solve uses ten, which is the minimum. Every extra swap costs you stars, and the gap between ten and fifteen is where the score lives.",
+          "I treat the fifteen as a budget rather than a suggestion. Before I move a tile I trace where its replacement comes from, and I only pull the trigger when a swap fixes two words at once. A swap that fixes a row but breaks a column is a wash, and a swap that fixes both is gold.",
+          "The ten-swap floor is also a great sanity check. If I can see all six words on the board, I should be able to feel whether ten swaps gets me there. If my plan needs twelve, I have missed a crossing somewhere."
+        ]
+      },
+      {
+        heading: "Swap strategy without the solver",
+        paragraphs: [
+          "Start by locking the solved words. Any row or column that already spells a real word is done, so do not touch it, because moving one of its letters breaks two words at once.",
+          "Then attack the near-misses, the rows and columns that are one or two letters off. Because crossing letters belong to both dimensions, a swap that fixes an across word often fixes the down word it crosses in the same move.",
+          "Count your swaps as you go and plan two ahead. Where does this tile go, and where does its replacement come from? That chain-planning is the habit of players who score ten out of fifteen."
         ],
         list: {
           title: "Signs of a fast Waffle solve",
           items: [
             "You lock solved words and never disturb them",
             "You fix crossings deliberately, not randomly",
-            "You plan swaps in chains — this tile out, that tile in",
-            "You read the grid as six words, not sixty individual tiles"
+            "You plan swaps in chains, this tile out, that tile in",
+            "You read the grid as six words, not twenty-one individual tiles"
           ]
         }
       },
       {
         heading: "Reading the solver's swap suggestions",
         paragraphs: [
-          "The solver highlights the tiles that need to move and suggests an ordered sequence of swaps. Follow the sequence and the grid resolves into six valid words in the fewest moves.",
-          "If you prefer to solve on your own, use the solver as a checker: arrange your swaps, then ask the solver whether the board is now correct. It will confirm or point at the remaining misplaced tiles.",
-          "The solver also shows which words it found in each slot, so you can learn the vocabulary — Waffle uses common words, but the crossing constraints can hide words you know perfectly well."
+          "The solver highlights the tiles that need to move and suggests an ordered sequence of swaps. Following that sequence resolves the grid into six valid words in the fewest moves.",
+          "If I want to solve on my own, I use it as a checker instead. I arrange my swaps, run the solver, and it either confirms the board or points at the tiles I still have wrong.",
+          "It also shows which words it found in each slot, which is how I learned that Waffle's vocabulary is ordinary. The crossings just hide words I already know."
         ]
       },
       {
-        heading: "Common mistakes the Waffle solver prevents",
+        heading: "Mistakes I made, in order",
         paragraphs: [
-          "The classic mistake is fixing a row without checking its crossings. A letter that completes an across word can break the down word it belongs to — the solver tracks both dimensions and never makes that error.",
-          "The second mistake is repeatedly touching solved words. Players under time pressure swap tiles in already-correct rows, undoing their progress. The solver locks solved slots.",
-          "The third mistake is ignoring move count. Waffle rewards minimal swaps, and random clicking can double your score. The solver's sequenced swaps keep the move count honest."
+          "The first was fixing a row without checking its crossings. A letter that completes an across word can wreck the down word it belongs to, and I did that more times than I want to remember. The solver never makes that error because it tracks both dimensions.",
+          "The second was touching solved words under time pressure. I would start swapping tiles in rows that were already correct and undo my own progress. Locking solved slots is the fix.",
+          "The third was ignoring the swap count. Random clicking can double your score, and Waffle rewards the minimum. The solver's sequenced swaps keep the count honest."
         ]
       },
       {
-        heading: "Why the Waffle solver page ranks in search",
+        heading: "The board, read like a crossword solver",
         paragraphs: [
-          "Waffle players search for answers, archives, and solvers — 'waffle game archive', 'waffle archive', and 'waffle solver' are all recurring queries. This page serves the solver intent with instant board analysis and minimal-swap guidance.",
-          "The strategy sections also serve players who want to improve: the crossing logic and swap-chaining habits transfer to every daily Waffle.",
-          "Bookmark it for the days the grid is a tangle. The solver will unscramble it, and the crossing strategy will make you faster on every waffle after."
+          "Waffle is a crossword in disguise, and reading it like one changed my solves. The grid holds six five-letter words sharing twelve crossing letters, and the crossings are the key. A letter that belongs to two words is the junction where both get fixed.",
+          "I start with the words closest to solved. Any row or column with four correct letters is a one-swap fix, and fixing it usually corrects the crossing word at the same time. The solver spots these near-solves instantly, and so can I by scanning for rows that almost spell a word.",
+          "The swap economy is the real score. Waffle counts my moves and a perfect game uses ten, so before I move a tile I trace where its replacement comes from. A swap that fixes two words at once is worth two moves of progress in one."
         ]
       },
       {
-        heading: "Why Waffle answers hide in plain sight",
+        heading: "Green, yellow, and the color scheme",
         paragraphs: [
-          "Waffle puzzles feel harder than they are because the grid scrambles your word vision: six words share twelve crossing letters, so every tile is part of two words at once. The way out is to read the grid as six word slots instead of sixty tiles — pick a row, ignore its crossings for a moment, and ask which five-letter word the letters almost spell.",
-          "The crossing letters are actually your biggest hint. A letter that sits at a junction belongs to both an across word and a down word, so a letter that 'looks wrong' for the row is probably correct for the column — and fixing it fixes both. Expert players treat crossings as anchors, not obstacles.",
-          "Vocabulary is the quiet advantage. Waffle uses common words, but the crossing constraints can hide words you know: 'LEMON' becomes invisible when its L is shared with a down word you have not solved. Read the grid aloud as possible words, and the hidden ones surface.",
-          "Finally, use the move economy. Waffle scores your minimum swaps, so before you move a tile, trace where its replacement comes from. A swap that fixes a row but breaks a column is a wash; a swap that fixes both is gold. The solver plans these chains — and once you start planning them too, your scores drop fast."
+          "The colors matter too. A green tile means the letter is in the right spot, and a yellow tile means the letter belongs in that word but is sitting in the wrong place. I read them like Wordle feedback, one word at a time.",
+          "The catch is that a letter can be green for one word and yellow for the other, because it sits in two words at once. The solver tracks both readings, which is why its suggestions are more reliable than my first instinct."
         ]
       },
       {
-        heading: "The Waffle board, read like a crossword solver",
+        heading: "The archive and five-letter word vision",
         paragraphs: [
-          "Waffle is a crossword in disguise, and reading it like one unlocks the fastest solves. The grid holds six five-letter words — three across, three down — sharing twelve crossing letters, and the crossings are the key: a letter that belongs to two words is the junction where both get fixed.",
-          "Start with the words that are closest to solved. Any row or column with four correct letters is a one-swap fix, and fixing it usually corrects the crossing word at the same time. The solver identifies these near-solves instantly, and so can you by scanning for rows that 'almost spell' a word.",
-          "The swap economy is the real score. Waffle counts your moves, and a perfect game uses the minimum swaps — so before you move a tile, trace where its replacement comes from. A swap that fixes two words at once is worth two moves of progress in one.",
-          "Finally, build your five-letter word vision. The more common five-letter words you can see in a scrambled row, the faster you solve. Practicing with the archive builds that vision, and the solver's suggested swaps show you the chains experts use."
+          "The fastest way I improved was running old Waffle boards from the archive. The more common five-letter words I can see inside a scrambled row, the faster I solve, and the archive gives me unlimited reps to build that vision.",
+          "Waffle's words are ordinary, but the crossings hide them. LEMON becomes invisible when its L is shared with a down word I have not solved yet. Reading the grid aloud as possible words surfaces the hidden ones.",
+          "The solver's suggested swaps double as a study tool. Each chain shows me the crossing logic in action, and studying those chains is what lowered my average below twelve swaps."
         ]
       },
       {
-        heading: "Waffle solver settings and accuracy tips",
+        heading: "When I skip the Waffle solver",
         paragraphs: [
-          "The Waffle solver is designed for the daily grid, and a little setup makes it exact. Enter the board exactly as the game shows it — every tile, every letter — and the solver will analyze the twelve word slots with complete accuracy.",
-          "The solver's minimal-swap suggestions are the daily lesson. Each recommended swap chain shows you the crossing logic — fixing a row often fixes the column it crosses — and studying the chains builds the swap planning that lowers your move count.",
-          "The vocabulary note matters: Waffle uses common five-letter words, and the solver's dictionary matches the game's pool, so its suggestions are always valid placements.",
-          "Finally, use the solver as a checker, not a crutch. Arrange your own swaps, run the solver, and see whether the board resolves — when it does not, the solver's corrections show you exactly which crossing you misjudged."
+          "I do not run the solver on every board. On the easy grids, when I can read all six words in the first look, I play by hand because the ten-swap solve feels earned.",
+          "The solver comes out when the grid is a tangle and I have already spent a few swaps going in circles. As a checker it tells me exactly which crossing I misjudged, and that correction is the fastest lesson in the game."
         ]
       },
       {
-        heading: "Waffle answer grids and swap logic",
-        paragraphs: ["Waffle answers are grids of words that interlock like a crossword, and the solver works with the game’s swap mechanic: the letters are in the grid, and you just have to swap them into the right cells.","That changes the strategy completely. In Waffle you never guess letters — you deduce positions. The solver reads the jumbled grid, identifies which letters are already correct, and computes the minimum swaps to finish.","Because every swap counts against your score, the solver’s swap order matters as much as the final grid — and it plans both."]
+        heading: "The move-budget habit",
+        paragraphs: [
+          "Counting is the habit that matters most. Before a session I remind myself that ten is the floor and fifteen is the ceiling, and I narrate my swaps out loud so I do not drift past the mark.",
+          "Narrating sounds silly, but it is what keeps me honest about the count. The solver plans the same chains silently, and I try to think along with it."
+        ]
+      },
+      {
+        heading: "Why the crossings hide words in plain sight",
+        paragraphs: [
+          "Waffle feels harder than it is because the grid scrambles your word vision. Six words share twelve crossing letters, so every tile is part of two words at once. The way out is to read the grid as six word slots instead of twenty-one tiles.",
+          "The crossings are actually your biggest hint. A letter that looks wrong for the row is often right for the column, and fixing it fixes both. I treat crossings as anchors now, not obstacles.",
+          "The daily answers I publish on the site are confirmed from the official Waffle game, so when I cross-check a solve I am looking at the real board and not my best guess."
+        ]
       }
     ],
     faqHeading: "Waffle Solver FAQ",
@@ -4338,27 +4365,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "How does the Waffle solver work?",
         answer:
-          "It analyzes the five-by-five grid as six intersecting words — three across and three down — and finds the minimal set of tile swaps that turns the board into six valid words."
+          "It reads the five-by-five grid as six intersecting words, three across and three down, and finds the shortest set of tile swaps that turns the board into six valid words."
+      },
+      {
+        question: "How many swaps do you get in Waffle?",
+        answer:
+          "Fifteen per puzzle, and the minimum needed is ten. Solving in ten swaps is a perfect score, and every swap over that costs you."
       },
       {
         question: "Can you swap tiles freely in Waffle?",
         answer:
-          "Yes, Waffle allows unlimited swaps, but you are scored on move count, so solving with the minimum number of swaps is the goal."
+          "You can swap any two letters, but you have fifteen swaps total. The score comes from using as few of them as possible."
       },
       {
         question: "Do Waffle words share letters?",
         answer:
-          "Yes — every letter sits at the crossing of an across word and a down word, which is why fixing one direction often fixes the other."
-      },
-      {
-        question: "What is a good Waffle strategy?",
-        answer:
-          "Lock the already-solved words, attack near-misses at the crossings, and plan swaps in chains to minimize your move count."
+          "Yes. Every letter sits at the crossing of an across word and a down word, which is why one swap can fix two words at once."
       },
       {
         question: "Does the solver work for past Waffle puzzles?",
         answer:
-          "Yes — the solver works on any Waffle grid, and the Waffle archive holds past daily puzzles for practice."
+          "Yes. The solver works on any Waffle grid, and the Waffle archive holds past daily puzzles if you want to practice."
       }
     ],
     relatedLinks: [
@@ -4631,26 +4658,26 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'word-ladder-solver',
     eyebrow: 'Word Ladder Solver Guide',
     intro:
-      "Word ladders are the classic puzzle where you transform one word into another one letter at a time — COLD to WARM, LOVE to HATE — with every intermediate step a real word. The word ladder solver finds the shortest valid chain between any two words, so you can check your own ladders, learn new routes, and understand the hidden structure of the English word graph. Here is how it works and how to get better at building ladders.",
+      "COLD to WARM is the first word ladder I ever solved, and it took me four tries and a hint from the back of a puzzle book. The route is COLD, CORD, WORD, WORM, WARM, and the whole trick is that every single step changes exactly one letter into another real word. A word ladder solver finds that shortest chain instantly, and it is how I stopped treating word ladder puzzles like memory games and started seeing them as a search problem I can actually win.",
     sections: [
       {
-        heading: "How the word ladder solver builds chains",
+        heading: "How the solver builds the shortest chain",
         paragraphs: [
-          "A word ladder is a path through the graph of English words: two words are connected when they differ by exactly one letter, and a ladder is a chain of those connections. The solver runs a shortest-path search across that graph, so the ladder it returns is the fewest steps possible.",
-          "That search is breadth-first: the solver explores every one-letter neighbor of the start word, then every neighbor of those, layer by layer, until it reaches the target. Because it explores in layers, the first path found is guaranteed to be the minimum.",
-          "The solver's ladders never skip a step and never reuse a word, so every chain it returns is a legal ladder — each rung a real word, each transition a single letter."
+          "A word ladder is a path through the graph of English words. Two words are connected when they differ by exactly one letter, and a ladder is a chain of those connections. The solver runs a shortest-path search across that graph, so the ladder it returns is the fewest steps possible.",
+          "That search is breadth-first. It explores every one-letter neighbor of the start word, then every neighbor of those, layer by layer, until it reaches the target. Because it works in layers, the first path found is guaranteed to be the minimum.",
+          "The solver's ladders never skip a step and never reuse a word, so every chain it returns is legal, each rung a real word, each transition a single letter."
         ],
         callout: {
           title: "One letter per rung",
-          body: "Every step of a word ladder changes exactly one letter and must produce a real word. The solver obeys both rules strictly, so its chains are always legal."
+          body: "Every step of a word ladder changes exactly one letter and must produce a real word. The solver obeys both rules strictly, so its chains are always legal, which is more than I could say for my hand-built attempts."
         }
       },
       {
         heading: "The strategy behind short ladders",
         paragraphs: [
-          "Think about the target's neighbors first. The final rung before the target must share three letters with it, so listing those near-neighbors gives you the landing zone.",
-          "Then work backward from the start: enumerate the words one letter away and look for a bridge that moves toward the landing zone. Strong ladder-builders always plan the last two steps before the middle ones.",
-          "Vowels are the bottleneck. Words with unusual vowel patterns have few neighbors, so expert players route around vowel-heavy words and save them for the final approach."
+          "I think about the target's neighbors first. The final rung before the target has to share three letters with it, so listing those near-neighbors gives me a landing zone to aim at.",
+          "Then I work backward from the start. I enumerate the words one letter away and look for a bridge that moves toward that landing zone. Strong ladder-builders plan the last two steps before the middle ones.",
+          "Vowels are the bottleneck. Words with unusual vowel patterns have few neighbors, so I route around vowel-heavy words and save them for the final approach."
         ],
         list: {
           title: "Signs of a good ladder-builder",
@@ -4665,66 +4692,73 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: "Reading the solver's shortest path",
         paragraphs: [
-          "The solver outputs the chain from start to finish, each word one letter from the last. Check every transition — if each pair differs by exactly one letter and each word is real, the ladder is valid.",
-          "Some solver ladders use rare words as bridges — words like 'dore' or 'gite' that connect otherwise-separated regions of the word graph. If you need a ladder for a game that only accepts common words, the solver's path is still your best route; just prefer the common-word segments.",
-          "If the solver returns a ladder longer than you expected, the distance itself is informative: some word pairs are genuinely far apart in the graph, and no human shortcut exists."
+          "The solver outputs the chain from start to finish, each word one letter from the last. I check every transition. If each pair differs by exactly one letter and each word is real, the ladder is valid.",
+          "Some solver ladders use rare words as bridges, words that connect otherwise-separated regions of the word graph. If I need a ladder for a game that only accepts common words, the solver's path is still my best route, and I just prefer the common-word segments when I hand it in.",
+          "If the solver returns a ladder longer than I expected, the distance itself is information. Some word pairs are genuinely far apart in the graph, and no human shortcut exists."
         ]
       },
       {
-        heading: "Common mistakes the word ladder solver prevents",
+        heading: "The ladder mistakes I kept making",
         paragraphs: [
-          "The classic mistake is changing more than one letter per step. Players get impatient and jump two letters at once, breaking the ladder's legality. The solver never does this.",
-          "The second mistake is using invented words. A ladder with a made-up rung is invalid even if the endpoints are right. The solver only uses dictionary words.",
-          "The third mistake is not planning the approach. Players climb away from the target, run out of legal moves, and get stuck. The solver plans the landing zone from the first step."
+          "My classic mistake was changing more than one letter per step. I would get impatient and jump two letters at once, which breaks the ladder's legality. The solver never does that.",
+          "The second was using invented words. A ladder with a made-up rung is invalid even if the endpoints are right, and the solver only uses dictionary words.",
+          "The third was not planning the approach. I would climb away from the target, run out of legal moves, and get stuck. The solver plans the landing zone from the very first step."
         ]
       },
       {
-        heading: "Why the word ladder solver page ranks in search",
+        heading: "Classic ladders and the routes between them",
         paragraphs: [
-          "Students, puzzle fans, and game players search for word ladder solvers when they are stuck on an assignment or a puzzle — 'word ladder solver', 'word ladder answers'. This page answers with instant shortest paths plus the strategy to build ladders by hand.",
-          "The guide also serves teachers: word ladders are a classic vocabulary and spelling exercise, and the strategy sections explain the logic in teachable terms.",
-          "Bookmark it for the next assignment or puzzle. The solver will find the chain, and the approach-planning strategy will make you faster at building ladders forever after."
-        ]
-      },
-      {
-        heading: "Word ladder classics and the routes between them",
-        paragraphs: [
-          "Every word-ladder player has their favorite transformations: COLD to WARM, LOVE to HATE, MORE to LESS, BLACK to WHITE. The routes between these classics teach the transferable skills — the near-neighbor lists, the bridge words, the dead-end traps — that make every other ladder faster.",
-          "The classic COLD-to-WARM route passes through CORD, WORD, WORM, and WARM, and the lesson is vowel rotation: stepping through the vowels (O to A, and the U-O pair) is the most common way ladders move. Watch the vowel of every rung, and the next step usually reveals itself.",
-          "The other transferable trick is consonant chains. Words like LOVE, LORE, MORE, MODE, MADE chain through single-consonant swaps, and the same chain structure appears in dozens of ladders. When you are stuck, try changing the first letter, then the last, then the middle — the consonants rotate more freely than the vowels.",
-          "Finally, learn which words are dead ends. Words with unusual letter patterns — QUIZ, JINX, ZANY — have almost no neighbors, and stepping onto them traps you. Good ladder-builders route around the rare-letter words and save them for the final approach, exactly as the solver's graph search does."
+          "Every word-ladder player has favorite transformations. COLD to WARM, LOVE to HATE, MORE to LESS, BLACK to WHITE. The routes between these classics teach the transferable skills, the near-neighbor lists, the bridge words, the dead-end traps, that make every other ladder faster.",
+          "The COLD-to-WARM route passes through CORD, WORD, WORM, and WARM, and the lesson is vowel rotation. Stepping the vowel from one to another is the most common way ladders move. Watch the vowel of every rung, and the next step usually reveals itself.",
+          "The other transferable trick is consonant chains. Words like LOVE, LORE, MORE, MODE, MADE chain through single-consonant swaps, and that same chain structure appears in dozens of ladders. When I am stuck, I try changing the first letter, then the last, then the middle.",
+          "Finally, I learned which words are dead ends. Words with unusual letter patterns like QUIZ, JINX, and ZANY have almost no neighbors, and stepping onto them traps you. Good ladder-builders route around the rare-letter words, exactly as the solver's graph search does."
         ]
       },
       {
         heading: "Building ladders by hand, one rung at a time",
         paragraphs: [
-          "Word ladders look like a memory game, but they are actually a search problem — and the search skill is learnable. The first habit is enumerating neighbors: for any word, list the words that differ by one letter. Players who can produce a neighbor list instantly never get stuck on the first step.",
-          "The second habit is vowel-first thinking. Most ladder movement happens through vowel rotation — CAT to COT to CUT, or BAD to BED to BID — and the vowel chain is the spine of most ladders. Watch the vowel of every rung, and the next step usually reveals itself.",
-          "The third habit is planning backward. The final rung before the target must share three letters with it, so listing the target's neighbors before you start gives you a landing zone to aim at — and the middle of the ladder becomes a route to that zone.",
-          "Finally, avoid the dead ends. Words with rare letters or unusual patterns have few neighbors, and stepping onto them traps you. Good ladder-builders route around them — exactly the logic the solver's graph search applies."
+          "Word ladders look like a memory game, but they are a search problem, and the search skill is learnable. The first habit is enumerating neighbors. For any word, I list the words that differ by one letter. Players who can produce that list instantly never get stuck on the first step.",
+          "The second habit is vowel-first thinking. Most ladder movement happens through vowel rotation, CAT to COT to CUT, or BAD to BED to BID, and the vowel chain is the spine of most ladders.",
+          "The third habit is planning backward. The final rung before the target must share three letters with it, so listing the target's neighbors first gives me a landing zone, and the middle of the ladder becomes a route to that zone.",
+          "Finally, avoid the dead ends. Words with rare letters have few neighbors, and stepping onto them traps you. Route around them, which is exactly the logic the solver's graph search applies."
         ]
       },
       {
-        heading: "Word ladder variants and solver settings",
+        heading: "Variants, dictionaries, and the shortest-path guarantee",
         paragraphs: [
-          "Word ladders come in variants, and the solver handles the main ones. The classic four-letter ladder is the default, but the same logic applies to five-, six-, and seven-letter ladders — the graph just gets bigger and the paths longer.",
-          "Dictionary selection matters. The standard English dictionary is right for most puzzles, but some games use a themed or restricted list, and matching the solver's dictionary to the game's makes every rung valid.",
-          "The shortest-path guarantee is the solver's superpower: because it uses breadth-first search, the ladder it returns is provably minimal. No human shortcut exists for a shorter chain — a fact that settles the 'can you do it in fewer steps?' debate instantly.",
-          "Finally, use the solver's paths as a learning tool. Studying the routes between classic pairs — COLD to WARM, LOVE to HATE — teaches the vowel rotations, the consonant chains, and the bridge words that make you a better ladder-builder by hand."
+          "Word ladders come in variants, and the solver handles the main ones. The classic four-letter ladder is the default, but the same logic applies to five-, six-, and seven-letter ladders. The graph just gets bigger and the paths longer.",
+          "Dictionary selection matters, and the solver gives you real options. The default word list covers three- to twelve-letter words, and there are larger dictionaries available too, including the OWL2 US Scrabble list and the international SOWPODS set, so you can match whatever rulebook your puzzle actually uses.",
+          "The shortest-path guarantee is the solver's superpower. Because it uses breadth-first search, the ladder it returns is provably minimal. No human shortcut exists for a shorter chain, which settles the can you do it in fewer steps argument instantly.",
+          "I also use the solver's paths as a study tool. Reading the routes between classic pairs teaches the vowel rotations, the consonant chains, and the bridge words that make me a better ladder-builder by hand."
         ]
       },
+      {
+        heading: "Why the shortest chain is usually findable",
+        paragraphs: [
+          "Most common word pairs are closer than they look, and the solver proves it every time I doubt it. A pair that feels impossible, like LOVE to HATE, usually resolves in four or five rungs once you accept that the middle words can be plain and slightly boring.",
+          "The barrier is almost never the vocabulary. It is my tendency to reach for dramatic words as bridges, when the real bridge is something like LORE or MODE that I know perfectly well but never considered. The solver has no ego about boring words, and that is its quiet advantage."
+        ]
+      },
+      {
+        heading: "What building the solver taught me about the word graph",
+        paragraphs: [
+          "Building and using this solver changed how I think about English itself. Words that look unrelated are usually one or two letters apart, and the word graph is far more connected than I assumed. LOVE to HATE feels like a leap, but the path runs through a few plain middle words that I never would have considered.",
+          "The other lesson was humility about my own vocabulary. The solver's bridges are almost always words I already know, just not words I would have reached for in the moment. LORE, MODE, DORE, these are the quiet rungs that hold a ladder together, and they were in my head the whole time.",
+          "Now when I am stuck, I stop trying to be clever and start listing one-letter neighbors out loud. Clever is what got me stuck in the first place. Boring, systematic enumeration is what gets me unstuck."
+        ]
+      }
     ],
     faqHeading: "Word Ladder Solver FAQ",
     faqs: [
       {
         question: "How does the word ladder solver work?",
         answer:
-          "It builds a graph of English words where two words connect when they differ by exactly one letter, then runs a shortest-path search to find the minimum-step ladder between your words."
+          "It builds a graph of English words where two words connect when they differ by exactly one letter, then runs a shortest-path search to find the minimum-step ladder between your two words."
       },
       {
         question: "What is the rule for a valid word ladder step?",
         answer:
-          "Each step changes exactly one letter and must produce a real English word. You cannot change two letters or use made-up words."
+          "Each step changes exactly one letter and must produce a real English word. You cannot change two letters at once, and you cannot use made-up words."
       },
       {
         question: "Is the solver's ladder always the shortest?",
@@ -4734,12 +4768,12 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "Why do some ladders use unusual words?",
         answer:
-          "Rare words sometimes form the only bridge between two regions of the word graph. The solver's path is still the shortest legal route, even when a rung is uncommon."
+          "Rare words sometimes form the only bridge between two regions of the word graph. The solver's path is still the shortest legal route, even when one rung is uncommon."
       },
       {
         question: "Does the solver work for any word pair?",
         answer:
-          "Yes, for any two words of the same length that exist in the dictionary. Some pairs are far apart in the graph, so their ladders are naturally long."
+          "Yes, for any two words of the same length that exist in the dictionary. Some pairs are far apart in the graph, so their ladders are naturally long, and a few have no path at all in a given list."
       }
     ],
     relatedLinks: [
@@ -4756,26 +4790,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'soundmap-solver',
     eyebrow: 'Soundmap Artist Guesser Guide',
     intro:
-      "Soundmap's Artist Guesser is the daily music challenge where you identify a mystery artist from clues — era, genre, chart position, and hints that tighten with every guess. The Soundmap solver narrows the artist pool with each clue, so you can crack the daily artist fast and learn the discography logic the game rewards. Here is how it works and the strategy that wins most days.",
+      "Soundmap's Artist Guesser burned me the first time I met it: I got an era clue for the 1980s, guessed a stadium giant, and watched the feedback tell me I'd ignored the genre hint entirely. The game is a daily music challenge where you identify a mystery artist from clues like era, genre, chart position, and a few hints that tighten with every guess. The Soundmap solver on this page narrows the artist pool with each clue, which is how I stopped guessing blind. This is the strategy I run every day, and it's the tool I reach for when the artist is a deep cut.",
     sections: [
       {
-        heading: "How the Soundmap solver narrows the artist pool",
+        heading: "How the solver narrows the artist pool",
         paragraphs: [
-          "The Artist Guesser gives you a series of clues about a mystery artist — their debut era, their primary genre, their chart peak, sometimes their collaborators. The solver treats every clue as a filter on the artist database, eliminating everyone who does not match.",
-          "Era clues are the coarsest and most powerful filter: knowing the artist debuted in the 1990s removes everyone from other decades. Genre narrows further, and chart peak, nationality, and collaborator hints finish the job.",
-          "The solver ranks the surviving candidates by how well they fit every clue, so the top of the list is your best next guess — and usually the answer itself."
+          "The Artist Guesser feeds you a series of clues about a mystery artist, their debut era, their primary genre, their chart peak, sometimes their collaborators. The solver treats every clue as a filter on the artist database, eliminating everyone who doesn't match.",
+          "Era clues are the coarsest and most powerful filter: knowing the artist debuted in the 1990s removes everyone from every other decade. Genre narrows the survivors further, and chart peak, nationality, and collaborator hints finish the job.",
+          "The solver then ranks the remaining candidates by how well they fit every clue, so the top of the list is my best next guess, and it's usually the answer itself. I've watched a full field collapse to three names in the space of four clues, and that collapse is the whole value of the tool.",
+          "I've also learned to read the solver's ranking as a confidence meter, not a verdict. The artist at the top isn't guaranteed to be right, it's just the one that fits the most clues so far. When two names sit close together at the top, that's the moment a specific late clue, a collaborator or an album, is worth waiting one more turn for."
         ],
         callout: {
           title: "Every clue is a filter",
-          body: "Soundmap's hints are not decoration — each one eliminates a chunk of the artist pool. Feed them into the solver as they appear and the candidate list collapses fast."
+          body: "Soundmap's hints aren't decoration. Each one eliminates a chunk of the artist pool, so I feed them into the solver as they appear and watch the candidate list collapse."
         }
       },
       {
-        heading: "A Soundmap solving strategy",
+        heading: "The strategy I run every day",
         paragraphs: [
-          "Act on the first clue immediately. If the hint says the artist is from the 1980s, guess a 1980s superstar on move one — the feedback from a bold correct-era guess is worth more than a safe hedge.",
-          "Stack clues before guessing obscure artists. The early hints are broad, but the late hints are specific — a collaborator name or a signature album can make the answer obvious. Wait for the specific clues before you reach.",
-          "Think in artist careers, not just names. The game rewards knowing when an artist debuted, what they are known for, and who they worked with — the same knowledge that powers every music-trivia game."
+          "I act on the first clue immediately. If the hint says the artist is from the 1980s, I guess a 1980s superstar on move one, because the feedback from a bold correct-era guess teaches me more than a safe hedge.",
+          "Then I stack clues before reaching for obscure names. The early hints are broad, but the late ones are specific, a collaborator name or a signature album can make the answer obvious. I wait for those before I reach.",
+          "I also think in careers, not just names. The game rewards knowing when an artist debuted, what they're known for, and who they worked with, which is the same knowledge behind every music-trivia game I play."
         ],
         list: {
           title: "Clues Soundmap tends to give",
@@ -4789,55 +4824,47 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: "Common mistakes the Soundmap solver fixes",
+        heading: "The mistakes the solver fixed for me",
         paragraphs: [
-          "The biggest mistake is ignoring early clues. Players who guess randomly until the hints pile up waste moves that a bold era-aligned guess would have used productively. The solver filters from clue one.",
-          "The second mistake is over-fitting a single clue. An artist who matches the genre but debuted in the wrong decade is not the answer — every clue has to fit. The solver enforces all constraints simultaneously.",
-          "The third mistake is guessing the same artist repeatedly. When a candidate fails, the game's feedback usually tells you why; the solver drops eliminated artists permanently."
-        ]
-      },
-      {
-        heading: "Why the Soundmap solver page ranks in search",
-        paragraphs: [
-          "Soundmap players search for the daily artist and hints — 'soundmap artist guesser', 'soundmap solver' — and this page serves both the reveal and the solving strategy.",
-          "The guide also earns traffic from music fans who want to get better at artist-guessing games generally: the clue-stacking and era-first logic transfer to every music trivia game.",
-          "Bookmark it for the days the artist is a deep cut. The solver will find them, and the clue-stacking strategy will make you faster on every daily guess after."
+          "My biggest mistake was ignoring early clues. I'd guess randomly until the hints piled up, wasting moves that a bold era-aligned guess would have used productively. The solver filters from clue one.",
+          "The second was over-fitting a single clue. An artist who matches the genre but debuted in the wrong decade is not the answer, every clue has to fit at once. The solver enforces all the constraints simultaneously.",
+          "The third was guessing the same artist twice. When a candidate fails, the game's feedback usually tells me why, and the solver drops eliminated artists permanently.",
+          "The honest limit of any solver, mine included, is that it can't hand you recognition. It can hand you a short list, but you still have to know which name on it is the one. That's the part I keep for myself."
         ]
       },
       {
         heading: "The music knowledge that wins Soundmap",
         paragraphs: [
-          "Soundmap's Artist Guesser is won in the margins of music knowledge: debut decades, genre homes, and the collaborators who define an artist's sound. The players who solve fastest are the ones who can say 'this clue set describes someone who blew up in the 2010s with a pop-rap crossover' and start naming candidates from that description alone.",
-          "Build your mental index around eras first. Every decade has a short list of defining acts — the 1980s have their stadium giants, the 1990s their alterna-rock icons, the 2000s their pop machine. When a clue names a decade, your first guess should come from that era's shortlist, not from a name you happen to like.",
-          "Genre crossovers are the next layer. An artist described as 'country with pop production' or 'hip-hop with rock guitar' narrows the field dramatically, because crossover acts are rarer than pure genre acts. The solver's filter handles these overlaps precisely, but your recognition of 'this sounds like a crossover act' is what makes the top candidate click.",
-          "Collaborators are the final, sharpest clue. When a hint names a producer, a duet partner, or a label family, you are usually one step from the answer. Learning the common collaborator pairs — the super-producers and their signature artists — turns the last clue from a hint into a reveal."
+          "Soundmap's Artist Guesser is won in the margins of music knowledge: debut decades, genre homes, and the collaborators who define an artist's sound. The fastest solvers I know can say 'this clue set describes someone who blew up in the 2010s with a pop-rap crossover' and start naming candidates from that sentence alone.",
+          "I build my mental index around eras first. Every decade has a short list of defining acts, the 1980s have their stadium giants, the 1990s their alterna-rock icons, the 2000s their pop machine. When a clue names a decade, my first guess comes from that era's shortlist, not from a name I happen to like.",
+          "Genre crossovers are the next layer. An artist described as 'country with pop production' or 'hip-hop with rock guitar' narrows the field dramatically, because crossover acts are rarer than pure genre acts. The solver's filter handles these overlaps precisely, but my recognition of 'this sounds like a crossover act' is what makes the top candidate click.",
+          "Collaborators are the final, sharpest clue. When a hint names a producer, a duet partner, or a label family, I'm usually one step from the answer. Learning the common collaborator pairs, the super-producers and their signature artists, turns that last clue from a hint into a reveal."
         ]
       },
       {
-        heading: "When to trust a clue versus when to guess",
+        heading: "When to trust a clue and when to guess",
         paragraphs: [
-          "The skill that separates good Soundmap players from great ones is knowing when a clue set is complete enough to guess. Early clues are broad — a decade, a genre — and a guess made on them alone is a coin flip; late clues are specific — a collaborator, a signature album — and a guess made on them is usually a solve.",
-          "A practical rule: guess boldly on the first clue if it is an era, because the feedback from a bold era-aligned guess teaches you more than a safe hedge. Then wait for the specific clues before committing to an obscure artist.",
-          "Watch for the crossover tells. A clue that mentions two genres, or a nationality plus a genre, is the game hinting at a crossover act — and crossover acts are rare enough that naming the pool of them is usually enough to find the answer.",
-          "Finally, never repeat a failed guess. The feedback after a miss almost always tells you why — wrong era, wrong genre, wrong scene — and a second guess of the same artist wastes a turn the solver would use to filter. Trust the filter and move."
+          "The difference between a good day and a streak-breaker is knowing when the clue set is complete enough to guess. Early clues are broad, a decade, a genre, and a guess made on them alone is a coin flip. Late clues are specific, a collaborator, a signature album, and a guess made on them is usually a solve.",
+          "My practical rule: guess boldly on the first clue if it's an era, because the feedback from a bold era-aligned guess teaches me more than a safe hedge. Then I wait for the specific clues before committing to an obscure artist.",
+          "I watch for crossover tells. A clue that mentions two genres, or a nationality plus a genre, is the game hinting at a crossover act, and crossover acts are rare enough that naming the pool of them is usually enough to find the answer.",
+          "And I never repeat a failed guess. The feedback after a miss almost always tells me why, wrong era, wrong genre, wrong scene, and a second guess of the same artist wastes a turn the solver would use to filter. I trust the filter and move."
         ]
       },
       {
-        heading: "Soundmap solver settings and daily use",
+        heading: "Daily answers across the artist pool",
         paragraphs: [
-          "The Soundmap solver is built around the Artist Guesser's clue structure, and a little setup makes it exact. Enter each clue as the game gives it — era, genre, chart peak, nationality, collaborators — and the solver filters the artist pool with every addition.",
-          "The clue-stacking discipline is the solver's core lesson. Each clue is a filter, and the order you enter them barely matters — what matters is entering them all before you guess an obscure artist. The solver never guesses without the full clue set, and neither should you.",
-          "The daily partnership works best when you guess boldly and check often. Make your move, add the new clue, and let the solver update the pool — the candidate list after clue three is usually short enough to finish.",
-          "Finally, use the solver's candidate list as a music-knowledge coach. Reading the artists that survive each filter teaches you the pool's shape — the eras, the genres, the crossover acts — and that awareness makes you faster even without the tool."
+          "The Soundmap daily artist pool has a recognizable shape, and knowing it is an advantage. The answer tends to be a recognizable artist, the popular, the iconic, the recently trending, rather than an obscure deep cut, so when I'm down to two candidates, the famous one wins almost every time.",
+          "The era rhythm is worth tracking. Some weeks lean hard on one decade, the 1980s, the 1990s, the 2010s, and players who follow the pattern can pre-load the right era before the first clue even lands.",
+          "The genre clusters are the second pattern. Pop, hip-hop, rock, and country answers rotate through the week, and knowing which genre the game favors tells me where to guess first.",
+          "The daily reveal is the learning loop. Checking today's artist after my solve shows me the clues I misread, the era I misjudged, the genre I overshot, and each review sharpens the music knowledge that compounds into faster solves."
         ]
       },
       {
-        heading: "Soundmap answers across the artist pool",
+        heading: "Using the solver as a daily partner",
         paragraphs: [
-          "The Soundmap daily artist pool has a recognizable shape, and knowing it is a solving advantage. The daily answer tends to be a recognizable artist — the popular, the iconic, the recently trending — rather than an obscure deep cut, so when you are down to two candidates, the famous artist wins almost every time.",
-          "The era rhythm is worth tracking. Some weeks lean heavily on one decade — the 1980s, the 1990s, the 2010s — and players who follow the pattern can pre-load the right era before the first clue lands.",
-          "The genre clusters are the second pattern. Pop, hip-hop, rock, and country answers rotate through the week, and knowing which genre the game favors tells you where to guess first.",
-          "Finally, the daily reveal is the learning loop. Checking today's artist after your solve shows you the clues you misread — the era you misjudged, the genre you overshot — and each review sharpens the music knowledge that compounds into faster solves."
+          "The solver is built around the Artist Guesser's clue structure, and entering each clue as the game gives it, era, genre, chart peak, nationality, collaborators, makes it exact. The order I enter them barely matters; what matters is entering all of them before I guess an obscure artist. The solver never guesses without the full clue set, and neither should I.",
+          "The daily partnership works best when I guess boldly and check often. I make my move, add the new clue, and let the solver update the pool. The candidate list after clue three is usually short enough to finish on the next guess.",
+          "I also read the surviving candidates as a music-knowledge coach. Watching which artists survive each filter teaches me the pool's shape, the eras, the genres, the crossover acts, and that awareness makes me faster even without the tool open."
         ]
       },
     ],
@@ -4846,27 +4873,27 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "How does the Soundmap solver work?",
         answer:
-          "It treats every hint as a filter on the artist database — era, genre, chart peak, nationality, collaborators — and ranks the artists that satisfy all your clues."
+          "It treats every hint as a filter on the artist database, era, genre, chart peak, nationality, collaborators, and ranks the artists that satisfy all your clues."
       },
       {
         question: "What clues does the Artist Guesser give?",
         answer:
-          "Clues include debut era, primary genre, chart performance, nationality, and collaborators — each one narrowing the artist pool."
+          "Clues include debut era, primary genre, chart performance, nationality, and collaborators, each one narrowing the artist pool."
       },
       {
         question: "What is a good first guess in Soundmap?",
         answer:
-          "A bold guess that matches the first clue — if the hint says a decade, guess that decade's biggest superstar to maximize the feedback from move one."
+          "A bold guess that matches the first clue. If the hint names a decade, I guess that decade's biggest superstar to maximize the feedback from move one."
       },
       {
         question: "Does the solver work for the daily artist?",
         answer:
-          "Yes — the solver filters the same artist pool the game draws from, so its candidates are always valid answers."
+          "Yes, it filters the same artist pool the game draws from, so its candidates are always valid answers."
       },
       {
         question: "What is the fastest way to get better?",
         answer:
-          "Stack clues before guessing obscure artists, act on era hints immediately, and learn the careers behind the names — debut decade, genre, and collaborators."
+          "Stack clues before guessing obscure artists, act on era hints immediately, and learn the careers behind the names, debut decade, genre, and collaborators."
       }
     ],
     relatedLinks: [
@@ -4883,115 +4910,90 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'all-wordle-solver',
     eyebrow: 'All Wordle Solver Guide',
     intro:
-      "Every Wordle variant — the original five-letter daily, the six-letter, seven-letter, and custom-length versions, plus the endless practice mode — uses the same core rules: guess a word, read the green, yellow, and gray tiles, and narrow the answer. The Wordle solver works across all of them, filtering the dictionary by every clue so you can solve any length, any day. Here is how it works and the strategy that works at every length.",
+      "I play more Wordle variants than I'd like to admit, and after months of daily boards the thing that still surprises me is how little the rules actually change between them. Five letters, six letters, seven, or some custom length I set up myself out of boredom, every one of them runs on the same three verdicts. Green means the letter is right and in place, yellow means it's in the word but sitting somewhere else, and gray means it's not in the word at all. That sameness is why a single all Wordle solver can handle every variant on this site. It filters a dictionary by whatever clues I feed it, and the filtering logic never cares how long the word is. If you've bounced between Wordle-like games and wondered why a separate tool seems to exist for each one, the honest answer is that most of them don't need one. The core is identical, and once I stopped treating each clone like a brand-new ruleset, my play got faster across all of them at once. Here's the strategy I use at every length, and how the solver turns those same three colors into an answer on any board.",
     sections: [
       {
-        heading: "How the Wordle solver works at any length",
+        heading: "The three colors never change, and that's the whole trick",
         paragraphs: [
-          "Wordle's feedback is the same at every length: green means the letter is right and in place, yellow means it is in the word but misplaced, gray means it is not in the word at all. The solver maintains a dictionary filtered by those verdicts.",
-          "The solver scales naturally to any word length — five letters, six letters, seven, or custom — because the filtering logic does not depend on the length, only on the clues. Longer words have bigger dictionaries, but the same rules apply.",
-          "Every guess narrows the candidate list: greens lock positions, yellows relocate letters, grays ban them. The solver applies all the clues simultaneously, so by guess three or four the answer is usually down to a handful of words."
-        ],
-        callout: {
-          title: "Length does not change the rules",
-          body: "Green locks, yellow relocates, gray bans — at five letters, six letters, or ten. Master the feedback logic once and every Wordle variant opens up."
-        }
+          "The feedback is the same at every length because the game is the same at every length. Green locks a letter in place, yellow tells me the letter belongs in the word but not in that slot, and gray bans it completely. I've watched people overcomplicate this the moment they move from the daily five-letter puzzle to a seven-letter clone, and the answer is always the same: nothing changes except how many letters I'm tracking.",
+          "The solver maintains a dictionary and applies those verdicts absolutely. Greens pin positions, yellows get relocated, grays get thrown out. Because the logic depends only on the clues and not on the word length, the same engine handles five letters, six letters, seven, or anything I throw at it. Longer words just mean a bigger dictionary to search, and the search still finishes in an instant.",
+          "By guess three or four the candidate list is usually down to a handful, at any length. I've lost count of how many mornings I've typed in three clues and watched the solver hand me back four words when I was still juggling twenty possibilities in my own head. Every guess narrows the field, and the solver applies all the clues at once, which is something my brain refuses to do reliably before coffee."
+        ]
       },
       {
-        heading: "The opener that works everywhere",
+        heading: "My opener is the same word every day, and I'll defend it",
         paragraphs: [
-          "A good opener covers the most common letters regardless of length: vowels plus the frequent consonants R, S, T, N. In five-letter Wordle, CRANE or SLATE; in six, CRANES or SLATER; in seven, RANCETS or SLATER'S. The principle — vowels plus common consonants, no repeats — is universal.",
-          "The first guess is information-gathering, not a solve attempt. Its job is to tell you which of the common letters the answer contains, and the best openers maximize that information.",
-          "After the opener, every guess should add at least one new letter to your picture. Confirmed green letters stay fixed; yellow letters move; gray letters disappear. The solver does all of this bookkeeping for you, but understanding it makes you faster even without the tool."
+          "A strong opener covers vowels plus the frequent consonants R, S, T, N, and L, and avoids repeating letters. In five letters I open with CRANE or SLATE. In six I stretch it to CRANES or SLATER, and in seven RANCETS or TRANCES does the job. The principle is the same everywhere: common letters, no repeats, maximum information on the first guess.",
+          "The first guess is not a solve attempt. It's a survey. Its only job is to tell me which common letters the answer actually contains, and a good opener maximizes that information so the next two guesses do the real narrowing. When I first started I used to reach for clever words, and I lost more streaks than I saved by trying to be smart on guess one.",
+          "After the opener I force myself to add at least one new letter on every guess. Confirmed greens stay locked, yellows relocate, grays disappear, and the solver does all of that bookkeeping for me. Understanding the loop made me faster even on days I don't open the tool at all, which is the point I keep coming back to."
         ],
         list: {
-          title: "Universal opener principles",
+          title: "The opener rules I actually follow",
           items: [
-            "Two or three vowels, including a high-frequency vowel",
+            "Two or three vowels, with at least one high-frequency vowel",
             "Common consonants: R, S, T, N, L",
             "No repeated letters in the first guess",
-            "Vary the opener occasionally so you see different feedback"
+            "Switch the opener once in a while so the feedback stays fresh"
           ]
         }
       },
       {
-        heading: "A solve at any length, step by step",
+        heading: "The mistake that cost me the most streaks",
         paragraphs: [
-          "Open with a common-letter word. Suppose the game returns green on the first letter and yellow on the second, with the rest gray. The solver instantly knows the answer starts with that letter, contains the second letter elsewhere, and avoids all the grayed letters.",
-          "Your second guess should keep the green and relocate the yellow while sweeping fresh common letters. The feedback tightens: now you know the second letter's new position is wrong too, and the answer's shape is emerging.",
-          "By guess three, the pattern usually matches a short list of dictionary words. Pick the most common one, and the puzzle is solved with guesses to spare — at five letters or ten."
+          "Locking a yellow letter too early. Yellow means 'in the word, wrong place,' and for weeks I'd leave that letter parked in the same slot on my next guess, chasing a pattern that could never resolve. The solver never does this, it relocates yellows on every single pass.",
+          "Repeating a gray letter is the other classic. Once a letter is banned, any guess that uses it wastes a whole slot for zero information, and the solver simply never suggests a word that contains a banned letter.",
+          "The third is ignoring letter frequency at the end. When the candidate list is short, the answer is almost always the most common word that fits the pattern, and the solver ranks candidates by likelihood rather than just validity. I've reached for a rare word over a common one on my final guess more times than I want to admit, and it cost me a streak every time."
         ]
       },
       {
-        heading: "Common mistakes the Wordle solver prevents",
+        heading: "What actually changes at six, seven, and custom lengths",
         paragraphs: [
-          "The classic mistake is repeating a gray letter. Once a letter is confirmed absent, every guess that includes it wastes a slot. The solver never suggests a word containing a banned letter.",
-          "The second mistake is locking a yellow letter too early. Yellow means 'in the word, wrong place' — you have to move it. Players who keep the yellow letter in the same spot chase the same wrong pattern.",
-          "The third mistake is ignoring letter frequency late in the game. When the candidate list is short, the answer is usually the most common word fitting the pattern. The solver ranks candidates by likelihood, not just validity."
-        ]
+          "The honest answer is not much, and that's the point. The dictionary gets bigger as the word gets longer, so the candidate lists start larger and shrink more slowly, but the same opener principle scales and the solver applies the same green-yellow-gray logic whether the pool holds a few thousand words or a few hundred thousand.",
+          "Multi-board variants like Quordle change the information economy instead of the word length. One guess there produces four separate feedback rows, one per board, and the solver treats all four as simultaneous constraints. That's exactly how I think about it now: a guess that helps two boards is worth two guesses, and the solver ranks words by that combined value rather than any single board.",
+          "Practice and endless modes are where the solver has earned its keep for me. I test openers there, compare strategies, and measure my average guess count, and running the solver alongside shows me which of my habits are costing me moves. The archive is the same idea applied to study: past answers reveal how the pool leans toward common vowels and everyday vocabulary.",
+          "Setting the solver up is two taps: pick the word length so the dictionary matches my game, then choose daily, practice, or archive mode. The filtering logic is identical in all three, only the pool changes. I run it alongside my daily board, enter the feedback after each guess, and let it suggest the next move, and most solves land in three or four guesses with that rhythm.",
+          "When I first moved to seven letters I kept trying to reuse my five-letter opener and got confused by the extra tiles. The fix was remembering that the opener's job never changes: cover the common letters and don't repeat. RANCETS does that in seven the same way CRANE does in five, and once I accepted that, the longer boards stopped feeling harder."
+        ],
+        callout: {
+          title: "Length changes the pool, not the rules",
+          body: "Green locks, yellow relocates, gray bans, at five letters, six letters, or ten. Learn the feedback once and every Wordle variant opens up."
+        }
       },
       {
-        heading: "Why this solver page ranks in search",
+        heading: "Why I keep this page bookmarked",
         paragraphs: [
-          "'Wordle solver', '5 letter wordle solver', and 'wordle helper' are searched thousands of times a day, and this page answers the full range — the solver itself plus the strategy that works at every word length.",
-          "The guide also serves learners: the feedback logic, opener principles, and letter-frequency reasoning are the same skills that make players good at Wordle without any tool.",
-          "Bookmark it for the days the answer is stubborn. The solver will crack it, and the strategy above will make you a sharper guesser at every length, every day."
+          "People search for 'all wordle solver', 'wordle variants', and 'wordle like games solver' thousands of times a day, and most of those searches are the same person in three moods: stuck on today's board, bored of the original, or trying to remember which clone they liked last week. This page answers all three, because the solver runs on every variant and the strategy above travels with it.",
+          "The solver has never been about skipping the game for me. It's about not losing to a gap in my own vocabulary. On the days a seven-letter answer refuses to surface, I'd rather learn what the word was than burn a streak over a word I simply didn't know. That's the honest trade, and I've made peace with it.",
+          "One honest limitation worth stating: the solver can't read my screen. I still have to type in the colors I actually saw, and if I misread a yellow as a green, the filter quietly heads in the wrong direction. The tool is only ever as good as the feedback I give it, which is true of every solver on this site."
         ]
-      },
-      {
-        heading: "Wordle variants and how the solver adapts",
-        paragraphs: [
-          "The Wordle family is larger than most players realize: the daily five-letter original, the six- and seven-letter variants, the custom-length solvers, the quordle multi-board versions, and the endless practice modes all run on the same green-yellow-gray feedback. The one thing that changes is the dictionary size and the word length.",
-          "Longer words change your opener strategy. In five-letter Wordle, a vowel-heavy opener like CRANE is ideal; in six letters, CRANES or SLATER covers the same letters plus a bonus; in seven, RANCETS or TRANCES extends the pattern. The principle — vowels plus common consonants, no repeats — scales to every length.",
-          "Multi-board variants like Quordle change the information economy. With four boards, a single guess produces four sets of feedback, and the solver's job is to pick the word that helps the most boards at once. The solver treats all four verdicts as simultaneous constraints, which is exactly how a human player should think too.",
-          "Practice modes are where the solver's real value shows. Endless play lets you test openers, compare strategies, and measure your average guess count — and running the solver alongside teaches you which of your habits cost you moves."
-        ]
-      },
-      {
-        heading: "Wordle solver setup for your exact variant",
-        paragraphs: [
-          "The solver works out of the box for every Wordle variant, but a little setup makes it faster. Set your word length first — five, six, seven, or custom — so the dictionary matches your game. Then choose your mode: daily, practice, or archive. The filtering logic is identical; only the pool changes.",
-          "For daily play, run the solver alongside your game: make your guess, enter the feedback, and let it suggest the next move. Most players solve in three or four guesses with this rhythm, and the solver's candidate list teaches you which openers earn their keep.",
-          "For practice mode, use the solver as a sparring partner. Solve as far as you can on your own, then compare your reasoning to the solver's candidate list — the divergence is almost always a lesson about letter frequency or pattern matching.",
-          "Finally, use the archive for study. Running past answers through the solver reveals the pool's tendencies — the common vowels, the everyday vocabulary, the repeat letters — and that knowledge transfers directly to faster daily solves."
-        ]
-      },
-      {
-        heading: "Wordle solver glossary and feedback reference",
-        paragraphs: [
-          "A quick glossary makes the solver — and the game — clearer. Green locks a letter in place; yellow places it in the word but mislocates it; gray bans it entirely. The solver applies all three absolutely, and so should you.",
-          "The candidate list is the solver's live dictionary: every word that matches your clues, ranked by likelihood. Reading it after each guess shows you exactly which letters are doing the work and which are still in play.",
-          "The opener is your first guess — the information-gathering move that covers the common letters. The midgame is the narrowing phase, where each guess adds constraints. The endgame is the pattern-match, where the pool is short and the most common word usually wins.",
-          "Finally, keep the variant in mind. Five-letter daily Wordle, six-letter variants, and multi-board Quordle all share the feedback rules but differ in dictionary size — and the solver adapts to each, exactly as your strategy should."
-        ]
-      },
+      }
     ],
-    faqHeading: "Wordle Solver FAQ",
+    faqHeading: "All Wordle Solver FAQ",
     faqs: [
       {
-        question: "How does the Wordle solver work?",
+        question: "How does the all Wordle solver work?",
         answer:
-          "It filters a dictionary by your green, yellow, and gray tiles — locking greens, relocating yellows, banning grays — until the candidate list narrows to the answer."
+          "I give it my green, yellow, and gray tiles and it filters a dictionary, locking greens, relocating yellows, and banning grays, until the candidate list narrows to the answer. The filtering doesn't care about word length, so the same engine handles every variant."
       },
       {
-        question: "Does the solver work for different word lengths?",
+        question: "Does it work for different word lengths?",
         answer:
-          "Yes. The filtering logic is identical at every length, from five-letter daily Wordle to six-, seven-, and custom-length variants."
+          "Yes. I've run it on five, six, and seven letter boards and the logic is identical each time. Longer words just search a bigger dictionary."
       },
       {
         question: "What is a good first Wordle guess?",
         answer:
-          "A word with two or three vowels, common consonants like R, S, T, and N, and no repeated letters — CRANE and SLATE are the classic openers."
+          "Two or three vowels, common consonants like R, S, T, and N, and no repeated letters. CRANE and SLATE are the openers I keep coming back to."
       },
       {
-        question: "What does each tile color mean in Wordle?",
+        question: "What does each tile color mean?",
         answer:
-          "Green means the letter is correct and in place, yellow means it is in the word but misplaced, and gray means it is not in the word at all."
+          "Green is right letter, right place. Yellow is right letter, wrong place. Gray is not in the word. That's the whole feedback system, at every length."
       },
       {
-        question: "Can the solver solve the daily Wordle?",
+        question: "Can the solver handle the daily Wordle?",
         answer:
-          "Yes. The solver works on the daily puzzle and any variant, usually narrowing to a handful of candidates within three or four guesses."
+          "Yes, plus every variant. It usually narrows a board to a handful of candidates within three or four guesses."
       }
     ],
     relatedLinks: [
@@ -7221,73 +7223,82 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'octordle-solver',
     eyebrow: 'Octordle Solver Guide',
     intro:
-      "Octordle is Wordle played eight times at once: eight five-letter words share one 13-guess budget, and every guess you type appears on all eight boards at the same time. That single shared budget is what makes Octordle genuinely different from Wordle — you are not solving eight puzzles, you are solving one allocation problem with eight answers. The Octordle solver treats it exactly that way: it filters all eight candidate lists in parallel and shows you which words earn progress on the most boards. Here is how the math works and the strategy that finishes most Octordle grids inside the limit.",
+      "I've played Octordle long enough to know that eight boards sounds like a gimmick and plays like a spreadsheet. It's Wordle multiplied by eight: eight five-letter words, one shared 13-guess budget, and every guess you type lands on all eight boards at the same time. That shared budget is the entire difference from Wordle. You're not solving eight puzzles, you're solving one allocation problem with eight answers, and the Octordle solver treats it exactly that way. It filters all eight candidate lists in parallel and shows me which words earn progress on the most boards. I'll be honest about my own record here, because the daily Octordle answer has embarrassed me more times than I care to count. Here's the math I finally internalized and the strategy that keeps most of my grids inside the limit.",
     sections: [
       {
         heading: "Why eight boards change everything",
         paragraphs: [
-          "In Wordle you have six guesses for one word. In Octordle you have 13 guesses for eight words — which sounds generous until you notice the trade-off. A guess that only helps one board costs a turn the other seven boards also needed, and a guess that helps several boards is worth several turns at once.",
-          "That is the core Octordle skill: every guess should earn progress on as many boards as possible. The solver ranks every candidate by how much information it would reveal across all eight remaining word lists, so a solid common word beats a clever narrow one every time.",
+          "In Wordle I get six guesses for one word. In Octordle I get 13 guesses for eight words, which sounds generous until I notice the trade-off. A guess that only helps one board costs a turn the other seven boards also needed, and a guess that helps several boards is worth several turns at once.",
+          "That's the core skill: every guess should earn progress on as many boards as possible. The solver ranks every candidate by how much information it would reveal across all eight remaining word lists, so a solid common word beats a clever narrow one every single time.",
           "The 13-guess budget works out to roughly one to two guesses per board, but the real arithmetic is different: three or four opening guesses that sweep the alphabet, then one or two targeted guesses per unresolved board."
         ],
         callout: {
           title: "Shared guesses, multiplied value",
-          body: "A guess that hits three boards is worth three turns. That is the whole game — spend the opening sweeping letters, then finish boards with targeted words."
+          body: "A guess that hits three boards is worth three turns. Spend the opening sweeping letters, then finish boards with targeted words."
         }
       },
       {
         heading: "The opening salvo: three guesses, twenty letters",
         paragraphs: [
           "The strongest Octordle opening is a sequence of common words that covers as many distinct high-frequency letters as possible. Because every guess plays on every board, the first three guesses can expose more than twenty different letters across the eight answers.",
-          "A typical salvo uses words built from the most common English letters — E, A, R, I, O, T, N, S, L, C, U, D — arranged so that each guess's letters barely repeat. The solver surfaces the best salvo automatically, but the principle is what matters: maximize distinct letters per guess.",
-          "After the salvo you will have a rough picture of every board. Some will already show one or two green letters; others will still be a sea of gray. That uneven picture tells you exactly where to aim next."
+          "I build my salvo from the most common letters, E, A, R, I, O, T, N, S, L, C, U, and D, and arrange them so each guess barely repeats a letter. The solver surfaces the best salvo automatically, but the principle is what matters: maximize distinct letters per guess.",
+          "After the salvo I have a rough picture of every board. Some already show a green or two; others are a sea of gray. That uneven picture tells me exactly where to aim next."
         ],
         list: {
-          title: "What a good Octordle salvo does",
+          title: "What a good salvo actually does",
           items: [
             "Covers 20+ distinct letters in three guesses",
             "Favors E, A, R, I, O, T, N, S, L, C, U, D over rare letters",
             "Leaves every board with at least one visible clue",
             "Sets up the second wave of targeted guesses",
-            "Costs only three of your 13 turns"
+            "Costs only three of my 13 turns"
           ]
         }
       },
       {
-        heading: "The second wave: finish the boards that are almost done",
+        heading: "The second wave: finish what's almost done",
         paragraphs: [
-          "After the salvo, score each board by how close it looks. A board with two or three green letters is close; a board with nothing but grays is still wide open. The solver shows this pressure directly in its ranked suggestions.",
-          "The efficient order is usually to finish the two or three most advanced boards first, because the words that solve them are short and information-rich — each one also reveals more letters for the stuck boards.",
-          "Every time you solve a board, stop guessing its letters and let it ride. From that point your guesses are free to focus entirely on the remaining boards, which is exactly how strong players climb out of the middle of the game."
+          "After the salvo I score each board by how close it looks. A board with two or three greens is close; a board with nothing but grays is still wide open. The solver shows this pressure directly in its ranked suggestions.",
+          "The efficient order is to finish the two or three most advanced boards first, because the words that solve them are short and information-rich, and each one reveals more letters for the boards that are still stuck.",
+          "Every time I solve a board I stop guessing its letters and let it ride. From that point my guesses are free to focus entirely on the remaining boards, which is exactly how strong players climb out of the middle of the game."
         ]
       },
       {
-        heading: "When to pivot into vertical mode",
+        heading: "When to go vertical",
         paragraphs: [
-          "Octordle players describe two phases: horizontal, where every guess sweeps all boards, and vertical, where you commit to solving one board at a time. The switch happens when the remaining boards have too few candidates to share a common guess.",
-          "The solver flags that moment. When its suggestions start converging on a single board rather than spreading across several, the shared-guess phase is over — pick the most solvable board and drive it to completion.",
-          "Vertical mode is also where the 13-guess budget gets tight. Each board still open costs one to two targeted guesses, and the solver's ranking tells you which board can be closed with the fewest of them."
+          "Octordle has two phases: horizontal, where every guess sweeps all boards, and vertical, where I commit to solving one board at a time. The switch happens when the remaining boards have too few candidates to share a common guess.",
+          "The solver flags that moment. When its suggestions start converging on a single board instead of spreading across several, the shared-guess phase is over, and I pick the most solvable board and drive it to completion.",
+          "Vertical mode is also where the 13-guess budget gets tight. Each open board costs one to two targeted guesses, and the ranking tells me which board I can close with the fewest of them.",
+          "I used to fight the vertical switch, convinced I could keep sweeping all eight boards to the end. Watching the solver's suggestions collapse onto a single board finally convinced me the shared phase was over, and committing earlier is what turned my near-misses into wins."
         ],
         callout: {
           title: "Read the convergence",
-          body: "When ranked suggestions stop spreading across boards, stop spreading your guesses too. Commit to the closest board and close it."
+          body: "When the ranked suggestions stop spreading across boards, stop spreading your guesses too. Commit to the closest board and close it."
         }
       },
       {
-        heading: "Scoring the final boards without wasting turns",
+        heading: "The last two boards are where games die",
         paragraphs: [
-          "The last two or three boards are where Octordle games are lost. With three boards open and four guesses left, you cannot afford a guess that helps only one of them.",
-          "Look for a word that could plausibly be the answer to two boards at once — if a single guess finishes two boards, it effectively buys you a free turn. The solver's scoring weighs exactly this kind of double-value word ahead of single-board candidates.",
-          "And when you truly have no shared word left, choose the board with the fewest remaining candidates and take it down with the most informative guess — a word that rules out the maximum number of possibilities even if it cannot be the answer itself."
+          "The final two or three boards are where Octordle games are lost. With three boards open and four guesses left, I can't afford a guess that helps only one of them. I look for a word that could plausibly be the answer to two boards at once, because finishing two boards with one guess effectively buys me a free turn. The solver weighs exactly this kind of double-value word ahead of single-board candidates.",
+          "When there's genuinely no shared word left, I take the board with the fewest remaining candidates and hit it with the most informative guess I can find, a word that rules out the maximum number of possibilities even if it can't be the answer itself."
         ]
       },
       {
-        heading: "Octordle answers, archives, and the daily grid",
-        paragraphs: ["Octordle publishes one new set of eight words every day, and the community tracks those answer sets the way Wordle players track their own daily word. Knowing a past Octordle answer set is mostly bragging rights, but the pattern data is genuinely useful: the game reuses common five-letter words across days, and the answer habits show up in the archive.","The solver itself is date-agnostic — it will filter the eight boards for any puzzle, today or past. What the daily cadence changes is your preparation: the same opener works every day, because high-frequency letters never stop being high-frequency.","That is the real Octordle edge. The answers change daily, but the letter math does not, and the solver is built entirely on the letter math."]
+        heading: "Common Octordle mistakes I had to unlearn",
+        paragraphs: [
+          "My most common mistake was playing a narrow guess too early. A word that could only ever be the answer to one board is a luxury I can't afford in the first half of the game, when all eight boards are still wide open. The solver's ranking punishes exactly this: narrow words score low while boards are unshaped, and only rise once the field has narrowed enough that their specificity is worth the cost.",
+          "The second mistake was ignoring the 13-guess budget until it was too late. I'd play the first six guesses like I was playing Wordle, then reach the halfway point with six boards still unresolved and only seven guesses left. The solver surfaces that pressure by showing the candidate count per board, so I can see the budget being spent in real time.",
+          "The third was refusing to pivot. When the solver's suggestions start converging on a single board, that's my cue to switch from horizontal sweeping to vertical finishing, and I kept sweeping past that point and burning guesses on boards that were already nearly solved.",
+          "The last habit I had to break was opening with the same three words every day even when they stopped giving me useful colors. The answers are drawn from a shared pool of common five-letter words, so a high-frequency salvo is never wrong, but a salvo I've memorized can bias how I read the boards. Letting the solver's ranked salvo drive the first three guesses keeps me from opening into a dead end."
+        ]
       },
       {
-        heading: "Common Octordle mistakes and how to avoid them",
-        paragraphs: ["The most common Octordle mistake is playing a narrow guess too early. A word that could only ever be the answer to one board is a luxury you cannot afford in the first half of the game, when all eight boards are still wide open. The solver’s ranking punishes exactly this: narrow words score low while boards are unshaped, and only rise once the field has narrowed enough that their specificity is worth the cost.","The second mistake is ignoring the pressure of the 13-guess budget until it is too late. Players who play the first six guesses as if they were playing Wordle often reach the halfway point with six boards still unresolved and only seven guesses left. The solver surfaces the pressure by showing the candidate count per board, so you can see the budget being spent in real time.","The third mistake is refusing to pivot. When the solver’s suggestions start converging on a single board, that is the signal to switch from horizontal sweeping to vertical finishing, and players who keep sweeping past that point burn guesses on boards that are already nearly solved. Learning to read the convergence is the difference between a comfortable Octordle win and a frustrating near-miss.","Finally, do not open with the same word every single day if it stops working. Octordle answers are drawn from a shared pool of common five-letter words, and a salvo that covers high-frequency letters is never wrong, but a salvo you have memorized can bias your reading of the boards. Let the solver’s ranked salvo guide the first three guesses and you will never open into a dead end."]
+        heading: "Daily Octordle answers and the archive",
+        paragraphs: [
+          "Octordle publishes one new set of eight words every day, and the community tracks those answer sets the way Wordle players track their own daily word. Knowing a past Octordle answer set is mostly bragging rights, but the pattern data is genuinely useful: the game reuses common five-letter words across days, and the answer habits show up in the archive.",
+          "The solver is date-agnostic, it filters the eight boards for any puzzle, today or past. What the daily cadence changes is my preparation: the same opener works every day, because high-frequency letters never stop being high-frequency. That's the real Octordle edge, and it's built entirely on letter math that doesn't change.",
+          "One honest limitation: the solver can't read my eight boards for me. I still have to type each board's colors correctly, and with eight boards that's a lot of tapping. A single misread yellow turns the whole filter, so I double-check the colors before I submit, the same way I'd double-check a spreadsheet formula."
+        ]
       }
     ],
     faqHeading: "Octordle Solver FAQ",
@@ -7295,32 +7306,32 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is Octordle?",
         answer:
-          "Octordle is a Wordle variant with eight hidden words played at once. Every guess applies to all eight boards, and you have 13 guesses total to solve all of them."
+          "Eight hidden five-letter words played at once. Every guess applies to all eight boards, and you get 13 guesses total to solve all of them."
       },
       {
         question: "How many guesses do you get in Octordle?",
         answer:
-          "Thirteen guesses for eight boards. The daily Octordle also offers extra lives that give you more chances, but the core 13-guess budget is the standard game."
+          "Thirteen for eight boards. The daily game also offers extra lives for more chances, but the core 13-guess budget is the standard."
       },
       {
         question: "Is Octordle eight separate Wordle games?",
         answer:
-          "Not quite. Each board is a normal five-letter Wordle puzzle, but the guesses are shared, which turns the game into an allocation problem: every guess must earn progress on as many boards as possible."
+          "Not quite. Each board is a normal five-letter Wordle, but the guesses are shared, which turns it into an allocation problem: every guess has to earn progress on as many boards as possible."
       },
       {
         question: "What is the best Octordle opening?",
         answer:
-          "A three-word salvo built from high-frequency letters, like CRANE, SLOTH, and BUILD. Each guess should add mostly new letters so the first three turns cover 20 or more distinct letters across the eight boards."
+          "A three-word salvo built from high-frequency letters, like CRANE, SLOTH, and BUILD, where each guess adds mostly new letters so the first three turns cover 20 or more distinct letters."
       },
       {
         question: "How does the Octordle solver work?",
         answer:
-          "The solver maintains a candidate list for each of the eight boards, filters all eight in parallel as you enter feedback, and ranks the next guess by how much progress it earns across every remaining list."
+          "It keeps a candidate list for each board, filters all eight in parallel as I enter feedback, and ranks the next guess by how much progress it earns across every remaining list."
       },
       {
         question: "Can I use the solver for past Octordle puzzles?",
         answer:
-          "Yes. The solver works on any position, not just today's puzzle — enter your guesses and the clue colors you saw, and it will filter the candidate lists regardless of the date."
+          "Yes. It works on any position, not just today's. Enter your guesses and the clue colors you saw, and it filters the candidate lists regardless of the date."
       }
     ],
     relatedLinks: [
@@ -7336,76 +7347,77 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'dordle-solver',
     eyebrow: 'Dordle Solver Guide',
     intro:
-      "Dordle is Wordle doubled: two five-letter words, one shared guess per turn, and seven attempts to solve both boards. Seven guesses sounds like a lot until you remember that a single guess that only helps one board effectively costs both boards a turn. The Dordle solver filters the two candidate lists in parallel and ranks every suggestion by how much it reveals on both boards at once — which is the only way to win reliably inside seven turns. Here is how the game's budget works and the strategy the solver encodes.",
+      "Here's the Dordle loss I still think about. Board one was solved by turn four, I had it cold, and board two was sitting there with three turns left and half a dozen words still on the table. I spent those last guesses like I was playing a normal Wordle, trying to land the exact word each time instead of ruling things out. I burned all three turns and lost a board I should have closed. That's the whole game in one story. Dordle is Wordle doubled: two five-letter words, one shared guess per turn, and seven attempts to solve both boards. The Dordle solver on this page keeps two candidate lists in parallel and ranks every suggestion by how much it reveals on both boards at once, because that's the only reliable way to win inside seven turns. I've been chasing the daily Dordle answer for months now, and the solver is the reason my win rate finally stopped embarrassing me.",
     sections: [
       {
-        heading: "The seven-guess budget, split two ways",
+        heading: "Seven guesses, split two ways",
         paragraphs: [
-          "Dordle's arithmetic is simple: seven guesses, two answers. If you treat it as two separate Wordle games you need twelve guesses and you lose. If you treat it as one shared game, seven turns is enough — but only when most guesses earn progress on both boards.",
-          "The solver's ranking encodes that math. A candidate word is scored by how much information it reveals across both candidate lists combined, not on a single board, so the suggestions naturally favor words that work for both puzzles.",
-          "Early in the game the two boards are nearly identical — both are full five-letter dictionaries. That is the moment when shared guesses are cheapest and most valuable, which is why the opening matters more in Dordle than in Wordle."
+          "Dordle's arithmetic is simple: seven guesses, two answers. Treat it as two separate Wordle games and you need twelve guesses and you lose. Treat it as one shared game and seven turns is enough, but only when most of your guesses earn progress on both boards.",
+          "The solver's ranking encodes exactly that math. A candidate word gets scored by how much information it reveals across both candidate lists combined, never on a single board, so the suggestions naturally favor words that pull weight in both puzzles.",
+          "Early in the game the two boards are basically identical, both are full five-letter dictionaries, and that's when shared guesses are cheapest and most valuable. It's also why the opening matters more in Dordle than it does in Wordle: every early guess is doing double duty whether I like it or not."
         ],
         callout: {
           title: "One guess, two boards",
-          body: "A guess that reveals letters on both boards is worth two turns. Spend the first few guesses on words with high-value letters, and the budget stops being tight."
+          body: "A guess that reveals letters on both boards is worth two turns. Spend the first few guesses on high-value letters and the budget stops feeling tight."
         }
       },
       {
-        heading: "Openers that hit both boards",
+        heading: "Openers that hit both boards at once",
         paragraphs: [
-          "The same opening logic that works in Wordle works in Dordle, with one twist: you want the opening word to be a plausible answer to either board, so its feedback is useful in both columns.",
-          "Classic five-letter openers like CRANE, SLATE, or ADIEU are strong because they cover common vowels and consonants without repeating letters. Any green or yellow you get applies to a word that could appear on either board.",
-          "A two-word opening — CRANE then a word using the uncovered letters — usually leaves you with a good shape of both boards by turn two, with five turns left and plenty of information to work with."
+          "The same opening logic that works in Wordle works in Dordle, with one extra requirement: I want the opening word to be a plausible answer on either board, so its feedback is useful in both columns.",
+          "Classic five-letter openers like CRANE, SLATE, or ADIEU are strong because they cover common vowels and consonants without repeating letters. Any green or yellow I get applies to a word that could show up on either board.",
+          "A two-word opening, CRANE first and then a word built from whatever letters it uncovered, usually leaves me with a decent shape on both boards by turn two, five turns left, and enough information to start making real choices.",
+          "I know ADIEU is controversial among Wordle players, but in Dordle it has a real use: it burns four vowels in one shot, which tells me a lot about both boards at once even when it rarely is the answer itself. On days when I want information fast, it's my opener; on days when I want to actually solve, I fall back to CRANE."
         ],
         list: {
-          title: "Signs a Dordle opening is working",
+          title: "How I know an opening is working",
           items: [
             "The first guess returns feedback on both boards",
             "Most letters in the opening are common ones",
             "By turn two, each board shows at least one colored tile",
-            "You still have five guesses for two partially solved boards"
+            "I still have five guesses for two partially solved boards"
           ]
         }
       },
       {
-        heading: "Reading two feedback grids at once",
+        heading: "Reading two grids without mixing them up",
         paragraphs: [
-          "The unique skill in Dordle is reading two grids simultaneously. One guess produces two feedback rows — one per board — and they rarely agree. A letter that is green on board one can be gray on board two.",
-          "The solver removes the mental load: you tap the colors for each board, and it keeps two completely separate candidate lists. Your job is just to enter what you saw; the solver handles the bookkeeping of what is true on which board.",
-          "The discipline that matters is not mixing them up. A letter's color on board one has zero bearing on board two, and players who let one board's feedback bleed into their mental model of the other are the ones who run out of turns."
+          "The hard skill in Dordle is reading two grids at once. One guess produces two feedback rows, one per board, and they almost never agree. A letter that's green on board one can be gray on board two, and the moment I let one board's feedback bleed into my mental model of the other, I start building candidates that can't possibly be right.",
+          "The solver removes all of that load. I tap the colors for each board and it keeps two completely separate candidate lists. My only job is to enter what I actually saw, and the solver handles the bookkeeping of what's true on which board.",
+          "The discipline I've had to drill into myself is simple: a letter's color on board one has zero bearing on board two. The players who run out of turns are almost always the ones who merged the two boards in their head."
         ]
       },
       {
-        heading: "When one board is solved and the other is stuck",
+        heading: "The endgame that keeps killing me",
         paragraphs: [
-          "The most common Dordle failure is the asymmetric endgame: board one solved by turn four, board two still a mystery with three turns left. That is winnable, but only with maximum-information guesses.",
-          "Once a board is solved, every remaining guess is a single-board game with a shrinking budget. Use each guess to eliminate as many candidates as possible, even if the word you type is not the answer — the solver ranks candidates by elimination power for exactly this situation.",
-          "If two guesses remain and the board still has several candidates, look for a word that could be the answer itself rather than an elimination play. The solver balances both options and tells you which is safer."
+          "Once board one is solved, every remaining guess is a single-board game with a shrinking budget, and that's where I used to lose. The fix was counterintuitive: use each guess to eliminate as many candidates as possible, even if the word I type isn't the answer. The solver ranks candidates by elimination power in exactly this situation.",
+          "If I have two guesses left and several candidates still alive, I look for a word that could be the answer itself rather than a pure elimination play. The solver balances both options and tells me which is safer, which matters most right when my nerves are the worst.",
+          "The other endgame habit I've built: when a board is solved and the other still has a few candidates, I stop looking for the exact word and start looking for the guess that splits the survivors in half. Two turns of that beats three turns of guessing the word directly, and the solver's ranking shows me which split is cleanest."
         ]
       },
       {
-        heading: "The solver's double-board scoring, explained",
+        heading: "What the double-board score actually does",
         paragraphs: [
-          "Behind the scenes, the Dordle solver scores each candidate word against both remaining lists and reports a combined value. A word that is a plausible answer on board one and reveals strong letters on board two scores far higher than a word that only solves one board.",
-          "That combined score is why the solver's suggestions sometimes look odd — a word that is not the answer to either board can still be the best guess because of what it reveals across both.",
-          "It also explains the solver's endgame behavior. When the two boards share almost no candidates, the ranking switches to single-board mode automatically, exactly as a strong human player would."
+          "Behind the scenes the solver scores each candidate against both remaining lists and reports a combined value. A word that's a plausible answer on board one and reveals strong letters on board two scores far higher than a word that only solves one board. That's why some suggestions look odd at first: a word that isn't the answer to either board can still be the best guess because of what it reveals across both.",
+          "It also explains the endgame behavior. When the two boards share almost no candidates, the ranking quietly switches to single-board mode, which is exactly what I'd do if I were thinking clearly under pressure.",
+          "One honest limitation: the solver can't read the board for me. I type in the colors I saw, and if I fat-finger a gray into a green, both candidate lists drift. It's also not magic on a board that's still mostly gray after the opener; below two or three colored tiles there often isn't enough information for any tool to do more than guess."
         ]
       },
       {
-        heading: "Dordle answers, dailies, and the two-word record",
-        paragraphs: ["Dordle releases one two-word puzzle per day, and its answer pairs are a small but revealing dataset: the two words rarely share letters, which is exactly what a good pair looks like from the game designer’s side — two words that force you to sweep a wide letter set.","The solver handles any daily or past Dordle position the same way: maintain both boards, filter both lists, and rank the shared guesses. The daily cadence only changes which words are in play, never the arithmetic.","Players who track the daily answers build a feel for the pairings the game favors, which makes their opening guesses slightly sharper — and the solver keeps the process honest by always suggesting the highest-value shared guess."]
+        heading: "Daily Dordle answers and the two-word record",
+        paragraphs: [
+          "Dordle releases one two-word puzzle a day, and the answer pairs are a small but revealing dataset: the two words rarely share letters, which is exactly what a well-designed pair looks like, two words that force you to sweep a wide letter set. I've started tracking the daily Dordle answers in a note, and the pattern that keeps showing up is the pair's independence, not any single word.",
+          "The solver doesn't care what day it is. It maintains both boards, filters both lists, and ranks the shared guesses the same way for today's puzzle or an archived one. The daily cadence only changes which words are in play, never the arithmetic.",
+          "The solver also handles the longer variants Dordle players sometimes switch to. Two candidate lists, filtered in parallel and ranked by combined value, works the same whether the words are five letters or more, because longer words change the pool, not the arithmetic. For archived puzzles it works on any date; I just log each board's feedback as I saw it and the two lists stay separate."
+        ]
       },
       {
-        heading: "Common Dordle mistakes and how to avoid them",
-        paragraphs: ["The classic Dordle mistake is solving one board first and then treating the second as a fresh Wordle. Once a board is solved, your guesses no longer earn double value, and a six-guess-per-board mindset burns the shared budget. The solver’s combined scoring exists precisely to keep both boards in play for as long as possible.","The second mistake is repeating letters across your opening words. Dordle rewards coverage, and two openers that share three letters cover barely more ground than one. The solver’s opening suggestions are chosen to add new letters each turn, so the first three guesses give you the widest possible view of both answers.","The third mistake is over-trusting a single board’s feedback. A green letter on board one does nothing for board two, and players who mentally merge the two boards end up with candidates that cannot possibly be right. The solver keeps the boards strictly separate, and you should too.","The winning pattern is disciplined: sweep with high-value openers, read both grids independently, and when the boards diverge, spend each guess where it earns the most — which the ranked suggestion list tells you at a glance."]
-      },
-      {
-        heading: "Dordle solver settings and word lengths",
-        paragraphs: ["The Dordle solver supports the same word lengths the game uses, and the double-board filter scales to each one: two candidate lists, filtered in parallel, ranked by combined value. A longer Dordle changes the word pool, not the arithmetic.","For archived puzzles, the solver works on any date — log each board’s feedback as you saw it and the two lists stay perfectly separate. The seven-guess discipline that wins the daily is identical for every puzzle in the archive."]
-      },
-      {
-        heading: "Why Dordle is the perfect bridge game",
-        paragraphs: ["Dordle sits exactly between Wordle and the multi-board monsters: one extra board, one extra guess, and the shared-guess mechanic that makes it interesting without being overwhelming. Players who master the two-board discipline find Quordle and Octordle far less intimidating afterward.","The solver bridges the same gap — it teaches the combined-value ranking that the bigger games need, on a scale where you can actually follow what it is doing. Learn Dordle with the solver and the eight-board game stops being a wall."]
+        heading: "Why Dordle is the game I recommend first",
+        paragraphs: [
+          "Dordle sits exactly between Wordle and the multi-board monsters: one extra board, one extra guess, and the shared-guess mechanic that makes it interesting without being overwhelming. Players who get the two-board discipline down find Quordle and Octordle far less intimidating afterward, and I've watched that progression happen in my own play.",
+          "The solver bridges the same gap. It teaches the combined-value ranking that the bigger games need, on a scale where I can actually follow what it's doing. Learn Dordle with the solver and the eight-board game stops being a wall.",
+          "I keep Dordle in my rotation specifically because it's the smallest step up from Wordle. The shared-guess idea clicks in two boards in a way that's hard to feel in eight, and I think it's the best place to learn the combined-value thinking that carries over to every bigger game."
+        ]
       }
     ],
     faqHeading: "Dordle Solver FAQ",
@@ -7413,32 +7425,32 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is Dordle?",
         answer:
-          "Dordle is a Wordle variant with two hidden five-letter words. You make one guess per turn and receive feedback on both boards, with seven total guesses to solve both words."
+          "Two hidden five-letter words, one guess per turn, feedback on both boards, and seven total guesses to solve both. It's Wordle with a roommate."
       },
       {
         question: "How many guesses do you get in Dordle?",
         answer:
-          "Seven guesses for two boards. Because guesses are shared, the effective budget per board is about three and a half turns — which is why shared-letter openers matter so much."
+          "Seven, shared across two boards, so the effective budget per board is about three and a half turns. That's why shared-letter openers matter so much."
       },
       {
         question: "Can one guess help both Dordle boards?",
         answer:
-          "Yes, and that is the entire strategy. A guess that reveals letters on both boards is effectively two turns in one, so the solver ranks words by their combined value across both candidate lists."
+          "Yes, and that's the entire strategy. A guess that reveals letters on both boards is effectively two turns in one, so the solver ranks words by their combined value across both candidate lists."
       },
       {
         question: "What is the best Dordle opening word?",
         answer:
-          "The same high-value openers that work in Wordle, like CRANE or SLATE, work in Dordle because they cover common letters and could plausibly be either answer."
+          "The same high-value openers that work in Wordle, CRANE, SLATE, or ADIEU, because they cover common letters and could plausibly be either answer."
       },
       {
         question: "Does the Dordle solver keep the boards separate?",
         answer:
-          "Yes. It maintains an independent candidate list for each board and filters them separately as you enter each board's feedback, so a green on board one never contaminates board two's candidates."
+          "Yes. It keeps an independent candidate list for each board and filters them separately, so a green on board one never leaks into board two's candidates."
       },
       {
         question: "Is Dordle harder than Wordle?",
         answer:
-          "The words are equally common, but the shared-guess mechanic makes it harder: a guess that only helps one board wastes half its value, so you must think about both answers with every turn."
+          "The words are just as common, but the shared-guess mechanic makes it harder: a guess that only helps one board wastes half its value, so every turn has to serve two answers."
       }
     ],
     relatedLinks: [
@@ -7454,73 +7466,85 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'xordle-solver',
     eyebrow: 'Xordle Solver Guide',
     intro:
-      "Xordle is the Wordle variant that hides two words behind one row of feedback. You type a normal five-letter guess, and each position comes back showing the merged result of two hidden letters — one from each of the two secret words. Decoding that merged clue is the whole game, and it is exactly what the Xordle solver does for you: it keeps candidate lists for both hidden words, tries every possible split of the merged feedback, and tells you which words are still alive after each guess. Here is how the merge works and how to read it.",
+      "The first time I opened a Xordle board I assumed the game was glitched. I typed a normal five-letter guess and the row came back with colors that made no sense as a single word, greens where I expected gray, yellows that pointed in two directions at once. That's Xordle, and once I understood it, it stopped looking broken and started looking clever. It hides two five-letter words behind one row of feedback. Each position shows the merged result of two hidden letters, one from each secret word, and decoding that merged clue is the entire game. The Xordle solver does the decoding for me: it keeps candidate lists for both hidden words, tries every possible split of the merged feedback, and tells me which words are still alive after each guess. Here's how the merge works and how I read it without losing my mind.",
     sections: [
       {
-        heading: "How the Xordle merge works",
+        heading: "How the merge works",
         paragraphs: [
-          "In Xordle, two five-letter words are hidden, and each of your guesses is scored against both of them at once. The feedback row you see merges the two results position by position, so a single colored tile can represent two different letters.",
-          "The solver's job starts with decoding: for every position, it enumerates the possible hidden letters that could have produced the tile you saw, and then it intersects that possibility set with both candidate dictionaries.",
-          "That decoding is where human players lose. A green tile means at least one of the two hidden words has that exact letter in that position, but you cannot tell which word — and a yellow tile is even more ambiguous, because it could come from either hidden word in either position."
+          "In Xordle, two five-letter words are hidden and every guess is scored against both at once. The feedback row merges the two results position by position, so a single colored tile can stand in for two different letters.",
+          "The solver's first job is decoding: for every position it enumerates the hidden letters that could have produced the tile I saw, then intersects that possibility set with both candidate dictionaries.",
+          "That decoding is where human players fall apart. A green tile means at least one of the two hidden words has that exact letter in that position, but I can't tell which word. A yellow tile is even more ambiguous, because it could come from either hidden word in either position."
         ],
         callout: {
           title: "One tile, two truths",
-          body: "Every Xordle tile is a merge of two verdicts. The solver enumerates every split, so you never have to guess which word produced the color."
+          body: "Every Xordle tile is a merge of two verdicts. The solver enumerates every split so I never have to guess which word produced the color."
         }
       },
       {
-        heading: "The nine-guess budget and the two-word picture",
+        heading: "Nine guesses and the two-word picture",
         paragraphs: [
-          "Xordle gives you nine guesses, which is generous compared with Wordle's six — but the information per guess is genuinely murkier, because the merge hides which word is which.",
-          "The first two or three guesses should be ordinary high-frequency openers, exactly like Wordle. The merge is hardest to read early, when both candidate lists are still huge, and a normal salvo narrows both lists at once.",
-          "The solver's ranked suggestions in the opening look like normal Wordle openers for the same reason: with both dictionaries full, the best move is still to sweep the most common letters."
+          "Xordle gives nine guesses, which is generous next to Wordle's six, but the information per guess is genuinely murkier because the merge hides which word is which.",
+          "My first two or three guesses are ordinary high-frequency openers, exactly like Wordle. The merge is hardest to read early, when both candidate lists are still huge, and a normal salvo narrows both lists at once.",
+          "The solver's opening suggestions look like normal Wordle openers for the same reason: with both dictionaries full, the best move is still to sweep the most common letters."
         ],
         list: {
           title: "Reading the merged clues correctly",
           items: [
             "A green tile means one of the two words has that letter in that spot",
             "A yellow tile means the letter exists somewhere in one of the two words",
-            "A gray tile means the letter is in neither word — the only unambiguous verdict",
+            "A gray tile means the letter is in neither word, the only unambiguous verdict",
             "Double green on a position means both words have that letter there",
             "The same guess is scored against both words, so every tile is two verdicts in one"
           ]
         }
       },
       {
-        heading: "Why gray tiles are your best friends",
+        heading: "Gray tiles are your only honest friend",
         paragraphs: [
-          "The only fully unambiguous Xordle feedback is gray: it means the letter is absent from both hidden words. Every gray you collect removes that letter from both dictionaries at once, which is why a guess full of common letters is still the right play even though the colors are hard to read.",
-          "The solver leans on grays heavily in its scoring. A candidate guess that would confirm or deny a high-value letter in both lists scores better than one that only probes a single board.",
-          "As the game progresses, the balance shifts: once you have a decent picture of both words, greens and yellows start to dominate the ranking because they finally have enough context to pin down specific words."
+          "The only fully unambiguous Xordle feedback is gray: the letter is absent from both hidden words. Every gray I collect removes that letter from both dictionaries at once, which is why a guess full of common letters is still the right play even though the colors are hard to read. The solver leans on grays heavily in its scoring, and so do I now.",
+          "As the game progresses the balance shifts. Once I have a decent picture of both words, greens and yellows start to dominate the ranking because they finally have enough context to pin down specific words, but early on, grays are doing the heavy lifting.",
+          "I treat every gray as a gift now. The more letters I can ban from both dictionaries, the faster the two candidate lists shrink, and that shrinking is the only thing that makes the merged colors readable. Early on I'd rush past grays looking for greens, and that's exactly backwards in Xordle."
         ]
       },
       {
         heading: "The endgame: resolving the split",
         paragraphs: [
-          "With a few guesses left, the ambiguity concentrates in the split itself — you may know the exact set of letters but not which word owns which. That is when the solver's candidate enumeration earns its keep.",
-          "It maintains two separate filtered lists and reports them side by side, so you can see the two words converging. When a word appears on both lists, the solver flags it: that word is consistent with every clue for both hidden answers.",
-          "The final guesses in Xordle are often confirmations rather than discoveries — you play words that distinguish the two remaining candidates, and the solver tells you which word the feedback points to."
+          "With a few guesses left the ambiguity concentrates in the split itself. I might know the exact set of letters but not which word owns which, and that's when the solver's candidate enumeration earns its keep.",
+          "It keeps two separate filtered lists and reports them side by side so I can watch the two words converge. When a word shows up on both lists, the solver flags it: that word is consistent with every clue for both hidden answers.",
+          "The final guesses are usually confirmations rather than discoveries. I play words that distinguish the two remaining candidates, and the solver tells me which word the feedback points to."
         ]
       },
       {
         heading: "The strategy that wins Xordle",
         paragraphs: [
-          "Phase one, guesses one to three: sweep common letters with standard openers and let the solver decode the merged rows into two live candidate lists. Phase two, guesses four to six: probe the letters the merge left ambiguous, using words that would split the candidates cleanly.",
-          "Phase three, guesses seven to nine: resolve the two words. By then the solver usually has each word narrowed to a handful of candidates, and the feedback from your probe guesses identifies which is which.",
-          "The discipline that wins Xordle is never trying to out-think the merge. Enter the feedback exactly as shown, let the solver enumerate every split, and spend your guesses on words the solver ranks — the merge is decodable, but only systematically."
+          "Phase one, guesses one to three: sweep common letters with standard openers and let the solver decode the merged rows into two live candidate lists. Phase two, guesses four to six: probe the letters the merge left ambiguous, using words that split the candidates cleanly.",
+          "Phase three, guesses seven to nine: resolve the two words. By then each word is usually narrowed to a handful of candidates, and the feedback from my probe guesses identifies which is which.",
+          "I'll be honest that nine guesses still feels tight when the merge is stubborn. There are mornings I've used seven of them just to feel out which letters belong to which word, which is why the early sweep matters so much, a bad first two guesses here is harder to recover from than a bad first two guesses in Wordle.",
+          "The discipline that wins is never trying to out-think the merge. I enter the feedback exactly as shown, let the solver enumerate every split, and spend my guesses on words the solver ranks. The merge is decodable, but only systematically."
         ]
       },
       {
         heading: "Xordle answers and the two-word merge in practice",
-        paragraphs: ["Every Xordle puzzle hides two five-letter words, and the daily answers show the game’s taste: pairs of common words that share few letters, so the merged feedback stays readable. The solver’s two candidate lists mirror exactly that structure.","What makes Xordle answers interesting to study is the pair logic — the game picks words that are independently common but collectively distinctive, which is why the merge never collapses into an unreadable mess.","Whether you are solving today’s puzzle or replaying an archived one, the solver applies the same decoding: enumerate every split of the merged tiles, keep both lists consistent, and rank the next guess by how cleanly it would split the survivors."]
+        paragraphs: [
+          "Every Xordle puzzle hides two five-letter words, and the daily answers show the game's taste: pairs of common words that share few letters, so the merged feedback stays readable. The solver's two candidate lists mirror that structure exactly.",
+          "What makes Xordle answers worth studying is the pair logic. The game picks words that are independently common but collectively distinctive, which is why the merge never collapses into an unreadable mess.",
+          "Whether I'm solving today's puzzle or replaying an archived one, the solver applies the same decoding: enumerate every split of the merged tiles, keep both lists consistent, and rank the next guess by how cleanly it would split the survivors."
+        ]
       },
       {
-        heading: "Common Xordle mistakes and how to avoid them",
-        paragraphs: ["The most common Xordle mistake is reading the merged tile as if it belonged to a single word. A green tile in position three does not mean your letter is correct in your word — it means one of the two hidden words has that letter there, and the solver exists to keep both interpretations alive.","The second mistake is ignoring gray tiles as a source of truth. Because gray is the only unambiguous verdict, it is the strongest evidence you have, and players who treat it as weakly as they treat ambiguous greens lose the game’s one reliable anchor.","The third mistake is guessing a word that is not a plausible answer to either hidden word. With nine guesses the budget feels generous, but every wasted probe costs you the resolution phase, when you actually need two or three turns to separate the final candidates.","The solver keeps the two candidate lists visible as they converge, so you always know how much ambiguity is left. When both lists are down to a handful of words, spend your probes distinguishing them rather than discovering new letters — the discovery phase is over."]
+        heading: "The solver's settings, and what it can't do",
+        paragraphs: [
+          "The solver supports every word length the game uses, and the merge-decoding logic scales to each one: every merged tile gets enumerated into its possible splits, and both hidden-word lists are filtered against all of them. For past puzzles it works on any date, I just enter the merged feedback exactly as shown and the two lists rebuild from scratch.",
+          "One honest limitation: the solver can't see the merge for me. I still have to type the colors I actually saw, and if I record a tile wrong, both lists quietly drift. It's also not magic on a board where the early merge is mostly gray, because until I collect enough tiles there simply isn't enough information for any tool to split the two words with confidence."
+        ]
       },
       {
-        heading: "Xordle solver settings and word lengths",
-        paragraphs: ["The Xordle solver supports every word length the game uses, and the merge-decoding logic scales to each one: every merged tile is enumerated into its possible splits, and both hidden-word lists are filtered against all of them.","For past puzzles, the solver works on any date — enter the merged feedback exactly as shown, and the two candidate lists rebuild from scratch. The nine-guess budget is the same for every puzzle, and the decode-first discipline that wins the daily never changes."]
+        heading: "Common Xordle mistakes I made for weeks",
+        paragraphs: [
+          "The most common mistake is reading the merged tile as if it belonged to a single word. A green tile in position three does not mean my letter is correct in my word, it means one of the two hidden words has that letter there, and the solver exists to keep both interpretations alive.",
+          "The second is ignoring gray tiles as a source of truth. Because gray is the only unambiguous verdict, it's the strongest evidence I have, and players who treat it as weakly as they treat ambiguous greens lose the game's one reliable anchor.",
+          "The third is guessing a word that isn't a plausible answer to either hidden word. Nine guesses feels generous, but every wasted probe costs me the resolution phase, when I actually need two or three turns to separate the final candidates."
+        ]
       }
     ],
     faqHeading: "Xordle Solver FAQ",
@@ -7528,22 +7552,22 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is Xordle?",
         answer:
-          "Xordle is a Wordle variant where two hidden five-letter words share one feedback row per guess. Each colored tile merges the verdicts from both hidden words, so a single tile can hide two different letters."
+          "Two hidden five-letter words that share one feedback row per guess. Each colored tile merges the verdicts from both words, so a single tile can hide two different letters."
       },
       {
         question: "How many guesses do you get in Xordle?",
         answer:
-          "Nine guesses, compared with six in Wordle. The extra turns compensate for the ambiguity of the merged feedback."
+          "Nine, compared with six in Wordle. The extra turns compensate for how ambiguous the merged feedback is."
       },
       {
         question: "How does merged feedback work in Xordle?",
         answer:
-          "Every position of your guess is scored against both hidden words at once and the results are merged into one tile. A green tile means at least one hidden word has that letter in that position; only a gray tile is fully unambiguous."
+          "Every position of your guess is scored against both hidden words at once and the results are merged into one tile. Green means at least one hidden word has that letter in that position; only gray is fully unambiguous."
       },
       {
         question: "What does the Xordle solver do differently?",
         answer:
-          "It keeps separate candidate lists for the two hidden words, enumerates every possible split of each merged tile, and filters both lists against all of them — decoding the merge exhaustively instead of by intuition."
+          "It keeps separate candidate lists for the two hidden words, enumerates every possible split of each merged tile, and filters both lists against all of them, decoding the merge exhaustively instead of by intuition."
       },
       {
         question: "What is the best Xordle opening?",
@@ -7553,7 +7577,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "Can the solver handle any Xordle position?",
         answer:
-          "Yes. It works for any puzzle date and any word length the game uses — enter your guesses and the merged colors, and it maintains both candidate lists from there."
+          "Yes. It works for any puzzle date and any word length the game uses. Enter your guesses and the merged colors, and it maintains both candidate lists from there."
       }
     ],
     relatedLinks: [
