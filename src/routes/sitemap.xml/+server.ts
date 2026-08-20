@@ -1,6 +1,6 @@
 import { formatPuzzleDateKey, getPuzzleDateForGame, TODAY_ROUTE_GAME_MAP, ARCHIVE_ROUTE_GAME_MAP, type PuzzleGame } from '$lib/puzzle-window';
 import { GENERATED_SITEMAP_LASTMOD } from '$lib/generated/sitemap-lastmod';
-import { SITEMAP_ENTRIES } from '$lib/route-registry';
+import { MAIN_SITEMAP_ENTRIES } from '$lib/route-registry';
 import { parseMonthDayYearKey, toArchiveDateKey } from '$lib/archive-page';
 
 const BLOCKED_URL_PATTERNS = ['/create-custom-wordle', '/custom-wordle', '/admin', '/api/', '/private'];
@@ -62,13 +62,35 @@ function getLastModified(path: string): string {
         return getDatedAnswerLastModified(path) ?? getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME));
 }
 
+function getPriority(path: string): string {
+        if (path === '/' || path === '/wordle-answer-today' || path === '/wordle-solver') return '1.0';
+        if (path.endsWith('-answer-today') || path.endsWith('-answer-today-updated')) return '0.9';
+        if (HUB_PAGES.has(path)) return '0.8';
+        if (path.endsWith('-solver')) return '0.7';
+        if (path.endsWith('-archive') || path === '/wordle-answer-archive') return '0.5';
+        if (CONTENT_PAGES.has(path)) return '0.4';
+        return '0.5';
+}
+
+function getChangefreq(path: string): string {
+        if (path === '/' || path === '/wordle-answer-today') return 'daily';
+        if (path.endsWith('-answer-today') || path.endsWith('-answer-today-updated')) return 'daily';
+        if (HUB_PAGES.has(path)) return 'daily';
+        if (path.endsWith('-solver')) return 'weekly';
+        if (path.endsWith('-archive')) return 'monthly';
+        if (CONTENT_PAGES.has(path)) return 'monthly';
+        return 'weekly';
+}
+
 function generateSitemap(): string {
-        const urls = SITEMAP_ENTRIES.filter(shouldIncludeUrl)
+        const urls = MAIN_SITEMAP_ENTRIES.filter(shouldIncludeUrl)
                 .map((url: string) => {
                         const fullUrl = url.startsWith('http') ? url : `https://wordsolverx.com${url}`;
                         const lastmod = getLastModified(url);
+                        const priority = getPriority(url);
+                        const changefreq = getChangefreq(url);
 
-                        let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>`;
+                        let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>`;
 
                         if (url === '/') {
                                 entry += `\n    <image:image>\n      <image:loc>https://wordsolverx.com/wordsolverx.webp</image:loc>\n    </image:image>`;

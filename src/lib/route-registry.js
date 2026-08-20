@@ -112,7 +112,8 @@ export const ARCHIVE_STATIC_ROUTES = [
 
 export const API_RUNTIME_ROUTES = [
   '/api/*',
-  '/sitemap.xml'
+  '/sitemap.xml',
+  '/wordle-archive-sitemap.xml'
 ];
 
 export const SITEMAP_EXCLUDED_ROUTES = [
@@ -181,4 +182,15 @@ export const PRERENDER_ENTRIES = [
 
 export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
   (route) => !SITEMAP_EXCLUDED_ROUTES.includes(route)
+);
+
+// Split the sitemap into two files:
+//  - MAIN_SITEMAP_ENTRIES: everything except Wordle dated answer pages (served at /sitemap.xml)
+//  - WORDLE_ARCHIVE_SITEMAP_ENTRIES: only /wordle-answer-for-{month}-{day}-{year} pages (served at /wordle-archive-sitemap.xml)
+export const MAIN_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
+  (route) => !route.startsWith('/wordle-answer-for-')
+);
+
+export const WORDLE_ARCHIVE_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
+  (route) => route.startsWith('/wordle-answer-for-')
 );
