@@ -113,7 +113,8 @@ export const ARCHIVE_STATIC_ROUTES = [
 export const API_RUNTIME_ROUTES = [
   '/api/*',
   '/sitemap.xml',
-  '/wordle-archive-sitemap.xml'
+  '/wordle-archive-sitemap.xml',
+  '/colordle-archive-sitemap.xml'
 ];
 
 export const SITEMAP_EXCLUDED_ROUTES = [
@@ -176,8 +177,42 @@ function buildWordleDatedAnswerRoutes(now = new Date()) {
 
 export const WORDLE_DATED_ANSWER_ROUTES = buildWordleDatedAnswerRoutes();
 
+// --- Colordle dated answer pages (/colordle-answer-for-month-day-year) ---
+// Colordle launched 2023-08-07. One page per past date up to YESTERDAY - "today"
+// always lives on /colordle-answer-today. Colordle uses the same 16:30 UTC rollover
+// as Wordle (visibleDateOffsetDays = 1).
+function buildColordleDatedAnswerRoutes(now = new Date()) {
+	const routes = [];
+	const rolloverBoundary = Date.UTC(
+		now.getUTCFullYear(),
+		now.getUTCMonth(),
+		now.getUTCDate(),
+		16,
+		30,
+		30,
+		0
+	);
+	const offsetDays = now.getTime() >= rolloverBoundary ? 1 : 0;
+	const todayPuzzle = new Date(
+		Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + offsetDays)
+	);
+	const end = new Date(todayPuzzle);
+	end.setUTCDate(end.getUTCDate() - 1);
+
+	const cursor = new Date(Date.UTC(2023, 7, 7)); // Colordle #1
+	while (cursor <= end) {
+		routes.push(
+			`/colordle-answer-for-${WORDLE_MONTH_NAMES[cursor.getUTCMonth()]}-${cursor.getUTCDate()}-${cursor.getUTCFullYear()}`
+		);
+		cursor.setUTCDate(cursor.getUTCDate() + 1);
+	}
+	return routes;
+}
+
+export const COLORDLE_DATED_ANSWER_ROUTES = buildColordleDatedAnswerRoutes();
+
 export const PRERENDER_ENTRIES = [
-  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_DATED_ANSWER_ROUTES])
+  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_DATED_ANSWER_ROUTES, ...COLORDLE_DATED_ANSWER_ROUTES])
 ];
 
 export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
@@ -188,9 +223,13 @@ export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
 //  - MAIN_SITEMAP_ENTRIES: everything except Wordle dated answer pages (served at /sitemap.xml)
 //  - WORDLE_ARCHIVE_SITEMAP_ENTRIES: only /wordle-answer-for-{month}-{day}-{year} pages (served at /wordle-archive-sitemap.xml)
 export const MAIN_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
-  (route) => !route.startsWith('/wordle-answer-for-')
+  (route) => !route.startsWith('/wordle-answer-for-') && !route.startsWith('/colordle-answer-for-')
 );
 
 export const WORDLE_ARCHIVE_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
   (route) => route.startsWith('/wordle-answer-for-')
+);
+
+export const COLORDLE_ARCHIVE_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
+  (route) => route.startsWith('/colordle-answer-for-')
 );

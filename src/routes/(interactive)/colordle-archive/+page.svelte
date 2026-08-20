@@ -4,7 +4,8 @@
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { fetchArchivePayload } from '$lib/archive-client';
-  import { parseArchiveDateKey } from '$lib/archive-page';
+  import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+  import { getPuzzleDateForGame } from '$lib/puzzle-window';
   import ArchiveCalendar from '$lib/components/ArchiveCalendar.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
 
@@ -26,6 +27,15 @@
 
   const fallbackStartDate = new Date(2023, 7, 7);
 
+  function colordleLink(iso: string): string {
+    const date = parseArchiveDateKey(iso);
+    if (!date) return '/colordle-archive';
+    const today = getPuzzleDateForGame('colordle');
+    const todayKey = `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
+    if (iso === todayKey) return '/colordle-answer-today';
+    return `/colordle-answer-for-${toMonthDayYearKey(date)}`;
+  }
+
   let data = $state<ColordleArchivePayload>({
     availableDateStrings: [],
     selectedDateKey: null,
@@ -43,10 +53,6 @@
       window.history.replaceState(window.history.state, '', window.location.pathname);
     }
   });
-
-  function handleDateSelect(dateKey: string): void {
-    selectedDateParam = dateKey;
-  }
 
   async function loadArchive(dateKey: string | null): Promise<void> {
     const requestDateKey = dateKey;
@@ -106,7 +112,7 @@
   basePath="/colordle-archive"
   selectedDate={data.selectedDateKey}
   description="Every Colordle color answer. Find any past hex code solution instantly."
-  onSelectDate={handleDateSelect}
+  hrefResolver={colordleLink}
 />
 
 <section id="archive-answer" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 scroll-mt-28">
