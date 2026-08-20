@@ -19,6 +19,7 @@
     selectedDate = null,
     description = '',
     onSelectDate = null,
+    hrefResolver = null,
   }: {
     gameName: string;
     gameColor?: string;
@@ -29,6 +30,7 @@
     selectedDate?: string | null;
     description?: string;
     onSelectDate?: ((dateKey: string) => void) | null;
+    hrefResolver?: ((dateKey: string) => string) | null;
   } = $props();
 
   const ARCHIVE_ARTICLE_KEYS: Record<string, string> = {
@@ -70,7 +72,7 @@
           date: new Date(date),
           dateKey,
           dayNum: index + 1,
-          href: `${basePath}?date=${dateKey}`,
+          href: hrefResolver ? hrefResolver(dateKey) : `${basePath}?date=${dateKey}`,
           formatted: format(date, 'MMMM d, yyyy'),
         });
       });
@@ -83,7 +85,7 @@
           date: new Date(d),
           dateKey,
           dayNum: num,
-          href: `${basePath}?date=${dateKey}`,
+          href: hrefResolver ? hrefResolver(dateKey) : `${basePath}?date=${dateKey}`,
           formatted: format(d, 'MMMM d, yyyy'),
         });
         d = addDays(d, 1);

@@ -130,7 +130,7 @@ import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
   basePath="/wordle-answer-archive"
   selectedDate={calendarData.selectedDateKey}
   description="Every NYT Wordle answer since the beginning. Find any past solution instantly."
-  onSelectDate={handleDateSelect}
+  hrefResolver={datedLink}
 />
 
 <!-- Selected date answer block -->
