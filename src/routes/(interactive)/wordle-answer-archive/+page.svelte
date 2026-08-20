@@ -11,10 +11,15 @@
   import type { WordleAnswer } from '$lib/api';
   import { formatDate } from '$lib/utils';
 import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+import { getPuzzleDateForGame } from '$lib/puzzle-window';
 
   function datedLink(iso: string): string {
     const date = parseArchiveDateKey(iso);
-    return date ? `/wordle-answer-for-${toMonthDayYearKey(date)}` : `/wordle-answer-archive`;
+    if (!date) return '/wordle-answer-archive';
+    const today = getPuzzleDateForGame('wordle');
+    const todayKey = `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
+    if (iso === todayKey) return '/wordle-answer-today';
+    return `/wordle-answer-for-${toMonthDayYearKey(date)}`;
   }
 
   interface WordleArchivePayload {
