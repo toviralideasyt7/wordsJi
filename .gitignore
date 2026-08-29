@@ -31,3 +31,8 @@ vite.config.ts.timestamp-*
 
 # GSC audit scratch outputs
 .freebuff/
+
+# Ad-stack diagnostic scratch scripts (see MEDIAVINE-ADS-CONTEXT.md)
+tmp-*.mjs
+tmp-*.json
+tmp-*.md

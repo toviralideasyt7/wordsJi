@@ -4,7 +4,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://faves.grow.me https://scripts.scriptwrapper.com https://scripts.journeymv.com https://exchange.journeymv.com https://keywords.journeymv.com https://securepubads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://googleads.g.doubleclick.net https://securepubads.g.doubleclick.net https://*.journeymv.com https://faves.grow.me; object-src 'none'; base-uri 'self'
 
 /404.html
   X-Robots-Tag: noindex, nofollow
