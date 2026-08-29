@@ -43,6 +43,15 @@ tmp-*.csv
 # the build or by agents reading the project. See docs/AGENTS.md.
 archive/
 
+# Agent/tool scratch output — noise for both humans and agents
+.playwright-cli/
+output/
+tmp-rewrites/
+.cache/
+.opencode/
+claude-seo/
+artifacts/
+
 # Service-account keys and API credentials — never commit
 *service-account*.json
 *credentials*.json

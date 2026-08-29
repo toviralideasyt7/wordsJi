@@ -23,8 +23,6 @@
                 "deploy:pages": "node scripts/run-pages-pipeline.mjs",
                 "preview": "vite preview",
                 "preview:cf": "npm run build && wrangler dev --config wrangler.jsonc",
-                "pagespeed:capture:before": "node scripts/pagespeed-capture-before.mjs",
-                "pagespeed:analyze:before": "node scripts/pagespeed-analyze-before.mjs",
                 "prepare": "svelte-kit sync || echo ''",
                 "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
                 "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

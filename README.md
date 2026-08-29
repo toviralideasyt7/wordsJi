@@ -3,15 +3,16 @@
 SvelteKit site of puzzle solvers and daily answer pages for word games.
 Deployed to Cloudflare. Monetized with Journey/Mediavine display ads.
 
-**Agents: read [`docs/AGENTS.md`](docs/AGENTS.md) first.** It is the short map of
-stack, layout, conventions, and the files you must not change blindly.
+**Agents: read [`AGENTS.md`](AGENTS.md) first.** Small by design — it points to
+everything else rather than inlining it.
 
 ## Docs
 
 | Doc | Contents |
 |---|---|
-| [`docs/AGENTS.md`](docs/AGENTS.md) | Repo map, stack, conventions, what to skip when reading |
-| [`docs/MEDIAVINE-ADS.md`](docs/MEDIAVINE-ADS.md) | Ad stack: why a CSP once killed all revenue, ad selector config, diagnostics |
+| [`AGENTS.md`](AGENTS.md) | Commands, rules, load-bearing files, what never to read |
+| [`docs/MAP.md`](docs/MAP.md) | Generated route → file index (86 routes, components, scripts) |
+| [`docs/MEDIAVINE-ADS.md`](docs/MEDIAVINE-ADS.md) | Ad stack: why a CSP once killed all revenue, selector config, diagnostics |
 | [`docs/SEO-INDEXING.md`](docs/SEO-INDEXING.md) | Google indexing failure root cause, Bing growth plan, GSC/Bing API recipes |
 
 ## Develop
@@ -43,9 +44,10 @@ src/routes/(content)/       prose + daily answer pages
 src/routes/(interactive)/   solver tools
 src/lib/                    components, data, route registry
 scripts/                    build, daily data updates, SEO automation
+scripts/analytics/          GSC + Bing pulls (need env keys, not run by CI)
 static/                     robots.txt, ads.txt, word lists, wasm
 _headers, _redirects        Cloudflare edge config
-docs/                       long-form context (start here)
+docs/                       MAP.md + long-form context
 archive/                    gitignored: superseded scripts and dated reports
 ```
 
