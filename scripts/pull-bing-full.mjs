@@ -1,5 +1,7 @@
 // Pull full Bing query stats (90 days) and save aggregated rows to a CSV.
-const KEY = '696b6fcae42c4cf49cdd18cd1c8906d8';
+// Requires BING_KEY in the environment (never hardcode API keys).
+const KEY = process.env.BING_KEY;
+if (!KEY) throw new Error('Set BING_KEY (Bing Webmaster API key) in the environment.');
 const SITE = 'https://wordsolverx.com/';
 const res = await fetch(`https://ssl.bing.com/webmaster/api.svc/json/GetQueryStats?siteUrl=${encodeURIComponent(SITE)}&apikey=${KEY}`);
 if (!res.ok) throw new Error(`HTTP ${res.status}`);

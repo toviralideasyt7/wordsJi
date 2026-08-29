@@ -1,112 +1,57 @@
-# WordSolverX Svelte
+﻿# WordSolverX
 
-This is the SvelteKit-based version of **WordSolverX**, a comprehensive suite of solvers and daily answer guides for popular word puzzle games.
+SvelteKit site of puzzle solvers and daily answer pages for word games.
+Deployed to Cloudflare. Monetized with Journey/Mediavine display ads.
 
-## 🚀 Features
+**Agents: read [`docs/AGENTS.md`](docs/AGENTS.md) first.** It is the short map of
+stack, layout, conventions, and the files you must not change blindly.
 
--   **High-Performance Solvers**: WASM-powered and logic-based solvers for complex games.
--   **Daily Answers**: Automatically updated answer pages for today's and yesterday's puzzles.
--   **Fast & Responsive**: Built with SvelteKit and Tailwind CSS for optimal speed and SEO.
--   **Edge-Ready**: Designed to run on Cloudflare Pages/Workers.
+## Docs
 
-## 📂 Site Structure & Pages
+| Doc | Contents |
+|---|---|
+| [`docs/AGENTS.md`](docs/AGENTS.md) | Repo map, stack, conventions, what to skip when reading |
+| [`docs/MEDIAVINE-ADS.md`](docs/MEDIAVINE-ADS.md) | Ad stack: why a CSP once killed all revenue, ad selector config, diagnostics |
+| [`docs/SEO-INDEXING.md`](docs/SEO-INDEXING.md) | Google indexing failure root cause, Bing growth plan, GSC/Bing API recipes |
 
-### 🧩 Specialized Solvers
-Tools to help you solve specific game puzzles interactively.
+## Develop
 
-| Solver Page | Description | Key Features |
-| :--- | :--- | :--- |
-| **[5-Letter Wordle Solver](/5-letter-wordle-solver)** | Standard Wordle solver | Dedicated 5-letter clue filtering and ranked guesses |
-| **[Colordle Solver](/colordle-solver)** | Color code guessing | Hex/RGB conversion & distance logic |
-| **[Quordle Solver](/quordle-solver)** | 4-board simultaneous | WASM-powered multi-board logic |
-| **[Waffle Solver](/waffle-solver)** | Grid-based word swap | Rust/WASM engine, 5x5 grid support |
-| **[Weaver Solver](/weaver-solver)** | Word ladder connector | Graph BFS shortest path finder |
+```bash
+npm install
+npm run dev            # vite dev
+npm run check          # svelte-check
+npm test               # vitest --run
+npm run build          # production build
+```
 
-### 📅 Answer Pages (Today & Yesterday)
-Static pages providing the solutions for daily puzzles.
+## Deploy
 
--   **Wordle**: `/wordle-answer-today`, `/wordle-answer-yesterday`, `/wordle-answer-archive`
--   **Quordle**: `/quordle-answer-today`, `/quordle-archive`
--   **Phoodle**: `/phoodle-answer-today`, `/phoodle-answer-yesterday`, `/phoodle-archive`
--   **Waffle**: `/waffle-answer-today`
--   **Semantle**: `/semantle-answer-today`, `/semantle-answer-yesterday`, `/semantle-archive`
--   **Globle**: `/globle-answer-today`, `/globle-archive`
--   **Colordle**: `/colordle-answer-today`, `/colordle-answer-yesterday`, `/colordle-archive`
--   **Other Games**:
-    -   `/loldle-answer-today-updated` (League of Legends)
-    -   `/dotadle-answer-today-updated` (Dota 2)
-    -   `/pokedle-answer-today-updated` (Pokemon)
-    -   `/smashdle-answer-today-updated` (Smash Bros)
-    -   `/narutodle-answer-today-updated` (Naruto)
-    -   `/onepiecedle-answer-today-updated` (One Piece)
-    -   `/binance-wotd-solver` (Binance Word of the Day)
+Push to `main` â€” `.github/workflows/publish-pages.yml` builds and deploys to
+Cloudflare automatically.
 
-### ℹ️ Info & Utility
--   `/about`: About the project
--   `/contact`: Contact form
--   `/guides`: Game guides and tips
--   `/privacy-policy`: Privacy Policy
--   `/terms-of-service`: Terms of Service
--   `/archive`: General daily puzzle archive
--   `/solver`: General solver hub
+Manual:
 
-## 🛠️ Local Development
+```bash
+npm run build
+wrangler deploy --config wrangler.jsonc
+```
 
-1.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
+## Structure
 
-2.  **Start Dev Server**:
-    ```bash
-    npm run dev
-    ```
+```
+src/routes/(content)/       prose + daily answer pages
+src/routes/(interactive)/   solver tools
+src/lib/                    components, data, route registry
+scripts/                    build, daily data updates, SEO automation
+static/                     robots.txt, ads.txt, word lists, wasm
+_headers, _redirects        Cloudflare edge config
+docs/                       long-form context (start here)
+archive/                    gitignored: superseded scripts and dated reports
+```
 
-3.  **Build for Production**:
-    ```bash
-    npm run build
-    ```
+Both route groups render `<main id="main-content">`. That id is the Mediavine ad
+targeting selector â€” renaming it breaks in-content ads. See `docs/MEDIAVINE-ADS.md`.
 
-## ☁️ Deployment to Cloudflare
+## License
 
-This project uses `@sveltejs/adapter-cloudflare` and is optimized for **Cloudflare Pages**.
-
-### GitHub-Only Folders (Not Deployed)
-- You can commit helper folders (for example: `wordle-answers-worker/`, `waffle-worker/`, `phoodle-worker/`, `naruto-worker/`, `semantle/`, `Waffle-Solver/`, `Spotleleddlesolver/`) to GitHub.
-- Cloudflare deploy does not publish those folders directly.
-- Deploy artifacts are restricted to `.svelte-kit/cloudflare` by `wrangler.jsonc`, and `npm run deploy` now always builds before deploy.
-
-### **Option 1: Deploy with Wrangler (Terminal)**
-This is the most direct method to deploy from your CLI.
-
-1.  **Login to Cloudflare** (if not already logged in):
-    ```bash
-    npx wrangler login
-    ```
-    *This will open a browser window to authorize your account.*
-
-2.  **Build the Project**:
-    ```bash
-    npm run build
-    ```
-    *This compiles the app into the `.svelte-kit/cloudflare` directory.*
-
-3.  **Deploy to Cloudflare Pages**:
-    ```bash
-    npx wrangler pages deploy .svelte-kit/cloudflare --project-name wordsolverx-svelte
-    ```
-    *Replace `wordsolverx-svelte` with your preferred project name if different.*
-
-### **Option 2: Connect GitHub to Cloudflare Pages (Automatic)**
-1.  Push your code to a GitHub repository.
-2.  Go to the Cloudflare Dashboard > **Workers & Pages**.
-3.  Click **Create Application** > **Pages** > **Connect to Git**.
-4.  Select your repository and branch.
-5.  **Build Settings**:
-    -   **Framework Preset**: `SvelteKit`
-    -   **Build Command**: `npm run build`
-    -   **build output directory**: `.svelte-kit/cloudflare`
-6.  Click **Save and Deploy**.
-
----
-*Built by Antigravity*
+MIT

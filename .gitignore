@@ -32,7 +32,18 @@ vite.config.ts.timestamp-*
 # GSC audit scratch outputs
 .freebuff/
 
-# Ad-stack diagnostic scratch scripts (see MEDIAVINE-ADS-CONTEXT.md)
+# Ad-stack / SEO diagnostic scratch scripts (see docs/)
 tmp-*.mjs
 tmp-*.json
 tmp-*.md
+tmp-*.txt
+tmp-*.csv
+
+# Archived one-off scripts and dated reports — kept locally, not needed by
+# the build or by agents reading the project. See docs/AGENTS.md.
+archive/
+
+# Service-account keys and API credentials — never commit
+*service-account*.json
+*credentials*.json
+gsc-key*.json
