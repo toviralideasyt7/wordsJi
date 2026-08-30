@@ -105,8 +105,13 @@ file a reconsideration request. The API does not expose this endpoint.
 
 Every inspected URL reported `sitemaps: NOT IN ANY SITEMAP`, including ones in
 `sitemap.xml`. Meanwhile `sitemap.xml` has only **100 URLs** while the archive
-sitemaps have 2,997 — and `robots.txt` does not reference any sitemap at all.
-Add `Sitemap:` lines to `static/robots.txt` and make a proper sitemap index.
+sitemaps have 2,997.
+
+**Correction (2026-08-30):** an earlier draft of this doc said `robots.txt`
+referenced no sitemap. That was wrong — it referenced exactly one
+(`/sitemap.xml`, covering 100 of 3,097 URLs). The two archive sitemaps holding
+the other 2,997 were discoverable only via manual GSC submission. All three are
+now declared in `static/robots.txt`.
 
 ### Also fix: 42 orphan pages
 
@@ -237,15 +242,77 @@ converts fine (111-200 clicks), so the *brand-name* query is landing somewhere w
 
 ## Part 4 — Fix plan, ordered by return per hour
 
-### This week
+### Done (2026-08-30)
+
+| # | Action | Where |
+|---|---|---|
+| ✅ | `Sitemap:` directives for all three sitemaps | `static/robots.txt` — previously declared only `/sitemap.xml` (100 of 3,097 URLs) |
+| ✅ | Title + meta rewrite on `/wordle-answer-archive` | now leads with `All Wordle Answers: 2026, 2025 …`; the old title contained neither "all" nor a year, against 1,415 impressions / 0 clicks for "all wordle answers 2025" |
+| ✅ | Removed fabricated first-person experience claims site-wide | `src/lib/content/registry.ts` — 1,195 strings, see below |
+| ✅ | Stopped advertising the redirecting solver URL | `static/llms.txt`, `static/llms-full.txt` listed `/5-letter-wordle-solver`, which 301s. Both now point at `/wordle-solver` |
+
+**The E-E-A-T fix, in detail.** The August rewrite (`7c71355`, `d3644dd`, `aa1c0fa`)
+replaced third-person AI prose with invented first-person anecdotes, per a playbook
+that explicitly permitted "non-verifiable-invented" experience. That converted one
+violation into another: `/wordle-answer-archive` claimed a 2022 argument with a friend
+about REBUS, while `/about` disclosed the copy as model-drafted. Google's guidance
+weighs the "who" and "how" of content; a page that contradicts its own disclosure is
+worse than plain prose.
+
+Method (three model-assisted passes plus manual repair):
+
+1. Machine audit of all 74 articles to enumerate unverifiable claims. Validated
+   against the pre-cleanup file first — the auditor had to catch the known
+   fabrications before its "clean" verdicts meant anything.
+2. Per-string rewrite, one string in / one string out, with hard guards: template
+   variables (`{answer}`, `{date}`, `{dayNum}`) must survive, HTML tags must survive,
+   and any output still containing first person was discarded rather than applied.
+3. Manual repair of what automation broke — three literals where the model answered
+   conversationally and emitted embedded newlines into single-line strings, plus
+   over-escaped quotes in the Searchle prompt examples.
+
+Result: **1,195 strings rewritten** across 74 articles. `\bI \b` occurrences in
+`registry.ts` fell from 2,238 to 51, and `\bmy \b` from 673 to 7 — the remainder are
+FAQ `question:` fields, where first person is the reader's voice ("How do I stop
+losing my Wordle streak?") and correct.
+
+What was removed:
+
+- **139 headings and list titles** converted to instructional voice
+  ("What the archive taught me" → "What the archive reveals").
+- **All named third parties** — the friend who swore about REBUS, the partner who
+  called Betweenle a phone book game, the friend who insisted Minesweeper is a coin
+  flip, the group chat that could not agree on a Semantle answer. None existed.
+- **All counted streaks and personal metrics** — the 200-day Wordle streak, the
+  61-day Semantle streak, the 612-guess solve, the 23-day Betweenle streak,
+  "my average dropped from seven to four", "took the average from six guesses to three".
+- **All dated personal history and routine detail** — "back in 2022", "I play at
+  breakfast before coffee", "my first month".
+- **Author-claim eyebrow labels** — "From a Daily Four-Board Player", "built by a
+  daily player", and four others.
+
+What was kept, deliberately: solver-derived expertise. "The solver ranks candidates by
+expected eliminations", "Colordle scores perceptual similarity rather than RGB
+distance", the Gaussian-elimination explanation on lights-out. These are checkable
+against `src/lib/wordlebot-wasm/` and are the strongest genuine E-E-A-T signal the
+site has. Deleting them would have made the pages worse.
+
+`/about` now states that article copy does not claim personal gameplay experience, so
+the disclosure and the pages agree.
+
+Verified: `npm run check` 0 errors, `npm test` 10/10, `npm run build` clean, and a
+scan of all **3,118 prerendered HTML pages** returns zero hits for the removed
+anecdote patterns.
+
+### Still open
 
 | # | Action | Where | Why |
 |---|---|---|---|
 | 1 | Check **Security & Manual actions** in GSC | GSC UI (not API-exposed) | If there's a manual action, everything else is wasted effort until it's lifted |
-| 2 | Rewrite title + meta description on `/wordle-answer-archive` and `/5-letter-wordle-solver` | route `+page.svelte` | 7,500 Bing impressions → 3 clicks today |
-| 3 | Add `Sitemap:` directives to `static/robots.txt` | `static/robots.txt` | Currently absent entirely |
-| 4 | Build a sitemap **index** referencing all three sitemaps | `scripts/generate-sitemap-lastmod.mjs` | `sitemap.xml` covers 100 of 3,097 URLs |
-| 5 | Rewrite titles for the 50 zero-click Bing queries | route metadata | Biggest single traffic lever |
+| 2 | Decide canonical for `/5-letter-wordle-solver` | `_redirects` line 2 | Confirmed live: the URL returns **301 → /wordle-solver**, and `/wordle-solver` self-canonicalizes with the already-correct title. Bing gives the redirecting URL 16,558 impressions and the target only 669, so Bing has not transferred the ranking. Options: (a) leave it and wait, (b) serve the page at `/5-letter-wordle-solver` and canonicalize the other way. Owner's call |
+| 3 | Build a sitemap **index** referencing all three sitemaps | `scripts/generate-sitemap-lastmod.mjs` | Cleaner than three flat declarations |
+| 4 | `noindex` decision on the thinnest archive tiers | `wordle-archive-sitemap.xml/+server.ts` + dated page head | 2,997 template URLs against ~100 real pages. Removes URLs from index eligibility — owner's call |
+| 5 | Rewrite titles for the remaining zero-click Bing queries | route metadata | Biggest remaining traffic lever |
 
 ### This month
 
@@ -268,10 +335,10 @@ and it takes months. Priority order:
    real pages is the exact ratio that reads as scaled content abuse. Consider
    `noindex` on the thinnest archive tiers and let the strong pages compete.
    Fewer, better-indexed pages beat 3,000 ignored ones.
-3. Fix the E-E-A-T damage. If fabricated first-person anecdotes are still live
-   (see `archive/reports/wordsolverx-adsense-issues.md`), remove them. Claiming
-   experience you didn't have, about the wrong answer, is exactly what Google's
-   quality raters are trained to catch.
+3. ~~Fix the E-E-A-T damage.~~ **Done 2026-08-30** — see Part 4. Note for future
+   agents: the fix is *removing* unverifiable claims, not generating better ones.
+   Two prior passes failed because each one replaced fabricated experience with
+   differently-worded fabricated experience.
 4. Earn links. Nothing else moves the needle at this stage.
 5. Request indexing on your 5 best pages via GSC UI — one round, then stop.
    Repeated requests don't help.

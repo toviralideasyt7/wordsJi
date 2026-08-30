@@ -116,7 +116,10 @@
 
     <h2 class="text-slate-900 dark:text-slate-50">How Article Content Works</h2>
     <p>
-      Some answer pages also include a long-form article block. That copy can be drafted with model assistance, but it is not the source of truth for the page. The answer card, hints, route date, and archive data come from verified puzzle data first.
+      Some answer pages also include a long-form article block. That copy can be drafted with model assistance and is edited before publication, but it is not the source of truth for the page. The answer card, hints, route date, and archive data come from verified puzzle data first.
+    </p>
+    <p>
+      Article copy explains game mechanics, solver behaviour, and strategy. It does not claim personal gameplay experiences, invented streaks, or anecdotes about specific puzzles, because those claims cannot be verified. Where a page describes how a solver ranks candidates or filters a word list, that description reflects the actual implementation running on the page.
     </p>
     <p>
       Before a generated article can appear, it has to pass route-specific structure checks, date-aware checks, banned-phrase filters, and quality thresholds. If a draft fails those checks, the answer page still publishes and the article block stays hidden for that date instead of showing stale or invented copy.

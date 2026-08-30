@@ -112,17 +112,17 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 </script>
 
 <svelte:head>
-  <title>Wordle Answer Archive - Complete List of All Solutions by Date</title>
-  <meta name="description" content="The complete Wordle answer archive: every solution since June 2021, organized by year with puzzle numbers, dates, and editors. Search by date or puzzle number. Updated daily." />
+  <title>All Wordle Answers: 2026, 2025 and Every Past Solution</title>
+  <meta name="description" content="Every Wordle answer ever, in one searchable list: 2025 and 2024 in full, 2026 updated daily, back to puzzle #1 in June 2021. Search any date, word, or puzzle number." />
   <link rel="canonical" href="https://wordsolverx.com/wordle-answer-archive" />
-  <meta property="og:title" content="Wordle Answer Archive - Complete List of All Solutions" />
-  <meta property="og:description" content="Every Wordle answer since the beginning, organized by year with puzzle numbers and search." />
+  <meta property="og:title" content="All Wordle Answers: 2026, 2025 and Every Past Solution" />
+  <meta property="og:description" content="The full list of Wordle answers by date and puzzle number, from puzzle #1 to today. Searchable, updated daily." />
   <meta property="og:url" content="https://wordsolverx.com/wordle-answer-archive" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Wordle Answer Archive - All Past Solutions" />
-  <meta name="twitter:description" content="Complete history of every Wordle answer with year-by-year tables and search." />
+  <meta name="twitter:title" content="All Wordle Answers: 2026, 2025 and Every Past Solution" />
+  <meta name="twitter:description" content="Every Wordle answer by date and puzzle number, searchable, updated daily." />
   <meta name="twitter:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
 </svelte:head>
 

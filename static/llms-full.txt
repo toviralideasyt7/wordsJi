@@ -73,7 +73,7 @@ This file is a fuller agent-facing route index for WordSolverX. Prefer canonical
 
 - https://wordsolverx.com/3-letter-wordle-solver
 - https://wordsolverx.com/4-letter-wordle-solver
-- https://wordsolverx.com/5-letter-wordle-solver
+- https://wordsolverx.com/wordle-solver
 - https://wordsolverx.com/6-letter-wordle-solver
 - https://wordsolverx.com/7-letter-wordle-solver
 - https://wordsolverx.com/8-letter-wordle-solver

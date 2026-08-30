@@ -40,7 +40,6 @@ XML sitemap: https://wordsolverx.com/sitemap.xml
 
 ## Core Solver Pages
 
-- 5-letter Wordle Solver: https://wordsolverx.com/5-letter-wordle-solver
 - Wordle Solver: https://wordsolverx.com/wordle-solver
 - Quordle Solver: https://wordsolverx.com/quordle-solver
 - Phoodle Solver: https://wordsolverx.com/phoodle-solver

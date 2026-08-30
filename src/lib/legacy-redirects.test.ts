@@ -3,17 +3,18 @@ import { getLegacyDatedRedirect, getLegacyTodayRedirect } from './legacy-redirec
 
 describe('getLegacyTodayRedirect', () => {
 	it('redirects old month-slug answer pages to the canonical today route (non-Wordle)', () => {
-		expect(getLegacyTodayRedirect('/colordle-answer-for-december-06-2025')).toBe(
-			'/colordle-answer-today'
-		);
 		expect(getLegacyTodayRedirect('/semantle-answer-for-october-1-2025')).toBe(
 			'/semantle-answer-today'
 		);
+		expect(getLegacyTodayRedirect('/phoodle-answer-for-december-06-2025')).toBe(
+			'/phoodle-answer-today'
+		);
 	});
 
-	it('does not redirect Wordle dated pages (they are real prerendered pages now)', () => {
+	it('does not redirect Wordle or Colordle dated pages (they are real prerendered pages now)', () => {
 		expect(getLegacyTodayRedirect('/wordle-answer-for-may-31-2023')).toBeNull();
 		expect(getLegacyTodayRedirect('/wordle-answer-for-december-06-2025')).toBeNull();
+		expect(getLegacyTodayRedirect('/colordle-answer-for-december-06-2025')).toBeNull();
 	});
 
 	it('redirects old date-folder paths to the canonical today route', () => {

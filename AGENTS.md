@@ -21,6 +21,12 @@ npm run build
   `src/routes/(interactive)/` (solvers). Each has its own `+layout.svelte`.
 - Prerendered routes are listed in `src/lib/route-registry.js`, not crawled.
 - Secrets come from env: `GSC_KEY_FILE`, `BING_KEY`, `MONID_KEY`. Never hardcode.
+- **Never write invented first-person experience into page copy.** No streaks, no
+  named friends or family, no dated personal history, no routines. Article copy in
+  `src/lib/content/registry.ts` explains mechanics and solver behaviour in
+  instructional voice. Claims must be checkable against the implementation or the
+  game's rules. This was cleaned up on 2026-08-30 after two prior passes made it
+  worse — see [docs/SEO-INDEXING.md](docs/SEO-INDEXING.md) Part 4.
 
 ## Do not change without reading the linked doc
 
