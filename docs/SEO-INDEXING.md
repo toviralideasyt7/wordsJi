@@ -353,7 +353,7 @@ where Bing already rewards you.
 
 ## Part 5 — Reproducing this analysis
 
-Scripts are gitignored (`tmp-*`). Credentials come from env vars, never files in
+Scripts live in `tmp/` (gitignored). Credentials come from env vars, never files in
 the repo.
 
 ```powershell
@@ -362,15 +362,15 @@ $env:GSC_KEY_FILE = 'C:\path\to\service-account.json'
 $env:BING_KEY     = '<bing webmaster key>'
 $env:MONID_KEY    = '<monid.ai key>'
 
-node tmp-gsc-report.mjs           # clicks/impressions trend, pages with impressions
-node tmp-gsc-inspect.mjs          # URL Inspection: why each page is/isn't indexed
-node tmp-gsc-sitemaps.mjs         # sitemap submitted-vs-indexed counts
-node tmp-gsc-dimensions.mjs       # country / device / query breakdown
-node tmp-bing-report.mjs          # Bing traffic + crawl stats + index size
-node tmp-bing-queries.mjs         # striking-distance + zero-click query analysis
-node tmp-bing-pages.mjs           # per-page Bing performance
-node tmp-audit-internal-links.mjs # orphan-page detection
-node tmp-research.mjs "query"     # TinyFish web search via monid.ai
+node tmp/tmp-gsc-report.mjs           # clicks/impressions trend, pages with impressions
+node tmp/tmp-gsc-inspect.mjs          # URL Inspection: why each page is/isn't indexed
+node tmp/tmp-gsc-sitemaps.mjs         # sitemap submitted-vs-indexed counts
+node tmp/tmp-gsc-dimensions.mjs       # country / device / query breakdown
+node tmp/tmp-bing-report.mjs          # Bing traffic + crawl stats + index size
+node tmp/tmp-bing-queries.mjs         # striking-distance + zero-click query analysis
+node tmp/tmp-bing-pages.mjs           # per-page Bing performance
+node tmp/tmp-audit-internal-links.mjs # orphan-page detection
+node tmp/tmp-research.mjs "query"     # TinyFish web search via monid.ai
 ```
 
 ### API notes for future agents

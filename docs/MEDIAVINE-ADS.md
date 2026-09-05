@@ -201,7 +201,7 @@ Journey config for wordsolverx.com:
 ```
 
 Audited all 100 sitemap URLs by parsing the live HTML and walking the ancestor
-chain (`tmp-audit-content-selector.mjs`):
+chain (`tmp/tmp-audit-content-selector.mjs`):
 
 ```
 MATCHES "#main-content article .prose" : 21 / 100
@@ -222,7 +222,7 @@ Only `/`, `/today`, `/archive` and ~18 similar pages match, via
 `main#main-content > div > article > div.prose`.
 
 Measured effect, holding CSP fixed and rewriting only the selector on the wire
-(`tmp-cdp-selector-ab.mjs`):
+(`tmp/tmp-cdp-selector-ab.mjs`):
 
 | Selector | matches | ad units inserted |
 |---|---|---|
@@ -328,7 +328,7 @@ Then confirm the header is gone and ads render:
 (Invoke-WebRequest 'https://wordsolverx.com/' -UseBasicParsing).Headers['content-security-policy']
 
 # 2. real ad load, expect 0 CSP violations + googletag: "object"
-node tmp-cdp-ad-audit.mjs 'https://wordsolverx.com/wordle-answer-today' 25000
+node tmp/tmp-cdp-ad-audit.mjs 'https://wordsolverx.com/wordle-answer-today' 25000
 ```
 
 Success looks like: `googletag: "object"`, `pbjs: "object"`, at least one
@@ -353,20 +353,20 @@ here uses Playwright.
 
 | Script | Purpose |
 |---|---|
-| `tmp-cdp-ad-audit.mjs` | Loads a page in headless Chrome over raw CDP; reports CSP violations, blocked requests, ad slots, iframes, request hosts. `BYPASS_CSP=1` to disable CSP, `BLOCK_URLS=` to block patterns, `DUMP_HOSTS=file.json` to dump hosts by resource type. |
-| `tmp-cdp-csp-test.mjs` | Re-serves the live page with a rewritten CSP header. `CSP_MODE=proposed\|current\|none`. This is how the new policy was validated before editing `_headers`. |
-| `tmp-cdp-selector-ab.mjs` | Rewrites `content_selector` inside the scriptwrapper tag response on the fly to A/B selectors against the real DOM. `node tmp-cdp-selector-ab.mjs <url> "<selector>"` |
-| `tmp-audit-content-selector.mjs` | Walks all sitemap URLs, reports how many match `#main-content article .prose`. |
-| `tmp-audit-selector-candidates.mjs` | Counts which candidate containers exist across all sitemap pages. |
-| `tmp-check-grow-selector.mjs` | Prints the full ancestor chain of every `.prose` element on sample pages. |
-| `tmp-diff-grow-config.mjs` | Extracts `window.$adManagementConfig.web.model` from both sites' tags and diffs them. Writes `tmp-model-wordsolverx.json`, `tmp-model-pinpoint.json`. |
-| `tmp-verify-csp.mjs` | Asserts the CSP in `_headers` is byte-identical to the policy that was validated in a live browser. |
-| `tmp-check-live-selector.mjs` | Fetches the live scriptwrapper tag and prints the current `content_selector`. Run this after editing the dashboard to prove the change saved. |
+| `tmp/tmp-cdp-ad-audit.mjs` | Loads a page in headless Chrome over raw CDP; reports CSP violations, blocked requests, ad slots, iframes, request hosts. `BYPASS_CSP=1` to disable CSP, `BLOCK_URLS=` to block patterns, `DUMP_HOSTS=file.json` to dump hosts by resource type. |
+| `tmp/tmp-cdp-csp-test.mjs` | Re-serves the live page with a rewritten CSP header. `CSP_MODE=proposed\|current\|none`. This is how the new policy was validated before editing `_headers`. |
+| `tmp/tmp-cdp-selector-ab.mjs` | Rewrites `content_selector` inside the scriptwrapper tag response on the fly to A/B selectors against the real DOM. `node tmp/tmp-cdp-selector-ab.mjs <url> "<selector>"` |
+| `tmp/tmp-audit-content-selector.mjs` | Walks all sitemap URLs, reports how many match `#main-content article .prose`. |
+| `tmp/tmp-audit-selector-candidates.mjs` | Counts which candidate containers exist across all sitemap pages. |
+| `tmp/tmp-check-grow-selector.mjs` | Prints the full ancestor chain of every `.prose` element on sample pages. |
+| `tmp/tmp-diff-grow-config.mjs` | Extracts `window.$adManagementConfig.web.model` from both sites' tags and diffs them. Writes `tmp/tmp-model-wordsolverx.json`, `tmp/tmp-model-pinpoint.json`. |
+| `tmp/tmp-verify-csp.mjs` | Asserts the CSP in `_headers` is byte-identical to the policy that was validated in a live browser. |
+| `tmp/tmp-check-live-selector.mjs` | Fetches the live scriptwrapper tag and prints the current `content_selector`. Run this after editing the dashboard to prove the change saved. |
 
 Delete them all when finished:
 
 ```powershell
-Remove-Item tmp-cdp-*.mjs, tmp-audit-*.mjs, tmp-check-grow-selector.mjs, tmp-diff-grow-config.mjs, tmp-verify-csp.mjs, tmp-model-*.json, tmp-ad-hosts.json
+Remove-Item tmp/tmp-cdp-*.mjs, tmp/tmp-audit-*.mjs, tmp/tmp-check-grow-selector.mjs, tmp/tmp-diff-grow-config.mjs, tmp/tmp-verify-csp.mjs, tmp/tmp-model-*.json, tmp/tmp-ad-hosts.json
 ```
 
 Reproduce the config diff from scratch:
@@ -377,7 +377,7 @@ Invoke-WebRequest 'https://scripts.scriptwrapper.com/tags/ac0e6549-a401-4cca-891
   Select-Object -ExpandProperty Content | Set-Content "$env:TEMP\wsx-tag.js"
 Invoke-WebRequest 'https://scripts.scriptwrapper.com/tags/29b5c8d2-10b2-40b0-bbd5-1e9ec45c2b0e.js' -UseBasicParsing |
   Select-Object -ExpandProperty Content | Set-Content "$env:TEMP\pin-tag.js"
-node tmp-diff-grow-config.mjs
+node tmp/tmp-diff-grow-config.mjs
 ```
 
 ---
@@ -403,4 +403,4 @@ node tmp-diff-grow-config.mjs
   requests, and its GraphQL endpoint rejects unauthenticated POSTs with 405). The
   `cwr_u` / `cwr_s` cookies are AWS CloudWatch RUM telemetry IDs, not auth
   tokens — they carry no session. The selector change must be made by hand in the
-  browser; use `tmp-check-live-selector.mjs` to verify it landed.
+  browser; use `tmp/tmp-check-live-selector.mjs` to verify it landed.

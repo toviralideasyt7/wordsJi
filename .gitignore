@@ -32,7 +32,8 @@ vite.config.ts.timestamp-*
 # GSC audit scratch outputs
 .freebuff/
 
-# Ad-stack / SEO diagnostic scratch scripts (see docs/)
+# Ad-stack / SEO diagnostic scratch scripts (see docs/) — all live in tmp/
+tmp/
 tmp-*.mjs
 tmp-*.json
 tmp-*.md
