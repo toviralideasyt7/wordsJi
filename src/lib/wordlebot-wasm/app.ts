@@ -37,13 +37,13 @@ function escapeHtml(value: string) {
 
 function renderError(target: HTMLElement, message: string) {
         target.innerHTML = `
-                <main class="solver-page">
+                <div class="solver-page">
                         <div class="solver-container">
                                 <section class="results-panel">
                                         <p class="loading-card">${escapeHtml(message)}</p>
                                 </section>
                         </div>
-                </main>
+                </div>
         `;
 }
 
@@ -177,7 +177,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                                         : 'solver-container';
 
                 target.innerHTML = `
-                        <main class="solver-page">
+                        <div class="solver-page">
                                 <div class="${solverContainerClass}" style="--word-length: ${state.wordLength}">
                                         <section class="settings-card">
                                                 <div class="settings-grid">
@@ -245,7 +245,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                                                 <div class="loading-card"><div class="loading-spinner"></div>Calculating suggestions...</div>
                                         </section>
                                 </div>
-                        </main>
+                        </div>
                 `;
 
                 const guessInput = required<HTMLInputElement>(target, '#guess-input');
@@ -285,7 +285,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                 }
 
 						target.innerHTML = `
-							<main class="solver-page">
+							<div class="solver-page">
 								<div class="solver-container canuckle-daily-container">
 									<div class="canuckle-plain">
 										<h2 class="canuckle-h2">Puzzle #${today.index}</h2>
@@ -301,7 +301,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
 										<div class="canuckle-fact-text">${renderCanuckleFact(today)}</div>
 									</div>
 								</div>
-							</main>
+							</div>
 						`;
         }
 
@@ -314,7 +314,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                 const archiveState = { query: '', visibleCount: 250 };
 
                 target.innerHTML = `
-                        <main class="solver-page">
+                        <div class="solver-page">
                                 <div class="solver-container canuckle-archive-container">
                                         <section class="settings-card archive-toolbar">
                                                 <div class="archive-toolbar-top">
@@ -336,7 +336,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
                                                 <button id="archive-more" class="subtle-link-button" type="button">Load more</button>
                                         </div>
                                 </div>
-                        </main>
+                        </div>
                 `;
 
                 const searchInput = required<HTMLInputElement>(target, '#archive-search');

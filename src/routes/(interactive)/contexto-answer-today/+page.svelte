@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
@@ -164,7 +164,7 @@
 <AnswerPageNoscript gameName="Contexto" answer={data.initialAnswer?.answer ?? null} />
 
 <div class="min-h-screen bg-slate-50 dark:bg-slate-800/30">
-  <main class="max-w-5xl mx-auto px-4 py-8">
+  <section class="max-w-5xl mx-auto px-4 py-8">
     <div class="text-center mb-8">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-sm font-medium mb-4">
         <span>Daily Contexto Answers</span>
@@ -348,7 +348,7 @@
     </div>
 
     <InternalLinkSection currentGame="Contexto" />
-  </main>
+  </section>
 </div>
 
 <style>

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -142,7 +142,7 @@
 <AnswerPageMeta publishedDate={publishedDate} />
 <AnswerPageNoscript gameName="Betweenle" answer={answerWord} />
 
-<main class="min-h-screen bg-slate-50 text-slate-900">
+<section class="min-h-screen bg-slate-50 text-slate-900">
   <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
     <Breadcrumbs hideSchema={true} />
 
@@ -339,7 +339,7 @@
       <InternalLinkSection currentGame="Betweenle" />
     </div>
   </div>
-</main>
+</section>
 
 <style>
   .betweenle-answer-content {

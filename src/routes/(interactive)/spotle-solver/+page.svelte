@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { generateBreadcrumbSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -154,7 +154,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         }), ['FAQPage', 'HowTo'])}</script>`}
 </svelte:head>
 
-<main class="min-h-screen bg-teal-50">
+<section class="min-h-screen bg-teal-50">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                         <Breadcrumbs hideSchema={true} />
         </div>
@@ -462,4 +462,4 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
       />
     </div>
-  </main>
+  </section>

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -54,14 +54,14 @@
 <AnswerPageNoscript gameName="Waffle" answer={noscriptAnswer} />
 
 {#if data.error || !data.puzzle}
-<main class="max-w-3xl mx-auto px-4 py-12">
+<section class="max-w-3xl mx-auto px-4 py-12">
   <div class="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
     <h1 class="mb-4 text-3xl font-bold text-slate-900">Unable to Load Waffle Right Now</h1>
     <p class="text-slate-600">Please refresh in a moment.</p>
   </div>
-</main>
+</section>
 {:else}
-<main class="max-w-3xl mx-auto px-4 py-8">
+<section class="max-w-3xl mx-auto px-4 py-8">
   <Breadcrumbs />
 
   <div class="mb-8">
@@ -328,5 +328,5 @@
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
       />
     </div>
-</main>
+</section>
 {/if}

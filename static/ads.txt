@@ -1,7 +1,7 @@
 # Ads.txt v20260817
 managerdomain=journeymv.com
 contact=sales@journeymv.com
-ownerdomain=cryptowalletsx.com
+ownerdomain=wordsolverx.com
 journeymv.com, ac0e6549-a401-4cca-8916-4b05721e7169, DIRECT, 1363c924529b3998
 
 google.com, pub-1601477034266482, DIRECT, f08c47fec0942fa0

@@ -405,7 +405,7 @@
 </script>
 
 <div class="flex-1 container mx-auto px-4 py-8">
-	<main class="max-w-2xl mx-auto">
+	<div class="max-w-2xl mx-auto">
 		<div class="text-center mb-10">
 			<h2
 				class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-teal-600 via-teal-500 to-teal-600 bg-clip-text text-transparent mb-3"
@@ -597,5 +597,5 @@
 				<Suggestions {suggestions} {possibilities} onSelectWord={useSuggestion} />
 			</div>
 		{/if}
-	</main>
+	</div>
 </div>

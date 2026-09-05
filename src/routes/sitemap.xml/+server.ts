@@ -56,10 +56,10 @@ function getLastModified(path: string): string {
                 return capToToday(getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME)));
         }
 
-        // Answer-today and archive pages intentionally track the NYT puzzle date,
-        // which is one day ahead of UTC after 16:30 UTC. This is intentional design
-        // (chapter 4.2) — do NOT cap these.
-        return getDatedAnswerLastModified(path) ?? getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME));
+	// Answer-today and archive pages track the puzzle window, but a lastmod in the
+	// future (the NYT puzzle date runs one day ahead of UTC after 16:30 UTC)
+	// confuses Google freshness signals — cap everything to today's UTC date.
+	return capToToday(getDatedAnswerLastModified(path) ?? getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME)));
 }
 
 function getPriority(path: string): string {

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import StaticArticle from '$lib/components/StaticArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -193,7 +193,7 @@
         {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 
-<main class="min-h-screen bg-slate-50">
+<section class="min-h-screen bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
   <Breadcrumbs hideSchema={true} />
   </div>
@@ -356,7 +356,7 @@
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
       />
     </div>
-  </main>
+  </section>
 
 <style>
   .animate-fadeIn {

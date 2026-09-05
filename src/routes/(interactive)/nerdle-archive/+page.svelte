@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import { onMount } from 'svelte';
@@ -281,7 +281,7 @@
         {@html `<script type="application/ld+json">${SCHEMAS}</script>`}
 </svelte:head>
 
-<main class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900">
+<section class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50 text-slate-900">
         <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
                 <header class="mb-8">
                         <h1 class="text-3xl sm:text-4xl font-black">Nerdle Archive</h1>
@@ -500,16 +500,27 @@
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
       />
     </div>
-  </main>
+  </section>
 
 <!-- SEO Article Section -->
 <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-16">
   <div class="rounded-xl border border-slate-200 bg-white p-6 sm:p-8 dark:border-slate-700 dark:bg-slate-800">
     <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-slate-50 mb-6">Why the Nerdle Archive Matters</h2>
     <div class="prose prose-slate dark:prose-invert max-w-none">
-      <p>Every Nerdle equation across all modes, from Classic to Instant, since January 2022.</p>
+      <p>Every Nerdle equation across all modes, from Classic to Instant, since January 2022. The calendar above is the fastest way to answer the one question that brings most visitors here: what was the Nerdle equation on a specific date. Pick the date, pick the mode, and the stored equation appears as tiles with a one-click copy button.</p>
       <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mt-10 mb-4">How Nerdle Works</h3>
-      <p>Each day, you guess a mathematical equation — digits, operators, and an equals sign. Green means right position, yellow means right element wrong spot, gray means it's not in the equation at all. Classic Nerdle has 8 cells. Mini has 6. The other modes change the grid shape or count.</p>
+      <p>Each day, you guess a mathematical equation — digits, operators, and an equals sign. Green means right element in the right position, purple means right element in the wrong spot, black means it is not in the equation at all. Classic Nerdle uses an 8-character grid; the smaller modes shrink it and the larger ones stretch it. Every guess must itself be a valid, balanced equation, or the game rejects it — that single rule is what separates Nerdle strategy from Wordle strategy.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mt-10 mb-4">What Each Mode Changes</h3>
+      <p>The modes differ along three axes: equation length, number of simultaneous equations, and time pressure. Classic is the reference 8-cell game. Mini and Micro shorten the grid, which means fewer valid equations exist and the search space collapses faster — short modes reward testing operators early because each operator placed correctly eliminates a large share of the remaining candidates. Maxi and Midi lengthen the grid, which flips the priority: digit coverage matters more than operator placement on the first two guesses.</p>
+      <p>Quad runs four equations at once, so guesses must pull duty across all four grids — the same logic as Quordle, except every guess also has to balance mathematically. Speed adds a timer, which punishes calculator-style play; the practical adjustment is to fix a small set of valid openers in advance rather than composing equations from scratch against the clock. Mini Bi pairs two short grids. Instant resolves immediately rather than over six guesses, so there is no narrowing phase at all — the first input is the whole game.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mt-10 mb-4">Reading the Tiles Without Wasting Guesses</h3>
+      <p>Two properties of arithmetic do most of the work. First, addition and multiplication commute: 3+4 and 4+3 are both valid equations, so a purple 3 and purple 4 next to each other usually means the day's arrangement is the mirror of the guess, not a different pair of digits. Second, the equals sign can only sit in a handful of positions for a given grid length, so once it turns green the equation's shape is nearly fixed — everything left of it must evaluate to everything right of it.</p>
+      <p>The common leak is spending guesses on rearrangements of confirmed digits while untested operators sit unused. Operators are the scarce resource: there are only four of them (+, −, ×, ÷) plus the equals sign, and most failed Nerdle boards come from locking digits early while the operator arrangement stays wrong. Test a fresh operator on every one of the first three guesses and the board resolves far more often. The <a href="/nerdle-solver" class="text-teal-600 hover:text-teal-700 underline">Nerdle solver</a> applies exactly this elimination order when it ranks candidates.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mt-10 mb-4">How This Archive Stays Current</h3>
+      <p>Stored equations on this page are baked in at build time and grow by one entry per mode each day. For the equation running right now — which may not be stored here yet if the site has not rebuilt today — use the <a href="/nerdle-answer-today" class="text-teal-600 hover:text-teal-700 underline">Nerdle answer today</a> page, which always carries the current puzzle. Dates before a mode existed show no stored answer, which is expected rather than a gap in the data.</p>
 
       <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mt-10 mb-4">Frequently Asked Questions</h3>
       <h4 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-6 mb-2">Does the archive cover all modes?</h4>
@@ -518,6 +529,8 @@
       <p>You can browse by date. If you remember roughly when a puzzle ran, scroll to that date and you'll find it.</p>
       <h4 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-6 mb-2">Are equations reused across modes?</h4>
       <p>Each mode gets its own equation every day. They rarely repeat, but the underlying math patterns can feel similar over time.</p>
+      <h4 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-6 mb-2">Why did my correct math get marked wrong?</h4>
+      <p>Because Nerdle scores the arrangement, not the arithmetic. An equation can be perfectly valid and still earn purple and black tiles when its digits sit in different positions than the day's equation. Validity gets a guess accepted; only matching the stored arrangement turns tiles green.</p>
     </div>
   </div>
 </article>

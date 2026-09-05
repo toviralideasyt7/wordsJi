@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -84,7 +84,7 @@
 </noscript>
 
 <div class="min-h-screen bg-slate-50">
-  <main class="max-w-5xl mx-auto px-4 py-8">
+  <section class="max-w-5xl mx-auto px-4 py-8">
     <Breadcrumbs />
 
     <div class="text-center mb-8">
@@ -328,7 +328,7 @@
       </section>
 
     </article>
-  </main>
+  </section>
 
   <FAQSection faqs={data.faqs} />
 </div>

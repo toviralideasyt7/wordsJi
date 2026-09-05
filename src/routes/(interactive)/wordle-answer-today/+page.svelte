@@ -65,7 +65,9 @@
 <AnswerPageMeta publishedDate={publishedDate} />
 <AnswerPageNoscript gameName="Wordle" answer={data.wordleWord?.toUpperCase()} />
 
-<main class="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 font-sans">
+<!-- NOTE: the layout already renders <main id="main-content"> — this page must not
+	nest a second <main> (invalid HTML that confuses ad content extraction). -->
+<div class="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 font-sans">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <WordleDisplayWrapper
       wordleData={data.wordleData}
@@ -141,4 +143,4 @@
       <InternalLinkSection currentGame="Wordle" />
     </div>
   </div>
-</main>
+</div>

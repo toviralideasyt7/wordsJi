@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import StaticArticle from '$lib/components/StaticArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -333,7 +333,7 @@
                         </div>
                 </header>
 
-                <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+                <section class="max-w-6xl mx-auto px-4 py-6 space-y-6">
                         {#if notice}
                                 <div class="rounded-xl border border-amber-200 bg-amber-50 text-amber-900 px-4 py-2 text-sm">
                                         {notice}
@@ -776,7 +776,7 @@
         description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
       />
     </div>
-  </main>
+  </section>
 
                 
 

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -61,7 +61,7 @@
 <AnswerPageMeta publishedDate={publishedDate} />
 <AnswerPageNoscript gameName="Nerdle" answer={noscriptAnswer || null} />
 
-<main class="min-h-screen bg-slate-50 text-slate-900">
+<section class="min-h-screen bg-slate-50 text-slate-900">
         <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
                 <div class="space-y-8">
                         <section class="text-center">
@@ -272,4 +272,4 @@
                         </article>
                 </div>
         </div>
-</main>
+</section>

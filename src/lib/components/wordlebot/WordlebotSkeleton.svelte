@@ -73,7 +73,7 @@
 </script>
 
 {#if isCanucklePanel}
-	<main class="solver-page">
+	<div class="solver-page">
 		<div class="solver-container canuckle-daily-container">
 			<div class="canuckle-plain">
 				<h2 class="canuckle-h2">Puzzle #---</h2>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</div>
 {:else}
 	<!-- Solver Grid Skeleton -->
 	<div

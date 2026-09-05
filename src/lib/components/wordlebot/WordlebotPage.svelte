@@ -78,7 +78,7 @@
 </svelte:head>
 
 {#if isWordleLengthPage}
-        <main class="min-h-screen bg-slate-50 dark:bg-slate-800/30">
+        <div class="min-h-screen bg-slate-50 dark:bg-slate-800/30">
                 <section class="bg-gradient-to-r from-teal-600 to-teal-500 py-16 shadow-lg">
                         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                 <Breadcrumbs />
@@ -158,9 +158,9 @@
                                 {/if}
                         </div>
                 </div>
-        </main>
+        </div>
 {:else if isCanuckleFamilyPage}
-        <main class="min-h-screen bg-[linear-gradient(180deg,#fff8f7_0%,#ffffff_42%,#f8fafc_100%)]">
+        <div class="min-h-screen bg-[linear-gradient(180deg,#fff8f7_0%,#ffffff_42%,#f8fafc_100%)]">
                 <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
                         <Breadcrumbs />
 
@@ -242,9 +242,9 @@
                         </div>
 
                 </div>
-        </main>
+        </div>
 {:else}
-        <main class="min-h-screen bg-[linear-gradient(180deg,#f7fbf8_0%,#ffffff_36%,#f7f4eb_100%)]">
+        <div class="min-h-screen bg-[linear-gradient(180deg,#f7fbf8_0%,#ffffff_36%,#f7f4eb_100%)]">
                 <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
                         <Breadcrumbs />
 
@@ -321,5 +321,5 @@
                         </div>
 
                 </div>
-        </main>
+        </div>
 {/if}
