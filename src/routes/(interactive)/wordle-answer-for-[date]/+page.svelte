@@ -29,6 +29,9 @@
 		nextIsToday: boolean;
 		wordStats: WordStats | null;
 		weekLinks: WeekLink[];
+		bodyHtml: string;
+		dayName: string;
+		isoDateKey: string;
 	}
 
 	let { data }: { data: DatedData } = $props();
@@ -67,6 +70,9 @@
 				Wordle Answer for {data.formattedDate}
 			</h1>
 			<p class="mt-2 text-sm font-semibold text-slate-500 dark:text-slate-400">Wordle #{data.puzzleNumber}</p>
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Published {data.dayName}, {data.formattedDate} · By <a href="/about#preston-hayes" class="underline hover:text-teal-600 dark:hover:text-teal-400">Preston Hayes, editor</a>
+			</p>
 
 			{#if data.solution}
 				<div class="mt-6 rounded-xl border border-green-200 bg-green-50 p-8 text-center dark:border-green-800/40 dark:bg-green-900/20">
@@ -129,23 +135,38 @@
 			</div>
 
 			{#if data.solution}
-				<section class="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="Frequently asked questions">
+				<article class="mt-8 border-t border-slate-200 pt-6 text-base leading-7 text-slate-700 dark:border-slate-700 dark:text-slate-200" aria-label="Puzzle overview">
+					<h2 class="text-lg font-bold text-slate-900 dark:text-slate-50">About Wordle #{data.puzzleNumber} ({data.formattedDate})</h2>
+					{@html data.bodyHtml}
+				</article>
+			{/if}
+
+			{#if data.solution}
+				<section class="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="Frequently asked questions" itemscope itemtype="https://schema.org/FAQPage">
 					<h2 class="text-lg font-bold text-slate-900 dark:text-slate-50">Frequently asked questions</h2>
-					<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50">
-						What was the Wordle answer on {data.formattedDate}?
-					</h3>
-					<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300">
-						The Wordle answer for {data.formattedDate} was
-						<strong class="font-bold text-slate-900 dark:text-slate-50 uppercase">{data.solution}</strong>.
-						This was Wordle #{data.puzzleNumber}.
-					</p>
-					<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50">
-						What was Wordle #{data.puzzleNumber}?
-					</h3>
-					<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300">
-						Wordle #{data.puzzleNumber}, published {data.formattedDate}, was
-						<strong class="font-bold text-slate-900 dark:text-slate-50 uppercase">{data.solution}</strong>.
-					</p>
+					<div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+						<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50" itemprop="name">
+							What was the Wordle answer on {data.formattedDate}?
+						</h3>
+						<div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+							<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300" itemprop="text">
+								The Wordle answer for {data.formattedDate} was
+								<strong class="font-bold text-slate-900 dark:text-slate-50 uppercase">{data.solution}</strong>.
+								This was Wordle #{data.puzzleNumber}.
+							</p>
+						</div>
+					</div>
+					<div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+						<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50" itemprop="name">
+							What was Wordle #{data.puzzleNumber}?
+						</h3>
+						<div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+							<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300" itemprop="text">
+								Wordle #{data.puzzleNumber}, published {data.formattedDate}, was
+								<strong class="font-bold text-slate-900 dark:text-slate-50 uppercase">{data.solution}</strong>.
+							</p>
+						</div>
+					</div>
 				</section>
 			{/if}
 

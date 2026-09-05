@@ -80,7 +80,7 @@
       <span class="text-sm font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider">{todayStr}</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Today's Puzzle Answers
+      Today's Puzzle Answers — Wordle, Quordle, Nerdle, Colordle &amp; More
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Every daily answer on one page. Pick a game, see the answer, move on with your day.
@@ -106,7 +106,7 @@
     {#each games as game}
       <li data-card-filter-item="today-search" data-filter-section="answers" data-search-text={`${game.name} ${game.description} ${game.href}`}>
         <article class="h-full">
-          <GameCard name={game.name} href={game.href} description={game.description} color={game.color} icon={game.icon} actionText="View Answer" />
+          <GameCard name={game.name} href={game.href} description={game.description} color={game.color} icon={game.icon} actionText={`View today's ${game.name} answer`} />
         </article>
       </li>
     {/each}

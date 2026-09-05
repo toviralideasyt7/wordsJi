@@ -91,6 +91,10 @@
   </p>
 
   <div class="mt-10 prose prose-slate dark:prose-invert max-w-none">
+    <p class="font-semibold">
+      AI disclosure: Some supporting article copy on WordSolverX is drafted with model assistance, then reviewed and approved by the human reviewer, <strong>Preston Hayes</strong>, the credited editor for WordSolverX, before publication. Preston Hayes is responsible for every page that publishes under this byline, including verification of any model-assisted draft. The answer data itself always comes from verified puzzle sources, never from generated text.
+    </p>
+
     <h2>1. Answer Data Comes First</h2>
     <p>
       WordSolverX separates answer data from article copy. The answer card, archive entry, hints, and route date must come from the game's own source data, a verified endpoint, or a maintained dataset tied back to the game. The supporting article text is never used as the source of truth for the answer.

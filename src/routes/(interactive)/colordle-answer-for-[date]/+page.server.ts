@@ -215,9 +215,89 @@ export const load: PageServerLoad = async ({ params }) => {
 			? {
 					family: hueFamily(colorHex),
 					rgbLabel: `RGB ${rgb[0]}, ${rgb[1]}, ${rgb[2]}`,
-					shortHex: colorHex.slice(0, 4).toUpperCase()
+					shortHex: colorHex.slice(0, 4).toUpperCase(),
+					brightness: Math.round((rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 255),
+					warmth: rgb[0] >= rgb[2] ? 'warm-leaning' : 'cool-leaning'
 				}
 			: null;
+
+	const dayName = date.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
+	const dayOfMonth = date.getUTCDate();
+	const monthName = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' });
+	const yearNum = date.getUTCFullYear();
+
+	const prevColorDate = new Date(date);
+	prevColorDate.setUTCDate(prevColorDate.getUTCDate() - 1);
+	const nextColorDate = new Date(date);
+	nextColorDate.setUTCDate(nextColorDate.getUTCDate() + 1);
+
+	const recent = await getRecentAnswers();
+	const prevColorMatch = recent.find((r) => r.date === toArchiveDateKey(prevColorDate));
+	const nextColorMatch = recent.find((r) => r.date === toArchiveDateKey(nextColorDate));
+	const prevColor = prevColorMatch?.name ?? '';
+	const nextColor = nextColorMatch?.name ?? '';
+
+	const familyDescriptions: Record<string, { use: string; vibe: string }> = {
+		red: {
+			use: 'warm primaries in branding, alerts, and accent UI',
+			vibe: 'high-energy, attention-grabbing, appetite-linked'
+		},
+		orange: {
+			use: 'friendly call-to-action buttons, autumn palettes, and food photography',
+			vibe: 'playful, warm, and approachable'
+		},
+		yellow: {
+			use: 'highlight markers, hazard signage, and cheerful landing pages',
+			vibe: 'sunny, optimistic, hard to ignore on white backgrounds'
+		},
+		green: {
+			use: 'eco and finance branding, growth metrics, and outdoor interfaces',
+			vibe: 'calm, balanced, and reassuring'
+		},
+		cyan: {
+			use: 'tech and water themes, link colors, and clean dashboards',
+			vibe: 'cool, modern, and slightly clinical'
+		},
+		blue: {
+			use: 'corporate identity, sky backgrounds, and trust signals',
+			vibe: 'steady, professional, and dependable'
+		},
+		purple: {
+			use: 'luxury goods, creative tools, and mystical themes',
+			vibe: 'rich, imaginative, and slightly regal'
+		},
+		pink: {
+			use: 'fashion branding, soft product UI, and social platform accents',
+			vibe: 'soft, expressive, and contemporary'
+		},
+		neutral: {
+			use: 'typography, surfaces, and quiet background fills',
+			vibe: 'balanced, restrained, and design-system friendly'
+		},
+		'light neutral': {
+			use: 'paper backgrounds, off-white cards, and minimal product chrome',
+			vibe: 'airy, clean, and unobtrusive'
+		},
+		'dark neutral': {
+			use: 'editorial dark mode, charcoal backdrops, and dense data UIs',
+			vibe: 'serious, premium, and easy on the eyes in low light'
+		}
+	};
+	const familyInfo = colorFacts ? familyDescriptions[colorFacts.family] : null;
+	const brightnessNote =
+		colorFacts && colorFacts.brightness < 64
+			? 'A darker shade that reads well on light backgrounds but can swallow text placed on top without enough contrast.'
+			: colorFacts && colorFacts.brightness > 192
+				? 'A bright shade that pops on dark canvases and works as a highlight, though it can feel harsh on large fills.'
+				: 'A middle-brightness value that pairs comfortably with both light and dark surfaces.';
+
+	const bodyHtml = colorName && colorHex
+		? `<p>Colordle ${dayNum ? `#${dayNum}` : `for ${formattedDate}`} was published on ${dayName}, ${monthName} ${dayOfMonth}, ${yearNum}. The daily puzzle resets at midnight in the player's local time, so the color you'd see on that calendar day depends on where you opened it.</p>
+<p>The answer was <strong>${colorName}</strong> at hex code <strong>${colorHex.toUpperCase()}</strong>, decoding to <strong>${colorFacts?.rgbLabel}</strong>. That puts it in the <strong>${colorFacts?.family}</strong> family, which designers typically reach for when they need ${familyInfo?.use ?? 'a versatile accent'}. The tone reads as ${familyInfo?.vibe ?? 'a flexible neutral you can pair with most palettes'}.</p>
+<p>On the brightness scale, ${colorName} scores roughly ${colorFacts?.brightness} out of 255, making it ${brightnessNote} It's also ${colorFacts?.warmth}, so it will play nicely against ${colorFacts?.warmth === 'warm-leaning' ? 'cool blues and grays as a contrast accent' : 'warm oranges and yellows as a counterweight'} in most layouts. If you're trying to recreate this color in Figma, Photoshop, or a CSS variable, copy the hex directly; if you need screen-space matching, the RGB triplet above lands you on the same swatch.</p>
+<p>The day before this puzzle was <strong>${prevColor || '(archived)'}</strong>${prevColor ? `, and the day after was <strong>${nextColor || '(today route)'}</strong>` : ''}. Scanning a short run of recent answers is a useful way to see whether the curator has been leaning toward a particular palette that week, and it gives you a baseline for guessing future puzzles when a hex doesn't ring a bell. The full archive on this site indexes every Colordle back to launch, so you can flip through months at a time.</p>
+<p>For working solvers, the Colordle helper on this site applies the same RGB distance math the official game uses, so you can plug a guess into it and get a near-match back without burning through your daily attempts.</p>`
+		: '';
 
 	// Week cluster: 3 days either side with descriptive anchors. Same-week pages
 	// link each other, so crawlers and readers walk the date long-tail.
@@ -260,6 +340,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		nextDateKey,
 		nextIsToday,
 		colorFacts,
-		weekLinks
+		weekLinks,
+		bodyHtml,
+		dayName,
+		isoDateKey
 	};
 };

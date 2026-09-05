@@ -18,7 +18,7 @@
       gradient: 'from-blue-500 to-indigo-600',
       icon: '🔷',
       link: '/quordle-solver',
-      linkText: 'Try Quordle Solver',
+      linkText: 'Open the Quordle solver',
     },
     {
       title: 'Phoodle Food Word Guide',
@@ -34,7 +34,7 @@
       gradient: 'from-amber-500 to-yellow-600',
       icon: '🧇',
       link: '/waffle-solver',
-      linkText: 'Try Waffle Solver',
+      linkText: 'Open the Waffle solver',
     },
     {
       title: 'Colordle Color Theory',
@@ -42,7 +42,7 @@
       gradient: 'from-pink-500 to-purple-600',
       icon: '🎨',
       link: '/colordle-solver',
-      linkText: 'Try Colordle Solver',
+      linkText: 'Open the Colordle solver',
     },
     {
       title: 'Semantle Word Similarity',
@@ -50,7 +50,7 @@
       gradient: 'from-cyan-500 to-teal-600',
       icon: '🧠',
       link: '/semantle-answer-today',
-      linkText: "Today's Semantle Answer",
+      linkText: "View today's Semantle answer",
     },
   ];
 
@@ -62,21 +62,21 @@
           game: 'Worldle',
           description: 'Guess countries from their outlines and use distance feedback to narrow each attempt.',
           links: [
-            { href: '/worldle-answer-today', label: "Today's answer" },
-            { href: '/worldle-solver', label: 'Solver' }
+            { href: '/worldle-answer-today', label: "View today's Worldle answer" },
+            { href: '/worldle-solver', label: 'Open the Worldle solver' }
           ]
         },
         {
           game: 'Globle',
           description: 'Guess countries on a globe where warmer colors mean your guess is getting closer.',
-          links: [{ href: '/globle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/globle-answer-today', label: "View today's Globle answer" }]
         },
         {
           game: 'Countryle',
           description: 'Use continent, area, and population clues to identify the daily country faster.',
           links: [
-            { href: '/countryle-answer-today', label: "Today's answer" },
-            { href: '/countryle-solver', label: 'Solver' }
+            { href: '/countryle-answer-today', label: "View today's Countryle answer" },
+            { href: '/countryle-solver', label: 'Open the Countryle solver' }
           ]
         }
       ]
@@ -87,32 +87,32 @@
         {
           game: 'LoLdle',
           description: 'Identify League of Legends champions using quote, ability, and splash clues.',
-          links: [{ href: '/loldle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/loldle-answer-today-updated', label: "View today's LoLdle answer" }]
         },
         {
           game: 'Dotadle',
           description: 'Daily Dota character challenge with mode-based hints and region-specific answers.',
-          links: [{ href: '/dotadle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/dotadle-answer-today-updated', label: "View today's Dotadle answer" }]
         },
         {
           game: 'Narutodle',
           description: 'Guess Naruto characters by quote and art clues with daily rotating answers.',
-          links: [{ href: '/narutodle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/narutodle-answer-today-updated', label: "View today's Narutodle answer" }]
         },
         {
           game: 'Onepiecedle',
           description: 'One Piece character guessing with clue modes that test memory and recognition.',
-          links: [{ href: '/onepiecedle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/onepiecedle-answer-today-updated', label: "View today's Onepiecedle answer" }]
         },
         {
           game: 'Pokedle',
           description: 'Pokemon-themed daily guessing puzzle for types, forms, and iconic clues.',
-          links: [{ href: '/pokedle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/pokedle-answer-today-updated', label: "View today's Pokedle answer" }]
         },
         {
           game: 'Smashdle',
           description: 'Guess Smash characters with fighter clues and daily updated answer pools.',
-          links: [{ href: '/smashdle-answer-today-updated', label: "Today's answer" }]
+          links: [{ href: '/smashdle-answer-today-updated', label: "View today's Smashdle answer" }]
         }
       ]
     },
@@ -122,43 +122,43 @@
         {
           game: 'Contexto',
           description: 'Find the target word by semantic closeness instead of letter-by-letter hints.',
-          links: [{ href: '/contexto-answer-today', label: "Today's answer" }]
+          links: [{ href: '/contexto-answer-today', label: "View today's Contexto answer" }]
         },
         {
           game: 'Semantle',
           description: 'Use word similarity ranks to move toward the hidden word in semantic space.',
-          links: [{ href: '/semantle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/semantle-answer-today', label: "View today's Semantle answer" }]
         },
         {
           game: 'Searchle',
           description: 'Predict Google autocomplete completions from real query prompts and trends.',
           links: [
-            { href: '/searchle-answer-today', label: "Today's answer" },
-            { href: '/searchle-solver', label: 'Solver' }
+            { href: '/searchle-answer-today', label: "View today's Searchle answer" },
+            { href: '/searchle-solver', label: 'Open the Searchle solver' }
           ]
         },
         {
           game: 'Colordle',
           description: 'Guess the daily color using RGB and hex-distance style feedback clues.',
           links: [
-            { href: '/colordle-answer-today', label: "Today's answer" },
-            { href: '/colordle-solver', label: 'Solver' }
+            { href: '/colordle-answer-today', label: "View today's Colordle answer" },
+            { href: '/colordle-solver', label: 'Open the Colordle solver' }
           ]
         },
         {
           game: 'Colorfle',
           description: 'Color-based puzzle variant with daily answer tracking and archive support.',
-          links: [{ href: '/colorfle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/colorfle-answer-today', label: "View today's Colorfle answer" }]
         },
         {
           game: 'Framed',
           description: 'Guess the movie from still frames with one new visual clue per guess.',
-          links: [{ href: '/framed-answer-today', label: "Today's answer" }]
+          links: [{ href: '/framed-answer-today', label: "View today's Framed answer" }]
         },
         {
           game: 'Spotle',
           description: 'Music and artist guessing puzzle with clue progression and archive lookup.',
-          links: [{ href: '/spotle-answer-today', label: "Today's answer" }]
+          links: [{ href: '/spotle-answer-today', label: "View today's Spotle answer" }]
         }
       ]
     }
@@ -233,7 +233,7 @@
       <span class="text-sm font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider">{guides.length} guides</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Guides & Strategies
+      Puzzle Guides &amp; Strategy — Wordle Strategy, Quordle Strategy &amp; More
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Practical strategy breakdowns for the games you actually play. No filler, no generic advice.
@@ -326,7 +326,7 @@
       <h2 class="text-slate-900 dark:text-slate-50">Wordle-Specific Strategy</h2>
 
       <p>
-        Wordle is the most analyzed puzzle game in history, and the strategic consensus has mostly settled around a few key ideas. First, your opening guess should test five different common letters. "CRANE," "SLATE," "TRACE," "CRATE," and "STARE" all score well because they contain R, A, T, E, and at least one of C/S/L — all among the most frequent letters in the Wordle answer list.
+        Wordle is the most analyzed puzzle game in history, and the strategic consensus has mostly settled around a few key ideas. First, your opening guess should test five different common letters. "CRANE," "SLATE," and "TRACE" all score well because they contain R, A, T, E, and at least one of C/S/L — all among the most frequent letters in the Wordle answer list.
       
       </p>
       <p>

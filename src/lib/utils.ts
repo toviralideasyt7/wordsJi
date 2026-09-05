@@ -1,21 +1,21 @@
 import { format, subDays } from 'date-fns';
 import { applyDailyRolloverGrace } from '$lib/rollover-grace';
 
-// The first NYT Wordle was #219 on January 24, 2022 (verified via NYT API:
-//   https://www.nytimes.com/svc/wordle/v2/2022-01-24.json -> days_since_launch=219, solution=knoll)
-// Earlier comment said Feb 15, 2022 — that was Wordle #241, not #219. Fixed per SEO audit Bug #1.
-export const WORDLE_NYT_START_DATE = new Date('2022-01-24');
-export const WORDLE_NYT_START_NUMBER = 219;
+// Wordle launched on June 19, 2021 as puzzle #1. Numbering continues sequentially
+// from that date, with the NYT adopting the same sequence when they acquired
+// the game. 2022-01-24 is puzzle #220 by this count (219 days after launch, +1).
+export const WORDLE_LAUNCH_DATE = new Date('2021-06-19');
+export const WORDLE_LAUNCH_NUMBER = 1;
 
 export function getWordleNumber(date: Date): number {
-  const timeDiff = date.getTime() - WORDLE_NYT_START_DATE.getTime();
+  const timeDiff = date.getTime() - WORDLE_LAUNCH_DATE.getTime();
   const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-  return WORDLE_NYT_START_NUMBER + daysDiff;
+  return WORDLE_LAUNCH_NUMBER + daysDiff;
 }
 
 export function getWordleDate(number: number): Date {
-  const daysDiff = number - WORDLE_NYT_START_NUMBER;
-  const date = new Date(WORDLE_NYT_START_DATE);
+  const daysDiff = number - WORDLE_LAUNCH_NUMBER;
+  const date = new Date(WORDLE_LAUNCH_DATE);
   date.setDate(date.getDate() + daysDiff);
   return date;
 }

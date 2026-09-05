@@ -429,7 +429,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: 'What is Maxi Nerdle, and what are the other variants?',
         answer:
-          'The family covers sizes and stakes: Mini Nerdle is a shorter six-character board, Maxi Nerdle expands to ten, Bi-Nerdle runs two puzzles at once, and Instant Nerdle is a one-shot version. The census method scales to all of them.'
+          'The family covers sizes and stakes: Mini Nerdle uses a six-character board, Midi Nerdle uses an eight-character board, Maxi Nerdle expands to ten, Bi-Nerdle runs two puzzles at once, and Instant Nerdle is a one-shot version. The census method scales to all of them.'
       },
       {
         question: 'How is Nerdle different from Wordle?',
@@ -1199,7 +1199,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         paragraphs: [
           "Contexto hides one secret word and gives you exactly one piece of information per guess: where that guess ranks in semantic similarity to the answer. A rank of 250 means your word is closer to the answer than 249 others and farther than most of the dictionary. Rank 1 is the answer itself. That's the entire interface. No letters, no colored tiles, just a number.",
           "The beginner trap is treating small numbers as praise. Type dog, see 3,000, and it feels like progress. It is not. The number is a coordinate, not a compliment, and if you do not move toward it you stay lost.",
-          "The engine behind all of it is a language model trained on an enormous pile of text. Words get mapped to vectors, and similarity is measured by how close those vectors sit. That's why synonyms rank well but so do words that merely appear in the same contexts. A good guess doesn't have to mean the same thing; it has to live near the answer in the space the model learned.",
+          "The engine behind all of it is a word-embedding model trained on an enormous pile of text. Words get mapped to vectors, and similarity is measured by how close those vectors sit. That's why synonyms rank well but so do words that merely appear in the same contexts. A good guess doesn't have to mean the same thing; it has to live near the answer in the space the model learned.",
           "Once that clicks, you stop solving a crossword and start reading a map. Every rank becomes a reading on that map, and the fastest route to the answer is triangulation: plant three or four anchors around the target and walk inward."
         ]
       },
@@ -1250,6 +1250,26 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
+        heading: "How the model turns words into coordinates",
+        paragraphs: [
+          "Behind the rank number sits a vector: a list of a few hundred numbers that summarize where a word sits in the model's learned space. Every word in the dictionary gets one of these vectors, and the list is built by training a neural network on a huge slice of ordinary text. The training task is simple to describe and brutal to scale: given a word, predict the words that tend to appear near it. The list of numbers is the side effect, not the goal, but it turns out the side effect is exactly what Contexto needs.",
+          "Two vectors that point in similar directions belong to words that show up in similar contexts. King and queen sit near each other because they share neighbors like royal, throne, crown, and reign. Walk and run sit near each other because they share neighbors like fast, slow, race, and distance. The model never sees a dictionary, and it never reads a thesaurus. The neighborhoods come from raw text, which is why some pairs feel obvious and some feel strange: the model is following statistical co-occurrence, not editorial definitions.",
+          "Dimensionality is the part that surprises people. The vectors are not three-dimensional points on a graph. They are points in a high-dimensional space, typically a few hundred axes, where each axis captures some latent feature the model invented during training. Nobody named those features. They are not \"nounness\" or \"verbness\" or \"kitchen-ness.\" They are statistical patterns the network found useful for the prediction task, and the only honest description of any one axis is a fuzzy label like \"this dimension helps separate indoor nouns from outdoor nouns.\" You cannot read a vector by hand, but you can read the distances between vectors, and Contexto does that for every guess.",
+          "Contexto also adds one trick on top of the raw vectors: it does not use raw cosine similarity. It uses a game-tuned similarity function that reweights the dimensions, which is why some pairs land much closer than a vanilla embedding model would put them. The exact recipe is the developer's, but the effect is visible to anyone who plays a few rounds. Words that are not synonyms still get pulled into the same neighborhood when they share a topic, a domain, or a usage pattern. The space is not a thesaurus, and it is not a Wikipedia category tree. It is a learned geometry that has been tweaked for the puzzle.",
+          "The practical takeaway: the rank you see is the model's opinion of how close your guess sits to the answer in this tuned space, and the model's opinion is shaped entirely by what the training text looked like. That is why some neighborhoods feel intuitive and others feel arbitrary. You are reading the geometry of a large text corpus, not a definition."
+        ]
+      },
+      {
+        heading: "What surprises the model, and why",
+        paragraphs: [
+          "Polysemy is the first thing that breaks player intuition. A word like bank has two clean senses: a place for money, and the side of a river. The model has to pick one vector, and it picks the average, weighted by how often each sense appears in the training text. The money sense usually wins, because financial writing dominates, and that is why bank, money, and account sit close together while bank, river, and water sit farther apart. The same effect hits words like bat, match, set, light, and almost any common noun that has shifted meanings over time.",
+          "Topic contamination is the second surprise. Two words that share a topic can rank as close neighbors even when they are not synonyms at all, because the model picks up on shared context. Doctor and hospital are not synonyms, but they share a topic, so they sit near each other. Cat and dog are not synonyms either, but they share a topic, so the model groups them. That is the reason Contexto answers often belong to a topic the player can name, even when the player cannot name a synonym. The answer is not the same word as your guess. It is a word from the same neighborhood the model has decided is the right one.",
+          "Frequency warps the geometry in a quieter way. Common words have stable, well-trained vectors, because the model has seen them in thousands of contexts. Rare words have noisy vectors, because the model has only seen them a few hundred times. The consequence is that a rare-word guess gets a rank that is partly a measurement and partly noise. A rank of 350 for a common word is a real 350. A rank of 350 for a rare word is a 350 with a margin of error that might be a hundred in either direction. Guess rare words only when the surrounding ranks tell you the answer is itself a rare word.",
+          "Negation is the third quirk worth knowing. The model has no concept of not, no, or without as operators. Anton and antonym are not the opposite of cat and dog in the vector space. The model knows that not and cat appear in similar contexts to no and cat, which is not the same thing. If the answer is a negative of a common word, the only way to find it is to guess the positive and then walk the neighborhood by meaning, not by negation. There is no shortcut the model offers here, and players who try to guess with not stuck on the front waste turns.",
+          "Morphology helps more than people expect. The model treats walks, walked, walking, and walk as neighbors, because the surrounding text overlaps heavily. That is why verb tense barely matters in Contexto: guess the base form when you can, because the model will forgive the mismatch. The same applies to plurals. Guesses and guess land close, and so do cat and cats. The opposite is true of truly different words that share a stem. Help and helpful are not synonyms, and the model knows it. The overlap is real but shallow, and ranks reflect that."
+        ]
+      },
+      {
         heading: 'How to check the Contexto answer today',
         paragraphs: [
           "Give the puzzle an honest run before checking today's Contexto answer, and hold off on the reveal until later in the day. This isn't about discipline, it's practical: the moment the answer appears, the puzzle is over and there's nothing left to learn from it. The reveal card at the top of this page is there for the days you're stuck or in a hurry, and it's confirmed against the official puzzle rather than guessed.",
@@ -1262,7 +1282,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "How does Contexto rank my guesses?",
         answer:
-          "A language model measures the semantic similarity between your guess and the hidden answer, then shows your guess's rank. Position 1 is the answer, and a smaller number means closer in meaning."
+          "A word-embedding model measures the semantic similarity between your guess and the hidden answer, then shows your guess's rank. Position 1 is the answer, and a smaller number means closer in meaning."
       },
       {
         question: "What is the best first guess in Contexto?",
@@ -1283,6 +1303,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         question: "Is using a Contexto solver cheating?",
         answer:
           "For a live game, yes. For studying the ranking logic and improving your own triangulation, it's the fastest way to learn how the game thinks."
+      },
+      {
+        question: "Do rare words make better guesses in Contexto?",
+        answer:
+          "Usually the opposite. Rare words have noisy vectors because the model has seen them in fewer contexts, so a rank reading for a rare word is less reliable than the same rank for a common word. Stick to common words for information guesses and save the rare ones for shortlists where you already know the answer is uncommon."
       },
       {
         question: 'What is the Contexto answer today?',
@@ -5192,7 +5217,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
           "The fastest way to improve is building a mental table of the roster sorted by the attributes the game tests. Start with regions: Demacia, Noxus, Ionia, Piltover and Zaun, the Shadow Isles, Targon, the Void, and the rest. Being able to say that champion is from Ionia on sight halves the pool before any feedback appears.",
           "Then layer roles on top of regions. Most regions have a recognizable cast, Ionia has its duelists and mages, Noxus its brawlers and assassins, Piltover its inventors and marksmen. Once a clue confirms a region, run down that region's role list and the field narrows to a shortlist of five or six names.",
           "The third layer is species and gender, which is chronically underused. Species is coarse, human, vastaya, spirit, void-born, undead, and it deletes whole classes in one verdict. A human champion can never be a vastaya, so confirming not human removes most of the pool in a single line.",
-          "The resource system covers mana, energy, rage, and the resource-less champions. It is the attribute that most resembles trivia, and it is easy to underestimate how hard it is to recall. It is also one of the most discriminating, because champions that share a region and a role rarely share a resource type.",
+          "The resource system covers mana, energy, rage, and the resource-less champions. It is the attribute that most resembles trivia, and it is easy to underestimate how hard it is to recall. It is also among the sharpest filters, because champions that share a region and a role rarely share a resource type.",
           "Trusting the staged filter instead of memorizing everything cuts solve time roughly in half. The region cut does the heavy lifting, and attribute memory is just there to catch the stragglers. When it comes down to a coin flip between two champions, pick the more recently reworked one, which is right more often than not."
         ]
       },
@@ -5728,14 +5753,14 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         heading: 'The wordle answer list 2025 problem: why most lists disagree',
         paragraphs: [
           'Most third-party answer lists disagree with each other, and some disagree with themselves. Gaps appear where a maintainer missed a week; wrong words appear where someone typed from memory. If you have ever tried to settle whether a specific word has been the answer twice, you have run into this.',
-          'This archive is pulled from the official Wordle source, one row per day, no gaps. That is the whole design goal. It is useful for three things: looking up a single date, reconstructing a streak you lost track of, and studying how the word list actually behaves over a full year.',
+          'This archive is pulled from the official Wordle source, one row per day. The puzzle numbers run sequentially from #1 on June 19, 2021, with two historical dates in 2022 that never received a puzzle and so leave two missing numbers in the sequence; the table makes the skip visible rather than papering over it. That is the whole design goal. It is useful for three things: looking up a single date, reconstructing a streak you lost track of, and studying how the word list actually behaves over a full year.',
           'One thing this list never does is editorialize. Every row is the answer that actually ran that day. No fan additions, no corrections of the puzzle\'s own choices, no placeholder words standing in while confirmation is pending. If a row is in the table, it was the real answer.'
         ]
       },
       {
         heading: 'Every Wordle answer from puzzle #1 to today',
         paragraphs: [
-          'The table below holds the complete run: more than 1,800 daily answers since June 19, 2021, in order, with the puzzle number and date on every row. It renders as a plain page, not hidden behind tabs or clicks, because an answer list you cannot actually read is not an answer list.',
+          'The table below holds the complete run: 1,902 archived answers since June 19, 2021, in order, with the puzzle number and date on every row. It renders as a plain page, not hidden behind tabs or clicks, because an answer list you cannot actually read is not an answer list.',
           'Each row carries three things: the puzzle number, the date, and the word. That is all a lookup needs, and all a study session needs too. If you missed a few days and want to reconstruct what happened to your streak, scroll. If you want to know what ran on your birthday, use the calendar.',
           'The list updates from the official source the moment each day\'s puzzle publishes, so the newest row is there before you think to check.'
         ],
@@ -5780,7 +5805,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         }
       },
       {
-        heading: 'What 1,800+ answers reveal about how Wordle picks words',
+        heading: 'What 1,900+ answers reveal about how Wordle picks words',
         paragraphs: [
           'An archive is a dataset once it gets long enough, and this one crossed that line somewhere around the 1,000th row. The answers are almost always common English words. The puzzle has an everyday-vocabulary habit that has held for years. Rare letters appear, but rarely, and usually in words that are common despite the letter, like the occasional X word.',
           'Repeats happen. Not often, but more often than zero, which is exactly the assumption that ends streaks: deciding a letter pattern is "used up" and stopping consideration of it. The table is where that assumption gets checked instead of guessed at.',
@@ -5815,7 +5840,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: 'How far back does the Wordle answer archive go?',
         answer:
-          'To the beginning: June 19, 2021, puzzle #1. More than 1,800 daily answers, no gaps, updated every day from the official source.'
+          'To the beginning: June 19, 2021, puzzle #1. 1,902 archived answers covering every day the puzzle ran, with two historical skip dates preserved in the numbering so the sequence stays accurate, updated every day from the official source.'
       },
       {
         question: 'Can I search the archive by date or by word?',

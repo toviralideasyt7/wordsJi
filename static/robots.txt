@@ -57,3 +57,5 @@ Disallow: /api/
 Sitemap: https://wordsolverx.com/sitemap.xml
 Sitemap: https://wordsolverx.com/wordle-archive-sitemap.xml
 Sitemap: https://wordsolverx.com/colordle-archive-sitemap.xml
+Sitemap: https://wordsolverx.com/wordle-dated-sitemap.xml
+Sitemap: https://wordsolverx.com/colordle-dated-sitemap.xml

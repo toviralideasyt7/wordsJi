@@ -5,6 +5,7 @@ import { parseMonthDayYearKey, toArchiveDateKey } from '$lib/archive-page';
 
 const BLOCKED_URL_PATTERNS = ['/create-custom-wordle', '/custom-wordle', '/admin', '/api/', '/private'];
 
+const LEGAL_PAGES = new Set(['/privacy-policy', '/terms-of-service', '/disclaimer', '/dmca-policy', '/editorial-policy']);
 const CONTENT_PAGES = new Set(['/about', '/contact', '/privacy-policy', '/terms-of-service', '/disclaimer', '/editorial-policy']);
 const HUB_PAGES = new Set(['/today', '/solver', '/archive', '/guides']);
 const MAIN_DAILY_FALLBACK_GAME: PuzzleGame = 'wordle';
@@ -50,6 +51,13 @@ function getDatedAnswerLastModified(path: string): string | null {
 }
 
 function getLastModified(path: string): string {
+        // Legal/policy pages reflect when the legal text last changed. The
+        // generated map pins these to a stable date so they do not all show
+        // today's date in the sitemap (a Bing spam signal). Do not cap them.
+        if (LEGAL_PAGES.has(path)) {
+                return getGeneratedLastModified(path) ?? '2025-01-01';
+        }
+
         // Hub pages (/, /today, /archive, /guides) and static content pages should
         // never have a future lastmod — cap to today's UTC date.
         if (HUB_PAGES.has(path) || CONTENT_PAGES.has(path) || path === '/') {
@@ -101,7 +109,7 @@ function generateSitemap(): string {
                 })
                 .join('\n');
 
-        return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls}\n</urlset>`;
+        return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n  <!-- Related sitemaps: wordle-dated-sitemap.xml, colordle-dated-sitemap.xml, wordle-archive-sitemap.xml, colordle-archive-sitemap.xml -->\n${urls}\n</urlset>`;
 }
 
 export async function GET() {

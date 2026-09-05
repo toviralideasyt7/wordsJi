@@ -80,7 +80,7 @@
       <span class="text-sm font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-wider">{archives.length} game archives</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Puzzle Answer Archives
+      Puzzle Answer Archives — Wordle, Quordle, Nerdle &amp; More
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Look up any past answer by date. Every archive links to a browsable history page with puzzle numbers.
@@ -113,7 +113,7 @@
               </div>
               <div class="mt-4 flex items-center justify-end">
                 <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                  Browse
+                  Browse the full {archive.name} archive
                   <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                   </svg>

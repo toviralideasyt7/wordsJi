@@ -134,7 +134,7 @@
       <span class="text-sm font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-wider">{solvers.length} tools available</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Puzzle Solver Tools
+      Puzzle Solver Tools — Wordle Solver, Quordle Solver &amp; More
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Stuck? Enter your clues and let the solver narrow it down. Every tool is free and works on your phone.
@@ -164,7 +164,7 @@
         data-search-text={`${solver.name} ${solver.description} ${solver.href}`}
       >
         <article class="h-full">
-          <GameCard name={solver.name} href={solver.href} description={solver.description} color={solver.color} icon={solver.icon} isPopular={solver.isPopular ?? false} actionText="Open Solver" />
+          <GameCard name={solver.name} href={solver.href} description={solver.description} color={solver.color} icon={solver.icon} isPopular={solver.isPopular ?? false} actionText={`Open the ${solver.name}`} />
         </article>
       </li>
     {/each}

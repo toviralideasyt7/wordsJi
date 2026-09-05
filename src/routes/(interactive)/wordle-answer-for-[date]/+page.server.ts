@@ -145,6 +145,56 @@ export const load: PageServerLoad = async ({ params }) => {
 			}
 		: null;
 
+	const dayName = date.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
+	const dayOfMonth = date.getUTCDate();
+	const monthName = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' });
+	const yearNum = date.getUTCFullYear();
+
+	const prevSolDate = new Date(date);
+	prevSolDate.setUTCDate(prevSolDate.getUTCDate() - 1);
+	const prevSolMatch = answers.find((a) => a.date === toArchiveDateKey(prevSolDate));
+	const prevSol = prevSolMatch?.solution?.toUpperCase() ?? '';
+
+	const nextSolDate = new Date(date);
+	nextSolDate.setUTCDate(nextSolDate.getUTCDate() + 1);
+	const nextSolMatch = answers.find((a) => a.date === toArchiveDateKey(nextSolDate));
+	const nextSol = nextSolMatch?.solution?.toUpperCase() ?? '';
+
+	const letterFrequency: Record<string, number> = {};
+	for (const ch of letters) {
+		letterFrequency[ch] = (letterFrequency[ch] ?? 0) + 1;
+	}
+	const distinctLetters = Object.keys(letterFrequency).length;
+	const topLetter = Object.entries(letterFrequency).sort((a, b) => b[1] - a[1])[0];
+	const consonants = letters.filter((l) => !'aeiou'.includes(l)).length;
+	const vowelPositions = letters
+		.map((l, i) => ('aeiou'.includes(l) ? i + 1 : -1))
+		.filter((p) => p > 0);
+
+	const difficultyNote = (() => {
+		if (!solution || !wordStats) return '';
+		if (wordStats.repeat && wordStats.vowels <= 1) {
+			return 'Players often found this one tough because of the repeated consonant and the tight vowel count.';
+		}
+		if (wordStats.vowels >= 3) {
+			return 'The generous vowel count gave solvers an early opening once a vowel-heavy starter like ADIEU or AUDIO landed.';
+		}
+		if (distinctLetters === 5) {
+			return 'With five fully distinct letters and no repeats, the grid behaves predictably for players who commit to a strong opener.';
+		}
+		return 'Standard difficulty for a weekday slot, with the answer sitting in a common word family that a careful opener can narrow down.';
+	})();
+
+	const bodyHtml = solution
+		? `<p>Wordle #${puzzleNumber} was published on ${dayName}, ${monthName} ${dayOfMonth}, ${yearNum}. It's the puzzle players around the world saw on that date, locked in at midnight local time and shared the next morning through the familiar yellow-and-green grid.</p>
+<p>The answer was <strong>${solution.toUpperCase()}</strong>, a ${solution.length}-letter word that starts with <strong>${solution[0].toUpperCase()}</strong> and ends with <strong>${solution[solution.length - 1].toUpperCase()}</strong>.${
+			editor ? ` It was chosen by ${editor}, the editor on duty for the ${monthName} ${dayOfMonth} slot.` : ''
+		}</p>
+<p>This particular answer carries ${wordStats?.vowels ?? 0} vowel${wordStats?.vowels === 1 ? '' : 's'} and ${consonants} consonant${consonants === 1 ? '' : 's'}, distributed across positions ${vowelPositions.length ? vowelPositions.join(', ') : '(none in standard vowel slots)'}. The word uses ${distinctLetters} distinct letter${distinctLetters === 1 ? '' : 's'}${wordStats?.repeat ? `, with ${topLetter?.[0].toUpperCase()} showing up ${topLetter?.[1]} time${topLetter?.[1] === 1 ? '' : 's'}` : ' with no repeats'}. ${difficultyNote}</p>
+<p>If you're replaying this puzzle from the archive, start with a classic opener like CRANE, STARE, or ADIEU to nail the vowels in two moves. Once you know the shape, the suffix often gives the answer away. The day before this one was <strong>${prevSol || '(archived)'}</strong> and the day after was <strong>${nextSol || '(today route)'}</strong>, so comparing those three answers is a quick way to spot whether the editor leaned toward a particular stem or vowel pattern that week.</p>
+<p>For more context, the Wordle archive on this site indexes every puzzle back to launch, so you can scan the surrounding week or jump straight to a specific date. The solver tool on the same site will run the same letter-frequency logic against any guess you throw at it, which makes it handy for working through a stale grid you've been sitting on.</p>`
+		: '';
+
 	// Week cluster: 3 days either side with descriptive anchors. Same-week pages
 	// link each other, so crawlers and readers walk the date long-tail.
 	interface WeekLink {
@@ -188,6 +238,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		nextDateKey,
 		nextIsToday,
 		wordStats,
-		weekLinks
+		weekLinks,
+		bodyHtml,
+		dayName,
+		isoDateKey
 	};
 };

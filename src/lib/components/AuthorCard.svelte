@@ -31,7 +31,7 @@
 
     <div class="min-w-0 flex-1">
       <p class="text-xs font-semibold uppercase tracking-[0.28em] text-teal-600 dark:text-teal-400">
-        Written by
+        Credited editor
       </p>
       <h2 id="author-heading" class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 md:text-3xl">
         {name}

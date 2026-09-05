@@ -27,6 +27,9 @@
 		nextIsToday: boolean;
 		colorFacts: ColorFacts | null;
 		weekLinks: WeekLink[];
+		bodyHtml: string;
+		dayName: string;
+		isoDateKey: string;
 	}
 
 	let { data }: { data: DatedData } = $props();
@@ -71,6 +74,9 @@
 			{#if data.dayNum}
 				<p class="mt-2 text-sm font-semibold text-slate-500 dark:text-slate-400">Colordle #{data.dayNum}</p>
 			{/if}
+			<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+				Published {data.dayName}, {data.formattedDate} · By <a href="/about#preston-hayes" class="underline hover:text-teal-600 dark:hover:text-teal-400">Preston Hayes, editor</a>
+			</p>
 
 			{#if data.colorName}
 				<div class="mt-6 rounded-xl border border-teal-200 bg-teal-50 p-8 text-center dark:border-teal-800/40 dark:bg-teal-900/20">
@@ -138,25 +144,40 @@
 			</div>
 
 			{#if data.colorName}
-				<section class="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="Frequently asked questions">
+				<article class="mt-8 border-t border-slate-200 pt-6 text-base leading-7 text-slate-700 dark:border-slate-700 dark:text-slate-200" aria-label="Color overview">
+					<h2 class="text-lg font-bold text-slate-900 dark:text-slate-50">About the Colordle color for {data.formattedDate}</h2>
+					{@html data.bodyHtml}
+				</article>
+			{/if}
+
+			{#if data.colorName}
+				<section class="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="Frequently asked questions" itemscope itemtype="https://schema.org/FAQPage">
 					<h2 class="text-lg font-bold text-slate-900 dark:text-slate-50">Frequently asked questions</h2>
-					<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50">
-						What was the Colordle answer on {data.formattedDate}?
-					</h3>
-					<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300">
-						The Colordle answer for {data.formattedDate} was
-						<strong class="font-bold text-slate-900 dark:text-slate-50">{data.colorName}</strong>{#if data.colorHex}
-							with hex code <strong class="font-mono text-slate-900 dark:text-slate-50 uppercase">{data.colorHex}</strong>{/if}.
-					</p>
-					{#if data.dayNum}
-						<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50">
-							What was Colordle day {data.dayNum}?
+					<div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+						<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50" itemprop="name">
+							What was the Colordle answer on {data.formattedDate}?
 						</h3>
-						<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300">
-							Colordle day {data.dayNum}, published {data.formattedDate}, was
-							<strong class="font-bold text-slate-900 dark:text-slate-50">{data.colorName}</strong>{#if data.colorHex}
-								with hex code <strong class="font-mono text-slate-900 dark:text-slate-50 uppercase">{data.colorHex}</strong>{/if}.
-						</p>
+						<div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+							<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300" itemprop="text">
+								The Colordle answer for {data.formattedDate} was
+								<strong class="font-bold text-slate-900 dark:text-slate-50">{data.colorName}</strong>{#if data.colorHex}
+									with hex code <strong class="font-mono text-slate-900 dark:text-slate-50 uppercase">{data.colorHex}</strong>{/if}.
+							</p>
+						</div>
+					</div>
+					{#if data.dayNum}
+						<div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+							<h3 class="mt-4 text-base font-semibold text-slate-900 dark:text-slate-50" itemprop="name">
+								What was Colordle day {data.dayNum}?
+							</h3>
+							<div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+								<p class="mt-1 text-base leading-7 text-slate-600 dark:text-slate-300" itemprop="text">
+									Colordle day {data.dayNum}, published {data.formattedDate}, was
+									<strong class="font-bold text-slate-900 dark:text-slate-50">{data.colorName}</strong>{#if data.colorHex}
+										with hex code <strong class="font-mono text-slate-900 dark:text-slate-50 uppercase">{data.colorHex}</strong>{/if}.
+								</p>
+							</div>
+						</div>
 					{/if}
 				</section>
 			{/if}

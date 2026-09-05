@@ -1761,16 +1761,20 @@ export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConf
         // that. For the 5-letter page specifically (the highest-traffic per-length page),
         // use the intent-driven title. Other lengths keep the simpler form.
 	const title = wordLength === 5
+		? `Wordle Solver 5 Letters - Enter Your Clues, Get the Best Guess`
+		: `${wordLength}-Letter Wordle Solver`;
+	const metaTitle = wordLength === 5
 		? `Wordle Solver 5 Letters - Enter Clues, Get Today's Answer`
 		: `${wordLength}-Letter Wordle Solver`;
 	const description = wordLength === 5
 		? `Free wordle solver 5 letters: enter your green, yellow, and gray tiles to find today's 5-letter Wordle answer with ranked next guesses.`
 		: `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
 
-        return {
-                appConfig: { pageType: 'solver', game: 'wordle', wordLength },
-                title,
-                eyebrow: 'Wordle solver by word length',
+return {
+		appConfig: { pageType: 'solver', game: 'wordle', wordLength },
+		title,
+		metaTitle,
+		eyebrow: 'Wordle solver by word length',
                 description,
                 pageUrl,
                 keywords: buildSolverKeywords(game, wordLength),

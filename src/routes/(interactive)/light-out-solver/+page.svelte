@@ -13,7 +13,7 @@
     generateWebPageSchema
   } from '$lib/seo';
 
-  const pageTitle = 'Light Out Solver - Get detailed solutions';
+  const pageTitle = 'Lights Out Solver - Step-by-Step Puzzle Solution';
   const pageDescription =
     'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal solve path.';
   const pageUrl = 'https://wordsolverx.com/light-out-solver';
@@ -67,7 +67,7 @@
       <p class="inline-flex rounded-full bg-amber-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
         Puzzle Solver
       </p>
-      <h1 class="mt-4 text-3xl font-black text-slate-900 sm:text-4xl lg:text-5xl">Light Out Solver</h1>
+      <h1 class="mt-4 text-3xl font-black text-slate-900 sm:text-4xl lg:text-5xl">Lights Out Solver</h1>
       <p class="mt-3 max-w-2xl text-lg text-slate-600 leading-relaxed">
         Build any 2×2 to 5×5 Lights Out board, toggle cells, and get the exact optimal move sequence using Gaussian elimination over GF(2).
       </p>

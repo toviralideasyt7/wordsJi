@@ -1,9 +1,42 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { generateOrganizationSchema } from '$lib/seo';
+  import { generateOrganizationSchema, generateArticleSchema } from '$lib/seo';
 
   const organizationSchema = generateOrganizationSchema();
   const currentUrl = $derived(`https://wordsolverx.com${page.url.pathname}`);
+  const currentTitle = $derived(page.data?.meta?.title ?? page.data?.title ?? '');
+  const pathname = $derived(page.url.pathname);
+
+  const isArticleRoute = $derived(
+    pathname.endsWith('-answer-today') ||
+      pathname.endsWith('-answer-today-updated') ||
+      pathname.endsWith('-archive') ||
+      pathname === '/today' ||
+      pathname === '/archive' ||
+      pathname === '/canuckle-archive' ||
+      pathname.startsWith('/wordle-answer-for-') ||
+      pathname.startsWith('/colordle-answer-for-')
+  );
+
+  const articleSchema = $derived(
+    isArticleRoute
+      ? generateArticleSchema({
+          headline: currentTitle || pathname,
+          description:
+            (page.data?.meta?.description as string | undefined) ??
+            'Daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.',
+          url: currentUrl,
+          image: 'https://wordsolverx.com/wordsolverx.webp',
+          datePublished: (page.data?.publishedDate as string | undefined) ?? new Date().toISOString().split('T')[0],
+          dateModified: (page.data?.modifiedDate as string | undefined) ?? new Date().toISOString().split('T')[0],
+          authorName: 'Preston Hayes',
+          authorImage: 'https://wordsolverx.com/author-wordsolverx.webp',
+          authorJobTitle: 'Puzzle Content Editor',
+          authorKnowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
+          authorSameAs: ['https://www.pinterest.com/wordsolverx/']
+        })
+      : null
+  );
 </script>
 
 <svelte:head>
@@ -22,4 +55,7 @@
   <link rel="alternate" hreflang="x-default" href={currentUrl} />
   <meta name="author" content="Preston Hayes" />
   {@html `<script type="application/ld+json">${JSON.stringify(organizationSchema)}</script>`}
+  {#if articleSchema}
+    {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
+  {/if}
 </svelte:head>

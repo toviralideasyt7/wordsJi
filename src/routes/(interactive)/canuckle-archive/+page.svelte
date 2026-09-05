@@ -3,8 +3,94 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import WordlebotPage from '$lib/components/wordlebot/WordlebotPage.svelte';
 
-  let { data }: { data: { config: import('$lib/wordlebot-wasm/types').WordlebotPageConfig } } = $props();
+  interface RecentCanuckleEntry {
+    index: number;
+    date: string;
+    answer: string;
+  }
+
+  let { data }: {
+    data: {
+      config: import('$lib/wordlebot-wasm/types').WordlebotPageConfig;
+      recentEntries: RecentCanuckleEntry[];
+      totalPuzzles: number;
+      latestDateKey: string | null;
+      latestIndex: number | null;
+      recentCount: number;
+    };
+  } = $props();
+
+  const recentEntries = $derived(data?.recentEntries ?? []);
+  const totalPuzzles = $derived(data?.totalPuzzles ?? 0);
+  const latestDateKey = $derived(data?.latestDateKey ?? null);
+  const latestIndex = $derived(data?.latestIndex ?? null);
+  const recentCount = $derived(data?.recentCount ?? 0);
+
+  function formatEntryDate(dateKey: string): string {
+    if (!dateKey) return '';
+    const date = new Date(`${dateKey}T12:00:00Z`);
+    if (Number.isNaN(date.getTime())) return dateKey;
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC'
+    });
+  }
 </script>
+
+<section class="bg-white border-b border-slate-200">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
+    <header class="mb-6">
+      <p class="text-xs font-bold uppercase tracking-[0.24em] text-rose-600">Canuckle Archive</p>
+      <h2 class="mt-2 text-2xl sm:text-3xl font-black text-slate-900">
+        Recent Canuckle Answers
+      </h2>
+      <p class="mt-2 max-w-3xl text-sm text-slate-600">
+        The most recent {recentCount} verified Canuckle puzzles, baked into this page so the list loads with the HTML and remains visible without JavaScript. The interactive search below covers the full archive of {totalPuzzles.toLocaleString('en-US')} puzzles.
+      </p>
+      {#if latestDateKey && latestIndex !== null}
+        <p class="mt-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+          Latest stored puzzle: #{latestIndex} on {formatEntryDate(latestDateKey)}
+        </p>
+      {/if}
+    </header>
+
+    {#if recentEntries.length === 0}
+      <p class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        No Canuckle entries are available right now. The interactive archive below will load on demand.
+      </p>
+    {:else}
+      <div class="overflow-x-auto rounded-lg border border-slate-200">
+        <table class="min-w-full divide-y divide-slate-200">
+          <thead class="bg-slate-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Puzzle #</th>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Date</th>
+              <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Answer</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 bg-white">
+            {#each recentEntries as entry}
+              <tr class="hover:bg-slate-50">
+                <td class="px-4 py-3 whitespace-nowrap text-sm font-bold text-slate-900">#{entry.index}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600">{formatEntryDate(entry.date)}</td>
+                <td class="px-4 py-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800 uppercase">
+                    {entry.answer}
+                  </span>
+                </td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-slate-500">
+        Showing {recentEntries.length} of {totalPuzzles.toLocaleString('en-US')} archived puzzles. The search panel below covers every stored Canuckle answer.
+      </p>
+    {/if}
+  </div>
+</section>
 
 <WordlebotPage config={data.config} />
 

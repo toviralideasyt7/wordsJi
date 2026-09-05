@@ -6,6 +6,26 @@
         import { getNerdleTodayDateKey } from '$lib/nerdle';
         import type { NerdleAllModeAnswerData } from '$lib/nerdle-answers';
 
+        interface RecentArchiveEntry {
+                date: string;
+                puzzleNumber: number | null;
+                classicAnswer: string | null;
+                modeCount: number;
+        }
+
+        let { data }: {
+                data: {
+                        recent: RecentArchiveEntry[];
+                        totalEntries: number;
+                        todayPuzzleNumber: number | null;
+                        fetchError: string | null;
+                };
+        } = $props();
+
+        const serverRecent = $derived(data?.recent ?? []);
+        const serverTodayPuzzleNumber = $derived(data?.todayPuzzleNumber ?? null);
+        const serverFetchError = $derived(data?.fetchError ?? null);
+
         const NERDLE_START_UTC_MS = Date.UTC(2022, 0, 20);
         const DAY_MS = 24 * 60 * 60 * 1000;
         const MONTH_NAMES = [
@@ -287,6 +307,75 @@
                         <h1 class="text-3xl sm:text-4xl font-black">Nerdle Archive</h1>
                         <p class="text-slate-600 mt-2">Browse all stored Nerdle all-mode answers by date.</p>
                 </header>
+
+                <section class="mb-10 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                        <div class="flex items-start justify-between gap-4 mb-3">
+                                <div>
+                                        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-teal-600 dark:text-teal-400">Recent Nerdle Answers</p>
+                                        <h2 class="mt-1 text-2xl font-black text-slate-900 dark:text-slate-50">Last {serverRecent.length} Classic Equations</h2>
+                                        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 max-w-2xl">
+                                                The most recent Nerdle Classic answers, baked into this page at build time so the list loads with the HTML and works without JavaScript. Use the calendar below to pick any other date and reveal every mode.
+                                        </p>
+                                </div>
+                                {#if serverTodayPuzzleNumber !== null}
+                                        <span class="hidden sm:inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700 dark:border-teal-700 dark:bg-teal-950/40 dark:text-teal-300">
+                                                Latest puzzle #{serverTodayPuzzleNumber}
+                                        </span>
+                                {/if}
+                        </div>
+
+                        {#if serverFetchError}
+                                <p class="mb-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-200">
+                                        Some entries could not be loaded at build time. The calendar below still works for any specific date.
+                                </p>
+                        {/if}
+
+                        {#if serverRecent.length === 0}
+                                <p class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300">
+                                        No stored entries are available right now. The interactive calendar below will load any specific date on click.
+                                </p>
+                        {:else}
+                                <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700">
+                                        <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
+                                                <thead class="bg-slate-50 dark:bg-slate-900">
+                                                        <tr>
+                                                                <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Puzzle #</th>
+                                                                <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Date</th>
+                                                                <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Classic Equation</th>
+                                                                <th scope="col" class="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-slate-500">Modes stored</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody class="divide-y divide-slate-200 bg-white dark:divide-slate-700 dark:bg-slate-800">
+                                                        {#each serverRecent as entry}
+                                                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50">
+                                                                        <td class="px-4 py-3 whitespace-nowrap text-sm font-bold text-slate-900 dark:text-slate-100">
+                                                                                #{entry.puzzleNumber ?? '—'}
+                                                                        </td>
+                                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-600 dark:text-slate-300">
+                                                                                {entry.date}
+                                                                        </td>
+                                                                        <td class="px-4 py-3 whitespace-nowrap">
+                                                                                {#if entry.classicAnswer}
+                                                                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300">
+                                                                                                {entry.classicAnswer}
+                                                                                        </span>
+                                                                                {:else}
+                                                                                        <span class="text-xs text-slate-400">not stored</span>
+                                                                                {/if}
+                                                                        </td>
+                                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">
+                                                                                {entry.modeCount > 0 ? entry.modeCount : '—'}
+                                                                        </td>
+                                                                </tr>
+                                                        {/each}
+                                                </tbody>
+                                        </table>
+                                </div>
+                                <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+                                        Showing {serverRecent.length} of {serverRecent.length} baked-in recent answers. Pick any other date on the calendar below to load that day&apos;s full all-mode breakdown.
+                                </p>
+                        {/if}
+                </section>
 
                 <div class="grid lg:grid-cols-3 gap-8">
                         <div class="lg:col-span-1">
