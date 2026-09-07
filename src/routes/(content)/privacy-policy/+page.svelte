@@ -88,8 +88,8 @@
 
       <h3>Advertising</h3>
       <p>
-        WordSolverX displays advertisements served by our advertising partner (Mediavine) through its
-        script at scripts.scriptwrapper.com. Our partner and its advertising network may use cookies or
+        WordSolverX displays advertisements served by our advertising partner (Ezoic) through its
+        script at www.ezojs.com. Our partner and its advertising network may use cookies or
         similar technologies to serve ads based on your visits to this site and other sites.
       </p>
       <ul>
