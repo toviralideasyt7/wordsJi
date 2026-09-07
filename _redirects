@@ -1,3 +1,6 @@
+# Ezoic-managed ads.txt (Step 1 of EzoicAds integration). Primary redirect lives
+# in src/hooks.server.ts because the build does not copy this file to deploys.
+/ads.txt https://srv.adstxtmanager.com/19390/wordsolverx.com 301
 /canuckle https://wordsolverx.com/canuckle-answer-today 301
 /5-letter-wordle-solver https://wordsolverx.com/wordle-solver 301
 /all-wordle-solver https://wordsolverx.com/wordle-solver 301
