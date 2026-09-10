@@ -10,11 +10,6 @@ import {
 
 const RETIRED_SOLVER_PATH = /^\/(leddle-solver)\/?$/;
 
-// Ezoic-managed ads.txt (Step 1 of EzoicAds integration). Served as a 301 to
-// AdsTxtManager so the file stays auto-updated without redeploys. Handled here
-// in code — not _redirects — because the build pipeline does not copy the root
-// _redirects file into the deploy output (same reason legacy redirects live here).
-const ADSTXT_MANAGER_URL = 'https://srv.adstxtmanager.com/19390/wordsolverx.com';
 const LEGACY_SITEMAP_PATH = /^\/(sitemap-index|sitemap-today|sitemap-yesterday|sitemap-solvers|sitemap-games|sitemap-archive|newssitemap)\.xml\/?$/;
 const YESTERDAY_REDIRECTS = {
         '/yesterday': '/today',
@@ -201,10 +196,6 @@ export const handle: Handle = async ({ event, resolve }) => {
 
         if (normalizedPathname in YESTERDAY_REDIRECTS) {
                 throw redirect(301, YESTERDAY_REDIRECTS[normalizedPathname as keyof typeof YESTERDAY_REDIRECTS]);
-        }
-
-        if (normalizedPathname === '/ads.txt') {
-                throw redirect(301, ADSTXT_MANAGER_URL);
         }
 
         if (RETIRED_SOLVER_PATH.test(normalizedPathname)) {
