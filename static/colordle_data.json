@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-26T22:17:32.556Z",
+  "generatedAt": "2026-09-20T15:02:07.962Z",
   "sourceUrl": "https://color-answers-worker.colordle.workers.dev/api/colordle/range",
   "startDate": "2023-08-07",
   "dayOffset": 500,
-  "entryCount": 1025,
-  "latestDate": "2026-05-27",
+  "entryCount": 1142,
+  "latestDate": "2026-09-21",
   "colors": [
     "night sky",
     "smoke",
@@ -1030,7 +1030,124 @@
     "storm",
     "celeste",
     "cadet",
-    "velvet"
+    "velvet",
+    "ebony",
+    "pig pink",
+    "shark",
+    "dusty blue",
+    "red velvet",
+    "highlighter",
+    "mint green",
+    "pink lemonade",
+    "azul",
+    "cadet blue",
+    "onyx",
+    "greenish",
+    "poppy",
+    "coral pink",
+    "alice blue",
+    "cherry blossom",
+    "lily",
+    "obsidian",
+    "shrimp",
+    "greyish blue",
+    "bubblegum pink",
+    "acid",
+    "meat",
+    "arctic",
+    "tiffany blue",
+    "blurple",
+    "lemon lime",
+    "light mint",
+    "deep ocean",
+    "prussian blue",
+    "seafoam green",
+    "dusty pink",
+    "hibiscus",
+    "lapis lazuli",
+    "cornflower blue",
+    "seaweed",
+    "soft pink",
+    "airforce",
+    "true blue",
+    "pale green",
+    "dark cyan",
+    "cherryred",
+    "greyblue",
+    "aquamarine",
+    "hazelnut",
+    "pinkish",
+    "powderblue",
+    "pastel red",
+    "lion",
+    "emerald",
+    "blue",
+    "jade",
+    "light pink",
+    "fern",
+    "tiger",
+    "melon",
+    "brownish",
+    "merlot",
+    "pure white",
+    "tea",
+    "pickle",
+    "light teal",
+    "red",
+    "tanbrown",
+    "canary",
+    "tortilla",
+    "neonpink",
+    "stop",
+    "darkorange",
+    "stone",
+    "light green",
+    "mauve",
+    "periwinkle",
+    "crimson red",
+    "bark",
+    "cinnabar",
+    "emeraldgreen",
+    "velvet",
+    "light red",
+    "orange pink",
+    "umber",
+    "royalblue",
+    "coconut",
+    "pinkred",
+    "mocha",
+    "red brown",
+    "deepred",
+    "blonde",
+    "cantaloupe",
+    "sea green",
+    "yellow",
+    "burnt sienna",
+    "pale pink",
+    "poppy",
+    "creamy",
+    "porcelain",
+    "orangebrown",
+    "light beige",
+    "blue violet",
+    "caramel",
+    "ginger",
+    "barn red",
+    "soft pink",
+    "blurple",
+    "beige",
+    "flame",
+    "tomato",
+    "coral pink",
+    "brown",
+    "dandelion",
+    "wheat",
+    "avocado",
+    "brightorange",
+    "carrot",
+    "forestgreen",
+    "azure",
+    "plum"
   ],
   "availableDateStrings": [
     "2023-08-07",
@@ -2057,7 +2174,124 @@
     "2026-05-24",
     "2026-05-25",
     "2026-05-26",
-    "2026-05-27"
+    "2026-05-27",
+    "2026-05-28",
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31",
+    "2026-06-01",
+    "2026-06-02",
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-05",
+    "2026-06-06",
+    "2026-06-07",
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-12",
+    "2026-06-13",
+    "2026-06-14",
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17",
+    "2026-06-18",
+    "2026-06-19",
+    "2026-06-20",
+    "2026-06-21",
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-27",
+    "2026-06-28",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-05",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-12",
+    "2026-09-13",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21"
   ],
   "entries": [
     {
@@ -10258,6 +10492,942 @@
       "color": {
         "name": "Velvet",
         "hex": "#750851"
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "dayNum": 1525,
+      "color": {
+        "name": "Ebony",
+        "hex": "#313337"
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "dayNum": 1526,
+      "color": {
+        "name": "Pig Pink",
+        "hex": "#fdd7e4"
+      }
+    },
+    {
+      "date": "2026-05-30",
+      "dayNum": 1527,
+      "color": {
+        "name": "Shark",
+        "hex": "#cadcde"
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "dayNum": 1528,
+      "color": {
+        "name": "Dusty Blue",
+        "hex": "#8093a4"
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "dayNum": 1529,
+      "color": {
+        "name": "Red Velvet",
+        "hex": "#783b38"
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "dayNum": 1530,
+      "color": {
+        "name": "Highlighter",
+        "hex": "#ffe536"
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "dayNum": 1531,
+      "color": {
+        "name": "Mint Green",
+        "hex": "#487d4a"
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "dayNum": 1532,
+      "color": {
+        "name": "Pink Lemonade",
+        "hex": "#ffeaeb"
+      }
+    },
+    {
+      "date": "2026-06-05",
+      "dayNum": 1533,
+      "color": {
+        "name": "Azul",
+        "hex": "#1d5dec"
+      }
+    },
+    {
+      "date": "2026-06-06",
+      "dayNum": 1534,
+      "color": {
+        "name": "Cadet Blue",
+        "hex": "#5f9ea0"
+      }
+    },
+    {
+      "date": "2026-06-07",
+      "dayNum": 1535,
+      "color": {
+        "name": "Onyx",
+        "hex": "#464544"
+      }
+    },
+    {
+      "date": "2026-06-08",
+      "dayNum": 1536,
+      "color": {
+        "name": "Greenish",
+        "hex": "#40a368"
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "dayNum": 1537,
+      "color": {
+        "name": "Poppy",
+        "hex": "#c23c47"
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "dayNum": 1538,
+      "color": {
+        "name": "Coral Pink",
+        "hex": "#f88379"
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "dayNum": 1539,
+      "color": {
+        "name": "Alice Blue",
+        "hex": "#f0f8ff"
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "dayNum": 1540,
+      "color": {
+        "name": "Cherry Blossom",
+        "hex": "#f5c1d5"
+      }
+    },
+    {
+      "date": "2026-06-13",
+      "dayNum": 1541,
+      "color": {
+        "name": "Lily",
+        "hex": "#c19fb3"
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "dayNum": 1542,
+      "color": {
+        "name": "Obsidian",
+        "hex": "#445055"
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "dayNum": 1543,
+      "color": {
+        "name": "Shrimp",
+        "hex": "#e29a86"
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "dayNum": 1544,
+      "color": {
+        "name": "Greyish Blue",
+        "hex": "#5e819d"
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "dayNum": 1545,
+      "color": {
+        "name": "Bubblegum Pink",
+        "hex": "#f6b0ba"
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "dayNum": 1546,
+      "color": {
+        "name": "Acid",
+        "hex": "#00ff22"
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "dayNum": 1547,
+      "color": {
+        "name": "Meat",
+        "hex": "#f08080"
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "dayNum": 1548,
+      "color": {
+        "name": "Arctic",
+        "hex": "#648589"
+      }
+    },
+    {
+      "date": "2026-06-21",
+      "dayNum": 1549,
+      "color": {
+        "name": "Tiffany Blue",
+        "hex": "#7bf2da"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "dayNum": 1550,
+      "color": {
+        "name": "Blurple",
+        "hex": "#5539cc"
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "dayNum": 1551,
+      "color": {
+        "name": "Lemon Lime",
+        "hex": "#bffe28"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "dayNum": 1552,
+      "color": {
+        "name": "Light Mint",
+        "hex": "#b6ffbb"
+      }
+    },
+    {
+      "date": "2026-06-25",
+      "dayNum": 1553,
+      "color": {
+        "name": "Deep Ocean",
+        "hex": "#2a4b5f"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "dayNum": 1554,
+      "color": {
+        "name": "Prussian Blue",
+        "hex": "#003366"
+      }
+    },
+    {
+      "date": "2026-06-27",
+      "dayNum": 1555,
+      "color": {
+        "name": "Seafoam Green",
+        "hex": "#99bb88"
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "dayNum": 1556,
+      "color": {
+        "name": "Dusty Pink",
+        "hex": "#d58a94"
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "dayNum": 1557,
+      "color": {
+        "name": "Hibiscus",
+        "hex": "#b6316c"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "dayNum": 1558,
+      "color": {
+        "name": "Lapis Lazuli",
+        "hex": "#26619c"
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "dayNum": 1559,
+      "color": {
+        "name": "Cornflower Blue",
+        "hex": "#6c91c5"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "dayNum": 1560,
+      "color": {
+        "name": "Seaweed",
+        "hex": "#18d17b"
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "dayNum": 1561,
+      "color": {
+        "name": "Soft Pink",
+        "hex": "#fdb0c0"
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "dayNum": 1562,
+      "color": {
+        "name": "Airforce",
+        "hex": "#364d70"
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "dayNum": 1563,
+      "color": {
+        "name": "True Blue",
+        "hex": "#010fcc"
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "dayNum": 1564,
+      "color": {
+        "name": "Pale Green",
+        "hex": "#69b076"
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "dayNum": 1565,
+      "color": {
+        "name": "Dark Cyan",
+        "hex": "#008b8b"
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "dayNum": 1566,
+      "color": {
+        "name": "Cherry Red",
+        "hex": "#f7022a"
+      }
+    },
+    {
+      "date": "2026-07-09",
+      "dayNum": 1567,
+      "color": {
+        "name": "Grey Blue",
+        "hex": "#77a1b5"
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "dayNum": 1568,
+      "color": {
+        "name": "Aquamarine",
+        "hex": "#2ee8bb"
+      }
+    },
+    {
+      "date": "2026-07-11",
+      "dayNum": 1569,
+      "color": {
+        "name": "Hazelnut",
+        "hex": "#a8715a"
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "dayNum": 1570,
+      "color": {
+        "name": "Pinkish",
+        "hex": "#d46a7e"
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "dayNum": 1571,
+      "color": {
+        "name": "Powder Blue",
+        "hex": "#b0e0e6"
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "dayNum": 1572,
+      "color": {
+        "name": "Pastel Red",
+        "hex": "#ff6961"
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "dayNum": 1573,
+      "color": {
+        "name": "Lion",
+        "hex": "#c19a62"
+      }
+    },
+    {
+      "date": "2026-07-16",
+      "dayNum": 1574,
+      "color": {
+        "name": "Emerald",
+        "hex": "#028f1e"
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "dayNum": 1575,
+      "color": {
+        "name": "Blue",
+        "hex": "#0000ff"
+      }
+    },
+    {
+      "date": "2026-07-18",
+      "dayNum": 1576,
+      "color": {
+        "name": "Jade",
+        "hex": "#00a86b"
+      }
+    },
+    {
+      "date": "2026-07-19",
+      "dayNum": 1577,
+      "color": {
+        "name": "Light Pink",
+        "hex": "#ffd1df"
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "dayNum": 1578,
+      "color": {
+        "name": "Fern",
+        "hex": "#548d44"
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "dayNum": 1579,
+      "color": {
+        "name": "Tiger",
+        "hex": "#be9c67"
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "dayNum": 1580,
+      "color": {
+        "name": "Melon",
+        "hex": "#ff7855"
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "dayNum": 1581,
+      "color": {
+        "name": "Brownish",
+        "hex": "#9c6d57"
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "dayNum": 1582,
+      "color": {
+        "name": "Merlot",
+        "hex": "#730039"
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "dayNum": 1583,
+      "color": {
+        "name": "Pure White",
+        "hex": "#f8f8f2"
+      }
+    },
+    {
+      "date": "2026-07-26",
+      "dayNum": 1584,
+      "color": {
+        "name": "Tea",
+        "hex": "#bfb5a2"
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "dayNum": 1585,
+      "color": {
+        "name": "Pickle",
+        "hex": "#85a16a"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "dayNum": 1586,
+      "color": {
+        "name": "Light Teal",
+        "hex": "#b1ccc5"
+      }
+    },
+    {
+      "date": "2026-07-29",
+      "dayNum": 1587,
+      "color": {
+        "name": "Red",
+        "hex": "#ff0000"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "dayNum": 1588,
+      "color": {
+        "name": "Tan Brown",
+        "hex": "#ab7e4c"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "dayNum": 1589,
+      "color": {
+        "name": "Canary",
+        "hex": "#fdff63"
+      }
+    },
+    {
+      "date": "2026-08-01",
+      "dayNum": 1590,
+      "color": {
+        "name": "Tortilla",
+        "hex": "#efdba7"
+      }
+    },
+    {
+      "date": "2026-08-02",
+      "dayNum": 1591,
+      "color": {
+        "name": "Neon Pink",
+        "hex": "#fe019a"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "dayNum": 1592,
+      "color": {
+        "name": "Stop",
+        "hex": "#c33a36"
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "dayNum": 1593,
+      "color": {
+        "name": "Dark Orange",
+        "hex": "#c65102"
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "dayNum": 1594,
+      "color": {
+        "name": "Stone",
+        "hex": "#ada587"
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "dayNum": 1595,
+      "color": {
+        "name": "Light Green",
+        "hex": "#76ff7b"
+      }
+    },
+    {
+      "date": "2026-08-07",
+      "dayNum": 1596,
+      "color": {
+        "name": "Mauve",
+        "hex": "#e0b0ff"
+      }
+    },
+    {
+      "date": "2026-08-08",
+      "dayNum": 1597,
+      "color": {
+        "name": "Periwinkle",
+        "hex": "#8e82fe"
+      }
+    },
+    {
+      "date": "2026-08-09",
+      "dayNum": 1598,
+      "color": {
+        "name": "Crimson Red",
+        "hex": "#980001"
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "dayNum": 1599,
+      "color": {
+        "name": "Bark",
+        "hex": "#5f5854"
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "dayNum": 1600,
+      "color": {
+        "name": "Cinnabar",
+        "hex": "#730113"
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "dayNum": 1601,
+      "color": {
+        "name": "Emerald Green",
+        "hex": "#046307"
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "dayNum": 1602,
+      "color": {
+        "name": "Velvet",
+        "hex": "#750851"
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "dayNum": 1603,
+      "color": {
+        "name": "Light Red",
+        "hex": "#ff7f7f"
+      }
+    },
+    {
+      "date": "2026-08-15",
+      "dayNum": 1604,
+      "color": {
+        "name": "Orange Pink",
+        "hex": "#ff6f52"
+      }
+    },
+    {
+      "date": "2026-08-16",
+      "dayNum": 1605,
+      "color": {
+        "name": "Umber",
+        "hex": "#b26400"
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "dayNum": 1606,
+      "color": {
+        "name": "Royal Blue",
+        "hex": "#4169e1"
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "dayNum": 1607,
+      "color": {
+        "name": "Coconut",
+        "hex": "#965a3e"
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "dayNum": 1608,
+      "color": {
+        "name": "Pink Red",
+        "hex": "#f5054f"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "dayNum": 1609,
+      "color": {
+        "name": "Mocha",
+        "hex": "#9d7651"
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "dayNum": 1610,
+      "color": {
+        "name": "Red Brown",
+        "hex": "#a52a2f"
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "dayNum": 1611,
+      "color": {
+        "name": "Deep Red",
+        "hex": "#9a0200"
+      }
+    },
+    {
+      "date": "2026-08-23",
+      "dayNum": 1612,
+      "color": {
+        "name": "Blonde",
+        "hex": "#dcbd92"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "dayNum": 1613,
+      "color": {
+        "name": "Cantaloupe",
+        "hex": "#ffd479"
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "dayNum": 1614,
+      "color": {
+        "name": "Sea Green",
+        "hex": "#53fca1"
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "dayNum": 1615,
+      "color": {
+        "name": "Yellow",
+        "hex": "#ffff00"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "dayNum": 1616,
+      "color": {
+        "name": "Burnt Sienna",
+        "hex": "#a93400"
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "dayNum": 1617,
+      "color": {
+        "name": "Pale Pink",
+        "hex": "#efcddb"
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "dayNum": 1618,
+      "color": {
+        "name": "Poppy",
+        "hex": "#c23c47"
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "dayNum": 1619,
+      "color": {
+        "name": "Creamy",
+        "hex": "#efe8db"
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "dayNum": 1620,
+      "color": {
+        "name": "Porcelain",
+        "hex": "#dddcdb"
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "dayNum": 1621,
+      "color": {
+        "name": "Orange Brown",
+        "hex": "#b16002"
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "dayNum": 1622,
+      "color": {
+        "name": "Light Beige",
+        "hex": "#e5deca"
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "dayNum": 1623,
+      "color": {
+        "name": "Blue Violet",
+        "hex": "#4e32b2"
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "dayNum": 1624,
+      "color": {
+        "name": "Caramel",
+        "hex": "#af6f09"
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "dayNum": 1625,
+      "color": {
+        "name": "Ginger",
+        "hex": "#b06500"
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "dayNum": 1626,
+      "color": {
+        "name": "Barn Red",
+        "hex": "#8b4044"
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "dayNum": 1627,
+      "color": {
+        "name": "Soft Pink",
+        "hex": "#fdb0c0"
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "dayNum": 1628,
+      "color": {
+        "name": "Blurple",
+        "hex": "#5539cc"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "dayNum": 1629,
+      "color": {
+        "name": "Beige",
+        "hex": "#e6daa6"
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "dayNum": 1630,
+      "color": {
+        "name": "Flame",
+        "hex": "#e25822"
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "dayNum": 1631,
+      "color": {
+        "name": "Tomato",
+        "hex": "#ef4026"
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "dayNum": 1632,
+      "color": {
+        "name": "Coral Pink",
+        "hex": "#f88379"
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "dayNum": 1633,
+      "color": {
+        "name": "Brown",
+        "hex": "#653700"
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "dayNum": 1634,
+      "color": {
+        "name": "Dandelion",
+        "hex": "#fedf08"
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "dayNum": 1635,
+      "color": {
+        "name": "Wheat",
+        "hex": "#fbdd7e"
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "dayNum": 1636,
+      "color": {
+        "name": "Avocado",
+        "hex": "#568203"
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "dayNum": 1637,
+      "color": {
+        "name": "Bright Orange",
+        "hex": "#ff7034"
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "dayNum": 1638,
+      "color": {
+        "name": "Carrot",
+        "hex": "#fd6f3b"
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "dayNum": 1639,
+      "color": {
+        "name": "Forest Green",
+        "hex": "#154406"
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "dayNum": 1640,
+      "color": {
+        "name": "Azure",
+        "hex": "#007fff"
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "dayNum": 1641,
+      "color": {
+        "name": "Plum",
+        "hex": "#66386a"
       }
     }
   ]

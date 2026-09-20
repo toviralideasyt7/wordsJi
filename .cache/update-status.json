@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T20:01:56.957Z",
+  "updatedAt": "2026-09-20T15:02:07.985Z",
   "games": {
     "canuckle": {
       "needsRetry": false,
@@ -35,13 +35,13 @@
     },
     "colordle": {
       "needsRetry": false,
-      "lastRunAt": "2026-05-26T22:17:32.560Z",
-      "lastSuccessAt": "2026-05-26T22:17:32.560Z",
+      "lastRunAt": "2026-09-20T15:02:07.984Z",
+      "lastSuccessAt": "2026-09-20T15:02:07.984Z",
       "lastFailureAt": null,
       "lastFailureMessage": null,
-      "latestDate": "2026-05-27",
+      "latestDate": "2026-09-21",
       "sourceUrl": "https://colordle.ryantanen.com/colors.json",
-      "expectedLatestDate": "2026-05-27"
+      "expectedLatestDate": "2026-09-21"
     },
     "spotle": {
       "needsRetry": false,

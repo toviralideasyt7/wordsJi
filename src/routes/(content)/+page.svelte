@@ -3,6 +3,12 @@
     generateSearchActionSchema,
     generateWebPageSchema
   } from '$lib/seo';
+  import { GUIDES } from '$lib/content/guides';
+
+  // Most useful evergreen guides for the homepage internal-link cluster.
+  const popularGuides = GUIDES.filter((g) =>
+    ['wordle', 'quordle', 'betweenle', 'semantle', 'colordle', 'nerdle'].some((kw) => g.slug.includes(kw))
+  ).slice(0, 6);
 
   let { data } = $props<{ data: { todayStr: string; todayKey: string } }>();
   let todayStr = $derived(data.todayStr);
@@ -324,6 +330,54 @@
         <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Wordle, Quordle, Phoodle, Nerdle, Waffle, Boggle, Hangman — if it's a puzzle, we probably have a solver for it.</p>
       </article>
     </li>
+  </ul>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     READ THE GUIDES — evergreen strategy articles
+     ═══════════════════════════════════════════════════════════ -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+        Strategy
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Read the Guides</h2>
+      <p class="mt-2 text-slate-500 dark:text-slate-400 max-w-xl">Practical strategy breakdowns for the games you actually play. No filler.</p>
+    </div>
+    <a href="/guides" class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors shrink-0">
+      View all guides
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+    </a>
+  </div>
+
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" aria-label="Popular strategy guides">
+    {#each popularGuides as guide}
+      <li>
+        <a
+          href={`/guides/${guide.slug}`}
+          class="group flex h-full flex-col rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600"
+        >
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br {guide.gradient} flex items-center justify-center text-xl shadow-sm">
+              <span aria-hidden="true">{guide.icon}</span>
+            </div>
+            <div class="min-w-0">
+              <p class="text-xs font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400 mb-0.5">{guide.group}</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50 leading-snug group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
+                {guide.cardTitle}
+              </h3>
+            </div>
+          </div>
+          <p class="mt-3 flex-1 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{guide.description}</p>
+          <p class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-teal-600 dark:text-teal-400 group-hover:gap-2 transition-all">
+            Read guide
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </p>
+        </a>
+      </li>
+    {/each}
   </ul>
 </section>
 
