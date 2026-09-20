@@ -2,57 +2,20 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import { generateWebPageSchema } from '$lib/seo';
+  import { GUIDES } from '$lib/content/guides';
 
-  const guides = [
-    {
-      title: 'Wordle Strategy Guide',
-      description: 'Learn the best starting words, elimination strategies, and how to solve Wordle in 3 guesses or fewer.',
-      gradient: 'from-teal-500 to-teal-600',
-      icon: '🟩',
-      link: '/wordle-solver',
-      linkText: 'Try 5-Letter Wordle Solver',
-    },
-    {
-      title: 'Quordle Tips & Tricks',
-      description: 'Master the art of solving four puzzles simultaneously. Learn word selection and board management.',
-      gradient: 'from-blue-500 to-indigo-600',
-      icon: '🔷',
-      link: '/quordle-solver',
-      linkText: 'Open the Quordle solver',
-    },
-    {
-      title: 'Phoodle Food Word Guide',
-      description: 'A curated list of common food terms, cooking methods, and ingredients that appear in Phoodle.',
-      gradient: 'from-orange-500 to-red-500',
-      icon: '🍕',
-      link: '/phoodle-answer-today',
-      linkText: 'See Phoodle Answer Today',
-    },
-    {
-      title: 'Waffle Puzzle Strategy',
-      description: 'How to approach waffle grids: identify fixed letters, plan swaps, and solve in minimum moves.',
-      gradient: 'from-amber-500 to-yellow-600',
-      icon: '🧇',
-      link: '/waffle-solver',
-      linkText: 'Open the Waffle solver',
-    },
-    {
-      title: 'Colordle Color Theory',
-      description: 'Understand hex codes, RGB values, and color proximity to guess the daily Colordle faster.',
-      gradient: 'from-pink-500 to-purple-600',
-      icon: '🎨',
-      link: '/colordle-solver',
-      linkText: 'Open the Colordle solver',
-    },
-    {
-      title: 'Semantle Word Similarity',
-      description: 'How semantic similarity works, what word2vec is, and strategies for narrowing down the secret word.',
-      gradient: 'from-cyan-500 to-teal-600',
-      icon: '🧠',
-      link: '/semantle-answer-today',
-      linkText: "View today's Semantle answer",
-    },
-  ];
+  // Full strategy articles, grouped for display on the hub.
+  const guideGroups = (() => {
+    const order = ['Wordle Core', 'Word Lists', 'Multi-Board', 'Non-Word Games', 'Getting Better'];
+    const map = new Map<string, typeof GUIDES>();
+    for (const g of GUIDES) {
+      if (!map.has(g.group)) map.set(g.group, [] as unknown as typeof GUIDES);
+      (map.get(g.group) as unknown as typeof GUIDES[number][]).push(g);
+    }
+    return order
+      .filter((k) => map.has(k))
+      .map((k) => ({ title: k, items: map.get(k) as unknown as typeof GUIDES }));
+  })();
 
   const clusterSections = [
     {
@@ -230,7 +193,7 @@
       <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center">
         <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
       </div>
-      <span class="text-sm font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider">{guides.length} guides</span>
+      <span class="text-sm font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider">{GUIDES.length} guides</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
       Puzzle Guides &amp; Strategy — Wordle Strategy, Quordle Strategy &amp; More
@@ -240,29 +203,33 @@
     </p>
   </div>
 
-  <!-- Guide cards -->
-  <div class="space-y-4 mb-16">
-    {#each guides as guide}
-      <div class="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 overflow-hidden transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md">
-        <div class="flex flex-col sm:flex-row">
-          <div class="sm:w-20 shrink-0 bg-gradient-to-br {guide.gradient} flex items-center justify-center p-4 sm:p-0">
-            <span class="text-3xl">{guide.icon}</span>
-          </div>
-          <div class="flex-1 p-5 sm:p-6">
-            <h2 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-1.5">{guide.title}</h2>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">{guide.description}</p>
-            <a
-              href={guide.link}
-              class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
-            >
-              {guide.linkText}
-              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
+  <!-- In-depth strategy articles (full guide pages) -->
+  <div class="space-y-10 mb-16">
+    {#each guideGroups as group}
+      <section>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-5">{group.title}</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {#each group.items as guide}
+            <article class="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 overflow-hidden transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md">
+              <a href={`/guides/${guide.slug}`} class="flex h-full flex-col sm:flex-row">
+                <div class="sm:w-20 shrink-0 bg-gradient-to-br {guide.gradient} flex items-center justify-center p-4 sm:p-0">
+                  <span class="text-3xl">{guide.icon}</span>
+                </div>
+                <div class="flex-1 p-5 sm:p-6">
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-1.5 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">{guide.cardTitle}</h3>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">{guide.description}</p>
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400">
+                    Read the guide
+                    <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </article>
+          {/each}
         </div>
-      </div>
+      </section>
     {/each}
   </div>
 

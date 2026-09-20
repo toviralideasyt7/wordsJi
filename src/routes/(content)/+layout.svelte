@@ -26,7 +26,7 @@
 	</header>
 	
 	<!-- Main content area - Mediavine uses .wordsolverx-content selector -->
-	<main id="main-content" class="wordsolverx-content site-main flex-grow" role="main">
+	<main id="main-content" class="wordsolverx-content site-main flex-grow">
 		{@render children()}
 	</main>
 	

@@ -14,6 +14,7 @@
       pathname === '/today' ||
       pathname === '/archive' ||
       pathname === '/canuckle-archive' ||
+      pathname.startsWith('/guides/') ||
       pathname.startsWith('/wordle-answer-for-') ||
       pathname.startsWith('/colordle-answer-for-')
   );
