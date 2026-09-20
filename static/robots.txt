@@ -1,61 +1,34 @@
 User-agent: Googlebot
 Allow: /
-Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?test=*
 
 User-agent: Bingbot
 Allow: /
-Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 
-User-agent: Slurp
+User-agent: Applebot
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Yandex
+Allow: /
 
 User-agent: *
 Allow: /
-Allow: /_app/immutable/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
 
-User-agent: GPTBot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-User-agent: ChatGPT-User
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-User-agent: ClaudeBot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-User-agent: CCBot
-Allow: /
-Disallow: /api/
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-Disallow: /api/
-
+# Sitemap location - only valid sitemaps
 Sitemap: https://wordsolverx.com/sitemap.xml
-Sitemap: https://wordsolverx.com/wordle-archive-sitemap.xml
-Sitemap: https://wordsolverx.com/colordle-archive-sitemap.xml
-Sitemap: https://wordsolverx.com/wordle-dated-sitemap.xml
-Sitemap: https://wordsolverx.com/colordle-dated-sitemap.xml

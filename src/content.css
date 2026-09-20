@@ -10,3 +10,98 @@
 @source "./lib/components/FAQSection.svelte";
 @source "./lib/components/AuthorCard.svelte";
 @source "./lib/components/GameDleAnswerPage.svelte";
+
+/* Mediavine Optimization Styles */
+/* These ensure proper ad placement and viewability */
+
+.wordsolverx-site {
+	/* Ensure clear content structure for ad targeting */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.wordsolverx-content {
+	/* Mediavine content selector */
+	flex: 1;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.site-sidebar {
+	/* Sidebar for ads */
+	width: 300px;
+	min-width: 250px;
+	padding: 20px;
+}
+
+.site-footer {
+	/* Mediavine footer selector: #mv-content-footer */
+	margin-top: auto;
+	padding: 40px 20px;
+	background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+	border-top: 2px solid #e2e8f0;
+}
+
+/* Ad slot styling for better visibility */
+.ad-slot {
+	background: #f8fafc;
+	border: 1px dashed #cbd5e0;
+	border-radius: 8px;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 24px 0;
+}
+
+.ad-slot::before {
+	content: 'Advertisement';
+	color: #94a3b8;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Ensure typography meets Mediavine requirements */
+.wordsolverx-content p,
+.wordsolverx-content li,
+.wordsolverx-content td {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+	.site-sidebar {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.wordsolverx-content {
+		padding: 15px;
+		font-size: 16px;
+	}
+	
+	.site-footer {
+		padding: 30px 15px;
+	}
+}
+
+/* Ad block warning styles (if implemented) */
+.adblock-warning-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(8px);
+}
