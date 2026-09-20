@@ -10,3 +10,7 @@
 @source "./lib/components/FAQSection.svelte";
 @source "./lib/components/AuthorCard.svelte";
 @source "./lib/components/GameDleAnswerPage.svelte";
+@source "./lib/components/StaticArticle.svelte";
+@source "./lib/components/article/**/*.{html,js,svelte,ts}";
+@source "./lib/content/guides.ts";
+@source "./lib/content/guide-deep-dives.ts";

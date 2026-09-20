@@ -71,6 +71,17 @@ function buildRouteCandidates(route) {
 		}
 	}
 
+	// Guide articles all render from one dynamic route file plus the shared
+	// content registry, so every /guides/<slug> resolves to the same mtimes.
+	if (/^\/guides\/[^/]+$/.test(route)) {
+		for (const sourceFile of sourceFiles) {
+			candidates.push(
+				path.join(projectRoot, 'src', 'routes', '(content)', 'guides', '[slug]', sourceFile)
+			);
+		}
+		candidates.push(path.join(projectRoot, 'src', 'lib', 'content', 'guides.ts'));
+	}
+
 	return [...new Set(candidates)];
 }
 

@@ -15,6 +15,7 @@
  */
 
 import type { StaticArticleContent } from './registry';
+import { GUIDE_EXTRAS } from './guide-deep-dives';
 
 export interface GuideArticle {
   slug: string;
@@ -33,12 +34,18 @@ export interface GuideArticle {
   /** Grouping used on the hub */
   group: 'Wordle Core' | 'Word Lists' | 'Multi-Board' | 'Non-Word Games' | 'Getting Better';
   body: StaticArticleContent;
+  /**
+   * Optional HowTo steps. Only procedural walkthroughs carry these — the route
+   * emits HowTo JSON-LD only when the array is present. Each step must be an
+   * instruction a reader can follow in the game, not a restatement of a claim.
+   */
+  howToSteps?: { name: string; text: string }[];
 }
 
 const PUBLISHED = '2026-09-20';
 const MODIFIED = '2026-09-20';
 
-export const GUIDES: GuideArticle[] = [
+const BASE_GUIDES: GuideArticle[] = [
   {
     slug: 'how-to-solve-wordle-in-3-guesses',
     title: 'How to Solve Wordle in 3 Guesses (Step-by-Step Method)',
@@ -1487,6 +1494,28 @@ export const GUIDES: GuideArticle[] = [
     }
   }
 ];
+
+/**
+ * The published guide list: the hand-written article bodies above, composed
+ * with the deep-dive additions from guide-deep-dives.ts (key takeaways, extra
+ * sections with figure blocks, extra FAQs and HowTo steps). The split keeps
+ * every original section and paragraph byte-identical while the long-form
+ * additions stay reviewable in one file.
+ */
+export const GUIDES: GuideArticle[] = BASE_GUIDES.map((guide) => {
+  const extra = GUIDE_EXTRAS[guide.slug];
+  if (!extra) return guide;
+  return {
+    ...guide,
+    howToSteps: extra.howToSteps,
+    body: {
+      ...guide.body,
+      keyTakeaways: extra.keyTakeaways,
+      sections: [...guide.body.sections, ...(extra.sections ?? [])],
+      faqs: [...guide.body.faqs, ...(extra.faqs ?? [])]
+    }
+  };
+});
 
 export const GUIDE_SLUGS = GUIDES.map((g) => g.slug);
 export const GUIDE_ROUTES = GUIDES.map((g) => `/guides/${g.slug}`);

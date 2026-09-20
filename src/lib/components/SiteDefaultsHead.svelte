@@ -34,7 +34,12 @@
           authorImage: 'https://wordsolverx.com/author-wordsolverx.webp',
           authorJobTitle: 'Puzzle Content Editor',
           authorKnowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-          authorSameAs: ['https://www.pinterest.com/wordsolverx/']
+          authorSameAs: ['https://www.pinterest.com/wordsolverx/'],
+          // Optional enrichment: only routes that supply these emit them, so
+          // every other page's Article JSON-LD is unchanged.
+          wordCount: page.data?.wordCount as number | undefined,
+          articleSection: page.data?.articleSection as string | undefined,
+          keywords: page.data?.keywords as string[] | undefined
         })
       : null
   );

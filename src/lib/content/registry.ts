@@ -32,7 +32,120 @@ export interface StaticArticleSection {
   paragraphs?: string[];
   list?: StaticArticleListBlock;
   callout?: StaticArticleCallout;
+  /**
+   * Optional figure block(s) rendered after the paragraphs and before the list
+   * or callout. Always fully present in the prerendered HTML — the reveal
+   * animation only adds a class after hydration, so a JS-less render is a
+   * complete, readable figure.
+   */
+  visual?: StaticArticleVisual | StaticArticleVisual[];
 }
+
+/* ── Figure blocks ───────────────────────────────────────────────────────────
+ * Visual blocks are decorative structure wrapped around literal, crawlable
+ * text: tile letters, bar values, stat numbers, table cells. Every value shown
+ * must be a published game rule (6 guesses, 5 letters, 25 Waffle tiles, …) or
+ * arithmetic over the words already printed on the same page. No invented
+ * statistics, no modelled elimination percentages.
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+/** Wordle-family tile state: green / yellow / gray. */
+export type StaticArticleTileState = 'correct' | 'present' | 'absent';
+
+export interface StaticArticleTileRow {
+  /** The guess itself, e.g. 'SLATE'. Rendered as readable text, not an image. */
+  word: string;
+  /** One state per letter, in order. Length should match `word`. */
+  states: StaticArticleTileState[];
+  /** Optional right-hand annotation, e.g. '2 greens, 1 yellow'. */
+  note?: string;
+}
+
+export interface StaticArticleTileFigure {
+  type: 'tiles';
+  /** `equation` renders monospace (Nerdle) instead of square letter tiles. */
+  variant?: 'letters' | 'equation';
+  rows: StaticArticleTileRow[];
+  /** Show the green/yellow/gray key under the rows. Defaults to true. */
+  legend?: boolean;
+}
+
+export interface StaticArticleBar {
+  label: string;
+  /** Printed as a number in the HTML as well as drawn as a bar width. */
+  value: number;
+  note?: string;
+  tone?: 'primary' | 'accent' | 'success' | 'neutral';
+}
+
+export interface StaticArticleBarFigure {
+  type: 'bars';
+  /** Bar width is `value / max`; defaults to the largest value in `bars`. */
+  max?: number;
+  /** Unit label shown with each value, e.g. 'letters'. */
+  unit?: string;
+  bars: StaticArticleBar[];
+}
+
+export interface StaticArticleStep {
+  title: string;
+  body: string;
+}
+
+export interface StaticArticleStepFigure {
+  type: 'steps';
+  /** Rendered as a numbered <ol> — order carries meaning. */
+  steps: StaticArticleStep[];
+}
+
+export interface StaticArticleStat {
+  /** Short literal shown large, e.g. '6', '25', '1–9'. */
+  value: string;
+  label: string;
+  note?: string;
+}
+
+export interface StaticArticleStatFigure {
+  type: 'stats';
+  /** Two to four cards; more than four wraps badly on mobile. */
+  stats: StaticArticleStat[];
+}
+
+export interface StaticArticleTableRow {
+  label: string;
+  value: string;
+  /** Tints the row — use for the recommended pick. */
+  highlight?: boolean;
+}
+
+export interface StaticArticleTableFigure {
+  type: 'table';
+  headers: [string, string];
+  rows: StaticArticleTableRow[];
+}
+
+export interface StaticArticleSwatch {
+  /** Six-digit hex literal, e.g. '#e63946'. Printed as text next to the chip. */
+  hex: string;
+  /** Match feedback that colour would earn in a colour-guessing game. */
+  state: StaticArticleTileState;
+  label?: string;
+}
+
+export interface StaticArticleSwatchFigure {
+  type: 'swatches';
+  swatches: StaticArticleSwatch[];
+}
+
+/** Discriminated on `type`; every variant also accepts a title and caption. */
+export type StaticArticleVisual = { title?: string; caption?: string } & (
+  | StaticArticleTileFigure
+  | StaticArticleBarFigure
+  | StaticArticleStepFigure
+  | StaticArticleStatFigure
+  | StaticArticleTableFigure
+  | StaticArticleSwatchFigure
+);
 
 export interface StaticArticleFaq {
   question: string;
@@ -47,10 +160,15 @@ export interface StaticArticleRelatedLink {
 export interface StaticArticleContent {
   /** Route key, e.g. 'wordle-answer-today'. */
   key: string;
-  /** Small label above the intro, e.g. 'Wordle Strategy Guide'. */
+  /** Small label above the intro, e.g. 'Wordle Answer Today, Verified Daily'. */
   eyebrow?: string;
   /** 40–60 word direct answer up front (featured snippet bait). */
   intro: string;
+  /**
+   * Short scannable summary rendered in a card directly under the intro.
+   * Optional — articles without it render exactly as they did before.
+   */
+  keyTakeaways?: string[];
   sections: StaticArticleSection[];
   faqHeading?: string;
   faqs: StaticArticleFaq[];

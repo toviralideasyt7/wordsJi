@@ -239,3 +239,51 @@
 .animate-scale-in {
 	animation: scaleIn 0.35s var(--easing-spring) both;
 }
+
+/* ── Article reveal motion ─────────────────────────────────────────────────
+   The stylesheet default for every element is "fully visible, no transform".
+   Nothing here hides anything on its own: `reveal-armed` is added only by the
+   reveal actions in src/lib/actions/reveal.ts, from client JS, and only for
+   nodes that start below the fold. A prerendered page with JS disabled (or
+   with prefers-reduced-motion: reduce) renders every figure complete.
+   ─────────────────────────────────────────────────────────────────────────── */
+.reveal-armed {
+	opacity: 0;
+	transform: translateY(14px);
+}
+.reveal-armed.reveal-in {
+	opacity: 1;
+	transform: none;
+	transition:
+		opacity var(--duration-slow) var(--easing-out),
+		transform var(--duration-slow) var(--easing-out);
+}
+
+.article-reveal-stagger.reveal-armed .article-tile,
+.article-reveal-stagger.reveal-armed .article-bar {
+	opacity: 0;
+	transform: translateY(8px);
+}
+.article-reveal-stagger.reveal-in .article-tile,
+.article-reveal-stagger.reveal-in .article-bar {
+	opacity: 1;
+	transform: none;
+	transition:
+		opacity var(--duration-normal) var(--easing-out),
+		transform var(--duration-normal) var(--easing-spring);
+	transition-delay: calc(var(--stagger-index, 0) * 35ms);
+}
+
+/* Belt-and-braces guard: even if an action armed a node, honour reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+	.reveal-armed,
+	.reveal-armed.reveal-in,
+	.article-reveal-stagger.reveal-armed .article-tile,
+	.article-reveal-stagger.reveal-armed .article-bar,
+	.article-reveal-stagger.reveal-in .article-tile,
+	.article-reveal-stagger.reveal-in .article-bar {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}

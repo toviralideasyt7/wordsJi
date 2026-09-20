@@ -155,6 +155,11 @@ export interface SchemaArticle {
     image?: string;
     datePublished: string;
     dateModified: string;
+    /** Resolved word count of the rendered article body. */
+    wordCount?: number;
+    /** Article section / guide group, e.g. 'Wordle Core'. */
+    articleSection?: string;
+    keywords?: string[];
     author: SchemaPerson;
     publisher: {
         '@type': 'Organization';
@@ -205,6 +210,9 @@ export function generateArticleSchema(config: {
     authorDescription?: string;
     authorKnowsAbout?: string[];
     authorSameAs?: string[];
+    wordCount?: number;
+    articleSection?: string;
+    keywords?: string[];
 }): SchemaArticle {
     const today = new Date().toISOString().split('T')[0];
     return {
@@ -216,6 +224,11 @@ export function generateArticleSchema(config: {
         ...(config.image && { image: config.image }),
         datePublished: config.datePublished || today,
         dateModified: config.dateModified || today,
+        // Conditional spread: callers that omit these emit nothing, so the
+        // ~100 existing call sites produce byte-identical JSON-LD.
+        ...(typeof config.wordCount === 'number' && { wordCount: config.wordCount }),
+        ...(config.articleSection && { articleSection: config.articleSection }),
+        ...(config.keywords?.length && { keywords: config.keywords }),
         author: {
             '@context': 'https://schema.org',
             '@type': 'Person',
