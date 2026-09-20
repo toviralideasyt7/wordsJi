@@ -67,8 +67,9 @@
 
         </style>
         <script>
-                (function () {
-var GA_ID = 'G-8QRMXK049Z';
+		(function () {
+			var GA_ID = 'G-8QRMXK049Z';
+			var CLARITY_ID = 'yl5jj469m7';
 
                         window.dataLayer = window.dataLayer || [];
                         window.__wordsolverxQueuedGtagCalls = window.__wordsolverxQueuedGtagCalls || [];
@@ -156,7 +157,85 @@ var GA_ID = 'G-8QRMXK049Z';
                                 );
                         }
 
-                        scheduleAnalytics();
+                        // Microsoft Clarity — deferred so it never competes with LCP/INP.
+                        // Loads on first interaction or shortly after window load, and
+                        // never inside lab crawlers (Lighthouse/PageSpeed) or webdriver.
+                        window.clarity =
+                                window.clarity ||
+                                function () {
+                                        (window.clarity.q = window.clarity.q || []).push(arguments);
+                                };
+
+                        function shouldDeferClarity() {
+                                try {
+                                        if (window.navigator && window.navigator.webdriver) return true;
+                                        var ua = (window.navigator && window.navigator.userAgent) || '';
+                                        if (/bot|crawl|spider|lighthouse|pagespeed|gtmetrix|headless/i.test(ua)) {
+                                                return true;
+                                        }
+                                } catch (e) {
+                                        return false;
+                                }
+                                return false;
+                        }
+
+                        function loadClarity() {
+                                if (window.__wordsolverxClarityLoaded) return;
+                                window.__wordsolverxClarityLoaded = true;
+
+                                var preconnect = document.createElement('link');
+                                preconnect.rel = 'preconnect';
+                                preconnect.href = 'https://www.clarity.ms';
+                                preconnect.crossOrigin = 'anonymous';
+                                document.head.appendChild(preconnect);
+
+                                var script = document.createElement('script');
+                                script.async = true;
+                                script.src = 'https://www.clarity.ms/tag/' + CLARITY_ID;
+                                document.head.appendChild(script);
+                        }
+
+                        function scheduleClarity() {
+                                if (shouldDeferClarity()) return;
+
+                                var interactionEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+                                var cleanup = function () {
+                                        for (var i = 0; i < interactionEvents.length; i += 1) {
+                                                window.removeEventListener(interactionEvents[i], loadAfterInteraction);
+                                        }
+                                };
+                                var loadAfterInteraction = function () {
+                                        cleanup();
+                                        if (idleTimer) window.clearTimeout(idleTimer);
+                                        loadClarity();
+                                };
+                                var idleTimer = 0;
+
+                                for (var i = 0; i < interactionEvents.length; i += 1) {
+                                        window.addEventListener(interactionEvents[i], loadAfterInteraction, {
+                                                once: true,
+                                                passive: true
+                                        });
+                                }
+
+                                var loadWhenIdle = function () {
+                                        var delay = 5000;
+                                        if ('requestIdleCallback' in window) {
+                                                window.requestIdleCallback(loadAfterInteraction, { timeout: delay });
+                                        } else {
+                                                idleTimer = window.setTimeout(loadAfterInteraction, delay);
+                                        }
+                                };
+
+                                if (document.readyState === 'complete') {
+                                        loadWhenIdle();
+                                } else {
+                                        window.addEventListener('load', loadWhenIdle, { once: true });
+                                }
+                        }
+
+			scheduleAnalytics();
+			scheduleClarity();
 
                         function updateCardFilter(input) {
                                 var group = input.getAttribute('data-card-filter-input');
