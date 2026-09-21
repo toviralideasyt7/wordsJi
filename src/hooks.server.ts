@@ -1,4 +1,5 @@
 import { redirect, type Handle, type HandleServerError } from '@sveltejs/kit';
+import { version as APP_VERSION } from '$app/environment';
 import { getLegacyDatedRedirect, getLegacyTodayRedirect } from '$lib/legacy-redirects';
 import {
         ARCHIVE_ROUTE_GAME_MAP,
@@ -47,7 +48,8 @@ function getNormalizedPathname(pathname: string): string {
 }
 
 function buildCacheRequest(origin: string, cacheKey: string): Request {
-        return new Request(`${origin}/__edge-cache__?key=${encodeURIComponent(cacheKey)}`, {
+        const versionedKey = `${APP_VERSION}:${cacheKey}`;
+        return new Request(`${origin}/__edge-cache__?key=${encodeURIComponent(versionedKey)}`, {
                 method: 'GET',
                 headers: {
                         accept: 'text/html'
