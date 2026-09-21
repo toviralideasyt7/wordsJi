@@ -32,7 +32,7 @@
 <GameDleAnswerPage gameKey="dotadle" gameTitle="Dotadle" apiGame="dotadle" {modes} {modeConfig} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
     <article class="space-y-8">
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">What today's Dotadle board is asking</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Dotadle asks you to identify a Dota 2 hero from attribute feedback, and gives you a limited number of guesses to do it. Each guess is scored across gender, attribute, lane, range type, species, complexity, and release year. The grid is the same idea as LoLdle's, but the attribute set is different, and a few of those attributes behave in ways people do not expect.
@@ -41,7 +41,7 @@
           Because Dota's hero pool is smaller and its attributes are coarser, Dotadle is usually more forgiving than its League counterpart. That also means a single well-chosen guess can collapse the pool very quickly — if you pick for information rather than for plausibility.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">The attributes that matter most</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           <strong>Primary attribute</strong> is the first real cut. Strength, agility and intelligence divide the roster into three roughly comparable groups, so one feedback cell telling you the hero is not strength removes about a third of the pool immediately.
@@ -53,7 +53,7 @@
           <strong>Complexity</strong> is the quiet filter. It is a small set of bands, so a single match narrows the roster sharply, and it correlates with how often a hero appears in ranked play — which is a useful cross-check when you are down to a short list.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Range type, and why it surprises people</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Range type reads as a binary — melee or ranged — but the roster does not split evenly, and a handful of heroes sit on the boundary in ways players misremember. If the grid returns a miss on range, trust it over your recollection and cut accordingly.
@@ -62,7 +62,7 @@
           The trap is using range as your first guess's main signal. It removes less than primary attribute and less than lane, so it is better used as a tiebreaker once you are down to a handful of candidates.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Release year is a compass, not a fact</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Dotadle's release year attribute is the one that decides close games. Dota's roster was built across more than a decade, and the feedback cell does not just tell you whether you matched — it tells you which direction to move. When a guess returns year feedback, the next guess should move decisively in that direction rather than nudging by a year or two.
@@ -71,7 +71,7 @@
           Note that hero release year is not the same as when a hero became popular or when their abilities were last reworked. The attribute tracks the original introduction, so a hero who feels modern may still sit early in the range.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">A repeatable opening plan</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Open with a hero whose attribute combination is uncommon. The aim of guess one is not to be correct, it is to make guesses three and four easy. A hero with an unusual lane pair or a rare complexity band gives you several cuts in one line.
@@ -83,7 +83,7 @@
           By guess three you should be choosing between named candidates. Write down the confirmed attributes, filter the roster, and take the guess that divides the survivors most evenly. When two candidates remain and you cannot separate them, play the more commonly seen hero — that is the safer bet on a pool where popular heroes are also better documented.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">What Dotadle is not testing</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Dotadle does not test whether you can play the hero, and it does not ask about item builds, ability order, or talent choices. The attributes are all identity and roster facts. That is good news if you know the hero list well but play a narrow set of positions, and bad news if you have learned the game purely through one role.
@@ -92,7 +92,7 @@
           It also does not use cosmetic or skin information. A hero's appearance in Dotadle is their default identity, not whichever set you happen to own.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Using the solver well</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           The solver takes the feedback you have already been given and returns every hero still consistent with it. The value is not that it plays the game for you — it is that it tells you how much information you actually have, which is often more than it feels like.
@@ -101,7 +101,7 @@
           The habit that improves your own play fastest is to commit to a guess, then check what the solver would have picked. When the two differ, work out which attribute you misread. That single loop fixes most repeat mistakes within a couple of weeks.
         </p>
       </section>
-            <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+            <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">How Dota's roster is organised, and why it matters here</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Dota's hero pool was built in waves rather than continuously, and that history shows up in the attributes. Early heroes cluster in the simpler complexity bands and in the classic lane roles. Later additions are more likely to be flexible across lanes and to sit in the higher complexity bands.
@@ -113,7 +113,7 @@
           It also explains why some attributes feel more reliable than others. Attributes that map onto the roster's history carry more information than attributes that were assigned afterwards for the puzzle's convenience.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Reading partial matches without overreading them</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           A partial match means the sets overlap, not that you were nearly right. The distinction matters most on multi-valued attributes like lane and species, where two heroes can share one value out of three and be otherwise unrelated.
@@ -125,7 +125,7 @@
           Where partials genuinely mislead is on single-valued attributes with a numeric flavour, such as complexity. There, a partial usually means the bands are adjacent, and nudging one band is the correct next move.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Turning the solver into practice</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           The most useful thing the solver does is disagree with you. Entering a board, committing to your own guess first, and then comparing is a training loop, and it surfaces your specific misreadings rather than a general sense that you are bad at the game.
@@ -134,7 +134,7 @@
           Once you can predict the solver's top two candidates before running it, you have effectively internalised the attribute model, and the remaining gains come from familiarity with the roster rather than from better reasoning.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">What to do when two heroes remain</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           The endgame of a Dotadle board looks different from the opening. Once two candidates remain, the remaining columns are the ones you have not yet exercised, and the correct move is almost always the attribute you have tested least, not the guess that feels closest.
@@ -149,7 +149,7 @@
           Finally, accept that some boards cannot be solved in the remaining guesses without a lucky pick. When that happens, take the hero whose attributes you are least uncertain about, because an uncertain attribute is the one most likely to have been misread earlier and to have put you on the wrong track entirely.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Closing out a Dotadle board you are behind on</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Being behind is normal, and the recovery is not to guess faster. It is to guess wider. When two or three guesses remain and the candidate list is still long, the highest-value move is the attribute you have tested least, even if the hero that tests it feels irrelevant.
@@ -161,7 +161,7 @@
           The last guess should always be the best-supported candidate rather than the most interesting one. There is no merit in a brave miss, and the attribute data is there to be used.
         </p>
       </section>
-<section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+<section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Frequently asked questions</h2>
         <div class="space-y-6 text-lg text-slate-600">
           <div>

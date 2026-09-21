@@ -36,7 +36,7 @@
 <GameDleAnswerPage gameKey="pokedle" gameTitle="Pokedle" apiGame="pokedle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
     <article class="space-y-8">
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">What today's Pokedle grid is telling you</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Pokedle asks you to name a Pokemon from an attribute grid. Each guess is scored against the answer on type one, type two, habitat, colour, evolution stage, height, and weight. Every cell comes back as an exact match, a partial match, or a miss, exactly like the other daily 'dle games built on this format.
@@ -45,7 +45,7 @@
           Two of those attributes are numeric — height and weight — and numeric attributes behave differently from categorical ones. A partial result on height does not mean 'close enough'. It tells you which direction to move, so the useful reading is the arrow, not the nearness.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Type is the first real cut, and dual types are the trap</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Type one is the strongest single filter, because eleven types split the Pokedex into groups of very different sizes. A guess that returns a miss on type one removes an entire family of Pokemon in one line, which is why opening with a common type is usually a mistake: it removes less than opening with something rarer.
@@ -54,7 +54,7 @@
           Type two is where people misread the grid. Plenty of Pokemon have only one type, and a single-type Pokemon still carries a value in that column. If your guess is dual-typed and the answer is not, the type two cell will not behave the way a normal mismatch does. Read it as 'the answer has no second type', not as 'wrong second type'.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Habitat and colour: cheap cuts, easy to forget</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Habitat is one of the most underrated attributes on the board. It is a small set of values, and it does not correlate cleanly with type — there are water-typed Pokemon outside any water habitat, and grassland residents across several types. That means a habitat result is close to independent information, which is exactly what you want from an early guess.
@@ -63,7 +63,7 @@
           Colour is similar, with one caveat: it tracks the Pokemon's official colour classification, not what its artwork actually looks like to you. A Pokemon that reads as purple in a particular game's render may be filed under a different colour. Trust the grid over your eye when the two disagree.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Evolution stage is the attribute that narrows fastest</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Evolution stage is a small ordered set, so a single exact match eliminates most of the Pokedex immediately. It is also the attribute that causes the most wasted guesses, because people assume stage one for anything that looks small and cute and it is not always right.
@@ -72,7 +72,7 @@
           The useful pattern is to treat evolution stage as a late-game confirmation rather than an early filter. Use type, habitat and colour to get to a shortlist first, then let evolution stage decide between the survivors.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Reading height and weight as direction</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Height and weight are the two attributes that reward attention to the feedback arrows. The grid tells you whether the answer is taller or shorter, heavier or lighter. One guess therefore does two jobs: it tests everything else about that Pokemon and it points you along the size axis.
@@ -81,7 +81,7 @@
           This is why a deliberately extreme guess is often correct play. Picking a famously small Pokemon or a famously large one produces the largest possible movement on the size axis, which collapses the candidate set faster than picking something mid-range.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">A repeatable opening plan</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Lead with a Pokemon whose type is uncommon and whose habitat does not overlap with most of the Pokedex. The objective of guess one is information, not accuracy — you are trying to make guesses three and four trivial.
@@ -93,7 +93,7 @@
           From guess three onward you should be choosing from a written shortlist. Note the confirmed type, habitat, colour and evolution stage, filter the Pokedex against them, and pick the guess that divides the survivors most evenly rather than the one you like best.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">What Pokedle does not test</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Pokedle does not ask about moves, abilities, base stats, held items, or which game a Pokemon first appeared in. All of its attributes are identity facts about the species. That is good news if you know the Pokedex as a list, and awkward if what you actually know well is competitive play, where a narrow set of Pokemon dominates and most of the roster never appears.
@@ -102,7 +102,7 @@
           It also does not use regional forms or cosmetic variants. The grid scores the species, not the particular form you happened to picture.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Studying without grinding</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           The fastest improvement comes from learning the shape of the type chart rather than memorising entries. If you know which type combinations exist at all, a grid result that implies an impossible pairing can be discarded immediately, and that is often worth more than remembering any specific Pokemon.
@@ -111,7 +111,7 @@
           The second habit worth building is size awareness by type. Once you can guess roughly which types run large and which run small, the height and weight columns stop feeling random and start acting like an extra filter.
         </p>
       </section>
-            <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+            <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Generations change which answers are reasonable</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           The Pokedex grew in discrete generations, and each one added Pokemon with types and combinations that did not previously exist. That matters for the puzzle because the plausible candidate set for a given grid shifts depending on how many generations you are carrying in your head.
@@ -123,7 +123,7 @@
           The correction is to treat the type chart as the stable fact and individual species as the volatile one. The chart has only been extended a handful of times; the roster behind it grows every generation.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Type combinations that cannot exist</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           One of the most useful pieces of Pokedex knowledge is negative knowledge: which type pairings have never been used. If a grid result implies a combination that does not exist, the constraint is contradictory and you have almost certainly misread a cell.
@@ -132,7 +132,7 @@
           That check is worth running before every third guess. It costs a few seconds and it catches the single most expensive category of mistake, which is compounding an early misreading into three more wasted guesses.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Why evolution stage reads as harder than it is</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Evolution stage looks straightforward and is not, because the stage a species occupies depends on how you count. A species in a three-stage line is a different stage from a species in a two-stage line, and some species sit outside any line at all.
@@ -141,7 +141,7 @@
           Because the set is ordered and small, one exact match removes a very large share of the roster, which makes it tempting to spend an early guess on it. The better use is as a confirmation column: get close on type and habitat first, then let evolution stage break the tie. An early stage guess is high-risk and often unnecessary.
         </p>
       </section>
-      <section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+      <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Habitat and colour, and how the official data behaves</h2>
         <p class="text-slate-600 mb-4 leading-relaxed sm:text-lg">
           Habitat is stored as a small set of environment categories, and it does not map cleanly onto type. That independence is what makes it valuable as an early filter: a habitat result tells you something the type columns cannot, and it is one of the few columns that reliably adds new information rather than restating what you already know.
@@ -156,7 +156,7 @@
           The practical lesson is to stop arguing with the colour column. When it disagrees with your expectation, treat that as a signal that your model of the species is incomplete, and adjust the candidate list rather than the column.
         </p>
       </section>
-<section class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+<section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
         <h2 class="text-2xl font-extrabold tracking-tight text-slate-900 mb-5 sm:text-3xl">Frequently asked questions</h2>
         <div class="space-y-6 text-lg text-slate-600">
           <div>

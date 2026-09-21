@@ -335,7 +335,7 @@
     {#if loading}
       <div class={`grid ${gridCols} gap-6`}>
         {#each Array(modes.length) as _}
-          <div class="animate-pulse rounded-xl border border-slate-200 bg-white p-5">
+          <div class="animate-pulse rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
             <div class="mb-4 h-3 w-1/3 rounded bg-slate-200"></div>
             <div class="mb-5 h-7 w-3/4 rounded bg-slate-200"></div>
             <div class="h-3 w-1/2 rounded bg-slate-200"></div>
@@ -367,7 +367,7 @@
               {@const answer = getAnswer(mode, region.key)}
               {@const content = answer ? parseContent(answer.json_content) : null}
               {@const cfg = modeConfig[mode]}
-              <article class="flex flex-col rounded-xl border border-slate-200 bg-white p-5 transition-colors hover:border-slate-300">
+              <article class="flex flex-col rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition-colors hover:border-slate-200">
                 <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-teal-700">{cfg.name}</p>
                 {#if content}
                   <p class="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl">
@@ -431,7 +431,7 @@
     <h2 id={`${gameKey}-more-games`} class="mb-6 text-center text-xl font-bold text-slate-800">More Games</h2>
     <nav class={`grid grid-cols-2 ${crossLinkColsClass} gap-4`} aria-label="More game links">
       {#each crossLinks as link}
-        <a href={link.href} class="rounded-xl border border-slate-200 bg-white p-4 text-center transition-colors hover:border-slate-300">
+        <a href={link.href} class="rounded-2xl border border-slate-100 bg-white p-4 text-center shadow-sm transition-colors hover:border-slate-200">
           <span class="mb-2 block text-3xl">{link.icon}</span>
           <span class="font-medium text-slate-700">{link.label}</span>
         </a>
