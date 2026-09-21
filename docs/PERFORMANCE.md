@@ -334,6 +334,66 @@ Two dynamic families expand from these: `/[wordLength]-letter-wordle-solver`
 
 ---
 
+---
+
+## 6b. Speed work that costs nothing visually and has no downside
+
+Everything in this section either ships no visual change at all, or changes only
+markup that is never seen. Items marked **SHIPPED** are already in `main` with the
+measured effect recorded. The rest are ranked by value per unit of risk.
+
+### Already shipped
+
+| Change | Measured effect | Visual impact |
+|---|---|---|
+| Externalise page CSS (`inlineStyleThreshold: 0`) | 8,227–12,016 B of inline `<style>` per document → **1,799 B**; CSS is now cached across navigations | None |
+| Move the app-shell rules out of `app.html` into cached `theme.css` | Contributes to the above; only paint-critical rules stay inline | None |
+| Namespace edge-cache keys by build version | Deploys take effect immediately instead of up to 7 days later | None |
+| Load solver WASM + dictionary on intent only | ~**0.9 MB** and 2 requests removed from the initial load of every solver page for visitors who never open the tool | Placeholder is unchanged; the engine appears on the same click |
+| Cache the in-flight dataset promise, not the resolved value | Removes a duplicate fetch of the same 341 KB file | None |
+| Close the two modulepreload leaks (answer content + `date-fns` in solver routes) | Preloaded JS on `/wordle-solver` **978,232 → 864,923 B** (−11.6%) | None |
+| Server-side loaders for the three solver route families | Removes ~128 KB of `route-config` from each solver page's client graph | None |
+| Reserve the solver frame height, share one grid cell | Fixes the 0.111 CLS on solver pages | Placeholder and app occupy one box; no visible shift |
+| Replace emoji mode icons and flags with text | Removes 10–15 glyphs per page from the render path | Deliberate, already reviewed |
+
+### Available next — still no visual change
+
+| # | Improvement | Why it helps | Risk / caveat |
+|---|---|---|---|
+| 1 | **Check `word-data.json` (3.02 MB) is unreachable from any route graph** | The runtime uses the per-length files (87–510 KB), so the 3 MB bundle copy is pure dead weight if any chunk still imports it | None if it is genuinely unreferenced; a build-graph check decides it, not a guess |
+| 2 | **Add `width`/`height` (or `aspect-ratio`) to the 1–2 images per answer page** | Removes the last layout-shift source on those pages | None; the images already have known dimensions in the markup |
+| 3 | **Add `preconnect` for at most 2–3 of the third-party origins already in the critical path** (consent manager, ad wrapper) | Saves a DNS + TLS round trip before the ad stack can start | Too many preconnects is counterproductive — cap it, and only for origins that always load |
+| 4 | **Self-host the Plus Jakarta Sans subset** | Removes a third-party round trip and a render-blocking-capable stylesheet from the critical path | Moderate: needs a subsetted woff2 committed and the `app.html` blocks repointed; must be done carefully or the font flashes |
+| 5 | **Paginate or lazily render the archive calendars** | Archive pages are the heaviest documents on the site (one sample measured ~8,994 words of rendered text) | Low: needs `content-visibility` or a paged view; must keep the links crawlable for SEO |
+| 6 | **Audit the route chunk graph for unused JavaScript** | PSI reports 503–717 KB of unused JS; the largest single item is the solver engine, which is already deferred | Low but real work: it needs per-chunk analysis, and over-splitting adds requests |
+| 7 | **Inline the small Above-the-fold CSS for answer pages only** | Recovers a few ms of first paint without reintroducing per-navigation cost, if limited to genuinely critical rules | Low; must stay well under 2 KB or it re-creates the old problem |
+| 8 | **Serve the per-length JSON with `immutable` cache headers** | They are content-addressed in practice and never change within a build | None — `_headers` already covers `/generated/per-length/*`; verify the wordlebot path too |
+
+### Do not do these
+
+| Anti-improvement | Why not |
+|---|---|
+| Remove, defer further, or block any part of the ad/consent stack | It is the revenue. On `/wordle-solver` it is ~11 of the 13 seconds of main-thread work, but that is the business, not a bug. |
+| Add or tighten a CSP in `_headers` | Documented in `docs/MEDIAVINE-ADS.md`: a CSP here once removed 100% of ad revenue. |
+| Re-inline the whole stylesheet | That is the 8–12 KB per document this work removed. |
+| Preload every chunk | Modulepreload is already large (865 KB on solver pages); adding more trades TTFB for bandwidth. |
+| Chase a single PageSpeed score | The same URL scored 32 and 54 within minutes on unchanged code. Compare bytes and request counts instead. |
+
+### How to verify any of this
+
+Use byte counts and request counts, not scores. The two commands that matter:
+
+```bash
+# 1. document + asset weight for a URL (stable, reproducible)
+python .openclaw/tmp/perf_final.py      # or the equivalent measuring <link href> totals
+
+# 2. one PageSpeed run per change, three times, take the median
+curl "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=<url>&key=$PSI_KEY&strategy=mobile"
+```
+
+A change is real when the document bytes or the request count moves and the three-run
+median score does not regress. Anything else is noise.
+
 ## 7. Honest limitations of this audit
 
 * The PSI key was rejected partway through, so only `/`, `/wordle-solver` and

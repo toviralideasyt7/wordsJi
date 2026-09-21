@@ -306,20 +306,28 @@
 
 <AnswerPageMeta publishedDate={publishedDate} />
 
-<div class="min-h-screen bg-slate-100">
+<div class="min-h-screen bg-white">
   <div class="max-w-6xl mx-auto px-3 sm:px-4 pt-6">
     <Breadcrumbs hideSchema={true} />
   </div>
-  <header class="bg-white shadow-sm">
-    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-10">
-      <h1 class="text-4xl font-extrabold text-slate-900">{pageHeading}</h1>
+  <header class="border-b border-slate-200 bg-slate-50/70">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-9 sm:py-11">
+      <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal-700">{gameTitle} daily answers</p>
+      <h1 class="mt-3 max-w-3xl text-3xl font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl text-balance">
+        {pageHeading}
+      </h1>
       {#if dateStr}
-        <p class="mt-2 text-lg text-slate-600">{dateStr}</p>
-        <div class="inline-flex items-center gap-1.5 text-xs text-slate-500 mt-1">
-          <span class="h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
-          Updated Daily
-        </div>
+        <p class="mt-3 text-base text-slate-600 sm:text-lg">{dateStr}</p>
       {/if}
+      <div class="mt-5 flex flex-wrap items-center gap-2 text-xs font-semibold">
+        <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-700">{modes.length} modes</span>
+        <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-700">{regions.length} regions</span>
+        <span class="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-700">Answers checked daily</span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-teal-700">
+          <span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span>
+          Live
+        </span>
+      </div>
     </div>
   </header>
 
@@ -327,10 +335,10 @@
     {#if loading}
       <div class={`grid ${gridCols} gap-6`}>
         {#each Array(modes.length) as _}
-          <div class="animate-pulse rounded-2xl bg-white p-6">
-            <div class="mx-auto mb-4 h-12 w-12 rounded-full bg-slate-200"></div>
-            <div class="mx-auto mb-4 h-4 w-1/2 rounded bg-slate-200"></div>
-            <div class="mx-auto h-8 w-3/4 rounded bg-slate-200"></div>
+          <div class="animate-pulse rounded-xl border border-slate-200 bg-white p-5">
+            <div class="mb-4 h-3 w-1/3 rounded bg-slate-200"></div>
+            <div class="mb-5 h-7 w-3/4 rounded bg-slate-200"></div>
+            <div class="h-3 w-1/2 rounded bg-slate-200"></div>
           </div>
         {/each}
       </div>
@@ -348,56 +356,50 @@
     {:else}
       {#each regions as region}
         <section class="mb-12" aria-labelledby={`${gameKey}-${region.key}-heading`}>
-          <div class="mb-6 flex items-center gap-3">
-            <div class={`h-8 w-1 rounded-full ${region.accent}`}></div>
-            <h2 id={`${gameKey}-${region.key}-heading`} class="text-2xl font-bold text-slate-800">{region.flag} {gameTitle} {region.label} Answers</h2>
+          <div class="mb-5 flex items-center gap-3">
+            <span class={`h-7 w-1.5 rounded-full ${region.accent}`} aria-hidden="true"></span>
+            <h2 id={`${gameKey}-${region.key}-heading`} class="text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
+              {gameTitle} {region.label} answers
+            </h2>
           </div>
           <div class={`grid ${gridCols} gap-6`}>
             {#each modes as mode}
               {@const answer = getAnswer(mode, region.key)}
               {@const content = answer ? parseContent(answer.json_content) : null}
               {@const cfg = modeConfig[mode]}
-              <article class={`rounded-2xl border-2 ${cfg.color} ${cfg.bg} p-6 transition-all hover:shadow-lg`}>
-                <div class="mb-3 flex justify-center">
-                  <div class={`flex h-12 w-12 items-center justify-center rounded-full border-2 text-2xl ${cfg.bg} ${cfg.color}`}>
-                    {cfg.icon}
-                  </div>
-                </div>
-                <h3 class="mb-4 text-center font-medium text-slate-600">{cfg.name}</h3>
+              <article class="flex flex-col rounded-xl border border-slate-200 bg-white p-5 transition-colors hover:border-slate-300">
+                <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-teal-700">{cfg.name}</p>
                 {#if content}
-                  <div class="mb-4 text-center">
-                    <p class="text-3xl font-bold text-slate-800">{content.champion_name}</p>
-                  </div>
-                  <div class="flex items-center justify-between border-t pt-3 text-sm">
-                    <div class="flex items-center gap-1.5 text-orange-500">
-                      <span>ID</span>
-                      <span>Game #{answer?.game_id}</span>
-                    </div>
-                    <div class="flex items-center gap-2">
+                  <p class="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl">
+                    {content.champion_name}
+                  </p>
+                  <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+                    <span class="font-mono text-slate-500">#{answer?.game_id}</span>
+                    <div class="flex items-center gap-3">
                       <button
                         type="button"
                         data-copy-value={content.champion_name}
                         data-copy-default="Copy"
                         data-copy-success="Copied"
-                        class="text-slate-600 transition-colors hover:text-slate-800"
+                        class="font-medium text-slate-600 transition-colors hover:text-slate-900"
                         title="Copy answer"
                       >
                         Copy
                       </button>
-                      <span class="flex items-center gap-1 text-teal-500">
-                        <span class="h-2 w-2 rounded-full bg-teal-500"></span>
+                      <span class="inline-flex items-center gap-1 font-medium text-teal-700">
+                        <span class="h-1.5 w-1.5 rounded-full bg-teal-500" aria-hidden="true"></span>
                         Live
                       </span>
                     </div>
                   </div>
                   {#if content.yesterday}
-                    <div class="mt-3 border-t border-dashed pt-3 text-center">
-                      <span class="text-xs text-slate-500">Yesterday: </span>
-                      <span class="text-sm font-medium text-slate-700">{content.yesterday}</span>
-                    </div>
+                    <p class="mt-3 border-t border-dashed border-slate-200 pt-3 text-xs text-slate-500">
+                      Yesterday
+                      <span class="ml-1 font-medium text-slate-700">{content.yesterday}</span>
+                    </p>
                   {/if}
                 {:else}
-                  <div class="py-4 text-center text-slate-500">No data available</div>
+                  <p class="mt-3 py-3 text-sm text-slate-500">No data available</p>
                 {/if}
               </article>
             {/each}
@@ -429,7 +431,7 @@
     <h2 id={`${gameKey}-more-games`} class="mb-6 text-center text-xl font-bold text-slate-800">More Games</h2>
     <nav class={`grid grid-cols-2 ${crossLinkColsClass} gap-4`} aria-label="More game links">
       {#each crossLinks as link}
-        <a href={link.href} class="rounded-xl bg-white p-4 text-center shadow-sm transition-shadow hover:shadow-md">
+        <a href={link.href} class="rounded-xl border border-slate-200 bg-white p-4 text-center transition-colors hover:border-slate-300">
           <span class="mb-2 block text-3xl">{link.icon}</span>
           <span class="font-medium text-slate-700">{link.label}</span>
         </a>
