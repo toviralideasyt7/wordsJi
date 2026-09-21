@@ -1760,15 +1760,19 @@ export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConf
         // green/yellow/gray tiles to get candidate words. The title should promise exactly
         // that. For the 5-letter page specifically (the highest-traffic per-length page),
         // use the intent-driven title. Other lengths keep the simpler form.
+	// Every title/description below is length-budgeted: titles must land in 30-60
+	// characters and descriptions in 140-158 so nothing is truncated in SERPs. The
+	// per-length strings only vary by the length number, so the shortest and longest
+	// forms both stay inside the budget. Verified by scripts/seo/check-meta-lengths.mjs.
 	const title = wordLength === 5
 		? `Wordle Solver 5 Letters - Enter Your Clues, Get the Best Guess`
-		: `${wordLength}-Letter Wordle Solver`;
+		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const metaTitle = wordLength === 5
 		? `Wordle Solver 5 Letters - Enter Clues, Get Today's Answer`
-		: `${wordLength}-Letter Wordle Solver`;
+		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const description = wordLength === 5
-		? `Free wordle solver 5 letters: enter your green, yellow, and gray tiles to find today's 5-letter Wordle answer with ranked next guesses.`
-		: `Use the ${wordLength}-letter Wordle solver to filter clues, rank next guesses, and solve custom-length Wordle boards faster.`;
+		? `Free 5-letter Wordle solver: enter your green, yellow, and gray tiles to narrow today's answer, rank the strongest next guesses, and close the board faster.`
+		: `Use the ${wordLength}-letter Wordle solver to turn green, yellow, and gray clues into a ranked shortlist of answers, with the best next guess shown first.`;
 
 return {
 		appConfig: { pageType: 'solver', game: 'wordle', wordLength },
@@ -1806,13 +1810,75 @@ export function getVariantSolverPageConfig(variant: WordlebotVariantRouteSlug): 
         const game = getWordlebotGame(gameSlug);
         const routePath = `/${variant}-solver`;
         const pageUrl = `https://wordsolverx.com${routePath}`;
-        const title = game.slug === 'spotle' ? 'Spotle Wordle Solver' : `${sentenceCaseGame(game)} Solver`;
-        const description =
-                game.slug === 'canuckle'
-                        ? 'Use the Canuckle solver to filter the Canadian answer list, rank strong next guesses, and move quickly between the answer today, archive, and solver pages.'
-                        : game.slug === 'spotle'
-                                ? 'Use the Spotle Wordle solver with blank-clue support, fast candidate filtering, and dedicated next-guess ranking.'
-                                : `Use the ${sentenceCaseGame(game)} solver with built-in clue matching, length switching where available, and fast next-guess suggestions.`;
+        // Each variant carries its own title and description rather than one shared
+        // boilerplate sentence. Titles are budgeted to 30-60 characters and descriptions to
+        // 140-158 so nothing truncates in a SERP result, and no two variants repeat the same
+        // wording. Covered variants are the ones reachable from PRERENDER_ENTRIES; anything
+        // else falls back to a length-safe generic pair.
+        const variantCopy: Record<string, { title: string; description: string }> = {
+                canuckle: {
+                        title: 'Canuckle Solver - Canadian Wordle Answer Helper',
+                        description:
+                                'Use the Canuckle solver to filter the Canadian answer list, rank strong next guesses, and move between the answer today, archive, and solver pages.'
+                },
+                dordle: {
+                        title: 'Dordle Solver - Solve Two Boards at Once',
+                        description:
+                                'Use the Dordle solver to track clues across two boards at once, filter the shared answer list, and rank the next guess that helps both words.'
+                },
+                quordle: {
+                        title: 'Quordle Solver - Solve Four Boards With One Guess',
+                        description:
+                                'Solve Quordle faster by tracking clues across all four boards at once, filtering the shared word list, and ranking the next guess that helps every grid.'
+                },
+                octordle: {
+                        title: 'Octordle Solver - Solve Eight Boards at Once',
+                        description:
+                                'Use the Octordle solver to track clues across eight boards, filter the shared answer list, and rank the next guess that unlocks the most grids.'
+                },
+                xordle: {
+                        title: 'Xordle Solver - Solve Two Hidden Words in One Grid',
+                        description:
+                                'Use the Xordle solver to separate the two hidden words behind each merged clue, filter the remaining answer list, and rank the strongest next guess to play.'
+                },
+                fibble: {
+                        title: 'Fibble Solver - Find the Answer Despite One Lie',
+                        description:
+                                'Use the Fibble solver when one tile can lie: work out which clue is false, filter the remaining answer list, and rank the safest next guess on the board.'
+                },
+                warmle: {
+                        title: 'Warmle Solver - Use Warm and Cold Letter Clues',
+                        description:
+                                'Use the Warmle solver to turn warm and cold letter clues into a filtered answer list, then rank the next guess with the most useful information.'
+                },
+                hardle: {
+                        title: 'Hardle Solver - Solve Swapped Green and Yellow Tiles',
+                        description:
+                                'Use the Hardle solver when green and yellow clues swap: set each tile to the colour you saw, filter the answers, and rank the strongest next guess.'
+                },
+                woodle: {
+                        title: 'Woodle Solver - Match Counts With No Position Clues',
+                        description:
+                                'Use the Woodle solver when you only get match counts: enter the exact and misplaced totals, filter the answer list, and rank the next guess.'
+                },
+                'w-peaks': {
+                        title: 'Wordle Peaks Solver - Read Before and After Clues',
+                        description:
+                                'Use the Wordle Peaks solver to read before, after, and equal letter clues, filter the remaining answer list, and rank the best next guess to play.'
+                },
+                spotle: {
+                        title: 'Spotle Wordle Solver - Blank Clue Word Finder',
+                        description:
+                                'Use the Spotle Wordle solver with blank-clue support to filter candidates, keep hidden letters alive, and rank the strongest next guess from the shortlist.'
+                }
+        };
+        const variantName = sentenceCaseGame(game);
+        const copy = variantCopy[game.slug] ?? {
+                title: `${variantName} Solver - Enter Your Clues, Get Answers`,
+                description: `Use the ${variantName} solver to enter your green, yellow, and gray clue tiles, filter the remaining answers, and rank the strongest next guess on the board.`
+        };
+        const title = copy.title;
+        const description = copy.description;
 
         const cta =
                 game.slug === 'canuckle'
@@ -1920,10 +1986,10 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
 
         return {
                 appConfig: { pageType: 'canuckle-archive', visibleDateKey },
-                title: 'Canuckle Archive',
+                title: 'Canuckle Archive - All Past Answers by Date',
                 eyebrow: 'Search past Canuckle answers by date or puzzle number',
                 description:
-                        'Browse the Canuckle archive with puzzle numbers, dates, answers, and Canadian facts in one searchable page built for quick lookups.',
+                        'Browse the Canuckle archive to look up any past puzzle by date, number, answer, or Canadian fact, with every entry kept on one searchable page.',
                 pageUrl: 'https://wordsolverx.com/canuckle-archive',
                 keywords: [
                         'canuckle archive',

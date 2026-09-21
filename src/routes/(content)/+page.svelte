@@ -84,7 +84,7 @@
 
 <svelte:head>
   <title>Daily Puzzle Answers, Solvers & Wordle Tools</title>
-  <meta name="description" content="Get daily puzzle answers, smart solver tools, archives, and practice modes for Wordle, Betweenle, Worldle, Quordle, Phoodle, Colordle, and more on WordSolverX." />
+  <meta name="description" content="Get daily puzzle answers, solver tools, archives, and practice modes for Wordle, Betweenle, Worldle, Quordle, Phoodle, Colordle and more on WordSolverX." />
   <link rel="canonical" href="https://wordsolverx.com/" />
   <meta property="og:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta property="og:description" content="Find daily answers, puzzle solvers, archives, and free practice tools for Wordle and dozens of popular daily games." />

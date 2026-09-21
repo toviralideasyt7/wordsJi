@@ -27,6 +27,7 @@
                 "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
                 "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
                 "test": "vitest --run",
+                "seo:check-meta": "node scripts/seo/check-meta-lengths.mjs",
                 "test:watch": "vitest"
         },
         "devDependencies": {

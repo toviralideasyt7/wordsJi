@@ -1,7 +1,7 @@
 import { formatDate } from '$lib/utils';
 import { getColordleDataForDate } from '$lib/colordle-date';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
-import { generatePersonAuthorSchema } from '$lib/seo';
+import { generatePersonAuthorSchema, composeMetaDescription } from '$lib/seo';
 import { parseMonthDayYearKey, toArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
 import type { PageServerLoad } from './$types';
 
@@ -10,6 +10,15 @@ export const prerender = true;
 const SITE_URL = 'https://wordsolverx.com';
 const COLORDLE_START_DATE = new Date(Date.UTC(2023, 7, 7)); // Colordle #1: August 7, 2023
 const COLOR_ANSWERS_API_BASE = 'https://color-answers-worker.colordle.workers.dev';
+
+// Closing sentences for the dated answer pages: one fuller, one trimmed. `trimmed` is short
+// enough that the longest head (long date, four-digit day number, longest colour name) still
+// lands inside the description budget, and long enough that the shortest head does not fall
+// under it.
+const COLORDLE_CLOSINGS = {
+	full: 'See the exact hex value, how colour scoring works, with older answers to compare.',
+	trimmed: 'See the hex value, how daily scoring works, with older answers listed.'
+};
 
 interface RecentAnswer {
 	date: string;
@@ -104,12 +113,23 @@ export const load: PageServerLoad = async ({ params }) => {
 		}
 	}
 
+	// Metadata is length-budgeted: titles stay in 30-60 characters and descriptions in
+	// 140-158 so nothing is truncated in a SERP result. The date string (11-18 characters)
+	// and the colour name (3-15 characters across the answer pool) together vary more than a
+	// single fixed template can absorb, so the closing sentence is chosen from the measured
+	// head rather than hard-coded. The hex code moved out of the title and into the
+	// description so a long colour name cannot overflow the title.
 	const title = colorName
-		? `Colordle Answer for ${formattedDate} - ${colorName}${colorHex ? ` (${colorHex})` : ''}`
-		: `Colordle Answer for ${formattedDate}`;
-	const description = colorName
-		? `The Colordle answer for ${formattedDate}${dayNum ? ` (day ${dayNum})` : ''} was ${colorName}${colorHex ? ` with hex code ${colorHex}` : ''}. See hints, the daily color solution, and more answers from this week.`
-		: `Find the Colordle answer for ${formattedDate} with the daily color name and hex code.`;
+		? `Colordle Answer for ${formattedDate} - ${colorName}`
+		: `Colordle Answer for ${formattedDate} - Solution and Hints`;
+
+	const description =
+		colorName && colorHex
+			? composeMetaDescription(
+					`The Colordle answer for ${formattedDate}${dayNum ? ` (day ${dayNum})` : ''} was ${colorName} (${colorHex})`,
+					COLORDLE_CLOSINGS
+				)
+			: `Find the Colordle colour for ${formattedDate}, with the colour name, the exact hex code, and the scoring hints once the daily puzzle is confirmed.`;
 	const canonicalUrl = `${SITE_URL}/colordle-answer-for-${dateKey}`;
 
 	const articleSchema = {

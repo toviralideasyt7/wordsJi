@@ -50,7 +50,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'how-to-solve-wordle-in-3-guesses',
     title: 'How to Solve Wordle in 3 Guesses (Step-by-Step Method)',
     description:
-      'A repeatable three-guess Wordle method: a fixed opener, an information-first second guess, and a disciplined third that closes the board.',
+      'A repeatable three-guess Wordle method: a fixed opening word, an information-first second guess, and a disciplined third that closes the board.',
     cardTitle: 'Solve Wordle in 3 Guesses',
     icon: '🎯',
     gradient: 'from-teal-500 to-teal-600',
@@ -217,9 +217,9 @@ const BASE_GUIDES: GuideArticle[] = [
   },
   {
     slug: 'wordle-hard-mode-guide',
-    title: 'Wordle Hard Mode: Rules, Strategy, and Why It Makes You Better',
+    title: 'Wordle Hard Mode: Rules and Strategy',
     description:
-      'What Wordle hard mode changes, the strategy shift it forces, and why a month of hard mode sharpens your normal-mode solving.',
+      'What Wordle hard mode changes, the strategy shift it forces, and why a month of hard mode sharpens your solving in the standard ruleset too.',
     cardTitle: 'Wordle Hard Mode Guide',
     icon: '🔒',
     gradient: 'from-slate-600 to-slate-800',
@@ -296,7 +296,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'words-with-lots-of-vowels',
     title: 'Words With Lots of Vowels (Best Options for Wordle Openers)',
     description:
-      'Five-letter words packed with vowels, when they help in Wordle, and why the most vowel-heavy word is not always the smartest opener.',
+      'Five-letter words packed with vowels, when they help in Wordle, and why the most vowel-heavy word is not always the smartest opening guess to play.',
     cardTitle: 'Words With Lots of Vowels',
     icon: '🅰️',
     gradient: 'from-amber-500 to-orange-600',
@@ -374,7 +374,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'two-vowel-words-for-wordle',
     title: 'Two-Vowel Words for Wordle (The Balanced Opener List)',
     description:
-      'The best two-vowel five-letter words for Wordle, why two vowels is the sweet spot for openers, and a ready-to-use list.',
+      'The best two-vowel five-letter words for Wordle, why two vowels is the sweet spot for an opening guess, and a ready-to-use list grouped by pattern.',
     cardTitle: 'Two-Vowel Words for Wordle',
     icon: '⚖️',
     gradient: 'from-lime-500 to-emerald-600',
@@ -443,7 +443,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'words-with-double-letters',
     title: 'Words With Double Letters (Why They Break Wordle Streaks)',
     description:
-      'Five-letter words with double letters, why players miss them, and how to test a doubles family when the board stalls.',
+      'Five-letter words with double letters, why players miss them, and how to test a doubles family when the board stalls with several greys and yellows.',
     cardTitle: 'Words With Double Letters',
     icon: '🔁',
     gradient: 'from-rose-500 to-pink-600',
@@ -513,7 +513,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: '5-letter-words-ending-in-e',
     title: '5-Letter Words Ending in E (Wordle Endgame List)',
     description:
-      'A practical list of five-letter words ending in E for Wordle endgames, plus why -E endings are so common in answers.',
+      'A practical list of five-letter words ending in E for Wordle endgames, plus why -E endings are so common and how to test a family of them quickly.',
     cardTitle: '5-Letter Words Ending in E',
     icon: '🔤',
     gradient: 'from-sky-500 to-blue-600',
@@ -583,7 +583,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: '5-letter-words-starting-with-s',
     title: '5-Letter Words Starting With S (Wordle Reference List)',
     description:
-      'A Wordle-focused list of five-letter words starting with S, grouped by second letter, for when your opener locks an S in slot one.',
+      'A Wordle-focused list of five-letter words starting with S, grouped by second letter, for when your opening guess locks an S into the first slot.',
     cardTitle: '5-Letter Words Starting With S',
     icon: '📝',
     gradient: 'from-cyan-500 to-teal-600',
@@ -793,7 +793,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'how-to-play-betweenle',
     title: 'How to Play Betweenle (Rules and Strategy)',
     description:
-      'What Betweenle is, how the upper and lower word bounds work, and a binary-search strategy that finds the hidden word fast.',
+      'What Betweenle is, how the upper and lower word bounds work, and a binary-search strategy that halves the remaining range with each guess you make.',
     cardTitle: 'How to Play Betweenle',
     icon: '↕️',
     gradient: 'from-indigo-500 to-fuchsia-700',
@@ -865,7 +865,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'globle-strategy-guide',
     title: 'Globle Strategy: How to Find the Country in Fewer Guesses',
     description:
-      'How Globle color proximity works and a continent-first strategy that turns each guess into a distance clue toward the mystery country.',
+      'How Globle colour proximity works and a continent-first strategy that turns every guess into a distance clue pointing toward the mystery country.',
     cardTitle: 'Globle Strategy Guide',
     icon: '🌍',
     gradient: 'from-sky-500 to-blue-600',
@@ -934,7 +934,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'worldle-strategy-guide',
     title: 'Worldle Strategy: How to Guess Countries From Their Shape',
     description:
-      'How Worldle distance and direction arrows work, plus a strategy for reading country outlines and closing in on the daily answer.',
+      'How Worldle distance and direction arrows work, plus a strategy for reading country outlines and closing in on the daily answer in a few guesses.',
     cardTitle: 'Worldle Strategy Guide',
     icon: '🗺️',
     gradient: 'from-teal-500 to-cyan-600',
@@ -1003,7 +1003,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'how-to-solve-a-waffle-puzzle',
     title: 'How to Solve a Waffle Puzzle in Minimum Swaps',
     description:
-      'A Waffle strategy for solving the grid in the fewest swaps: read the green anchors, plan multi-letter swaps, and protect your star rating.',
+      'A Waffle strategy for solving the grid in the fewest swaps: read the green anchors first, plan multi-letter swaps, and protect your star rating.',
     cardTitle: 'How to Solve a Waffle',
     icon: '🧇',
     gradient: 'from-amber-500 to-yellow-600',
@@ -1072,7 +1072,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'how-to-play-contexto',
     title: 'How to Play Contexto (Semantic Guessing Explained)',
     description:
-      'How Contexto ranks your guesses by meaning, why the number matters more than the word, and a strategy for climbing from 5,000 to 1.',
+      'How Contexto ranks your guesses by meaning, why the similarity number matters more than the word itself, and a strategy for climbing from 5,000 to 1.',
     cardTitle: 'How to Play Contexto',
     icon: '🧩',
     gradient: 'from-violet-500 to-fuchsia-600',
@@ -1141,7 +1141,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'semantle-strategy-guide',
     title: 'Semantle Strategy: How to Use Similarity Scores to Win',
     description:
-      'How Semantle similarity scores work, what word vectors mean for your guesses, and a strategy for narrowing to the secret word.',
+      'How Semantle similarity scores work, what word vectors mean for your guesses, and a strategy for narrowing steadily toward the secret word itself.',
     cardTitle: 'Semantle Strategy Guide',
     icon: '🧠',
     gradient: 'from-cyan-500 to-teal-600',
@@ -1279,7 +1279,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'are-wordle-solvers-cheating',
     title: 'Are Wordle Solvers Cheating? An Honest Answer',
     description:
-      'Whether using a Wordle solver counts as cheating, how solvers actually work, and how to use them to improve instead of just finishing.',
+      'Whether using a Wordle solver counts as cheating, how solvers actually work, and how to use one to improve your own solving instead of just finishing.',
     cardTitle: 'Are Wordle Solvers Cheating?',
     icon: '🤔',
     gradient: 'from-slate-500 to-slate-700',
@@ -1346,7 +1346,7 @@ const BASE_GUIDES: GuideArticle[] = [
   },
   {
     slug: 'daily-word-games-like-wordle',
-    title: 'Daily Word Games Like Wordle (20+ Alternatives Worth Playing)',
+    title: 'Daily Word Games Like Wordle - 20+ Picks Worth Playing',
     description:
       'A tour of the best daily games like Wordle, grouped by type: word variants, math, geography, and character-guessing puzzles, each with a solver.',
     cardTitle: 'Games Like Wordle',
@@ -1428,7 +1428,7 @@ const BASE_GUIDES: GuideArticle[] = [
     slug: 'colordle-strategy-guide',
     title: 'Colordle Strategy: How to Guess the Hex Code Faster',
     description:
-      'How Colordle feedback works with RGB and hex values, and a channel-by-channel strategy for narrowing the daily color in fewer guesses.',
+      'How Colordle feedback works with RGB and hex values, and a channel-by-channel strategy for narrowing the daily colour in fewer guesses each round.',
     cardTitle: 'Colordle Strategy Guide',
     icon: '🎨',
     gradient: 'from-pink-500 to-purple-600',

@@ -15,7 +15,7 @@
 
   const pageTitle = 'Hangman Solver - Free Online Word Finder & Hint Tool';
   const pageDescription =
-    'Use this Hangman solver to enter your pattern and letters, then get ranked answers and the best next guess.';
+    'Use this Hangman solver to enter your pattern and the letters you have already tried, then get ranked answers and a suggestion for the best next guess.';
   const pageUrl = 'https://wordsolverx.com/hangman-solver';
 
 

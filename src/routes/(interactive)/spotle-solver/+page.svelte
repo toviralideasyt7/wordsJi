@@ -110,7 +110,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         <title>Spotle Solver - Spotify Artist Guess Helper</title>
         <meta
                 name="description"
-                content="Solve Spotle faster with our Spotify artist solver. Match rank, debut year, genre, country, and more using precise feedback filters."
+                content="Solve Spotle faster with a Spotify artist solver that matches rank, debut year, genre, and country using precise feedback filters on every guess."
         />
         <link rel="canonical" href="https://wordsolverx.com/spotle-solver" />
         <meta property="og:title" content="Spotle Solver - Spotify Artist Guess Helper" />

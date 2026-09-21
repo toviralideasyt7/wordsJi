@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-  <title>Terms and Conditions</title>
+  <title>Terms of Service - Using WordSolverX</title>
   <meta
     name="description"
-    content="Review the WordSolverX terms and conditions for using our puzzle answer pages, archives, guides, and solver tools."
+    content="Review the WordSolverX terms of service for using our puzzle answer pages, archives, guides, and solver tools, including acceptable use and liability."
   />
   <link rel="canonical" href="https://wordsolverx.com/terms-of-service" />
-  <meta property="og:title" content="Terms and Conditions" />
+  <meta property="og:title" content="Terms of Service - Using WordSolverX" />
   <meta
     property="og:description"
     content="Read the current terms and conditions for using WordSolverX and its puzzle tools."
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://wordsolverx.com/terms-of-service" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Terms and Conditions" />
+  <meta name="twitter:title" content="Terms of Service - Using WordSolverX" />
   <meta
     name="twitter:description"
     content="Review the rules, site usage terms, and limitations for WordSolverX."
@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Terms and Conditions',
+      'Terms of Service - Using WordSolverX',
       'Terms and conditions and legal information for WordSolverX.',
       'https://wordsolverx.com/terms-of-service',
       { dateModified: '2026-03-14' }
@@ -39,7 +39,7 @@
   <Breadcrumbs />
 
   <div class="mb-10">
-    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Terms and Conditions</h1>
+    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Terms of Service - Using WordSolverX</h1>
     <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: March 14, 2026</p>
   </div>
 
@@ -47,7 +47,7 @@
     <div class="prose prose-slate dark:prose-invert max-w-none">
       <h2>1. Acceptance of Terms</h2>
       <p>
-        By accessing or using https://wordsolverx.com, you agree to these Terms and Conditions. If
+        By accessing or using https://wordsolverx.com, you agree to these Terms of Service - Using WordSolverX. If
         you do not agree, please do not use the site. These terms apply to all visitors, regardless
         of how you accessed the site or which pages you view. We may update these terms from time to
         time, and continued use of the site after any changes constitutes acceptance of the revised
@@ -117,13 +117,13 @@
 
       <h2>9. Changes to These Terms</h2>
       <p>
-        We may update these Terms and Conditions from time to time. Any revised version will be
+        We may update these Terms of Service - Using WordSolverX from time to time. Any revised version will be
         posted on this page with a new last updated date.
       </p>
 
       <h2>10. Contact</h2>
       <p>
-        If you have questions about these Terms and Conditions, email
+        If you have questions about these Terms of Service - Using WordSolverX, email
         <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>
         or visit our <a href="/contact">contact page</a>.
       </p>

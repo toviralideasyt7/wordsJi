@@ -48,10 +48,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			: recentEntries;
 
 	const formattedDate = formatDisplayDate(displayDateKey);
-	const pageTitle = `Countryle Answer Today (${formattedDate}) - Answer & Clues`;
+	const pageTitle = `Countryle Answer Today (${formattedDate}) - Country Clues`;
 	const pageDescription = today
-		? `Get today's Countryle answer for ${formattedDate}. See the country, key clues, and quick links to the archive and Countryle solver.`
-		: "Get today's Countryle answer, archive access, and the Countryle solver.";
+		? `Get today's Countryle answer for ${formattedDate}. See the country, the key clues, and quick links to the Countryle archive and the Countryle solver.`
+		: 'Get the Countryle answer for today, plus the country clues, the archive, and the Countryle solver.';
 	const pageUrl = 'https://wordsolverx.com/countryle-answer-today';
 	const isFallback = displayDateKey !== targetDateKey;
 

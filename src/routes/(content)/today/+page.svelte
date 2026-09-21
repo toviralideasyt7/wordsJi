@@ -38,7 +38,7 @@
 
 <svelte:head>
   <title>Today's Puzzle Answers ({todayStr})</title>
-  <meta name="description" content="All of today's puzzle answers in one place - Wordle, Canuckle, Betweenle, Phoodle, Quordle, Colordle, Semantle, Waffle, Globle and more for {todayStr}." />
+  <meta name="description" content="Today's puzzle answers in one place - Wordle, Canuckle, Betweenle, Phoodle, Quordle, Colordle, Semantle, Waffle, Globle and more for {todayStr}." />
   <link rel="canonical" href="https://wordsolverx.com/today" />
   <meta property="og:title" content={"Today's Puzzle Answers (" + todayStr + ")"} />
   <meta property="og:description" content="See today's verified puzzle answers, daily solution links, and quick access to all supported games in one place." />

@@ -288,7 +288,7 @@
         <title>Boggle Solver | Find All Words Instantly</title>
         <meta
                 name="description"
-                content="A light-theme Boggle Solver for 3x3 to 10x10 boards using the same trie and DFS algorithm as the original source project."
+                content="A light-theme Boggle solver for 3x3 to 10x10 boards, using the same trie and depth-first search approach as the original source project to find every word."
         />
         <link rel="canonical" href="https://wordsolverx.com/boggle-solver" />
         <meta property="og:title" content="Boggle Solver" />

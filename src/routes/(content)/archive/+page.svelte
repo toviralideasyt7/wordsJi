@@ -32,7 +32,7 @@
 </script>
 
 <svelte:head>
-  <title>Puzzle Answer Archives</title>
+  <title>Puzzle Answer Archives - Every Daily Game</title>
   <meta name="description" content="Browse archive pages for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
   <link rel="canonical" href="https://wordsolverx.com/archive" />
   <meta property="og:title" content="Puzzle Answer Archive - All Solutions" />
@@ -80,7 +80,7 @@
       <span class="text-sm font-semibold text-teal-700 dark:text-teal-400 uppercase tracking-wider">{archives.length} game archives</span>
     </div>
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Puzzle Answer Archives — Wordle, Quordle, Nerdle &amp; More
+      Puzzle Answer Archives - Every Daily Game — Wordle, Quordle, Nerdle &amp; More
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Look up any past answer by date. Every archive links to a browsable history page with puzzle numbers.

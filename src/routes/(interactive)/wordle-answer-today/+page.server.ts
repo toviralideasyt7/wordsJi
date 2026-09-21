@@ -102,7 +102,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     // verbatim (unlike Google, which often rewrites it). For daily-answer queries, the
     // user wants the answer immediately — an answer-visible snippet dramatically
     // increases CTR even at the same rank.
-    const pageDescription = `Today's Wordle answer for ${formattedDate} is ${wordleWord.toUpperCase()}. Plus hints, clue breakdown, and recent answers for Wordle #${wordleNumber}.`;
+    const pageDescription = `Today's Wordle answer for ${formattedDate} is ${wordleWord.toUpperCase()}. Plus the letter hints, the full clue breakdown, and the recent answers from Wordle #${wordleNumber} onwards.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

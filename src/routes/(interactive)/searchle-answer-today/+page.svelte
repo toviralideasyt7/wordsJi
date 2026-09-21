@@ -42,11 +42,11 @@
 
   const todayLabel = $derived(formatDisplayDate(data.todayPuzzle.date));
   const publishedDate = $derived(`${data.todayPuzzle.date}T00:00:00Z`);
-  const metaTitle = $derived(`Searchle Answer Today (${todayLabel}) - Prompt and Answer`);
+  const metaTitle = $derived(`Searchle Answer Today (${todayLabel}) - Daily Prompt`);
   const pageTitle = $derived(`Searchle Answer Today (${todayLabel})`);
   const pageDescription = $derived(
     data.meta?.description ??
-      `Today's Searchle autocomplete answer revealed. See the prompt, copy the answer, and browse ${totalPuzzles.toLocaleString('en-US')} past puzzles in the archive.`
+      `Today's Searchle autocomplete answer for ${todayLabel}, with the prompt, the expected word, and ${totalPuzzles.toLocaleString('en-US')} past puzzles you can browse in the archive.`
   );
   const pageKeywords = $derived(
     `searchle answer today, searchle answer, searchle hint, searchle hint today, searchle answer for ${todayLabel}`

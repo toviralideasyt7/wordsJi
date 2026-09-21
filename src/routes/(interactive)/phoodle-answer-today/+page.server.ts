@@ -1,4 +1,5 @@
 import { getPhoodleTodaySummary } from '$lib/phoodle';
+import { composeMetaDescription } from '$lib/seo';
 import { getPuzzleWindow, parsePuzzleDateKey } from '$lib/puzzle-window';
 import { format } from 'date-fns';
 import type { PageServerLoad } from './$types';
@@ -22,8 +23,16 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     });
 
     const last10Days = summary.recent;
-    const pageTitle = `Phoodle Answer Today (${formattedDate}) - Food Word and Hints`;
-    const pageDescription = `Get Phoodle hints and the confirmed Phoodle answer for today, ${formattedDate}. Today's food word is ${upperWord}, with recent answers and recipe context.`;
+    const pageTitle = `Phoodle Answer Today (${formattedDate}) - Food and Hints`;
+    // The food word is the only part of this sentence whose length varies, so the closing
+    // is chosen from the measured head to stay inside the 140-158 description budget.
+    const pageDescription = composeMetaDescription(
+        `Today's Phoodle answer for ${formattedDate} is ${upperWord}`,
+        {
+            full: 'The page also covers the letter hints, the recent food words, and the recipe context for each answer.',
+            trimmed: 'The page also covers the letter hints, the recent food words, and the recipe context.'
+        }
+    );
     const pageKeywords = `phoodle answer today, phoodle answer, phoodle hint, phoodle hint today, phoodle answer for ${formattedDate}`;
 
     return {

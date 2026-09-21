@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy</title>
+  <title>Privacy Policy - Data, Cookies and Advertising</title>
   <meta
     name="description"
-    content="Read the WordSolverX privacy policy for browser storage, analytics, advertising disclosures, cookie choices, and contact information."
+    content="Read the WordSolverX privacy policy covering browser storage, analytics, advertising partners, your cookie choices, and how to reach us about your data."
   />
   <link rel="canonical" href="https://wordsolverx.com/privacy-policy" />
-  <meta property="og:title" content="Privacy Policy" />
+  <meta property="og:title" content="Privacy Policy - Data, Cookies and Advertising" />
   <meta
     property="og:description"
     content="Review how WordSolverX handles browser storage, analytics, advertising, and privacy requests."
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://wordsolverx.com/privacy-policy" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy" />
+  <meta name="twitter:title" content="Privacy Policy - Data, Cookies and Advertising" />
   <meta
     name="twitter:description"
     content="See how WordSolverX handles privacy, cookie preferences, analytics, and advertising disclosures."
@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Privacy Policy',
+      'Privacy Policy - Data, Cookies and Advertising',
       'Privacy policy and data handling information for WordSolverX.',
       'https://wordsolverx.com/privacy-policy',
       { dateModified: '2026-05-26' }
@@ -39,14 +39,14 @@
   <Breadcrumbs />
 
   <div class="mb-10">
-    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Privacy Policy</h1>
+    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Privacy Policy - Data, Cookies and Advertising</h1>
     <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: May 26, 2026</p>
   </div>
 
   <div class="border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 p-6 sm:p-8">
     <div class="prose prose-slate dark:prose-invert max-w-none">
       <p class="lead text-lg">
-        This Privacy Policy explains how WordSolverX may collect, use, store, and disclose information
+        This Privacy Policy - Data, Cookies and Advertising explains how WordSolverX may collect, use, store, and disclose information
         when you visit https://wordsolverx.com, use our puzzle pages, or contact us directly.
       </p>
 
@@ -156,13 +156,13 @@
 
       <h2>12. Changes to This Policy</h2>
       <p>
-        We may update this Privacy Policy from time to time as the site changes. Any updates will be
+        We may update this Privacy Policy - Data, Cookies and Advertising from time to time as the site changes. Any updates will be
         posted on this page with a revised last updated date.
       </p>
 
       <h2>13. Contact</h2>
       <p>
-        If you have questions about this Privacy Policy or advertising disclosures,
+        If you have questions about this Privacy Policy - Data, Cookies and Advertising or advertising disclosures,
         contact <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
       </p>
     </div>

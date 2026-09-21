@@ -15,7 +15,7 @@
 
   const pageTitle = 'Lights Out Solver - Step-by-Step Puzzle Solution';
   const pageDescription =
-    'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal solve path.';
+    'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal sequence of moves that clears the whole board.';
   const pageUrl = 'https://wordsolverx.com/light-out-solver';
 
 

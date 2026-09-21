@@ -113,7 +113,7 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 
 <svelte:head>
   <title>All Wordle Answers: 2026, 2025 and Every Past Solution</title>
-  <meta name="description" content="Every Wordle answer ever, in one searchable list: 2025 and 2024 in full, 2026 updated daily, back to puzzle #1 in June 2021. Search any date, word, or puzzle number." />
+  <meta name="description" content="Every Wordle answer in one searchable list: 2025 and 2024 in full, 2026 updated daily, and every puzzle back to #1 in June 2021. Search by date or word." />
   <link rel="canonical" href="https://wordsolverx.com/wordle-answer-archive" />
   <meta property="og:title" content="All Wordle Answers: 2026, 2025 and Every Past Solution" />
   <meta property="og:description" content="The full list of Wordle answers by date and puzzle number, from puzzle #1 to today. Searchable, updated daily." />

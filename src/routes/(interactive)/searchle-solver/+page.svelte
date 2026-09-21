@@ -281,7 +281,7 @@
 
   const pageTitle = 'Searchle Solver - Autocomplete Guess Helper';
   const pageDescription =
-    'Solve Searchle fast with entropy-ranked guesses, daily prompts, and feedback tracking. Find the missing autocomplete word in seconds.';
+    'Solve Searchle faster with entropy-ranked guesses, the daily autocomplete prompt, and feedback tracking that finds the missing word in seconds.';
   const pageUrl = 'https://wordsolverx.com/searchle-solver';
   const pageImage = 'https://wordsolverx.com/images/searchle-solver.webp';
 
@@ -291,7 +291,7 @@
   <title>Searchle Solver - Autocomplete Guess Helper</title>
   <meta
     name="description"
-    content="Solve Searchle fast with entropy-ranked guesses, daily prompts, and feedback tracking. Find the missing autocomplete word in seconds."
+    content="Solve Searchle faster with entropy-ranked guesses, the daily autocomplete prompt, and feedback tracking that finds the missing word in seconds."
   />
   <meta
     name="keywords"

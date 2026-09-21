@@ -157,7 +157,7 @@
     '@graph': [
       generateWebPageSchema(
         'Weaver Solver - Word Ladder Helper',
-        'Solve any Weaver word ladder puzzle with our free solver. Find the shortest path between two words by changing one letter at a time.',
+        'Solve any Weaver word ladder with this free solver. It finds the shortest path between two words by changing one letter at a time at each step.',
         'https://wordsolverx.com/weaver-solver',
         { image: 'https://wordsolverx.com/images/weaver-solver.webp' }
       ),
@@ -178,7 +178,7 @@
 
 <svelte:head>
   <title>Weaver Solver - Word Ladder Helper</title>
-  <meta name="description" content="Solve any Weaver word ladder puzzle with our free solver. Find the shortest path between two words by changing one letter at a time." />
+  <meta name="description" content="Solve any Weaver word ladder with this free solver. It finds the shortest path between two words by changing one letter at a time at each step." />
   <meta name="keywords" content="Weaver Solver, Word Ladder, Weaver Game, Weaver Answer, Word Puzzle Solver" />
   <link rel="canonical" href="https://wordsolverx.com/weaver-solver" />
   <meta property="og:title" content="Weaver Solver - Word Ladder Helper" />

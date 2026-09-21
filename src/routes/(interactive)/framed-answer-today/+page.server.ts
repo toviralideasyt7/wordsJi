@@ -53,12 +53,17 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	}
 
 	const formattedDate = formatFramedDate(new Date(`${displayDateKey}T00:00:00Z`));
+	// The title keeps the calendar date but drops the weekday prefix: the full
+	// "<weekday>, <month> <day>, <year>" form plus a qualifier pushes the title past the
+	// 30-60 character budget. The weekday still appears in the description, which has a
+	// wider 140-158 budget.
+	const titleDate = formattedDate.replace(/^[A-Za-z]+,\s*/, '');
 	const pageTitle = hasExactEntries
-		? `Framed Answer Today (${formattedDate}) - Movie Answers for All Modes`
-		: `Framed Answer Today (${formattedDate}) - Latest Saved Movie Answers`;
+		? `Framed Answer Today (${titleDate}) - Movie Answers`
+		: `Framed Answer Today (${titleDate}) - Latest Answers`;
 	const pageDescription = hasExactEntries
-		? `Get today's Framed answers for ${formattedDate}, including Framed Classic, One Frame, Titleshot, and Poster movie titles.`
-		: `Check whether the Framed answers for ${formattedDate} are ready yet, then use the archive if you need older saved movie titles.`;
+		? `Get today's Framed answers for ${formattedDate}, including Framed Classic, One Frame, Titleshot, and Poster movie titles, plus the archive.`
+		: `Check whether the Framed answers for ${formattedDate} are ready yet, then use the Framed archive to look up older saved movie titles and scores.`;
 	const pageUrl = 'https://wordsolverx.com/framed-answer-today';
 	const isFallback = displayDateKey !== targetDateKey || !hasExactEntries;
 

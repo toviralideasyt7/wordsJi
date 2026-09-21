@@ -205,14 +205,14 @@
 
   const pageTitle = 'Colorfle Solver - Free Colorfle Helper Tool';
   const pageDescription =
-    'Use the Colorfle solver to match target hex colors, test Colorfle feedback, and narrow the correct three-color combination fast.';
+    'Use the Colorfle solver to match a target hex colour, test your Colorfle feedback, and narrow the correct three-colour combination in fewer attempts.';
   const pageUrl = 'https://wordsolverx.com/colorfle-solver';
   const pageImage = 'https://wordsolverx.com/images/colorfle-solver.webp';
 </script>
 
 <svelte:head>
   <title>Colorfle Solver - Free Colorfle Helper Tool</title>
-  <meta name="description" content="Use the Colorfle solver to match target hex colors, test Colorfle feedback, and narrow the correct three-color combination fast." />
+  <meta name="description" content="Use the Colorfle solver to match a target hex colour, test your Colorfle feedback, and narrow the correct three-colour combination in fewer attempts." />
   <meta name="keywords" content="colorfle solver, colorfle helper, colorfle answer, colorfle color solver" />
   <link rel="canonical" href="https://wordsolverx.com/colorfle-solver" />
   <meta property="og:title" content="Colorfle Solver - Free Colorfle Helper Tool" />

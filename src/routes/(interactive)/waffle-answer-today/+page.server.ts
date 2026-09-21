@@ -42,8 +42,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const nextSlug = formatArchiveHref(nextDate);
     const showNext = isBefore(startOfDay(nextDate), addDays(startOfDay(today), 1));
 
-    const pageTitle = `Waffle Answer Today (${formattedDate}) - Answer & Hints`;
-    const pageDescription = `Get the confirmed Waffle answer for ${formattedDate} with hints, the solved grid, and today's word list.`;
+    const pageTitle = `Waffle Answer Today (${formattedDate}) - Answer and Hints`;
+    const pageDescription = `Get the confirmed Waffle answer for ${formattedDate}, with hints, the fully solved grid, today's word list, and links to the older puzzle archive.`;
     const pageKeywords = `waffle answer today, waffle answer, waffle hint, waffle hint today, waffle answer for ${formattedDate}`;
     const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(today).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } });
 

@@ -96,7 +96,7 @@
   <title>Colorfle Archive - Normal and Hard Answers by Date</title>
   <meta
     name="description"
-    content="Browse the full Colorfle archive with API-backed normal and hard answers for every date since launch."
+    content="Browse the full Colorfle archive with normal and hard answers for every past date, plus the blended colour and its source swatches for each puzzle."
   />
   <link rel="canonical" href="https://wordsolverx.com/colorfle-archive" />
   <meta property="og:title" content="Colorfle Archive - Normal and Hard Answers by Date" />

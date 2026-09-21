@@ -49,8 +49,8 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         : `public, max-age=0, s-maxage=${fallbackCacheTtlSeconds}, stale-while-revalidate=300`
         });
 
-        const pageTitle = `Nerdle Answer Today (${formattedDate}) - All Modes and Hints`;
-        const pageDescription = `Get all Nerdle answers for ${formattedDate}: Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant.`;
+        const pageTitle = `Nerdle Answer Today (${formattedDate}) - All Modes`;
+        const pageDescription = `Get every Nerdle answer for ${formattedDate}, covering Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant, all solved on one page.`;
         const faqItems = [
                 {
                         question: `What is the Nerdle classic answer for ${formattedDate}?`,

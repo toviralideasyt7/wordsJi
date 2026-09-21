@@ -46,7 +46,7 @@
   <title>About | Puzzle Answers, Archives, and Solver Tools</title>
   <meta
     name="description"
-    content="Learn about WordSolverX and how we publish daily puzzle answers, archives, solver tools, and puzzle guides."
+    content="Learn about WordSolverX and how we publish daily puzzle answers, solver tools, archives, and strategy guides, with our sources and corrections policy."
   />
   <link rel="canonical" href="https://wordsolverx.com/about" />
   <meta property="og:title" content="About | Puzzle Answers, Archives, and Solver Tools" />

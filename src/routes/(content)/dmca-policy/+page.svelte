@@ -4,21 +4,21 @@
 
   const schemaJson = JSON.stringify(
     generateWebPageSchema(
-      'DMCA Policy',
-      'Read the WordSolverX DMCA policy for copyright complaints, takedown notices, counter notices, and contact details.',
+      'DMCA Policy - Copyright Notices and Takedowns',
+      'Read the WordSolverX DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them.',
       'https://wordsolverx.com/dmca-policy'
     )
   );
 </script>
 
 <svelte:head>
-  <title>DMCA Policy</title>
+  <title>DMCA Policy - Copyright Notices and Takedowns</title>
   <meta
     name="description"
-    content="Read the WordSolverX DMCA policy for copyright complaints, takedown notices, counter notices, and contact details."
+    content="Read the WordSolverX DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them."
   />
   <link rel="canonical" href="https://wordsolverx.com/dmca-policy" />
-  <meta property="og:title" content="DMCA Policy" />
+  <meta property="og:title" content="DMCA Policy - Copyright Notices and Takedowns" />
   <meta
     property="og:description"
     content="Copyright takedown and counter-notice process for WordSolverX."
@@ -27,7 +27,7 @@
   <meta property="og:url" content="https://wordsolverx.com/dmca-policy" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DMCA Policy" />
+  <meta name="twitter:title" content="DMCA Policy - Copyright Notices and Takedowns" />
   <meta
     name="twitter:description"
     content="See how to submit copyright notices and counter notices to WordSolverX."
@@ -40,7 +40,7 @@
   <Breadcrumbs />
 
   <div class="mb-10">
-    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">DMCA Policy</h1>
+    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">DMCA Policy - Copyright Notices and Takedowns</h1>
     <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: May 26, 2026</p>
   </div>
 

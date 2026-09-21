@@ -15,14 +15,14 @@
     '@graph': [
       {
         ...generateWebPageSchema(
-          'Editorial Policy',
+          'Editorial Policy - How We Publish Answers',
           'WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
           'https://wordsolverx.com/editorial-policy'
         )
       },
       {
         '@type': 'Article',
-        headline: 'Editorial Policy',
+        headline: 'Editorial Policy - How We Publish Answers',
         description:
           'WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
         url: 'https://wordsolverx.com/editorial-policy',
@@ -54,25 +54,25 @@
 </script>
 
 <svelte:head>
-  <title>Editorial Policy</title>
+  <title>Editorial Policy - How We Publish Answers</title>
   <meta
     name="description"
-    content="WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and correct mistakes."
+    content="WordSolverX editorial policy: how we verify puzzle answers, check article drafts against the implementation, handle corrections, and date our updates."
   />
   <link rel="canonical" href="https://wordsolverx.com/editorial-policy" />
-  <meta property="og:title" content="Editorial Policy" />
+  <meta property="og:title" content="Editorial Policy - How We Publish Answers" />
   <meta
     property="og:description"
-    content="WordSolverX editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and correct mistakes."
+    content="WordSolverX editorial policy: how we verify puzzle answers, check article drafts against the implementation, handle corrections, and date our updates."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wordsolverx.com/editorial-policy" />
   <meta property="og:image" content="https://wordsolverx.com/wordsolverx.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="WordSolverX Editorial Policy" />
+  <meta property="og:image:alt" content="WordSolverX Editorial Policy - How We Publish Answers" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Editorial Policy" />
+  <meta name="twitter:title" content="Editorial Policy - How We Publish Answers" />
   <meta
     name="twitter:description"
     content="Learn how WordSolverX verifies answers, handles generated article text, and publishes corrections."
@@ -84,7 +84,7 @@
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
   <Breadcrumbs />
   <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-    Editorial Policy
+    Editorial Policy - How We Publish Answers
   </h1>
   <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
     How WordSolverX verifies answers, validates supporting article drafts, reuses stored article files, and handles corrections.

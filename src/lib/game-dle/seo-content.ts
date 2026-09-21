@@ -22,8 +22,8 @@ export interface GameSEOContent {
 
 export const gameSolverSeoContent: Record<SolverGameKey, GameSEOContent> = {
   loldle: {
-    title: "Loldle Solver - Find Today's League of Legends Champion Answer",
-    description: "Use our free Loldle solver to find today's champion. Filter by gender, position, species, region, and more.",
+    title: "LoLdle Solver - Find the League of Legends Champion",
+    description: "Use our free LoLdle solver to find today's champion. Filter by gender, position, species, resource, range, and release year to narrow the roster.",
     introduction: [
       "Loldle is a daily puzzle where you guess a League of Legends champion using attribute clues. Each guess gives you colored feedback: green for exact matches, yellow for partial matches, and red for wrong attributes. You get six tries per day, and the puzzle resets at midnight UTC.",
       "The challenge comes from League's massive roster — over 170 champions, each with gender, positions, species, regions, and release year to consider. When you guess Ahri and get yellow for species, you know the answer shares at least one species trait. When you guess a 2013 champion and get 'lower' for release year, you've cut the entire modern era.",
@@ -61,7 +61,7 @@ export const gameSolverSeoContent: Record<SolverGameKey, GameSEOContent> = {
   },
   dotadle: {
     title: "Dotadle Solver - Find Today's Dota 2 Hero Answer",
-    description: "Solve today's Dotadle puzzle with our hero solver. Filter Dota 2 heroes by attribute, lane, complexity, and more.",
+    description: "Solve today's Dotadle puzzle with our hero solver. Filter Dota 2 heroes by attribute, attack type, lane, complexity, and release year in seconds.",
     introduction: [
       "Dotadle is a daily Dota 2 hero guessing game. You get six tries to identify the mystery hero, and each guess returns color-coded feedback about attributes like primary attribute, lanes, complexity, and release year. The game covers all 120+ heroes from Dota 2.",
       "Dota heroes have more attributes than most similar games — primary attribute, attack type, lanes, complexity rating, and release year all come into play. Guessing Pudge and getting yellow on lanes means the answer shares at least one lane. Guessing 2013 and getting 'lower' means the hero is older.",
@@ -99,7 +99,7 @@ export const gameSolverSeoContent: Record<SolverGameKey, GameSEOContent> = {
   },
   pokedle: {
     title: "Pokedle Solver - Find Today's Pokemon Answer Fast",
-    description: "Use our free Pokedle solver to find today's Pokemon. Filter by type, habitat, color, evolution stage, and more.",
+    description: "Use our free Pokedle solver to find today's Pokemon. Filter by type, habitat, colour, evolution stage, and generation to narrow the candidate list.",
     introduction: [
       "Pokedle is a daily Pokemon guessing game using the original 151 Kanto Pokemon. You guess by name and get colored feedback on type, habitat, color, evolution stage, height, and weight. Six guesses per day, reset at midnight UTC.",
       "The puzzle works because Pokemon have fixed attributes. Guessing Charizard and getting green on Type 1 means the answer is Fire. Getting yellow on Type 2 means it shares one type. A 'higher' on weight after guessing Pikachu (6kg) tells you the answer is heavier.",
@@ -137,7 +137,7 @@ export const gameSolverSeoContent: Record<SolverGameKey, GameSEOContent> = {
   },
   smashdle: {
     title: "Smashdle Solver - Solve Super Smash Bros Character Puzzles",
-    description: "Find today's Smashdle answer with our fighter solver. Filter by universe, games, weight, jumps, species, and more.",
+    description: "Find today's Smashdle answer with our fighter solver. Filter by universe, game series, weight, jump count, species, and fighter type across the roster.",
     introduction: [
       "Smashdle is a daily Super Smash Bros Ultimate guessing game. You have six tries to identify the mystery fighter based on universe, weight class, jump count, Smash game appearances, and species. It covers all 80+ fighters from the Switch roster.",
       "Each fighter has a fixed set of attributes. Guessing Mario and getting green on universe confirms Nintendo. Getting yellow on weight means the answer overlaps in weight class. A 'not human' result on species immediately eliminates half the roster.",

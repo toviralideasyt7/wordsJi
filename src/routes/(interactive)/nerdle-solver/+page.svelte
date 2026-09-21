@@ -424,10 +424,10 @@
 </script>
 
 <svelte:head>
-        <title>Nerdle Solver All Modes | Micro, Mini, Midi, Classic And Maxi</title>
+        <title>Nerdle Solver - Solve Micro, Mini, Midi, Classic and Maxi</title>
         <meta
                 name="description"
-                content="Use the WordSolverX Nerdle Solver for Micro, Mini, Midi, Classic, and Maxi with direct worker solving and a cleaner Wordle-style interface."
+                content="Use the WordSolverX Nerdle solver for Micro, Mini, Midi, Classic, and Maxi equations, with solving that runs in the browser and Wordle-style clue entry."
         />
         <link rel="canonical" href="https://wordsolverx.com/nerdle-solver" />
         <meta property="og:title" content="Nerdle Solver All Modes" />

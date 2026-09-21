@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-  <title>Disclaimer</title>
+  <title>Disclaimer - WordSolverX Site and Content</title>
   <meta
     name="description"
-    content="Read the WordSolverX disclaimer covering site accuracy, puzzle trademarks, independent status, and external links."
+    content="Read the WordSolverX disclaimer covering site accuracy, puzzle trademarks, our independent status, external links, and the limits of the answers we publish."
   />
   <link rel="canonical" href="https://wordsolverx.com/disclaimer" />
-  <meta property="og:title" content="Disclaimer" />
+  <meta property="og:title" content="Disclaimer - WordSolverX Site and Content" />
   <meta
     property="og:description"
     content="Review the WordSolverX disclaimer for puzzle content, trademarks, and independent site status."
@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://wordsolverx.com/disclaimer" />
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Disclaimer" />
+  <meta name="twitter:title" content="Disclaimer - WordSolverX Site and Content" />
   <meta
     name="twitter:description"
     content="See the WordSolverX disclaimer for answer accuracy, external links, and trademark notices."
@@ -27,8 +27,8 @@
   <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Disclaimer',
-      'Disclaimer for WordSolverX and its puzzle content.',
+      'Disclaimer - WordSolverX Site and Content',
+      'Disclaimer - WordSolverX Site and Content for WordSolverX and its puzzle content.',
       'https://wordsolverx.com/disclaimer',
       { dateModified: '2026-03-14' }
     )
@@ -39,7 +39,7 @@
   <Breadcrumbs />
 
   <div class="mb-10">
-    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Disclaimer</h1>
+    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Disclaimer - WordSolverX Site and Content</h1>
     <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: March 14, 2026</p>
   </div>
 
@@ -122,7 +122,7 @@
 
       <h2>7. Contact</h2>
       <p>
-        If you have questions about this Disclaimer, contact
+        If you have questions about this Disclaimer - WordSolverX Site and Content, contact
         <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
         You can also reach us through our <a href="/contact">contact page</a>,
         which includes additional details about what information to include in your message so we

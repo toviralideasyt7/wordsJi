@@ -81,7 +81,7 @@
 
 <svelte:head>
   <title>Quordle Archive - Complete Four-Word Answer History</title>
-  <meta name="description" content="Browse the complete archive of all Quordle answers. Calendar view with search and direct links to every past four-word puzzle solution." />
+  <meta name="description" content="Browse the complete archive of every Quordle answer, with a calendar view, search, and direct links to each past four-word puzzle solution and its daily grid." />
   <link rel="canonical" href="https://wordsolverx.com/quordle-archive" />
   <meta property="og:title" content="Quordle Archive - All Past Four-Word Answers" />
   <meta property="og:description" content="Complete history of every Quordle answer. Browse by calendar or search." />

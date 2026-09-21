@@ -49,9 +49,9 @@ export const load = () => {
 	const today = getPuzzleDateForGame('phrazle');
 	const todayAnswers = getDayAnswers(today);
 	const todayLabel = formatDisplayDate(todayAnswers.date);
-	const metaTitle = `Phrazle Answer Today (${todayLabel}) - Morning and Afternoon Answers`;
+	const metaTitle = `Phrazle Answer Today (${todayLabel}) - Daily Answers`;
 	const pageTitle = `Phrazle Answer Today (${todayLabel})`;
-	const pageDescription = `Get Phrazle hints and the confirmed morning and afternoon Phrazle answers for today, ${todayLabel}. Use the dedicated archive page for older phrase pairs.`;
+	const pageDescription = `Get Phrazle hints and the confirmed morning and afternoon Phrazle answers for today, ${todayLabel}. Use the archive page for older phrase pairs.`;
 	const pageKeywords = `phrazle answer today, phrazle answer, phrazle hint, phrazle hint today, phrazle answer for ${todayLabel}`;
 	const faqs = [
 		{

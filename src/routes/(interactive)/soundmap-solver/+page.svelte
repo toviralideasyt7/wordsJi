@@ -240,7 +240,7 @@
                 '@graph': [
                         generateWebPageSchema(
                                 'Soundmap Solver - Artist Guesser Helper',
-                                'Solve Soundmap Artist Guesser faster with the Soundmap Solver. Filter artists by debut year, popularity, genre, country, and more.',
+                                'Solve Soundmap Artist Guesser faster with the Soundmap solver. Filter artists by debut year, popularity, genre, country, and other clue fields.',
                                 'https://wordsolverx.com/soundmap-solver',
                                 { image: 'https://wordsolverx.com/images/soundmap-solver.webp' }
                         ),
@@ -264,7 +264,7 @@
         <title>Soundmap Solver - Artist Guesser Helper</title>
         <meta
                 name="description"
-                content="Solve Soundmap Artist Guesser faster with the Soundmap Solver. Filter artists by debut year, popularity, genre, country, and more."
+                content="Solve Soundmap Artist Guesser faster with the Soundmap solver. Filter artists by debut year, popularity, genre, country, and other clue fields."
         />
         <meta
                 name="keywords"

@@ -15,8 +15,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     month: 'long',
     day: 'numeric',
   });
-  const pageTitle = `Betweenle Answer Today (${todaySeoDate}) - Hints and Answer`;
-  const pageDescription = `Check Betweenle hints and reveal today's answer for ${todaySeoDate}. Includes clue cards, puzzle number, recent answers, and archive links.`;
+  const pageTitle = `Betweenle Answer Today (${todaySeoDate}) - Hints`;
+  const pageDescription = `Check Betweenle hints and reveal today's answer for ${todaySeoDate}. Includes the clue cards, the puzzle number, recent answers, and archive links.`;
   const pageKeywords = [
     'betweenle answer today',
     'betweenle answer',

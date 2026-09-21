@@ -78,12 +78,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	const nextDateKey = nextKey < todayKey ? toMonthDayYearKey(nextDate) : null;
 	const nextIsToday = nextKey === todayKey;
 
+	// The no-solution branch has to stand on its own: the date string is the only variable
+	// part, so both strings are sized to land inside the 30-60 title and 140-158 description
+	// budgets for every date length from "May 5, 2026" to "September 21, 2026".
 	const title = solution
 		? `Wordle Answer for ${formattedDate} - ${solution.toUpperCase()} (#${puzzleNumber})`
-		: `Wordle Answer for ${formattedDate}`;
+		: `Wordle Answer for ${formattedDate} - Solution and Hints`;
 	const description = solution
 		? `The Wordle answer for ${formattedDate} (Wordle #${puzzleNumber}) was ${solution.toUpperCase()}. Starts with ${solution[0].toUpperCase()}, ends with ${solution[solution.length - 1].toUpperCase()}. See hints, solution details, and more answers from this week.`
-		: `Find the Wordle answer for ${formattedDate} with puzzle number and details.`;
+		: `Looking for the Wordle answer for ${formattedDate}? This page carries the puzzle number, the letter hints, and the confirmed solution for that day.`;
 	const canonicalUrl = `${SITE_URL}/wordle-answer-for-${dateKey}`;
 
 	const articleSchema = {

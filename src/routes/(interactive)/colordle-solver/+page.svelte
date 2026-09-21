@@ -242,7 +242,7 @@ const jsonLdSchema = JSON.stringify({
 
 <svelte:head>
   <title>Colordle Solver - Color Puzzle Helper</title>
-  <meta name="description" content="Enter your Colordle guess and percentage. The solver filters thousands of named colors to find candidates matching your score." />
+  <meta name="description" content="Enter your Colordle guess and its percentage score. The solver filters thousands of named colours to find the candidates that match your result." />
   <meta name="keywords" content="Colordle Solver, Colordle Answer, Color Puzzle, Colordle Help, Colordle Cheat" />
   <link rel="canonical" href="https://wordsolverx.com/colordle-solver" />
   <meta property="og:title" content="Colordle Solver - Daily Color Puzzle Helper" />

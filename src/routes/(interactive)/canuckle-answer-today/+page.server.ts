@@ -132,8 +132,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         });
 
         const last30 = getLast30Puzzles(puzzles, puzzlePositionByIndex, todayPuzzle);
-        const pageTitle = `Canuckle Answer Today (${formattedDate}) - Answer & Hints`;
-        const pageDescription = `Today's Canuckle answer for ${formattedDate}, yesterday's word, the Canadian fact, and a searchable archive. Updated daily by real players.`;
+        const pageTitle = `Canuckle Answer Today (${formattedDate}) - Hints and Clues`;
+        const pageDescription = `Today's Canuckle answer for ${formattedDate}, yesterday's word, the Canadian fact, and a searchable archive. Updated every day with the latest puzzle.`;
         const pageKeywords = `canuckle answer today, canuckle word, canuckle hint, canuckle fact, canuckle archive, canadian wordle`;
 
         const yesterdayData = yesterdayPuzzle

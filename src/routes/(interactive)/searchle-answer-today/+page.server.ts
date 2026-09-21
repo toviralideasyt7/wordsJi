@@ -7,6 +7,6 @@ export const load: PageServerLoad = () => ({
 	totalPuzzles: SEARCHLE_PUZZLES.length,
 	todayPuzzle: getSearchlePuzzleForDate(getPuzzleDateForGame('searchle')),
 	meta: {
-		description: `Today's Searchle autocomplete answer revealed. See the prompt, copy the answer, and browse ${SEARCHLE_PUZZLES.length.toLocaleString('en-US')} past puzzles in the archive.`
+		description: `Today's Searchle autocomplete answer is revealed on this page, with the prompt, the expected word, and all ${SEARCHLE_PUZZLES.length.toLocaleString('en-US')} past puzzles listed in the archive.`
 	}
 });

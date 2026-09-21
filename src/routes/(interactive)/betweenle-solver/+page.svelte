@@ -15,7 +15,7 @@
 
   const pageTitle = 'Ai Betweenle Solver - Solve Betweenle within seconds';
   const pageDescription =
-    'Use our Betweenle solver to enter bounds and distance clues, then get the best next guess with real dictionary logic.';
+    'Use the Betweenle solver to enter your bounds and distance clues, then get the best next guess with real dictionary logic and a ranked shortlist of answers.';
   const pageUrl = 'https://wordsolverx.com/betweenle-solver';
 
 

@@ -53,9 +53,12 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         const pageTitle = seoDate
             ? `Smashdle Hints and Answers for Today (${seoDate})`
             : 'Smashdle Hints and Answers for Today';
+        // Both branches stay inside the site-wide 140-158 character description budget for
+        // every date length, so the per-mode answer names are left to the page body and the
+        // structured data rather than appended here, where they pushed the text past 240.
         const pageDescription = seoDate
-            ? `Get Smashdle hints and the confirmed Smashdle answers for today, ${seoDate}. Check the classic, emoji, silhouette, Final Smash, and Kirby answers across all available regions${answerSummary ? `, including ${answerSummary}` : ''}.`
-            : 'Get Smashdle hints and the confirmed Smashdle answers for today across every available mode and region.';
+            ? `Get Smashdle hints and the confirmed Smashdle answers for today, ${seoDate}, with every mode listed alongside its answer and a link to the solver.`
+            : 'Get Smashdle hints and the confirmed Smashdle answers for every mode and region today, with each answer listed alongside its hint and a link to the solver.';
         const pageKeywords = seoDate
             ? `smashdle answer today, smashdle answer, smashdle hint, smashdle hint today, smashdle answer for ${seoDate}`
             : 'smashdle answer today, smashdle answer, smashdle hint, smashdle hint today';

@@ -41,8 +41,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			latestStoredDate: latestStoredEntry?.date ?? null
 		},
 		meta: {
-			title: `Worgle Answer Today - ${formattedDate}`,
-			description: `Get the Worgle answer for ${formattedDate}, the live puzzle number, and the recent archive in one place.`,
+			title: `Worgle Answer Today (${formattedDate}) - Hints and Answer`,
+			description: `Get the Worgle answer for ${formattedDate}, the live puzzle number, the letter hints, the full word list, and the recent answers archive, all on one page.`,
 			keywords: `worgle answer today, worgle archive, worgle answer ${todayKey}`
 		}
 	};

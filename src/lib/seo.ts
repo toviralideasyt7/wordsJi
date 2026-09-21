@@ -28,6 +28,46 @@ const DEFAULT_CONTACT_EMAIL = 'wordsolverx@gmail.com';
 const DEFAULT_ORGANIZATION_DESCRIPTION =
     'WordSolverX publishes daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.';
 
+/**
+ * Site-wide title and description budget for indexable pages. `scripts/seo/check-meta-lengths.mjs`
+ * asserts both ranges against the prerendered HTML, so anything generated through the helpers
+ * below is checked at build time rather than by eye.
+ */
+export const META_TITLE_MIN_LENGTH = 30;
+export const META_TITLE_MAX_LENGTH = 60;
+export const META_DESCRIPTION_MIN_LENGTH = 140;
+export const META_DESCRIPTION_MAX_LENGTH = 158;
+
+/**
+ * Closing sentences for a generated page description.
+ *
+ * Pages that quote the day's answer -- a colour name, a food word, an artist, a track --
+ * vary in length by more than a single fixed sentence can absorb, because the date string
+ * already spans 11-18 characters and the answer text adds up to a dozen more. Supplying two
+ * closings lets the caller keep the finished string inside the budget for every
+ * combination. Author the pair so that `trimmed` is short enough that
+ * `head + trimmed` never exceeds `META_DESCRIPTION_MAX_LENGTH`, and long enough that
+ * `head + trimmed` never falls under `META_DESCRIPTION_MIN_LENGTH` for the longest head.
+ */
+export interface MetaDescriptionClosings {
+    /** Preferred closing, used whenever it still fits. */
+    full: string;
+    /** Fallback for long heads. */
+    trimmed: string;
+}
+
+/**
+ * Joins a page description head to the richest closing sentence that keeps the whole string
+ * inside the site-wide description budget. `head` must already carry the page's unique
+ * content (date, answer, puzzle number) and must not end in a full stop.
+ */
+export function composeMetaDescription(head: string, closings: MetaDescriptionClosings): string {
+    const preferred = `${head}. ${closings.full}`;
+    return preferred.length <= META_DESCRIPTION_MAX_LENGTH
+        ? preferred
+        : `${head}. ${closings.trimmed}`;
+}
+
 export interface SchemaWebPage {
     '@context': string;
     '@type': 'WebPage';

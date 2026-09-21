@@ -12,6 +12,7 @@ import {
 	type SpotleData
 } from '$lib/spotle';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { composeMetaDescription } from '$lib/seo';
 
 interface SpotleDay {
 	date: string;
@@ -119,9 +120,20 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	};
 
 	const todayFormatted = format(displayDateObject, 'MMMM d, yyyy');
-	const metaTitle = `Spotle Answer Today (${todayFormatted}) - Artist Answer and Clues`;
-	const metaDescription =
-		`Get the Spotle answer for ${todayFormatted}${todayArtist ? `, including artist details for ${todayArtist.artist}` : ''}${todayAnswer?.track ? ` and the featured track ${todayAnswer.track}` : ''}.`;
+	const metaTitle = `Spotle Answer Today (${todayFormatted}) - Artist and Clues`;
+	// The artist name is the only part of this sentence whose length varies (2-24 characters
+	// across the artist list), so the closing is chosen from the measured head to stay inside
+	// the 140-158 character description budget. The track title is left out for the same
+	// reason; it still appears in the page body and the structured data.
+	const metaDescription = todayArtist
+		? composeMetaDescription(
+				`Get the Spotle answer for ${todayFormatted}, including artist details for ${todayArtist.artist}`,
+				{
+					full: 'The page also lists the clue trail, the track list, and every past answer.',
+					trimmed: 'The page also lists the clue trail and every past answer.'
+				}
+			)
+		: `Get the Spotle answer for ${todayFormatted}, plus the clue trail, the artist details, the track list, and every past answer listed in the archive.`;
 	const metaKeywords =
 		`spotle answer today, spotle answer, spotle archive, spotle artist today, spotle hints ${todayFormatted}`;
 

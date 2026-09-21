@@ -18,7 +18,7 @@
     'Use the Squaredle solver to load today’s board, paste any custom grid, and find every valid word path with the same client-side solving logic as the original project.';
   const pageUrl = 'https://wordsolverx.com/squaredle-solver';
   pageDescription =
-    'Use the Squaredle solver to load today\u2019s board or paste a custom grid and find every valid word path.';
+    'Use the Squaredle solver to load today\u2019s board or paste a custom grid, then find every valid word path hidden in the letter square on screen.';
 
 
   const schemas = JSON.stringify([

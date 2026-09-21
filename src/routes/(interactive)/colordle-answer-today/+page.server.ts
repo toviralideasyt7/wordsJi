@@ -3,6 +3,7 @@ import {
         getColordleTodayFromApi
 } from '$lib/color-answers-api';
 import { colorDiff, hexToRgb, type RGB } from '$lib/colordle';
+import { composeMetaDescription } from '$lib/seo';
 import { format, subDays } from 'date-fns';
 import type { PageServerLoad } from './$types';
 
@@ -386,11 +387,20 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 'X-Puzzle-Date': actualDateKey
         });
 
-        const pageTitle = `Colordle Answer Today (${formattedDate}) - Answer & Hints`;
+        const pageTitle = `Colordle Answer Today (${formattedDate}) - Hints and Hex`;
         // SEO audit chapter 6.2 / 7.2 Lever 2: put the answer (color name + hex) directly
         // in the meta description so it shows in Bing's search snippet without a click.
         // Pattern copied from the #1 organic competitor colordleanswer.today.
-        const pageDescription = `Colordle answer today ${formattedDate}: ${color.name} ${color.hex}. See today's color, hints, scoring breakdown, and past answers.`;
+        // The colour name is the only part of this sentence that varies in length, so the
+        // closing sentence is picked from the measured head to stay inside the site-wide
+        // 140-158 character description budget.
+        const pageDescription = composeMetaDescription(
+                `Colordle answer today ${formattedDate}: ${color.name} ${color.hex}`,
+                {
+                        full: 'See the daily colour, its hex code, the scoring breakdown for your guesses, and the recent answers.',
+                        trimmed: 'See the daily colour, its hex code, and the scoring breakdown for all of your guesses.'
+                }
+        );
         const pageKeywords = `colordle answer today, colordle color puzzle, daily color solution, colordle hex code, colordle tips, colordle archive`;
 
         const faqItems = [

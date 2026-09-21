@@ -182,7 +182,7 @@
   const jsonLdSchema = JSON.stringify([
     generateWebPageSchema(
       'Waffle Solver - Solve Any Waffle Puzzle Instantly',
-      "Solve today's Waffle puzzle with our high-performance WASM-powered solver. Auto-fill or manually enter your grid and get instant solutions.",
+      "Solve today's Waffle puzzle with a high-performance WASM solver. Auto-fill the grid or enter it by hand, then get the swap sequence that solves it.",
       'https://wordsolverx.com/waffle-solver',
       { image: 'https://wordsolverx.com/images/waffle-solver.webp' }
     ),
@@ -209,7 +209,7 @@
 
 <svelte:head>
   <title>Waffle Solver - Solve Any Waffle Puzzle Instantly</title>
-  <meta name="description" content="Solve today's Waffle puzzle with our high-performance WASM-powered solver. Auto-fill or manually enter your grid and get instant solutions." />
+  <meta name="description" content="Solve today's Waffle puzzle with a high-performance WASM solver. Auto-fill the grid or enter it by hand, then get the swap sequence that solves it." />
   <meta name="keywords" content="Waffle Solver, Waffle Answer, Waffle Puzzle, Waffle Game Helper, Waffle Cheat" />
   <link rel="canonical" href="https://wordsolverx.com/waffle-solver" />
   <meta property="og:title" content="Waffle Solver - Instant Puzzle Solutions" />

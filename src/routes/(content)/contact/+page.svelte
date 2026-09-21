@@ -119,6 +119,9 @@
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
           This opens your email app with the details filled in so correction requests and bug reports are easier to send in one pass.
         </p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+          Nothing typed here is submitted to WordSolverX. The button builds a pre-filled message and hands it to your own email app, so nothing leaves your device until you press send there, and nothing is stored on this site.
+        </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <label class="block text-sm">
             <span class="mb-1 block font-medium text-slate-700 dark:text-slate-200">Contact type</span>
@@ -207,6 +210,61 @@
       </p>
       <p>
         If you need a takedown request or copyright notice handled, use the same email address and include the information listed in our <a href="/dmca-policy">DMCA Policy</a>.
+      </p>
+
+      <h2 class="text-slate-900 dark:text-slate-50">Reporting a Wrong Answer</h2>
+      <p>
+        Daily answer pages read from the same stored dataset that the archive pages use, so an incorrect answer usually means the stored entry for that date is wrong rather than the page logic. A report that can be acted on includes five things: the game name, the exact page address, the puzzle date or puzzle number as the game labels it, the answer the page currently shows, and the answer you believe is correct.
+      </p>
+      <p>
+        Pointing at the game itself, or at a published answer list, makes verification faster because the stored entry can be compared directly against a second source. Reports without a date are difficult to check, since most of these games publish a new answer every day and a page can be several puzzles behind the one being played.
+      </p>
+      <p>
+        A page can also look wrong when it is simply early or late relative to a reset. Daily pages follow a fixed rollover schedule, and some games change over at a different hour or in a different time zone. If the page and the game disagree by exactly one day, it is worth checking whether the puzzle has actually reset before reporting it as an error.
+      </p>
+
+      <h2 class="text-slate-900 dark:text-slate-50">Requesting a Puzzle Game</h2>
+      <p>
+        Suggestions for games that are not covered yet are welcome. The most useful request includes the game name, where it is played, a short description of how a round works, and when the puzzle resets. It also helps to say whether the game runs more than one mode, since multi-mode games need a page that separates them rather than a single answer.
+      </p>
+      <p>
+        Coverage depends on whether an answer can be verified. A game that publishes a stable daily solution, with a public answer list or a visible in-game result, can be checked and kept current. A game whose answers change per player, or that keeps its solution private, cannot be covered the same way, because there would be nothing to verify an answer against. Requests are reviewed as a group, and a game that becomes coverable later can always be suggested again.
+      </p>
+
+      <h2 class="text-slate-900 dark:text-slate-50">What We Cannot Help With</h2>
+      <p>
+        WordSolverX publishes answers, archives, and solver tools. It is not affiliated with the games it covers, so it cannot act on anything inside those games.
+      </p>
+      <ul>
+        <li>
+          <strong>Game account problems.</strong> Locked accounts, missing purchases, bans, and bugs inside the game itself have to go to that game's own support, because those systems are not part of this site.
+        </li>
+        <li>
+          <strong>Content on other websites.</strong> A page published somewhere else can only be changed by whoever publishes it.
+        </li>
+        <li>
+          <strong>Answers before a puzzle is live.</strong> Answers are published for puzzles that have already been released. A future answer cannot be provided early, and requests for one cannot be met.
+        </li>
+        <li>
+          <strong>Account recovery here.</strong> There are no user accounts on WordSolverX, so there is no profile, password, or saved progress to recover or reset.
+        </li>
+        <li>
+          <strong>Removing a published answer.</strong> Reporting the day's solution is the purpose of the answer pages. A page is only removed or changed if it is wrong, or if the complaint is a copyright matter handled through the <a href="/dmca-policy">DMCA Policy</a>.
+        </li>
+      </ul>
+
+      <h2 class="text-slate-900 dark:text-slate-50">How a Correction Is Verified and Applied</h2>
+      <p>
+        Every report is checked against the data that produced the page. For a daily answer page that means the stored puzzle entry for the reported date. For an archive page it means the same dataset, which is why one corrected entry normally fixes the daily page and the matching archive row at the same time instead of needing two separate fixes.
+      </p>
+      <p>
+        Solver reports are reproduced by entering the same clues, colours, or counts in the same order and comparing the suggested list with what was reported. Because the solver tools run in the browser, a result that differs between two visits usually points at the input rather than the tool, so it helps to say exactly which tiles or fields were set.
+      </p>
+      <p>
+        If a report cannot be reproduced, the page is left as it stands. The stored entry and the game's own result are treated as the deciding evidence, which keeps a single unverifiable report from overwriting an answer that everything else agrees on. Checking a game's own result before writing is the fastest way to make a report decisive.
+      </p>
+      <p>
+        Not sure whether something is worth reporting? The pages most worth a look before writing are <a href="/today">today's answers</a>, the <a href="/archive">archive hub</a>, and the <a href="/editorial-policy">Editorial Policy</a>, which describes how answers are sourced and updated.
       </p>
     </div>
   </div>

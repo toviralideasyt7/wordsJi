@@ -46,7 +46,7 @@
         const META = {
                 title: 'Nerdle Archive - All Modes Answers by Date',
                 description:
-                        'Browse stored Nerdle answers by date for all modes: Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant.',
+                        'Browse stored Nerdle answers by date across every mode: Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant, with the full equation shown.',
                 keywords:
                         'nerdle archive, nerdle all modes archive, nerdle classic micro mini midi maxi quad speed instant answers, nerdle previous answers',
                 canonical: 'https://wordsolverx.com/nerdle-archive'

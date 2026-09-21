@@ -16,7 +16,7 @@
 
   const pageTitle = 'Kanoodle Solver — Solve Any Kanoodle Puzzle Online';
   const pageDescription =
-    'Use the Kanoodle solver online to fit all 12 pieces on the board with hints, challenge mode, and fast in-browser solving.';
+    'Use the Kanoodle solver online to fit all 12 pieces onto the board, with hints, challenge mode, and fast solving that runs entirely in your browser.';
   const pageUrl = 'https://wordsolverx.com/kanoodle-solver';
 
   const schemas = JSON.stringify([

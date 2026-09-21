@@ -16,8 +16,8 @@ export const load: PageServerLoad = async () => {
         const date = subDays(today, i + 1);
         return getQuordleDataForDate(date);
     }).filter(Boolean);
-    const pageTitle = `Quordle Answer Today (${formattedDate}) - Answer & Hints`;
-    const pageDescription = `Get Quordle answers for ${formattedDate}, including Classic, Chill, Extreme, Sequence, Rescue, and Weekly modes.`;
+    const pageTitle = `Quordle Answer Today (${formattedDate}) - All Modes`;
+    const pageDescription = `Get today's Quordle answers for ${formattedDate}, covering the Classic, Chill, Extreme, Sequence, Rescue, and Weekly modes, all solved on one page.`;
     const pageKeywords = `quordle answer today, quordle answer, quordle hint, quordle hint today, quordle answer for ${formattedDate}`;
 
     const jsonLd = {

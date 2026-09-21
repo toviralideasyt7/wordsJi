@@ -121,7 +121,7 @@
 
 <svelte:head>
         <title>Spotle Archive - Complete Artist Answer History</title>
-        <meta name="description" content="Browse the full Spotle archive by date, with artist details and stored music metadata for past answers." />
+        <meta name="description" content="Browse the full Spotle archive by date, with the artist, the track, and the stored music metadata for every past puzzle answer in one searchable list." />
         <link rel="canonical" href="https://wordsolverx.com/spotle-archive" />
         <meta property="og:title" content="Spotle Archive - All Past Artist Answers" />
         <meta property="og:description" content="Complete history of Spotle answers with artist details, music metadata, and date-based browsing." />

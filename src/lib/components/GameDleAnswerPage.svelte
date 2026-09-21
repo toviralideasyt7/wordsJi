@@ -93,7 +93,7 @@
   );
   let pageDescription = $derived(
     data?.meta?.description ??
-      `Today's ${gameTitle} answers for every mode and region${seoDate ? ` — ${seoDate}` : ''}. View the answer or jump to the solver.`
+      `Today's ${gameTitle} answers for every mode and region${seoDate ? ` — ${seoDate}` : ''}. Every mode is listed with its answer, and the solver is always one click away.`
   );
   let pageKeywords = $derived(
     data?.meta?.keywords ??

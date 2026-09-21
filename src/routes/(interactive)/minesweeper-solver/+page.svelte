@@ -16,7 +16,7 @@
 
   const pageTitle = 'Minesweeper Solver - Free Online Safe Move Finder';
   const pageDescription =
-    'Use this free Minesweeper solver to find safe moves, mark mines, and analyze custom boards with smart hints.';
+    'Use this free Minesweeper solver to find safe moves, mark suspected mines, and analyse custom boards, with hints for the squares worth opening next.';
   const pageUrl = 'https://wordsolverx.com/minesweeper-solver';
 
 

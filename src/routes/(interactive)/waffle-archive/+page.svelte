@@ -81,7 +81,7 @@
 
 <svelte:head>
   <title>Waffle Archive - Complete Waffle Puzzle Answer History</title>
-  <meta name="description" content="Browse the complete archive of all Waffle puzzle answers. Calendar view with search and direct links to every past waffle grid solution." />
+  <meta name="description" content="Browse the complete archive of every Waffle puzzle answer, with a calendar view, search, and direct links to each past waffle grid solution." />
   <link rel="canonical" href="https://wordsolverx.com/waffle-archive" />
   <meta property="og:title" content="Waffle Archive - All Past Waffle Answers" />
   <meta property="og:description" content="Complete history of every Waffle puzzle answer. Browse by calendar or search." />

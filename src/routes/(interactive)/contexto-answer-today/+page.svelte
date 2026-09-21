@@ -56,7 +56,7 @@
     data.initialAnswer?.gameNumber ?? getContextoGameNumber(new Date(`${activeDate}T12:00:00`))
   );
 
-  let metaTitle = $derived(`Contexto Answer Today (${activeLabel}) - Hints and Answer`);
+  let metaTitle = $derived(`Contexto Answer Today (${activeLabel}) - Hints and Clues`);
   let pageTitle = $derived(`Contexto Answer Today (${activeLabel})`);
   let pageDescription = $derived(
     `Get Contexto hints and the confirmed Contexto answer for today, ${activeLabel}. Use the dedicated archive page when you need an older Contexto answer.`

@@ -33,8 +33,8 @@ export const load: PageServerLoad = async () => {
     answer: `The Worldle answer on ${getDisplayDateLabel(answer.date)} was ${answer.country.name}. That puzzle was Worldle #${answer.worldleNumber}.`,
   }));
 
-  const pageTitle = `Worldle Answer Today (${formattedTodayDate}) - Answer & Map`;
-  const pageDescription = `Get Worldle hints and today's confirmed answer for ${formattedTodayDate}, plus a direct link to the full archive.`;
+  const pageTitle = `Worldle Answer Today (${formattedTodayDate}) - Answer and Map`;
+  const pageDescription = `Get Worldle hints and today's confirmed answer for ${formattedTodayDate}, with the distance and direction clues and a direct link to the full archive.`;
   const pageKeywords = `worldle answer today, worldle answer, worldle hint, worldle hint today, worldle answer for ${formattedTodayDate}`;
 
   const pageUrl = 'https://wordsolverx.com/worldle-answer-today';
