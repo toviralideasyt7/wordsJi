@@ -1,6 +1,7 @@
 <script lang="ts">
   import { type Snippet } from 'svelte';
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
+  import ArticleAttribution from '$lib/components/ArticleAttribution.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -403,6 +404,10 @@
           </div>
         </section>
       {/each}
+
+      <div class="mb-6">
+        <ArticleAttribution verified={publishedDate ?? null} />
+      </div>
 
       <section class="mb-12">
         {@render seoContent()}
