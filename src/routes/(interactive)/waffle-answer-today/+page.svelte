@@ -5,11 +5,11 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import WaffleAnswerCard from '$lib/components/WaffleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
   import FiHash from '$lib/components/icons/FiHash.svelte';
-  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -47,7 +47,7 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/waffle-answer-today.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
-  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -319,7 +319,9 @@
 
     <div class="mt-12">
       <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['waffle-answer-today']} vars={{ date: data.formattedDate, answer: data.solution ?? '' }} />
+  <AnswerArticle content={ARTICLE_CONTENT['waffle-answer-today']} vars={{ date: data.formattedDate, answer: data.solution ?? '' }}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

@@ -601,6 +601,22 @@ export function generateMetaTags(config: MetaTagsConfig): Record<string, string>
     };
 }
 
+/**
+ * Node types a page loader or route should drop before rendering `data.schemas`.
+ *
+ * Every prerendered page already emits these from components:
+ *   - `Organization` + `Article` → <SiteDefaultsHead>
+ *   - `FAQPage`                  → <StaticArticle>, built from the visible FAQ copy
+ *   - `BreadcrumbList`           → <Breadcrumbs>, derived from the real URL
+ *
+ * A loader that also emits them ships a second, near-identical node describing
+ * the same page, which is exactly the duplicate-JSON-LD signal search engines
+ * complain about. Pass this list to `stripStructuredDataTypes` so a page emits
+ * one node per type. Page-specific nodes (WebPage, SoftwareApplication, Team)
+ * are kept.
+ */
+export const PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES: string[] = ['FAQPage', 'HowTo', 'Article'];
+
 export function stripStructuredDataTypes(
     schemaJson: string | null | undefined,
     schemaTypes: string[]

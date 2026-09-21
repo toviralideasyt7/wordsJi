@@ -94,6 +94,27 @@
 	--radius-full: 9999px;
 }
 
+/* ── App shell ──────────────────────────────────────────────────────────────
+   These used to be inline in src/app.html. They are layout, not paint-blocking
+   critical CSS, so they live in this cached stylesheet instead: the document
+   itself is re-sent on every navigation and cannot be cached, this file can.
+   ─────────────────────────────────────────────────────────────────────────── */
+.site-shell {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+}
+.site-main {
+	flex: 1 1 auto;
+}
+/* No code sets data-theme today; kept so a future toggle has a defined default. */
+body[data-theme='dark'],
+[data-theme='dark'] .site-shell {
+	background: #0f172a;
+	color: #f8fafc;
+}
+
 /* ── Dark Theme ── */
 [data-theme='dark'] {
 	--color-primary-50:  #042f2e;

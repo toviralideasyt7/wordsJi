@@ -1776,6 +1776,11 @@ export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConf
 
 return {
 		appConfig: { pageType: 'solver', game: 'wordle', wordLength },
+		// `dataUpdated` is deliberately absent here. It is the puzzle date, and
+		// reaching it means puzzle-window's rollover table plus date-fns — ~26 KB of
+		// client JS that these solver routes then had to modulepreload to print one
+		// date. The routes that render it supply it from their server loader
+		// instead; see `wordle-solver/+page.server.ts`.
 		title,
 		metaTitle,
 		eyebrow: 'Wordle solver by word length',
@@ -1893,6 +1898,8 @@ export function getVariantSolverPageConfig(variant: WordlebotVariantRouteSlug): 
                         game: game.slug,
                         wordLength: getBestLengthForWordlebotGame(game.slug, 5)
                 },
+                // See the note in getWordleLengthPageConfig: the puzzle date is
+                // supplied by the route's server loader, not built in the client graph.
                 title,
                 eyebrow: game.boards > 1 ? 'Multi-board puzzle solver' : 'Interactive puzzle solver',
                 description,
@@ -1919,6 +1926,7 @@ export function getCanuckleTodayPageConfig(): WordlebotPageConfig {
 
         return {
                 appConfig: { pageType: 'canuckle-daily', visibleDateKey },
+                dataUpdated: visibleDateKey,
                 title: 'Canuckle Answer Today',
                 displayTitle: `Canuckle Answer Today (${displayDate})`,
                 metaTitle: `Canuckle Answer Today (${displayDate}) - Answer and Canadian Fact`,
@@ -1986,6 +1994,7 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
 
         return {
                 appConfig: { pageType: 'canuckle-archive', visibleDateKey },
+                dataUpdated: visibleDateKey,
                 title: 'Canuckle Archive - All Past Answers by Date',
                 eyebrow: 'Search past Canuckle answers by date or puzzle number',
                 description:

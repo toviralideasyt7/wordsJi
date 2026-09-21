@@ -2,7 +2,7 @@
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
@@ -13,7 +13,7 @@
                 PRESTON_HAYES_AUTHOR_NAME
         } from '$lib/authors';
         import type { SpotleAnswer, SpotleArtist } from '$lib/spotle';
-        import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
+        import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
         let { data }: {
                 data: {
@@ -42,21 +42,11 @@
         const todayArtist = $derived(data.todayArtist);
         const last30Days = $derived(data.last30Days);
         const faqItems = $derived(data.faqItems);
-        const schemaJson = $derived(stripStructuredDataTypes(data.schemaJson, ['FAQPage', 'HowTo']));
+        const schemaJson = $derived(stripStructuredDataTypes(data.schemaJson, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES));
         const meta = $derived(data.meta);
         const stats = $derived(data.stats);
         const labels = $derived(data.labels);
         const publishedDate = $derived(`${data.todayAnswer?.date ?? data.todayStr}T00:00:00Z`);
-        const articleSchema = $derived(
-                generateArticleSchema({
-                        headline: meta.title,
-                        description: meta.description,
-                        url: 'https://wordsolverx.com/spotle-answer-today',
-                        image: 'https://wordsolverx.com/images/spotle-answer-today.webp',
-                        datePublished: publishedDate,
-                        dateModified: publishedDate
-                })
-        );
 
         function toSpotifyArtistUrl(uri?: string): string | null {
                 if (!uri?.startsWith('spotify:artist:')) {
@@ -81,7 +71,6 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
         {#if schemaJson}
                 {@html `<script type="application/ld+json">${schemaJson}</script>`}
         {/if}
@@ -332,7 +321,9 @@
 
                 <div class="mt-12">
                         <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['spotle-answer-today']} />
+  <AnswerArticle content={ARTICLE_CONTENT['spotle-answer-today']}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

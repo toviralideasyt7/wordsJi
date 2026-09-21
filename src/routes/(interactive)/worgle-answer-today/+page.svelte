@@ -5,10 +5,10 @@
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
         import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
-        import { generateArticleSchema, generateWebPageSchema } from '$lib/seo';
+        import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema } from '$lib/seo';
 
         let { data }: {
                 data: {
@@ -35,15 +35,7 @@
                                         image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
                                         dateModified: data.todayKey
                                 }
-                        ),
-                        generateArticleSchema({
-                                headline: data.meta.title,
-                                description: data.meta.description,
-                                url: 'https://wordsolverx.com/worgle-answer-today',
-                                image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
-                                datePublished: publishedDate,
-                                dateModified: publishedDate
-                        })
+                        )
                 ])
         );
 
@@ -393,7 +385,9 @@
                 {/if}
 
                 <div class="mt-12">
-                        <StaticArticle content={ARTICLE_CONTENT['worgle-answer-today']} vars={{ date: data.formattedDate, answer: data.todayEntry.word.toUpperCase() }} />
+                        <AnswerArticle content={ARTICLE_CONTENT['worgle-answer-today']} vars={{ date: data.formattedDate, answer: data.todayEntry.word.toUpperCase() }}
+                          verified={publishedDate}
+                        />
 
 
                         <AuthorCard

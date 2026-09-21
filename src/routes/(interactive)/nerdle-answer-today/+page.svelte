@@ -2,7 +2,7 @@
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
         import type { NerdleModeData } from '$lib/nerdle-answers';
@@ -11,7 +11,7 @@
                 PRESTON_HAYES_AUTHOR_IMAGE,
                 PRESTON_HAYES_AUTHOR_NAME
         } from '$lib/authors';
-        import { stripStructuredDataTypes } from '$lib/seo';
+        import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
         let { data } = $props();
 
@@ -28,7 +28,7 @@
                         .join(' | ')
         );
         const cleanedSchemas = $derived(
-                stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+                stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
         );
 
         function getTileStyle(_char: string, index: number): string {
@@ -192,8 +192,10 @@
                         </section>
 
                         <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['nerdle-answer-today']} />
-</div>
+                                <AnswerArticle content={ARTICLE_CONTENT['nerdle-answer-today']}
+                                        verified={data.answerData.date}
+                                />
+                        </div>
 
 <AuthorCard
                                 name={PRESTON_HAYES_AUTHOR_NAME}

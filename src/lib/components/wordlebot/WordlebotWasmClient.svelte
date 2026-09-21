@@ -21,6 +21,45 @@
       .replace(/\.shadow-body/g, '.wasm-body');
   }
 
+  /**
+   * Bridge the site's design tokens into the shadow root.
+   *
+   * Custom properties inherit across a shadow boundary, so the solver only has to
+   * re-point its own variables at the outer ones instead of hard-coding a second
+   * palette. Chrome — panel, borders, text, accent, radii, shadows — follows the
+   * page; the three feedback colours are left alone, because green/yellow/gray is
+   * what the puzzle feedback means, not a theme choice.
+   *
+   * Appended after the solver stylesheet so these declarations win on order, and
+   * `background: transparent` replaces the sheet's own beige body gradient with
+   * the card's surface colour.
+   */
+  const HOST_TOKEN_BRIDGE = `
+:host {
+  --background: var(--color-bg-secondary, #f8fafc);
+  --panel: var(--color-bg-primary, #ffffff);
+  --panel-strong: var(--color-bg-primary, #ffffff);
+  --text-color: var(--color-text-primary, #0f172a);
+  --muted-text: var(--color-text-tertiary, #64748b);
+  --link-border: var(--color-border, #e2e8f0);
+  --card-border: var(--color-border, #e2e8f0);
+  --accent: var(--color-primary-600, #0d9488);
+  --accent-soft: var(--color-primary-50, #f0fdfa);
+  --button-text: var(--color-bg-primary, #ffffff);
+  --radius-tile: var(--radius-sm, 0.5rem);
+  --radius-card: var(--radius-lg, 1rem);
+  --radius-pill: 9999px;
+  --shadow-soft: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --shadow-hover: var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.07));
+  --shadow-tile: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --transition-smooth: var(--duration-normal, 220ms) var(--easing-in-out, cubic-bezier(0.4, 0, 0.2, 1));
+}
+.wasm-body {
+  background: transparent;
+  color: var(--text-color);
+}
+`;
+
   async function start() {
     if (!host || isStarted || isLoading) {
       return;
@@ -41,7 +80,7 @@
       shadowRoot.innerHTML = '';
 
       const style = document.createElement('style');
-      style.textContent = prepareShadowStyles(rawStyles);
+      style.textContent = prepareShadowStyles(rawStyles) + HOST_TOKEN_BRIDGE;
 
       const body = document.createElement('div');
       body.className = 'wasm-body';
@@ -169,28 +208,27 @@
   {/if}
 
   {#if errorMessage}
-    <div class="mx-auto w-full max-w-5xl px-4 py-6 text-center sm:px-6 lg:px-8">
-      <div class="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
-        {errorMessage}
-        <button
-          type="button"
-          class="ml-2 font-semibold underline"
-          onclick={() => void start()}
-        >
-          Retry
-        </button>
-      </div>
+    <div class="mb-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+      {errorMessage}
+      <button
+        type="button"
+        class="ml-2 font-semibold underline"
+        onclick={() => void start()}
+      >
+        Retry
+      </button>
     </div>
   {/if}
 
   <div
     bind:this={host}
     class="solver-host block w-full"
-    style="min-height: 280px;"
   ></div>
 </div>
 
 <style>
+  /* Reserved while the solver is still loading, so the framed card does not
+     resize under the reader when the engine mounts. */
   .solver-host {
     display: block;
     width: 100%;

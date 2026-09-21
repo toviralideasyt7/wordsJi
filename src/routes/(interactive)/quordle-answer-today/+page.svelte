@@ -4,10 +4,10 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import QuordleAnswerCard from '$lib/components/QuordleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
-  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -28,7 +28,7 @@
     )
   );
   const cleanedSchemas = $derived(
-    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+    stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
   );
 </script>
 
@@ -207,7 +207,9 @@
 
     <div class="mt-12">
       <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['quordle-answer-today']} />
+  <AnswerArticle content={ARTICLE_CONTENT['quordle-answer-today']}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

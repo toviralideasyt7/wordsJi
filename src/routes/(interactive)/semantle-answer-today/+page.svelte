@@ -5,10 +5,10 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import SemantleClues from '$lib/components/SemantleClues.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
-  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -29,7 +29,7 @@
     )
   );
   const cleanedSchemas = $derived(
-    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+    stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
   );
 </script>
 
@@ -198,7 +198,9 @@
 
       <div class="mb-12">
         <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['semantle-answer-today']} vars={{ date: data.formattedDate, number: data.puzzleNumber ? String(data.puzzleNumber) : '' }} />
+  <AnswerArticle content={ARTICLE_CONTENT['semantle-answer-today']} vars={{ date: data.formattedDate, number: data.puzzleNumber ? String(data.puzzleNumber) : '' }}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

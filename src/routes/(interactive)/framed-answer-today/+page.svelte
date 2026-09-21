@@ -2,7 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
@@ -13,7 +13,7 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
-  import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   const todayKey = getMainDailyDateKey();
@@ -25,16 +25,6 @@
   );
   const featuredEntry = $derived(data.hasExactEntries ? data.entries[0] ?? null : null);
   const remainingEntries = $derived(data.hasExactEntries ? data.entries.slice(1) : []);
-  const articleSchema = $derived(
-    generateArticleSchema({
-      headline: data.meta.title,
-      description: data.meta.description,
-      url: data.meta.canonical,
-      image: `https://wordsolverx.com${data.meta.featuredImage}`,
-      datePublished: publishedDate,
-      dateModified: publishedDate
-    })
-  );
 </script>
 
 <svelte:head>
@@ -52,8 +42,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
-  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
-  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -171,7 +160,9 @@
     </article>
     {/if}
 
-    <StaticArticle content={ARTICLE_CONTENT['framed-answer-today']} vars={{ date: data.formattedDate, answer: data.entries?.[0]?.answer ?? '' }} />
+    <AnswerArticle content={ARTICLE_CONTENT['framed-answer-today']} vars={{ date: data.formattedDate, answer: data.entries?.[0]?.answer ?? '' }}
+      verified={publishedDate}
+    />
 
 
 

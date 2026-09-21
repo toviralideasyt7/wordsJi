@@ -5,7 +5,7 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
@@ -14,7 +14,6 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import {
-    generateArticleSchema,
     generatePersonAuthorSchema,
     generateWebPageSchema
   } from '$lib/seo';
@@ -87,16 +86,6 @@
       'https://wordsolverx.com/author-wordsolverx.webp'
     )
   });
-  const articleSchema = $derived(
-    generateArticleSchema({
-      headline: metaTitle,
-      description: pageDescription,
-      url: 'https://wordsolverx.com/searchle-answer-today',
-      image: 'https://wordsolverx.com/images/searchle-answer-today.webp',
-      datePublished: publishedDate,
-      dateModified: publishedDate
-    })
-  );
 </script>
 
 <svelte:head>
@@ -110,7 +99,6 @@
   <meta property="og:site_name" content="WordSolverX" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://wordsolverx.com/searchle-answer-today" />
-  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
 </svelte:head>
 
@@ -201,7 +189,9 @@
 
 
     <div class="mt-12">
-      <StaticArticle content={ARTICLE_CONTENT['searchle-answer-today']} vars={{ date: todayLabel, answer: todayPuzzle.answer.toUpperCase() }} />
+      <AnswerArticle content={ARTICLE_CONTENT['searchle-answer-today']} vars={{ date: todayLabel, answer: todayPuzzle.answer.toUpperCase() }}
+        verified={publishedDate}
+      />
 
 
       <AuthorCard

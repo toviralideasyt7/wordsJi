@@ -29,7 +29,13 @@
           url: currentUrl,
           image: 'https://wordsolverx.com/wordsolverx.webp',
           datePublished: (page.data?.publishedDate as string | undefined) ?? new Date().toISOString().split('T')[0],
-          dateModified: (page.data?.modifiedDate as string | undefined) ?? new Date().toISOString().split('T')[0],
+          // Daily answer pages rebuild every puzzle day but set only publishedDate,
+          // so falling straight through to the build date would report an edit that
+          // did not happen. Prefer the puzzle date; guides still supply modifiedDate.
+          dateModified:
+            (page.data?.modifiedDate as string | undefined) ??
+            (page.data?.publishedDate as string | undefined) ??
+            new Date().toISOString().split('T')[0],
           authorName: 'Preston Hayes',
           authorImage: 'https://wordsolverx.com/author-wordsolverx.webp',
           authorJobTitle: 'Puzzle Content Editor',

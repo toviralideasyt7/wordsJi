@@ -4,7 +4,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -12,7 +12,7 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import type { WordleAnswer } from '$lib/api';
-  import { stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
 
@@ -25,7 +25,7 @@
     data.publishedDate ?? (data.wordleData?.date ? `${data.wordleData.date}T00:00:00Z` : null)
   );
   const cleanedSchemas = $derived(
-    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+    stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
   );
 </script>
 
@@ -121,13 +121,15 @@
     {/if}
 
     <div class="mt-12">
-      <StaticArticle
+      <AnswerArticle
         content={ARTICLE_CONTENT['wordle-answer-today']}
         vars={{
           date: data.formattedDate,
           answer: data.wordleWord?.toUpperCase() ?? '',
           number: data.wordleNumber ? String(data.wordleNumber) : ''
         }}
+
+        verified={publishedDate}
       />
     </div>
 

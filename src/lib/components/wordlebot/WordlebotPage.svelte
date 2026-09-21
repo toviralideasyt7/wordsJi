@@ -1,12 +1,20 @@
 <script lang="ts">
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import FAQSection from '$lib/components/FAQSection.svelte';
+        import AuthorCard from '$lib/components/AuthorCard.svelte';
+        import ArticleAttribution from '$lib/components/ArticleAttribution.svelte';
+        import StaticArticle from '$lib/components/StaticArticle.svelte';
         import WordlebotWasmClient from '$lib/components/wordlebot/WordlebotWasmClient.svelte';
         import { getWordlebotStructuredData } from '$lib/wordlebot-wasm/route-config';
+        import { getWordlebotGame } from '$lib/wordlebot-wasm/game-config';
         import { getCanucklePagePath } from '$lib/wordlebot-wasm/routes';
         import type { WordlebotPageConfig } from '$lib/wordlebot-wasm/types';
-        import StaticArticle from '$lib/components/StaticArticle.svelte';
         import { ARTICLE_CONTENT } from '$lib/content/registry';
+        import {
+                PRESTON_HAYES_AUTHOR_DESCRIPTION,
+                PRESTON_HAYES_AUTHOR_IMAGE,
+                PRESTON_HAYES_AUTHOR_NAME
+        } from '$lib/authors';
 
         let { config }: { config: WordlebotPageConfig } = $props();
 
@@ -52,6 +60,34 @@
                 isCanuckleTodayPage ? 'today' : isCanuckleArchivePage ? 'archive' : 'solver'
         );
         let displayTitle = $derived(config.displayTitle ?? config.title);
+
+        /**
+         * The solver card's own heading. It names the tool rather than repeating the
+         * <h1>: the page title carries the search intent, this one tells you what the
+         * box you are about to use does.
+         */
+        const MULTI_BOARD_GAMES = ['dordle', 'quordle', 'octordle'];
+
+        let solverHeading = $derived.by(() => {
+                const app = config.appConfig;
+                if (app.pageType !== 'solver') return config.title;
+                if (app.game === 'wordle') return `${app.wordLength ?? 5}-Letter Wordle Solver`;
+                return `${getWordlebotGame(app.game).name} Solver`;
+        });
+
+        let solverHint = $derived.by(() => {
+                const app = config.appConfig;
+                return app.pageType === 'solver' && MULTI_BOARD_GAMES.includes(app.game)
+                        ? 'Type a guess, match the clue tiles on every board, then review the ranked answers.'
+                        : 'Type a guess, match the clue tiles to your puzzle, then review the ranked answers.';
+        });
+
+        /** The date the solver datasets were last rolled forward, from the loader. */
+        let dataUpdated = $derived(config.dataUpdated ?? null);
+
+        let solverArticleContent = $derived(
+                solverArticleKey ? ARTICLE_CONTENT[solverArticleKey] : undefined
+        );
 </script>
 
 <svelte:head>
@@ -77,249 +113,169 @@
         {@html `<script type="application/ld+json">${structuredData}</script>`}
 </svelte:head>
 
-{#if isWordleLengthPage}
-        <div class="min-h-screen bg-slate-50 dark:bg-slate-800/30">
-                <section class="bg-gradient-to-r from-teal-600 to-teal-500 py-16 shadow-lg">
-                        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                                <Breadcrumbs />
-                                <div class="mt-6 text-center">
-                                        <p class="text-sm font-bold uppercase tracking-[0.28em] text-teal-100">
-                                                {config.eyebrow}
-                                        </p>
-                                        <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
-                                                {config.title}
-                                        </h1>
-                                        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/90 sm:text-2xl">
-                                                {config.description}
-                                        </p>
-                                        <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm font-bold text-teal-100">
-                                                {#each config.chips as chip}
-                                                        <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2">
-                                                                {chip}
-                                                        </span>
-                                                {/each}
-                                        </div>
-                                        {#if config.cta}
-                                                <a
-                                                        class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-teal-700 shadow-lg shadow-teal-900/20 transition hover:-translate-y-0.5 hover:shadow-xl"
-                                                        href={config.cta.href}
-                                                >
-                                                        {config.cta.label}
-                                                </a>
-                                        {/if}
-                                </div>
-                        </div>
-                </section>
+<!--
+  One shell for all three page families. The previous version had a separate
+  gradient hero per family, a `grid lg:grid-cols-[1.2fr_0.8fr]` on the Canuckle
+  panel with only one child (so the second column was permanently empty), and
+  the solver mounted bare between two sections. Now the page is: heading block,
+  the solver in a framed card with its own header and reserved height, the
+  how-to steps, the article, the FAQ, and the author/corrections block.
+-->
+<div class="bg-slate-50 dark:bg-slate-900/40">
+        <div class="mx-auto max-w-5xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
+                <Breadcrumbs />
 
-                <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-                        <noscript>
-                                <div class="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-                                        <p class="text-sm font-bold uppercase tracking-[0.24em] text-teal-600">
-                                                JavaScript disabled
-                                        </p>
-                                        <p class="mt-3 text-base leading-7 text-slate-600">
-                                                {config.title} works best with JavaScript enabled. You can still use the
-                                                guide, FAQ, and strategy sections below without the interactive solver.
-                                        </p>
-                                </div>
-                        </noscript>
-                        <WordlebotWasmClient config={config.appConfig} />
-                </div>
-
-                <div class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
-                        <div class="rounded-3xl border border-slate-200 bg-white p-2 shadow-xl">
-                                <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
-                        </div>
-                </div>
-
-                <section class="mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
-                        <div class="rounded-3xl border border-slate-200 bg-white p-10 shadow-xl">
-                                <h2 class="text-center text-3xl font-black tracking-tight text-slate-900">
-                                        {config.howToTitle}
-                                </h2>
-                                <div class="mt-10 grid gap-8 md:grid-cols-3">
-                                        {#each config.howToSteps as step, index}
-                                                <div class="space-y-4 rounded-2xl bg-teal-50 p-6">
-                                                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-sm font-black text-teal-700">
-                                                                {index + 1}
-                                                        </div>
-                                                        <h3 class="text-xl font-bold text-slate-900">{step.name}</h3>
-                                                        <p class="leading-7 text-slate-600">{step.text}</p>
-                                                </div>
-                                        {/each}
-                                </div>                                        </div>
-
-                </section>
-
-                <div class="mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
-                        <div class="pt-4">
-                                {#if solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
-                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
-                                {/if}
-                        </div>
-                </div>
-        </div>
-{:else if isCanuckleFamilyPage}
-        <div class="min-h-screen bg-[linear-gradient(180deg,#fff8f7_0%,#ffffff_42%,#f8fafc_100%)]">
-                <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-                        <Breadcrumbs />
-
-                        <section class="overflow-hidden rounded-[2rem] border border-rose-100 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.18),transparent_34%),linear-gradient(135deg,#ffffff_0%,#fff5f5_40%,#f8fafc_100%)] p-6 shadow-[0_28px_80px_rgba(239,68,68,0.09)] sm:p-8">
-                                <nav class="mb-6 flex flex-wrap gap-2" aria-label="Canuckle pages">
-                                        {#each canuckleTabs as tab}
-                                                <a
-                                                        class={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                                                                tab.key === activeCanuckleTab
-                                                                        ? 'border-rose-300 bg-rose-600 text-white shadow-sm'
-                                                                        : 'border-rose-200 bg-white/80 text-rose-700 hover:border-rose-300 hover:bg-rose-50'
-                                                        }`}
-                                                        href={tab.href}
-                                                >
-                                                        {tab.label}
-                                                </a>
-                                        {/each}
-                                </nav>
-
-                                <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-                                        <div>
-                                                <p class="inline-flex rounded-full border border-rose-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-rose-700">
-                                                        {config.eyebrow}
-                                                </p>
-                                                <h1 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-                                                        {displayTitle}
-                                                </h1>
-                                                <p class="mt-4 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                                                        {config.description}
-                                                </p>
-                                                <div class="mt-6 flex flex-wrap gap-3">
-                                                        {#if config.cta}
-                                                                <a
-                                                                        class="inline-flex items-center gap-2 rounded-full bg-rose-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-rose-500/20 transition hover:-translate-y-0.5 hover:bg-rose-500"
-                                                                        href={config.cta.href}
-                                                                >
-                                                                        {config.cta.label}
-                                                                </a>
-                                                        {/if}
-                                                        {#if activeCanuckleTab !== 'solver'}
-                                                                <a
-                                                                        class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white px-5 py-3 text-sm font-bold text-rose-700 transition hover:border-rose-300 hover:bg-rose-50"
-                                                                        href={getCanucklePagePath('solver')}
-                                                                >
-                                                                        Open Canuckle solver
-                                                                </a>
-                                                        {/if}
-                                                </div>
-                                        </div>
-
-                                        </div>
-                        </section>
-                </div>
-
-                <div class="pb-10">
-                        <noscript>
-                                <div class="mx-auto max-w-5xl rounded-3xl border border-rose-100 bg-white p-6 text-center shadow-sm">
-                                        <p class="text-sm font-bold uppercase tracking-[0.24em] text-rose-600">
-                                                JavaScript disabled
-                                        </p>
-                                        <p class="mt-3 text-base leading-7 text-slate-600">
-                                                {config.title} works best with JavaScript enabled. The page guide and FAQ
-                                                remain available even without the interactive solver.
-                                        </p>
-                                </div>
-                        </noscript>
-                        <WordlebotWasmClient config={config.appConfig} />
-                </div>
-
-                <div class="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-                        <div class="pt-10">
-                                {#if isCanuckleSolverPage && solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
-                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
-                                {/if}
-                        </div>
-
-                        <div class="rounded-[2rem] border border-rose-100 bg-white p-2 shadow-[0_24px_70px_rgba(239,68,68,0.08)]">
-                                <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
-                        </div>
-
-                </div>
-        </div>
-{:else}
-        <div class="min-h-screen bg-[linear-gradient(180deg,#f7fbf8_0%,#ffffff_36%,#f7f4eb_100%)]">
-                <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-                        <Breadcrumbs />
-
-                        <section class="mb-8 overflow-hidden rounded-[2rem] border border-teal-100 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.16),transparent_34%),linear-gradient(135deg,#ffffff_0%,#f7fbf8_45%,#f8f1e5_100%)] p-6 shadow-[0_28px_80px_rgba(16,185,129,0.08)] sm:p-8">
-                                <div class="flex flex-wrap items-start justify-between gap-6">
-                                        <div class="max-w-3xl">
-                                                <p class="inline-flex rounded-full border border-teal-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">
-                                                        {config.eyebrow}
-                                                </p>
-                                                <h1 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-                                                        {config.title}
-                                                </h1>
-                                                <p class="mt-4 max-w-2xl text-base leading-8 text-slate-600">
-                                                        {config.description}
-                                                </p>
-
-                                                {#if config.cta}
-                                                        <a
-                                                                class="mt-5 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white px-4 py-2 text-sm font-semibold text-teal-700 transition hover:border-teal-300 hover:bg-teal-50"
-                                                                href={config.cta.href}
-                                                        >
-                                                                {config.cta.label}
-                                                        </a>
-                                                {/if}
-                                        </div>
-
-                                        <div class="flex flex-wrap gap-2">
-                                                {#each config.chips as chip}
-                                                        <span class="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700">
-                                                                {chip}
-                                                        </span>
-                                                {/each}
-                                        </div>
-                                </div>
-                        </section>
-
-                        <section class="grid gap-4 md:grid-cols-3">
-                                {#each config.howToSteps as step, index}
-                                        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                                                <p class="text-sm font-bold uppercase tracking-[0.24em] text-teal-600">
-                                                        Step {index + 1}
-                                                </p>
-                                                <h2 class="mt-3 text-xl font-black text-slate-900">{step.name}</h2>
-                                                <p class="mt-3 leading-7 text-slate-600">{step.text}</p>
-                                        </article>
+                {#if isCanuckleFamilyPage}
+                        <nav class="mb-5 flex flex-wrap gap-2" aria-label="Canuckle pages">
+                                {#each canuckleTabs as tab}
+                                        <a
+                                                class="rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${tab.key ===
+                                                activeCanuckleTab
+                                                        ? 'border-slate-900 bg-slate-900 text-white'
+                                                        : 'border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-100'}"
+                                                href={tab.href}
+                                                aria-current={tab.key === activeCanuckleTab ? 'page' : undefined}
+                                        >
+                                                {tab.label}
+                                        </a>
                                 {/each}
-                        </section>
-                </div>
+                        </nav>
+                {/if}
 
-                <div class="pb-10">
-                        <noscript>
-                                <div class="mb-8 rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-                                        <p class="text-sm font-bold uppercase tracking-[0.24em] text-teal-600">
-                                                JavaScript disabled
-                                        </p>
-                                        <p class="mt-3 text-base leading-7 text-slate-600">
-                                                {config.title} works best with JavaScript enabled. You can still read the
-                                                overview, FAQ, and page sections below.
-                                        </p>
+                <header class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-teal-700">
+                                {config.eyebrow}
+                        </p>
+                        <h1 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl">
+                                {displayTitle}
+                        </h1>
+                        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+                                {config.description}
+                        </p>
+
+                        {#if config.chips.length > 0}
+                                <ul class="mt-5 flex flex-wrap gap-2">
+                                        {#each config.chips as chip}
+                                                <li
+                                                        class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600"
+                                                >
+                                                        {chip}
+                                                </li>
+                                        {/each}
+                                </ul>
+                        {/if}
+
+                        {#if config.cta}
+                                <p class="mt-5 text-sm">
+                                        <a
+                                                class="font-semibold text-teal-700 underline-offset-4 hover:underline"
+                                                href={config.cta.href}
+                                        >
+                                                {config.cta.label}
+                                        </a>
+                                </p>
+                        {/if}
+                </header>
+
+                <!-- Solver card: the framing is the page's, the engine inside is untouched. -->
+                <section
+                        class="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                        aria-labelledby="solver-heading"
+                >
+                        <div
+                                class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-slate-200 px-5 py-4"
+                        >
+                                <div class="min-w-0">
+                                        <h2 id="solver-heading" class="text-lg font-extrabold tracking-tight text-slate-900">
+                                                {solverHeading}
+                                        </h2>
+                                        <p class="mt-0.5 text-sm text-slate-500">{solverHint}</p>
                                 </div>
+                                <p
+                                        class="rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800"
+                                >
+                                        Runs in your browser
+                                </p>
+                        </div>
+
+                        <div class="bg-slate-50/60 px-3 py-4 sm:px-5 sm:py-6">
+                                <WordlebotWasmClient config={config.appConfig} />
+                        </div>
+
+                        <noscript>
+                                <p
+                                        class="border-t border-slate-200 px-5 py-3 text-sm text-slate-600"
+                                >
+                                        The interactive solver needs JavaScript. The instructions, FAQ, and guide below
+                                        work without it.
+                                </p>
                         </noscript>
-                        <WordlebotWasmClient config={config.appConfig} />
+                </section>
+
+                <section class="mt-8" aria-labelledby="solver-steps-heading">
+                        <h2
+                                id="solver-steps-heading"
+                                class="text-2xl font-extrabold tracking-tight text-slate-900"
+                        >
+                                {config.howToTitle}
+                        </h2>
+                        <ol class="mt-5 grid gap-4 sm:grid-cols-3">
+                                {#each config.howToSteps as step, index}
+                                        <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                                                <p
+                                                        class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-600 text-sm font-bold text-white"
+                                                        aria-hidden="true"
+                                                >
+                                                        {index + 1}
+                                                </p>
+                                                <h3 class="mt-3 font-bold text-slate-900">{step.name}</h3>
+                                                <p class="mt-2 text-sm leading-relaxed text-slate-600">{step.text}</p>
+                                        </li>
+                                {/each}
+                        </ol>
+                </section>
+
+                {#if solverArticleContent}
+                        <!-- Same presentation tier as the -answer-today pages (attribution
+                             line, large type scale, scroll-reveal) but rendered from the
+                             two data-free pieces. <AnswerArticle> is not used here: it
+                             statically imports answer-deep-dives.ts, and none of the solver
+                             articles have entries in it, so every solver page would preload
+                             ~31 KB of daily-answer content it never renders. -->
+                        <div class="mt-10">
+                                <ArticleAttribution verified={dataUpdated} />
+                                <StaticArticle
+                                        content={solverArticleContent}
+                                        containerClass="w-full max-w-none"
+                                        scale="large"
+                                        motion={true}
+                                />
+                        </div>
+                {/if}
+
+                <div class="mt-10 rounded-3xl border border-slate-200 bg-white p-2 shadow-sm">
+                        <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
                 </div>
 
-                <div class="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-                        <div class="pt-10">
-                                {#if solverArticleKey && ARTICLE_CONTENT[solverArticleKey]}
-                                        <StaticArticle content={ARTICLE_CONTENT[solverArticleKey]} />
-                                {/if}
-                        </div>
-
-                        <div class="rounded-[2rem] border border-slate-200 bg-white/85 p-2 shadow-[0_24px_70px_rgba(148,163,184,0.12)]">
-                                <FAQSection class="py-0" title={config.faqTitle} faqs={config.faqs} />
-                        </div>
-
+                <div class="mt-10">
+                        <AuthorCard
+                                name={PRESTON_HAYES_AUTHOR_NAME}
+                                image={PRESTON_HAYES_AUTHOR_IMAGE}
+                                description={PRESTON_HAYES_AUTHOR_DESCRIPTION}
+                        />
                 </div>
+
+                <p class="mt-6 text-sm text-slate-500">
+                        Spotted a wrong word or a broken suggestion?
+                        <a href="/contact" class="font-semibold text-teal-700 underline-offset-2 hover:underline"
+                                >Report it</a
+                        >
+                        and see
+                        <a
+                                href="/editorial-policy"
+                                class="font-semibold text-teal-700 underline-offset-2 hover:underline"
+                                >how corrections work</a
+                        >.
+                </p>
         </div>
-{/if}
+</div>

@@ -25,7 +25,12 @@ const config = {
 					}
 				: {})
 		}),
-		inlineStyleThreshold: 4096,
+		// 0 = never inline stylesheets into the document. Anything inlined is
+		// re-downloaded with every navigation and can never be cached; at 4096
+		// this was putting 0.7–3.8 KB of component CSS into every answer and
+		// solver document. External CSS files are cached across pages, so the
+		// only cost is one extra request on a cold cache.
+		inlineStyleThreshold: 0,
 		prerender: {
 			crawl: false,
 			entries: PRERENDER_ENTRIES

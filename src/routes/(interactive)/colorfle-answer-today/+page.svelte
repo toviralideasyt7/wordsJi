@@ -2,7 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -13,7 +13,7 @@
   } from '$lib/authors';
   import type { ApiColorfleModeAnswer } from '$lib/color-answers-api';
   import { getContrastColor } from '$lib/colorfle';
-  import { generateArticleSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   let revealed = $state(false);
@@ -21,16 +21,6 @@
   const publishedDate = $derived(data.publishedDate ?? null);
   const answer = $derived(data.answer ?? null);
   const recentEntries = $derived(data.recentEntries ?? []);
-  const articleSchema = $derived(
-    generateArticleSchema({
-      headline: data.meta.title,
-      description: data.meta.description,
-      url: data.meta.canonical,
-      image: `https://wordsolverx.com${data.meta.featuredImage}`,
-      datePublished: publishedDate ?? undefined,
-      dateModified: publishedDate ?? undefined
-    })
-  );
   const noscriptAnswer = $derived(
     answer
       ? `Normal: ${answer.normal.colors.map((color) => color.name).join(', ')}. Hard: ${answer.hard.colors.map((color) => color.name).join(', ')}.`
@@ -79,9 +69,8 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
-  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {#if data.schemas}
-    {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
+    {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
   {/if}
 </svelte:head>
 
@@ -343,7 +332,9 @@
       {/if}
 
       <div class="mt-8">
-        <StaticArticle content={ARTICLE_CONTENT['colorfle-answer-today']} vars={{ date: data.formattedDate, answer: data.answer?.normal?.targetColor?.hex ?? '' }} />
+        <AnswerArticle content={ARTICLE_CONTENT['colorfle-answer-today']} vars={{ date: data.formattedDate, answer: data.answer?.normal?.targetColor?.hex ?? '' }}
+          verified={publishedDate}
+        />
 
 
         <AuthorCard

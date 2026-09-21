@@ -3,7 +3,7 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
@@ -69,34 +69,6 @@
 
   let schemas = $derived.by(() =>
     JSON.stringify([
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: data.meta.title,
-        description: data.meta.description,
-        mainEntityOfPage: data.meta.canonical,
-        image: 'https://wordsolverx.com/images/betweenle-answer-today.webp',
-        keywords: data.meta.keywords,
-        datePublished: `${data.todayAnswer.date}T00:00:00Z`,
-        dateModified: `${data.todayAnswer.date}T00:00:00Z`,
-        author: {
-          '@type': 'Person',
-          name: 'Preston Hayes',
-          url: 'https://wordsolverx.com/about#preston-hayes',
-          image: 'https://wordsolverx.com/author-wordsolverx.webp',
-          jobTitle: 'Word Puzzle Analyst',
-          knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-          sameAs: ['https://www.pinterest.com/wordsolverx/']
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'WordSolverX',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://wordsolverx.com/images/betweenle-answer-today.webp',
-          },
-        },
-      },
       generateBreadcrumbSchema([
         { name: 'Home', url: 'https://wordsolverx.com' },
         { name: 'Today', url: 'https://wordsolverx.com/today' },
@@ -327,7 +299,9 @@
   </article>
   {/if}
     <div class="mx-auto mt-12 max-w-4xl px-4 sm:px-6 lg:px-8">
-      <StaticArticle content={ARTICLE_CONTENT['betweenle-answer-today']} vars={{ date: data.todaySeoDate, answer: data.todayAnswer.word.toUpperCase() }} />
+      <AnswerArticle content={ARTICLE_CONTENT['betweenle-answer-today']} vars={{ date: data.todaySeoDate, answer: data.todayAnswer.word.toUpperCase() }}
+        verified={publishedDate}
+      />
 
 
       <AuthorCard

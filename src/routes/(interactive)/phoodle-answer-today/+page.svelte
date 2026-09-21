@@ -3,11 +3,11 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import PhoodleAnswerCard from '$lib/components/PhoodleAnswerCard.svelte';
-  import { generateArticleSchema, generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -32,14 +32,6 @@
           dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
         }
       ),
-      generateArticleSchema({
-        headline: pageTitle,
-        description: pageDescription,
-        url: 'https://wordsolverx.com/phoodle-answer-today',
-        image: 'https://wordsolverx.com/images/phoodle-answer-today.webp',
-        datePublished: publishedDate ?? undefined,
-        dateModified: publishedDate ?? undefined
-      }),
       generateBreadcrumbSchema([
         { name: 'Home', url: 'https://wordsolverx.com' },
         { name: 'Today', url: 'https://wordsolverx.com/today' },
@@ -215,7 +207,9 @@
       </article>
       <div class="mb-12">
         <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['phoodle-answer-today']} vars={{ date: data.formattedDate }} />
+  <AnswerArticle content={ARTICLE_CONTENT['phoodle-answer-today']} vars={{ date: data.formattedDate }}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

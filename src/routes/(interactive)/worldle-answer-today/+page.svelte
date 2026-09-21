@@ -2,7 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
@@ -13,7 +13,7 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
-  import { stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
 
   let { data } = $props();
   const publishedDate = $derived(`${data.todayDate}T00:00:00Z`);
@@ -36,7 +36,7 @@
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content="https://wordsolverx.com/images/worldle-answer-today.webp" />
-  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo']) ?? data.schemas}</script>`}
+  {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -185,7 +185,9 @@
     {/if}
     <div class="mt-12">
       <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['worldle-answer-today']} vars={{ date: data.formattedTodayDate, country: data.todayAnswer?.country?.name ?? '' }} />
+  <AnswerArticle content={ARTICLE_CONTENT['worldle-answer-today']} vars={{ date: data.formattedTodayDate, country: data.todayAnswer?.country?.name ?? '' }}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

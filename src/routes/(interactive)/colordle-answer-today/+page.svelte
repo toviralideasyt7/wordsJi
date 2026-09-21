@@ -5,9 +5,9 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
-  import { generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
+  import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -37,7 +37,7 @@
     `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim() || null
   );
   const cleanedSchemas = $derived(
-    stripStructuredDataTypes(data.schemas, ['FAQPage', 'HowTo'])
+    stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
   );
 
   const filteredHistory = $derived.by(() => {
@@ -271,12 +271,14 @@
 
       <div class="mt-12">
         <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['colordle-answer-today']} vars={{
+  <AnswerArticle content={ARTICLE_CONTENT['colordle-answer-today']} vars={{
           date: data.formattedDate,
           answer: data.color?.name ?? '',
           hex: data.color?.hex ?? '',
           dayNum: data.dayNum ? String(data.dayNum) : ''
-        }} />
+        }}
+    verified={publishedDate}
+  />
 </div>
 
 <AuthorCard

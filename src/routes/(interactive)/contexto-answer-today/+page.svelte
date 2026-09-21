@@ -3,7 +3,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
-  import StaticArticle from '$lib/components/StaticArticle.svelte';
+  import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     formatContextoDate,
@@ -11,18 +11,13 @@
     getContextoTodayDate
   } from '$lib/contexto';
   import {
-    generateArticleSchema,
     generateBreadcrumbSchema,
     generateWebPageSchema
   } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
-    PRESTON_HAYES_AUTHOR_IMAGE_URL,
     PRESTON_HAYES_AUTHOR_NAME,
-    PRESTON_HAYES_AUTHOR_JOB_TITLE,
-    PRESTON_HAYES_AUTHOR_KNOWS_ABOUT,
-    PRESTON_HAYES_AUTHOR_SAME_AS,
     PRESTON_HAYES_AUTHOR_URL
   } from '$lib/authors';
 
@@ -111,24 +106,6 @@
     )
   );
 
-  // E-E-A-T: Article schema with Person author (not Organization)
-  let articleSchema = $derived(
-    generateArticleSchema({
-      headline: metaTitle,
-      description: pageDescription,
-      url: 'https://wordsolverx.com/contexto-answer-today',
-      image: 'https://wordsolverx.com/images/contexto-answer-today.webp',
-      datePublished: activeDate,
-      dateModified: activeDate,
-      authorName: PRESTON_HAYES_AUTHOR_NAME,
-      authorImage: PRESTON_HAYES_AUTHOR_IMAGE_URL,
-      authorJobTitle: PRESTON_HAYES_AUTHOR_JOB_TITLE,
-      authorDescription: PRESTON_HAYES_AUTHOR_DESCRIPTION,
-      authorKnowsAbout: PRESTON_HAYES_AUTHOR_KNOWS_ABOUT,
-      authorSameAs: PRESTON_HAYES_AUTHOR_SAME_AS,
-    })
-  );
-
   // Breadcrumb schema for navigation
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://wordsolverx.com' },
@@ -157,7 +134,6 @@
   <meta name="twitter:description" content={pageDescription} />
   <link rel="canonical" href="https://wordsolverx.com/contexto-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
-  {@html `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
 </svelte:head>
 
@@ -337,7 +313,9 @@
 
     <div class="mt-12">
       <div class="mt-12">
-  <StaticArticle content={ARTICLE_CONTENT['contexto-answer-today']} />
+  <AnswerArticle content={ARTICLE_CONTENT['contexto-answer-today']}
+    verified={activeDate}
+  />
 </div>
 
 <AuthorCard
