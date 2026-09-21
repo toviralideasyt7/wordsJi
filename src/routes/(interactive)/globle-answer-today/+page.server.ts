@@ -1,19 +1,21 @@
-import { getGlobleDataForDate } from '$lib/globle-date';
-import { format, subDays } from 'date-fns';
+import { resolveGlobleDataForWindow } from '$lib/globle-date';
 import { redirect } from '@sveltejs/kit';
-import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { getPuzzleWindow } from '$lib/puzzle-window';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
-    const today = getPuzzleDateForGame('globle');
-    const data = await getLatestAvailableGlobleData(today);
+export const load: PageServerLoad = async ({ setHeaders }) => {
+    // The window decides which dates are publishable; the resolver refuses anything older than
+    // the effective date or its declared fallback, so this page can no longer relabel an older
+    // country as "today" the way it did when it walked backwards through subDays().
+    const puzzleWindow = getPuzzleWindow('globle');
+    const resolved = await resolveGlobleDataForWindow(puzzleWindow);
 
-    if (!data) {
+    if (!resolved) {
         throw redirect(302, '/globle-archive');
     }
 
-    const { country, formattedDate, date } = data;
-    const dateKey = date instanceof Date ? format(date, 'yyyy-MM-dd') : String(date).split('T')[0];
+    const { data, publishedDateKey } = resolved;
+    const { country, formattedDate } = data;
     const featuredImage = 'https://wordsolverx.com/images/globle-answer-today.webp';
     const pageTitle = `Globle Answer Today (${formattedDate}) - Answer and Hints`;
     const pageDescription = `Get today's Globle country for ${formattedDate}, with the flag, the continent, the subregion, and the distance clues that help you narrow the map.`;
@@ -23,8 +25,8 @@ export const load: PageServerLoad = async () => {
             '@context': 'https://schema.org',
             '@type': 'Article',
             headline: pageTitle,
-            datePublished: new Date(date).toISOString(),
-            dateModified: new Date(date).toISOString(),
+            datePublished: new Date(data.date).toISOString(),
+            dateModified: new Date(data.date).toISOString(),
             author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' },
             publisher: { '@type': 'Organization', name: 'WordSolverX' },
             description: pageDescription,
@@ -33,10 +35,15 @@ export const load: PageServerLoad = async () => {
         }
     ]);
 
+    // Key the edge cache on the date that is actually on the page. hooks.server.ts stores the
+    // response under X-Puzzle-Date, so a render that had to fall back to the previous date can
+    // never be handed out later under the new window's cache key while it is still inside its TTL.
+    setHeaders({ 'X-Puzzle-Date': publishedDateKey });
+
     return {
         country,
         formattedDate,
-        dateKey,
+        dateKey: publishedDateKey,
         schemas: jsonLd,
         meta: {
             title: pageTitle,
@@ -46,16 +53,3 @@ export const load: PageServerLoad = async () => {
         }
     };
 };
-
-async function getLatestAvailableGlobleData(baseDate: Date) {
-    for (let offset = 0; offset < 7; offset += 1) {
-        const candidate = subDays(baseDate, offset);
-        const data = await getGlobleDataForDate(candidate);
-        if (data) {
-            return data;
-        }
-    }
-
-    return null;
-}
-

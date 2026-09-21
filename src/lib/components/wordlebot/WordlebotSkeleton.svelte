@@ -3,13 +3,18 @@
   import { getWordlebotGame } from '$lib/wordlebot-wasm/game-config';
 
   /**
-   * The placeholder shown until the solver mounts.
+   * The placeholder shown until the solver is asked for.
    *
-   * It is deliberately dumb markup: one flat tile list per board, laid out by
-   * `grid-template-columns` instead of nested rows, so a four-board grid costs a
-   * few hundred bytes rather than the ~19 KB of nested divs and hydration
-   * anchors this used to emit. The tiles are decorative (`aria-hidden`); the one
-   * thing announced is the status line.
+   * It is deliberately dumb markup: one flat tile row per board, laid out with the same tile
+   * size and spacing the mounted app uses, plus a block where the suggestion list will land.
+   * Earlier versions drew a full-width board of `aspect-ratio: 1` tiles, which is around
+   * 4-11x taller than the app and made the swap a layout shift; matching the app's own
+   * measurements is what lets the region reserve a height and keep it.
+   *
+   * The status line is an instruction, not a progress status: nothing is downloaded until the
+   * reader points at, taps, or presses a key, so there is no spinner and no "Loading…" copy.
+   *
+   * The tiles are decorative (`aria-hidden`); the one thing announced is the instruction.
    */
   let { config }: { config: WordlebotAppPageConfig } = $props();
 
@@ -19,7 +24,6 @@
     config.pageType === 'solver' && config.wordLength ? config.wordLength : game.lengths[0] ?? 5
   );
   let boardCount = $derived(game.boards);
-  let maxGuesses = $derived(game.defaultMax);
 
   /** One legal opener per length, used as the sample row so the tiles read as a board. */
   const SAMPLE_WORDS: Record<number, string> = {
@@ -39,16 +43,11 @@
 
   let sampleWord = $derived((SAMPLE_WORDS[wordLength] ?? 'CRANE').slice(0, wordLength));
 
-  /**
-   * Row one carries sample feedback so the placeholder looks like a board rather
-   * than a grey grid. Every other slot is empty.
-   */
-  let boardTiles = $derived.by(() =>
-    Array.from({ length: maxGuesses * wordLength }, (_, index) => {
-      const column = index % wordLength;
-      if (Math.floor(index / wordLength) > 0) return { letter: '', state: '' };
-      return { letter: sampleWord[column] ?? '', state: SAMPLE_PATTERN[column % SAMPLE_PATTERN.length] };
-    })
+  let sampleTiles = $derived(
+    Array.from({ length: wordLength }, (_, column) => ({
+      letter: sampleWord[column] ?? '',
+      state: SAMPLE_PATTERN[column % SAMPLE_PATTERN.length]
+    }))
   );
 
   let boardList = $derived(Array.from({ length: boardCount }, (_, index) => index));
@@ -61,14 +60,11 @@
     <div class="line wide"></div>
     <div class="line medium"></div>
   </div>
-  <p class="status" role="status">
-    <span class="spinner" aria-hidden="true"></span>
-    Loading…
-  </p>
+  <p class="status">Point, tap, or press a key to load today's puzzle data.</p>
 {:else}
   <div
     class="skeleton"
-    style="--tile-columns: {wordLength};"
+    style="--word-length: {wordLength};"
   >
     <div class="boards" aria-hidden="true">
       {#each boardList as board}
@@ -76,8 +72,8 @@
           {#if boardCount > 1}
             <p class="board-label">Board {board + 1}</p>
           {/if}
-          <div class="grid">
-            {#each boardTiles as tile}
+          <div class="guess-row">
+            {#each sampleTiles as tile}
               <span class="tile" class:correct={tile.state === 'correct'} class:present={tile.state === 'present'}
                 >{tile.letter}</span
               >
@@ -87,10 +83,14 @@
       {/each}
     </div>
 
-    <p class="status" role="status">
-      <span class="spinner" aria-hidden="true"></span>
-      Loading the solver…
-    </p>
+    <div class="results-placeholder" aria-hidden="true">
+      <p class="line short"></p>
+      <p class="line wide"></p>
+      <p class="line wide"></p>
+      <p class="line medium"></p>
+    </div>
+
+    <p class="status">Point, tap, or press a key to load the solver.</p>
 
     <noscript>
       <p class="noscript">The interactive solver needs JavaScript turned on. The steps and FAQ below still work.</p>
@@ -107,7 +107,9 @@
     align-items: center;
     gap: 1rem;
     width: 100%;
-    padding-bottom: 0.75rem;
+    /* Fills the height the solver region reserved, so the placeholder and the mounted app
+       occupy the same box. */
+    height: 100%;
   }
 
   .boards {
@@ -135,21 +137,25 @@
     text-align: center;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(var(--tile-columns, 5), minmax(0, 1fr));
+  .guess-row {
+    display: flex;
+    justify-content: center;
     gap: 4px;
+    width: 100%;
   }
 
+  /* Same measurements as `.tile` in the solver's own stylesheet, so the placeholder's board
+     and the mounted board are the same size at every viewport width. */
   .tile {
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1;
+    width: min(calc((100vw - 40px) / (var(--word-length, 5) + 0.8)), 62px);
+    height: min(calc((100vw - 40px) / (var(--word-length, 5) + 0.8)), 62px);
     border: 2px solid var(--color-border, #e2e8f0);
-    border-radius: var(--radius-sm, 0.5rem);
+    border-radius: 14px;
     background: #fff;
-    font-size: clamp(0.75rem, 2.2vw, 1.25rem);
+    font-size: clamp(0.9rem, calc(1.9rem - (var(--word-length, 5) - 5) * 0.12rem), 1.9rem);
     font-weight: 700;
     text-transform: uppercase;
     color: var(--color-text-primary, #0f172a);
@@ -165,6 +171,42 @@
     border-color: var(--wordle-yellow, #c9b458);
     background: var(--wordle-yellow, #c9b458);
     color: #fff;
+  }
+
+  /* Stands in for the results panel the engine will render, and takes up the slack in the
+     reserved height so the box looks deliberate rather than half empty. */
+  .results-placeholder {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    min-height: 8rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: var(--radius-lg, 1rem);
+    background: #fff;
+  }
+
+  .results-placeholder .line,
+  .canuckle-skeleton .line {
+    height: 0.875rem;
+    margin: 0;
+    border-radius: 9999px;
+    background: var(--color-neutral-200, #e2e8f0);
+  }
+
+  .results-placeholder .wide,
+  .canuckle-skeleton .wide {
+    width: 100%;
+  }
+  .results-placeholder .medium,
+  .canuckle-skeleton .medium {
+    width: 75%;
+  }
+  .results-placeholder .short,
+  .canuckle-skeleton .short {
+    width: 45%;
   }
 
   .status {
@@ -184,58 +226,18 @@
     color: var(--color-accent-700, #b45309);
   }
 
-  .spinner {
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid var(--color-border, #e2e8f0);
-    border-top-color: var(--color-primary-500, #14b8a6);
-    border-radius: 50%;
-  }
-
   .canuckle-skeleton {
     display: grid;
     gap: 0.625rem;
     width: 100%;
   }
 
-  .canuckle-skeleton .line {
-    height: 0.875rem;
-    border-radius: 9999px;
-    background: var(--color-neutral-200, #e2e8f0);
-  }
-
-  .canuckle-skeleton .wide {
-    width: 100%;
-  }
-  .canuckle-skeleton .medium {
-    width: 75%;
-  }
-  .canuckle-skeleton .short {
-    width: 45%;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .spinner {
-      animation: solver-spin 0.8s linear infinite;
-    }
-    .canuckle-skeleton .line {
-      animation: solver-pulse 1.8s ease-in-out infinite;
-    }
-  }
-
-  @keyframes solver-spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes solver-pulse {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.6;
+  @media (max-width: 520px) {
+    .tile {
+      width: min(calc((100vw - 28px) / (var(--word-length, 5) + 0.8)), 54px);
+      height: min(calc((100vw - 28px) / (var(--word-length, 5) + 0.8)), 54px);
+      border-radius: 10px;
+      font-size: clamp(0.75rem, calc(1.55rem - (var(--word-length, 5) - 5) * 0.1rem), 1.55rem);
     }
   }
 </style>

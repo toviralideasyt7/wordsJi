@@ -1,6 +1,10 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
   import WordlebotSkeleton from './WordlebotSkeleton.svelte';
+  import {
+    getSolverFrameMinHeight,
+    SOLVER_FRAME_MOBILE_EXTRA_PX
+  } from '$lib/wordlebot-wasm/frame-height';
   import type { WordlebotAppPageConfig } from '$lib/wordlebot-wasm/types';
 
   let { config }: { config: WordlebotAppPageConfig } = $props();
@@ -11,6 +15,12 @@
   let isLoading = $state(false);
   let errorMessage = $state('');
   let cleanup: (() => void) | undefined;
+
+  /**
+   * Height the region holds open for the engine, so mounting fills space that is already there
+   * instead of pushing the article below the card down the page.
+   */
+  let frameMinHeight = $derived(getSolverFrameMinHeight(config));
 
   function prepareShadowStyles(css: string) {
     return css
@@ -58,23 +68,82 @@
   background: transparent;
   color: var(--text-color);
 }
+/* The first solve runs on idle right after mounting and replaces a one-line spinner with the
+   ranked suggestion list. Holding the panel at its populated height keeps that swap from
+   growing the page under the reader; the solver's suggestions are untouched. */
+.results-panel {
+  min-height: 440px;
+}
 `;
+
+  /**
+   * The app module and its stylesheet are pulled in once and shared by the preload and the
+   * mount, so hovering the solver and then clicking it costs a single fetch of each.
+   */
+  let appModulePromise: Promise<{
+    mountWordlebotApp: typeof import('$lib/wordlebot-wasm/app').mountWordlebotApp;
+    preloadSolverAssets: typeof import('$lib/wordlebot-wasm/app').preloadSolverAssets;
+    rawStyles: string;
+  }> | null = null;
+
+  function loadAppModule() {
+    if (!appModulePromise) {
+      appModulePromise = Promise.all([
+        import('$lib/wordlebot-wasm/app'),
+        import('$lib/wordlebot-wasm/styles.css?raw')
+      ]).then(([app, styles]) => ({
+        mountWordlebotApp: app.mountWordlebotApp,
+        preloadSolverAssets: app.preloadSolverAssets,
+        rawStyles: styles.default
+      }));
+    }
+
+    return appModulePromise;
+  }
+
+  /**
+   * Warm the engine and its word list for this page's game and length.
+   *
+   * Only ever called on a sign of intent: a pointer entering the solver, focus landing inside
+   * it, a press, or the first key press. Requesting the solver pair (569 KB of solver WASM plus
+   * a 341 KB len5 dictionary for a 5-letter solve) on idle for every visitor — including the
+   * ones who never touch the tool — is the cost this removes.
+   *
+   * There is deliberately no post-load idle fallback. An idle fetch would be the same
+   * speculative download under a different name, and the intent listeners below already start
+   * the load before the click lands.
+   */
+  let preloadStarted = false;
+  function preload() {
+    if (preloadStarted || isStarted) {
+      return;
+    }
+
+    preloadStarted = true;
+    void loadAppModule()
+      .then(({ preloadSolverAssets }) => preloadSolverAssets(config))
+      .catch(() => {
+        // Best effort: real errors surface when the app actually mounts.
+        preloadStarted = false;
+      });
+  }
 
   async function start() {
     if (!host || isStarted || isLoading) {
       return;
     }
 
+    // Before the flag flips: a touch device has no hover step, so this is where its engine
+    // request starts. Both this and the mount go through the same cached module promises, so
+    // the two of them still download the engine and its dictionary once.
+    preload();
     isStarted = true;
     isLoading = true;
     errorMessage = '';
     cleanup?.();
 
     try {
-      const [{ default: rawStyles }, { mountWordlebotApp }] = await Promise.all([
-        import('$lib/wordlebot-wasm/styles.css?raw'),
-        import('$lib/wordlebot-wasm/app')
-      ]);
+      const { rawStyles, mountWordlebotApp } = await loadAppModule();
 
       const shadowRoot = host.shadowRoot ?? host.attachShadow({ mode: 'open' });
       shadowRoot.innerHTML = '';
@@ -103,96 +172,35 @@
     const startOnIntent = () => {
       void start();
     };
-    const interactionEvents: Array<keyof HTMLElementEventMap> = ['pointerdown', 'touchstart'];
-    const removeInteractionListeners = () => {
-      if (!activationTarget) return;
-      interactionEvents.forEach((eventName) => {
-        activationTarget?.removeEventListener(eventName, startOnIntent);
-      });
+    const preloadOnIntent = () => {
+      preload();
     };
 
-    // Preload the app module, styles, and the page-specific WASM solver + dictionary
-    // during idle — non-blocking. This does NOT run any solve logic (suggestions are
-    // unchanged); it only resolves the dynamic imports so that when start() fires on
-    // interaction/idle, the modules are already cached and the app mounts + renders
-    // its first suggestions with no cold-import delay.
-    let preloadStarted = false;
-    const runPreload = () => {
-      if (preloadStarted) return;
-      preloadStarted = true;
-      void Promise.all([
-        import('$lib/wordlebot-wasm/styles.css?raw'),
-        import('$lib/wordlebot-wasm/app').then(({ preloadSolverAssets }) => preloadSolverAssets(config))
-      ]).catch(() => {
-        // Best-effort: real errors surface when the app actually mounts.
-        preloadStarted = false;
-      });
-    };
-    const schedulePreload = () => {
-      if ('requestIdleCallback' in window) {
-        const idleId = window.requestIdleCallback(() => runPreload(), { timeout: 4000 });
-        return () => window.cancelIdleCallback(idleId);
-      }
-      const timeoutId = globalThis.setTimeout(runPreload, 600);
-      return () => globalThis.clearTimeout(timeoutId);
-    };
+    // Intent, then action. A pointer entering the region — or focus landing inside it — buys
+    // the app, the WASM solver and the dictionary ahead of the click; the click mounts from
+    // what is already in flight. Touch devices have no hover step, so their pointerdown starts
+    // the load directly.
+    const preloadEvents: Array<keyof HTMLElementEventMap> = ['pointerenter', 'focusin'];
+    const activationEvents: Array<keyof HTMLElementEventMap> = ['pointerdown', 'touchstart'];
 
-    const scheduleIdleStart = () => {
-      const run = () => {
-        removeInteractionListeners();
-        void start();
-      };
-
-      if ('requestIdleCallback' in window) {
-        const idleId = window.requestIdleCallback(run, { timeout: 2500 });
-        return () => window.cancelIdleCallback(idleId);
-      }
-
-      const timeoutId = globalThis.setTimeout(run, 1500);
-      return () => globalThis.clearTimeout(timeoutId);
-    };
-
-    interactionEvents.forEach((eventName) => {
+    preloadEvents.forEach((eventName) => {
+      activationTarget?.addEventListener(eventName, preloadOnIntent);
+    });
+    activationEvents.forEach((eventName) => {
       activationTarget?.addEventListener(eventName, startOnIntent, { once: true, passive: true });
     });
+    // Keyboard users get the same treatment as pointer users: the first key press is the intent
+    // signal, so the engine is loading before they have typed a guess.
     window.addEventListener('keydown', startOnIntent, { once: true });
 
-    // Kick off the non-blocking preload as soon as the page is done loading (or now).
-    const cancelPreload =
-      document.readyState === 'complete'
-        ? schedulePreload()
-        : (() => {
-            let cancel = () => {};
-            const handleLoad = () => {
-              cancel = schedulePreload();
-            };
-            window.addEventListener('load', handleLoad, { once: true });
-            return () => {
-              window.removeEventListener('load', handleLoad);
-              cancel();
-            };
-          })();
-
-    const cancelIdleStart =
-      document.readyState === 'complete'
-        ? scheduleIdleStart()
-        : (() => {
-            let cancel = () => {};
-            const handleLoad = () => {
-              cancel = scheduleIdleStart();
-            };
-            window.addEventListener('load', handleLoad, { once: true });
-            return () => {
-              window.removeEventListener('load', handleLoad);
-              cancel();
-            };
-          })();
-
     return () => {
-      removeInteractionListeners();
+      preloadEvents.forEach((eventName) => {
+        activationTarget?.removeEventListener(eventName, preloadOnIntent);
+      });
+      activationEvents.forEach((eventName) => {
+        activationTarget?.removeEventListener(eventName, startOnIntent);
+      });
       window.removeEventListener('keydown', startOnIntent);
-      cancelPreload();
-      cancelIdleStart();
       cleanup?.();
     };
   });
@@ -202,10 +210,28 @@
   });
 </script>
 
-<div bind:this={activationTarget}>
-  {#if !isStarted || isLoading}
-    <WordlebotSkeleton {config} />
-  {/if}
+<div
+  bind:this={activationTarget}
+  class="solver-shell"
+  style="--solver-frame-min-height: {frameMinHeight}px; --solver-frame-mobile-extra: {SOLVER_FRAME_MOBILE_EXTRA_PX}px;"
+>
+  <!--
+    One box, two occupants: the server-rendered placeholder and the mounted engine render into
+    the same grid cell, so the region is never blank and swapping one for the other cannot
+    change the region's height.
+  -->
+  <div class="solver-frame">
+    {#if !isStarted || isLoading}
+      <div class="solver-placeholder">
+        <WordlebotSkeleton {config} />
+      </div>
+    {/if}
+
+    <div
+      bind:this={host}
+      class="solver-host"
+    ></div>
+  </div>
 
   {#if errorMessage}
     <div class="mb-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
@@ -219,19 +245,34 @@
       </button>
     </div>
   {/if}
-
-  <div
-    bind:this={host}
-    class="solver-host block w-full"
-  ></div>
 </div>
 
 <style>
-  /* Reserved while the solver is still loading, so the framed card does not
-     resize under the reader when the engine mounts. */
-  .solver-host {
+  .solver-shell {
     display: block;
     width: 100%;
-    min-height: 280px;
+  }
+
+  /* Reserves the mounted app's height before it exists, and lets the placeholder and the engine
+     share one cell so the swap is height neutral. */
+  .solver-frame {
+    display: grid;
+    width: 100%;
+    min-height: var(--solver-frame-min-height, 0);
+  }
+
+  .solver-placeholder,
+  .solver-host {
+    grid-area: 1 / 1;
+    width: 100%;
+  }
+
+  /* Matches the app's own breakpoint: below 520px its settings grid and guess entry stack. */
+  @media (max-width: 520px) {
+    .solver-frame {
+      min-height: calc(
+        var(--solver-frame-min-height, 0px) + var(--solver-frame-mobile-extra, 0px)
+      );
+    }
   }
 </style>

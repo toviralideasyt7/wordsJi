@@ -1,5 +1,5 @@
 import { startOfDay, format, subDays, addDays } from 'date-fns';
-import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { getPuzzleDateForGame, parsePuzzleDateKey, type PuzzleWindow } from '$lib/puzzle-window';
 import countries from '$lib/data/globle-countries.json';
 
 import CryptoJS from 'crypto-js';
@@ -83,6 +83,61 @@ export async function getGlobleToday(): Promise<GlobleDayData | null> {
 
 export async function getGlobleYesterday(): Promise<GlobleDayData | null> {
     return getGlobleDataForDate(subDays(getPuzzleDateForGame('globle'), 1));
+}
+
+export interface PublishableGlobleData {
+    data: GlobleDayData;
+    publishedDateKey: string;
+}
+
+/**
+ * Resolve the Globle payload a "-answer-today" page is allowed to publish, or null.
+ *
+ * Globle's upstream serves exactly one day and 404s for every other date, so "fetch the window
+ * date" is the only honest request this page can make. An older version walked backwards up to
+ * seven days with subDays() and returned the first date that answered, which is how yesterday's
+ * country ended up in the <title>, the <h1> and the Article JSON-LD while the page still called
+ * itself "today".
+ *
+ * The only two dates that may be published are the ones the window itself declares:
+ *   - effectivePuzzleDate: what "today" means for the site right now, and
+ *   - fallbackPuzzleDate: the previous date the window keeps for the rollover gap, for the
+ *     stretch where the site's date has advanced but upstream has not published the new day.
+ *
+ * Nothing older is accepted. When neither date answers, callers redirect to /globle-archive
+ * rather than labelling an older answer as today's.
+ */
+export async function resolveGlobleDataForWindow(
+    puzzleWindow: PuzzleWindow
+): Promise<PublishableGlobleData | null> {
+    const candidates = [puzzleWindow.effectivePuzzleDate, puzzleWindow.fallbackPuzzleDate].filter(
+        (dateKey): dateKey is string => typeof dateKey === 'string' && dateKey.length > 0
+    );
+
+    for (const dateKey of [...new Set(candidates)]) {
+        const data = await getGlobleDataForDate(parsePuzzleDateKey(dateKey));
+
+        if (!data) {
+            continue;
+        }
+
+        // getGlobleDataForDate() formats the day in the runtime's local timezone, so confirm the
+        // payload really is for the candidate date before it reaches the title and the schema.
+        if (format(data.date, 'yyyy-MM-dd') !== dateKey) {
+            continue;
+        }
+
+        if (dateKey !== puzzleWindow.effectivePuzzleDate) {
+            console.warn(
+                `[globle-date] No upstream data for ${puzzleWindow.effectivePuzzleDate} yet; ` +
+                    `publishing the declared fallback date ${dateKey}.`
+            );
+        }
+
+        return { data, publishedDateKey: dateKey };
+    }
+
+    return null;
 }
 
 // Helper to parse the verbose url format: "january-27-2026"

@@ -15,7 +15,10 @@ import type {
         WordlebotGameSlug
 } from './types';
 
-const solverFnCache = new Map<string, (request: unknown) => unknown>();
+// One WASM instance per solver key. The promise is cached rather than the resolved function:
+// the page warms this on first intent and the mounted app asks for it again a moment later, and
+// the value cache let both calls instantiate (and fetch 569 KB of) the same module.
+const solverFnCache = new Map<string, Promise<(request: unknown) => unknown>>();
 let canuckleDataPromise: Promise<CanuckleData> | null = null;
 
 function required<T extends Element>(root: ParentNode, selector: string) {
@@ -713,55 +716,67 @@ async function getDatasetForGame(game: WordlebotGameSlug, length: number) {
 }
 
 async function getSolveFunction(key: string) {
-        if (solverFnCache.has(key)) {
-                return solverFnCache.get(key)!;
+        const cached = solverFnCache.get(key);
+        if (cached) {
+                return cached;
         }
 
-        let mod:
-                | {
-                                default: () => Promise<unknown>;
-                                solve: (request: unknown) => unknown;
-                  }
-                | undefined;
+        const pending = (async () => {
+                let mod:
+                        | {
+                                        default: () => Promise<unknown>;
+                                        solve: (request: unknown) => unknown;
+                          }
+                        | undefined;
 
-        switch (key) {
-                case 'len3':
-                        mod = await import('./assets/wasm/len3/solver_len3.js');
-                        break;
-                case 'len4':
-                        mod = await import('./assets/wasm/len4/solver_len4.js');
-                        break;
-                case 'len5':
-                        mod = await import('./assets/wasm/len5/solver_len5.js');
-                        break;
-                case 'len6':
-                        mod = await import('./assets/wasm/len6/solver_len6.js');
-                        break;
-                case 'len7':
-                        mod = await import('./assets/wasm/len7/solver_len7.js');
-                        break;
-                case 'len8':
-                        mod = await import('./assets/wasm/len8/solver_len8.js');
-                        break;
-                case 'len9':
-                        mod = await import('./assets/wasm/len9/solver_len9.js');
-                        break;
-                case 'len10':
-                        mod = await import('./assets/wasm/len10/solver_len10.js');
-                        break;
-                case 'len11':
-                        mod = await import('./assets/wasm/len11/solver_len11.js');
-                        break;
-                case 'canuckle':
-                        mod = await import('./assets/wasm/canuckle/solver_canuckle.js');
-                        break;
-                default:
-                        throw new Error(`Unknown solver key: ${key}`);
+                switch (key) {
+                        case 'len3':
+                                mod = await import('./assets/wasm/len3/solver_len3.js');
+                                break;
+                        case 'len4':
+                                mod = await import('./assets/wasm/len4/solver_len4.js');
+                                break;
+                        case 'len5':
+                                mod = await import('./assets/wasm/len5/solver_len5.js');
+                                break;
+                        case 'len6':
+                                mod = await import('./assets/wasm/len6/solver_len6.js');
+                                break;
+                        case 'len7':
+                                mod = await import('./assets/wasm/len7/solver_len7.js');
+                                break;
+                        case 'len8':
+                                mod = await import('./assets/wasm/len8/solver_len8.js');
+                                break;
+                        case 'len9':
+                                mod = await import('./assets/wasm/len9/solver_len9.js');
+                                break;
+                        case 'len10':
+                                mod = await import('./assets/wasm/len10/solver_len10.js');
+                                break;
+                        case 'len11':
+                                mod = await import('./assets/wasm/len11/solver_len11.js');
+                                break;
+                        case 'canuckle':
+                                mod = await import('./assets/wasm/canuckle/solver_canuckle.js');
+                                break;
+                        default:
+                                throw new Error(`Unknown solver key: ${key}`);
+                }
+
+                await mod.default();
+                return mod.solve;
+        })();
+
+        solverFnCache.set(key, pending);
+
+        try {
+                return await pending;
+        } catch (error) {
+                // A failed load must not stay cached, or the retry could never recover.
+                solverFnCache.delete(key);
+                throw error;
         }
-
-        await mod.default();
-        solverFnCache.set(key, mod.solve);
-        return mod.solve;
 }
 
 /**

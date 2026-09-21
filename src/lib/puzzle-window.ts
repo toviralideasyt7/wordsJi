@@ -121,13 +121,41 @@ export const PUZZLE_WINDOW_CONFIG: Record<PuzzleGame, PuzzleWindowConfig> = {
                 boundaryMinuteUtc: 30,
                 visibleDateOffsetDays: 1
         },
+        // Globle is the one game in this table whose upstream only ever serves a single day:
+        // https://globle-game.com/answer?day=YYYY-MM-DD returns 200 for today's country and 404
+        // for every other date (checked 2026-09-21 06:46 UTC: 09-19 404, 09-20 404, 09-21 200,
+        // 09-22 404). So the window date has to name the day upstream is serving, and the
+        // boundary has to sit at (or after) the instant upstream swaps days.
+        //
+        // Evidence for the swap time. On 2026-09-21 the page built at ~03:30 UTC got 404 for both
+        // 09-21 and 09-20, and at 06:30 UTC `day=2026-09-21` returned 200 while 09-20 and 09-22
+        // returned 404 — so upstream swapped somewhere inside 03:30-06:30 UTC. That brackets
+        // midnight US Eastern, which is 04:00 UTC during EDT and 05:00 UTC during EST.
+        //
+        // 06:00 UTC is the latest boundary that still satisfies that bracket: it is at least an
+        // hour after the swap in either DST state, so the computed date is never ahead of what
+        // upstream serves, and it is before the 06:30 observation that already had the new day
+        // live, so the page is never a day behind by mid-morning either.
+        //
+        // The old 16:30 UTC boundary came from the shared Wordle row and flipped the label 11.5
+        // hours before upstream had the answer, which is the whole bug: the page asked for
+        // tomorrow, got a 404, and the loader below quietly published yesterday instead.
+        //
+        // visibleDateOffsetDays is 0 because for Globle the label is the date upstream serves
+        // today, not tomorrow's date published a little early.
+        //
+        // Accepted cost: between the upstream swap and 06:00 UTC the window date is still the
+        // previous day, which upstream has stopped serving. The page then falls back to its
+        // declared fallbackPuzzleDate and, if that is gone too, redirects to /globle-archive.
+        // That is a bounded one- to two-hour gap, deliberately chosen over publishing a date
+        // upstream does not have yet.
         globle: {
                 group: 'main',
                 timezone: 'worker-latest',
                 sourceReadiness: 'deterministic',
-                boundaryHourUtc: 16,
-                boundaryMinuteUtc: 30,
-                visibleDateOffsetDays: 1
+                boundaryHourUtc: 6,
+                boundaryMinuteUtc: 0,
+                visibleDateOffsetDays: 0
         },
         waffle: {
                 group: 'waffle',
