@@ -63,3 +63,7 @@ gsc-key*.json
 .claude/
 agent/
 skills-lock.json
+
+# ZCode planner scratch (plans/*.md) and stray test-capture files —
+# tool output, never part of the build
+.zcode/
