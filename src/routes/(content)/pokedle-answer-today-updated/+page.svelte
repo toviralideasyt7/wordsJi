@@ -4,21 +4,21 @@
   let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
 
   const modeConfig = {
-    classic: { name: 'Pokédle Classic Answer', icon: '👑', color: 'border-yellow-400', bg: 'bg-yellow-50' },
-    silhouette: { name: 'Pokédle Silhouette Answer', icon: '👤', color: 'border-purple-400', bg: 'bg-purple-50' },
-    flavor: { name: 'Pokédle Flavor Text Answer', icon: '📖', color: 'border-teal-400', bg: 'bg-teal-50' },
-    card: { name: 'Pokédle Card Answer', icon: '🃏', color: 'border-blue-400', bg: 'bg-blue-50' },
+    classic: { name: 'Pokédle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
+    silhouette: { name: 'Pokédle Silhouette Answer', icon: 'S', color: 'border-purple-400', bg: 'bg-purple-50' },
+    flavor: { name: 'Pokédle Flavor Text Answer', icon: 'F', color: 'border-teal-400', bg: 'bg-teal-50' },
+    card: { name: 'Pokédle Card Answer', icon: 'C', color: 'border-blue-400', bg: 'bg-blue-50' },
   };
   const modes = ['classic', 'silhouette', 'flavor', 'card'];
   const regions = [
-    { key: 'america', label: 'America', flag: '🇺🇸', accent: 'bg-yellow-500' },
-    { key: 'europe', label: 'Europe', flag: '🇪🇺', accent: 'bg-red-500' },
+    { key: 'america', label: 'America', flag: '', accent: 'bg-yellow-500' },
+    { key: 'europe', label: 'Europe', flag: '', accent: 'bg-red-500' },
   ];
   const crossLinks = [
-    { href: '/narutodle-answer-today-updated', icon: '🍥', label: 'Narutodle' },
-    { href: '/loldle-answer-today-updated', icon: '⚔️', label: 'LoLdle' },
-    { href: '/smashdle-answer-today-updated', icon: '🎮', label: 'Smashdle' },
-    { href: '/dotadle-answer-today-updated', icon: '🛡️', label: 'Dotadle' },
+    { href: '/narutodle-answer-today-updated', icon: '', label: 'Narutodle' },
+    { href: '/loldle-answer-today-updated', icon: '', label: 'LoLdle' },
+    { href: '/smashdle-answer-today-updated', icon: '', label: 'Smashdle' },
+    { href: '/dotadle-answer-today-updated', icon: '', label: 'Dotadle' },
   ];
   const schemas = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
@@ -35,61 +35,157 @@
 
 <GameDleAnswerPage gameKey="pokedle" gameTitle="Pokedle" apiGame="pokedle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
-    {#if true}
     <article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Gen 1 attributes that matter most</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">What today's Pokedle grid is telling you</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          Pokedle uses Pokemon as answers and gives you feedback on type, generation, evolution stage, habitat, and color. Gen 1 Pokemon dominate the recognizable end of the pool — everyone knows Charizard, Pikachu, and Mewtwo. But that familiarity is a trap: you'll guess Gen 1 Pokemon by default even when the answer is from Gen 5 or later.
+          Pokedle asks you to name a Pokemon from an attribute grid. Each guess is scored against the answer on type one, type two, habitat, colour, evolution stage, height, and weight. Every cell comes back as an exact match, a partial match, or a miss, exactly like the other daily 'dle games built on this format.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          Generation is your strongest filter after type. There are currently 9 generations, and each one has a distinct design philosophy. Gen 1 creatures are simpler in shape, Gen 5 introduced a huge batch, and recent generations have more complex silhouettes. If the answer isn't from Gen 1, stop guessing Kanto Pokemon immediately.
+          Two of those attributes are numeric — height and weight — and numeric attributes behave differently from categorical ones. A partial result on height does not mean 'close enough'. It tells you which direction to move, so the useful reading is the arrow, not the nearness.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Type combinations as shortcuts</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Type is the first real cut, and dual types are the trap</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          Single-type Pokemon are more common in earlier generations. Dual types become more prevalent from Gen 3 onward. If the answer is a dual type like Water/Ground, you can eliminate every pure Water and pure Ground type immediately. That's the kind of clue that cuts the pool from 800+ to under 50.
+          Type one is the strongest single filter, because eleven types split the Pokedex into groups of very different sizes. A guess that returns a miss on type one removes an entire family of Pokemon in one line, which is why opening with a common type is usually a mistake: it removes less than opening with something rarer.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          The rarest type combinations are your best friends when guessing. Bug/Dragon, Fire/Grass, Normal/Ice — these have very few Pokemon each. If you can identify a rare type combo, the answer narrows to a handful of candidates instantly.
+          Type two is where people misread the grid. Plenty of Pokemon have only one type, and a single-type Pokemon still carries a value in that column. If your guess is dual-typed and the answer is not, the type two cell will not behave the way a normal mismatch does. Read it as 'the answer has no second type', not as 'wrong second type'.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Evolution stage is underrated</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Habitat and colour: cheap cuts, easy to forget</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          Most players focus on type and generation, but evolution stage is surprisingly discriminating. If the answer is a fully evolved Pokemon, you can eliminate every base form and middle evolution. If it's a base form that doesn't evolve (like Tauros or Lapras), your pool shrinks dramatically — there are fewer standalone Pokemon than you'd think.
+          Habitat is one of the most underrated attributes on the board. It is a small set of values, and it does not correlate cleanly with type — there are water-typed Pokemon outside any water habitat, and grassland residents across several types. That means a habitat result is close to independent information, which is exactly what you want from an early guess.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          The solver tracks this automatically. Enter your feedback on type, generation, and evolution stage, and it filters the remaining candidates. Two guesses in, you'll see the list drop from 800+ to maybe 30.
+          Colour is similar, with one caveat: it tracks the Pokemon's official colour classification, not what its artwork actually looks like to you. A Pokemon that reads as purple in a particular game's render may be filed under a different colour. Trust the grid over your eye when the two disagree.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Evolution stage is the attribute that narrows fastest</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Evolution stage is a small ordered set, so a single exact match eliminates most of the Pokedex immediately. It is also the attribute that causes the most wasted guesses, because people assume stage one for anything that looks small and cute and it is not always right.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The useful pattern is to treat evolution stage as a late-game confirmation rather than an early filter. Use type, habitat and colour to get to a shortlist first, then let evolution stage decide between the survivors.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Reading height and weight as direction</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Height and weight are the two attributes that reward attention to the feedback arrows. The grid tells you whether the answer is taller or shorter, heavier or lighter. One guess therefore does two jobs: it tests everything else about that Pokemon and it points you along the size axis.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          This is why a deliberately extreme guess is often correct play. Picking a famously small Pokemon or a famously large one produces the largest possible movement on the size axis, which collapses the candidate set faster than picking something mid-range.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">A repeatable opening plan</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Lead with a Pokemon whose type is uncommon and whose habitat does not overlap with most of the Pokedex. The objective of guess one is information, not accuracy — you are trying to make guesses three and four trivial.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Guess two should chase whichever attribute came back as a partial or a directional clue. If the grid told you the answer is larger, take a larger Pokemon; do not split the difference.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          From guess three onward you should be choosing from a written shortlist. Note the confirmed type, habitat, colour and evolution stage, filter the Pokedex against them, and pick the guess that divides the survivors most evenly rather than the one you like best.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">What Pokedle does not test</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Pokedle does not ask about moves, abilities, base stats, held items, or which game a Pokemon first appeared in. All of its attributes are identity facts about the species. That is good news if you know the Pokedex as a list, and awkward if what you actually know well is competitive play, where a narrow set of Pokemon dominates and most of the roster never appears.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          It also does not use regional forms or cosmetic variants. The grid scores the species, not the particular form you happened to picture.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Studying without grinding</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          The fastest improvement comes from learning the shape of the type chart rather than memorising entries. If you know which type combinations exist at all, a grid result that implies an impossible pairing can be discarded immediately, and that is often worth more than remembering any specific Pokemon.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The second habit worth building is size awareness by type. Once you can guess roughly which types run large and which run small, the height and weight columns stop feeling random and start acting like an extra filter.
+        </p>
+      </section>
+            <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Generations change which answers are reasonable</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          The Pokedex grew in discrete generations, and each one added Pokemon with types and combinations that did not previously exist. That matters for the puzzle because the plausible candidate set for a given grid shifts depending on how many generations you are carrying in your head.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          A type combination that was unique in an early generation now belongs to several species. If you are reasoning from an older mental model, you will systematically underestimate how many candidates fit a grid and therefore over-commit to a guess too early.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The correction is to treat the type chart as the stable fact and individual species as the volatile one. The chart has only been extended a handful of times; the roster behind it grows every generation.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Type combinations that cannot exist</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          One of the most useful pieces of Pokedex knowledge is negative knowledge: which type pairings have never been used. If a grid result implies a combination that does not exist, the constraint is contradictory and you have almost certainly misread a cell.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          That check is worth running before every third guess. It costs a few seconds and it catches the single most expensive category of mistake, which is compounding an early misreading into three more wasted guesses.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Why evolution stage reads as harder than it is</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Evolution stage looks straightforward and is not, because the stage a species occupies depends on how you count. A species in a three-stage line is a different stage from a species in a two-stage line, and some species sit outside any line at all.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Because the set is ordered and small, one exact match removes a very large share of the roster, which makes it tempting to spend an early guess on it. The better use is as a confirmation column: get close on type and habitat first, then let evolution stage break the tie. An early stage guess is high-risk and often unnecessary.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Habitat and colour, and how the official data behaves</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Habitat is stored as a small set of environment categories, and it does not map cleanly onto type. That independence is what makes it valuable as an early filter: a habitat result tells you something the type columns cannot, and it is one of the few columns that reliably adds new information rather than restating what you already know.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          One consequence is worth flagging. Because habitat is coarse, several very different species share one value, so a habitat match narrows less than an exact type match would. The right way to read it is as a broad cut that makes the later guesses easier rather than as a shortcut to the answer.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Colour is the column most likely to contradict your intuition, because it reflects the official classification rather than the way a species looks in any particular artwork. A Pokemon that reads as one colour to you may be recorded as another, and the grid will score the record.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The practical lesson is to stop arguing with the colour column. When it disagrees with your expectation, treat that as a signal that your model of the species is incomplete, and adjust the candidate list rather than the column.
+        </p>
+      </section>
+<section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Frequently asked questions</h2>
         <div class="space-y-6 text-lg text-slate-600">
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">What time does Pokedle reset?</h3>
-            <p class="leading-relaxed">Resets at midnight UTC — same time as Wordle.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">How often does Pokedle update?</h3>
+            <p class="leading-relaxed">A new Pokemon is set once every 24 hours, on the same daily reset the other attribute-grid games use.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Does Pokedle include all generations?</h3>
-            <p class="leading-relaxed">Yes, all Pokemon from Gen 1 through the most recent generation are in the pool.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">What attributes does Pokedle compare?</h3>
+            <p class="leading-relaxed">Type one, type two, habitat, colour, evolution stage, height and weight, each scored as exact, partial or miss.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">What are the Pokedle modes?</h3>
-            <p class="leading-relaxed">Classic (attribute-based), Ability (move or ability recognition), and Quote (Pokedex entries or character dialogue). Each mode picks a different Pokemon.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Does Pokedle include every Pokemon?</h3>
+            <p class="leading-relaxed">The pool follows the current Pokedex, which grows as new generations are released. Newer entries are harder because fewer players have their attributes memorised.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">How many Pokemon are in the pool?</h3>
-            <p class="leading-relaxed">Over 1,000 across all generations. That's a lot of candidates, which is why type and generation filters are so important.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Why did my type two cell look wrong?</h3>
+            <p class="leading-relaxed">Single-type Pokemon still occupy that column. If your guess has two types and the answer has one, the mismatch is telling you the answer has no second type.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Is Pokedle the same format as LoLdle and Narutodle?</h3>
+            <p class="leading-relaxed">It shares the attribute-grid format but uses the Pokemon roster and its own attribute set. Each game has separate daily answers.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Do I need to play the games to solve Pokedle?</h3>
+            <p class="leading-relaxed">No. Every attribute Pokedle scores is a Pokedex fact, not a gameplay outcome.</p>
           </div>
         </div>
       </section>
     </article>
-    {/if}
   {/snippet}
 </GameDleAnswerPage>
 

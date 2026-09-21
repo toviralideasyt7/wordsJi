@@ -4,22 +4,22 @@
   let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
 
   const modeConfig = {
-    classic: { name: 'OnePiecedle Classic Answer', icon: '👑', color: 'border-yellow-400', bg: 'bg-yellow-50' },
-    devilFruit: { name: 'OnePiecedle Devil Fruit Answer', icon: '🍎', color: 'border-red-400', bg: 'bg-red-50' },
-    laugh: { name: 'OnePiecedle Laugh Answer', icon: '😆', color: 'border-pink-400', bg: 'bg-pink-50' },
-    wanted: { name: 'OnePiecedle Wanted Answer', icon: '📜', color: 'border-orange-400', bg: 'bg-orange-50' },
+    classic: { name: 'OnePiecedle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
+    devilFruit: { name: 'OnePiecedle Devil Fruit Answer', icon: 'D', color: 'border-red-400', bg: 'bg-red-50' },
+    laugh: { name: 'OnePiecedle Laugh Answer', icon: 'L', color: 'border-pink-400', bg: 'bg-pink-50' },
+    wanted: { name: 'OnePiecedle Wanted Answer', icon: 'W', color: 'border-orange-400', bg: 'bg-orange-50' },
   };
   const modes = ['classic', 'devilFruit', 'laugh', 'wanted'];
   const regions = [
-    { key: 'america', label: 'America', flag: '🇺🇸', accent: 'bg-red-500' },
-    { key: 'europe', label: 'Europe', flag: '🇪🇺', accent: 'bg-orange-500' },
+    { key: 'america', label: 'America', flag: '', accent: 'bg-red-500' },
+    { key: 'europe', label: 'Europe', flag: '', accent: 'bg-orange-500' },
   ];
   const crossLinks = [
-    { href: '/narutodle-answer-today-updated', icon: '🍥', label: 'Narutodle' },
-    { href: '/loldle-answer-today-updated', icon: '⚔️', label: 'LoLdle' },
-    { href: '/pokedle-answer-today-updated', icon: '⚡', label: 'Pokedle' },
-    { href: '/smashdle-answer-today-updated', icon: '🎮', label: 'Smashdle' },
-    { href: '/dotadle-answer-today-updated', icon: '🛡️', label: 'Dotadle' },
+    { href: '/narutodle-answer-today-updated', icon: '', label: 'Narutodle' },
+    { href: '/loldle-answer-today-updated', icon: '', label: 'LoLdle' },
+    { href: '/pokedle-answer-today-updated', icon: '', label: 'Pokedle' },
+    { href: '/smashdle-answer-today-updated', icon: '', label: 'Smashdle' },
+    { href: '/dotadle-answer-today-updated', icon: '', label: 'Dotadle' },
   ];
   const schemas = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
@@ -36,61 +36,153 @@
 
 <GameDleAnswerPage gameKey="onepiecedle" gameTitle="OnePiecedle" apiGame="onepiecedle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
   {#snippet seoContent()}
-    {#if true}
     <article class="space-y-8">
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Today's character breakdown</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">What today's Onepiecedle board is asking you to find</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          OnePiecedle picks a character from the One Piece universe and you narrow it down using attributes like crew, bounty, devil fruit status, haki type, and debut arc. Crew affiliation is your strongest first filter — Straw Hat, Heart Pirates, Big Mom Pirates, and the other major crews each have distinctive attribute patterns that eliminate large chunks of the pool.
+          Onepiecedle gives you one One Piece character to identify and scores each guess against a grid of attributes: affiliation, origin, status, height, bounty, debut chapter, haki types, gender, and devil fruit type. Every cell comes back as an exact match, a partial match, or a miss.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          Bounty ranges shift dramatically across the series. Early-series characters might have bounties in the tens of millions, while post-Wano characters can hit billions. If the answer's bounty is in a range you don't recognize, you're probably looking at a character from an arc you haven't watched yet.
+          Two things make this board unusual. The first is bounty, which is a genuinely informative numeric column rather than a formality. The second is devil fruit type, which is small enough as a set that a single result can collapse the pool dramatically. Together they mean One Piece rewards a more aggressive opening than most of the daily character games.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Arc-specific knowledge matters</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Bounty is the best-designed column on the board</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          One Piece has over 1,100 episodes and 30+ arcs. The puzzle pulls characters from all of them. If you're current with the manga, you have a massive advantage — you know the recent reveals, the updated bounties, and the characters who just showed up for the first time. If you're an anime-only viewer, you're roughly a year behind on character introductions.
+          Bounty ranges across several orders of magnitude. A character with no bounty at all is not a marginal case — it is a statement that they are not a wanted pirate, which removes a large share of the roster in one guess. At the other end, a bounty in the billions puts you in a very small group.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Because bounty is numeric, a partial result tells you which direction to move. That makes it the ideal column to spend a guess on early: one guess returns your categorical information and simultaneously points you along the bounty axis.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          This creates a real knowledge gap. Someone who stopped at Dressrosa doesn't know Wano characters. Someone who skipped Skypeia might miss characters that Oda brought back 800 chapters later. The solver helps bridge these gaps by filtering what's left after you enter your feedback.
+          The trap is over-reading small differences. Bounty bands are wide, and characters who are comparable in strength can sit far apart. Use the direction, not the distance.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Devil fruit and haki as filters</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Devil fruit type narrows fastest of all</h2>
         <p class="text-base text-slate-600 mb-4 leading-relaxed">
-          Devil fruit status is binary — either the character has one or they don't. That alone cuts the pool roughly in half. If they have a fruit, knowing the type (Paramecia, Zoan, Logia, or the newer classification system) narrows it further. Logia users are the rarest, so if the answer is Logia, you've got a short list.
+          Devil fruit type is a very small set, and a large share of the roster has no fruit at all. That combination makes it the sharpest filter available. If the grid tells you the answer has a Paramecia, you have just eliminated every Zoan, every Logia, and every character who never ate one.
         </p>
         <p class="text-base text-slate-600 leading-relaxed">
-          Haki type is less useful early because many characters have multiple types. But Conqueror's Haki specifically is rare — only a handful of characters have it confirmed. If the answer has Conqueror's, you're looking at top-tier characters only.
+          The multi-value case is the interesting one. A small number of characters have a fruit that sits ambiguously, or have abilities that look fruit-derived without being one. When a devil fruit result comes back partial rather than exact, that ambiguity is usually the reason, and it is worth trusting the grid over your own reading.
         </p>
       </section>
-
       <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
-        <h2 class="text-3xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Haki is the column most players ignore</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Haki is easy to forget because it was introduced late and is only documented for characters who demonstrated it. But because it is multi-valued and largely independent of affiliation, an haki result is close to new information rather than a restatement of something you already know.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The practical use is as a tiebreaker. Once affiliation, origin and status have brought you down to a handful of candidates, the haki column is often what separates them, because Observation and Armament are distributed unevenly across the cast.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Affiliation and origin are not the same filter</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          It is tempting to read affiliation and origin as one column. They are not the same question. Affiliation describes who a character is currently aligned with — a crew, an organisation, the Marines, or nobody — while origin describes where they came from, which for a character who left home early can be a place they have not been associated with for most of the story.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Read them as two independent signals. A partial match on affiliation usually means the character has moved between groups, which is common enough that it is worth expecting rather than treating as an anomaly.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Status, height and debut chapter</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Status is the column that decides more close games than people credit. It is a small set, and it partitions the cast in ways that cut across affiliation, so a status result is both sharp and non-redundant.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Height is numeric and works like the other direction columns — extract the arrow, not the proximity. Debut chapter is the more precise of the numeric columns, because chapter numbers are exact and the roster is ordered by them, so treating debut as a compass rather than a fact will move you further per guess than any other column here.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">A repeatable opening plan</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Open with a character who has no bounty or a distinctive devil fruit type, rather than with a Straw Hat. The most recognisable characters in the series share too many attributes with the rest of the cast to be good opening guesses.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Guess two should use bounty as an arrow. If the grid told you the answer's bounty is higher, move decisively upward rather than nudging. Bounty bands are wide, so a timid move wastes the guess.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          By guess three you should be working from a shortlist. Write down the confirmed affiliation, status, devil fruit type and bounty band, filter the cast, and take the guess that divides the survivors most evenly. When two candidates remain, play the one with the more distinctive devil fruit — the puzzle favours characters that make an interesting grid.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Building the knowledge the board assumes</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Onepiecedle assumes a broad knowledge of the cast rather than a deep knowledge of any one arc. The characters who appear most often in the answers are not the strongest in the story, they are the ones whose attribute combinations are distinctive — unusual origins, unusual fruit types, unusual affiliations.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          That means the most efficient study is not rereading the story. It is learning the shape of the attribute space: which affiliations exist, what the bounty bands look like, and which fruit types are rare. Once you can picture the grid rather than the story, the game becomes a logic problem and gets considerably easier.
+        </p>
+      </section>
+            <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Reading bounty bands rather than bounty values</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Bounty is reported exactly, but what the grid actually needs from you is the band. Treating it as a set of tiers — none, low, mid, high, and the very small group at the top — makes the column far more usable than trying to recall precise figures.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The single most valuable fact about the column is that a large share of the cast has no bounty at all. A result confirming that removes every wanted pirate in one guess, which is why a bounty-bearing opening guess is usually a poor choice.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Devil fruits are a taxonomy, not a list</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          Devil fruit type is a classification with very few values, and that is exactly what makes it powerful: a single result partitions the roster into a handful of groups rather than a long tail. Characters without a fruit form the largest group of all.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The ambiguity worth knowing about is the small set of characters whose abilities sit between types, or who inherited a fruit rather than eating one. Those cases produce partial results, and the partial is informative rather than a defect.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Studying the cast as a grid</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          The board does not reward knowing the story; it rewards knowing the attribute space. Which affiliations exist, how the bounty tiers are distributed, which fruit types are rare — those are the facts that convert a stalled board into a solved one.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          That is a smaller body of knowledge than it sounds, and it is mostly finite. Once you can picture the grid rather than the narrative, Onepiecedle stops being a memory test and becomes a process of elimination like the other character games.
+        </p>
+      </section>
+      <section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Affiliation changes, and the grid expects you to know it</h2>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          One Piece is a story about people changing sides, and the affiliation column reflects that. Characters defect, form alliances, join crews and leave them, so the affiliation a character is scored under is the one most closely associated with them rather than a permanent fact about the character.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          That makes partial matches on affiliation common rather than exceptional, and it means the column is best read as a constraint on the current grouping rather than as a statement about history. A character who was once a Marine and is now something else carries both associations, and the grid will show the overlap rather than choosing for you.
+        </p>
+        <p class="text-base text-slate-600 mb-4 leading-relaxed">
+          It also means affiliation is a weaker early filter than it looks. Because so many characters belong to more than one group, an affiliation match narrows less than a match on devil fruit type or bounty tier would, even though it feels more specific.
+        </p>
+        <p class="text-base text-slate-600 leading-relaxed">
+          The strongest sequence available on this board is therefore to open with something that cuts hard — a no-fruit character, or an extreme bounty — and to use affiliation and status to close. Reversing that order is the single most common way to spend three guesses without making progress.
+        </p>
+      </section>
+<section class="bg-white rounded-3xl p-5 sm:p-8 shadow-lg border border-slate-100">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Frequently asked questions</h2>
         <div class="space-y-6 text-lg text-slate-600">
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">What time does OnePiecedle reset?</h3>
-            <p class="leading-relaxed">The daily puzzle flips at midnight UTC.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">How often does Onepiecedle update?</h3>
+            <p class="leading-relaxed">A new character is set once every 24 hours, on the same daily reset the other attribute-grid games use.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Does it include manga-only characters?</h3>
-            <p class="leading-relaxed">Yes — characters who have appeared in the manga are in the pool even if they haven't shown up in the anime yet.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">What attributes does Onepiecedle compare?</h3>
+            <p class="leading-relaxed">Affiliation, origin, status, height, bounty, debut chapter, haki, gender and devil fruit type, each scored as exact, partial or miss.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">How many characters are in the pool?</h3>
-            <p class="leading-relaxed">Hundreds, from Straw Hat crew members to minor arc villains. One Piece has one of the largest character rosters in manga history.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Does Onepiecedle include manga-only characters?</h3>
+            <p class="leading-relaxed">The pool is drawn from the One Piece cast as a whole, so characters who have not appeared in the anime can still be answers.</p>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">What are the OnePiecedle modes?</h3>
-            <p class="leading-relaxed">Classic (attribute guessing), Quote (dialogue), and Ability (character abilities or techniques). Each mode picks independently.</p>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Why is the devil fruit column sometimes a partial match?</h3>
+            <p class="leading-relaxed">A few characters have abilities that sit ambiguously between fruit types. A partial result is telling you the classification is not clean, not that the data is unreliable.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Is Onepiecedle the same format as Narutodle?</h3>
+            <p class="leading-relaxed">It shares the attribute-grid format but uses the One Piece roster and its own attribute set, with separate daily answers.</p>
           </div>
         </div>
       </section>
     </article>
-    {/if}
   {/snippet}
 </GameDleAnswerPage>
 
