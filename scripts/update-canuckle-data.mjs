@@ -29,6 +29,16 @@ const outputPath = path.join(
 	'canuckle-data.json'
 );
 
+const solverOutputPath = path.join(
+	projectRoot,
+	'src',
+	'lib',
+	'wordlebot-wasm',
+	'assets',
+	'generated',
+	'canuckle-solver-data.json'
+);
+
 function decodeBase64(str) {
 	return Buffer.from(str, 'base64').toString('utf-8');
 }
@@ -219,7 +229,7 @@ async function main() {
 	puzzles.sort((a, b) => a.index - b.index);
 	const maxIndex = puzzles.length > 0 ? puzzles[puzzles.length - 1].index : 0;
 
-	const dataset = {
+	const puzzlesDataset = {
 		source: {
 			projectId: 'canuckle-c2157',
 			version: 'Version 2.3.4',
@@ -236,12 +246,15 @@ async function main() {
 		},
 		maxIndex,
 		acceptedWords,
-		puzzles,
-		solver: buildSolverDataset(puzzles, acceptedWords)
+		puzzles
 	};
 
+	const solverDataset = buildSolverDataset(puzzles, acceptedWords);
+
 	await mkdir(path.dirname(outputPath), { recursive: true });
-	await writeFile(outputPath, `${JSON.stringify(dataset)}\n`, 'utf8');
+	await mkdir(path.dirname(solverOutputPath), { recursive: true });
+	await writeFile(outputPath, `${JSON.stringify(puzzlesDataset)}\n`, 'utf8');
+	await writeFile(solverOutputPath, JSON.stringify(solverDataset), 'utf8');
 
 	if (usedFallback) {
 		await markUpdateFailure(projectRoot, 'canuckle', failureMessage || 'Canuckle refresh fell back to cached data.', {

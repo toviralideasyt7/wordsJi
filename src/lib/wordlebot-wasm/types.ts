@@ -125,6 +125,8 @@ export interface CanucklePuzzle {
 	updateTime?: string;
 }
 
+export type CanuckleSolverData = SolverDataset;
+
 export interface CanuckleData {
 	source: CanuckleSourceInfo;
 	schedule: {
@@ -134,7 +136,6 @@ export interface CanuckleData {
 	maxIndex: number;
 	acceptedWords: string[];
 	puzzles: CanucklePuzzle[];
-	solver: SolverDataset;
 }
 
 export interface WordlebotHowToStep {

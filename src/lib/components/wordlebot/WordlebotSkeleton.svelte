@@ -3,7 +3,7 @@
   import { getWordlebotGame } from '$lib/wordlebot-wasm/game-config';
 
   /**
-   * The placeholder shown until the solver is asked for.
+   * The brief mounting placeholder shown while the solver engine loads.
    *
    * It is deliberately dumb markup: one flat tile row per board, laid out with the same tile
    * size and spacing the mounted app uses, plus a block where the suggestion list will land.
@@ -11,10 +11,10 @@
    * 4-11x taller than the app and made the swap a layout shift; matching the app's own
    * measurements is what lets the region reserve a height and keep it.
    *
-   * The status line is an instruction, not a progress status: nothing is downloaded until the
-   * reader points at, taps, or presses a key, so there is no spinner and no "Loading…" copy.
+   * The engine now loads immediately at page load, so this state is transient: the spinner and
+   * status line communicate that loading is under way rather than waiting for input.
    *
-   * The tiles are decorative (`aria-hidden`); the one thing announced is the instruction.
+   * The tiles are decorative (`aria-hidden`); the one thing announced is the status text.
    */
   let { config }: { config: WordlebotAppPageConfig } = $props();
 
@@ -60,7 +60,7 @@
     <div class="line wide"></div>
     <div class="line medium"></div>
   </div>
-  <p class="status">Point, tap, or press a key to load today's puzzle data.</p>
+  <p class="status"><span class="spinner" aria-hidden="true"></span>Loading today's puzzle data…</p>
 {:else}
   <div
     class="skeleton"
@@ -90,7 +90,7 @@
       <p class="line medium"></p>
     </div>
 
-    <p class="status">Point, tap, or press a key to load the solver.</p>
+    <p class="status"><span class="spinner" aria-hidden="true"></span>Loading the solver…</p>
 
     <noscript>
       <p class="noscript">The interactive solver needs JavaScript turned on. The steps and FAQ below still work.</p>
@@ -209,6 +209,28 @@
     width: 45%;
   }
 
+  .spinner {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 9999px;
+    animation: skeleton-spin 0.8s linear infinite;
+  }
+
+  @keyframes skeleton-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner {
+      animation: none;
+    }
+  }
   .status {
     display: flex;
     align-items: center;

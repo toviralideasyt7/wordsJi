@@ -7,6 +7,7 @@ import { getCanucklePagePath, getWordlebotSolverPath } from './routes';
 import type {
         CanuckleData,
         CanucklePuzzle,
+        CanuckleSolverData,
         SolverDataset,
         SolverResponse,
         SolverState,
@@ -20,6 +21,7 @@ import type {
 // the value cache let both calls instantiate (and fetch 569 KB of) the same module.
 const solverFnCache = new Map<string, Promise<(request: unknown) => unknown>>();
 let canuckleDataPromise: Promise<CanuckleData> | null = null;
+let canuckleSolverDataPromise: Promise<CanuckleSolverData> | null = null;
 
 function required<T extends Element>(root: ParentNode, selector: string) {
         const node = root.querySelector(selector);
@@ -706,8 +708,7 @@ export function mountWordlebotApp(target: HTMLElement, config: WordlebotAppPageC
 
 async function getDatasetForGame(game: WordlebotGameSlug, length: number) {
         if (game === 'canuckle') {
-                const data = await getCanuckleData();
-                return data.solver;
+                return getCanuckleSolverData();
         }
 
         // Fetch only the specific length dataset from static assets (87-510KB vs 2.96MB bundle)
@@ -789,7 +790,7 @@ async function getSolveFunction(key: string) {
 export async function preloadSolverAssets(config: WordlebotAppPageConfig) {
         try {
                 if (config.pageType === 'canuckle-daily' || config.pageType === 'canuckle-archive') {
-                        await Promise.all([getSolveFunction('canuckle'), getDatasetForGame('canuckle', 5)]);
+                        await Promise.all([getSolveFunction('canuckle'), getCanuckleData()]);
                         return;
                 }
                 const game = config.game;
@@ -800,6 +801,15 @@ export async function preloadSolverAssets(config: WordlebotAppPageConfig) {
         } catch {
                 // Preload is best-effort; real errors surface when the app actually mounts.
         }
+}
+
+async function getCanuckleSolverData() {
+        if (!canuckleSolverDataPromise) {
+                canuckleSolverDataPromise = import('./assets/generated/canuckle-solver-data.json').then(
+                        (module) => module.default as CanuckleSolverData
+                );
+        }
+        return canuckleSolverDataPromise;
 }
 
 async function getCanuckleData() {

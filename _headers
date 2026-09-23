@@ -14,9 +14,6 @@
 /generated/per-length/*
   Cache-Control: public, max-age=31536000, immutable
 
-/wasm-lib/*
-  Cache-Control: public, max-age=31536000, immutable
-
 /phoodle-wasm/*
   Cache-Control: public, max-age=31536000, immutable
 

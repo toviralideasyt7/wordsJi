@@ -6,6 +6,10 @@
     SOLVER_FRAME_MOBILE_EXTRA_PX
   } from '$lib/wordlebot-wasm/frame-height';
   import type { WordlebotAppPageConfig } from '$lib/wordlebot-wasm/types';
+  import {
+    getBestLengthForWordlebotGame,
+    getWordlebotGame
+  } from '$lib/wordlebot-wasm/game-config';
 
   let { config }: { config: WordlebotAppPageConfig } = $props();
 
@@ -21,6 +25,17 @@
    * instead of pushing the article below the card down the page.
    */
   let frameMinHeight = $derived(getSolverFrameMinHeight(config));
+
+  /**
+   * Word length the engine will actually solve for (falls back to the game's first supported
+   * length when the page does not pin one). Used by the preload hint below so the browser
+   * starts the dictionary download during HTML parse, before hydration can even begin.
+   */
+  let solverLength = $derived(
+    config.pageType === 'solver' && config.game !== 'canuckle'
+      ? getBestLengthForWordlebotGame(config.game, config.wordLength ?? getWordlebotGame(config.game).lengths[0])
+      : null
+  );
 
   function prepareShadowStyles(css: string) {
     return css
@@ -104,14 +119,11 @@
   /**
    * Warm the engine and its word list for this page's game and length.
    *
-   * Only ever called on a sign of intent: a pointer entering the solver, focus landing inside
-   * it, a press, or the first key press. Requesting the solver pair (569 KB of solver WASM plus
-   * a 341 KB len5 dictionary for a 5-letter solve) on idle for every visitor — including the
-   * ones who never touch the tool — is the cost this removes.
-   *
-   * There is deliberately no post-load idle fallback. An idle fetch would be the same
-   * speculative download under a different name, and the intent listeners below already start
-   * the load before the click lands.
+   * Called immediately on mount. Loading ~0.9 MB of solver assets on every solver page view
+   * is a deliberate trade made by the site owner on 2026-09-23: the earlier intent gate left
+   * the placeholder visible indefinitely on a plain page load, which read as a broken tool.
+   * All heavy processing still happens off the interaction path, and the results panel
+   * communicates progress with its "Calculating suggestions..." state.
    */
   let preloadStarted = false;
   function preload() {
@@ -133,9 +145,8 @@
       return;
     }
 
-    // Before the flag flips: a touch device has no hover step, so this is where its engine
-    // request starts. Both this and the mount go through the same cached module promises, so
-    // the two of them still download the engine and its dictionary once.
+    // Warm the engine + dictionary in parallel with the app module load; the shared promise
+    // caches make preload and mount download each asset exactly once.
     preload();
     isStarted = true;
     isLoading = true;
@@ -169,38 +180,11 @@
   }
 
   onMount(() => {
-    const startOnIntent = () => {
-      void start();
-    };
-    const preloadOnIntent = () => {
-      preload();
-    };
-
-    // Intent, then action. A pointer entering the region — or focus landing inside it — buys
-    // the app, the WASM solver and the dictionary ahead of the click; the click mounts from
-    // what is already in flight. Touch devices have no hover step, so their pointerdown starts
-    // the load directly.
-    const preloadEvents: Array<keyof HTMLElementEventMap> = ['pointerenter', 'focusin'];
-    const activationEvents: Array<keyof HTMLElementEventMap> = ['pointerdown', 'touchstart'];
-
-    preloadEvents.forEach((eventName) => {
-      activationTarget?.addEventListener(eventName, preloadOnIntent);
-    });
-    activationEvents.forEach((eventName) => {
-      activationTarget?.addEventListener(eventName, startOnIntent, { once: true, passive: true });
-    });
-    // Keyboard users get the same treatment as pointer users: the first key press is the intent
-    // signal, so the engine is loading before they have typed a guess.
-    window.addEventListener('keydown', startOnIntent, { once: true });
+    // Load immediately: the engine request starts on mount, so the placeholder only shows for
+    // the brief asset-load window instead of sitting on the page until the reader interacts.
+    void start();
 
     return () => {
-      preloadEvents.forEach((eventName) => {
-        activationTarget?.removeEventListener(eventName, preloadOnIntent);
-      });
-      activationEvents.forEach((eventName) => {
-        activationTarget?.removeEventListener(eventName, startOnIntent);
-      });
-      window.removeEventListener('keydown', startOnIntent);
       cleanup?.();
     };
   });
@@ -209,6 +193,25 @@
     cleanup?.();
   });
 </script>
+
+<svelte:head>
+  {#if solverLength}
+    <!--
+      The dictionary fetch is the longest serial step before first suggestions (87-521 KB).
+      Preloading it from the SSR document starts the download during HTML parse instead of
+      after hydration + mount. crossorigin matches the app's fetch() request mode so the
+      preload is reused rather than downloaded twice. Canuckle pages are skipped on purpose:
+      their dataset is a content-hashed dynamic import with no stable URL to preload.
+    -->
+    <link
+      rel="preload"
+      as="fetch"
+      crossorigin="anonymous"
+      href="/generated/per-length/word-data-len{solverLength}.json"
+      fetchpriority="high"
+    />
+  {/if}
+</svelte:head>
 
 <div
   bind:this={activationTarget}

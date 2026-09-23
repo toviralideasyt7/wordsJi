@@ -140,6 +140,30 @@ expected effect. Items marked **DONE** are already in `main`.
 * **Expected effect.** ~0.9 MB (and two requests) removed from the initial load of
   every solver page for non-users.
 
+* **Superseded 2026-09-23.** The site owner opted back into load-on-mount after the intent
+  gate made the solver look broken on a plain page load (the placeholder sat indefinitely
+  until interaction). Assets now load immediately on mount; the CLS reservation mechanism
+  from RC5 is unchanged.
+* **Follow-ups shipped 2026-09-23:**
+  * *WASM delivery verified.* `/wasm-lib/*.wasm` served with `Content-Type: application/wasm`,
+    `Content-Encoding: br`, `Cache-Control: immutable` (curl against production), so
+    `WebAssembly.instantiateStreaming` is on the fast path and the fallback in the bindgen
+    glue is never taken. No change needed.
+  * *Dead solver stack removed.* `AdvancedSolverClient` + its three sub-components had zero
+    importers, and the only chain to `static/wasm-lib/` (6.7 MB WASM + 12.7 KB JS) ran through
+    it via `solver.worker.ts`. Removed all of it plus the orphaned 3 MB
+    `assets/generated/word-data.json` and the `/wasm-lib/*` `_headers` block.
+  * *Canuckle dataset split.* `canuckle-data.json` (1.74 MB) bundled the puzzle/fact archive
+    with the solver word lists. Split into `canuckle-data.json` (1.41 MB puzzles) and
+    `canuckle-solver-data.json` (336 KB). The Canuckle solver page now downloads the 336 KB
+    chunk instead of 1.74 MB; the archive/today pages keep only what they render. The
+    generator (`scripts/update-canuckle-data.mjs`) writes both files.
+  * *Dictionary preload hint.* The wordle-solver pages emit
+    `<link rel="preload" as="fetch" ... href="/generated/per-length/word-data-len{N}.json">`
+    from the SSR document, so the dictionary starts downloading during HTML parse instead of
+    after hydration. Canuckle is excluded (its dataset is a content-hashed chunk with no
+    stable URL).
+
 ### RC5 — CLS 0.111 on solver pages (DONE)
 
 * **Evidence.** PSI reports CLS 0.111 on `/wordle-solver`; the placeholder was a
