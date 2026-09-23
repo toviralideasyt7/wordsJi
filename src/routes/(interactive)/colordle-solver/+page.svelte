@@ -1,10 +1,12 @@
-﻿<script lang="ts">
+<script lang="ts">
   import { onMount } from 'svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 import AuthorCard from '$lib/components/AuthorCard.svelte';
   import StaticArticle from '$lib/components/StaticArticle.svelte';
-  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
+
+  // Article arrives from the server load (see +page.server.ts) instead of importing the registry.
+  let { data } = $props();
   import {
     generateBreadcrumbSchema,
     generateHowToSchema,
@@ -489,7 +491,9 @@ const jsonLdSchema = JSON.stringify({
   
 
     <div class="mt-12">
-      <StaticArticle content={ARTICLE_CONTENT['colordle-solver']} />
+      {#if data.article}
+      <StaticArticle content={data.article} />
+    {/if}
 
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

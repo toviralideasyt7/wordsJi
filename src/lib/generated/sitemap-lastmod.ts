@@ -25,7 +25,7 @@ export const GENERATED_SITEMAP_LASTMOD: Record<string, string> = {
 	"/betweenle-solver": "2026-09-21",
 	"/boggle-solver": "2026-09-21",
 	"/colorfle-solver": "2026-09-21",
-	"/colordle-solver": "2026-09-21",
+	"/colordle-solver": "2026-09-23",
 	"/contact": "2026-09-21",
 	"/countryle-solver": "2026-09-20",
 	"/dmca-policy": "2026-09-21",

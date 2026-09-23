@@ -1,4 +1,4 @@
-const DEFAULT_NERDLE_ANSWERS_API_BASE = 'https://nerdle-answers.wordsolverx.workers.dev';
+const DEFAULT_NERDLE_ANSWERS_API_BASE = 'https://nerdle-answers.nerdleapi.workers.dev';
 // Override this in deployment env if your workers.dev subdomain is different.
 const configuredNerdleAnswersApiBase =
 	typeof import.meta.env.PUBLIC_NERDLE_ANSWERS_API_BASE === 'string'
