@@ -1,8 +1,13 @@
-﻿<script lang="ts">
+<script lang="ts">
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import StaticArticle from '$lib/components/StaticArticle.svelte';
-  import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
+
+  /**
+   * Article content arrives from the server load (see +page.server.ts) instead of the client
+   * importing the whole content registry.
+   */
+  let { data } = $props();
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import {
@@ -430,6 +435,13 @@
                 content="Use the WordSolverX Nerdle solver for Micro, Mini, Midi, Classic, and Maxi equations, with solving that runs in the browser and Wordle-style clue entry."
         />
         <link rel="canonical" href="https://wordsolverx.com/nerdle-solver" />
+        <!--
+          The first thing this page does on mount is POST to the solver worker on its own
+          origin. Warming DNS + TLS during HTML parse takes that handshake off the critical
+          path of the first suggestion request.
+        -->
+        <link rel="preconnect" href="https://solver.nerdle.workers.dev" crossorigin="anonymous" />
+        <link rel="dns-prefetch" href="https://solver.nerdle.workers.dev" />
         <meta property="og:title" content="Nerdle Solver All Modes" />
         <meta
                 property="og:description"
@@ -818,7 +830,9 @@
         </div>
 
     <div class="mt-12">
-      <StaticArticle content={ARTICLE_CONTENT['nerdle-solver']} />
+      {#if data.article}
+        <StaticArticle content={data.article} />
+      {/if}
 
       <AuthorCard
         name={PRESTON_HAYES_AUTHOR_NAME}

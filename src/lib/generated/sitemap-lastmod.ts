@@ -39,7 +39,7 @@ export const GENERATED_SITEMAP_LASTMOD: Record<string, string> = {
 	"/loldle-solver": "2026-09-20",
 	"/minesweeper-solver": "2026-09-21",
 	"/narutodle-solver": "2026-09-20",
-	"/nerdle-solver": "2026-09-21",
+	"/nerdle-solver": "2026-09-23",
 	"/onepiecedle-solver": "2026-09-20",
 	"/canuckle-answer-today": "2026-09-21",
 	"/canuckle-archive": "2026-09-20",
