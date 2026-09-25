@@ -61,6 +61,10 @@
     { name: 'Spotle Solver', href: '/spotle-solver', description: 'Spotify artist solver for Spotle.', color: 'from-teal-500 to-teal-600', icon: 'Sp' },
     { name: 'Weaver Solver', href: '/weaver-solver', description: 'Find the shortest word ladder path.', color: 'from-violet-500 to-fuchsia-600', icon: 'Wv' },
     { name: 'Word Ladder Solver', href: '/word-ladder-solver', description: 'Find all shortest paths with OWL2 and SOWPODS dictionaries.', color: 'from-fuchsia-500 to-violet-600', icon: 'WL' },
+    { name: 'Batter Up Solver', href: '/batterup-solver', description: 'Six-column entropy solver for the daily MLB player guessing game.', color: 'from-blue-600 to-indigo-700', icon: 'Bu', isPopular: true },
+    { name: 'Marveldle Solver', href: '/marveldle-solver', description: 'Constraint solver for Marveldle Comics and MCU modes with full character data.', color: 'from-red-600 to-blue-700', icon: 'Mv', isPopular: true },
+    { name: 'Terminus Solver', href: '/terminus-solver', description: 'Calculate the Terminus code from the three whiteboard symbols in BO6 Zombies.', color: 'from-amber-500 to-orange-700', icon: 'Tm' },
+    { name: 'Nonogram Solver', href: '/nonogram-solver', description: 'Solve Picross puzzles up to 20x20 with constraint propagation, right in your browser.', color: 'from-slate-600 to-slate-800', icon: 'Ng' },
   ];
 
   const faqs = [
