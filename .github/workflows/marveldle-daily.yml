@@ -1,0 +1,71 @@
+# .github/workflows/marveldle-daily.yml
+# Daily Marveldle answer solve. Upstream releases the new pick around US
+# midnight (~04:00-05:00 UTC); the page flips at the 06:02 UTC puzzle-window
+# boundary, so the main solve runs at 06:05 UTC — three minutes after the flip,
+# so the solver never races it. The solve itself takes 2-5 minutes, which is
+# why the today page shows its "updating" state until the new entry lands.
+#
+# A second run at 06:35 UTC executes `yesterday` mode: the cheap, reliable
+# /yesterday endpoint (one call per mode, no solving) backfills the previous
+# day's entry so the yesterday page and archive never have gaps.
+#
+# Fails loudly: if scripts/marveldle-solve.mjs exits non-zero (either mode
+# unsolved, upstream blocked, timeout) the job fails and NOTHING is committed
+# — the script never writes a partial entry. Commits only when the data file
+# actually changed.
+
+name: Marveldle Daily
+
+on:
+  schedule:
+    - cron: '5 6 * * *'
+    - cron: '35 6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Which solve mode to run
+        required: false
+        default: today
+        type: choice
+        options:
+          - today
+          - yesterday
+
+permissions:
+  contents: write
+
+jobs:
+  solve-marveldle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Retry/backfill run at 06:35 uses the cheap /yesterday endpoint;
+      # the 06:05 run does the full constraint solve. Manual dispatch
+      # can override with the `mode` input.
+      SOLVE_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode || (github.event.schedule == '35 6 * * *' && 'yesterday' || 'today') }}
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Solve Marveldle answers
+        run: node scripts/marveldle-solve.mjs "$SOLVE_MODE"
+
+      - name: Commit and push if data changed
+        run: |
+          set -e
+          if git diff --quiet -- src/lib/data/marveldle-answers.json; then
+            echo "Marveldle data unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data/marveldle-answers.json
+          git commit -m "chore(marveldle): daily answer update $(date -u +%F) [mode: $SOLVE_MODE]"
+          git push

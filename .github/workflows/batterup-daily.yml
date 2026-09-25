@@ -1,0 +1,54 @@
+# .github/workflows/batterup-daily.yml
+# Daily Batter Up answer fetch. Upstream data for date D lands on the CDN at
+# ~00:32 UTC on D and the page flips at the 01:00 UTC puzzle-window boundary.
+# This job runs at 01:05 UTC — AFTER the boundary — because the site
+# prerenders today pages at deploy time: a bake before 01:00 would compute
+# yesterday's puzzle date and permanently bake the "updating" state until the
+# next deploy. Running after the boundary guarantees the baked page carries
+# today's answer.
+#
+# Fails loudly: if scripts/batterup-daily.mjs exits non-zero (no CDN data,
+# player not found, malformed payload) the job fails and NOTHING is
+# committed — the today page renders its "updating" state instead of a wrong
+# answer. Commits only when the data files actually changed.
+
+name: Batter Up Daily
+
+on:
+  schedule:
+    - cron: '5 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-batterup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch today's Batter Up answer
+        run: node scripts/batterup-daily.mjs
+
+      - name: Commit and push if data changed
+        run: |
+          set -e
+          if git diff --quiet -- src/lib/data/batterup-answers.json src/lib/data/batterup-players.json; then
+            echo "Batter Up data unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data/batterup-answers.json src/lib/data/batterup-players.json
+          git commit -m "chore(batterup): daily answer update $(date -u +%F)"
+          git push
