@@ -3,6 +3,19 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import { generateWebPageSchema } from '$lib/seo';
   import { GUIDES } from '$lib/content/guides';
+  import { countArticleWords, estimateReadingMinutes } from '$lib/content/article-metrics';
+
+  const formatGuideDate = (iso: string) =>
+    new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+
+  const guideReadingMinutes = (slug: string) => {
+    const guide = GUIDES.find((g) => g.slug === slug);
+    return guide ? estimateReadingMinutes(countArticleWords(guide.body)) : 5;
+  };
 
   // Full strategy articles, grouped for display on the hub.
   const guideGroups = (() => {
@@ -16,116 +29,6 @@
       .filter((k) => map.has(k))
       .map((k) => ({ title: k, items: map.get(k) as unknown as typeof GUIDES }));
   })();
-
-  const clusterSections = [
-    {
-      title: 'Geography Puzzle Variants',
-      cards: [
-        {
-          game: 'Worldle',
-          description: 'Guess countries from their outlines and use distance feedback to narrow each attempt.',
-          links: [
-            { href: '/worldle-answer-today', label: "View today's Worldle answer" },
-            { href: '/worldle-solver', label: 'Open the Worldle solver' }
-          ]
-        },
-        {
-          game: 'Globle',
-          description: 'Guess countries on a globe where warmer colors mean your guess is getting closer.',
-          links: [{ href: '/globle-answer-today', label: "View today's Globle answer" }]
-        },
-        {
-          game: 'Countryle',
-          description: 'Use continent, area, and population clues to identify the daily country faster.',
-          links: [
-            { href: '/countryle-answer-today', label: "View today's Countryle answer" },
-            { href: '/countryle-solver', label: 'Open the Countryle solver' }
-          ]
-        }
-      ]
-    },
-    {
-      title: 'Character Guessing Games',
-      cards: [
-        {
-          game: 'LoLdle',
-          description: 'Identify League of Legends champions using quote, ability, and splash clues.',
-          links: [{ href: '/loldle-answer-today-updated', label: "View today's LoLdle answer" }]
-        },
-        {
-          game: 'Dotadle',
-          description: 'Daily Dota character challenge with mode-based hints and region-specific answers.',
-          links: [{ href: '/dotadle-answer-today-updated', label: "View today's Dotadle answer" }]
-        },
-        {
-          game: 'Narutodle',
-          description: 'Guess Naruto characters by quote and art clues with daily rotating answers.',
-          links: [{ href: '/narutodle-answer-today-updated', label: "View today's Narutodle answer" }]
-        },
-        {
-          game: 'Onepiecedle',
-          description: 'One Piece character guessing with clue modes that test memory and recognition.',
-          links: [{ href: '/onepiecedle-answer-today-updated', label: "View today's Onepiecedle answer" }]
-        },
-        {
-          game: 'Pokedle',
-          description: 'Pokemon-themed daily guessing puzzle for types, forms, and iconic clues.',
-          links: [{ href: '/pokedle-answer-today-updated', label: "View today's Pokedle answer" }]
-        },
-        {
-          game: 'Smashdle',
-          description: 'Guess Smash characters with fighter clues and daily updated answer pools.',
-          links: [{ href: '/smashdle-answer-today-updated', label: "View today's Smashdle answer" }]
-        }
-      ]
-    },
-    {
-      title: 'Logic & Visual Puzzle Variants',
-      cards: [
-        {
-          game: 'Contexto',
-          description: 'Find the target word by semantic closeness instead of letter-by-letter hints.',
-          links: [{ href: '/contexto-answer-today', label: "View today's Contexto answer" }]
-        },
-        {
-          game: 'Semantle',
-          description: 'Use word similarity ranks to move toward the hidden word in semantic space.',
-          links: [{ href: '/semantle-answer-today', label: "View today's Semantle answer" }]
-        },
-        {
-          game: 'Searchle',
-          description: 'Predict Google autocomplete completions from real query prompts and trends.',
-          links: [
-            { href: '/searchle-answer-today', label: "View today's Searchle answer" },
-            { href: '/searchle-solver', label: 'Open the Searchle solver' }
-          ]
-        },
-        {
-          game: 'Colordle',
-          description: 'Guess the daily color using RGB and hex-distance style feedback clues.',
-          links: [
-            { href: '/colordle-answer-today', label: "View today's Colordle answer" },
-            { href: '/colordle-solver', label: 'Open the Colordle solver' }
-          ]
-        },
-        {
-          game: 'Colorfle',
-          description: 'Color-based puzzle variant with daily answer tracking and archive support.',
-          links: [{ href: '/colorfle-answer-today', label: "View today's Colorfle answer" }]
-        },
-        {
-          game: 'Framed',
-          description: 'Guess the movie from still frames with one new visual clue per guess.',
-          links: [{ href: '/framed-answer-today', label: "View today's Framed answer" }]
-        },
-        {
-          game: 'Spotle',
-          description: 'Music and artist guessing puzzle with clue progression and archive lookup.',
-          links: [{ href: '/spotle-answer-today', label: "View today's Spotle answer" }]
-        }
-      ]
-    }
-  ];
 
   const faqs = [
     {
@@ -208,15 +111,19 @@
     {#each guideGroups as group}
       <section>
         <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-5">{group.title}</h2>
-        <div class="grid gap-4 sm:grid-cols-2">
+        <div class="grid gap-5">
           {#each group.items as guide}
-            <article class="group border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 overflow-hidden transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-md">
+            <article class="group border border-slate-200 dark:border-slate-700 rounded-2xl bg-white dark:bg-slate-800/50 overflow-hidden transition-all duration-200 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-lg">
               <a href={`/guides/${guide.slug}`} class="flex h-full flex-col sm:flex-row">
-                <div class="sm:w-20 shrink-0 bg-gradient-to-br {guide.gradient} flex items-center justify-center p-4 sm:p-0">
-                  <span class="text-3xl">{guide.icon}</span>
+                <div class="sm:w-44 shrink-0 bg-gradient-to-br {guide.gradient} flex items-center justify-center p-8 sm:p-6">
+                  <span class="text-5xl">{guide.icon}</span>
                 </div>
-                <div class="flex-1 p-5 sm:p-6">
-                  <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-1.5 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">{guide.cardTitle}</h3>
+                <div class="flex-1 p-6 sm:p-7">
+                  <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                    <span class="rounded-full bg-teal-50 dark:bg-teal-900/30 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300">{group.title}</span>
+                    <span class="text-xs text-slate-400 dark:text-slate-500">{formatGuideDate(guide.publishedDate)} · {guideReadingMinutes(guide.slug)} min read</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-2 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">{guide.cardTitle}</h3>
                   <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">{guide.description}</p>
                   <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400">
                     Read the guide
@@ -232,27 +139,6 @@
       </section>
     {/each}
   </div>
-
-  {#each clusterSections as section}
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-6">{section.title}</h2>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {#each section.cards as card}
-          <div class="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-5">
-            <h3 class="font-bold text-slate-900 dark:text-slate-50 mb-2">{card.game}</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">{card.description}</p>
-            <div class="flex flex-wrap gap-3 text-sm">
-              {#each card.links as link}
-                <a href={link.href} class="font-semibold text-teal-600 dark:text-teal-400 hover:underline">
-                  {link.label}
-                </a>
-              {/each}
-            </div>
-          </div>
-        {/each}
-      </div>
-    </section>
-  {/each}
 
   <!-- ═══════════════════════════════════════════════════
        SEO ARTICLE CONTENT — 1500+ words

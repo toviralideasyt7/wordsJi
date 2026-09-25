@@ -30,11 +30,17 @@
     scale?: 'default' | 'large';
   } = $props();
 
-  const faqSchema = $derived(
-    content.faqs.length > 0 ? JSON.stringify(generateFAQSchema(content.faqs)) : null
-  );
-
   const sub = (text: string) => substituteVars(text, vars);
+
+  const faqSchema = $derived(
+    content.faqs.length > 0
+      ? JSON.stringify(
+          generateFAQSchema(
+            content.faqs.map((faq) => ({ question: sub(faq.question), answer: sub(faq.answer) }))
+          )
+        )
+      : null
+  );
 
   const headings = $derived(
     content.sections.map((section) => ({

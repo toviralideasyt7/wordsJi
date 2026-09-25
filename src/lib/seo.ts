@@ -314,6 +314,12 @@ export function generateWebPageSchema(
 }
 
 // Generate FAQ Schema
+// Defense in depth: strip any unreplaced {token} placeholders so a missed
+// substitution can never leak into structured data as literal text.
+function stripUnreplacedTokens(text: string): string {
+    return text.replace(/\{\w+\}/g, '');
+}
+
 export function generateFAQSchema(
     faqs: Array<{ question: string; answer: string }>
 ): SchemaFAQ {
@@ -322,10 +328,10 @@ export function generateFAQSchema(
         '@type': 'FAQPage',
         mainEntity: faqs.map((faq) => ({
             '@type': 'Question',
-            name: faq.question,
+            name: stripUnreplacedTokens(faq.question),
             acceptedAnswer: {
                 '@type': 'Answer',
-                text: faq.answer,
+                text: stripUnreplacedTokens(faq.answer),
             },
         })),
     };

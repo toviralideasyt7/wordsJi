@@ -84,16 +84,46 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 !latestBundledDateKey || latestBundledDateKey < dateKey || !puzzles.some((puzzle) => puzzle.date === dateKey);
 
         if (shouldRefreshFromSource) {
-                try {
-                        const livePuzzle = await fetchLiveCanucklePuzzle(dateKey);
-                        if (livePuzzle && !puzzles.some((puzzle) => puzzle.index === livePuzzle.index)) {
-                                puzzles = [...puzzles, livePuzzle].sort((left, right) => left.index - right.index);
+                // Backfill EVERY missing date from the day after the bundled data ends
+                // through today, so "yesterday" and the last-30 list are computed from
+                // real puzzles instead of the stale bundle edge.
+                const missingDates: string[] = [];
+                const cursor = latestBundledDateKey
+                        ? new Date(`${latestBundledDateKey}T12:00:00Z`)
+                        : new Date(`${dateKey}T12:00:00Z`);
+                if (latestBundledDateKey) {
+                        cursor.setUTCDate(cursor.getUTCDate() + 1);
+                }
+                const end = new Date(`${dateKey}T12:00:00Z`);
+                while (cursor <= end && missingDates.length < 45) {
+                        missingDates.push(format(cursor, 'yyyy-MM-dd'));
+                        cursor.setUTCDate(cursor.getUTCDate() + 1);
+                }
+
+                for (const missingDate of missingDates) {
+                        if (puzzles.some((puzzle) => puzzle.date === missingDate)) {
+                                continue;
                         }
-                } catch (error) {
-                        console.warn(
-                                `Unable to refresh Canuckle live puzzle for ${dateKey}:`,
-                                error instanceof Error ? error.message : String(error)
-                        );
+                        try {
+                                const livePuzzle = await fetchLiveCanucklePuzzle(missingDate);
+                                if (livePuzzle && !puzzles.some((puzzle) => puzzle.index === livePuzzle.index)) {
+                                        puzzles = [...puzzles, livePuzzle];
+                                }
+                        } catch (error) {
+                                console.warn(
+                                        `Unable to backfill Canuckle puzzle for ${missingDate}:`,
+                                        error instanceof Error ? error.message : String(error)
+                                );
+                        }
+                }
+                puzzles = [...puzzles].sort((left, right) => left.index - right.index);
+
+                // Staleness guard: if the newest puzzle is still older than yesterday,
+                // the supporting sections would be wrong — fail loud in the logs.
+                const newestDate = puzzles[puzzles.length - 1]?.date ?? '';
+                const yesterdayKey = format(new Date(end.getTime() - 86400000), 'yyyy-MM-dd');
+                if (newestDate < yesterdayKey) {
+                        console.warn(`Canuckle data still stale after backfill; newest puzzle date: ${newestDate}`);
                 }
         }
 

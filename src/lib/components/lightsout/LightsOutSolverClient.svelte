@@ -116,64 +116,14 @@
     <div class="mx-auto max-w-5xl space-y-6">
       <div class="space-y-6">
         <div class="rounded-[2rem] border border-teal-100 bg-white/85 p-6 shadow-[0_24px_80px_rgba(15,118,110,0.12)] backdrop-blur sm:p-8">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <div class="max-w-2xl">
-              <p class="inline-flex rounded-full bg-teal-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">
-                Classic grid puzzle
-              </p>
-              <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Light Out Solver</h2>
-              <p class="mt-4 text-base leading-8 text-slate-600">
-                Build any 2x2 to 5x5 Light Out puzzle, switch between linked play and manual edit mode, then solve it with the same optimal Gaussian-elimination logic from the original project.
-              </p>
-            </div>
-
-            <div class="grid min-w-[220px] gap-3 rounded-3xl border border-slate-200 bg-slate-50/90 p-4 shadow-sm sm:grid-cols-2">
-              <label class="grid gap-2 text-sm font-semibold text-slate-700">
-                Board size
-                <select
-                  class="h-11 rounded-2xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-900 outline-none transition focus:border-teal-400"
-                  bind:value={gridSize}
-                  onchange={handleGridSizeChange}
-                >
-                  <option value={2}>2 x 2</option>
-                  <option value={3}>3 x 3</option>
-                  <option value={4}>4 x 4</option>
-                  <option value={5}>5 x 5</option>
-                </select>
-              </label>
-
-              <button
-                class="mt-auto inline-flex h-11 items-center justify-center rounded-2xl bg-slate-900 px-4 text-sm font-semibold text-white transition hover:bg-slate-800"
-                onclick={handleRandom}
-                type="button"
-              >
-                Random puzzle
-              </button>
-            </div>
-          </div>
-
-          <div class="mt-6 flex flex-wrap gap-3">
-            <button
-              class={`inline-flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition ${!editMode ? 'bg-teal-600 text-white shadow-lg shadow-teal-500/25' : 'border border-slate-200 bg-white text-slate-700 hover:border-teal-200 hover:text-teal-700'}`}
-              onclick={() => (editMode = false)}
-              type="button"
-            >
-              Linked toggle
-            </button>
-            <button
-              class={`inline-flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition ${editMode ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/25' : 'border border-slate-200 bg-white text-slate-700 hover:border-amber-200 hover:text-amber-700'}`}
-              onclick={() => (editMode = true)}
-              type="button"
-            >
-              Edit puzzle
-            </button>
-            <button
-              class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-teal-600 via-teal-600 to-cyan-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition hover:translate-y-[-1px]"
-              onclick={handleSolve}
-              type="button"
-            >
-              Solve board
-            </button>
+          <div class="max-w-2xl">
+            <p class="inline-flex rounded-full bg-teal-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">
+              Classic grid puzzle
+            </p>
+            <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Light Out Solver</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Build any 2x2 to 5x5 Light Out puzzle, switch between linked play and manual edit mode, then solve it with the same optimal Gaussian-elimination logic from the original project.
+            </p>
           </div>
         </div>
 
@@ -196,6 +146,31 @@
             </div>
 
             <div class="flex flex-col items-center gap-4">
+              <div class="flex flex-wrap items-end justify-center gap-3">
+                <label class="grid gap-2 text-sm font-semibold text-slate-700">
+                  Board size
+                  <select
+                    class="h-11 rounded-2xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-900 outline-none transition focus:border-teal-400"
+                    bind:value={gridSize}
+                    onchange={handleGridSizeChange}
+                    aria-label="Board size"
+                  >
+                    <option value={2}>2 x 2</option>
+                    <option value={3}>3 x 3</option>
+                    <option value={4}>4 x 4</option>
+                    <option value={5}>5 x 5</option>
+                  </select>
+                </label>
+
+                <button
+                  class="inline-flex h-11 items-center justify-center rounded-2xl bg-slate-900 px-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+                  onclick={handleRandom}
+                  type="button"
+                >
+                  Random puzzle
+                </button>
+              </div>
+
               <div class="lights-board grid gap-1.5 rounded-[1.75rem] border border-slate-200 bg-slate-900/95 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.3)]" style={boardStyle(gridSize)}>
                 {#each boardIndices as index}
                   {@const isLit = (bitboard & (1 << index)) !== 0}
@@ -207,6 +182,30 @@
                     aria-label={`Cell ${index + 1}`}
                   ></button>
                 {/each}
+              </div>
+
+              <div class="flex flex-wrap justify-center gap-3">
+                <button
+                  class={`inline-flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition ${!editMode ? 'bg-teal-600 text-white shadow-lg shadow-teal-500/25' : 'border border-slate-200 bg-white text-slate-700 hover:border-teal-200 hover:text-teal-700'}`}
+                  onclick={() => (editMode = false)}
+                  type="button"
+                >
+                  Linked toggle
+                </button>
+                <button
+                  class={`inline-flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition ${editMode ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/25' : 'border border-slate-200 bg-white text-slate-700 hover:border-amber-200 hover:text-amber-700'}`}
+                  onclick={() => (editMode = true)}
+                  type="button"
+                >
+                  Edit puzzle
+                </button>
+                <button
+                  class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-teal-600 via-teal-600 to-cyan-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition hover:translate-y-[-1px]"
+                  onclick={handleSolve}
+                  type="button"
+                >
+                  Solve board
+                </button>
               </div>
 
               <p class="text-sm text-slate-500">

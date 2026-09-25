@@ -20,6 +20,17 @@ const YESTERDAY_REDIRECTS = {
         '/colordle-answer-yesterday': '/colordle-answer-today'
 } as const;
 
+// Canonical consolidation: the -updated slugs rank in Bing and stay canonical.
+// The clean variants 301 to them in a single hop.
+const CANONICAL_UPDATED_REDIRECTS = {
+        '/dotadle-answer-today': '/dotadle-answer-today-updated',
+        '/loldle-answer-today': '/loldle-answer-today-updated',
+        '/narutodle-answer-today': '/narutodle-answer-today-updated',
+        '/onepiecedle-answer-today': '/onepiecedle-answer-today-updated',
+        '/pokedle-answer-today': '/pokedle-answer-today-updated',
+        '/smashdle-answer-today': '/smashdle-answer-today-updated'
+} as const;
+
 const TODAY_CACHE_VERSION_BY_GAME: Partial<Record<PuzzleGame, string>> = {
         nerdle: 'v3'
 };
@@ -195,6 +206,10 @@ export const handle: Handle = async ({ event, resolve }) => {
         const requestUrl = new URL(event.request.url);
         const pathname = requestUrl.pathname;
         const normalizedPathname = getNormalizedPathname(pathname);
+
+        if (normalizedPathname in CANONICAL_UPDATED_REDIRECTS) {
+                throw redirect(301, CANONICAL_UPDATED_REDIRECTS[normalizedPathname as keyof typeof CANONICAL_UPDATED_REDIRECTS]);
+        }
 
         if (normalizedPathname in YESTERDAY_REDIRECTS) {
                 throw redirect(301, YESTERDAY_REDIRECTS[normalizedPathname as keyof typeof YESTERDAY_REDIRECTS]);

@@ -95,14 +95,14 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/wordle-answer-today' },
     };
 
-    const answerSuffix = wordleWord ? ` - ${wordleWord.toUpperCase()}` : ` - Answer #${wordleNumber}`;
-    const pageTitle = `Wordle Answer Today (${formattedDate})${answerSuffix}`;
+    const answerSuffix = wordleWord ? `: ${wordleWord.toUpperCase()} (#${wordleNumber})` : ` (#${wordleNumber})`;
+    const pageTitle = `Wordle Answer Today, ${formattedDate}${answerSuffix} — Hints & Solution | WordSolverX`;
     // SEO audit chapter 7.2 Lever 2: put the answer directly in the meta description so it
     // shows in Bing's search snippet without a click. Bing shows the meta description
     // verbatim (unlike Google, which often rewrites it). For daily-answer queries, the
     // user wants the answer immediately — an answer-visible snippet dramatically
     // increases CTR even at the same rank.
-    const pageDescription = `Today's Wordle answer for ${formattedDate} is ${wordleWord.toUpperCase()}. Plus the letter hints, the full clue breakdown, and the recent answers from Wordle #${wordleNumber} onwards.`;
+    const pageDescription = `Wordle answer today (${formattedDate}): ${wordleWord.toUpperCase()} for Wordle #${wordleNumber}. Hints, clues and recent answers at WordSolverX.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

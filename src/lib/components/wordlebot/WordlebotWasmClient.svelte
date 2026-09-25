@@ -170,6 +170,13 @@
 
       shadowRoot.append(style, body);
       cleanup = mountWordlebotApp(appTarget, config);
+      // Timing beacon: when the solver actually becomes interactive.
+      try {
+        performance.mark('solver-interactive');
+        (window as any).dataLayer?.push({ event: 'solver_interactive' });
+      } catch {
+        /* telemetry is best-effort */
+      }
     } catch (error) {
       errorMessage =
         error instanceof Error ? error.message : 'The solver engine could not load.';
@@ -179,12 +186,31 @@
     }
   }
 
+  let mountObserver: IntersectionObserver | null = null;
+
   onMount(() => {
-    // Load immediately: the engine request starts on mount, so the placeholder only shows for
-    // the brief asset-load window instead of sitting on the page until the reader interacts.
-    void start();
+    // Start the ~0.9 MB WASM + dictionary download only when the solver is about to
+    // enter the viewport, so it never competes with LCP on initial page load.
+    // The skeleton placeholder keeps the region height-stable until then.
+    if (typeof IntersectionObserver !== 'undefined' && activationTarget) {
+      mountObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            mountObserver?.disconnect();
+            mountObserver = null;
+            void start();
+          }
+        },
+        { rootMargin: '400px' }
+      );
+      mountObserver.observe(activationTarget);
+    } else {
+      void start();
+    }
 
     return () => {
+      mountObserver?.disconnect();
+      mountObserver = null;
       cleanup?.();
     };
   });
@@ -195,22 +221,8 @@
 </script>
 
 <svelte:head>
-  {#if solverLength}
-    <!--
-      The dictionary fetch is the longest serial step before first suggestions (87-521 KB).
-      Preloading it from the SSR document starts the download during HTML parse instead of
-      after hydration + mount. crossorigin matches the app's fetch() request mode so the
-      preload is reused rather than downloaded twice. Canuckle pages are skipped on purpose:
-      their dataset is a content-hashed dynamic import with no stable URL to preload.
-    -->
-    <link
-      rel="preload"
-      as="fetch"
-      crossorigin="anonymous"
-      href="/generated/per-length/word-data-len{solverLength}.json"
-      fetchpriority="high"
-    />
-  {/if}
+  <!-- Dictionary preload removed: the WASM engine and its word list load only when the
+       solver approaches the viewport (see onMount above), never during initial page load. -->
 </svelte:head>
 
 <div

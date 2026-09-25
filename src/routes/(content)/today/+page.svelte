@@ -113,6 +113,32 @@
   </ul>
   <p class="mt-6 text-center text-slate-500 dark:text-slate-400" hidden data-card-filter-empty="today-search" data-empty-scope="answers">No answer pages matched your search.</p>
 
+  <!-- Related games & guides: surfaced above the fold-adjacent SEO article -->
+  <section class="mt-12 rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 sm:p-8">
+    <div class="flex items-center justify-between gap-4 mb-5">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-50">Keep playing</h2>
+      <a href="/guides" class="text-sm font-semibold text-teal-600 dark:text-teal-400 hover:underline">All strategy guides →</a>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="/wordle-solver" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
+        <p class="font-bold text-slate-900 dark:text-slate-50">Wordle Solver</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Filter answers from your clues</p>
+      </a>
+      <a href="/guides/how-to-solve-wordle-in-3-guesses" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
+        <p class="font-bold text-slate-900 dark:text-slate-50">Solve Wordle in 3 Guesses</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">The repeatable 3-guess method</p>
+      </a>
+      <a href="/semantle-archive" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
+        <p class="font-bold text-slate-900 dark:text-slate-50">Semantle Archive</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Browse past puzzles by date</p>
+      </a>
+      <a href="/today" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
+        <p class="font-bold text-slate-900 dark:text-slate-50">Yesterday's Answers</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Catch up on what you missed</p>
+      </a>
+    </div>
+  </section>
+
   <!-- ═══════════════════════════════════════════════════
        SEO ARTICLE CONTENT — 1500+ words
        ═══════════════════════════════════════════════════ -->

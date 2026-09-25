@@ -305,7 +305,8 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                                                                 <button
                                                                         type="button"
                                                                         onclick={addGuess}
-                                                                        class="w-full rounded-xl bg-teal-500 text-white font-semibold py-2 hover:bg-teal-600 shadow-md"
+                                                                        disabled={!selectedArtist}
+                                                                        class={`w-full rounded-xl font-semibold py-2 shadow-md transition-colors ${selectedArtist ? 'bg-teal-500 text-white hover:bg-teal-600' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}`}
                                                                 >
                                                                         Add Guess
                                                                 </button>

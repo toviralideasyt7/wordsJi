@@ -4,7 +4,6 @@
   import FiType from '$lib/components/icons/FiType.svelte';
   import FiBookOpen from '$lib/components/icons/FiBookOpen.svelte';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
-  import FiChevronUp from '$lib/components/icons/FiChevronUp.svelte';
 
   interface DatamuseWord { word: string; defs?: string[]; }
 
@@ -107,11 +106,15 @@
 
     {#if showAnswerReveal}
       <button
-        onclick={() => (showAnswer = !showAnswer)}
-        class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+        onclick={() => (showAnswer = true)}
+        disabled={showAnswer}
+        aria-disabled={showAnswer}
+        class={showAnswer
+          ? 'w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-default'
+          : 'w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2'}
       >
         {#if showAnswer}
-          <FiChevronUp class="text-xl" /> Hide Answer
+          ✓ Answer Revealed
         {:else}
           <FiChevronDown class="text-xl" /> Reveal Answer
         {/if}

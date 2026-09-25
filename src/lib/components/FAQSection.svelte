@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { substituteVars } from '$lib/content/article-metrics';
+
 	export interface FAQItem {
 		question: string;
 		answer: string;
@@ -7,12 +9,21 @@
 	let {
 		title = 'Frequently Asked Questions',
 		faqs,
+		vars = {},
 		class: className = ''
 	}: {
 		title?: string;
 		faqs: FAQItem[];
+		vars?: Record<string, string>;
 		class?: string;
 	} = $props();
+
+	const renderedFaqs = $derived(
+		faqs.map((faq) => ({
+			question: substituteVars(faq.question, vars),
+			answer: substituteVars(faq.answer, vars)
+		}))
+	);
 </script>
 
 <section class={`w-full ${className}`}>
@@ -21,7 +32,7 @@
 			{title}
 		</h2>
 		<div class="space-y-2">
-			{#each faqs as faq}
+			{#each renderedFaqs as faq}
 				<details class="group rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
 					<summary class="list-none cursor-pointer px-5 py-4 flex justify-between items-center gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
 						<span class="text-[0.9375rem] font-semibold text-slate-800 dark:text-slate-200">
