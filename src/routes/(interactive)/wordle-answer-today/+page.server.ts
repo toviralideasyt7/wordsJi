@@ -95,14 +95,15 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/wordle-answer-today' },
     };
 
-    const answerSuffix = wordleWord ? `: ${wordleWord.toUpperCase()} (#${wordleNumber})` : ` (#${wordleNumber})`;
-    const pageTitle = `Wordle Answer Today, ${formattedDate}${answerSuffix} — Hints & Solution | WordSolverX`;
-    // SEO audit chapter 7.2 Lever 2: put the answer directly in the meta description so it
-    // shows in Bing's search snippet without a click. Bing shows the meta description
-    // verbatim (unlike Google, which often rewrites it). For daily-answer queries, the
-    // user wants the answer immediately — an answer-visible snippet dramatically
-    // increases CTR even at the same rank.
-    const pageDescription = `Wordle answer today (${formattedDate}): ${wordleWord.toUpperCase()} for Wordle #${wordleNumber}. Hints, clues and recent answers at WordSolverX.`;
+    // CTR fix 2026-09-25: never reveal the answer in the title or meta description.
+    // The "answer in snippet" experiment coincided with CTR collapsing to ~1.6% on
+    // 50k monthly Bing impressions for "wordle answer today": a snippet that hands
+    // over the answer earns the impression but loses the click. Tease with hints.
+    const shortDate = format(today, 'MMM d');
+    const pageTitle = `Wordle Answer Today #${wordleNumber} (${shortDate}) \u2014 Hints | WordSolverX`;
+    const pageDescription = wordleWord
+        ? `Wordle hints for ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on Wordle #${wordleNumber}? Get daily clues, tips and the full solution at WordSolverX.`
+        : `Get Wordle hints and the confirmed Wordle answer for today, ${formattedDate}. Hints, clues, and the solution for Wordle #${wordleNumber}.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

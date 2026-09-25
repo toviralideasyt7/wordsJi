@@ -133,7 +133,9 @@ function getHtmlCacheContext(url: URL): CacheContext | null {
                         cacheControl: buildCacheControl(window.ttlSeconds),
                         lookupKeys: [key],
                         storeKey: key,
-                        browserMaxAge: 3600
+                        // CTR/trust fix 2026-09-25: keep browser cache short on the hub so a
+                        // cached copy can never show yesterday's answers as "today" for long.
+                        browserMaxAge: 900
                 };
         }
 
@@ -155,10 +157,13 @@ function getHtmlCacheContext(url: URL): CacheContext | null {
                         ? `html:${pathname}:today:${window.effectivePuzzleDate}:${cacheVersion}`
                         : `html:${pathname}:today:${window.effectivePuzzleDate}`;
                 return {
-                        cacheControl: buildCacheControl(window.ttlSeconds, 3600),
+                        cacheControl: buildCacheControl(window.ttlSeconds, 900),
                         lookupKeys: [cacheKey],
                         storeKey: cacheKey,
-                        browserMaxAge: 3600
+                        // CTR/trust fix 2026-09-25: 15 min browser cache on today-pages so a
+                        // visitor cached just before a game's flip never sees yesterday's
+                        // answer labeled "today" for an hour.
+                        browserMaxAge: 900
                 };
         }
 
@@ -285,6 +290,21 @@ export const handle: Handle = async ({ event, resolve }) => {
                         }
                 } else {
                         response.headers.set('Cache-Control', buildCacheControl(900, 86400));
+                }
+        }
+
+        // Central answer-staleness guard (2026-09-25): if a today-page renders a
+        // puzzle date different from the game's current window date, flag it. A
+        // "today" page must never serve tomorrow's (or yesterday's) answer.
+        const staleCheckGame = TODAY_ROUTE_GAME_MAP[normalizedPathname] as PuzzleGame | undefined;
+        if (staleCheckGame && contentType.includes('text/html')) {
+                const servedDate = response.headers.get('X-Puzzle-Date');
+                const expectedDate = getPuzzleWindow(staleCheckGame).effectivePuzzleDate;
+                if (servedDate && servedDate !== expectedDate) {
+                        response.headers.set('X-Puzzle-Stale', '1');
+                        console.warn(
+                                `[stale-answer] ${normalizedPathname} served puzzle date ${servedDate}, window expects ${expectedDate}`
+                        );
                 }
         }
 

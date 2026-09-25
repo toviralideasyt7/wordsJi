@@ -105,20 +105,23 @@
     </div>
 
     {#if showAnswerReveal}
-      <button
-        onclick={() => (showAnswer = true)}
-        disabled={showAnswer}
-        aria-disabled={showAnswer}
-        class={showAnswer
-          ? 'w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-default'
-          : 'w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2'}
-      >
-        {#if showAnswer}
+      {#if showAnswer}
+        <!-- Dead-click fix 2026-09-25: a revealed state is not a button. A disabled
+             <button> still absorbs clicks that Clarity records as dead clicks. -->
+        <div
+          class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-default"
+          aria-hidden="true"
+        >
           ✓ Answer Revealed
-        {:else}
+        </div>
+      {:else}
+        <button
+          onclick={() => (showAnswer = true)}
+          class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+        >
           <FiChevronDown class="text-xl" /> Reveal Answer
-        {/if}
-      </button>
+        </button>
+      {/if}
 
       <div class="answer-reveal-area" class:revealed={showAnswer}>
         <div class="answer-text-content bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">

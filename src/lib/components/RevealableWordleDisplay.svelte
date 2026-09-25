@@ -49,21 +49,28 @@
 
   <div class="flex justify-center flex-wrap gap-2 sm:gap-3 mb-8">
     {#each word.split('') as letter, index}
-      <button
-        onclick={() => revealLetter(index)}
-        class="focus:outline-none transition-transform hover:scale-105 active:scale-95"
-        aria-label="Reveal Tile {index + 1}"
-      >
+      {#if revealedIndices.has(index)}
+        <!-- Dead-click fix 2026-09-25: a revealed tile is not interactive. Keeping it a
+             <button> made every click on a green tile a Clarity dead click. -->
         <div
-          class={`flex h-14 w-14 items-center justify-center rounded-xl border-2 text-3xl font-black uppercase transition-all md:h-16 md:w-16 md:text-4xl ${
-            revealedIndices.has(index)
-              ? 'border-[#6aaa64] bg-[#6aaa64] text-white shadow-md'
-              : 'border-slate-300 bg-slate-100 text-slate-900 wordle-blurred-letter dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100'
-          }`}
+          class="flex h-14 w-14 items-center justify-center rounded-xl border-2 text-3xl font-black uppercase transition-all md:h-16 md:w-16 md:text-4xl border-[#6aaa64] bg-[#6aaa64] text-white shadow-md cursor-default"
+          aria-hidden="true"
         >
           {letter.toUpperCase()}
         </div>
-      </button>
+      {:else}
+        <button
+          onclick={() => revealLetter(index)}
+          class="focus:outline-none transition-transform hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Reveal Tile {index + 1}"
+        >
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-xl border-2 text-3xl font-black uppercase transition-all md:h-16 md:w-16 md:text-4xl border-slate-300 bg-slate-100 text-slate-900 wordle-blurred-letter dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100"
+          >
+            {letter.toUpperCase()}
+          </div>
+        </button>
+      {/if}
     {/each}
   </div>
 

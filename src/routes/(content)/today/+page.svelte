@@ -132,7 +132,7 @@
         <p class="font-bold text-slate-900 dark:text-slate-50">Semantle Archive</p>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Browse past puzzles by date</p>
       </a>
-      <a href="/today" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
+      <a href="/wordle-answer-archive" class="rounded-2xl border border-slate-200 dark:border-slate-700 p-4 hover:border-teal-300 dark:hover:border-teal-600 hover:shadow-md transition-all">
         <p class="font-bold text-slate-900 dark:text-slate-50">Yesterday's Answers</p>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Catch up on what you missed</p>
       </a>
