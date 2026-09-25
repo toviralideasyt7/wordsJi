@@ -141,7 +141,7 @@
     terminateWorker();
     solving = true;
 
-    const next = new Worker(new URL('../solvers/nonogram/nonogram.worker.ts', import.meta.url), {
+    const next = new Worker(new URL('../../solvers/nonogram/nonogram.worker.ts', import.meta.url), {
       type: 'module'
     });
     worker = next;

@@ -5,7 +5,7 @@
  * then deriving the clues to ensure consistency.
  */
 
-import { NonogramPuzzle } from './solver';
+import type { NonogramPuzzle } from './solver';
 
 // Helper to create puzzle from grid
 function createPuzzleFromGrid(grid: number[][]): NonogramPuzzle {
