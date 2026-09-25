@@ -28,7 +28,9 @@ export type PuzzleGame =
         | 'pokedle'
         | 'smashdle'
         | 'nerdle'
-        | 'colorfle';
+        | 'colorfle'
+        | 'batterup'
+        | 'marveldle';
 
 export interface PuzzleWindow {
         group: string;
@@ -275,6 +277,23 @@ export const PUZZLE_WINDOW_CONFIG: Record<PuzzleGame, PuzzleWindowConfig> = {
                 boundaryHourUtc: 15,
                 boundaryMinuteUtc: 0,
                 visibleDateOffsetDays: 1
+        },
+        // New games 2026-09-25. batterup: upstream CDN data lands ~00:32 UTC, so the
+        // page flips at 01:00 UTC (late publisher, never the 16:30 early group).
+        // marveldle: upstream pick is US-midnight; joins the 06:02 gamedle group.
+        batterup: {
+                group: 'late',
+                timezone: 'worker-latest',
+                sourceReadiness: 'latest-payload',
+                boundaryHourUtc: 1,
+                boundaryMinuteUtc: 0
+        },
+        marveldle: {
+                group: 'gamedle',
+                timezone: 'worker-latest',
+                sourceReadiness: 'latest-payload',
+                boundaryHourUtc: 6,
+                boundaryMinuteUtc: 2
         }
 };
 
@@ -303,7 +322,9 @@ export const TODAY_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
         '/narutodle-answer-today-updated': 'narutodle',
         '/onepiecedle-answer-today-updated': 'onepiecedle',
         '/pokedle-answer-today-updated': 'pokedle',
-        '/smashdle-answer-today-updated': 'smashdle'
+        '/smashdle-answer-today-updated': 'smashdle',
+        '/batterup-answer-today': 'batterup',
+        '/marveldle-answer-today': 'marveldle'
 };
 
 export const ARCHIVE_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
@@ -324,7 +345,9 @@ export const ARCHIVE_ROUTE_GAME_MAP: Record<string, PuzzleGame> = {
         '/searchle-archive': 'searchle',
         '/phrazle-archive': 'phrazle',
         '/spotle-archive': 'spotle',
-        '/worgle-archive': 'worgle'
+        '/worgle-archive': 'worgle',
+        '/batterup-archive': 'batterup',
+        '/marveldle-archive': 'marveldle'
 };
 
 export const LONG_CACHE_STATIC_PATHS = new Set([
@@ -385,6 +408,10 @@ export const LONG_CACHE_STATIC_PATHS = new Set([
         '/onepiecedle-solver',
         '/smashdle-solver',
         '/pokedle-solver',
+        '/batterup-solver',
+        '/marveldle-solver',
+        '/terminus-solver',
+        '/nonogram-solver',
 ]);
 
 function formatDateKeyFromUtcParts(year: number, month: number, day: number): string {

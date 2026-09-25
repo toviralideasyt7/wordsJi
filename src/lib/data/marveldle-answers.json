@@ -1,0 +1,122 @@
+{
+  "2026-09-24": {
+    "date": "2026-09-24",
+    "dateId": "yesterday-of:9/25/2026 12:00:00 AM",
+    "comics": {
+      "id": "ghostrider-johnnyblaze",
+      "name": "Ghost Rider (Johnny Blaze)",
+      "gender": "Male",
+      "type": "AntiHero",
+      "species": [
+        "Human",
+        "Spirit"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Elemental"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1972,
+      "firstApparitionComicTitle": "Marvel Spotlight #5",
+      "keywords": [
+        "johnny",
+        "blaze",
+        "rider",
+        "Johnathon",
+        "Johnathon blaze"
+      ]
+    },
+    "mcu": {
+      "id": "hulk",
+      "name": "Hulk",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Shapeshifting"
+      ],
+      "origin": "Earth",
+      "actorName": "Mark Ruffalo, Edward Norton",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "Avengers",
+        "Revengers"
+      ],
+      "keywords": [
+        "bruce",
+        "banner",
+        "bruce banner"
+      ]
+    },
+    "solvedAt": "2026-09-25T15:57:48.487Z"
+  },
+  "2026-09-25": {
+    "date": "2026-09-25",
+    "dateId": "9/25/2026 12:00:00 AM",
+    "comics": {
+      "id": "blackcat",
+      "name": "Black Cat",
+      "gender": "Female",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Magic",
+        "Kinesis"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1979,
+      "firstApparitionComicTitle": "The Amazing Spider-Man #194",
+      "keywords": [
+        "black",
+        "cat",
+        "Felicia",
+        "Hardy"
+      ]
+    },
+    "mcu": {
+      "id": "ironheart",
+      "name": "Ironheart",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Magic",
+        "Flight",
+        "Technological"
+      ],
+      "origin": "Earth",
+      "actorName": "Dominique Thorne",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "HoodsGang"
+      ],
+      "keywords": [
+        "riri",
+        "williams",
+        "riri williams",
+        "iron heart"
+      ]
+    },
+    "solvedAt": "2026-09-25T15:43:28.999Z"
+  }
+}

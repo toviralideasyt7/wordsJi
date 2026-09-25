@@ -1,0 +1,22 @@
+{
+  "2026-09-25": {
+    "date": "2026-09-25",
+    "gameNumber": 950,
+    "player": {
+      "player_name": "Caleb Durbin",
+      "player_id": "5007615",
+      "team_name": "Red Sox",
+      "born": "USA",
+      "birth_date": "2000-02-22",
+      "position": [
+        "3B"
+      ],
+      "debut": 2025,
+      "jersey_number": 5
+    },
+    "videoDescription": "[07/20/26 : BAL 5 - 6 BOS] Caleb Durbin crushes his 10th homer of the year to left field to give the Red Sox the lead in the bottom of the 8th, 6-5.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/20/ab55162b-172ecfad-f23b85d3-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-09-25",
+    "fetchedAt": "2026-09-25T15:43:13.474Z"
+  }
+}

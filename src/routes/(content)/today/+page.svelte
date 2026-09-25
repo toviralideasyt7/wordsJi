@@ -33,6 +33,8 @@
     { name: 'Phrazle', href: '/phrazle-answer-today', description: 'Both daily phrases, morning and afternoon.', color: 'from-teal-500 to-lime-600', icon: 'Pz' },
     { name: 'Spotle', href: '/spotle-answer-today', description: "Today's artist answer and the key details around it.", color: 'from-teal-500 to-teal-600', icon: 'Sp' },
     { name: 'Worgle', href: '/worgle-answer-today', description: 'The daily Worgle answer with the live puzzle number and archive link.', color: 'from-slate-700 to-slate-900', icon: 'Wo' },
+    { name: 'Batter Up', href: '/batterup-answer-today', description: "Today's MLB player answer, with the six clue columns explained.", color: 'from-blue-600 to-indigo-700', icon: 'Bu' },
+    { name: 'Marveldle', href: '/marveldle-answer-today', description: "Today's Marvel character in both Comics and MCU modes.", color: 'from-red-600 to-blue-700', icon: 'Mv' },
   ];
 </script>
 
