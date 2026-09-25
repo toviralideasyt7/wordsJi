@@ -185,6 +185,22 @@
         </div>
       </section>
 
+      {#if data.yesterday}
+        <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+          <h2 class="text-2xl font-bold text-slate-900 mb-5">Yesterday's Marveldle answers</h2>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-red-700">Comics · {data.yesterday.date}</p>
+              <p class="mt-1 text-xl font-extrabold text-slate-900">{data.yesterday.comics?.name ?? '—'}</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-xs font-semibold uppercase tracking-widest text-indigo-700">MCU · {data.yesterday.date}</p>
+              <p class="mt-1 text-xl font-extrabold text-slate-900">{data.yesterday.mcu?.name ?? '—'}</p>
+            </div>
+          </div>
+        </section>
+      {/if}
+
       {#if data.recent.length > 1}
         <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
           <h2 class="text-2xl font-bold text-slate-900 mb-5">Recent Marveldle answers</h2>
@@ -210,8 +226,6 @@
           </div>
           <p class="mt-4">
             <a href="/marveldle-archive" class="text-red-700 hover:text-red-800 font-medium underline">See the full Marveldle archive</a>
-            <span class="text-slate-400"> · </span>
-            <a href="/marveldle-answer-yesterday" class="text-red-700 hover:text-red-800 font-medium underline">Yesterday's answers</a>
           </p>
         </section>
       {/if}

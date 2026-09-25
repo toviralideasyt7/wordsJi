@@ -76,8 +76,6 @@
 </script>
 
 <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
-
-<div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
   <div class="space-y-6">
     <!-- Symbol selectors -->
     <div class="rounded-3xl border border-slate-700/60 bg-slate-900/95 p-6 shadow-2xl sm:p-8">

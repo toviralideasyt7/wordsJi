@@ -5,7 +5,7 @@
 // sourceReadiness: 'latest-payload', boundaryHourUtc: 1, boundaryMinuteUtc: 0 }.
 // Until then this load does not typecheck; it is written against that config.
 
-import { format } from 'date-fns';
+import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { getTeamDivision, getLeague, calculateAge } from '$lib/batterup/solver';
 import type { BatterUpDayEntry } from '$lib/batterup/solver';
@@ -44,6 +44,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const today = getPuzzleDateForGame('batterup');
 	const dateKey = format(today, 'yyyy-MM-dd');
 	const entry = answers[dateKey] ?? null;
+	// Yesterday's answer renders inline on this page.
+	const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
+	const yesterday = answers[yesterdayKey] ?? null;
 
 	// Staleness guard (Canuckle pattern): if the payload date is not the
 	// expected window date, the page renders its "updating" state — never
@@ -55,6 +58,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			error: true,
 			isStale: true,
 			entry: null,
+			yesterday: null,
 			recent: [],
 			formattedDate: staleDate,
 			visibleDateKey: dateKey,
@@ -156,6 +160,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		error: false,
 		isStale: false,
 		entry,
+		yesterday,
 		recent,
 		formattedDate,
 		visibleDateKey: entry.date,

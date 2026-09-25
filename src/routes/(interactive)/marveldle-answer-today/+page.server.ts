@@ -8,7 +8,7 @@
 // upstream-picked (US-midnight release), so tomorrow's character does not
 // exist until upstream releases it. 06:02 UTC is 1-2h after the swap.
 
-import { format } from 'date-fns';
+import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import type { MarveldleDayEntry } from '$lib/marveldle/types';
 import answersRaw from '$lib/data/marveldle-answers.json';
@@ -33,6 +33,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const today = getPuzzleDateForGame('marveldle');
 	const dateKey = format(today, 'yyyy-MM-dd');
 	const entry = answers[dateKey] ?? null;
+	// Yesterday's answers render inline on this page (no separate yesterday route).
+	const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
+	const yesterday = answers[yesterdayKey] ?? null;
 
 	// Staleness guard (Canuckle pattern): Marveldle's solver runs at 06:05 UTC,
 	// three minutes after the 06:02 page flip, and takes 2-5 minutes. Until the
@@ -46,6 +49,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			error: true,
 			isStale: true,
 			entry: null,
+			yesterday: null,
 			recent: [],
 			formattedDate: staleDate,
 			visibleDateKey: dateKey,
@@ -143,6 +147,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		error: false,
 		isStale: false,
 		entry,
+		yesterday,
 		recent,
 		formattedDate,
 		visibleDateKey: entry.date,

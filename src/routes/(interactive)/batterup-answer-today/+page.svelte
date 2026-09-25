@@ -186,6 +186,17 @@
         </div>
       </section>
 
+      {#if data.yesterday}
+        <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+          <h2 class="text-2xl font-bold text-slate-900 mb-5">Yesterday's Batter Up answer</h2>
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <p class="text-xs font-semibold uppercase tracking-widest text-sky-700">Batter Up #{data.yesterday.gameNumber} · {data.yesterday.date}</p>
+            <p class="mt-1 text-xl font-extrabold text-slate-900">{data.yesterday.player.player_name}</p>
+            <p class="mt-1 text-sm text-slate-600">{data.yesterday.player.team_name} · {data.yesterday.player.position.join(', ')}</p>
+          </div>
+        </section>
+      {/if}
+
       {#if data.recent.length > 1}
         <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
           <h2 class="text-2xl font-bold text-slate-900 mb-5">Recent Batter Up answers</h2>

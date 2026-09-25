@@ -28,8 +28,6 @@
 </script>
 
 <div class="overflow-x-auto">
-
-<div class="overflow-x-auto">
   <div class="inline-block rounded-2xl border border-slate-300 bg-slate-50 p-3 shadow-sm sm:p-4">
     <div
       class="grid gap-0"
