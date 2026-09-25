@@ -21,6 +21,8 @@
     { name: 'Phrazle', href: '/phrazle-archive', description: 'Morning and afternoon phrase archive', color: 'from-teal-500 to-lime-600', icon: 'Pz' },
     { name: 'Spotle', href: '/spotle-archive', description: 'Spotify artist answer history', color: 'from-teal-600 to-teal-600', icon: 'Sp' },
     { name: 'Worgle', href: '/worgle-archive', description: 'Deterministic daily answer history with puzzle numbers', color: 'from-slate-700 to-slate-900', icon: 'Wo' },
+    { name: 'Batter Up', href: '/batterup-archive', description: 'Every Batter Up answer: game number, date, player, team and position', color: 'from-blue-600 to-indigo-700', icon: 'Bu' },
+    { name: 'Marveldle', href: '/marveldle-archive', description: 'Every Marveldle answer in Comics and MCU modes', color: 'from-red-600 to-blue-700', icon: 'Mv' },
   ];
 
   const archiveItemList = archives.map((archive, index) => ({
