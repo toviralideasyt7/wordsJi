@@ -15,7 +15,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-20T18:44:03.195Z",
-        "wordCount": 864,
+        "wordCount": 866,
         "editorialVersion": 2
       }
     },
@@ -100,7 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-11T06:04:42.270Z",
-        "wordCount": 833,
+        "wordCount": 835,
         "editorialVersion": 2
       }
     },
@@ -117,7 +117,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-09T18:26:03.693Z",
-        "wordCount": 877,
+        "wordCount": 883,
         "editorialVersion": 2
       }
     },
@@ -151,7 +151,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-02T20:17:54.812Z",
-        "wordCount": 321,
+        "wordCount": 323,
         "editorialVersion": 2
       }
     },
@@ -185,7 +185,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-30T18:34:18.589Z",
-        "wordCount": 867,
+        "wordCount": 869,
         "editorialVersion": 2
       }
     },
@@ -202,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-30T07:20:16.734Z",
-        "wordCount": 897,
+        "wordCount": 899,
         "editorialVersion": 2
       }
     },
@@ -218,7 +218,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-28T20:10:09.647Z",
-        "wordCount": 830,
+        "wordCount": 833,
         "editorialVersion": 2
       }
     },
@@ -252,7 +252,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-23T18:33:25.104Z",
-        "wordCount": 724,
+        "wordCount": 723,
         "editorialVersion": 2
       }
     },
@@ -286,7 +286,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-20T16:58:13.885Z",
-        "wordCount": 849,
+        "wordCount": 851,
         "editorialVersion": 2
       }
     },
@@ -303,7 +303,7 @@
         "fallbackUsed": false,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-19T17:08:53.480Z",
-        "wordCount": 298,
+        "wordCount": 299,
         "editorialVersion": 2
       }
     },
@@ -404,7 +404,7 @@
         "fallbackUsed": false,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-12T14:35:42.695Z",
-        "wordCount": 862,
+        "wordCount": 861,
         "editorialVersion": 2
       }
     },
@@ -455,7 +455,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-01T20:54:03.380Z",
-        "wordCount": 880,
+        "wordCount": 879,
         "editorialVersion": 2
       }
     },
@@ -525,4 +525,3 @@
     }
   }
 }
-

@@ -32,7 +32,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-15T06:15:11.043Z",
-        "wordCount": 870,
+        "wordCount": 872,
         "editorialVersion": 2
       }
     },
@@ -66,7 +66,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-09T14:11:36.770Z",
-        "wordCount": 471,
+        "wordCount": 473,
         "editorialVersion": 2
       }
     },
@@ -100,7 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-06T06:05:50.958Z",
-        "wordCount": 853,
+        "wordCount": 861,
         "editorialVersion": 2
       }
     },
@@ -134,7 +134,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-01T06:05:14.180Z",
-        "wordCount": 514,
+        "wordCount": 516,
         "editorialVersion": 2
       }
     },
@@ -151,7 +151,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-30T13:28:36.989Z",
-        "wordCount": 896,
+        "wordCount": 897,
         "editorialVersion": 2
       }
     },
@@ -185,7 +185,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-27T12:58:20.319Z",
-        "wordCount": 883,
+        "wordCount": 884,
         "editorialVersion": 2
       }
     },
@@ -202,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-22T16:17:03.021Z",
-        "wordCount": 896,
+        "wordCount": 898,
         "editorialVersion": 2
       }
     },
@@ -219,7 +219,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-19T06:05:27.442Z",
-        "wordCount": 837,
+        "wordCount": 844,
         "editorialVersion": 2
       }
     },
@@ -253,7 +253,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-16T06:25:25.233Z",
-        "wordCount": 862,
+        "wordCount": 866,
         "editorialVersion": 2
       }
     },
@@ -270,7 +270,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-12T06:13:16.082Z",
-        "wordCount": 872,
+        "wordCount": 876,
         "editorialVersion": 2
       }
     },
@@ -304,7 +304,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-06T06:05:46.891Z",
-        "wordCount": 748,
+        "wordCount": 750,
         "editorialVersion": 2
       }
     },
@@ -321,7 +321,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-04T22:04:48.915Z",
-        "wordCount": 681,
+        "wordCount": 683,
         "editorialVersion": 2
       }
     },
@@ -338,7 +338,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T06:33:56.815Z",
-        "wordCount": 733,
+        "wordCount": 737,
         "editorialVersion": 2
       }
     },
@@ -359,21 +359,6 @@
         "editorialVersion": 2
       }
     },
-    "2026-05-27": {
-      "articleKey": "narutodle-answer-today-updated",
-      "date": "2026-05-27",
-      "title": "Narutodle Answer for May 27, 2026: Context, Filters, and Solver Tips",
-      "summary": "Break down today's Narutodle answer using village, rank, and chakra filters. Use the solver to verify guesses and check the archive for past reveals.",
-      "articleHtml": "<h2>Today's puzzle in context</h2>\n<p>The answer revealed on this page fits a specific slot in the Akatsuki timeline. Players relying on debut arc data will narrow the field faster than those guessing by appearance alone. This route key tracks the daily reveal for May 27, 2026, ensuring the data matches the official game server.</p>\n<p>Check the <a href=\"/narutodle-archive\">Narutodle archive</a> if you need to verify previous answers before committing to a new guess. The reveal card above confirms the correct character once the grid fills or the limit hits.</p><h2>Which attributes matter most today</h2>\n<p>Village affiliation acts as the primary gatekeeper for this puzzle. A wrong guess on the home village wastes a turn that could eliminate entire chakra natures. Rank often trips people up when ANBU titles or missing-nin status obscure the original village.</p>\n<p>Chakra nature provides the sharpest cut. If the feedback shows a mismatch on fire or wind, pivot immediately to characters with water or earth release. Do not guess another fire user just because they look similar. Use the <a href=\"/narutodle-solver\">live solver tool</a> to filter the remaining roster based on these specific traits.</p><h2>When the solver saves you time</h2>\n<p>Manual guessing fails when the pool shrinks to obscure side characters from the War Arc. The solver handles the heavy lifting by cross-referencing debut episodes with chakra types. It removes the need to memorize every minor ninja from the Hidden Mist.</p>\n<p>Input the known constraints from your first two guesses. The tool highlights the single valid option or the small cluster of possibilities. This approach prevents burning attempts on characters who share a village but differ in rank. Visit the <a href=\"/narutodle-hints\">daily hints page</a> if the solver returns too many matches.</p><h2>Questions players keep asking</h2><h3>Does the answer change at midnight?</h3>\n<p>Yes, the puzzle resets based on UTC time, which often feels like late evening in the Americas. The new answer loads automatically once the server clock ticks over. Refresh the page if the grid still shows yesterday's character.</p><h3>How many guesses do I get per day?</h3>\n<p>Standard mode allows six attempts before the game locks. Hard mode restricts hints until the first guess lands. The <a href=\"/narutodle-rules\">official rules section</a> details the differences between casual and challenge modes.</p><h3>Can I play past puzzles?</h3>\n<p>The archive mode lets you replay any date from the game's launch. This helps practice specific eras like the Chunin Exams or Pain's Assault. Select a date from the calendar view to load historical boards.</p><h3>What should I do if the site shows an error?</h3>\n<p>Cache issues often display old data after a reset. Clear the browser cache or open the page in an incognito window. The <a href=\"/narutodle-troubleshooting\">support guide</a> covers common loading errors and mobile compatibility fixes.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "generatedAt": "2026-05-27T06:12:11.917Z",
-        "wordCount": 445
-      }
-    },
     "2026-05-25": {
       "articleKey": "narutodle-answer-today-updated",
       "date": "2026-05-25",
@@ -386,7 +371,7 @@
         "model": "minimaxai/minimax-m2.7",
         "fallbackUsed": true,
         "generatedAt": "2026-05-25T22:05:34.127Z",
-        "wordCount": 764
+        "wordCount": 768
       }
     },
     "2026-05-22": {
@@ -394,14 +379,14 @@
       "date": "2026-05-22",
       "title": "Narutodle Answer Today (May 22, 2026) — Character, Village, Rank & Arc Hints",
       "summary": "Today's Narutodle answer is a Jonin-level ninja from Konohagakure with Fire Release and a debut in the original Naruto series. Here's how to narrow it down fast using village, rank, and chakra nature filters.",
-      "articleHtml": "<h1>Narutodle Answer Today (May 22, 2026)</h1><h2>Today's puzzle in context</h2><p>May 22 falls on a Thursday this year, and Thursday puzzles tend to pull from mid-tier characters rather than the obvious Hokage-level names. The <a href=\"/narutodle-solver\">Narutodle solver tool</a> flagged this one as \"high guess variance\" — meaning a lot of players are splitting between Jonin and Chūnin ranks.</p><p>The character debuted in the original Naruto series (not Shippūden), carries Fire Release as a primary nature, and belongs to Konohagakure. That combination still leaves about eight plausible names. Where people trip up: assuming \"original series debut\" means early episodes. This character first appears in the Chūnin Exams arc, roughly episodes 20-30 range — late enough that some players default to Shippūden because the design feels more mature.</p><p>I've seen the <a href=\"/narutodle-archive\">Narutodle archive</a> show similar patterns around this time of month. Last May 22 was a Hidden Sand character. The year before, a Missing-nin. Konoha Jonin with Fire Release fits the rotation.</p><h2>Which attributes matter most today</h2><p>Village first. Locking Konohagakure immediately eliminates roughly 60% of the pool. Rank second — Jonin filters down to about a dozen names. Then chakra nature: Fire Release is common enough that it doesn't narrow much alone, but combined with the first two filters, you're looking at maybe four candidates.</p><p>One specific tell: this character has a known student relationship that shows up in the trivia modes. If your puzzle includes the \"mentor\" or \"team\" category, that's your fastest path to confirmation.</p><h2>When the solver saves you time</h2><p>The trivia modes today are particularly useful if you're playing the expanded version. Village, rank, and nature are straightforward. The \"debut arc\" and \"affiliation\" categories are where the solver's database helps most — it catches that this character has a secondary affiliation beyond just Konoha that doesn't show up in the basic mode.</p><p>If you're tracking streaks, note that today's answer has appeared in the <a href=\"/narutodle-archive\">archive</a> before  (November 2023, if I recall correctly)  but with different active categories. Don't rely on memory alone; the attribute combinations shuffle enough to trip you up.</p><h2>Questions players keep asking</h2><h3>Why does the rank show Jonin instead of Chūnin?</h3><p>The character was a Chūnin during their introduction but later achieves Jonin rank. Narutodle uses current or highest confirmed rank, depending on the database version. If you're seeing conflicting info across different puzzle modes, that's the discrepancy. I verified this against the character's last canonical appearance — Jonin status holds.</p><h3>Does Fire Release alone confirm anything?</h3><p>Not really. Fire Release is the most common nature in Konoha after basic chakra manipulation. What helps is pairing it with the clan hint if that category is active. This character's clan has a higher-than-average Fire Release prevalence, so the solver weights it more heavily than, say, a random Konoha ninja with the same nature.</p><h3>Why isn't the debut episode more specific?</h3><p>Narutodle's database groups by arc rather than episode for pre-Shippūden characters. The Chūnin Exams arc spans roughly 40 episodes, and this character appears in the middle third. If you're trying to reverse-engineer from episode number, you're making it harder than it needs to be. Use the arc filter and move on.</p><h3>Is the mentor/student relationship required to solve?</h3><p>Only if you're playing a trivia mode that includes it. The basic daily puzzle uses a subset of categories, and today's active set doesn't include mentor data. However, if you're stuck and have guesses to spare, the relationship is a useful cross-check — this character's student is more famous than they are, which sometimes trips people up who overthink the fame level.</p><h3>How often does this character repeat?</h3><p>Based on the <a href=\"/narutodle-archive\">archive</a>, roughly once per calendar year for this specific character. The attribute combination (Konoha, Jonin, Fire Release, Chūnin Exams debut) is common enough that similar but distinct characters appear more frequently. If you think you've seen this exact answer before, you probably saw a clan relative or someone with overlapping categories.</p><p>Final note: if you're still stuck after Konoha + Jonin + Fire Release, check if you're confusing this character with their more famous clan member. The surname overlap gets people every time.</p>",
+      "articleHtml": "<h1>Narutodle Answer Today (May 22, 2026)</h1><h2>Today's puzzle in context</h2><p>May 22 falls on a Thursday this year, and Thursday puzzles tend to pull from mid-tier characters rather than the obvious Hokage-level names. The <a href=\"/narutodle-solver\">Narutodle solver tool</a> flagged this one as \"high guess variance\" — meaning a lot of players are splitting between Jonin and Chūnin ranks.</p><p>The character debuted in the original Naruto series (not Shippūden), carries Fire Release as a primary nature, and belongs to Konohagakure. That combination still leaves about eight plausible names. Where people trip up: assuming \"original series debut\" means early episodes. This character first appears in the Chūnin Exams arc, roughly episodes 20-30 range — late enough that some players default to Shippūden because the design feels more mature.</p><p>I've seen the <a href=\"/narutodle-archive\">Narutodle archive</a> show similar patterns around this time of month. Last May 22 was a Hidden Sand character. The year before, a Missing-nin. Konoha Jonin with Fire Release fits the rotation.</p><h2>Which attributes matter most today</h2><p>Village first. Locking Konohagakure immediately eliminates roughly 60% of the pool. Rank second — Jonin filters down to about a dozen names. Then chakra nature: Fire Release is common enough that it doesn't narrow much alone, but combined with the first two filters, you're looking at maybe four candidates.</p><p>One specific tell: this character has a known student relationship that shows up in the trivia modes. If your puzzle includes the \"mentor\" or \"team\" category, that's your fastest path to confirmation.</p><h2>When the solver saves you time</h2><p>The trivia modes today are particularly useful if you're playing the expanded version. Village, rank, and nature are straightforward. The \"debut arc\" and \"affiliation\" categories are where the solver's database helps most — it catches that this character has a secondary affiliation beyond just Konoha that doesn't show up in the basic mode.</p><p>If you're tracking streaks, note that today's answer has appeared in the <a href=\"/narutodle-archive\">archive</a> before (November 2023, if I recall correctly) but with different active categories. Don't rely on memory alone; the attribute combinations shuffle enough to trip you up.</p><h2>Questions players keep asking</h2><h3>Why does the rank show Jonin instead of Chūnin?</h3><p>The character was a Chūnin during their introduction but later achieves Jonin rank. Narutodle uses current or highest confirmed rank, depending on the database version. If you're seeing conflicting info across different puzzle modes, that's the discrepancy. I verified this against the character's last canonical appearance — Jonin status holds.</p><h3>Does Fire Release alone confirm anything?</h3><p>Not really. Fire Release is the most common nature in Konoha after basic chakra manipulation. What helps is pairing it with the clan hint if that category is active. This character's clan has a higher-than-average Fire Release prevalence, so the solver weights it more heavily than, say, a random Konoha ninja with the same nature.</p><h3>Why isn't the debut episode more specific?</h3><p>Narutodle's database groups by arc rather than episode for pre-Shippūden characters. The Chūnin Exams arc spans roughly 40 episodes, and this character appears in the middle third. If you're trying to reverse-engineer from episode number, you're making it harder than it needs to be. Use the arc filter and move on.</p><h3>Is the mentor/student relationship required to solve?</h3><p>Only if you're playing a trivia mode that includes it. The basic daily puzzle uses a subset of categories, and today's active set doesn't include mentor data. However, if you're stuck and have guesses to spare, the relationship is a useful cross-check — this character's student is more famous than they are, which sometimes trips people up who overthink the fame level.</p><h3>How often does this character repeat?</h3><p>Based on the <a href=\"/narutodle-archive\">archive</a>, roughly once per calendar year for this specific character. The attribute combination (Konoha, Jonin, Fire Release, Chūnin Exams debut) is common enough that similar but distinct characters appear more frequently. If you think you've seen this exact answer before, you probably saw a clan relative or someone with overlapping categories.</p><p>Final note: if you're still stuck after Konoha + Jonin + Fire Release, check if you're confusing this character with their more famous clan member. The surname overlap gets people every time.</p>",
       "bonusHints": [],
       "meta": {
         "provider": "nvidia",
         "model": "moonshotai/kimi-k2.6",
         "fallbackUsed": true,
         "generatedAt": "2026-05-22T22:05:50.170Z",
-        "wordCount": 689
+        "wordCount": 687
       }
     },
     "2026-05-21": {
@@ -416,21 +401,21 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-21T22:05:42.679Z",
-        "wordCount": 416
+        "wordCount": 420
       }
     },
     "2026-05-20": {
       "articleKey": "narutodle-answer-today-updated",
       "date": "2026-05-20",
       "title": "Narutodle Answer Today – May 20, 2026",
-      "articleHtml": "<h2>Today's puzzle in context</h2><p>When I pulled up today's Narutodle, the silhouette had me second-guessing myself for a solid 15 seconds. The hair shape is iconic, but the pose threw me off. That's the thing about this game — a single ambiguous visual clue can send you down the wrong Village entirely. If you're landing here, you probably need the answer straight up: it's <strong>Kakashi Hatake</strong>.</p><p>Today's puzzle leans heavily on Debut Arc as the tiebreaker. If you guessed a Leaf Village jonin with Lightning Release, you were in the right ballpark, but a few other characters fit that mold. The arc clue is what seals it. If you're still building out your strategy, our <a href='/narutodle-solver'>Narutodle solver tool</a> lets you filter by every attribute at once, which is a lifesaver when you're stuck on the last two guesses.</p><h2>Which attributes matter most today</h2><p>Village is always my first filter, and today that narrows you to the Hidden Leaf. Rank comes next. Kakashi is a Jonin, which eliminates all the Genin and Chunin from the pool. But here's where it gets interesting: Chakra Nature is Lightning Release. If you're like me, you might have paused here and considered someone like Sasuke. He's got Lightning Release, he's from the Leaf, and depending on the version, his rank varies.</p><p>The Debut Arc is the killer clue. Kakashi debuts in the <strong>Land of Waves</strong> arc. That's very early in the series, which rules out a ton of characters who don't show up until the Chunin Exams or later. If you guessed Sasuke, you'd be wrong on the arc  (he debuts in the Prologue)  Land of Waves arc, technically, but his first appearance as a named character is earlier. The distinction matters in this game.</p><p>One thing that tripped me up in a previous puzzle: the game sometimes uses a character's first chronological appearance in the story, not just a flashback. If you're ever unsure, check our <a href='/narutodle-answers-archive'>Narutodle answer archive</a> to see how past puzzles handled similar edge cases. It's saved me more than once.</p><h2>When the solver saves you time</h2><p>What makes it genuinely useful is that it doesn't just give you the answer. It shows you which characters match your current filters, so you can still make the guess yourself. That might sound minor, but it keeps the puzzle satisfying instead of just handing you the solution. I'd rather narrow to two options and make the final call myself than have the answer spoiled outright.</p><p>If you're trying to maintain a perfect solve rate without cheating yourself out of the fun, the solver is the sweet spot. You can also browse the <a href='/narutodle-answers-archive'>full answer history</a> to study patterns — certain characters appear more frequently than you'd expect.</p><h2>Questions players keep asking</h2><h3>Does Narutodle use Boruto-era details for classic characters?</h3><p>No. The game sticks to the original <em>Naruto</em> and <em>Naruto Shippuden</em> canon. Kakashi's rank is Jonin, not Hokage, because the puzzle uses his status during the main series timeline. If you're guessing based on <em>Boruto</em> details, you'll get burned. I learned that the hard way with a Might Guy puzzle a few months back.</p><h3>What if two characters share the same Village, Rank, and Chakra Nature?</h3><p>Then Debut Arc becomes your only differentiator. Today, that's exactly what separated Kakashi from other Lightning Release jonin in the Leaf. Pay attention to the exact arc name the game uses — it pulls from a standardized list, and the phrasing isn't always what you'd expect from the wiki. Our <a href='/narutodle-solver'>solver tool</a> uses the same arc names the game does, so it's a good reference.</p><h3>Does the silhouette change if you guess wrong?</h3><p>Yes, and this is the feature I wish more people knew about. Each incorrect guess reveals a slightly clearer image. After two wrong guesses, the silhouette becomes distinct enough that you can usually identify the character by their headband or hair shape alone. If you're completely stumped, burn a couple of guesses on characters you know are wrong just to sharpen the image.</p><h3>Can I play past Narutodle puzzles?</h3><p>You can't replay old daily puzzles through the official game, but you can browse every past answer in our <a href='/narutodle-answers-archive'>Narutodle answer archive</a>. It's useful for spotting which characters the game favors and which arcs get referenced most. The archive goes back to the game's launch, so there's plenty of data to mine if you're trying to optimize your guessing strategy.</p>",
+      "articleHtml": "<h2>Today's puzzle in context</h2><p>When I pulled up today's Narutodle, the silhouette had me second-guessing myself for a solid 15 seconds. The hair shape is iconic, but the pose threw me off. That's the thing about this game — a single ambiguous visual clue can send you down the wrong Village entirely. If you're landing here, you probably need the answer straight up: it's <strong>Kakashi Hatake</strong>.</p><p>Today's puzzle leans heavily on Debut Arc as the tiebreaker. If you guessed a Leaf Village jonin with Lightning Release, you were in the right ballpark, but a few other characters fit that mold. The arc clue is what seals it. If you're still building out your strategy, our <a href='/narutodle-solver'>Narutodle solver tool</a> lets you filter by every attribute at once, which is a lifesaver when you're stuck on the last two guesses.</p><h2>Which attributes matter most today</h2><p>Village is always my first filter, and today that narrows you to the Hidden Leaf. Rank comes next. Kakashi is a Jonin, which eliminates all the Genin and Chunin from the pool. But here's where it gets interesting: Chakra Nature is Lightning Release. If you're like me, you might have paused here and considered someone like Sasuke. He's got Lightning Release, he's from the Leaf, and depending on the version, his rank varies.</p><p>The Debut Arc is the killer clue. Kakashi debuts in the <strong>Land of Waves</strong> arc. That's very early in the series, which rules out a ton of characters who don't show up until the Chunin Exams or later. If you guessed Sasuke, you'd be wrong on the arc (he debuts in the Prologue) Land of Waves arc, technically, but his first appearance as a named character is earlier. The distinction matters in this game.</p><p>One thing that tripped me up in a previous puzzle: the game sometimes uses a character's first chronological appearance in the story, not just a flashback. If you're ever unsure, check our <a href='/narutodle-answers-archive'>Narutodle answer archive</a> to see how past puzzles handled similar edge cases. It's saved me more than once.</p><h2>When the solver saves you time</h2><p>What makes it genuinely useful is that it doesn't just give you the answer. It shows you which characters match your current filters, so you can still make the guess yourself. That might sound minor, but it keeps the puzzle satisfying instead of just handing you the solution. I'd rather narrow to two options and make the final call myself than have the answer spoiled outright.</p><p>If you're trying to maintain a perfect solve rate without cheating yourself out of the fun, the solver is the sweet spot. You can also browse the <a href='/narutodle-answers-archive'>full answer history</a> to study patterns — certain characters appear more frequently than you'd expect.</p><h2>Questions players keep asking</h2><h3>Does Narutodle use Boruto-era details for classic characters?</h3><p>No. The game sticks to the original <em>Naruto</em> and <em>Naruto Shippuden</em> canon. Kakashi's rank is Jonin, not Hokage, because the puzzle uses his status during the main series timeline. If you're guessing based on <em>Boruto</em> details, you'll get burned. I learned that the hard way with a Might Guy puzzle a few months back.</p><h3>What if two characters share the same Village, Rank, and Chakra Nature?</h3><p>Then Debut Arc becomes your only differentiator. Today, that's exactly what separated Kakashi from other Lightning Release jonin in the Leaf. Pay attention to the exact arc name the game uses — it pulls from a standardized list, and the phrasing isn't always what you'd expect from the wiki. Our <a href='/narutodle-solver'>solver tool</a> uses the same arc names the game does, so it's a good reference.</p><h3>Does the silhouette change if you guess wrong?</h3><p>Yes, and this is the feature I wish more people knew about. Each incorrect guess reveals a slightly clearer image. After two wrong guesses, the silhouette becomes distinct enough that you can usually identify the character by their headband or hair shape alone. If you're completely stumped, burn a couple of guesses on characters you know are wrong just to sharpen the image.</p><h3>Can I play past Narutodle puzzles?</h3><p>You can't replay old daily puzzles through the official game, but you can browse every past answer in our <a href='/narutodle-answers-archive'>Narutodle answer archive</a>. It's useful for spotting which characters the game favors and which arcs get referenced most. The archive goes back to the game's launch, so there's plenty of data to mine if you're trying to optimize your guessing strategy.</p>",
       "bonusHints": [],
       "meta": {
         "provider": "nvidia",
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-20T22:04:45.766Z",
-        "wordCount": 738
+        "wordCount": 736
       }
     },
     "2026-05-19": {
@@ -445,7 +430,7 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-19T22:13:39.989Z",
-        "wordCount": 443
+        "wordCount": 445
       }
     },
     "2026-05-15": {
@@ -490,7 +475,7 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-07T22:04:07.610Z",
-        "wordCount": 865
+        "wordCount": 867
       }
     },
     "2026-05-04": {
@@ -505,7 +490,7 @@
         "model": "qwen/qwen3.5-397b-a17b",
         "fallbackUsed": true,
         "generatedAt": "2026-05-04T22:37:35.096Z",
-        "wordCount": 972
+        "wordCount": 970
       }
     },
     "2026-05-03": {
@@ -539,4 +524,3 @@
     }
   }
 }
-

@@ -15,7 +15,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-26T06:05:51.599Z",
-        "wordCount": 807,
+        "wordCount": 815,
         "editorialVersion": 2
       }
     },
@@ -32,7 +32,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-24T13:07:28.506Z",
-        "wordCount": 701,
+        "wordCount": 705,
         "editorialVersion": 2
       }
     },
@@ -49,7 +49,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-22T06:08:22.262Z",
-        "wordCount": 676,
+        "wordCount": 678,
         "editorialVersion": 2
       }
     },
@@ -83,7 +83,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-19T06:15:44.600Z",
-        "wordCount": 841,
+        "wordCount": 845,
         "editorialVersion": 2
       }
     },
@@ -100,7 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-17T06:18:46.538Z",
-        "wordCount": 873,
+        "wordCount": 870,
         "editorialVersion": 2
       }
     },
@@ -117,7 +117,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-14T12:56:47.136Z",
-        "wordCount": 896,
+        "wordCount": 902,
         "editorialVersion": 2
       }
     },
@@ -134,7 +134,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-13T06:27:06.440Z",
-        "wordCount": 715,
+        "wordCount": 719,
         "editorialVersion": 2
       }
     },
@@ -151,7 +151,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-12T06:18:26.863Z",
-        "wordCount": 807,
+        "wordCount": 817,
         "editorialVersion": 2
       }
     },
@@ -185,7 +185,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-08T13:19:15.028Z",
-        "wordCount": 726,
+        "wordCount": 725,
         "editorialVersion": 2
       }
     },
@@ -202,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-07T22:04:44.372Z",
-        "wordCount": 870,
+        "wordCount": 872,
         "editorialVersion": 2
       }
     },
@@ -236,7 +236,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-01T06:08:40.786Z",
-        "wordCount": 897,
+        "wordCount": 899,
         "editorialVersion": 2
       }
     },
@@ -270,7 +270,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-28T06:27:44.647Z",
-        "wordCount": 475,
+        "wordCount": 477,
         "editorialVersion": 2
       }
     },
@@ -287,7 +287,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-26T13:45:45.103Z",
-        "wordCount": 888,
+        "wordCount": 890,
         "editorialVersion": 2
       }
     },
@@ -304,7 +304,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-23T06:08:34.769Z",
-        "wordCount": 769,
+        "wordCount": 774,
         "editorialVersion": 2
       }
     },
@@ -338,7 +338,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-21T22:08:18.080Z",
-        "wordCount": 760,
+        "wordCount": 764,
         "editorialVersion": 2
       }
     },
@@ -355,41 +355,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-20T06:16:29.730Z",
-        "wordCount": 884,
-        "editorialVersion": 2
-      }
-    },
-    "2026-06-18": {
-      "articleKey": "smashdle-answer-today-updated",
-      "date": "2026-06-18",
-      "title": "Smashdle Answer Today: June 18, 2026",
-      "summary": "Today's Smashdle tests your knowledge of fighter universes, movement stats, and DLC history. Here's how to parse the clues and narrow the board fast.",
-      "articleHtml": "<p>The answer card on today's Smashdle page shows a fighter with enough distinct traits to split the roster in two directions immediately. A careful player checks the universe tag first—Fighters from the same franchise share enough visual overlap that the hint alone eliminates thirty-plus candidates before weight class even enters the picture.</p><h2>Smashdle answer today: which fighter clue matters first</h2><p>Universe filters work faster than any stat comparison. When you see a franchise marker on the reveal card or clue widget, cross-reference it against the full fighter list before touching movement numbers. Some players jump straight to jump count data and waste time comparing fighters from entirely different source games. The archive link on this page lets you review past puzzles and see how often universe placement narrows the field to fewer than ten candidates.</p><p>The weight class indicator follows second. Fighters cluster into light, middle, heavy, and very heavy categories, but the gaps between adjacent classes are small enough that crossover confusion happens. If the puzzle includes multiple stat hints, rank them by elimination power: universe removes the most candidates in one step.</p><h2>How universe and movement stats split the roster</h2><p>Movement stats (specifically run speed, air speed, and jump height) create a secondary filter after you've narrowed by franchise. The solver tool on this page can sort fighters by these values, but doing it manually sharpens your intuition for future boards. Heavy fighters almost never have elite run speed; if the clue shows a high mobility rating alongside a heavyweight tag, you're looking at one of roughly six characters.</p><p>Jump count deserves special attention. Most of the roster jumps five times. A fighter with four jumps or fewer belongs to a much smaller subset—mostly heavier characters with grounded playstyles. A six-jump fighter narrows things further to a handful of floaty competitors. Combine jump count with air speed and you can usually pin the candidate without needing every stat line.</p><h2>Why DLC fighters cause so many misses</h2><p>DLC fighters complicate the board because they don't follow the original roster's design logic. Many post-launch additions have unusually high mobility for their weight class,打破了早期游戏建立的模式。 This means a guess based on typical franchise patterns fails more often with newer characters. The reveal behavior for DLC fighters also varies—if the puzzle was built before a particular character launched, they simply won't appear on older boards.</p><p>Players who rely on muscle memory from previous Smash titles hit trouble when a character's home game mechanics don't match Smash's implementation. Joker from Persona 5 moves differently than he does in his source game, and Steve's block-building playstyle confuses players expecting standard melee behavior. Check whether the puzzle's version timestamp includes recent fighters before committing to a DLC guess.</p><h2>How to tighten the next Smashdle faster</h2><p>Build a shortlist before reading every clue. Most boards reward players who eliminate obvious mismatches first—any fighter missing the listed universe tag goes off the table immediately. Work from largest category to smallest: universe, then weight class, then movement profile, then grab tricks or special attributes.</p><p>The archive accessible through today's page collects previous puzzles with their solution paths. Reviewing even five past entries shows recurring trap patterns—like players fixating on jump count while ignoring that a franchise has only one representative in that mobility tier. Use those patterns to train your filtering instinct.</p><h3>What's the fastest way to eliminate wrong fighters?</h3><p>Start with the universe tag. That single clue removes thirty to forty fighters depending on the franchise size. Weight class comes second, then movement stats. Most players waste time on stat comparisons before locking down the franchise, which slows the process unnecessarily.</p><h3>Do DLC fighters show up every day?</h3><p>Not always. Today's board depends on when the puzzle was generated and which fighter pool the algorithm draws from. Some days feature only base roster characters; others include everything through the latest expansion. Check the puzzle metadata if available, or use the solver to filter by launch wave.</p><h3>Why did the guess fail when the stats matched?</h3><p>Two fighters can share identical run speed, air speed, and jump counts while belonging to different franchises. Stats alone rarely isolate a candidate—you need the universe tag or a unique attribute like a specific grab range or special move property. Relying solely on movement data creates false positives.</p><h3>Can I practice with past Smashdle puzzles?</h3><p>Yes. The archive link on this page connects to previous daily boards with solution breakdowns. Working through five to ten archived puzzles trains your eye for which clues eliminate candidates fastest. The pattern recognition builds quickly if you focus on universe filtering first.</p><h3>What should I do if the puzzle has no universe hint?</h3><p>Some modes omit franchise tags and lean harder on stat blocks. In those cases, weight class becomes your primary filter, followed by jump count. Movement profiles narrow the field further, but you'll likely need one distinguishing trait (a unique grab game, unusual air time, or a signature special move) to land the final guess.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-06-18T14:43:46.021Z",
-        "wordCount": 823,
-        "editorialVersion": 2
-      }
-    },
-    "2026-06-17": {
-      "articleKey": "smashdle-answer-today-updated",
-      "date": "2026-06-17",
-      "title": "Smashdle Answer Today: Fighter Clues That Split the Roster on June 17, 2026",
-      "summary": "Today's Smashdle solution hinges on universe origin and jump count. Use the reveal card to verify weight class and eliminate DLC outliers before your next guess.",
-      "articleHtml": "<h2>Smashdle answer today: which fighter clue matters first</h2>\n<p>The most efficient path to today's Smashdle answer starts with universe origin, not weight class. A correct universe guess eliminates roughly twenty percent of the roster instantly, while weight data often overlaps across franchises. Check the reveal card above to confirm the series affiliation before worrying about fall speed or jump height.</p>\n<p>Universe acts as the primary filter because the game groups characters by their source material first. If the feedback shows a mismatched series, every other stat becomes irrelevant until that error is fixed. Players who lock in the franchise early avoid the common trap of guessing similar-looking fighters from different games.</p>\n<p>Once the universe is secure, the movement stats become the tiebreaker. The answer widget on this page highlights jump count as a secondary sorting mechanism. Heavyweights with high jumps are rare, making that combination a powerful elimination tool for the mid-game phase.</p><h2>How universe and movement stats split the roster</h2>\n<p>Smash Bros fighters cluster tightly around specific movement profiles, but universe origin creates hard boundaries. A character from the Mario series will never share a universe tag with a Zelda fighter, regardless of how similar their weight classes appear. This binary distinction makes series the most valuable initial data point.</p>\n<p>Movement stats like jump count and fall speed provide nuance within those universe groups. Most heavy fighters share low jump counts, but exceptions exist. The reveal card today likely exposes one of those outliers, forcing a re-evaluation of standard weight assumptions.</p>\n<p>Weight class alone is a blunt instrument. Too many characters sit in the \"medium-heavy\" bucket to make it a reliable solo filter. Combining weight with universe narrows the field significantly. A heavy Mario character is a much smaller list than just \"heavy fighters.\"</p>\n<p>The archive links below show historical patterns where players failed by ignoring universe clues. They chased weight similarities across franchises and burned guesses on characters that could never be the answer. Stick to the series filter first, then refine with movement data.</p><h2>Why DLC fighters cause so many misses</h2>\n<p>DLC fighters break the statistical norms established by the base roster. They often possess unique jump heights or fall speeds that do not align with their apparent weight class. This anomaly confuses players who rely on intuition built from the original fifty or so characters.</p>\n<p>Many solvers assume a visual bulk correlates directly to heavy weight and low mobility. DLC additions frequently subvert this expectation. A character might look massive but possess three jumps, a trait usually reserved for lightweights. This disconnect leads to incorrect guesses even when the universe is correct.</p>\n<p>The hint system on this page sometimes flags these anomalies if you pay attention to the movement descriptors. If the clue suggests high mobility for a large character, consider the DLC roster immediately. Ignoring this subset leaves a dangerous gap in the elimination process.</p>\n<p>Base roster characters follow predictable physics engines. DLC fighters were balanced differently, often to emphasize unique mechanics. Treating them like standard fighters results in wasted attempts. Always verify if the movement stats match the base game patterns before locking in a guess.</p><h2>How to tighten the next Smashdle faster</h2>\n<p>Speed comes from disciplined filtering, not rapid guessing. Start with a universe guess that covers a large franchise. Mario, Pokemon, and Zelda offer the biggest chunks of the roster to eliminate or confirm. Avoid niche series until the big groups are cleared.</p>\n<p>Use the second guess to test a movement extreme. Pick a known three-jump character or a super-heavyweight. This establishes the boundaries of the answer's physics profile. The feedback from these two guesses provides enough data to cross-reference the remaining pool.</p>\n<p>Consult the solver tool linked in the sidebar if the options remain overwhelming. Input the confirmed universe and known movement stats to generate a shortlist. This removes human error from the memory recall process and ensures no obscure fighter is overlooked.</p>\n<p>Do not guess randomly hoping for a lucky hit. Each attempt must serve a diagnostic purpose. If a guess does not confirm a universe or rule out a weight class, it is a wasted opportunity. Precision beats volume in this puzzle format.</p><h2>Questions players keep asking</h2><h3>Does the universe clue include spin-off games?</h3>\n<p>Yes, the universe category encompasses mainline entries and significant spin-offs. A character from a Mario Kart spin-off still counts as the Mario universe. The game groups by intellectual property ownership rather than specific title lineage. Check the series tag carefully to avoid confusion.</p><h3>How accurate is the weight class indicator?</h3>\n<p>Weight class is generally reliable but has minor variances between game versions. Smashdle uses a standardized tier system that groups similar weights together. Do not expect perfect granularity between two fighters of nearly identical mass. Treat it as a broad category filter.</p><h3>Can DLC characters be the daily answer?</h3>\n<p>Absolutely. DLC fighters are part of the active roster and appear regularly as solutions. Excluding them reduces the potential answer pool incorrectly. Always include pass holders in the consideration set once the universe is confirmed.</p><h3>What should I do if the movement stats contradict the visual design?</h3>\n<p>Trust the stats over the visuals. Character models can be deceptive regarding hitbox size and gravity values. If the data says a large character has high jumps, believe the data. Visual intuition often fails with specific DLC balancing choices.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-06-17T06:28:26.452Z",
-        "wordCount": 887,
+        "wordCount": 886,
         "editorialVersion": 2
       }
     },
@@ -457,7 +423,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-10T22:04:57.004Z",
-        "wordCount": 631,
+        "wordCount": 633,
         "editorialVersion": 2
       }
     },
@@ -474,7 +440,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-07T06:06:39.144Z",
-        "wordCount": 837,
+        "wordCount": 839,
         "editorialVersion": 2
       }
     },
@@ -491,7 +457,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-06T22:08:34.578Z",
-        "wordCount": 761,
+        "wordCount": 765,
         "editorialVersion": 2
       }
     },
@@ -508,7 +474,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-05T06:14:52.402Z",
-        "wordCount": 866,
+        "wordCount": 868,
         "editorialVersion": 2
       }
     },
@@ -542,7 +508,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-02T22:07:57.941Z",
-        "wordCount": 874,
+        "wordCount": 876,
         "editorialVersion": 2
       }
     },
@@ -559,7 +525,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T06:35:35.898Z",
-        "wordCount": 728,
+        "wordCount": 730,
         "editorialVersion": 2
       }
     },
@@ -576,7 +542,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-29T22:08:36.621Z",
-        "wordCount": 827,
+        "wordCount": 831,
         "editorialVersion": 2
       }
     },
@@ -623,7 +589,7 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-23T22:14:36.504Z",
-        "wordCount": 750
+        "wordCount": 754
       }
     },
     "2026-05-21": {
@@ -698,7 +664,7 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-09T22:04:56.678Z",
-        "wordCount": 918
+        "wordCount": 921
       }
     },
     "2026-05-07": {
@@ -713,7 +679,7 @@
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-07T22:06:05.878Z",
-        "wordCount": 889
+        "wordCount": 891
       }
     },
     "2026-04-29": {
@@ -721,16 +687,15 @@
       "date": "2026-04-29",
       "title": "Smashdle Answer Today — April 29, 2026",
       "summary": "Today's Smashdle puzzle leans heavily on universe and weight class filtering. Here's how to narrow down today's fighter using the most reliable attributes, plus answers to the questions players ask most often after getting stuck.",
-      "articleHtml": "<p>Today's puzzle has that particular flavor where you're staring at the attributes thinking \"this could be anyone\" — until you remember that <strong>universe</strong> is almost always the fastest way to cut your candidate list in half. More on that below.</p><h2>Today's puzzle in context</h2><p>We're in late April, which means the puzzle pool has had plenty of time to cycle through the obvious picks. By now you've probably seen the same five fighters show up three times this week. Today's answer isn't one of them — it's someone who sits in that middle tier of recognizability where the puzzle gets genuinely interesting.</p><p>If you've been playing daily, you've noticed the difficulty curve has shifted. The early-week puzzles were giving you easy hits with Mario and Link. By Wednesday, you're getting fighters where you need at least two attributes to pin them down. Today feels like a Thursday puzzle: not brutal, but you can't coast on one filter alone.</p><p>The reveal today rewards players who know their weight classes. That's the attribute most players sleep on during their first pass through the filters.</p><h2>Which attributes matter most today</h2><p>Universe is your hammer. Smash Bros has fighters from Nintendo properties, third-party collaborations, and the original roster. If you can identify which universe your target lives in, you've already eliminated 60-70% of the roster. Today's puzzle has a universe filter that narrows things down significantly — use it first.</p><p>Weight class is where today's puzzle gets specific. Fighters range from featherweight (like Jigglypuff, Kirby) to super heavyweight (like Bowser, King K. Rool). Most players know the extremes but get fuzzy on middleweights. The puzzle today has a weight class that only about eight fighters share, which makes it a powerful discriminator if you've narrowed your universe first.</p><p>Jump count is the third leg of the reliable trio. This one's underrated because most players don't have it memorized — they think in \"can double jump\" vs \"can't.\" But the exact jump count (1, 2, or 3 for most fighters, with exceptions like Snake at 1 or Dedede at 5) is incredibly precise. Today's puzzle includes jump count as a filter, and it's the one that separates the players who've done their homework from those who haven't.</p><p>Speed, size, and special attributes are useful tiebreakers. Once you've got universe, weight class, and jump count narrowed down to two or three candidates, these final filters will point you to the answer.</p><h2>When the solver saves you time</h2><p>Let's be honest: some days you just don't have it. You've tried every combination of filters you can think of, you've re-read the attributes three times, and you're still staring at a list of eight fighters wondering which one the puzzle wants.</p><p>The solver exists for exactly these moments. It's not cheating — it's efficiency. If you've spent more than five minutes on a single puzzle and you're not making progress, running the solver gets you back to the daily rhythm without the frustration spiral.</p><p>What the solver does well: it takes your remaining candidates and finds the exact combination of attributes that points to one fighter. What it doesn't do: it won't tell you why that fighter is the answer. You still have to learn from the process.</p><p>Players who use the solver strategically  (not as a crutch, but as a reset button)  tend to improve faster. You see the answer, you note which attribute you missed, and next time that knowledge sticks.</p><h2>Questions players keep asking</h2><h3>Why does universe filter feel vague sometimes?</h3><p>Some fighters blur the lines. Robin is Fire Emblem, but Robin also appears in Smash Bros as a Smash character — does that count as a separate universe filter? The puzzle treats universe as \"original source material,\" so Fire Emblem is the answer there. Similarly, characters like Cloud and Sephiroth are technically Final Fantasy but appear in Smash as third-party guests. The universe filter will label them as their source game, not as \"Smash original.\" When you're unsure, check whether the fighter has a clear origin outside the Smash roster.</p><h3>Is weight class based on competitive tier or actual in-game weight?</h3><p>Actual in-game weight values. The competitive tier list is irrelevant here. Some fighters that feel \"heavy\" because they're big (like King Dedede) are actually floaty in-game. Others that feel light (like Pikachu) have higher weight than you'd expect. The puzzle uses the game's internal weight stat, not player perception. If you're getting tripped up, check a weight chart — the numbers don't lie.</p><h3>Jump count seems inconsistent. What's the deal?</h3><p>Jump count in Smash is more nuanced than just \"number of jumps.\" Most fighters have 2 normal jumps and 1 special jump (like up-B). Some fighters like Yoshi have unique mechanics (no normal jumps, but an up-B that functions as a jump). Others like the Ice Climbers share jumps. The puzzle typically uses the standard \"number of jumps\" count for the average fighter. If you see a jump count that seems off, look for fighters with special jump mechanics — they're usually the ones throwing you off.</p><h3>Can I play past puzzles players missed?</h3><p>Yes, and you should. The archive section lets you replay any puzzle from the past. This is useful for practice — you can test your attribute knowledge without the pressure of the daily clock. Players who go through old puzzles systematically tend to improve faster than those who only play today's challenge. Think of it as drilling the weight class and jump count tables before the next test.</p><h3>What's the best first filter to use?</h3><p>Universe, almost every time. It has the highest elimination power per click. If you know the fighter is from a specific universe, you've immediately ruled out 70+ fighters. Weight class is your second move. Jump count comes last — it's the tiebreaker when you've got 2-3 candidates left and need to pick one. Following this order will solve most puzzles in under a minute once you know the attributes.</p>",
+      "articleHtml": "<p>Today's puzzle has that particular flavor where you're staring at the attributes thinking \"this could be anyone\" — until you remember that <strong>universe</strong> is almost always the fastest way to cut your candidate list in half. More on that below.</p><h2>Today's puzzle in context</h2><p>We're in late April, which means the puzzle pool has had plenty of time to cycle through the obvious picks. By now you've probably seen the same five fighters show up three times this week. Today's answer isn't one of them — it's someone who sits in that middle tier of recognizability where the puzzle gets genuinely interesting.</p><p>If you've been playing daily, you've noticed the difficulty curve has shifted. The early-week puzzles were giving you easy hits with Mario and Link. By Wednesday, you're getting fighters where you need at least two attributes to pin them down. Today feels like a Thursday puzzle: not brutal, but you can't coast on one filter alone.</p><p>The reveal today rewards players who know their weight classes. That's the attribute most players sleep on during their first pass through the filters.</p><h2>Which attributes matter most today</h2><p>Universe is your hammer. Smash Bros has fighters from Nintendo properties, third-party collaborations, and the original roster. If you can identify which universe your target lives in, you've already eliminated 60-70% of the roster. Today's puzzle has a universe filter that narrows things down significantly — use it first.</p><p>Weight class is where today's puzzle gets specific. Fighters range from featherweight (like Jigglypuff, Kirby) to super heavyweight (like Bowser, King K. Rool). Most players know the extremes but get fuzzy on middleweights. The puzzle today has a weight class that only about eight fighters share, which makes it a powerful discriminator if you've narrowed your universe first.</p><p>Jump count is the third leg of the reliable trio. This one's underrated because most players don't have it memorized — they think in \"can double jump\" vs \"can't.\" But the exact jump count (1, 2, or 3 for most fighters, with exceptions like Snake at 1 or Dedede at 5) is incredibly precise. Today's puzzle includes jump count as a filter, and it's the one that separates the players who've done their homework from those who haven't.</p><p>Speed, size, and special attributes are useful tiebreakers. Once you've got universe, weight class, and jump count narrowed down to two or three candidates, these final filters will point you to the answer.</p><h2>When the solver saves you time</h2><p>Let's be honest: some days you just don't have it. You've tried every combination of filters you can think of, you've re-read the attributes three times, and you're still staring at a list of eight fighters wondering which one the puzzle wants.</p><p>The solver exists for exactly these moments. It's not cheating — it's efficiency. If you've spent more than five minutes on a single puzzle and you're not making progress, running the solver gets you back to the daily rhythm without the frustration spiral.</p><p>What the solver does well: it takes your remaining candidates and finds the exact combination of attributes that points to one fighter. What it doesn't do: it won't tell you why that fighter is the answer. You still have to learn from the process.</p><p>Players who use the solver strategically (not as a crutch, but as a reset button) tend to improve faster. You see the answer, you note which attribute you missed, and next time that knowledge sticks.</p><h2>Questions players keep asking</h2><h3>Why does universe filter feel vague sometimes?</h3><p>Some fighters blur the lines. Robin is Fire Emblem, but Robin also appears in Smash Bros as a Smash character — does that count as a separate universe filter? The puzzle treats universe as \"original source material,\" so Fire Emblem is the answer there. Similarly, characters like Cloud and Sephiroth are technically Final Fantasy but appear in Smash as third-party guests. The universe filter will label them as their source game, not as \"Smash original.\" When you're unsure, check whether the fighter has a clear origin outside the Smash roster.</p><h3>Is weight class based on competitive tier or actual in-game weight?</h3><p>Actual in-game weight values. The competitive tier list is irrelevant here. Some fighters that feel \"heavy\" because they're big (like King Dedede) are actually floaty in-game. Others that feel light (like Pikachu) have higher weight than you'd expect. The puzzle uses the game's internal weight stat, not player perception. If you're getting tripped up, check a weight chart — the numbers don't lie.</p><h3>Jump count seems inconsistent. What's the deal?</h3><p>Jump count in Smash is more nuanced than just \"number of jumps.\" Most fighters have 2 normal jumps and 1 special jump (like up-B). Some fighters like Yoshi have unique mechanics (no normal jumps, but an up-B that functions as a jump). Others like the Ice Climbers share jumps. The puzzle typically uses the standard \"number of jumps\" count for the average fighter. If you see a jump count that seems off, look for fighters with special jump mechanics — they're usually the ones throwing you off.</p><h3>Can I play past puzzles players missed?</h3><p>Yes, and you should. The archive section lets you replay any puzzle from the past. This is useful for practice — you can test your attribute knowledge without the pressure of the daily clock. Players who go through old puzzles systematically tend to improve faster than those who only play today's challenge. Think of it as drilling the weight class and jump count tables before the next test.</p><h3>What's the best first filter to use?</h3><p>Universe, almost every time. It has the highest elimination power per click. If you know the fighter is from a specific universe, you've immediately ruled out 70+ fighters. Weight class is your second move. Jump count comes last — it's the tiebreaker when you've got 2-3 candidates left and need to pick one. Following this order will solve most puzzles in under a minute once you know the attributes.</p>",
       "bonusHints": [],
       "meta": {
         "provider": "nvidia",
         "model": "minimaxai/minimax-m2.7",
         "fallbackUsed": false,
         "generatedAt": "2026-04-29T22:06:01.405Z",
-        "wordCount": 999
+        "wordCount": 995
       }
     }
   }
 }
-

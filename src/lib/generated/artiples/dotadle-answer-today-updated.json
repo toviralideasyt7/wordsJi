@@ -15,24 +15,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-26T06:04:49.983Z",
-        "wordCount": 779,
-        "editorialVersion": 2
-      }
-    },
-    "2026-07-25": {
-      "articleKey": "dotadle-answer-today-updated",
-      "date": "2026-07-25",
-      "title": "Dotadle Answer Today: Hero Clues That Actually Matter",
-      "summary": "A sharp daily breakdown of which Dota hero clues carry the most weight on WordSolverX, with smarter filtering tactics for faster solves.",
-      "articleHtml": "<p>The hero pool in Dota 2 shifts constantly with patches, reworks, and new releases. Today's Dotadle puzzle on WordSolverX reflects that reality—some clues point to concrete facts you can lock in immediately, while others require more careful handling before you commit.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2><p>Primary attribute clues hit hardest. When a puzzle signals Strength, Agility, Intelligence, or Universal, you've got roughly a quarter of the roster eliminated in one step. That's not nothing—but it's also not the whole picture. A careful player usually notices that attribute labels sit prominently on the reveal card, making them the fastest filter available. If your board shows an attribute hint, start there and work outward rather than chasing flashier clues that might pull you sideways.</p><p>Ability keywords narrow further. Phrases like \"invisibility,\" \"healing,\" \"summoning,\" or \"hook\" map to specific hero kits. The trick is matching the keyword to heroes who actually rely on that mechanic as a core identity—not just incidental uses. Phantom Assassin's blur feels different from Riki's smoke screen, even though both involve stealth. Knowing which ability defines the hero saves time.</p><h2>How to cut the Dota roster faster</h2><p>Laning assignment gets underrated. Heroes flex across positions, but certain roles stay dominant for specific characters. A clue mentioning \"offlane\" points harder toward Tidehunter than Spirit Breaker, despite both having initiation tools. The position system isn't perfect, but it filters better than raw ability descriptions alone.</p><p>Attribute brackets do heavy lifting. Strength heroes cluster around 2250-2400 base health at level one. Agility heroes tend toward higher armor values early. Intelligence casters often have lower mana pools than you'd expect until they build stats. These patterns won't solve puzzles by themselves, but they catch inconsistencies in wrong guesses before you waste too much time on a dead-end branch.</p><p>Use the <a href=\"https://wordsolverx.com/solver\">solver tool on this page</a> to input known filters and surface candidates faster. It handles the mechanical sorting so you can focus on pattern recognition.</p><h2>When roles help and when they mislead</h2><p>Role labels are useful shorthand, but Dota's flexibility creates noise. Rubick can support, mid, or offlane depending on the draft. Chen bounces between jungle and roam. Pudge sits in offlane, mid, and sometimes trilane safelane despite what guides say. If a puzzle leans heavily on role terminology, treat it as directional rather than definitive.</p><p>Patch-specific context trips people up. Older puzzles may reference hero identities that shifted with reworks. A clue pointing to \"pure damage nuke\" reads differently for Lion than it does for Lion post-rework. The archive history helps here—when you're stuck, checking past reveals shows how clue phrasing has evolved and what conventions the puzzle setter follows.</p><h2>Smarter way to approach tomorrow's Dotadle</h2><p>Build a mental shortlist before opening the puzzle. Spend two minutes reviewing recent hero releases and major patch changes. This sounds like homework, but it takes pressure off the actual solve. You stop treating every clue as equal and start seeing hierarchies form naturally.</p><p>Trust the obvious pairing first. Most Dotadle clues layer difficulty intentionally—one strong signal backed by weaker supporting details. Jumping straight to obscure cross-references wastes energy. Match the loudest clue to a hero family, then verify against secondary hints. If the fit holds, move on. If it buckles, backtrack to the last solid checkpoint.</p><p>Bookmark the <a href=\"https://wordsolverx.com/archive\">archive page</a> for reference builds. Seeing how previous puzzles structured their clue hierarchies trains your pattern-matching faster than random guessing ever could.</p><h2>Questions players keep asking</h2><h3>Do attribute clues ever contradict each other?</h3>\n<p>Sometimes. A hero like Outworld Destroyer was Intelligence for years before becoming Universal. If you spot an unexpected attribute label, check whether the puzzle predates a rework. The reveal card should clarify, but older archive entries occasionally show outdated classifications.</p><h3>How much weight should I give to lane position clues?</h3>\n<p>Moderate weight—enough to narrow candidates but not enough to rule out entirely. Lane meta shifts with patches, and many heroes see play outside their \"intended\" position at various skill brackets. Treat lane hints as texture, not gospel.</p><h3>What should I do when multiple heroes fit the same clue set?</h3>\n<p>Look for unique identifiers next. Voice lines, cosmetic exclusivity, and signature item interactions separate heroes that share generic ability themes. A heal-based clue could mean Dazzle, Oracle, or Witch Doctor—but only Dazzle makes Shadow Wave bounce between allies.</p><h3>Can I trust the hint widget to guide me correctly?</h3>\n<p>The hint widget pulls from verified clue data and typically surfaces the highest-probability interpretation. It's reliable as a starting point, but puzzles with layered complexity sometimes hide the true solution behind a secondary clue that seems weaker at first glance. Use hints to confirm, not to replace, your own analysis.</p><h3>Should I check the archive before attempting today's puzzle?</h3><p>Depends on your goal. Speed solvers benefit from warming up on older entries to calibrate clue-reading instincts. Players going for accuracy without time pressure often prefer fresh attempts. Both approaches work—the archive exists for whichever fits your style.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-25T12:35:42.926Z",
-        "wordCount": 823,
+        "wordCount": 781,
         "editorialVersion": 2
       }
     },
@@ -66,7 +49,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-22T06:06:25.393Z",
-        "wordCount": 308,
+        "wordCount": 310,
         "editorialVersion": 2
       }
     },
@@ -87,23 +70,6 @@
         "editorialVersion": 2
       }
     },
-    "2026-07-18": {
-      "articleKey": "dotadle-answer-today-updated",
-      "date": "2026-07-18",
-      "title": "Dotadle Answer Today: July 18, 2026 Hero Clues and Solve Strategy",
-      "summary": "Today's Dotadle puzzle hinges on distinguishing universal heroes from attribute-specific ones. Use the reveal card to confirm the primary stat before guessing lane roles.",
-      "articleHtml": "<h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>The July 18, 2026 board demands a strict hierarchy of clues. Players often waste turns guessing lane positions before confirming the hero's primary attribute. The answer card on this page reveals the stat line first, which immediately eliminates half the roster. If the puzzle points to a universal hero, standard strength or agility assumptions fail instantly. The reveal widget shows the exact attribute count, making it the single most valuable data point before the first guess.</p>\n<p>A careful player notices that today's hint set avoids generic role descriptions like \"support\" or \"carry\" in favor of specific ability interactions. This forces solvers to cross-reference the hero's kit with the attribute filter. The archive link on this page confirms that universal heroes appear less frequently than pure strength or agility picks, so prioritize them only when the clue explicitly mentions hybrid scaling or item independence. Check the <a href=\"/solver/dotadle\">Dotadle solver</a> if the attribute count doesn't match your initial guess.</p>\n<h2>How to cut the Dota roster faster</h2>\n<p>Speed comes from filtering by attribute before considering the role. The roster contains over 120 heroes, but splitting them by Strength, Agility, Intelligence, and Universal drops the pool to manageable chunks. If the puzzle hints at a hero who scales with attack damage but lacks a primary agility stat, the list shrinks to a handful of universal or strength heroes. This method prevents the common error of guessing a agility hero when the clue actually describes a strength-based tank.</p>\n<p>Use the <a href=\"/archive/dotadle\">Dotadle archive</a> to see which heroes have appeared in the last week. Recent patterns show a bias toward less common universal heroes when the daily hint mentions \"scaling with all stats.\" Avoid guessing popular meta picks like Pudge or Invoker unless the clue specifically references their unique mechanics. The solver tool on this page automatically removes heroes that don't match the confirmed attribute, saving the mental energy needed for the final deduction.</p>\n<h2>When roles help and when they mislead</h2>\n<p>Role clues are the most dangerous part of today's puzzle because lane assignments shift with every patch. A hero listed as a \"support\" in the current meta might have been a core carry two years ago. The clue card today uses a role description that fits a specific niche, not a general lane position. Relying on the \"position 4\" or \"position 5\" tags without checking the hero's current item build path leads to dead ends.</p>\n<p>Focus on the ability descriptions instead of the role label. If the hint mentions a hero who can disable multiple enemies or provides global presence, the role matters less than the mechanic. The <a href=\"/hints/dotadle\">hint widget</a> breaks down these mechanics clearly, showing exactly which abilities trigger the clue. Don't let the \"core\" or \"support\" tag dictate your guess; let the ability interaction do the work. This approach works even when the meta shifts unexpectedly.</p>\n<h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Prepare for the next board by reviewing the universal hero list before the daily reset. These heroes often appear when the puzzle wants to trick players relying on traditional attribute filters. Bookmark the <a href=\"/hero-list/dotadle\">hero list</a> and scan for any new additions or reworks that might change their primary stat. The archive shows that universal heroes tend to cluster in the middle of the month, making them a high-probability target for the next few days.</p>\n<p>Set up a mental checklist: confirm the attribute, verify the ability interaction, then check the role. This order prevents the frustration of guessing a hero that fits the role but fails the stat check. The solver link on this page updates in real-time, so use it to test your hypothesis before committing to a guess. Consistency beats luck when the clue set is this specific.</p>\n<h2>Questions players keep asking</h2>\n<h3>Does the attribute hint change mid-puzzle?</h3>\n<p>No, the primary attribute remains constant for the entire solve. The reveal card locks in the stat line at the start, and every subsequent clue must align with that attribute. If a guess contradicts the initial attribute hint, the puzzle is invalid, which never happens on the verified board.</p>\n<h3>How do universal heroes count toward the attribute limit?</h3>\n<p>Universal heroes count as having all three attributes simultaneously. If the clue requires a hero with a specific strength or agility threshold, a universal hero qualifies if their base stats meet the number. The solver tool automatically flags universal heroes as valid options for any attribute-based filter.</p>\n<h3>Can players use the same hero twice in a row?</h3>\n<p>The game logic prevents immediate repeats, but the archive shows that heroes often return within a week. If you see a familiar face in the hint set, check the last three days of the <a href=\"/archive/dotadle\">Dotadle archive</a> to see if it was used recently. The system usually rotates through the roster before recycling a specific pick.</p>\n<h3>What should I do if the role clue seems wrong?</h3>\n<p>Role clues refer to the hero's most common or historical lane assignment, not necessarily their current meta role. If the clue says \"position 1\" but the hero is currently played as a support, trust the historical data over the current meta. The puzzle designers use stable, long-term roles to avoid confusion from patch changes.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-122b-a10b",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-18T22:06:34.371Z",
-        "wordCount": 867,
-        "editorialVersion": 2
-      }
-    },
     "2026-07-16": {
       "articleKey": "dotadle-answer-today-updated",
       "date": "2026-07-16",
@@ -117,7 +83,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-16T22:25:57.446Z",
-        "wordCount": 527,
+        "wordCount": 531,
         "editorialVersion": 2
       }
     },
@@ -134,24 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-11T22:16:16.071Z",
-        "wordCount": 813,
-        "editorialVersion": 2
-      }
-    },
-    "2026-07-10": {
-      "articleKey": "dotadle-answer-today-updated",
-      "date": "2026-07-10",
-      "title": "Dotadle Answer Today: Hero Clues That Actually Matter",
-      "summary": "Smart players know which Dota 2 hero attributes and lane roles narrow the board fastest. Here's how to read today's Dotadle clues without wasting guesses.",
-      "articleHtml": "<h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>The attribute system gives you the fastest filter on the board. Strength, Agility, Intelligence, and Universal each contain roughly 30-35% of the total hero pool, so landing on the right attribute immediately cuts your options by two-thirds. Pair that with any role tag (carry, support, offlane) and you've narrowed the field to single digits before checking anything else.</p>\n<p>A careful player usually notices the hint widgets on today's page show both a primary attribute and at least one lane assignment. The attribute comes first in the clue hierarchy because it's the broadest bucket. If you're staring at \"Strength\" and \"Safe Lane,\" you're not guessing from 124 heroes anymore—you're working from maybe eight candidates that fit both conditions.</p><h2>How to cut the Dota roster faster</h2>\n<p>Stop reading clues in the order they appear. Most puzzle layouts surface secondary details like cosmetic themes or voice actor names before the mechanical data. Those extras are useful for tiebreaking, but they add noise during the elimination phase.</p>\n<p>Run attribute first, always. Then primary role. Then check whether the hero has undergone major reworks recently—if the archive shows recent balance changes, some older players may misremember the current kit. The solver link on this page pulls live hero data, which catches heroes whose playstyle shifted after a significant patch.</p>\n<p>The mistake beginners make is treating every clue as equally important. Lore text and response lines sound distinctive, but they don't narrow the pool the way a simple attribute filter does. Use them to confirm, not to discover.</p><h2>When roles help and when they mislead</h2>\n<p>Dota 2 heroes don't stay in their lane boxes. A hero listed as \"Support\" might dominate the safe lane in one patch and get pushed to the offlane in the next after nerfs change the math. The clue widget sometimes reflects the dominant meta position, but it can also point to an older or less common build.</p>\n<p>This is where the attribute filter earns its weight. No matter where a hero lanes, its primary attribute stays constant. Sniper has always been Agility. Witch Doctor has always been Support. The attribute doesn't lie even when the role assignment feels fuzzy.</p>\n<p>If a clue mentions a specific ability name, treat that as high-confidence signal. Ability names map directly to individual heroes with almost no overlap. When you see \"Finger of Death\" or \"Chronosphere,\" you're looking at one hero and one hero only. The reveal card on today's page uses ability names sparingly for exactly this reason—each one is a precision tool.</p><h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Build a mental shortcut for the three most common attribute groupings before you open tomorrow's page. Strength heroes tend toward high HP and armor. Agility heroes scale with attack speed and armor as the game progresses. Intelligence heroes typically have the strongest early-game spell damage. Universal heroes split the difference in ways that make them harder to pin down from attribute alone.</p>\n<p>Bookmark the <a href=\"/dotadle-solver\">solver tool</a> before you start tomorrow. It lets you stack multiple filters (attribute plus role plus patch era) without manually tracking combinations. Players who use it consistently report solving in fewer attempts because they're not burning guesses on heroes that fail the first filter.</p>\n<p>Check the archive for yesterday's answer pattern. If you noticed which clue types resolved first, that tells you something about how the board weights its hints. Some days the attribute lands clean; other days you need two role clues to triangulate. Tomorrow's board may behave differently, but the underlying logic stays consistent.</p><h2>Questions players keep asking</h2><h3>Does the difficulty setting change which clues appear?</h3>\n<p>Yes. Harder modes tend to hide the attribute tag behind more specific mechanical hints. Easy mode surfaces the primary attribute earlier in the clue sequence, which is why new players often find the attribute filter obvious on lower difficulties.</p><h3>Why did the guess match the role but not the answer?</h3>\n<p>Role assignments in Dota 2 shift with the meta. A hero played as a core carry in one patch might function as a support in another after itemization changes. The clue widget reflects how the community currently uses a hero, not necessarily how you've seen it played. Check the lane assignment hint alongside the role tag—if they conflict, trust the lane assignment.</p><h3>Can I rely on the archive to learn clue patterns?</h3>\n<p>The <a href=\"/dotadle-archive\">archive</a> shows past answers and their associated clue sets. Studying it reveals which clue types tend to appear together and in what order. That's legitimate preparation. You're not cheating—you're learning the board's language.</p><h3>What should I do if I can't narrow it past five heroes?</h3>\n<p>At that stage, ability names become your best friend. Look for any clue referencing a signature spell—the one ability that defines the hero's playstyle. If no ability clue exists, check the attribute and role combination against the remaining pool. Four out of five will share either the same attribute or the same role. The odd one out is usually your answer.</p><h3>Are there heroes that never appear in Dotadle?</h3>\n<p>New heroes released within the last six months occasionally take time to integrate into the clue system. If a hero was added after today's puzzle cycle started, it might not appear until the next refresh. Otherwise, every hero in the main roster eventually shows up.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-10T06:14:05.928Z",
-        "wordCount": 881,
+        "wordCount": 817,
         "editorialVersion": 2
       }
     },
@@ -168,7 +117,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-09T22:35:01.464Z",
-        "wordCount": 808,
+        "wordCount": 814,
         "editorialVersion": 2
       }
     },
@@ -185,7 +134,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-07T13:38:48.803Z",
-        "wordCount": 748,
+        "wordCount": 750,
         "editorialVersion": 2
       }
     },
@@ -219,7 +168,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-05T12:52:38.284Z",
-        "wordCount": 564,
+        "wordCount": 566,
         "editorialVersion": 2
       }
     },
@@ -237,23 +186,6 @@
         "fallbackSource": "stored",
         "generatedAt": "2026-07-04T06:14:07.963Z",
         "wordCount": 836,
-        "editorialVersion": 2
-      }
-    },
-    "2026-07-01": {
-      "articleKey": "dotadle-answer-today-updated",
-      "date": "2026-07-01",
-      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
-      "summary": "Attribute-based clues narrow the Dota hero pool fastest on fresh boards. Start with primary stats before wrestling with ability descriptions.",
-      "articleHtml": "<p>Attribute-based clues narrow the Dota hero pool fastest on fresh boards. Strength heroes cluster around 23 names, Agility around 25, and Intelligence around 27—plus the newer Universal category. If your clue set includes primary attribute or stat growth hints, start there before wrestling with ability descriptions.</p><p>The reveal card on today's page gives you a confirmed answer, but the path worth studying is how those clues stack against each other. A careful player usually notices that some clues feel redundant while others contradict expected patterns—this tension often points toward heroes with unusual builds or recent reworks.</p><h2>How to cut the Dota roster faster</h2>\n<p>Dota 2 throws over 120 playable heroes at you. That's too many to parse by feel. The fastest filter is primary attribute—if a clue tells you the hero scales with Intelligence or hits hard through Strength, you've already carved out two-thirds of the roster before reading another word.</p><p>Lane assignment clues need more caution. The professional meta shifts constantly, and the puzzle occasionally hides answers in off-lane positions that confuse casual viewers. When a clue says \"offlane,\" check whether that's traditional or current meta positioning before locking it in.</p><h2>When roles help and when they mislead</h2>\n<p>Support and carry labels cause problems. Chen farms the jungle but also enables ganks. Hoodwink plays both ranged carry and position-four support depending on the draft. These terms describe typical playstyles, not absolute boundaries.</p><p>Look at what the clue actually emphasizes. Does it highlight teamfight presence? Pickoff potential? Sustained damage versus burst? Those distinctions separate heroes like Tidehunter from Puck in ways that simple role labels obscure.</p><h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Most solvers start with the clues and build outward. Try flipping that—assemble your full candidate list first, then eliminate against each clue. You'll spot contradictions faster and waste less time on heroes that can't possibly fit.</p><p>The <a href=\"/tools/solver\">solver on this page</a> handles filtering mechanically, but understanding why certain heroes get eliminated builds pattern recognition that pays dividends over time. When you hit a wall, the <a href=\"/archive/dotadle\">archive</a> shows how similar clue combinations resolved in previous weeks.</p><h2>Questions players keep asking</h2><h3>Does the puzzle ever include unreleased heroes?</h3>\n<p>No. The hero database updates only when the puzzle refreshes its content—not with every Dota 2 patch. Balance changes and new releases don't affect which heroes appear until the puzzle itself cycles.</p><h3>Are aghanim's scepter upgrades fair game for clues?</h3>\n<p>They come up occasionally. Clues referencing upgraded abilities or altered ultimates appear more often than you'd expect. Read carefully whether the clue describes the base kit or something that requires the shard or scepter.</p><h3>What should I do if I can't match all clues to a single hero?</h3>\n<p>Work backward. Find the two or three strongest clues (the ones that eliminate the most candidates) and search for heroes satisfying those. Partial matches beat no matches, and sometimes a clue uses unexpected wording for a familiar mechanic.</p><h3>Do hero cosmetics or arcana affect anything in the puzzle?</h3>\n<p>Not in any version of this puzzle. The solver and clue system operate purely on hero identity and abilities. Custom visuals, voice lines, and model variations are irrelevant to finding the answer.</p><h3>How should I handle ambiguous clue phrasing?</h3>\n<p>Clue phrasing tends to repeat across puzzles. The same developer often uses identical structures for equivalent hint types. Comparing today's wording against archived examples trains your eye for what specific phrases signal.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-01T13:55:09.014Z",
-        "wordCount": 560,
         "editorialVersion": 2
       }
     },
@@ -287,7 +219,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-29T22:06:14.973Z",
-        "wordCount": 351,
+        "wordCount": 353,
         "editorialVersion": 2
       }
     },
@@ -304,7 +236,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-28T22:05:48.560Z",
-        "wordCount": 877,
+        "wordCount": 881,
         "editorialVersion": 2
       }
     },
@@ -354,7 +286,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-24T13:41:10.156Z",
-        "wordCount": 764,
+        "wordCount": 768,
         "editorialVersion": 2
       }
     },
@@ -371,7 +303,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-22T16:15:06.845Z",
-        "wordCount": 900,
+        "wordCount": 902,
         "editorialVersion": 2
       }
     },
@@ -422,7 +354,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-18T06:24:42.452Z",
-        "wordCount": 798,
+        "wordCount": 802,
         "editorialVersion": 2
       }
     },
@@ -439,7 +371,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-17T06:25:40.844Z",
-        "wordCount": 701,
+        "wordCount": 705,
         "editorialVersion": 2
       }
     },
@@ -490,7 +422,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-14T06:25:22.397Z",
-        "wordCount": 375,
+        "wordCount": 377,
         "editorialVersion": 2
       }
     },
@@ -523,7 +455,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-12T22:04:34.138Z",
-        "wordCount": 867,
+        "wordCount": 869,
         "editorialVersion": 2
       }
     },
@@ -540,7 +472,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-11T22:05:13.877Z",
-        "wordCount": 329,
+        "wordCount": 331,
         "editorialVersion": 2
       }
     },
@@ -557,7 +489,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-10T22:04:58.956Z",
-        "wordCount": 649,
+        "wordCount": 651,
         "editorialVersion": 2
       }
     },
@@ -574,7 +506,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-08T14:58:01.865Z",
-        "wordCount": 339,
+        "wordCount": 341,
         "editorialVersion": 2
       }
     },
@@ -591,7 +523,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-05T06:12:56.520Z",
-        "wordCount": 363,
+        "wordCount": 367,
         "editorialVersion": 2
       }
     },
@@ -625,7 +557,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-02T22:06:05.137Z",
-        "wordCount": 831,
+        "wordCount": 833,
         "editorialVersion": 2
       }
     },
@@ -643,23 +575,6 @@
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T06:33:57.040Z",
         "wordCount": 787,
-        "editorialVersion": 2
-      }
-    },
-    "2026-05-30": {
-      "articleKey": "dotadle-answer-today-updated",
-      "date": "2026-05-30",
-      "title": "Dotadle Answer Today: Which Hero Clues Carry the Most Weight",
-      "summary": "Dota 2 hero answers require weighing multiple clue types—attribute, role, and lane placement each narrow the pool differently.",
-      "articleHtml": "<p>On today's Dotadle board, the hero answer sits behind layers of clue data that don't all pull equal weight. A careful player reads the attribute hint first, then cross-references role flexibility before touching lane assignment. That ordering matters more than most guides admit.</p><h2>Dotadle answer today: which hero clues carry the most weight</h2>\n<p>The primary attribute clue is your sharpest filter. Dota 2 splits its roster into Strength, Agility, Intelligence, and Universal heroes—and that single classification eliminates roughly three-quarters of the cast immediately. If today's board shows an attribute hint, treat it as non-negotiable. Strength heroes tend toward high HP pools and tanky builds, Agility heroes scale with attack speed and armor, Intelligence heroes rely on mana and abilities, and Universal heroes blend these profiles. Knowing which category you're hunting changes how aggressively you can prune the remaining candidates. The attribute clue appears early in most Dotadle sessions precisely because it's so decisive—don't sleep on it by saving it for last.</p><h2>How to cut the Dota roster faster</h2>\n<p>The full Dota 2 hero pool exceeds 120 characters. That's too many to brute-force. Instead, build a mental elimination sequence: start with attribute, then apply role constraints, then check lane viability. Role clues (Carry, Support, Offlane, Soft Support) narrow further but watch for overlap. Many heroes flex across roles depending on draft context. Anti-Mage functions as hard carry but can slip into aggressive offlane against the right matchup. Shadow Fiend tops the damage charts as a position-one hero but sees occasional use as a farming mid. This flexibility trips up players who treat role labels as rigid buckets.</p><p>Lane assignment helps most when combined with attribute data. A Strength hero marked for safe lane likely means a tanky frontliner or sustain-focused carry. An Agility hero assigned to the offlane probably signals a slippery initiator or split-pusher. Intelligence heroes in the support role usually point toward disable-heavy playmakers. The solver tool on this page can help map those intersections quickly if you're working through multiple possibilities.</p><h2>When roles help and when they mislead</h2>\n<p>Role information ranks below attribute but above pure aesthetics. Players sometimes fixate on visual cues (a hero's color scheme, weapon type, or model silhouette) when those details appear on the board. Resist that instinct. A glowing blue hero could be Riki (Agility) or Crystal Maiden (Intelligence). A massive armored figure might be Tidehunter (Strength) or Dragon Knight (also Strength, but the attribute distinction still matters more than the silhouette similarity).</p><p>Lane assignment proves most reliable for core positions and least reliable for supports. Position-five heroes cover the widest hero pool and show up in every lane rotation depending on the game's flow. Hard supports like Lion, Lich, and CM have predictable patterns, but roamers and position-four supports blur those lines constantly. When lane clues feel ambiguous, lean back on attribute filtering and let the roster collapse naturally.</p><h2>Smarter way to approach tomorrow's Dotadle</h2>\n<p>Tomorrow's puzzle will reset the clue stack, but your process shouldn't. Build a consistent reading order: attribute first, then role, then lane, then secondary traits. This habit pays dividends across multiple rounds and keeps you from chasing dead ends down visual rabbit holes.</p><p>Bookmark the <a href=\"#archive\">archive link</a> if you want to study past boards and see how different clue combinations resolved. Looking at yesterday's answer alongside its clue set trains pattern recognition faster than random play. The <a href=\"#solver\">solver tool</a> works best when you've already narrowed to two or three candidates and need confirmation—not as a starting point.</p><p>A few recurring hero archetypes show up frequently enough to memorize: tanky Strength initiators (Centaur, Axe, Tidehunter), mobile Agility carries (Phantom Lancer, Juggernaut, Slark), utility Intelligence supports (Lion, Lina, Skywrath Mage), and Universal farmers (Nature's Prophet, Chen, Enchantress). Knowing where these fall in the attribute table gives you an instant edge when their clues appear.</p><h2>Questions players keep asking</h2><h3>Does Universal attribute mean the hero fits anywhere?</h3>\n<p>Not exactly. Universal heroes have balanced stat growth and can theoretically fill multiple roles, but they still have preferred positions. Arc Warden and Broodmother both carry Universal tags but operate very differently on the map. Treat Universal as a flexible category, not a wildcard that ignores other clues.</p><h3>What should I do when the clue widgets contradict each other?</h3>\n<p>Check which clue appeared earliest in the session. Earlier reveals typically carry higher confidence. If a lane assignment seems off compared to the attribute hint, verify whether the hero has seen recent meta shifts—IceFrog adjusts hero roles patch by patch, and some older assumptions don't hold anymore.</p><h3>Can I rely on the archive to predict today's answer?</h3>\n<p>The archive shows historical patterns, not future outcomes. Each Dotadle board generates independently. Studying the archive improves your solve technique, but no past answer guarantees what's coming next.</p><h3>Should players use the solver for every guess?</h3>\n<p>Use it as a checkpoint, not a crutch. Running every possibility through the solver before thinking wastes time and muddies your read of the clues. Solve manually until you've narrowed the field, then let the tool confirm or deny your shortlist.</p><h3>Do hero cosmetics affect the clues?</h3>\n<p>No. Clue data pulls from base hero stats, roles, and attributes—not cosmetic items. A hero wearing Immortal-tier gear still resolves to the same attribute and role profile underneath.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-05-30T06:34:49.856Z",
-        "wordCount": 866,
         "editorialVersion": 2
       }
     },
@@ -693,7 +608,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-27T22:05:51.905Z",
-        "wordCount": 527,
+        "wordCount": 531,
         "editorialVersion": 2
       }
     },
@@ -709,7 +624,7 @@
         "model": "moonshotai/kimi-k2.6",
         "fallbackUsed": true,
         "generatedAt": "2026-05-25T17:17:28.871Z",
-        "wordCount": 799
+        "wordCount": 798
       }
     },
     "2026-05-23": {
@@ -754,9 +669,8 @@
         "model": "moonshotai/kimi-k2.6",
         "fallbackUsed": true,
         "generatedAt": "2026-05-18T22:08:50.128Z",
-        "wordCount": 546
+        "wordCount": 550
       }
     }
   }
 }
-

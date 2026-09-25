@@ -19,23 +19,6 @@
         "editorialVersion": 2
       }
     },
-    "2026-07-21": {
-      "articleKey": "contexto-answer-today",
-      "date": "2026-07-21",
-      "title": "Contexto Answer Today: Rank Patterns and Smart Guessing Strategy",
-      "summary": "Understanding Contexto's semantic ranking helps you decode today's board. Here's how rank patterns reveal category direction and when broad words outperform clever ones.",
-      "articleHtml": "<p>Today's Contexto board rewards players who read the rank column as a map, not just a score. Each guess returns a position number—the lower, the closer your word sits to the target in semantic space. That single digit tells you more about the puzzle's direction than any single clue widget might.</p><h2>Contexto answer today: what the rank pattern usually means</h2>\n<p>A careful player notices that early ranks cluster into zones. If your first three guesses land at positions 847, 612, and 445, you're seeing a gradient—not random scatter. The gap between each guess shows if you're moving toward the answer or circling the same conceptual neighborhood. Today's board likely has one dominant category thread running through those top 200 positions. Once you spot that thread, your remaining guesses become surgical rather than scattered.</p><h2>When to pivot categories instead of forcing synonyms</h2>\n<p>The instinct to find synonyms works against you in Contexto. Players who chase close variations of an opening guess often stay trapped in a semantic pocket. Suppose your starting word lands at position 300. You try two synonyms and both sit at 280 and 315—close, but not breaking through. That's the signal. Stop drilling deeper into that word family. Pivot hard to a related but distinct category. If you opened with \"ocean,\" tried \"sea\" and \"marine,\" consider jumping to \"coastal,\" \"shipping,\" or even \"pollution.\" These share conceptual territory without being lexical cousins. The ranking engine treats categorical shifts as meaningful moves, not lateral steps.</p><h2>Why broad words beat clever words here</h2>\n<p>Contexto's algorithm rewards generality in unexpected ways. A word like \"system\" or \"process\" sits near thousands of concepts simultaneously. It won't win the puzzle, but it gives clean directional data. Players who reach for obscure, precise terms often get misleading rank feedback because those words live in narrow semantic neighborhoods. The hint widgets on today's page work better when you've already established a rough zone. Use broad anchors to triangulate, then let the narrower words confirm. Trying \"democracy\" before establishing that politics is the domain costs you; trying \"political\" as a second-tier probe after \"government\" scores better intel.</p><h2>How to cut tomorrow's guess count</h2>\n<p>Archive habits matter more than individual solves. After today's reveal, spend two minutes scanning which guess landed closest and why. Look for the moment you pivoted categories—that's where most efficiency lives. Players who log their pivot points across five sessions start recognizing recurring patterns: certain puzzle types reward vertical drilling within a topic, others reward horizontal jumps to adjacent fields. Tomorrow's board will present different semantic terrain, but the habit of reading rank deltas as decision data compounds fast. You don't need a spreadsheet—just a mental note of which move broke through versus which kept you circling.</p><h2>Questions players keep asking</h2><h3>Does the ranking reset between puzzles?</h3>\n<p>No. Each daily puzzle has its own fresh ranking universe. Yesterday's position 50 means nothing today. Treat every board as a new mapping problem, even if the general strategy stays consistent.</p><h3>Should I trust hints from the solver tool on this page?</h3>\n<p>The solver links here point toward archived strategies and verified solve paths. Use them to check your logic after you've made three to five informed guesses. They're most useful when you're stuck in a semantic pocket and need a directional nudge rather than the answer itself.</p><h3>What should I do when my best guess keeps plateauing in rank?</h3>\n<p>Plateauing at similar positions (like 150, 148, 152 across three tries) usually means you're exploring the same conceptual layer. One of those guesses needs to break category entirely. Pick a word from a peripheral but connected field and commit to it, even if it feels wrong intuitively.</p><h3>How does the reveal card change mid-game?</h3>\n<p>The reveal card on today's page becomes available once you've submitted enough guesses or explicitly trigger it. Before that point, the hint widgets offer the best directional data. Check them early—they often steer you away from obvious traps before you've invested too many guesses in a dead end.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "minimaxai/minimax-m2.7",
-        "fallbackUsed": true,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-20T20:16:16.983Z",
-        "wordCount": 663,
-        "editorialVersion": 2
-      }
-    },
     "2026-07-20": {
       "articleKey": "contexto-answer-today",
       "date": "2026-07-20",
@@ -83,7 +66,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-15T17:55:27.592Z",
-        "wordCount": 807,
+        "wordCount": 811,
         "editorialVersion": 2
       }
     },
@@ -117,7 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-10T18:18:56.316Z",
-        "wordCount": 620,
+        "wordCount": 624,
         "editorialVersion": 2
       }
     },
@@ -134,7 +117,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-09T16:46:02.792Z",
-        "wordCount": 829,
+        "wordCount": 833,
         "editorialVersion": 2
       }
     },
@@ -168,7 +151,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-07T07:03:44.745Z",
-        "wordCount": 897,
+        "wordCount": 900,
         "editorialVersion": 2
       }
     },
@@ -219,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-02T16:45:39.710Z",
-        "wordCount": 760,
+        "wordCount": 761,
         "editorialVersion": 2
       }
     },
@@ -236,7 +219,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-01T20:32:01.660Z",
-        "wordCount": 806,
+        "wordCount": 800,
         "editorialVersion": 2
       }
     },
@@ -304,7 +287,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-27T20:02:30.029Z",
-        "wordCount": 795,
+        "wordCount": 797,
         "editorialVersion": 2
       }
     },
@@ -338,7 +321,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-23T16:49:16.872Z",
-        "wordCount": 805,
+        "wordCount": 809,
         "editorialVersion": 2
       }
     },
@@ -355,7 +338,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-21T18:12:42.940Z",
-        "wordCount": 861,
+        "wordCount": 865,
         "editorialVersion": 2
       }
     },
@@ -406,7 +389,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-18T16:52:20.377Z",
-        "wordCount": 885,
+        "wordCount": 889,
         "editorialVersion": 2
       }
     },
@@ -457,7 +440,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-11T19:22:42.506Z",
-        "wordCount": 869,
+        "wordCount": 871,
         "editorialVersion": 2
       }
     },
@@ -542,7 +525,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-04T20:56:57.121Z",
-        "wordCount": 728,
+        "wordCount": 734,
         "editorialVersion": 2
       }
     },
@@ -559,7 +542,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-02T20:00:12.664Z",
-        "wordCount": 817,
+        "wordCount": 814,
         "editorialVersion": 2
       }
     },
@@ -576,7 +559,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T17:45:46.157Z",
-        "wordCount": 330,
+        "wordCount": 332,
         "editorialVersion": 2
       }
     },
@@ -629,4 +612,3 @@
     }
   }
 }
-

@@ -15,24 +15,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-26T16:43:46.432Z",
-        "wordCount": 730,
-        "editorialVersion": 2
-      }
-    },
-    "2026-07-22": {
-      "articleKey": "framed-answer-today",
-      "date": "2026-07-22",
-      "title": "Framed Answer Today: July 22, 2026 Solve Path & Movie Reveal",
-      "summary": "Get the Framed answer for July 22, 2026. Learn how genre cues beat specific recall and clean up your solve path using the archive tools on this page.",
-      "articleHtml": "<h2>Framed answer today: what the opening still usually gives away</h2><p>The answer card above reveals the full movie title for the July 22, 2026 puzzle. Most players identify the film by the third frame because the opening shot establishes a distinct visual genre before any actors appear. Lighting choices and color grading in that first image narrow the field faster than trying to recognize a specific star.</p><p>Genre recognition acts as the primary filter. A gritty, desaturated opening suggests a crime thriller or neo-noir, while high-contrast neon points toward sci-fi or synth-wave horror. This visual shorthand lets you eliminate entire decades of cinema before guessing a single title. The reveal widget on this page confirms whether your genre assessment matched the final answer.</p><h2>How genre beats exact movie recall early</h2><p>Trying to name the movie from frame one is a trap. The game design relies on obscure shots that even superfans might miss. Instead, focus on the production era. Aspect ratios, film grain, and costume design provide hard data points that do not require encyclopedic memory.</p><p>A careful player notices the texture of the image first. Digital cleanliness suggests a post-2010 release, while heavy grain often indicates 70s or 80s film stock. Once you lock in the decade, the genre becomes the second lock. If the first frame shows a spaceship corridor, you are not guessing romantic comedies. You are guessing sci-fi titles from that specific era.</p><p>This approach reduces the mental load significantly. You stop searching your entire memory bank and start scanning a much smaller subset of films. The solver link below helps verify if your genre-based guesses align with the actual answer history.</p><h2>Where a single memorable frame can mislead you</h2><p>Sometimes a specific prop or location sends players down the wrong path entirely. A distinctive car or a famous landmark might make you confident in a guess that turns out to be incorrect. These red herrings work because they trigger false associations with more popular movies.</p><p>Iconic objects appear in multiple films. A yellow taxi does not guarantee a New York-based crime drama; it could be background noise in a romance set in the same city. Relying on one object ignores the context of the scene. The lighting, the actor's posture, and the camera angle often tell a more accurate story than the props themselves.</p><p>When a guess fails, check the archive. Looking at previous puzzles where similar visual elements appeared shows how the game uses common tropes to disguise less obvious answers. This pattern recognition prevents you from making the same assumption twice.</p><h2>How to clean up tomorrow's Framed in fewer reveals</h2><p>Efficiency comes from treating each reveal as a data point rather than a lucky guess. Start with broad genre tags if the interface allows, or mentally categorize the visual style immediately. Do not waste a guess on a hunch unless the visual evidence supports at least two other criteria like decade and director style.</p><p>Use the process of elimination aggressively. If the second frame confirms a modern setting, cross out everything pre-1990. If the third frame shows a specific type of conflict, narrow the scope to films dealing with that theme. This methodical pruning leaves you with a shortlist of viable candidates by the fourth or fifth frame.</p><p>Speed matters less than accuracy here. Rushing leads to careless errors where you ignore a crucial background detail. Take the extra second to scan the edges of the frame. The answer often hides in the periphery, not the center of the shot.</p><h2>Questions players keep asking</h2><h3>Does the first frame always show the main character?</h3><p>No. The opening image frequently focuses on setting, atmosphere, or a secondary character to obscure the identity of the film. Designers avoid giving away the protagonist immediately to increase difficulty. Look for environmental clues instead of faces.</p><h3>How many frames does the average player need?</h3><p>Most skilled solvers identify the movie between the third and fifth frames. The first two establish genre and era, while the middle frames introduce plot-specific elements. Rarely does a player solve it on frame one unless the movie is extremely iconic.</p><h3>Can players use the archive to improve my score?</h3><p>Yes. Reviewing past answers in the archive helps you spot recurring directors and visual styles. You begin to recognize the cinematography of specific filmmakers, which acts as a shortcut when their new work appears in the daily puzzle.</p><h3>What should I do if I recognize the actor but not the movie?</h3><p>Filter your mental search by that actor's filmography within the established decade. If you know the star and the approximate year, the list of possibilities shrinks dramatically. Cross-reference their roles with the genre cues you already identified.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-21T16:47:36.553Z",
-        "wordCount": 780,
+        "wordCount": 736,
         "editorialVersion": 2
       }
     },
@@ -83,7 +66,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-17T12:44:41.511Z",
-        "wordCount": 866,
+        "wordCount": 868,
         "editorialVersion": 2
       }
     },
@@ -100,7 +83,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-14T16:52:18.474Z",
-        "wordCount": 719,
+        "wordCount": 721,
         "editorialVersion": 2
       }
     },
@@ -138,23 +121,6 @@
         "editorialVersion": 2
       }
     },
-    "2026-07-12": {
-      "articleKey": "framed-answer-today",
-      "date": "2026-07-12",
-      "title": "Framed Answer Today: July 12, 2026 Movie Reveal and Solve Path",
-      "summary": "The July 12, 2026 Framed answer is revealed above. Use genre cues from early frames to narrow options before specific actors or plot points become clear.",
-      "articleHtml": "<h1>Framed Answer Today: July 12, 2026 Movie Reveal and Solve Path</h1><p>The daily Framed answer for July 12, 2026, sits in the reveal card at the top of this page. Players who track genre shifts across the first three frames typically solve faster than those hunting for specific actors immediately. Early frames often establish tone rather than identity, making broad categorization the most efficient opening move.</p><h2>Framed answer today: what the opening still usually gives away</h2><p>That first image rarely hands you the title on a silver platter. It sets a mood. A color grade. A lighting style that screams late 90s thriller or early 2000s rom-com before you even see a face. The July 12 puzzle follows this pattern, relying on atmospheric cues that separate blockbusters from indie darlings right out of the gate.</p><p>Most solvers waste their first guess trying to name the star. Don't. Look at the background instead. Is it a soundstage or a location shoot? The production value in frame one tells you if you're dealing with a studio tentpole or a niche festival circuit entry. This distinction cuts the potential answer pool in half before the second image loads.</p><p>Check the archive link below the reveal if you want to see how often this specific opening tactic appears. The history shows a clear preference for establishing shots over close-ups in the initial slot, especially during summer release cycles.</p><h2>How genre beats exact movie recall early</h2><p>Trying to recall every film an actor made is a slow way to play. Recognizing that the lighting matches a specific director's visual signature gets you there quicker. The puzzle mechanics reward broad strokes first. You need to know if you're in a sci-fi universe or a historical drama before you start guessing names.</p><p>Frame two usually confirms the genre hinted at in frame one. If the first shot was a dark alley and the second shows a futuristic vehicle, you can safely ignore anything released before 1980. This narrowing process is more reliable than trying to match a blurry profile to a mental database of headshots.</p><p>Use the solver tool linked in the sidebar to filter by decade and genre once you have those two data points. It eliminates hundreds of irrelevant titles instantly. Players who skip this step often burn guesses on movies that fit the actor but miss the era entirely.</p><h2>Where a single memorable frame can mislead you</h2><p>Sometimes a frame is iconic enough to trick you. A famous costume or a well-known prop can make you lock onto a franchise that isn't actually the answer. The July 12 sequence includes a visual element that looks like a major superhero property but belongs to a smaller satire.</p><p>This happens when the game pulls a shot from a parody or a homage. Your brain wants to complete the pattern with the original source material. Resist that urge. Wait for the third or fourth frame to show a supporting character or a distinct location that breaks the franchise illusion.</p><p>If you guess the wrong blockbuster based on one strong visual cue, check the hint widget. It will tell you if you're in the right decade or genre, helping you pivot before you run out of attempts. Don't let a single recognizable jacket derail your entire logic chain.</p><h2>How to clean up tomorrow's Framed in fewer reveals</h2><p>Tomorrow's puzzle will likely start with another atmospheric shot. Prepare by reviewing the genre tags on the current answer card. Notice how the metadata groups the film. That grouping strategy is the blueprint for the next day's challenge.</p><p>Keep a mental note of which directors favor specific color palettes. If you see teal and orange grading in frame one, think Michael Bay or his imitators. If it's desaturated and grainy, look for gritty crime dramas from the 70s. These visual shorthands save guesses.</p><p>Bookmark the archive page. Scrolling through past answers reveals patterns in how the editors select frames. They rarely use the poster art. They prefer obscure scenes that test your actual viewing history rather than your ability to recognize marketing materials.</p><h2>Questions players keep asking</h2><h3>Does the first frame always show the main character?</h3><p>No. The opening image frequently features a setting, a vehicle, or a secondary character to obscure the identity. Relying on face recognition in frame one leads to unnecessary mistakes. Focus on the environment first.</p><h3>How many guesses do most players need for this puzzle?</h3><p>Data from the solver tool suggests the average player solves in four attempts when they prioritize genre over actor. Those who guess specific names early often use all six chances. Patience with broad categories pays off.</p><h3>Can players use the archive to practice?</h3><p>Absolutely. The archive contains every past answer with full frame sequences. Running through old puzzles helps you spot the visual tropes the editors reuse. It's the best way to train your eye for lighting and set design cues.</p><h3>What should I do if I recognize the scene but not the title?</h3><p>Type the scene description into the solver search bar. Filtering by visual elements like 'rainy street' or 'space cockpit' often narrows the list enough for you to spot the title. Don't rely solely on memory when the database can do the heavy lifting.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-07-11T19:59:34.829Z",
-        "wordCount": 873,
-        "editorialVersion": 2
-      }
-    },
     "2026-07-11": {
       "articleKey": "framed-answer-today",
       "date": "2026-07-11",
@@ -168,7 +134,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-10T20:12:47.341Z",
-        "wordCount": 766,
+        "wordCount": 770,
         "editorialVersion": 2
       }
     },
@@ -202,7 +168,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-08T18:11:35.604Z",
-        "wordCount": 866,
+        "wordCount": 872,
         "editorialVersion": 2
       }
     },
@@ -236,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-05T16:49:02.066Z",
-        "wordCount": 808,
+        "wordCount": 810,
         "editorialVersion": 2
       }
     },
@@ -253,7 +219,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-03T06:49:17.342Z",
-        "wordCount": 725,
+        "wordCount": 727,
         "editorialVersion": 2
       }
     },
@@ -270,7 +236,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-01T20:32:44.038Z",
-        "wordCount": 588,
+        "wordCount": 590,
         "editorialVersion": 2
       }
     },
@@ -291,23 +257,6 @@
         "editorialVersion": 2
       }
     },
-    "2026-06-30": {
-      "articleKey": "framed-answer-today",
-      "date": "2026-06-30",
-      "title": "Framed Answer Today: June 30, 2026 Movie Solution & Hints",
-      "summary": "The Framed answer for June 30, 2026 relies on genre recognition over specific plot recall. Use the archive and solver tools to verify the film quickly.",
-      "articleHtml": "<h2>Framed answer today: what the opening still usually gives away</h2>\n<p>The reveal card above confirms the movie solution for June 30, 2026. Early frames in this puzzle lean heavily on lighting and set design rather than actor faces. A sharp player spots the genre within the first two clicks, narrowing the search field before the plot details even matter. Check the archive link below if you need to verify the full sequence of reveals for today's film.</p>\n<p>Most daily puzzles follow a rhythm where the first image establishes tone. For this specific date, the color grading and camera angle suggest a particular era of filmmaking that rules out half the database immediately. Don't waste guesses on modern blockbusters if the grain looks like 1980s stock. The solver tool on this page helps cross-reference these visual cues against known releases.</p><h2>How genre beats exact movie recall early</h2>\n<p>You do not need to know the director's filmography to solve this. The game rewards broad categorical knowledge first. If the opening shot shows a spaceship corridor, you are playing a sci-fi guessing game, not a trivia contest about specific captains. This approach saves reveals for later when the images get obscure.</p>\n<p>Visual shorthand does the heavy lifting here. A rainy street with a trench coat signals noir or neo-noir instantly. A sun-drenched suburban lawn with a minivan points to comedy or family drama. Today's puzzle likely used one of these strong environmental signals to filter options. Relying on these tropes is faster than trying to remember every actor's face from 1995.</p>\n<p>Genre clustering also helps when using the hint system. If you know the category, you can eliminate entire decades of cinema. The archive shows that recent puzzles have favored distinct visual styles over ambiguous shots. Use that pattern to your advantage before clicking for more frames.</p><h2>Where a single memorable frame can mislead you</h2>\n<p>One iconic shot often tricks players into guessing a famous movie that shares a similar scene. This is a classic trap. The game might show a boxing ring, leading you to shout out the most popular boxing movie you know, while the actual answer is a lesser-known drama set in a gym. Context matters more than the object in the frame.</p>\n<p>Pay attention to the background details, not just the foreground action. Props, costumes, and even the film stock quality tell the real story. A specific car model or a brand of cigarette can date a film more accurately than the lead actor's hairstyle. Today's solution probably hinged on one of these background elements that contradicts the obvious genre assumption.</p>\n<p>False positives happen when players fixate on a single element. If you see a shark, do not just guess the biggest shark movie. Look at the water color, the boat type, and the clothing. These details separate the correct answer from the decoy. The reveal card above demonstrates how the final frame clarifies what the earlier ambiguous shots hid.</p><h2>How to clean up tomorrow's Framed in fewer reveals</h2>\n<p>Speed comes from elimination, not confirmation. Start by guessing a movie that defines a specific genre to test the waters. If the game says you are close on year or director, you have your lane. If it says you are far off, you know to pivot to a different decade or style entirely.</p>\n<p>Use the solver link to check release years if you get stuck on the timeline. Knowing whether a film came out in 1982 or 1984 can break a stalemate. Do not burn guesses on random titles. Pick movies that act as fence posts to define the boundaries of the answer.</p>\n<p>Consistency wins over luck. Players who track the visual patterns of the daily frames solve faster than those who rely on plot memory. Tomorrow's puzzle will likely offer another chance to practice reading the lighting and composition before the actors even appear. Keep your guesses strategic and watch the reveal count drop.</p><h2>Questions players keep asking</h2><h3>Does the first frame always show the main character?</h3>\n<p>No. The opening image often focuses on setting, atmosphere, or a supporting character to obscure the identity of the film. Designers intentionally avoid giving away the star immediately to increase difficulty. You might see a hand, a vehicle, or a field before you see a face.</p><h3>How many frames are typical for a solve?</h3>\n<p>Most skilled players solve the puzzle within three to five frames. The first two establish genre and era, while the third or fourth usually provides enough specific detail for a confident guess. Going beyond six frames suggests you missed a key visual cue early on.</p><h3>Can players use the archive to practice?</h3>\n<p>Yes. The archive link on this page lets you review past solutions and study the progression of images. Reviewing how previous puzzles revealed their answers helps you recognize the visual language the game uses. It is the best way to improve your pattern recognition without burning daily streaks.</p><h3>What should I do if I recognize the scene but not the title?</h3>\n<p>Focus on the director or the lead actor if the title escapes you. The game accepts close guesses on cast and crew as partial hits. Use these near-misses to narrow down the specific filmography of the people involved until the title clicks.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-06-29T18:36:04.306Z",
-        "wordCount": 878,
-        "editorialVersion": 2
-      }
-    },
     "2026-06-29": {
       "articleKey": "framed-answer-today",
       "date": "2026-06-29",
@@ -321,7 +270,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-28T20:05:52.763Z",
-        "wordCount": 820,
+        "wordCount": 827,
         "editorialVersion": 2
       }
     },
@@ -389,24 +338,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-20T13:08:28.250Z",
-        "wordCount": 868,
-        "editorialVersion": 2
-      }
-    },
-    "2026-06-19": {
-      "articleKey": "framed-answer-today",
-      "date": "2026-06-19",
-      "title": "Framed Answer Today: June 19, 2026 Movie Reveal & Solve Path | WordSolverX",
-      "summary": "Today's Framed answer for June 19, 2026 relies on genre cues over specific plot recall. Use the archive and solver tools to verify the film and refine your opening strategy.",
-      "articleHtml": "<h1>Framed Answer Today: June 19, 2026 Movie Reveal</h1><p>The reveal card on this page confirms the movie for June 19, 2026. Players who locked onto the genre during the first two frames typically solved it faster than those guessing specific titles immediately. Check the answer box above to verify your result before moving to the archive.</p><h2>Framed answer today: what the opening still usually gives away</h2><p>Most daily puzzles lean heavily on lighting and aspect ratio before a single actor's face appears. The first frame often screams \"sci-fi\" or \"period drama\" based purely on color grading and film grain. Today's puzzle followed that pattern, where the initial silhouette offered more clues about the decade than the location. A sharp eye catches the camera movement style, which narrows the field significantly before the second reveal.</p><p>Don't waste your first guess on a specific title unless you recognize a unique prop. Instead, use the genre filter in your head to eliminate entire decades. This approach saves reveals for the harder middle frames where the plot details finally surface. The answer above matches the visual cues presented in the early sequence.</p><h2>How genre beats exact movie recall early</h2><p>Trying to name the film from frame one is a trap that burns guesses. The game design intentionally uses ambiguous backgrounds that could belong to dozens of films within the same genre. Successful players focus on identifying the production era and budget level rather than the specific storyline. A low-budget indie from the 90s looks distinctly different from a modern blockbuster, even in a cropped still.</p><p>Notice how the lighting setup in the early frames dictates the mood. High-contrast noir lighting points to a specific set of directors and time periods. Soft, natural light often signals a contemporary drama or romance. By categorizing the visual style first, you reduce the pool of potential answers from thousands to a manageable few. This method works better than relying on memory alone.</p><h2>Where a single memorable frame can mislead you</h2><p>Sometimes a background extra or a generic car model sends players down the wrong rabbit hole. It is easy to fixate on a detail that feels significant but turns out to be a red herring. Many films share similar props, costumes, and set dressings, especially within popular genres like crime thrillers or superhero movies. Trust the overall composition more than the tiny details until the main characters appear.</p><p>Color palettes can also deceive. A sepia tone might suggest a historical setting, but it could just be a stylistic choice in a modern music video or flashback sequence. Wait for at least three frames before committing to a specific year or director. The reveal card on this page shows the final context that clarifies any earlier ambiguity. If your guess was close but wrong, check the archive to see which visual cue you misinterpreted.</p><h2>How to clean up tomorrow's Framed in fewer reveals</h2><p>Start by scanning the aspect ratio and film grain. These technical elements are harder for editors to fake and provide solid grounding for your first guess. If the image looks wide and crisp, think post-2010. If it is boxy and grainy, look at pre-1990 catalogs. This technical check takes seconds and prevents wild swings.</p><p>Use the WordSolverX archive link below to review past puzzles from the same director or genre. Patterns emerge over time, and seeing how previous puzzles handled similar lighting helps calibrate your expectations. The solver tool on this site can also help filter movies by release year if you have a strong hunch about the decade but not the title. Practice identifying the camera angle; a handheld shake implies a different production style than a steady tripod shot.</p><h2>Questions players keep asking</h2><h3>Does the first frame always show the main character?</h3><p>No, the opening still frequently features a supporting actor, a field, or an object central to the plot. Relying on face recognition for the first guess fails often. The game mixes establishing shots with character close-ups to test your broader film knowledge.</p><h3>How many guesses do most players need for the June 19 answer?</h3><p>Data from the solver page suggests most users land the answer between the third and fourth reveal. Those who guess the genre correctly on the first try tend to finish in three. Players who guess specific titles too early often use all six attempts.</p><h3>Can players use the archive to practice specific decades?</h3><p>Yes, the archive allows you to filter by date, which indirectly lets you practice specific eras. Pull up puzzles from the 1980s or 2000s to train your eye on the distinct film stock and fashion of those times. This targeted practice improves your speed on future daily puzzles.</p><h3>What should I do if the movie is obscure?</h3><p>Even obscure movies follow visual rules. If the film is less known, the frames usually highlight a very distinctive costume or unique set piece earlier in the sequence. Look for the unusual element that separates it from generic productions. The answer card confirms the title regardless of its popularity.</p><p>Check the <a href=\"/framed/archive\">Framed Archive</a> to see how yesterday's puzzle compared. For more help narrowing down titles, visit the <a href=\"/framed/solver\">movie solver tool</a>. If you missed the context clues, the <a href=\"/framed/hints\">daily hint page</a> breaks down the genre signals again.</p>",
-      "bonusHints": [],
-      "meta": {
-        "provider": "nvidia",
-        "model": "qwen/qwen3.5-397b-a17b",
-        "fallbackUsed": false,
-        "fallbackSource": "stored",
-        "generatedAt": "2026-06-19T14:30:45.015Z",
-        "wordCount": 876,
+        "wordCount": 869,
         "editorialVersion": 2
       }
     },
@@ -423,7 +355,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-17T19:15:52.892Z",
-        "wordCount": 787,
+        "wordCount": 789,
         "editorialVersion": 2
       }
     },
@@ -457,7 +389,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-15T16:35:23.058Z",
-        "wordCount": 833,
+        "wordCount": 835,
         "editorialVersion": 2
       }
     },
@@ -474,7 +406,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-14T16:50:04.472Z",
-        "wordCount": 693,
+        "wordCount": 695,
         "editorialVersion": 2
       }
     },
@@ -542,7 +474,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-08T21:12:06.778Z",
-        "wordCount": 870,
+        "wordCount": 872,
         "editorialVersion": 2
       }
     },
@@ -559,7 +491,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-07T17:52:54.475Z",
-        "wordCount": 756,
+        "wordCount": 760,
         "editorialVersion": 2
       }
     },
@@ -576,7 +508,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-05T16:48:45.581Z",
-        "wordCount": 712,
+        "wordCount": 716,
         "editorialVersion": 2
       }
     },
@@ -593,7 +525,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-04T18:42:51.084Z",
-        "wordCount": 861,
+        "wordCount": 863,
         "editorialVersion": 2
       }
     },
@@ -610,7 +542,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-03T20:08:06.906Z",
-        "wordCount": 849,
+        "wordCount": 857,
         "editorialVersion": 2
       }
     },
@@ -644,7 +576,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-01T16:47:55.305Z",
-        "wordCount": 798,
+        "wordCount": 800,
         "editorialVersion": 2
       }
     },
@@ -661,7 +593,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T16:47:07.808Z",
-        "wordCount": 296,
+        "wordCount": 298,
         "editorialVersion": 2
       }
     },
@@ -709,7 +641,7 @@
         "model": "qwen/qwen3.5-397b-a17b",
         "fallbackUsed": true,
         "generatedAt": "2026-05-07T18:20:23.639Z",
-        "wordCount": 1004
+        "wordCount": 1003
       }
     },
     "2026-05-02": {
@@ -729,4 +661,3 @@
     }
   }
 }
-

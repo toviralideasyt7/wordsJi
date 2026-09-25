@@ -66,7 +66,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-14T06:37:47.970Z",
-        "wordCount": 873,
+        "wordCount": 877,
         "editorialVersion": 2
       }
     },
@@ -100,7 +100,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-07T06:24:53.554Z",
-        "wordCount": 824,
+        "wordCount": 826,
         "editorialVersion": 2
       }
     },
@@ -117,7 +117,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-07-05T12:59:15.883Z",
-        "wordCount": 839,
+        "wordCount": 845,
         "editorialVersion": 2
       }
     },
@@ -151,7 +151,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-29T06:26:25.367Z",
-        "wordCount": 805,
+        "wordCount": 807,
         "editorialVersion": 2
       }
     },
@@ -168,7 +168,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-28T06:26:20.464Z",
-        "wordCount": 656,
+        "wordCount": 658,
         "editorialVersion": 2
       }
     },
@@ -185,7 +185,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-26T06:07:56.110Z",
-        "wordCount": 887,
+        "wordCount": 889,
         "editorialVersion": 2
       }
     },
@@ -202,7 +202,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-24T06:08:54.656Z",
-        "wordCount": 551,
+        "wordCount": 553,
         "editorialVersion": 2
       }
     },
@@ -269,7 +269,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-06-12T14:29:10.059Z",
-        "wordCount": 598,
+        "wordCount": 600,
         "editorialVersion": 2
       }
     },
@@ -303,7 +303,7 @@
         "fallbackUsed": true,
         "fallbackSource": "stored",
         "generatedAt": "2026-05-31T06:35:44.929Z",
-        "wordCount": 846,
+        "wordCount": 840,
         "editorialVersion": 2
       }
     },
@@ -329,14 +329,14 @@
       "date": "2026-05-20",
       "title": "Pokedle Answer Today – May 20, 2026",
       "summary": "Today's Pokedle answer is a dual-type from the Hoenn region that stumped me on the habitat clue. Here's the full reveal, the attribute breakdown that matters, and how the solver tool handles the weird edge cases the daily puzzle throws at you.",
-      "articleHtml": "<h2>Today's puzzle in context</h2><p>Flygon's been a fan favorite since Ruby and Sapphire, mostly because of those goggle-lens eyes and the fact that it actually looks like it could fly despite being a Ground type. In Pokedle, the silhouette is distinctive  (those rhombus-shaped wings and the long tail with the fan tip)  but only if you've seen it from the right angle. The default art rotation sometimes hides the tail stripes, which are usually the giveaway.</p><h2>Which attributes matter most today</h2><p>Type is the entry point. Ground/Dragon narrows the field to exactly four fully-evolved Pokémon: Flygon, Garchomp, Zygarde (50% Forme), and the Mega evolutions if the mode allows them. If you're playing Classic or a mode that excludes Megas, you're down to three. Generation is the next filter — Gen 3 (Hoenn) eliminates Garchomp and Zygarde immediately. That's the clean solve path.</p><p>Habitat is where the game gets sticky. Flygon's habitat is Rough Terrain, which is a broad category shared with things like Sandslash and Cacturne. If you're guessing based on \"desert Pokémon\" vibes, you might lean toward Sandy Cave or Desert — both wrong. I've made that exact mistake. The Pokedle habitat classification doesn't always map to your mental model of where a Pokémon lives in the anime or main-series games. It uses the Pokédex habitat data, and Flygon's entry specifies \"it lives in arid, rough terrain\" — not caves. Remember that for future puzzles.</p><p>Evolution stage is a three-stage line: Trapinch → Vibrava → Flygon. If the mode reveals the stage icon and you see three dots filled, you know you're looking at a final evolution. That eliminates Vibrava, which is a common wrong guess when the silhouette looks ambiguous. Height and weight don't help much here — Flygon is 6'7\" and 180 lbs, which is medium-large but not distinctive enough to separate it from other dragons.</p><h2>When the solver saves you time</h2><p>If you're playing the Silhouette mode, the solver's visual reference is faster than scrolling Bulbapedia. The wing shape on Flygon is unique — no other Ground/Dragon has that swept-back delta-wing profile. But if you've never seen Flygon from the back, the solver's gallery shows all angles. Bookmark it for days when the silhouette is a pre-evolution you haven't thought about since 2003.</p><p>For the Description mode, today's flavor text mentions \"the desert spirit\" and \"it whips up sandstorms with its wings.\" That's a direct pull from the Sapphire Pokédex entry. If you recognize the phrasing, you can skip the type guessing entirely. Our <a href=\"/pokedle-archive\">Pokedle answer archive</a> tracks patterns in which dex entries get reused — Sapphire and Emerald descriptions show up disproportionately in the daily rotation.</p><h2>Questions players keep asking</h2><h3>Why does Pokedle list Flygon's habitat as Rough Terrain instead of Desert?</h3><p>The game pulls from the official Pokédex habitat categories introduced in Gen 3. There is no \"Desert\" habitat in that classification. Pokémon found in deserts are split between Rough Terrain, Sandy Cave (like Cacnea), and Mountain (like Larvitar). Flygon's data flags it as Rough Terrain because its dex entries emphasize rocky, arid highlands rather than pure sand dunes. It's one of the most frequently misclassified habitats in the game, and it trips up even experienced players.</p><h3>Can Flygon Mega Evolve in Pokedle?</h3><p>No. Flygon famously never got a Mega Evolution, despite a lot of fan demand and a well-known piece of concept art that circulated years ago. If you're playing a mode that includes Mega-capable Pokémon, Flygon won't appear in that category. This also means you won't see it in any \"Mega Evolution\" clue sets. The Pokedle database sticks to canonical forms only.</p><h3>What's the best starting guess for narrowing down to Flygon?</h3><p>Garchomp. It shares the Ground/Dragon typing, is from a different generation (Gen 4), and has a different body shape. If the game tells you the generation is wrong but the type is correct, you've already narrowed to Gen 3 or Gen 5 (for Zygarde). One more guess on generation and you're basically there. I've been using Garchomp as an opener for months because it splits the Ground/Dragon pool efficiently.</p><h3>Does the silhouette mode use Sugimori art or in-game models?</h3><p>It uses the official Ken Sugimori stock art, which means the poses are static and consistent. Flygon's Sugimori art shows it in a banking flight pose with the tail curved upward. The tail stripes are visible, but the wing transparency effect from newer art isn't present. If you're used to the 3D models from Scarlet and Violet, the Sugimori silhouette can look slightly different — the wings appear more solid. Check the <a href=\"/pokedle-silhouette-guide\">silhouette guide</a> if you're getting caught on Gen 3 art style differences.</p><p>If Flygon burned you today, tomorrow's puzzle will probably be something completely different — the daily rotation doesn't seem to follow type or generation patterns. Check back here or hit the <a href=\"/pokedle\">Pokedle homepage</a> for the next solve.</p>",
+      "articleHtml": "<h2>Today's puzzle in context</h2><p>Flygon's been a fan favorite since Ruby and Sapphire, mostly because of those goggle-lens eyes and the fact that it actually looks like it could fly despite being a Ground type. In Pokedle, the silhouette is distinctive (those rhombus-shaped wings and the long tail with the fan tip) but only if you've seen it from the right angle. The default art rotation sometimes hides the tail stripes, which are usually the giveaway.</p><h2>Which attributes matter most today</h2><p>Type is the entry point. Ground/Dragon narrows the field to exactly four fully-evolved Pokémon: Flygon, Garchomp, Zygarde (50% Forme), and the Mega evolutions if the mode allows them. If you're playing Classic or a mode that excludes Megas, you're down to three. Generation is the next filter — Gen 3 (Hoenn) eliminates Garchomp and Zygarde immediately. That's the clean solve path.</p><p>Habitat is where the game gets sticky. Flygon's habitat is Rough Terrain, which is a broad category shared with things like Sandslash and Cacturne. If you're guessing based on \"desert Pokémon\" vibes, you might lean toward Sandy Cave or Desert — both wrong. I've made that exact mistake. The Pokedle habitat classification doesn't always map to your mental model of where a Pokémon lives in the anime or main-series games. It uses the Pokédex habitat data, and Flygon's entry specifies \"it lives in arid, rough terrain\" — not caves. Remember that for future puzzles.</p><p>Evolution stage is a three-stage line: Trapinch → Vibrava → Flygon. If the mode reveals the stage icon and you see three dots filled, you know you're looking at a final evolution. That eliminates Vibrava, which is a common wrong guess when the silhouette looks ambiguous. Height and weight don't help much here — Flygon is 6'7\" and 180 lbs, which is medium-large but not distinctive enough to separate it from other dragons.</p><h2>When the solver saves you time</h2><p>If you're playing the Silhouette mode, the solver's visual reference is faster than scrolling Bulbapedia. The wing shape on Flygon is unique — no other Ground/Dragon has that swept-back delta-wing profile. But if you've never seen Flygon from the back, the solver's gallery shows all angles. Bookmark it for days when the silhouette is a pre-evolution you haven't thought about since 2003.</p><p>For the Description mode, today's flavor text mentions \"the desert spirit\" and \"it whips up sandstorms with its wings.\" That's a direct pull from the Sapphire Pokédex entry. If you recognize the phrasing, you can skip the type guessing entirely. Our <a href=\"/pokedle-archive\">Pokedle answer archive</a> tracks patterns in which dex entries get reused — Sapphire and Emerald descriptions show up disproportionately in the daily rotation.</p><h2>Questions players keep asking</h2><h3>Why does Pokedle list Flygon's habitat as Rough Terrain instead of Desert?</h3><p>The game pulls from the official Pokédex habitat categories introduced in Gen 3. There is no \"Desert\" habitat in that classification. Pokémon found in deserts are split between Rough Terrain, Sandy Cave (like Cacnea), and Mountain (like Larvitar). Flygon's data flags it as Rough Terrain because its dex entries emphasize rocky, arid highlands rather than pure sand dunes. It's one of the most frequently misclassified habitats in the game, and it trips up even experienced players.</p><h3>Can Flygon Mega Evolve in Pokedle?</h3><p>No. Flygon famously never got a Mega Evolution, despite a lot of fan demand and a well-known piece of concept art that circulated years ago. If you're playing a mode that includes Mega-capable Pokémon, Flygon won't appear in that category. This also means you won't see it in any \"Mega Evolution\" clue sets. The Pokedle database sticks to canonical forms only.</p><h3>What's the best starting guess for narrowing down to Flygon?</h3><p>Garchomp. It shares the Ground/Dragon typing, is from a different generation (Gen 4), and has a different body shape. If the game tells you the generation is wrong but the type is correct, you've already narrowed to Gen 3 or Gen 5 (for Zygarde). One more guess on generation and you're basically there. I've been using Garchomp as an opener for months because it splits the Ground/Dragon pool efficiently.</p><h3>Does the silhouette mode use Sugimori art or in-game models?</h3><p>It uses the official Ken Sugimori stock art, which means the poses are static and consistent. Flygon's Sugimori art shows it in a banking flight pose with the tail curved upward. The tail stripes are visible, but the wing transparency effect from newer art isn't present. If you're used to the 3D models from Scarlet and Violet, the Sugimori silhouette can look slightly different — the wings appear more solid. Check the <a href=\"/pokedle-silhouette-guide\">silhouette guide</a> if you're getting caught on Gen 3 art style differences.</p><p>If Flygon burned you today, tomorrow's puzzle will probably be something completely different — the daily rotation doesn't seem to follow type or generation patterns. Check back here or hit the <a href=\"/pokedle\">Pokedle homepage</a> for the next solve.</p>",
       "bonusHints": [],
       "meta": {
         "provider": "nvidia",
         "model": "deepseek-ai/deepseek-v4-pro",
         "fallbackUsed": false,
         "generatedAt": "2026-05-20T22:07:56.195Z",
-        "wordCount": 812
+        "wordCount": 810
       }
     },
     "2026-05-19": {
@@ -359,14 +359,14 @@
       "date": "2026-05-15",
       "title": "Pokedle Answer Today – May 15, 2026",
       "summary": "Today's Pokedle answer is a Gen 3 Water-type that evolves twice and lives in the ocean. If your first guess was Mudkip, you already burned the Water starter slot and learned nothing about habitat.",
-      "articleHtml": "<h1>Pokedle Answer Today – May 15, 2026</h1><p>Today's Pokedle answer is a Gen 3 Water-type in its final evolution stage, found in the ocean. If you guessed Mudkip first and watched every tile turn gray except Water, you already know the pain: same generation, same type, completely wrong habitat and evolution stage. That slot could've been Wailmer and at least told you something useful.</p><h2>Today's puzzle in context</h2><p>May 15 lands square in the middle of Pokedle's \"no hint\" stretch — no special event week, no anniversary boosts, just the standard daily rotation. The answer pool pulls evenly across all nine generations today, so your Gen 3 guess wasn't statistically wrong. It just wasn't efficient.</p><p>Here's what actually mattered once Mudkip flopped:</p><ul>\n<li><strong>Generation:</strong> Confirmed Gen 3, but that was already 80+ Pokémon wide</li>\n<li><strong>Type:</strong> Water  (now you're looking at roughly 35 candidates</li>\n<li><strong>Evolution stage:</strong> Final)  cuts the list by more than half</li>\n<li><strong>Habitat:</strong> Ocean — the real filter that separates Wailord from Swampert</li>\n</ul><p><strong>Quick solve tip for Gen 3 Water-types:</strong> lead with Wailmer if you want habitat data, or Ludicolo if you want to test dual-type (Water/Grass) against pure Water. Both give cleaner splits than the starter line.</p><h2>Which attributes matter most today</h2><p>Pokedle's four-attribute system sounds simple until you realize how unevenly they distribute. On May 15's answer, here's how the information value breaks down:</p><p><strong>Habitat is the narrowest filter.</strong> \"Ocean\" knocks out every river, cave, and grassland Pokémon in Gen 3. That's huge. Compare it to \"Water\" type, which still leaves you with everything from Lotad to Kyogre.</p><p><strong>Evolution stage matters more in later generations.</strong> Gen 3 has 135 Pokémon but only 42 fully evolved forms. Guessing a middle-stage Pokémon like Marshtomp wastes a slot — you learn \"not final\" but you don't split the remaining pool cleanly.</p><p>My actual solve path today: Mudkip (Water, Gen 3, wrong stage/habitat) → Wailmer (right type/gen, wrong stage, right habitat) → Wailord (locked it). Three rows because I ignored habitat on guess one. Could've been two if I'd started with Wailmer.</p><h2>When the solver saves you time</h2><p>The solver's attribute filters let you stack these four clues and see the remaining pool in real time. Today it would've shown Wailord, Kyogre, and Relicanth as the only Gen 3 Water-types with ocean habitat and final evolution. Relicanth is Rock/Water dual-type, so if your type guess returned pure Water, you're already down to two.</p><p>That beats staring at a blank grid trying to remember whether Huntail or Gorebyss lives in the ocean. (It's the same line, but the habitat classification varies by Pokedle database version — another reason to check the solver rather than trust memory.)</p><p>If you're building streak data, the <a href=\"https://wordsolverx.com/pokedle-archive\">Pokedle archive</a> is worth bookmarking. It tracks whether previous answers share attributes with today's, which helps you avoid the \"didn't they just use this?\" trap. Spoiler: they didn't, but Wailord shares a generation with three answers from the past two weeks, so your Gen 3 muscle memory isn't wrong — just mistimed.</p><h2>Questions players keep asking</h2><h3>Why did my correct type guess not narrow down the answer?</h3><p>Because Water is the most common type in Pokémon. In Gen 3 alone, 35+ Pokémon carry Water as a primary or secondary type. Type is a starting filter, not a finishing one. Pair it with habitat or evolution stage to get real value.</p><h3>Does Pokedle use the same habitat categories as the main games?</h3><p>Mostly, but not perfectly. \"Ocean\" in Pokedle typically means deep-water fishing or surfing routes, not just any body of water. Some Pokémon classified as \"water\" habitat in the main games get tagged as \"river\" or \"lake\" here. If you're stuck on habitat, guess a Pokémon with an more obvious environmental tie  (Wailord's literally named after a sea mammal)  rather than a generalist like Swampert.</p><h3>Is the final evolution stage always the answer in Pokedle?</h3><p>No, and that's the trap. Pokedle rotates through all three evolution stages evenly. Today's answer happened to be final stage, but last week's included a baby Pokémon and a middle-stage form. Don't assume — test with a deliberately staged guess if you're unsure.</p><h3>What's the fastest way to check if players missed a recent duplicate?</h3><p>Cross-reference the <a href=\"https://wordsolverx.com/pokedle-archive\">Pokedle archive</a> before you lock in your first guess. If the same generation or type appeared yesterday, you can safely eliminate related Pokémon and open with something orthogonal. On May 15, no ocean-dwelling Water-type has appeared in the past seven days, so you weren't repeating — but checking takes ten seconds and saves a ruined streak.</p>",
+      "articleHtml": "<h1>Pokedle Answer Today – May 15, 2026</h1><p>Today's Pokedle answer is a Gen 3 Water-type in its final evolution stage, found in the ocean. If you guessed Mudkip first and watched every tile turn gray except Water, you already know the pain: same generation, same type, completely wrong habitat and evolution stage. That slot could've been Wailmer and at least told you something useful.</p><h2>Today's puzzle in context</h2><p>May 15 lands square in the middle of Pokedle's \"no hint\" stretch — no special event week, no anniversary boosts, just the standard daily rotation. The answer pool pulls evenly across all nine generations today, so your Gen 3 guess wasn't statistically wrong. It just wasn't efficient.</p><p>Here's what actually mattered once Mudkip flopped:</p><ul>\n<li><strong>Generation:</strong> Confirmed Gen 3, but that was already 80+ Pokémon wide</li>\n<li><strong>Type:</strong> Water (now you're looking at roughly 35 candidates</li>\n<li><strong>Evolution stage:</strong> Final) cuts the list by more than half</li>\n<li><strong>Habitat:</strong> Ocean — the real filter that separates Wailord from Swampert</li>\n</ul><p><strong>Quick solve tip for Gen 3 Water-types:</strong> lead with Wailmer if you want habitat data, or Ludicolo if you want to test dual-type (Water/Grass) against pure Water. Both give cleaner splits than the starter line.</p><h2>Which attributes matter most today</h2><p>Pokedle's four-attribute system sounds simple until you realize how unevenly they distribute. On May 15's answer, here's how the information value breaks down:</p><p><strong>Habitat is the narrowest filter.</strong> \"Ocean\" knocks out every river, cave, and grassland Pokémon in Gen 3. That's huge. Compare it to \"Water\" type, which still leaves you with everything from Lotad to Kyogre.</p><p><strong>Evolution stage matters more in later generations.</strong> Gen 3 has 135 Pokémon but only 42 fully evolved forms. Guessing a middle-stage Pokémon like Marshtomp wastes a slot — you learn \"not final\" but you don't split the remaining pool cleanly.</p><p>My actual solve path today: Mudkip (Water, Gen 3, wrong stage/habitat) → Wailmer (right type/gen, wrong stage, right habitat) → Wailord (locked it). Three rows because I ignored habitat on guess one. Could've been two if I'd started with Wailmer.</p><h2>When the solver saves you time</h2><p>The solver's attribute filters let you stack these four clues and see the remaining pool in real time. Today it would've shown Wailord, Kyogre, and Relicanth as the only Gen 3 Water-types with ocean habitat and final evolution. Relicanth is Rock/Water dual-type, so if your type guess returned pure Water, you're already down to two.</p><p>That beats staring at a blank grid trying to remember whether Huntail or Gorebyss lives in the ocean. (It's the same line, but the habitat classification varies by Pokedle database version — another reason to check the solver rather than trust memory.)</p><p>If you're building streak data, the <a href=\"https://wordsolverx.com/pokedle-archive\">Pokedle archive</a> is worth bookmarking. It tracks whether previous answers share attributes with today's, which helps you avoid the \"didn't they just use this?\" trap. Spoiler: they didn't, but Wailord shares a generation with three answers from the past two weeks, so your Gen 3 muscle memory isn't wrong — just mistimed.</p><h2>Questions players keep asking</h2><h3>Why did my correct type guess not narrow down the answer?</h3><p>Because Water is the most common type in Pokémon. In Gen 3 alone, 35+ Pokémon carry Water as a primary or secondary type. Type is a starting filter, not a finishing one. Pair it with habitat or evolution stage to get real value.</p><h3>Does Pokedle use the same habitat categories as the main games?</h3><p>Mostly, but not perfectly. \"Ocean\" in Pokedle typically means deep-water fishing or surfing routes, not just any body of water. Some Pokémon classified as \"water\" habitat in the main games get tagged as \"river\" or \"lake\" here. If you're stuck on habitat, guess a Pokémon with an more obvious environmental tie (Wailord's literally named after a sea mammal) rather than a generalist like Swampert.</p><h3>Is the final evolution stage always the answer in Pokedle?</h3><p>No, and that's the trap. Pokedle rotates through all three evolution stages evenly. Today's answer happened to be final stage, but last week's included a baby Pokémon and a middle-stage form. Don't assume — test with a deliberately staged guess if you're unsure.</p><h3>What's the fastest way to check if players missed a recent duplicate?</h3><p>Cross-reference the <a href=\"https://wordsolverx.com/pokedle-archive\">Pokedle archive</a> before you lock in your first guess. If the same generation or type appeared yesterday, you can safely eliminate related Pokémon and open with something orthogonal. On May 15, no ocean-dwelling Water-type has appeared in the past seven days, so you weren't repeating — but checking takes ten seconds and saves a ruined streak.</p>",
       "bonusHints": [],
       "meta": {
         "provider": "nvidia",
         "model": "moonshotai/kimi-k2.6",
         "fallbackUsed": true,
         "generatedAt": "2026-05-15T22:29:42.034Z",
-        "wordCount": 761
+        "wordCount": 757
       }
     },
     "2026-05-14": {
@@ -381,7 +381,7 @@
         "model": "moonshotai/kimi-k2.6",
         "fallbackUsed": true,
         "generatedAt": "2026-05-14T22:29:14.038Z",
-        "wordCount": 657
+        "wordCount": 659
       }
     },
     "2026-05-07": {
@@ -401,4 +401,3 @@
     }
   }
 }
-
