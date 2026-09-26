@@ -118,5 +118,61 @@
       ]
     },
     "solvedAt": "2026-09-25T15:43:28.999Z"
+  },
+  "2026-09-26": {
+    "date": "2026-09-26",
+    "dateId": "9/26/2026 12:00:00 AM",
+    "comics": {
+      "id": "klaw",
+      "name": "Klaw",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Regeneration"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1966,
+      "firstApparitionComicTitle": "Fantastic Four #53",
+      "keywords": [
+        "ulysses"
+      ]
+    },
+    "mcu": {
+      "id": "nebula",
+      "name": "Nebula",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Luphomoid"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration",
+        "Technological",
+        "Shapeshifting"
+      ],
+      "origin": "Luphom",
+      "actorName": "Karen Gillan",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Avengers",
+        "GuardiansOfTheGalaxy",
+        "BlackOrder"
+      ],
+      "keywords": [
+        "nebula"
+      ]
+    },
+    "solvedAt": "2026-09-26T11:13:09.497Z"
   }
 }
