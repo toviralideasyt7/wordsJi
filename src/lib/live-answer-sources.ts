@@ -15,7 +15,7 @@ const CANUCKLE_FIRESTORE_URL =
 const CANUCKLE_ORIGINAL_START_DATE = '2022-02-10';
 const CANUCKLE_CURRENT_START_DATE = '2022-10-04';
 const CANUCKLE_RESTART_PUZZLE_INDEX = 143;
-const CANUCKLE_RECENT_PAGE_SIZE = 64;
+const CANUCKLE_RECENT_PAGE_SIZE = 200;
 
 const COUNTRYLE_AES_KEY = '4%w!KpB+?FC<P9W*';
 const COUNTRYLE_SOURCE_URL = 'https://www.countryle.com/hidden-api/get-daily-country-valid.php';

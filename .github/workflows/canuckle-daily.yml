@@ -1,0 +1,55 @@
+# .github/workflows/canuckle-daily.yml
+# Daily Canuckle answer refresh. Upstream answers live in the Canuckle
+# Firestore project (pre-published days ahead); the page flips at the 05:00
+# UTC puzzle-window boundary.
+# This job runs at 05:10 UTC — AFTER the boundary — because the site
+# prerenders today pages at deploy time: a bake before 05:00 would compute
+# yesterday's puzzle date and permanently bake the "updating" state until
+# the next deploy. Running after the boundary guarantees the baked page
+# carries today's answer.
+#
+# Fails loudly: if scripts/update-canuckle-data.mjs exits non-zero the job
+# fails and NOTHING is committed — the today page renders its "updating"
+# state instead of a wrong answer. Commits only when the data files actually
+# changed; the push triggers Publish Pages, which rebakes the today page.
+
+name: Canuckle Daily
+
+on:
+  schedule:
+    - cron: '10 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-canuckle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh Canuckle dataset from Firestore
+        run: node scripts/update-canuckle-data.mjs
+
+      - name: Commit and push if data changed
+        run: |
+          set -e
+          if git diff --quiet -- src/lib/wordlebot-wasm/assets/generated/canuckle-data.json src/lib/wordlebot-wasm/assets/generated/canuckle-solver-data.json; then
+            echo "Canuckle data unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/wordlebot-wasm/assets/generated/canuckle-data.json src/lib/wordlebot-wasm/assets/generated/canuckle-solver-data.json
+          git commit -m "chore(canuckle): daily answer update $(date -u +%F)"
+          git push
