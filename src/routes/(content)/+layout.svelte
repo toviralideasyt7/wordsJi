@@ -19,11 +19,10 @@
 	<header class="site-header">
 		<ContentNavigation />
 	</header>
-	<!-- .wordsolverx-content is the Mediavine content selector; it must NOT constrain width -->
-	<main id="main-content" class="wordsolverx-content site-main flex-grow">
+	<main id="main-content" class="site-main flex-grow">
 		{@render children()}
 	</main>
-	<footer id="mv-content-footer" class="site-footer">
+	<footer class="site-footer">
 		<Footer />
 	</footer>
 </div>

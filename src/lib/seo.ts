@@ -24,7 +24,7 @@ export const SOCIAL_PROFILE_URLS = [
 
 const DEFAULT_SOCIAL_IMAGE = 'https://wordsolverx.com/wordsolverx.webp';
 const DEFAULT_CONTACT_URL = 'https://wordsolverx.com/contact';
-const DEFAULT_CONTACT_EMAIL = 'wordsolverx@gmail.com';
+const DEFAULT_CONTACT_EMAIL = 'blog@wordsolverx.com';
 const DEFAULT_ORGANIZATION_DESCRIPTION =
     'WordSolverX publishes daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.';
 

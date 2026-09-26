@@ -2,42 +2,10 @@
 <html lang="en">
 
 <head>
-	<script>
-		(function () {
-			var loaded = false;
-			function loadWrapper() {
-				if (loaded) return;
-				loaded = true;
-				var s = document.createElement('script');
-				s.type = 'text/javascript';
-				s.async = true;
-				s.crossOrigin = 'anonymous';
-				s.setAttribute('data-noptimize', '1');
-				s.setAttribute('data-cfasync', 'false');
-				s.src = '//scripts.scriptwrapper.com/tags/ac0e6549-a401-4cca-8916-4b05721e7169.js';
-				document.head.appendChild(s);
-			}
-			function onIdle() {
-				if ('requestIdleCallback' in window) {
-					requestIdleCallback(loadWrapper, { timeout: 4000 });
-				} else {
-					setTimeout(loadWrapper, 1500);
-				}
-			}
-			if (document.readyState === 'complete') {
-				onIdle();
-			} else {
-				window.addEventListener('load', onIdle, { once: true });
-			}
-			// User is interacting: intent is established, load now.
-			window.addEventListener('scroll', loadWrapper, { once: true, passive: true });
-			window.addEventListener('touchstart', loadWrapper, { once: true, passive: true });
-		})();
-	</script>
 
 	<meta charset="utf-8" />
 	<script>
-		// First-party breadcrumb for opaque third-party failures (e.g. the ad wrapper).
+		// First-party breadcrumb for opaque third-party failures.
 		// With crossorigin="anonymous" on the tag, real messages arrive here instead of "Script error."
 		window.addEventListener('error', function (e) {
 			console.error('[wordsolverx:error]', e.message, e.filename, e.lineno, e.colno);

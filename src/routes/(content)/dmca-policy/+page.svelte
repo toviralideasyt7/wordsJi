@@ -53,7 +53,7 @@
 
       <h2>How to Submit a Takedown Notice</h2>
       <p>
-        Send notices to <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a> with the subject
+        Send notices to <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a> with the subject
         line <strong>DMCA Notice</strong>. Please include:
       </p>
       <ul>
@@ -89,7 +89,7 @@
       <h2>Contact</h2>
       <p>
         Questions about this policy can also be sent to
-        <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
+        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
       </p>
     </div>
   </div>

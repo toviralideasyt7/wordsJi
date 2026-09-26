@@ -39,6 +39,9 @@
     { name: 'Phrazle Answer Today', href: '/phrazle-answer-today', color: 'from-teal-500 to-lime-600', icon: 'Ph' },
     { name: 'Spotle Answer Today', href: '/spotle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'Sp' },
     { name: 'Worgle Answer Today', href: '/worgle-answer-today', color: 'from-slate-700 to-slate-900', icon: 'Wo' },
+    { name: 'Worldle Answer Today', href: '/worldle-answer-today', color: 'from-sky-500 to-blue-700', icon: 'Wr' },
+    { name: 'Batter Up Answer Today', href: '/batterup-answer-today', color: 'from-blue-600 to-indigo-700', icon: 'Bu' },
+    { name: 'Marveldle Answer Today', href: '/marveldle-answer-today', color: 'from-red-600 to-blue-700', icon: 'Mv' },
   ];
 
   const solverTools = [
@@ -165,7 +168,7 @@
       <ul class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8" aria-label="WordSolverX trust signals">
         {#each [
           { label: '100% Free', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
-          { label: '24 Games', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
+          { label: '27 Games', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
           { label: 'Verified Daily', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
         ] as badge}
           <li class="flex items-center gap-2">
@@ -396,7 +399,7 @@
       
       </p>
       <p>
-        Right now we cover 24 daily puzzle games. That includes the obvious ones — Wordle, Quordle, Nerdle — but also niche titles like Phrazle, Spotle, Searchle, Worgle, and Dotadle. Each game gets its own answer-today page, its own archive (where available), and in most cases a dedicated solver tool that lets you work through the puzzle step by step instead of just reading the answer.
+        Right now we cover 27 daily puzzle games. That includes the obvious ones — Wordle, Quordle, Nerdle — but also niche titles like Phrazle, Spotle, Searchle, Worgle, and Dotadle. Each game gets its own answer-today page, its own archive (where available), and in most cases a dedicated solver tool that lets you work through the puzzle step by step instead of just reading the answer.
       
       </p>
       <p>

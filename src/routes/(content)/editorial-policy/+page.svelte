@@ -153,7 +153,7 @@
 
     <h2>8. Contact</h2>
     <p>
-      Report corrections, stale answer pages, broken solvers, or article issues through <a href="/contact">our contact page</a> or by email at <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>. Useful reports usually include the URL, puzzle date, your time zone if it matters, and a short description of the problem.
+      Report corrections, stale answer pages, broken solvers, or article issues through <a href="/contact">our contact page</a> or by email at <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>. Useful reports usually include the URL, puzzle date, your time zone if it matters, and a short description of the problem.
     </p>
   </div>
 </div>

@@ -30,7 +30,7 @@
       'Privacy Policy - Data, Cookies and Advertising',
       'Privacy policy and data handling information for WordSolverX.',
       'https://wordsolverx.com/privacy-policy',
-      { dateModified: '2026-05-26' }
+      { dateModified: '2026-09-26' }
     )
   )}</script>`}
 </svelte:head>
@@ -40,7 +40,7 @@
 
   <div class="mb-10">
     <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Privacy Policy - Data, Cookies and Advertising</h1>
-    <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: May 26, 2026</p>
+    <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: September 26, 2026</p>
   </div>
 
   <div class="border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 p-6 sm:p-8">
@@ -88,18 +88,23 @@
 
       <h3>Advertising</h3>
       <p>
-        WordSolverX displays advertisements served by our advertising partner (Mediavine) through its
-        script at scripts.scriptwrapper.com. Our partner and its advertising network may use cookies or
-        similar technologies to serve ads based on your visits to this site and other sites.
+        WordSolverX may display advertisements served by Google AdSense. Google uses cookies,
+        including the DoubleClick cookie, to serve ads based on your visits to this site and other
+        sites on the internet. Google's use of advertising cookies enables it and its partners to
+        serve ads to you based on your visit to this site and/or other sites on the internet.
       </p>
       <ul>
         <li>
-          Our advertising partner manages its own consent controls for ad personalization in line with
-          industry frameworks.
+          You may opt out of personalized advertising by visiting
+          <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google's Ads Settings</a>.
         </li>
         <li>
-          You can learn more about ad industry opt-out tools at
-          <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info/choices</a>.
+          You can also opt out of third-party vendors' use of cookies for personalized advertising by
+          visiting <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info/choices</a>.
+        </li>
+        <li>
+          Learn more about how Google uses data from partner sites at
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">policies.google.com/technologies/partner-sites</a>.
         </li>
       </ul>
 
@@ -145,7 +150,7 @@
       <p>
         Depending on where you live, you may have rights related to access, correction, deletion, or
         objection to the processing of your personal information. To make a request, email
-        <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
+        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
       </p>
 
       <h2>11. Children&apos;s Privacy</h2>
@@ -163,7 +168,7 @@
       <h2>13. Contact</h2>
       <p>
         If you have questions about this Privacy Policy - Data, Cookies and Advertising or advertising disclosures,
-        contact <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
+        contact <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
       </p>
     </div>
   </div>

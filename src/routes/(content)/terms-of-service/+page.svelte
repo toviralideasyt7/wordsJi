@@ -124,7 +124,7 @@
       <h2>10. Contact</h2>
       <p>
         If you have questions about these Terms of Service - Using WordSolverX, email
-        <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>
+        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>
         or visit our <a href="/contact">contact page</a>.
       </p>
     </div>

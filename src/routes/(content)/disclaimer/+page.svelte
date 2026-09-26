@@ -123,7 +123,7 @@
       <h2>7. Contact</h2>
       <p>
         If you have questions about this Disclaimer - WordSolverX Site and Content, contact
-        <a href="mailto:wordsolverx@gmail.com">wordsolverx@gmail.com</a>.
+        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
         You can also reach us through our <a href="/contact">contact page</a>,
         which includes additional details about what information to include in your message so we
         can respond effectively. We read every message we receive and aim to respond within a

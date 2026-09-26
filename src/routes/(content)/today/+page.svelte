@@ -150,7 +150,7 @@
       <h2 class="text-slate-900 dark:text-slate-50">Why This Page Exists</h2>
 
       <p>
-        This page exists because puzzle players don't want to navigate a maze to find the answer they're looking for. You already know which game you play — you just need the answer, or at most a few hints before the answer. This grid gives you 25 games on one screen, each linking directly to its answer-today page. One click and you're there.
+        This page exists because puzzle players don't want to navigate a maze to find the answer they're looking for. You already know which game you play — you just need the answer, or at most a few hints before the answer. This grid gives you 27 games on one screen, each linking directly to its answer-today page. One click and you're there.
       
       </p>
       <p>

@@ -143,4 +143,4 @@ This file is a fuller agent-facing route index for WordSolverX. Prefer canonical
 ## Contact
 
 - Contact page: https://wordsolverx.com/contact
-- Email: mailto:wordsolverx@gmail.com
+- Email: mailto:blog@wordsolverx.com

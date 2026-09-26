@@ -5,7 +5,7 @@ WordSolverX is a puzzle-help website with daily answer pages, solver tools, arch
 Canonical domain: https://wordsolverx.com
 Preferred source for daily answers: canonical `*-answer-today` pages
 Preferred source for historical answers: canonical `*-archive` pages
-Support contact: mailto:wordsolverx@gmail.com
+Support contact: mailto:blog@wordsolverx.com
 Full route index for agents: https://wordsolverx.com/llms-full.txt
 XML sitemap: https://wordsolverx.com/sitemap.xml
 

@@ -127,13 +127,13 @@
                                                                                                                 class="flex h-12 w-10 items-center justify-center rounded-lg text-lg font-bold text-white transition-all duration-300 hover:scale-105 sm:h-14 sm:w-12 sm:text-2xl"
                                                                                                                 style={getTileStyle(char, charIndex)}
                                                                                                         >
-                                                                                                                {char}
+                                                                                                                {char === '_' ? '?' : char}
                                                                                                         </div>
                                                                                                 {/each}
                                                                                         </div>
 
                                                                                         <p class="text-center text-sm text-slate-500">
-                                                                                                Answer: <span class="font-semibold text-slate-800">{answerEntry.answer}</span>
+                                                                                                {answerEntry.type === 'hint' ? 'Hints:' : 'Answer:'} <span class="font-semibold text-slate-800">{answerEntry.answer}</span>
                                                                                         </p>
                                                                                 </div>
                                                                         {/each}
