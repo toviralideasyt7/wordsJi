@@ -174,5 +174,66 @@
       ]
     },
     "solvedAt": "2026-09-26T11:13:09.497Z"
+  },
+  "2026-09-27": {
+    "date": "2026-09-27",
+    "dateId": "9/27/2026 12:00:00 AM",
+    "comics": {
+      "id": "omegared",
+      "name": "Omega Red",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutant",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Toxicity"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1991,
+      "firstApparitionComicTitle": "X-Men (Vol. 2) #4",
+      "keywords": [
+        "red",
+        "arkady rossovich",
+        "rossovich"
+      ]
+    },
+    "mcu": {
+      "id": "kahhori",
+      "name": "Kahhori",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Flight",
+        "Kinesis",
+        "InterdimensionalTravel",
+        "Speed"
+      ],
+      "origin": "Earth",
+      "actorName": "Devery Jacobs",
+      "appearanceTypes": [
+        "Cartoon"
+      ],
+      "affiliations": [
+        "GuardiansOfTheMultiverse"
+      ],
+      "keywords": [
+        "Kahhori"
+      ]
+    },
+    "solvedAt": "2026-09-27T11:51:49.809Z"
   }
 }
