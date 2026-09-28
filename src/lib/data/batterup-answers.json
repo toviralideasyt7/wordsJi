@@ -58,5 +58,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/04/adbf0a93-8ee3c7b5-94f577b1-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-09-27",
     "fetchedAt": "2026-09-27T06:26:02.028Z"
+  },
+  "2026-09-28": {
+    "date": "2026-09-28",
+    "gameNumber": 953,
+    "player": {
+      "player_name": "Freddie Freeman",
+      "player_id": "30193",
+      "team_name": "Dodgers",
+      "born": "USA",
+      "birth_date": "1989-09-12",
+      "position": [
+        "1B"
+      ],
+      "debut": 2010,
+      "jersey_number": 5
+    },
+    "videoDescription": "[06/02/26 : LAD 6 - 5 ARI] Freddie Freeman drives a two-run homer to right-center field to get the Dodgers on the board early.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/02/87967194-81958181-41a4c22f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-09-28",
+    "fetchedAt": "2026-09-28T06:31:44.104Z"
   }
 }
