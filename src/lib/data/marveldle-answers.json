@@ -235,5 +235,58 @@
       ]
     },
     "solvedAt": "2026-09-27T11:51:49.809Z"
+  },
+  "2026-09-28": {
+    "date": "2026-09-28",
+    "dateId": "9/28/2026 12:00:00 AM",
+    "comics": {
+      "id": "moongirl",
+      "name": "Moon-Girl",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Inhuman"
+      ],
+      "powerTypes": [
+        "Psychic"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 2015,
+      "firstApparitionComicTitle": "Moon Girl and Devil Dinosaur #1",
+      "keywords": [
+        "lunella louise lafayette",
+        "louise lafayette",
+        "lafayette"
+      ]
+    },
+    "mcu": {
+      "id": "wong",
+      "name": "Wong",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Magic",
+        "InterdimensionalTravel",
+        "PocketDimension",
+        "Summoning"
+      ],
+      "origin": "Earth",
+      "actorName": "Benedict Wong",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "MasterOfMysticArts"
+      ],
+      "keywords": [
+        "wong"
+      ]
+    },
+    "solvedAt": "2026-09-28T13:37:03.548Z"
   }
 }
