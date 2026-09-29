@@ -78,5 +78,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/02/87967194-81958181-41a4c22f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-09-28",
     "fetchedAt": "2026-09-28T06:31:44.104Z"
+  },
+  "2026-09-29": {
+    "date": "2026-09-29",
+    "gameNumber": 954,
+    "player": {
+      "player_name": "Jordan Walker",
+      "player_id": "4684778",
+      "team_name": "Cardinals",
+      "born": "USA",
+      "birth_date": "2002-05-22",
+      "position": [
+        "RF"
+      ],
+      "debut": 2023,
+      "jersey_number": 18
+    },
+    "videoDescription": "[08/20/26 : STL 10 - 9 CIN] Jordan Walker lifts a three-run home run to center field, extending the Cardinals' lead to 4-0 over the Reds in the top of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/20/53bd25b0-cf5e288f-c9ab4fb3-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-09-29",
+    "fetchedAt": "2026-09-29T08:43:00.400Z"
   }
 }
