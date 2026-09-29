@@ -288,5 +288,55 @@
       ]
     },
     "solvedAt": "2026-09-28T13:37:03.548Z"
+  },
+  "2026-09-29": {
+    "date": "2026-09-29",
+    "dateId": "9/29/2026 12:00:00 AM",
+    "comics": {
+      "id": "whiterabbit",
+      "name": "White Rabbit",
+      "gender": "Female",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1983,
+      "firstApparitionComicTitle": "Marvel Team-Up #131",
+      "keywords": [
+        "Lorina Dodson",
+        "Dodson",
+        "rabbit"
+      ]
+    },
+    "mcu": {
+      "id": "muneebakhan",
+      "name": "Muneeba Khan",
+      "gender": "Female",
+      "type": "Supporting",
+      "species": [
+        "Human",
+        "Clandestine"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Zenobia Shroff",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "khan"
+      ]
+    },
+    "solvedAt": "2026-09-29T12:37:32.870Z"
   }
 }
