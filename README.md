@@ -1,4 +1,4 @@
-﻿# WordSolverX
+# wordsJi
 
 SvelteKit site of puzzle solvers and daily answer pages for word games.
 Deployed to Cloudflare. Monetized with Journey/Mediavine display ads.
