@@ -1,6 +1,6 @@
 name: Publish Pages
 
-run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
+run-name: Publish Pages (${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && format('articles {0}', github.event.inputs.article_scope) || github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || (github.event_name == 'workflow_run' && 'site') || 'manual' }}${{ (github.event.client_payload.target_date || github.event.inputs.target_date) && format(' {0}', github.event.client_payload.target_date || github.event.inputs.target_date) || '' }})
 
 on:
   push:
@@ -9,6 +9,13 @@ on:
   repository_dispatch:
     types:
       - pages-publish-requested
+  workflow_run:
+    workflows:
+      - Batter Up Daily
+      - Canuckle Daily
+      - Marveldle Daily
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       workflow_mode:
@@ -62,14 +69,14 @@ permissions:
 
 jobs:
   publish:
-    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+    if: (github.event_name != 'push' || github.actor != 'github-actions[bot]') && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 35
     concurrency:
-      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
+      group: pages-publish-${{ github.ref_name || 'detached' }}-${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || (github.event_name == 'workflow_run' && 'site') || 'manual' }}-${{ github.event.client_payload.target_date || github.event.inputs.target_date || 'default' }}
       cancel-in-progress: true
     env:
-      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || 'manual' }}
+      GROUP_NAME: ${{ github.event.client_payload.group || github.event.inputs.group || (github.event_name == 'schedule' && (github.event.schedule == '35 16 * * *' && 'site' || github.event.schedule == '45 18 * * *' && 'site' || github.event.schedule == '30 3 * * *' && 'waffle' || github.event.schedule == '31 11 * * *' && 'gamedle' || 'site')) || (github.event_name == 'push' && 'site') || (github.event_name == 'workflow_run' && 'site') || 'manual' }}
       TARGET_DATE: ${{ github.event.client_payload.target_date || github.event.inputs.target_date || '' }}
       WORKFLOW_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode || 'deploy' }}
       ARTICLE_SCOPE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.workflow_mode == 'generate-articles-only' && github.event.inputs.article_scope) || 'current-group' }}
@@ -235,6 +242,17 @@ jobs:
                     ;;
                 esac
               fi
+              ;;
+            workflow_run)
+              # Chained from a daily data workflow (Batter Up / Canuckle /
+              # Marveldle) via the workflow_run trigger: fresh data was just
+              # committed, so skip data updates and just rebake + deploy.
+              resolved_group="site"
+              resolved_article_groups="site"
+              resolved_scope="current-group"
+              resolved_generate="false"
+              resolved_data_mode="skip"
+              resolved_skip_existing="true"
               ;;
           esac
 

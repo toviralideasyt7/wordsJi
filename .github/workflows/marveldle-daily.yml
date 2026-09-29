@@ -1,13 +1,14 @@
 # .github/workflows/marveldle-daily.yml
 # Daily Marveldle answer solve. Upstream releases the new pick around US
 # midnight (~04:00-05:00 UTC); the page flips at the 06:02 UTC puzzle-window
-# boundary, so the main solve runs at 06:05 UTC — three minutes after the flip,
-# so the solver never races it. The solve itself takes 2-5 minutes, which is
-# why the today page shows its "updating" state until the new entry lands.
-#
-# A second run at 06:35 UTC executes `yesterday` mode: the cheap, reliable
-# /yesterday endpoint (one call per mode, no solving) backfills the previous
-# day's entry so the yesterday page and archive never have gaps.
+# boundary. Triggered by the wordsolverx-daily-dispatch Cloudflare worker,
+# which fires marveldle-daily-requested repository_dispatch events: 06:05 UTC
+# with mode=today (full constraint solve, three minutes after the flip so the
+# solver never races it) and 06:35 UTC with mode=yesterday (the cheap, reliable
+# /yesterday endpoint — one call per mode, no solving — backfills the previous
+# day's entry so the yesterday page and archive never have gaps). The solve
+# itself takes 2-5 minutes, which is why the today page shows its "updating"
+# state until the new entry lands.
 #
 # Fails loudly: if scripts/marveldle-solve.mjs exits non-zero (either mode
 # unsolved, upstream blocked, timeout) the job fails and NOTHING is committed
@@ -17,9 +18,9 @@
 name: Marveldle Daily
 
 on:
-  schedule:
-    - cron: '5 6 * * *'
-    - cron: '35 6 * * *'
+  repository_dispatch:
+    types:
+      - marveldle-daily-requested
   workflow_dispatch:
     inputs:
       mode:
@@ -39,10 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      # Retry/backfill run at 06:35 uses the cheap /yesterday endpoint;
-      # the 06:05 run does the full constraint solve. Manual dispatch
-      # can override with the `mode` input.
-      SOLVE_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode || (github.event.schedule == '35 6 * * *' && 'yesterday' || 'today') }}
+      # The solve mode comes from the dispatch payload (today at 06:05,
+      # yesterday at 06:35). Manual dispatch can override with the `mode` input.
+      SOLVE_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode || github.event.client_payload.mode || 'today' }}
     steps:
       - name: Check Out Repository
         uses: actions/checkout@v4

@@ -2,22 +2,24 @@
 # Daily Canuckle answer refresh. Upstream answers live in the Canuckle
 # Firestore project (pre-published days ahead); the page flips at the 05:00
 # UTC puzzle-window boundary.
-# This job runs at 05:10 UTC — AFTER the boundary — because the site
-# prerenders today pages at deploy time: a bake before 05:00 would compute
-# yesterday's puzzle date and permanently bake the "updating" state until
-# the next deploy. Running after the boundary guarantees the baked page
-# carries today's answer.
+# Triggered by the wordsolverx-daily-dispatch Cloudflare worker, which fires
+# a canuckle-daily-requested repository_dispatch at 05:10 UTC — AFTER the
+# boundary — because the site prerenders today pages at deploy time: a bake
+# before 05:00 would compute yesterday's puzzle date and permanently bake the
+# "updating" state until the next deploy. Running after the boundary guarantees
+# the baked page carries today's answer.
 #
 # Fails loudly: if scripts/update-canuckle-data.mjs exits non-zero the job
 # fails and NOTHING is committed — the today page renders its "updating"
 # state instead of a wrong answer. Commits only when the data files actually
-# changed; the push triggers Publish Pages, which rebakes the today page.
+# changed; Publish Pages then rebakes the today page via the workflow_run chain.
 
 name: Canuckle Daily
 
 on:
-  schedule:
-    - cron: '10 5 * * *'
+  repository_dispatch:
+    types:
+      - canuckle-daily-requested
   workflow_dispatch:
 
 permissions:

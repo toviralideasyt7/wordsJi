@@ -1,11 +1,12 @@
 # .github/workflows/batterup-daily.yml
 # Daily Batter Up answer fetch. Upstream data for date D lands on the CDN at
 # ~00:32 UTC on D and the page flips at the 01:00 UTC puzzle-window boundary.
-# This job runs at 01:05 UTC — AFTER the boundary — because the site
-# prerenders today pages at deploy time: a bake before 01:00 would compute
-# yesterday's puzzle date and permanently bake the "updating" state until the
-# next deploy. Running after the boundary guarantees the baked page carries
-# today's answer.
+# Triggered by the wordsolverx-daily-dispatch Cloudflare worker, which fires
+# a batterup-daily-requested repository_dispatch at 01:05 UTC — AFTER the
+# boundary — because the site prerenders today pages at deploy time: a bake
+# before 01:00 would compute yesterday's puzzle date and permanently bake the
+# "updating" state until the next deploy. Running after the boundary guarantees
+# the baked page carries today's answer.
 #
 # Fails loudly: if scripts/batterup-daily.mjs exits non-zero (no CDN data,
 # player not found, malformed payload) the job fails and NOTHING is
@@ -15,8 +16,9 @@
 name: Batter Up Daily
 
 on:
-  schedule:
-    - cron: '5 1 * * *'
+  repository_dispatch:
+    types:
+      - batterup-daily-requested
   workflow_dispatch:
 
 permissions:
