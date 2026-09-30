@@ -338,5 +338,58 @@
       ]
     },
     "solvedAt": "2026-09-29T12:37:32.870Z"
+  },
+  "2026-09-30": {
+    "date": "2026-09-30",
+    "dateId": "9/30/2026 12:00:00 AM",
+    "comics": {
+      "id": "domino",
+      "name": "Domino",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Agility",
+        "Psychic"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1992,
+      "firstApparitionComicTitle": "X-Force #8",
+      "keywords": [
+        "neena thurman",
+        "thurman"
+      ]
+    },
+    "mcu": {
+      "id": "colleenwing",
+      "name": "Colleen Wing",
+      "gender": "Female",
+      "type": "Vigilante",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy"
+      ],
+      "origin": "Earth",
+      "actorName": "Jessica Henwick",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "Hand",
+        "ChikaraDojo"
+      ],
+      "keywords": [
+        "iron fist",
+        "wing"
+      ]
+    },
+    "solvedAt": "2026-09-30T06:06:11.119Z"
   }
 }
