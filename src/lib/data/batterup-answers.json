@@ -98,5 +98,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/20/53bd25b0-cf5e288f-c9ab4fb3-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-09-29",
     "fetchedAt": "2026-09-29T08:43:00.400Z"
+  },
+  "2026-10-01": {
+    "date": "2026-10-01",
+    "gameNumber": 956,
+    "player": {
+      "player_name": "Bobby Witt Jr",
+      "player_id": "42403",
+      "team_name": "Royals",
+      "born": "USA",
+      "birth_date": "2000-06-14",
+      "position": [
+        "SS"
+      ],
+      "debut": 2022,
+      "jersey_number": 7
+    },
+    "videoDescription": "[09/04/26 : TOR 9 - 2 KC] Bobby Witt Jr. hammers a solo home run to left field, opening the scoring for the Royals 4-1 in the bottom of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/04/93e8bbd5-76164767-b1c56aba-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-01",
+    "fetchedAt": "2026-10-01T01:06:11.576Z"
   }
 }
