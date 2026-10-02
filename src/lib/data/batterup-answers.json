@@ -118,5 +118,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/04/93e8bbd5-76164767-b1c56aba-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-01",
     "fetchedAt": "2026-10-01T01:06:11.576Z"
+  },
+  "2026-10-02": {
+    "date": "2026-10-02",
+    "gameNumber": 957,
+    "player": {
+      "player_name": "Joc Pederson",
+      "player_id": "31392",
+      "team_name": "Rangers",
+      "born": "USA",
+      "birth_date": "1992-04-21",
+      "position": [
+        "DH",
+        "1B"
+      ],
+      "debut": 2014,
+      "jersey_number": 3
+    },
+    "videoDescription": "[08/11/26 : TEX 2 - 3 LAA] Joc Pederson crushes a leadoff home run to center field to give the Rangers the lead in the top of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/11/3c8ccaf9-e70e6a42-87a0223e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-02",
+    "fetchedAt": "2026-10-02T01:05:50.285Z"
   }
 }
