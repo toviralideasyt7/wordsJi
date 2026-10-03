@@ -500,5 +500,62 @@
       ]
     },
     "solvedAt": "2026-10-02T06:05:46.679Z"
+  },
+  "2026-10-03": {
+    "date": "2026-10-03",
+    "dateId": "10/3/2026 12:00:00 AM",
+    "comics": {
+      "id": "carnage",
+      "name": "Carnage",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Symbiote"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration",
+        "Shapeshifting",
+        "Wallcrawling"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1992,
+      "firstApparitionComicTitle": "The Amazing Spider-Man #361",
+      "keywords": [
+        "kasady"
+      ]
+    },
+    "mcu": {
+      "id": "bushmaster",
+      "name": "Bushmaster",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration",
+        "Perception"
+      ],
+      "origin": "Earth",
+      "actorName": "Mekhi Hewling, Mustafa Shakir",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "HarlemsParadise"
+      ],
+      "keywords": [
+        "John McIver"
+      ]
+    },
+    "solvedAt": "2026-10-03T06:05:46.069Z"
   }
 }
