@@ -557,5 +557,58 @@
       ]
     },
     "solvedAt": "2026-10-03T06:05:46.069Z"
+  },
+  "2026-10-04": {
+    "date": "2026-10-04",
+    "dateId": "10/4/2026 12:00:00 AM",
+    "comics": {
+      "id": "shangchi",
+      "name": "Shang-Chi",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Psychic"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1973,
+      "firstApparitionComicTitle": "Special Marvel Edition #15",
+      "keywords": [
+        "Zheng Shang-Chi",
+        "chi"
+      ]
+    },
+    "mcu": {
+      "id": "agentorange",
+      "name": "Agent Orange",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Paul Schulze",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "CIA"
+      ],
+      "keywords": [
+        "orange",
+        "william rawlins",
+        "rawlins"
+      ]
+    },
+    "solvedAt": "2026-10-04T06:05:57.095Z"
   }
 }
