@@ -139,5 +139,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/11/3c8ccaf9-e70e6a42-87a0223e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-02",
     "fetchedAt": "2026-10-02T01:05:50.285Z"
+  },
+  "2026-10-04": {
+    "date": "2026-10-04",
+    "gameNumber": 959,
+    "player": {
+      "player_name": "Angel Martinez",
+      "player_id": "42497",
+      "team_name": "Guardians",
+      "born": "D.R.",
+      "birth_date": "2002-01-27",
+      "position": [
+        "LF"
+      ],
+      "debut": 2024,
+      "jersey_number": 1
+    },
+    "videoDescription": "[09/19/26 : ATH 6 - 12 CLE] Angel Martínez's lifts his second home run of the game extending the Guardians' lead to 11-4 in the bottom of the 4th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/19/26488b85-132ba5d7-8b34b27f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-04",
+    "fetchedAt": "2026-10-04T01:05:47.023Z"
   }
 }
