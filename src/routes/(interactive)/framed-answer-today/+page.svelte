@@ -3,6 +3,7 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
+  import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
@@ -167,7 +168,9 @@
       verified={publishedDate}
     />
 
-
+    <div class="mt-12">
+      <StrategyDeepDive slug="framed-answer-today" />
+    </div>
 
     <AuthorCard
       name={PRESTON_HAYES_AUTHOR_NAME}

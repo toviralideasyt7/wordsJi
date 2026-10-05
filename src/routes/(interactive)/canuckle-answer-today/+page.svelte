@@ -6,6 +6,7 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
+  import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -324,6 +325,10 @@
   <AnswerArticle content={ARTICLE_CONTENT['canuckle-answer-today']} vars={{ date: data.formattedDate }}
     verified={publishedDate}
   />
+</div>
+
+<div class="mt-12">
+  <StrategyDeepDive slug="canuckle-answer-today" />
 </div>
 
 <AuthorCard

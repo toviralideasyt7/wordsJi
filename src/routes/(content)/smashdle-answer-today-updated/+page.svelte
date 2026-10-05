@@ -1,5 +1,6 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
+  import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
 
   let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
 
@@ -196,6 +197,7 @@
         </div>
       </section>
     </article>
+    <StrategyDeepDive slug="smashdle-answer-today" />
   {/snippet}
 </GameDleAnswerPage>
 

@@ -6,6 +6,7 @@
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
+  import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -134,6 +135,10 @@
 
         verified={publishedDate}
       />
+    </div>
+
+    <div class="mt-12">
+      <StrategyDeepDive slug="wordle-answer-today" />
     </div>
 
     <div class="mt-12">

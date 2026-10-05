@@ -7,6 +7,7 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
+  import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -342,6 +343,10 @@
         }}
     verified={publishedDate}
   />
+</div>
+
+<div class="mt-12">
+  <StrategyDeepDive slug="colordle-answer-today" />
 </div>
 
 <AuthorCard
