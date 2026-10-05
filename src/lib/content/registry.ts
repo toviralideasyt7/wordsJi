@@ -935,7 +935,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/wordle-solver", label: "Wordle Solver" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
       { href: "/nerdle-answer-today", label: "Nerdle Answer Today" },
-      { href: "/quordle-answer-archive", label: "Quordle Answer Archive" },
+      { href: "/quordle-archive", label: "Quordle Answer Archive" },
       { href: "/phoodle-answer-today", label: "Phoodle Answer Today" }
     ]
   },
@@ -1297,7 +1297,6 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/squaredle-answer-today", label: "Squaredle Answer Today" },
       { href: "/wordle-solver", label: "Wordle Solver" },
       { href: "/boggle-solver", label: "Boggle Solver" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
@@ -1434,7 +1433,6 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/contexto-solver", label: "Contexto Solver" },
       { href: "/semantle-answer-today", label: "Semantle Answer Today" },
       { href: "/searchle-answer-today", label: "Searchle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
@@ -1568,7 +1566,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: '/spotle-answer-today', label: 'Spotle Answer Today' },
       { href: '/wordle-answer-today', label: 'Wordle Answer Today' },
       { href: '/framed-answer-today', label: 'Framed Answer Today' },
-      { href: '/colordle-answer-archive', label: 'Colordle Answer Archive' }
+      { href: '/colordle-archive', label: 'Colordle Answer Archive' }
     ]
   },
   'globle-answer-today': {
@@ -1670,11 +1668,10 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: '/globle-solver', label: 'Globle Solver' },
       { href: '/worldle-answer-today', label: 'Worldle Answer Today' },
       { href: '/countryle-answer-today', label: 'Countryle Answer Today' },
       { href: '/wordle-answer-today', label: 'Wordle Answer Today' },
-      { href: '/globle-answer-archive', label: 'Globle Answer Archive' },
+      { href: '/globle-archive', label: 'Globle Answer Archive' },
       { href: '/spotle-answer-today', label: 'Spotle Answer Today' }
     ]
   },
@@ -1775,11 +1772,10 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/semantle-solver", label: "Semantle Solver" },
       { href: "/contexto-answer-today", label: "Contexto Answer Today" },
       { href: "/searchle-answer-today", label: "Searchle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
-      { href: "/semantle-answer-archive", label: "Semantle Answer Archive" },
+      { href: "/semantle-archive", label: "Semantle Answer Archive" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" }
     ]
   },
@@ -1896,7 +1892,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
-      { href: "/waffle-answer-archive", label: "Waffle Answer Archive" },
+      { href: "/waffle-archive", label: "Waffle Answer Archive" },
       { href: "/phrazle-answer-today", label: "Phrazle Answer Today" }
     ]
   },
@@ -2020,7 +2016,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/phrazle-answer-today", label: "Phrazle Answer Today" },
       { href: "/waffle-answer-today", label: "Waffle Answer Today" },
-      { href: "/phoodle-answer-archive", label: "Phoodle Answer Archive" }
+      { href: "/phoodle-archive", label: "Phoodle Answer Archive" }
     ]
   },
 
@@ -2141,12 +2137,11 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       }
     ],
     relatedLinks: [
-      { href: "/phrazle-solver", label: "Phrazle Solver" },
       { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/waffle-answer-today", label: "Waffle Answer Today" },
-      { href: "/phrazle-answer-archive", label: "Phrazle Answer Archive" }
+      { href: "/phrazle-archive", label: "Phrazle Answer Archive" }
     ]
   },
 
@@ -2272,7 +2267,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/worgle-answer-today", label: "Worgle Answer Today" },
       { href: "/quordle-answer-today", label: "Quordle Answer Today" },
       { href: "/phoodle-answer-today", label: "Phoodle Answer Today" },
-      { href: "/canuckle-answer-archive", label: "Canuckle Answer Archive" }
+      { href: "/canuckle-archive", label: "Canuckle Answer Archive" }
     ]
   },
 
@@ -2397,7 +2392,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       { href: "/globle-answer-today", label: "Globle Answer Today" },
       { href: "/countryle-answer-today", label: "Countryle Answer Today" },
       { href: "/wordle-answer-today", label: "Wordle Answer Today" },
-      { href: "/worldle-answer-archive", label: "Worldle Answer Archive" },
+      { href: "/worldle-archive", label: "Worldle Answer Archive" },
       { href: "/spotle-answer-today", label: "Spotle Answer Today" }
     ]
   },

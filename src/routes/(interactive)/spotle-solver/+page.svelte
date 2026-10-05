@@ -34,7 +34,6 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                 { href: '/nerdle-solver', label: 'Nerdle Solver' },
                 { href: '/spotle-answer-today', label: 'Spotle Answer Today' },
                 { href: '/searchle-solver', label: 'Searchle Solver' },
-                { href: '/contexto-solver', label: 'Contexto Solver' },
                 { href: '/countryle-solver', label: 'Countryle Solver' }
         ];
 

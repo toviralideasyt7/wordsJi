@@ -58,8 +58,7 @@
     { href: '/nerdle-solver', label: 'Nerdle Solver' },
     { href: '/quordle-solver', label: 'Quordle Solver' },
     { href: '/searchle-answer-today', label: 'Searchle Answer Today' },
-    { href: '/spotle-solver', label: 'Spotle Solver' },
-    { href: '/contexto-solver', label: 'Contexto Solver' }
+    { href: '/spotle-solver', label: 'Spotle Solver' }
   ];
 
   function loadSearchleRuntime(): Promise<SearchleRuntime> {
