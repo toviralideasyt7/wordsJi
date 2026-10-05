@@ -610,5 +610,56 @@
       ]
     },
     "solvedAt": "2026-10-04T06:05:57.095Z"
+  },
+  "2026-10-05": {
+    "date": "2026-10-05",
+    "dateId": "10/5/2026 12:00:00 AM",
+    "comics": {
+      "id": "herbie",
+      "name": "H.E.R.B.I.E.",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Robot"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Perception",
+        "Flight"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1979,
+      "firstApparitionComicTitle": "Fantastic Four #209",
+      "keywords": [
+        "Humanoid Experimental Robot B-Type Integrated Electronics",
+        "HERBIE"
+      ]
+    },
+    "mcu": {
+      "id": "katebishop",
+      "name": "Kate Bishop",
+      "gender": "Female",
+      "type": "Vigilante",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Hailee Steinfeld",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "BishopSecurity"
+      ],
+      "keywords": [
+        "bishop",
+        "kate bishop"
+      ]
+    },
+    "solvedAt": "2026-10-05T06:05:48.974Z"
   }
 }
