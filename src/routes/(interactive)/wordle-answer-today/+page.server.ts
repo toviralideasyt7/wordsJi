@@ -99,11 +99,15 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     // The "answer in snippet" experiment coincided with CTR collapsing to ~1.6% on
     // 50k monthly Bing impressions for "wordle answer today": a snippet that hands
     // over the answer earns the impression but loses the click. Tease with hints.
-    const shortDate = format(today, 'MMM d');
-    const pageTitle = `Wordle Answer Today #${wordleNumber} (${shortDate}) \u2014 Hints | WordSolverX`;
+    // Stream 4 (2026-10-05): title rewritten to the colordle benchmark pattern
+    // "[Game] Answer Today ([Date]) - [hook]" which converts at ~7.7% CTR. The
+    // date uses `today` (the same puzzle-window date the answers are keyed on),
+    // so a "today" page can never carry tomorrow's date or answer here.
+    const longTitleDate = format(today, 'MMMM d, yyyy');
+    const pageTitle = `Wordle Answer Today #${wordleNumber} (${longTitleDate}) - Hints`;
     const pageDescription = wordleWord
-        ? `Wordle hints for ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on Wordle #${wordleNumber}? Get daily clues, tips and the full solution at WordSolverX.`
-        : `Get Wordle hints and the confirmed Wordle answer for today, ${formattedDate}. Hints, clues, and the solution for Wordle #${wordleNumber}.`;
+        ? `Wordle answer today ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on Wordle #${wordleNumber}? Hints, letter clues and the confirmed solution, updated daily.`
+        : `Wordle answer today ${formattedDate}: hints, letter clues and the confirmed solution for Wordle #${wordleNumber}, with yesterday's answer too. Updated daily.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

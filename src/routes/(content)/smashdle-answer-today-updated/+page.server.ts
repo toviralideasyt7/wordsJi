@@ -51,14 +51,17 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         ));
         const answerSummary = uniqueNames.slice(0, 4).join(', ');
         const pageTitle = seoDate
-            ? `Smashdle Hints and Answers for Today (${seoDate})`
-            : 'Smashdle Hints and Answers for Today';
+            ? `Smashdle Answer Today (${seoDate}) - All Modes`
+            : 'Smashdle Answer Today - All Modes';
         // Both branches stay inside the site-wide 140-158 character description budget for
         // every date length, so the per-mode answer names are left to the page body and the
         // structured data rather than appended here, where they pushed the text past 240.
+        // Stream 4 (2026-10-05): rewritten to the colordle benchmark pattern for CTR. The
+        // date here comes from loadGameDleToday (same source as the answers), so a "today"
+        // page can never carry tomorrow's date or answers in its metadata.
         const pageDescription = seoDate
-            ? `Get Smashdle hints and the confirmed Smashdle answers for today, ${seoDate}, with every mode listed alongside its answer and a link to the solver.`
-            : 'Get Smashdle hints and the confirmed Smashdle answers for every mode and region today, with each answer listed alongside its hint and a link to the solver.';
+            ? `Smashdle answer today ${seoDate}: every mode's champion listed with hints and clues. See all of today's answers and jump to the solver. Updated daily.`
+            : 'Smashdle answer today: every mode\u2019s champion listed with hints and clues. See all of today\u2019s answers and jump to the solver. Updated daily for every region.';
         const pageKeywords = seoDate
             ? `smashdle answer today, smashdle answer, smashdle hint, smashdle hint today, smashdle answer for ${seoDate}`
             : 'smashdle answer today, smashdle answer, smashdle hint, smashdle hint today';

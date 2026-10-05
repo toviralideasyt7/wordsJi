@@ -13,12 +13,10 @@
     generateWebPageSchema
   } from '$lib/seo';
 
-  const pageTitle = 'Ai Squaredle Solver - Solve board in seconds';
-  let pageDescription =
-    'Use the Squaredle solver to load today’s board, paste any custom grid, and find every valid word path with the same client-side solving logic as the original project.';
+  const pageTitle = 'Squaredle Solver - Solve Today\u2019s Board in Seconds';
+  const pageDescription =
+    'Stuck on Squaredle today? Paste today\u2019s board or any custom grid and get every valid word with the exact letter path, solved in seconds \u2014 free, no signup.';
   const pageUrl = 'https://wordsolverx.com/squaredle-solver';
-  pageDescription =
-    'Use the Squaredle solver to load today\u2019s board or paste a custom grid, then find every valid word path hidden in the letter square on screen.';
 
 
   const schemas = JSON.stringify([

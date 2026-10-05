@@ -1768,10 +1768,10 @@ export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConf
 		? `Wordle Solver 5 Letters - Enter Your Clues, Get the Best Guess`
 		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const metaTitle = wordLength === 5
-		? `Wordle Solver 5 Letters - Enter Clues, Get Today's Answer`
+		? `Wordle Solver (5 Letters): Enter Clues, Get Today's Answer`
 		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const description = wordLength === 5
-		? `Free 5-letter Wordle solver: enter your green, yellow, and gray tiles to narrow today's answer, rank the strongest next guesses, and close the board faster.`
+		? `Free Wordle solver for 5-letter puzzles: enter your green, yellow and gray tiles, see the remaining answers ranked, and get your best next guess.`
 		: `Use the ${wordLength}-letter Wordle solver to turn green, yellow, and gray clues into a ranked shortlist of answers, with the best next guess shown first.`;
 
 return {

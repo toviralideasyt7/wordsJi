@@ -285,13 +285,13 @@
 </script>
 
 <svelte:head>
-        <title>Boggle Solver | Find All Words Instantly</title>
+        <title>Boggle Solver - Find Every Word on Any Board</title>
         <meta
                 name="description"
-                content="A light-theme Boggle solver for 3x3 to 10x10 boards, using the same trie and depth-first search approach as the original source project to find every word."
+                content="Free Boggle solver for 3x3 to 10x10 boards: enter your letters and see every valid word with its letter path highlighted, instantly, in your browser."
         />
         <link rel="canonical" href="https://wordsolverx.com/boggle-solver" />
-        <meta property="og:title" content="Boggle Solver" />
+        <meta property="og:title" content="Boggle Solver - Find Every Word on Any Board" />
         <meta
                 property="og:description"
                 content="Solve any Boggle board, highlight paths, filter by starting cell, and share board URLs."
@@ -300,7 +300,7 @@
         <meta property="og:url" content="https://wordsolverx.com/boggle-solver" />
         <meta property="og:image" content="https://wordsolverx.com/images/boggle-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Boggle Solver" />
+        <meta name="twitter:title" content="Boggle Solver - Find Every Word on Any Board" />
         <meta
                 name="twitter:description"
                 content="Find all possible words in your Boggle board with the copied trie + DFS logic."
