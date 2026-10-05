@@ -110,6 +110,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "Does Wordle repeat answers?",
               answer: "The official answer list has no repeats so far, and the archive on this page lets you check whether a word you suspect has already appeared."
+            },
+            {
+              question: "What counts as a valid guess vs. a valid answer?",
+              answer: "The guess list is larger than the answer list — obscure words are accepted as guesses but never chosen as answers. If your guess is rejected, it's not in the dictionary the game uses."
+            },
+            {
+              question: "Is hard mode worth it?",
+              answer: "Only if you enjoy the constraint. Hard mode bans probe words (you must reuse confirmed hints), which removes the single strongest endgame technique above. Your streak will be lower, not higher."
             }
           ]
         },
@@ -200,6 +208,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "What does the similarity percentage measure?",
               answer: "RGB color distance between your guess and the target — higher means closer in hue, brightness, and saturation combined."
+            },
+            {
+              question: "Do I guess a color name or a hex code?",
+              answer: "A color name. The game matches against its named-color list, so the name must be exact."
+            },
+            {
+              question: "What are the day numbers?",
+              answer: "Colordle puzzles run in an unbroken numbered sequence, and the community indexes answers by day number — handy for cross-referencing an answer across sites and dates, the same trick Wordle players use with puzzle numbers."
             }
           ]
         },
@@ -293,6 +309,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "How many modes are there?",
               answer: "Classic plus rotating clue modes — Final Smash, Emoji, Kirby, and Silhouette — each with its own daily answer. A wrong guess in one mode doesn't affect the others."
+            },
+            {
+              question: "What does orange mean vs. green?",
+              answer: "Green is an exact property match; orange is a partial match (related but not identical). Orange universe with red everything else usually means \"right franchise family, wrong fighter.\""
+            },
+            {
+              question: "Do echo fighters and variants count separately?",
+              answer: "Yes — and that's the trap. Characters with multiple versions (Link/Young Link/Toon Link) are distinct answers with distinct property rows."
             }
           ]
         },
@@ -371,6 +395,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "Is there a guess limit?",
               answer: "No — Semantle gives you unlimited guesses. Your score is your guess count, so exploration is free but inefficiency is visible."
+            },
+            {
+              question: "Why did my synonym score lower than an unrelated word?",
+              answer: "Because similarity measures shared context, not meaning overlap. A word that appears in the same <em>kinds of sentences</em> as the answer outscores a dictionary synonym that lives in different contexts."
+            },
+            {
+              question: "Does word length or spelling matter?",
+              answer: "Not at all. There are no letter clues in Semantle — it's pure meaning-space navigation."
             }
           ]
         },
@@ -449,6 +481,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "What does the rank number mean?",
               answer: "Your guess's position in the full vocabulary sorted by similarity to the secret word. Lower is closer; rank 1 would be the answer itself."
+            },
+            {
+              question: "Is Contexto the same puzzle as Semantle?",
+              answer: "No — same family, different feedback. Semantle gives absolute similarity scores; Contexto gives relative ranks. The strategies overlap but the endgames play differently."
+            },
+            {
+              question: "Why do opposites rank so close together?",
+              answer: "The underlying model measures shared linguistic context, and opposites appear in the same kinds of sentences. Treat a high rank as \"same neighborhood,\" never as \"same meaning.\""
             }
           ]
         },
@@ -547,6 +587,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "Is Betweenle just Wordle with different colors?",
               answer: "No — it's a fundamentally different puzzle. Wordle gives letter-position feedback; Betweenle gives alphabetical-order feedback. The optimal strategies share nothing."
+            },
+            {
+              question: "What does the number next to my guess mean?",
+              answer: "Approximately how many dictionary words separate your guess from the secret word — a direct measure of your remaining search space."
+            },
+            {
+              question: "Should I guess words outside my current bounds to \"test\" letters?",
+              answer: "Never. Out-of-range guesses return no new information in Betweenle. Every guess should fall between your established upper and lower bounds."
             }
           ]
         },
@@ -624,6 +672,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "Is Canuckle just Wordle with Canadian words?",
               answer: "Mechanically similar, but the curated Canadian word list and Canadian spellings change optimal play — U and -OUR patterns are far more valuable here than in standard Wordle."
+            },
+            {
+              question: "What do the tile colors mean?",
+              answer: "Red: correct letter in the correct position. Yellow: the letter is in the word but in a different position. Grey/white: the letter isn't in the word. (The red replaces Wordle's green as a nod to the flag.)"
+            },
+            {
+              question: "When does the puzzle reset?",
+              answer: "Daily, one puzzle per day — the answer page here tracks the current day's puzzle on the game's own schedule."
             }
           ]
         },
@@ -719,6 +775,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "How many guesses do I get?",
               answer: "Ten. The guess pool is limited to Spotify's top 1,000 most-streamed artists, so every guess must be a real artist name from that pool."
+            },
+            {
+              question: "What does yellow mean on each column?",
+              answer: "Close but not exact — the definition varies by column (a few years on debut year, an adjacent genre on genre). Green is an exact match; grey is no overlap."
+            },
+            {
+              question: "Is this the same as the Spotle word game?",
+              answer: "No. This page covers the artist-guessing game. The Wordle-style word variant is covered separately on this site's Spotle word game page."
             }
           ]
         },
@@ -806,6 +870,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "How many stills do I get?",
               answer: "Six. Each incorrect guess (or skip) reveals the next still, and the stills get progressively clearer and more revealing."
+            },
+            {
+              question: "Can I skip a still without guessing?",
+              answer: "Yes — submitting without a guess (or using the skip control) advances to the next still at no cost. Skipping a hopeless frame is correct play."
+            },
+            {
+              question: "Does Framed include non-English films?",
+              answer: "The database spans world cinema, and stills with non-English signage or distinct national production styles appear regularly — which is why the language check in the visual audit matters."
             }
           ]
         },
@@ -922,6 +994,14 @@ export const STRATEGY_DEEP_DIVES: Record<string, StrategySection[]> = {
             {
               question: "How many modes does Narutodle have?",
               answer: "Four daily modes — Classic, Jutsu, Quote, and Eye — each with its own answer. Solving one doesn't affect the others."
+            },
+            {
+              question: "What do the colors mean in Classic mode?",
+              answer: "Green: exact property match. Yellow/orange: partial overlap. Red: no match. Arrows on ordered properties (debut, age) point toward the answer's value."
+            },
+            {
+              question: "Do wrong guesses cost anything?",
+              answer: "In most modes, wrong guesses only unlock more clues (clearer GIFs, wider zooms, additional hints) — so exploratory guessing is cheap, but <em>diagnostic</em> guessing (each miss teaching you something) beats random stabs."
             }
           ]
         },
