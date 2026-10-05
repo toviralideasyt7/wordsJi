@@ -4,6 +4,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import QuordleAnswerCard from '$lib/components/QuordleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
@@ -88,6 +89,8 @@
     <div class="mb-16">
       <QuordleAnswerCard date={data.today} initialData={data.quordleData} />
     </div>
+
+    <KeepExploring slug="quordle" puzzleDate={data.dateKey} />
 
     <article class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] border border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-6">Frequently Asked Questions</h2>

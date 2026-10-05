@@ -3,6 +3,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import {
@@ -234,6 +235,8 @@
         {/if}
       </div>
     </section>
+
+    <KeepExploring slug="contexto" puzzleDate={data.latestDate} />
 
     <FAQSection title="Contexto Answer FAQ" {faqs} class="pb-0" />
 

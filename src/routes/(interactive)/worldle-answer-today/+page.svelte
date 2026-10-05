@@ -2,6 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -86,6 +87,8 @@
         subheadline={`This page is refreshed automatically for the active Worldle day. Today is ${data.formattedTodayDate}.`}
       />
     </div>
+
+    <KeepExploring slug="worldle" puzzleDate={data.todayDate} />
 
     <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

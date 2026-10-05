@@ -5,6 +5,7 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import WaffleAnswerCard from '$lib/components/WaffleAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
@@ -147,6 +148,8 @@
       </a>
     {/if}
   </div>
+
+  <KeepExploring slug="waffle" puzzleDate={data.dateKey} />
 
   {#if false}
   <!-- SEO Content Section -->

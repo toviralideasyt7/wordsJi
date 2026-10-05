@@ -5,6 +5,8 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
+  import type { KeepExploringSlug } from '$lib/keep-exploring';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -73,6 +75,7 @@
       answers: GameAnswer[];
       dateStr: string;
       error: string | null;
+      latestDate?: string | null;
       meta?: PageMeta;
       schemas?: object | string;
     };
@@ -406,6 +409,8 @@
           </div>
         </section>
       {/each}
+
+      <KeepExploring slug={gameKey as KeepExploringSlug} puzzleDate={data?.latestDate ?? null} />
 
       <div class="mb-6">
         <ArticleAttribution verified={publishedDate ?? null} />

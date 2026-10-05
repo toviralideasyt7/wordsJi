@@ -7,6 +7,7 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -95,6 +96,8 @@
         </div>
       {/if}
     </section>
+
+    <KeepExploring slug="framed" puzzleDate={data.targetDateKey} />
 
     {#if false}
     <article class="space-y-8">

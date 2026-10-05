@@ -2,6 +2,7 @@
         import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
         import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
         import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+        import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -154,6 +155,8 @@
                                         </p>
                                 </section>
                         {/if}
+
+                        <KeepExploring slug="nerdle" puzzleDate={data.answerData?.date} />
 
                         <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
                                 <h2 class="text-2xl font-black tracking-tight text-slate-900">More Nerdle Help</h2>

@@ -3,6 +3,7 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -102,6 +103,8 @@
           Browse Archive
         </a>
       </div>
+
+      <KeepExploring slug="phoodle" puzzleDate={data.dateKey} />
 
       <!-- Content & FAQs -->
       <article class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm">

@@ -3,6 +3,7 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -79,6 +80,8 @@
       socialImage={data.directSocialImage}
       youtubeVideoUrl={data.wordleData?.youtube_video_url}
     />
+
+    <KeepExploring slug="wordle" puzzleDate={data.wordleData?.date} />
 
     {#if data.recentAnswers.length > 1}
       <section class="mt-12 bg-white rounded-3xl p-8 shadow-xl border border-gray-100 overflow-hidden">

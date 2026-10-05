@@ -5,6 +5,7 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
@@ -237,6 +238,8 @@
           </div>
         {/if}
       </section>
+
+      <KeepExploring slug="colordle" puzzleDate={data.dateKey} />
 
       <section class="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

@@ -7,6 +7,7 @@
   import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import { formatPopulation, formatTemperature } from '$lib/countryle';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
@@ -142,6 +143,8 @@
           {/if}
         </details>
       </section>
+
+      <KeepExploring slug="countryle" puzzleDate={data.today?.date} />
 
       <!-- Recent Answers -->
       <section class="mt-8 rounded-[2rem] border border-teal-100 bg-white p-8 shadow-[0_20px_60px_rgba(16,185,129,0.06)] sm:p-10">

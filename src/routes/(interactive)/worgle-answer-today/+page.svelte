@@ -4,6 +4,7 @@
         import { onMount } from 'svelte';
         import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -177,6 +178,8 @@
                                 </div>
                         </div>
                 </section>
+
+                <KeepExploring slug="worgle" puzzleDate={data.todayKey} />
 
                 <section class="mt-10 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                         <h2 class="text-2xl font-black text-slate-900">Recent Worgle answers</h2>

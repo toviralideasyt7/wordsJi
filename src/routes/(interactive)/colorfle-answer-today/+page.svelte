@@ -6,6 +6,7 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -239,6 +240,8 @@
           {/each}
         </div>
       </section>
+
+      <KeepExploring slug="colorfle" puzzleDate={data.dateKey} />
 
       <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
         <div class="flex flex-wrap items-center justify-between gap-4">

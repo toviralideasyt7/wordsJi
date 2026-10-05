@@ -2,6 +2,7 @@
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -145,6 +146,8 @@
         </div>
       </div>
     </section>
+
+    <KeepExploring slug="betweenle" puzzleDate={data.todayAnswer.date} />
 
     <section class="mt-8 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
       <div class="flex flex-wrap items-center justify-between gap-3">

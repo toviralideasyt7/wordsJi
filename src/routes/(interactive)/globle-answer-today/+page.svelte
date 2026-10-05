@@ -3,6 +3,7 @@
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
@@ -116,6 +117,8 @@
         </div>
       </div>
     </GlobleCluesSection>
+
+    <KeepExploring slug="globle" puzzleDate={data.dateKey} />
 
     {#if false}
     <article class="mt-12 space-y-8">

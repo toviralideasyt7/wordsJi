@@ -4,6 +4,7 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
+  import KeepExploring from '$lib/components/KeepExploring.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
@@ -187,6 +188,7 @@
       </div>
     </div>
 
+    <KeepExploring slug="searchle" puzzleDate={data.todayPuzzle?.date} />
 
     <div class="mt-12">
       <AnswerArticle content={ARTICLE_CONTENT['searchle-answer-today']} vars={{ date: todayLabel, answer: todayPuzzle.answer.toUpperCase() }}
