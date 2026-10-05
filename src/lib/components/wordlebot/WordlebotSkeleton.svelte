@@ -226,8 +226,32 @@
     }
   }
 
+  /* Dead-click fix: the placeholder tiles look like a finished game board, so
+     clicks on them while the engine loads felt unresponsive. The pulse marks
+     the whole region as "working", never as an interactive board. */
+  .tile,
+  .results-placeholder .line,
+  .canuckle-skeleton .line {
+    animation: skeleton-pulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes skeleton-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .spinner {
+      animation: none;
+    }
+    .tile,
+    .results-placeholder .line,
+    .canuckle-skeleton .line {
       animation: none;
     }
   }

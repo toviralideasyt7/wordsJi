@@ -29,6 +29,13 @@
   let darkMode = $state(false);
   let isDragging = $state(false);
   let draggingPieceId = $state<string | null>(null);
+  // Dead-click fix: on touch, pointerdown calls preventDefault(), which
+  // suppresses the card's click handler — so a tap started a drag and then
+  // cleared it without selecting the piece. Recording the tap origin lets
+  // pointerup distinguish a tap (select) from a drag (place).
+  let dragStartX = $state(0);
+  let dragStartY = $state(0);
+  let dragStartTime = $state(0);
   let hoverCell = $state<{ row: number; col: number } | null>(null);
   let dragPointer = $state<{ x: number; y: number } | null>(null);
   let puzzlePrefill = $state(3);
@@ -89,6 +96,11 @@
       const dropTarget = hoverCell;
       const pieceId = draggingPieceId;
       if (dropTarget && place(pieceId, dropTarget.row, dropTarget.col)) return;
+      const moved = Math.hypot(event.clientX - dragStartX, event.clientY - dragStartY);
+      const elapsed = performance.now() - dragStartTime;
+      if (moved < 12 && elapsed < 600) {
+        selectPiece(pieceId);
+      }
       clearDragState();
     };
     window.addEventListener('keydown', onKey);
@@ -362,11 +374,15 @@
   }
 
   function startPointerDrag(event: PointerEvent, pieceId: string): void {
-    if (event.button !== 0 || placedPieces.has(pieceId)) return;
+    if (placedPieces.has(pieceId)) return;
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
     event.preventDefault();
     draggingPieceId = pieceId;
     isDragging = true;
     selectedPiece = pieceId;
+    dragStartX = event.clientX;
+    dragStartY = event.clientY;
+    dragStartTime = performance.now();
     updateDragPosition(event.clientX, event.clientY);
   }
 
@@ -427,7 +443,7 @@
 
         <header class="mb-8 text-center">
           <h2 class="bg-gradient-to-r from-teal-500 via-sky-500 to-fuchsia-500 bg-clip-text text-4xl font-black text-transparent sm:text-5xl">Kanoodle Pro</h2>
-          <p class="mt-3 text-base text-slate-500 dark:text-slate-400">Drag pieces to solve the puzzle</p>
+          <p class="mt-3 text-base text-slate-500 dark:text-slate-400">Drag or tap pieces to solve the puzzle</p>
         </header>
 
         <div class="overflow-x-auto pb-2">
@@ -488,7 +504,7 @@
         <section class={`mx-auto w-full max-w-4xl rounded-[1.75rem] border p-4 shadow-xl sm:p-6 ${isDragging ? 'border-sky-300 bg-white ring-2 ring-sky-200 dark:border-sky-700 dark:bg-slate-900 dark:ring-sky-900/30' : 'border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900'}`}>
           <div class="mb-5 text-center">
             <h2 class="text-xl font-bold">Available Pieces</h2>
-            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">{#if isDragging}Drop on the board!{:else}Drag pieces to the board{/if}</p>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">{#if isDragging}Drop on the board!{:else}Drag a piece, or tap it then tap the board{/if}</p>
           </div>
           <div class="grid grid-cols-3 gap-3 sm:gap-4">
             {#each unplacedPieces as piece}

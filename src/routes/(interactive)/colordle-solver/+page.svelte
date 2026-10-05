@@ -35,6 +35,10 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
 
   let selectedGuess = $state<ColorData | null>(null);
   let displayLimit = $state(12);
+  // Dead-click fix: the Filter button used to be `disabled` until both fields
+  // were filled, so clicks on it did nothing at all. It is now always
+  // clickable and explains what is missing via this inline hint instead.
+  let filterHint = $state('');
   let colordleRuntime = $state<ColordleRuntime | null>(null);
   let runtimeBootstrapped = $state(false);
 
@@ -89,12 +93,25 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   });
 
   function handleAddStep() {
-    if (!colordleRuntime || !selectedGuess || !percentageInput) return;
-    const percent = parseFloat(percentageInput);
-    if (isNaN(percent) || percent < 0 || percent > 100) {
-      alert('Please enter a valid percentage (0-100)');
+    if (processing) return;
+    if (!colordleRuntime) {
+      filterHint = 'The solver is still loading — try again in a moment.';
       return;
     }
+    if (!selectedGuess) {
+      filterHint = 'Pick a color from the suggestions first.';
+      return;
+    }
+    if (!percentageInput) {
+      filterHint = 'Enter the similarity % score first.';
+      return;
+    }
+    const percent = parseFloat(percentageInput);
+    if (isNaN(percent) || percent < 0 || percent > 100) {
+      filterHint = 'Enter a valid percentage between 0 and 100.';
+      return;
+    }
+    filterHint = '';
     processing = true;
     const newHistoryItem = { guess: selectedGuess, percent };
     history = [...history, newHistoryItem];
@@ -120,6 +137,7 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
   function handleSelectFromSuggestion(color: ColorData) {
     selectedGuess = color;
     guessInput = color.name;
+    filterHint = '';
   }
 
   function handleRemoveHistoryItem(idx: number) {
@@ -312,7 +330,7 @@ const jsonLdSchema = JSON.stringify({
                     id="colorNameInput"
                     type="text"
                     value={guessInput}
-                    oninput={(e) => handleGuessInput((e.target as HTMLInputElement).value)}
+                    oninput={(e) => { filterHint = ''; handleGuessInput((e.target as HTMLInputElement).value); }}
                     placeholder="e.g. Flax, Sky Blue, Coral"
                     class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-slate-900 placeholder-slate-400 transition-all"
                   />
@@ -357,7 +375,7 @@ const jsonLdSchema = JSON.stringify({
                   type="number"
                   step="0.01"
                   value={percentageInput}
-                  oninput={(e) => (percentageInput = (e.target as HTMLInputElement).value)}
+                  oninput={(e) => { filterHint = ''; percentageInput = (e.target as HTMLInputElement).value; }}
                   placeholder="e.g. 50.18"
                   class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-slate-900 placeholder-slate-400 font-mono transition-all"
                   onkeydown={(e) => { if ((e as KeyboardEvent).key === 'Enter') handleAddStep(); }}
@@ -367,8 +385,11 @@ const jsonLdSchema = JSON.stringify({
               <!-- Submit Button -->
               <button
                 onclick={handleAddStep}
-                disabled={!selectedGuess || !percentageInput || processing}
-                class="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 disabled:from-slate-300 disabled:to-slate-300 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 disabled:shadow-none transition-all flex items-center justify-center gap-2"
+                disabled={processing}
+                class="w-full font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 {selectedGuess && percentageInput && !processing
+                  ? 'bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30'
+                  : 'bg-slate-200 text-slate-500 hover:bg-slate-300 shadow-none cursor-pointer'}"
+                aria-describedby={filterHint ? "filter-hint" : undefined}
               >
                 {#if processing}
                   <span class="flex items-center gap-2"><span class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span> Calculating...</span>
@@ -376,6 +397,11 @@ const jsonLdSchema = JSON.stringify({
                   Filter Results →
                 {/if}
               </button>
+              {#if filterHint}
+                <p id="filter-hint" role="status" class="text-sm font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-2.5">
+                  {filterHint}
+                </p>
+              {/if}
             </div>
           </div>
 
@@ -408,7 +434,7 @@ const jsonLdSchema = JSON.stringify({
                     </div>
                     <div class="flex items-center gap-2">
                       <span class="font-mono text-sm font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-lg">{item.percent}%</span>
-                      <button onclick={() => handleRemoveHistoryItem(idx)} class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-red-500 transition-all p-1" title="Remove">
+                      <button onclick={() => handleRemoveHistoryItem(idx)} class="opacity-100 md:opacity-0 md:group-hover:opacity-100 text-slate-400 hover:text-red-500 transition-all p-1" title="Remove" aria-label="Remove {item.guess.name} from history">
                         ✕
                       </button>
                     </div>

@@ -17,6 +17,49 @@
   let { data } = $props();
   let historySearch = $state('');
 
+  // Dead-click fix (UI-only; the answer computation/display logic is untouched):
+  // the Search button filtered live on input, so clicking it did nothing, and
+  // the answer text offered no copy affordance. Both now acknowledge the click.
+  let searchFeedback = $state('');
+  let answerCopied = $state(false);
+  let answerCopyTimer: ReturnType<typeof setTimeout> | undefined;
+
+  function handleHistorySearch(event: Event) {
+    event.preventDefault();
+    const shown = filteredHistory.length;
+    const total = historyEntries.length;
+    searchFeedback =
+      shown === total
+        ? `Showing all ${total} recent answers.`
+        : `Showing ${shown} of ${total} recent answers.`;
+    document
+      .getElementById('colordle-history-results')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function copyColordleAnswer() {
+    const text = `${data.color.name} (${data.color.hex})`;
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    } catch {
+      /* Clipboard unavailable — still acknowledge the click so it never feels dead. */
+    }
+    answerCopied = true;
+    clearTimeout(answerCopyTimer);
+    answerCopyTimer = setTimeout(() => (answerCopied = false), 2000);
+  }
+
   const featuredImage = $derived(data.meta?.featuredImage ?? '/images/colordle-answer-today.webp');
   const publishedDate = $derived(data.publishedDate ?? null);
   const requestedDateLabel = $derived(data.requestedFormattedDate ?? data.formattedDate ?? 'today');
@@ -128,7 +171,20 @@
           <div>
             <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Today's answer</p>
             <h2 class="mt-2 text-3xl font-black text-slate-900">{data.color.name}</h2>
-            <p class="mt-2 font-mono text-lg font-bold text-indigo-600">{data.color.hex}</p>
+            <div class="mt-2 flex flex-wrap items-center gap-3">
+              <p class="font-mono text-lg font-bold text-indigo-600">{data.color.hex}</p>
+              <button
+                onclick={copyColordleAnswer}
+                class="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-white px-3.5 py-1.5 text-xs font-bold text-indigo-700 shadow-sm transition hover:border-indigo-300 hover:bg-indigo-50"
+                aria-live="polite"
+              >
+                {#if answerCopied}
+                  <span class="text-emerald-600">✓ Copied!</span>
+                {:else}
+                  <span>⧉ Copy answer</span>
+                {/if}
+              </button>
+            </div>
             <p class="mt-3 text-sm text-slate-500">Puzzle #{data.dayNum} for {answerDateLabel}</p>
           </div>
           {#if data.yesterdayData}
@@ -193,7 +249,7 @@
           </p>
         </div>
 
-        <form class="mt-6 flex overflow-hidden rounded-2xl border border-indigo-200 bg-white shadow-sm" onsubmit={(event) => event.preventDefault()}>
+        <form class="mt-6 flex overflow-hidden rounded-2xl border border-indigo-200 bg-white shadow-sm" onsubmit={handleHistorySearch}>
           <input
             bind:value={historySearch}
             type="search"
@@ -208,7 +264,11 @@
           </button>
         </form>
 
-        <div class="mt-6 grid gap-3 md:grid-cols-2">
+        {#if searchFeedback}
+          <p class="mt-3 text-sm font-medium text-indigo-600" role="status">{searchFeedback}</p>
+        {/if}
+
+        <div id="colordle-history-results" class="mt-6 grid gap-3 md:grid-cols-2 scroll-mt-24">
           {#each filteredHistory as entry}
             <div class="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50/60">
               <div class="min-w-0">

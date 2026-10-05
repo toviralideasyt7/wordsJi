@@ -14,6 +14,8 @@
   } = $props();
 
   let revealedIndices = $state<Set<number>>(new Set());
+  let copied = $state(false);
+  let copyTimer: ReturnType<typeof setTimeout> | undefined;
 
   function revealLetter(index: number) {
     if (revealedIndices.has(index)) return;
@@ -30,6 +32,32 @@
   }
 
   let isAllRevealed = $derived(revealedIndices.size === word.length);
+
+  // Dead-click fix: after the reveal there was no way to copy the answer, so
+  // clicks on the "Answer Revealed" badge went nowhere. The button always
+  // acknowledges the click, even when the clipboard API is unavailable.
+  async function copyAnswer() {
+    const text = word.toUpperCase();
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+    } catch {
+      /* Clipboard unavailable — still acknowledge the click so it never feels dead. */
+    }
+    copied = true;
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(() => (copied = false), 2000);
+  }
 </script>
 
 <div class="max-w-3xl mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 sm:p-8 border border-slate-200 dark:border-slate-700 transform transition-all hover:shadow-xl">
@@ -91,9 +119,24 @@
         Click individual tiles to reveal one letter at a time
       </div>
     {:else}
-      <div class="inline-flex items-center gap-2 px-6 py-3 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full font-bold">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-        <span>Answer Revealed</span>
+      <div class="inline-flex flex-wrap items-center justify-center gap-3">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full font-bold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span>Answer Revealed</span>
+        </div>
+        <button
+          onclick={copyAnswer}
+          class="inline-flex items-center gap-2 px-5 py-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-200 rounded-full font-bold shadow-sm hover:shadow-md hover:border-teal-300 dark:hover:border-teal-600 transition-all"
+          aria-live="polite"
+        >
+          {#if copied}
+            <svg class="w-5 h-5 text-teal-600 dark:text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            <span class="text-teal-600 dark:text-teal-300">Copied!</span>
+          {:else}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+            <span>Copy answer</span>
+          {/if}
+        </button>
       </div>
     {/if}
   </div>
