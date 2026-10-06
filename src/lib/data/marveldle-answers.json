@@ -661,5 +661,60 @@
       ]
     },
     "solvedAt": "2026-10-05T06:05:48.974Z"
+  },
+  "2026-10-06": {
+    "date": "2026-10-06",
+    "dateId": "10/6/2026 12:00:00 AM",
+    "comics": {
+      "id": "hulkling",
+      "name": "Hulkling",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Kree",
+        "Skrull"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Shapeshifting"
+      ],
+      "origin": "TarnaxIV",
+      "apparitionYear": 2005,
+      "firstApparitionComicTitle": "Young Avengers #1",
+      "keywords": [
+        "theodore altman",
+        "altman",
+        "theodore rufus teddy kaplan-altman",
+        "rufus teddy kaplan-altman",
+        "teddy kaplan-altman",
+        "emperor dorrek-vell",
+        "dorrek-vell"
+      ]
+    },
+    "mcu": {
+      "id": "amybendix",
+      "name": "Amy Bendix",
+      "gender": "Female",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Giorgia Whigham",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "bendix"
+      ]
+    },
+    "solvedAt": "2026-10-06T06:05:53.295Z"
   }
 }
