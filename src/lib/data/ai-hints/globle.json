@@ -1,0 +1,21 @@
+{
+  "game": "globle",
+  "generatedAt": "2026-10-06T12:27:28.098Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A tiny West African land, hyphenated, once ruled from Lisbon's distant hand.",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "U",
+      "definition": "A small West African country on the Atlantic coast, a former Portuguese colony with a hyphenated name.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Small, less-known nation with an unusual hyphenated name tricky to guess by proximity."
+    }
+  },
+  "prose": {
+    "2026-10-06": "The Globle puzzle for October 6, 2026 features a vowel-rich, hyphenated name where four different letters each repeat twice. Solvers of 2026-10-06 should watch the Atlantic coast of West Africa to narrow in on this compact answer."
+  }
+}

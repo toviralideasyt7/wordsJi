@@ -16,6 +16,12 @@
     generateBreadcrumbSchema,
     generateWebPageSchema
   } from '$lib/seo';
+  import { dailyAnswerTitle } from '$lib/seo/daily-title';
+  import type { AIHints } from '$lib/ai-hints';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -34,7 +40,15 @@
   let {
     data
   }: {
-    data: { initialAnswer: ContextoAnswer | null; latestDate: string | null; error: string | null };
+    data: {
+      initialAnswer: ContextoAnswer | null;
+      latestDate: string | null;
+      error: string | null;
+      pageTitle?: string;
+      updatedStamp?: string;
+      aiHints?: AIHints | null;
+      hintFaqs?: { question: string; answer: string }[];
+    };
   } = $props();
 
   function formatDisplayDate(dateKey: string): string {
@@ -53,7 +67,7 @@
     data.initialAnswer?.gameNumber ?? getContextoGameNumber(new Date(`${activeDate}T12:00:00`))
   );
 
-  let metaTitle = $derived(`Contexto Answer Today (${activeLabel}) - Hints and Clues`);
+  let metaTitle = $derived(data.pageTitle ?? dailyAnswerTitle('Contexto', activeGameNumber, activeLabel));
   let pageTitle = $derived(`Contexto Answer Today (${activeLabel})`);
   let pageDescription = $derived(
     `Get Contexto hints and the confirmed Contexto answer for today, ${activeLabel}. Use the dedicated archive page when you need an older Contexto answer.`
@@ -114,6 +128,25 @@
     { name: 'Today', url: 'https://wordsolverx.com/today' },
     { name: 'Contexto Answer Today', url: 'https://wordsolverx.com/contexto-answer-today' },
   ]);
+
+  const faqPageSchema = $derived(
+    JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: (data.hintFaqs ?? []).map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+      }))
+    })
+  );
+
+  const contextoAnswerWord = $derived((data.initialAnswer?.answer ?? '').toUpperCase());
+  const contextoAnswerLetters = $derived(contextoAnswerWord.split(''));
+  const contextoVowelCount = $derived(contextoAnswerLetters.filter((c) => 'AEIOU'.includes(c)).length);
+  const contextoHasRepeat = $derived(
+    new Set(contextoAnswerLetters).size !== contextoAnswerLetters.length
+  );
 </script>
 
 <svelte:head>
@@ -137,6 +170,7 @@
   <link rel="canonical" href="https://wordsolverx.com/contexto-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
+  {@html `<script type="application/ld+json">${faqPageSchema}</script>`}
 </svelte:head>
 
 <AnswerPageNoscript gameName="Contexto" answer={data.initialAnswer?.answer ?? null} />
@@ -157,6 +191,14 @@
         <span class="h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
         Updated Daily
       </div>
+    </div>
+
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp ?? ''} />
+    </div>
+
+    <div class="mb-10">
+      <AIHintCards gameName="Contexto" answer={data.initialAnswer?.answer ?? ''} hints={data.aiHints} />
     </div>
 
     <section class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] overflow-hidden mb-10">
@@ -236,6 +278,22 @@
         {/if}
       </div>
     </section>
+
+    <div class="mb-10">
+      <FactBlock
+        gameName="Contexto"
+        puzzleNumber={String(activeGameNumber)}
+        dateLong={activeLabel}
+        firstLetter={contextoAnswerLetters[0] ?? ''}
+        lastLetter={contextoAnswerLetters[contextoAnswerLetters.length - 1] ?? ''}
+        vowelCount={contextoVowelCount}
+        repeatText={contextoHasRepeat ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mb-10">
+      <PaaHints gameName="Contexto" hints={data.aiHints} />
+    </div>
 
     <KeepExploring slug="contexto" puzzleDate={data.latestDate} />
 

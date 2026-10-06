@@ -1,0 +1,21 @@
+{
+  "game": "loldle",
+  "generatedAt": "2026-10-06T12:27:43.535Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A wandering swordsman chasing wind, haunted by a brother's wrongful death.",
+      "clue1": "An Ionian blade dancer wielding gusts of air.",
+      "starts_with": "Y",
+      "ends_with": "C",
+      "definition": "League of Legends champion, an exiled Ionian swordsman who commands wind through his blade.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Popular champion but short name with uncommon letters can trick guessers early."
+    }
+  },
+  "prose": {
+    "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds."
+  }
+}

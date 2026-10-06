@@ -12,6 +12,10 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
 
@@ -22,6 +26,10 @@
     data.schemas ? stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) : null
   );
   const player = $derived(data.entry?.player ?? null);
+  const answerName = $derived(player?.player_name ?? '');
+  const answerLetters = $derived(answerName.toLowerCase().replace(/[^a-z]/g, '').split(''));
+  const answerVowelCount = $derived(answerLetters.filter((c: string) => 'aeiou'.includes(c)).length);
+  const answerHasRepeat = $derived(new Set(answerLetters).size !== answerLetters.length);
 </script>
 
 <svelte:head>
@@ -114,6 +122,10 @@
         </div>
       </section>
 
+      <div class="mt-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
       <!-- Hints -->
       <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
         <h2 class="text-2xl font-bold text-slate-900 mb-5">Hints for today's Batter Up</h2>
@@ -139,6 +151,10 @@
           In the real game, jersey and division give you "close" feedback: same tens digit on the number, or same league but a different division. Team and birthplace are all-or-nothing — they never score yellow.
         </p>
       </section>
+
+      <div class="mt-8">
+        <AIHintCards gameName="Batter Up" answer={answerName} hints={data.aiHints} />
+      </div>
 
       <!-- Reveal -->
       <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
@@ -173,6 +189,22 @@
           </div>
         {/if}
       </section>
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Batter Up"
+          puzzleNumber={String(data.entry.gameNumber)}
+          dateLong={data.formattedDate}
+          firstLetter={answerLetters[0] ?? ''}
+          lastLetter={answerLetters[answerLetters.length - 1] ?? ''}
+          vowelCount={answerVowelCount}
+          repeatText={answerHasRepeat ? 'Yes' : 'No'}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Batter Up" hints={data.aiHints} />
+      </div>
 
       <KeepExploring slug="batterup" puzzleDate={data.visibleDateKey} />
 

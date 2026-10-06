@@ -4,6 +4,8 @@ import {
 } from '$lib/color-answers-api';
 import { colorDiff, hexToRgb, type RGB } from '$lib/colordle';
 import { composeMetaDescription } from '$lib/seo';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { format, subDays } from 'date-fns';
 import type { PageServerLoad } from './$types';
 
@@ -360,6 +362,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         isFallback: false,
                         availableThroughFormattedDate: null,
                         yesterdayData: null,
+                        yesterday: null,
+                        updatedStamp: '',
+                        aiHints: null,
                         last100Days: [],
                         schemas: null,
                         gameNarrative: null,
@@ -387,7 +392,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 'X-Puzzle-Date': actualDateKey
         });
 
-        const pageTitle = `Colordle Answer Today (${formattedDate}) - Hints and Hex`;
+        const pageTitle = dailyAnswerTitle('Colordle', dayNum, formattedDate);
         // SEO audit chapter 6.2 / 7.2 Lever 2: put the answer (color name + hex) directly
         // in the meta description so it shows in Bing's search snippet without a click.
         // Pattern copied from the #1 organic competitor colordleanswer.today.
@@ -402,6 +407,16 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 }
         );
         const pageKeywords = `colordle answer today, colordle color puzzle, daily color solution, colordle hex code, colordle tips, colordle archive`;
+
+        const updatedStamp = updatedStampText('Colordle', dayNum, formattedDate);
+        const aiHints = mergeHints(color.name, getAIHints('colordle', actualDateKey));
+        const yesterday = yesterdayData
+                ? {
+                        number: yesterdayData.dayNum,
+                        dateLong: yesterdayData.formattedDate,
+                        answer: `${yesterdayData.color.name} ${yesterdayData.color.hex}`
+                }
+                : null;
 
         const faqItems = [
                 {
@@ -469,6 +484,14 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                                 '@type': 'Answer',
                                 text: 'Use the built-in search on this page to scan recent entries by date, color name, or hex code. For the full calendar view, visit the Colordle archive page.'
                         }
+                },
+                {
+                        '@type': 'Question',
+                        name: 'When was this page last updated?',
+                        acceptedAnswer: {
+                                '@type': 'Answer',
+                                text: updatedStamp
+                        }
                 }
         ];
 
@@ -524,6 +547,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 isFallback,
                 availableThroughFormattedDate,
                 yesterdayData,
+                yesterday,
+                updatedStamp,
+                aiHints,
                 last100Days,
                 dateKey: actualDateKey,
                 publishedDate: `${actualDateKey}T00:00:00Z`,

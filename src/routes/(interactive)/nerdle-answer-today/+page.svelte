@@ -6,6 +6,11 @@
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
         import type { NerdleModeData } from '$lib/nerdle-answers';
         import {
                 PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -88,6 +93,16 @@
                                 </div>
                         </section>
 
+                        <div class="mt-2">
+                                <UpdatedStamp stamp={data.updatedStamp} />
+                        </div>
+
+                        {#if data.classicAnswer}
+                                <div class="mb-2">
+                                        <AIHintCards gameName="Nerdle" answer={data.classicAnswer} hints={data.aiHints} />
+                                </div>
+                        {/if}
+
                         {#if modes.length > 0}
                                 <div class="space-y-8">
                                         {#each modes as mode}
@@ -154,6 +169,23 @@
                                                 The page will show all modes as soon as the latest Nerdle data is available in the worker.
                                         </p>
                                 </section>
+                        {/if}
+
+                        {#if data.classicAnswer}
+                                <div class="mt-2">
+                                        <FactBlock
+                                                gameName="Nerdle"
+                                                puzzleNumber={String(data.classicNumber ?? '')}
+                                                dateLong={data.formattedDate}
+                                                firstLetter={data.factFirstLetter ?? ''}
+                                                lastLetter={data.factLastLetter ?? ''}
+                                                vowelCount={data.factVowelCount ?? 0}
+                                                repeatText={data.factRepeatText ?? ''}
+                                        />
+                                </div>
+                                <div class="mt-8">
+                                        <PaaHints gameName="Nerdle" hints={data.aiHints} />
+                                </div>
                         {/if}
 
                         <KeepExploring slug="nerdle" puzzleDate={data.answerData?.date} />

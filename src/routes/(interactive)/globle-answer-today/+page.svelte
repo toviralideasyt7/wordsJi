@@ -8,6 +8,10 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GlobleCluesSection from '$lib/components/GlobleCluesSection.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -17,6 +21,14 @@
 
   let { data } = $props();
   const publishedDate = $derived(`${data.dateKey}T00:00:00Z`);
+  const factLetters = $derived((data.country?.name ?? '').toLowerCase().replace(/[^a-z]/g, ''));
+  const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
+  const factLastLetter = $derived((factLetters[factLetters.length - 1] ?? '').toUpperCase());
+  const factVowelCount = $derived([...factLetters].filter((c) => 'aeiou'.includes(c)).length);
+  const factRepeatCount = $derived(factLetters.length - new Set(factLetters).size);
+  const factRepeatText = $derived(
+    factRepeatCount === 0 ? 'None' : `${factRepeatCount} repeated letter${factRepeatCount === 1 ? '' : 's'}`
+  );
   const webPageSchema = $derived(
     generateWebPageSchema(
       data.meta.title,
@@ -47,6 +59,9 @@
   <meta name="twitter:image" content={data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp'} />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
+  {#if data.faqSchemaJson}
+    {@html `<script type="application/ld+json">${data.faqSchemaJson}</script>`}
+  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -60,6 +75,12 @@
       <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 mb-4">{data.meta.title}</h1>
       <p class="text-lg text-slate-600 dark:text-slate-400">Today's Globle country and hints for {data.formattedDate}</p>
     </div>
+
+    <div class="flex justify-center mb-8">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <AIHintCards gameName="Globle" answer={data.country.name} hints={data.aiHints} />
 
     <GlobleCluesSection country={data.country} date={data.formattedDate}>
       <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] overflow-hidden">
@@ -117,6 +138,22 @@
         </div>
       </div>
     </GlobleCluesSection>
+
+    <div class="mb-8">
+      <FactBlock
+        gameName="Globle"
+        puzzleNumber={data.dateKey}
+        dateLong={data.formattedDate}
+        firstLetter={factFirstLetter}
+        lastLetter={factLastLetter}
+        vowelCount={factVowelCount}
+        repeatText={factRepeatText}
+      />
+    </div>
+
+    <div class="mb-8">
+      <PaaHints gameName="Globle" hints={data.aiHints} />
+    </div>
 
     <KeepExploring slug="globle" puzzleDate={data.dateKey} />
 

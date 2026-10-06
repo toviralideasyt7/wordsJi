@@ -1,4 +1,6 @@
 import type { PageServerLoad } from './$types';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import {
         getNerdleAllModeAnswerForDate,
         type NerdleAllModeAnswerData,
@@ -49,8 +51,23 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         : `public, max-age=0, s-maxage=${fallbackCacheTtlSeconds}, stale-while-revalidate=300`
         });
 
-        const pageTitle = `Nerdle Answer Today (${formattedDate}) - All Modes`;
+        // Bing ranking components (2026-10-06): title built from the shared daily
+        // title pattern, keyed on the puzzle-window date (formattedDate) so a
+        // "today" page can never carry tomorrow's date or answer here. The answer
+        // stays out of the title and meta description (snippet tease, not reveal).
+        const classicAnswerEntry = answerData.modes.find((mode) => mode.id === 'classic')?.answers[0];
+        const classicAnswer = classicAnswerEntry?.answer ?? '';
+        const classicNumber = Number.isFinite(answerData.classicPuzzleNumber) ? answerData.classicPuzzleNumber : '';
+        const pageTitle = dailyAnswerTitle('Nerdle', classicNumber, formattedDate);
         const pageDescription = `Get every Nerdle answer for ${formattedDate}, covering Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant, all solved on one page.`;
+        const updatedStamp = updatedStampText('Nerdle', classicNumber, formattedDate);
+        const aiHints = mergeHints(classicAnswer, getAIHints('nerdle', answerData.date));
+
+        // FactBlock values derived from the classic equation.
+        const factChars = classicAnswer.toLowerCase().replace(/[^a-z0-9]/g, '');
+        const factVowelCount = [...classicAnswer.toLowerCase()].filter((c) => 'aeiou'.includes(c)).length;
+        const factHasRepeat = factChars.split('').some((c, i, a) => a.indexOf(c) !== a.lastIndexOf(c));
+
         const faqItems = [
                 {
                         question: `What is the Nerdle classic answer for ${formattedDate}?`,
@@ -67,7 +84,8 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         question: 'Where can I solve old Nerdle puzzles?',
                         answer:
                                 'Use the Nerdle Solver and the Nerdle Archive on WordSolverX to check older dates, mode answers, and puzzle history.'
-                }
+                },
+                { question: 'When was this page last updated?', answer: updatedStamp }
         ];
 
         const schemas = JSON.stringify([
@@ -138,6 +156,14 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                 answerData,
                 formattedDate,
                 faqItems,
+                updatedStamp,
+                aiHints,
+                classicAnswer,
+                classicNumber,
+                factFirstLetter: factChars[0]?.toUpperCase() ?? '',
+                factLastLetter: factChars[factChars.length - 1]?.toUpperCase() ?? '',
+                factVowelCount,
+                factRepeatText: factHasRepeat ? 'Yes' : 'No',
                 meta: {
                         title: pageTitle,
                         description: pageDescription,

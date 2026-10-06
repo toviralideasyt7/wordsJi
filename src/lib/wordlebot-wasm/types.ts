@@ -171,6 +171,15 @@ export interface WordlebotPageConfig {
 		href: string;
 	};
 	/**
+	 * Intent-split callout rendered between the header and the solver card:
+	 * routes visitors who want the daily answer to the -answer-today page.
+	 */
+	intentSplit?: {
+		label: string;
+		linkText: string;
+		href: string;
+	};
+	/**
 	 * Puzzle date the solver's answer list and daily data were last rolled
 	 * forward to (YYYY-MM-DD). Rendered in the page body next to the author and
 	 * the corrections link, and the same value the Article JSON-LD dates from.

@@ -6,6 +6,7 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
+  import type { AIHints } from '$lib/ai-hints';
   import type { KeepExploringSlug } from '$lib/keep-exploring';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -59,7 +60,11 @@
     seoContent,
     crossLinks,
     schemas,
-    data
+    data,
+    stampSnippet = null,
+    hintsSnippet = null,
+    factsSnippet = null,
+    paaSnippet = null
   }: {
     gameKey: string;
     gameTitle: string;
@@ -78,7 +83,23 @@
       latestDate?: string | null;
       meta?: PageMeta;
       schemas?: object | string;
+      // Optional Bing-ranking wiring (only smashdle-answer-today-updated supplies these today).
+      updatedStamp?: string;
+      aiHints?: AIHints;
+      classicChampion?: string;
+      factData?: {
+        puzzleNumber: string;
+        dateLong: string;
+        firstLetter: string;
+        lastLetter: string;
+        vowelCount: number;
+        repeatText: string;
+      };
     };
+    stampSnippet?: Snippet | null;
+    hintsSnippet?: Snippet | null;
+    factsSnippet?: Snippet | null;
+    paaSnippet?: Snippet | null;
   } = $props();
 
   let answers = $derived(data?.answers ?? []);
@@ -335,6 +356,8 @@
   </header>
 
   <div class="max-w-6xl mx-auto px-3 sm:px-4 py-8">
+    {@render stampSnippet?.()}
+    {@render hintsSnippet?.()}
     {#if loading}
       <div class={`grid ${gridCols} gap-6`}>
         {#each Array(modes.length) as _}
@@ -409,6 +432,9 @@
           </div>
         </section>
       {/each}
+
+      {@render factsSnippet?.()}
+      {@render paaSnippet?.()}
 
       <KeepExploring slug={gameKey as KeepExploringSlug} puzzleDate={data?.latestDate ?? null} />
 

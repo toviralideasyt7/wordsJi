@@ -1,6 +1,8 @@
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { TOTAL_PHRASES, getAnswerForDate } from '$lib/phrazle/phrases';
 import { generateWebPageSchema } from '$lib/seo';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 
 export const prerender = true;
 export const csr = false;
@@ -49,10 +51,17 @@ export const load = () => {
 	const today = getPuzzleDateForGame('phrazle');
 	const todayAnswers = getDayAnswers(today);
 	const todayLabel = formatDisplayDate(todayAnswers.date);
-	const metaTitle = `Phrazle Answer Today (${todayLabel}) - Daily Answers`;
+	// Bing ranking components (2026-10-06): title built from the shared daily
+	// title pattern, keyed on the puzzle-window date (todayLabel) so a "today"
+	// page can never carry tomorrow's date or answer here. The answer stays out
+	// of the title and meta description (snippet tease, not reveal). The morning
+	// phrase index is the primary puzzle number.
+	const metaTitle = dailyAnswerTitle('Phrazle', todayAnswers.morning.index, todayLabel);
 	const pageTitle = `Phrazle Answer Today (${todayLabel})`;
 	const pageDescription = `Get Phrazle hints and the confirmed morning and afternoon Phrazle answers for today, ${todayLabel}. Use the archive page for older phrase pairs.`;
 	const pageKeywords = `phrazle answer today, phrazle answer, phrazle hint, phrazle hint today, phrazle answer for ${todayLabel}`;
+	const updatedStamp = updatedStampText('Phrazle', todayAnswers.morning.index, todayLabel);
+	const aiHints = mergeHints(todayAnswers.morning.phrase, getAIHints('phrazle', todayAnswers.date));
 	const faqs = [
 		{
 			question: 'What is Phrazle?',
@@ -73,7 +82,8 @@ export const load = () => {
 			question: 'Why are there two puzzles?',
 			answer:
 				'Phrazle releases two puzzles per day, so each date has a morning phrase and an afternoon phrase.'
-		}
+		},
+		{ question: 'When was this page last updated?', answer: updatedStamp }
 	];
 
 	const webPageSchema = generateWebPageSchema(
@@ -81,6 +91,24 @@ export const load = () => {
 		pageDescription,
 		'https://wordsolverx.com/phrazle-answer-today'
 	);
+
+	// FAQPage schema built from the page FAQ array (wordle pattern).
+	const faqSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.question,
+			acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+		}))
+	};
+
+	// FactBlock values from the morning phrase.
+	const morningLetters = todayAnswers.morning.phrase.toLowerCase().replace(/[^a-z]/g, '');
+	const morningVowelCount = [...morningLetters].filter((c) => 'aeiou'.includes(c)).length;
+	const morningHasDouble = morningLetters
+		.split('')
+		.some((c, i, a) => a.indexOf(c) !== a.lastIndexOf(c));
 
 	return {
 		totalPhrases: TOTAL_PHRASES,
@@ -91,6 +119,12 @@ export const load = () => {
 		pageDescription,
 		pageKeywords,
 		faqs,
-		schemas: JSON.stringify([webPageSchema])
+		updatedStamp,
+		aiHints,
+		morningVowelCount,
+		morningHasDouble,
+		morningStartLetter: morningLetters[0]?.toUpperCase() ?? '',
+		morningEndLetter: morningLetters[morningLetters.length - 1]?.toUpperCase() ?? '',
+		schemas: JSON.stringify([webPageSchema, faqSchema])
 	};
 };

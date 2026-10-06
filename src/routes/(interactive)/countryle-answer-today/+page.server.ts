@@ -1,6 +1,9 @@
 import { getCountryleArchiveDates, getCountryleArchiveEntry, getCountryleToday } from '$lib/countryle-data';
 import { fetchLiveCountryleToday } from '$lib/live-answer-sources';
 import { getMainDailyDateKey } from '$lib/main-daily-date';
+import { format, subDays } from 'date-fns';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import {
 	generateBreadcrumbSchema,
 	generateSoftwareApplicationSchema,
@@ -48,12 +51,43 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			: recentEntries;
 
 	const formattedDate = formatDisplayDate(displayDateKey);
-	const pageTitle = `Countryle Answer Today (${formattedDate}) - Country Clues`;
+	// Stream 4 (2026-10-06): shared daily title/stamp. Number falls back to the
+	// date key itself when no game number is known — never fabricated.
+	const puzzleNumber: string | number = today?.gameNumber ?? displayDateKey;
+	const pageTitle = dailyAnswerTitle('Countryle', puzzleNumber, formattedDate);
+	const updatedStamp = updatedStampText('Countryle', puzzleNumber, formattedDate);
 	const pageDescription = today
 		? `Get today's Countryle answer for ${formattedDate}. See the country, the key clues, and quick links to the Countryle archive and the Countryle solver.`
 		: 'Get the Countryle answer for today, plus the country clues, the archive, and the Countryle solver.';
 	const pageUrl = 'https://wordsolverx.com/countryle-answer-today';
 	const isFallback = displayDateKey !== targetDateKey;
+
+	// FAQPage (wordle pattern): the updated-stamp Q&A feeds its own schema node
+	// because the page-level strip removes FAQPage from data.schemas.
+	const hintFaqs = [{ question: 'When was this page last updated?', answer: updatedStamp }];
+	const faqSchemaJson = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: hintFaqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.question,
+			acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+		}))
+	});
+
+	// AI hint cards: deterministic letter analysis merged with any stored hints.
+	const aiHints = mergeHints(today?.country.country ?? '', getAIHints('countryle', targetDateKey));
+
+	// Yesterday's entry comes from the real archive — never fabricated.
+	const yesterdayKey = format(subDays(new Date(`${displayDateKey}T12:00:00Z`), 1), 'yyyy-MM-dd');
+	const yesterdayEntry = recentEntriesWithToday.find((entry) => entry.date === yesterdayKey);
+	const yesterday = yesterdayEntry
+		? {
+				number: yesterdayEntry.gameNumber,
+				dateLong: formatDisplayDate(yesterdayEntry.date),
+				answer: yesterdayEntry.country.country
+			}
+		: null;
 
 	setHeaders({
 		'X-Puzzle-Date': displayDateKey,
@@ -73,7 +107,12 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	return {
 		today,
 		recentEntries: recentEntriesWithToday,
+		yesterday,
 		formattedDate,
+		updatedStamp,
+		hintFaqs,
+		faqSchemaJson,
+		aiHints,
 		schemas,
 		meta: {
 			title: pageTitle,

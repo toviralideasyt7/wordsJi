@@ -103,6 +103,7 @@ export const EVERGREEN_STATIC_ROUTES = [
   '/waffle-solver',
   '/weaver-solver',
   '/word-ladder-solver',
+  '/wordle-hardest-answers',
   '/wordle-solver',
   '/worldle-solver',
   '/3-letter-wordle-solver',
@@ -239,8 +240,28 @@ function buildColordleDatedAnswerRoutes(now = new Date()) {
 
 export const COLORDLE_DATED_ANSWER_ROUTES = buildColordleDatedAnswerRoutes();
 
+
+// --- Wordle letter-hint micro pages (/wordle-hints/*) ---
+// Static, prerendered daily-hint pages. The puzzle date is the puzzle-window
+// date (getPuzzleDateForGame('wordle')) resolved in each page's server load,
+// never the build date.
+export const WORDLE_HINT_ROUTES = [
+  '/wordle-hints/first-letter',
+  '/wordle-hints/first-two-letters',
+  '/wordle-hints/middle-letter',
+  '/wordle-hints/last-two-letters',
+  '/wordle-hints/last-letter',
+  '/wordle-hints/vowel-count',
+  '/wordle-hints/consonant-count',
+  '/wordle-hints/repeating-letters',
+  '/wordle-hints/letter-pattern',
+  '/wordle-hints/unique-letters',
+  '/wordle-hints/starts-with-vowel',
+  '/wordle-hints/word-definition'
+];
+
 export const PRERENDER_ENTRIES = [
-  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_DATED_ANSWER_ROUTES, ...COLORDLE_DATED_ANSWER_ROUTES])
+  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_HINT_ROUTES, ...WORDLE_DATED_ANSWER_ROUTES, ...COLORDLE_DATED_ANSWER_ROUTES])
 ];
 
 export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
@@ -248,10 +269,27 @@ export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(
 );
 
 // Split the sitemap into two files:
-//  - MAIN_SITEMAP_ENTRIES: everything except Wordle dated answer pages (served at /sitemap.xml)
+//  - MAIN_SITEMAP_ENTRIES: everything except dated answer pages (served at /sitemap.xml)
 //  - WORDLE_ARCHIVE_SITEMAP_ENTRIES: only /wordle-answer-for-{month}-{day}-{year} pages (served at /wordle-archive-sitemap.xml)
+// Dated families (wordle, colordle + the 10 rolling families) are excluded from
+// the main sitemap and served by their own per-game dated sitemaps instead.
+const DATED_SITEMAP_PREFIXES = [
+  '/wordle-answer-for-',
+  '/colordle-answer-for-',
+  '/semantle-answer-for-',
+  '/searchle-answer-for-',
+  '/betweenle-answer-for-',
+  '/phrazle-answer-for-',
+  '/worgle-answer-for-',
+  '/worldle-answer-for-',
+  '/canuckle-answer-for-',
+  '/spotle-answer-for-',
+  '/batterup-answer-for-',
+  '/marveldle-answer-for-'
+];
+
 export const MAIN_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(
-  (route) => !route.startsWith('/wordle-answer-for-') && !route.startsWith('/colordle-answer-for-')
+  (route) => !DATED_SITEMAP_PREFIXES.some((prefix) => route.startsWith(prefix))
 );
 
 export const WORDLE_ARCHIVE_SITEMAP_ENTRIES = SITEMAP_ENTRIES.filter(

@@ -1,0 +1,21 @@
+{
+  "game": "searchle",
+  "generatedAt": "2026-10-06T12:27:14.436Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Grow a bit more clever, and this is what you become.",
+      "clue1": "The comparative form of being intelligent.",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "More intelligent, quick-witted, or clever; the comparative form of smart.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common comparative word, but seven letters with a repeated consonant may slow solvers."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Searchle puzzle #73 for October 6, 2026 offers a seven-letter word with two vowels. This Searchle entry begins with S and ends with R, featuring a single repeated letter."
+  }
+}

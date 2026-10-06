@@ -8,6 +8,11 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import PhoodleAnswerCard from '$lib/components/PhoodleAnswerCard.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateBreadcrumbSchema, generateWebPageSchema } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -22,6 +27,22 @@
       "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordSolverX."
   );
   const publishedDate = $derived(data.dateKey ? `${data.dateKey}T00:00:00Z` : null);
+  // FAQPage schema built from the server's hintFaqs (wordle pattern).
+  const faqSchemaNode = $derived(
+    (data.hintFaqs?.length ?? 0) > 0
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: (data.hintFaqs ?? []).map((faq: { question: string; answer: string }) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+            }))
+          }
+        ]
+      : []
+  );
   let pageSchema = $derived(
     JSON.stringify([
       generateWebPageSchema(
@@ -37,7 +58,8 @@
         { name: 'Home', url: 'https://wordsolverx.com' },
         { name: 'Today', url: 'https://wordsolverx.com/today' },
         { name: 'Phoodle Answer Today', url: 'https://wordsolverx.com/phoodle-answer-today' }
-      ])
+      ]),
+      ...faqSchemaNode
     ])
   );
 </script>
@@ -89,6 +111,17 @@
         <p class="text-lg text-slate-600 font-medium">{data.formattedDate}</p>
       </header>
 
+      <div class="mb-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mb-8">
+        <AIHintCards gameName="Phoodle" answer={data.upperWord ?? ''} hints={data.aiHints} />
+        <p class="mt-3 text-center text-sm text-slate-500">
+          Need help solving? <a href="/phoodle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Phoodle Solver →</a>
+        </p>
+      </div>
+
       <!-- Answer Card -->
       <PhoodleAnswerCard
         word={data.word}
@@ -96,6 +129,33 @@
         description={data.description}
         recipe_name={data.recipe_name}
       />
+
+      {#if data.yesterday}
+        <div class="mt-8">
+          <YesterdayBlock
+            gameName="Phoodle"
+            puzzleNumber={String(data.yesterday.number)}
+            dateLong={data.yesterday.dateLong}
+            answer={data.yesterday.answer}
+          />
+        </div>
+      {/if}
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Phoodle"
+          puzzleNumber={String(data.phoodleNumber ?? '')}
+          dateLong={data.formattedDate}
+          firstLetter={data.startLetter ?? ''}
+          lastLetter={data.endLetter ?? ''}
+          vowelCount={data.vowelCount ?? 0}
+          repeatText={data.hasDouble ? 'Yes' : 'No'}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Phoodle" hints={data.aiHints} />
+      </div>
 
       <!-- Quick Links -->
       <div class="flex justify-center gap-4 mb-16">

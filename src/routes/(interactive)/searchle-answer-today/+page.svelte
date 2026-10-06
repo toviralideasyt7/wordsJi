@@ -8,6 +8,12 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
   import type { SearchleDailyPuzzle } from '$lib/searchle/daily';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -23,7 +29,16 @@
     data: {
       totalPuzzles: number;
       todayPuzzle: SearchleDailyPuzzle;
+      searchleNumber: number;
+      updatedStamp: string;
+      aiHints: AIHints;
+      yesterday: { number: number; dateLong: string; answer: string } | null;
+      vowelCount: number;
+      hasDouble: boolean;
+      startLetter: string;
+      endLetter: string;
       meta?: {
+        title?: string;
         description?: string;
       };
     };
@@ -42,7 +57,7 @@
 
   const todayLabel = $derived(formatDisplayDate(data.todayPuzzle.date));
   const publishedDate = $derived(`${data.todayPuzzle.date}T00:00:00Z`);
-  const metaTitle = $derived(`Searchle Answer Today (${todayLabel}) - Daily Prompt`);
+  const metaTitle = $derived(data.meta?.title ?? `Searchle Answer Today (${todayLabel}) - Daily Prompt`);
   const pageTitle = $derived(`Searchle Answer Today (${todayLabel})`);
   const pageDescription = $derived(
     data.meta?.description ??
@@ -72,8 +87,23 @@
       question: 'Where does the data come from?',
       answer:
         "Searchle answers come from the game's official daily puzzle list."
+    },
+    {
+      question: 'When was this page last updated?',
+      answer: data.updatedStamp ?? ''
     }
   ];
+
+  // FAQPage schema built from the page FAQ array (wordle pattern).
+  const faqSchema = $derived({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+    }))
+  });
 
   const webPageSchema = $derived({
     ...generateWebPageSchema(
@@ -101,6 +131,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://wordsolverx.com/searchle-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
+  {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -124,6 +155,14 @@
         <span class="h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
         Updated Daily
       </div>
+    </div>
+
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mb-8">
+      <AIHintCards gameName="Searchle" answer={todayPuzzle.answer.toUpperCase()} hints={data.aiHints} />
     </div>
 
     <div class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden mb-8">
@@ -165,6 +204,33 @@
           </a>
         </div>
       </div>
+    </div>
+
+    {#if data.yesterday}
+      <div class="mb-8">
+        <YesterdayBlock
+          gameName="Searchle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+
+    <div class="mb-8">
+      <FactBlock
+        gameName="Searchle"
+        puzzleNumber={String(data.searchleNumber ?? '')}
+        dateLong={todayLabel}
+        firstLetter={data.startLetter ?? ''}
+        lastLetter={data.endLetter ?? ''}
+        vowelCount={data.vowelCount ?? 0}
+        repeatText={data.hasDouble ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mb-8">
+      <PaaHints gameName="Searchle" hints={data.aiHints} />
     </div>
 
     <div class="bg-white border border-slate-200 rounded-2xl shadow-lg p-6 mb-8">

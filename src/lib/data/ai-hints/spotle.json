@@ -1,0 +1,21 @@
+{
+  "game": "spotle",
+  "generatedAt": "2026-10-06T12:27:16.927Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "True grit launched this young star who also sings her own pop tunes.",
+      "clue1": "Oscar-nominated teen actress turned chart-climbing pop singer.",
+      "starts_with": "H",
+      "ends_with": "D",
+      "definition": "American actress and singer known for True Grit, Pitch Perfect, and hits like 'Love Myself'.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A two-word celebrity name with unusual spelling and many repeated vowels."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Spotle for October 6, 2026 (Day 1663) features a two-word name beginning with H and ending with D. This puzzle's letter pattern packs seven vowels, with one letter repeating four times."
+  }
+}

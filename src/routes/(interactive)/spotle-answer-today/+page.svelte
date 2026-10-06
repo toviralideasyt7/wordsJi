@@ -16,6 +16,12 @@
         } from '$lib/authors';
         import type { SpotleAnswer, SpotleArtist } from '$lib/spotle';
         import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+        import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+        import AIHintCards from '$lib/components/AIHintCards.svelte';
+        import FactBlock from '$lib/components/FactBlock.svelte';
+        import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+        import PaaHints from '$lib/components/PaaHints.svelte';
+        import type { AIHints } from '$lib/ai-hints';
 
         let { data }: {
                 data: {
@@ -36,6 +42,17 @@
                         meta: { title: string; description: string; keywords?: string };
                         stats: { totalArtists: number; totalAnswers: number; lastSyncedAt: string | null };
                         labels: { countryNames: Record<string, string>; genderNames: Record<string, string> };
+                        updatedStamp: string;
+                        aiHints: AIHints;
+                        yesterday: { number: number; dateLong: string; answer: string } | null;
+                        factData: {
+                                puzzleNumber: string;
+                                dateLong: string;
+                                firstLetter: string;
+                                lastLetter: string;
+                                vowelCount: number;
+                                repeatText: string;
+                        };
                 };
         } = $props();
 
@@ -119,6 +136,16 @@
                                 </div>
                         </div>
                 </header>
+
+                <div class="mt-10">
+                        <UpdatedStamp stamp={data.updatedStamp} />
+                </div>
+
+                {#if todayArtist}
+                        <div class="mt-10">
+                                <AIHintCards gameName="Spotle" answer={todayArtist.artist} hints={data.aiHints} />
+                        </div>
+                {/if}
 
                 <section id="spotle-answer-card" class="mt-10 grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
                         <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
@@ -213,6 +240,33 @@
                                 </div>
                         </div>
                 </section>
+
+                {#if data.yesterday}
+                        <div class="mt-10">
+                                <YesterdayBlock
+                                        gameName="Spotle"
+                                        puzzleNumber={String(data.yesterday.number)}
+                                        dateLong={data.yesterday.dateLong}
+                                        answer={data.yesterday.answer}
+                                />
+                        </div>
+                {/if}
+
+                <div class="mt-10">
+                        <FactBlock
+                                gameName="Spotle"
+                                puzzleNumber={data.factData.puzzleNumber}
+                                dateLong={data.factData.dateLong}
+                                firstLetter={data.factData.firstLetter}
+                                lastLetter={data.factData.lastLetter}
+                                vowelCount={data.factData.vowelCount}
+                                repeatText={data.factData.repeatText}
+                        />
+                </div>
+
+                <div class="mt-10">
+                        <PaaHints gameName="Spotle" hints={data.aiHints} />
+                </div>
 
                 <KeepExploring slug="spotle" puzzleDate={data.todayStr} />
 

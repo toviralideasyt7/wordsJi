@@ -2,6 +2,7 @@ import { formatDate } from '$lib/utils';
 import { getColordleDataForDate } from '$lib/colordle-date';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { generatePersonAuthorSchema, composeMetaDescription } from '$lib/seo';
+import { getDatedProse, deterministicProse } from '$lib/ai-hints';
 import { parseMonthDayYearKey, toArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
 import type { PageServerLoad } from './$types';
 
@@ -197,6 +198,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	const prevDateKey = prevKey >= '2023-08-07' ? toMonthDayYearKey(prevDate) : null;
 	const nextDateKey = nextKey < todayKey ? toMonthDayYearKey(nextDate) : null;
 	const nextIsToday = nextKey === todayKey;
+	const prevDateLabel = prevDateKey ? formatDate(prevDate) : null;
+	const nextDateLabel = nextDateKey ? formatDate(nextDate) : null;
+
+	// Unique two-sentence prose per puzzle: stored AI prose when it exists for
+	// this date, otherwise the deterministic fallback computed from the answer.
+	const prose = colorName
+		? (getDatedProse('colordle', isoDateKey) ??
+			deterministicProse('Colordle', formattedDate, dayNum ? `#${dayNum}` : formattedDate, colorName))
+		: null;
 
 	// Color facts computed from the hex itself: unique per page, distinct
 	// indexable text on every dated URL for Bing.
@@ -359,6 +369,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		prevDateKey,
 		nextDateKey,
 		nextIsToday,
+		prevDateLabel,
+		nextDateLabel,
+		prose,
 		colorFacts,
 		weekLinks,
 		bodyHtml,

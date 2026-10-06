@@ -1,0 +1,21 @@
+{
+  "game": "colorfle",
+  "generatedAt": "2026-10-06T12:27:37.707Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "Zesty citrus meets cool breath and sunshine, blended bright upon the palette.",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "W",
+      "definition": "A blend of a bright citrus-green, a pale cool green, and a vivid sunny hue.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Three similar green-yellow shades are tough to distinguish and mix in correct proportions."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Colorfle's puzzle #1625 for October 6, 2026 blends three closely related bright shades. The combined letter pattern runs from L to W and features seven vowels spread across the words."
+  }
+}

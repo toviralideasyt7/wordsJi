@@ -177,6 +177,21 @@
                         {/if}
                 </header>
 
+                {#if config.intentSplit}
+                        <!-- Intent split: answer-seekers go to the daily page, solvers stay. -->
+                        <div class="mt-6 rounded-2xl border border-teal-200 bg-teal-50 px-5 py-4">
+                                <p class="text-sm leading-relaxed text-slate-700">
+                                        {config.intentSplit.label}
+                                        <a
+                                                class="font-bold text-teal-700 underline-offset-4 hover:underline"
+                                                href={config.intentSplit.href}
+                                        >
+                                                {config.intentSplit.linkText}
+                                        </a>
+                                </p>
+                        </div>
+                {/if}
+
                 <!-- Solver card: the framing is the page's, the engine inside is untouched. -->
                 <section
                         class="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"

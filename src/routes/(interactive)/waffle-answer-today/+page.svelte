@@ -10,6 +10,10 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiArrowRight from '$lib/components/icons/FiArrowRight.svelte';
   import FiHash from '$lib/components/icons/FiHash.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -83,6 +87,17 @@
     <p class="text-xl text-slate-600">Here are the solutions for today's Waffle puzzle ({data.formattedDate}).</p>
   </div>
 
+  <div class="mb-8">
+    <UpdatedStamp stamp={data.updatedStamp} />
+  </div>
+
+  <div class="mb-8">
+    <AIHintCards gameName="Waffle" answer={data.words?.join(', ') ?? ''} hints={data.aiHints} />
+    <p class="mt-4 text-center text-sm text-slate-600">
+      Need help solving? <a href="/waffle-solver" class="font-semibold text-amber-700 hover:text-amber-800 underline">Try the free Waffle Solver &rarr;</a>
+    </p>
+  </div>
+
   <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 mb-8">
     <WaffleAnswerCard puzzle={data.puzzle} solution={data.solution} date={data.date} />
 
@@ -136,6 +151,22 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="mb-8">
+    <FactBlock
+      gameName="Waffle"
+      puzzleNumber={data.factData.puzzleNumber}
+      dateLong={data.factData.dateLong}
+      firstLetter={data.factData.firstLetter}
+      lastLetter={data.factData.lastLetter}
+      vowelCount={data.factData.vowelCount}
+      repeatText={data.factData.repeatText}
+    />
+  </div>
+
+  <div class="mb-8">
+    <PaaHints gameName="Waffle" hints={data.aiHints} />
   </div>
 
   <div class="flex justify-between items-center mb-12">

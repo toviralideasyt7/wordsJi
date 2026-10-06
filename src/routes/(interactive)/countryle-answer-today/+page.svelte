@@ -8,6 +8,11 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { formatPopulation, formatTemperature } from '$lib/countryle';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
@@ -36,6 +41,16 @@
     'South America': '\u{1F30E}',
     Antarctica: '\u{2744}\u{FE0F}'
   };
+
+  const countryName = $derived(data.today?.country.country ?? '');
+  const factLetters = $derived(countryName.toLowerCase().replace(/[^a-z]/g, ''));
+  const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
+  const factLastLetter = $derived((factLetters[factLetters.length - 1] ?? '').toUpperCase());
+  const factVowelCount = $derived([...factLetters].filter((c) => 'aeiou'.includes(c)).length);
+  const factRepeatCount = $derived(factLetters.length - new Set(factLetters).size);
+  const factRepeatText = $derived(
+    factRepeatCount === 0 ? 'None' : `${factRepeatCount} repeated letter${factRepeatCount === 1 ? '' : 's'}`
+  );
 </script>
 
 <svelte:head>
@@ -54,6 +69,9 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
+  {#if data.faqSchemaJson}
+    {@html `<script type="application/ld+json">${data.faqSchemaJson}</script>`}
+  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -82,6 +100,14 @@
           </div>
         </div>
       </section>
+
+      <div class="mt-6 flex justify-center">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mt-6">
+        <AIHintCards gameName="Countryle" answer={data.today.country.country} hints={data.aiHints} />
+      </div>
 
       <!-- Answer Card -->
       <section class="mt-8 rounded-[2rem] border border-teal-100 bg-white p-8 shadow-[0_20px_60px_rgba(16,185,129,0.06)] sm:p-10">
@@ -143,6 +169,33 @@
           {/if}
         </details>
       </section>
+
+      {#if data.yesterday}
+        <div class="mt-8">
+          <YesterdayBlock
+            gameName="Countryle"
+            puzzleNumber={String(data.yesterday.number)}
+            dateLong={data.yesterday.dateLong}
+            answer={data.yesterday.answer}
+          />
+        </div>
+      {/if}
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Countryle"
+          puzzleNumber={String(data.today.gameNumber)}
+          dateLong={data.formattedDate}
+          firstLetter={factFirstLetter}
+          lastLetter={factLastLetter}
+          vowelCount={factVowelCount}
+          repeatText={factRepeatText}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Countryle" hints={data.aiHints} />
+      </div>
 
       <KeepExploring slug="countryle" puzzleDate={data.today?.date} />
 
@@ -249,6 +302,13 @@
               <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </summary>
             <p class="mt-3 text-sm leading-relaxed text-slate-600">Worldle shows you a country silhouette and you guess based on shape recognition. Countryle takes a data-driven approach instead — it gives you quantitative clues like population, surface area, average temperature, and hemisphere. Worldle tests visual geography memory, while Countryle tests statistical and comparative reasoning. Both are daily games, but they appeal to different types of geography knowledge.</p>
+          </details>
+          <details class="group py-5 first:pt-0 last:pb-0">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-slate-900">
+              When was this page last updated?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">{data.updatedStamp}</p>
           </details>
         </div>
       </section>

@@ -3,6 +3,23 @@ import { TODAY_ROUTE_GAME_MAP } from '$lib/puzzle-window';
 
 const LEGACY_MONTH_DATE_PATTERN = /^(?<month>[a-z]+)-(?<day>\d{1,2})-(?<year>\d{4})$/i;
 
+// Games with real prerendered /{game}-answer-for-{month}-{day}-{year} pages.
+// Their dated URLs are canonical and must never hit the legacy redirect below.
+const DATED_PAGE_GAMES = new Set([
+	'wordle',
+	'colordle',
+	'semantle',
+	'searchle',
+	'betweenle',
+	'phrazle',
+	'worgle',
+	'worldle',
+	'canuckle',
+	'spotle',
+	'batterup',
+	'marveldle'
+]);
+
 const EXACT_CANONICAL_REDIRECTS: Record<string, string> = {
 	'/canuckle': '/canuckle-answer-today',
 	'/5-letter-wordle-solver': '/wordle-solver',
@@ -100,12 +117,9 @@ export function getLegacyTodayRedirect(pathname: string): string | null {
 
 	const datedSlugMatch = LEGACY_DATED_SLUG_PATH.exec(pathname);
 	if (datedSlugMatch?.groups?.game && datedSlugMatch.groups.legacyDate) {
-		// Wordle and Colordle /game-answer-for-month-day-year pages are now real prerendered pages,
-		// so they must not be redirected. Other games still redirect to their "today" route.
-		if (
-			datedSlugMatch.groups.game.toLowerCase() !== 'wordle' &&
-			datedSlugMatch.groups.game.toLowerCase() !== 'colordle'
-		) {
+		// Games with real prerendered /game-answer-for-month-day-year pages must not
+		// be redirected. Other games still redirect to their "today" route.
+		if (!DATED_PAGE_GAMES.has(datedSlugMatch.groups.game.toLowerCase())) {
 			const todayRoute = getTodayRouteForLegacyGame(datedSlugMatch.groups.game);
 			const parsedDate = parseLegacyMonthDate(datedSlugMatch.groups.legacyDate);
 			if (todayRoute && parsedDate) {

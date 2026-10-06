@@ -1,0 +1,21 @@
+{
+  "game": "narutodle",
+  "generatedAt": "2026-10-06T12:27:47.675Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "A salamander-named leader whose venomous reputation ruled a hidden rain-soaked village.",
+      "clue1": "A legendary ninja associated with poison and amphibians.",
+      "starts_with": "H",
+      "ends_with": "A",
+      "definition": "Fictional ninja leader of the Hidden Rain Village, famed as a powerful war-era shinobi.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A minor but memorable character; recognizable to fans yet easy for casuals to overlook."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Narutodle challenge for October 6, 2026 (Game #887) features a five-letter name with no repeated letters. This Narutodle puzzle spotlights a figure whose name begins with H and ends with O."
+  }
+}

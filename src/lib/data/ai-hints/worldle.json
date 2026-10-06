@@ -1,0 +1,21 @@
+{
+  "game": "worldle",
+  "generatedAt": "2026-10-06T12:27:25.874Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A self-governing island where tailless cats roam and motorcycles race the mountain.",
+      "clue1": "A Crown dependency in the Irish Sea, famous for its TT races.",
+      "starts_with": "I",
+      "ends_with": "N",
+      "definition": "A self-governing British Crown dependency island located in the Irish Sea between Britain and Ireland.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known island but small and sometimes confused with mainland regions by casual players."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Worldle puzzle #1720 for October 6, 2026 points to a small island territory with a distinctive outline. The answer spans three words with no repeated letters, beginning with I and ending with N."
+  }
+}

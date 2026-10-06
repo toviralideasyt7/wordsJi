@@ -178,6 +178,26 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                 </div>
         </section>
 
+        <!-- Intent split: answer-seekers go to the daily page, solvers stay -->
+        <section class="mx-auto max-w-5xl px-4 pb-6 sm:px-6 lg:px-8">
+                <div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-relaxed text-slate-700">
+                        Looking for today's answer instead? For today's hints and the confirmed answer, see
+                        <a href="/spotle-answer-today" class="font-bold text-teal-700 underline-offset-4 hover:underline">Today's Spotle Answer →</a>
+                </div>
+        </section>
+
+        <!-- Short how-to -->
+        <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">
+                <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                        <h2 class="text-lg font-extrabold tracking-tight text-slate-900">How to use the Spotle solver</h2>
+                        <ol class="mt-3 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-slate-600">
+                                <li>Type the artist you guessed in Spotle and select them from the dropdown.</li>
+                                <li>Tap each attribute button until it matches the feedback colors from your game.</li>
+                                <li>Click Add Guess, then pick from the filtered remaining candidates for your next guess.</li>
+                        </ol>
+                </div>
+        </section>
+
         <div class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
 
                 {#if !dataLoaded}

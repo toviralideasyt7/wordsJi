@@ -25,6 +25,9 @@
 		prevDateKey: string | null;
 		nextDateKey: string | null;
 		nextIsToday: boolean;
+		prevDateLabel: string | null;
+		nextDateLabel: string | null;
+		prose: string | null;
 		colorFacts: ColorFacts | null;
 		weekLinks: WeekLink[];
 		bodyHtml: string;
@@ -43,10 +46,8 @@
 	<title>{data.title}</title>
 	<meta name="description" content={data.description} />
 	<link rel="canonical" href={data.canonicalUrl} />
-	<!-- Dated archive URLs are kept for Bing/Yandex/AI crawlers; Google is asked to
-	     concentrate on the canonical today + hub pages instead of 1,100 near-identical
-	     dated URLs. Bingbot and AI agents ignore googlebot-scoped directives. -->
-	<meta name="googlebot" content="noindex, follow" />
+	<!-- Dated archive pages are self-canonical and indexable: each carries unique
+	     per-puzzle prose and its own answer, so they stand as canonical dated URLs. -->
 	<meta property="og:title" content={data.title} />
 	<meta property="og:description" content={data.description} />
 	<meta property="og:type" content="article" />
@@ -98,6 +99,11 @@
 						with hex code <strong class="font-mono text-slate-900 dark:text-slate-50 uppercase">{data.colorHex}</strong>{/if}.{#if data.dayNum}
 						This was Colordle day {data.dayNum}.{/if}
 				</p>
+				{#if data.prose}
+					<p class="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">
+						{data.prose}
+					</p>
+				{/if}
 				{#if data.colorFacts}
 					<ul class="mt-6 grid grid-cols-3 gap-3 text-center" aria-label="Color facts">
 						<li class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-3 dark:border-slate-700 dark:bg-slate-900">
@@ -181,6 +187,29 @@
 					{/if}
 				</section>
 			{/if}
+
+			<nav class="mt-8 flex items-center justify-between border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="Older and newer Colordle answers">
+				{#if data.prevDateKey}
+					<a
+						href="/colordle-answer-for-{data.prevDateKey}"
+						rel="prev"
+						class="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-teal-700 dark:hover:text-teal-300"
+					>
+						← Older: {data.prevDateLabel}
+					</a>
+				{:else}
+					<span></span>
+				{/if}
+				{#if data.nextDateKey}
+					<a
+						href="/colordle-answer-for-{data.nextDateKey}"
+						rel="next"
+						class="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-teal-700 dark:hover:text-teal-300"
+					>
+						Newer: {data.nextDateLabel} →
+					</a>
+				{/if}
+			</nav>
 
 			{#if data.weekLinks.length > 0}
 				<nav class="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700" aria-label="More Colordle answers from this week">

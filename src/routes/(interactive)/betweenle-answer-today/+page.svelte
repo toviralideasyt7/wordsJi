@@ -20,6 +20,11 @@
     generateBreadcrumbSchema,
     generateWebPageSchema,
   } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
 
@@ -77,6 +82,15 @@
         { name: 'Betweenle Answer Today', url: data.meta.canonical },
       ]),
       generateWebPageSchema(data.meta.title, data.meta.description, data.meta.canonical),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: (data.hintFaqs ?? []).map((faq: { question: string; answer: string }) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+        }))
+      }
     ])
   );
 
@@ -148,7 +162,15 @@
       </div>
     </section>
 
+    <div class="mt-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
     <KeepExploring slug="betweenle" puzzleDate={data.todayAnswer.date} />
+
+    <div class="mt-8">
+      <AIHintCards gameName="Betweenle" answer={data.todayAnswer.word} hints={data.aiHints} />
+    </div>
 
     <section class="mt-8 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
       <div class="flex flex-wrap items-center justify-between gap-3">
@@ -202,6 +224,33 @@
         {/if}
       </div>
     </section>
+
+    {#if data.yesterday}
+      <div class="mt-8">
+        <YesterdayBlock
+          gameName="Betweenle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+
+    <div class="mt-8">
+      <FactBlock
+        gameName="Betweenle"
+        puzzleNumber={String(data.todayAnswer.puzzleNumber)}
+        dateLong={data.todaySeoDate}
+        firstLetter={wordLetters[0] ?? ''}
+        lastLetter={wordLetters[wordLetters.length - 1] ?? ''}
+        vowelCount={vowelCount}
+        repeatText={hasRepeatLetter ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mt-8">
+      <PaaHints gameName="Betweenle" hints={data.aiHints} />
+    </div>
 
     <section class="mt-8 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
       <div class="flex flex-wrap items-center justify-between gap-4">

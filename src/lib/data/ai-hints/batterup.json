@@ -1,0 +1,21 @@
+{
+  "game": "batterup",
+  "generatedAt": "2026-10-06T12:27:17.528Z",
+  "hints": {
+    "2026-10-05": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A Cuban slugger guards first base, swinging line drives for a Floridian bay crew.",
+      "clue1": "An All-Star first baseman batting for a Tampa Bay club.",
+      "starts_with": "Y",
+      "ends_with": "Z",
+      "definition": "Cuban-born Major League Baseball first baseman and All-Star hitter for the Tampa Bay Rays.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A specific baseball player known mostly to dedicated fans of the sport."
+    }
+  },
+  "prose": {
+    "2026-10-05": "Today's Batter Up challenge for October 5, 2026, marks Game #960 with a name featuring three vowels and three letters that each appear twice. This October 5, 2026 puzzle runs from Y to Z, offering a tidy test for sharp solvers."
+  }
+}

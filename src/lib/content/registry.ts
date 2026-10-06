@@ -787,6 +787,21 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
             'Practice hard mode against old boards so the rules become reflex'
           ]
         }
+      },
+      {
+        heading: 'Common ways Wordle is misspelled',
+        paragraphs: [
+          "Wordle gets typed in a hurry, so a few misspellings show up in search every day. If one of them brought you here, you are in the right place: the solver above works with the real Wordle, whatever you called it on the way in."
+        ],
+        list: {
+          title: 'The four spellings that land here',
+          items: [
+            "If you searched for 'worlde', you mean Wordle — the daily five-letter word game, and this solver filters its answer list for you.",
+            "If you typed 'wordel', you swapped the last two letters of Wordle; the game and the solver above are exactly what you were looking for.",
+            "If you typed 'wordlw', your finger slipped onto W instead of E at the end of Wordle; same game, same solver.",
+            "If you typed 'wrodle', you transposed the first two letters of Wordle; the daily puzzle and this helper work the same either way."
+          ]
+        }
       }
     ],
     faqHeading: 'Wordle solver FAQ',

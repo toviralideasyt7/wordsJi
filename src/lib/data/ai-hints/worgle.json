@@ -1,0 +1,21 @@
+{
+  "game": "worgle",
+  "generatedAt": "2026-10-06T12:27:00.378Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Pick me out from the crowd, chosen above all the rest.",
+      "clue1": "What you do when choosing the finest few.",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "To carefully choose someone or something as being the best or most suitable.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common everyday verb, but the doubled vowel can trip up some solvers."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Worgle's puzzle #1728 for October 6, 2026 features a six-letter word with a repeated vowel. The pattern spans from S to T, offering a steady midweek challenge."
+  }
+}

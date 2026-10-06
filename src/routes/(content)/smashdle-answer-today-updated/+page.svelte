@@ -1,8 +1,28 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
-  let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
+  let { data }: { data: {
+    answers: any[];
+    dateStr: string;
+    error: string | null;
+    updatedStamp?: string;
+    aiHints?: AIHints;
+    classicChampion?: string;
+    factData?: {
+      puzzleNumber: string;
+      dateLong: string;
+      firstLetter: string;
+      lastLetter: string;
+      vowelCount: number;
+      repeatText: string;
+    };
+  } } = $props();
 
   const modeConfig = {
     classic: { name: 'Smashdle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
@@ -36,7 +56,50 @@
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>
 
-<GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data}>
+{#snippet stampSnippet()}
+  {#if data.updatedStamp}
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+  {/if}
+{/snippet}
+
+{#snippet hintsSnippet()}
+  {#if data.aiHints && data.classicChampion}
+    <div class="mb-8">
+      <AIHintCards gameName="Smashdle" answer={data.classicChampion} hints={data.aiHints} />
+      <p class="mt-4 text-center text-sm text-slate-600">
+        Need help solving? <a href="/smashdle-solver" class="font-semibold text-teal-700 hover:text-teal-800 underline">Try the free Smashdle Solver &rarr;</a>
+      </p>
+    </div>
+  {/if}
+{/snippet}
+
+{#snippet factsSnippet()}
+  {#if data.factData}
+    <div class="mb-12">
+      <FactBlock
+        gameName="Smashdle"
+        puzzleNumber={data.factData.puzzleNumber}
+        dateLong={data.factData.dateLong}
+        firstLetter={data.factData.firstLetter}
+        lastLetter={data.factData.lastLetter}
+        vowelCount={data.factData.vowelCount}
+        repeatText={data.factData.repeatText}
+      />
+    </div>
+  {/if}
+{/snippet}
+
+{#snippet paaSnippet()}
+  {#if data.aiHints}
+    <section class="mb-12">
+      <PaaHints gameName="Smashdle" hints={data.aiHints} />
+    </section>
+  {/if}
+{/snippet}
+
+<GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data} {stampSnippet} {hintsSnippet} {factsSnippet} {paaSnippet}>
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">

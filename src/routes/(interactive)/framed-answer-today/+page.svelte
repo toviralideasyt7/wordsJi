@@ -9,6 +9,10 @@
   import FramedAnswerCard from '$lib/components/FramedAnswerCard.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -27,6 +31,15 @@
   );
   const featuredEntry = $derived(data.hasExactEntries ? data.entries[0] ?? null : null);
   const remainingEntries = $derived(data.hasExactEntries ? data.entries.slice(1) : []);
+
+  const factLetters = $derived((data.classicAnswer ?? '').toLowerCase().replace(/[^a-z]/g, ''));
+  const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
+  const factLastLetter = $derived((factLetters[factLetters.length - 1] ?? '').toUpperCase());
+  const factVowelCount = $derived([...factLetters].filter((c) => 'aeiou'.includes(c)).length);
+  const factRepeatCount = $derived(factLetters.length - new Set(factLetters).size);
+  const factRepeatText = $derived(
+    factRepeatCount === 0 ? 'None' : `${factRepeatCount} repeated letter${factRepeatCount === 1 ? '' : 's'}`
+  );
 </script>
 
 <svelte:head>
@@ -45,6 +58,9 @@
   <meta name="twitter:description" content={data.meta.description} />
   <meta name="twitter:image" content={`https://wordsolverx.com${data.meta.featuredImage}`} />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
+  {#if data.faqSchemaJson}
+    {@html `<script type="application/ld+json">${data.faqSchemaJson}</script>`}
+  {/if}
 </svelte:head>
 
 <AnswerPageMeta publishedDate={publishedDate} />
@@ -66,6 +82,14 @@
         <a href="/framed-archive" class="inline-flex items-center rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-white hover:bg-amber-600">Browse Archive</a>
       </div>
     </section>
+
+    <div class="flex justify-center">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    {#if data.hasExactEntries && data.classicAnswer}
+      <AIHintCards gameName="Framed" answer={data.classicAnswer} hints={data.aiHints} />
+    {/if}
 
     <section class="space-y-5">
       {#if data.hasExactEntries}
@@ -97,6 +121,20 @@
         </div>
       {/if}
     </section>
+
+    {#if data.hasExactEntries && data.classicAnswer}
+      <FactBlock
+        gameName="Framed Classic"
+        puzzleNumber={String(data.classicNumber)}
+        dateLong={data.formattedDate}
+        firstLetter={factFirstLetter}
+        lastLetter={factLastLetter}
+        vowelCount={factVowelCount}
+        repeatText={factRepeatText}
+      />
+
+      <PaaHints gameName="Framed" hints={data.aiHints} />
+    {/if}
 
     <KeepExploring slug="framed" puzzleDate={data.targetDateKey} />
 

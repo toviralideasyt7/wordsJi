@@ -1,0 +1,21 @@
+{
+  "game": "phoodle",
+  "generatedAt": "2026-10-06T12:27:23.895Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I describe a brew with a rich grainy flavor from roasted barley.",
+      "clue1": "Often used to describe beer or milkshake flavor.",
+      "starts_with": "M",
+      "ends_with": "Y",
+      "definition": "Having a flavor or aroma suggestive of malt, as in certain beers or beverages.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Short word with a single vowel and an uncommon consonant cluster makes guessing tricky."
+    }
+  },
+  "prose": {
+    "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y."
+  }
+}

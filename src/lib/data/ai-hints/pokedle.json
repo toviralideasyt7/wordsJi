@@ -1,0 +1,21 @@
+{
+  "game": "pokedle",
+  "generatedAt": "2026-10-06T12:27:51.216Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A dreamy sea creature whose tail is forever nipped by a clingy shellfish.",
+      "clue1": "A laid-back dual-type that evolved from a sluggish pink friend.",
+      "starts_with": "S",
+      "ends_with": "S",
+      "definition": "A Water/Psychic-type Pokémon, the evolved form of a notoriously slow pink creature.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A recognizable classic creature, though the seven-letter pattern and double vowel need some thought."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much."
+  }
+}

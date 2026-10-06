@@ -15,6 +15,11 @@
   import type { ApiColorfleModeAnswer } from '$lib/color-answers-api';
   import { getContrastColor } from '$lib/colorfle';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
   let revealed = $state(false);
@@ -22,6 +27,14 @@
   const publishedDate = $derived(data.publishedDate ?? null);
   const answer = $derived(data.answer ?? null);
   const recentEntries = $derived(data.recentEntries ?? []);
+  const answerSummary = $derived(
+    answer
+      ? `${answer.normal.colors.map((color) => color.name).join(', ')} / ${answer.hard.colors.map((color) => color.name).join(', ')}`
+      : ''
+  );
+  const summaryLetters = $derived(answerSummary.toLowerCase().replace(/[^a-z]/g, '').split(''));
+  const summaryVowelCount = $derived(summaryLetters.filter((c) => 'aeiou'.includes(c)).length);
+  const summaryHasRepeat = $derived(new Set(summaryLetters).size !== summaryLetters.length);
   const noscriptAnswer = $derived(
     answer
       ? `Normal: ${answer.normal.colors.map((color) => color.name).join(', ')}. Hard: ${answer.hard.colors.map((color) => color.name).join(', ')}.`
@@ -119,6 +132,14 @@
           </a>
         </div>
       </section>
+
+      <div class="mt-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mt-8">
+        <AIHintCards gameName="Colorfle" answer={answerSummary} hints={data.aiHints} />
+      </div>
 
       <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-6 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -242,6 +263,33 @@
       </section>
 
       <KeepExploring slug="colorfle" puzzleDate={data.dateKey} />
+
+      {#if data.yesterday}
+        <div class="mt-8">
+          <YesterdayBlock
+            gameName="Colorfle"
+            puzzleNumber={String(data.yesterday.number)}
+            dateLong={data.yesterday.dateLong}
+            answer={data.yesterday.answer}
+          />
+        </div>
+      {/if}
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Colorfle"
+          puzzleNumber={String(answer?.puzzleNumber ?? '')}
+          dateLong={data.formattedDate}
+          firstLetter={summaryLetters[0] ?? ''}
+          lastLetter={summaryLetters[summaryLetters.length - 1] ?? ''}
+          vowelCount={summaryVowelCount}
+          repeatText={summaryHasRepeat ? 'Yes' : 'No'}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Colorfle" hints={data.aiHints} />
+      </div>
 
       <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-8 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
         <div class="flex flex-wrap items-center justify-between gap-4">

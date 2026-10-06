@@ -1,0 +1,21 @@
+{
+  "game": "canuckle",
+  "generatedAt": "2026-10-06T12:27:14.473Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A spicy dip and a lively dance share this fiery name.",
+      "clue1": "Tomato-based dip or a rhythmic Latin dance.",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "A spicy tomato-based sauce or dip; also a lively Latin American dance style.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but the repeated-letter pattern can slow down guessers."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Canuckle's puzzle #1606 for October 6, 2026 features a five-letter word where two letters each repeat. The pattern begins and ends on the same consonant-vowel bookends, offering solvers a tidy symmetry to work with."
+  }
+}

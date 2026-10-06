@@ -1,6 +1,8 @@
-import { format } from 'date-fns';
+import { format, subDays } from 'date-fns';
 import { getWordleNumber, formatDate } from '$lib/utils';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import type { WordleAnswer } from '$lib/api';
 import { generatePersonAuthorSchema } from '$lib/seo';
 import type { PageServerLoad } from './$types';
@@ -60,13 +62,28 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const startLetter = wordleWord[0]?.toUpperCase() || '';
     const endLetter = wordleWord[wordleWord.length - 1]?.toUpperCase() || '';
 
+    const updatedStamp = updatedStampText('Wordle', wordleNumber, formattedDate);
+    const aiHints = mergeHints(wordleWord, getAIHints('wordle', todayKey));
+
     const hintFaqs = [
         { question: `What is the Wordle answer for today, ${formattedDate}?`, answer: `The Wordle answer for today, ${formattedDate}, is ${wordleWord.toUpperCase()}. This is Wordle #${wordleNumber}.` },
         { question: `How many vowels are in today's Wordle answer?`, answer: `Today's Wordle answer contains ${vowelCount} vowels.` },
         { question: `Does today's Wordle have any repeating letters?`, answer: hasDouble ? "Yes, today's Wordle has at least one repeating letter." : "No, today's Wordle does not contain any repeated letters." },
         { question: `What letter does Wordle #${wordleNumber} start with?`, answer: `Today's Wordle answer starts with the letter ${startLetter}.` },
         { question: `What is the last letter of today's Wordle?`, answer: `The Wordle answer for ${formattedDate} ends with the letter ${endLetter}.` },
+        { question: 'When was this page last updated?', answer: updatedStamp },
     ];
+
+    // Yesterday's entry for the YesterdayBlock (from the recent-answers feed).
+    const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
+    const yesterdayEntry = recentAnswers.find((a: WordleAnswer) => a.date === yesterdayKey) ?? null;
+    const yesterday = yesterdayEntry
+        ? {
+            number: yesterdayEntry.days_since_launch ?? yesterdayEntry.id,
+            dateLong: formatDate(new Date(yesterdayEntry.date)),
+            answer: yesterdayEntry.solution.toUpperCase()
+        }
+        : null;
 
     const faqSchema = {
         '@context': 'https://schema.org',
@@ -95,16 +112,11 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/wordle-answer-today' },
     };
 
-    // CTR fix 2026-09-25: never reveal the answer in the title or meta description.
-    // The "answer in snippet" experiment coincided with CTR collapsing to ~1.6% on
-    // 50k monthly Bing impressions for "wordle answer today": a snippet that hands
-    // over the answer earns the impression but loses the click. Tease with hints.
-    // Stream 4 (2026-10-05): title rewritten to the colordle benchmark pattern
-    // "[Game] Answer Today ([Date]) - [hook]" which converts at ~7.7% CTR. The
-    // date uses `today` (the same puzzle-window date the answers are keyed on),
-    // so a "today" page can never carry tomorrow's date or answer here.
-    const longTitleDate = format(today, 'MMMM d, yyyy');
-    const pageTitle = `Wordle Answer Today #${wordleNumber} (${longTitleDate}) - Hints`;
+    // Bing ranking components (2026-10-06): title built from the shared daily
+    // title pattern, keyed on the puzzle-window date (formattedDate) so a
+    // "today" page can never carry tomorrow's date or answer here. The answer
+    // stays out of the title and meta description (snippet tease, not reveal).
+    const pageTitle = dailyAnswerTitle('Wordle', wordleNumber, formattedDate);
     const pageDescription = wordleWord
         ? `Wordle answer today ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on Wordle #${wordleNumber}? Hints, letter clues and the confirmed solution, updated daily.`
         : `Wordle answer today ${formattedDate}: hints, letter clues and the confirmed solution for Wordle #${wordleNumber}, with yesterday's answer too. Updated daily.`;
@@ -118,6 +130,13 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         recentAnswers,
         directSocialImage,
         hintFaqs,
+        updatedStamp,
+        aiHints,
+        yesterday,
+        vowelCount,
+        hasDouble,
+        startLetter,
+        endLetter,
         publishedDate: new Date(normalizedWordleData?.date || today).toISOString(),
         schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),
         meta: {

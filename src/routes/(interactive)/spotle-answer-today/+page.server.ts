@@ -13,6 +13,8 @@ import {
 } from '$lib/spotle';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { composeMetaDescription } from '$lib/seo';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 
 interface SpotleDay {
 	date: string;
@@ -90,6 +92,32 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		});
 	}
 
+	const todayFormatted = format(displayDateObject, 'MMMM d, yyyy');
+	const updatedStamp = updatedStampText('Spotle', todayAnswer?.dayNumber ?? '', todayFormatted);
+	const answerString = todayArtist?.artist ?? todayAnswer?.artist ?? '';
+	const aiHints = mergeHints(answerString, getAIHints('spotle', todayStr));
+
+	const yesterdayKey = formatSpotleDate(subDays(displayDateObject, 1));
+	const yesterdayEntry = !isFallback ? last30Days.find((entry) => entry.date === yesterdayKey) ?? null : null;
+	const yesterday = yesterdayEntry
+		? {
+				number: yesterdayEntry.dayNumber,
+				dateLong: format(parseSpotleDate(yesterdayEntry.date), 'MMMM d, yyyy'),
+				answer: yesterdayEntry.artistName
+			}
+		: null;
+
+	const factLetters = answerString.toLowerCase().replace(/[^a-z]/g, '');
+	const factRepeatCount = factLetters.length - new Set(factLetters).size;
+	const factData = {
+		puzzleNumber: todayAnswer ? String(todayAnswer.dayNumber) : '',
+		dateLong: todayFormatted,
+		firstLetter: factLetters[0]?.toUpperCase() ?? '',
+		lastLetter: factLetters[factLetters.length - 1]?.toUpperCase() ?? '',
+		vowelCount: [...factLetters].filter((c) => 'aeiou'.includes(c)).length,
+		repeatText: factRepeatCount === 0 ? 'None' : String(factRepeatCount)
+	};
+
 	const faqItems = [
 		{
 			question: `What is the Spotle answer for ${format(displayDateObject, 'MMMM d, yyyy')}?`,
@@ -106,6 +134,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			question: 'Does this page show extra Spotle info besides the artist?',
 			answer:
 				'Yes. When the source provides it, this page also shows the featured track, SoundCloud link, rank, country, genre, debut year, and group details.'
+		},
+		{
+			question: 'When was this page last updated?',
+			answer: updatedStamp
 		}
 	];
 
@@ -119,8 +151,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		}))
 	};
 
-	const todayFormatted = format(displayDateObject, 'MMMM d, yyyy');
-	const metaTitle = `Spotle Answer Today (${todayFormatted}) - Artist and Clues`;
+	const metaTitle = todayAnswer
+		? dailyAnswerTitle('Spotle', todayAnswer.dayNumber, todayFormatted)
+		: `Spotle Answer Today (${todayFormatted}) - Artist and Clues`;
 	// The artist name is the only part of this sentence whose length varies (2-24 characters
 	// across the artist list), so the closing is chosen from the measured head to stay inside
 	// the 140-158 character description budget. The track title is left out for the same
@@ -187,6 +220,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		answers: activeAnswers,
 		last30Days,
 		faqItems,
+		updatedStamp,
+		aiHints,
+		yesterday,
+		factData,
 		schemaJson: JSON.stringify([webPageSchema, breadcrumbSchema, faqSchema]),
 		meta: {
 			title: metaTitle,

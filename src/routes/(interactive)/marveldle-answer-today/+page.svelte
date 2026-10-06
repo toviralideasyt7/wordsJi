@@ -6,6 +6,10 @@
   import FAQSection from '$lib/components/FAQSection.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -24,6 +28,15 @@
   );
   const comics = $derived(data.entry?.comics ?? null);
   const mcu = $derived(data.entry?.mcu ?? null);
+
+  const factLetters = $derived((comics?.name ?? '').toLowerCase().replace(/[^a-z]/g, ''));
+  const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
+  const factLastLetter = $derived((factLetters[factLetters.length - 1] ?? '').toUpperCase());
+  const factVowelCount = $derived([...factLetters].filter((c) => 'aeiou'.includes(c)).length);
+  const factRepeatCount = $derived(factLetters.length - new Set(factLetters).size);
+  const factRepeatText = $derived(
+    factRepeatCount === 0 ? 'None' : `${factRepeatCount} repeated letter${factRepeatCount === 1 ? '' : 's'}`
+  );
 </script>
 
 <svelte:head>
@@ -117,6 +130,16 @@
         </div>
       </section>
 
+      <div class="mt-6 flex justify-center">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      {#if comics}
+        <div class="mt-6">
+          <AIHintCards gameName="Marveldle Comics" answer={comics.name} hints={data.aiHints} />
+        </div>
+      {/if}
+
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Comics mode -->
         <section class="rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
@@ -174,6 +197,24 @@
           {/if}
         </section>
       </div>
+
+      {#if comics}
+        <div class="mt-8">
+          <FactBlock
+            gameName="Marveldle Comics"
+            puzzleNumber={data.visibleDateKey}
+            dateLong={data.formattedDate}
+            firstLetter={factFirstLetter}
+            lastLetter={factLastLetter}
+            vowelCount={factVowelCount}
+            repeatText={factRepeatText}
+          />
+        </div>
+
+        <div class="mt-8">
+          <PaaHints gameName="Marveldle" hints={data.aiHints} />
+        </div>
+      {/if}
 
       <KeepExploring slug="marveldle" puzzleDate={data.visibleDateKey} />
 

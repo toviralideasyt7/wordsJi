@@ -10,6 +10,12 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
         import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema } from '$lib/seo';
+        import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+        import AIHintCards from '$lib/components/AIHintCards.svelte';
+        import FactBlock from '$lib/components/FactBlock.svelte';
+        import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+        import PaaHints from '$lib/components/PaaHints.svelte';
+        import type { AIHints } from '$lib/ai-hints';
 
         let { data }: {
                 data: {
@@ -20,6 +26,18 @@
                         last30Entries: { date: string; word: string; puzzle: number }[];
                         stats: { totalSolutions: number; totalArchived: number; latestStoredDate: string | null };
                         meta: { title: string; description: string; keywords?: string };
+                        updatedStamp: string;
+                        aiHints: AIHints;
+                        hintFaqs: { question: string; answer: string }[];
+                        yesterday: { number: number; dateLong: string; answer: string } | null;
+                        factData: {
+                                puzzleNumber: string;
+                                dateLong: string;
+                                firstLetter: string;
+                                lastLetter: string;
+                                vowelCount: number;
+                                repeatText: string;
+                        };
                 };
         } = $props();
 
@@ -36,7 +54,16 @@
                                         image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
                                         dateModified: data.todayKey
                                 }
-                        )
+                        ),
+                        {
+                                '@context': 'https://schema.org',
+                                '@type': 'FAQPage',
+                                mainEntity: (data.hintFaqs ?? []).map((faq) => ({
+                                        '@type': 'Question',
+                                        name: faq.question,
+                                        acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+                                }))
+                        }
                 ])
         );
 
@@ -119,6 +146,14 @@
                         </div>
                 </header>
 
+                <div class="mt-10">
+                        <UpdatedStamp stamp={data.updatedStamp} />
+                </div>
+
+                <div class="mt-10">
+                        <AIHintCards gameName="Worgle" answer={data.todayEntry.word.toUpperCase()} hints={data.aiHints} />
+                </div>
+
                 <section id="worgle-answer-card" class="mt-10 grid gap-6 lg:grid-cols-[1.3fr_0.8fr]">
                         <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Puzzle #{data.todayEntry.puzzle}</p>
@@ -178,6 +213,33 @@
                                 </div>
                         </div>
                 </section>
+
+                {#if data.yesterday}
+                        <div class="mt-10">
+                                <YesterdayBlock
+                                        gameName="Worgle"
+                                        puzzleNumber={String(data.yesterday.number)}
+                                        dateLong={data.yesterday.dateLong}
+                                        answer={data.yesterday.answer.toUpperCase()}
+                                />
+                        </div>
+                {/if}
+
+                <div class="mt-10">
+                        <FactBlock
+                                gameName="Worgle"
+                                puzzleNumber={data.factData.puzzleNumber}
+                                dateLong={data.factData.dateLong}
+                                firstLetter={data.factData.firstLetter}
+                                lastLetter={data.factData.lastLetter}
+                                vowelCount={data.factData.vowelCount}
+                                repeatText={data.factData.repeatText}
+                        />
+                </div>
+
+                <div class="mt-10">
+                        <PaaHints gameName="Worgle" hints={data.aiHints} />
+                </div>
 
                 <KeepExploring slug="worgle" puzzleDate={data.todayKey} />
 

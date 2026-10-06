@@ -209,7 +209,7 @@ const jsonLdSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@graph': [
     generateWebPageSchema(
-      'Colordle Solver - Color Puzzle Helper',
+      'Colordle Solver, Helper & Color Finder',
       'Filter Colordle candidates by entering your guess and percentage score. Find the daily color answer faster.',
       'https://wordsolverx.com/colordle-solver',
       {
@@ -261,11 +261,11 @@ const jsonLdSchema = JSON.stringify({
 </script>
 
 <svelte:head>
-  <title>Colordle Solver - Color Puzzle Helper</title>
+  <title>Colordle Solver, Helper & Color Finder</title>
   <meta name="description" content="Enter your Colordle guess and its percentage score. The solver filters thousands of named colours to find the candidates that match your result." />
   <meta name="keywords" content="Colordle Solver, Colordle Answer, Color Puzzle, Colordle Help, Colordle Cheat" />
   <link rel="canonical" href="https://wordsolverx.com/colordle-solver" />
-  <meta property="og:title" content="Colordle Solver - Daily Color Puzzle Helper" />
+  <meta property="og:title" content="Colordle Solver, Helper & Color Finder" />
   <meta property="og:description" content="Use our Colordle solver to filter named colors by similarity percentage and find the exact daily answer faster." />
   <meta property="og:url" content="https://wordsolverx.com/colordle-solver" />
   <meta property="og:site_name" content="WordSolverX" />
@@ -289,6 +289,26 @@ const jsonLdSchema = JSON.stringify({
       <p class="inline-flex rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">Daily Color Puzzle</p>
       <h1 class="text-4xl font-black text-white sm:text-5xl">Colordle Solver</h1>
       <p class="text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">Enter color guesses and their similarity percentages. The solver filters named colors by Delta E distance to find the exact daily answer.</p>
+    </div>
+  </section>
+
+  <!-- Intent split: answer-seekers go to the daily page, solvers stay -->
+  <section class="mx-auto max-w-5xl px-4 pb-6 sm:px-6 lg:px-8">
+    <div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-relaxed text-slate-700">
+      Looking for today's answer instead? For today's hints and the confirmed answer, see
+      <a href="/colordle-answer-today" class="font-bold text-teal-700 underline-offset-4 hover:underline">Today's Colordle Answer →</a>
+    </div>
+  </section>
+
+  <!-- Short how-to -->
+  <section class="mx-auto max-w-5xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+      <h2 class="text-lg font-extrabold tracking-tight text-slate-900">How to use the Colordle solver</h2>
+      <ol class="mt-3 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-slate-600">
+        <li>Search the color name you guessed in Colordle and pick it from the dropdown.</li>
+        <li>Enter the similarity percentage Colordle showed under your guess.</li>
+        <li>Hit Filter Results, then use a top candidate as your next guess and repeat until you hit 100%.</li>
+      </ol>
     </div>
   </section>
 

@@ -15,6 +15,11 @@
   } from '$lib/authors';
   import type { WordleAnswer } from '$lib/api';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
 
@@ -71,6 +76,17 @@
 	nest a second <main> (invalid HTML that confuses ad content extraction). -->
 <div class="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 font-sans">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mb-8">
+      <AIHintCards gameName="Wordle" answer={data.wordleWord ?? ''} hints={data.aiHints} />
+      <p class="mt-3 text-center text-sm text-slate-500">
+        Need help solving? <a href="/wordle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Wordle Solver →</a>
+      </p>
+    </div>
+
     <WordleDisplayWrapper
       wordleData={data.wordleData}
       wordleWord={data.wordleWord}
@@ -81,6 +97,33 @@
       socialImage={data.directSocialImage}
       youtubeVideoUrl={data.wordleData?.youtube_video_url}
     />
+
+    {#if data.yesterday}
+      <div class="mt-8">
+        <YesterdayBlock
+          gameName="Wordle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+
+    <div class="mt-8">
+      <FactBlock
+        gameName="Wordle"
+        puzzleNumber={String(data.wordleNumber ?? '')}
+        dateLong={data.formattedDate}
+        firstLetter={data.startLetter ?? ''}
+        lastLetter={data.endLetter ?? ''}
+        vowelCount={data.vowelCount ?? 0}
+        repeatText={data.hasDouble ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mt-8">
+      <PaaHints gameName="Wordle" hints={data.aiHints} />
+    </div>
 
     <KeepExploring slug="wordle" puzzleDate={data.wordleData?.date} />
 

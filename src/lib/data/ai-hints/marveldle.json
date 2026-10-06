@@ -1,0 +1,21 @@
+{
+  "game": "marveldle",
+  "generatedAt": "2026-10-06T12:27:16.571Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A shapeshifting green prince weds a spellcaster, leading heroes still young.",
+      "clue1": "Young Avengers alien royalty with a familiar emerald hue.",
+      "starts_with": "H",
+      "ends_with": "X",
+      "definition": "Marvel superhero, a shapeshifting Kree-Skrull hybrid and member of the Young Avengers.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A lesser-known younger-generation hero recognizable mainly to dedicated comic readers, not casual fans."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Marveldle for October 6, 2026 spotlights a hero whose name begins with H and ends with G. The 10/6/2026 12:00:00 AM puzzle features eight letters with a single doubled consonant."
+  }
+}

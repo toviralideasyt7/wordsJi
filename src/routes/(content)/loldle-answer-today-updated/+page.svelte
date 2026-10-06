@@ -1,7 +1,33 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
-  let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
+  interface Facts {
+    mode: string;
+    number: number | string;
+    name: string;
+    firstLetter: string;
+    lastLetter: string;
+    vowelCount: number;
+    repeatText: string;
+  }
+
+  let { data }: { data: {
+    answers: any[];
+    dateStr: string;
+    error: string | null;
+    answerText?: string;
+    dateLong?: string;
+    updatedStamp?: string;
+    hintFaqs?: { question: string; answer: string }[];
+    aiHints?: AIHints;
+    facts?: Facts | null;
+    meta?: { title?: string };
+  } } = $props();
 
   const modeConfig = {
     classic: { name: 'LoLdle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
@@ -27,6 +53,7 @@
       { '@type': 'Question', name: 'What are the LoLdle game modes?', acceptedAnswer: { '@type': 'Answer', text: 'LoLdle features four modes: Classic, Quote, Ability, and Splash Art.' } },
       { '@type': 'Question', name: 'Does LoLdle have different answers for different regions?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, LoLdle has separate daily answers for the America and Europe regions.' } },
       { '@type': 'Question', name: 'Is LoLdle free to play?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, LoLdle is completely free to play in your browser.' } },
+      ...(data.hintFaqs ?? []).map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
     ]},
     { '@type': 'Article', headline: 'LoLdle Answer Today', description: "Today's LoLdle champion revealed — Classic, Ability, Splash, Quote, and Emoji mode answers all in one place. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/loldle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/loldle-answer-today.webp' } } },
   ]};
@@ -34,6 +61,45 @@
 </script>
 
 <GameDleAnswerPage gameKey="loldle" gameTitle="LoLdle" apiGame="loldle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
+  {#snippet stampSnippet()}
+    {#if data.updatedStamp}
+      <div class="mb-6 flex justify-center">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet hintsSnippet()}
+    {#if data.aiHints && data.answerText}
+      <div class="mb-8">
+        <AIHintCards gameName="LoLdle" answer={data.answerText} hints={data.aiHints} />
+        <p class="mt-4 text-center text-sm text-slate-600">
+          Need help solving? Try the free <a href="/loldle-solver" class="font-bold text-teal-700 underline underline-offset-2 hover:text-teal-600">LoLdle Solver →</a>
+        </p>
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet factsSnippet()}
+    {#if data.facts}
+      <div class="mb-8">
+        <FactBlock
+          gameName={(modeConfig as Record<string, { name: string }>)[data.facts.mode]?.name ?? 'LoLdle'}
+          puzzleNumber={String(data.facts.number)}
+          dateLong={data.dateLong ?? ''}
+          firstLetter={data.facts.firstLetter}
+          lastLetter={data.facts.lastLetter}
+          vowelCount={data.facts.vowelCount}
+          repeatText={data.facts.repeatText}
+        />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet paaSnippet()}
+    {#if data.aiHints && data.answerText}
+      <div class="mb-8">
+        <PaaHints gameName="LoLdle" hints={data.aiHints} />
+      </div>
+    {/if}
+  {/snippet}
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
@@ -166,6 +232,10 @@
           <div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Does solving one mode help with the others?</h3>
             <p class="leading-relaxed">No. Each mode picks its own champion, so the Classic answer tells you nothing about Quote, Ability or Splash Art.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">When was this page last updated?</h3>
+            <p class="leading-relaxed">{data.updatedStamp}</p>
           </div>
         </div>
       </section>

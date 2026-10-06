@@ -8,6 +8,11 @@
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -86,8 +91,43 @@
       </a>
     </div>
 
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mb-8">
+      <AIHintCards gameName="Quordle" answer={data.todayWords ?? ''} hints={data.aiHints} />
+    </div>
+
     <div class="mb-16">
       <QuordleAnswerCard date={data.today} initialData={data.quordleData} />
+    </div>
+
+    {#if data.yesterday}
+      <div class="mb-8">
+        <YesterdayBlock
+          gameName="Quordle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+
+    <div class="mb-8">
+      <FactBlock
+        gameName="Quordle"
+        puzzleNumber={String(data.quordleNumber ?? '')}
+        dateLong={data.formattedDate}
+        firstLetter={data.quordleStartLetter ?? ''}
+        lastLetter={data.quordleEndLetter ?? ''}
+        vowelCount={data.quordleVowelCount ?? 0}
+        repeatText={data.quordleHasDouble ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mb-8">
+      <PaaHints gameName="Quordle" hints={data.aiHints} />
     </div>
 
     <KeepExploring slug="quordle" puzzleDate={data.dateKey} />

@@ -7,6 +7,11 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
   import {
@@ -38,6 +43,12 @@
       pageDescription: string;
       pageKeywords: string;
       faqs: { question: string; answer: string }[];
+      updatedStamp: string;
+      aiHints: AIHints;
+      morningVowelCount: number;
+      morningHasDouble: boolean;
+      morningStartLetter: string;
+      morningEndLetter: string;
       schemas: string;
     };
   } = $props();
@@ -87,6 +98,14 @@
       <p class="text-slate-600 max-w-xl mx-auto">
         Two phrases every day — morning and afternoon. Need an older one? Check the archive.
       </p>
+    </div>
+
+    <div class="mb-6">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mb-8">
+      <AIHintCards gameName="Phrazle" answer={data.todayAnswers.morning.phrase} hints={data.aiHints} />
     </div>
 
     <div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -147,6 +166,22 @@
           </details>
         </div>
       </div>
+    </div>
+
+    <div class="mb-8">
+      <FactBlock
+        gameName="Phrazle"
+        puzzleNumber={String(data.todayAnswers.morning.index ?? '')}
+        dateLong={data.todayLabel}
+        firstLetter={data.morningStartLetter ?? ''}
+        lastLetter={data.morningEndLetter ?? ''}
+        vowelCount={data.morningVowelCount ?? 0}
+        repeatText={data.morningHasDouble ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mb-8">
+      <PaaHints gameName="Phrazle" hints={data.aiHints} />
     </div>
 
     <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8">

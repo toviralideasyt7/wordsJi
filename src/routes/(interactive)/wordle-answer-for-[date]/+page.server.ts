@@ -1,6 +1,7 @@
 import { getWordleNumber, formatDate } from '$lib/utils';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { generatePersonAuthorSchema } from '$lib/seo';
+import { getDatedProse, deterministicProse } from '$lib/ai-hints';
 import { parseMonthDayYearKey, toArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
 import type { PageServerLoad } from './$types';
 
@@ -77,6 +78,15 @@ export const load: PageServerLoad = async ({ params }) => {
 	const prevDateKey = prevKey >= '2021-06-19' ? toMonthDayYearKey(prevDate) : null;
 	const nextDateKey = nextKey < todayKey ? toMonthDayYearKey(nextDate) : null;
 	const nextIsToday = nextKey === todayKey;
+	const prevDateLabel = prevDateKey ? formatDate(prevDate) : null;
+	const nextDateLabel = nextDateKey ? formatDate(nextDate) : null;
+
+	// Unique two-sentence prose per puzzle: stored AI prose when it exists for
+	// this date, otherwise the deterministic fallback computed from the answer.
+	const prose = solution
+		? (getDatedProse('wordle', isoDateKey) ??
+			deterministicProse('Wordle', formattedDate, `#${puzzleNumber}`, solution))
+		: null;
 
 	// The no-solution branch has to stand on its own: the date string is the only variable
 	// part, so both strings are sized to land inside the 30-60 title and 140-158 description
@@ -240,6 +250,9 @@ export const load: PageServerLoad = async ({ params }) => {
 		prevDateKey,
 		nextDateKey,
 		nextIsToday,
+		prevDateLabel,
+		nextDateLabel,
+		prose,
 		wordStats,
 		weekLinks,
 		bodyHtml,

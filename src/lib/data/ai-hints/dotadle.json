@@ -1,0 +1,21 @@
+{
+  "game": "dotadle",
+  "generatedAt": "2026-10-06T12:27:42.248Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "19 letters appear more than once.",
+      "riddle": "",
+      "clue1": "A stealthy backstabbing agility hero cloaked in permanent invisibility.",
+      "starts_with": "R",
+      "ends_with": "T",
+      "definition": "A Dota 2 melee agility hero, the Stealth Assassin, known for invisibility and backstab attacks.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Short, memorable name but requires familiarity with lesser-discussed Dota 2 assassin heroes."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Dotadle challenge for October 6, 2026 marks puzzle Game #1026 with a compact four-letter answer. This Game #1026 entry features a short name where one letter repeats, so study the letter pattern closely."
+  }
+}

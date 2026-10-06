@@ -1,0 +1,21 @@
+{
+  "game": "colordle",
+  "generatedAt": "2026-10-06T12:27:17.753Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A barnyard oinker lends its name to this soft blushing hue.",
+      "clue1": "A gentle rosy shade named after a snorting farm animal.",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "A soft, pale rosy color resembling the skin tone of a young farm pig.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two repeated letters and a compound name make it tricky to guess cleanly."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Colordle's puzzle #1656 for October 6, 2026 features a soft blushing shade with a seven-letter answer spanning two words. The pattern includes two letters that each repeat, opening with P and closing with K."
+  }
+}

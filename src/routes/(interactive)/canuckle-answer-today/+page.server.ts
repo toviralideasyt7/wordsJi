@@ -1,6 +1,8 @@
 import { format } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { fetchRecentCanucklePuzzles } from '$lib/live-answer-sources';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import canuckleRaw from '$lib/wordlebot-wasm/assets/generated/canuckle-data.json';
 import type { PageServerLoad } from './$types';
 
@@ -110,10 +112,13 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         error: true,
                         todayPuzzle: null,
                         yesterdayPuzzle: null,
+                        yesterday: null,
                         last30: [],
                         visibleDateKey: dateKey,
                         formattedDate,
                         isFallback: false,
+                        updatedStamp: '',
+                        aiHints: null,
                         schemas: null,
                         meta: {
                                 title: 'Canuckle Answer Today',
@@ -129,9 +134,12 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         setHeaders({ 'X-Puzzle-Date': visibleDateKey });
 
         const last30 = getLast30Puzzles(puzzles, puzzlePositionByIndex, todayPuzzle);
-        const pageTitle = `Canuckle Answer Today (${formattedDate}) - Hints and Clues`;
+        const pageTitle = dailyAnswerTitle('Canuckle', todayPuzzle.index, formattedDate);
         const pageDescription = `Today's Canuckle answer for ${formattedDate}, yesterday's word, the Canadian fact, and a searchable archive. Updated every day with the latest puzzle.`;
         const pageKeywords = `canuckle answer today, canuckle word, canuckle hint, canuckle fact, canuckle archive, canadian wordle`;
+
+        const updatedStamp = updatedStampText('Canuckle', todayPuzzle.index, formattedDate);
+        const aiHints = mergeHints(todayPuzzle.answer, getAIHints('canuckle', dateKey));
 
         const yesterdayData = yesterdayPuzzle
                 ? {
@@ -139,6 +147,14 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                                 index: yesterdayPuzzle.index,
                                 date: format(new Date(`${yesterdayPuzzle.date}T12:00:00Z`), 'MMMM d, yyyy'),
                                 fact: yesterdayPuzzle.fact.join(' ')
+                        }
+                : null;
+
+        const yesterday = yesterdayData
+                ? {
+                                number: yesterdayData.index,
+                                dateLong: yesterdayData.date,
+                                answer: yesterdayData.answer.toUpperCase()
                         }
                 : null;
 
@@ -200,6 +216,14 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                                 '@type': 'Answer',
                                 text: 'Use the recent answers table on this page to scan the last 30 days, or visit the full Canuckle archive for a searchable history of all past puzzles.'
                         }
+                },
+                {
+                        '@type': 'Question',
+                        name: 'When was this page last updated?',
+                        acceptedAnswer: {
+                                '@type': 'Answer',
+                                text: updatedStamp
+                        }
                 }
         ];
 
@@ -257,6 +281,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 visibleDateKey,
                 isFallback,
                 yesterdayData,
+                yesterday,
+                updatedStamp,
+                aiHints,
                 last30: last30.map((p) => ({
                         answer: p.answer,
                         index: p.index,

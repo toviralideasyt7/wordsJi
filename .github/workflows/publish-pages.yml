@@ -398,6 +398,34 @@ jobs:
         run: |
           printf '%s' "$INDEXNOW_KEY" > "static/${INDEXNOW_KEY}.txt"
 
+      - name: Generate Daily AI Hints
+        if: env.WORKFLOW_MODE != 'generate-articles-only' && steps.canary.outputs.skip != 'true'
+        env:
+          NVIDIA_API_KEYS: ${{ secrets.NVIDIA_API_KEYS }}
+          BYNARA_API_KEY: ${{ secrets.BYNARA_API_KEY }}
+        shell: bash
+        run: |
+          # Regenerate AI hint JSONs (src/lib/data/ai-hints/) for any game whose
+          # current puzzle date is missing. Keyless justworker endpoints first,
+          # then NVIDIA NIM / bynara router (env), then deterministic fallback.
+          # Idempotent: skips dates already present. No secrets are written anywhere.
+          node scripts/generate-ai-hints.mjs || echo "AI hint generation had failures; deterministic fallback covers missing hints."
+
+      - name: Persist Generated AI Hints
+        if: env.WORKFLOW_MODE != 'generate-articles-only' && steps.canary.outputs.skip != 'true' && (github.event_name == 'push' || github.event_name == 'repository_dispatch' || github.event_name == 'schedule')
+        shell: bash
+        run: |
+          if git diff --quiet -- src/lib/data/ai-hints; then
+            echo "No AI hint changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data/ai-hints
+          git commit -m "chore(hints): refresh daily AI hint cache"
+          git push
+
       - name: Deploy Cloudflare Pages
         if: env.WORKFLOW_MODE != 'generate-articles-only' && steps.canary.outputs.skip != 'true'
         env:

@@ -1,7 +1,29 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
-  let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
+  let { data }: { data: {
+    answers: any[];
+    dateStr: string;
+    error: string | null;
+    updatedStamp?: string;
+    aiHints?: AIHints;
+    aiAnswer?: string;
+    yesterday?: { number: number; dateLong: string; answer: string } | null;
+    factData?: {
+      puzzleNumber: string;
+      dateLong: string;
+      firstLetter: string;
+      lastLetter: string;
+      vowelCount: number;
+      repeatText: string;
+    };
+  } } = $props();
 
   const modeConfig = {
     classic: { name: 'Pokédle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
@@ -20,20 +42,70 @@
     { href: '/smashdle-answer-today-updated', icon: '', label: 'Smashdle' },
     { href: '/dotadle-answer-today-updated', icon: '', label: 'Dotadle' },
   ];
-  const schemas = { '@context': 'https://schema.org', '@graph': [
+  const schemas = $derived({ '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
       { '@type': 'Question', name: 'What is Pokedle?', acceptedAnswer: { '@type': 'Answer', text: 'Pokedle is a Pokémon-themed daily guessing game inspired by Wordle, featuring modes for Classic guessing, Silhouette, Flavor Text, and Card identification.' } },
       { '@type': 'Question', name: 'What are the Pokedle game modes?', acceptedAnswer: { '@type': 'Answer', text: 'Pokedle features four modes: Classic, Silhouette, Flavor Text, and Card.' } },
       { '@type': 'Question', name: 'How many Pokémon are in Pokedle?', acceptedAnswer: { '@type': 'Answer', text: 'Pokedle includes Pokémon from across all generations, with over 1,000 species in the database.' } },
       { '@type': 'Question', name: 'When does Pokedle reset?', acceptedAnswer: { '@type': 'Answer', text: 'Pokedle resets daily at midnight UTC with new puzzles for all modes.' } },
       { '@type': 'Question', name: 'Is Pokedle free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Pokedle is completely free to play in your browser.' } },
+      { '@type': 'Question', name: 'When was this page last updated?', acceptedAnswer: { '@type': 'Answer', text: data.updatedStamp ?? '' } },
     ]},
     { '@type': 'Article', headline: 'Pokedle Answer Today', description: "Today's Pokedle Pokemon revealed — Classic, Type, and Generation mode answers. Check your guess or browse the archive.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/pokedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/pokedle-answer-today.webp' } } },
-  ]};
+  ]});
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>
 
 <GameDleAnswerPage gameKey="pokedle" gameTitle="Pokedle" apiGame="pokedle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
+  {#snippet stampSnippet()}
+    {#if data.updatedStamp}
+      <div class="mb-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet hintsSnippet()}
+    {#if data.aiHints && data.aiAnswer}
+      <div class="mb-8">
+        <AIHintCards gameName="Pokedle" answer={data.aiAnswer} hints={data.aiHints} />
+        <p class="mt-3 text-center text-sm text-slate-500">
+          Need help solving? <a href="/pokedle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Pokedle Solver →</a>
+        </p>
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet factsSnippet()}
+    {#if data.yesterday}
+      <div class="mb-8">
+        <YesterdayBlock
+          gameName="Pokedle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+    {#if data.factData}
+      <div class="mb-8">
+        <FactBlock
+          gameName="Pokedle"
+          puzzleNumber={data.factData.puzzleNumber}
+          dateLong={data.factData.dateLong}
+          firstLetter={data.factData.firstLetter}
+          lastLetter={data.factData.lastLetter}
+          vowelCount={data.factData.vowelCount}
+          repeatText={data.factData.repeatText}
+        />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet paaSnippet()}
+    {#if data.aiHints}
+      <div class="mb-8">
+        <PaaHints gameName="Pokedle" hints={data.aiHints} />
+      </div>
+    {/if}
+  {/snippet}
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">

@@ -10,6 +10,8 @@
 
 import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import type { MarveldleDayEntry } from '$lib/marveldle/types';
 import answersRaw from '$lib/data/marveldle-answers.json';
 import type { PageServerLoad } from './$types';
@@ -72,7 +74,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const formattedDate = formatSeoDate(entry.date);
 	const shortDate = format(today, 'MMM d');
 
-	const pageTitle = `Marveldle Answer Today (${shortDate}): Comics & MCU | WordSolverX`;
+	// Stream 4 (2026-10-06): shared daily title/stamp. Marveldle has no upstream
+	// puzzle number, so the puzzle date key is the identifier.
+	const pageTitle = dailyAnswerTitle('Marveldle', dateKey, formattedDate);
+	const updatedStamp = updatedStampText('Marveldle', dateKey, formattedDate);
 	// Tease with hints — never the character names in title or description.
 	// Template stays inside the 140-158 budget across decade/appearance lengths.
 	const pageDescription = `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}, MCU appears in ${(mcu.appearanceTypes ?? []).join(' and ').toLowerCase() || 'film and TV'}. Daily clues for both modes and the confirmed answers at WordSolverX.`;
@@ -102,6 +107,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		{
 			question: 'What is the difference between Marveldle Comics and MCU mode?',
 			answer: 'Comics mode draws from Marvel comic-book characters and scores the year of first appearance; MCU mode draws from the Marvel Cinematic Universe and scores appearance type, teams, and the actor instead.'
+		},
+		{
+			question: 'When was this page last updated?',
+			answer: updatedStamp
 		}
 	];
 
@@ -152,6 +161,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		formattedDate,
 		visibleDateKey: entry.date,
 		publishedDate: `${entry.date}T00:00:00Z`,
+		updatedStamp,
 		hints: {
 			comics: {
 				decade: decadeOf(comics.apparitionYear),
@@ -168,6 +178,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				affiliations: (mcu.affiliations ?? []).slice(0, 3)
 			}
 		},
+		// AI hint cards: merged against the Comics name, which is what the
+		// stored hint content describes (see scripts/generate-ai-hints.mjs).
+		aiHints: mergeHints(comics.name, getAIHints('marveldle', dateKey)),
 		hintFaqs,
 		schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),
 		meta: {

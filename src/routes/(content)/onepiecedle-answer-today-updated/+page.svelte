@@ -1,7 +1,29 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
-  let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
+  let { data }: { data: {
+    answers: any[];
+    dateStr: string;
+    error: string | null;
+    updatedStamp?: string;
+    aiHints?: AIHints;
+    aiAnswer?: string;
+    yesterday?: { number: number; dateLong: string; answer: string } | null;
+    factData?: {
+      puzzleNumber: string;
+      dateLong: string;
+      firstLetter: string;
+      lastLetter: string;
+      vowelCount: number;
+      repeatText: string;
+    };
+  } } = $props();
 
   const modeConfig = {
     classic: { name: 'OnePiecedle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
@@ -21,20 +43,70 @@
     { href: '/smashdle-answer-today-updated', icon: '', label: 'Smashdle' },
     { href: '/dotadle-answer-today-updated', icon: '', label: 'Dotadle' },
   ];
-  const schemas = { '@context': 'https://schema.org', '@graph': [
+  const schemas = $derived({ '@context': 'https://schema.org', '@graph': [
     { '@type': 'FAQPage', mainEntity: [
       { '@type': 'Question', name: 'What is OnePiecedle?', acceptedAnswer: { '@type': 'Answer', text: 'OnePiecedle is a daily trivia game for One Piece fans, featuring modes for character guessing, Devil Fruits, laughs, and Wanted Posters.' } },
       { '@type': 'Question', name: 'What are the OnePiecedle game modes?', acceptedAnswer: { '@type': 'Answer', text: 'OnePiecedle features four modes: Classic, Devil Fruit, Laugh, and Wanted.' } },
       { '@type': 'Question', name: 'When does OnePiecedle reset?', acceptedAnswer: { '@type': 'Answer', text: 'OnePiecedle resets daily at midnight UTC.' } },
       { '@type': 'Question', name: 'Does OnePiecedle cover the entire One Piece series?', acceptedAnswer: { '@type': 'Answer', text: 'OnePiecedle draws from characters across the entire One Piece manga and anime, from East Blue to the latest arcs.' } },
       { '@type': 'Question', name: 'Is OnePiecedle free to play?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, OnePiecedle is completely free to play in your browser.' } },
+      { '@type': 'Question', name: 'When was this page last updated?', acceptedAnswer: { '@type': 'Answer', text: data.updatedStamp ?? '' } },
     ]},
     { '@type': 'Article', headline: 'OnePiecedle Answer Today', description: "Today's Onepiecedle character revealed — Character, Devil Fruit, and Wanted Poster mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/onepiecedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/onepiecedle-answer-today.webp' } } },
-  ]};
+  ]});
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>
 
 <GameDleAnswerPage gameKey="onepiecedle" gameTitle="OnePiecedle" apiGame="onepiecedle" {modes} {modeConfig} {regions} {crossLinks} {schemas} {data}>
+  {#snippet stampSnippet()}
+    {#if data.updatedStamp}
+      <div class="mb-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet hintsSnippet()}
+    {#if data.aiHints && data.aiAnswer}
+      <div class="mb-8">
+        <AIHintCards gameName="OnePiecedle" answer={data.aiAnswer} hints={data.aiHints} />
+        <p class="mt-3 text-center text-sm text-slate-500">
+          Need help solving? <a href="/onepiecedle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free OnePiecedle Solver →</a>
+        </p>
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet factsSnippet()}
+    {#if data.yesterday}
+      <div class="mb-8">
+        <YesterdayBlock
+          gameName="OnePiecedle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+    {#if data.factData}
+      <div class="mb-8">
+        <FactBlock
+          gameName="OnePiecedle"
+          puzzleNumber={data.factData.puzzleNumber}
+          dateLong={data.factData.dateLong}
+          firstLetter={data.factData.firstLetter}
+          lastLetter={data.factData.lastLetter}
+          vowelCount={data.factData.vowelCount}
+          repeatText={data.factData.repeatText}
+        />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet paaSnippet()}
+    {#if data.aiHints}
+      <div class="mb-8">
+        <PaaHints gameName="OnePiecedle" hints={data.aiHints} />
+      </div>
+    {/if}
+  {/snippet}
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">

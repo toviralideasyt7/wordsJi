@@ -14,11 +14,19 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
 
   const formattedDate = $derived(data.formattedDate ?? 'today');
   const publishedDate = $derived(`${data.visibleDateKey}T00:00:00Z`);
+  const answerWord = $derived((data.todayPuzzle?.answer ?? '').toUpperCase());
+  const answerLetters = $derived(answerWord.split(''));
+  const answerVowelCount = $derived(answerLetters.filter((c) => 'AEIOU'.includes(c)).length);
+  const answerHasRepeat = $derived(new Set(answerLetters).size !== answerLetters.length);
   const socialImage = $derived(
     data.meta?.featuredImage?.startsWith('http')
       ? data.meta.featuredImage
@@ -124,6 +132,10 @@
         </div>
       </section>
 
+      <div class="mt-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
       <!-- Trust Indicators — Clean pill bar -->
       <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="flex items-center gap-3 rounded-xl bg-white p-4 border border-slate-200/80 shadow-sm">
@@ -164,6 +176,10 @@
         </div>
       </section>
 
+      <div class="mb-8">
+        <AIHintCards gameName="Canuckle" answer={data.todayPuzzle.answer} hints={data.aiHints} />
+      </div>
+
       <section id="today-answer-reveal" class="overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl">
         <div class="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
           <div class="p-6 sm:p-8">
@@ -202,6 +218,22 @@
           </aside>
         </div>
       </section>
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Canuckle"
+          puzzleNumber={String(data.todayPuzzle.index)}
+          dateLong={formattedDate}
+          firstLetter={answerLetters[0] ?? ''}
+          lastLetter={answerLetters[answerLetters.length - 1] ?? ''}
+          vowelCount={answerVowelCount}
+          repeatText={answerHasRepeat ? 'Yes' : 'No'}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Canuckle" hints={data.aiHints} />
+      </div>
 
       <!-- Yesterday's Answer — Light Info Card -->
       {#if data.yesterdayData}

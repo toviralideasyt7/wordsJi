@@ -1,0 +1,21 @@
+{
+  "game": "semantle",
+  "generatedAt": "2026-10-06T12:27:01.902Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "Too much of everything, I overflow every reasonable limit without restraint.",
+      "clue1": "Beyond what is normal, needed, or proper.",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "More than what is necessary, usual, or reasonable; immoderate in amount or degree.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common adjective with clear meaning, but many near-synonyms can scatter semantic guesses."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Today's Semantle puzzle #1711 for October 6, 2026 features a nine-letter adjective that both starts and ends with the same vowel. The solution packs four vowels and includes letters that repeat, making its pattern more distinctive than most."
+  }
+}

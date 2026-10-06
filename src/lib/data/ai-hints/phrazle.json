@@ -1,0 +1,21 @@
+{
+  "game": "phrazle",
+  "generatedAt": "2026-10-06T12:27:55.225Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "A disastrous mess paired with the most patriotic of pastries.",
+      "clue1": "A catastrophe, then something as patriotic as it gets.",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two separate idioms, lengthy phrasing, and many repeated letters make guessing tricky."
+    }
+  },
+  "prose": {
+    "2026-10-06": "The Phrazle puzzle for October 6, 2026 pairs two well-known idioms into one lengthy challenge. Solvers tackling 2026-10-06 should note it begins with T, ends with E, and packs thirteen vowels across its words."
+  }
+}

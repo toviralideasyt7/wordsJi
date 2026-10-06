@@ -1,0 +1,21 @@
+{
+  "game": "betweenle",
+  "generatedAt": "2026-10-06T12:27:00.770Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Turn me by hand to start an engine, or I describe a grouch.",
+      "clue1": "A handle you rotate, or someone irritable and bad-tempered.",
+      "starts_with": "C",
+      "ends_with": "K",
+      "definition": "A lever or arm turned by hand to transmit motion; also slang for an irritable person.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Single vowel and uncommon consonant cluster make it moderately tricky to guess."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Betweenle puzzle #1300 for October 6, 2026 features a compact five-letter word with just a single vowel and no repeated letters. This Betweenle challenge wraps a hard consonant ending around a familiar mechanical and figurative term."
+  }
+}

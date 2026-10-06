@@ -1,0 +1,21 @@
+{
+  "game": "waffle",
+  "generatedAt": "2026-10-06T12:27:35.910Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "20 letters appear more than once.",
+      "riddle": "Six five-letter friends weave a grid, swapping tiles until each row and column reads true.",
+      "clue1": "A crisscross of six words sharing crossing letters.",
+      "starts_with": "V",
+      "ends_with": "R",
+      "definition": "A set of six interlocking five-letter words forming a crossword-style grid solved by swapping tiles.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words mix with trickier entries, and the swapping format adds moderate solving challenge."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Waffle for October 6, 2026 (puzzle #1719) arranges six five-letter words into a crossing grid. Each row and column locks together through shared letters, rewarding careful tile swaps."
+  }
+}

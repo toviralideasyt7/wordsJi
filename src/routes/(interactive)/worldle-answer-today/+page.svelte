@@ -15,6 +15,11 @@
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
   const publishedDate = $derived(`${data.todayDate}T00:00:00Z`);
@@ -81,11 +86,46 @@
     </section>
 
     <div class="mt-8">
+      <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mt-8">
+      <AIHintCards gameName="Worldle" answer={data.todayAnswer.country.name} hints={data.aiHints} />
+    </div>
+
+    <div class="mt-8">
       <WorldleCountryCard
         answer={data.todayAnswer}
         headline="Today's Worldle answer"
         subheadline={`This page is refreshed automatically for the active Worldle day. Today is ${data.formattedTodayDate}.`}
       />
+    </div>
+
+    {#if data.yesterday}
+      <div class="mt-8">
+        <YesterdayBlock
+          gameName="Worldle"
+          puzzleNumber={String(data.yesterday.number)}
+          dateLong={data.yesterday.dateLong}
+          answer={data.yesterday.answer}
+        />
+      </div>
+    {/if}
+
+    <div class="mt-8">
+      <FactBlock
+        gameName="Worldle"
+        puzzleNumber={data.factData.puzzleNumber}
+        dateLong={data.factData.dateLong}
+        firstLetter={data.factData.firstLetter}
+        lastLetter={data.factData.lastLetter}
+        vowelCount={data.factData.vowelCount}
+        repeatText={data.factData.repeatText}
+      />
+    </div>
+
+    <div class="mt-8">
+      <PaaHints gameName="Worldle" hints={data.aiHints} />
     </div>
 
     <KeepExploring slug="worldle" puzzleDate={data.todayDate} />

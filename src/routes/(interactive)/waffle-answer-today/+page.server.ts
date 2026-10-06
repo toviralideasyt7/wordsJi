@@ -2,6 +2,8 @@ import { getWaffleDataForDate } from '$lib/waffle';
 import { subDays, addDays, startOfDay, isBefore } from 'date-fns';
 import { format } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
@@ -42,16 +44,34 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const nextSlug = formatArchiveHref(nextDate);
     const showNext = isBefore(startOfDay(nextDate), addDays(startOfDay(today), 1));
 
-    const pageTitle = `Waffle Answer Today (${formattedDate}) - Answer and Hints`;
+    const pageTitle = dailyAnswerTitle('Waffle', number, formattedDate);
+    const updatedStamp = updatedStampText('Waffle', number, formattedDate);
+    const answerString = words.join(', ');
+    const dateKey = data.date.toISOString().split('T')[0];
+    const aiHints = mergeHints(answerString, getAIHints('waffle', dateKey));
+    const hintFaqs = [
+        { question: 'When was this page last updated?', answer: updatedStamp }
+    ];
+    const factLetters = answerString.toLowerCase().replace(/[^a-z]/g, '');
+    const factRepeatCount = factLetters.length - new Set(factLetters).size;
+    const factData = {
+        puzzleNumber: String(number),
+        dateLong: formattedDate,
+        firstLetter: factLetters[0]?.toUpperCase() ?? '',
+        lastLetter: factLetters[factLetters.length - 1]?.toUpperCase() ?? '',
+        vowelCount: [...factLetters].filter((c: string) => 'aeiou'.includes(c)).length,
+        repeatText: factRepeatCount === 0 ? 'None' : String(factRepeatCount)
+    };
     const pageDescription = `Get the confirmed Waffle answer for ${formattedDate}, with hints, the fully solved grid, today's word list, and links to the older puzzle archive.`;
     const pageKeywords = `waffle answer today, waffle answer, waffle hint, waffle hint today, waffle answer for ${formattedDate}`;
-    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(today).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } });
+    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(today).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } }, { '@type': 'FAQPage', mainEntity: hintFaqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] });
 
     return {
         error: false,
         formattedDate, puzzle, solution, words, definitions, number,
         prevSlug, nextSlug, showNext, date: data.date,
-        dateKey: data.date.toISOString().split('T')[0],
+        dateKey,
+        updatedStamp, aiHints, hintFaqs, factData,
         schemas: jsonLd,
         meta: {
             title: pageTitle,

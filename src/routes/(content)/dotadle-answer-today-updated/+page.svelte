@@ -1,7 +1,33 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
-  let { data }: { data: { answers: any[]; dateStr: string; error: string | null; } } = $props();
+  interface Facts {
+    mode: string;
+    number: number | string;
+    name: string;
+    firstLetter: string;
+    lastLetter: string;
+    vowelCount: number;
+    repeatText: string;
+  }
+
+  let { data }: { data: {
+    answers: any[];
+    dateStr: string;
+    error: string | null;
+    answerText?: string;
+    dateLong?: string;
+    updatedStamp?: string;
+    hintFaqs?: { question: string; answer: string }[];
+    aiHints?: AIHints;
+    facts?: Facts | null;
+    meta?: { title?: string };
+  } } = $props();
 
   const modeConfig = {
     classic: { name: 'Dotadle Classic Answer', icon: 'C', color: 'border-yellow-400', bg: 'bg-yellow-50' },
@@ -23,6 +49,7 @@
       { '@type': 'Question', name: 'How many modes does Dotadle have?', acceptedAnswer: { '@type': 'Answer', text: 'Dotadle has four game modes: Classic, Ability, Quote, and Loading Screen.' } },
       { '@type': 'Question', name: 'Can I play Dotadle on mobile?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Dotadle is a browser-based game that works on mobile devices and desktop browsers.' } },
       { '@type': 'Question', name: 'Does Dotadle cost money?', acceptedAnswer: { '@type': 'Answer', text: 'No, Dotadle is completely free to play.' } },
+      ...(data.hintFaqs ?? []).map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
     ]},
     { '@type': 'Article', headline: 'Dotadle Answer Today', description: "Today's Dotadle hero revealed — Classic, Ability, Item, and Quote mode answers. Check your guess or jump to the solver.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/dotadle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/dotadle-answer-today.webp' } } },
   ]};
@@ -30,6 +57,45 @@
 </script>
 
 <GameDleAnswerPage gameKey="dotadle" gameTitle="Dotadle" apiGame="dotadle" {modes} {modeConfig} {crossLinks} {schemas} {data}>
+  {#snippet stampSnippet()}
+    {#if data.updatedStamp}
+      <div class="mb-6 flex justify-center">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet hintsSnippet()}
+    {#if data.aiHints && data.answerText}
+      <div class="mb-8">
+        <AIHintCards gameName="Dotadle" answer={data.answerText} hints={data.aiHints} />
+        <p class="mt-4 text-center text-sm text-slate-600">
+          Need help solving? Try the free <a href="/dotadle-solver" class="font-bold text-teal-700 underline underline-offset-2 hover:text-teal-600">Dotadle Solver →</a>
+        </p>
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet factsSnippet()}
+    {#if data.facts}
+      <div class="mb-8">
+        <FactBlock
+          gameName={(modeConfig as Record<string, { name: string }>)[data.facts.mode]?.name ?? 'Dotadle'}
+          puzzleNumber={String(data.facts.number)}
+          dateLong={data.dateLong ?? ''}
+          firstLetter={data.facts.firstLetter}
+          lastLetter={data.facts.lastLetter}
+          vowelCount={data.facts.vowelCount}
+          repeatText={data.facts.repeatText}
+        />
+      </div>
+    {/if}
+  {/snippet}
+  {#snippet paaSnippet()}
+    {#if data.aiHints && data.answerText}
+      <div class="mb-8">
+        <PaaHints gameName="Dotadle" hints={data.aiHints} />
+      </div>
+    {/if}
+  {/snippet}
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">
@@ -183,6 +249,10 @@
           <div>
             <h3 class="text-lg font-bold text-slate-900 mb-2">Do I need to own or play Dota 2 to solve it?</h3>
             <p class="leading-relaxed">No. Everything Dotadle asks about is roster information, not gameplay.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">When was this page last updated?</h3>
+            <p class="leading-relaxed">{data.updatedStamp}</p>
           </div>
         </div>
       </section>

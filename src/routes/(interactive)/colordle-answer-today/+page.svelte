@@ -15,6 +15,10 @@
     PRESTON_HAYES_AUTHOR_IMAGE,
     PRESTON_HAYES_AUTHOR_NAME
   } from '$lib/authors';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
   let historySearch = $state('');
@@ -81,6 +85,9 @@
   const noscriptAnswer = $derived(
     `${data.color?.name ?? ''}${data.color?.hex ? ` (${data.color.hex})` : ''}`.trim() || null
   );
+  const colorNameLetters = $derived((data.color?.name ?? '').toLowerCase().replace(/[^a-z]/g, '').split(''));
+  const colorVowelCount = $derived(colorNameLetters.filter((c) => 'aeiou'.includes(c)).length);
+  const colorHasRepeat = $derived(new Set(colorNameLetters).size !== colorNameLetters.length);
   const cleanedSchemas = $derived(
     stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
   );
@@ -153,7 +160,7 @@
       <section class="mt-6 rounded-[2rem] border border-indigo-100 bg-white p-8 shadow-[0_20px_60px_rgba(79,70,229,0.08)] sm:p-10">
         <p class="text-xs font-bold uppercase tracking-[0.3em] text-indigo-500">Daily Color Puzzle</p>
         <h1 class="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          Colordle Answer Today ({answerDateLabel})
+          Colordle Answer Today ({answerDateLabel}) — {data.color.name} {data.color.hex}, Day {data.dayNum}
         </h1>
         <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
           The worker API now feeds this page directly, so the color name, hex code, and recent history all come from the same verified source.
@@ -168,11 +175,19 @@
         </div>
       </section>
 
+      <div class="mt-6">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mt-8">
+        <AIHintCards gameName="Colordle" answer={data.color.name} hints={data.aiHints} />
+      </div>
+
       <section class="mt-8 rounded-[2rem] border border-indigo-100 bg-white p-6 shadow-[0_20px_60px_rgba(79,70,229,0.06)] sm:p-10">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p class="text-xs font-bold uppercase tracking-[0.24em] text-indigo-500">Today's answer</p>
-            <h2 class="mt-2 text-3xl font-black text-slate-900">{data.color.name}</h2>
+            <h2 class="mt-2 text-3xl font-black text-slate-900">Today's Colordle answer — {data.color.name} {data.color.hex}, Day {data.dayNum}</h2>
             <div class="mt-2 flex flex-wrap items-center gap-3">
               <p class="font-mono text-lg font-bold text-indigo-600">{data.color.hex}</p>
               <button
@@ -239,6 +254,22 @@
           </div>
         {/if}
       </section>
+
+      <div class="mt-8">
+        <FactBlock
+          gameName="Colordle"
+          puzzleNumber={String(data.dayNum ?? '')}
+          dateLong={answerDateLabel}
+          firstLetter={colorNameLetters[0] ?? ''}
+          lastLetter={colorNameLetters[colorNameLetters.length - 1] ?? ''}
+          vowelCount={colorVowelCount}
+          repeatText={colorHasRepeat ? 'Yes' : 'No'}
+        />
+      </div>
+
+      <div class="mt-8">
+        <PaaHints gameName="Colordle" hints={data.aiHints} />
+      </div>
 
       <KeepExploring slug="colordle" puzzleDate={data.dateKey} />
 

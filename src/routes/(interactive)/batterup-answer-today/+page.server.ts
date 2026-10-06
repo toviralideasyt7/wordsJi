@@ -7,6 +7,8 @@
 
 import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { getTeamDivision, getLeague, calculateAge } from '$lib/batterup/solver';
 import type { BatterUpDayEntry } from '$lib/batterup/solver';
 import answersRaw from '$lib/data/batterup-answers.json';
@@ -64,6 +66,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			visibleDateKey: dateKey,
 			publishedDate: `${dateKey}T00:00:00Z`,
 			hintFaqs: [],
+			updatedStamp: '',
+			aiHints: null,
 			schemas: null,
 			meta: {
 				title: `Batter Up Answer Today (${format(today, 'MMM d')}) | WordSolverX`,
@@ -84,12 +88,15 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const league = getLeague(division);
 	const age = calculateAge(player.birth_date);
 
-	const pageTitle = `Batter Up Answer Today #${entry.gameNumber} (${shortDate}) | WordSolverX`;
+	const pageTitle = dailyAnswerTitle('Batter Up', entry.gameNumber, formattedDate);
 	// Tease with hints — never the player name in title or description.
 	// Template keeps the description inside the 140-158 budget for the full
 	// range of position/team/jersey lengths (worst cases: ~130-157).
 	const pageDescription = `Batter Up hints (${shortDate}): today's ${position} for the ${player.team_name}, jersey in ${tensWord(player.jersey_number)}. Daily MLB clues and the confirmed answer at WordSolverX.`;
 	const pageKeywords = `batter up answer today, batter up answer, batter up mlb answer today, batter up hint, batter up hint today, batter up solver, batter up answer for ${formattedDate}`;
+
+	const updatedStamp = updatedStampText('Batter Up', entry.gameNumber, formattedDate);
+	const aiHints = mergeHints(player.player_name, getAIHints('batterup', dateKey));
 
 	const hintFaqs = [
 		{
@@ -115,6 +122,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		{
 			question: 'When does Batter Up update?',
 			answer: 'A new Batter Up puzzle goes live shortly after midnight UTC each day, and this page is updated with the confirmed answer every morning.'
+		},
+		{
+			question: 'When was this page last updated?',
+			answer: updatedStamp
 		}
 	];
 
@@ -175,6 +186,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			jerseyTens: tensWord(player.jersey_number),
 			debut: player.debut
 		},
+		updatedStamp,
+		aiHints,
 		hintFaqs,
 		schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),
 		meta: {

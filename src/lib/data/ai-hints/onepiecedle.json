@@ -1,0 +1,21 @@
+{
+  "game": "onepiecedle",
+  "generatedAt": "2026-10-06T12:27:58.729Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "20 letters appear more than once.",
+      "riddle": "A cursed samurai, a clown, a scholar, and a sawtoothed foe swim together.",
+      "clue1": "A quartet of villains, pirates, and one brilliant archaeologist.",
+      "starts_with": "K",
+      "ends_with": "G",
+      "definition": "A grouping of four One Piece characters, spanning a fishman, a clown pirate, a scholar, and a traitorous retainer.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Four distinct characters must be identified together, spanning different arcs, allegiances, and eras of the series."
+    }
+  },
+  "prose": {
+    "2026-10-06": "OnePiecedle's October 6, 2026 challenge, Game #919, bundles four familiar faces into a single themed answer. The combined set begins with the letter K and ends with the letter G, offering sharp solvers a subtle pattern to parse."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "game": "smashdle",
+  "generatedAt": "2026-10-06T12:28:04.625Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "Five brawlers answer one call, trading blows on floating stages—name this crossover crew.",
+      "clue1": "A quintet of fighters from a famous crossover brawler.",
+      "starts_with": "I",
+      "ends_with": "E",
+      "definition": "A set of playable fighters from Nintendo's Super Smash Bros. crossover fighting game series.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Five separate fighters must be identified, spanning different franchises and recognition levels."
+    }
+  },
+  "prose": {
+    "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes."
+  }
+}

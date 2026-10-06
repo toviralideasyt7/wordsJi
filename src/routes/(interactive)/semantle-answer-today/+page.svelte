@@ -10,6 +10,11 @@
   import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
+  import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import AIHintCards from '$lib/components/AIHintCards.svelte';
+  import FactBlock from '$lib/components/FactBlock.svelte';
+  import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
+  import PaaHints from '$lib/components/PaaHints.svelte';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -83,6 +88,14 @@
         </p>
       </header>
 
+      <div class="mb-8">
+        <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mb-12">
+        <AIHintCards gameName="Semantle" answer={data.word} hints={data.aiHints} />
+      </div>
+
       <div class="mb-12">
         <SemantleClues
           word={data.word}
@@ -92,6 +105,33 @@
           synonyms={data.clues?.synonyms ?? []}
           disableClientFetch={true}
         />
+      </div>
+
+      {#if data.yesterday}
+        <div class="mb-12">
+          <YesterdayBlock
+            gameName="Semantle"
+            puzzleNumber={String(data.yesterday.number)}
+            dateLong={data.yesterday.dateLong}
+            answer={data.yesterday.answer}
+          />
+        </div>
+      {/if}
+
+      <div class="mb-12">
+        <FactBlock
+          gameName="Semantle"
+          puzzleNumber={data.factData.puzzleNumber}
+          dateLong={data.factData.dateLong}
+          firstLetter={data.factData.firstLetter}
+          lastLetter={data.factData.lastLetter}
+          vowelCount={data.factData.vowelCount}
+          repeatText={data.factData.repeatText}
+        />
+      </div>
+
+      <div class="mb-12">
+        <PaaHints gameName="Semantle" hints={data.aiHints} />
       </div>
 
       <div class="flex justify-center gap-4 mb-12">

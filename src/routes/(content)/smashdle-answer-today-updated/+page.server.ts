@@ -1,5 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { loadGameDleToday, type GameDleAnswer } from '$lib/game-dle/today';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 
 interface ParsedContent {
     champion_name?: string;
@@ -50,9 +52,26 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                 .filter((name): name is string => Boolean(name))
         ));
         const answerSummary = uniqueNames.slice(0, 4).join(', ');
+        // Classic/America is the flagship mode: its champion anchors the shared
+        // hint components and its game_id is the representative puzzle number.
+        const classicEntry = answers.find((answer) => answer.mode === 'classic' && answer.region === 'america') ?? answers[0];
+        const classicChampion = parseContent(classicEntry?.json_content ?? '').champion_name?.trim() ?? '';
+        const smashdleNumber = classicEntry?.game_id ?? 0;
         const pageTitle = seoDate
-            ? `Smashdle Answer Today (${seoDate}) - All Modes`
+            ? dailyAnswerTitle('Smashdle', smashdleNumber, seoDate)
             : 'Smashdle Answer Today - All Modes';
+        const updatedStamp = updatedStampText('Smashdle', smashdleNumber, seoDate);
+        const aiHints = mergeHints(classicChampion, getAIHints('smashdle', latestDate ?? ''));
+        const factVowelCount = classicChampion.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length;
+        const factRepeatCount = classicChampion.replace(/[^a-z]/gi, '').length - new Set(classicChampion.toLowerCase().replace(/[^a-z]/g, '')).size;
+        const factData = {
+            puzzleNumber: String(smashdleNumber),
+            dateLong: seoDate,
+            firstLetter: classicChampion.replace(/[^a-z]/gi, '')[0]?.toUpperCase() ?? '',
+            lastLetter: classicChampion.replace(/[^a-z]/gi, '').slice(-1)?.toUpperCase() ?? '',
+            vowelCount: factVowelCount,
+            repeatText: factRepeatCount === 0 ? 'None' : String(factRepeatCount)
+        };
         // Both branches stay inside the site-wide 140-158 character description budget for
         // every date length, so the per-mode answer names are left to the page body and the
         // structured data rather than appended here, where they pushed the text past 240.
@@ -91,6 +110,14 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                     '@type': 'Answer',
                     text: 'Smashdle typically resets at midnight UTC (00:00 UTC) each day.'
                 }
+            },
+            {
+                '@type': 'Question',
+                name: 'When was this page last updated?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: updatedStamp
+                }
             }
         ];
         const schemas = {
@@ -118,6 +145,11 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         return {
             answers,
             dateStr,
+            updatedStamp,
+            aiHints,
+            classicChampion,
+            smashdleNumber,
+            factData,
             meta: {
                 title: pageTitle,
                 heading: pageTitle,

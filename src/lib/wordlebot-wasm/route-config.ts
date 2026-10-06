@@ -1764,14 +1764,16 @@ export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConf
 	// characters and descriptions in 140-158 so nothing is truncated in SERPs. The
 	// per-length strings only vary by the length number, so the shortest and longest
 	// forms both stay inside the budget. Verified by scripts/seo/check-meta-lengths.mjs.
+	// The 5-letter page (the main /wordle-solver route) stacks the three query
+	// variants Bing sees for this intent: solver, helper, finder.
 	const title = wordLength === 5
-		? `Wordle Solver 5 Letters - Enter Your Clues, Get the Best Guess`
+		? `Wordle Solver, Helper & Finder`
 		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const metaTitle = wordLength === 5
-		? `Wordle Solver (5 Letters): Enter Clues, Get Today's Answer`
+		? `Wordle Solver, Helper & Finder`
 		: `${wordLength}-Letter Wordle Solver - Enter Clues, Get Answers`;
 	const description = wordLength === 5
-		? `Free Wordle solver for 5-letter puzzles: enter your green, yellow and gray tiles, see the remaining answers ranked, and get your best next guess.`
+		? `Free Wordle solver, helper, and word finder: enter green, yellow, and grey letter clues to solve any Wordle, with the best next guess ranked first.`
 		: `Use the ${wordLength}-letter Wordle solver to turn green, yellow, and gray clues into a ranked shortlist of answers, with the best next guess shown first.`;
 
 return {
@@ -1789,14 +1791,30 @@ return {
                 keywords: buildSolverKeywords(game, wordLength),
                 faqTitle: `${title} FAQs`,
                 faqs: buildSolverFaqs(game, wordLength),
-                howToTitle: `How to use the ${wordLength}-letter Wordle solver`,
-                howToSteps: [
-                        { name: 'Type your guess', text: `Enter the ${wordLength}-letter word you played in Wordle.` },
-                        { name: 'Match the clue colors', text: 'Tap each tile until it matches the gray, yellow, or green result from your game.' },
-                        { name: 'Review the ranked answers', text: 'Run the solver to see the best next guesses and the most likely remaining answers.' }
-                ],
+                howToTitle: wordLength === 5 ? 'How to use this Wordle solver' : `How to use the ${wordLength}-letter Wordle solver`,
+                howToSteps:
+                        wordLength === 5
+                                ? [
+                                                { name: 'Enter your guess', text: 'Type the word you played in Wordle into the solver so it knows your starting point.' },
+                                                { name: 'Match the green, yellow, and grey tiles', text: 'Tap each tile until the colors match your game: green for the right letter in the right spot, yellow for a letter in the word but somewhere else, grey for letters that are not in the answer.' },
+                                                { name: 'Review the ranked next guesses', text: 'The solver filters out every word your clues rule out, then ranks the remaining answers so the strongest next guess is on top.' },
+                                                { name: 'Repeat until one word is left', text: 'Play the top suggestion, add the new feedback, and repeat. When a single word survives the filter, that word is the answer.' }
+                                        ]
+                                : [
+                                        { name: 'Type your guess', text: `Enter the ${wordLength}-letter word you played in Wordle.` },
+                                        { name: 'Match the clue colors', text: 'Tap each tile until it matches the gray, yellow, or green result from your game.' },
+                                        { name: 'Review the ranked answers', text: 'Run the solver to see the best next guesses and the most likely remaining answers.' }
+                                ],
                 sections: buildSolverSections(game, wordLength),
                 chips: buildSolverChips(game, wordLength),
+                intentSplit:
+                        wordLength === 5
+                                ? {
+                                                label: "Looking for today's answer instead? Head to our daily page:",
+                                                linkText: "Today's Wordle Answer & Hints (updated daily) →",
+                                                href: '/wordle-answer-today'
+                                        }
+                                : undefined,
                 cta:
                         wordLength === 5
                                 ? {
@@ -1915,7 +1933,16 @@ export function getVariantSolverPageConfig(variant: WordlebotVariantRouteSlug): 
                 ],
                 sections: buildSolverSections(game),
                 chips: buildSolverChips(game),
-                cta
+                cta,
+                // Intent split: route answer-seekers to the daily answer page.
+                intentSplit:
+                        game.slug === 'quordle'
+                                ? {
+                                                label: "Looking for today's answer instead? Head to our daily page:",
+                                                linkText: "Today's Quordle Answer & Hints (updated daily) →",
+                                                href: '/quordle-answer-today'
+                                        }
+                                : undefined
         };
 }
 

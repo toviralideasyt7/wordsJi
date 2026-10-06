@@ -1,0 +1,21 @@
+{
+  "game": "wordle",
+  "generatedAt": "2026-10-06T12:27:01.198Z",
+  "hints": {
+    "2026-10-06": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "In faint light I describe how a shadowy candle barely glows.",
+      "clue1": "How a weak bulb lights a shadowy room.",
+      "starts_with": "D",
+      "ends_with": "Y",
+      "definition": "In a way that is not bright or clear; faintly, obscurely.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common adverb, but single vowel and a tricky final Y challenge solvers."
+    }
+  },
+  "prose": {
+    "2026-10-06": "Wordle puzzle #1935 for October 6, 2026 offers a five-letter word with just a single vowel. This solution ends in Y and features no repeated letters, keeping guessers on their toes."
+  }
+}

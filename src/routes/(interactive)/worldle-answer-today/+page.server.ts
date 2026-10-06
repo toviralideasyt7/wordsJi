@@ -13,6 +13,8 @@ import {
 } from '$lib/worldle/logic';
 import type { WorldleCity, WorldleCountry, WorldleCountryDetailsMap } from '$lib/worldle/types';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
+import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
+import { getAIHints, mergeHints } from '$lib/ai-hints';
 import type { PageServerLoad } from './$types';
 
 const countries = countriesData as WorldleCountry[];
@@ -33,7 +35,36 @@ export const load: PageServerLoad = async () => {
     answer: `The Worldle answer on ${getDisplayDateLabel(answer.date)} was ${answer.country.name}. That puzzle was Worldle #${answer.worldleNumber}.`,
   }));
 
-  const pageTitle = `Worldle Answer Today (${formattedTodayDate}) - Answer and Map`;
+  const pageTitle = dailyAnswerTitle('Worldle', todayAnswer.worldleNumber, formattedTodayDate);
+  const updatedStamp = updatedStampText('Worldle', todayAnswer.worldleNumber, formattedTodayDate);
+
+  faqEntries.push({
+    question: 'When was this page last updated?',
+    answer: updatedStamp
+  });
+
+  const aiHints = mergeHints(todayAnswer.country.name, getAIHints('worldle', todayDate));
+
+  const yesterdayAnswer = recentAnswers[1] ?? null;
+  const yesterday = yesterdayAnswer
+    ? {
+        number: yesterdayAnswer.worldleNumber,
+        dateLong: getDisplayDateLabel(yesterdayAnswer.date),
+        answer: yesterdayAnswer.country.name
+      }
+    : null;
+
+  const factLetters = todayAnswer.country.name.toLowerCase().replace(/[^a-z]/g, '');
+  const factRepeatCount = factLetters.length - new Set(factLetters).size;
+  const factData = {
+    puzzleNumber: String(todayAnswer.worldleNumber),
+    dateLong: formattedTodayDate,
+    firstLetter: factLetters[0]?.toUpperCase() ?? '',
+    lastLetter: factLetters[factLetters.length - 1]?.toUpperCase() ?? '',
+    vowelCount: [...factLetters].filter((c) => 'aeiou'.includes(c)).length,
+    repeatText: factRepeatCount === 0 ? 'None' : String(factRepeatCount)
+  };
+
   const pageDescription = `Get Worldle hints and today's confirmed answer for ${formattedTodayDate}, with the distance and direction clues and a direct link to the full archive.`;
   const pageKeywords = `worldle answer today, worldle answer, worldle hint, worldle hint today, worldle answer for ${formattedTodayDate}`;
 
@@ -69,8 +100,19 @@ export const load: PageServerLoad = async () => {
     },
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqEntries.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+    })),
+  };
+
   const schemas = JSON.stringify([
     articleSchema,
+    faqSchema,
     generateSoftwareApplicationSchema('Worldle Answer Today', 'UtilitiesApplication'),
     generateBreadcrumbSchema([
       { name: 'Home', url: 'https://wordsolverx.com' },
@@ -85,6 +127,10 @@ export const load: PageServerLoad = async () => {
     todayAnswer,
     formattedTodayDate,
     faqEntries,
+    updatedStamp,
+    aiHints,
+    yesterday,
+    factData,
     schemas,
     meta: {
       title: pageTitle,
