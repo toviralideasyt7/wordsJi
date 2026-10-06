@@ -162,7 +162,7 @@
     </div>
 
     <div class="mb-8">
-      <AIHintCards gameName="Searchle" answer={todayPuzzle.answer.toUpperCase()} hints={data.aiHints} />
+      <AIHintCards gameName="Searchle" answer={todayPuzzle.answer.toUpperCase()} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <div class="bg-white border border-slate-200 rounded-2xl shadow-lg overflow-hidden mb-8">

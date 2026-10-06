@@ -93,8 +93,6 @@
       }
     ])
   );
-
-  let showAnswer = $state(false);
   const publishedDate = $derived(`${data.todayAnswer.date}T00:00:00Z`);
 
   let clueCards = $derived([
@@ -169,7 +167,7 @@
     <KeepExploring slug="betweenle" puzzleDate={data.todayAnswer.date} />
 
     <div class="mt-8">
-      <AIHintCards gameName="Betweenle" answer={data.todayAnswer.word} hints={data.aiHints} />
+      <AIHintCards gameName="Betweenle" answer={data.todayAnswer.word} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <section class="mt-8 rounded-3xl border border-slate-200 bg-white px-6 py-8 shadow-sm sm:px-8">
@@ -201,27 +199,22 @@
           Try the clues first. When you want the official word, use the reveal button below.
         </p>
 
-        <div class="mt-5 rounded-2xl border border-teal-200 bg-teal-50 px-5 py-6">
-          <div class="betweenle-answer-content" class:revealed={showAnswer}>
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Official Betweenle answer</p>
-            <p class="mt-3 text-4xl font-black uppercase tracking-[0.18em] text-slate-900 sm:text-5xl">
-              {answerWord}
-            </p>
-            <p class="mt-3 text-sm text-slate-600">
-              Answer for {data.todayLabel} and Betweenle puzzle #{data.todayAnswer.puzzleNumber}.
-            </p>
-          </div>
-        </div>
+      <details class="betweenle-answer-details mt-5">
+        <summary class="inline-flex items-center justify-center rounded-2xl bg-teal-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-teal-500 cursor-pointer">
+          <span class="label-closed">Reveal Today&apos;s Answer</span>
+          <span class="label-open">Hide answer</span>
+        </summary>
 
-        {#if !showAnswer}
-          <button
-            class="mt-5 inline-flex items-center justify-center rounded-2xl bg-teal-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-teal-500  "
-            onclick={() => (showAnswer = true)}
-            type="button"
-          >
-            Reveal Today&apos;s Answer
-          </button>
-        {/if}
+        <div class="mt-5 rounded-2xl border border-teal-200 bg-teal-50 px-5 py-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Official Betweenle answer</p>
+          <p class="mt-3 text-4xl font-black uppercase tracking-[0.18em] text-slate-900 sm:text-5xl">
+            {answerWord}
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Answer for {data.todayLabel} and Betweenle puzzle #{data.todayAnswer.puzzleNumber}.
+          </p>
+        </div>
+      </details>
       </div>
     </section>
 
@@ -372,15 +365,25 @@
 </section>
 
 <style>
-  .betweenle-answer-content {
-    filter: blur(10px);
-    transition: filter 0.3s ease;
-    user-select: none;
+  /* CSS-only answer reveal: native <details> keeps the answer in the HTML with
+     zero JavaScript, so crawlers always see it and the toggle cannot break. */
+  .betweenle-answer-details summary {
+    list-style: none;
   }
-
-  .betweenle-answer-content.revealed {
-    filter: none;
-    user-select: auto;
+  .betweenle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .betweenle-answer-details summary::marker {
+    display: none;
+  }
+  .betweenle-answer-details .label-open {
+    display: none;
+  }
+  .betweenle-answer-details[open] .label-closed {
+    display: none;
+  }
+  .betweenle-answer-details[open] .label-open {
+    display: inline;
   }
 </style>
 

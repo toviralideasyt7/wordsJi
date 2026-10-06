@@ -92,7 +92,7 @@
   </div>
 
   <div class="mb-8">
-    <AIHintCards gameName="Waffle" answer={data.words?.join(', ') ?? ''} hints={data.aiHints} />
+    <AIHintCards gameName="Waffle" answer={data.words?.join(', ') ?? ''} hints={data.aiHints} showAnswerReveal={false} />
     <p class="mt-4 text-center text-sm text-slate-600">
       Need help solving? <a href="/waffle-solver" class="font-semibold text-amber-700 hover:text-amber-800 underline">Try the free Waffle Solver &rarr;</a>
     </p>

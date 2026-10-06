@@ -19,8 +19,6 @@
 
   let { data } = $props();
 
-  let revealed = $state(false);
-
   const socialImage = $derived(data.meta?.socialImage ?? 'https://wordsolverx.com/wordsolverx.webp');
   const cleanedSchemas = $derived(
     data.schemas ? stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) : null
@@ -153,23 +151,21 @@
       </section>
 
       <div class="mt-8">
-        <AIHintCards gameName="Batter Up" answer={answerName} hints={data.aiHints} />
+        <AIHintCards gameName="Batter Up" answer={answerName} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
       <!-- Reveal -->
       <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
         <h2 class="text-2xl font-bold text-slate-900 mb-5">Today's answer</h2>
-        {#if !revealed}
-          <button
-            onclick={() => (revealed = true)}
-            class="w-full rounded-xl bg-sky-700 px-6 py-4 text-base font-semibold text-white shadow hover:bg-sky-800 transition-colors"
+        <details class="batterup-answer-details">
+          <summary
+            class="w-full rounded-xl bg-sky-700 px-6 py-4 text-base font-semibold text-white shadow hover:bg-sky-800 transition-colors cursor-pointer text-center list-none"
             aria-label="Reveal today's Batter Up answer"
           >
-            Reveal the answer
-          </button>
-          <p class="mt-3 text-center text-sm text-slate-500">No peeking — solve it first if you want the streak.</p>
-        {:else}
-          <div class="rounded-xl border-2 border-sky-200 bg-sky-50/60 p-6">
+            <span class="label-closed">Reveal the answer</span>
+            <span class="label-open">Hide the answer</span>
+          </summary>
+          <div class="mt-5 rounded-xl border-2 border-sky-200 bg-sky-50/60 p-6">
             <p class="text-xs font-semibold uppercase tracking-wider text-sky-700">Batter Up #{data.entry.gameNumber} · {data.formattedDate}</p>
             <p class="mt-2 text-3xl font-extrabold text-slate-900">{player.player_name}</p>
             <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
@@ -187,7 +183,8 @@
               </p>
             {/if}
           </div>
-        {/if}
+        </details>
+        <p class="mt-3 text-center text-sm text-slate-500">No peeking — solve it first if you want the streak.</p>
       </section>
 
       <div class="mt-8">
@@ -281,3 +278,21 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .batterup-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .batterup-answer-details summary::marker {
+    display: none;
+  }
+  .batterup-answer-details .label-open {
+    display: none;
+  }
+  .batterup-answer-details[open] .label-closed {
+    display: none;
+  }
+  .batterup-answer-details[open] .label-open {
+    display: inline;
+  }
+</style>

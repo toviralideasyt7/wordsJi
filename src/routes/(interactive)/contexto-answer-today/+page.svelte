@@ -198,7 +198,7 @@
     </div>
 
     <div class="mb-10">
-      <AIHintCards gameName="Contexto" answer={data.initialAnswer?.answer ?? ''} hints={data.aiHints} />
+      <AIHintCards gameName="Contexto" answer={data.initialAnswer?.answer ?? ''} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <section class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] overflow-hidden mb-10">

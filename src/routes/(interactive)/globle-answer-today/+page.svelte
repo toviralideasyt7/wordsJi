@@ -80,7 +80,7 @@
       <UpdatedStamp stamp={data.updatedStamp} />
     </div>
 
-    <AIHintCards gameName="Globle" answer={data.country.name} hints={data.aiHints} />
+    <AIHintCards gameName="Globle" answer={data.country.name} hints={data.aiHints} showAnswerReveal={false} />
 
     <GlobleCluesSection country={data.country} date={data.formattedDate}>
       <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-[0_1px_3px_rgb(0_0_0/0.04)] overflow-hidden">

@@ -143,7 +143,7 @@
 
                 {#if todayArtist}
                         <div class="mt-10">
-                                <AIHintCards gameName="Spotle" answer={todayArtist.artist} hints={data.aiHints} />
+                                <AIHintCards gameName="Spotle" answer={todayArtist.artist} hints={data.aiHints} showAnswerReveal={false} />
                         </div>
                 {/if}
 

@@ -93,7 +93,7 @@
       </div>
 
       <div class="mb-12">
-        <AIHintCards gameName="Semantle" answer={data.word} hints={data.aiHints} />
+        <AIHintCards gameName="Semantle" answer={data.word} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
       <div class="mb-12">

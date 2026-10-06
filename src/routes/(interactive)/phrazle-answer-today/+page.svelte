@@ -105,7 +105,7 @@
     </div>
 
     <div class="mb-8">
-      <AIHintCards gameName="Phrazle" answer={data.todayAnswers.morning.phrase} hints={data.aiHints} />
+      <AIHintCards gameName="Phrazle" answer={data.todayAnswers.morning.phrase} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <div class="grid md:grid-cols-2 gap-6 mb-8">

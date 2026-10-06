@@ -180,7 +180,7 @@
       </div>
 
       <div class="mt-8">
-        <AIHintCards gameName="Colordle" answer={data.color.name} hints={data.aiHints} />
+        <AIHintCards gameName="Colordle" answer={data.color.name} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
       <section class="mt-8 rounded-[2rem] border border-indigo-100 bg-white p-6 shadow-[0_20px_60px_rgba(79,70,229,0.06)] sm:p-10">

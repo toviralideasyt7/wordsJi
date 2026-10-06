@@ -88,7 +88,7 @@
     </div>
 
     {#if data.hasExactEntries && data.classicAnswer}
-      <AIHintCards gameName="Framed" answer={data.classicAnswer} hints={data.aiHints} />
+      <AIHintCards gameName="Framed" answer={data.classicAnswer} hints={data.aiHints} showAnswerReveal={false} />
     {/if}
 
     <section class="space-y-5">

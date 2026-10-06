@@ -22,7 +22,6 @@
   import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
-  let revealed = $state(false);
 
   const publishedDate = $derived(data.publishedDate ?? null);
   const answer = $derived(data.answer ?? null);
@@ -138,26 +137,27 @@
       </div>
 
       <div class="mt-8">
-        <AIHintCards gameName="Colorfle" answer={answerSummary} hints={data.aiHints} />
+        <AIHintCards gameName="Colorfle" answer={answerSummary} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
-      <section class="mt-8 rounded-[2rem] border border-pink-100 bg-white p-6 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Today's Colorfle answers</h2>
-            <p class="mt-2 text-sm text-slate-500">
-              Reveal the source colors for both modes, plus the computed mixed target preview.
-            </p>
+      <details class="colorfle-answer-details mt-8 rounded-[2rem] border border-pink-100 bg-white p-6 shadow-[0_20px_60px_rgba(236,72,153,0.06)] sm:p-10">
+        <summary class="list-none cursor-pointer">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Today's Colorfle answers</h2>
+              <p class="mt-2 text-sm text-slate-500">
+                Reveal the source colors for both modes, plus the computed mixed target preview.
+              </p>
+            </div>
+            <span
+              class="inline-flex items-center justify-center rounded-full bg-pink-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition hover:bg-pink-500"
+              aria-label="Reveal Colorfle answers"
+            >
+              <span class="label-closed">Reveal answers</span>
+              <span class="label-open">Hide answers</span>
+            </span>
           </div>
-          <button
-            type="button"
-            class="inline-flex items-center justify-center rounded-full bg-pink-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition hover:bg-pink-500"
-            onclick={() => (revealed = !revealed)}
-            aria-label={revealed ? 'Hide Colorfle answers' : 'Reveal Colorfle answers'}
-          >
-            {revealed ? 'Hide answers' : 'Reveal answers'}
-          </button>
-        </div>
+        </summary>
 
         <div class="mt-8 grid gap-6 lg:grid-cols-2">
           {#each [answer.normal, answer.hard] as modeAnswer}
@@ -177,65 +177,38 @@
 
               <div class="relative mx-auto mt-8 flex justify-center">
                 <div class="relative h-56 w-56 sm:h-64 sm:w-64">
-                  {#if revealed}
-                    <div
-                      class="h-full w-full rounded-full ring-4 ring-white shadow-2xl transition-all duration-500"
-                      style={`background:${buildConicGradient(modeAnswer)}; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);`}
-                    ></div>
-                  {:else}
-                    <div class="flex h-full w-full items-center justify-center rounded-full bg-slate-200 ring-4 ring-white shadow-2xl">
-                      <span class="text-4xl font-black text-slate-400">?</span>
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                      <span class="rounded-full bg-white/95 px-5 py-3 text-sm font-bold text-slate-700 shadow-xl ring-2 ring-pink-100">
-                        Click reveal
-                      </span>
-                    </div>
-                  {/if}
+                  <div
+                    class="h-full w-full rounded-full ring-4 ring-white shadow-2xl transition-all duration-500"
+                    style={`background:${buildConicGradient(modeAnswer)}; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);`}
+                  ></div>
                 </div>
               </div>
 
               <div class="mt-8 grid gap-3 sm:grid-cols-2">
-                {#each modeAnswer.colors as color, index}
+                {#each modeAnswer.colors as color}
                   <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                    {#if revealed}
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-slate-200 shadow-inner"
-                          style={`background:${color.hex}; color:${getContrastColor(color.hex)}`}
-                        >
-                          <span class="text-xs font-black uppercase tracking-[0.16em]">
-                            {formatWeight(color.weight)}
-                          </span>
-                        </div>
-                        <div class="min-w-0">
-                          <p class="font-bold text-slate-900">{color.name}</p>
-                          <p class="mt-1 font-mono text-xs text-slate-500">{color.hex}</p>
-                          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-pink-600">
-                            {formatWeight(color.weight)}
-                          </p>
-                        </div>
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-slate-200 shadow-inner"
+                        style={`background:${color.hex}; color:${getContrastColor(color.hex)}`}
+                      >
+                        <span class="text-xs font-black uppercase tracking-[0.16em]">
+                          {formatWeight(color.weight)}
+                        </span>
                       </div>
-                    {:else}
-                      <div class="flex items-center gap-4">
-                        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-200 shadow-inner">
-                          <span class="text-2xl font-black text-slate-400">{index + 1}</span>
-                        </div>
-                        <div class="min-w-0">
-                          <p class="font-bold text-slate-400">Hidden</p>
-                          <p class="mt-1 font-mono text-xs text-slate-300">---</p>
-                          <p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300">
-                            --%
-                          </p>
-                        </div>
+                      <div class="min-w-0">
+                        <p class="font-bold text-slate-900">{color.name}</p>
+                        <p class="mt-1 font-mono text-xs text-slate-500">{color.hex}</p>
+                        <p class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-pink-600">
+                          {formatWeight(color.weight)}
+                        </p>
                       </div>
-                    {/if}
+                    </div>
                   </div>
                 {/each}
               </div>
 
-              {#if revealed}
-                <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
                   <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Mixed result</p>
                   <div class="mt-4 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
                     <div class="flex items-center gap-4">
@@ -256,11 +229,10 @@
                     </p>
                   </div>
                 </div>
-              {/if}
             </article>
           {/each}
         </div>
-      </section>
+      </details>
 
       <KeepExploring slug="colorfle" puzzleDate={data.dateKey} />
 
@@ -401,3 +373,21 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .colorfle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .colorfle-answer-details summary::marker {
+    display: none;
+  }
+  .colorfle-answer-details .label-open {
+    display: none;
+  }
+  .colorfle-answer-details[open] .label-closed {
+    display: none;
+  }
+  .colorfle-answer-details[open] .label-open {
+    display: inline;
+  }
+</style>

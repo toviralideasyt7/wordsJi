@@ -42,13 +42,13 @@
 
   <div class="answer-reveal-panel">
     {#if variant === 'tiles'}
-      <div class="answer-tiles" role="text" aria-label={`Today's ${gameName} answer is ${answer.toUpperCase()}`}>
+      <div class="answer-tiles" aria-label={`Today's ${gameName} answer is ${answer.toUpperCase()}`}>
         {#each letters as letter}
           <span class="answer-tile" style="background-color: {tileColor}; border-color: {tileColor};">{letter}</span>
         {/each}
       </div>
     {:else}
-      <p class="answer-text" role="text">{answer}</p>
+      <p class="answer-text">{answer}</p>
     {/if}
     {#if puzzleNumber || dateLong}
       <p class="answer-meta">

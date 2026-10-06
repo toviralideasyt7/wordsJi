@@ -1,6 +1,7 @@
 <script lang="ts">
   import AnswerPageMeta from '$lib/components/AnswerPageMeta.svelte';
   import AnswerPageNoscript from '$lib/components/AnswerPageNoscript.svelte';
+  import AnswerReveal from '$lib/components/AnswerReveal.svelte';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
@@ -177,18 +178,25 @@
       </section>
 
       <div class="mb-8">
-        <AIHintCards gameName="Canuckle" answer={data.todayPuzzle.answer} hints={data.aiHints} />
+        <AIHintCards gameName="Canuckle" answer={data.todayPuzzle.answer} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
       <section id="today-answer-reveal" class="overflow-hidden rounded-3xl border border-teal-100 bg-white shadow-xl">
         <div class="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
           <div class="p-6 sm:p-8">
             <p class="text-xs font-semibold uppercase tracking-[0.24em] text-teal-600">Today&apos;s verified answer</p>
-            <h2 class="mt-3 text-4xl font-black tracking-[0.18em] text-slate-900 sm:text-5xl">
-              {data.todayPuzzle.answer.toUpperCase()}
-            </h2>
-            <p class="mt-4 text-base leading-7 text-slate-600">
-              Puzzle #{data.todayPuzzle.index} for {formattedDate}. This answer is rendered directly in the page HTML for faster crawlability and easier verification.
+            <div class="mt-6">
+              <AnswerReveal
+                gameName="Canuckle"
+                answer={data.todayPuzzle.answer}
+                variant="tiles"
+                tileColor="#DC2626"
+                puzzleNumber={data.todayPuzzle.index}
+                dateLong={formattedDate}
+              />
+            </div>
+            <p class="mt-6 text-base leading-7 text-slate-600">
+              Puzzle #{data.todayPuzzle.index} for {formattedDate}. The answer sits in the page HTML behind a no-JavaScript reveal, so it stays crawlable and easy to verify.
             </p>
 
             <div class="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
@@ -212,7 +220,7 @@
               <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Date key</p>
               <p class="mt-2 text-lg font-bold text-slate-900">{data.visibleDateKey}</p>
               <p class="mt-2 text-sm leading-6 text-slate-600">
-                This page now shows the answer directly instead of hiding it behind the client-only daily widget.
+                The answer reveal above sits in the page HTML behind a no-JavaScript toggle — no client-only daily widget.
               </p>
             </div>
           </aside>

@@ -106,7 +106,7 @@
       </div>
 
       <div class="mt-6">
-        <AIHintCards gameName="Countryle" answer={data.today.country.country} hints={data.aiHints} />
+        <AIHintCards gameName="Countryle" answer={data.today.country.country} hints={data.aiHints} showAnswerReveal={false} />
       </div>
 
       <!-- Answer Card -->

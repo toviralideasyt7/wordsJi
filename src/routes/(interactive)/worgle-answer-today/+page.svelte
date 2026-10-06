@@ -42,7 +42,6 @@
         } = $props();
 
         let countdown = $state('00:00:00');
-        let revealed = $state(false);
         const publishedDate = $derived(`${data.todayKey}T00:00:00Z`);
         const pageSchemaJson = $derived(
                 JSON.stringify([
@@ -151,7 +150,7 @@
                 </div>
 
                 <div class="mt-10">
-                        <AIHintCards gameName="Worgle" answer={data.todayEntry.word.toUpperCase()} hints={data.aiHints} />
+                        <AIHintCards gameName="Worgle" answer={data.todayEntry.word.toUpperCase()} hints={data.aiHints} showAnswerReveal={false} />
                 </div>
 
                 <section id="worgle-answer-card" class="mt-10 grid gap-6 lg:grid-cols-[1.3fr_0.8fr]">
@@ -162,22 +161,19 @@
                                         This page stays in sync with the daily Worgle puzzle, which resets at midnight IST.
                                 </p>
 
-                                <div class="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-6">
-                                        <div class="flex flex-wrap gap-2 worgle-answer-tiles" class:revealed={revealed}>
+                                <details class="worgle-answer-details mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+                                        <summary class="list-none">
+                                                <span class="label-closed inline-block cursor-pointer rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-500">Reveal answer</span>
+                                                <span class="label-open inline-block cursor-pointer rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-500">Hide answer</span>
+                                        </summary>
+                                        <div class="mt-5 flex flex-wrap gap-2">
                                                 {#each data.todayEntry.word.toUpperCase().split('') as letter}
                                                         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-600 text-lg font-black text-white">
                                                                 {letter}
                                                         </div>
                                                 {/each}
                                         </div>
-                                        <button
-                                                type="button"
-                                                class="mt-5 rounded-full bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-500"
-                                                onclick={() => (revealed = !revealed)}
-                                        >
-                                                {revealed ? 'Hide answer' : 'Reveal answer'}
-                                        </button>
-                                </div>
+                                </details>
 
                                 {#if data.previousEntry}
                                         <p class="mt-5 text-sm text-slate-600">
@@ -467,14 +463,23 @@
 </div>
 
 <style>
-        .worgle-answer-tiles {
-                filter: blur(10px);
-                transition: filter 0.3s ease;
-                user-select: none;
+        .worgle-answer-details summary::-webkit-details-marker {
+                display: none;
         }
 
-        .worgle-answer-tiles.revealed {
-                filter: none;
-                user-select: auto;
+        .worgle-answer-details summary::marker {
+                display: none;
+        }
+
+        .worgle-answer-details .label-open {
+                display: none;
+        }
+
+        .worgle-answer-details[open] .label-closed {
+                display: none;
+        }
+
+        .worgle-answer-details[open] .label-open {
+                display: inline-block;
         }
 </style>

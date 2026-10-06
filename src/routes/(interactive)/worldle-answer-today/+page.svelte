@@ -90,7 +90,7 @@
     </div>
 
     <div class="mt-8">
-      <AIHintCards gameName="Worldle" answer={data.todayAnswer.country.name} hints={data.aiHints} />
+      <AIHintCards gameName="Worldle" answer={data.todayAnswer.country.name} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <div class="mt-8">

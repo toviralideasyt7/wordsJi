@@ -19,9 +19,6 @@
 
   let { data } = $props();
 
-  let revealedComics = $state(false);
-  let revealedMcu = $state(false);
-
   const socialImage = $derived(data.meta?.socialImage ?? 'https://wordsolverx.com/wordsolverx.webp');
   const cleanedSchemas = $derived(
     data.schemas ? stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) : null
@@ -136,7 +133,7 @@
 
       {#if comics}
         <div class="mt-6">
-          <AIHintCards gameName="Marveldle Comics" answer={comics.name} hints={data.aiHints} />
+          <AIHintCards gameName="Marveldle Comics" answer={comics.name} hints={data.aiHints} showAnswerReveal={false} />
         </div>
       {/if}
 
@@ -152,21 +149,20 @@
               <li>Debuted in <em>{data.hints.comics.firstTitle}</em></li>
             {/if}
           </ul>
-          {#if !revealedComics}
-            <button
-              onclick={() => (revealedComics = true)}
-              class="mt-5 w-full rounded-xl bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-red-800 transition-colors"
+          <details class="marveldle-answer-details mt-5">
+            <summary
+              class="w-full rounded-xl bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-red-800 transition-colors cursor-pointer text-center list-none"
               aria-label="Reveal today's Marveldle Comics answer"
             >
-              Reveal the Comics answer
-            </button>
-          {:else}
-            <div class="mt-5 rounded-xl border-2 border-red-200 bg-red-50/60 p-5">
+              <span class="label-closed">Reveal the Comics answer</span>
+              <span class="label-open">Hide the Comics answer</span>
+            </summary>
+            <div class="mt-4 rounded-xl border-2 border-red-200 bg-red-50/60 p-5">
               <p class="text-xs font-semibold uppercase tracking-wider text-red-700">Comics answer</p>
               <p class="mt-1 text-2xl font-extrabold text-slate-900">{comics.name}</p>
               <p class="mt-2 text-sm text-slate-600">{comics.gender} {comics.type} · {(comics.species ?? []).join(', ')} · first appeared {comics.apparitionYear ?? '—'}</p>
             </div>
-          {/if}
+          </details>
         </section>
 
         <!-- MCU mode -->
@@ -180,21 +176,20 @@
               <li>Connected to {data.hints.mcu.affiliations.join(', ')}</li>
             {/if}
           </ul>
-          {#if !revealedMcu}
-            <button
-              onclick={() => (revealedMcu = true)}
-              class="mt-5 w-full rounded-xl bg-indigo-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-indigo-800 transition-colors"
+          <details class="marveldle-answer-details mt-5">
+            <summary
+              class="w-full rounded-xl bg-indigo-700 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-indigo-800 transition-colors cursor-pointer text-center list-none"
               aria-label="Reveal today's Marveldle MCU answer"
             >
-              Reveal the MCU answer
-            </button>
-          {:else}
-            <div class="mt-5 rounded-xl border-2 border-indigo-200 bg-indigo-50/60 p-5">
+              <span class="label-closed">Reveal the MCU answer</span>
+              <span class="label-open">Hide the MCU answer</span>
+            </summary>
+            <div class="mt-4 rounded-xl border-2 border-indigo-200 bg-indigo-50/60 p-5">
               <p class="text-xs font-semibold uppercase tracking-wider text-indigo-700">MCU answer</p>
               <p class="mt-1 text-2xl font-extrabold text-slate-900">{mcu.name}</p>
               <p class="mt-2 text-sm text-slate-600">{mcu.gender} {mcu.type} · played by {mcu.actorName ?? '—'} · {(mcu.appearanceTypes ?? []).join(' / ')}</p>
             </div>
-          {/if}
+          </details>
         </section>
       </div>
 
@@ -292,3 +287,21 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .marveldle-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .marveldle-answer-details summary::marker {
+    display: none;
+  }
+  .marveldle-answer-details .label-open {
+    display: none;
+  }
+  .marveldle-answer-details[open] .label-closed {
+    display: none;
+  }
+  .marveldle-answer-details[open] .label-open {
+    display: inline;
+  }
+</style>

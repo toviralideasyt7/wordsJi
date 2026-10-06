@@ -96,7 +96,7 @@
     </div>
 
     <div class="mb-8">
-      <AIHintCards gameName="Quordle" answer={data.todayWords ?? ''} hints={data.aiHints} />
+      <AIHintCards gameName="Quordle" answer={data.todayWords ?? ''} hints={data.aiHints} showAnswerReveal={false} />
     </div>
 
     <div class="mb-16">

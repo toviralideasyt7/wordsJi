@@ -116,7 +116,7 @@
       </div>
 
       <div class="mb-8">
-        <AIHintCards gameName="Phoodle" answer={data.upperWord ?? ''} hints={data.aiHints} />
+        <AIHintCards gameName="Phoodle" answer={data.upperWord ?? ''} hints={data.aiHints} showAnswerReveal={false} />
         <p class="mt-3 text-center text-sm text-slate-500">
           Need help solving? <a href="/phoodle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Phoodle Solver →</a>
         </p>
