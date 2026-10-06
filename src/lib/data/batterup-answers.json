@@ -159,5 +159,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/19/26488b85-132ba5d7-8b34b27f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-04",
     "fetchedAt": "2026-10-04T01:05:47.023Z"
+  },
+  "2026-10-05": {
+    "date": "2026-10-05",
+    "gameNumber": 960,
+    "player": {
+      "player_name": "Yandy Diaz",
+      "player_id": "33481",
+      "team_name": "Rays",
+      "born": "CUBA",
+      "birth_date": "1991-08-08",
+      "position": [
+        "1B"
+      ],
+      "debut": 2017,
+      "jersey_number": 2
+    },
+    "videoDescription": "[08/19/26 : TOR 6 - 7 TB] Yandy Diaz crushes a two-run home run to left-center field, giving the Rays' a 2-0 lead in the bottom of the 1st inning against the Blue Jays.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/19/23030a0a-ad29a759-1437991e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-05",
+    "fetchedAt": "2026-10-06T01:05:37.771Z"
   }
 }
