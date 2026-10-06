@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-06T12:27:25.874Z",
+  "generatedAt": "2026-10-06T16:31:19.442Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known island but small and sometimes confused with mainland regions by casual players."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "The world's youngest nation, born in 2011, where the White Nile flows.",
+      "clue1": "A landlocked African republic that split from its larger neighbor.",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "Landlocked East-Central African country, the world's newest nation, independent since 2011, capital Juba.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A recently formed, relatively small country that some players may overlook on the map."
     }
   },
   "prose": {
-    "2026-10-06": "Today's Worldle puzzle #1720 for October 6, 2026 points to a small island territory with a distinctive outline. The answer spans three words with no repeated letters, beginning with I and ending with N."
+    "2026-10-06": "Today's Worldle puzzle #1720 for October 6, 2026 points to a small island territory with a distinctive outline. The answer spans three words with no repeated letters, beginning with I and ending with N.",
+    "2026-10-07": "Worldle's puzzle #1721 for October 7, 2026 points to a two-word nation whose name begins with S and ends with N. This entry contains four vowels and features two letters that each appear exactly twice."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-06T12:27:33.303Z",
+  "generatedAt": "2026-10-06T16:31:21.739Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word with multiple meanings, but broad semantic range makes guessing paths varied."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "I judge your film, book, or meal, rarely satisfied, always sharpening my quill.",
+      "clue1": "One who evaluates and reviews art or performances professionally.",
+      "starts_with": "C",
+      "ends_with": "C",
+      "definition": "A person who judges and comments on the merits of art, literature, or performances.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but abstract profession makes semantic neighbors scattered and harder to guess."
     }
   },
   "prose": {
-    "2026-10-06": "The Contexto puzzle #1479 for October 6, 2026 features an eight-letter word beginning with M and ending with L. It holds four vowels and one letter that appears twice, offering steady clues for careful solvers."
+    "2026-10-06": "The Contexto puzzle #1479 for October 6, 2026 features an eight-letter word beginning with M and ending with L. It holds four vowels and one letter that appears twice, offering steady clues for careful solvers.",
+    "2026-10-07": "Today's Contexto puzzle #1480 for October 7, 2026 features a six-letter word that both begins and ends with the same letter. Notably, two different letters each appear twice within it, offering a subtle structural clue."
   }
 }

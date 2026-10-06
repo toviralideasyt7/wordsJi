@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-06T12:27:00.770Z",
+  "generatedAt": "2026-10-06T16:31:14.734Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Single vowel and uncommon consonant cluster make it moderately tricky to guess."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Step inside the door and I greet you first, a welcoming space.",
+      "clue1": "The entrance hall just inside a building's front door.",
+      "starts_with": "F",
+      "ends_with": "R",
+      "definition": "An entrance hall or lobby area just inside the main doors of a building.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A less common word with a tricky silent-y arrangement that trips up many solvers."
     }
   },
   "prose": {
-    "2026-10-06": "Betweenle puzzle #1300 for October 6, 2026 features a compact five-letter word with just a single vowel and no repeated letters. This Betweenle challenge wraps a hard consonant ending around a familiar mechanical and figurative term."
+    "2026-10-06": "Betweenle puzzle #1300 for October 6, 2026 features a compact five-letter word with just a single vowel and no repeated letters. This Betweenle challenge wraps a hard consonant ending around a familiar mechanical and figurative term.",
+    "2026-10-07": "Betweenle puzzle #1301 arrives on October 7, 2026, offering a five-letter word with no repeated letters. This entry runs from F to R and hides two vowels within its uncommon pattern."
   }
 }

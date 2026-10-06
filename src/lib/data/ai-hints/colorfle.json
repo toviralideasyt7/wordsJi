@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-06T12:27:37.707Z",
+  "generatedAt": "2026-10-06T16:31:28.271Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Three similar green-yellow shades are tough to distinguish and mix in correct proportions."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A sailor's deep shade, a cheerful sky tint, and a dark reddish-brown gather together.",
+      "clue1": "Sea depths, open sky, and old brick walls combined.",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "A trio of hues: a sky-and-sea tone, its darker counterpart, and a brownish-crimson shade.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Mixing related dark cool tones with a warm reddish shade challenges color intuition."
     }
   },
   "prose": {
-    "2026-10-06": "Colorfle's puzzle #1625 for October 6, 2026 blends three closely related bright shades. The combined letter pattern runs from L to W and features seven vowels spread across the words."
+    "2026-10-06": "Colorfle's puzzle #1625 for October 6, 2026 blends three closely related bright shades. The combined letter pattern runs from L to W and features seven vowels spread across the words.",
+    "2026-10-07": "Colorfle's puzzle #1626 for October 7, 2026 pairs cool tones with a single warm shade. The combined answer begins with the letter B and ends with the letter N."
   }
 }

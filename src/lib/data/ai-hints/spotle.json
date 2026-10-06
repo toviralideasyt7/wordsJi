@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-06T12:27:16.927Z",
+  "generatedAt": "2026-10-06T16:31:12.891Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A two-word celebrity name with unusual spelling and many repeated vowels."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A legendary rapper whose name opens with a number, not a letter.",
+      "clue1": "Iconic '90s hip-hop figure, also known as Makaveli.",
+      "starts_with": "P",
+      "ends_with": "C",
+      "definition": "Stage name of Tupac Shakur, influential American rapper and actor of the 1990s.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Starts with a digit and mixes a number with letters, making the pattern unusual to guess."
     }
   },
   "prose": {
-    "2026-10-06": "Today's Spotle for October 6, 2026 (Day 1663) features a two-word name beginning with H and ending with D. This puzzle's letter pattern packs seven vowels, with one letter repeating four times."
+    "2026-10-06": "Today's Spotle for October 6, 2026 (Day 1663) features a two-word name beginning with H and ending with D. This puzzle's letter pattern packs seven vowels, with one letter repeating four times.",
+    "2026-10-07": "The Spotle puzzle for October 7, 2026 (Day 1664) features an unusual four-character answer that begins with a digit rather than a letter. This Day 1664 challenge contains a single vowel and no repeated characters, rewarding solvers who think beyond standard spelling."
   }
 }

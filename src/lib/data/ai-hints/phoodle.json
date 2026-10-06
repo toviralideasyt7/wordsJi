@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-06T12:27:23.895Z",
+  "generatedAt": "2026-10-06T16:31:14.229Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -13,9 +13,22 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Short word with a single vowel and an uncommon consonant cluster makes guessing tricky."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Plural shops stacking sandwiches high with meats and cheeses galore.",
+      "clue1": "Where you grab a quick sandwich counter order.",
+      "starts_with": "D",
+      "ends_with": "S",
+      "definition": "Shops selling prepared foods like cold cuts, cheeses, and ready-to-eat sandwiches.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word but short plural form with no repeated letters may trip some solvers."
     }
   },
   "prose": {
-    "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y."
+    "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y.",
+    "2026-10-07": "The Phoodle puzzle for October 7, 2026 features a five-letter word with no repeated letters. Solvers tackling 2026-10-07 will notice it holds two vowels and ends in a plural S."
   }
 }

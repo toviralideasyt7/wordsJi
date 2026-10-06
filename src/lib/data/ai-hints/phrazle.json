@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-06T12:27:55.225Z",
+  "generatedAt": "2026-10-06T16:31:36.529Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Two separate idioms, lengthy phrasing, and many repeated letters make guessing tricky."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "The city that never sleeps meets a stubborn, tricky problem to solve.",
+      "clue1": "A famous metropolis nickname beside an idiom for difficulty.",
+      "starts_with": "B",
+      "ends_with": "K",
+      "definition": "Nickname for New York City paired with an idiom meaning a difficult problem or stubborn person.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Combines a city nickname with a long idiom, requiring broader cultural and figurative knowledge."
     }
   },
   "prose": {
-    "2026-10-06": "The Phrazle puzzle for October 6, 2026 pairs two well-known idioms into one lengthy challenge. Solvers tackling 2026-10-06 should note it begins with T, ends with E, and packs thirteen vowels across its words."
+    "2026-10-06": "The Phrazle puzzle for October 6, 2026 pairs two well-known idioms into one lengthy challenge. Solvers tackling 2026-10-06 should note it begins with T, ends with E, and packs thirteen vowels across its words.",
+    "2026-10-07": "The Phrazle puzzle for October 7, 2026 blends a well-known city nickname with a classic idiom. Solvers tackling 2026-10-07 will notice the phrase begins with B and ends with K, featuring several repeated letters."
   }
 }

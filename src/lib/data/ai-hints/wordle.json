@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-06T12:27:01.198Z",
+  "generatedAt": "2026-10-06T16:31:07.354Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -13,9 +13,22 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common adverb, but single vowel and a tricky final Y challenge solvers."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Show it true, or demonstrate beyond doubt, this verb will test.",
+      "clue1": "What a mathematician does to a theorem.",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "To demonstrate the truth of something using evidence or argument.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word with no repeats, but the silent-E vowel pattern may need a few guesses."
     }
   },
   "prose": {
-    "2026-10-06": "Wordle puzzle #1935 for October 6, 2026 offers a five-letter word with just a single vowel. This solution ends in Y and features no repeated letters, keeping guessers on their toes."
+    "2026-10-06": "Wordle puzzle #1935 for October 6, 2026 offers a five-letter word with just a single vowel. This solution ends in Y and features no repeated letters, keeping guessers on their toes.",
+    "2026-10-07": "The Wordle puzzle #1936 for October 7, 2026 features a five-letter word with no repeated letters. Its pattern pairs an opening consonant cluster with a familiar silent-E ending."
   }
 }
