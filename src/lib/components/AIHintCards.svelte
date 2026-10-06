@@ -8,9 +8,14 @@
     answer?: string;
     hints?: AIHints | null;
     accent?: string;
+    /**
+     * Set to false on pages that render their own dedicated answer block, so
+     * the page keeps exactly one answer reveal.
+     */
+    showAnswerReveal?: boolean;
   }
 
-  let { gameName = 'Wordle', answer = '', hints = EMPTY_AI_HINTS, accent = 'teal' }: Props = $props();
+  let { gameName = 'Wordle', answer = '', hints = EMPTY_AI_HINTS, accent = 'teal', showAnswerReveal = true }: Props = $props();
   const hh = $derived(hints ?? EMPTY_AI_HINTS);
 
   // Tailwind-safe accent map (full class names only — no dynamic interpolation).
@@ -25,7 +30,6 @@
   let accentGradient = $derived(ACCENTS[accent] ?? ACCENTS['teal']);
 
   let open = $state<Record<string, boolean>>({});
-  let answerRevealed = $state(false);
 
   function toggle(id: string) {
     open = { ...open, [id]: !open[id] };
@@ -139,13 +143,39 @@
       </div>
     {/if}
 
-    <div class="mt-4 rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-5 text-center">
-      <button type="button" onclick={() => (answerRevealed = !answerRevealed)} aria-expanded={answerRevealed} class="px-6 py-3 rounded-xl font-bold text-white bg-slate-900 hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white transition-colors">
-        {answerRevealed ? 'Hide answer' : `Reveal today's ${gameName} answer`}
-      </button>
-      <p class="mt-4 text-lg text-slate-800 dark:text-slate-200 transition-all duration-300 {answerRevealed ? '' : 'blur-md select-none'}" aria-hidden={answerRevealed ? undefined : 'true'}>
+    {#if showAnswerReveal}
+    <details class="hint-answer-details mt-4 rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-5 text-center">
+      <summary class="inline-block px-6 py-3 rounded-xl font-bold text-white bg-slate-900 hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white transition-colors cursor-pointer">
+        <span class="label-closed">Reveal today's {gameName} answer</span>
+        <span class="label-open">Hide answer</span>
+      </summary>
+      <p class="mt-4 text-lg text-slate-800 dark:text-slate-200">
         Today's {gameName} answer: <strong class="font-black">{answer}</strong>
       </p>
-    </div>
+    </details>
+    {/if}
   </section>
 {/if}
+
+<style>
+  /* CSS-only answer reveal: native <details> keeps the answer in the HTML with
+     zero JavaScript, so crawlers always see it and the toggle cannot break. */
+  .hint-answer-details summary {
+    list-style: none;
+  }
+  .hint-answer-details summary::-webkit-details-marker {
+    display: none;
+  }
+  .hint-answer-details summary::marker {
+    display: none;
+  }
+  .hint-answer-details .label-open {
+    display: none;
+  }
+  .hint-answer-details[open] .label-closed {
+    display: none;
+  }
+  .hint-answer-details[open] .label-open {
+    display: inline;
+  }
+</style>

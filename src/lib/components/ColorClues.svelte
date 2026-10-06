@@ -17,7 +17,6 @@
     showAnswerReveal?: boolean;
   } = $props();
 
-  let showAnswer = $state(false);
   let definition = $state<string | null>(null);
   let loading = $state(true);
 
@@ -105,46 +104,44 @@
     </div>
 
     {#if showAnswerReveal}
-      {#if showAnswer}
-        <!-- Dead-click fix 2026-09-25: a revealed state is not a button. A disabled
-             <button> still absorbs clicks that Clarity records as dead clicks. -->
-        <div
-          class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-default"
-          aria-hidden="true"
-        >
-          ✓ Answer Revealed
-        </div>
-      {:else}
-        <button
-          onclick={() => (showAnswer = true)}
+      <details class="color-answer-details">
+        <summary
           class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 hover:from-purple-700 hover:via-indigo-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+          style="list-style: none;"
         >
-          <FiChevronDown class="text-xl" /> Reveal Answer
-        </button>
-      {/if}
+          <FiChevronDown class="text-xl" />
+          <span class="label-closed">Reveal Answer</span>
+          <span class="label-open">Hide Answer</span>
+        </summary>
 
-      <div class="answer-reveal-area" class:revealed={showAnswer}>
-        <div class="answer-text-content bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
-          <div class="text-center">
-            <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Today's Answer</p>
-            <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 mb-1">{colorName}</h3>
-            <p class="font-mono text-lg text-slate-600 dark:text-slate-400">({colorHex})</p>
+        <div class="answer-reveal-area mt-4">
+          <div class="answer-text-content bg-gradient-to-r from-teal-50 to-teal-50 dark:from-teal-900/20 dark:to-teal-900/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800/50">
+            <div class="text-center">
+              <p class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider mb-2">Today's Answer</p>
+              <h3 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50 mb-1">{colorName}</h3>
+              <p class="font-mono text-lg text-slate-600 dark:text-slate-400">({colorHex})</p>
+            </div>
           </div>
         </div>
-      </div>
+      </details>
     {/if}
   </div>
 </div>
 
 <style>
-  .answer-text-content {
-    filter: blur(10px);
-    user-select: none;
-    transition: filter 0.3s ease;
+  .color-answer-details summary::-webkit-details-marker {
+    display: none;
   }
-
-  .answer-reveal-area.revealed .answer-text-content {
-    filter: none;
-    user-select: auto;
+  .color-answer-details summary::marker {
+    display: none;
+  }
+  .color-answer-details .label-open {
+    display: none;
+  }
+  .color-answer-details[open] .label-closed {
+    display: none;
+  }
+  .color-answer-details[open] .label-open {
+    display: inline;
   }
 </style>

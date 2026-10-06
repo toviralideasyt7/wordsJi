@@ -16,7 +16,6 @@
   import type { WordleAnswer } from '$lib/api';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
@@ -80,13 +79,6 @@
       <UpdatedStamp stamp={data.updatedStamp} />
     </div>
 
-    <div class="mb-8">
-      <AIHintCards gameName="Wordle" answer={data.wordleWord ?? ''} hints={data.aiHints} />
-      <p class="mt-3 text-center text-sm text-slate-500">
-        Need help solving? <a href="/wordle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Wordle Solver →</a>
-      </p>
-    </div>
-
     <WordleDisplayWrapper
       wordleData={data.wordleData}
       wordleWord={data.wordleWord}
@@ -96,7 +88,11 @@
       contentGuide={data.wordleData?.content_guide}
       socialImage={data.directSocialImage}
       youtubeVideoUrl={data.wordleData?.youtube_video_url}
+      aiHints={data.aiHints}
     />
+    <p class="mt-6 text-center text-sm text-slate-500">
+      Need help solving? <a href="/wordle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Wordle Solver →</a>
+    </p>
 
     {#if data.yesterday}
       <div class="mt-8">

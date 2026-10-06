@@ -632,23 +632,21 @@ select:focus-visible,
 }
 
 .color-b {
-  background: linear-gradient(180deg, #868a8c 0%, var(--incorrect-color) 100%);
+  background: var(--incorrect-color);
   border-color: var(--incorrect-color);
   color: #fff;
 }
 
 .color-g {
-  background: linear-gradient(180deg, #7bb475 0%, var(--correct-color) 100%);
+  background: var(--correct-color);
   border-color: var(--correct-color);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(83, 141, 78, 0.28), var(--shadow-tile);
 }
 
 .color-y {
-  background: linear-gradient(180deg, #c9ad5e 0%, var(--wrong-spot-color) 100%);
+  background: var(--wrong-spot-color);
   border-color: var(--wrong-spot-color);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(181, 159, 59, 0.26), var(--shadow-tile);
 }
 
 .color-x {

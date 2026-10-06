@@ -154,7 +154,7 @@ export const PUBLIC_ROUTE_ENTRIES = [
   ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES])
 ];
 
-export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES, '/wordle/*'])];
+export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES, '/wordle/*', '/5-letter-wordle-solver'])];
 
 // --- Wordle dated answer pages (/wordle-answer-for-month-day-year) ---
 // Wordle launched 2021-06-19. We prerender one page per past date up to YESTERDAY

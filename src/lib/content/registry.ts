@@ -180,7 +180,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'wordle-answer-today',
     eyebrow: 'Wordle Answer Today, Verified Daily',
     intro:
-      "The Wordle answer today is {answer} for {date}, puzzle {number}, confirmed from the official NYT source and shown in the reveal card above. If you have not solved yet, do not scroll. The sections below cover the opener question, yellow-tile reads, second-guess planning, and the double-letter habit that ends most streaks.",
+      "The Wordle answer for {date}, puzzle {number}, is confirmed from the official NYT source and waiting in the reveal card below — take the hints first if you have not solved yet. The sections below cover the opener question, yellow-tile reads, second-guess planning, and the double-letter habit that ends most streaks.",
     sections: [
       {
         heading: 'The double-letter assumption that ends more streaks than hard words',
@@ -258,13 +258,13 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: 'The Wordle answer today: {date}, puzzle number {number}',
         paragraphs: [
-          "The {date} Wordle is puzzle number {number}, and today's Wordle answer is {answer}. People reach this page a dozen ways: 'what is today's wordle answer', 'todays wordle', plain 'wordle today', dated searches like wordle answer today 2026, the {date} date itself, or the wordle puzzle number alone. Every one of them lands on this row, including searches typed as 'today wordle answer', and the answer is confirmed from the official NYT Wordle source.",
-          "One thing worth knowing if you solve late: the {number}th puzzle stays the same all day. The game resets at midnight local time, so {date} has exactly one daily answer, and it is {answer}. The NYT app, this page, and every site mirroring the official source show the same word. There is no second version hiding somewhere for night owls.",
-          "If you haven't solved yet, take the hints before the reveal. They give you the opening letter, the vowel count, and the key patterns, so you can finish the board yourself and check your work after. The answer for {date} is {answer}, listed above and in the quick-answer card at the top of the page."
+          "The {date} Wordle is puzzle number {number}, with the answer waiting in the reveal card above. People reach this page a dozen ways: 'what is today's wordle answer', 'todays wordle', plain 'wordle today', dated searches like wordle answer today 2026, the {date} date itself, or the wordle puzzle number alone. Every one of them lands on this row, including searches typed as 'today wordle answer', and the answer is confirmed from the official NYT Wordle source.",
+          "One thing worth knowing if you solve late: the {number}th puzzle stays the same all day. The game resets at midnight local time, so {date} has exactly one daily answer. The NYT app, this page, and every site mirroring the official source show the same word. There is no second version hiding somewhere for night owls.",
+          "If you haven't solved yet, take the hints before the reveal. They give you the opening letter, the vowel count, and the key patterns, so you can finish the board yourself and check your work after. The answer for {date} is in the reveal card above — tap it when you are ready."
         ],
         callout: {
           title: 'One daily answer, every source',
-          body: "The {date} Wordle answer {answer} is the single daily answer from NYT Wordle. The {date} puzzle, puzzle {number}, and today's Wordle all point to the same word."
+          body: "The {date} Wordle has a single daily answer from NYT Wordle. The {date} puzzle, puzzle {number}, and today's Wordle all point to the same word — tap the reveal card above to see it."
         }
       }
     ],
@@ -288,7 +288,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       },
       {
         question: "What is today's Wordle answer?",
-        answer: "The {date} Wordle answer is {answer}, puzzle number {number}. That is the only answer for {date}; the game resets at midnight local time, so late solves and other time zones still see the same word."
+        answer: "The {date} Wordle answer is puzzle number {number}, in the reveal card above. That is the only answer for {date}; the game resets at midnight local time, so late solves and other time zones still see the same word."
       },
       {
         question: 'Is hard mode better for getting better at Wordle?',
@@ -1460,7 +1460,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'colordle-answer-today',
     eyebrow: 'Colordle answer today',
     intro:
-      "Today's Colordle answer is {answer} ({hex}), day {dayNum}, shown in the reveal card above. For a Colordle hint before the reveal, start with a pure primary and read the percentage. The method below covers hue-first order and the fine-tuning trap that ends most streaks.",
+      "Today's Colordle answer for day {dayNum} is shown in the reveal card above — name and exact hex. For a Colordle hint before the reveal, start with a pure primary and read the percentage. The method below covers hue-first order and the fine-tuning trap that ends most streaks.",
     sections: [
       {
         heading: 'The fine-tuning trap that ends Colordle streaks',
@@ -1473,9 +1473,9 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: 'The Colordle answer today: {date}, day {dayNum}',
         paragraphs: [
-          "The Colordle answer for {date} is {answer}, which lands as hex code {hex} on day {dayNum}. If you searched the date format, or the community's day-number format, colordle day {dayNum} answer, both resolve to this same color, and it matches every mirror of the official source.",
-          'The answer card above shows {answer} rendered at its exact hex, so you can put your final mix next to it and see precisely where you landed. The percentage on your last attempt is the same number the solver uses to confirm {answer} is the target, which is a nice closed loop: the tool and the game speak the same math.',
-          'One small thing that trips people up: the color name is the canonical name from the game\'s official list. Day {dayNum} is {answer}, full stop. If it looked like a different shade on someone else\'s screen, that is monitor calibration having opinions, not a second answer.'
+          "The Colordle answer for {date} lands as the hex code in the reveal card above, on day {dayNum}. If you searched the date format, or the community's day-number format, colordle day {dayNum} answer, both resolve to this same color, and it matches every mirror of the official source.",
+          'The answer card above shows today\'s color rendered at its exact hex, so you can put your final mix next to it and see precisely where you landed. The percentage on your last attempt is the same number the solver uses to confirm the target, which is a nice closed loop: the tool and the game speak the same math.',
+          'One small thing that trips people up: the color name is the canonical name from the game\'s official list. Day {dayNum} has exactly one answer, full stop. If it looked like a different shade on someone else\'s screen, that is monitor calibration having opinions, not a second answer.'
         ],
         callout: {
           title: 'Day-number searches land here',
@@ -1533,7 +1533,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         paragraphs: [
           'The archive doubles as a study tool, and not only for practice runs. Reading down the list of past answers shows you the shape of the pool the game draws from: the standard rainbow families, the classic neutrals, a steady supply of recognizable named colors. The pool has a personality, and once you have seen a few months of it, your bracketing guesses get suspiciously good.',
           'The day numbers are worth paying attention to as well. Colordle puzzles run in an unbroken numbered sequence, and the community indexes answers by day, which is why the day-{dayNum} search format exists at all. Tracking the number means you can cross-reference an answer across sites and dates without ambiguity, the same trick the Wordle crowd uses with puzzle numbers.',
-          'Whether you solved today\'s in three or needed the reveal, the day settles here: {answer}, {hex}, day {dayNum}, archived the moment it published. Tomorrow there is a new color, and the hue-first crew will be fine.'
+          'Whether you solved today\'s in three or needed the reveal, the day settles here: day {dayNum}, archived the moment it published. Tomorrow there is a new color, and the hue-first crew will be fine.'
         ]
       }
     ],
@@ -1542,7 +1542,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: 'What is the Colordle answer today?',
         answer:
-          '{answer}: hex code {hex}, day {dayNum}. One color per day, reset at midnight, identical across every source that mirrors the official feed.'
+          'Tap the reveal card above for today\'s color name and hex code — day {dayNum}. One color per day, reset at midnight, identical across every source that mirrors the official feed.'
       },
       {
         question: 'How do you play Colordle?',
@@ -1798,7 +1798,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'waffle-answer-today',
     eyebrow: 'Waffle Answer Today',
     intro:
-      "The Waffle answer today is {answer} for the {date} grid, confirmed from the official source and shown solved above. If you came for the Waffle answer today and nothing else, the card has all six words. The rest of this page covers the swap economy: pairs first, singles last.",
+      "The Waffle answer for the {date} grid is confirmed from the official source and shown solved above. If you came for the Waffle answer today and nothing else, the card has all six words. The rest of this page covers the swap economy: pairs first, singles last.",
     sections: [
       {
         heading: "Waffle is a swap puzzle, not a spelling test",
@@ -1811,7 +1811,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: "The Waffle answer today: {date}",
         paragraphs: [
-          "Today's Waffle is the {date} puzzle, and the solved grid shows {answer} along with the five other words. The {date} solution matches the official source, so the grid shown here is the same one the game serves everywhere.",
+          "Today's Waffle is the {date} puzzle, and the solved grid above shows all six words. The {date} solution matches the official source, so the grid shown here is the same one the game serves everywhere.",
           "The answer card at the top of the page shows the completed grid letter by letter, so you can verify your own swaps or find the words you were missing. The {date} puzzle has exactly one correct arrangement, and it is the same across every mirror of the game.",
           "If you are still solving, the hint card gives you the across words with their first letters and the key intersections. That is usually enough to finish the grid without the full reveal."
         ],
@@ -1879,7 +1879,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         question: "What is today's Waffle answer?",
         answer:
-          "Today's Waffle solution for {date} is shown in the solved grid on this page, and the six words include {answer}. It is the same arrangement across every source."
+          "Today's Waffle solution for {date} is shown in the solved grid on this page. It is the same arrangement across every source."
       },
       {
         question: "How do you play Waffle?",

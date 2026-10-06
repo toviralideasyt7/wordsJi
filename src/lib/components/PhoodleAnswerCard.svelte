@@ -60,7 +60,7 @@
       <p class="text-orange-600 text-sm font-bold uppercase tracking-widest mb-4">The Answer {isYesterday ? 'Was' : 'Is'}</p>
       <div class="flex justify-center flex-wrap gap-2 mb-6">
         {#each upperWord.split('') as letter, i}
-          <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-2xl md:text-3xl font-black text-white shadow-lg shadow-teal-200 transform animate-bounce" style="animation-delay: {i * 100}ms">
+          <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl font-black text-white shadow-lg transform" style="background-color: #538d4e; animation-delay: {i * 100}ms">
             {letter}
           </div>
         {/each}

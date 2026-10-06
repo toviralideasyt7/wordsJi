@@ -162,14 +162,14 @@
   }
 
   .tile.correct {
-    border-color: var(--wordle-green, #6aaa64);
-    background: var(--wordle-green, #6aaa64);
+    border-color: var(--wordle-green, #538d4e);
+    background: var(--wordle-green, #538d4e);
     color: #fff;
   }
 
   .tile.present {
-    border-color: var(--wordle-yellow, #c9b458);
-    background: var(--wordle-yellow, #c9b458);
+    border-color: var(--wordle-yellow, #b59f3b);
+    background: var(--wordle-yellow, #b59f3b);
     color: #fff;
   }
 

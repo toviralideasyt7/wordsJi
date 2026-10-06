@@ -4,6 +4,8 @@
   import RevealableWordleDisplay from './RevealableWordleDisplay.svelte';
   import YouTubeVideoEmbed from './YouTubeVideoEmbed.svelte';
   import SocialShareButton from './SocialShareButton.svelte';
+  import AIHintCards from './AIHintCards.svelte';
+  import type { AIHints } from '$lib/ai-hints';
 
   let {
     wordleData,
@@ -14,6 +16,7 @@
     contentGuide,
     socialImage,
     youtubeVideoUrl,
+    aiHints = null,
   }: {
     wordleData: WordleAnswer | null;
     wordleWord: string;
@@ -23,181 +26,33 @@
     contentGuide?: string | null;
     socialImage?: string | null;
     youtubeVideoUrl?: string | null;
+    aiHints?: AIHints | null;
   } = $props();
 
-  let isRevealed = $state(false);
   let currentUrl = $state('');
-  let analysisEl: HTMLDivElement | undefined = $state();
 
   // Set current URL on client mount
   $effect(() => {
     if (browser) currentUrl = window.location.href;
   });
 
-  // Pronounce word using Web Speech API
-  function pronounceWord(word: string) {
-    if (browser && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = 'en-US';
-      utterance.rate = 0.85;
-      utterance.pitch = 1;
-      window.speechSynthesis.speak(utterance);
-    }
-  }
-
   let pageTitle = $derived.by(() => {
     if (pageContext === 'today') return `Wordle Hints and Answer for Today (${formattedDate})`;
     return `Wordle Answer for ${formattedDate}`;
   });
 
-  let aboutTitle = $derived.by(() => {
-    if (pageContext === 'today') return "About Today's Wordle";
-    return `About Wordle for ${formattedDate}`;
-  });
-
-  let solutionText = $derived.by(() => {
-    const lw = wordleWord.toLowerCase();
-    if (pageContext === 'archive') return `The word <span class="font-semibold text-teal-600 dark:text-teal-400">"${lw}"</span> was the solution for the Wordle puzzle on ${formattedDate}.`;
-    return `The word <span class="font-semibold text-teal-600 dark:text-teal-400">"${lw}"</span> is the solution for today's Wordle puzzle.`;
-  });
-
-  let comeBackText = $derived.by(() => {
-    if (pageContext === 'archive') return 'Browse the archive for more past Wordle solutions.';
-    return "If you've already played today's puzzle, come back tomorrow for the next solution!";
-  });
-
-  // Split contentGuide
-  let { hintsHtml, revealHtml, analysisHtml } = $derived.by(() => {
-    let h: string | null = null;
-    let r: string | null = null;
-    let a: string | null = null;
-
-    if (contentGuide) {
-      const revealHeaderRegex = /<h2[^>]*>.*?Wordle Answer Revealed.*?<\/h2>/i;
-      const headerMatch = contentGuide.match(revealHeaderRegex);
-      if (headerMatch) {
-        const headerIndex = headerMatch.index!;
-        h = contentGuide.substring(0, headerIndex);
-        const afterHeader = contentGuide.substring(headerIndex + headerMatch[0].length);
-        const pMatch = afterHeader.match(/<p[^>]*>.*?<\/p>/i);
-        if (pMatch) {
-          const pEndIndex = pMatch.index! + pMatch[0].length;
-          r = headerMatch[0] + afterHeader.substring(0, pEndIndex);
-          a = afterHeader.substring(pEndIndex);
-        } else {
-          r = headerMatch[0];
-          a = afterHeader;
-        }
-      } else {
-        a = contentGuide;
-      }
+  // Hints section of the legacy content guide (everything before the old
+  // "Wordle Answer Revealed" heading, which is no longer rendered — the page
+  // keeps exactly one answer block, the CSS-only reveal below).
+  let hintsHtml = $derived.by(() => {
+    if (!contentGuide) return null;
+    const revealHeaderRegex = /<h2[^>]*>.*?Wordle Answer Revealed.*?<\/h2>/i;
+    const headerMatch = contentGuide.match(revealHeaderRegex);
+    if (headerMatch && headerMatch.index !== undefined) {
+      return contentGuide.substring(0, headerMatch.index);
     }
-    return { hintsHtml: h, revealHtml: r, analysisHtml: a };
+    return null;
   });
-
-  // Enhance rendered HTML: pronunciation button + collapsible FAQs
-  $effect(() => {
-    const container = analysisEl;
-    if (!container || !analysisHtml) return;
-
-    // 1. Add pronunciation speaker button
-    const allPs = container.querySelectorAll('p');
-    allPs.forEach((p) => {
-      const strong = p.querySelector('strong');
-      if (strong && strong.textContent?.includes('Pronunciation')) {
-        if (p.querySelector('.pronunciation-btn')) return;
-        const btn = document.createElement('button');
-        btn.className = 'pronunciation-btn';
-        btn.setAttribute('aria-label', 'Listen to pronunciation');
-        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
-        btn.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:none;background:#0d9488;color:white;cursor:pointer;margin-left:8px;vertical-align:middle;transition:all 0.2s;flex-shrink:0;';
-        btn.onmouseenter = () => { btn.style.background = '#0f766e'; btn.style.transform = 'scale(1.1)'; };
-        btn.onmouseleave = () => { btn.style.background = '#0d9488'; btn.style.transform = 'scale(1)'; };
-        btn.onclick = () => {
-          pronounceWord(wordleWord);
-          btn.style.transform = 'scale(0.9)';
-          setTimeout(() => { btn.style.transform = 'scale(1)'; }, 150);
-        };
-        p.style.display = 'flex';
-        p.style.alignItems = 'center';
-        p.style.flexWrap = 'wrap';
-        p.appendChild(btn);
-      }
-    });
-
-    // 2. Convert FAQ section into collapsible accordion
-    const allH2s = container.querySelectorAll('h2');
-    let faqH2: Element | null = null;
-    allH2s.forEach((h2) => {
-      if (h2.textContent?.toLowerCase().includes('frequently asked')) faqH2 = h2;
-    });
-
-    if (faqH2) {
-      const faqItems: { question: Element; answer: Element[] }[] = [];
-      let currentSibling = (faqH2 as Element).nextElementSibling;
-      let currentItem: { question: Element; answer: Element[] } | null = null;
-
-      while (currentSibling) {
-        if (currentSibling.tagName === 'H2') break;
-        if (currentSibling.tagName === 'H3') {
-          if (currentItem) faqItems.push(currentItem);
-          currentItem = { question: currentSibling, answer: [] };
-        } else if (currentItem) {
-          currentItem.answer.push(currentSibling);
-        }
-        currentSibling = currentSibling.nextElementSibling;
-      }
-      if (currentItem) faqItems.push(currentItem);
-
-      if (faqItems.length > 0) {
-        const accordion = document.createElement('div');
-        accordion.className = 'faq-accordion';
-
-        faqItems.forEach((item, index) => {
-          const wrapper = document.createElement('div');
-          wrapper.className = 'faq-item';
-          if (index === 0) wrapper.classList.add('faq-item-first');
-          if (index === faqItems.length - 1) wrapper.classList.add('faq-item-last');
-
-          const trigger = document.createElement('button');
-          trigger.className = 'faq-trigger';
-          trigger.setAttribute('aria-expanded', 'false');
-          trigger.innerHTML = `<span class="faq-question-text">${item.question.textContent}</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
-
-          const content = document.createElement('div');
-          content.className = 'faq-content';
-          content.hidden = true;
-          const inner = document.createElement('div');
-          inner.className = 'faq-content-inner';
-          item.answer.forEach(el => inner.appendChild(el.cloneNode(true)));
-          content.appendChild(inner);
-
-          trigger.onclick = () => {
-            const isOpen = trigger.getAttribute('aria-expanded') === 'true';
-            trigger.setAttribute('aria-expanded', String(!isOpen));
-            wrapper.classList.toggle('faq-item-open', !isOpen);
-            content.hidden = isOpen;
-          };
-
-          wrapper.appendChild(trigger);
-          wrapper.appendChild(content);
-          accordion.appendChild(wrapper);
-        });
-
-        faqItems.forEach(item => {
-          item.question.remove();
-          item.answer.forEach(el => el.remove());
-        });
-
-        (faqH2 as Element).insertAdjacentElement('afterend', accordion);
-        (faqH2 as HTMLElement).style.cssText = 'margin-bottom: 16px;';
-      }
-    }
-  });
-
-  let vowelCount = $derived(wordleWord.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length);
-  let consonantCount = $derived(wordleWord.toLowerCase().split('').filter((c: string) => !'aeiou'.includes(c)).length);
 
   const socialPlatforms = ['twitter', 'reddit', 'telegram', 'whatsapp', 'linkedin', 'facebook', 'pinterest', 'tumblr', 'threads', 'mix'];
 </script>
@@ -268,13 +123,19 @@
       <!-- 3. YouTube Video -->
       <YouTubeVideoEmbed videoUrl={youtubeVideoUrl} title="Wordle {formattedDate} - Video Solution" />
 
-      <!-- 4. Interactive Wordle Game Board -->
+      <!-- Hint cards: clues before the answer -->
+      {#if aiHints}
+        <div class="mb-8">
+          <AIHintCards gameName="Wordle" answer={wordleWord} hints={aiHints} showAnswerReveal={false} />
+        </div>
+      {/if}
+
+      <!-- 4. Single CSS-only answer reveal (the one answer block on the page) -->
       <RevealableWordleDisplay
         word={wordleWord}
         number={wordleNumber}
         date={formattedDate}
         days_since_launch={wordleData?.days_since_launch}
-        onReveal={() => (isRevealed = true)}
       />
 
       <!-- Social Share Bar -->
@@ -288,93 +149,6 @@
           </div>
         </div>
       </div>
-
-      <!-- 5. Reveal & Analysis -->
-      {#if revealHtml || analysisHtml}
-        <div class="mt-12 bg-white dark:bg-slate-800 rounded-lg shadow-[0_1px_3px_rgb(0_0_0/0.04)] p-6 sm:p-8 max-w-3xl mx-auto border border-slate-200 dark:border-slate-700">
-          {#if revealHtml}
-            <div class="prose prose-slate dark:prose-invert max-w-none mb-8 border-b border-slate-100 pb-8 transition-all duration-700 dark:border-slate-700 reveal-section" class:revealed={isRevealed}>
-              {@html revealHtml}
-            </div>
-          {/if}
-
-          {#if analysisHtml}
-            <div
-              bind:this={analysisEl}
-              class="prose prose-slate dark:prose-invert max-w-none wordle-analysis-content"
-            >
-              {@html analysisHtml}
-            </div>
-          {/if}
-
-          <!-- Social Share - visible when revealed -->
-          {#if isRevealed}
-            <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 animate-fade-in">
-              <p class="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">Share this solution</p>
-              <div class="flex flex-wrap justify-center gap-3">
-                {#each socialPlatforms as platform}
-                  <SocialShareButton {platform} url={currentUrl} title={pageTitle} />
-                {/each}
-              </div>
-            </div>
-          {/if}
-        </div>
-      {/if}
-
-      <!-- 6. Fallback "About" Section (no contentGuide) -->
-      {#if !contentGuide}
-        <div class="mt-12 bg-white dark:bg-slate-800 rounded-lg shadow-[0_1px_3px_rgb(0_0_0/0.04)] p-6 sm:p-8 max-w-3xl mx-auto border border-slate-200 dark:border-slate-700 transition-all duration-500">
-          <div class="flex items-center mb-4">
-            <div class="flex-shrink-0 bg-slate-100 dark:bg-slate-700 rounded-full p-2.5 mr-4">
-              <svg class="h-6 w-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">{aboutTitle}</h2>
-          </div>
-
-          <div class="prose prose-slate dark:prose-invert max-w-none transition-all duration-500 {isRevealed ? '' : 'blurred-answer'}">
-            <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300">
-              {@html solutionText.replace(wordleWord.toLowerCase(), wordleWord.toUpperCase())}
-            </p>
-            <p class="mt-4 text-base sm:text-lg text-slate-700 dark:text-slate-300">
-              This answer is for {#if wordleData?.days_since_launch}<span class="font-medium">Day {wordleData.days_since_launch}</span>{:else}{pageContext}{/if}, released on {formattedDate}. {comeBackText}
-            </p>
-          </div>
-
-          <!-- Stats Grid -->
-          <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center transition-all duration-500 {isRevealed ? '' : 'blurred-stats'}">
-            <div>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Day</p>
-              <p class="text-lg font-semibold text-slate-900 dark:text-white">{wordleData?.days_since_launch}</p>
-            </div>
-            <div>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Letters</p>
-              <p class="text-lg font-semibold text-slate-900 dark:text-white">{wordleWord.length}</p>
-            </div>
-            <div>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Vowels</p>
-              <p class="text-lg font-semibold text-slate-900 dark:text-white">{vowelCount}</p>
-            </div>
-            <div>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Consonants</p>
-              <p class="text-lg font-semibold text-slate-900 dark:text-white">{consonantCount}</p>
-            </div>
-          </div>
-
-          <!-- Social Share - visible when revealed -->
-          {#if isRevealed}
-            <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 animate-fade-in">
-              <p class="text-center text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">Share this solution</p>
-              <div class="flex flex-wrap justify-center gap-3">
-                {#each socialPlatforms as platform}
-                  <SocialShareButton {platform} url={currentUrl} title={pageTitle} />
-                {/each}
-              </div>
-            </div>
-          {/if}
-        </div>
-      {/if}
     </div>
   </div>
 {/if}
@@ -395,22 +169,6 @@
     border: none; cursor: pointer; text-align: left;
     font-size: 15px; font-weight: 600; color: #111827;
     transition: background 0.2s; gap: 12px;
-  }
-  .reveal-section {
-    filter: blur(8px);
-    user-select: none;
-  }
-  .reveal-section.revealed {
-    filter: none;
-    user-select: auto;
-  }
-  .blurred-answer {
-    filter: blur(8px);
-    user-select: none;
-  }
-  .blurred-stats {
-    filter: blur(6px);
-    user-select: none;
   }
   :global(.dark .faq-trigger) { background: #1f2937; color: #f9fafb; }
   :global(.faq-trigger:hover) { background: #f3f4f6; }
