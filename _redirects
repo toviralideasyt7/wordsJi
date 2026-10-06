@@ -25,10 +25,8 @@
 # Legacy dated answer permalinks to canonical today routes
 /betweenle/* https://wordsolverx.com/betweenle-answer-today 301
 /betweenle-answer/* https://wordsolverx.com/betweenle-answer-today 301
-/betweenle-answer-for-* https://wordsolverx.com/betweenle-answer-today 301
 /canuckle/* https://wordsolverx.com/canuckle-answer-today 301
 /canuckle-answer/* https://wordsolverx.com/canuckle-answer-today 301
-/canuckle-answer-for-* https://wordsolverx.com/canuckle-answer-today 301
 /colorfle/* https://wordsolverx.com/colorfle-answer-today 301
 /colorfle-answer/* https://wordsolverx.com/colorfle-answer-today 301
 /colorfle-answer-for-* https://wordsolverx.com/colorfle-answer-today 301
@@ -66,7 +64,6 @@
 /phoodle-answer-for-* https://wordsolverx.com/phoodle-answer-today 301
 /phrazle/* https://wordsolverx.com/phrazle-answer-today 301
 /phrazle-answer/* https://wordsolverx.com/phrazle-answer-today 301
-/phrazle-answer-for-* https://wordsolverx.com/phrazle-answer-today 301
 /pokedle/* https://wordsolverx.com/pokedle-answer-today-updated 301
 /pokedle-answer/* https://wordsolverx.com/pokedle-answer-today-updated 301
 /pokedle-answer-for-* https://wordsolverx.com/pokedle-answer-today-updated 301
@@ -75,10 +72,8 @@
 /quordle-answer-for-* https://wordsolverx.com/quordle-answer-today 301
 /searchle/* https://wordsolverx.com/searchle-answer-today 301
 /searchle-answer/* https://wordsolverx.com/searchle-answer-today 301
-/searchle-answer-for-* https://wordsolverx.com/searchle-answer-today 301
 /semantle/* https://wordsolverx.com/semantle-answer-today 301
 /semantle-answer/* https://wordsolverx.com/semantle-answer-today 301
-/semantle-answer-for-* https://wordsolverx.com/semantle-answer-today 301
 /smashdle/* https://wordsolverx.com/smashdle-answer-today-updated 301
 /smashdle-answer/* https://wordsolverx.com/smashdle-answer-today-updated 301
 /smashdle-answer-for-* https://wordsolverx.com/smashdle-answer-today-updated 301
@@ -87,14 +82,11 @@
 /sportle-answer-for-* https://wordsolverx.com/spotle-answer-today 301
 /spotle/* https://wordsolverx.com/spotle-answer-today 301
 /spotle-answer/* https://wordsolverx.com/spotle-answer-today 301
-/spotle-answer-for-* https://wordsolverx.com/spotle-answer-today 301
 /waffle/* https://wordsolverx.com/waffle-answer-today 301
 /waffle-answer/* https://wordsolverx.com/waffle-answer-today 301
 /waffle-answer-for-* https://wordsolverx.com/waffle-answer-today 301
 /wordle-answer/* https://wordsolverx.com/wordle-answer-today 301
 /worgle/* https://wordsolverx.com/worgle-answer-today 301
 /worgle-answer/* https://wordsolverx.com/worgle-answer-today 301
-/worgle-answer-for-* https://wordsolverx.com/worgle-answer-today 301
 /worldle/* https://wordsolverx.com/worldle-answer-today 301
 /worldle-answer/* https://wordsolverx.com/worldle-answer-today 301
-/worldle-answer-for-* https://wordsolverx.com/worldle-answer-today 301
