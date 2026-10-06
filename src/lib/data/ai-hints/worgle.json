@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-06T12:27:00.378Z",
+  "generatedAt": "2026-10-06T22:03:10.317Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common everyday verb, but the doubled vowel can trip up some solvers."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I sit before a screen, watching stories unfold without a single word.",
+      "clue1": "Someone observing a show or scene from the audience.",
+      "starts_with": "V",
+      "ends_with": "R",
+      "definition": "A person who watches something, especially television or an online video.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but the doubled vowel and uncommon letter arrangement may slow some solvers."
     }
   },
   "prose": {
-    "2026-10-06": "Worgle's puzzle #1728 for October 6, 2026 features a six-letter word with a repeated vowel. The pattern spans from S to T, offering a steady midweek challenge."
+    "2026-10-06": "Worgle's puzzle #1728 for October 6, 2026 features a six-letter word with a repeated vowel. The pattern spans from S to T, offering a steady midweek challenge.",
+    "2026-10-07": "Worgle's October 7, 2026 puzzle (#1729) offers a familiar six-letter word to untangle. The pattern starts with V and ends with R, featuring one letter that appears twice."
   }
 }
