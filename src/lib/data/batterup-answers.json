@@ -179,5 +179,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/19/23030a0a-ad29a759-1437991e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-05",
     "fetchedAt": "2026-10-06T01:05:37.771Z"
+  },
+  "2026-10-06": {
+    "date": "2026-10-06",
+    "gameNumber": 961,
+    "player": {
+      "player_name": "Matt Olson",
+      "player_id": "32767",
+      "team_name": "Braves",
+      "born": "USA",
+      "birth_date": "1994-03-29",
+      "position": [
+        "1B"
+      ],
+      "debut": 2016,
+      "jersey_number": 28
+    },
+    "videoDescription": "[09/23/26 : CIN 2 - 3 ATL] Matt Olson mashes his 41st home run of the year in the 6th inning to tie up the game at 1.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/23/4dcc4728-143c0622-cc294f18-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-06",
+    "fetchedAt": "2026-10-07T01:05:36.588Z"
   }
 }
