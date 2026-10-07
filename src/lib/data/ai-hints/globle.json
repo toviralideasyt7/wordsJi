@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-06T12:27:28.098Z",
+  "generatedAt": "2026-10-07T06:03:27.291Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Small, less-known nation with an unusual hyphenated name tricky to guess by proximity."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A warm heart beats beside a great lake in southeastern Africa.",
+      "clue1": "A landlocked African nation hugging a vast lake.",
+      "starts_with": "M",
+      "ends_with": "I",
+      "definition": "A landlocked country in southeastern Africa known as 'The Warm Heart of Africa'.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A smaller, landlocked African nation that casual players may struggle to pinpoint quickly."
     }
   },
   "prose": {
-    "2026-10-06": "The Globle puzzle for October 6, 2026 features a vowel-rich, hyphenated name where four different letters each repeat twice. Solvers of 2026-10-06 should watch the Atlantic coast of West Africa to narrow in on this compact answer."
+    "2026-10-06": "The Globle puzzle for October 6, 2026 features a vowel-rich, hyphenated name where four different letters each repeat twice. Solvers of 2026-10-06 should watch the Atlantic coast of West Africa to narrow in on this compact answer.",
+    "2026-10-07": "The Globle puzzle for October 7, 2026 features a six-letter country with one repeated letter. Solvers tackling 2026-10-07 should note its name begins with M and ends with I."
   }
 }

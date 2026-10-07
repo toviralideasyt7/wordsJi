@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-06T12:27:14.473Z",
+  "generatedAt": "2026-10-07T06:03:24.637Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but the repeated-letter pattern can slow down guessers."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Describing a beer bursting with aromatic bitter cones, or something that bounces along.",
+      "clue1": "Full of a certain floral bitterness in craft brewing.",
+      "starts_with": "H",
+      "ends_with": "Y",
+      "definition": "Having the taste or aroma of hops, as in beer; also meaning full of bounce.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common brewing term but single vowel and doubled letter can slow solvers down."
     }
   },
   "prose": {
-    "2026-10-06": "Canuckle's puzzle #1606 for October 6, 2026 features a five-letter word where two letters each repeat. The pattern begins and ends on the same consonant-vowel bookends, offering solvers a tidy symmetry to work with."
+    "2026-10-06": "Canuckle's puzzle #1606 for October 6, 2026 features a five-letter word where two letters each repeat. The pattern begins and ends on the same consonant-vowel bookends, offering solvers a tidy symmetry to work with.",
+    "2026-10-07": "The Canuckle puzzle #1607 for October 7, 2026 features a five-letter word with a single vowel and a doubled consonant. Solvers tackling this October 7, 2026 edition should watch for the repeated letter nestled in the middle of the pattern."
   }
 }

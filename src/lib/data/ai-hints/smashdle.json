@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-06T12:28:04.625Z",
+  "generatedAt": "2026-10-07T06:03:46.726Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Five separate fighters must be identified, spanning different franchises and recognition levels."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "A tie-wearing ape hurls barrels from his jungle, smashing rivals with brute strength.",
+      "clue1": "A barrel-tossing primate star of a classic arcade climb.",
+      "starts_with": "D",
+      "ends_with": "S",
+      "definition": "Nintendo video game character; a powerful gorilla and longtime Super Smash Bros. roster fighter.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A widely recognized Nintendo icon, though the two-word name may slow some solvers."
     }
   },
   "prose": {
-    "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes."
+    "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes.",
+    "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players."
   }
 }

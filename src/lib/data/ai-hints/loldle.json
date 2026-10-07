@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-06T12:27:43.535Z",
+  "generatedAt": "2026-10-07T06:03:34.107Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Popular champion but short name with uncommon letters can trick guessers early."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A greedy river king who swallows allies and foes whole for a ride.",
+      "clue1": "A monstrous catfish demon lurking in the muddy waters.",
+      "starts_with": "T",
+      "ends_with": "C",
+      "definition": "A monstrous river-dwelling champion in League of Legends known for devouring allies and enemies alike.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A recognizable champion with a two-word name, though its unusual spelling can trip players up."
     }
   },
   "prose": {
-    "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds."
+    "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds.",
+    "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack."
   }
 }

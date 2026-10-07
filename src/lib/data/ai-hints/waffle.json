@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-06T12:27:35.910Z",
+  "generatedAt": "2026-10-07T06:03:33.660Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common words mix with trickier entries, and the swapping format adds moderate solving challenge."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "Six crossing words, one grid; boast, cook, and undo all meet here.",
+      "clue1": "A woven breakfast of intersecting five-letter words awaits solving.",
+      "starts_with": "V",
+      "ends_with": "E",
+      "definition": "A six-word interlocking Waffle grid featuring words like a boast, a herb, and a diet.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words throughout, though a boastful term and a herb may slow some solvers."
     }
   },
   "prose": {
-    "2026-10-06": "Waffle for October 6, 2026 (puzzle #1719) arranges six five-letter words into a crossing grid. Each row and column locks together through shared letters, rewarding careful tile swaps."
+    "2026-10-06": "Waffle for October 6, 2026 (puzzle #1719) arranges six five-letter words into a crossing grid. Each row and column locks together through shared letters, rewarding careful tile swaps.",
+    "2026-10-07": "Waffle puzzle #1720 for October 7, 2026 arranges six five-letter words into its familiar crossing grid. The letter pattern blends everyday vocabulary with a trickier herb and an archaic boast, keeping the challenge balanced."
   }
 }

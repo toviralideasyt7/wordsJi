@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-06T12:27:42.248Z",
+  "generatedAt": "2026-10-07T06:03:48.855Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Short, memorable name but requires familiarity with lesser-discussed Dota 2 assassin heroes."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "30 letters appear more than once.",
+      "riddle": "Ales, lanterns, gold hunts, and stones unite these four Dota champions.",
+      "clue1": "A themed quartet of heroes from a popular MOBA.",
+      "starts_with": "B",
+      "ends_with": "T",
+      "definition": "A set of four Dota 2 heroes grouped together as today's answer.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A multi-hero answer requiring broad roster knowledge, not just one obvious guess."
     }
   },
   "prose": {
-    "2026-10-06": "Today's Dotadle challenge for October 6, 2026 marks puzzle Game #1026 with a compact four-letter answer. This Game #1026 entry features a short name where one letter repeats, so study the letter pattern closely."
+    "2026-10-06": "Today's Dotadle challenge for October 6, 2026 marks puzzle Game #1026 with a compact four-letter answer. This Game #1026 entry features a short name where one letter repeats, so study the letter pattern closely.",
+    "2026-10-07": "The Dotadle puzzle for October 7, 2026 (Game #1027) gathers four distinct heroes into one answer. In this edition, the opening name begins with B and ends with R while packing repeated letters."
   }
 }

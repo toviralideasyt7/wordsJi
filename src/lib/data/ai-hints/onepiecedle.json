@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-06T12:27:58.729Z",
+  "generatedAt": "2026-10-07T06:03:38.922Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Four distinct characters must be identified together, spanning different arcs, allegiances, and eras of the series."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "A sworn brother reborn in flames, fighting for freedom beneath a shadowy banner.",
+      "clue1": "Revolutionary chief of staff who inherited a fiery fruit.",
+      "starts_with": "S",
+      "ends_with": "O",
+      "definition": "One Piece character; Luffy's sworn brother and the Revolutionary Army's second-in-command.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Popular recurring character, but short name offers few guessing footholds early on."
     }
   },
   "prose": {
-    "2026-10-06": "OnePiecedle's October 6, 2026 challenge, Game #919, bundles four familiar faces into a single themed answer. The combined set begins with the letter K and ends with the letter G, offering sharp solvers a subtle pattern to parse."
+    "2026-10-06": "OnePiecedle's October 6, 2026 challenge, Game #919, bundles four familiar faces into a single themed answer. The combined set begins with the letter K and ends with the letter G, offering sharp solvers a subtle pattern to parse.",
+    "2026-10-07": "The OnePiecedle puzzle for October 7, 2026 (Game #920) spotlights a four-letter name beginning and ending with distinct consonants and vowels. This Game #920 entry features two vowels and no repeated letters, rewarding fans who know the crew's loyal allies."
   }
 }

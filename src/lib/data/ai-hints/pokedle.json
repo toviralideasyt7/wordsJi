@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-06T12:27:51.216Z",
+  "generatedAt": "2026-10-07T06:03:44.083Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A recognizable classic creature, though the seven-letter pattern and double vowel need some thought."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "A sludge, a stinger, a moth, and a shell-backed turtle all appear here.",
+      "clue1": "A quartet of creatures from a famous monster-catching franchise.",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "A set of four fictional creatures from a popular Japanese monster-collecting video game and media franchise.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Four distinct names must be identified, spanning different types and letter patterns, with little overlap."
     }
   },
   "prose": {
-    "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much."
+    "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much.",
+    "2026-10-07": "The Pokedle puzzle for October 7, 2026 (Game #1091) asks solvers to pin down a group of four creature names at once. Each entry in Game #1091 begins and ends with different letters, making the pattern tricky without revealing anything outright."
   }
 }

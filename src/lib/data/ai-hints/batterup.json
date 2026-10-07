@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-06T12:27:17.528Z",
+  "generatedAt": "2026-10-07T06:03:25.942Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A specific baseball player known mostly to dedicated fans of the sport."
+    },
+    "2026-10-06": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A slugging first baseman swapped Oakland green for Atlanta's bravest home.",
+      "clue1": "This power hitter mans first base in Atlanta.",
+      "starts_with": "M",
+      "ends_with": "N",
+      "definition": "American professional baseball first baseman known for prodigious home run power with the Braves.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known slugger among fans, but casual players may not recall the full name."
     }
   },
   "prose": {
-    "2026-10-05": "Today's Batter Up challenge for October 5, 2026, marks Game #960 with a name featuring three vowels and three letters that each appear twice. This October 5, 2026 puzzle runs from Y to Z, offering a tidy test for sharp solvers."
+    "2026-10-05": "Today's Batter Up challenge for October 5, 2026, marks Game #960 with a name featuring three vowels and three letters that each appear twice. This October 5, 2026 puzzle runs from Y to Z, offering a tidy test for sharp solvers.",
+    "2026-10-06": "Today's Batter Up puzzle for October 6, 2026 (Game #961) features a two-word name with ten letters total. The letter pattern includes two pairs of repeated letters, offering a subtle structural hint for solvers."
   }
 }
