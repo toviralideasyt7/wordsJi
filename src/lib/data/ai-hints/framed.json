@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-06T12:28:38.266Z",
+  "generatedAt": "2026-10-07T13:57:04.825Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Acclaimed film but moderately known; title and compound word may be tricky to guess."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A grieving spectre in mourning haunts a marsh house, dressed darkly head to toe.",
+      "clue1": "A gothic ghost story set in a lonely English marsh manor.",
+      "starts_with": "T",
+      "ends_with": "K",
+      "definition": "2012 British gothic horror film about a haunting spectral figure, based on Susan Hill's novel.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A moderately known horror film, recognizable to genre fans but easily missed by casual viewers."
     }
   },
   "prose": {
-    "2026-10-06": "Framed's puzzle #1671 for October 6, 2026 spotlights a tense modern thriller. The twelve-letter title is a single compound word featuring one letter that repeats."
+    "2026-10-06": "Framed's puzzle #1671 for October 6, 2026 spotlights a tense modern thriller. The twelve-letter title is a single compound word featuring one letter that repeats.",
+    "2026-10-07": "Framed's October 7, 2026 puzzle (#1672) offers a four-word title that begins with T and ends with K. The phrase spans fifteen letters and features five vowels, with two letters each appearing twice."
   }
 }
