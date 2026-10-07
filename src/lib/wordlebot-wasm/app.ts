@@ -962,7 +962,7 @@ function isAllowedGuess(state: SolverState, dataset: SolverDataset, guess: strin
 
 function hintTextForGame(state: SolverState) {
         if (state.game === 'canuckle') {
-                return "Click tiles to cycle gray, green, and yellow after adding each guess. The answer bank uses Canuckle's Canadian-themed list.";
+                return "Click tiles to cycle gray, red, and yellow after adding each guess. The answer bank uses Canuckle's Canadian-themed list.";
         }
         if (state.feedbackMode === 'woodle') {
                 return 'After each guess, set how many letters are exact matches and how many are misplaced.';

@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	let isOpen = $state(false);
 	let scrolled = $state(false);
 
 	const navLinks = [
@@ -16,7 +15,6 @@
 
 	onMount(() => {
 		const handleScroll = () => {
-			if (isOpen) return;
 			scrolled = window.scrollY > 10;
 		};
 		window.addEventListener('scroll', handleScroll, { passive: true });
@@ -68,47 +66,71 @@
 				{/each}
 			</ul>
 
-			<!-- Mobile toggle -->
-			<div class="flex items-center lg:hidden">
-				<button
-					type="button"
-					class="p-2 -mr-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-colors"
-					aria-controls="mobile-menu"
-					aria-expanded={isOpen}
-					onclick={() => isOpen = !isOpen}
-				>
+			<!-- Mobile menu: CSS-only <details> disclosure so the hamburger works
+			     with zero JavaScript (csr=false prerendered pages). The panel
+			     is absolutely positioned against <nav> (sticky), full width. -->
+			<details class="mobile-nav flex items-center lg:hidden">
+				<summary class="mobile-nav-summary cursor-pointer list-none rounded-lg p-2 -mr-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200">
 					<span class="sr-only">Toggle menu</span>
-					<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-						{#if isOpen}
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-						{:else}
-							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-						{/if}
+					<svg class="nav-icon-open w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
-				</button>
-			</div>
+					<svg class="nav-icon-close w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</summary>
+				<div class="mobile-nav-panel absolute inset-x-0 top-full z-50 border-t border-slate-200 bg-white dark:border-slate-700/50 dark:bg-slate-900 lg:hidden">
+					<ul class="px-4 py-3 space-y-0.5">
+						{#each navLinks as link}
+							{@const isActive = $page.url.pathname === link.href || (link.href !== '/' && $page.url.pathname?.startsWith(link.href))}
+							<li>
+								<a
+									href={link.href}
+									class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors {isActive
+										? 'text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/20'
+										: 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}"
+								>
+									{link.name}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+			</details>
 		</div>
 	</div>
-
-	<!-- Mobile menu -->
-	{#if isOpen}
-		<div class="lg:hidden border-t border-slate-200 dark:border-slate-700/50 bg-white dark:bg-slate-900 animate-slide-down">
-			<ul class="px-4 py-3 space-y-0.5">
-				{#each navLinks as link}
-					{@const isActive = $page.url.pathname === link.href || (link.href !== '/' && $page.url.pathname?.startsWith(link.href))}
-					<li>
-						<a
-							href={link.href}
-							class="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors {isActive
-								? 'text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/20'
-								: 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}"
-							onclick={() => isOpen = false}
-						>
-							{link.name}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</div>
-	{/if}
 </nav>
+
+<style>
+	.mobile-nav summary {
+		list-style: none;
+	}
+	.mobile-nav summary::-webkit-details-marker {
+		display: none;
+	}
+	.mobile-nav summary::marker {
+		display: none;
+	}
+	.mobile-nav .nav-icon-close {
+		display: none;
+	}
+	.mobile-nav[open] .nav-icon-open {
+		display: none;
+	}
+	.mobile-nav[open] .nav-icon-close {
+		display: block;
+	}
+	.mobile-nav[open] .mobile-nav-panel {
+		animation: nav-slide-down 0.18s ease;
+	}
+	@keyframes nav-slide-down {
+		from {
+			opacity: 0;
+			transform: translateY(-6px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>

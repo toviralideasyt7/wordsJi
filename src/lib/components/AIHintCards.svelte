@@ -29,37 +29,34 @@
   };
   let accentGradient = $derived(ACCENTS[accent] ?? ACCENTS['teal']);
 
-  let open = $state<Record<string, boolean>>({});
-
-  function toggle(id: string) {
-    open = { ...open, [id]: !open[id] };
-  }
-
   let difficultyPct = $derived(Math.min(100, Math.max(0, (hh.difficulty / 10) * 100)));
 </script>
 
 {#snippet hintCard(id: string, title: string, subtitle: string, body: Snippet)}
-  <div class="overflow-hidden rounded-2xl border transition-all duration-300 {open[id] ? 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700' : 'bg-white dark:bg-slate-800 border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md'}">
-    <button type="button" onclick={() => toggle(id)} aria-expanded={open[id] ?? false} class="w-full flex items-center justify-between gap-4 p-5 text-left">
+  <!-- CSS-only disclosure: native <details> needs no JavaScript, so hint
+       reveals work on csr=false prerendered pages and stay crawlable. -->
+  <details class="hint-card overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800" {id}>
+    <summary class="hint-summary flex w-full cursor-pointer list-none items-center justify-between gap-4 p-5 text-left">
       <div class="min-w-0">
         <span class="block font-bold text-slate-900 dark:text-slate-100">{title}</span>
         <span class="text-sm text-slate-500 dark:text-slate-400">{subtitle}</span>
       </div>
-      <span class="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-colors {open[id] ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900' : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}">
-        {open[id] ? 'Hide' : 'Reveal'}
-        <svg class="w-4 h-4 transition-transform duration-300 {open[id] ? 'rotate-180' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <span class="hint-pill flex shrink-0 items-center gap-2 rounded-lg bg-slate-100 px-3 py-1.5 text-sm font-bold text-slate-600 transition-colors dark:bg-slate-700 dark:text-slate-300">
+        <span class="label-closed">Reveal</span>
+        <span class="label-open">Hide</span>
+        <svg class="hint-chevron h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </span>
-    </button>
-    <div class="transition-all duration-300 ease-in-out overflow-hidden {open[id] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}">
-      <div class="px-5 pb-5">
-        <div class="pt-4 border-t border-slate-100 dark:border-slate-700/60">
+    </summary>
+    <div class="hint-body">
+      <div class="hint-body-inner">
+        <div class="mx-5 mb-5 border-t border-slate-100 pt-4 dark:border-slate-700/60">
           {@render body()}
         </div>
       </div>
     </div>
-  </div>
+  </details>
 {/snippet}
 
 {#if answer}
@@ -177,5 +174,62 @@
   }
   .hint-answer-details[open] .label-open {
     display: inline;
+  }
+
+  /* CSS-only hint-card disclosures: the <summary> is the toggle, so the
+     Reveal/Hide buttons work with zero JavaScript (csr=false pages). */
+  .hint-card summary {
+    list-style: none;
+  }
+  .hint-card summary::-webkit-details-marker {
+    display: none;
+  }
+  .hint-card summary::marker {
+    display: none;
+  }
+  .hint-card .label-open {
+    display: none;
+  }
+  .hint-card[open] .label-closed {
+    display: none;
+  }
+  .hint-card[open] .label-open {
+    display: inline;
+  }
+  .hint-card[open] {
+    border-color: #e2e8f0;
+  }
+  .hint-card[open] .hint-pill {
+    background-color: #0f172a;
+    color: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    .hint-card[open] {
+      border-color: #334155;
+    }
+    .hint-card[open] .hint-pill {
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+  }
+  .hint-card .hint-chevron {
+    transition: transform 0.3s ease;
+  }
+  .hint-card[open] .hint-chevron {
+    transform: rotate(180deg);
+  }
+  /* Smooth expand/collapse without JavaScript. Native <details> already hides
+     the body when closed; the grid transition animates the opening. */
+  .hint-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+  .hint-body-inner {
+    overflow: hidden;
+    min-height: 0;
+  }
+  .hint-card[open] .hint-body {
+    grid-template-rows: 1fr;
   }
 </style>
