@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-06T16:31:14.036Z",
+  "generatedAt": "2026-10-07T16:31:12.200Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common operators and a clean zero result, but a repeated digit may mislead."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 0 vowels.",
+      "repeat_hint": "There are zero repeated characters.",
+      "riddle": "Multiply a pair, subtract a larger sum, and barely land above nothing.",
+      "clue1": "A product shrinks until only a lone unit remains.",
+      "starts_with": "5",
+      "ends_with": "1",
+      "definition": "An arithmetic equation where a product minus a larger number equals a single unit.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Mixing multiplication and subtraction with a small result requires some trial and error."
     }
   },
   "prose": {
     "2026-10-06": "The Nerdle puzzle for October 6, 2026 (#1721) is live with today's answer confirmed. The answer runs 6 characters, starting with 5 and ending with 4 — see the letter hints above before you peek.",
-    "2026-10-07": "The Nerdle puzzle #1722 for October 7, 2026 features both division and subtraction operators. Its eight-character sequence begins with a 1 and resolves neatly to a single-digit result."
+    "2026-10-07": "The Nerdle puzzle #1722 for October 7, 2026 features both division and subtraction operators. Its eight-character sequence begins with a 1 and resolves neatly to a single-digit result.",
+    "2026-10-08": "Nerdle puzzle #1723 for October 8, 2026 blends multiplication and subtraction across its eight tiles. The sequence starts with a 5 and finishes with a 1, framing a compact numeric challenge."
   }
 }

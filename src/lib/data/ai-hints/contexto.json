@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-06T16:31:21.739Z",
+  "generatedAt": "2026-10-07T16:31:19.424Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but abstract profession makes semantic neighbors scattered and harder to guess."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "Teachers want me on a resume, yet life hands me out for free.",
+      "clue1": "What you gain through time, practice, and living.",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "Knowledge or skill gained from doing, seeing, or feeling things over time.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common everyday word, but many related concepts cluster closely, making the exact target tricky."
     }
   },
   "prose": {
     "2026-10-06": "The Contexto puzzle #1479 for October 6, 2026 features an eight-letter word beginning with M and ending with L. It holds four vowels and one letter that appears twice, offering steady clues for careful solvers.",
-    "2026-10-07": "Today's Contexto puzzle #1480 for October 7, 2026 features a six-letter word that both begins and ends with the same letter. Notably, two different letters each appear twice within it, offering a subtle structural clue."
+    "2026-10-07": "Today's Contexto puzzle #1480 for October 7, 2026 features a six-letter word that both begins and ends with the same letter. Notably, two different letters each appear twice within it, offering a subtle structural clue.",
+    "2026-10-08": "Today's Contexto puzzle for October 8, 2026 (#1481) hides a ten-letter word that both opens and closes with the same letter. Players tackling this round will notice one letter repeating three times across the solution."
   }
 }

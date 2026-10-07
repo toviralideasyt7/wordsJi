@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-06T16:31:06.509Z",
+  "generatedAt": "2026-10-07T16:31:02.866Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common everyday word with no repeated letters and a familiar vowel-heavy pattern."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A clash of fists, or the courage to stand your ground.",
+      "clue1": "What boxers do, and what the brave never give up.",
+      "starts_with": "F",
+      "ends_with": "T",
+      "definition": "To take part in a violent struggle or battle; a physical or verbal conflict.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A common five-letter word with no repeats and a familiar letter pattern."
     }
   },
   "prose": {
     "2026-10-06": "Searchle puzzle #73 for October 6, 2026 offers a seven-letter word with two vowels. This Searchle entry begins with S and ends with R, featuring a single repeated letter.",
-    "2026-10-07": "Searchle puzzle #74 for October 7, 2026 offers a five-letter word with three vowels and no repeats. The pattern begins with A and ends with E, giving solvers a steady foothold."
+    "2026-10-07": "Searchle puzzle #74 for October 7, 2026 offers a five-letter word with three vowels and no repeats. The pattern begins with A and ends with E, giving solvers a steady foothold.",
+    "2026-10-08": "The Searchle puzzle #75 for October 8, 2026 is a five-letter word featuring a single vowel. This entry has no repeated letters and begins and ends with consonants."
   }
 }

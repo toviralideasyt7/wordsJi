@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-06T16:31:39.112Z",
+  "generatedAt": "2026-10-07T16:31:11.315Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common words, but one repeated letter and varied vowel counts can slow solvers down."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "A fresh flavor, a boat's helper, a hen's family, and a fresh start await.",
+      "clue1": "Four unrelated words: taste, athlete, offspring, and a button press.",
+      "starts_with": "M",
+      "ends_with": "T",
+      "definition": "A Quordle grid of four words spanning taste, sport, parenting, and restarting.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Mix of common and trickier words with repeated letters and varied vowel placement."
     }
   },
   "prose": {
     "2026-10-06": "Quordle's October 6, 2026 puzzle (#1716) gathers four five-letter words with starting letters F, S, B, and E. The set mixes consonant-heavy spellings with one vowel-rich entry, offering a varied letter pattern for solvers.",
-    "2026-10-07": "The Quordle puzzle #1717 for October 7, 2026 features four everyday five-letter words beginning with P, F, D, and E. Across the grid these answers pack eight vowels total, with just a single repeated letter hiding among them."
+    "2026-10-07": "The Quordle puzzle #1717 for October 7, 2026 features four everyday five-letter words beginning with P, F, D, and E. Across the grid these answers pack eight vowels total, with just a single repeated letter hiding among them.",
+    "2026-10-08": "The Quordle puzzle for October 8, 2026 (#1718) gathers four distinct five-letter words with no shared theme. Each entry follows its own letter pattern, keeping the quartet balanced between familiar and challenging guesses."
   }
 }

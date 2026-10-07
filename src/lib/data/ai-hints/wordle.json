@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-06T16:31:07.354Z",
+  "generatedAt": "2026-10-07T16:31:05.577Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -25,10 +25,23 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word with no repeats, but the silent-E vowel pattern may need a few guesses."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I scatter seeds and words alike, tossed loosely all about the ground.",
+      "clue1": "To scatter or spread things carelessly around.",
+      "starts_with": "S",
+      "ends_with": "W",
+      "definition": "To scatter or spread something loosely over a surface or area.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Single vowel, tricky consonant cluster, and uncommon word reduce easy guessing."
     }
   },
   "prose": {
     "2026-10-06": "Wordle puzzle #1935 for October 6, 2026 offers a five-letter word with just a single vowel. This solution ends in Y and features no repeated letters, keeping guessers on their toes.",
-    "2026-10-07": "The Wordle puzzle #1936 for October 7, 2026 features a five-letter word with no repeated letters. Its pattern pairs an opening consonant cluster with a familiar silent-E ending."
+    "2026-10-07": "The Wordle puzzle #1936 for October 7, 2026 features a five-letter word with no repeated letters. Its pattern pairs an opening consonant cluster with a familiar silent-E ending.",
+    "2026-10-08": "Wordle puzzle #1937 for October 8, 2026 features a five-letter word with only one vowel. The solution follows a consonant-heavy pattern that may challenge solvers hunting for familiar letter combinations."
   }
 }

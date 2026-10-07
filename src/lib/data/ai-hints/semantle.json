@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-06T16:31:06.679Z",
+  "generatedAt": "2026-10-07T16:31:04.737Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common everyday noun with several meanings, moderately connected to many related concepts."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "Focus hard, and I appear; lose focus, and I disappear.",
+      "clue1": "The mental focus a student brings to difficult work.",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "The action of focusing all one's attention or mental effort on a task.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common abstract noun with many semantic neighbors, but not among frequent guesses."
     }
   },
   "prose": {
     "2026-10-06": "Today's Semantle puzzle #1711 for October 6, 2026 features a nine-letter adjective that both starts and ends with the same vowel. The solution packs four vowels and includes letters that repeat, making its pattern more distinctive than most.",
-    "2026-10-07": "Semantle puzzle #1712 for October 7, 2026 features an eleven-letter word starting with R and ending with N. In this edition two separate letters each surface twice, so watch the recurring patterns closely."
+    "2026-10-07": "Semantle puzzle #1712 for October 7, 2026 features an eleven-letter word starting with R and ending with N. In this edition two separate letters each surface twice, so watch the recurring patterns closely.",
+    "2026-10-08": "Semantle puzzle #1713, dated October 8, 2026, hides a thirteen-letter word beginning with C and ending with N. This entry packs five vowels and several repeated letters into a single everyday term."
   }
 }

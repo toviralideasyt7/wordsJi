@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-06T16:31:19.442Z",
+  "generatedAt": "2026-10-07T16:31:15.934Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "A recently formed, relatively small country that some players may overlook on the map."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "Land of fire by a landlocked sea, where East greets West warmly.",
+      "clue1": "A Caucasus nation bordering the Caspian Sea.",
+      "starts_with": "A",
+      "ends_with": "N",
+      "definition": "A country in the South Caucasus region bordering the Caspian Sea, Russia, Georgia, Armenia, and Iran.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known country, though its spelling and exact borders can trip up players."
     }
   },
   "prose": {
     "2026-10-06": "Today's Worldle puzzle #1720 for October 6, 2026 points to a small island territory with a distinctive outline. The answer spans three words with no repeated letters, beginning with I and ending with N.",
-    "2026-10-07": "Worldle's puzzle #1721 for October 7, 2026 points to a two-word nation whose name begins with S and ends with N. This entry contains four vowels and features two letters that each appear exactly twice."
+    "2026-10-07": "Worldle's puzzle #1721 for October 7, 2026 points to a two-word nation whose name begins with S and ends with N. This entry contains four vowels and features two letters that each appear exactly twice.",
+    "2026-10-08": "Today's Worldle puzzle #1722 for October 8, 2026 challenges players to identify a country from its silhouette. The answer runs ten letters long, beginning with A and ending with N, with one letter appearing three times."
   }
 }

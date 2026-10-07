@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-06T16:31:10.375Z",
+  "generatedAt": "2026-10-07T16:31:05.985Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A compound color name with two repeated letters makes it tricky to pin down."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A citrus named for the crimson color hiding beneath its ordinary skin.",
+      "clue1": "A reddish fruit shares its name with this deep hue.",
+      "starts_with": "B",
+      "ends_with": "C",
+      "definition": "A deep crimson-red color named after a citrus fruit with dark red flesh.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two-word answer with repeated letters and five vowels makes guessing the exact shade tricky."
     }
   },
   "prose": {
     "2026-10-06": "Colordle's puzzle #1656 for October 6, 2026 features a soft blushing shade with a seven-letter answer spanning two words. The pattern includes two letters that each repeat, opening with P and closing with K.",
-    "2026-10-07": "Colordle's puzzle #1657 for October 7, 2026 presents a two-word earthy shade. The letter pattern spans a longer phrase beginning with R and ending with N, with two letters appearing twice."
+    "2026-10-07": "Colordle's puzzle #1657 for October 7, 2026 presents a two-word earthy shade. The letter pattern spans a longer phrase beginning with R and ending with N, with two letters appearing twice.",
+    "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times."
   }
 }

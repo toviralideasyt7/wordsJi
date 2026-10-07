@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-06T16:31:22.425Z",
+  "generatedAt": "2026-10-07T16:31:20.545Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A small Pacific nation less familiar to many, requiring geographic knowledge of Oceania."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A small South American land of gauchos, mate, and sky-blue stripes.",
+      "clue1": "Nestled between two giants, by the River Plate.",
+      "starts_with": "U",
+      "ends_with": "Y",
+      "definition": "A South American country bordered by Brazil and Argentina, known for its Atlantic coastline and capital Montevideo.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known nation, but its small size and location can trip up solvers."
     }
   },
   "prose": {
     "2026-10-06": "Today's Countryle puzzle for October 6, 2026 (Game #1691) points to a southern African nation. The answer begins with a rare letter, ends with a vowel, and features one letter appearing twice.",
-    "2026-10-07": "Today's Countryle puzzle for October 7, 2026 (Game #1692) points to a Pacific archipelago whose name both begins and ends with the same letter. This entry features five vowels and multiple repeated letters across its two words."
+    "2026-10-07": "Today's Countryle puzzle for October 7, 2026 (Game #1692) points to a Pacific archipelago whose name both begins and ends with the same letter. This entry features five vowels and multiple repeated letters across its two words.",
+    "2026-10-08": "The Countryle puzzle for October 8, 2026 (Game #1693) hides a South American answer with a letter pattern featuring one letter repeated three times. This Game #1693 solution begins with U and ends with Y, spanning four vowels in total."
   }
 }

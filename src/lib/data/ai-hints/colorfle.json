@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-06T16:31:28.271Z",
+  "generatedAt": "2026-10-07T16:31:26.388Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Mixing related dark cool tones with a warm reddish shade challenges color intuition."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A purple bloom, a dark reddish brown, and a bright greenish blue walk in.",
+      "clue1": "A soft floral purple, a deep brownish red, a vivid blue-green.",
+      "starts_with": "L",
+      "ends_with": "N",
+      "definition": "Three color names: a pale purple flower shade, a dark brownish-red, and a greenish-blue hue.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common color names, but mixing them to the correct target shade takes some careful guessing."
     }
   },
   "prose": {
     "2026-10-06": "Colorfle's puzzle #1625 for October 6, 2026 blends three closely related bright shades. The combined letter pattern runs from L to W and features seven vowels spread across the words.",
-    "2026-10-07": "Colorfle's puzzle #1626 for October 7, 2026 pairs cool tones with a single warm shade. The combined answer begins with the letter B and ends with the letter N."
+    "2026-10-07": "Colorfle's puzzle #1626 for October 7, 2026 pairs cool tones with a single warm shade. The combined answer begins with the letter B and ends with the letter N.",
+    "2026-10-08": "Colorfle puzzle #1627 for October 8, 2026 challenges players to blend three distinct color names into one target shade. The trio's names begin with L and the final one closes with the letter N."
   }
 }

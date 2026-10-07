@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-07T13:57:04.825Z",
+  "generatedAt": "2026-10-07T16:31:20.579Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A moderately known horror film, recognizable to genre fans but easily missed by casual viewers."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A legal thriller where murky currents hide a company's deadly secret.",
+      "clue1": "A courtroom drama about corporate pollution and contaminated supplies.",
+      "starts_with": "D",
+      "ends_with": "S",
+      "definition": "2019 legal thriller film about a lawyer exposing a chemical company's environmental contamination.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A quieter prestige drama, less widely seen than mainstream blockbusters, making it tricky to recall."
     }
   },
   "prose": {
     "2026-10-06": "Framed's puzzle #1671 for October 6, 2026 spotlights a tense modern thriller. The twelve-letter title is a single compound word featuring one letter that repeats.",
-    "2026-10-07": "Framed's October 7, 2026 puzzle (#1672) offers a four-word title that begins with T and ends with K. The phrase spans fifteen letters and features five vowels, with two letters each appearing twice."
+    "2026-10-07": "Framed's October 7, 2026 puzzle (#1672) offers a four-word title that begins with T and ends with K. The phrase spans fifteen letters and features five vowels, with two letters each appearing twice.",
+    "2026-10-08": "The Framed puzzle for October 8, 2026 (#1673) offers a title made of two words totaling ten letters. This entry begins with D and ends with S, with a couple of letters appearing twice across the pattern."
   }
 }

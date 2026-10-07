@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-06T16:31:14.229Z",
+  "generatedAt": "2026-10-07T16:31:11.647Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -25,10 +25,23 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word but short plural form with no repeated letters may trip some solvers."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A big round rustic loaf, baked crusty, sliced to share at the table.",
+      "clue1": "A hearty country-style loaf of bread.",
+      "starts_with": "M",
+      "ends_with": "E",
+      "definition": "A large round loaf of rustic, country-style bread with a thick crust.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "An uncommon baking term many solvers may not recognize despite its simple five-letter shape."
     }
   },
   "prose": {
     "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y.",
-    "2026-10-07": "The Phoodle puzzle for October 7, 2026 features a five-letter word with no repeated letters. Solvers tackling 2026-10-07 will notice it holds two vowels and ends in a plural S."
+    "2026-10-07": "The Phoodle puzzle for October 7, 2026 features a five-letter word with no repeated letters. Solvers tackling 2026-10-07 will notice it holds two vowels and ends in a plural S.",
+    "2026-10-08": "Today's Phoodle for October 8, 2026 features a five-letter word with no repeated letters. The 2026-10-08 puzzle begins with M and ends with E, framing a tidy two-vowel pattern."
   }
 }
