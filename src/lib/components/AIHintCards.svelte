@@ -17,6 +17,7 @@
 
   let { gameName = 'Wordle', answer = '', hints = EMPTY_AI_HINTS, accent = 'teal', showAnswerReveal = true }: Props = $props();
   const hh = $derived(hints ?? EMPTY_AI_HINTS);
+  const isMath = $derived(hh.kind === 'math');
 
   // Tailwind-safe accent map (full class names only — no dynamic interpolation).
   const ACCENTS: Record<string, string> = {
@@ -74,6 +75,48 @@
     </div>
 
     <div class="grid gap-4">
+      {#if isMath}
+        {#snippet operatorsBody()}
+          <p class="text-lg font-medium text-slate-800 dark:text-slate-200">{hh.operator_hint}</p>
+        {/snippet}
+        {@render hintCard('operators', 'Operators', 'Which math operators appear?', operatorsBody)}
+
+        {#snippet lengthBody()}
+          <p class="text-lg font-medium text-slate-800 dark:text-slate-200">{hh.length_hint}</p>
+        {/snippet}
+        {@render hintCard('length', 'Equation length', 'How many characters long?', lengthBody)}
+
+        {#snippet resultBody()}
+          <p class="text-lg font-medium text-slate-800 dark:text-slate-200">{hh.result_hint}</p>
+        {/snippet}
+        {@render hintCard('result', 'The result', 'What does it equal? No spoilers.', resultBody)}
+
+        {#snippet mathLettersBody()}
+          <div class="flex items-center justify-around">
+            <div class="text-center">
+              <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Starts with</div>
+              <div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-xl text-2xl font-black text-slate-800 dark:text-slate-100">
+                {hh.starts_with}
+              </div>
+            </div>
+            <div class="h-px flex-grow mx-4 bg-slate-200 dark:bg-slate-700"></div>
+            <div class="text-center">
+              <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Ends with</div>
+              <div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-xl text-2xl font-black text-slate-800 dark:text-slate-100">
+                {hh.ends_with}
+              </div>
+            </div>
+          </div>
+        {/snippet}
+        {@render hintCard('letters', 'Starts & ends with', 'The first and last characters.', mathLettersBody)}
+
+        {#if hh.riddle}
+          {#snippet mathRiddleBody()}
+            <p class="text-lg font-medium text-slate-800 dark:text-slate-200 italic">{hh.riddle}</p>
+          {/snippet}
+          {@render hintCard('riddle', 'Riddle', 'Solve this to narrow it down.', mathRiddleBody)}
+        {/if}
+      {:else}
       {#snippet vowelBody()}
         <p class="text-lg font-medium text-slate-800 dark:text-slate-200">{hh.vowel_hint}</p>
       {/snippet}
@@ -122,6 +165,7 @@
           <p class="text-lg font-medium text-slate-800 dark:text-slate-200">{hh.definition}</p>
         {/snippet}
         {@render hintCard('meaning', 'Meaning', 'What the word means.', definitionBody)}
+      {/if}
       {/if}
     </div>
 

@@ -1,6 +1,7 @@
 // Shared type for per-puzzle AI-generated hint data.
 // Used by AIHintCards.svelte, PaaHints.svelte and daily answer pages.
 export interface AIHints {
+	kind?: 'word' | 'math';
 	vowel_hint: string;
 	repeat_hint: string;
 	riddle: string;
@@ -11,6 +12,10 @@ export interface AIHints {
 	difficulty: number;
 	difficulty_label: string;
 	difficulty_reason: string;
+	// Math (nerdle) hint fields — only populated when kind === 'math'.
+	operator_hint?: string;
+	length_hint?: string;
+	result_hint?: string;
 }
 
 export const EMPTY_AI_HINTS: AIHints = {
@@ -116,7 +121,88 @@ export function deterministicHints(text: string): AIHints {
  * creative fields (riddle, clue1, definition, difficulty, prose) when sane.
  * Empty AI strings stay empty (the UI hides them).
  */
+// ---------------------------------------------------------------------------
+// Math (nerdle) hints — equations, not words. Mirrors the math path in
+// scripts/generate-ai-hints.mjs so pages render kind:'math' JSON correctly.
+const MATH_OP_NAMES: Record<string, string> = {
+	'+': 'addition', '-': 'subtraction', '*': 'multiplication', '×': 'multiplication',
+	x: 'multiplication', '/': 'division', '÷': 'division'
+};
+function analyzeEquation(eq: string) {
+	const clean = eq.replace(/\s+/g, '');
+	const parts = clean.split('=');
+	const lhs = parts[0] || '';
+	const rhs = parts.length > 1 ? parts.slice(1).join('=') : '';
+	const opChars = lhs.match(/[+\-*/×÷x]/g) || [];
+	const opNames = [...new Set(opChars.map((c) => MATH_OP_NAMES[c]).filter(Boolean))];
+	const rhsDigits = (rhs.match(/\d/g) || []).length;
+	const rhsNum = rhs !== '' && /^-?\d+$/.test(rhs) ? parseInt(rhs, 10) : null;
+	return {
+		clean, opNames, rhsDigits, rhsNum,
+		first: clean[0] ? clean[0].toUpperCase() : '?',
+		last: clean[clean.length - 1] ? clean[clean.length - 1].toUpperCase() : '?',
+		length: clean.length
+	};
+}
+function mathLeakTokens(text: string): string[] {
+	const a = analyzeEquation(text);
+	const toks = new Set<string>();
+	const stripped = a.clean.replace(/[^a-z0-9]/gi, '').toLowerCase();
+	if (stripped.length >= 3) toks.add(stripped);
+	for (const n of text.match(/\d+/g) || []) {
+		if (n.length >= 2) toks.add(n);
+	}
+	return [...toks];
+}
+function leaksMath(field: string | undefined, text: string): boolean {
+	if (!field) return false;
+	const low = field.toLowerCase();
+	return mathLeakTokens(text).some((t) => t.length >= 2 && low.includes(t));
+}
+export function deterministicMathHints(text: string): AIHints {
+	const a = analyzeEquation(text);
+	const operator_hint = a.opNames.length ? `Uses ${a.opNames.join(' and ')}.` : 'Uses basic arithmetic.';
+	const length_hint = `The equation is ${a.length} characters long.`;
+	const bits = [a.rhsDigits === 1 ? 'a single digit' : a.rhsDigits === 0 ? 'a value' : `a ${a.rhsDigits}-digit number`];
+	if (a.rhsNum !== null && Number.isInteger(a.rhsNum)) bits.push(a.rhsNum % 2 === 0 ? 'even' : 'odd');
+	const result_hint = `The result is ${bits.join(' and ')}.`;
+	let score = 3;
+	if (a.opNames.length > 1) score += 2;
+	if (a.opNames.includes('division') || a.opNames.includes('multiplication')) score += 1;
+	if (/\d{3,}/.test(text)) score += 1;
+	if (a.length >= 9) score += 1;
+	score = Math.max(0, Math.min(10, score));
+	const difficulty_label = score <= 2 ? 'Very Easy' : score <= 4 ? 'Easy' : score <= 6 ? 'Normal' : score <= 8 ? 'Hard' : 'Very Hard';
+	return {
+		kind: 'math', operator_hint, length_hint, result_hint, riddle: '',
+		starts_with: a.first, ends_with: a.last,
+		vowel_hint: '', repeat_hint: '', clue1: '', definition: '',
+		difficulty: score, difficulty_label,
+		difficulty_reason: 'Scored from operators, number size, and equation length.'
+	};
+}
+function mergeMathHintsRuntime(text: string, ai: AIHints): AIHints {
+	const det = deterministicMathHints(text);
+	const a = analyzeEquation(text);
+	const operator_hint = ai.operator_hint && !leaksMath(ai.operator_hint, text) ? ai.operator_hint.trim() : det.operator_hint!;
+	const result_hint = ai.result_hint && !leaksMath(ai.result_hint, text) ? ai.result_hint.trim() : det.result_hint!;
+	const riddle = ai.riddle && !leaksMath(ai.riddle, text) ? ai.riddle.trim() : '';
+	let difficulty = det.difficulty, difficulty_label = det.difficulty_label, difficulty_reason = det.difficulty_reason;
+	if (Number.isInteger(ai.difficulty) && ai.difficulty >= 0 && ai.difficulty <= 10) {
+		difficulty = ai.difficulty;
+		difficulty_label = (DIFFICULTY_LABELS as readonly string[]).includes(ai.difficulty_label) ? ai.difficulty_label : det.difficulty_label;
+		if (ai.difficulty_reason?.trim()) difficulty_reason = ai.difficulty_reason.trim();
+	}
+	return {
+		kind: 'math', operator_hint, length_hint: det.length_hint!, result_hint, riddle,
+		starts_with: a.first, ends_with: a.last,
+		vowel_hint: '', repeat_hint: '', clue1: '', definition: '',
+		difficulty, difficulty_label, difficulty_reason
+	};
+}
+
 export function mergeHints(text: string, ai: AIHints | null): AIHints {
+	if (ai?.kind === 'math') return mergeMathHintsRuntime(text, ai);
 	const det = deterministicHints(text);
 	if (!ai) return det;
 	const { vowelCount, repeatCount, first, last } = analyzeLetters(text);

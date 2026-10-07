@@ -336,7 +336,7 @@ const GAMES = [
 		}
 	},
 	{
-		key: 'nerdle', label: 'Nerdle',
+		key: 'nerdle', label: 'Nerdle', hintKind: 'math',
 		async getInput() {
 			const key = windowKey('nerdle');
 			const payload = await fetchJson(`https://nerdle-answers.nerdleapi.workers.dev/${key}`);
@@ -549,6 +549,137 @@ function deterministicHints(text) {
 		difficulty_reason: 'Scored from letter rarity, repeats, and length.'
 	};
 }
+// ---------------------------------------------------------------- Math (nerdle) hints
+// Nerdle answers are equations ("12+34=46"), not words — vowel/letter clues
+// are nonsense there, so math games get their own hint set.
+const OP_NAMES = { '+': 'addition', '-': 'subtraction', '*': 'multiplication', '×': 'multiplication', 'x': 'multiplication', '/': 'division', '÷': 'division' };
+function analyzeEquation(eq) {
+	const clean = String(eq).replace(/\s+/g, '');
+	const parts = clean.split('=');
+	const lhs = parts[0] || '';
+	const rhs = parts.length > 1 ? parts.slice(1).join('=') : '';
+	const opChars = lhs.match(/[+\-*/×÷x]/g) || [];
+	const opNames = [...new Set(opChars.map((c) => OP_NAMES[c]).filter(Boolean))];
+	const numbers = lhs.match(/\d+/g) || [];
+	const rhsDigits = (rhs.match(/\d/g) || []).length;
+	const rhsNum = rhs !== '' && /^-?\d+$/.test(rhs) ? parseInt(rhs, 10) : null;
+	return {
+		clean, lhs, rhs, opChars, opNames, numbers, rhsDigits, rhsNum,
+		first: clean[0] ? clean[0].toUpperCase() : '?',
+		last: clean[clean.length - 1] ? clean[clean.length - 1].toUpperCase() : '?',
+		length: clean.length
+	};
+}
+function mathDifficultyBand(score) {
+	return score <= 2 ? 'Very Easy' : score <= 4 ? 'Easy' : score <= 6 ? 'Normal' : score <= 8 ? 'Hard' : 'Very Hard';
+}
+function resultDescription(a) {
+	const bits = [];
+	bits.push(a.rhsDigits === 1 ? 'a single digit' : a.rhsDigits === 0 ? 'a value' : `a ${a.rhsDigits}-digit number`);
+	if (a.rhsNum !== null && Number.isInteger(a.rhsNum)) bits.push(a.rhsNum % 2 === 0 ? 'even' : 'odd');
+	return `The result is ${bits.join(' and ')}.`;
+}
+function deterministicMathHints(text) {
+	const a = analyzeEquation(text);
+	const operator_hint = a.opNames.length ? `Uses ${a.opNames.join(' and ')}.` : 'Uses basic arithmetic.';
+	const length_hint = `The equation is ${a.length} characters long.`;
+	const result_hint = resultDescription(a);
+	let score = 3;
+	if (a.opNames.length > 1) score += 2;
+	if (a.opNames.includes('division') || a.opNames.includes('multiplication')) score += 1;
+	if (a.numbers.some((n) => n.length >= 3)) score += 1;
+	if (a.length >= 9) score += 1;
+	score = Math.max(0, Math.min(10, score));
+	return {
+		kind: 'math', operator_hint, length_hint, result_hint, riddle: '',
+		starts_with: a.first, ends_with: a.last,
+		vowel_hint: '', repeat_hint: '', clue1: '', definition: '',
+		difficulty: score, difficulty_label: mathDifficultyBand(score),
+		difficulty_reason: 'Scored from operators, number size, and equation length.'
+	};
+}
+// Leak guard for math: the equation's digit runs and the result must never
+// appear in riddle / result_hint / operator_hint.
+function mathLeakTokens(text) {
+	const a = analyzeEquation(text);
+	const toks = new Set();
+	const stripped = a.clean.replace(/[^a-z0-9]/gi, '').toLowerCase();
+	if (stripped.length >= 3) toks.add(stripped);
+	for (const n of [...a.numbers, a.rhs]) {
+		if (n && n.length >= 2) toks.add(n);
+	}
+	return [...toks];
+}
+function leaksMath(field, text) {
+	if (!field || typeof field !== 'string') return false;
+	const low = field.toLowerCase();
+	return mathLeakTokens(text).some((t) => t.length >= 2 && low.includes(t));
+}
+function buildMathPrompt(label, text, dateLong, numberText) {
+	const a = analyzeEquation(text);
+	return `You are writing hints for the daily math puzzle game "${label}" (an equation-guessing game like Nerdle).
+The equation for the ${dateLong} puzzle (${numberText}) is: ${text}
+
+Reply with ONLY a JSON object (no markdown, no commentary) with EXACTLY these keys:
+- "operator_hint": e.g. "Uses subtraction." (name ONLY the operator types: addition, subtraction, multiplication, division)
+- "length_hint": e.g. "The equation is 8 characters long."
+- "result_hint": describe the RESULT only in vague terms, e.g. "The result is a single digit." or "The result is a two-digit even number." NEVER state the actual result or any of its digits.
+- "riddle": a playful math-themed riddle about the equation, max 15 words. MUST NOT contain the equation, any multi-digit number from it, or the result.
+- "starts_with": single character (digit or uppercase letter) — the first character of the equation
+- "ends_with": single character — the last character of the equation
+- "difficulty": integer 0-10
+- "difficulty_label": one of "Very Easy", "Easy", "Normal", "Hard", "Very Hard"
+- "difficulty_reason": max 18 words
+- "prose": two original sentences about this specific puzzle (mention the game "${label}", the date "${dateLong}", the puzzle ${numberText}). NEVER reveal the equation or result. No first-person experience.
+
+Reference facts (do NOT echo verbatim): operators=${a.opNames.join(', ') || 'none'}, equationLength=${a.length}, resultDigits=${a.rhsDigits}.`;
+}
+const MATH_HINT_KEYS = ['operator_hint', 'length_hint', 'result_hint', 'riddle', 'starts_with', 'ends_with', 'difficulty', 'difficulty_label', 'difficulty_reason'];
+function parseMathAIJson(content) {
+	const s = content.trim();
+	const obj = JSON.parse(s.slice(s.indexOf('{'), s.lastIndexOf('}') + 1));
+	for (const k of MATH_HINT_KEYS) {
+		if (!(k in obj)) throw new Error(`missing key ${k}`);
+	}
+	if (!/^[A-Z0-9?]$/.test(String(obj.starts_with))) throw new Error('bad starts_with');
+	if (!/^[A-Z0-9?]$/.test(String(obj.ends_with))) throw new Error('bad ends_with');
+	if (!Number.isInteger(obj.difficulty) || obj.difficulty < 0 || obj.difficulty > 10) throw new Error('bad difficulty');
+	if (!DIFFICULTY_LABELS.includes(obj.difficulty_label)) throw new Error('bad difficulty_label');
+	return obj;
+}
+// Merge: deterministic facts always win; AI fills creative fields when sane.
+function mergeMathHints(text, ai) {
+	const det = deterministicMathHints(text);
+	const a = analyzeEquation(text);
+	if (!ai) return { hints: det, prose: null };
+	const operator_hint = ai.operator_hint && typeof ai.operator_hint === 'string' && !leaksMath(ai.operator_hint, text)
+		? ai.operator_hint.trim() : det.operator_hint;
+	const result_hint = ai.result_hint && typeof ai.result_hint === 'string' && !leaksMath(ai.result_hint, text)
+		? ai.result_hint.trim() : det.result_hint;
+	const riddle = ai.riddle && !leaksMath(ai.riddle, text) ? String(ai.riddle).trim() : '';
+	let difficulty = det.difficulty, difficulty_label = det.difficulty_label, difficulty_reason = det.difficulty_reason;
+	if (Number.isInteger(ai.difficulty) && ai.difficulty >= 0 && ai.difficulty <= 10) {
+		difficulty = ai.difficulty;
+		difficulty_label = DIFFICULTY_LABELS.includes(ai.difficulty_label) ? ai.difficulty_label : mathDifficultyBand(difficulty);
+		difficulty_reason = ai.difficulty_reason && typeof ai.difficulty_reason === 'string' && ai.difficulty_reason.trim()
+			? ai.difficulty_reason.trim() : det.difficulty_reason;
+	}
+	return {
+		hints: {
+			kind: 'math', operator_hint, length_hint: det.length_hint, result_hint, riddle,
+			starts_with: a.first, ends_with: a.last,
+			vowel_hint: '', repeat_hint: '', clue1: '', definition: '',
+			difficulty, difficulty_label, difficulty_reason
+		},
+		prose: null
+	};
+}
+function deterministicMathProse(gameLabel, dateLong, numberText, text) {
+	const a = analyzeEquation(text);
+	const opBit = a.opNames.length ? ` using ${a.opNames.join(' and ')}` : '';
+	return `The ${gameLabel} puzzle for ${dateLong} (${numberText}) is live with today's equation confirmed. ` +
+		`The equation runs ${a.length} characters${opBit} — see the math hints above before you peek.`;
+}
 function deterministicProse(gameLabel, dateLong, numberText, text) {
 	const { chars, first, last } = analyzeText(text);
 	const span = chars.length === 1 ? '1 character' : `${chars.length} characters`;
@@ -632,10 +763,12 @@ function parseAIJson(content) {
 	return obj;
 }
 
-async function callAI(label, text, dateLong, numberText) {
-	const user = buildPrompt(label, text, dateLong, numberText);
+async function callAI(label, text, dateLong, numberText, kind = 'word') {
+	const isMath = kind === 'math';
+	const user = isMath ? buildMathPrompt(label, text, dateLong, numberText) : buildPrompt(label, text, dateLong, numberText);
 	const system = 'You are a puzzle-hint writer. Reply with ONLY a JSON object, no markdown, no commentary.';
 	const body = { model: 'claude-opus-4-8', messages: [{ role: 'system', content: system }, { role: 'user', content: user }], temperature: 0.5, max_tokens: 1024 };
+	const parse = isMath ? parseMathAIJson : parseAIJson;
 
 	// PRIMARY: justworker keyless hosts, round-robin, with retries on transient errors
 	const errors = [];
@@ -644,7 +777,7 @@ async function callAI(label, text, dateLong, numberText) {
 		const host = JUSTWORKER_HOSTS[(justworkerCounter++) % JUSTWORKER_HOSTS.length];
 		try {
 			const content = await postChat(`${host}/v1/chat/completions`, body);
-			return { source: `justworker:${new URL(host).hostname}`, hints: parseAIJson(content), prose: extractProse(content) };
+			return { source: `justworker:${new URL(host).hostname}`, hints: parse(content), prose: extractProse(content) };
 		} catch (e) {
 			errors.push(`justworker ${host} attempt ${attempt + 1}: ${e.message}`);
 			if (attempt < 3) await sleep(1500 * (attempt + 1));
@@ -658,7 +791,7 @@ async function callAI(label, text, dateLong, numberText) {
 			const content = await postChat('https://integrate.api.nvidia.com/v1/chat/completions',
 				{ ...body, model: 'google/gemma-4-31b-it' },
 				{ Authorization: `Bearer ${nvidiaKey}` });
-			return { source: 'nvidia', hints: parseAIJson(content), prose: extractProse(content) };
+			return { source: 'nvidia', hints: parse(content), prose: extractProse(content) };
 		} catch (e) { errors.push(`nvidia: ${e.message}`); }
 	}
 	// FALLBACK 2: bynara
@@ -667,7 +800,7 @@ async function callAI(label, text, dateLong, numberText) {
 			const content = await postChat('https://router.bynara.id/v1/chat/completions',
 				{ ...body, model: 'agnes-3-flash' },
 				{ Authorization: `Bearer ${process.env.BYNARA_API_KEY}` });
-			return { source: 'bynara', hints: parseAIJson(content), prose: extractProse(content) };
+			return { source: 'bynara', hints: parse(content), prose: extractProse(content) };
 		} catch (e) { errors.push(`bynara: ${e.message}`); }
 	}
 	return { source: 'deterministic', hints: null, prose: null, errors };
@@ -681,7 +814,8 @@ function extractProse(content) {
 }
 
 // Merge: deterministic fields always win; AI fills creative fields when sane.
-function mergeHints(text, ai) {
+function mergeHints(text, ai, kind = 'word') {
+	if (kind === 'math') return mergeMathHints(text, ai);
 	const det = deterministicHints(text);
 	if (!ai) return { hints: det, prose: null };
 	const { vowelCount, repeatCount, first, last } = analyzeText(text);
@@ -705,7 +839,7 @@ function mergeHints(text, ai) {
 			? ai.difficulty_reason.trim() : det.difficulty_reason;
 	}
 	return {
-		hints: { vowel_hint, repeat_hint, riddle, clue1, starts_with: first, ends_with: last, definition, difficulty, difficulty_label, difficulty_reason },
+		hints: { kind: 'word', vowel_hint, repeat_hint, riddle, clue1, starts_with: first, ends_with: last, definition, difficulty, difficulty_label, difficulty_reason },
 		prose: null
 	};
 }
@@ -754,15 +888,18 @@ async function processGame(game, results) {
 		return;
 	}
 	const dateLong = dateLongOf(input.dateKey);
+	const kind = game.hintKind || 'word';
 	let aiResult;
 	try {
-		aiResult = await callAI(label, input.text, dateLong, input.numberText);
+		aiResult = await callAI(label, input.text, dateLong, input.numberText, kind);
 	} catch (e) {
 		aiResult = { source: 'deterministic', hints: null, prose: null, errors: [e.message] };
 	}
-	const merged = mergeHints(input.text, aiResult.hints);
+	const merged = mergeHints(input.text, aiResult.hints, kind);
 	let prose = aiResult.prose && !leaksAnswer(aiResult.prose, input.text) ? aiResult.prose : null;
-	if (!prose) prose = deterministicProse(label, dateLong, input.numberText, input.text);
+	if (!prose) prose = kind === 'math'
+		? deterministicMathProse(label, dateLong, input.numberText, input.text)
+		: deterministicProse(label, dateLong, input.numberText, input.text);
 	writeGame(game.key, input.dateKey, merged.hints, prose);
 	results.push({
 		key: game.key, status: aiResult.source === 'deterministic' ? 'DETERMINISTIC' : 'AI',
