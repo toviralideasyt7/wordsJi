@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-06T12:27:16.571Z",
+  "generatedAt": "2026-10-07T06:21:21.390Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -13,9 +13,22 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A lesser-known younger-generation hero recognizable mainly to dedicated comic readers, not casual fans."
+    },
+    "2026-10-07": {
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "A cosmic champion deemed worthy, I swing a hammer though no god of thunder.",
+      "clue1": "A Korbinite warrior found worthy to lift an enchanted hammer.",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "Fictional Marvel Comics alien superhero, a cybernetic Korbinite warrior deemed worthy to wield an enchanted hammer.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A lesser-known cosmic character unfamiliar to casual fans, though iconic among dedicated comic readers."
     }
   },
   "prose": {
-    "2026-10-06": "Today's Marveldle for October 6, 2026 spotlights a hero whose name begins with H and ends with G. The 10/6/2026 12:00:00 AM puzzle features eight letters with a single doubled consonant."
+    "2026-10-06": "Today's Marveldle for October 6, 2026 spotlights a hero whose name begins with H and ends with G. The 10/6/2026 12:00:00 AM puzzle features eight letters with a single doubled consonant.",
+    "2026-10-07": "Marveldle's puzzle for October 7, 2026 spotlights a cosmic figure whose name starts with B and ends with L. The 10/7/2026 12:00:00 AM entry features four vowels and three letters that each repeat."
   }
 }
