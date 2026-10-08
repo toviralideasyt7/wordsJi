@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-07T06:03:38.922Z",
+  "generatedAt": "2026-10-08T06:07:00.059Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Popular recurring character, but short name offers few guessing footholds early on."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
     "2026-10-06": "OnePiecedle's October 6, 2026 challenge, Game #919, bundles four familiar faces into a single themed answer. The combined set begins with the letter K and ends with the letter G, offering sharp solvers a subtle pattern to parse.",
-    "2026-10-07": "The OnePiecedle puzzle for October 7, 2026 (Game #920) spotlights a four-letter name beginning and ending with distinct consonants and vowels. This Game #920 entry features two vowels and no repeated letters, rewarding fans who know the crew's loyal allies."
+    "2026-10-07": "The OnePiecedle puzzle for October 7, 2026 (Game #920) spotlights a four-letter name beginning and ending with distinct consonants and vowels. This Game #920 entry features two vowels and no repeated letters, rewarding fans who know the crew's loyal allies.",
+    "2026-10-08": "The OnePiecedle puzzle for October 8, 2026 (Game #921) is live with today's answer confirmed. The answer runs 38 characters, starting with J and ending with N — see the letter hints above before you peek."
   }
 }

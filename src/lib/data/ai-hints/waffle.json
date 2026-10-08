@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-07T06:03:33.660Z",
+  "generatedAt": "2026-10-08T06:05:29.894Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common words throughout, though a boastful term and a herb may slow some solvers."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
     "2026-10-06": "Waffle for October 6, 2026 (puzzle #1719) arranges six five-letter words into a crossing grid. Each row and column locks together through shared letters, rewarding careful tile swaps.",
-    "2026-10-07": "Waffle puzzle #1720 for October 7, 2026 arranges six five-letter words into its familiar crossing grid. The letter pattern blends everyday vocabulary with a trickier herb and an archaic boast, keeping the challenge balanced."
+    "2026-10-07": "Waffle puzzle #1720 for October 7, 2026 arranges six five-letter words into its familiar crossing grid. The letter pattern blends everyday vocabulary with a trickier herb and an archaic boast, keeping the challenge balanced.",
+    "2026-10-08": "The Waffle puzzle for October 8, 2026 (#1721) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with L — see the letter hints above before you peek."
   }
 }

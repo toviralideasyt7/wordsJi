@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-07T06:03:34.107Z",
+  "generatedAt": "2026-10-08T06:05:18.940Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -25,10 +25,24 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A recognizable champion with a two-word name, though its unusual spelling can trip players up."
+    },
+    "2026-10-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "A drunk, a king, a hunter, and a master of the lamp.",
+      "clue1": "A mix of Shuriman royalty and a barrel-tossing brawler.",
+      "starts_with": "V",
+      "ends_with": "X",
+      "definition": "A group of four League of Legends champions with diverse combat roles.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four distinct champions across different roles and regions."
     }
   },
   "prose": {
     "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds.",
-    "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack."
+    "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack.",
+    "2026-10-08": "LoLdle Game #1554 for October 8, 2026, features a specific set of four champions. The solution follows a pattern starting with V and ending with X."
   }
 }

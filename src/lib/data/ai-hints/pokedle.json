@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-07T06:03:44.083Z",
+  "generatedAt": "2026-10-08T06:05:59.628Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -25,10 +25,24 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Four distinct names must be identified, spanning different types and letter patterns, with little overlap."
+    },
+    "2026-10-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "A star, a program, a snake, and a mother's love.",
+      "clue1": "A mix of synthetic, cosmic, and biological creatures.",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "A group of four diverse Pokémon from the Kanto region.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four distinct Pokémon simultaneously."
     }
   },
   "prose": {
     "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much.",
-    "2026-10-07": "The Pokedle puzzle for October 7, 2026 (Game #1091) asks solvers to pin down a group of four creature names at once. Each entry in Game #1091 begins and ends with different letters, making the pattern tricky without revealing anything outright."
+    "2026-10-07": "The Pokedle puzzle for October 7, 2026 (Game #1091) asks solvers to pin down a group of four creature names at once. Each entry in Game #1091 begins and ends with different letters, making the pattern tricky without revealing anything outright.",
+    "2026-10-08": "Pokedle Game #1092 was released on October 8, 2026. This specific puzzle features a long sequence of characters ending in N."
   }
 }

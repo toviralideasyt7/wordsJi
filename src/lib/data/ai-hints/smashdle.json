@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-07T06:03:46.726Z",
+  "generatedAt": "2026-10-08T06:06:02.217Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -25,10 +25,24 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A widely recognized Nintendo icon, though the two-word name may slow some solvers."
+    },
+    "2026-10-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 18 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "A royal beast, a space racer, and a master of monsters.",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "R",
+      "definition": "A specific combination of five combatants from a fighting game roster.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying five distinct characters simultaneously."
     }
   },
   "prose": {
     "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes.",
-    "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players."
+    "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players.",
+    "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R."
   }
 }

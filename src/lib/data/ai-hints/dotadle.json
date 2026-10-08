@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-07T06:03:48.855Z",
+  "generatedAt": "2026-10-08T06:03:59.523Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -25,10 +25,24 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A multi-hero answer requiring broad roster knowledge, not just one obvious guess."
+    },
+    "2026-10-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "28 letters appear more than once.",
+      "riddle": "Four legends of battle, some ghostly, some scaled, all deadly.",
+      "clue1": "A quartet of powerful heroes from a popular MOBA.",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "A group of four playable hero characters from Dota 2.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple long names make the character count and letter patterns complex."
     }
   },
   "prose": {
     "2026-10-06": "Today's Dotadle challenge for October 6, 2026 marks puzzle Game #1026 with a compact four-letter answer. This Game #1026 entry features a short name where one letter repeats, so study the letter pattern closely.",
-    "2026-10-07": "The Dotadle puzzle for October 7, 2026 (Game #1027) gathers four distinct heroes into one answer. In this edition, the opening name begins with B and ends with R while packing repeated letters."
+    "2026-10-07": "The Dotadle puzzle for October 7, 2026 (Game #1027) gathers four distinct heroes into one answer. In this edition, the opening name begins with B and ends with R while packing repeated letters.",
+    "2026-10-08": "Dotadle Game #1028 for October 8, 2026, features a long sequence of characters. The letter pattern includes several repetitions across four distinct names."
   }
 }

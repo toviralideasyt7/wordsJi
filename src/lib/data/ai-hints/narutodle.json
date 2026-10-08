@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-07T06:03:38.880Z",
+  "generatedAt": "2026-10-08T06:06:02.412Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -25,10 +25,23 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A secondary antagonist less recognized than main cast, with an unusual repeated-letter name pattern."
+    },
+    "2026-10-08": {
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
     "2026-10-06": "Today's Narutodle challenge for October 6, 2026 (Game #887) features a five-letter name with no repeated letters. This Narutodle puzzle spotlights a figure whose name begins with H and ends with O.",
-    "2026-10-07": "Today's Narutodle challenge for October 7, 2026, marks Game #888 with a six-letter answer. This puzzle's name notably features two letters that each appear twice, hinting at its rhythmic structure."
+    "2026-10-07": "Today's Narutodle challenge for October 7, 2026, marks Game #888 with a six-letter answer. This puzzle's name notably features two letters that each appear twice, hinting at its rhythmic structure.",
+    "2026-10-08": "The Narutodle puzzle for October 8, 2026 (Game #889) is live with today's answer confirmed. The answer runs 29 characters, starting with J and ending with O — see the letter hints above before you peek."
   }
 }
