@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-07T20:35:49.953Z",
+  "generatedAt": "2026-10-08T16:37:11.016Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -41,11 +41,28 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-10-09": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication and addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a two-digit odd number.",
+      "riddle": "Double a lucky prime, then add that prime once more.",
+      "starts_with": "2",
+      "ends_with": "1",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple operators and small digits make this a straightforward solve."
     }
   },
   "prose": {
     "2026-10-06": "The Nerdle puzzle for October 6, 2026 (#1721) is live with today's answer confirmed. The answer runs 6 characters, starting with 5 and ending with 4 — see the letter hints above before you peek.",
     "2026-10-07": "The Nerdle puzzle #1722 for October 7, 2026 features both division and subtraction operators. Its eight-character sequence begins with a 1 and resolves neatly to a single-digit result.",
-    "2026-10-08": "The Nerdle puzzle for October 8, 2026 (#1723) is live with today's equation confirmed. The equation runs 8 characters using multiplication and subtraction — see the math hints above before you peek."
+    "2026-10-08": "The Nerdle puzzle for October 8, 2026 (#1723) is live with today's equation confirmed. The equation runs 8 characters using multiplication and subtraction — see the math hints above before you peek.",
+    "2026-10-09": "Nerdle puzzle #1724 presents a clean arithmetic challenge for October 9, 2026. This specific sequence relies on a repeating digit to reach its total."
   }
 }

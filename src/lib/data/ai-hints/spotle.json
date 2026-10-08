@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-07T16:31:07.485Z",
+  "generatedAt": "2026-10-08T16:36:34.751Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A two-word stage name with multiple repeated letters and uncommon spelling."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A drill pioneer from the Windy City with a royal title.",
+      "clue1": "A foundational figure in the Chicago drill scene.",
+      "starts_with": "C",
+      "ends_with": "F",
+      "definition": "American rapper and pioneer of the Chicago drill music genre.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known in music circles but may be niche for general players."
     }
   },
   "prose": {
     "2026-10-06": "Today's Spotle for October 6, 2026 (Day 1663) features a two-word name beginning with H and ending with D. This puzzle's letter pattern packs seven vowels, with one letter repeating four times.",
     "2026-10-07": "The Spotle puzzle for October 7, 2026 (Day 1664) features an unusual four-character answer that begins with a digit rather than a letter. This Day 1664 challenge contains a single vowel and no repeated characters, rewarding solvers who think beyond standard spelling.",
-    "2026-10-08": "The Spotle puzzle for October 8, 2026 (Day 1665) features a two-word answer beginning with C and ending with N. This Day 1665 challenge includes four vowels and three letters that each appear twice."
+    "2026-10-08": "The Spotle puzzle for October 8, 2026 (Day 1665) features a two-word answer beginning with C and ending with N. This Day 1665 challenge includes four vowels and three letters that each appear twice.",
+    "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters."
   }
 }

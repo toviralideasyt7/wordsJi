@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-07T16:31:11.647Z",
+  "generatedAt": "2026-10-08T16:37:06.955Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -37,11 +37,25 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "An uncommon baking term many solvers may not recognize despite its simple five-letter shape."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I grow in damp corners and ruin your old bread.",
+      "clue1": "Something you might find on an old orange.",
+      "starts_with": "M",
+      "ends_with": "S",
+      "definition": "Fungi that grow in multicellular filaments, often appearing as fuzzy patches.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common household term with a simple five-letter structure."
     }
   },
   "prose": {
     "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y.",
     "2026-10-07": "The Phoodle puzzle for October 7, 2026 features a five-letter word with no repeated letters. Solvers tackling 2026-10-07 will notice it holds two vowels and ends in a plural S.",
-    "2026-10-08": "Today's Phoodle for October 8, 2026 features a five-letter word with no repeated letters. The 2026-10-08 puzzle begins with M and ends with E, framing a tidy two-vowel pattern."
+    "2026-10-08": "Today's Phoodle for October 8, 2026 features a five-letter word with no repeated letters. The 2026-10-08 puzzle begins with M and ends with E, framing a tidy two-vowel pattern.",
+    "2026-10-09": "The Phoodle puzzle for October 9, 2026, features a five-letter word. Puzzle 2026-10-09 follows a consonant-vowel-consonant-consonant-consonant pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-07T16:31:26.388Z",
+  "generatedAt": "2026-10-08T16:39:02.388Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -37,11 +37,24 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common color names, but mixing them to the correct target shade takes some careful guessing."
+    },
+    "2026-10-09": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
     "2026-10-06": "Colorfle's puzzle #1625 for October 6, 2026 blends three closely related bright shades. The combined letter pattern runs from L to W and features seven vowels spread across the words.",
     "2026-10-07": "Colorfle's puzzle #1626 for October 7, 2026 pairs cool tones with a single warm shade. The combined answer begins with the letter B and ends with the letter N.",
-    "2026-10-08": "Colorfle puzzle #1627 for October 8, 2026 challenges players to blend three distinct color names into one target shade. The trio's names begin with L and the final one closes with the letter N."
+    "2026-10-08": "Colorfle puzzle #1627 for October 8, 2026 challenges players to blend three distinct color names into one target shade. The trio's names begin with L and the final one closes with the letter N.",
+    "2026-10-09": "The Colorfle puzzle for October 9, 2026 (#1628) is live with today's answer confirmed. The answer runs 15 characters, starting with B and ending with N — see the letter hints above before you peek."
   }
 }

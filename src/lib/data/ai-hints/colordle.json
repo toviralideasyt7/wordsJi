@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-07T16:31:05.985Z",
+  "generatedAt": "2026-10-08T16:36:37.194Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Two-word answer with repeated letters and five vowels makes guessing the exact shade tricky."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "Zero repeated letters.",
+      "riddle": "A red companion for fries, squeezed from a bottle.",
+      "clue1": "A common condiment found in fast food restaurants.",
+      "starts_with": "K",
+      "ends_with": "D",
+      "definition": "A sweet and tangy condiment made from tomatoes, sugar, and vinegar.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common food item with a distinct color."
     }
   },
   "prose": {
     "2026-10-06": "Colordle's puzzle #1656 for October 6, 2026 features a soft blushing shade with a seven-letter answer spanning two words. The pattern includes two letters that each repeat, opening with P and closing with K.",
     "2026-10-07": "Colordle's puzzle #1657 for October 7, 2026 presents a two-word earthy shade. The letter pattern spans a longer phrase beginning with R and ending with N, with two letters appearing twice.",
-    "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times."
+    "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times.",
+    "2026-10-09": "Colordle puzzle #1659 for October 9, 2026, features a seven-letter word. The target color is a deep reddish-brown shade."
   }
 }

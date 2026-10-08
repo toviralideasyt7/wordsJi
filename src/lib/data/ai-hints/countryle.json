@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-07T16:31:20.545Z",
+  "generatedAt": "2026-10-08T16:37:50.839Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known nation, but its small size and location can trip up solvers."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "Seven thousand emeralds scattered across a deep blue sea.",
+      "clue1": "An archipelago located in Southeast Asia.",
+      "starts_with": "P",
+      "ends_with": "S",
+      "definition": "An archipelagic country in Southeast Asia consisting of over 7,000 islands.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A well-known country with a distinct starting letter and geography."
     }
   },
   "prose": {
     "2026-10-06": "Today's Countryle puzzle for October 6, 2026 (Game #1691) points to a southern African nation. The answer begins with a rare letter, ends with a vowel, and features one letter appearing twice.",
     "2026-10-07": "Today's Countryle puzzle for October 7, 2026 (Game #1692) points to a Pacific archipelago whose name both begins and ends with the same letter. This entry features five vowels and multiple repeated letters across its two words.",
-    "2026-10-08": "The Countryle puzzle for October 8, 2026 (Game #1693) hides a South American answer with a letter pattern featuring one letter repeated three times. This Game #1693 solution begins with U and ends with Y, spanning four vowels in total."
+    "2026-10-08": "The Countryle puzzle for October 8, 2026 (Game #1693) hides a South American answer with a letter pattern featuring one letter repeated three times. This Game #1693 solution begins with U and ends with Y, spanning four vowels in total.",
+    "2026-10-09": "Countryle Game #1694 for October 9, 2026, features a word starting with P. The letter pattern includes several repetitions."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-07T16:31:04.737Z",
+  "generatedAt": "2026-10-08T16:36:53.602Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common abstract noun with many semantic neighbors, but not among frequent guesses."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I am a boundary that you cannot cross or a maximum cap.",
+      "clue1": "A restriction or a mathematical approach to a value.",
+      "starts_with": "L",
+      "ends_with": "T",
+      "definition": "A point or level beyond which something may not extend.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word with multiple meanings across mathematics and general usage."
     }
   },
   "prose": {
     "2026-10-06": "Today's Semantle puzzle #1711 for October 6, 2026 features a nine-letter adjective that both starts and ends with the same vowel. The solution packs four vowels and includes letters that repeat, making its pattern more distinctive than most.",
     "2026-10-07": "Semantle puzzle #1712 for October 7, 2026 features an eleven-letter word starting with R and ending with N. In this edition two separate letters each surface twice, so watch the recurring patterns closely.",
-    "2026-10-08": "Semantle puzzle #1713, dated October 8, 2026, hides a thirteen-letter word beginning with C and ending with N. This entry packs five vowels and several repeated letters into a single everyday term."
+    "2026-10-08": "Semantle puzzle #1713, dated October 8, 2026, hides a thirteen-letter word beginning with C and ending with N. This entry packs five vowels and several repeated letters into a single everyday term.",
+    "2026-10-09": "Semantle puzzle #1714 for October 9, 2026, features a five-letter word. The target word begins with L and ends with T."
   }
 }

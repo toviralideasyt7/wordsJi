@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-07T16:31:11.315Z",
+  "generatedAt": "2026-10-08T16:37:16.642Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Mix of common and trickier words with repeated letters and varied vowel placement."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "Ancient gold, a slow student, a wide cut, and a bumpy slope.",
+      "clue1": "One word describes a person lacking intelligence.",
+      "starts_with": "O",
+      "ends_with": "Y",
+      "definition": "A set of words describing age, ignorance, a wide strip, and slopes.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Contains a mix of common and less frequent vocabulary words."
     }
   },
   "prose": {
     "2026-10-06": "Quordle's October 6, 2026 puzzle (#1716) gathers four five-letter words with starting letters F, S, B, and E. The set mixes consonant-heavy spellings with one vowel-rich entry, offering a varied letter pattern for solvers.",
     "2026-10-07": "The Quordle puzzle #1717 for October 7, 2026 features four everyday five-letter words beginning with P, F, D, and E. Across the grid these answers pack eight vowels total, with just a single repeated letter hiding among them.",
-    "2026-10-08": "The Quordle puzzle for October 8, 2026 (#1718) gathers four distinct five-letter words with no shared theme. Each entry follows its own letter pattern, keeping the quartet balanced between familiar and challenging guesses."
+    "2026-10-08": "The Quordle puzzle for October 8, 2026 (#1718) gathers four distinct five-letter words with no shared theme. Each entry follows its own letter pattern, keeping the quartet balanced between familiar and challenging guesses.",
+    "2026-10-09": "Quordle puzzle #1719 for October 9, 2026, features four distinct five-letter words. The set includes a variety of vowel placements and one repeated consonant."
   }
 }
