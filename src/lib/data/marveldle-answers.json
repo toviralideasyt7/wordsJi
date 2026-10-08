@@ -719,7 +719,7 @@
   },
   "2026-10-07": {
     "date": "2026-10-07",
-    "dateId": "10/7/2026 12:00:00 AM",
+    "dateId": "yesterday-of:10/8/2026 12:00:00 AM",
     "comics": {
       "id": "betaraybill",
       "name": "Beta Ray Bill",
@@ -769,6 +769,6 @@
         "phil coulson"
       ]
     },
-    "solvedAt": "2026-10-07T06:05:45.048Z"
+    "solvedAt": "2026-10-08T06:35:41.850Z"
   }
 }
