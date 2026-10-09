@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-08T06:05:59.628Z",
+  "generatedAt": "2026-10-09T06:04:43.269Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four distinct Pokémon simultaneously."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "A rosy egg-bearer famed for boundless stamina and tending to the injured.",
+      "clue1": "A beloved pink Gen I Pokémon tied to healing.",
+      "starts_with": "C",
+      "ends_with": "I",
+      "definition": "Pink Pokémon species known for carrying a lucky egg and possessing exceptionally high HP in the games.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known Gen I Pokémon, but seven letters with a distinctive silhouette and theme."
     }
   },
   "prose": {
     "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much.",
     "2026-10-07": "The Pokedle puzzle for October 7, 2026 (Game #1091) asks solvers to pin down a group of four creature names at once. Each entry in Game #1091 begins and ends with different letters, making the pattern tricky without revealing anything outright.",
-    "2026-10-08": "Pokedle Game #1092 was released on October 8, 2026. This specific puzzle features a long sequence of characters ending in N."
+    "2026-10-08": "Pokedle Game #1092 was released on October 8, 2026. This specific puzzle features a long sequence of characters ending in N.",
+    "2026-10-09": "Pokedle's October 9, 2026 puzzle (Game #1093) presents a seven-letter answer beginning with C and ending with Y. This Pokedle round features a clean pattern with no repeated letters to confuse solvers."
   }
 }

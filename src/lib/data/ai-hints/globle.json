@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-08T06:04:44.806Z",
+  "generatedAt": "2026-10-09T06:04:02.196Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Well-known tourist destination with a distinct geographic location."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "Twin isles basking in Caribbean sun, home to steelpan and limbo fun.",
+      "clue1": "A two-island nation south of the Caribbean Sea.",
+      "starts_with": "T",
+      "ends_with": "O",
+      "definition": "A dual-island republic in the southern Caribbean, near Venezuela's coast.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Small but well-known nation; its distinctive location aids guessers familiar with the Caribbean."
     }
   },
   "prose": {
     "2026-10-06": "The Globle puzzle for October 6, 2026 features a vowel-rich, hyphenated name where four different letters each repeat twice. Solvers of 2026-10-06 should watch the Atlantic coast of West Africa to narrow in on this compact answer.",
     "2026-10-07": "The Globle puzzle for October 7, 2026 features a six-letter country with one repeated letter. Solvers tackling 2026-10-07 should note its name begins with M and ends with I.",
-    "2026-10-08": "The Globle puzzle for October 8, 2026, features a seven-letter country. Puzzle 2026-10-08 follows a pattern starting with a consonant and ending with a plural marker."
+    "2026-10-08": "The Globle puzzle for October 8, 2026, features a seven-letter country. Puzzle 2026-10-08 follows a pattern starting with a consonant and ending with a plural marker.",
+    "2026-10-09": "Today's Globle puzzle for October 9, 2026 (2026-10-09) points to a Caribbean destination. The answer for 2026-10-09 begins with T and ends with O, featuring plenty of repeated letters."
   }
 }

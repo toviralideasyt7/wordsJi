@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-08T06:06:02.217Z",
+  "generatedAt": "2026-10-09T06:04:40.444Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying five distinct characters simultaneously."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "",
+      "clue1": "Today's set gathers combatants from a famous crossover roster.",
+      "starts_with": "O",
+      "ends_with": "A",
+      "definition": "A group of playable fighters from Nintendo's Super Smash Bros. crossover series.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Five distinct characters span varied franchises, demanding broad roster familiarity to identify all."
     }
   },
   "prose": {
     "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes.",
     "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players.",
-    "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R."
+    "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R.",
+    "2026-10-09": "Smashdle's October 9, 2026 edition, Game #1129, lines up five contenders whose names start with letters spanning O through Z. The letter patterns vary widely across this group, so pay attention to each fighter's opening and closing characters."
   }
 }

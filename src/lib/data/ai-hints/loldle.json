@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-08T06:05:18.940Z",
+  "generatedAt": "2026-10-09T06:04:12.493Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four distinct champions across different roles and regions."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "A shackled revolutionary breaks free, borrowing enemies' magic through binding chains.",
+      "clue1": "An escaped prisoner turns stolen power against his captors.",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "League of Legends champion, a chained mage who steals and copies enemy abilities.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A short name with a repeated boundary letter and only one true vowel."
     }
   },
   "prose": {
     "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds.",
     "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack.",
-    "2026-10-08": "LoLdle Game #1554 for October 8, 2026, features a specific set of four champions. The solution follows a pattern starting with V and ending with X."
+    "2026-10-08": "LoLdle Game #1554 for October 8, 2026, features a specific set of four champions. The solution follows a pattern starting with V and ending with X.",
+    "2026-10-09": "Today's LoLdle puzzle for October 9, 2026, Game #1555, hides a five-letter answer that begins and ends with the same consonant. The letter pattern reveals one letter appearing twice, offering a quiet nudge for attentive solvers."
   }
 }

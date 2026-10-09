@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-08T06:06:02.412Z",
+  "generatedAt": "2026-10-09T06:04:33.018Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 19 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "A sleepy swordsman serving a mountain-sized leader, wielding lightning and water as one.",
+      "clue1": "A laid-back right hand to the Fourth Raikage.",
+      "starts_with": "D",
+      "ends_with": "E",
+      "definition": "Fictional shinobi from the Hidden Cloud Village, a Storm Release user and bodyguard-turned-leader.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A supporting character with limited screen time, tricky for casual fans to recall."
     }
   },
   "prose": {
     "2026-10-06": "Today's Narutodle challenge for October 6, 2026 (Game #887) features a five-letter name with no repeated letters. This Narutodle puzzle spotlights a figure whose name begins with H and ends with O.",
     "2026-10-07": "Today's Narutodle challenge for October 7, 2026, marks Game #888 with a six-letter answer. This puzzle's name notably features two letters that each appear twice, hinting at its rhythmic structure.",
-    "2026-10-08": "The Narutodle puzzle for October 8, 2026 (Game #889) is live with today's answer confirmed. The answer runs 29 characters, starting with J and ending with O — see the letter hints above before you peek."
+    "2026-10-08": "The Narutodle puzzle for October 8, 2026 (Game #889) is live with today's answer confirmed. The answer runs 29 characters, starting with J and ending with O — see the letter hints above before you peek.",
+    "2026-10-09": "Narutodle's puzzle Game #890 for October 9, 2026 features a five-letter answer with no repeated letters. This Narutodle challenge opens with D and closes with I, holding exactly three vowels."
   }
 }

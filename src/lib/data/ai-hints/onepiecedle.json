@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-08T06:07:00.059Z",
+  "generatedAt": "2026-10-09T06:04:37.693Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "A blade, a fortress, a dragon, and a magnetic rookie all sail here.",
+      "clue1": "Four menacing pirates grouped by one shared quiz theme.",
+      "starts_with": "D",
+      "ends_with": "D",
+      "definition": "A set of four antagonist pirate characters from the One Piece manga and anime series.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires recognizing a four-character grouping and the subtle theme uniting these distinct pirates."
     }
   },
   "prose": {
     "2026-10-06": "OnePiecedle's October 6, 2026 challenge, Game #919, bundles four familiar faces into a single themed answer. The combined set begins with the letter K and ends with the letter G, offering sharp solvers a subtle pattern to parse.",
     "2026-10-07": "The OnePiecedle puzzle for October 7, 2026 (Game #920) spotlights a four-letter name beginning and ending with distinct consonants and vowels. This Game #920 entry features two vowels and no repeated letters, rewarding fans who know the crew's loyal allies.",
-    "2026-10-08": "The OnePiecedle puzzle for October 8, 2026 (Game #921) is live with today's answer confirmed. The answer runs 38 characters, starting with J and ending with N — see the letter hints above before you peek."
+    "2026-10-08": "The OnePiecedle puzzle for October 8, 2026 (Game #921) is live with today's answer confirmed. The answer runs 38 characters, starting with J and ending with N — see the letter hints above before you peek.",
+    "2026-10-09": "Today's OnePiecedle puzzle for October 9, 2026, Game #922, asks solvers to identify a quartet rather than a single character. The grouped answer begins with the letter D and also ends with the letter D."
   }
 }

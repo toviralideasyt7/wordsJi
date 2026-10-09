@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-08T06:04:44.416Z",
+  "generatedAt": "2026-10-09T06:03:59.547Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires knowledge of current MLB rosters and international players."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A slugging first baseman whose glove and bat both earned gold.",
+      "clue1": "MVP-winning first baseman with a famously consistent swing.",
+      "starts_with": "P",
+      "ends_with": "T",
+      "definition": "American professional baseball first baseman and former National League Most Valuable Player.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known to baseball fans but tricky for casual players unfamiliar with MLB stars."
     }
   },
   "prose": {
     "2026-10-05": "Today's Batter Up challenge for October 5, 2026, marks Game #960 with a name featuring three vowels and three letters that each appear twice. This October 5, 2026 puzzle runs from Y to Z, offering a tidy test for sharp solvers.",
     "2026-10-06": "Today's Batter Up puzzle for October 6, 2026 (Game #961) features a two-word name with ten letters total. The letter pattern includes two pairs of repeated letters, offering a subtle structural hint for solvers.",
-    "2026-10-07": "Batter Up Game #962 for October 7, 2026, features an eleven-letter name. The solution follows a pattern of five letters, then six letters."
+    "2026-10-07": "Batter Up Game #962 for October 7, 2026, features an eleven-letter name. The solution follows a pattern of five letters, then six letters.",
+    "2026-10-09": "Game #964 of Batter Up for October 9, 2026 features a two-word answer beginning with P and ending with T. This puzzle's name spans fifteen letters, with two separate letters each appearing twice."
   }
 }

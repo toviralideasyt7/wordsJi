@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-08T06:03:59.523Z",
+  "generatedAt": "2026-10-09T06:04:11.137Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Multiple long names make the character count and letter patterns complex."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "Four warriors of a battling arena share one hidden thread.",
+      "clue1": "A quartet drawn from a famous multiplayer battle game.",
+      "starts_with": "Q",
+      "ends_with": "N",
+      "definition": "A set of playable heroes from the online strategy game Dota 2.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires niche knowledge of specific game characters and spotting their shared connection."
     }
   },
   "prose": {
     "2026-10-06": "Today's Dotadle challenge for October 6, 2026 marks puzzle Game #1026 with a compact four-letter answer. This Game #1026 entry features a short name where one letter repeats, so study the letter pattern closely.",
     "2026-10-07": "The Dotadle puzzle for October 7, 2026 (Game #1027) gathers four distinct heroes into one answer. In this edition, the opening name begins with B and ends with R while packing repeated letters.",
-    "2026-10-08": "Dotadle Game #1028 for October 8, 2026, features a long sequence of characters. The letter pattern includes several repetitions across four distinct names."
+    "2026-10-08": "Dotadle Game #1028 for October 8, 2026, features a long sequence of characters. The letter pattern includes several repetitions across four distinct names.",
+    "2026-10-09": "Today's Dotadle challenge for October 9, 2026, Game #1029, invites players to connect a group of combatants. The grouping begins with a letter pattern starting in Q and closing on N."
   }
 }

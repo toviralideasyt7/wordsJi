@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-08T06:05:29.894Z",
+  "generatedAt": "2026-10-09T06:04:04.323Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "A tiny spot of color on fabric or feather, I'm but a speck.",
+      "clue1": "A minuscule mark or dot of pigment.",
+      "starts_with": "F",
+      "ends_with": "Y",
+      "definition": "A small mark, spot, or patch of color or light.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common enough concept but the single-vowel spelling can trip up quick guessers."
     }
   },
   "prose": {
     "2026-10-06": "Waffle for October 6, 2026 (puzzle #1719) arranges six five-letter words into a crossing grid. Each row and column locks together through shared letters, rewarding careful tile swaps.",
     "2026-10-07": "Waffle puzzle #1720 for October 7, 2026 arranges six five-letter words into its familiar crossing grid. The letter pattern blends everyday vocabulary with a trickier herb and an archaic boast, keeping the challenge balanced.",
-    "2026-10-08": "The Waffle puzzle for October 8, 2026 (#1721) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with L — see the letter hints above before you peek."
+    "2026-10-08": "The Waffle puzzle for October 8, 2026 (#1721) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with L — see the letter hints above before you peek.",
+    "2026-10-09": "Waffle's October 9, 2026 grid (puzzle #1722) features this compact five-letter entry built around a lone vowel. True to the game's crisscross format, it shares letters with neighboring words to lock the solution in place."
   }
 }

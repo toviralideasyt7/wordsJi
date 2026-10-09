@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-08T06:05:17.259Z",
+  "generatedAt": "2026-10-09T06:03:58.051Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -37,11 +37,25 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I scoop your soup and stir your tea, but I'm no fork or knife.",
+      "clue1": "You'll reach for this when eating cereal or soup.",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "A utensil with a rounded bowl and a handle, used for eating or stirring.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common everyday word with a repeated vowel that may briefly puzzle solvers."
     }
   },
   "prose": {
     "2026-10-06": "Canuckle's puzzle #1606 for October 6, 2026 features a five-letter word where two letters each repeat. The pattern begins and ends on the same consonant-vowel bookends, offering solvers a tidy symmetry to work with.",
     "2026-10-07": "The Canuckle puzzle #1607 for October 7, 2026 features a five-letter word with a single vowel and a doubled consonant. Solvers tackling this October 7, 2026 edition should watch for the repeated letter nestled in the middle of the pattern.",
-    "2026-10-08": "The Canuckle puzzle for October 8, 2026 (#1608) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with E — see the letter hints above before you peek."
+    "2026-10-08": "The Canuckle puzzle for October 8, 2026 (#1608) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with E — see the letter hints above before you peek.",
+    "2026-10-09": "Canuckle puzzle #1609 for October 9, 2026 features a five-letter word with a repeated vowel. This Canuckle entry begins and ends with consonants, framing a familiar everyday pattern."
   }
 }
