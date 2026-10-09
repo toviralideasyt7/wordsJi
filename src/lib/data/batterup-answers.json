@@ -219,5 +219,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/09/a07267ea-faa6fc86-405a8aa1-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-07",
     "fetchedAt": "2026-10-08T01:05:44.681Z"
+  },
+  "2026-10-09": {
+    "date": "2026-10-09",
+    "gameNumber": 964,
+    "player": {
+      "player_name": "Paul Goldschmidt",
+      "player_id": "31027",
+      "team_name": "Yankees",
+      "born": "USA",
+      "birth_date": "1987-09-10",
+      "position": [
+        "1B"
+      ],
+      "debut": 2011,
+      "jersey_number": 48
+    },
+    "videoDescription": "[06/08/26 : NYY 7 - 5 CLE] Paul Goldschmidt hits a two-run homer to left, giving the Yankees a 2-0 lead in the 1st.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/08/5be6de29-3df003fd-2ed07bd0-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-09",
+    "fetchedAt": "2026-10-09T01:05:36.339Z"
   }
 }
