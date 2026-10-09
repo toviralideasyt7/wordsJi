@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-07T06:21:21.390Z",
+  "generatedAt": "2026-10-09T06:21:39.446Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -25,10 +25,24 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A lesser-known cosmic character unfamiliar to casual fans, though iconic among dedicated comic readers."
+    },
+    "2026-10-09": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A crimson-skinned general, furious and strong, trading green rage for scarlet.",
+      "clue1": "A military man transformed, but not in the usual green hue.",
+      "starts_with": "S",
+      "ends_with": "K",
+      "definition": "Marvel Comics character, a red-skinned gamma-powered brute tied to a military leader's alter ego.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A specific variant of a famous hero, less widely known than the original."
     }
   },
   "prose": {
     "2026-10-06": "Today's Marveldle for October 6, 2026 spotlights a hero whose name begins with H and ends with G. The 10/6/2026 12:00:00 AM puzzle features eight letters with a single doubled consonant.",
-    "2026-10-07": "Marveldle's puzzle for October 7, 2026 spotlights a cosmic figure whose name starts with B and ends with L. The 10/7/2026 12:00:00 AM entry features four vowels and three letters that each repeat."
+    "2026-10-07": "Marveldle's puzzle for October 7, 2026 spotlights a cosmic figure whose name starts with B and ends with L. The 10/7/2026 12:00:00 AM entry features four vowels and three letters that each repeat.",
+    "2026-10-09": "Marveldle's puzzle for October 9, 2026 features a seven-letter answer beginning with R and ending with K. The 10/9/2026 12:00:00 AM challenge offers no repeated letters and exactly two vowels to guide solvers."
   }
 }
