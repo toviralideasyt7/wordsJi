@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-08T16:37:11.016Z",
+  "generatedAt": "2026-10-09T16:31:05.421Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -57,12 +57,29 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple operators and small digits make this a straightforward solve."
+    },
+    "2026-10-10": {
+      "kind": "math",
+      "operator_hint": "Uses addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a two-digit odd number.",
+      "riddle": "Two round-ish numbers join hands and climb toward the nineties together.",
+      "starts_with": "5",
+      "ends_with": "3",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A single addition with no carrying tricks makes this quick to deduce."
     }
   },
   "prose": {
     "2026-10-06": "The Nerdle puzzle for October 6, 2026 (#1721) is live with today's answer confirmed. The answer runs 6 characters, starting with 5 and ending with 4 — see the letter hints above before you peek.",
     "2026-10-07": "The Nerdle puzzle #1722 for October 7, 2026 features both division and subtraction operators. Its eight-character sequence begins with a 1 and resolves neatly to a single-digit result.",
     "2026-10-08": "The Nerdle puzzle for October 8, 2026 (#1723) is live with today's equation confirmed. The equation runs 8 characters using multiplication and subtraction — see the math hints above before you peek.",
-    "2026-10-09": "Nerdle puzzle #1724 presents a clean arithmetic challenge for October 9, 2026. This specific sequence relies on a repeating digit to reach its total."
+    "2026-10-09": "Nerdle puzzle #1724 presents a clean arithmetic challenge for October 9, 2026. This specific sequence relies on a repeating digit to reach its total.",
+    "2026-10-10": "The Nerdle puzzle #1725 for October 10, 2026 keeps things friendly with a straightforward sum. Solvers should find the path to the answer clear once the operator is pinned down."
   }
 }

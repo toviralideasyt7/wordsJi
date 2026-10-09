@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-08T16:38:28.709Z",
+  "generatedAt": "2026-10-09T16:31:21.339Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A well-known European nation with a distinct shape."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A mountainous Central Asian land where nomads and eagles roam high peaks.",
+      "clue1": "Landlocked nation bordering China and Kazakhstan.",
+      "starts_with": "K",
+      "ends_with": "N",
+      "definition": "A landlocked country in Central Asia known for its mountains and nomadic heritage.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Lesser-known Central Asian country with an unusual, hard-to-spell letter pattern."
     }
   },
   "prose": {
     "2026-10-06": "Today's Worldle puzzle #1720 for October 6, 2026 points to a small island territory with a distinctive outline. The answer spans three words with no repeated letters, beginning with I and ending with N.",
     "2026-10-07": "Worldle's puzzle #1721 for October 7, 2026 points to a two-word nation whose name begins with S and ends with N. This entry contains four vowels and features two letters that each appear exactly twice.",
     "2026-10-08": "Today's Worldle puzzle #1722 for October 8, 2026 challenges players to identify a country from its silhouette. The answer runs ten letters long, beginning with A and ending with N, with one letter appearing three times.",
-    "2026-10-09": "Worldle puzzle #1723 for October 9, 2026, features a seven-letter country. The word follows a consonant-vowel pattern starting with F."
+    "2026-10-09": "Worldle puzzle #1723 for October 9, 2026, features a seven-letter country. The word follows a consonant-vowel pattern starting with F.",
+    "2026-10-10": "Worldle puzzle #1724 for October 10, 2026 features a country whose name runs ten letters long. The letter pattern begins with K and ends with N, with a single repeated letter in between."
   }
 }

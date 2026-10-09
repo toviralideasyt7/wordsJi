@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-08T16:37:24.666Z",
+  "generatedAt": "2026-10-09T16:31:12.583Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The high vowel count and common usage make it recognizable."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A tiny traveler released by fungi, drifting silently to grow somewhere new.",
+      "clue1": "Mushrooms and ferns scatter these to reproduce.",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "A microscopic reproductive cell released by fungi, ferns, and some microbes to form new organisms.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common five-letter word, but the biological meaning may not spring to mind immediately."
     }
   },
   "prose": {
     "2026-10-06": "Betweenle puzzle #1300 for October 6, 2026 features a compact five-letter word with just a single vowel and no repeated letters. This Betweenle challenge wraps a hard consonant ending around a familiar mechanical and figurative term.",
     "2026-10-07": "Betweenle puzzle #1301 arrives on October 7, 2026, offering a five-letter word with no repeated letters. This entry runs from F to R and hides two vowels within its uncommon pattern.",
     "2026-10-08": "Betweenle puzzle #1302 for October 8, 2026 features a five-letter word with no repeated letters. This entry opens with a hard consonant and closes on a rare final letter, giving solvers a distinctive bookend pattern.",
-    "2026-10-09": "Betweenle puzzle #1303 arrives on October 9, 2026. This specific word follows a five-letter pattern with a repeated vowel."
+    "2026-10-09": "Betweenle puzzle #1303 arrives on October 9, 2026. This specific word follows a five-letter pattern with a repeated vowel.",
+    "2026-10-10": "Betweenle puzzle #1304 for October 10, 2026 is a five-letter word with no repeated letters. This entry opens and closes on consonant-and-vowel bookends, giving solvers a tidy pattern to work from."
   }
 }

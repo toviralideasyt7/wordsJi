@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-08T16:38:56.417Z",
+  "generatedAt": "2026-10-09T16:32:11.739Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Two distinct idioms combined into one long phrase increase complexity."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "Dodge all blame, then vanish faster than a blink in the city.",
+      "clue1": "Two idioms: escaping punishment and acting with great speed.",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "A pairing of idioms meaning to avoid any punishment, and to do something extremely quickly.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two unrelated idioms with uncommon words make guessing the full phrase challenging."
     }
   },
   "prose": {
     "2026-10-06": "The Phrazle puzzle for October 6, 2026 pairs two well-known idioms into one lengthy challenge. Solvers tackling 2026-10-06 should note it begins with T, ends with E, and packs thirteen vowels across its words.",
     "2026-10-07": "The Phrazle puzzle for October 7, 2026 blends a well-known city nickname with a classic idiom. Solvers tackling 2026-10-07 will notice the phrase begins with B and ends with K, featuring several repeated letters.",
     "2026-10-08": "The Phrazle puzzle for October 8, 2026 pairs two well-known idioms into one lengthy challenge. Puzzle 2026-10-08 opens with the letter P and closes with S, featuring a notably vowel-rich letter pattern.",
-    "2026-10-09": "The Phrazle puzzle for October 9, 2026, features a multi-word phrase. Puzzle 2026-10-09 follows a pattern starting with H and ending with Y."
+    "2026-10-09": "The Phrazle puzzle for October 9, 2026, features a multi-word phrase. Puzzle 2026-10-09 follows a pattern starting with H and ending with Y.",
+    "2026-10-10": "The Phrazle puzzle for October 10, 2026 (2026-10-10) links two colorful idioms into one solution. This 2026-10-10 answer begins with G and ends with E, packing a dozen vowels across its two phrases."
   }
 }

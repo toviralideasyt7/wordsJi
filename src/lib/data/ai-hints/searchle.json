@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-08T16:36:59.169Z",
+  "generatedAt": "2026-10-09T16:31:52.586Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a distinct lack of standard vowels."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "Over eons I slowly change, from simple start to complex range.",
+      "clue1": "What species do across many generations of time.",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "To develop gradually, especially from a simpler to a more complex or advanced form.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but doubled letters and matching start-end letter can briefly confuse solvers."
     }
   },
   "prose": {
     "2026-10-06": "Searchle puzzle #73 for October 6, 2026 offers a seven-letter word with two vowels. This Searchle entry begins with S and ends with R, featuring a single repeated letter.",
     "2026-10-07": "Searchle puzzle #74 for October 7, 2026 offers a five-letter word with three vowels and no repeats. The pattern begins with A and ends with E, giving solvers a steady foothold.",
     "2026-10-08": "The Searchle puzzle #75 for October 8, 2026 is a five-letter word featuring a single vowel. This entry has no repeated letters and begins and ends with consonants.",
-    "2026-10-09": "Searchle puzzle #76 was released on October 9, 2026. This specific word follows a consonant-heavy three-letter pattern."
+    "2026-10-09": "Searchle puzzle #76 was released on October 9, 2026. This specific word follows a consonant-heavy three-letter pattern.",
+    "2026-10-10": "Searchle puzzle #77 for October 10, 2026 features a six-letter word that opens and closes with the same letter. Notably, two separate letters each appear twice within this entry."
   }
 }

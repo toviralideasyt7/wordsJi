@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-08T16:36:37.194Z",
+  "generatedAt": "2026-10-09T16:30:56.857Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common food item with a distinct color."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A tropical bloom brewing tea, flaunting petals bold and rosy.",
+      "clue1": "A showy flowering shrub often linked to the tropics.",
+      "starts_with": "H",
+      "ends_with": "C",
+      "definition": "A tropical or warm-climate plant bearing large, showy, trumpet-shaped flowers in vivid colors.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Eight letters with two repeated pairs and an uncommon consonant cluster make guessing tricky."
     }
   },
   "prose": {
     "2026-10-06": "Colordle's puzzle #1656 for October 6, 2026 features a soft blushing shade with a seven-letter answer spanning two words. The pattern includes two letters that each repeat, opening with P and closing with K.",
     "2026-10-07": "Colordle's puzzle #1657 for October 7, 2026 presents a two-word earthy shade. The letter pattern spans a longer phrase beginning with R and ending with N, with two letters appearing twice.",
     "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times.",
-    "2026-10-09": "Colordle puzzle #1659 for October 9, 2026, features a seven-letter word. The target color is a deep reddish-brown shade."
+    "2026-10-09": "Colordle puzzle #1659 for October 9, 2026, features a seven-letter word. The target color is a deep reddish-brown shade.",
+    "2026-10-10": "Colordle #1660 for October 10, 2026 features an eight-letter word that begins with H and ends with S. This puzzle hides two letters that each appear twice, giving solvers a subtle pattern to untangle."
   }
 }

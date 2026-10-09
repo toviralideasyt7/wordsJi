@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-08T16:36:34.751Z",
+  "generatedAt": "2026-10-09T16:31:27.425Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known in music circles but may be niche for general players."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A Canadian voice soared on an ill-fated ship's romantic anthem.",
+      "clue1": "Powerhouse vocalist tied to a famous sinking-ship ballad.",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "Canadian singer known for powerful ballads including the Titanic theme and Las Vegas residencies.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Globally famous performer, but the two-word name and letter pattern can slow solvers."
     }
   },
   "prose": {
     "2026-10-06": "Today's Spotle for October 6, 2026 (Day 1663) features a two-word name beginning with H and ending with D. This puzzle's letter pattern packs seven vowels, with one letter repeating four times.",
     "2026-10-07": "The Spotle puzzle for October 7, 2026 (Day 1664) features an unusual four-character answer that begins with a digit rather than a letter. This Day 1664 challenge contains a single vowel and no repeated characters, rewarding solvers who think beyond standard spelling.",
     "2026-10-08": "The Spotle puzzle for October 8, 2026 (Day 1665) features a two-word answer beginning with C and ending with N. This Day 1665 challenge includes four vowels and three letters that each appear twice.",
-    "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters."
+    "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters.",
+    "2026-10-10": "Today's Spotle puzzle for October 10, 2026 marks Day 1667 with a two-word answer. The letters span from C to N, and three distinct letters each appear exactly twice."
   }
 }

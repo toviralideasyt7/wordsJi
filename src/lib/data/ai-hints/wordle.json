@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-08T16:36:51.164Z",
+  "generatedAt": "2026-10-09T16:32:18.962Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common vocabulary word with a standard consonant-vowel pattern."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Drive down this rough road and your car will shake plenty.",
+      "clue1": "How a pothole-ridden road might feel underneath.",
+      "starts_with": "B",
+      "ends_with": "Y",
+      "definition": "Having an uneven surface full of lumps, ridges, or small raised areas.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Single vowel and an ending letter that doubles as a vowel can slow solvers down."
     }
   },
   "prose": {
     "2026-10-06": "Wordle puzzle #1935 for October 6, 2026 offers a five-letter word with just a single vowel. This solution ends in Y and features no repeated letters, keeping guessers on their toes.",
     "2026-10-07": "The Wordle puzzle #1936 for October 7, 2026 features a five-letter word with no repeated letters. Its pattern pairs an opening consonant cluster with a familiar silent-E ending.",
     "2026-10-08": "Wordle puzzle #1937 for October 8, 2026 features a five-letter word with only one vowel. The solution follows a consonant-heavy pattern that may challenge solvers hunting for familiar letter combinations.",
-    "2026-10-09": "Wordle puzzle #1938 arrives on October 9, 2026. This specific entry features a five-letter word ending in a consonant."
+    "2026-10-09": "Wordle puzzle #1938 arrives on October 9, 2026. This specific entry features a five-letter word ending in a consonant.",
+    "2026-10-10": "Wordle puzzle #1939 for October 10, 2026 features a five-letter word with only a single traditional vowel. The answer begins with B and closes with Y, giving solvers a distinctive consonant-heavy pattern to work through."
   }
 }

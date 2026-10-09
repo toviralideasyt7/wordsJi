@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-08T16:37:06.955Z",
+  "generatedAt": "2026-10-09T16:31:37.923Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common household term with a simple five-letter structure."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Hidden hard heart inside a peach or cherry, spit me out when done.",
+      "clue1": "The firm pit at a fruit's center.",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "The hard, seed-containing center of certain fruits such as peaches, plums, and cherries.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but its fruit-pit meaning may surprise players expecting a dish."
     }
   },
   "prose": {
     "2026-10-06": "The Phoodle puzzle for October 6, 2026 features a five-letter word with only one vowel. Solvers tackling 2026-10-06 should note it begins with M and ends with Y.",
     "2026-10-07": "The Phoodle puzzle for October 7, 2026 features a five-letter word with no repeated letters. Solvers tackling 2026-10-07 will notice it holds two vowels and ends in a plural S.",
     "2026-10-08": "Today's Phoodle for October 8, 2026 features a five-letter word with no repeated letters. The 2026-10-08 puzzle begins with M and ends with E, framing a tidy two-vowel pattern.",
-    "2026-10-09": "The Phoodle puzzle for October 9, 2026, features a five-letter word. Puzzle 2026-10-09 follows a consonant-vowel-consonant-consonant-consonant pattern."
+    "2026-10-09": "The Phoodle puzzle for October 9, 2026, features a five-letter word. Puzzle 2026-10-09 follows a consonant-vowel-consonant-consonant-consonant pattern.",
+    "2026-10-10": "The Phoodle puzzle for October 10, 2026 features a five-letter word with no repeated letters. This 2026-10-10 answer follows a consonant-vowel-consonant-consonant-vowel pattern."
   }
 }
