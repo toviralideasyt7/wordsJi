@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-08T22:05:07.315Z",
+  "generatedAt": "2026-10-09T22:08:33.948Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -50,12 +50,25 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word has multiple distinct meanings across different contexts."
+    },
+    "2026-10-10": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
     "2026-10-06": "Worgle's puzzle #1728 for October 6, 2026 features a six-letter word with a repeated vowel. The pattern spans from S to T, offering a steady midweek challenge.",
     "2026-10-07": "Worgle's October 7, 2026 puzzle (#1729) offers a familiar six-letter word to untangle. The pattern starts with V and ends with R, featuring one letter that appears twice.",
     "2026-10-08": "The Worgle puzzle for October 8, 2026 (#1730) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with G — see the letter hints above before you peek.",
-    "2026-10-09": "Worgle puzzle #1731 for October 9, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with a trailing vowel."
+    "2026-10-09": "Worgle puzzle #1731 for October 9, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with a trailing vowel.",
+    "2026-10-10": "The Worgle puzzle for October 10, 2026 (#1732) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek."
   }
 }
