@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-09T06:04:12.493Z",
+  "generatedAt": "2026-10-10T06:03:18.493Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -51,12 +51,26 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A short name with a repeated boundary letter and only one true vowel."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "A rift-walking hunter who devours magic and stalks the Void's spawn.",
+      "clue1": "The Voidwalker, father to a famous spellcasting daughter.",
+      "starts_with": "K",
+      "ends_with": "H",
+      "definition": "League of Legends champion, a Voidwalker who hunts and consumes creatures of the Void.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Recognizable Void theme, though less iconic than headline champions, so moderately tricky to guess."
     }
   },
   "prose": {
     "2026-10-06": "LoLdle's puzzle Game #1552 for October 6, 2026 challenges players to identify a champion from scattered clues. The hidden name holds five letters with no repeats, beginning and ending on different sounds.",
     "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack.",
     "2026-10-08": "LoLdle Game #1554 for October 8, 2026, features a specific set of four champions. The solution follows a pattern starting with V and ending with X.",
-    "2026-10-09": "Today's LoLdle puzzle for October 9, 2026, Game #1555, hides a five-letter answer that begins and ends with the same consonant. The letter pattern reveals one letter appearing twice, offering a quiet nudge for attentive solvers."
+    "2026-10-09": "Today's LoLdle puzzle for October 9, 2026, Game #1555, hides a five-letter answer that begins and ends with the same consonant. The letter pattern reveals one letter appearing twice, offering a quiet nudge for attentive solvers.",
+    "2026-10-10": "Today's LoLdle challenge for October 10, 2026 arrives as Game #1556 with a tidy eight-letter solution. This puzzle's answer opens with K and closes with N, featuring two different letters that each repeat exactly twice."
   }
 }

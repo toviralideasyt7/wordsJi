@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-09T06:04:43.269Z",
+  "generatedAt": "2026-10-10T06:03:34.751Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -51,12 +51,26 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known Gen I Pokémon, but seven letters with a distinctive silhouette and theme."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "Floating screws and horseshoe charms, I'm drawn to any metal that comes near.",
+      "clue1": "A levitating Electric-type sphere with built-in magnets.",
+      "starts_with": "M",
+      "ends_with": "S",
+      "definition": "A Pokémon species; a spherical Electric and Steel-type creature with a single eye and two side magnets.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A classic early-generation Pokémon, recognizable to fans but tricky from letters alone."
     }
   },
   "prose": {
     "2026-10-06": "Today's Pokedle challenge for October 6, 2026 (Game #1090) features a seven-letter name with a single repeated letter. This puzzle's pattern opens and closes on different letters, giving solvers a steady foothold without revealing too much.",
     "2026-10-07": "The Pokedle puzzle for October 7, 2026 (Game #1091) asks solvers to pin down a group of four creature names at once. Each entry in Game #1091 begins and ends with different letters, making the pattern tricky without revealing anything outright.",
     "2026-10-08": "Pokedle Game #1092 was released on October 8, 2026. This specific puzzle features a long sequence of characters ending in N.",
-    "2026-10-09": "Pokedle's October 9, 2026 puzzle (Game #1093) presents a seven-letter answer beginning with C and ending with Y. This Pokedle round features a clean pattern with no repeated letters to confuse solvers."
+    "2026-10-09": "Pokedle's October 9, 2026 puzzle (Game #1093) presents a seven-letter answer beginning with C and ending with Y. This Pokedle round features a clean pattern with no repeated letters to confuse solvers.",
+    "2026-10-10": "Today's Pokedle for October 10, 2026 (Game #1094) hides a well-known creature whose name begins with M and ends with E. This Game #1094 answer features four vowels and a pattern where two separate letters each appear exactly twice."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-09T06:03:58.051Z",
+  "generatedAt": "2026-10-10T06:03:08.066Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common everyday word with a repeated vowel that may briefly puzzle solvers."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Not dead, still breathing, kicking, and full of vital energy.",
+      "clue1": "The opposite of lifeless, still full of breath.",
+      "starts_with": "A",
+      "ends_with": "E",
+      "definition": "Living; having life; not dead; still in existence or active.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common everyday word with three vowels and no repeats, fairly guessable."
     }
   },
   "prose": {
     "2026-10-06": "Canuckle's puzzle #1606 for October 6, 2026 features a five-letter word where two letters each repeat. The pattern begins and ends on the same consonant-vowel bookends, offering solvers a tidy symmetry to work with.",
     "2026-10-07": "The Canuckle puzzle #1607 for October 7, 2026 features a five-letter word with a single vowel and a doubled consonant. Solvers tackling this October 7, 2026 edition should watch for the repeated letter nestled in the middle of the pattern.",
     "2026-10-08": "The Canuckle puzzle for October 8, 2026 (#1608) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with E — see the letter hints above before you peek.",
-    "2026-10-09": "Canuckle puzzle #1609 for October 9, 2026 features a five-letter word with a repeated vowel. This Canuckle entry begins and ends with consonants, framing a familiar everyday pattern."
+    "2026-10-09": "Canuckle puzzle #1609 for October 9, 2026 features a five-letter word with a repeated vowel. This Canuckle entry begins and ends with consonants, framing a familiar everyday pattern.",
+    "2026-10-10": "Canuckle puzzle #1610 for October 10, 2026 features a familiar five-letter word. The letter pattern spans three vowels with no repeated letters, framed between two distinct endpoints."
   }
 }

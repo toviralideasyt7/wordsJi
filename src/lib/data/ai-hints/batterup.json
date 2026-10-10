@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-09T06:03:59.547Z",
+  "generatedAt": "2026-10-10T06:03:12.682Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -51,12 +51,26 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known to baseball fans but tricky for casual players unfamiliar with MLB stars."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A ballpark flyhawk who swung for two nations under the lights.",
+      "clue1": "An outfielder with dual heritage and a famous roar.",
+      "starts_with": "L",
+      "ends_with": "R",
+      "definition": "American professional baseball outfielder known for Major League play and international competition representing Japan.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A niche sports name recognizable mainly to dedicated baseball fans."
     }
   },
   "prose": {
     "2026-10-05": "Today's Batter Up challenge for October 5, 2026, marks Game #960 with a name featuring three vowels and three letters that each appear twice. This October 5, 2026 puzzle runs from Y to Z, offering a tidy test for sharp solvers.",
     "2026-10-06": "Today's Batter Up puzzle for October 6, 2026 (Game #961) features a two-word name with ten letters total. The letter pattern includes two pairs of repeated letters, offering a subtle structural hint for solvers.",
     "2026-10-07": "Batter Up Game #962 for October 7, 2026, features an eleven-letter name. The solution follows a pattern of five letters, then six letters.",
-    "2026-10-09": "Game #964 of Batter Up for October 9, 2026 features a two-word answer beginning with P and ending with T. This puzzle's name spans fifteen letters, with two separate letters each appearing twice."
+    "2026-10-09": "Game #964 of Batter Up for October 9, 2026 features a two-word answer beginning with P and ending with T. This puzzle's name spans fifteen letters, with two separate letters each appearing twice.",
+    "2026-10-10": "Today's Batter Up puzzle, Game #965 for October 10, 2026, hides a two-word answer spanning eleven letters. Solvers of this edition should note it begins with L and closes with R, with several letters making repeat appearances."
   }
 }

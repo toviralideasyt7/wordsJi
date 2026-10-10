@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-09T06:04:40.444Z",
+  "generatedAt": "2026-10-10T06:03:37.571Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -51,12 +51,26 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Five distinct characters span varied franchises, demanding broad roster familiarity to identify all."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "20 letters appear more than once.",
+      "riddle": "Five brawlers unite: one flat, one swift, one plumber, one goddess, one dark king.",
+      "clue1": "A roster of Nintendo and Sega legends ready to brawl.",
+      "starts_with": "M",
+      "ends_with": "F",
+      "definition": "A set of five playable fighters drawn from the Super Smash Bros. crossover series.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Five characters spanning several franchises make this combined lineup tricky to guess fully."
     }
   },
   "prose": {
     "2026-10-06": "The Smashdle puzzle for October 6, 2026 (Game #1126) challenges players to name five Super Smash Bros. fighters rather than one. The lineup spans several franchises, with names beginning in letters as varied as I, F, Z, R, and ending in sounds that keep guessers on their toes.",
     "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players.",
     "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R.",
-    "2026-10-09": "Smashdle's October 9, 2026 edition, Game #1129, lines up five contenders whose names start with letters spanning O through Z. The letter patterns vary widely across this group, so pay attention to each fighter's opening and closing characters."
+    "2026-10-09": "Smashdle's October 9, 2026 edition, Game #1129, lines up five contenders whose names start with letters spanning O through Z. The letter patterns vary widely across this group, so pay attention to each fighter's opening and closing characters.",
+    "2026-10-10": "The Smashdle puzzle for October 10, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 38 characters, starting with M and ending with F — see the letter hints above before you peek."
   }
 }

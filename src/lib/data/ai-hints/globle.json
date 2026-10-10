@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-09T06:04:02.196Z",
+  "generatedAt": "2026-10-10T06:03:19.870Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -51,12 +51,26 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Small but well-known nation; its distinctive location aids guessers familiar with the Caribbean."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A landlocked West African land where a great river bends north.",
+      "clue1": "Home to the ancient city of Timbuktu.",
+      "starts_with": "M",
+      "ends_with": "I",
+      "definition": "A landlocked country in West Africa, formerly part of a great medieval empire.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A sizeable, well-known African nation, though its exact borders can be tricky."
     }
   },
   "prose": {
     "2026-10-06": "The Globle puzzle for October 6, 2026 features a vowel-rich, hyphenated name where four different letters each repeat twice. Solvers of 2026-10-06 should watch the Atlantic coast of West Africa to narrow in on this compact answer.",
     "2026-10-07": "The Globle puzzle for October 7, 2026 features a six-letter country with one repeated letter. Solvers tackling 2026-10-07 should note its name begins with M and ends with I.",
     "2026-10-08": "The Globle puzzle for October 8, 2026, features a seven-letter country. Puzzle 2026-10-08 follows a pattern starting with a consonant and ending with a plural marker.",
-    "2026-10-09": "Today's Globle puzzle for October 9, 2026 (2026-10-09) points to a Caribbean destination. The answer for 2026-10-09 begins with T and ends with O, featuring plenty of repeated letters."
+    "2026-10-09": "Today's Globle puzzle for October 9, 2026 (2026-10-09) points to a Caribbean destination. The answer for 2026-10-09 begins with T and ends with O, featuring plenty of repeated letters.",
+    "2026-10-10": "Today's Globle puzzle for October 10, 2026 features a four-letter answer with two vowels and no repeated letters. The 2026-10-10 challenge points players toward a landlocked region of West Africa."
   }
 }

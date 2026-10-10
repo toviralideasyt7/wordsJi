@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-09T06:04:33.018Z",
+  "generatedAt": "2026-10-10T06:03:22.295Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -50,12 +50,26 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A supporting character with limited screen time, tricky for casual fans to recall."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 19 vowels.",
+      "repeat_hint": "21 letters appear more than once.",
+      "riddle": "A cloud-village swordsman who overthinks every outcome before he ever acts.",
+      "clue1": "A worry-prone ninja from the Hidden Cloud Village.",
+      "starts_with": "O",
+      "ends_with": "I",
+      "definition": "A Kumogakure shinobi known for anxious overthinking and skilled swordsmanship, teammate to Karui and Samui.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A supporting Cloud ninja with limited screen time, easily confused with other minor characters."
     }
   },
   "prose": {
     "2026-10-06": "Today's Narutodle challenge for October 6, 2026 (Game #887) features a five-letter name with no repeated letters. This Narutodle puzzle spotlights a figure whose name begins with H and ends with O.",
     "2026-10-07": "Today's Narutodle challenge for October 7, 2026, marks Game #888 with a six-letter answer. This puzzle's name notably features two letters that each appear twice, hinting at its rhythmic structure.",
     "2026-10-08": "The Narutodle puzzle for October 8, 2026 (Game #889) is live with today's answer confirmed. The answer runs 29 characters, starting with J and ending with O — see the letter hints above before you peek.",
-    "2026-10-09": "Narutodle's puzzle Game #890 for October 9, 2026 features a five-letter answer with no repeated letters. This Narutodle challenge opens with D and closes with I, holding exactly three vowels."
+    "2026-10-09": "Narutodle's puzzle Game #890 for October 9, 2026 features a five-letter answer with no repeated letters. This Narutodle challenge opens with D and closes with I, holding exactly three vowels.",
+    "2026-10-10": "The Narutodle puzzle for October 10, 2026 (Game #891) is live with today's answer confirmed. The answer runs 34 characters, starting with O and ending with I — see the letter hints above before you peek."
   }
 }
