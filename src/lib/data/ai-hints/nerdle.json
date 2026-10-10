@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-09T16:31:05.421Z",
+  "generatedAt": "2026-10-10T16:31:19.030Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -73,6 +73,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A single addition with no carrying tricks makes this quick to deduce."
+    },
+    "2026-10-11": {
+      "kind": "math",
+      "operator_hint": "Uses division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single-digit even number.",
+      "riddle": "Split a big number by a smaller one, land on a tiny even friend.",
+      "starts_with": "2",
+      "ends_with": "4",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Single division with a clean whole-number quotient, but the three-digit dividend takes some trial."
     }
   },
   "prose": {
@@ -80,6 +96,7 @@
     "2026-10-07": "The Nerdle puzzle #1722 for October 7, 2026 features both division and subtraction operators. Its eight-character sequence begins with a 1 and resolves neatly to a single-digit result.",
     "2026-10-08": "The Nerdle puzzle for October 8, 2026 (#1723) is live with today's equation confirmed. The equation runs 8 characters using multiplication and subtraction — see the math hints above before you peek.",
     "2026-10-09": "Nerdle puzzle #1724 presents a clean arithmetic challenge for October 9, 2026. This specific sequence relies on a repeating digit to reach its total.",
-    "2026-10-10": "The Nerdle puzzle #1725 for October 10, 2026 keeps things friendly with a straightforward sum. Solvers should find the path to the answer clear once the operator is pinned down."
+    "2026-10-10": "The Nerdle puzzle #1725 for October 10, 2026 keeps things friendly with a straightforward sum. Solvers should find the path to the answer clear once the operator is pinned down.",
+    "2026-10-11": "Nerdle puzzle #1726 for October 11, 2026 leans on a single division that resolves neatly into one tidy digit. Solvers who test clean divisors early will find this October 11, 2026 challenge rewarding without too much struggle."
   }
 }

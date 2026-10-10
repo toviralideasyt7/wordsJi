@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-09T16:32:10.261Z",
+  "generatedAt": "2026-10-10T16:31:52.027Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -62,6 +62,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Three separate colors must be guessed, and two of them sit close together on the spectrum."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Fresh snow, a sailor's coat, and open sky—three cool shades stacked together.",
+      "clue1": "From palest neutral down to the deepest maritime tone.",
+      "starts_with": "W",
+      "ends_with": "E",
+      "definition": "A trio of cool colors spanning a bright neutral, a very dark maritime shade, and a vivid primary hue.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two of the three shades sit close on the spectrum, making them easy to confuse."
     }
   },
   "prose": {
@@ -69,6 +82,7 @@
     "2026-10-07": "Colorfle's puzzle #1626 for October 7, 2026 pairs cool tones with a single warm shade. The combined answer begins with the letter B and ends with the letter N.",
     "2026-10-08": "Colorfle puzzle #1627 for October 8, 2026 challenges players to blend three distinct color names into one target shade. The trio's names begin with L and the final one closes with the letter N.",
     "2026-10-09": "The Colorfle puzzle for October 9, 2026 (#1628) is live with today's answer confirmed. The answer runs 15 characters, starting with B and ending with N — see the letter hints above before you peek.",
-    "2026-10-10": "Colorfle puzzle #1629 for October 10, 2026 presents a three-color answer that begins with O and ends with N. Its combined thirteen letters include a pair of letters that each surface twice across the set."
+    "2026-10-10": "Colorfle puzzle #1629 for October 10, 2026 presents a three-color answer that begins with O and ends with N. Its combined thirteen letters include a pair of letters that each surface twice across the set.",
+    "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from."
   }
 }

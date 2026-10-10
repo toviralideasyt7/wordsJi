@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-09T16:31:27.425Z",
+  "generatedAt": "2026-10-10T16:31:08.131Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Globally famous performer, but the two-word name and letter pattern can slow solvers."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A Boston rock band that walks this way through decades of hits.",
+      "clue1": "Legendary hard rock group fronted by a scarf-draped frontman.",
+      "starts_with": "A",
+      "ends_with": "H",
+      "definition": "American rock band formed in Boston in 1970, known for hits like 'Dream On' and 'Walk This Way'.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known band, but nine letters with no repeats makes spelling tricky."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "The Spotle puzzle for October 7, 2026 (Day 1664) features an unusual four-character answer that begins with a digit rather than a letter. This Day 1664 challenge contains a single vowel and no repeated characters, rewarding solvers who think beyond standard spelling.",
     "2026-10-08": "The Spotle puzzle for October 8, 2026 (Day 1665) features a two-word answer beginning with C and ending with N. This Day 1665 challenge includes four vowels and three letters that each appear twice.",
     "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters.",
-    "2026-10-10": "Today's Spotle puzzle for October 10, 2026 marks Day 1667 with a two-word answer. The letters span from C to N, and three distinct letters each appear exactly twice."
+    "2026-10-10": "Today's Spotle puzzle for October 10, 2026 marks Day 1667 with a two-word answer. The letters span from C to N, and three distinct letters each appear exactly twice.",
+    "2026-10-11": "The Spotle puzzle for October 11, 2026 (Day 1668) features a nine-letter answer with no repeated letters. This Spotle challenge begins with A and ends with H, offering four vowels to guide solvers."
   }
 }

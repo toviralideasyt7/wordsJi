@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-09T16:31:42.661Z",
+  "generatedAt": "2026-10-10T16:32:13.185Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -62,6 +62,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A common formal noun, moderately long with one repeated vowel pattern."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Storms, floods, and clumsy hands all leave me behind.",
+      "clue1": "The harm done when something gets broken or hurt.",
+      "starts_with": "D",
+      "ends_with": "E",
+      "definition": "Physical harm or injury that impairs the value, usefulness, or function of something.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A common everyday word, though many near-synonyms could mislead guessers."
     }
   },
   "prose": {
@@ -69,6 +82,7 @@
     "2026-10-07": "Today's Contexto puzzle #1480 for October 7, 2026 features a six-letter word that both begins and ends with the same letter. Notably, two different letters each appear twice within it, offering a subtle structural clue.",
     "2026-10-08": "Today's Contexto puzzle for October 8, 2026 (#1481) hides a ten-letter word that both opens and closes with the same letter. Players tackling this round will notice one letter repeating three times across the solution.",
     "2026-10-09": "The Contexto puzzle for October 9, 2026 (#1482) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with N — see the letter hints above before you peek.",
-    "2026-10-10": "Contexto puzzle #1483 for October 10, 2026 features an eleven-letter word beginning with D and ending with N. This entry includes five vowels and has one letter that appears twice."
+    "2026-10-10": "Contexto puzzle #1483 for October 10, 2026 features an eleven-letter word beginning with D and ending with N. This entry includes five vowels and has one letter that appears twice.",
+    "2026-10-11": "Today's Contexto puzzle #1484 for October 11, 2026 features a six-letter word beginning with D and ending with E. The letter pattern includes one letter that appears twice, offering a quiet nudge for persistent solvers."
   }
 }

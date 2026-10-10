@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-09T16:31:03.827Z",
+  "generatedAt": "2026-10-10T16:34:39.660Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -63,6 +63,18 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "RURAL's tripled R and the uncommon CLASP cluster trip up many solvers."
+    },
+    "2026-10-11": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -70,6 +82,7 @@
     "2026-10-07": "The Quordle puzzle #1717 for October 7, 2026 features four everyday five-letter words beginning with P, F, D, and E. Across the grid these answers pack eight vowels total, with just a single repeated letter hiding among them.",
     "2026-10-08": "The Quordle puzzle for October 8, 2026 (#1718) gathers four distinct five-letter words with no shared theme. Each entry follows its own letter pattern, keeping the quartet balanced between familiar and challenging guesses.",
     "2026-10-09": "Quordle puzzle #1719 for October 9, 2026, features four distinct five-letter words. The set includes a variety of vowel placements and one repeated consonant.",
-    "2026-10-10": "The Quordle puzzle #1720 for October 10, 2026 pairs three single-vowel-pattern words with one that repeats a letter three times. Its mix of a tricky double-consonant ending and a sneaky triple-letter word makes October 10, 2026's grid a satisfying challenge."
+    "2026-10-10": "The Quordle puzzle #1720 for October 10, 2026 pairs three single-vowel-pattern words with one that repeats a letter three times. Its mix of a tricky double-consonant ending and a sneaky triple-letter word makes October 10, 2026's grid a satisfying challenge.",
+    "2026-10-11": "The Quordle puzzle for October 11, 2026 (#1721) is live with today's answer confirmed. The answer runs 20 characters, starting with L and ending with E — see the letter hints above before you peek."
   }
 }

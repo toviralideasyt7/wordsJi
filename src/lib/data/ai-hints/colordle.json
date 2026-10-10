@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-09T16:30:56.857Z",
+  "generatedAt": "2026-10-10T16:31:18.064Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Eight letters with two repeated pairs and an uncommon consonant cluster make guessing tricky."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "A pale, sunny whisper of a hue, nearly white yet warmed by soft glow.",
+      "clue1": "Think faint sunshine or a soft butter tone.",
+      "starts_with": "L",
+      "ends_with": "A",
+      "definition": "A very pale, soft shade resembling diluted sunshine or faint butter tones.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Two words and a tripled letter add a twist, but the shade is familiar."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Colordle's puzzle #1657 for October 7, 2026 presents a two-word earthy shade. The letter pattern spans a longer phrase beginning with R and ending with N, with two letters appearing twice.",
     "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times.",
     "2026-10-09": "Colordle puzzle #1659 for October 9, 2026, features a seven-letter word. The target color is a deep reddish-brown shade.",
-    "2026-10-10": "Colordle #1660 for October 10, 2026 features an eight-letter word that begins with H and ends with S. This puzzle hides two letters that each appear twice, giving solvers a subtle pattern to untangle."
+    "2026-10-10": "Colordle #1660 for October 10, 2026 features an eight-letter word that begins with H and ends with S. This puzzle hides two letters that each appear twice, giving solvers a subtle pattern to untangle.",
+    "2026-10-11": "Colordle puzzle #1661 for October 11, 2026 features a two-word answer spanning eleven letters. One letter repeats three times across this soft, pale entry in the game."
   }
 }

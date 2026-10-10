@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-09T16:31:10.992Z",
+  "generatedAt": "2026-10-10T16:31:18.018Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A short, common everyday word with a familiar meaning and simple spelling."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "Reach your goal and triumph, the opposite of falling short.",
+      "clue1": "What hard work and persistence often lead to.",
+      "starts_with": "S",
+      "ends_with": "D",
+      "definition": "To achieve a desired aim or result; to accomplish or prosper in an endeavor.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common everyday verb, but its semantic neighbors are abstract and easy to overshoot."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Semantle puzzle #1712 for October 7, 2026 features an eleven-letter word starting with R and ending with N. In this edition two separate letters each surface twice, so watch the recurring patterns closely.",
     "2026-10-08": "Semantle puzzle #1713, dated October 8, 2026, hides a thirteen-letter word beginning with C and ending with N. This entry packs five vowels and several repeated letters into a single everyday term.",
     "2026-10-09": "Semantle puzzle #1714 for October 9, 2026, features a five-letter word. The target word begins with L and ends with T.",
-    "2026-10-10": "Today's Semantle puzzle #1715 for October 10, 2026 features a brief three-letter word. Its letter pattern starts with M and ends with D, enclosing a single vowel."
+    "2026-10-10": "Today's Semantle puzzle #1715 for October 10, 2026 features a brief three-letter word. Its letter pattern starts with M and ends with D, enclosing a single vowel.",
+    "2026-10-11": "Semantle puzzle #1716 for October 11, 2026 features a seven-letter word with two pairs of repeated letters. This entry begins with S and ends with D, framing a familiar concept of achievement."
   }
 }

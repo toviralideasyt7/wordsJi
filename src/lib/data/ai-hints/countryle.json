@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-09T16:31:29.464Z",
+  "generatedAt": "2026-10-10T16:31:39.704Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known European nation, but one of several landlocked candidates to guess."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A sunburnt island continent where kangaroos bound beneath the Southern Cross.",
+      "clue1": "Both a country and a whole continent down under.",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "Island continent and nation in the Southern Hemisphere, known for unique wildlife and vast outback.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A famous, iconic country-continent with memorable geography that most players recognize quickly."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Today's Countryle puzzle for October 7, 2026 (Game #1692) points to a Pacific archipelago whose name both begins and ends with the same letter. This entry features five vowels and multiple repeated letters across its two words.",
     "2026-10-08": "The Countryle puzzle for October 8, 2026 (Game #1693) hides a South American answer with a letter pattern featuring one letter repeated three times. This Game #1693 solution begins with U and ends with Y, spanning four vowels in total.",
     "2026-10-09": "Countryle Game #1694 for October 9, 2026, features a word starting with P. The letter pattern includes several repetitions.",
-    "2026-10-10": "Today's Countryle puzzle for October 10, 2026, Game #1695, hides a seven-letter nation with no repeated letters. Its name begins with H and ends with Y, framing two vowels in between."
+    "2026-10-10": "Today's Countryle puzzle for October 10, 2026, Game #1695, hides a seven-letter nation with no repeated letters. Its name begins with H and ends with Y, framing two vowels in between.",
+    "2026-10-11": "Today's Countryle for October 11, 2026 (Game #1696) features a nine-letter answer that both begins and ends with the same letter. This puzzle's word holds five vowels, with one letter appearing three times across its span."
   }
 }

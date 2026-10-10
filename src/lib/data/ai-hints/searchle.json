@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-09T16:31:52.586Z",
+  "generatedAt": "2026-10-10T16:31:06.662Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but doubled letters and matching start-end letter can briefly confuse solvers."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A furry river swimmer, I crack shells on my belly and hold hands asleep.",
+      "clue1": "A playful aquatic mammal often seen floating in rivers.",
+      "starts_with": "O",
+      "ends_with": "R",
+      "definition": "A semiaquatic, fish-eating mammal with webbed feet, dense fur, and a long body.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A common five-letter animal with one doubled consonant and a familiar pattern."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Searchle puzzle #74 for October 7, 2026 offers a five-letter word with three vowels and no repeats. The pattern begins with A and ends with E, giving solvers a steady foothold.",
     "2026-10-08": "The Searchle puzzle #75 for October 8, 2026 is a five-letter word featuring a single vowel. This entry has no repeated letters and begins and ends with consonants.",
     "2026-10-09": "Searchle puzzle #76 was released on October 9, 2026. This specific word follows a consonant-heavy three-letter pattern.",
-    "2026-10-10": "Searchle puzzle #77 for October 10, 2026 features a six-letter word that opens and closes with the same letter. Notably, two separate letters each appear twice within this entry."
+    "2026-10-10": "Searchle puzzle #77 for October 10, 2026 features a six-letter word that opens and closes with the same letter. Notably, two separate letters each appear twice within this entry.",
+    "2026-10-11": "Searchle puzzle #78 for October 11, 2026 is a five-letter word with a single doubled consonant. The pattern features two vowels and one letter that appears twice."
   }
 }

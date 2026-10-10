@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-09T16:31:12.583Z",
+  "generatedAt": "2026-10-10T16:31:15.831Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -63,6 +63,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common five-letter word, but the biological meaning may not spring to mind immediately."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Cook me slow in an oven, or aim me at a friend in jest.",
+      "clue1": "What you do to a chicken or a comedian.",
+      "starts_with": "R",
+      "ends_with": "T",
+      "definition": "To cook food with dry heat; also, good-natured teasing or mockery.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common five-letter word with no repeated letters and a familiar everyday meaning."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Betweenle puzzle #1301 arrives on October 7, 2026, offering a five-letter word with no repeated letters. This entry runs from F to R and hides two vowels within its uncommon pattern.",
     "2026-10-08": "Betweenle puzzle #1302 for October 8, 2026 features a five-letter word with no repeated letters. This entry opens with a hard consonant and closes on a rare final letter, giving solvers a distinctive bookend pattern.",
     "2026-10-09": "Betweenle puzzle #1303 arrives on October 9, 2026. This specific word follows a five-letter pattern with a repeated vowel.",
-    "2026-10-10": "Betweenle puzzle #1304 for October 10, 2026 is a five-letter word with no repeated letters. This entry opens and closes on consonant-and-vowel bookends, giving solvers a tidy pattern to work from."
+    "2026-10-10": "Betweenle puzzle #1304 for October 10, 2026 is a five-letter word with no repeated letters. This entry opens and closes on consonant-and-vowel bookends, giving solvers a tidy pattern to work from.",
+    "2026-10-11": "Betweenle puzzle #1305 arrives on October 11, 2026, offering a five-letter challenge. This answer begins with R and ends with T, holding two vowels and no repeats."
   }
 }

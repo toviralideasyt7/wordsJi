@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-09T16:31:35.650Z",
+  "generatedAt": "2026-10-10T16:31:29.269Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Widely recognized franchise, but visual framing may obscure quick recognition for casual players."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "Found footage ghosts haunt a couple's house night after sleepless night.",
+      "clue1": "A low-budget haunted-house film franchise with hidden cameras.",
+      "starts_with": "P",
+      "ends_with": "Y",
+      "definition": "2007 found-footage supernatural horror film that spawned a popular franchise.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known horror title, but two long words with many repeated letters."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Framed's October 7, 2026 puzzle (#1672) offers a four-word title that begins with T and ends with K. The phrase spans fifteen letters and features five vowels, with two letters each appearing twice.",
     "2026-10-08": "The Framed puzzle for October 8, 2026 (#1673) offers a title made of two words totaling ten letters. This entry begins with D and ends with S, with a couple of letters appearing twice across the pattern.",
     "2026-10-09": "Framed puzzle #1674 for October 9, 2026, features a multi-word title. The answer consists of eighteen characters including spaces and punctuation.",
-    "2026-10-10": "Framed's puzzle #1675 for October 10, 2026 presents a three-word title spanning fifteen letters. The letter pattern features one letter appearing three times and two others appearing twice, with multiple repeated consonants adding texture."
+    "2026-10-10": "Framed's puzzle #1675 for October 10, 2026 presents a three-word title spanning fifteen letters. The letter pattern features one letter appearing three times and two others appearing twice, with multiple repeated consonants adding texture.",
+    "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters."
   }
 }

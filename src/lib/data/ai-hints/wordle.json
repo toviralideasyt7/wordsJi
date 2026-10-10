@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-09T16:32:18.962Z",
+  "generatedAt": "2026-10-10T16:31:07.232Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -63,6 +63,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Single vowel and an ending letter that doubles as a vowel can slow solvers down."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I undo what a lid once did, freeing the bottle's mouth to breathe.",
+      "clue1": "The opposite of sealing a bottle tight.",
+      "starts_with": "U",
+      "ends_with": "P",
+      "definition": "To remove the lid or cover from something, especially a bottle or pen.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Uncommon word with a tricky opening letter that few players guess early."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "The Wordle puzzle #1936 for October 7, 2026 features a five-letter word with no repeated letters. Its pattern pairs an opening consonant cluster with a familiar silent-E ending.",
     "2026-10-08": "Wordle puzzle #1937 for October 8, 2026 features a five-letter word with only one vowel. The solution follows a consonant-heavy pattern that may challenge solvers hunting for familiar letter combinations.",
     "2026-10-09": "Wordle puzzle #1938 arrives on October 9, 2026. This specific entry features a five-letter word ending in a consonant.",
-    "2026-10-10": "Wordle puzzle #1939 for October 10, 2026 features a five-letter word with only a single traditional vowel. The answer begins with B and closes with Y, giving solvers a distinctive consonant-heavy pattern to work through."
+    "2026-10-10": "Wordle puzzle #1939 for October 10, 2026 features a five-letter word with only a single traditional vowel. The answer begins with B and closes with Y, giving solvers a distinctive consonant-heavy pattern to work through.",
+    "2026-10-11": "Wordle #1940 for October 11, 2026 features a five-letter word with two vowels and no repeats. The letter pattern opens with an unusual starting consonant that tends to stump early guesses."
   }
 }
