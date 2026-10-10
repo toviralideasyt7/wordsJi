@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-09T06:21:39.446Z",
+  "generatedAt": "2026-10-10T06:21:17.052Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -38,11 +38,25 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A specific variant of a famous hero, less widely known than the original."
+    },
+    "2026-10-10": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A glowing punch meets a swamp dweller; two heroes share today's spotlight.",
+      "clue1": "A martial artist pairs with a muck-born guardian of a nexus.",
+      "starts_with": "I",
+      "ends_with": "G",
+      "definition": "A Marvel pairing of a chi-powered martial-arts hero and a shambling empathic swamp creature.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A dual-character answer blending an obscure variant with a cult horror hero."
     }
   },
   "prose": {
     "2026-10-06": "Today's Marveldle for October 6, 2026 spotlights a hero whose name begins with H and ends with G. The 10/6/2026 12:00:00 AM puzzle features eight letters with a single doubled consonant.",
     "2026-10-07": "Marveldle's puzzle for October 7, 2026 spotlights a cosmic figure whose name starts with B and ends with L. The 10/7/2026 12:00:00 AM entry features four vowels and three letters that each repeat.",
-    "2026-10-09": "Marveldle's puzzle for October 9, 2026 features a seven-letter answer beginning with R and ending with K. The 10/9/2026 12:00:00 AM challenge offers no repeated letters and exactly two vowels to guide solvers."
+    "2026-10-09": "Marveldle's puzzle for October 9, 2026 features a seven-letter answer beginning with R and ending with K. The 10/9/2026 12:00:00 AM challenge offers no repeated letters and exactly two vowels to guide solvers.",
+    "2026-10-10": "Today's Marveldle for October 10, 2026 pairs two very different Marvel figures in one answer. The 10/10/2026 12:00:00 AM puzzle starts with I and ends with G, spanning multiple words."
   }
 }
