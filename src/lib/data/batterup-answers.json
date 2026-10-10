@@ -239,5 +239,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/08/5be6de29-3df003fd-2ed07bd0-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-09",
     "fetchedAt": "2026-10-09T01:05:36.339Z"
+  },
+  "2026-10-10": {
+    "date": "2026-10-10",
+    "gameNumber": 965,
+    "player": {
+      "player_name": "Lars Nootbaar",
+      "player_id": "4448736",
+      "team_name": "Diamondbacks",
+      "born": "USA",
+      "birth_date": "1997-09-08",
+      "position": [
+        "LF"
+      ],
+      "debut": 2021,
+      "jersey_number": 21
+    },
+    "videoDescription": "[09/14/26 : MIA 7 - 8 ARI] Lars Nootbaar belts a two-run home run to left-center field to tie the game at 3-3 in the bottom of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/14/c4d4c4c1-3852f98e-b764d446-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-10",
+    "fetchedAt": "2026-10-10T01:05:40.857Z"
   }
 }
