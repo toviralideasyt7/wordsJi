@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-10T16:31:08.131Z",
+  "generatedAt": "2026-10-11T16:31:02.734Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known band, but nine letters with no repeats makes spelling tricky."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A masked Norwegian producer whose faded beats lit up global dance floors.",
+      "clue1": "Electronic music producer behind a famous masked persona.",
+      "starts_with": "A",
+      "ends_with": "R",
+      "definition": "Norwegian DJ and record producer known for the hit single 'Faded'.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Globally famous in electronic music, but a niche pick for casual listeners."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Spotle puzzle for October 8, 2026 (Day 1665) features a two-word answer beginning with C and ending with N. This Day 1665 challenge includes four vowels and three letters that each appear twice.",
     "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters.",
     "2026-10-10": "Today's Spotle puzzle for October 10, 2026 marks Day 1667 with a two-word answer. The letters span from C to N, and three distinct letters each appear exactly twice.",
-    "2026-10-11": "The Spotle puzzle for October 11, 2026 (Day 1668) features a nine-letter answer with no repeated letters. This Spotle challenge begins with A and ends with H, offering four vowels to guide solvers."
+    "2026-10-11": "The Spotle puzzle for October 11, 2026 (Day 1668) features a nine-letter answer with no repeated letters. This Spotle challenge begins with A and ends with H, offering four vowels to guide solvers.",
+    "2026-10-12": "Today's Spotle for October 12, 2026, Day 1669, hides an eleven-letter name split across two words. This puzzle begins with A and ends with R, offering steady footing for careful guessers."
   }
 }

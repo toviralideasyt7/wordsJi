@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-10T16:31:39.704Z",
+  "generatedAt": "2026-10-11T16:31:15.113Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A famous, iconic country-continent with memorable geography that most players recognize quickly."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A mountain kingdom wrapped entirely by a single larger neighbor's embrace.",
+      "clue1": "A high-altitude enclave surrounded completely by one country.",
+      "starts_with": "L",
+      "ends_with": "O",
+      "definition": "Landlocked mountainous kingdom in southern Africa, entirely surrounded by South Africa.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A small, lesser-known kingdom that casual players often overlook on the map."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Countryle puzzle for October 8, 2026 (Game #1693) hides a South American answer with a letter pattern featuring one letter repeated three times. This Game #1693 solution begins with U and ends with Y, spanning four vowels in total.",
     "2026-10-09": "Countryle Game #1694 for October 9, 2026, features a word starting with P. The letter pattern includes several repetitions.",
     "2026-10-10": "Today's Countryle puzzle for October 10, 2026, Game #1695, hides a seven-letter nation with no repeated letters. Its name begins with H and ends with Y, framing two vowels in between.",
-    "2026-10-11": "Today's Countryle for October 11, 2026 (Game #1696) features a nine-letter answer that both begins and ends with the same letter. This puzzle's word holds five vowels, with one letter appearing three times across its span."
+    "2026-10-11": "Today's Countryle for October 11, 2026 (Game #1696) features a nine-letter answer that both begins and ends with the same letter. This puzzle's word holds five vowels, with one letter appearing three times across its span.",
+    "2026-10-12": "Countryle's October 12, 2026 puzzle, Game #1697, asks players to pin down a seven-letter nation. The name begins with L, ends with O, and features exactly one repeated letter."
   }
 }

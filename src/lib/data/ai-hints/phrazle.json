@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-10T16:31:43.996Z",
+  "generatedAt": "2026-10-11T16:31:29.574Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Two common idioms, but the lengthy phrase and many repeated letters add challenge."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "A carefree soul meets a fluttery, nervous feeling fluttering deep within.",
+      "clue1": "Easygoing nature paired with jittery pre-event nerves.",
+      "starts_with": "H",
+      "ends_with": "H",
+      "definition": "Describing a relaxed, unworried disposition alongside the fluttery sensation of nervous anticipation.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Two common idioms, but the long second phrase and many repeated letters add challenge."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Phrazle puzzle for October 8, 2026 pairs two well-known idioms into one lengthy challenge. Puzzle 2026-10-08 opens with the letter P and closes with S, featuring a notably vowel-rich letter pattern.",
     "2026-10-09": "The Phrazle puzzle for October 9, 2026, features a multi-word phrase. Puzzle 2026-10-09 follows a pattern starting with H and ending with Y.",
     "2026-10-10": "The Phrazle puzzle for October 10, 2026 (2026-10-10) links two colorful idioms into one solution. This 2026-10-10 answer begins with G and ends with E, packing a dozen vowels across its two phrases.",
-    "2026-10-11": "The Phrazle puzzle for October 11, 2026 pairs two familiar idioms into one lengthy answer. This 2026-10-11 entry starts with A and ends with L, featuring many repeated vowels throughout."
+    "2026-10-11": "The Phrazle puzzle for October 11, 2026 pairs two familiar idioms into one lengthy answer. This 2026-10-11 entry starts with A and ends with L, featuring many repeated vowels throughout.",
+    "2026-10-12": "The Phrazle puzzle for October 12, 2026 pairs two familiar idioms across its grid. Solvers of 2026-10-12 should note the phrase begins and ends with the same letter and holds ten vowels."
   }
 }

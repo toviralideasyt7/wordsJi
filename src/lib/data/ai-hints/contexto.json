@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-10T16:32:13.185Z",
+  "generatedAt": "2026-10-11T16:31:18.186Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -75,6 +75,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "A common everyday word, though many near-synonyms could mislead guessers."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I hang in clusters, swell with sun, then surrender to wine or raisins.",
+      "clue1": "Small round fruit that grows in bunches on vines.",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "A small, round, juicy fruit growing in clusters on a vine, eaten fresh or used for wine.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A common everyday fruit with strong, predictable associations to food and drink."
     }
   },
   "prose": {
@@ -83,6 +96,7 @@
     "2026-10-08": "Today's Contexto puzzle for October 8, 2026 (#1481) hides a ten-letter word that both opens and closes with the same letter. Players tackling this round will notice one letter repeating three times across the solution.",
     "2026-10-09": "The Contexto puzzle for October 9, 2026 (#1482) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-10-10": "Contexto puzzle #1483 for October 10, 2026 features an eleven-letter word beginning with D and ending with N. This entry includes five vowels and has one letter that appears twice.",
-    "2026-10-11": "Today's Contexto puzzle #1484 for October 11, 2026 features a six-letter word beginning with D and ending with E. The letter pattern includes one letter that appears twice, offering a quiet nudge for persistent solvers."
+    "2026-10-11": "Today's Contexto puzzle #1484 for October 11, 2026 features a six-letter word beginning with D and ending with E. The letter pattern includes one letter that appears twice, offering a quiet nudge for persistent solvers.",
+    "2026-10-12": "Today's Contexto puzzle for October 12, 2026, puzzle #1485, hides a five-letter word with no repeated letters. The answer begins with G and ends with E, offering solvers a tidy pattern to narrow their guesses."
   }
 }

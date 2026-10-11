@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-10T16:31:18.064Z",
+  "generatedAt": "2026-10-11T16:31:04.542Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Two words and a tripled letter add a twist, but the shade is familiar."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Pink and green, a summer slice that drips with sweet juice.",
+      "clue1": "A juicy summer fruit with seeds and striped rind.",
+      "starts_with": "W",
+      "ends_with": "D",
+      "definition": "A large round fruit with sweet, watery red flesh and a green rind.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but ten letters and a repeated vowel can slow guessers down."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "Colordle puzzle #1658 for October 8, 2026 features a vivid two-word shade. The answer spans eleven letters, begins with B and ends with E, with one letter repeating three times.",
     "2026-10-09": "Colordle puzzle #1659 for October 9, 2026, features a seven-letter word. The target color is a deep reddish-brown shade.",
     "2026-10-10": "Colordle #1660 for October 10, 2026 features an eight-letter word that begins with H and ends with S. This puzzle hides two letters that each appear twice, giving solvers a subtle pattern to untangle.",
-    "2026-10-11": "Colordle puzzle #1661 for October 11, 2026 features a two-word answer spanning eleven letters. One letter repeats three times across this soft, pale entry in the game."
+    "2026-10-11": "Colordle puzzle #1661 for October 11, 2026 features a two-word answer spanning eleven letters. One letter repeats three times across this soft, pale entry in the game.",
+    "2026-10-12": "Colordle puzzle #1662 for October 12, 2026 features a ten-letter word with a vivid pinkish-red hue. The pattern begins with W and ends with N, and one letter shows up twice."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-10T16:34:39.660Z",
+  "generatedAt": "2026-10-11T16:34:33.380Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -75,6 +75,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-12": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -83,6 +95,7 @@
     "2026-10-08": "The Quordle puzzle for October 8, 2026 (#1718) gathers four distinct five-letter words with no shared theme. Each entry follows its own letter pattern, keeping the quartet balanced between familiar and challenging guesses.",
     "2026-10-09": "Quordle puzzle #1719 for October 9, 2026, features four distinct five-letter words. The set includes a variety of vowel placements and one repeated consonant.",
     "2026-10-10": "The Quordle puzzle #1720 for October 10, 2026 pairs three single-vowel-pattern words with one that repeats a letter three times. Its mix of a tricky double-consonant ending and a sneaky triple-letter word makes October 10, 2026's grid a satisfying challenge.",
-    "2026-10-11": "The Quordle puzzle for October 11, 2026 (#1721) is live with today's answer confirmed. The answer runs 20 characters, starting with L and ending with E — see the letter hints above before you peek."
+    "2026-10-11": "The Quordle puzzle for October 11, 2026 (#1721) is live with today's answer confirmed. The answer runs 20 characters, starting with L and ending with E — see the letter hints above before you peek.",
+    "2026-10-12": "The Quordle puzzle for October 12, 2026 (#1722) is live with today's answer confirmed. The answer runs 20 characters, starting with H and ending with T — see the letter hints above before you peek."
   }
 }

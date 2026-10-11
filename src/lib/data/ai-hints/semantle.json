@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-10T16:31:18.018Z",
+  "generatedAt": "2026-10-11T16:31:07.845Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common everyday verb, but its semantic neighbors are abstract and easy to overshoot."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "I mark your place on a chessboard, a map, or a job.",
+      "clue1": "Where something sits, or a stance you take.",
+      "starts_with": "P",
+      "ends_with": "N",
+      "definition": "A particular place where someone or something is located; also an arrangement, posture, or point of view.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word with broad meanings, but many semantic neighbors can mislead solvers."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "Semantle puzzle #1713, dated October 8, 2026, hides a thirteen-letter word beginning with C and ending with N. This entry packs five vowels and several repeated letters into a single everyday term.",
     "2026-10-09": "Semantle puzzle #1714 for October 9, 2026, features a five-letter word. The target word begins with L and ends with T.",
     "2026-10-10": "Today's Semantle puzzle #1715 for October 10, 2026 features a brief three-letter word. Its letter pattern starts with M and ends with D, enclosing a single vowel.",
-    "2026-10-11": "Semantle puzzle #1716 for October 11, 2026 features a seven-letter word with two pairs of repeated letters. This entry begins with S and ends with D, framing a familiar concept of achievement."
+    "2026-10-11": "Semantle puzzle #1716 for October 11, 2026 features a seven-letter word with two pairs of repeated letters. This entry begins with S and ends with D, framing a familiar concept of achievement.",
+    "2026-10-12": "Today's Semantle puzzle #1717 for October 12, 2026 features an eight-letter word that begins with P and ends with N. The pattern includes four vowels, with two separate letters each surfacing twice."
   }
 }

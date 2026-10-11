@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-10T16:31:29.515Z",
+  "generatedAt": "2026-10-11T16:31:14.314Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Tiny, remote, and politically disputed territory that most players rarely encounter on maps."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A tailless cat and a three-legged flag mark this self-ruling sea rock.",
+      "clue1": "A Crown dependency famed for its motorcycle road race.",
+      "starts_with": "I",
+      "ends_with": "N",
+      "definition": "Self-governing British Crown dependency in the Irish Sea between Britain and Ireland.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A small, well-known island, but easy to overlook on a map outline."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "Today's Worldle puzzle #1722 for October 8, 2026 challenges players to identify a country from its silhouette. The answer runs ten letters long, beginning with A and ending with N, with one letter appearing three times.",
     "2026-10-09": "Worldle puzzle #1723 for October 9, 2026, features a seven-letter country. The word follows a consonant-vowel pattern starting with F.",
     "2026-10-10": "Worldle puzzle #1724 for October 10, 2026 features a country whose name runs ten letters long. The letter pattern begins with K and ends with N, with a single repeated letter in between.",
-    "2026-10-11": "Worldle puzzle #1725 for October 11, 2026 points to a far-flung tropical dependency. The target begins with B, ends with Y, and spans three words totaling many repeated letters."
+    "2026-10-11": "Worldle puzzle #1725 for October 11, 2026 points to a far-flung tropical dependency. The target begins with B, ends with Y, and spans three words totaling many repeated letters.",
+    "2026-10-12": "Worldle puzzle #1726 for October 12, 2026 points to a location whose name has zero repeated letters. The three-word answer begins with I and ends with N, forming a familiar outline for sharp-eyed geographers."
   }
 }

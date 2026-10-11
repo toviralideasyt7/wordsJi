@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-10T16:31:29.269Z",
+  "generatedAt": "2026-10-11T16:31:16.970Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known horror title, but two long words with many repeated letters."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "This hammer-wielding god of thunder rules the storm.",
+      "clue1": "A mighty figure wielding a legendary hammer.",
+      "starts_with": "T",
+      "ends_with": "R",
+      "definition": "Norse god of thunder, lightning, and storms, wielding a magical hammer.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A widely recognized mythological figure, though the short four-letter name adds slight challenge."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Framed puzzle for October 8, 2026 (#1673) offers a title made of two words totaling ten letters. This entry begins with D and ends with S, with a couple of letters appearing twice across the pattern.",
     "2026-10-09": "Framed puzzle #1674 for October 9, 2026, features a multi-word title. The answer consists of eighteen characters including spaces and punctuation.",
     "2026-10-10": "Framed's puzzle #1675 for October 10, 2026 presents a three-word title spanning fifteen letters. The letter pattern features one letter appearing three times and two others appearing twice, with multiple repeated consonants adding texture.",
-    "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters."
+    "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters.",
+    "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-10T16:31:52.027Z",
+  "generatedAt": "2026-10-11T16:31:27.739Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -75,6 +75,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Two of the three shades sit close on the spectrum, making them easy to confuse."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "Three regal tones: pale blooms, deep wine, and twilight skies combined.",
+      "clue1": "A trio spanning soft floral violets to dark reddish depths.",
+      "starts_with": "P",
+      "ends_with": "R",
+      "definition": "A palette blending a rich violet hue, a dark brownish-red, and a soft pale lilac tone.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Three related purple-and-red family shades are tricky to distinguish and order correctly."
     }
   },
   "prose": {
@@ -83,6 +96,7 @@
     "2026-10-08": "Colorfle puzzle #1627 for October 8, 2026 challenges players to blend three distinct color names into one target shade. The trio's names begin with L and the final one closes with the letter N.",
     "2026-10-09": "The Colorfle puzzle for October 9, 2026 (#1628) is live with today's answer confirmed. The answer runs 15 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-10-10": "Colorfle puzzle #1629 for October 10, 2026 presents a three-color answer that begins with O and ends with N. Its combined thirteen letters include a pair of letters that each surface twice across the set.",
-    "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from."
+    "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from.",
+    "2026-10-12": "Colorfle puzzle #1631 for October 12, 2026 presents a three-shade palette drawn from the violet and red families. The combined color names begin with the letter P and end with the letter R, hinting at their span."
   }
 }

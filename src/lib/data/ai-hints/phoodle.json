@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-10T16:31:14.228Z",
+  "generatedAt": "2026-10-11T16:31:10.076Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -76,6 +76,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common cookout food, but the slang spelling may trip some solvers up."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I'm the glow you feel when smiles come easy and worries fade away.",
+      "clue1": "The opposite of sad or gloomy.",
+      "starts_with": "H",
+      "ends_with": "Y",
+      "definition": "Feeling or showing pleasure, contentment, or joy.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A short, common everyday word with a familiar meaning and simple letter pattern."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "Today's Phoodle for October 8, 2026 features a five-letter word with no repeated letters. The 2026-10-08 puzzle begins with M and ends with E, framing a tidy two-vowel pattern.",
     "2026-10-09": "The Phoodle puzzle for October 9, 2026, features a five-letter word. Puzzle 2026-10-09 follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-10-10": "The Phoodle puzzle for October 10, 2026 features a five-letter word with no repeated letters. This 2026-10-10 answer follows a consonant-vowel-consonant-consonant-vowel pattern.",
-    "2026-10-11": "Today's Phoodle for October 11, 2026 serves up a five-letter sizzler. The 2026-10-11 puzzle follows a consonant-vowel pattern with no repeated letters."
+    "2026-10-11": "Today's Phoodle for October 11, 2026 serves up a five-letter sizzler. The 2026-10-11 puzzle follows a consonant-vowel pattern with no repeated letters.",
+    "2026-10-12": "The Phoodle puzzle for October 12, 2026 features a cheerful five-letter word. This 2026-10-12 entry follows a pattern where one letter is doubled in the middle."
   }
 }
