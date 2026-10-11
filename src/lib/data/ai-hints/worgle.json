@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-10T22:03:12.324Z",
+  "generatedAt": "2026-10-11T22:03:08.625Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -75,6 +75,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but no repeated letters and a mix of less-frequent consonants."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I flow and fill, neither solid nor gas, taking any vessel's shape.",
+      "clue1": "A state of matter that pours and takes its container's form.",
+      "starts_with": "L",
+      "ends_with": "D",
+      "definition": "A substance that flows freely but has constant volume, like water or oil.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word, but the repeated vowel and tricky middle letter add mild challenge."
     }
   },
   "prose": {
@@ -83,6 +96,7 @@
     "2026-10-08": "The Worgle puzzle for October 8, 2026 (#1730) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with G — see the letter hints above before you peek.",
     "2026-10-09": "Worgle puzzle #1731 for October 9, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with a trailing vowel.",
     "2026-10-10": "The Worgle puzzle for October 10, 2026 (#1732) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek.",
-    "2026-10-11": "Worgle puzzle #1733 for October 11, 2026 features a six-letter word with no repeated letters. The pattern runs from T to D with two vowels tucked between the consonants."
+    "2026-10-11": "Worgle puzzle #1733 for October 11, 2026 features a six-letter word with no repeated letters. The pattern runs from T to D with two vowels tucked between the consonants.",
+    "2026-10-12": "Worgle puzzle #1734 for October 12, 2026 features a six-letter word with one repeated vowel. The pattern begins with L and ends with D, flowing somewhere in between."
   }
 }
