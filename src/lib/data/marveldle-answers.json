@@ -883,7 +883,7 @@
   },
   "2026-10-10": {
     "date": "2026-10-10",
-    "dateId": "10/10/2026 12:00:00 AM",
+    "dateId": "yesterday-of:10/11/2026 12:00:00 AM",
     "comics": {
       "id": "ironfist_fanfei",
       "name": "Iron Fist (Fan Fei)",
@@ -934,7 +934,7 @@
         "thing"
       ]
     },
-    "solvedAt": "2026-10-10T06:05:45.941Z"
+    "solvedAt": "2026-10-11T06:35:39.609Z"
   },
   "2026-10-11": {
     "date": "2026-10-11",
