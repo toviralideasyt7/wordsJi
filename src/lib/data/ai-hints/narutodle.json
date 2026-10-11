@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-10T06:03:22.295Z",
+  "generatedAt": "2026-10-11T06:03:21.081Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A supporting Cloud ninja with limited screen time, easily confused with other minor characters."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "A floating elder kage whose aching back belies his dust-wielding might.",
+      "clue1": "Third Tsuchikage famous for Dust Release and chronic back pain.",
+      "starts_with": "O",
+      "ends_with": "O",
+      "definition": "Fictional ninja, the Third Tsuchikage of Iwagakure, known for Dust Release in the Naruto series.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A notable kage but a secondary character; recognizable to fans, not among the most iconic."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Today's Narutodle challenge for October 7, 2026, marks Game #888 with a six-letter answer. This puzzle's name notably features two letters that each appear twice, hinting at its rhythmic structure.",
     "2026-10-08": "The Narutodle puzzle for October 8, 2026 (Game #889) is live with today's answer confirmed. The answer runs 29 characters, starting with J and ending with O — see the letter hints above before you peek.",
     "2026-10-09": "Narutodle's puzzle Game #890 for October 9, 2026 features a five-letter answer with no repeated letters. This Narutodle challenge opens with D and closes with I, holding exactly three vowels.",
-    "2026-10-10": "The Narutodle puzzle for October 10, 2026 (Game #891) is live with today's answer confirmed. The answer runs 34 characters, starting with O and ending with I — see the letter hints above before you peek."
+    "2026-10-10": "The Narutodle puzzle for October 10, 2026 (Game #891) is live with today's answer confirmed. The answer runs 34 characters, starting with O and ending with I — see the letter hints above before you peek.",
+    "2026-10-11": "Today's Narutodle puzzle, Game #892 for October 11, 2026, hides a five-letter name beginning with O and ending with I. The letter pattern features three vowels and a single repeated letter, challenging players to recall this airborne elder."
   }
 }

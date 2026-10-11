@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-10T06:03:18.493Z",
+  "generatedAt": "2026-10-11T06:03:22.662Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -64,6 +64,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Recognizable Void theme, though less iconic than headline champions, so moderately tricky to guess."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A horse, a clock-keeper, a scroll-mage, and a crossbow hunter walk into a rift.",
+      "clue1": "Four champions, four game modes, each a different corner of Runeterra.",
+      "starts_with": "H",
+      "ends_with": "E",
+      "definition": "A set of four League of Legends champions spanning juggernaut, support, mage, and marksman roles.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Mixed roles and regions make guessing all four modes moderately tricky for casual players."
     }
   },
   "prose": {
@@ -71,6 +84,7 @@
     "2026-10-07": "The LoLdle puzzle for October 7, 2026 (Game #1553) hides a champion whose two-word name begins with T and ends with H. Across this answer, one letter appears twice and only two vowels are present, giving sharp solvers a useful pattern to crack.",
     "2026-10-08": "LoLdle Game #1554 for October 8, 2026, features a specific set of four champions. The solution follows a pattern starting with V and ending with X.",
     "2026-10-09": "Today's LoLdle puzzle for October 9, 2026, Game #1555, hides a five-letter answer that begins and ends with the same consonant. The letter pattern reveals one letter appearing twice, offering a quiet nudge for attentive solvers.",
-    "2026-10-10": "Today's LoLdle challenge for October 10, 2026 arrives as Game #1556 with a tidy eight-letter solution. This puzzle's answer opens with K and closes with N, featuring two different letters that each repeat exactly twice."
+    "2026-10-10": "Today's LoLdle challenge for October 10, 2026 arrives as Game #1556 with a tidy eight-letter solution. This puzzle's answer opens with K and closes with N, featuring two different letters that each repeat exactly twice.",
+    "2026-10-11": "The LoLdle puzzle for October 11, 2026, Game #1557, pairs four champions whose names begin with distinct letters and end variously, spanning the game's classic, quote, ability, splash, and emoji modes. Solvers must juggle a cavalry charge, a timekeeper, an arcane scholar, and a shadow-hunting marksman to clear every round."
   }
 }

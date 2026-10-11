@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-10T06:03:15.274Z",
+  "generatedAt": "2026-10-11T06:03:15.250Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -63,6 +63,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common five-letter words, but repeated letters and shared tiles complicate placement."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "Six five-letter words lock into a cross, each sharing letters at the seams.",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "Y",
+      "definition": "A set of six interlocking five-letter words forming the day's Waffle grid.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Overlapping shared letters and a doubled-letter word make several placements genuinely tricky to resolve."
     }
   },
   "prose": {
@@ -70,6 +83,7 @@
     "2026-10-07": "Waffle puzzle #1720 for October 7, 2026 arranges six five-letter words into its familiar crossing grid. The letter pattern blends everyday vocabulary with a trickier herb and an archaic boast, keeping the challenge balanced.",
     "2026-10-08": "The Waffle puzzle for October 8, 2026 (#1721) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with L — see the letter hints above before you peek.",
     "2026-10-09": "Waffle's October 9, 2026 grid (puzzle #1722) features this compact five-letter entry built around a lone vowel. True to the game's crisscross format, it shares letters with neighboring words to lock the solution in place.",
-    "2026-10-10": "The Waffle puzzle for October 10, 2026 (#1723) arranges six five-letter words in its signature crossing grid. Each entry runs exactly five tiles, with several sharing repeated letters that make the swaps trickier to resolve."
+    "2026-10-10": "The Waffle puzzle for October 10, 2026 (#1723) arranges six five-letter words in its signature crossing grid. Each entry runs exactly five tiles, with several sharing repeated letters that make the swaps trickier to resolve.",
+    "2026-10-11": "The Waffle puzzle for October 11, 2026 (#1724) weaves six five-letter words into its signature crossing grid. Shared letters at each intersection, including one word with a doubled letter, keep solvers carefully testing each swap."
   }
 }

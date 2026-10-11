@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-10T06:03:37.571Z",
+  "generatedAt": "2026-10-11T06:03:39.570Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -64,6 +64,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Five characters spanning several franchises make this combined lineup tricky to guess fully."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "Five fighters from a Nintendo brawl, from a townsperson to a flat two-dimensional soul.",
+      "clue1": "Today's roster spans plumbers, crocodiles, boxers, and lawmen.",
+      "starts_with": "V",
+      "ends_with": "H",
+      "definition": "A lineup of five playable fighters from the Super Smash Bros. crossover series.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Multiple fighters span several franchises, requiring broad knowledge of the Smash roster."
     }
   },
   "prose": {
@@ -71,6 +84,7 @@
     "2026-10-07": "Today's Smashdle puzzle for October 7, 2026, Game #1127, features a two-word fighter beginning with D and ending with G. The letter pattern includes three vowels and multiple repeating consonants, offering steady hints for careful players.",
     "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R.",
     "2026-10-09": "Smashdle's October 9, 2026 edition, Game #1129, lines up five contenders whose names start with letters spanning O through Z. The letter patterns vary widely across this group, so pay attention to each fighter's opening and closing characters.",
-    "2026-10-10": "The Smashdle puzzle for October 10, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 38 characters, starting with M and ending with F — see the letter hints above before you peek."
+    "2026-10-10": "The Smashdle puzzle for October 10, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 38 characters, starting with M and ending with F — see the letter hints above before you peek.",
+    "2026-10-11": "The Smashdle puzzle for October 11, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 38 characters, starting with V and ending with H — see the letter hints above before you peek."
   }
 }

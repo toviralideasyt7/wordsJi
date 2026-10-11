@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-10T06:03:22.035Z",
+  "generatedAt": "2026-10-11T06:03:20.790Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -64,6 +64,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires naming four specific heroes, mixing melee, support, and spellcasting archetypes."
+    },
+    "2026-10-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "23 letters appear more than once.",
+      "riddle": "Four champions of the Ancients, bound by strategy, standing shoulder to shoulder on the battlefield.",
+      "clue1": "A roster of heroes from a popular MOBA.",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "A grouping of four playable heroes featured in a competitive multiplayer online battle arena game.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Guessing a full multi-hero lineup requires deep familiarity with the game's roster."
     }
   },
   "prose": {
@@ -71,6 +84,7 @@
     "2026-10-07": "The Dotadle puzzle for October 7, 2026 (Game #1027) gathers four distinct heroes into one answer. In this edition, the opening name begins with B and ends with R while packing repeated letters.",
     "2026-10-08": "Dotadle Game #1028 for October 8, 2026, features a long sequence of characters. The letter pattern includes several repetitions across four distinct names.",
     "2026-10-09": "Today's Dotadle challenge for October 9, 2026, Game #1029, invites players to connect a group of combatants. The grouping begins with a letter pattern starting in Q and closing on N.",
-    "2026-10-10": "Today's Dotadle for October 10, 2026, Game #1030, asks solvers to pin down four distinct hero names. Notice how three of the four conclude with the same consonant while their opening letters all differ."
+    "2026-10-10": "Today's Dotadle for October 10, 2026, Game #1030, asks solvers to pin down four distinct hero names. Notice how three of the four conclude with the same consonant while their opening letters all differ.",
+    "2026-10-11": "Today's Dotadle on October 11, 2026 presents Game #1031 as a layered challenge. The entries in this puzzle span names beginning with S, D, S, and L, rewarding sharp pattern recognition."
   }
 }
