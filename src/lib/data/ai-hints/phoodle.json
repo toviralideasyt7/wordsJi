@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-11T16:31:10.076Z",
+  "generatedAt": "2026-10-12T16:44:08.123Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -89,6 +89,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A short, common everyday word with a familiar meaning and simple letter pattern."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "C",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -98,6 +110,7 @@
     "2026-10-09": "The Phoodle puzzle for October 9, 2026, features a five-letter word. Puzzle 2026-10-09 follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-10-10": "The Phoodle puzzle for October 10, 2026 features a five-letter word with no repeated letters. This 2026-10-10 answer follows a consonant-vowel-consonant-consonant-vowel pattern.",
     "2026-10-11": "Today's Phoodle for October 11, 2026 serves up a five-letter sizzler. The 2026-10-11 puzzle follows a consonant-vowel pattern with no repeated letters.",
-    "2026-10-12": "The Phoodle puzzle for October 12, 2026 features a cheerful five-letter word. This 2026-10-12 entry follows a pattern where one letter is doubled in the middle."
+    "2026-10-12": "The Phoodle puzzle for October 12, 2026 features a cheerful five-letter word. This 2026-10-12 entry follows a pattern where one letter is doubled in the middle.",
+    "2026-10-13": "The Phoodle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with C — see the letter hints above before you peek."
   }
 }

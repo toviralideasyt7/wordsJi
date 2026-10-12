@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-11T16:31:15.113Z",
+  "generatedAt": "2026-10-12T16:46:33.282Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -89,6 +89,18 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "A small, lesser-known kingdom that casual players often overlook on the map."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "U",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -98,6 +110,7 @@
     "2026-10-09": "Countryle Game #1694 for October 9, 2026, features a word starting with P. The letter pattern includes several repetitions.",
     "2026-10-10": "Today's Countryle puzzle for October 10, 2026, Game #1695, hides a seven-letter nation with no repeated letters. Its name begins with H and ends with Y, framing two vowels in between.",
     "2026-10-11": "Today's Countryle for October 11, 2026 (Game #1696) features a nine-letter answer that both begins and ends with the same letter. This puzzle's word holds five vowels, with one letter appearing three times across its span.",
-    "2026-10-12": "Countryle's October 12, 2026 puzzle, Game #1697, asks players to pin down a seven-letter nation. The name begins with L, ends with O, and features exactly one repeated letter."
+    "2026-10-12": "Countryle's October 12, 2026 puzzle, Game #1697, asks players to pin down a seven-letter nation. The name begins with L, ends with O, and features exactly one repeated letter.",
+    "2026-10-13": "The Countryle puzzle for October 13, 2026 (Game #1698) is live with today's answer confirmed. The answer runs 10 characters, starting with U and ending with N — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-11T16:31:18.186Z",
+  "generatedAt": "2026-10-12T16:46:36.440Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -88,6 +88,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A common everyday fruit with strong, predictable associations to food and drink."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -97,6 +109,7 @@
     "2026-10-09": "The Contexto puzzle for October 9, 2026 (#1482) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-10-10": "Contexto puzzle #1483 for October 10, 2026 features an eleven-letter word beginning with D and ending with N. This entry includes five vowels and has one letter that appears twice.",
     "2026-10-11": "Today's Contexto puzzle #1484 for October 11, 2026 features a six-letter word beginning with D and ending with E. The letter pattern includes one letter that appears twice, offering a quiet nudge for persistent solvers.",
-    "2026-10-12": "Today's Contexto puzzle for October 12, 2026, puzzle #1485, hides a five-letter word with no repeated letters. The answer begins with G and ends with E, offering solvers a tidy pattern to narrow their guesses."
+    "2026-10-12": "Today's Contexto puzzle for October 12, 2026, puzzle #1485, hides a five-letter word with no repeated letters. The answer begins with G and ends with E, offering solvers a tidy pattern to narrow their guesses.",
+    "2026-10-13": "The Contexto puzzle for October 13, 2026 (#1486) is live with today's answer confirmed. The answer runs 4 characters, starting with A and ending with A — see the letter hints above before you peek."
   }
 }

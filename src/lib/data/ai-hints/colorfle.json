@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-11T16:31:27.739Z",
+  "generatedAt": "2026-10-12T16:46:35.011Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -88,6 +88,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Three related purple-and-red family shades are tricky to distinguish and order correctly."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -97,6 +109,7 @@
     "2026-10-09": "The Colorfle puzzle for October 9, 2026 (#1628) is live with today's answer confirmed. The answer runs 15 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-10-10": "Colorfle puzzle #1629 for October 10, 2026 presents a three-color answer that begins with O and ends with N. Its combined thirteen letters include a pair of letters that each surface twice across the set.",
     "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from.",
-    "2026-10-12": "Colorfle puzzle #1631 for October 12, 2026 presents a three-shade palette drawn from the violet and red families. The combined color names begin with the letter P and end with the letter R, hinting at their span."
+    "2026-10-12": "Colorfle puzzle #1631 for October 12, 2026 presents a three-shade palette drawn from the violet and red families. The combined color names begin with the letter P and end with the letter R, hinting at their span.",
+    "2026-10-13": "The Colorfle puzzle for October 13, 2026 (#1632) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with E — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-11T16:31:02.734Z",
+  "generatedAt": "2026-10-12T16:44:03.502Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -89,6 +89,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Globally famous in electronic music, but a niche pick for casual listeners."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -98,6 +110,7 @@
     "2026-10-09": "Spotle puzzle Day 1666 occurs on October 9, 2026. The answer follows a nine-letter pattern with two distinct repeated characters.",
     "2026-10-10": "Today's Spotle puzzle for October 10, 2026 marks Day 1667 with a two-word answer. The letters span from C to N, and three distinct letters each appear exactly twice.",
     "2026-10-11": "The Spotle puzzle for October 11, 2026 (Day 1668) features a nine-letter answer with no repeated letters. This Spotle challenge begins with A and ends with H, offering four vowels to guide solvers.",
-    "2026-10-12": "Today's Spotle for October 12, 2026, Day 1669, hides an eleven-letter name split across two words. This puzzle begins with A and ends with R, offering steady footing for careful guessers."
+    "2026-10-12": "Today's Spotle for October 12, 2026, Day 1669, hides an eleven-letter name split across two words. This puzzle begins with A and ends with R, offering steady footing for careful guessers.",
+    "2026-10-13": "The Spotle puzzle for October 13, 2026 (Day 1670) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek."
   }
 }

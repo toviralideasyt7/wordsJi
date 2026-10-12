@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-11T16:31:07.845Z",
+  "generatedAt": "2026-10-12T16:41:37.472Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -89,6 +89,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word with broad meanings, but many semantic neighbors can mislead solvers."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Worn to court or dealt in cards, I match from head to toe.",
+      "clue1": "A matching set of clothes, or a category in a deck.",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "A set of matching garments; one of four categories in a deck of cards; to fit or be appropriate.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A short, common word with multiple everyday meanings and strong semantic neighbors."
     }
   },
   "prose": {
@@ -98,6 +111,7 @@
     "2026-10-09": "Semantle puzzle #1714 for October 9, 2026, features a five-letter word. The target word begins with L and ends with T.",
     "2026-10-10": "Today's Semantle puzzle #1715 for October 10, 2026 features a brief three-letter word. Its letter pattern starts with M and ends with D, enclosing a single vowel.",
     "2026-10-11": "Semantle puzzle #1716 for October 11, 2026 features a seven-letter word with two pairs of repeated letters. This entry begins with S and ends with D, framing a familiar concept of achievement.",
-    "2026-10-12": "Today's Semantle puzzle #1717 for October 12, 2026 features an eight-letter word that begins with P and ends with N. The pattern includes four vowels, with two separate letters each surfacing twice."
+    "2026-10-12": "Today's Semantle puzzle #1717 for October 12, 2026 features an eight-letter word that begins with P and ends with N. The pattern includes four vowels, with two separate letters each surfacing twice.",
+    "2026-10-13": "Semantle puzzle #1718 for October 13, 2026 hides a compact four-letter word. It opens with S and closes with T, carrying two vowels and no repeated letters."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-11T16:30:59.177Z",
+  "generatedAt": "2026-10-12T16:41:37.810Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -89,6 +89,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Starts with an uncommon letter and the word itself is used infrequently."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "The opposite of narrow, I give you more room to roam.",
+      "clue1": "Describes something broad or more spacious than before.",
+      "starts_with": "W",
+      "ends_with": "R",
+      "definition": "Comparative form of broad; greater in extent from side to side.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common comparative adjective, but the opening letter has limited partner options."
     }
   },
   "prose": {
@@ -98,6 +111,7 @@
     "2026-10-09": "Wordle puzzle #1938 arrives on October 9, 2026. This specific entry features a five-letter word ending in a consonant.",
     "2026-10-10": "Wordle puzzle #1939 for October 10, 2026 features a five-letter word with only a single traditional vowel. The answer begins with B and closes with Y, giving solvers a distinctive consonant-heavy pattern to work through.",
     "2026-10-11": "Wordle #1940 for October 11, 2026 features a five-letter word with two vowels and no repeats. The letter pattern opens with an unusual starting consonant that tends to stump early guesses.",
-    "2026-10-12": "Wordle puzzle #1941 for October 12, 2026 offers a five-letter word with two vowels and no repeated letters. The solution begins with a seldom-used starting letter, which may slow down early guesses."
+    "2026-10-12": "Wordle puzzle #1941 for October 12, 2026 offers a five-letter word with two vowels and no repeated letters. The solution begins with a seldom-used starting letter, which may slow down early guesses.",
+    "2026-10-13": "The Wordle puzzle #1942 for October 13, 2026 features a five-letter word with two vowels and no repeated letters. Its comparative ending is a familiar pattern that experienced solvers often recognize quickly."
   }
 }
