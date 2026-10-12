@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-11T06:03:15.250Z",
+  "generatedAt": "2026-10-12T06:03:25.646Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Overlapping shared letters and a doubled-letter word make several placements genuinely tricky to resolve."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "19 letters appear more than once.",
+      "riddle": "I mean before in time, or I lead the monks in their house.",
+      "clue1": "Think 'previous,' or a monastery's ranking official.",
+      "starts_with": "P",
+      "ends_with": "C",
+      "definition": "Existing or coming before in time, order, or importance; also a monastery superior.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A familiar word, though the doubled letter and vowel placement can mislead some solvers."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Waffle puzzle for October 8, 2026 (#1721) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with L — see the letter hints above before you peek.",
     "2026-10-09": "Waffle's October 9, 2026 grid (puzzle #1722) features this compact five-letter entry built around a lone vowel. True to the game's crisscross format, it shares letters with neighboring words to lock the solution in place.",
     "2026-10-10": "The Waffle puzzle for October 10, 2026 (#1723) arranges six five-letter words in its signature crossing grid. Each entry runs exactly five tiles, with several sharing repeated letters that make the swaps trickier to resolve.",
-    "2026-10-11": "The Waffle puzzle for October 11, 2026 (#1724) weaves six five-letter words into its signature crossing grid. Shared letters at each intersection, including one word with a doubled letter, keep solvers carefully testing each swap."
+    "2026-10-11": "The Waffle puzzle for October 11, 2026 (#1724) weaves six five-letter words into its signature crossing grid. Shared letters at each intersection, including one word with a doubled letter, keep solvers carefully testing each swap.",
+    "2026-10-12": "The Waffle puzzle for October 12, 2026 (#1725) features a five-letter entry that opens with P and closes with R. This grid rewards players who notice its single doubled letter nestled among the pattern."
   }
 }

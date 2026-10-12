@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-11T06:03:09.423Z",
+  "generatedAt": "2026-10-12T06:03:15.523Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -77,6 +77,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "Smaller, less prominent nation that casual players may struggle to locate quickly."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A southwestern African land where oil flows and rivers run.",
+      "clue1": "A southern African nation on the Atlantic coast.",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "A country in southwestern Africa, former Portuguese colony, rich in oil and diamonds.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known African nation, though its exact location may challenge some players."
     }
   },
   "prose": {
@@ -85,6 +98,7 @@
     "2026-10-08": "The Globle puzzle for October 8, 2026, features a seven-letter country. Puzzle 2026-10-08 follows a pattern starting with a consonant and ending with a plural marker.",
     "2026-10-09": "Today's Globle puzzle for October 9, 2026 (2026-10-09) points to a Caribbean destination. The answer for 2026-10-09 begins with T and ends with O, featuring plenty of repeated letters.",
     "2026-10-10": "Today's Globle puzzle for October 10, 2026 features a four-letter answer with two vowels and no repeated letters. The 2026-10-10 challenge points players toward a landlocked region of West Africa.",
-    "2026-10-11": "Today's Globle puzzle for October 11, 2026 features a short four-letter answer with two vowels and no repeated letters. The 2026-10-11 challenge points players toward a landlocked corner of Southeast Asia."
+    "2026-10-11": "Today's Globle puzzle for October 11, 2026 features a short four-letter answer with two vowels and no repeated letters. The 2026-10-11 challenge points players toward a landlocked corner of Southeast Asia.",
+    "2026-10-12": "Today's Globle puzzle for October 12, 2026 points to a place whose name opens and closes with the same letter. The 2026-10-12 answer has six letters, with one letter appearing twice."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-11T06:03:20.790Z",
+  "generatedAt": "2026-10-12T06:03:23.651Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -77,6 +77,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Guessing a full multi-hero lineup requires deep familiarity with the game's roster."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "I crackle with lightning and drain your power with a glowing tether.",
+      "clue1": "A storm-charged hunter wielding an electric whip in battle.",
+      "starts_with": "R",
+      "ends_with": "O",
+      "definition": "A lightning-wielding Dota 2 agility hero known for his static link and electric lash.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A recognizable classic hero, but the short name offers few letters to deduce."
     }
   },
   "prose": {
@@ -85,6 +98,7 @@
     "2026-10-08": "Dotadle Game #1028 for October 8, 2026, features a long sequence of characters. The letter pattern includes several repetitions across four distinct names.",
     "2026-10-09": "Today's Dotadle challenge for October 9, 2026, Game #1029, invites players to connect a group of combatants. The grouping begins with a letter pattern starting in Q and closing on N.",
     "2026-10-10": "Today's Dotadle for October 10, 2026, Game #1030, asks solvers to pin down four distinct hero names. Notice how three of the four conclude with the same consonant while their opening letters all differ.",
-    "2026-10-11": "Today's Dotadle on October 11, 2026 presents Game #1031 as a layered challenge. The entries in this puzzle span names beginning with S, D, S, and L, rewarding sharp pattern recognition."
+    "2026-10-11": "Today's Dotadle on October 11, 2026 presents Game #1031 as a layered challenge. The entries in this puzzle span names beginning with S, D, S, and L, rewarding sharp pattern recognition.",
+    "2026-10-12": "Today's Dotadle challenge for October 12, 2026 is puzzle Game #1032. The answer is a five-letter name that begins and ends with the same consonant."
   }
 }

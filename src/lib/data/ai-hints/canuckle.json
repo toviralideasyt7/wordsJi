@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-11T06:03:08.413Z",
+  "generatedAt": "2026-10-12T06:03:16.272Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -76,6 +76,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but the uncommon starting letter may slow early guesses."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I measure how fast your bulb drinks its electric energy.",
+      "clue1": "A unit named after a Scottish engineer.",
+      "starts_with": "W",
+      "ends_with": "S",
+      "definition": "Units of power equal to one joule per second, measuring the rate of energy transfer.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word but the doubled consonant and single vowel can trip up guessers."
     }
   },
   "prose": {
@@ -84,6 +97,7 @@
     "2026-10-08": "The Canuckle puzzle for October 8, 2026 (#1608) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-10-09": "Canuckle puzzle #1609 for October 9, 2026 features a five-letter word with a repeated vowel. This Canuckle entry begins and ends with consonants, framing a familiar everyday pattern.",
     "2026-10-10": "Canuckle puzzle #1610 for October 10, 2026 features a familiar five-letter word. The letter pattern spans three vowels with no repeated letters, framed between two distinct endpoints.",
-    "2026-10-11": "Canuckle puzzle #1611 for October 11, 2026 features a five-letter word with two vowels and no repeated letters. This entry begins with an uncommon opening letter and closes on a hard consonant."
+    "2026-10-11": "Canuckle puzzle #1611 for October 11, 2026 features a five-letter word with two vowels and no repeated letters. This entry begins with an uncommon opening letter and closes on a hard consonant.",
+    "2026-10-12": "Canuckle puzzle #1612 for October 12, 2026 features a five-letter word with a single vowel and one doubled consonant. Solvers of this Canuckle entry should note the word begins with W and ends with S."
   }
 }

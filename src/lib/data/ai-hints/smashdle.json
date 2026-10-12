@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-11T06:03:39.570Z",
+  "generatedAt": "2026-10-12T06:03:46.958Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -77,6 +77,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Multiple fighters span several franchises, requiring broad knowledge of the Smash roster."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "",
+      "clue1": "Five Nintendo fighters sharing one chaotic crossover roster.",
+      "starts_with": "Y",
+      "ends_with": "N",
+      "definition": "Five playable fighters from the Super Smash Bros. series, spanning Nintendo franchises old and new.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Guessing five distinct fighters at once demands broad roster knowledge, not a single answer."
     }
   },
   "prose": {
@@ -85,6 +98,7 @@
     "2026-10-08": "Smashdle Game #1128 takes place on October 8, 2026. This particular puzzle features a long string of characters ending in R.",
     "2026-10-09": "Smashdle's October 9, 2026 edition, Game #1129, lines up five contenders whose names start with letters spanning O through Z. The letter patterns vary widely across this group, so pay attention to each fighter's opening and closing characters.",
     "2026-10-10": "The Smashdle puzzle for October 10, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 38 characters, starting with M and ending with F — see the letter hints above before you peek.",
-    "2026-10-11": "The Smashdle puzzle for October 11, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 38 characters, starting with V and ending with H — see the letter hints above before you peek."
+    "2026-10-11": "The Smashdle puzzle for October 11, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 38 characters, starting with V and ending with H — see the letter hints above before you peek.",
+    "2026-10-12": "Today's Smashdle for October 12, 2026 (Game #1132) bundles five fighters instead of one. This puzzle's names begin with Y and close on N, a pattern spanning the whole quintet."
   }
 }
