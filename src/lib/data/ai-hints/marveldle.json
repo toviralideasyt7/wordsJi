@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-11T06:21:21.546Z",
+  "generatedAt": "2026-10-12T06:21:12.370Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -64,6 +64,19 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Pairs two obscure characters with accented letters and an unusual dual-name format."
+    },
+    "2026-10-12": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A pink teleporter opens portals in a wink of an eye.",
+      "clue1": "A mutant who steps through space in an instant.",
+      "starts_with": "B",
+      "ends_with": "O",
+      "definition": "Marvel mutant able to create teleportation portals, associated with the Exiles and X-Men.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A lesser-known mutant with a short, deceptively simple name and niche team history."
     }
   },
   "prose": {
@@ -71,6 +84,7 @@
     "2026-10-07": "Marveldle's puzzle for October 7, 2026 spotlights a cosmic figure whose name starts with B and ends with L. The 10/7/2026 12:00:00 AM entry features four vowels and three letters that each repeat.",
     "2026-10-09": "Marveldle's puzzle for October 9, 2026 features a seven-letter answer beginning with R and ending with K. The 10/9/2026 12:00:00 AM challenge offers no repeated letters and exactly two vowels to guide solvers.",
     "2026-10-10": "Today's Marveldle for October 10, 2026 pairs two very different Marvel figures in one answer. The 10/10/2026 12:00:00 AM puzzle starts with I and ends with G, spanning multiple words.",
-    "2026-10-11": "The Marveldle puzzle for October 11, 2026 (10/11/2026 12:00:00 AM) pairs two separate Marvel identities in one entry. Its combined letter pattern begins with E and ends with K while packing seven vowels across the string."
+    "2026-10-11": "The Marveldle puzzle for October 11, 2026 (10/11/2026 12:00:00 AM) pairs two separate Marvel identities in one entry. Its combined letter pattern begins with E and ends with K while packing seven vowels across the string.",
+    "2026-10-12": "Marveldle's puzzle for October 12, 2026 features a five-letter answer with no repeated letters. The 10/12/2026 12:00:00 AM challenge opens and closes on consonants, framing a single hidden vowel."
   }
 }
