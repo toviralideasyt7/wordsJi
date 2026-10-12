@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-11T22:03:08.625Z",
+  "generatedAt": "2026-10-12T22:05:11.180Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -88,6 +88,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but the repeated vowel and tricky middle letter add mild challenge."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -97,6 +109,7 @@
     "2026-10-09": "Worgle puzzle #1731 for October 9, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with a trailing vowel.",
     "2026-10-10": "The Worgle puzzle for October 10, 2026 (#1732) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek.",
     "2026-10-11": "Worgle puzzle #1733 for October 11, 2026 features a six-letter word with no repeated letters. The pattern runs from T to D with two vowels tucked between the consonants.",
-    "2026-10-12": "Worgle puzzle #1734 for October 12, 2026 features a six-letter word with one repeated vowel. The pattern begins with L and ends with D, flowing somewhere in between."
+    "2026-10-12": "Worgle puzzle #1734 for October 12, 2026 features a six-letter word with one repeated vowel. The pattern begins with L and ends with D, flowing somewhere in between.",
+    "2026-10-13": "The Worgle puzzle for October 13, 2026 (#1735) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with T — see the letter hints above before you peek."
   }
 }
