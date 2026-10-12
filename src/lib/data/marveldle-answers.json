@@ -991,5 +991,57 @@
       ]
     },
     "solvedAt": "2026-10-11T06:05:48.408Z"
+  },
+  "2026-10-12": {
+    "date": "2026-10-12",
+    "dateId": "10/12/2026 12:00:00 AM",
+    "comics": {
+      "id": "blink_295",
+      "name": "Blink",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Teleportation"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1994,
+      "firstApparitionComicTitle": "X-Men: Alpha #1",
+      "keywords": [
+        "Clarice Ferguson",
+        "Ferguson",
+        "295"
+      ]
+    },
+    "mcu": {
+      "id": "mordo",
+      "name": "Karl Mordo",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Magic",
+        "InterdimensionalTravel"
+      ],
+      "origin": "Earth",
+      "actorName": "Chiwetel Ejiofor",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "MasterOfMysticArts"
+      ],
+      "keywords": [
+        "baron mordo",
+        "mordo"
+      ]
+    },
+    "solvedAt": "2026-10-12T06:05:54.519Z"
   }
 }
