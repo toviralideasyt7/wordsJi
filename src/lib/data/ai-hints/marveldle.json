@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-12T06:21:12.370Z",
+  "generatedAt": "2026-10-13T06:22:06.115Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -77,6 +77,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "A lesser-known mutant with a short, deceptively simple name and niche team history."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "One blasts energy, the other prowls with feline grace.",
+      "clue1": "A cosmic power and a jungle spirit combined.",
+      "starts_with": "H",
+      "ends_with": "R",
+      "definition": "A pairing of a mutant energy manipulator and a martial arts feline hero.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of two distinct characters across different team affiliations."
     }
   },
   "prose": {
@@ -85,6 +98,7 @@
     "2026-10-09": "Marveldle's puzzle for October 9, 2026 features a seven-letter answer beginning with R and ending with K. The 10/9/2026 12:00:00 AM challenge offers no repeated letters and exactly two vowels to guide solvers.",
     "2026-10-10": "Today's Marveldle for October 10, 2026 pairs two very different Marvel figures in one answer. The 10/10/2026 12:00:00 AM puzzle starts with I and ends with G, spanning multiple words.",
     "2026-10-11": "The Marveldle puzzle for October 11, 2026 (10/11/2026 12:00:00 AM) pairs two separate Marvel identities in one entry. Its combined letter pattern begins with E and ends with K while packing seven vowels across the string.",
-    "2026-10-12": "Marveldle's puzzle for October 12, 2026 features a five-letter answer with no repeated letters. The 10/12/2026 12:00:00 AM challenge opens and closes on consonants, framing a single hidden vowel."
+    "2026-10-12": "Marveldle's puzzle for October 12, 2026 features a five-letter answer with no repeated letters. The 10/12/2026 12:00:00 AM challenge opens and closes on consonants, framing a single hidden vowel.",
+    "2026-10-13": "The Marveldle puzzle for October 13, 2026, features a dual-character answer. This 10/13/2026 12:00:00 AM challenge utilizes a complex letter pattern across two names."
   }
 }
