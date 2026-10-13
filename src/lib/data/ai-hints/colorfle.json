@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-12T16:46:35.011Z",
+  "generatedAt": "2026-10-13T16:32:01.709Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -100,6 +100,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A pale citrus cake, a deep wine, and the void of night.",
+      "clue1": "A light yellow, a dark red, and a total absence of light.",
+      "starts_with": "L",
+      "ends_with": "K",
+      "definition": "A sequence of three colors: a pale yellow, a dark brownish-red, and a dark neutral.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The first color is a specific web-color name, increasing complexity."
     }
   },
   "prose": {
@@ -110,6 +123,7 @@
     "2026-10-10": "Colorfle puzzle #1629 for October 10, 2026 presents a three-color answer that begins with O and ends with N. Its combined thirteen letters include a pair of letters that each surface twice across the set.",
     "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from.",
     "2026-10-12": "Colorfle puzzle #1631 for October 12, 2026 presents a three-shade palette drawn from the violet and red families. The combined color names begin with the letter P and end with the letter R, hinting at their span.",
-    "2026-10-13": "The Colorfle puzzle for October 13, 2026 (#1632) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with E — see the letter hints above before you peek."
+    "2026-10-13": "The Colorfle puzzle for October 13, 2026 (#1632) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with E — see the letter hints above before you peek.",
+    "2026-10-14": "Colorfle puzzle #1633 was released on October 14, 2026. The solution consists of three distinct color names with a total of twenty-five letters."
   }
 }

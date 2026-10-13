@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-12T16:44:05.421Z",
+  "generatedAt": "2026-10-13T16:31:13.385Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -99,6 +99,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "One word describes a lack of courage.",
+      "starts_with": "T",
+      "ends_with": "Y",
+      "definition": "A set of four words including a personality trait and a cooking tool.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words with some overlapping consonants and standard vowel placements."
     }
   },
   "prose": {
@@ -109,6 +122,7 @@
     "2026-10-10": "The Quordle puzzle #1720 for October 10, 2026 pairs three single-vowel-pattern words with one that repeats a letter three times. Its mix of a tricky double-consonant ending and a sneaky triple-letter word makes October 10, 2026's grid a satisfying challenge.",
     "2026-10-11": "The Quordle puzzle for October 11, 2026 (#1721) is live with today's answer confirmed. The answer runs 20 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-10-12": "The Quordle puzzle for October 12, 2026 (#1722) is live with today's answer confirmed. The answer runs 20 characters, starting with H and ending with T — see the letter hints above before you peek.",
-    "2026-10-13": "The Quordle puzzle for October 13, 2026 (#1723) is live with today's answer confirmed. The answer runs 20 characters, starting with F and ending with N — see the letter hints above before you peek."
+    "2026-10-13": "The Quordle puzzle for October 13, 2026 (#1723) is live with today's answer confirmed. The answer runs 20 characters, starting with F and ending with N — see the letter hints above before you peek.",
+    "2026-10-14": "Quordle puzzle #1724 for October 14, 2026, features four distinct five-letter words. The set contains a mix of repeated consonants and varied vowel positions."
   }
 }

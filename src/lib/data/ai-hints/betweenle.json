@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-12T16:44:24.399Z",
+  "generatedAt": "2026-10-13T16:31:41.638Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -101,6 +101,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I make a room look fancy, but I am not the walls.",
+      "clue1": "Often added to a home for aesthetic appeal.",
+      "starts_with": "D",
+      "ends_with": "R",
+      "definition": "The furnishing and ornamentation of a room.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common five-letter word with a straightforward meaning."
     }
   },
   "prose": {
@@ -111,6 +124,7 @@
     "2026-10-10": "Betweenle puzzle #1304 for October 10, 2026 is a five-letter word with no repeated letters. This entry opens and closes on consonant-and-vowel bookends, giving solvers a tidy pattern to work from.",
     "2026-10-11": "Betweenle puzzle #1305 arrives on October 11, 2026, offering a five-letter challenge. This answer begins with R and ends with T, holding two vowels and no repeats.",
     "2026-10-12": "Betweenle puzzle #1306 for October 12, 2026 features a five-letter word with two vowels and no repeated letters. This entry starts with P and ends with L, bracketing a middle that solvers must deduce.",
-    "2026-10-13": "The Betweenle puzzle for October 13, 2026 (#1307) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek."
+    "2026-10-13": "The Betweenle puzzle for October 13, 2026 (#1307) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek.",
+    "2026-10-14": "Betweenle puzzle #1308 is scheduled for October 14, 2026. This specific entry features a five-letter word with a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }

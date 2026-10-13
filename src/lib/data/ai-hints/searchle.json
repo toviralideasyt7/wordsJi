@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-12T16:41:53.249Z",
+  "generatedAt": "2026-10-13T16:32:47.496Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -102,6 +102,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word, but mix of letters including an uncommon one makes it moderately tricky."
+    },
+    "2026-10-14": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -112,6 +124,7 @@
     "2026-10-10": "Searchle puzzle #77 for October 10, 2026 features a six-letter word that opens and closes with the same letter. Notably, two separate letters each appear twice within this entry.",
     "2026-10-11": "Searchle puzzle #78 for October 11, 2026 is a five-letter word with a single doubled consonant. The pattern features two vowels and one letter that appears twice.",
     "2026-10-12": "Searchle puzzle #79 for October 12, 2026 features a five-letter word that begins and ends on different consonants. The pattern includes a single repeated vowel sitting in the middle of the word.",
-    "2026-10-13": "Searchle puzzle #80 for October 13, 2026 features a five-letter word with no repeated letters. The pattern runs from E to T, challenging players to track two vowels among the spread."
+    "2026-10-13": "Searchle puzzle #80 for October 13, 2026 features a five-letter word with no repeated letters. The pattern runs from E to T, challenging players to track two vowels among the spread.",
+    "2026-10-14": "The Searchle puzzle for October 14, 2026 (#81) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with S — see the letter hints above before you peek."
   }
 }

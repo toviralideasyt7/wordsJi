@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-12T16:46:47.114Z",
+  "generatedAt": "2026-10-13T16:33:17.448Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -101,6 +101,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -111,6 +123,7 @@
     "2026-10-10": "The Phrazle puzzle for October 10, 2026 (2026-10-10) links two colorful idioms into one solution. This 2026-10-10 answer begins with G and ends with E, packing a dozen vowels across its two phrases.",
     "2026-10-11": "The Phrazle puzzle for October 11, 2026 pairs two familiar idioms into one lengthy answer. This 2026-10-11 entry starts with A and ends with L, featuring many repeated vowels throughout.",
     "2026-10-12": "The Phrazle puzzle for October 12, 2026 pairs two familiar idioms across its grid. Solvers of 2026-10-12 should note the phrase begins and ends with the same letter and holds ten vowels.",
-    "2026-10-13": "The Phrazle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 30 characters, starting with P and ending with K — see the letter hints above before you peek."
+    "2026-10-13": "The Phrazle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 30 characters, starting with P and ending with K — see the letter hints above before you peek.",
+    "2026-10-14": "The Phrazle puzzle for October 14, 2026 (2026-10-14) is live with today's answer confirmed. The answer runs 24 characters, starting with M and ending with L — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-12T16:46:36.440Z",
+  "generatedAt": "2026-10-13T16:32:01.656Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -100,6 +100,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I can be a piece of luggage or a line on a list.",
+      "clue1": "A single unit of something in a collection.",
+      "starts_with": "I",
+      "ends_with": "M",
+      "definition": "An individual object, especially one among several of the same type.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a common noun with a broad semantic range."
     }
   },
   "prose": {
@@ -110,6 +123,7 @@
     "2026-10-10": "Contexto puzzle #1483 for October 10, 2026 features an eleven-letter word beginning with D and ending with N. This entry includes five vowels and has one letter that appears twice.",
     "2026-10-11": "Today's Contexto puzzle #1484 for October 11, 2026 features a six-letter word beginning with D and ending with E. The letter pattern includes one letter that appears twice, offering a quiet nudge for persistent solvers.",
     "2026-10-12": "Today's Contexto puzzle for October 12, 2026, puzzle #1485, hides a five-letter word with no repeated letters. The answer begins with G and ends with E, offering solvers a tidy pattern to narrow their guesses.",
-    "2026-10-13": "The Contexto puzzle for October 13, 2026 (#1486) is live with today's answer confirmed. The answer runs 4 characters, starting with A and ending with A — see the letter hints above before you peek."
+    "2026-10-13": "The Contexto puzzle for October 13, 2026 (#1486) is live with today's answer confirmed. The answer runs 4 characters, starting with A and ending with A — see the letter hints above before you peek.",
+    "2026-10-14": "Contexto puzzle #1487 was released on October 14, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant-consonant pattern."
   }
 }

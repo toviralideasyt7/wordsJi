@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-12T16:44:25.629Z",
+  "generatedAt": "2026-10-13T16:31:55.888Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -101,6 +101,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A Caribbean gem known for cigars and classic cars.",
+      "clue1": "An island nation located south of Florida.",
+      "starts_with": "C",
+      "ends_with": "A",
+      "definition": "An island country in the Caribbean Sea.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a well-known island nation with a short, distinct name."
     }
   },
   "prose": {
@@ -111,6 +124,7 @@
     "2026-10-10": "Worldle puzzle #1724 for October 10, 2026 features a country whose name runs ten letters long. The letter pattern begins with K and ends with N, with a single repeated letter in between.",
     "2026-10-11": "Worldle puzzle #1725 for October 11, 2026 points to a far-flung tropical dependency. The target begins with B, ends with Y, and spans three words totaling many repeated letters.",
     "2026-10-12": "Worldle puzzle #1726 for October 12, 2026 points to a location whose name has zero repeated letters. The three-word answer begins with I and ends with N, forming a familiar outline for sharp-eyed geographers.",
-    "2026-10-13": "The Worldle puzzle for October 13, 2026 (#1727) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-10-13": "The Worldle puzzle for October 13, 2026 (#1727) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-10-14": "Worldle puzzle #1728 for October 14, 2026, features a four-letter country. The name follows a consonant-vowel-consonant-vowel pattern."
   }
 }
