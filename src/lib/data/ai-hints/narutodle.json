@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-12T06:03:28.941Z",
+  "generatedAt": "2026-10-13T06:03:56.420Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -89,6 +89,19 @@
       "difficulty": 1,
       "difficulty_label": "Very Easy",
       "difficulty_reason": "The series' title character; instantly recognizable to nearly every fan."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "A legendary sage who loved books and taught the orange ninja.",
+      "clue1": "Known as one of the three legendary Sannin.",
+      "starts_with": "C",
+      "ends_with": "A",
+      "definition": "Legendary Sannin and mentor to Naruto and Minato.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Extremely prominent character with a very recognizable name."
     }
   },
   "prose": {
@@ -98,6 +111,7 @@
     "2026-10-09": "Narutodle's puzzle Game #890 for October 9, 2026 features a five-letter answer with no repeated letters. This Narutodle challenge opens with D and closes with I, holding exactly three vowels.",
     "2026-10-10": "The Narutodle puzzle for October 10, 2026 (Game #891) is live with today's answer confirmed. The answer runs 34 characters, starting with O and ending with I — see the letter hints above before you peek.",
     "2026-10-11": "Today's Narutodle puzzle, Game #892 for October 11, 2026, hides a five-letter name beginning with O and ending with I. The letter pattern features three vowels and a single repeated letter, challenging players to recall this airborne elder.",
-    "2026-10-12": "The Narutodle puzzle for October 12, 2026 (Game #893) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with I — see the letter hints above before you peek."
+    "2026-10-12": "The Narutodle puzzle for October 12, 2026 (Game #893) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with I — see the letter hints above before you peek.",
+    "2026-10-13": "Narutodle Game #894 takes place on October 13, 2026. This specific puzzle features a seven-letter name ending in a vowel."
   }
 }

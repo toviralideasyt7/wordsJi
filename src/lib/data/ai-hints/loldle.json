@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-12T06:03:27.213Z",
+  "generatedAt": "2026-10-13T06:03:50.459Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -90,6 +90,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A recognizable support champion, but the short symmetric name can trip quick guesses."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "A rolling ball, a genius, a boss, and a serpent.",
+      "clue1": "Four diverse champions from the Rift.",
+      "starts_with": "R",
+      "ends_with": "A",
+      "definition": "A group of four League of Legends champions.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four distinct characters simultaneously."
     }
   },
   "prose": {
@@ -99,6 +112,7 @@
     "2026-10-09": "Today's LoLdle puzzle for October 9, 2026, Game #1555, hides a five-letter answer that begins and ends with the same consonant. The letter pattern reveals one letter appearing twice, offering a quiet nudge for attentive solvers.",
     "2026-10-10": "Today's LoLdle challenge for October 10, 2026 arrives as Game #1556 with a tidy eight-letter solution. This puzzle's answer opens with K and closes with N, featuring two different letters that each repeat exactly twice.",
     "2026-10-11": "The LoLdle puzzle for October 11, 2026, Game #1557, pairs four champions whose names begin with distinct letters and end variously, spanning the game's classic, quote, ability, splash, and emoji modes. Solvers must juggle a cavalry charge, a timekeeper, an arcane scholar, and a shadow-hunting marksman to clear every round.",
-    "2026-10-12": "The LoLdle puzzle for October 12, 2026 (Game #1558) features a short, symmetric four-letter name. In this round the letter pattern repeats two characters, giving players a tidy structural hint without spoiling the solution."
+    "2026-10-12": "The LoLdle puzzle for October 12, 2026 (Game #1558) features a short, symmetric four-letter name. In this round the letter pattern repeats two characters, giving players a tidy structural hint without spoiling the solution.",
+    "2026-10-13": "LoLdle Game #1559 for October 13, 2026, features a multi-character solution. The answer follows a specific sequence of four champion names."
   }
 }

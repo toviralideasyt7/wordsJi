@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-12T06:03:30.464Z",
+  "generatedAt": "2026-10-13T06:05:14.604Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -89,6 +89,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Famous character but short name with repeated letter can mislead guessers early."
+    },
+    "2026-10-13": {
+      "vowel_hint": "It contains 20 vowels.",
+      "repeat_hint": "31 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -98,6 +110,7 @@
     "2026-10-09": "Today's OnePiecedle puzzle for October 9, 2026, Game #922, asks solvers to identify a quartet rather than a single character. The grouped answer begins with the letter D and also ends with the letter D.",
     "2026-10-10": "Today's OnePiecedle puzzle, Game #923 for October 10, 2026, challenges solvers with a four-name grouping rather than a single word. The combined set begins with the letter P and the final name ends in Y.",
     "2026-10-11": "Today's OnePiecedle challenge for October 11, 2026, marks Game #924 with a five-letter answer containing no repeated letters. This OnePiecedle puzzle features a word that begins with K and ends with O, offering a balanced test for solvers.",
-    "2026-10-12": "OnePiecedle Game #925 for October 12, 2026 features a six-letter name bookended by the same letter. This OnePiecedle puzzle holds a single vowel, offering a tidy challenge for the day."
+    "2026-10-12": "OnePiecedle Game #925 for October 12, 2026 features a six-letter name bookended by the same letter. This OnePiecedle puzzle holds a single vowel, offering a tidy challenge for the day.",
+    "2026-10-13": "The OnePiecedle puzzle for October 13, 2026 (Game #926) is live with today's answer confirmed. The answer runs 48 characters, starting with P and ending with N — see the letter hints above before you peek."
   }
 }

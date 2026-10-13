@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-12T06:03:15.523Z",
+  "generatedAt": "2026-10-13T06:04:08.069Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -90,6 +90,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known African nation, though its exact location may challenge some players."
+    },
+    "2026-10-13": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A desert gem on the Arabian coast, where incense once flowed.",
+      "clue1": "A sovereign state on the southeastern coast of the peninsula.",
+      "starts_with": "O",
+      "ends_with": "N",
+      "definition": "A country located on the southeastern coast of the Arabian Peninsula.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Short name with a distinct starting vowel and a recognizable region."
     }
   },
   "prose": {
@@ -99,6 +112,7 @@
     "2026-10-09": "Today's Globle puzzle for October 9, 2026 (2026-10-09) points to a Caribbean destination. The answer for 2026-10-09 begins with T and ends with O, featuring plenty of repeated letters.",
     "2026-10-10": "Today's Globle puzzle for October 10, 2026 features a four-letter answer with two vowels and no repeated letters. The 2026-10-10 challenge points players toward a landlocked region of West Africa.",
     "2026-10-11": "Today's Globle puzzle for October 11, 2026 features a short four-letter answer with two vowels and no repeated letters. The 2026-10-11 challenge points players toward a landlocked corner of Southeast Asia.",
-    "2026-10-12": "Today's Globle puzzle for October 12, 2026 points to a place whose name opens and closes with the same letter. The 2026-10-12 answer has six letters, with one letter appearing twice."
+    "2026-10-12": "Today's Globle puzzle for October 12, 2026 points to a place whose name opens and closes with the same letter. The 2026-10-12 answer has six letters, with one letter appearing twice.",
+    "2026-10-13": "The Globle puzzle for October 13, 2026, features a four-letter country name. Puzzle 2026-10-13 follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }
