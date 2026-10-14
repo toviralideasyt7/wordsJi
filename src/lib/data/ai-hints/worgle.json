@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-13T22:05:29.694Z",
+  "generatedAt": "2026-10-14T22:05:12.001Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -112,6 +112,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-15": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -123,6 +135,7 @@
     "2026-10-11": "Worgle puzzle #1733 for October 11, 2026 features a six-letter word with no repeated letters. The pattern runs from T to D with two vowels tucked between the consonants.",
     "2026-10-12": "Worgle puzzle #1734 for October 12, 2026 features a six-letter word with one repeated vowel. The pattern begins with L and ends with D, flowing somewhere in between.",
     "2026-10-13": "The Worgle puzzle for October 13, 2026 (#1735) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with T — see the letter hints above before you peek.",
-    "2026-10-14": "The Worgle puzzle for October 14, 2026 (#1736) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with L — see the letter hints above before you peek."
+    "2026-10-14": "The Worgle puzzle for October 14, 2026 (#1736) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with L — see the letter hints above before you peek.",
+    "2026-10-15": "The Worgle puzzle for October 15, 2026 (#1737) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with R — see the letter hints above before you peek."
   }
 }
