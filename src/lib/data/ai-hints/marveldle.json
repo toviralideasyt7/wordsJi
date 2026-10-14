@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-13T06:22:06.115Z",
+  "generatedAt": "2026-10-14T06:21:05.157Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -90,6 +90,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires knowledge of two distinct characters across different team affiliations."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A puppet master of chaos who assigns impossible trials.",
+      "clue1": "A villain who loves to play games with others.",
+      "starts_with": "T",
+      "ends_with": "N",
+      "definition": "A manipulative strategist and criminal who forces others to complete tasks.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The character is less prominent than A-list Avengers villains."
     }
   },
   "prose": {
@@ -99,6 +112,7 @@
     "2026-10-10": "Today's Marveldle for October 10, 2026 pairs two very different Marvel figures in one answer. The 10/10/2026 12:00:00 AM puzzle starts with I and ends with G, spanning multiple words.",
     "2026-10-11": "The Marveldle puzzle for October 11, 2026 (10/11/2026 12:00:00 AM) pairs two separate Marvel identities in one entry. Its combined letter pattern begins with E and ends with K while packing seven vowels across the string.",
     "2026-10-12": "Marveldle's puzzle for October 12, 2026 features a five-letter answer with no repeated letters. The 10/12/2026 12:00:00 AM challenge opens and closes on consonants, framing a single hidden vowel.",
-    "2026-10-13": "The Marveldle puzzle for October 13, 2026, features a dual-character answer. This 10/13/2026 12:00:00 AM challenge utilizes a complex letter pattern across two names."
+    "2026-10-13": "The Marveldle puzzle for October 13, 2026, features a dual-character answer. This 10/13/2026 12:00:00 AM challenge utilizes a complex letter pattern across two names.",
+    "2026-10-14": "The Marveldle puzzle for October 14, 2026, features a name ending in the letter R. This 10/14/2026 12:00:00 AM challenge requires identifying a specific mastermind."
   }
 }
