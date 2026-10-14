@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-13T06:03:55.198Z",
+  "generatedAt": "2026-10-14T06:03:39.108Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -103,6 +103,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The answer consists of four separate multi-word names."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "27 letters appear more than once.",
+      "riddle": "A silent field, a loud war, a drink, and a giant.",
+      "clue1": "Four distinct heroes from a battle arena.",
+      "starts_with": "D",
+      "ends_with": "N",
+      "definition": "A group of four playable characters from Dota 2.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple long names make the total character count high and complex."
     }
   },
   "prose": {
@@ -113,6 +126,7 @@
     "2026-10-10": "Today's Dotadle for October 10, 2026, Game #1030, asks solvers to pin down four distinct hero names. Notice how three of the four conclude with the same consonant while their opening letters all differ.",
     "2026-10-11": "Today's Dotadle on October 11, 2026 presents Game #1031 as a layered challenge. The entries in this puzzle span names beginning with S, D, S, and L, rewarding sharp pattern recognition.",
     "2026-10-12": "Today's Dotadle challenge for October 12, 2026 is puzzle Game #1032. The answer is a five-letter name that begins and ends with the same consonant.",
-    "2026-10-13": "Dotadle Game #1033 takes place on October 13, 2026. This puzzle features a long sequence of letters across four names."
+    "2026-10-13": "Dotadle Game #1033 takes place on October 13, 2026. This puzzle features a long sequence of letters across four names.",
+    "2026-10-14": "Dotadle Game #1034 was released on October 14, 2026. This specific puzzle features a long sequence of letters across four names."
   }
 }

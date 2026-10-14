@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-13T06:03:56.420Z",
+  "generatedAt": "2026-10-14T06:04:45.671Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -102,6 +102,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Extremely prominent character with a very recognizable name."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "21 letters appear more than once.",
+      "riddle": "A lava lady, a cloud warrior, a spy, and a shadow.",
+      "clue1": "A diverse group featuring a Kage and a puppet master.",
+      "starts_with": "M",
+      "ends_with": "U",
+      "definition": "A group of four distinct characters from the Naruto series.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four separate characters across different affiliations."
     }
   },
   "prose": {
@@ -112,6 +125,7 @@
     "2026-10-10": "The Narutodle puzzle for October 10, 2026 (Game #891) is live with today's answer confirmed. The answer runs 34 characters, starting with O and ending with I — see the letter hints above before you peek.",
     "2026-10-11": "Today's Narutodle puzzle, Game #892 for October 11, 2026, hides a five-letter name beginning with O and ending with I. The letter pattern features three vowels and a single repeated letter, challenging players to recall this airborne elder.",
     "2026-10-12": "The Narutodle puzzle for October 12, 2026 (Game #893) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with I — see the letter hints above before you peek.",
-    "2026-10-13": "Narutodle Game #894 takes place on October 13, 2026. This specific puzzle features a seven-letter name ending in a vowel."
+    "2026-10-13": "Narutodle Game #894 takes place on October 13, 2026. This specific puzzle features a seven-letter name ending in a vowel.",
+    "2026-10-14": "Narutodle Game #895 for October 14, 2026, features a multi-character solution. The letter pattern spans several names of varying lengths."
   }
 }

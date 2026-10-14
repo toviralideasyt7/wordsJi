@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-13T06:04:21.135Z",
+  "generatedAt": "2026-10-14T06:05:01.483Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -103,6 +103,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "The unique ending letter makes it highly recognizable."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A cold gaze, a wild punch, a boxing pro, and soaring wings.",
+      "clue1": "Four distinct Generation I creatures.",
+      "starts_with": "J",
+      "ends_with": "T",
+      "definition": "A group of four first-generation Pokémon including a psychic, fighter, and bird.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four separate entities rather than a single word."
     }
   },
   "prose": {
@@ -113,6 +126,7 @@
     "2026-10-10": "Today's Pokedle for October 10, 2026 (Game #1094) hides a well-known creature whose name begins with M and ends with E. This Game #1094 answer features four vowels and a pattern where two separate letters each appear exactly twice.",
     "2026-10-11": "Pokedle's puzzle for October 11, 2026, Game #1095, features a nine-letter name beginning with D and ending with E. This entry holds four vowels and no repeated letters, giving careful solvers a steady foothold.",
     "2026-10-12": "Today's Pokedle for October 12, 2026 (Game #1096) presents a quartet of Generation I Pokemon instead of a single creature. Across the four names you'll find ten vowels and a pair of doubled letters, with starting letters spanning from M through T.",
-    "2026-10-13": "Pokedle Game #1097 takes place on October 13, 2026. This specific puzzle features a four-letter word ending in X."
+    "2026-10-13": "Pokedle Game #1097 takes place on October 13, 2026. This specific puzzle features a four-letter word ending in X.",
+    "2026-10-14": "Pokedle Game #1098 for October 14, 2026, features a multi-answer sequence. The solution follows a specific pattern of four distinct names."
   }
 }

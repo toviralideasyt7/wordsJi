@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-13T06:04:19.060Z",
+  "generatedAt": "2026-10-14T06:04:52.195Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -103,6 +103,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying five distinct characters simultaneously."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "",
+      "clue1": "Five diverse fighters from the Nintendo universe.",
+      "starts_with": "Z",
+      "ends_with": "S",
+      "definition": "A specific roster of five playable characters in a fighting game.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying five distinct characters simultaneously."
     }
   },
   "prose": {
@@ -113,6 +126,7 @@
     "2026-10-10": "The Smashdle puzzle for October 10, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 38 characters, starting with M and ending with F — see the letter hints above before you peek.",
     "2026-10-11": "The Smashdle puzzle for October 11, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 38 characters, starting with V and ending with H — see the letter hints above before you peek.",
     "2026-10-12": "Today's Smashdle for October 12, 2026 (Game #1132) bundles five fighters instead of one. This puzzle's names begin with Y and close on N, a pattern spanning the whole quintet.",
-    "2026-10-13": "Smashdle Game #1133 takes place on October 13, 2026. This puzzle features a complex sequence of characters with a varied letter pattern."
+    "2026-10-13": "Smashdle Game #1133 takes place on October 13, 2026. This puzzle features a complex sequence of characters with a varied letter pattern.",
+    "2026-10-14": "Smashdle Game #1134 for October 14, 2026, features a multi-character solution. The answer follows a complex letter pattern across five names."
   }
 }

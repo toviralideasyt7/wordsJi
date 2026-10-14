@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-13T06:05:14.604Z",
+  "generatedAt": "2026-10-14T06:04:17.916Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -101,6 +101,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 18 vowels.",
+      "repeat_hint": "40 letters appear more than once.",
+      "riddle": "A glutton, a glutton, a guide, and a doctor.",
+      "clue1": "A mix of an Emperor, a rookie, a mentor, and a medic.",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "A group of four distinct characters from the One Piece series.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four separate characters across different affiliations."
     }
   },
   "prose": {
@@ -111,6 +124,7 @@
     "2026-10-10": "Today's OnePiecedle puzzle, Game #923 for October 10, 2026, challenges solvers with a four-name grouping rather than a single word. The combined set begins with the letter P and the final name ends in Y.",
     "2026-10-11": "Today's OnePiecedle challenge for October 11, 2026, marks Game #924 with a five-letter answer containing no repeated letters. This OnePiecedle puzzle features a word that begins with K and ends with O, offering a balanced test for solvers.",
     "2026-10-12": "OnePiecedle Game #925 for October 12, 2026 features a six-letter name bookended by the same letter. This OnePiecedle puzzle holds a single vowel, offering a tidy challenge for the day.",
-    "2026-10-13": "The OnePiecedle puzzle for October 13, 2026 (Game #926) is live with today's answer confirmed. The answer runs 48 characters, starting with P and ending with N — see the letter hints above before you peek."
+    "2026-10-13": "The OnePiecedle puzzle for October 13, 2026 (Game #926) is live with today's answer confirmed. The answer runs 48 characters, starting with P and ending with N — see the letter hints above before you peek.",
+    "2026-10-14": "OnePiecedle Game #927 for October 14, 2026, features a complex multi-character string. The solution consists of several names with a varied letter pattern."
   }
 }

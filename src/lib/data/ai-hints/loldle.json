@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-13T06:03:50.459Z",
+  "generatedAt": "2026-10-14T06:03:38.628Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -103,6 +103,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four distinct characters simultaneously."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A divine wing, a stolen spark, a void walk, and a shadow.",
+      "clue1": "Four champions from vastly different realms of Runeterra.",
+      "starts_with": "K",
+      "ends_with": "D",
+      "definition": "A group of four League of Legends champions.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four distinct characters across different roles."
     }
   },
   "prose": {
@@ -113,6 +126,7 @@
     "2026-10-10": "Today's LoLdle challenge for October 10, 2026 arrives as Game #1556 with a tidy eight-letter solution. This puzzle's answer opens with K and closes with N, featuring two different letters that each repeat exactly twice.",
     "2026-10-11": "The LoLdle puzzle for October 11, 2026, Game #1557, pairs four champions whose names begin with distinct letters and end variously, spanning the game's classic, quote, ability, splash, and emoji modes. Solvers must juggle a cavalry charge, a timekeeper, an arcane scholar, and a shadow-hunting marksman to clear every round.",
     "2026-10-12": "The LoLdle puzzle for October 12, 2026 (Game #1558) features a short, symmetric four-letter name. In this round the letter pattern repeats two characters, giving players a tidy structural hint without spoiling the solution.",
-    "2026-10-13": "LoLdle Game #1559 for October 13, 2026, features a multi-character solution. The answer follows a specific sequence of four champion names."
+    "2026-10-13": "LoLdle Game #1559 for October 13, 2026, features a multi-character solution. The answer follows a specific sequence of four champion names.",
+    "2026-10-14": "LoLdle Game #1560 for October 14, 2026, features a multi-champion answer. The solution follows a specific sequence of names starting with K and ending with D."
   }
 }

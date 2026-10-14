@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-13T06:04:44.334Z",
+  "generatedAt": "2026-10-14T06:04:11.247Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -101,6 +101,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "19 letters appear more than once.",
+      "riddle": "Heat it up, stay moody, and keep the edges sharp.",
+      "clue1": "A mix of cooking, moods, and logical conclusions.",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "A set of six five-letter words including cooking tools and emotional states.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word list contains several uncommon letter combinations and overlapping vowels."
     }
   },
   "prose": {
@@ -111,6 +124,7 @@
     "2026-10-10": "The Waffle puzzle for October 10, 2026 (#1723) arranges six five-letter words in its signature crossing grid. Each entry runs exactly five tiles, with several sharing repeated letters that make the swaps trickier to resolve.",
     "2026-10-11": "The Waffle puzzle for October 11, 2026 (#1724) weaves six five-letter words into its signature crossing grid. Shared letters at each intersection, including one word with a doubled letter, keep solvers carefully testing each swap.",
     "2026-10-12": "The Waffle puzzle for October 12, 2026 (#1725) features a five-letter entry that opens with P and closes with R. This grid rewards players who notice its single doubled letter nestled among the pattern.",
-    "2026-10-13": "The Waffle puzzle for October 13, 2026 (#1726) is live with today's answer confirmed. The answer runs 30 characters, starting with C and ending with Y — see the letter hints above before you peek."
+    "2026-10-13": "The Waffle puzzle for October 13, 2026 (#1726) is live with today's answer confirmed. The answer runs 30 characters, starting with C and ending with Y — see the letter hints above before you peek.",
+    "2026-10-14": "The Waffle puzzle for October 14, 2026, is identified as number 1727. This specific grid features a variety of five-letter words with overlapping characters."
   }
 }
