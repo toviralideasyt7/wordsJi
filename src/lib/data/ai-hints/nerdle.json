@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-13T16:32:04.592Z",
+  "generatedAt": "2026-10-14T16:31:54.573Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -137,6 +137,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple repeated division with a small single-digit result."
+    },
+    "2026-10-15": {
+      "kind": "math",
+      "operator_hint": "Uses division and subtraction.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit.",
+      "riddle": "Divide a pair, then take some away to find the end.",
+      "starts_with": "5",
+      "ends_with": "9",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple operations and a short length make this a straightforward solve."
     }
   },
   "prose": {
@@ -148,6 +164,7 @@
     "2026-10-11": "Nerdle puzzle #1726 for October 11, 2026 leans on a single division that resolves neatly into one tidy digit. Solvers who test clean divisors early will find this October 11, 2026 challenge rewarding without too much struggle.",
     "2026-10-12": "Nerdle puzzle #1727 for October 12, 2026 leans on repeated subtraction to reach its tidy conclusion. Solvers tackling this Nerdle challenge should watch how the operators chain together across the compact equation.",
     "2026-10-13": "Nerdle puzzle #1728 for October 13, 2026 blends multiplication and division into a compact eight-character challenge. Solvers must respect operator order to land on the modest single-digit result.",
-    "2026-10-14": "Nerdle puzzle #1729 challenges players with a sequence of operations. This October 14, 2026, entry focuses on reducing a value multiple times."
+    "2026-10-14": "Nerdle puzzle #1729 challenges players with a sequence of operations. This October 14, 2026, entry focuses on reducing a value multiple times.",
+    "2026-10-15": "Nerdle puzzle #1730 presents a clean arithmetic challenge for players. October 15, 2026, features an equation with a single-digit outcome."
   }
 }

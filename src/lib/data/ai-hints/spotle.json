@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-13T16:31:40.273Z",
+  "generatedAt": "2026-10-14T16:31:58.226Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -113,6 +113,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am the path you take to reach a far destination.",
+      "clue1": "Often associated with a long trip or a spiritual quest.",
+      "starts_with": "J",
+      "ends_with": "Y",
+      "definition": "An act of traveling from one place to another.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a distinct starting letter."
     }
   },
   "prose": {
@@ -124,6 +137,7 @@
     "2026-10-11": "The Spotle puzzle for October 11, 2026 (Day 1668) features a nine-letter answer with no repeated letters. This Spotle challenge begins with A and ends with H, offering four vowels to guide solvers.",
     "2026-10-12": "Today's Spotle for October 12, 2026, Day 1669, hides an eleven-letter name split across two words. This puzzle begins with A and ends with R, offering steady footing for careful guessers.",
     "2026-10-13": "The Spotle puzzle for October 13, 2026 (Day 1670) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek.",
-    "2026-10-14": "The Spotle puzzle for October 14, 2026 (Day 1671) is live with today's answer confirmed. The answer runs 14 characters, starting with C and ending with N — see the letter hints above before you peek."
+    "2026-10-14": "The Spotle puzzle for October 14, 2026 (Day 1671) is live with today's answer confirmed. The answer runs 14 characters, starting with C and ending with N — see the letter hints above before you peek.",
+    "2026-10-15": "Spotle puzzle Day 1672 takes place on October 15, 2026. This specific entry follows a seven-letter pattern."
   }
 }

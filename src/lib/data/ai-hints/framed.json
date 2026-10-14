@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-11T16:31:16.970Z",
+  "generatedAt": "2026-10-14T16:32:39.123Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -89,6 +89,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "A widely recognized mythological figure, though the short four-letter name adds slight challenge."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A sunny holiday that turns into a floral nightmare.",
+      "clue1": "A folk horror film set in Sweden.",
+      "starts_with": "M",
+      "ends_with": "R",
+      "definition": "A 2019 psychological horror film directed by Ari Aster.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known cult film, but the title is a specific seasonal event."
     }
   },
   "prose": {
@@ -98,6 +111,7 @@
     "2026-10-09": "Framed puzzle #1674 for October 9, 2026, features a multi-word title. The answer consists of eighteen characters including spaces and punctuation.",
     "2026-10-10": "Framed's puzzle #1675 for October 10, 2026 presents a three-word title spanning fifteen letters. The letter pattern features one letter appearing three times and two others appearing twice, with multiple repeated consonants adding texture.",
     "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters.",
-    "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement."
+    "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement.",
+    "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-13T16:31:40.206Z",
+  "generatedAt": "2026-10-14T16:32:01.486Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -114,6 +114,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common slang term with a straightforward structure."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Light as air, these can be corn or clouds of smoke.",
+      "clue1": "A light, airy snack or a sudden burst of air.",
+      "starts_with": "P",
+      "ends_with": "S",
+      "definition": "Light, airy masses of something, or a type of corn snack.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a simple structure and recognizable snack association."
     }
   },
   "prose": {
@@ -125,6 +138,7 @@
     "2026-10-11": "Today's Phoodle for October 11, 2026 serves up a five-letter sizzler. The 2026-10-11 puzzle follows a consonant-vowel pattern with no repeated letters.",
     "2026-10-12": "The Phoodle puzzle for October 12, 2026 features a cheerful five-letter word. This 2026-10-12 entry follows a pattern where one letter is doubled in the middle.",
     "2026-10-13": "The Phoodle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with C — see the letter hints above before you peek.",
-    "2026-10-14": "The Phoodle puzzle for October 14, 2026, features a five-letter word. Puzzle 2026-10-14 follows a consonant-vowel-consonant-consonant-consonant pattern."
+    "2026-10-14": "The Phoodle puzzle for October 14, 2026, features a five-letter word. Puzzle 2026-10-14 follows a consonant-vowel-consonant-consonant-consonant pattern.",
+    "2026-10-15": "The Phoodle puzzle for October 15, 2026, features a five-letter word. Puzzle 2026-10-15 contains a double consonant near the end."
   }
 }

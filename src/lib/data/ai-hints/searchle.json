@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-13T16:32:47.496Z",
+  "generatedAt": "2026-10-14T16:32:22.987Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -114,6 +114,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-15": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -125,6 +137,7 @@
     "2026-10-11": "Searchle puzzle #78 for October 11, 2026 is a five-letter word with a single doubled consonant. The pattern features two vowels and one letter that appears twice.",
     "2026-10-12": "Searchle puzzle #79 for October 12, 2026 features a five-letter word that begins and ends on different consonants. The pattern includes a single repeated vowel sitting in the middle of the word.",
     "2026-10-13": "Searchle puzzle #80 for October 13, 2026 features a five-letter word with no repeated letters. The pattern runs from E to T, challenging players to track two vowels among the spread.",
-    "2026-10-14": "The Searchle puzzle for October 14, 2026 (#81) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with S — see the letter hints above before you peek."
+    "2026-10-14": "The Searchle puzzle for October 14, 2026 (#81) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with S — see the letter hints above before you peek.",
+    "2026-10-15": "The Searchle puzzle for October 15, 2026 (#82) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with G — see the letter hints above before you peek."
   }
 }

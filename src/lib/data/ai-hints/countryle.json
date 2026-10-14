@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-13T16:32:06.731Z",
+  "generatedAt": "2026-10-14T16:33:14.347Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -114,6 +114,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A well-known global power with a distinct four-letter name."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A northern coast where oil flows and Angel Falls drops high.",
+      "clue1": "It borders Colombia and Brazil in South America.",
+      "starts_with": "V",
+      "ends_with": "A",
+      "definition": "A country on the northern coast of South America.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Well-known South American nation with a distinct starting letter."
     }
   },
   "prose": {
@@ -125,6 +138,7 @@
     "2026-10-11": "Today's Countryle for October 11, 2026 (Game #1696) features a nine-letter answer that both begins and ends with the same letter. This puzzle's word holds five vowels, with one letter appearing three times across its span.",
     "2026-10-12": "Countryle's October 12, 2026 puzzle, Game #1697, asks players to pin down a seven-letter nation. The name begins with L, ends with O, and features exactly one repeated letter.",
     "2026-10-13": "The Countryle puzzle for October 13, 2026 (Game #1698) is live with today's answer confirmed. The answer runs 10 characters, starting with U and ending with N — see the letter hints above before you peek.",
-    "2026-10-14": "Countryle Game #1699 for October 14, 2026, features a four-letter country. The solution follows a consonant-vowel-consonant-consonant pattern."
+    "2026-10-14": "Countryle Game #1699 for October 14, 2026, features a four-letter country. The solution follows a consonant-vowel-consonant-consonant pattern.",
+    "2026-10-15": "Countryle Game #1700 takes place on October 15, 2026. This specific puzzle features a ten-letter word starting with V."
   }
 }

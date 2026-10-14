@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-13T16:31:19.309Z",
+  "generatedAt": "2026-10-14T16:31:18.979Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -115,6 +115,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Starts with a silent letter and ends with a digraph."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A pointy hat for a slow learner.",
+      "clue1": "Often associated with a conical cap in old schools.",
+      "starts_with": "D",
+      "ends_with": "E",
+      "definition": "A person who is slow at learning.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word is common but not frequently used in modern conversation."
     }
   },
   "prose": {
@@ -126,6 +139,7 @@
     "2026-10-11": "Wordle #1940 for October 11, 2026 features a five-letter word with two vowels and no repeats. The letter pattern opens with an unusual starting consonant that tends to stump early guesses.",
     "2026-10-12": "Wordle puzzle #1941 for October 12, 2026 offers a five-letter word with two vowels and no repeated letters. The solution begins with a seldom-used starting letter, which may slow down early guesses.",
     "2026-10-13": "The Wordle puzzle #1942 for October 13, 2026 features a five-letter word with two vowels and no repeated letters. Its comparative ending is a familiar pattern that experienced solvers often recognize quickly.",
-    "2026-10-14": "Wordle puzzle #1943 for October 14, 2026, features a five-letter word. The pattern consists of five unique letters including a silent opening consonant."
+    "2026-10-14": "Wordle puzzle #1943 for October 14, 2026, features a five-letter word. The pattern consists of five unique letters including a silent opening consonant.",
+    "2026-10-15": "Wordle puzzle #1944 for October 15, 2026, features a five-letter word. The pattern consists of three consonants and two vowels."
   }
 }

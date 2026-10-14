@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-13T16:32:01.709Z",
+  "generatedAt": "2026-10-14T16:33:15.949Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -113,6 +113,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The first color is a specific web-color name, increasing complexity."
+    },
+    "2026-10-15": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -124,6 +136,7 @@
     "2026-10-11": "Colorfle puzzle #1630 for October 11, 2026 asks solvers to blend three cool-toned shades. The combined color names begin with W and end with E, offering a subtle pattern to work from.",
     "2026-10-12": "Colorfle puzzle #1631 for October 12, 2026 presents a three-shade palette drawn from the violet and red families. The combined color names begin with the letter P and end with the letter R, hinting at their span.",
     "2026-10-13": "The Colorfle puzzle for October 13, 2026 (#1632) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with E — see the letter hints above before you peek.",
-    "2026-10-14": "Colorfle puzzle #1633 was released on October 14, 2026. The solution consists of three distinct color names with a total of twenty-five letters."
+    "2026-10-14": "Colorfle puzzle #1633 was released on October 14, 2026. The solution consists of three distinct color names with a total of twenty-five letters.",
+    "2026-10-15": "The Colorfle puzzle for October 15, 2026 (#1634) is live with today's answer confirmed. The answer runs 14 characters, starting with G and ending with K — see the letter hints above before you peek."
   }
 }

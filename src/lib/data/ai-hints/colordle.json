@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-13T16:31:22.412Z",
+  "generatedAt": "2026-10-14T16:31:21.707Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -114,6 +114,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "It is a compound color name with common components."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A bright red bird or a high church official.",
+      "clue1": "A deep, vivid shade of red.",
+      "starts_with": "C",
+      "ends_with": "A",
+      "definition": "A vivid red color; also a type of bird or a high-ranking cleric.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common color name with a recognizable bird association."
     }
   },
   "prose": {
@@ -125,6 +138,7 @@
     "2026-10-11": "Colordle puzzle #1661 for October 11, 2026 features a two-word answer spanning eleven letters. One letter repeats three times across this soft, pale entry in the game.",
     "2026-10-12": "Colordle puzzle #1662 for October 12, 2026 features a ten-letter word with a vivid pinkish-red hue. The pattern begins with W and ends with N, and one letter shows up twice.",
     "2026-10-13": "The Colordle puzzle for October 13, 2026 (#1663) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with E — see the letter hints above before you peek.",
-    "2026-10-14": "Colordle puzzle #1664 for October 14, 2026, features an eleven-letter color name. The solution follows a pattern of two repeated consonants and two repeated vowels."
+    "2026-10-14": "Colordle puzzle #1664 for October 14, 2026, features an eleven-letter color name. The solution follows a pattern of two repeated consonants and two repeated vowels.",
+    "2026-10-15": "Colordle puzzle #1665 for October 15, 2026, features an eight-letter word. The pattern includes one repeated consonant."
   }
 }

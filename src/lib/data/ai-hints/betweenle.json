@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-13T16:31:41.638Z",
+  "generatedAt": "2026-10-14T16:32:22.030Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -114,6 +114,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common five-letter word with a straightforward meaning."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A heavy feeling after a very long day.",
+      "clue1": "Similar to feeling exhausted or drained.",
+      "starts_with": "W",
+      "ends_with": "Y",
+      "definition": "Feeling or showing tiredness, especially as a result of excessive exertion.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common adjective with a straightforward synonym and simple structure."
     }
   },
   "prose": {
@@ -125,6 +138,7 @@
     "2026-10-11": "Betweenle puzzle #1305 arrives on October 11, 2026, offering a five-letter challenge. This answer begins with R and ends with T, holding two vowels and no repeats.",
     "2026-10-12": "Betweenle puzzle #1306 for October 12, 2026 features a five-letter word with two vowels and no repeated letters. This entry starts with P and ends with L, bracketing a middle that solvers must deduce.",
     "2026-10-13": "The Betweenle puzzle for October 13, 2026 (#1307) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek.",
-    "2026-10-14": "Betweenle puzzle #1308 is scheduled for October 14, 2026. This specific entry features a five-letter word with a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-14": "Betweenle puzzle #1308 is scheduled for October 14, 2026. This specific entry features a five-letter word with a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-15": "Betweenle puzzle #1309 for October 15, 2026, features a five-letter word. The pattern begins with a consonant and ends with a semi-vowel."
   }
 }

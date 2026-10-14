@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-13T16:31:28.969Z",
+  "generatedAt": "2026-10-14T16:32:13.320Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -114,6 +114,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-15": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -125,6 +137,7 @@
     "2026-10-11": "Semantle puzzle #1716 for October 11, 2026 features a seven-letter word with two pairs of repeated letters. This entry begins with S and ends with D, framing a familiar concept of achievement.",
     "2026-10-12": "Today's Semantle puzzle #1717 for October 12, 2026 features an eight-letter word that begins with P and ends with N. The pattern includes four vowels, with two separate letters each surfacing twice.",
     "2026-10-13": "Semantle puzzle #1718 for October 13, 2026 hides a compact four-letter word. It opens with S and closes with T, carrying two vowels and no repeated letters.",
-    "2026-10-14": "The Semantle puzzle for October 14, 2026 (#1719) is live with today's answer confirmed. The answer runs 7 characters, starting with H and ending with D — see the letter hints above before you peek."
+    "2026-10-14": "The Semantle puzzle for October 14, 2026 (#1719) is live with today's answer confirmed. The answer runs 7 characters, starting with H and ending with D — see the letter hints above before you peek.",
+    "2026-10-15": "The Semantle puzzle for October 15, 2026 (#1720) is live with today's answer confirmed. The answer runs 11 characters, starting with E and ending with T — see the letter hints above before you peek."
   }
 }

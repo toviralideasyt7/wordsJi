@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-13T16:31:55.888Z",
+  "generatedAt": "2026-10-14T16:33:27.481Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -114,6 +114,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a well-known island nation with a short, distinct name."
+    },
+    "2026-10-15": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -125,6 +137,7 @@
     "2026-10-11": "Worldle puzzle #1725 for October 11, 2026 points to a far-flung tropical dependency. The target begins with B, ends with Y, and spans three words totaling many repeated letters.",
     "2026-10-12": "Worldle puzzle #1726 for October 12, 2026 points to a location whose name has zero repeated letters. The three-word answer begins with I and ends with N, forming a familiar outline for sharp-eyed geographers.",
     "2026-10-13": "The Worldle puzzle for October 13, 2026 (#1727) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with N — see the letter hints above before you peek.",
-    "2026-10-14": "Worldle puzzle #1728 for October 14, 2026, features a four-letter country. The name follows a consonant-vowel-consonant-vowel pattern."
+    "2026-10-14": "Worldle puzzle #1728 for October 14, 2026, features a four-letter country. The name follows a consonant-vowel-consonant-vowel pattern.",
+    "2026-10-15": "The Worldle puzzle for October 15, 2026 (#1729) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek."
   }
 }
