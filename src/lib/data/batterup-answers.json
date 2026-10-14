@@ -279,5 +279,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/21/17f1222b-b2672d89-4ee1af0c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-12",
     "fetchedAt": "2026-10-12T01:05:44.878Z"
+  },
+  "2026-10-14": {
+    "date": "2026-10-14",
+    "gameNumber": 969,
+    "player": {
+      "player_name": "Carson Benge",
+      "player_id": "4925604",
+      "team_name": "Mets",
+      "born": "USA",
+      "birth_date": "2003-01-20",
+      "position": [
+        "RF"
+      ],
+      "debut": 2026,
+      "jersey_number": 3
+    },
+    "videoDescription": "[08/15/26 : WSH 4 - 5 NYM] Carson Benge hammers a solo home run to right field to make it 4-3 in the bottom of the 6th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/15/24f161f4-c73e9cdc-3b4a7957-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-14",
+    "fetchedAt": "2026-10-14T01:05:26.183Z"
   }
 }
