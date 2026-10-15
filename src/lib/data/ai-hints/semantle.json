@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-14T16:32:13.320Z",
+  "generatedAt": "2026-10-15T16:31:51.143Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -126,6 +126,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A place of desks and chalk, where students listen and talk.",
+      "clue1": "A setting for formal instruction.",
+      "starts_with": "C",
+      "ends_with": "M",
+      "definition": "A room in which a class of students is taught.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The concept is common and strongly associated with specific academic synonyms."
     }
   },
   "prose": {
@@ -138,6 +151,7 @@
     "2026-10-12": "Today's Semantle puzzle #1717 for October 12, 2026 features an eight-letter word that begins with P and ends with N. The pattern includes four vowels, with two separate letters each surfacing twice.",
     "2026-10-13": "Semantle puzzle #1718 for October 13, 2026 hides a compact four-letter word. It opens with S and closes with T, carrying two vowels and no repeated letters.",
     "2026-10-14": "The Semantle puzzle for October 14, 2026 (#1719) is live with today's answer confirmed. The answer runs 7 characters, starting with H and ending with D — see the letter hints above before you peek.",
-    "2026-10-15": "The Semantle puzzle for October 15, 2026 (#1720) is live with today's answer confirmed. The answer runs 11 characters, starting with E and ending with T — see the letter hints above before you peek."
+    "2026-10-15": "The Semantle puzzle for October 15, 2026 (#1720) is live with today's answer confirmed. The answer runs 11 characters, starting with E and ending with T — see the letter hints above before you peek.",
+    "2026-10-16": "Semantle puzzle #1721 for October 16, 2026, features a ten-letter word. The target word follows a consonant-vowel pattern throughout."
   }
 }

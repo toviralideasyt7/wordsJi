@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-14T16:33:20.514Z",
+  "generatedAt": "2026-10-15T16:33:09.515Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -125,6 +125,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "A bird's restriction paired with a common probability.",
+      "clue1": "Two common idioms combined into one sequence.",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "A combination of phrases meaning to restrict freedom and almost always.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The combination of two distinct idioms increases the complexity of the search."
     }
   },
   "prose": {
@@ -137,6 +150,7 @@
     "2026-10-12": "The Phrazle puzzle for October 12, 2026 pairs two familiar idioms across its grid. Solvers of 2026-10-12 should note the phrase begins and ends with the same letter and holds ten vowels.",
     "2026-10-13": "The Phrazle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 30 characters, starting with P and ending with K — see the letter hints above before you peek.",
     "2026-10-14": "The Phrazle puzzle for October 14, 2026 (2026-10-14) is live with today's answer confirmed. The answer runs 24 characters, starting with M and ending with L — see the letter hints above before you peek.",
-    "2026-10-15": "The Phrazle puzzle for October 15, 2026 (2026-10-15) is live with today's answer confirmed. The answer runs 29 characters, starting with W and ending with D — see the letter hints above before you peek."
+    "2026-10-15": "The Phrazle puzzle for October 15, 2026 (2026-10-15) is live with today's answer confirmed. The answer runs 29 characters, starting with W and ending with D — see the letter hints above before you peek.",
+    "2026-10-16": "The Phrazle puzzle for October 16, 2026, features a long character string. Puzzle 2026-10-16 contains several repeating consonants and vowels."
   }
 }

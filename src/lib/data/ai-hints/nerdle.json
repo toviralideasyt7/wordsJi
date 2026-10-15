@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-14T16:31:54.573Z",
+  "generatedAt": "2026-10-15T16:31:57.329Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -153,6 +153,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple operations and a short length make this a straightforward solve."
+    },
+    "2026-10-16": {
+      "kind": "math",
+      "operator_hint": "Uses subtraction and addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a two-digit even number.",
+      "riddle": "Take some away, add a few, find the total anew.",
+      "starts_with": "9",
+      "ends_with": "2",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple single-digit operations leading to a common small two-digit total."
     }
   },
   "prose": {
@@ -165,6 +181,7 @@
     "2026-10-12": "Nerdle puzzle #1727 for October 12, 2026 leans on repeated subtraction to reach its tidy conclusion. Solvers tackling this Nerdle challenge should watch how the operators chain together across the compact equation.",
     "2026-10-13": "Nerdle puzzle #1728 for October 13, 2026 blends multiplication and division into a compact eight-character challenge. Solvers must respect operator order to land on the modest single-digit result.",
     "2026-10-14": "Nerdle puzzle #1729 challenges players with a sequence of operations. This October 14, 2026, entry focuses on reducing a value multiple times.",
-    "2026-10-15": "Nerdle puzzle #1730 presents a clean arithmetic challenge for players. October 15, 2026, features an equation with a single-digit outcome."
+    "2026-10-15": "Nerdle puzzle #1730 presents a clean arithmetic challenge for players. October 15, 2026, features an equation with a single-digit outcome.",
+    "2026-10-16": "Nerdle puzzle #1731 presents a straightforward arithmetic challenge for players. This October 16, 2026 entry balances basic operators for a quick solve."
   }
 }

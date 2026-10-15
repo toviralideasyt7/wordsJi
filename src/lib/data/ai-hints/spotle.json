@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-14T16:31:58.226Z",
+  "generatedAt": "2026-10-15T16:32:15.084Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -126,6 +126,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a distinct starting letter."
+    },
+    "2026-10-16": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -138,6 +150,7 @@
     "2026-10-12": "Today's Spotle for October 12, 2026, Day 1669, hides an eleven-letter name split across two words. This puzzle begins with A and ends with R, offering steady footing for careful guessers.",
     "2026-10-13": "The Spotle puzzle for October 13, 2026 (Day 1670) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek.",
     "2026-10-14": "The Spotle puzzle for October 14, 2026 (Day 1671) is live with today's answer confirmed. The answer runs 14 characters, starting with C and ending with N — see the letter hints above before you peek.",
-    "2026-10-15": "Spotle puzzle Day 1672 takes place on October 15, 2026. This specific entry follows a seven-letter pattern."
+    "2026-10-15": "Spotle puzzle Day 1672 takes place on October 15, 2026. This specific entry follows a seven-letter pattern.",
+    "2026-10-16": "The Spotle puzzle for October 16, 2026 (Day 1673) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }

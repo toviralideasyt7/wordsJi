@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-14T16:33:27.481Z",
+  "generatedAt": "2026-10-15T16:32:12.523Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -126,6 +126,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A giant heart of Africa, rich in minerals and deep forests.",
+      "clue1": "It shares a name with a major river.",
+      "starts_with": "D",
+      "ends_with": "O",
+      "definition": "A large landlocked country in Central Africa known for its rainforests.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The length is significant, but the geographical location is distinctive."
     }
   },
   "prose": {
@@ -138,6 +151,7 @@
     "2026-10-12": "Worldle puzzle #1726 for October 12, 2026 points to a location whose name has zero repeated letters. The three-word answer begins with I and ends with N, forming a familiar outline for sharp-eyed geographers.",
     "2026-10-13": "The Worldle puzzle for October 13, 2026 (#1727) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-10-14": "Worldle puzzle #1728 for October 14, 2026, features a four-letter country. The name follows a consonant-vowel-consonant-vowel pattern.",
-    "2026-10-15": "The Worldle puzzle for October 15, 2026 (#1729) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek."
+    "2026-10-15": "The Worldle puzzle for October 15, 2026 (#1729) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek.",
+    "2026-10-16": "Worldle puzzle #1730 for October 16, 2026, features a very long name. The letter pattern includes several repetitions across its multiple words."
   }
 }

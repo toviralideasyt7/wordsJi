@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-14T16:31:51.274Z",
+  "generatedAt": "2026-10-15T16:31:57.566Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -125,6 +125,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common vocabulary words with distinct vowel patterns and no tricky overlaps."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "A brief value, a ceiling beam, and a sneaky retreat.",
+      "clue1": "Three of the four words share a common vowel.",
+      "starts_with": "S",
+      "ends_with": "K",
+      "definition": "A set of five-letter words including a brief length, value, beam, and stealthy movement.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Overlapping consonants like R, S, and T may cause confusion between words."
     }
   },
   "prose": {
@@ -137,6 +150,7 @@
     "2026-10-12": "The Quordle puzzle for October 12, 2026 (#1722) is live with today's answer confirmed. The answer runs 20 characters, starting with H and ending with T — see the letter hints above before you peek.",
     "2026-10-13": "The Quordle puzzle for October 13, 2026 (#1723) is live with today's answer confirmed. The answer runs 20 characters, starting with F and ending with N — see the letter hints above before you peek.",
     "2026-10-14": "Quordle puzzle #1724 for October 14, 2026, features four distinct five-letter words. The set contains a mix of repeated consonants and varied vowel positions.",
-    "2026-10-15": "Quordle puzzle #1725 for October 15, 2026, features four five-letter words. The solution set includes a variety of common consonants and several vowels."
+    "2026-10-15": "Quordle puzzle #1725 for October 15, 2026, features four five-letter words. The solution set includes a variety of common consonants and several vowels.",
+    "2026-10-16": "Quordle puzzle #1726 for October 16, 2026, features four distinct five-letter words. The set contains several recurring consonants that challenge the player's placement logic."
   }
 }

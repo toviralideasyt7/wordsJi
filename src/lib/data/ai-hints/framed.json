@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-14T16:32:39.123Z",
+  "generatedAt": "2026-10-15T16:32:50.497Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -102,6 +102,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "A well-known cult film, but the title is a specific seasonal event."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A foggy town where nightmares walk and sirens wail.",
+      "clue1": "A psychological horror setting shrouded in mist.",
+      "starts_with": "S",
+      "ends_with": "L",
+      "definition": "A fictional town and psychological horror video game series.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known pop culture reference but requires specific knowledge of the franchise."
     }
   },
   "prose": {
@@ -112,6 +125,7 @@
     "2026-10-10": "Framed's puzzle #1675 for October 10, 2026 presents a three-word title spanning fifteen letters. The letter pattern features one letter appearing three times and two others appearing twice, with multiple repeated consonants adding texture.",
     "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters.",
     "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement.",
-    "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern."
+    "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern.",
+    "2026-10-16": "Framed puzzle #1681 is featured on October 16, 2026. The target phrase consists of two words and eleven letters."
   }
 }

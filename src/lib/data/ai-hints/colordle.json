@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-14T16:31:21.707Z",
+  "generatedAt": "2026-10-15T16:31:38.287Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -127,6 +127,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common color name with a recognizable bird association."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A deep pink fishy hue, found in a fancy dish for you.",
+      "clue1": "A moody shade of a pinkish-orange fish.",
+      "starts_with": "D",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Combines a common adjective with a specific fish-named color."
     }
   },
   "prose": {
@@ -139,6 +152,7 @@
     "2026-10-12": "Colordle puzzle #1662 for October 12, 2026 features a ten-letter word with a vivid pinkish-red hue. The pattern begins with W and ends with N, and one letter shows up twice.",
     "2026-10-13": "The Colordle puzzle for October 13, 2026 (#1663) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with E — see the letter hints above before you peek.",
     "2026-10-14": "Colordle puzzle #1664 for October 14, 2026, features an eleven-letter color name. The solution follows a pattern of two repeated consonants and two repeated vowels.",
-    "2026-10-15": "Colordle puzzle #1665 for October 15, 2026, features an eight-letter word. The pattern includes one repeated consonant."
+    "2026-10-15": "Colordle puzzle #1665 for October 15, 2026, features an eight-letter word. The pattern includes one repeated consonant.",
+    "2026-10-16": "Colordle puzzle #1666 for October 16, 2026, features a ten-letter phrase. The solution follows a pattern of four letters followed by six letters."
   }
 }

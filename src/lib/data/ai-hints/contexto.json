@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-14T16:32:52.807Z",
+  "generatedAt": "2026-10-15T16:32:34.500Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -126,6 +126,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Commonly used word with strong semantic associations for Contexto's algorithm."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I hold your coats and secrets behind a swinging door.",
+      "clue1": "A small room or cupboard for storage.",
+      "starts_with": "C",
+      "ends_with": "T",
+      "definition": "A small room or large cupboard used for storing clothes.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common household object with a straightforward semantic context."
     }
   },
   "prose": {
@@ -138,6 +151,7 @@
     "2026-10-12": "Today's Contexto puzzle for October 12, 2026, puzzle #1485, hides a five-letter word with no repeated letters. The answer begins with G and ends with E, offering solvers a tidy pattern to narrow their guesses.",
     "2026-10-13": "The Contexto puzzle for October 13, 2026 (#1486) is live with today's answer confirmed. The answer runs 4 characters, starting with A and ending with A — see the letter hints above before you peek.",
     "2026-10-14": "Contexto puzzle #1487 was released on October 14, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant-consonant pattern.",
-    "2026-10-15": "Contexto puzzle #1488 was released on October 15, 2026. The target word follows a consonant-vowel pattern ending in E."
+    "2026-10-15": "Contexto puzzle #1488 was released on October 15, 2026. The target word follows a consonant-vowel pattern ending in E.",
+    "2026-10-16": "Contexto puzzle #1489 for October 16, 2026, features a six-letter word. The target word follows a consonant-vowel-consonant pattern at the start."
   }
 }

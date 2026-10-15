@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-14T16:31:18.979Z",
+  "generatedAt": "2026-10-15T16:32:04.157Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -128,6 +128,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word is common but not frequently used in modern conversation."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I hide from the sun, or I might be quite suspicious.",
+      "clue1": "A cool spot under a tree.",
+      "starts_with": "S",
+      "ends_with": "Y",
+      "definition": "Situated in or providing shade; or appearing suspicious and dishonest.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common adjective with a straightforward consonant-vowel pattern."
     }
   },
   "prose": {
@@ -140,6 +153,7 @@
     "2026-10-12": "Wordle puzzle #1941 for October 12, 2026 offers a five-letter word with two vowels and no repeated letters. The solution begins with a seldom-used starting letter, which may slow down early guesses.",
     "2026-10-13": "The Wordle puzzle #1942 for October 13, 2026 features a five-letter word with two vowels and no repeated letters. Its comparative ending is a familiar pattern that experienced solvers often recognize quickly.",
     "2026-10-14": "Wordle puzzle #1943 for October 14, 2026, features a five-letter word. The pattern consists of five unique letters including a silent opening consonant.",
-    "2026-10-15": "Wordle puzzle #1944 for October 15, 2026, features a five-letter word. The pattern consists of three consonants and two vowels."
+    "2026-10-15": "Wordle puzzle #1944 for October 15, 2026, features a five-letter word. The pattern consists of three consonants and two vowels.",
+    "2026-10-16": "Wordle puzzle #1945 is scheduled for October 16, 2026. This specific entry follows a consonant-heavy structure with two vowels."
   }
 }
