@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-14T06:03:31.623Z",
+  "generatedAt": "2026-10-15T06:03:19.472Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -115,6 +115,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common vocabulary word with a distinct ending consonant."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I trade the world's wealth in a digital dance of currencies.",
+      "clue1": "A global marketplace for buying and selling money.",
+      "starts_with": "F",
+      "ends_with": "X",
+      "definition": "The global decentralized market for the trading of currencies.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The ending letter is uncommon, but the financial term is widely known."
     }
   },
   "prose": {
@@ -126,6 +139,7 @@
     "2026-10-11": "Canuckle puzzle #1611 for October 11, 2026 features a five-letter word with two vowels and no repeated letters. This entry begins with an uncommon opening letter and closes on a hard consonant.",
     "2026-10-12": "Canuckle puzzle #1612 for October 12, 2026 features a five-letter word with a single vowel and one doubled consonant. Solvers of this Canuckle entry should note the word begins with W and ends with S.",
     "2026-10-13": "Canuckle puzzle #1613 for October 13, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
-    "2026-10-14": "Canuckle puzzle #1614 for October 14, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure."
+    "2026-10-14": "Canuckle puzzle #1614 for October 14, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
+    "2026-10-15": "Canuckle puzzle #1615 is scheduled for October 15, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }

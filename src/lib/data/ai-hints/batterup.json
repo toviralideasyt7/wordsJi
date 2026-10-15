@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-14T06:03:33.235Z",
+  "generatedAt": "2026-10-15T06:03:19.403Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -90,6 +90,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The name is not widely recognized globally compared to superstar athletes."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A Dominican star who anchors the hot corner in San Diego.",
+      "clue1": "A Gold Glove third baseman for the Padres.",
+      "starts_with": "M",
+      "ends_with": "O",
+      "definition": "Dominican professional baseball player and All-Star third baseman.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "He is a high-profile current star in a major market."
     }
   },
   "prose": {
@@ -99,6 +112,7 @@
     "2026-10-09": "Game #964 of Batter Up for October 9, 2026 features a two-word answer beginning with P and ending with T. This puzzle's name spans fifteen letters, with two separate letters each appearing twice.",
     "2026-10-10": "Today's Batter Up puzzle, Game #965 for October 10, 2026, hides a two-word answer spanning eleven letters. Solvers of this edition should note it begins with L and closes with R, with several letters making repeat appearances.",
     "2026-10-12": "Game #967 of Batter Up for October 12, 2026 challenges solvers with a lengthy two-word answer rich in repeated letters. This puzzle begins with M and closes with I, packing eight vowels across its span.",
-    "2026-10-14": "Batter Up Game #969 takes place on October 14, 2026. This puzzle features an eleven-letter name pattern."
+    "2026-10-14": "Batter Up Game #969 takes place on October 14, 2026. This puzzle features an eleven-letter name pattern.",
+    "2026-10-15": "Batter Up Game #970 arrives on October 15, 2026. This puzzle features a twelve-letter name with several repeating characters."
   }
 }

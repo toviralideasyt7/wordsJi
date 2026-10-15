@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-14T06:05:01.483Z",
+  "generatedAt": "2026-10-15T06:03:48.674Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -116,6 +116,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four separate entities rather than a single word."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "A psychic duck, a mother, a bird, and a crab.",
+      "clue1": "Four Kanto region creatures from the first generation.",
+      "starts_with": "G",
+      "ends_with": "Y",
+      "definition": "A group of four Pokémon including a duck, kangaroo, bird, and crab.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple distinct names make the combined letter count high and complex."
     }
   },
   "prose": {
@@ -127,6 +140,7 @@
     "2026-10-11": "Pokedle's puzzle for October 11, 2026, Game #1095, features a nine-letter name beginning with D and ending with E. This entry holds four vowels and no repeated letters, giving careful solvers a steady foothold.",
     "2026-10-12": "Today's Pokedle for October 12, 2026 (Game #1096) presents a quartet of Generation I Pokemon instead of a single creature. Across the four names you'll find ten vowels and a pair of doubled letters, with starting letters spanning from M through T.",
     "2026-10-13": "Pokedle Game #1097 takes place on October 13, 2026. This specific puzzle features a four-letter word ending in X.",
-    "2026-10-14": "Pokedle Game #1098 for October 14, 2026, features a multi-answer sequence. The solution follows a specific pattern of four distinct names."
+    "2026-10-14": "Pokedle Game #1098 for October 14, 2026, features a multi-answer sequence. The solution follows a specific pattern of four distinct names.",
+    "2026-10-15": "Pokedle Game #1099 takes place on October 15, 2026. This specific puzzle features a long sequence of letters ending in Y."
   }
 }

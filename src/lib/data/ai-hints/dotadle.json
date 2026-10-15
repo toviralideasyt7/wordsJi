@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-14T06:03:39.108Z",
+  "generatedAt": "2026-10-15T06:03:24.091Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -116,6 +116,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Multiple long names make the total character count high and complex."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A beast, a machine, a zombie, and a royal guard.",
+      "clue1": "Four distinct heroes from the lanes of Dota 2.",
+      "starts_with": "S",
+      "ends_with": "G",
+      "definition": "A group of four playable characters from a popular MOBA game.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires specific knowledge of a game roster and multi-word identification."
     }
   },
   "prose": {
@@ -127,6 +140,7 @@
     "2026-10-11": "Today's Dotadle on October 11, 2026 presents Game #1031 as a layered challenge. The entries in this puzzle span names beginning with S, D, S, and L, rewarding sharp pattern recognition.",
     "2026-10-12": "Today's Dotadle challenge for October 12, 2026 is puzzle Game #1032. The answer is a five-letter name that begins and ends with the same consonant.",
     "2026-10-13": "Dotadle Game #1033 takes place on October 13, 2026. This puzzle features a long sequence of letters across four names.",
-    "2026-10-14": "Dotadle Game #1034 was released on October 14, 2026. This specific puzzle features a long sequence of letters across four names."
+    "2026-10-14": "Dotadle Game #1034 was released on October 14, 2026. This specific puzzle features a long sequence of letters across four names.",
+    "2026-10-15": "Dotadle Game #1035 takes place on October 15, 2026. The solution follows a multi-word pattern consisting of four names."
   }
 }

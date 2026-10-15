@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-14T06:03:36.212Z",
+  "generatedAt": "2026-10-15T06:03:20.338Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -116,6 +116,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Distinctive starting letter and strong cultural associations make it recognizable."
+    },
+    "2026-10-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A golden field of grain beneath a deep blue sky.",
+      "clue1": "Located in Eastern Europe, bordering the Black Sea.",
+      "starts_with": "U",
+      "ends_with": "E",
+      "definition": "A large Eastern European country known for its agriculture and sunflowers.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a large, well-known country with a distinct starting letter."
     }
   },
   "prose": {
@@ -127,6 +140,7 @@
     "2026-10-11": "Today's Globle puzzle for October 11, 2026 features a short four-letter answer with two vowels and no repeated letters. The 2026-10-11 challenge points players toward a landlocked corner of Southeast Asia.",
     "2026-10-12": "Today's Globle puzzle for October 12, 2026 points to a place whose name opens and closes with the same letter. The 2026-10-12 answer has six letters, with one letter appearing twice.",
     "2026-10-13": "The Globle puzzle for October 13, 2026, features a four-letter country name. Puzzle 2026-10-13 follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-10-14": "The Globle puzzle for October 14, 2026, features a seven-letter destination. Puzzle 2026-10-14 follows a pattern where the first and last letters are identical."
+    "2026-10-14": "The Globle puzzle for October 14, 2026, features a seven-letter destination. Puzzle 2026-10-14 follows a pattern where the first and last letters are identical.",
+    "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels."
   }
 }
