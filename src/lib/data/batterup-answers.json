@@ -299,5 +299,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/15/24f161f4-c73e9cdc-3b4a7957-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-14",
     "fetchedAt": "2026-10-14T01:05:26.183Z"
+  },
+  "2026-10-15": {
+    "date": "2026-10-15",
+    "gameNumber": 970,
+    "player": {
+      "player_name": "Manny Machado",
+      "player_id": "31097",
+      "team_name": "Padres",
+      "born": "USA",
+      "birth_date": "1992-07-06",
+      "position": [
+        "3B"
+      ],
+      "debut": 2012,
+      "jersey_number": 13
+    },
+    "videoDescription": "[07/20/26 : SD 2 - 3 ATL] Manny Machado hits his 20th home run of the season to give the Padres a 1-0 lead in the top of the 4th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/20/3a986102-59d743be-b5379e55-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-15",
+    "fetchedAt": "2026-10-15T01:06:11.493Z"
   }
 }
