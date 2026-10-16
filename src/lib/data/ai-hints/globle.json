@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-15T06:03:20.338Z",
+  "generatedAt": "2026-10-16T06:12:17.722Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -129,6 +129,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a large, well-known country with a distinct starting letter."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A landlocked gem where diamonds shine and elephants roam free.",
+      "clue1": "A stable democracy located in Southern Africa.",
+      "starts_with": "B",
+      "ends_with": "A",
+      "definition": "A landlocked country in Southern Africa known for its diamond mining.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known region but less frequent in common trivia than larger neighbors."
     }
   },
   "prose": {
@@ -141,6 +154,7 @@
     "2026-10-12": "Today's Globle puzzle for October 12, 2026 points to a place whose name opens and closes with the same letter. The 2026-10-12 answer has six letters, with one letter appearing twice.",
     "2026-10-13": "The Globle puzzle for October 13, 2026, features a four-letter country name. Puzzle 2026-10-13 follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-10-14": "The Globle puzzle for October 14, 2026, features a seven-letter destination. Puzzle 2026-10-14 follows a pattern where the first and last letters are identical.",
-    "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels."
+    "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels.",
+    "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel."
   }
 }
