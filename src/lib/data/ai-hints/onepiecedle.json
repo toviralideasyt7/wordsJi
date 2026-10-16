@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-15T06:03:46.973Z",
+  "generatedAt": "2026-10-16T06:05:49.192Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -127,6 +127,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four separate characters as a single combined answer set."
+    },
+    "2026-10-16": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -139,6 +151,7 @@
     "2026-10-12": "OnePiecedle Game #925 for October 12, 2026 features a six-letter name bookended by the same letter. This OnePiecedle puzzle holds a single vowel, offering a tidy challenge for the day.",
     "2026-10-13": "The OnePiecedle puzzle for October 13, 2026 (Game #926) is live with today's answer confirmed. The answer runs 48 characters, starting with P and ending with N — see the letter hints above before you peek.",
     "2026-10-14": "OnePiecedle Game #927 for October 14, 2026, features a complex multi-character string. The solution consists of several names with a varied letter pattern.",
-    "2026-10-15": "OnePiecedle Game #928 for October 15, 2026, features a multi-character solution. The letter pattern spans four distinct names of varying lengths."
+    "2026-10-15": "OnePiecedle Game #928 for October 15, 2026, features a multi-character solution. The letter pattern spans four distinct names of varying lengths.",
+    "2026-10-16": "The OnePiecedle puzzle for October 16, 2026 (Game #929) is live with today's answer confirmed. The answer runs 29 characters, starting with K and ending with O — see the letter hints above before you peek."
   }
 }

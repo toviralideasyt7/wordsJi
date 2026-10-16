@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-15T06:03:34.044Z",
+  "generatedAt": "2026-10-16T06:05:48.477Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -129,6 +129,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four distinct champions simultaneously."
+    },
+    "2026-10-16": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -141,6 +153,7 @@
     "2026-10-12": "The LoLdle puzzle for October 12, 2026 (Game #1558) features a short, symmetric four-letter name. In this round the letter pattern repeats two characters, giving players a tidy structural hint without spoiling the solution.",
     "2026-10-13": "LoLdle Game #1559 for October 13, 2026, features a multi-character solution. The answer follows a specific sequence of four champion names.",
     "2026-10-14": "LoLdle Game #1560 for October 14, 2026, features a multi-champion answer. The solution follows a specific sequence of names starting with K and ending with D.",
-    "2026-10-15": "LoLdle Game #1561 for October 15, 2026, features a diverse set of champions. The solution follows a specific sequence of names ending in a vowel."
+    "2026-10-15": "LoLdle Game #1561 for October 15, 2026, features a diverse set of champions. The solution follows a specific sequence of names ending in a vowel.",
+    "2026-10-16": "The LoLdle puzzle for October 16, 2026 (Game #1562) is live with today's answer confirmed. The answer runs 25 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }

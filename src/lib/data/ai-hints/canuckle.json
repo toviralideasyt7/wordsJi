@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-15T06:03:19.472Z",
+  "generatedAt": "2026-10-16T06:05:45.352Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -128,6 +128,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The ending letter is uncommon, but the financial term is widely known."
+    },
+    "2026-10-16": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -140,6 +152,7 @@
     "2026-10-12": "Canuckle puzzle #1612 for October 12, 2026 features a five-letter word with a single vowel and one doubled consonant. Solvers of this Canuckle entry should note the word begins with W and ends with S.",
     "2026-10-13": "Canuckle puzzle #1613 for October 13, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
     "2026-10-14": "Canuckle puzzle #1614 for October 14, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
-    "2026-10-15": "Canuckle puzzle #1615 is scheduled for October 15, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-15": "Canuckle puzzle #1615 is scheduled for October 15, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-16": "The Canuckle puzzle for October 16, 2026 (#1616) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with H — see the letter hints above before you peek."
   }
 }

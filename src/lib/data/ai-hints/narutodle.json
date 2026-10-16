@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-15T06:04:31.804Z",
+  "generatedAt": "2026-10-16T06:04:53.157Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -128,6 +128,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four separate characters in a single solution string."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 18 vowels.",
+      "repeat_hint": "21 letters appear more than once.",
+      "riddle": "A vengeful eye, a sand shield, tools, and a guiding smoke.",
+      "clue1": "A mix of a rogue, a kage, and two mentors.",
+      "starts_with": "S",
+      "ends_with": "I",
+      "definition": "A group of four distinct shinobi from the Hidden Leaf and Sand.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four separate characters across different villages."
     }
   },
   "prose": {
@@ -140,6 +153,7 @@
     "2026-10-12": "The Narutodle puzzle for October 12, 2026 (Game #893) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with I — see the letter hints above before you peek.",
     "2026-10-13": "Narutodle Game #894 takes place on October 13, 2026. This specific puzzle features a seven-letter name ending in a vowel.",
     "2026-10-14": "Narutodle Game #895 for October 14, 2026, features a multi-character solution. The letter pattern spans several names of varying lengths.",
-    "2026-10-15": "Narutodle Game #896 for October 15, 2026, features a complex multi-character answer. The solution follows a specific sequence of four names with varying lengths."
+    "2026-10-15": "Narutodle Game #896 for October 15, 2026, features a complex multi-character answer. The solution follows a specific sequence of four names with varying lengths.",
+    "2026-10-16": "Narutodle Game #897 for October 16, 2026, features a multi-character answer. The letter pattern spans four distinct names."
   }
 }
