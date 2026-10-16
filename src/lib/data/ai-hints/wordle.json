@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-15T16:32:04.157Z",
+  "generatedAt": "2026-10-16T16:44:18.483Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -141,6 +141,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a straightforward consonant-vowel pattern."
+    },
+    "2026-10-17": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -154,6 +166,7 @@
     "2026-10-13": "The Wordle puzzle #1942 for October 13, 2026 features a five-letter word with two vowels and no repeated letters. Its comparative ending is a familiar pattern that experienced solvers often recognize quickly.",
     "2026-10-14": "Wordle puzzle #1943 for October 14, 2026, features a five-letter word. The pattern consists of five unique letters including a silent opening consonant.",
     "2026-10-15": "Wordle puzzle #1944 for October 15, 2026, features a five-letter word. The pattern consists of three consonants and two vowels.",
-    "2026-10-16": "Wordle puzzle #1945 is scheduled for October 16, 2026. This specific entry follows a consonant-heavy structure with two vowels."
+    "2026-10-16": "Wordle puzzle #1945 is scheduled for October 16, 2026. This specific entry follows a consonant-heavy structure with two vowels.",
+    "2026-10-17": "The Wordle puzzle for October 17, 2026 (#1946) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with E — see the letter hints above before you peek."
   }
 }

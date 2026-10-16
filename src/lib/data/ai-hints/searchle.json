@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-15T16:31:37.894Z",
+  "generatedAt": "2026-10-16T16:44:11.407Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -139,6 +139,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a very distinct opposite."
+    },
+    "2026-10-17": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I take you far away, but I am not a car.",
+      "clue1": "Something people often do during their summer break.",
+      "starts_with": "T",
+      "ends_with": "L",
+      "definition": "The act of making a journey from one place to another.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common everyday word with a simple structure."
     }
   },
   "prose": {
@@ -152,6 +165,7 @@
     "2026-10-13": "Searchle puzzle #80 for October 13, 2026 features a five-letter word with no repeated letters. The pattern runs from E to T, challenging players to track two vowels among the spread.",
     "2026-10-14": "The Searchle puzzle for October 14, 2026 (#81) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with S — see the letter hints above before you peek.",
     "2026-10-15": "The Searchle puzzle for October 15, 2026 (#82) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with G — see the letter hints above before you peek.",
-    "2026-10-16": "Searchle puzzle #83 arrives on October 16, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-16": "Searchle puzzle #83 arrives on October 16, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-17": "Searchle puzzle #84 for October 17, 2026, features a six-letter word. The pattern consists of four consonants and two vowels."
   }
 }

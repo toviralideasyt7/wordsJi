@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-15T16:31:38.287Z",
+  "generatedAt": "2026-10-16T16:44:11.239Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -140,6 +140,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Combines a common adjective with a specific fish-named color."
+    },
+    "2026-10-17": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "C",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -153,6 +165,7 @@
     "2026-10-13": "The Colordle puzzle for October 13, 2026 (#1663) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with E — see the letter hints above before you peek.",
     "2026-10-14": "Colordle puzzle #1664 for October 14, 2026, features an eleven-letter color name. The solution follows a pattern of two repeated consonants and two repeated vowels.",
     "2026-10-15": "Colordle puzzle #1665 for October 15, 2026, features an eight-letter word. The pattern includes one repeated consonant.",
-    "2026-10-16": "Colordle puzzle #1666 for October 16, 2026, features a ten-letter phrase. The solution follows a pattern of four letters followed by six letters."
+    "2026-10-16": "Colordle puzzle #1666 for October 16, 2026, features a ten-letter phrase. The solution follows a pattern of four letters followed by six letters.",
+    "2026-10-17": "The Colordle puzzle for October 17, 2026 (#1667) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with C — see the letter hints above before you peek."
   }
 }

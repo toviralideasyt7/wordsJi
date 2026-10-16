@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-15T16:32:08.498Z",
+  "generatedAt": "2026-10-16T16:46:30.195Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -140,6 +140,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a distinct starting and ending letter."
+    },
+    "2026-10-17": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -153,6 +165,7 @@
     "2026-10-13": "The Phoodle puzzle for October 13, 2026 (2026-10-13) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with C — see the letter hints above before you peek.",
     "2026-10-14": "The Phoodle puzzle for October 14, 2026, features a five-letter word. Puzzle 2026-10-14 follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-10-15": "The Phoodle puzzle for October 15, 2026, features a five-letter word. Puzzle 2026-10-15 contains a double consonant near the end.",
-    "2026-10-16": "The Phoodle puzzle for October 16, 2026, features a five-letter word. Puzzle 2026-10-16 follows a consonant-vowel-consonant-consonant-consonant pattern."
+    "2026-10-16": "The Phoodle puzzle for October 16, 2026, features a five-letter word. Puzzle 2026-10-16 follows a consonant-vowel-consonant-consonant-consonant pattern.",
+    "2026-10-17": "The Phoodle puzzle for October 17, 2026 (2026-10-17) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with K — see the letter hints above before you peek."
   }
 }

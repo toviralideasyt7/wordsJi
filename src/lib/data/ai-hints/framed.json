@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-15T16:32:50.497Z",
+  "generatedAt": "2026-10-16T16:46:34.876Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -115,6 +115,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known pop culture reference but requires specific knowledge of the franchise."
+    },
+    "2026-10-17": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -126,6 +138,7 @@
     "2026-10-11": "Framed's puzzle #1676 for October 11, 2026 features a two-word title running from P to Y. The letter pattern packs seven vowels and several repeated consonants across its nineteen letters.",
     "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement.",
     "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern.",
-    "2026-10-16": "Framed puzzle #1681 is featured on October 16, 2026. The target phrase consists of two words and eleven letters."
+    "2026-10-16": "Framed puzzle #1681 is featured on October 16, 2026. The target phrase consists of two words and eleven letters.",
+    "2026-10-17": "The Framed puzzle for October 17, 2026 (#1682) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with S — see the letter hints above before you peek."
   }
 }

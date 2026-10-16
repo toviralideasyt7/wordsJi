@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-15T16:31:57.566Z",
+  "generatedAt": "2026-10-16T16:44:18.597Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -138,6 +138,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Overlapping consonants like R, S, and T may cause confusion between words."
+    },
+    "2026-10-17": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Q",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -151,6 +163,7 @@
     "2026-10-13": "The Quordle puzzle for October 13, 2026 (#1723) is live with today's answer confirmed. The answer runs 20 characters, starting with F and ending with N — see the letter hints above before you peek.",
     "2026-10-14": "Quordle puzzle #1724 for October 14, 2026, features four distinct five-letter words. The set contains a mix of repeated consonants and varied vowel positions.",
     "2026-10-15": "Quordle puzzle #1725 for October 15, 2026, features four five-letter words. The solution set includes a variety of common consonants and several vowels.",
-    "2026-10-16": "Quordle puzzle #1726 for October 16, 2026, features four distinct five-letter words. The set contains several recurring consonants that challenge the player's placement logic."
+    "2026-10-16": "Quordle puzzle #1726 for October 16, 2026, features four distinct five-letter words. The set contains several recurring consonants that challenge the player's placement logic.",
+    "2026-10-17": "The Quordle puzzle for October 17, 2026 (#1727) is live with today's answer confirmed. The answer runs 20 characters, starting with Q and ending with K — see the letter hints above before you peek."
   }
 }
