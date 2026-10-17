@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-15T06:21:23.823Z",
+  "generatedAt": "2026-10-17T06:21:39.827Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -116,6 +116,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "A very well-known character with a descriptive name."
+    },
+    "2026-10-17": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "A sinister witch who weaves webs of deception and dark magic.",
+      "clue1": "A master of manipulation and the Darkhold.",
+      "starts_with": "A",
+      "ends_with": "S",
+      "definition": "A powerful sorceress and antagonist known for her deceptive nature.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The character is well-known in MCU but less so in core comics."
     }
   },
   "prose": {
@@ -127,6 +140,7 @@
     "2026-10-12": "Marveldle's puzzle for October 12, 2026 features a five-letter answer with no repeated letters. The 10/12/2026 12:00:00 AM challenge opens and closes on consonants, framing a single hidden vowel.",
     "2026-10-13": "The Marveldle puzzle for October 13, 2026, features a dual-character answer. This 10/13/2026 12:00:00 AM challenge utilizes a complex letter pattern across two names.",
     "2026-10-14": "The Marveldle puzzle for October 14, 2026, features a name ending in the letter R. This 10/14/2026 12:00:00 AM challenge requires identifying a specific mastermind.",
-    "2026-10-15": "The Marveldle puzzle for October 15, 2026, features a six-letter name. This 10/15/2026 12:00:00 AM challenge follows a consonant-vowel pattern."
+    "2026-10-15": "The Marveldle puzzle for October 15, 2026, features a six-letter name. This 10/15/2026 12:00:00 AM challenge follows a consonant-vowel pattern.",
+    "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure."
   }
 }
