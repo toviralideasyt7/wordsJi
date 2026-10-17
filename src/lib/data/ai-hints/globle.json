@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-16T06:12:17.722Z",
+  "generatedAt": "2026-10-17T06:03:34.662Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -142,6 +142,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known region but less frequent in common trivia than larger neighbors."
+    },
+    "2026-10-17": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A golden coast where cocoa grows and history flows.",
+      "clue1": "A West African nation known for its cocoa exports.",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "A republic in West Africa bordering the Gulf of Guinea.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Well-known country with a distinct geographic location and common exports."
     }
   },
   "prose": {
@@ -155,6 +168,7 @@
     "2026-10-13": "The Globle puzzle for October 13, 2026, features a four-letter country name. Puzzle 2026-10-13 follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-10-14": "The Globle puzzle for October 14, 2026, features a seven-letter destination. Puzzle 2026-10-14 follows a pattern where the first and last letters are identical.",
     "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels.",
-    "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel."
+    "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel.",
+    "2026-10-17": "The Globle puzzle for October 17, 2026, features a five-letter country name. Puzzle 2026-10-17 follows a pattern where the first and last letters are vowels."
   }
 }

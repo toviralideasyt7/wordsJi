@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-16T06:05:47.810Z",
+  "generatedAt": "2026-10-17T06:04:14.736Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -141,6 +141,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-17": {
+      "kind": "word",
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "29 letters appear more than once.",
+      "riddle": "Four nocturnal or wild spirits bound by a single theme.",
+      "clue1": "A gathering of strength and shadows from the forest.",
+      "starts_with": "D",
+      "ends_with": "D",
+      "definition": "A group of four strength and intelligence based fantasy heroes.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple multi-word names make the letter count and pattern complex."
     }
   },
   "prose": {
@@ -154,6 +167,7 @@
     "2026-10-13": "Dotadle Game #1033 takes place on October 13, 2026. This puzzle features a long sequence of letters across four names.",
     "2026-10-14": "Dotadle Game #1034 was released on October 14, 2026. This specific puzzle features a long sequence of letters across four names.",
     "2026-10-15": "Dotadle Game #1035 takes place on October 15, 2026. The solution follows a multi-word pattern consisting of four names.",
-    "2026-10-16": "The Dotadle puzzle for October 16, 2026 (Game #1036) is live with today's answer confirmed. The answer runs 36 characters, starting with K and ending with K — see the letter hints above before you peek."
+    "2026-10-16": "The Dotadle puzzle for October 16, 2026 (Game #1036) is live with today's answer confirmed. The answer runs 36 characters, starting with K and ending with K — see the letter hints above before you peek.",
+    "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant."
   }
 }

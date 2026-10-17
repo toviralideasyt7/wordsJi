@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-15T06:03:19.403Z",
+  "generatedAt": "2026-10-17T06:03:34.193Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -103,6 +103,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "He is a high-profile current star in a major market."
+    },
+    "2026-10-16": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A Cuban bat who swings for the fences in the big leagues.",
+      "clue1": "A powerful outfielder from the island of Cuba.",
+      "starts_with": "W",
+      "ends_with": "U",
+      "definition": "Professional baseball player known for his power hitting.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The name contains an uncommon starting letter and a rare ending vowel."
     }
   },
   "prose": {
@@ -113,6 +126,7 @@
     "2026-10-10": "Today's Batter Up puzzle, Game #965 for October 10, 2026, hides a two-word answer spanning eleven letters. Solvers of this edition should note it begins with L and closes with R, with several letters making repeat appearances.",
     "2026-10-12": "Game #967 of Batter Up for October 12, 2026 challenges solvers with a lengthy two-word answer rich in repeated letters. This puzzle begins with M and closes with I, packing eight vowels across its span.",
     "2026-10-14": "Batter Up Game #969 takes place on October 14, 2026. This puzzle features an eleven-letter name pattern.",
-    "2026-10-15": "Batter Up Game #970 arrives on October 15, 2026. This puzzle features a twelve-letter name with several repeating characters."
+    "2026-10-15": "Batter Up Game #970 arrives on October 15, 2026. This puzzle features a twelve-letter name with several repeating characters.",
+    "2026-10-16": "Batter Up Game #971 for October 16, 2026, features an eleven-letter name. The letter pattern includes a unique combination of consonants and vowels."
   }
 }
