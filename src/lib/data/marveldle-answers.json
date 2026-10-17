@@ -1197,6 +1197,56 @@
     },
     "solvedAt": "2026-10-16T06:36:11.058Z"
   },
+  "2026-10-16": {
+    "date": "2026-10-16",
+    "dateId": "yesterday-of:10/17/2026 12:00:00 AM",
+    "comics": {
+      "id": "howardtheduck",
+      "name": "Howard the Duck",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Duckworldian"
+      ],
+      "powerTypes": [
+        "Magic",
+        "Perception",
+        "Speed"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1973,
+      "firstApparitionComicTitle": "Fear #19",
+      "keywords": [
+        "duck",
+        "howard duckson",
+        "duckson"
+      ]
+    },
+    "mcu": {
+      "id": "vonkovak",
+      "name": "Von Kovak",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Zlatko Burić",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "kovak"
+      ]
+    },
+    "solvedAt": "2026-10-17T06:35:20.626Z"
+  },
   "2026-10-17": {
     "date": "2026-10-17",
     "dateId": "10/17/2026 12:00:00 AM",
