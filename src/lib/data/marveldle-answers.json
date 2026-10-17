@@ -1196,5 +1196,63 @@
       ]
     },
     "solvedAt": "2026-10-16T06:36:11.058Z"
+  },
+  "2026-10-17": {
+    "date": "2026-10-17",
+    "dateId": "10/17/2026 12:00:00 AM",
+    "comics": {
+      "id": "arcade",
+      "name": "Arcade",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Perception",
+        "RealityManipulation"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1977,
+      "firstApparitionComicTitle": "Marvel Team-Up #65",
+      "keywords": [
+        "arcade"
+      ]
+    },
+    "mcu": {
+      "id": "agathaharkness",
+      "name": "Agatha Harkness",
+      "gender": "Female",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Regeneration",
+        "Magic",
+        "Flight",
+        "Shapeshifting",
+        "Psychic",
+        "Kinesis",
+        "ForceFields",
+        "Teleportation",
+        "Summoning"
+      ],
+      "origin": "Earth",
+      "actorName": "Kathryn Hahn",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "AgathasCoven"
+      ],
+      "keywords": [
+        "harkness"
+      ]
+    },
+    "solvedAt": "2026-10-17T06:05:27.563Z"
   }
 }
