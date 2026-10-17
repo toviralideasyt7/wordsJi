@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-16T16:46:38.253Z",
+  "generatedAt": "2026-10-17T16:45:53.640Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -152,6 +152,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -166,6 +178,7 @@
     "2026-10-14": "Countryle Game #1699 for October 14, 2026, features a four-letter country. The solution follows a consonant-vowel-consonant-consonant pattern.",
     "2026-10-15": "Countryle Game #1700 takes place on October 15, 2026. This specific puzzle features a ten-letter word starting with V.",
     "2026-10-16": "Countryle Game #1701 for October 16, 2026, features a multi-word answer. The letter pattern consists of sixteen characters including spaces.",
-    "2026-10-17": "The Countryle puzzle for October 17, 2026 (Game #1702) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with E — see the letter hints above before you peek."
+    "2026-10-17": "The Countryle puzzle for October 17, 2026 (Game #1702) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with E — see the letter hints above before you peek.",
+    "2026-10-18": "The Countryle puzzle for October 18, 2026 (Game #1703) is live with today's answer confirmed. The answer runs 8 characters, starting with B and ending with A — see the letter hints above before you peek."
   }
 }

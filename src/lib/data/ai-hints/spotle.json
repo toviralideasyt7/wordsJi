@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-16T16:44:18.741Z",
+  "generatedAt": "2026-10-17T16:43:30.980Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -150,6 +150,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A multi-instrumentalist who brings the funk and a soulful beat.",
+      "clue1": "He collaborated with Silk Sonic.",
+      "starts_with": "A",
+      "ends_with": "K",
+      "definition": "American singer, drummer, and producer known for blending R&B and hip hop.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known artist but the spelling of the surname can be tricky."
     }
   },
   "prose": {
@@ -164,6 +177,7 @@
     "2026-10-14": "The Spotle puzzle for October 14, 2026 (Day 1671) is live with today's answer confirmed. The answer runs 14 characters, starting with C and ending with N — see the letter hints above before you peek.",
     "2026-10-15": "Spotle puzzle Day 1672 takes place on October 15, 2026. This specific entry follows a seven-letter pattern.",
     "2026-10-16": "The Spotle puzzle for October 16, 2026 (Day 1673) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
-    "2026-10-17": "The Spotle puzzle for October 17, 2026 (Day 1674) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with A — see the letter hints above before you peek."
+    "2026-10-17": "The Spotle puzzle for October 17, 2026 (Day 1674) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with A — see the letter hints above before you peek.",
+    "2026-10-18": "Spotle puzzle Day 1675 arrives on October 18, 2026. This specific entry features a twelve-letter pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-16T16:45:40.977Z",
+  "generatedAt": "2026-10-17T16:44:28.534Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -152,6 +152,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common animal name with a straightforward five-letter structure."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -166,6 +178,7 @@
     "2026-10-14": "Betweenle puzzle #1308 is scheduled for October 14, 2026. This specific entry features a five-letter word with a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-10-15": "Betweenle puzzle #1309 for October 15, 2026, features a five-letter word. The pattern begins with a consonant and ends with a semi-vowel.",
     "2026-10-16": "The Betweenle puzzle for October 16, 2026 (#1310) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with R — see the letter hints above before you peek.",
-    "2026-10-17": "Betweenle puzzle #1311 arrives on October 17, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-17": "Betweenle puzzle #1311 arrives on October 17, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-18": "The Betweenle puzzle for October 18, 2026 (#1312) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with R — see the letter hints above before you peek."
   }
 }

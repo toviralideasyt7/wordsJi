@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-16T16:45:04.107Z",
+  "generatedAt": "2026-10-17T16:45:18.376Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -152,6 +152,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The name contains special characters and a specific French spelling."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "I",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -166,6 +178,7 @@
     "2026-10-14": "Worldle puzzle #1728 for October 14, 2026, features a four-letter country. The name follows a consonant-vowel-consonant-vowel pattern.",
     "2026-10-15": "The Worldle puzzle for October 15, 2026 (#1729) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek.",
     "2026-10-16": "Worldle puzzle #1730 for October 16, 2026, features a very long name. The letter pattern includes several repetitions across its multiple words.",
-    "2026-10-17": "Worldle puzzle #1731 for October 17, 2026, features a multi-word name. The target word follows a complex pattern with several repeating letters."
+    "2026-10-17": "Worldle puzzle #1731 for October 17, 2026, features a multi-word name. The target word follows a complex pattern with several repeating letters.",
+    "2026-10-18": "The Worldle puzzle for October 18, 2026 (#1732) is live with today's answer confirmed. The answer runs 7 characters, starting with I and ending with D — see the letter hints above before you peek."
   }
 }

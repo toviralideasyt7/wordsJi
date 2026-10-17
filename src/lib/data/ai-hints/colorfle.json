@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-16T16:45:47.966Z",
+  "generatedAt": "2026-10-17T16:45:57.195Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -151,6 +151,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The multi-word format and specific shade descriptors increase complexity."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -165,6 +177,7 @@
     "2026-10-14": "Colorfle puzzle #1633 was released on October 14, 2026. The solution consists of three distinct color names with a total of twenty-five letters.",
     "2026-10-15": "The Colorfle puzzle for October 15, 2026 (#1634) is live with today's answer confirmed. The answer runs 14 characters, starting with G and ending with K — see the letter hints above before you peek.",
     "2026-10-16": "Colorfle puzzle #1635 was released on October 16, 2026. This specific challenge features a sequence of fifteen letters across three words.",
-    "2026-10-17": "Colorfle puzzle #1636 was released on October 17, 2026. The solution follows a three-part color pattern."
+    "2026-10-17": "Colorfle puzzle #1636 was released on October 17, 2026. The solution follows a three-part color pattern.",
+    "2026-10-18": "The Colorfle puzzle for October 18, 2026 (#1637) is live with today's answer confirmed. The answer runs 14 characters, starting with N and ending with N — see the letter hints above before you peek."
   }
 }
