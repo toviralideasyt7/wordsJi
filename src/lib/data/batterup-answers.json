@@ -319,5 +319,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/20/3a986102-59d743be-b5379e55-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-15",
     "fetchedAt": "2026-10-15T01:06:11.493Z"
+  },
+  "2026-10-16": {
+    "date": "2026-10-16",
+    "gameNumber": 971,
+    "player": {
+      "player_name": "Wilyer Abreu",
+      "player_id": "4990055",
+      "team_name": "Red Sox",
+      "born": "VEN.",
+      "birth_date": "1999-06-24",
+      "position": [
+        "RF"
+      ],
+      "debut": 2023,
+      "jersey_number": 52
+    },
+    "videoDescription": "[07/18/26 : TB 6 - 7 BOS] Wilyer Abreu crushes a two-run home run to give the Red Sox the lead in the bottom of the 7th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/18/2da7f678-45f85f6c-add72702-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-16",
+    "fetchedAt": "2026-10-17T01:05:22.912Z"
   }
 }
