@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-17T06:04:14.736Z",
+  "generatedAt": "2026-10-18T06:04:30.644Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -154,6 +154,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Multiple multi-word names make the letter count and pattern complex."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "19 letters appear more than once.",
+      "riddle": "A flying machine, a rock, a blood-boil, and a saw.",
+      "clue1": "Four distinct heroes from a popular MOBA.",
+      "starts_with": "G",
+      "ends_with": "W",
+      "definition": "A group of four playable characters from Dota 2.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of specific game characters and a long combined string."
     }
   },
   "prose": {
@@ -168,6 +181,7 @@
     "2026-10-14": "Dotadle Game #1034 was released on October 14, 2026. This specific puzzle features a long sequence of letters across four names.",
     "2026-10-15": "Dotadle Game #1035 takes place on October 15, 2026. The solution follows a multi-word pattern consisting of four names.",
     "2026-10-16": "The Dotadle puzzle for October 16, 2026 (Game #1036) is live with today's answer confirmed. The answer runs 36 characters, starting with K and ending with K — see the letter hints above before you peek.",
-    "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant."
+    "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant.",
+    "2026-10-18": "Dotadle Game #1038 for October 18, 2026, features a complex multi-word solution. The letter pattern consists of four separate names."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-17T06:03:46.427Z",
+  "generatedAt": "2026-10-18T06:04:37.035Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -152,6 +152,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -166,6 +178,7 @@
     "2026-10-14": "Canuckle puzzle #1614 for October 14, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
     "2026-10-15": "Canuckle puzzle #1615 is scheduled for October 15, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-10-16": "The Canuckle puzzle for October 16, 2026 (#1616) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with H — see the letter hints above before you peek.",
-    "2026-10-17": "The Canuckle puzzle for October 17, 2026 (#1617) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek."
+    "2026-10-17": "The Canuckle puzzle for October 17, 2026 (#1617) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek.",
+    "2026-10-18": "The Canuckle puzzle for October 18, 2026 (#1618) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-17T06:03:59.505Z",
+  "generatedAt": "2026-10-18T06:04:01.456Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -140,6 +140,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The inclusion of 'ennui' adds a layer of complexity to the letter grid."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "A huge fruit, a holy house, and a secret meeting.",
+      "clue1": "Look for a mix of nature, architecture, and romance.",
+      "starts_with": "G",
+      "ends_with": "T",
+      "definition": "A set of six five-letter words including a large person and a bird.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word tryst is uncommon and the repeated vowels may cause confusion."
     }
   },
   "prose": {
@@ -153,6 +166,7 @@
     "2026-10-13": "The Waffle puzzle for October 13, 2026 (#1726) is live with today's answer confirmed. The answer runs 30 characters, starting with C and ending with Y — see the letter hints above before you peek.",
     "2026-10-14": "The Waffle puzzle for October 14, 2026, is identified as number 1727. This specific grid features a variety of five-letter words with overlapping characters.",
     "2026-10-15": "Waffle puzzle #1728 is scheduled for October 15, 2026. This specific grid features a recurring vowel across multiple words.",
-    "2026-10-17": "Waffle puzzle #1730 for October 17, 2026, features a diverse set of vocabulary. The grid contains a mix of numeric values and abstract nouns."
+    "2026-10-17": "Waffle puzzle #1730 for October 17, 2026, features a diverse set of vocabulary. The grid contains a mix of numeric values and abstract nouns.",
+    "2026-10-18": "Waffle puzzle #1731 for October 18, 2026, features a variety of five-letter words. The grid contains several repeated vowels across the six target words."
   }
 }

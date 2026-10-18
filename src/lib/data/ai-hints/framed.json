@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-16T16:46:34.876Z",
+  "generatedAt": "2026-10-18T06:04:27.887Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -127,6 +127,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A visitor from far away, arriving in a silver disc.",
+      "clue1": "Often found in science fiction movies.",
+      "starts_with": "A",
+      "ends_with": "N",
+      "definition": "A hypothetical being from another planet.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The concept is widely recognized and the word is short."
     }
   },
   "prose": {
@@ -139,6 +152,7 @@
     "2026-10-12": "The Framed puzzle #1677 for October 12, 2026 features a four-letter answer with a single vowel. Each letter appears exactly once, following a tidy consonant-vowel-consonant arrangement.",
     "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern.",
     "2026-10-16": "Framed puzzle #1681 is featured on October 16, 2026. The target phrase consists of two words and eleven letters.",
-    "2026-10-17": "The Framed puzzle for October 17, 2026 (#1682) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with S — see the letter hints above before you peek."
+    "2026-10-17": "The Framed puzzle for October 17, 2026 (#1682) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with S — see the letter hints above before you peek.",
+    "2026-10-18": "Framed puzzle #1683 was released on October 18, 2026. This specific entry features a five-letter word pattern."
   }
 }

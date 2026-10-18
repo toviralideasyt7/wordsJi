@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-17T06:04:06.831Z",
+  "generatedAt": "2026-10-18T06:06:54.870Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -154,6 +154,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four different Pokémon simultaneously."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -168,6 +180,7 @@
     "2026-10-14": "Pokedle Game #1098 for October 14, 2026, features a multi-answer sequence. The solution follows a specific pattern of four distinct names.",
     "2026-10-15": "Pokedle Game #1099 takes place on October 15, 2026. This specific puzzle features a long sequence of letters ending in Y.",
     "2026-10-16": "The Pokedle puzzle for October 16, 2026 (Game #1100) is live with today's answer confirmed. The answer runs 31 characters, starting with E and ending with O — see the letter hints above before you peek.",
-    "2026-10-17": "Pokedle Game #1101 takes place on October 17, 2026. This specific puzzle features a multi-word answer with a varied letter pattern."
+    "2026-10-17": "Pokedle Game #1101 takes place on October 17, 2026. This specific puzzle features a multi-word answer with a varied letter pattern.",
+    "2026-10-18": "The Pokedle puzzle for October 18, 2026 (Game #1102) is live with today's answer confirmed. The answer runs 33 characters, starting with L and ending with E — see the letter hints above before you peek."
   }
 }

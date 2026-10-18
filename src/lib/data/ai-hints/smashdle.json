@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-17T06:04:51.493Z",
+  "generatedAt": "2026-10-18T06:06:56.839Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -154,6 +154,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires identifying five specific characters across different franchises."
+    },
+    "2026-10-18": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -168,6 +180,7 @@
     "2026-10-14": "Smashdle Game #1134 for October 14, 2026, features a multi-character solution. The answer follows a complex letter pattern across five names.",
     "2026-10-15": "Smashdle Game #1135 for October 15, 2026, features a complex multi-character solution. The letter pattern spans several names of varying lengths.",
     "2026-10-16": "The Smashdle puzzle for October 16, 2026 (Game #1136) is live with today's answer confirmed. The answer runs 36 characters, starting with D and ending with T — see the letter hints above before you peek.",
-    "2026-10-17": "Smashdle Game #1137 for October 17, 2026, features a multi-character solution. The letter pattern spans several words of varying lengths."
+    "2026-10-17": "Smashdle Game #1137 for October 17, 2026, features a multi-character solution. The letter pattern spans several words of varying lengths.",
+    "2026-10-18": "The Smashdle puzzle for October 18, 2026 (Game #1138) is live with today's answer confirmed. The answer runs 25 characters, starting with J and ending with O — see the letter hints above before you peek."
   }
 }
