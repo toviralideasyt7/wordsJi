@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-17T16:42:02.224Z",
+  "generatedAt": "2026-10-18T16:43:21.749Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -164,6 +164,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common prepositional word with a relatively straightforward semantic neighborhood."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I seize a prize or snap a photo with a click.",
+      "clue1": "To take hold of something by force or image.",
+      "starts_with": "C",
+      "ends_with": "E",
+      "definition": "To take into one's possession or record an image.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common verb with multiple familiar meanings across different contexts."
     }
   },
   "prose": {
@@ -179,6 +192,7 @@
     "2026-10-15": "The Semantle puzzle for October 15, 2026 (#1720) is live with today's answer confirmed. The answer runs 11 characters, starting with E and ending with T — see the letter hints above before you peek.",
     "2026-10-16": "Semantle puzzle #1721 for October 16, 2026, features a ten-letter word. The target word follows a consonant-vowel pattern throughout.",
     "2026-10-17": "The Semantle puzzle for October 17, 2026 (#1722) is live with today's answer confirmed. The answer runs 3 characters, starting with C and ending with Y — see the letter hints above before you peek.",
-    "2026-10-18": "Semantle puzzle #1723 was released on October 18, 2026. This specific target word follows a six-letter pattern."
+    "2026-10-18": "Semantle puzzle #1723 was released on October 18, 2026. This specific target word follows a six-letter pattern.",
+    "2026-10-19": "Semantle puzzle #1724 was released on October 19, 2026. The target word follows a consonant-vowel pattern starting with C and ending with E."
   }
 }

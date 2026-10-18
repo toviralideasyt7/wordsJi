@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-17T16:42:02.345Z",
+  "generatedAt": "2026-10-18T16:43:22.796Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -166,6 +166,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word but less frequent as a primary verb in daily speech."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A foul aroma that makes you hold your nose.",
+      "clue1": "Something a skunk might do.",
+      "starts_with": "S",
+      "ends_with": "K",
+      "definition": "To have a strong, unpleasant smell.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common vocabulary word with a straightforward structure."
     }
   },
   "prose": {
@@ -181,6 +194,7 @@
     "2026-10-15": "Wordle puzzle #1944 for October 15, 2026, features a five-letter word. The pattern consists of three consonants and two vowels.",
     "2026-10-16": "Wordle puzzle #1945 is scheduled for October 16, 2026. This specific entry follows a consonant-heavy structure with two vowels.",
     "2026-10-17": "The Wordle puzzle for October 17, 2026 (#1946) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with E — see the letter hints above before you peek.",
-    "2026-10-18": "Wordle puzzle #1947 for October 18, 2026, features a five-letter word. The solution follows a vowel-consonant-vowel-consonant-consonant pattern."
+    "2026-10-18": "Wordle puzzle #1947 for October 18, 2026, features a five-letter word. The solution follows a vowel-consonant-vowel-consonant-consonant pattern.",
+    "2026-10-19": "Wordle puzzle #1948 arrives on October 19, 2026. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern."
   }
 }

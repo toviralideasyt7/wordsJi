@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-17T16:43:30.980Z",
+  "generatedAt": "2026-10-18T16:42:08.146Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -163,6 +163,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known artist but the spelling of the surname can be tricky."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A pop star's name that echoes itself at the start.",
+      "clue1": "Known for the hit song 'I Got You'.",
+      "starts_with": "B",
+      "ends_with": "A",
+      "definition": "American singer and songwriter known for dance-pop hits.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The repetitive first name and chart-topping hits make her recognizable."
     }
   },
   "prose": {
@@ -178,6 +191,7 @@
     "2026-10-15": "Spotle puzzle Day 1672 takes place on October 15, 2026. This specific entry follows a seven-letter pattern.",
     "2026-10-16": "The Spotle puzzle for October 16, 2026 (Day 1673) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-10-17": "The Spotle puzzle for October 17, 2026 (Day 1674) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with A — see the letter hints above before you peek.",
-    "2026-10-18": "Spotle puzzle Day 1675 arrives on October 18, 2026. This specific entry features a twelve-letter pattern."
+    "2026-10-18": "Spotle puzzle Day 1675 arrives on October 18, 2026. This specific entry features a twelve-letter pattern.",
+    "2026-10-19": "Spotle puzzle Day 1676 for October 19, 2026, features a ten-letter name. The pattern includes several repeating characters across two words."
   }
 }

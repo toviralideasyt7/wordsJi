@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-17T16:42:02.063Z",
+  "generatedAt": "2026-10-18T16:42:03.220Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -163,6 +163,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common words but varied vowel placements and some overlapping consonants."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A fake lure, a liquid flow, a link, and a state of being.",
+      "clue1": "One word describes a liquid state; another is a distraction.",
+      "starts_with": "E",
+      "ends_with": "D",
+      "definition": "A set of words meaning to be, a lure, a connection, and liquid.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The words use a diverse set of consonants and common vowel placements."
     }
   },
   "prose": {
@@ -178,6 +191,7 @@
     "2026-10-15": "Quordle puzzle #1725 for October 15, 2026, features four five-letter words. The solution set includes a variety of common consonants and several vowels.",
     "2026-10-16": "Quordle puzzle #1726 for October 16, 2026, features four distinct five-letter words. The set contains several recurring consonants that challenge the player's placement logic.",
     "2026-10-17": "The Quordle puzzle for October 17, 2026 (#1727) is live with today's answer confirmed. The answer runs 20 characters, starting with Q and ending with K — see the letter hints above before you peek.",
-    "2026-10-18": "Quordle puzzle #1728 for October 18, 2026, features a diverse set of five-letter words. The letter patterns involve several distinct vowel combinations across the four solutions."
+    "2026-10-18": "Quordle puzzle #1728 for October 18, 2026, features a diverse set of five-letter words. The letter patterns involve several distinct vowel combinations across the four solutions.",
+    "2026-10-19": "Quordle puzzle #1729 for October 19, 2026, features four distinct five-letter words. Each word in this set contains a unique combination of vowels and consonants."
   }
 }

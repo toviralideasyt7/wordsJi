@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-17T16:45:53.640Z",
+  "generatedAt": "2026-10-18T16:43:56.495Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -164,6 +164,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A royal kingdom adrift in the deep blue Pacific.",
+      "clue1": "An archipelago in Polynesia.",
+      "starts_with": "T",
+      "ends_with": "A",
+      "definition": "A Polynesian kingdom and archipelago in the South Pacific Ocean.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A well-known island nation but not a global superpower."
     }
   },
   "prose": {
@@ -179,6 +192,7 @@
     "2026-10-15": "Countryle Game #1700 takes place on October 15, 2026. This specific puzzle features a ten-letter word starting with V.",
     "2026-10-16": "Countryle Game #1701 for October 16, 2026, features a multi-word answer. The letter pattern consists of sixteen characters including spaces.",
     "2026-10-17": "The Countryle puzzle for October 17, 2026 (Game #1702) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with E — see the letter hints above before you peek.",
-    "2026-10-18": "The Countryle puzzle for October 18, 2026 (Game #1703) is live with today's answer confirmed. The answer runs 8 characters, starting with B and ending with A — see the letter hints above before you peek."
+    "2026-10-18": "The Countryle puzzle for October 18, 2026 (Game #1703) is live with today's answer confirmed. The answer runs 8 characters, starting with B and ending with A — see the letter hints above before you peek.",
+    "2026-10-19": "Countryle Game #1704 takes place on October 19, 2026. This specific puzzle features a five-letter word pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-17T16:45:58.604Z",
+  "generatedAt": "2026-10-18T16:44:10.333Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -163,6 +163,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am the spark that starts the fire, the reason for the result.",
+      "clue1": "Often linked to an effect.",
+      "starts_with": "C",
+      "ends_with": "E",
+      "definition": "A person or thing that gives rise to a particular action or condition.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a very strong semantic link to 'effect'."
     }
   },
   "prose": {
@@ -178,6 +191,7 @@
     "2026-10-15": "Contexto puzzle #1488 was released on October 15, 2026. The target word follows a consonant-vowel pattern ending in E.",
     "2026-10-16": "Contexto puzzle #1489 for October 16, 2026, features a six-letter word. The target word follows a consonant-vowel-consonant pattern at the start.",
     "2026-10-17": "The Contexto puzzle for October 17, 2026 (#1490) is live with today's answer confirmed. The answer runs 11 characters, starting with P and ending with Y — see the letter hints above before you peek.",
-    "2026-10-18": "The Contexto puzzle for October 18, 2026 (#1491) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-10-18": "The Contexto puzzle for October 18, 2026 (#1491) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-10-19": "Contexto puzzle #1492 was released on October 19, 2026. The target word follows a C-E consonant-vowel pattern."
   }
 }

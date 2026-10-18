@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-17T16:44:28.534Z",
+  "generatedAt": "2026-10-18T16:43:42.373Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -164,6 +164,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A spark of spirit that keeps the energy high.",
+      "clue1": "Synonymous with zest or vigor.",
+      "starts_with": "V",
+      "ends_with": "E",
+      "definition": "Vigor and spirit or enthusiasm.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word is relatively short but contains less common consonants."
     }
   },
   "prose": {
@@ -179,6 +192,7 @@
     "2026-10-15": "Betweenle puzzle #1309 for October 15, 2026, features a five-letter word. The pattern begins with a consonant and ends with a semi-vowel.",
     "2026-10-16": "The Betweenle puzzle for October 16, 2026 (#1310) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with R — see the letter hints above before you peek.",
     "2026-10-17": "Betweenle puzzle #1311 arrives on October 17, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-10-18": "The Betweenle puzzle for October 18, 2026 (#1312) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with R — see the letter hints above before you peek."
+    "2026-10-18": "The Betweenle puzzle for October 18, 2026 (#1312) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with R — see the letter hints above before you peek.",
+    "2026-10-19": "Betweenle puzzle #1313 was released on October 19, 2026. This specific word follows a five-letter pattern with a repeated vowel."
   }
 }
