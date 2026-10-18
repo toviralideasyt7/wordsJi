@@ -339,5 +339,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/18/2da7f678-45f85f6c-add72702-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-16",
     "fetchedAt": "2026-10-17T01:05:22.912Z"
+  },
+  "2026-10-17": {
+    "date": "2026-10-17",
+    "gameNumber": 972,
+    "player": {
+      "player_name": "Wyatt Langford",
+      "player_id": "4719324",
+      "team_name": "Rangers",
+      "born": "USA",
+      "birth_date": "2001-11-15",
+      "position": [
+        "LF"
+      ],
+      "debut": 2024,
+      "jersey_number": 36
+    },
+    "videoDescription": "[09/12/26 : TEX 6 - 2 ARI] Wyatt Langford drives a solo home run to left center field in the top of the 5th, tying the game at 1.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-10/01/57714d5a-a36e2125-883d99d6-csvm-diamondgcp-asset-4000K.mp4",
+    "sourceDate": "2026-10-17",
+    "fetchedAt": "2026-10-18T01:06:12.148Z"
   }
 }
