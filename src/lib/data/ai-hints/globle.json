@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-17T06:03:34.662Z",
+  "generatedAt": "2026-10-18T06:11:44.161Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -155,6 +155,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Well-known country with a distinct geographic location and common exports."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A tiny Pacific gem where limestone islands meet the deep blue.",
+      "clue1": "An archipelago located in the western Pacific Ocean.",
+      "starts_with": "P",
+      "ends_with": "U",
+      "definition": "An island nation in the western Pacific Ocean.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "It is a small island nation, making it harder to locate on a globe."
     }
   },
   "prose": {
@@ -169,6 +182,7 @@
     "2026-10-14": "The Globle puzzle for October 14, 2026, features a seven-letter destination. Puzzle 2026-10-14 follows a pattern where the first and last letters are identical.",
     "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels.",
     "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel.",
-    "2026-10-17": "The Globle puzzle for October 17, 2026, features a five-letter country name. Puzzle 2026-10-17 follows a pattern where the first and last letters are vowels."
+    "2026-10-17": "The Globle puzzle for October 17, 2026, features a five-letter country name. Puzzle 2026-10-17 follows a pattern where the first and last letters are vowels.",
+    "2026-10-18": "The Globle puzzle for October 18, 2026, features a five-letter name. Puzzle 2026-10-18 follows a pattern with a repeated vowel."
   }
 }
