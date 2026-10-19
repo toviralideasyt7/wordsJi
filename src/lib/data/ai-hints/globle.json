@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-18T06:11:44.161Z",
+  "generatedAt": "2026-10-19T06:12:06.959Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -168,6 +168,19 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "It is a small island nation, making it harder to locate on a globe."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A giant wall guards this vast eastern land.",
+      "clue1": "The most populous nation in East Asia.",
+      "starts_with": "C",
+      "ends_with": "A",
+      "definition": "A sovereign state in East Asia with the world's second-largest population.",
+      "difficulty": 1,
+      "difficulty_label": "Very Easy",
+      "difficulty_reason": "It is a globally recognized superpower with very distinct landmarks."
     }
   },
   "prose": {
@@ -183,6 +196,7 @@
     "2026-10-15": "The Globle puzzle for October 15, 2026, features a seven-letter country. Puzzle 2026-10-15 follows a pattern where the first and last letters are vowels.",
     "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel.",
     "2026-10-17": "The Globle puzzle for October 17, 2026, features a five-letter country name. Puzzle 2026-10-17 follows a pattern where the first and last letters are vowels.",
-    "2026-10-18": "The Globle puzzle for October 18, 2026, features a five-letter name. Puzzle 2026-10-18 follows a pattern with a repeated vowel."
+    "2026-10-18": "The Globle puzzle for October 18, 2026, features a five-letter name. Puzzle 2026-10-18 follows a pattern with a repeated vowel.",
+    "2026-10-19": "The Globle puzzle for October 19, 2026, features a five-letter country. Puzzle 2026-10-19 follows a consonant-vowel-consonant-vowel-vowel pattern."
   }
 }
