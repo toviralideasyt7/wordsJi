@@ -1304,5 +1304,55 @@
       ]
     },
     "solvedAt": "2026-10-18T06:36:15.007Z"
+  },
+  "2026-10-18": {
+    "date": "2026-10-18",
+    "dateId": "yesterday-of:10/19/2026 12:00:00 AM",
+    "comics": {
+      "id": "glob",
+      "name": "Glob",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 2001,
+      "firstApparitionComicTitle": "New X-Men #117",
+      "keywords": [
+        "glob herman",
+        "herman",
+        "robert herman"
+      ]
+    },
+    "mcu": {
+      "id": "mordo_838",
+      "name": "Karl Mordo (Illuminati Assembled Universe)",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Magic"
+      ],
+      "origin": "Earth",
+      "actorName": "Chiwetel Ejiofor",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Illuminati"
+      ],
+      "keywords": [
+        "baron mordo"
+      ]
+    },
+    "solvedAt": "2026-10-19T06:36:09.316Z"
   }
 }
