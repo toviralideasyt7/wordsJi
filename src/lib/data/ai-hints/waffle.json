@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-18T06:04:01.456Z",
+  "generatedAt": "2026-10-19T06:05:10.361Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -153,6 +153,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word tryst is uncommon and the repeated vowels may cause confusion."
+    },
+    "2026-10-19": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -167,6 +179,7 @@
     "2026-10-14": "The Waffle puzzle for October 14, 2026, is identified as number 1727. This specific grid features a variety of five-letter words with overlapping characters.",
     "2026-10-15": "Waffle puzzle #1728 is scheduled for October 15, 2026. This specific grid features a recurring vowel across multiple words.",
     "2026-10-17": "Waffle puzzle #1730 for October 17, 2026, features a diverse set of vocabulary. The grid contains a mix of numeric values and abstract nouns.",
-    "2026-10-18": "Waffle puzzle #1731 for October 18, 2026, features a variety of five-letter words. The grid contains several repeated vowels across the six target words."
+    "2026-10-18": "Waffle puzzle #1731 for October 18, 2026, features a variety of five-letter words. The grid contains several repeated vowels across the six target words.",
+    "2026-10-19": "The Waffle puzzle for October 19, 2026 (#1732) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }

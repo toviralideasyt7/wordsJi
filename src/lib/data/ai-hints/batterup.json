@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-18T06:04:15.398Z",
+  "generatedAt": "2026-10-19T06:03:55.900Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -129,6 +129,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The name is not yet a household staple for casual sports fans."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A Fresh Prince who found fame in the silver screen.",
+      "clue1": "Known for both sitcoms and major motion pictures.",
+      "starts_with": "W",
+      "ends_with": "H",
+      "definition": "American actor and rapper known for his versatile leading roles.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The subject is a globally recognized celebrity with a very common surname."
     }
   },
   "prose": {
@@ -141,6 +154,7 @@
     "2026-10-14": "Batter Up Game #969 takes place on October 14, 2026. This puzzle features an eleven-letter name pattern.",
     "2026-10-15": "Batter Up Game #970 arrives on October 15, 2026. This puzzle features a twelve-letter name with several repeating characters.",
     "2026-10-16": "Batter Up Game #971 for October 16, 2026, features an eleven-letter name. The letter pattern includes a unique combination of consonants and vowels.",
-    "2026-10-17": "Batter Up Game #972 for October 17, 2026, features a thirteen-letter name. The solution follows a specific consonant-vowel pattern across two words."
+    "2026-10-17": "Batter Up Game #972 for October 17, 2026, features a thirteen-letter name. The solution follows a specific consonant-vowel pattern across two words.",
+    "2026-10-19": "Batter Up Game #974 for October 19, 2026, features a nine-letter answer. The pattern consists of two distinct words separated by a space."
   }
 }

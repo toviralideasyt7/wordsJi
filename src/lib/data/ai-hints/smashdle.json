@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-18T06:06:56.839Z",
+  "generatedAt": "2026-10-19T06:04:43.474Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -166,6 +166,19 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "20 letters appear more than once.",
+      "riddle": "A sword, a mountain, and a mask in one mixed group.",
+      "clue1": "A diverse roster of fighters from across the galaxy.",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "A specific selection of five playable characters from a fighting game.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple characters make the total letter count high and complex."
     }
   },
   "prose": {
@@ -181,6 +194,7 @@
     "2026-10-15": "Smashdle Game #1135 for October 15, 2026, features a complex multi-character solution. The letter pattern spans several names of varying lengths.",
     "2026-10-16": "The Smashdle puzzle for October 16, 2026 (Game #1136) is live with today's answer confirmed. The answer runs 36 characters, starting with D and ending with T — see the letter hints above before you peek.",
     "2026-10-17": "Smashdle Game #1137 for October 17, 2026, features a multi-character solution. The letter pattern spans several words of varying lengths.",
-    "2026-10-18": "The Smashdle puzzle for October 18, 2026 (Game #1138) is live with today's answer confirmed. The answer runs 25 characters, starting with J and ending with O — see the letter hints above before you peek."
+    "2026-10-18": "The Smashdle puzzle for October 18, 2026 (Game #1138) is live with today's answer confirmed. The answer runs 25 characters, starting with J and ending with O — see the letter hints above before you peek.",
+    "2026-10-19": "Smashdle Game #1139 for October 19, 2026, features a multi-character sequence. The solution follows a specific pattern of five distinct names."
   }
 }

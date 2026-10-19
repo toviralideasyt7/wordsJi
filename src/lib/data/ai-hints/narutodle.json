@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-18T06:04:34.296Z",
+  "generatedAt": "2026-10-19T06:05:16.795Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -167,6 +167,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four separate characters across different arcs."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 22 vowels.",
+      "repeat_hint": "30 letters appear more than once.",
+      "riddle": "Two legends, a snake, and a cough in one list.",
+      "clue1": "Includes the founders of the Leaf and a Sannin.",
+      "starts_with": "H",
+      "ends_with": "U",
+      "definition": "A group of four distinct shinobi from the Naruto universe.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four different characters across different eras."
     }
   },
   "prose": {
@@ -182,6 +195,7 @@
     "2026-10-15": "Narutodle Game #896 for October 15, 2026, features a complex multi-character answer. The solution follows a specific sequence of four names with varying lengths.",
     "2026-10-16": "Narutodle Game #897 for October 16, 2026, features a multi-character answer. The letter pattern spans four distinct names.",
     "2026-10-17": "Narutodle Game #898 for October 17, 2026, features a complex multi-character answer. The letter pattern is exceptionally long compared to standard daily puzzles.",
-    "2026-10-18": "Narutodle Game #899 for October 18, 2026, features a complex multi-name sequence. The letter pattern spans four distinct names of varying lengths."
+    "2026-10-18": "Narutodle Game #899 for October 18, 2026, features a complex multi-name sequence. The letter pattern spans four distinct names of varying lengths.",
+    "2026-10-19": "Narutodle Game #900 takes place on October 19, 2026. This specific puzzle features a long sequence of characters with a complex letter pattern."
   }
 }

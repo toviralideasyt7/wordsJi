@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-18T06:04:30.644Z",
+  "generatedAt": "2026-10-19T06:04:11.579Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -167,6 +167,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires knowledge of specific game characters and a long combined string."
+    },
+    "2026-10-19": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -182,6 +194,7 @@
     "2026-10-15": "Dotadle Game #1035 takes place on October 15, 2026. The solution follows a multi-word pattern consisting of four names.",
     "2026-10-16": "The Dotadle puzzle for October 16, 2026 (Game #1036) is live with today's answer confirmed. The answer runs 36 characters, starting with K and ending with K — see the letter hints above before you peek.",
     "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant.",
-    "2026-10-18": "Dotadle Game #1038 for October 18, 2026, features a complex multi-word solution. The letter pattern consists of four separate names."
+    "2026-10-18": "Dotadle Game #1038 for October 18, 2026, features a complex multi-word solution. The letter pattern consists of four separate names.",
+    "2026-10-19": "The Dotadle puzzle for October 19, 2026 (Game #1039) is live with today's answer confirmed. The answer runs 28 characters, starting with S and ending with R — see the letter hints above before you peek."
   }
 }

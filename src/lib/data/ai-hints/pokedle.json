@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-18T06:06:54.870Z",
+  "generatedAt": "2026-10-19T06:05:11.415Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -166,6 +166,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "A gentle giant of the sea who carries travelers on its back.",
+      "clue1": "A Water and Ice type from the Kanto region.",
+      "starts_with": "L",
+      "ends_with": "M",
+      "definition": "A gentle, shell-like Pokémon known for transporting people across the ocean.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Highly recognizable design and common typing make it easy to guess."
     }
   },
   "prose": {
@@ -181,6 +194,7 @@
     "2026-10-15": "Pokedle Game #1099 takes place on October 15, 2026. This specific puzzle features a long sequence of letters ending in Y.",
     "2026-10-16": "The Pokedle puzzle for October 16, 2026 (Game #1100) is live with today's answer confirmed. The answer runs 31 characters, starting with E and ending with O — see the letter hints above before you peek.",
     "2026-10-17": "Pokedle Game #1101 takes place on October 17, 2026. This specific puzzle features a multi-word answer with a varied letter pattern.",
-    "2026-10-18": "The Pokedle puzzle for October 18, 2026 (Game #1102) is live with today's answer confirmed. The answer runs 33 characters, starting with L and ending with E — see the letter hints above before you peek."
+    "2026-10-18": "The Pokedle puzzle for October 18, 2026 (Game #1102) is live with today's answer confirmed. The answer runs 33 characters, starting with L and ending with E — see the letter hints above before you peek.",
+    "2026-10-19": "Pokedle Game #1103 takes place on October 19, 2026. The target word follows a six-letter pattern."
   }
 }

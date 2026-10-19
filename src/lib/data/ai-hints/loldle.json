@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-18T06:04:38.772Z",
+  "generatedAt": "2026-10-19T06:04:06.977Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -167,6 +167,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The combination of champions spans very different regions and roles."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "Four fighters who love the spotlight and a good brawl.",
+      "clue1": "A group of aggressive melee champions.",
+      "starts_with": "S",
+      "ends_with": "M",
+      "definition": "A selection of four combat-oriented League of Legends champions.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Requires identifying four distinct champions across different roles."
     }
   },
   "prose": {
@@ -182,6 +195,7 @@
     "2026-10-15": "LoLdle Game #1561 for October 15, 2026, features a diverse set of champions. The solution follows a specific sequence of names ending in a vowel.",
     "2026-10-16": "The LoLdle puzzle for October 16, 2026 (Game #1562) is live with today's answer confirmed. The answer runs 25 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-10-17": "LoLdle Game #1563 for October 17, 2026, features a diverse set of champions. The solution follows a specific sequence of characters ending in X.",
-    "2026-10-18": "LoLdle Game #1564 for October 18, 2026, features a diverse set of characters. The solution follows a specific sequence of letters ending in a vowel."
+    "2026-10-18": "LoLdle Game #1564 for October 18, 2026, features a diverse set of characters. The solution follows a specific sequence of letters ending in a vowel.",
+    "2026-10-19": "LoLdle Game #1565 for October 19, 2026, features a multi-champion answer. The solution follows a specific sequence of letters ending in M."
   }
 }

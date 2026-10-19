@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-18T06:04:27.887Z",
+  "generatedAt": "2026-10-19T06:04:42.183Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -140,6 +140,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "The concept is widely recognized and the word is short."
+    },
+    "2026-10-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A fixation that grows until it consumes every single thought.",
+      "clue1": "A preoccupation that borders on the unhealthy.",
+      "starts_with": "O",
+      "ends_with": "N",
+      "definition": "An idea or thought that continually preoccupies or intrudes on a person's mind.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word with a standard structure but abstract meaning."
     }
   },
   "prose": {
@@ -153,6 +166,7 @@
     "2026-10-15": "Framed puzzle #1680 was released on October 15, 2026. The answer follows a ten-letter pattern.",
     "2026-10-16": "Framed puzzle #1681 is featured on October 16, 2026. The target phrase consists of two words and eleven letters.",
     "2026-10-17": "The Framed puzzle for October 17, 2026 (#1682) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with S — see the letter hints above before you peek.",
-    "2026-10-18": "Framed puzzle #1683 was released on October 18, 2026. This specific entry features a five-letter word pattern."
+    "2026-10-18": "Framed puzzle #1683 was released on October 18, 2026. This specific entry features a five-letter word pattern.",
+    "2026-10-19": "Framed puzzle #1684 for October 19, 2026, features a nine-letter word. The pattern includes a repeated consonant and four vowels."
   }
 }
