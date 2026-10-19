@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-18T22:05:15.568Z",
+  "generatedAt": "2026-10-19T22:05:45.587Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -173,6 +173,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word but contains a less frequent consonant cluster."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -189,6 +201,7 @@
     "2026-10-16": "The Worgle puzzle for October 16, 2026 (#1738) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with T — see the letter hints above before you peek.",
     "2026-10-17": "The Worgle puzzle for October 17, 2026 (#1739) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with T — see the letter hints above before you peek.",
     "2026-10-18": "The Worgle puzzle for October 18, 2026 (#1740) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with N — see the letter hints above before you peek.",
-    "2026-10-19": "Worgle puzzle #1741 for October 19, 2026, features a six-letter word. The pattern consists of a single vowel surrounded by consonants."
+    "2026-10-19": "Worgle puzzle #1741 for October 19, 2026, features a six-letter word. The pattern consists of a single vowel surrounded by consonants.",
+    "2026-10-20": "The Worgle puzzle for October 20, 2026 (#1742) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek."
   }
 }
