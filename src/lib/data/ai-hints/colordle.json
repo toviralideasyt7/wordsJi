@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-18T16:42:09.110Z",
+  "generatedAt": "2026-10-19T16:43:52.503Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -177,6 +177,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word associated with a distinct, recognizable color."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -193,6 +205,7 @@
     "2026-10-16": "Colordle puzzle #1666 for October 16, 2026, features a ten-letter phrase. The solution follows a pattern of four letters followed by six letters.",
     "2026-10-17": "The Colordle puzzle for October 17, 2026 (#1667) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with C — see the letter hints above before you peek.",
     "2026-10-18": "The Colordle puzzle for October 18, 2026 (#1668) is live with today's answer confirmed. The answer runs 8 characters, starting with R and ending with C — see the letter hints above before you peek.",
-    "2026-10-19": "Colordle puzzle #1669 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure."
+    "2026-10-19": "Colordle puzzle #1669 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
+    "2026-10-20": "The Colordle puzzle for October 20, 2026 (#1670) is live with today's answer confirmed. The answer runs 11 characters, starting with M and ending with F — see the letter hints above before you peek."
   }
 }

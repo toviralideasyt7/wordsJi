@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-18T16:43:42.373Z",
+  "generatedAt": "2026-10-19T16:46:23.032Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -177,6 +177,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word is relatively short but contains less common consonants."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -193,6 +205,7 @@
     "2026-10-16": "The Betweenle puzzle for October 16, 2026 (#1310) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with R — see the letter hints above before you peek.",
     "2026-10-17": "Betweenle puzzle #1311 arrives on October 17, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-10-18": "The Betweenle puzzle for October 18, 2026 (#1312) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with R — see the letter hints above before you peek.",
-    "2026-10-19": "Betweenle puzzle #1313 was released on October 19, 2026. This specific word follows a five-letter pattern with a repeated vowel."
+    "2026-10-19": "Betweenle puzzle #1313 was released on October 19, 2026. This specific word follows a five-letter pattern with a repeated vowel.",
+    "2026-10-20": "The Betweenle puzzle for October 20, 2026 (#1314) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek."
   }
 }

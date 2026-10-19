@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-18T16:43:21.749Z",
+  "generatedAt": "2026-10-19T16:43:58.092Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -177,6 +177,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common verb with multiple familiar meanings across different contexts."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -193,6 +205,7 @@
     "2026-10-16": "Semantle puzzle #1721 for October 16, 2026, features a ten-letter word. The target word follows a consonant-vowel pattern throughout.",
     "2026-10-17": "The Semantle puzzle for October 17, 2026 (#1722) is live with today's answer confirmed. The answer runs 3 characters, starting with C and ending with Y — see the letter hints above before you peek.",
     "2026-10-18": "Semantle puzzle #1723 was released on October 18, 2026. This specific target word follows a six-letter pattern.",
-    "2026-10-19": "Semantle puzzle #1724 was released on October 19, 2026. The target word follows a consonant-vowel pattern starting with C and ending with E."
+    "2026-10-19": "Semantle puzzle #1724 was released on October 19, 2026. The target word follows a consonant-vowel pattern starting with C and ending with E.",
+    "2026-10-20": "The Semantle puzzle for October 20, 2026 (#1725) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with D — see the letter hints above before you peek."
   }
 }

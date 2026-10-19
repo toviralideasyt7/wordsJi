@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-18T16:44:10.333Z",
+  "generatedAt": "2026-10-19T16:48:21.152Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -176,6 +176,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a very strong semantic link to 'effect'."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -192,6 +204,7 @@
     "2026-10-16": "Contexto puzzle #1489 for October 16, 2026, features a six-letter word. The target word follows a consonant-vowel-consonant pattern at the start.",
     "2026-10-17": "The Contexto puzzle for October 17, 2026 (#1490) is live with today's answer confirmed. The answer runs 11 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-10-18": "The Contexto puzzle for October 18, 2026 (#1491) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with N — see the letter hints above before you peek.",
-    "2026-10-19": "Contexto puzzle #1492 was released on October 19, 2026. The target word follows a C-E consonant-vowel pattern."
+    "2026-10-19": "Contexto puzzle #1492 was released on October 19, 2026. The target word follows a C-E consonant-vowel pattern.",
+    "2026-10-20": "The Contexto puzzle for October 20, 2026 (#1493) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with Y — see the letter hints above before you peek."
   }
 }

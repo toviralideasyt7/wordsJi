@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-18T16:44:13.182Z",
+  "generatedAt": "2026-10-19T16:46:26.471Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -176,6 +176,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The combination of basic neutrals and a specific shade of green is moderately intuitive."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -192,6 +204,7 @@
     "2026-10-16": "Colorfle puzzle #1635 was released on October 16, 2026. This specific challenge features a sequence of fifteen letters across three words.",
     "2026-10-17": "Colorfle puzzle #1636 was released on October 17, 2026. The solution follows a three-part color pattern.",
     "2026-10-18": "The Colorfle puzzle for October 18, 2026 (#1637) is live with today's answer confirmed. The answer runs 14 characters, starting with N and ending with N — see the letter hints above before you peek.",
-    "2026-10-19": "Colorfle puzzle #1638 for October 19, 2026, features a sequence of three distinct colors. The solution follows a pattern of five, five, and nine letters respectively."
+    "2026-10-19": "Colorfle puzzle #1638 for October 19, 2026, features a sequence of three distinct colors. The solution follows a pattern of five, five, and nine letters respectively.",
+    "2026-10-20": "The Colorfle puzzle for October 20, 2026 (#1639) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with Y — see the letter hints above before you peek."
   }
 }
