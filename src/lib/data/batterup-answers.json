@@ -359,5 +359,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-10/01/57714d5a-a36e2125-883d99d6-csvm-diamondgcp-asset-4000K.mp4",
     "sourceDate": "2026-10-17",
     "fetchedAt": "2026-10-18T01:06:12.148Z"
+  },
+  "2026-10-19": {
+    "date": "2026-10-19",
+    "gameNumber": 974,
+    "player": {
+      "player_name": "Will Smith",
+      "player_id": "38309",
+      "team_name": "Dodgers",
+      "born": "USA",
+      "birth_date": "1995-03-28",
+      "position": [
+        "C"
+      ],
+      "debut": 2019,
+      "jersey_number": 16
+    },
+    "videoDescription": "[09/22/26 : SD 0 - 7 LAD] Will Smith crushes a solo home run to left field, extending the Dodgers' lead to 7-0 in the bottom of the 7th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-10/05/f2c9de36-6ed3333d-b3ca7e46-csvm-diamondgcp-asset-4000K.mp4",
+    "sourceDate": "2026-10-19",
+    "fetchedAt": "2026-10-19T01:06:15.943Z"
   }
 }
