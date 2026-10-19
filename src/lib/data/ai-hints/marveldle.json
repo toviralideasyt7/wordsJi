@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-17T06:21:39.827Z",
+  "generatedAt": "2026-10-19T07:01:36.037Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -129,6 +129,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The character is well-known in MCU but less so in core comics."
+    },
+    "2026-10-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "24 letters appear more than once.",
+      "riddle": "A spherical shape that hides a mystical secret.",
+      "clue1": "A strange form from a council of geniuses.",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "A mutated version of a sorcerer within a specific multiverse council.",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Obscure variant from a specific comic run and non-standard name."
     }
   },
   "prose": {
@@ -141,6 +154,7 @@
     "2026-10-13": "The Marveldle puzzle for October 13, 2026, features a dual-character answer. This 10/13/2026 12:00:00 AM challenge utilizes a complex letter pattern across two names.",
     "2026-10-14": "The Marveldle puzzle for October 14, 2026, features a name ending in the letter R. This 10/14/2026 12:00:00 AM challenge requires identifying a specific mastermind.",
     "2026-10-15": "The Marveldle puzzle for October 15, 2026, features a six-letter name. This 10/15/2026 12:00:00 AM challenge follows a consonant-vowel pattern.",
-    "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure."
+    "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure.",
+    "2026-10-18": "The Marveldle puzzle for October 18, 2026, featured a very rare character variant. This specific entry for the puzzle yesterday-of:10/19/2026 12:00:00 AM follows a four-letter pattern."
   }
 }
