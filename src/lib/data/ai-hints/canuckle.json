@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-19T06:03:57.389Z",
+  "generatedAt": "2026-10-20T06:04:10.028Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -177,6 +177,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "It is a specialized botanical term not common in everyday conversation."
+    },
+    "2026-10-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A small singer with a high voice in the forest.",
+      "clue1": "A tiny bird of the flycatcher family.",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "A small North American flycatcher bird.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Uncommon spelling and rare vocabulary word."
     }
   },
   "prose": {
@@ -193,6 +206,7 @@
     "2026-10-16": "The Canuckle puzzle for October 16, 2026 (#1616) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with H — see the letter hints above before you peek.",
     "2026-10-17": "The Canuckle puzzle for October 17, 2026 (#1617) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek.",
     "2026-10-18": "The Canuckle puzzle for October 18, 2026 (#1618) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek.",
-    "2026-10-19": "Canuckle puzzle #1619 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure."
+    "2026-10-19": "Canuckle puzzle #1619 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
+    "2026-10-20": "Canuckle puzzle #1620 for October 20, 2026, features a five-letter word. The pattern consists of a consonant followed by several vowels."
   }
 }

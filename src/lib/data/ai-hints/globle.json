@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-19T06:12:06.959Z",
+  "generatedAt": "2026-10-20T06:03:42.458Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -181,6 +181,19 @@
       "difficulty": 1,
       "difficulty_label": "Very Easy",
       "difficulty_reason": "It is a globally recognized superpower with very distinct landmarks."
+    },
+    "2026-10-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Between two great rivers, an ancient cradle of civilization rests.",
+      "clue1": "A Middle Eastern nation bordering the Persian Gulf.",
+      "starts_with": "I",
+      "ends_with": "Q",
+      "definition": "A country in Western Asia known for its ancient Mesopotamian history.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The unique ending letter makes it easier to narrow down once found."
     }
   },
   "prose": {
@@ -197,6 +210,7 @@
     "2026-10-16": "The Globle puzzle for October 16, 2026, features a target with eight letters. Puzzle 2026-10-16 follows a pattern starting and ending with the same vowel.",
     "2026-10-17": "The Globle puzzle for October 17, 2026, features a five-letter country name. Puzzle 2026-10-17 follows a pattern where the first and last letters are vowels.",
     "2026-10-18": "The Globle puzzle for October 18, 2026, features a five-letter name. Puzzle 2026-10-18 follows a pattern with a repeated vowel.",
-    "2026-10-19": "The Globle puzzle for October 19, 2026, features a five-letter country. Puzzle 2026-10-19 follows a consonant-vowel-consonant-vowel-vowel pattern."
+    "2026-10-19": "The Globle puzzle for October 19, 2026, features a five-letter country. Puzzle 2026-10-19 follows a consonant-vowel-consonant-vowel-vowel pattern.",
+    "2026-10-20": "The Globle puzzle for October 20, 2026, features a four-letter country name. Puzzle 2026-10-20 follows a pattern with no repeating characters."
   }
 }

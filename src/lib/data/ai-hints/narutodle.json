@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-19T06:05:16.795Z",
+  "generatedAt": "2026-10-20T06:04:19.724Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -180,6 +180,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four different characters across different eras."
+    },
+    "2026-10-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "A cloud, a fan, a sword, and a salamander's master.",
+      "clue1": "Four distinct shinobi from different villages and clans.",
+      "starts_with": "K",
+      "ends_with": "O",
+      "definition": "A group of four diverse ninja characters from the series.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of multiple minor and major characters across different arcs."
     }
   },
   "prose": {
@@ -196,6 +209,7 @@
     "2026-10-16": "Narutodle Game #897 for October 16, 2026, features a multi-character answer. The letter pattern spans four distinct names.",
     "2026-10-17": "Narutodle Game #898 for October 17, 2026, features a complex multi-character answer. The letter pattern is exceptionally long compared to standard daily puzzles.",
     "2026-10-18": "Narutodle Game #899 for October 18, 2026, features a complex multi-name sequence. The letter pattern spans four distinct names of varying lengths.",
-    "2026-10-19": "Narutodle Game #900 takes place on October 19, 2026. This specific puzzle features a long sequence of characters with a complex letter pattern."
+    "2026-10-19": "Narutodle Game #900 takes place on October 19, 2026. This specific puzzle features a long sequence of characters with a complex letter pattern.",
+    "2026-10-20": "Narutodle Game #901 for October 20, 2026, features a multi-character sequence. The letter pattern spans four distinct names."
   }
 }

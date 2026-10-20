@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-19T06:04:11.579Z",
+  "generatedAt": "2026-10-20T06:03:41.486Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -179,6 +179,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A divine bird, a flame bat, a shepherd, and a bear.",
+      "clue1": "Four distinct heroes from a popular MOBA game.",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "A group of four playable characters from Dota 2.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Multiple multi-word names increase the total character count and complexity."
     }
   },
   "prose": {
@@ -195,6 +208,7 @@
     "2026-10-16": "The Dotadle puzzle for October 16, 2026 (Game #1036) is live with today's answer confirmed. The answer runs 36 characters, starting with K and ending with K — see the letter hints above before you peek.",
     "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant.",
     "2026-10-18": "Dotadle Game #1038 for October 18, 2026, features a complex multi-word solution. The letter pattern consists of four separate names.",
-    "2026-10-19": "The Dotadle puzzle for October 19, 2026 (Game #1039) is live with today's answer confirmed. The answer runs 28 characters, starting with S and ending with R — see the letter hints above before you peek."
+    "2026-10-19": "The Dotadle puzzle for October 19, 2026 (Game #1039) is live with today's answer confirmed. The answer runs 28 characters, starting with S and ending with R — see the letter hints above before you peek.",
+    "2026-10-20": "Dotadle Game #1040 for October 20, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct names."
   }
 }
