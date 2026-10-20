@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-19T16:46:24.100Z",
+  "generatedAt": "2026-10-20T16:38:46.758Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -190,6 +190,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am a wooden voice, slightly larger than my famous cousin.",
+      "clue1": "A stringed instrument played with a bow.",
+      "starts_with": "V",
+      "ends_with": "A",
+      "definition": "A string instrument slightly larger than a violin with a deeper tone.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common musical instrument with a distinct starting letter."
     }
   },
   "prose": {
@@ -207,6 +220,7 @@
     "2026-10-17": "The Phoodle puzzle for October 17, 2026 (2026-10-17) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with K — see the letter hints above before you peek.",
     "2026-10-18": "The Phoodle puzzle for October 18, 2026, features a five-letter word. Puzzle 2026-10-18 follows a consonant-vowel-consonant-vowel-vowel pattern.",
     "2026-10-19": "The Phoodle puzzle for October 19, 2026, features a five-letter word. Puzzle 2026-10-19 follows a consonant-vowel-consonant-consonant-vowel pattern.",
-    "2026-10-20": "The Phoodle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with S — see the letter hints above before you peek."
+    "2026-10-20": "The Phoodle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with S — see the letter hints above before you peek.",
+    "2026-10-21": "The Phoodle puzzle for October 21, 2026, features a five-letter word. Puzzle 2026-10-21 follows a consonant-vowel-consonant-vowel-vowel pattern."
   }
 }

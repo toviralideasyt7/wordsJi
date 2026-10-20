@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-19T16:48:21.152Z",
+  "generatedAt": "2026-10-20T16:39:52.223Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -188,6 +188,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am a sudden burst of light or a quick movement.",
+      "clue1": "It can describe a camera tool or a superhero's speed.",
+      "starts_with": "F",
+      "ends_with": "H",
+      "definition": "A sudden brief burst of bright light or a rapid movement.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The word has multiple common meanings that provide several paths to the answer."
     }
   },
   "prose": {
@@ -205,6 +218,7 @@
     "2026-10-17": "The Contexto puzzle for October 17, 2026 (#1490) is live with today's answer confirmed. The answer runs 11 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-10-18": "The Contexto puzzle for October 18, 2026 (#1491) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-10-19": "Contexto puzzle #1492 was released on October 19, 2026. The target word follows a C-E consonant-vowel pattern.",
-    "2026-10-20": "The Contexto puzzle for October 20, 2026 (#1493) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with Y — see the letter hints above before you peek."
+    "2026-10-20": "The Contexto puzzle for October 20, 2026 (#1493) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with Y — see the letter hints above before you peek.",
+    "2026-10-21": "Contexto puzzle #1494 for October 21, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel."
   }
 }

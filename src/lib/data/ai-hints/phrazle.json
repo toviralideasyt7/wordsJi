@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-19T16:48:44.615Z",
+  "generatedAt": "2026-10-20T16:40:12.125Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -188,6 +188,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A close race meets a belief that cannot be questioned.",
+      "clue1": "A tight competition and an untouchable tradition.",
+      "starts_with": "N",
+      "ends_with": "W",
+      "definition": "A tie in a race and a belief held beyond criticism.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Combining two distinct idioms increases the complexity of the letter pattern."
     }
   },
   "prose": {
@@ -205,6 +218,7 @@
     "2026-10-17": "The Phrazle puzzle for October 17, 2026, features a multi-phrase solution. Puzzle 2026-10-17 contains a total of twenty-four letters.",
     "2026-10-18": "The Phrazle puzzle for October 18, 2026 (2026-10-18) is live with today's answer confirmed. The answer runs 27 characters, starting with L and ending with K — see the letter hints above before you peek.",
     "2026-10-19": "The Phrazle puzzle for October 19, 2026, features a complex multi-phrase structure. Puzzle 2026-10-19 contains a high frequency of the letter E.",
-    "2026-10-20": "The Phrazle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with F — see the letter hints above before you peek."
+    "2026-10-20": "The Phrazle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with F — see the letter hints above before you peek.",
+    "2026-10-21": "The Phrazle puzzle for October 21, 2026, features two common English idioms. Puzzle 2026-10-21 consists of twenty-one letters in total."
   }
 }

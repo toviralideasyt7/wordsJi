@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-19T16:46:24.315Z",
+  "generatedAt": "2026-10-20T16:40:33.624Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -188,6 +188,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -205,6 +217,7 @@
     "2026-10-17": "Worldle puzzle #1731 for October 17, 2026, features a multi-word name. The target word follows a complex pattern with several repeating letters.",
     "2026-10-18": "The Worldle puzzle for October 18, 2026 (#1732) is live with today's answer confirmed. The answer runs 7 characters, starting with I and ending with D — see the letter hints above before you peek.",
     "2026-10-19": "The Worldle puzzle for October 19, 2026 (#1733) is live with today's answer confirmed. The answer runs 7 characters, starting with E and ending with A — see the letter hints above before you peek.",
-    "2026-10-20": "The Worldle puzzle for October 20, 2026 (#1734) is live with today's answer confirmed. The answer runs 18 characters, starting with R and ending with O — see the letter hints above before you peek."
+    "2026-10-20": "The Worldle puzzle for October 20, 2026 (#1734) is live with today's answer confirmed. The answer runs 18 characters, starting with R and ending with O — see the letter hints above before you peek.",
+    "2026-10-21": "The Worldle puzzle for October 21, 2026 (#1735) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek."
   }
 }

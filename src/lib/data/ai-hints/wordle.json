@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-19T16:43:59.341Z",
+  "generatedAt": "2026-10-20T16:39:01.660Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -191,6 +191,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -208,6 +220,7 @@
     "2026-10-17": "The Wordle puzzle for October 17, 2026 (#1946) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with E — see the letter hints above before you peek.",
     "2026-10-18": "Wordle puzzle #1947 for October 18, 2026, features a five-letter word. The solution follows a vowel-consonant-vowel-consonant-consonant pattern.",
     "2026-10-19": "Wordle puzzle #1948 arrives on October 19, 2026. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
-    "2026-10-20": "The Wordle puzzle for October 20, 2026 (#1949) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with T — see the letter hints above before you peek."
+    "2026-10-20": "The Wordle puzzle for October 20, 2026 (#1949) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with T — see the letter hints above before you peek.",
+    "2026-10-21": "The Wordle puzzle for October 21, 2026 (#1950) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek."
   }
 }

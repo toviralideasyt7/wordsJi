@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-19T16:43:59.135Z",
+  "generatedAt": "2026-10-20T16:38:45.966Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -188,6 +188,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -205,6 +217,7 @@
     "2026-10-17": "The Spotle puzzle for October 17, 2026 (Day 1674) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with A — see the letter hints above before you peek.",
     "2026-10-18": "Spotle puzzle Day 1675 arrives on October 18, 2026. This specific entry features a twelve-letter pattern.",
     "2026-10-19": "Spotle puzzle Day 1676 for October 19, 2026, features a ten-letter name. The pattern includes several repeating characters across two words.",
-    "2026-10-20": "The Spotle puzzle for October 20, 2026 (Day 1677) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with D — see the letter hints above before you peek."
+    "2026-10-20": "The Spotle puzzle for October 20, 2026 (Day 1677) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with D — see the letter hints above before you peek.",
+    "2026-10-21": "The Spotle puzzle for October 21, 2026 (Day 1678) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with R — see the letter hints above before you peek."
   }
 }

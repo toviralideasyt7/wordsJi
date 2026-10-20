@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-20T06:04:20.207Z",
+  "generatedAt": "2026-10-20T16:39:19.231Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -165,6 +165,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A pub trip during a walking corpse apocalypse.",
+      "clue1": "A romantic comedy with a zombie twist.",
+      "starts_with": "S",
+      "ends_with": "D",
+      "definition": "A 2004 British horror comedy film directed by Edgar Wright.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A very famous cult classic film with a distinct title."
     }
   },
   "prose": {
@@ -180,6 +193,7 @@
     "2026-10-17": "The Framed puzzle for October 17, 2026 (#1682) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with S — see the letter hints above before you peek.",
     "2026-10-18": "Framed puzzle #1683 was released on October 18, 2026. This specific entry features a five-letter word pattern.",
     "2026-10-19": "Framed puzzle #1684 for October 19, 2026, features a nine-letter word. The pattern includes a repeated consonant and four vowels.",
-    "2026-10-20": "The Framed puzzle for October 20, 2026 (#1685) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek."
+    "2026-10-20": "The Framed puzzle for October 20, 2026 (#1685) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek.",
+    "2026-10-21": "Framed puzzle #1686 was released on October 21, 2026. The target phrase consists of four words and seventeen letters."
   }
 }
