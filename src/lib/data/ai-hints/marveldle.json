@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-19T07:01:36.037Z",
+  "generatedAt": "2026-10-20T06:22:56.146Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -142,6 +142,19 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Obscure variant from a specific comic run and non-standard name."
+    },
+    "2026-10-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A digital ghost in a robotic shell, seeking genetic perfection.",
+      "clue1": "A Hydra scientist who exists as a computer program.",
+      "starts_with": "X",
+      "ends_with": "A",
+      "definition": "A Hydra scientist and geneticist who transfers his consciousness into robotic bodies.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The answer consists of two distinct names with unconventional spelling."
     }
   },
   "prose": {
@@ -155,6 +168,7 @@
     "2026-10-14": "The Marveldle puzzle for October 14, 2026, features a name ending in the letter R. This 10/14/2026 12:00:00 AM challenge requires identifying a specific mastermind.",
     "2026-10-15": "The Marveldle puzzle for October 15, 2026, features a six-letter name. This 10/15/2026 12:00:00 AM challenge follows a consonant-vowel pattern.",
     "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure.",
-    "2026-10-18": "The Marveldle puzzle for October 18, 2026, featured a very rare character variant. This specific entry for the puzzle yesterday-of:10/19/2026 12:00:00 AM follows a four-letter pattern."
+    "2026-10-18": "The Marveldle puzzle for October 18, 2026, featured a very rare character variant. This specific entry for the puzzle yesterday-of:10/19/2026 12:00:00 AM follows a four-letter pattern.",
+    "2026-10-20": "The Marveldle puzzle for October 20, 2026, features a complex multi-part answer. The 10/20/2026 12:00:00 AM entry follows a specific character-pairing letter pattern."
   }
 }
