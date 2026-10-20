@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-19T22:05:45.587Z",
+  "generatedAt": "2026-10-20T21:57:28.596Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -185,6 +185,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A border tax that makes imports cost more.",
+      "clue1": "Commonly discussed during trade wars.",
+      "starts_with": "T",
+      "ends_with": "F",
+      "definition": "A tax or duty to be paid on a particular class of imports.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common economic term with a repeated consonant."
     }
   },
   "prose": {
@@ -202,6 +215,7 @@
     "2026-10-17": "The Worgle puzzle for October 17, 2026 (#1739) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with T — see the letter hints above before you peek.",
     "2026-10-18": "The Worgle puzzle for October 18, 2026 (#1740) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with N — see the letter hints above before you peek.",
     "2026-10-19": "Worgle puzzle #1741 for October 19, 2026, features a six-letter word. The pattern consists of a single vowel surrounded by consonants.",
-    "2026-10-20": "The Worgle puzzle for October 20, 2026 (#1742) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek."
+    "2026-10-20": "The Worgle puzzle for October 20, 2026 (#1742) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek.",
+    "2026-10-21": "Worgle puzzle #1743 for October 21, 2026, features a six-letter word. The pattern includes a doubled consonant near the end."
   }
 }
