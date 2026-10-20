@@ -1354,5 +1354,71 @@
       ]
     },
     "solvedAt": "2026-10-19T06:36:09.316Z"
+  },
+  "2026-10-20": {
+    "date": "2026-10-20",
+    "dateId": "10/20/2026 12:00:00 AM",
+    "comics": {
+      "id": "xman",
+      "name": "X-Man",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Elemental",
+        "Flight",
+        "Technological",
+        "Shapeshifting",
+        "Psychic",
+        "Kinesis",
+        "Invisibility",
+        "InterdimensionalTravel",
+        "Speed",
+        "RealityManipulation",
+        "TimeTravel"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1995,
+      "firstApparitionComicTitle": "X-Man #1",
+      "keywords": [
+        "nate grey",
+        "nathaniel grey",
+        "grey"
+      ]
+    },
+    "mcu": {
+      "id": "arnimzola",
+      "name": "Arnim Zola",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "ArtificialIntelligence"
+      ],
+      "powerTypes": [
+        "Technological"
+      ],
+      "origin": "Earth",
+      "actorName": "Toby Jones",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "Hydra",
+        "SHIELD"
+      ],
+      "keywords": [
+        "zola"
+      ]
+    },
+    "solvedAt": "2026-10-20T06:06:17.092Z"
   }
 }
