@@ -7,6 +7,7 @@ import { composeMetaDescription } from '$lib/seo';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { format, subDays } from 'date-fns';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -355,6 +356,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         if (!todayData) {
                 return {
                         error: true,
+                        video: { videoId: null, uploadDate: null },
                         color: null,
                         dayNum: null,
                         formattedDate: requestedFormattedDate,
@@ -540,6 +542,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
         return {
                 error: false,
+                video: await getGameVideo('colordle', actualDateKey),
                 color,
                 dayNum,
                 formattedDate,

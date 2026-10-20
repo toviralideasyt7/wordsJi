@@ -12,6 +12,7 @@ import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { getTeamDivision, getLeague, calculateAge } from '$lib/batterup/solver';
 import type { BatterUpDayEntry } from '$lib/batterup/solver';
 import answersRaw from '$lib/data/batterup-answers.json';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, BatterUpDayEntry>;
@@ -45,6 +46,7 @@ function formatSeoDate(dateStr: string): string {
 export const load: PageServerLoad = async ({ setHeaders }) => {
 	const today = getPuzzleDateForGame('batterup');
 	const dateKey = format(today, 'yyyy-MM-dd');
+	const video = await getGameVideo('batterup', dateKey);
 	const entry = answers[dateKey] ?? null;
 	// Yesterday's answer renders inline on this page.
 	const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
@@ -59,6 +61,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		return {
 			error: true,
 			isStale: true,
+			video,
 			entry: null,
 			yesterday: null,
 			recent: [],
@@ -170,6 +173,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	return {
 		error: false,
 		isStale: false,
+		video,
 		entry,
 		yesterday,
 		recent,

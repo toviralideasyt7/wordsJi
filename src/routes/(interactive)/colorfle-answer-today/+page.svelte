@@ -16,6 +16,7 @@
   import { getContrastColor } from '$lib/colorfle';
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
@@ -134,6 +135,15 @@
 
       <div class="mt-6">
         <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mt-8">
+        <VideoSection
+          videoId={data.video.videoId}
+          gameName="Colorfle"
+          dateStr={data.formattedDate}
+          uploadDate={data.video.uploadDate}
+        />
       </div>
 
       <div class="mt-8">

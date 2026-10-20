@@ -1,4 +1,5 @@
 import type { PageServerLoad } from './$types';
+import { getGameVideo } from '$lib/server/game-videos';
 import { format, subDays } from 'date-fns';
 import spotleData from '../../../../static/spotle_data.json';
 import { fetchLiveSpotleToday } from '$lib/live-answer-sources';
@@ -211,7 +212,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		}
 	};
 
+	const video = await getGameVideo('spotle', todayStr);
+
 	return {
+		video,
 		todayStr,
 		todayFormatted,
 		todayAnswer: todayAnswer as SpotleAnswer | null,

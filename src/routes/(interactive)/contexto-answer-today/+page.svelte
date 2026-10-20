@@ -19,6 +19,7 @@
   import { dailyAnswerTitle } from '$lib/seo/daily-title';
   import type { AIHints } from '$lib/ai-hints';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
@@ -41,6 +42,7 @@
     data
   }: {
     data: {
+      video: { videoId: string | null; uploadDate: string | null };
       initialAnswer: ContextoAnswer | null;
       latestDate: string | null;
       error: string | null;
@@ -195,6 +197,15 @@
 
     <div class="mb-6">
       <UpdatedStamp stamp={data.updatedStamp ?? ''} />
+    </div>
+
+    <div class="mt-8">
+      <VideoSection
+        videoId={data.video.videoId}
+        gameName="Contexto"
+        dateStr={activeLabel}
+        uploadDate={data.video.uploadDate}
+      />
     </div>
 
     <div class="mb-10">

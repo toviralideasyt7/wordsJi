@@ -9,6 +9,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import GlobleCluesSection from '$lib/components/GlobleCluesSection.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
@@ -78,6 +79,15 @@
 
     <div class="flex justify-center mb-8">
       <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mt-8">
+      <VideoSection
+        videoId={data.video.videoId}
+        gameName="Globle"
+        dateStr={data.formattedDate}
+        uploadDate={data.video.uploadDate}
+      />
     </div>
 
     <AIHintCards gameName="Globle" answer={data.country.name} hints={data.aiHints} showAnswerReveal={false} />

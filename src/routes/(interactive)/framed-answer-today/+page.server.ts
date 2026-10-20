@@ -13,6 +13,7 @@ import {
 	generateSoftwareApplicationSchema,
 	generateWebPageSchema
 } from '$lib/seo';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -109,7 +110,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	// AI hint cards for the Classic answer (matches the generated hint store).
 	const aiHints = mergeHints(classicAnswer, getAIHints('framed', targetDateKey));
 
+	const video = await getGameVideo('framed', displayDateKey);
+
 	return {
+		video,
 		entries,
 		hasExactEntries,
 		targetDateKey: displayDateKey,

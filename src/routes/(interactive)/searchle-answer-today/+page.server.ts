@@ -4,10 +4,12 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { format, subDays } from 'date-fns';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = () => {
+export const load: PageServerLoad = async () => {
 	const today = getPuzzleDateForGame('searchle');
+	const video = await getGameVideo('searchle', format(today, 'yyyy-MM-dd'));
 	const todayPuzzle = getSearchlePuzzleForDate(today);
 	const todayLabel = format(today, 'MMMM d, yyyy');
 	// Searchle has no official puzzle number; use the puzzle's stable index
@@ -41,6 +43,7 @@ export const load: PageServerLoad = () => {
 	const endLetter = todayPuzzle.answer[todayPuzzle.answer.length - 1]?.toUpperCase() || '';
 
 	return {
+		video,
 		totalPuzzles: SEARCHLE_PUZZLES.length,
 		todayPuzzle,
 		searchleNumber,

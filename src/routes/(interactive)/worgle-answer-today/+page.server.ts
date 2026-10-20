@@ -5,6 +5,7 @@ import solutionsJson from '../../../../static/worgle_solutions.json';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 import {
 	formatWorgleDateKey,
 	getWorgleEntryForDateKey,
@@ -54,7 +55,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		'X-Puzzle-Date': todayKey
 	});
 
+	const video = await getGameVideo('worgle', todayKey);
+
 	return {
+		video,
 		todayKey,
 		formattedDate,
 		todayEntry,

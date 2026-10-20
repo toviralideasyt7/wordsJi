@@ -8,6 +8,7 @@ import {
   getBetweenleTodayAnswer,
   parseDateKey,
 } from '$lib/betweenle/logic';
+import { getGameVideo } from '$lib/server/game-videos';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
   const todayAnswer = getBetweenleTodayAnswer();
@@ -49,7 +50,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
       }
     : null;
 
+  const video = await getGameVideo('betweenle', todayAnswer.date);
+
   return {
+    video,
     todayAnswer,
     archive,
     todayLabel: formatBetweenleDate(todayAnswer.date),

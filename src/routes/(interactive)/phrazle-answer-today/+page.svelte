@@ -8,6 +8,7 @@
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import FAQSection from '$lib/components/FAQSection.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
@@ -35,6 +36,7 @@
     data
   }: {
     data: {
+      video: { videoId: string | null; uploadDate: string | null };
       totalPhrases: number;
       todayAnswers: PhrazleDayAnswers;
       todayLabel: string;
@@ -102,6 +104,15 @@
 
     <div class="mb-6">
       <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mt-8">
+      <VideoSection
+        videoId={data.video.videoId}
+        gameName="Phrazle"
+        dateStr={data.todayLabel}
+        uploadDate={data.video.uploadDate}
+      />
     </div>
 
     <div class="mb-8">

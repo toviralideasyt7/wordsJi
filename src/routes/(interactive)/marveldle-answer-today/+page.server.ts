@@ -12,6 +12,7 @@ import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { MarveldleDayEntry } from '$lib/marveldle/types';
 import answersRaw from '$lib/data/marveldle-answers.json';
 import type { PageServerLoad } from './$types';
@@ -34,6 +35,7 @@ function decadeOf(year?: number): string {
 export const load: PageServerLoad = async ({ setHeaders }) => {
 	const today = getPuzzleDateForGame('marveldle');
 	const dateKey = format(today, 'yyyy-MM-dd');
+	const video = await getGameVideo('marveldle', dateKey);
 	const entry = answers[dateKey] ?? null;
 	// Yesterday's answers render inline on this page (no separate yesterday route).
 	const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
@@ -50,6 +52,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		return {
 			error: true,
 			isStale: true,
+			video,
 			entry: null,
 			yesterday: null,
 			recent: [],
@@ -155,6 +158,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	return {
 		error: false,
 		isStale: false,
+		video,
 		entry,
 		yesterday,
 		recent,

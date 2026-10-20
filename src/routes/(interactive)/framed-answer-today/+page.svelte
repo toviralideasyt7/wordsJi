@@ -10,6 +10,7 @@
   import InternalLinkSection from '$lib/components/InternalLinkSection.svelte';
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
@@ -85,6 +86,15 @@
 
     <div class="flex justify-center">
       <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mt-8">
+      <VideoSection
+        videoId={data.video.videoId}
+        gameName="Framed"
+        dateStr={data.formattedDate}
+        uploadDate={data.video.uploadDate}
+      />
     </div>
 
     {#if data.hasExactEntries && data.classicAnswer}

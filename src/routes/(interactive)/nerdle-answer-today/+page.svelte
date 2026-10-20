@@ -7,6 +7,7 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import AuthorCard from '$lib/components/AuthorCard.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
@@ -95,6 +96,15 @@
 
                         <div class="mt-2">
                                 <UpdatedStamp stamp={data.updatedStamp} />
+                        </div>
+
+                        <div class="mt-6">
+                                <VideoSection
+                                        videoId={data.video.videoId}
+                                        gameName="Nerdle"
+                                        dateStr={data.formattedDate}
+                                        uploadDate={data.video.uploadDate}
+                                />
                         </div>
 
                         {#if data.classicAnswer}

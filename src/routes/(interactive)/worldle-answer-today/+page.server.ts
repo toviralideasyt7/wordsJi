@@ -15,6 +15,7 @@ import type { WorldleCity, WorldleCountry, WorldleCountryDetailsMap } from '$lib
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 const countries = countriesData as WorldleCountry[];
@@ -122,7 +123,10 @@ export const load: PageServerLoad = async () => {
     generateWebPageSchema('Worldle Answer Today', pageDescription, pageUrl),
   ]);
 
+  const video = await getGameVideo('worldle', todayDate);
+
   return {
+    video,
     todayDate,
     todayAnswer,
     formattedTodayDate,

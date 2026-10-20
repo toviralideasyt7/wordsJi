@@ -11,6 +11,7 @@ import {
 	generateSoftwareApplicationSchema,
 	generateWebPageSchema
 } from '$lib/seo';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -38,6 +39,7 @@ export const load: PageServerLoad = async () => {
 	if (!answer) {
 		return {
 			error: true,
+			video: { videoId: null, uploadDate: null },
 			answer: null,
 			recentEntries: [],
 			dateKey: null,
@@ -98,6 +100,7 @@ export const load: PageServerLoad = async () => {
 
 	return {
 		error: false,
+		video: await getGameVideo('colorfle', answer.date),
 		answer,
 		recentEntries,
 		dateKey: answer.date,

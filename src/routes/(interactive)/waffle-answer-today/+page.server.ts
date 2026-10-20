@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
@@ -14,6 +15,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         const formattedDate = format(today, 'MMMM d, yyyy');
         return {
             error: true,
+            video: await getGameVideo('waffle', format(today, 'yyyy-MM-dd')),
             formattedDate,
             meta: {
                 title: `Waffle Answer Today (${formattedDate}) - Grid Solution and Hints`,
@@ -66,8 +68,11 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const pageKeywords = `waffle answer today, waffle answer, waffle hint, waffle hint today, waffle answer for ${formattedDate}`;
     const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(today).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } }, { '@type': 'FAQPage', mainEntity: hintFaqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] });
 
+    const video = await getGameVideo('waffle', dateKey);
+
     return {
         error: false,
+        video,
         formattedDate, puzzle, solution, words, definitions, number,
         prevSlug, nextSlug, showNext, date: data.date,
         dateKey,

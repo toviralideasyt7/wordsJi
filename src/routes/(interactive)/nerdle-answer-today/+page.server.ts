@@ -7,6 +7,7 @@ import {
         type NerdleAnswerFetchOptions
 } from '$lib/nerdle-answers';
 import { getPuzzleWindow } from '$lib/puzzle-window';
+import { getGameVideo } from '$lib/server/game-videos';
 
 function formatDateLabel(dateKey: string): string {
         const date = new Date(`${dateKey}T00:00:00Z`);
@@ -152,7 +153,10 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                 }
         ]);
 
+        const video = await getGameVideo('nerdle', answerData.date);
+
         return {
+                video,
                 answerData,
                 formattedDate,
                 faqItems,

@@ -4,6 +4,7 @@ import { fetchRecentCanucklePuzzles } from '$lib/live-answer-sources';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
 import canuckleRaw from '$lib/wordlebot-wasm/assets/generated/canuckle-data.json';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 interface CanucklePuzzle {
@@ -64,6 +65,7 @@ function getLast30Puzzles(
 export const load: PageServerLoad = async ({ setHeaders }) => {
         const today = getPuzzleDateForGame('canuckle');
         const dateKey = format(today, 'yyyy-MM-dd');
+        const video = await getGameVideo('canuckle', dateKey);
         let puzzles = canucklePuzzles;
         const shouldRefreshFromSource =
                 !latestBundledDateKey || latestBundledDateKey < dateKey || !puzzles.some((puzzle) => puzzle.date === dateKey);
@@ -110,6 +112,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 setHeaders({ 'X-Puzzle-Date': dateKey, 'X-Edge-Cache-Bypass': '1' });
                 return {
                         error: true,
+                        video,
                         todayPuzzle: null,
                         yesterdayPuzzle: null,
                         yesterday: null,
@@ -272,6 +275,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
         return {
                 error: false,
+                video,
                 todayPuzzle: {
                         answer: todayPuzzle.answer,
                         index: todayPuzzle.index,

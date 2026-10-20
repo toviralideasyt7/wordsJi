@@ -9,6 +9,7 @@
   import AnswerArticle from '$lib/components/AnswerArticle.svelte';
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
@@ -27,6 +28,7 @@
 
   let { data } = $props<{
     data: {
+      video: { videoId: string | null; uploadDate: string | null };
       totalPuzzles: number;
       todayPuzzle: SearchleDailyPuzzle;
       searchleNumber: number;
@@ -159,6 +161,15 @@
 
     <div class="mb-6">
       <UpdatedStamp stamp={data.updatedStamp} />
+    </div>
+
+    <div class="mt-8">
+      <VideoSection
+        videoId={data.video.videoId}
+        gameName="Searchle"
+        dateStr={todayLabel}
+        uploadDate={data.video.uploadDate}
+      />
     </div>
 
     <div class="mb-8">

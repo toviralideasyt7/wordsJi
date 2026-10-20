@@ -4,6 +4,7 @@ import { getPuzzleWindow, parsePuzzleDateKey } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { format, differenceInCalendarDays } from 'date-fns';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
@@ -13,6 +14,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     if (!data) {
         return {
             error: true,
+            video: await getGameVideo('phoodle', getPuzzleWindow('phoodle').effectivePuzzleDate),
             formattedDate: format(parsePuzzleDateKey(getPuzzleWindow('phoodle').effectivePuzzleDate), 'MMMM d, yyyy')
         };
     }
@@ -62,7 +64,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     );
     const pageKeywords = `phoodle answer today, phoodle answer, phoodle hint, phoodle hint today, phoodle answer for ${formattedDate}`;
 
+    const video = await getGameVideo('phoodle', data.date.toISOString().split('T')[0]);
+
     return {
+        video,
         word,
         upperWord,
         description,

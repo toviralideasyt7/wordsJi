@@ -9,6 +9,7 @@ import {
 	generateSoftwareApplicationSchema,
 	generateWebPageSchema
 } from '$lib/seo';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const prerender = true;
@@ -104,7 +105,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		])
 	]);
 
+	const video = await getGameVideo('countryle', displayDateKey);
+
 	return {
+		video,
 		today,
 		recentEntries: recentEntriesWithToday,
 		yesterday,

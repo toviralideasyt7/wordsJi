@@ -5,15 +5,17 @@ import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { fetchDatamuseClues } from '$lib/datamuse';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch }) => {
     const today = getPuzzleDateForGame('semantle');
     const dateKey = format(today, 'yyyy-MM-dd');
+    const video = await getGameVideo('semantle', dateKey);
     const data = getTodaySemantleData();
 
     if (!data) {
-        return { error: true };
+        return { error: true, video };
     }
 
     const { word, puzzleNumber, formattedDate } = data;
@@ -59,6 +61,6 @@ export const load: PageServerLoad = async ({ fetch }) => {
 
     const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(formattedDate).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } }, { '@type': 'FAQPage', mainEntity: hintFaqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] });
 
-    return { word, puzzleNumber, formattedDate, dateKey, last10Days, clues, updatedStamp, aiHints, hintFaqs, yesterday, factData, schemas: jsonLd, meta: { title: pageTitle, description: pageDescription, keywords: pageKeywords } };
+    return { video, word, puzzleNumber, formattedDate, dateKey, last10Days, clues, updatedStamp, aiHints, hintFaqs, yesterday, factData, schemas: jsonLd, meta: { title: pageTitle, description: pageDescription, keywords: pageKeywords } };
 };
 

@@ -3,6 +3,7 @@ import { TOTAL_PHRASES, getAnswerForDate } from '$lib/phrazle/phrases';
 import { generateWebPageSchema } from '$lib/seo';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import type { PageLoad } from './$types';
 
 export const prerender = true;
 export const csr = false;
@@ -47,7 +48,7 @@ function getDayAnswers(date: Date): PhrazleDayAnswers {
 	};
 }
 
-export const load = () => {
+export const load: PageLoad = ({ data }) => {
 	const today = getPuzzleDateForGame('phrazle');
 	const todayAnswers = getDayAnswers(today);
 	const todayLabel = formatDisplayDate(todayAnswers.date);
@@ -111,6 +112,10 @@ export const load = () => {
 		.some((c, i, a) => a.indexOf(c) !== a.lastIndexOf(c));
 
 	return {
+		// Server-load data (the build-time video state) is not merged into
+		// the page data automatically when a universal load returns its own
+		// object — spread it through explicitly.
+		...data,
 		totalPhrases: TOTAL_PHRASES,
 		todayAnswers,
 		todayLabel,

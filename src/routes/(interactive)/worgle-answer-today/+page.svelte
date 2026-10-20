@@ -11,6 +11,7 @@
         import { PRESTON_HAYES_AUTHOR_NAME, PRESTON_HAYES_AUTHOR_IMAGE, PRESTON_HAYES_AUTHOR_DESCRIPTION } from '$lib/authors';
         import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, generateWebPageSchema } from '$lib/seo';
         import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+        import VideoSection from '$lib/components/VideoSection.svelte';
         import AIHintCards from '$lib/components/AIHintCards.svelte';
         import FactBlock from '$lib/components/FactBlock.svelte';
         import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
@@ -19,6 +20,7 @@
 
         let { data }: {
                 data: {
+                        video: { videoId: string | null; uploadDate: string | null };
                         todayKey: string;
                         formattedDate: string;
                         todayEntry: { date: string; word: string; puzzle: number };
@@ -147,6 +149,15 @@
 
                 <div class="mt-10">
                         <UpdatedStamp stamp={data.updatedStamp} />
+                </div>
+
+                <div class="mt-10">
+                        <VideoSection
+                                videoId={data.video.videoId}
+                                gameName="Worgle"
+                                dateStr={data.formattedDate}
+                                uploadDate={data.video.uploadDate}
+                        />
                 </div>
 
                 <div class="mt-10">

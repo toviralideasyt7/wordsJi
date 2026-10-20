@@ -3,6 +3,7 @@ import { fetchTodayContextoAnswer, type ContextoAnswerPayload } from '$lib/conte
 import { formatContextoDate, getContextoTodayDate } from '$lib/contexto';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 
 function formatDisplayDate(dateKey: string): string {
   return new Date(`${dateKey}T12:00:00`).toLocaleDateString('en-US', {
@@ -29,6 +30,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     const hintFaqs = [{ question: 'When was this page last updated?', answer: updatedStamp }];
 
     return {
+      video: await getGameVideo('contexto', latestAnswer.date),
       initialAnswer: latestAnswer,
       latestDate: latestAnswer.date,
       error: null,
@@ -42,6 +44,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
     const fallbackDate = formatContextoDate(getContextoTodayDate());
     return {
+      video: await getGameVideo('contexto', fallbackDate),
       initialAnswer: null as ContextoAnswerPayload | null,
       latestDate: fallbackDate,
       error: 'Failed to load Contexto answer',

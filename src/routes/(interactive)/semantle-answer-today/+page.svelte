@@ -11,6 +11,7 @@
   import { ARTICLE_CONTENT } from '$lib/content/registry';
   import FiChevronDown from '$lib/components/icons/FiChevronDown.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
+  import VideoSection from '$lib/components/VideoSection.svelte';
   import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
@@ -90,6 +91,15 @@
 
       <div class="mb-8">
         <UpdatedStamp stamp={data.updatedStamp} />
+      </div>
+
+      <div class="mt-8">
+        <VideoSection
+          videoId={data.video.videoId}
+          gameName="Semantle"
+          dateStr={data.formattedDate}
+          uploadDate={data.video.uploadDate}
+        />
       </div>
 
       <div class="mb-12">

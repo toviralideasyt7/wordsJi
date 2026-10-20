@@ -3,6 +3,7 @@ import { redirect } from '@sveltejs/kit';
 import { getPuzzleWindow } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
@@ -61,7 +62,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     // AI hint cards: deterministic letter analysis merged with any stored hints.
     const aiHints = mergeHints(country.name, getAIHints('globle', publishedDateKey));
 
+    const video = await getGameVideo('globle', publishedDateKey);
+
     return {
+        video,
         country,
         formattedDate,
         dateKey: publishedDateKey,
