@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-20T21:57:28.596Z",
+  "generatedAt": "2026-10-21T19:57:46.958Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -198,6 +198,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common economic term with a repeated consonant."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -216,6 +228,7 @@
     "2026-10-18": "The Worgle puzzle for October 18, 2026 (#1740) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with N — see the letter hints above before you peek.",
     "2026-10-19": "Worgle puzzle #1741 for October 19, 2026, features a six-letter word. The pattern consists of a single vowel surrounded by consonants.",
     "2026-10-20": "The Worgle puzzle for October 20, 2026 (#1742) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek.",
-    "2026-10-21": "Worgle puzzle #1743 for October 21, 2026, features a six-letter word. The pattern includes a doubled consonant near the end."
+    "2026-10-21": "Worgle puzzle #1743 for October 21, 2026, features a six-letter word. The pattern includes a doubled consonant near the end.",
+    "2026-10-22": "The Worgle puzzle for October 22, 2026 (#1744) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with R — see the letter hints above before you peek."
   }
 }
