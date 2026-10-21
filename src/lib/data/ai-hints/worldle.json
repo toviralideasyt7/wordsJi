@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-20T16:40:33.624Z",
+  "generatedAt": "2026-10-21T16:45:17.252Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -200,6 +200,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A landlocked gem between Romania and the black sea's edge.",
+      "clue1": "It is a small nation in Eastern Europe.",
+      "starts_with": "M",
+      "ends_with": "A",
+      "definition": "A landlocked country in Eastern Europe bordering Romania and Ukraine.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Recognizable shape but less common in daily conversation than larger neighbors."
     }
   },
   "prose": {
@@ -218,6 +231,7 @@
     "2026-10-18": "The Worldle puzzle for October 18, 2026 (#1732) is live with today's answer confirmed. The answer runs 7 characters, starting with I and ending with D — see the letter hints above before you peek.",
     "2026-10-19": "The Worldle puzzle for October 19, 2026 (#1733) is live with today's answer confirmed. The answer runs 7 characters, starting with E and ending with A — see the letter hints above before you peek.",
     "2026-10-20": "The Worldle puzzle for October 20, 2026 (#1734) is live with today's answer confirmed. The answer runs 18 characters, starting with R and ending with O — see the letter hints above before you peek.",
-    "2026-10-21": "The Worldle puzzle for October 21, 2026 (#1735) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek."
+    "2026-10-21": "The Worldle puzzle for October 21, 2026 (#1735) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek.",
+    "2026-10-22": "Worldle puzzle #1736 for October 22, 2026, features a seven-letter country. The pattern includes a repeating vowel and a landlocked geography."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-20T16:39:01.660Z",
+  "generatedAt": "2026-10-21T16:43:06.088Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -203,6 +203,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "Push a button to start the whole thing over again.",
+      "clue1": "A common action when a device freezes.",
+      "starts_with": "R",
+      "ends_with": "T",
+      "definition": "To set again or restore to an original state.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common vocabulary word with a familiar letter pattern."
     }
   },
   "prose": {
@@ -221,6 +234,7 @@
     "2026-10-18": "Wordle puzzle #1947 for October 18, 2026, features a five-letter word. The solution follows a vowel-consonant-vowel-consonant-consonant pattern.",
     "2026-10-19": "Wordle puzzle #1948 arrives on October 19, 2026. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-10-20": "The Wordle puzzle for October 20, 2026 (#1949) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with T — see the letter hints above before you peek.",
-    "2026-10-21": "The Wordle puzzle for October 21, 2026 (#1950) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek."
+    "2026-10-21": "The Wordle puzzle for October 21, 2026 (#1950) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek.",
+    "2026-10-22": "Wordle puzzle #1951 for October 22, 2026, features a five-letter word. The pattern consists of a repeated vowel in the second and fourth positions."
   }
 }

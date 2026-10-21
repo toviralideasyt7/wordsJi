@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-20T16:39:19.231Z",
+  "generatedAt": "2026-10-21T16:46:00.408Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -178,6 +178,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A very famous cult classic film with a distinct title."
+    },
+    "2026-10-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A mental maze where the truth is a locked door.",
+      "clue1": "A psychological thriller set in a remote asylum.",
+      "starts_with": "S",
+      "ends_with": "D",
+      "definition": "A psychological thriller novel and film about a psychiatric facility.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known title but requires connecting the setting to the specific name."
     }
   },
   "prose": {
@@ -194,6 +207,7 @@
     "2026-10-18": "Framed puzzle #1683 was released on October 18, 2026. This specific entry features a five-letter word pattern.",
     "2026-10-19": "Framed puzzle #1684 for October 19, 2026, features a nine-letter word. The pattern includes a repeated consonant and four vowels.",
     "2026-10-20": "The Framed puzzle for October 20, 2026 (#1685) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek.",
-    "2026-10-21": "Framed puzzle #1686 was released on October 21, 2026. The target phrase consists of four words and seventeen letters."
+    "2026-10-21": "Framed puzzle #1686 was released on October 21, 2026. The target phrase consists of four words and seventeen letters.",
+    "2026-10-22": "Framed puzzle #1687 arrives on October 22, 2026. This specific entry follows a fourteen-letter pattern."
   }
 }

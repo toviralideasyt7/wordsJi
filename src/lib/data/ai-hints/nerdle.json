@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-20T16:39:01.978Z",
+  "generatedAt": "2026-10-21T16:43:57.643Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -249,6 +249,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple two-digit addition with no carrying required."
+    },
+    "2026-10-22": {
+      "kind": "math",
+      "operator_hint": "Uses addition and division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit.",
+      "riddle": "Split a ten, then add a few more to find the total.",
+      "starts_with": "4",
+      "ends_with": "9",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple operations and a short length make this a straightforward puzzle."
     }
   },
   "prose": {
@@ -267,6 +283,7 @@
     "2026-10-18": "The Nerdle puzzle for October 18, 2026 (#1733) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
     "2026-10-19": "Nerdle puzzle #1734 arrives on October 19, 2026. This specific challenge requires balancing two different operators to find the solution.",
     "2026-10-20": "The Nerdle puzzle for October 20, 2026 (#1735) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
-    "2026-10-21": "Nerdle puzzle #1736 presents a straightforward arithmetic challenge. This October 21, 2026 entry rewards players who spot basic sums quickly."
+    "2026-10-21": "Nerdle puzzle #1736 presents a straightforward arithmetic challenge. This October 21, 2026 entry rewards players who spot basic sums quickly.",
+    "2026-10-22": "Nerdle puzzle #1737 offers a quick mental challenge for players. This October 22, 2026 entry balances two basic operations."
   }
 }

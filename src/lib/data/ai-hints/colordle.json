@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-20T16:38:49.275Z",
+  "generatedAt": "2026-10-21T16:43:45.415Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -202,6 +202,18 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "The specific shade name is less common than basic colors."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -220,6 +232,7 @@
     "2026-10-18": "The Colordle puzzle for October 18, 2026 (#1668) is live with today's answer confirmed. The answer runs 8 characters, starting with R and ending with C — see the letter hints above before you peek.",
     "2026-10-19": "Colordle puzzle #1669 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
     "2026-10-20": "The Colordle puzzle for October 20, 2026 (#1670) is live with today's answer confirmed. The answer runs 11 characters, starting with M and ending with F — see the letter hints above before you peek.",
-    "2026-10-21": "Colordle puzzle #1671 for October 21, 2026, features a ten-letter color name. The word follows a consonant-vowel pattern with one repeating letter."
+    "2026-10-21": "Colordle puzzle #1671 for October 21, 2026, features a ten-letter color name. The word follows a consonant-vowel pattern with one repeating letter.",
+    "2026-10-22": "The Colordle puzzle for October 22, 2026 (#1672) is live with today's answer confirmed. The answer runs 16 characters, starting with E and ending with F — see the letter hints above before you peek."
   }
 }

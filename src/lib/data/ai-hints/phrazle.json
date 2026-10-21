@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-20T16:40:12.125Z",
+  "generatedAt": "2026-10-21T16:46:20.935Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -201,6 +201,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Combining two distinct idioms increases the complexity of the letter pattern."
+    },
+    "2026-10-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "One is a lost bird, the other is a firm stance.",
+      "clue1": "Two common idioms combined into one puzzle.",
+      "starts_with": "D",
+      "ends_with": "D",
+      "definition": "Phrases meaning completely extinct and refusing to retreat.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Combining two distinct idioms increases the length and complexity of the search."
     }
   },
   "prose": {
@@ -219,6 +232,7 @@
     "2026-10-18": "The Phrazle puzzle for October 18, 2026 (2026-10-18) is live with today's answer confirmed. The answer runs 27 characters, starting with L and ending with K — see the letter hints above before you peek.",
     "2026-10-19": "The Phrazle puzzle for October 19, 2026, features a complex multi-phrase structure. Puzzle 2026-10-19 contains a high frequency of the letter E.",
     "2026-10-20": "The Phrazle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with F — see the letter hints above before you peek.",
-    "2026-10-21": "The Phrazle puzzle for October 21, 2026, features two common English idioms. Puzzle 2026-10-21 consists of twenty-one letters in total."
+    "2026-10-21": "The Phrazle puzzle for October 21, 2026, features two common English idioms. Puzzle 2026-10-21 consists of twenty-one letters in total.",
+    "2026-10-22": "The Phrazle puzzle for October 22, 2026, features a long character string. Puzzle 2026-10-22 utilizes a pattern that begins and ends with the same letter."
   }
 }

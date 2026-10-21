@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-20T16:37:44.305Z",
+  "generatedAt": "2026-10-21T16:43:45.883Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -201,6 +201,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a simple five-letter structure."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -219,6 +231,7 @@
     "2026-10-18": "The Searchle puzzle for October 18, 2026 (#85) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-10-19": "The Searchle puzzle for October 19, 2026 (#86) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with W — see the letter hints above before you peek.",
     "2026-10-20": "The Searchle puzzle for October 20, 2026 (#87) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek.",
-    "2026-10-21": "Searchle puzzle #88 takes place on October 21, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-21": "Searchle puzzle #88 takes place on October 21, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-22": "The Searchle puzzle for October 22, 2026 (#89) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with D — see the letter hints above before you peek."
   }
 }
