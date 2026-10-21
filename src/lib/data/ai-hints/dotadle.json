@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-20T06:03:41.486Z",
+  "generatedAt": "2026-10-21T06:04:29.187Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -192,6 +192,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Multiple multi-word names increase the total character count and complexity."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "Fire, darkness, rot, and sunlight clash in this quartet.",
+      "clue1": "A collection of diverse magical combatants.",
+      "starts_with": "P",
+      "ends_with": "R",
+      "definition": "A group of four distinct fantasy heroes from a battle arena.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of a specific game roster and multiple character names."
     }
   },
   "prose": {
@@ -209,6 +222,7 @@
     "2026-10-17": "Dotadle Game #1037 for October 17, 2026, features a long string of characters. The pattern begins and ends with the same consonant.",
     "2026-10-18": "Dotadle Game #1038 for October 18, 2026, features a complex multi-word solution. The letter pattern consists of four separate names.",
     "2026-10-19": "The Dotadle puzzle for October 19, 2026 (Game #1039) is live with today's answer confirmed. The answer runs 28 characters, starting with S and ending with R — see the letter hints above before you peek.",
-    "2026-10-20": "Dotadle Game #1040 for October 20, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct names."
+    "2026-10-20": "Dotadle Game #1040 for October 20, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct names.",
+    "2026-10-21": "Dotadle Game #1041 was released on October 21, 2026. This puzzle features a long sequence of letters across four names."
   }
 }

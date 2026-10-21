@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-19T06:03:55.900Z",
+  "generatedAt": "2026-10-21T06:05:24.677Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -142,6 +142,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "The subject is a globally recognized celebrity with a very common surname."
+    },
+    "2026-10-20": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -155,6 +167,7 @@
     "2026-10-15": "Batter Up Game #970 arrives on October 15, 2026. This puzzle features a twelve-letter name with several repeating characters.",
     "2026-10-16": "Batter Up Game #971 for October 16, 2026, features an eleven-letter name. The letter pattern includes a unique combination of consonants and vowels.",
     "2026-10-17": "Batter Up Game #972 for October 17, 2026, features a thirteen-letter name. The solution follows a specific consonant-vowel pattern across two words.",
-    "2026-10-19": "Batter Up Game #974 for October 19, 2026, features a nine-letter answer. The pattern consists of two distinct words separated by a space."
+    "2026-10-19": "Batter Up Game #974 for October 19, 2026, features a nine-letter answer. The pattern consists of two distinct words separated by a space.",
+    "2026-10-20": "The Batter Up puzzle for October 20, 2026 (Game #975) is live with today's answer confirmed. The answer runs 14 characters, starting with J and ending with A — see the letter hints above before you peek."
   }
 }

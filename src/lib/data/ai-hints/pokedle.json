@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-20T06:04:10.662Z",
+  "generatedAt": "2026-10-21T06:06:02.276Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -192,6 +192,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four different Pokémon simultaneously."
+    },
+    "2026-10-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "A versatile fox, a sleek serpent, a bone-clubber, and a fossil shell.",
+      "clue1": "Four distinct species from different generations and types.",
+      "starts_with": "E",
+      "ends_with": "R",
+      "definition": "A group of four specific Pokémon species.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires identifying four separate creatures rather than a single entity."
     }
   },
   "prose": {
@@ -209,6 +222,7 @@
     "2026-10-17": "Pokedle Game #1101 takes place on October 17, 2026. This specific puzzle features a multi-word answer with a varied letter pattern.",
     "2026-10-18": "The Pokedle puzzle for October 18, 2026 (Game #1102) is live with today's answer confirmed. The answer runs 33 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-10-19": "Pokedle Game #1103 takes place on October 19, 2026. The target word follows a six-letter pattern.",
-    "2026-10-20": "Pokedle Game #1104 for October 20, 2026, features a multi-word answer. The solution follows a complex pattern of varied lengths."
+    "2026-10-20": "Pokedle Game #1104 for October 20, 2026, features a multi-word answer. The solution follows a complex pattern of varied lengths.",
+    "2026-10-21": "Pokedle Game #1105 takes place on October 21, 2026. This specific puzzle features a multi-word answer starting with E and ending with R."
   }
 }
