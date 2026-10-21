@@ -379,5 +379,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-10/05/f2c9de36-6ed3333d-b3ca7e46-csvm-diamondgcp-asset-4000K.mp4",
     "sourceDate": "2026-10-19",
     "fetchedAt": "2026-10-19T01:06:15.943Z"
+  },
+  "2026-10-20": {
+    "date": "2026-10-20",
+    "gameNumber": 975,
+    "player": {
+      "player_name": "Jonathan Aranda",
+      "player_id": "40810",
+      "team_name": "Rays",
+      "born": "MEX.",
+      "birth_date": "1998-05-23",
+      "position": [
+        "1B"
+      ],
+      "debut": 2022,
+      "jersey_number": 8
+    },
+    "videoDescription": "[07/12/26 : SEA 8 - 2 TB] Jonathan Aranda hits a two-run home run to the opposite field to get the Rays on the board in the bottom of the 8th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/12/5a76f222-48c659a4-6732695d-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-20",
+    "fetchedAt": "2026-10-21T01:06:09.723Z"
   }
 }
