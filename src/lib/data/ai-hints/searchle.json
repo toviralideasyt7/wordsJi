@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-22T14:16:21.529Z",
+  "generatedAt": "2026-10-22T19:33:51.177Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -188,6 +188,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -205,6 +217,7 @@
     "2026-10-17": "Searchle puzzle #84 for October 17, 2026, features a six-letter word. The pattern consists of four consonants and two vowels.",
     "2026-10-18": "The Searchle puzzle for October 18, 2026 (#85) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-10-19": "The Searchle puzzle for October 19, 2026 (#86) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with W — see the letter hints above before you peek.",
-    "2026-10-22": "The Searchle puzzle for October 22, 2026 (#89) is live with today's answer confirmed. The answer runs 6 characters, starting with H and ending with S — see the letter hints above before you peek."
+    "2026-10-22": "The Searchle puzzle for October 22, 2026 (#89) is live with today's answer confirmed. The answer runs 6 characters, starting with H and ending with S — see the letter hints above before you peek.",
+    "2026-10-23": "The Searchle puzzle for October 23, 2026 (#90) is live with today's answer confirmed. The answer runs 6 characters, starting with A and ending with S — see the letter hints above before you peek."
   }
 }

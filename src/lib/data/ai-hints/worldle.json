@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-22T14:16:21.758Z",
+  "generatedAt": "2026-10-22T19:33:51.124Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -164,6 +164,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "C",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -179,6 +191,7 @@
     "2026-10-15": "The Worldle puzzle for October 15, 2026 (#1729) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek.",
     "2026-10-16": "Worldle puzzle #1730 for October 16, 2026, features a very long name. The letter pattern includes several repetitions across its multiple words.",
     "2026-10-17": "Worldle puzzle #1731 for October 17, 2026, features a multi-word name. The target word follows a complex pattern with several repeating letters.",
-    "2026-10-22": "The Worldle puzzle for October 22, 2026 (#1736) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek."
+    "2026-10-22": "The Worldle puzzle for October 22, 2026 (#1736) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
+    "2026-10-23": "The Worldle puzzle for October 23, 2026 (#1737) is live with today's answer confirmed. The answer runs 22 characters, starting with C and ending with C — see the letter hints above before you peek."
   }
 }
