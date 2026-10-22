@@ -25,9 +25,11 @@
     dateStr: string;
     /** ISO publish timestamp from the database, when known. */
     uploadDate?: string | null;
+    /** Path of the video's dedicated watch page (published branch only). */
+    watchUrl?: string | null;
   }
 
-  let { videoId, gameName, dateStr, uploadDate = null }: Props = $props();
+  let { videoId, gameName, dateStr, uploadDate = null, watchUrl = null }: Props = $props();
 
   const title = $derived(`${gameName} Answer Today — ${dateStr} (Video Solve)`);
   const posterMax = $derived(
@@ -42,10 +44,14 @@
           '@type': 'VideoObject',
           name: title,
           description: `Watch the ${gameName} solve for ${dateStr}: the confirmed answer, the clues, and how the puzzle was cracked.`,
-          thumbnailUrl: [posterMax, posterHq].filter(Boolean),
+          // hqdefault only: it is the one thumbnail URL guaranteed to
+          // exist for every public video, and it must match the URL the
+          // watch page and the video sitemap declare for this video.
+          // (No contentUrl: for a YouTube embed there is no direct media
+          // file URL, and Google requires contentUrl to be exactly that.)
+          thumbnailUrl: [posterHq],
           ...(uploadDate ? { uploadDate } : {}),
-          embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
-          contentUrl: `https://www.youtube.com/watch?v=${videoId}`
+          embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`
         })
       : null
   );
@@ -135,6 +141,12 @@
     </div>
   </div>
 </div>
+
+{#if videoId && watchUrl}
+  <p class="yt-watch-row">
+    <a class="yt-watch-link" href={watchUrl}>Watch the full solve on its own watch page</a>
+  </p>
+{/if}
 
 <style>
   .yt-embed {
@@ -303,6 +315,17 @@
     border-radius: 999px;
     background: #4edea3;
     box-shadow: 0 0 8px rgba(78, 222, 163, 0.8);
+  }
+  .yt-watch-row {
+    margin-top: 0.9rem;
+    text-align: center;
+  }
+  .yt-watch-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(var(--yt-rgb));
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .yt-soon {
     position: absolute;

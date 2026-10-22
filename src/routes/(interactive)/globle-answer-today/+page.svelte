@@ -87,6 +87,7 @@
         gameName="Globle"
         dateStr={data.formattedDate}
         uploadDate={data.video.uploadDate}
+        watchUrl={data.video.watchUrl}
       />
     </div>
 

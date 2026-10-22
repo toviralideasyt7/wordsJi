@@ -15,14 +15,18 @@
 // prerendering runs every load in one Node process, so each record is
 // fetched at most once per build no matter how many pages ask for it.
 
+import { watchPath } from '$lib/video-seo';
+
 export interface GameVideo {
 	/** YouTube video id when the video for this date is published, else null. */
 	videoId: string | null;
 	/** ISO timestamp from the database's published_at field, when known. */
 	uploadDate: string | null;
+	/** Path of the dedicated watch page for this video, when published. */
+	watchUrl: string | null;
 }
 
-const NOT_PUBLISHED: GameVideo = { videoId: null, uploadDate: null };
+const NOT_PUBLISHED: GameVideo = { videoId: null, uploadDate: null, watchUrl: null };
 
 const cache = new Map<string, Promise<GameVideo>>();
 
@@ -51,7 +55,8 @@ async function fetchGameVideo(game: string, dateKey: string): Promise<GameVideo>
 				uploadDate:
 					typeof record.published_at === 'string' && record.published_at.length > 0
 						? record.published_at
-						: null
+						: null,
+				watchUrl: watchPath(game, dateKey)
 			};
 		}
 		return NOT_PUBLISHED;

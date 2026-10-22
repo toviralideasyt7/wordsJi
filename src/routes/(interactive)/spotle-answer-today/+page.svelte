@@ -26,7 +26,7 @@
 
         let { data }: {
                 data: {
-                        video: { videoId: string | null; uploadDate: string | null };
+                        video: { videoId: string | null; uploadDate: string | null; watchUrl?: string | null };
                         todayStr: string;
                         todayFormatted: string;
                         todayAnswer: SpotleAnswer | null;
@@ -149,6 +149,7 @@
                                 gameName="Spotle"
                                 dateStr={data.todayFormatted}
                                 uploadDate={data.video.uploadDate}
+                                watchUrl={data.video.watchUrl}
                         />
                 </div>
 
