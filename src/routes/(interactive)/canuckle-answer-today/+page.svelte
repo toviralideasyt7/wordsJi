@@ -199,8 +199,6 @@
               <AnswerReveal
                 gameName="Canuckle"
                 answer={data.todayPuzzle.answer}
-                variant="tiles"
-                tileColor="#DC2626"
                 puzzleNumber={data.todayPuzzle.index}
                 dateLong={formattedDate}
               />

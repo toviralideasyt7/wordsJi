@@ -41,8 +41,8 @@
   </div>
 
   <details class="phoodle-answer-details transition-all duration-700 transform">
-    <summary class="mx-auto flex w-fit cursor-pointer list-none items-center justify-center rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-10 py-4 text-lg font-black text-white shadow-xl shadow-orange-100 transition-all active:scale-95 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-200">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <summary class="mx-auto flex w-fit cursor-pointer list-none items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg shadow-orange-100 transition-all active:scale-95 hover:-translate-y-0.5 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-200 focus-visible:outline-3 focus-visible:outline-orange-300 focus-visible:outline-offset-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
       </svg>
@@ -58,13 +58,7 @@
       </div>
 
       <p class="text-orange-600 text-sm font-bold uppercase tracking-widest mb-4">The Answer {isYesterday ? 'Was' : 'Is'}</p>
-      <div class="flex justify-center flex-wrap gap-2 mb-6">
-        {#each upperWord.split('') as letter, i}
-          <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-2xl md:text-3xl font-black text-white shadow-lg transform" style="background-color: #538d4e; animation-delay: {i * 100}ms">
-            {letter}
-          </div>
-        {/each}
-      </div>
+      <p class="mb-6 text-5xl font-black uppercase tracking-[0.12em] text-slate-900">{upperWord}</p>
       {#if description}
         <p class="text-slate-700 text-lg max-w-lg mx-auto leading-relaxed font-medium">{description}</p>
       {/if}

@@ -146,9 +146,16 @@
     max-width: 880px;
     margin-inline: auto;
   }
+  /* The glow may bleed vertically only. A horizontal bleed (inset: -2rem on
+     all sides) made this box extend past both edges of the embed, and with
+     no overflow containment up the tree it widened the page's scrollable
+     area on mobile — measured scrollWidth 406 vs clientWidth 390 at a 390px
+     viewport, i.e. the page panned sideways. The 60px blur below still
+     paints the halo past the frame visually; only the layout box, which is
+     what feeds scrollable overflow, is kept flush with the embed. */
   .yt-glow {
     position: absolute;
-    inset: -2rem;
+    inset: -2rem 0;
     z-index: -1;
     opacity: 0.6;
     filter: blur(60px);

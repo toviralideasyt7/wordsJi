@@ -5,12 +5,12 @@
    * Pure HTML + CSS reveal via native <details>/<summary>: zero JavaScript, so
    * the answer text is always present in the prerendered HTML for crawlers and
    * the reveal can never break. Exactly one of these should exist per page.
+   *
+   * The answer is shown as normal large text — no letter tiles, no card box.
    */
   let {
     gameName = 'Wordle',
     answer = '',
-    variant = 'tiles',
-    tileColor = '#538d4e',
     puzzleNumber = '',
     dateLong = '',
     summaryLabel = '',
@@ -18,8 +18,6 @@
   }: {
     gameName?: string;
     answer: string;
-    variant?: 'tiles' | 'text';
-    tileColor?: string;
     puzzleNumber?: string | number;
     dateLong?: string;
     summaryLabel?: string;
@@ -27,7 +25,6 @@
   } = $props();
 
   let label = $derived(summaryLabel || `Reveal today's ${gameName} answer`);
-  let letters = $derived(answer.toUpperCase().split(''));
 </script>
 
 <details class="answer-reveal" {id}>
@@ -41,15 +38,7 @@
   </summary>
 
   <div class="answer-reveal-panel">
-    {#if variant === 'tiles'}
-      <div class="answer-tiles" aria-label={`Today's ${gameName} answer is ${answer.toUpperCase()}`}>
-        {#each letters as letter}
-          <span class="answer-tile" style="background-color: {tileColor}; border-color: {tileColor};">{letter}</span>
-        {/each}
-      </div>
-    {:else}
-      <p class="answer-text">{answer}</p>
-    {/if}
+    <p class="answer-text">{answer}</p>
     {#if puzzleNumber || dateLong}
       <p class="answer-meta">
         Today's {gameName} answer{#if puzzleNumber} <strong>#{puzzleNumber}</strong>{/if}{#if dateLong} for {dateLong}{/if}.
@@ -78,14 +67,20 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.875rem 2rem;
+    padding: 0.625rem 1.25rem;
     border-radius: 9999px;
-    font-weight: 800;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.25;
     color: #fff;
     background-color: #0f766e;
     box-shadow: 0 4px 14px rgb(15 118 110 / 0.25);
     transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+  .answer-reveal-summary .reveal-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
   .answer-reveal-summary:hover {
     background-color: #115e59;
@@ -109,47 +104,25 @@
   .answer-reveal[open] .answer-reveal-summary {
     background-color: #334155;
   }
+  /* No card box: the answer reads as normal large text on the page. */
   .answer-reveal-panel {
-    margin-top: 1.5rem;
-    border-radius: 1rem;
-    border: 1px solid #e2e8f0;
-    background: #fff;
-    padding: 2rem 1.5rem;
+    margin-top: 1.25rem;
+    padding: 0.5rem;
     text-align: center;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
-  }
-  .answer-tiles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .answer-tile {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.75rem;
-    border: 2px solid;
-    color: #fff;
-    font-size: 1.875rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-  @media (min-width: 640px) {
-    .answer-tile {
-      width: 4rem;
-      height: 4rem;
-      font-size: 2.25rem;
-    }
   }
   .answer-text {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 900;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
+    line-height: 1.15;
     text-transform: uppercase;
     color: #0f172a;
+    overflow-wrap: break-word;
+  }
+  @media (min-width: 640px) {
+    .answer-text {
+      font-size: 3rem;
+    }
   }
   .answer-meta {
     margin-top: 1rem;

@@ -161,7 +161,7 @@
       <section class="mt-6 rounded-[2rem] border border-indigo-100 bg-white p-8 shadow-[0_20px_60px_rgba(79,70,229,0.08)] sm:p-10">
         <p class="text-xs font-bold uppercase tracking-[0.3em] text-indigo-500">Daily Color Puzzle</p>
         <h1 class="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-5xl">
-          Colordle Answer Today ({answerDateLabel}) — {data.color.name} {data.color.hex}, Day {data.dayNum}
+          Colordle Answer Today ({answerDateLabel})
         </h1>
         <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
           The worker API now feeds this page directly, so the color name, hex code, and recent history all come from the same verified source.

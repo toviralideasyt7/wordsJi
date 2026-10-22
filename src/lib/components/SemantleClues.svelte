@@ -142,7 +142,7 @@
     {/if}
 
     <details class="semantle-answer-details">
-      <summary class="w-full cursor-pointer list-none rounded-2xl bg-teal-600 px-6 py-4 text-white shadow-lg transition-all duration-300 hover:bg-teal-700 hover:shadow-xl">
+      <summary class="mx-auto w-fit cursor-pointer list-none rounded-full bg-teal-600 px-6 py-3 text-base font-bold text-white shadow-md transition-all duration-300 hover:bg-teal-700 hover:shadow-lg active:scale-95">
         <span class="flex items-center justify-center gap-2">
           <span class="summary-closed flex items-center gap-2"><FiChevronDown class="text-xl" /> Reveal Answer</span>
           <span class="summary-open flex items-center gap-2"><FiChevronUp class="text-xl" /> Hide Answer</span>

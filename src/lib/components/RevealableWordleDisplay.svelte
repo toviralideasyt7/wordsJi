@@ -19,7 +19,7 @@
   } = $props();
 </script>
 
-<div class="max-w-3xl mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 sm:p-8 border border-slate-200 dark:border-slate-700">
+<div class="max-w-3xl mx-auto px-2 py-2">
   <div class="text-center mb-6">
     <div class="relative inline-block">
       <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">
@@ -37,8 +37,6 @@
   <AnswerReveal
     gameName="Wordle"
     answer={word}
-    variant="tiles"
-    tileColor="#538d4e"
     puzzleNumber={number}
     dateLong={date}
     id="wordle-answer-reveal"
