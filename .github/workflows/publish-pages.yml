@@ -68,6 +68,56 @@ permissions:
   contents: write
 
 jobs:
+  call-video-repo:
+    # Two-way trigger (2026-10-23): when the site's own update cycle
+    # starts (its schedules, or a manual dispatch), first ask
+    # satwiksamanta77/daily-games to make any of today's videos that do
+    # not exist yet. Videos already made are skipped by that repo's
+    # skip-guard, and a finished video run dispatches
+    # "pages-publish-requested" back to this repo, so a rebuild later in
+    # the same cycle carries the fresh videos.
+    #
+    # Deliberately independent of the publish job below (no needs:):
+    # the site update must never wait on, or be blocked by, the video
+    # call. Also deliberately NOT run for repository_dispatch (that
+    # event IS the video-completion callback - dispatching again there
+    # would loop), workflow_run (the Batter Up / Canuckle / Marveldle
+    # dailies already call for their own game at their start), push, or
+    # article-only manual runs.
+    if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && (github.event_name != 'workflow_dispatch' || github.event.inputs.workflow_mode != 'generate-articles-only')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call video repo (start any missing videos)
+        env:
+          GIT_VIDEO: ${{ secrets.GIT_VIDEO }}
+          VIDEO_DATE: ${{ github.event.inputs.target_date || '' }}
+        run: |
+          payload=$(printf '{"ref":"main","inputs":{"game":"","date":"%s","force":"false","publish":"true"}}' "${VIDEO_DATE}")
+          status=$(curl -sS -o /tmp/video-dispatch-response.txt -w "%{http_code}" -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GIT_VIDEO}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/satwiksamanta77/daily-games/actions/workflows/daily-all-videos.yml/dispatches \
+            -d "${payload}") || status="curl-error"
+          echo "daily-games video dispatch HTTP status: ${status} (204 = video run started)"
+          if [ -s /tmp/video-dispatch-response.txt ]; then
+            echo "Response body:"
+            cat /tmp/video-dispatch-response.txt
+          fi
+          case "${status}" in
+            204)
+              echo "Video run requested."
+              ;;
+            401|403|404)
+              echo "::error::GIT_VIDEO cannot dispatch satwiksamanta77/daily-games (HTTP ${status}) - the token lacks Actions write access there. Continuing without the video call."
+              ;;
+            *)
+              echo "::warning::Video dispatch was not accepted (HTTP ${status}). Continuing without the video call."
+              ;;
+          esac
+          exit 0
+
   publish:
     if: (github.event_name != 'push' || github.actor != 'github-actions[bot]') && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
