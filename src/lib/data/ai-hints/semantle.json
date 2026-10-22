@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-21T16:43:39.299Z",
+  "generatedAt": "2026-10-22T16:43:55.156Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -215,6 +215,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Commonly used term with strong semantic links to military and sports."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -234,6 +246,7 @@
     "2026-10-19": "Semantle puzzle #1724 was released on October 19, 2026. The target word follows a consonant-vowel pattern starting with C and ending with E.",
     "2026-10-20": "The Semantle puzzle for October 20, 2026 (#1725) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with D — see the letter hints above before you peek.",
     "2026-10-21": "Semantle puzzle #1726 for October 21, 2026, features an eight-letter word. The target word begins with H and ends with C.",
-    "2026-10-22": "Semantle puzzle #1727 was released on October 22, 2026. The target word follows a five-letter pattern."
+    "2026-10-22": "Semantle puzzle #1727 was released on October 22, 2026. The target word follows a five-letter pattern.",
+    "2026-10-23": "The Semantle puzzle for October 23, 2026 (#1728) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with T — see the letter hints above before you peek."
   }
 }

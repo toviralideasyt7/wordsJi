@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-21T16:44:28.521Z",
+  "generatedAt": "2026-10-22T16:46:20.186Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -216,6 +216,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The word has a common double meaning that is easily guessed."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -235,6 +247,7 @@
     "2026-10-19": "The Phoodle puzzle for October 19, 2026, features a five-letter word. Puzzle 2026-10-19 follows a consonant-vowel-consonant-consonant-vowel pattern.",
     "2026-10-20": "The Phoodle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with S — see the letter hints above before you peek.",
     "2026-10-21": "The Phoodle puzzle for October 21, 2026, features a five-letter word. Puzzle 2026-10-21 follows a consonant-vowel-consonant-vowel-vowel pattern.",
-    "2026-10-22": "The Phoodle puzzle for October 22, 2026, features a five-letter word. Puzzle 2026-10-22 follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-10-22": "The Phoodle puzzle for October 22, 2026, features a five-letter word. Puzzle 2026-10-22 follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-10-23": "The Phoodle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with N — see the letter hints above before you peek."
   }
 }

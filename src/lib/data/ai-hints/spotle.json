@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-21T16:43:49.482Z",
+  "generatedAt": "2026-10-22T16:43:54.445Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -212,6 +212,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "J",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -231,6 +243,7 @@
     "2026-10-19": "Spotle puzzle Day 1676 for October 19, 2026, features a ten-letter name. The pattern includes several repeating characters across two words.",
     "2026-10-20": "The Spotle puzzle for October 20, 2026 (Day 1677) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with D — see the letter hints above before you peek.",
     "2026-10-21": "The Spotle puzzle for October 21, 2026 (Day 1678) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with R — see the letter hints above before you peek.",
-    "2026-10-22": "The Spotle puzzle for October 22, 2026 (Day 1679) is live with today's answer confirmed. The answer runs 11 characters, starting with D and ending with E — see the letter hints above before you peek."
+    "2026-10-22": "The Spotle puzzle for October 22, 2026 (Day 1679) is live with today's answer confirmed. The answer runs 11 characters, starting with D and ending with E — see the letter hints above before you peek.",
+    "2026-10-23": "The Spotle puzzle for October 23, 2026 (Day 1680) is live with today's answer confirmed. The answer runs 10 characters, starting with N and ending with J — see the letter hints above before you peek."
   }
 }

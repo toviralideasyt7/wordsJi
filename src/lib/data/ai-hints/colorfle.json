@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-21T16:46:06.035Z",
+  "generatedAt": "2026-10-22T16:46:21.276Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -212,6 +212,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -231,6 +243,7 @@
     "2026-10-19": "Colorfle puzzle #1638 for October 19, 2026, features a sequence of three distinct colors. The solution follows a pattern of five, five, and nine letters respectively.",
     "2026-10-20": "The Colorfle puzzle for October 20, 2026 (#1639) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "The Colorfle puzzle for October 21, 2026 (#1640) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with W — see the letter hints above before you peek.",
-    "2026-10-22": "The Colorfle puzzle for October 22, 2026 (#1641) is live with today's answer confirmed. The answer runs 21 characters, starting with B and ending with W — see the letter hints above before you peek."
+    "2026-10-22": "The Colorfle puzzle for October 22, 2026 (#1641) is live with today's answer confirmed. The answer runs 21 characters, starting with B and ending with W — see the letter hints above before you peek.",
+    "2026-10-23": "The Colorfle puzzle for October 23, 2026 (#1642) is live with today's answer confirmed. The answer runs 17 characters, starting with M and ending with E — see the letter hints above before you peek."
   }
 }

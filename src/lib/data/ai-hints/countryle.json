@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-21T16:46:05.093Z",
+  "generatedAt": "2026-10-22T16:46:20.563Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -213,6 +213,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "U",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -232,6 +244,7 @@
     "2026-10-19": "Countryle Game #1704 takes place on October 19, 2026. This specific puzzle features a five-letter word pattern.",
     "2026-10-20": "The Countryle puzzle for October 20, 2026 (Game #1705) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with A — see the letter hints above before you peek.",
     "2026-10-21": "The Countryle puzzle for October 21, 2026 (Game #1706) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek.",
-    "2026-10-22": "The Countryle puzzle for October 22, 2026 (Game #1707) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek."
+    "2026-10-22": "The Countryle puzzle for October 22, 2026 (Game #1707) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek.",
+    "2026-10-23": "The Countryle puzzle for October 23, 2026 (Game #1708) is live with today's answer confirmed. The answer runs 21 characters, starting with U and ending with A — see the letter hints above before you peek."
   }
 }

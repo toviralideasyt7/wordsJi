@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-21T16:46:20.935Z",
+  "generatedAt": "2026-10-22T16:46:32.026Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -214,6 +214,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Combining two distinct idioms increases the length and complexity of the search."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -233,6 +245,7 @@
     "2026-10-19": "The Phrazle puzzle for October 19, 2026, features a complex multi-phrase structure. Puzzle 2026-10-19 contains a high frequency of the letter E.",
     "2026-10-20": "The Phrazle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with F — see the letter hints above before you peek.",
     "2026-10-21": "The Phrazle puzzle for October 21, 2026, features two common English idioms. Puzzle 2026-10-21 consists of twenty-one letters in total.",
-    "2026-10-22": "The Phrazle puzzle for October 22, 2026, features a long character string. Puzzle 2026-10-22 utilizes a pattern that begins and ends with the same letter."
+    "2026-10-22": "The Phrazle puzzle for October 22, 2026, features a long character string. Puzzle 2026-10-22 utilizes a pattern that begins and ends with the same letter.",
+    "2026-10-23": "The Phrazle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with T — see the letter hints above before you peek."
   }
 }

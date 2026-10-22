@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-21T16:43:50.013Z",
+  "generatedAt": "2026-10-22T16:43:54.876Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -212,6 +212,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -231,6 +243,7 @@
     "2026-10-19": "Quordle puzzle #1729 for October 19, 2026, features four distinct five-letter words. Each word in this set contains a unique combination of vowels and consonants.",
     "2026-10-20": "The Quordle puzzle for October 20, 2026 (#1730) is live with today's answer confirmed. The answer runs 20 characters, starting with C and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "The Quordle puzzle for October 21, 2026 (#1731) is live with today's answer confirmed. The answer runs 20 characters, starting with M and ending with H — see the letter hints above before you peek.",
-    "2026-10-22": "The Quordle puzzle for October 22, 2026 (#1732) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with R — see the letter hints above before you peek."
+    "2026-10-22": "The Quordle puzzle for October 22, 2026 (#1732) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with R — see the letter hints above before you peek.",
+    "2026-10-23": "The Quordle puzzle for October 23, 2026 (#1733) is live with today's answer confirmed. The answer runs 20 characters, starting with B and ending with D — see the letter hints above before you peek."
   }
 }
