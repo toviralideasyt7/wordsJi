@@ -306,11 +306,23 @@ const GAMES = [
 		async getInput() {
 			const puzzles = loadSearchle();
 			const key = windowKey('searchle');
+			// The verified answer comes from the daily-games database (the
+			// solver bot's record of what the real game served). This branch
+			// previously rotated the bundled pool by day-index; the pool is
+			// a stale snapshot (current answers like "hooves" are not in
+			// it), which generated hints for the wrong word. No record for
+			// the date -> skip; never fabricate an answer.
+			let rec = null;
+			try {
+				rec = await fetchJson(`https://raw.githubusercontent.com/satwiksamanta77/daily-games/main/database/${key}/searchle/result.json`, {
+					headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+				});
+			} catch { /* no verified record for this date */ }
+			if (!rec || rec.solved !== true || typeof rec.answer !== 'string' || !rec.answer) return null;
+			const idx = puzzles.findIndex((p) => p.answer.toLowerCase() === rec.answer.toLowerCase());
 			const diffDays = daysSinceEpochUtc(key, 2023, 6, 22);
-			const index = diffDays >= 0 ? diffDays % puzzles.length : 0;
-			const p = puzzles[index];
-			if (!p || !p.answer) return null;
-			return { text: p.answer, dateKey: key, numberText: `#${index + 1}` };
+			const number = idx >= 0 ? idx + 1 : (diffDays >= 0 ? diffDays % puzzles.length : 0) + 1;
+			return { text: rec.answer, dateKey: key, numberText: `#${number}` };
 		}
 	},
 	{
@@ -413,12 +425,29 @@ const GAMES = [
 		key: 'worldle', label: 'Worldle',
 		async getInput() {
 			const countries = loadWorldleCountries();
-			const seedrandom = require('seedrandom');
 			const key = windowKey('worldle');
 			const worldleNumber = daysSinceEpochUtc(key, 2022, 1, 21) + 1;
-			const sorted = [...countries].sort((a, b) => a.code.localeCompare(b.code));
-			const rng = seedrandom(String(worldleNumber));
-			const country = sorted[Math.floor(rng() * sorted.length)];
+			// The verified answer comes from the daily-games database (the
+			// solver bot's record of what the real game served). This branch
+			// previously re-implemented the site's old seedrandom pick,
+			// which does not match the game's sequence and generated hints
+			// for the wrong country (Moldova for 2026-10-22; the game
+			// served Kazakhstan). No record for the date -> skip; never
+			// fabricate an answer.
+			let rec = null;
+			try {
+				rec = await fetchJson(`https://raw.githubusercontent.com/satwiksamanta77/daily-games/main/database/${key}/worldle/result.json`, {
+					headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+				});
+			} catch { /* no verified record for this date */ }
+			if (!rec) return null;
+			const evidence = typeof rec.evidence === 'string' ? rec.evidence : '';
+			const codeMatch = evidence.match(/\(([A-Z]{2})\)/);
+			const nameMatch = evidence.match(/worldle all-modes:\s*(.+?)\s*\([A-Z]{2}\)/i);
+			const country =
+				(codeMatch && countries.find((c) => c.code === codeMatch[1])) ||
+				(typeof rec.answer === 'string' && countries.find((c) => c.name === rec.answer)) ||
+				(nameMatch && countries.find((c) => c.name === nameMatch[1]));
 			if (!country || !country.name) return null;
 			return { text: country.name, dateKey: key, numberText: `#${worldleNumber}` };
 		}
