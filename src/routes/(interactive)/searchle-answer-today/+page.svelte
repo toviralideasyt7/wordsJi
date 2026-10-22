@@ -169,7 +169,6 @@
         gameName="Searchle"
         dateStr={todayLabel}
         uploadDate={data.video.uploadDate}
-        watchUrl={data.video.watchUrl}
       />
     </div>
 

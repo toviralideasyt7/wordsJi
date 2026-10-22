@@ -39,7 +39,7 @@ export const load: PageServerLoad = async () => {
 	if (!answer) {
 		return {
 			error: true,
-			video: { videoId: null, uploadDate: null, watchUrl: null },
+			video: { videoId: null, uploadDate: null },
 			answer: null,
 			recentEntries: [],
 			dateKey: null,

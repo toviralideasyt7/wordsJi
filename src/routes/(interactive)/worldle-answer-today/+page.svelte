@@ -96,7 +96,6 @@
         gameName="Worldle"
         dateStr={data.formattedTodayDate}
         uploadDate={data.video.uploadDate}
-        watchUrl={data.video.watchUrl}
       />
     </div>
 

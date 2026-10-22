@@ -42,7 +42,7 @@
     data
   }: {
     data: {
-      video: { videoId: string | null; uploadDate: string | null; watchUrl?: string | null };
+      video: { videoId: string | null; uploadDate: string | null };
       initialAnswer: ContextoAnswer | null;
       latestDate: string | null;
       error: string | null;
@@ -205,7 +205,6 @@
         gameName="Contexto"
         dateStr={activeLabel}
         uploadDate={data.video.uploadDate}
-        watchUrl={data.video.watchUrl}
       />
     </div>
 

@@ -20,7 +20,7 @@
 
         let { data }: {
                 data: {
-                        video: { videoId: string | null; uploadDate: string | null; watchUrl?: string | null };
+                        video: { videoId: string | null; uploadDate: string | null };
                         todayKey: string;
                         formattedDate: string;
                         todayEntry: { date: string; word: string; puzzle: number };
@@ -157,7 +157,6 @@
                                 gameName="Worgle"
                                 dateStr={data.formattedDate}
                                 uploadDate={data.video.uploadDate}
-                                watchUrl={data.video.watchUrl}
                         />
                 </div>
 

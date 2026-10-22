@@ -32,4 +32,3 @@ Disallow: /private/
 
 # Sitemap location - only valid sitemaps
 Sitemap: https://wordsolverx.com/sitemap.xml
-Sitemap: https://wordsolverx.com/video-sitemap.xml

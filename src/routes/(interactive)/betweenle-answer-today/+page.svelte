@@ -171,7 +171,6 @@
         gameName="Betweenle"
         dateStr={data.todaySeoDate}
         uploadDate={data.video.uploadDate}
-        watchUrl={data.video.watchUrl}
       />
     </div>
 

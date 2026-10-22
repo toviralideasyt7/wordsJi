@@ -36,7 +36,7 @@
     data
   }: {
     data: {
-      video: { videoId: string | null; uploadDate: string | null; watchUrl?: string | null };
+      video: { videoId: string | null; uploadDate: string | null };
       totalPhrases: number;
       todayAnswers: PhrazleDayAnswers;
       todayLabel: string;
@@ -112,7 +112,6 @@
         gameName="Phrazle"
         dateStr={data.todayLabel}
         uploadDate={data.video.uploadDate}
-        watchUrl={data.video.watchUrl}
       />
     </div>
 
