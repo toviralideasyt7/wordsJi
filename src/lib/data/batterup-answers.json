@@ -399,5 +399,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/12/5a76f222-48c659a4-6732695d-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-20",
     "fetchedAt": "2026-10-21T01:06:09.723Z"
+  },
+  "2026-10-22": {
+    "date": "2026-10-22",
+    "gameNumber": 977,
+    "player": {
+      "player_name": "Bryson Stott",
+      "player_id": "42417",
+      "team_name": "Phillies",
+      "born": "USA",
+      "birth_date": "1997-10-06",
+      "position": [
+        "2B"
+      ],
+      "debut": 2022,
+      "jersey_number": 5
+    },
+    "videoDescription": "[08/31/26 : PHI 2 - 1 ARI] Bryson Stott crushes a towering solo home run to right field, giving the Phillies a 1-0 lead in the top of the 2nd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/31/8ce33cd9-30a24c0c-a5b2dc05-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-22",
+    "fetchedAt": "2026-10-22T01:06:20.347Z"
   }
 }
