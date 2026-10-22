@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-22T07:03:58.451Z",
+  "generatedAt": "2026-10-22T13:58:58.440Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -167,6 +167,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -182,6 +194,7 @@
     "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure.",
     "2026-10-18": "The Marveldle puzzle for October 18, 2026, featured a very rare character variant. This specific entry for the puzzle yesterday-of:10/19/2026 12:00:00 AM follows a four-letter pattern.",
     "2026-10-20": "The Marveldle puzzle for October 20, 2026, features a complex multi-part answer. The 10/20/2026 12:00:00 AM entry follows a specific character-pairing letter pattern.",
-    "2026-10-21": "The Marveldle puzzle for October 21, 2026 (yesterday-of:10/22/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 20 characters, starting with N and ending with H — see the letter hints above before you peek."
+    "2026-10-21": "The Marveldle puzzle for October 21, 2026 (yesterday-of:10/22/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 20 characters, starting with N and ending with H — see the letter hints above before you peek.",
+    "2026-10-22": "The Marveldle puzzle for October 22, 2026 (10/22/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 17 characters, starting with S and ending with T — see the letter hints above before you peek."
   }
 }
