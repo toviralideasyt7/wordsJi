@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-20T06:22:56.146Z",
+  "generatedAt": "2026-10-22T07:03:58.451Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -155,6 +155,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The answer consists of two distinct names with unconventional spelling."
+    },
+    "2026-10-21": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -169,6 +181,7 @@
     "2026-10-15": "The Marveldle puzzle for October 15, 2026, features a six-letter name. This 10/15/2026 12:00:00 AM challenge follows a consonant-vowel pattern.",
     "2026-10-17": "The Marveldle puzzle for October 17, 2026, features a name starting with A. This 10/17/2026 12:00:00 AM challenge requires identifying a specific mystical figure.",
     "2026-10-18": "The Marveldle puzzle for October 18, 2026, featured a very rare character variant. This specific entry for the puzzle yesterday-of:10/19/2026 12:00:00 AM follows a four-letter pattern.",
-    "2026-10-20": "The Marveldle puzzle for October 20, 2026, features a complex multi-part answer. The 10/20/2026 12:00:00 AM entry follows a specific character-pairing letter pattern."
+    "2026-10-20": "The Marveldle puzzle for October 20, 2026, features a complex multi-part answer. The 10/20/2026 12:00:00 AM entry follows a specific character-pairing letter pattern.",
+    "2026-10-21": "The Marveldle puzzle for October 21, 2026 (yesterday-of:10/22/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 20 characters, starting with N and ending with H — see the letter hints above before you peek."
   }
 }
