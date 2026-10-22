@@ -1471,5 +1471,59 @@
       ]
     },
     "solvedAt": "2026-10-21T06:36:08.639Z"
+  },
+  "2026-10-21": {
+    "date": "2026-10-21",
+    "dateId": "yesterday-of:10/22/2026 12:00:00 AM",
+    "comics": {
+      "id": "northstar",
+      "name": "Northstar",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Resistance",
+        "Perception",
+        "Flight",
+        "Speed"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1979,
+      "firstApparitionComicTitle": "X-Men #120",
+      "keywords": [
+        "jean-paul beaubier",
+        "beaubier"
+      ]
+    },
+    "mcu": {
+      "id": "cottonmouth",
+      "name": "Cottonmouth",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Jayden D. Brown, Elijah Boothe, Mahershala Ali",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "HarlemsParadise",
+        "StokesCrimeFamily"
+      ],
+      "keywords": [
+        "Cornell Bertram Stokes",
+        "stokes"
+      ]
+    },
+    "solvedAt": "2026-10-22T06:36:15.325Z"
   }
 }
