@@ -1142,16 +1142,25 @@ export const SEARCHLE_PUZZLES: SearchlePuzzle[] = [
 const SEARCHLE_START_DATE = new Date(2023, 5, 22); // Month is 0-indexed in JS
 
 // Get puzzle for a specific date based on days since start date
-export function getDailyPuzzle(date: Date): SearchlePuzzle {
+export function getSearchleDayIndex(date: Date): number {
   // Reset hours to ensure accurate day calculation
   const targetDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
   const startDate = new Date(SEARCHLE_START_DATE.getFullYear(), SEARCHLE_START_DATE.getMonth(), SEARCHLE_START_DATE.getDate());
-  
+
   // Calculate days since start
   const diffTime = targetDate.getTime() - startDate.getTime();
-  const diffDays = Math.floor(diffTime / 86400000); // 86400000 = milliseconds in a day
-  
+  return Math.floor(diffTime / 86400000); // 86400000 = milliseconds in a day
+}
+
+export function getDailyPuzzle(date: Date): SearchlePuzzle {
+  const diffDays = getSearchleDayIndex(date);
+
   // Use modulo to wrap around the array
   const index = diffDays >= 0 ? diffDays % SEARCHLE_PUZZLES.length : 0;
   return SEARCHLE_PUZZLES[index];
+}
+
+export function findSearchlePuzzleByAnswer(answer: string): SearchlePuzzle | undefined {
+  const wanted = answer.trim().toLowerCase();
+  return SEARCHLE_PUZZLES.find((puzzle) => puzzle.answer.toLowerCase() === wanted);
 }

@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { getDatedGame, datedWindowEntries } from '$lib/dated-answer';
+import { getWorldleNumberFromDateString } from '$lib/worldle/logic';
+import { getWorldleDbCountryName } from '$lib/server/daily-games-answers';
 import { getDatedProse, deterministicProse } from '$lib/ai-hints';
 import { parseMonthDayYearKey, toArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
 import { formatDate } from '$lib/utils';
@@ -34,7 +36,13 @@ export const load: PageServerLoad = async ({ params }) => {
 	if (dateKey > yesterdayKey) throw error(404, 'Date is in the future');
 	if (dateKey < game.launchDate) throw error(404, 'Date is before launch');
 
-	const answer = game.answerForDate(dateKey);
+	// The verified answer from the daily-games database wins whenever it
+	// covers this date: the local dated derivation is a seeded pick that
+	// does not match the real game's sequence.
+	const dbAnswerName = await getWorldleDbCountryName(dateKey);
+	const answer = dbAnswerName
+		? { text: dbAnswerName, numberText: `#${getWorldleNumberFromDateString(dateKey)}` }
+		: game.answerForDate(dateKey);
 	if (!answer) throw error(404, 'No answer for this date');
 
 	const dateLong = formatDate(date);

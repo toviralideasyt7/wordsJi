@@ -14,6 +14,14 @@
 # unsolved, upstream blocked, timeout) the job fails and NOTHING is committed
 # — the script never writes a partial entry. Commits only when the data file
 # actually changed.
+#
+# Push race (root cause of the recurring "solved but never landed" days,
+# e.g. 2026-10-19/21/22): the today-mode solve takes ~10 minutes, and other
+# automation (hint refresh, site publishes) commits to main every few
+# minutes, so a bare `git push` at the end was rejected as non-fast-forward
+# and the solved entry was thrown away. Yesterday mode never hit it (its
+# two API calls finish in seconds). The commit step now rebases onto the
+# latest main and retries the push instead of losing the solve.
 
 name: Marveldle Daily
 
@@ -68,4 +76,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/lib/data/marveldle-answers.json
           git commit -m "chore(marveldle): daily answer update $(date -u +%F) [mode: $SOLVE_MODE]"
-          git push
+          # Rebase-and-retry: main moves every few minutes (hint refresh,
+          # site publishes) and the solve above takes ~10 minutes, so a
+          # bare push loses the race and discards the solved entry.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto latest main and retrying."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 5))
+          done
+          echo "ERROR: could not push the Marveldle update after 5 attempts."
+          exit 1

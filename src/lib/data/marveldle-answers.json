@@ -1525,5 +1525,67 @@
       ]
     },
     "solvedAt": "2026-10-22T06:36:15.325Z"
+  },
+  "2026-10-22": {
+    "date": "2026-10-22",
+    "dateId": "10/22/2026 12:00:00 AM",
+    "comics": {
+      "id": "stinger",
+      "name": "Stinger",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Shapeshifting"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1979,
+      "firstApparitionComicTitle": "Marvel Premiere #47",
+      "keywords": [
+        "cassandra",
+        "lang",
+        "cassie"
+      ]
+    },
+    "mcu": {
+      "id": "moonknight",
+      "name": "Moon Knight",
+      "gender": "Male",
+      "type": "Vigilante",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration",
+        "Magic",
+        "Flight"
+      ],
+      "origin": "Earth",
+      "actorName": "Carlos Sanchez, David Jake Rodriguez, Oscar Isaac",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "knight",
+        "marc",
+        "spector",
+        "marc spector",
+        "jake",
+        "jake lockley",
+        "steven",
+        "grant",
+        "steven grant"
+      ]
+    },
+    "solvedAt": "2026-10-22T13:21:42.295Z"
   }
 }

@@ -13,11 +13,14 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { getGameVideo } from '$lib/server/game-videos';
-import type { MarveldleDayEntry } from '$lib/marveldle/types';
+import { getMarveldleDbAnswer } from '$lib/server/daily-games-answers';
+import type { CharacterData, MarveldleDayEntry } from '$lib/marveldle/types';
 import answersRaw from '$lib/data/marveldle-answers.json';
+import comicsCharactersRaw from '$lib/data/marveldle-comics.json';
 import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, MarveldleDayEntry>;
+const comicsCharacters = comicsCharactersRaw as unknown as CharacterData[];
 const SITE_URL = 'https://wordsolverx.com';
 const CANONICAL = `${SITE_URL}/marveldle-answer-today`;
 
@@ -35,23 +38,57 @@ function decadeOf(year?: number): string {
 export const load: PageServerLoad = async ({ setHeaders }) => {
 	const today = getPuzzleDateForGame('marveldle');
 	const dateKey = format(today, 'yyyy-MM-dd');
-	const video = await getGameVideo('marveldle', dateKey);
-	const entry = answers[dateKey] ?? null;
+	const ownEntry = answers[dateKey] ?? null;
 	// Yesterday's answers render inline on this page (no separate yesterday route).
 	const yesterdayKey = format(subDays(today, 1), 'yyyy-MM-dd');
 	const yesterday = answers[yesterdayKey] ?? null;
 
-	// Staleness guard (Canuckle pattern): Marveldle's solver runs at 06:05 UTC,
-	// three minutes after the 06:02 page flip, and takes 2-5 minutes. Until the
-	// new entry lands, the page renders its "updating" state — it never shows
-	// yesterday's characters labeled as today's.
-	const isStale = !entry || entry.date !== dateKey || !entry.comics || !entry.mcu;
-	if (isStale) {
+	const ownComplete =
+		!!ownEntry && ownEntry.date === dateKey && !!ownEntry.comics && !!ownEntry.mcu;
+
+	let entry: MarveldleDayEntry | null = ownComplete ? ownEntry : null;
+	let video = await getGameVideo('marveldle', dateKey);
+	let partial = false;
+	let fallback: { requestedDate: string; showingDate: string } | null = null;
+
+	if (!entry) {
+		// Fallback 1 — the daily-games solver verifies the Comics-mode
+		// character every day (it is the answer its daily video solves).
+		// When our own entry has not landed, today's Comics answer and
+		// video can still be shown immediately; the MCU character follows
+		// when our solver's entry arrives.
+		const db = await getMarveldleDbAnswer(dateKey);
+		const dbComics = db
+			? (comicsCharacters.find((c) => c.name === db.name) ?? null)
+			: null;
+		if (db && dbComics) {
+			entry = {
+				date: dateKey,
+				dateId: 'daily-games-db',
+				comics: dbComics,
+				mcu: null,
+				solvedAt: db.publishedAt ?? new Date().toISOString()
+			};
+			partial = true;
+		} else if (yesterday && yesterday.comics && yesterday.mcu) {
+			// Fallback 2 — show yesterday's confirmed answers, clearly
+			// dated as yesterday's, instead of a dead-end "still being
+			// solved" page. Every rebuild retries today's sources first,
+			// so the page self-heals as soon as today's answers land.
+			entry = yesterday;
+			fallback = { requestedDate: dateKey, showingDate: yesterdayKey };
+			video = await getGameVideo('marveldle', yesterdayKey);
+		}
+	}
+
+	if (!entry) {
 		setHeaders({ 'X-Puzzle-Date': dateKey, 'X-Edge-Cache-Bypass': '1' });
 		const staleDate = formatSeoDate(dateKey);
 		return {
 			error: true,
 			isStale: true,
+			partial: false,
+			fallback: null,
 			video,
 			entry: null,
 			yesterday: null,
@@ -70,52 +107,77 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		};
 	}
 
-	setHeaders({ 'X-Puzzle-Date': dateKey, 'X-Edge-Cache-Bypass': '0' });
+	const provisional = partial || !!fallback;
+	setHeaders({ 'X-Puzzle-Date': dateKey, 'X-Edge-Cache-Bypass': provisional ? '1' : '0' });
 
 	const comics = entry.comics!;
-	const mcu = entry.mcu!;
+	const mcu = entry.mcu;
 	const formattedDate = formatSeoDate(entry.date);
-	const shortDate = format(today, 'MMM d');
+	const shortDate = format(new Date(`${entry.date}T12:00:00Z`), 'MMM d');
+	const displayKey = entry.date;
 
 	// Stream 4 (2026-10-06): shared daily title/stamp. Marveldle has no upstream
-	// puzzle number, so the puzzle date key is the identifier.
-	const pageTitle = dailyAnswerTitle('Marveldle', dateKey, formattedDate);
-	const updatedStamp = updatedStampText('Marveldle', dateKey, formattedDate);
+	// puzzle number, so the puzzle date key is the identifier. In the
+	// yesterday-fallback state the stamp keys on the DISPLAYED entry's date,
+	// never on the requested (still-unsolved) date.
+	const pageTitle = dailyAnswerTitle('Marveldle', displayKey, formattedDate);
+	const updatedStamp = updatedStampText('Marveldle', displayKey, formattedDate);
 	// Tease with hints — never the character names in title or description.
 	// Template stays inside the 140-158 budget across decade/appearance lengths.
-	const pageDescription = `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}, MCU appears in ${(mcu.appearanceTypes ?? []).join(' and ').toLowerCase() || 'film and TV'}. Daily clues for both modes and the confirmed answers at WordSolverX.`;
+	const pageDescription = mcu
+		? `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}, MCU appears in ${(mcu.appearanceTypes ?? []).join(' and ').toLowerCase() || 'film and TV'}. Daily clues for both modes and the confirmed answers at WordSolverX.`
+		: `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}. The confirmed Comics answer is live now; the MCU character is still being verified and joins this page shortly.`;
 	const pageKeywords = `marveldle answer today, marveldle answer, marveldle hint, marveldle hint today, marveldle mcu answer, marveldle comics answer, marveldle answer for ${formattedDate}`;
 
-	const hintFaqs = [
-		{
-			question: `What are the Marveldle answers for today, ${formattedDate}?`,
-			answer: `Today's Marveldle answers for ${formattedDate} are ${comics.name} in Comics mode and ${mcu.name} in MCU mode.`
-		},
-		{
-			question: `Who is today's Marveldle Comics character?`,
-			answer: `Today's Marveldle Comics answer is ${comics.name}, a ${comics.gender.toLowerCase()} ${comics.type.toLowerCase()} from ${comics.origin} who first appeared in ${comics.apparitionYear ?? 'an unknown year'}.`
-		},
-		{
-			question: `Who is today's Marveldle MCU character?`,
-			answer: `Today's Marveldle MCU answer is ${mcu.name}, played by ${mcu.actorName ?? 'an unknown actor'}, appearing in ${(mcu.appearanceTypes ?? []).join(' and ') || 'the MCU'}.`
-		},
-		{
-			question: `What are today's Marveldle hints?`,
-			answer: `Comics hint: think ${decadeOf(comics.apparitionYear)} debut, ${comics.origin} origin. MCU hint: ${(mcu.appearanceTypes ?? []).join('/').toLowerCase() || 'screen'} appearance with ${(mcu.affiliations ?? []).slice(0, 2).join(' and ') || 'a notable'} affiliation.`
-		},
-		{
-			question: 'When does Marveldle update?',
-			answer: 'Marveldle releases a new pair of characters around midnight US time each day, and this page is updated with the confirmed answers every morning.'
-		},
-		{
-			question: 'What is the difference between Marveldle Comics and MCU mode?',
-			answer: 'Comics mode draws from Marvel comic-book characters and scores the year of first appearance; MCU mode draws from the Marvel Cinematic Universe and scores appearance type, teams, and the actor instead.'
-		},
-		{
-			question: 'When was this page last updated?',
-			answer: updatedStamp
-		}
-	];
+	const hintFaqs = mcu
+		? [
+				{
+					question: `What are the Marveldle answers for today, ${formattedDate}?`,
+					answer: `Today's Marveldle answers for ${formattedDate} are ${comics.name} in Comics mode and ${mcu.name} in MCU mode.`
+				},
+				{
+					question: `Who is today's Marveldle Comics character?`,
+					answer: `Today's Marveldle Comics answer is ${comics.name}, a ${comics.gender.toLowerCase()} ${comics.type.toLowerCase()} from ${comics.origin} who first appeared in ${comics.apparitionYear ?? 'an unknown year'}.`
+				},
+				{
+					question: `Who is today's Marveldle MCU character?`,
+					answer: `Today's Marveldle MCU answer is ${mcu.name}, played by ${mcu.actorName ?? 'an unknown actor'}, appearing in ${(mcu.appearanceTypes ?? []).join(' and ') || 'the MCU'}.`
+				},
+				{
+					question: `What are today's Marveldle hints?`,
+					answer: `Comics hint: think ${decadeOf(comics.apparitionYear)} debut, ${comics.origin} origin. MCU hint: ${(mcu.appearanceTypes ?? []).join('/').toLowerCase() || 'screen'} appearance with ${(mcu.affiliations ?? []).slice(0, 2).join(' and ') || 'a notable'} affiliation.`
+				},
+				{
+					question: 'When does Marveldle update?',
+					answer: 'Marveldle releases a new pair of characters around midnight US time each day, and this page is updated with the confirmed answers every morning.'
+				},
+				{
+					question: 'What is the difference between Marveldle Comics and MCU mode?',
+					answer: 'Comics mode draws from Marvel comic-book characters and scores the year of first appearance; MCU mode draws from the Marvel Cinematic Universe and scores appearance type, teams, and the actor instead.'
+				},
+				{
+					question: 'When was this page last updated?',
+					answer: updatedStamp
+				}
+			]
+		: [
+				{
+					question: `What is the Marveldle Comics answer for today, ${formattedDate}?`,
+					answer: `Today's Marveldle Comics answer for ${formattedDate} is ${comics.name}, a ${comics.gender.toLowerCase()} ${comics.type.toLowerCase()} from ${comics.origin} who first appeared in ${comics.apparitionYear ?? 'an unknown year'}. The MCU character is still being verified and will be added to this page shortly.`
+				},
+				{
+					question: `What are today's Marveldle hints?`,
+					answer: `Comics hint: think ${decadeOf(comics.apparitionYear)} debut, ${comics.origin} origin.`
+				},
+				{
+					question: 'When does Marveldle update?',
+					answer: 'Marveldle releases a new pair of characters around midnight US time each day, and this page is updated with the confirmed answers every morning.'
+				},
+				{
+					question: 'When was this page last updated?',
+					answer: updatedStamp
+				}
+			];
 
 	const faqSchema = {
 		'@context': 'https://schema.org',
@@ -155,12 +217,21 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const sortedKeys = Object.keys(answers).sort().reverse();
 	const recent = sortedKeys.slice(0, 8).map((k) => answers[k]);
 
+	// In the yesterday-fallback state the displayed entry IS yesterday's, so
+	// the inline "yesterday" strip steps one more day back instead of
+	// repeating the same answers.
+	const inlineYesterday = fallback
+		? (answers[format(subDays(new Date(`${entry.date}T12:00:00Z`), 1), 'yyyy-MM-dd')] ?? null)
+		: yesterday;
+
 	return {
 		error: false,
 		isStale: false,
+		partial,
+		fallback,
 		video,
 		entry,
-		yesterday,
+		yesterday: inlineYesterday,
 		recent,
 		formattedDate,
 		visibleDateKey: entry.date,
@@ -174,17 +245,19 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				gender: comics.gender,
 				firstTitle: comics.firstApparitionComicTitle
 			},
-			mcu: {
-				appearances: (mcu.appearanceTypes ?? []).join(' / ') || '—',
-				origin: mcu.origin,
-				type: mcu.type,
-				gender: mcu.gender,
-				affiliations: (mcu.affiliations ?? []).slice(0, 3)
-			}
+			mcu: mcu
+				? {
+						appearances: (mcu.appearanceTypes ?? []).join(' / ') || '—',
+						origin: mcu.origin,
+						type: mcu.type,
+						gender: mcu.gender,
+						affiliations: (mcu.affiliations ?? []).slice(0, 3)
+					}
+				: null
 		},
 		// AI hint cards: merged against the Comics name, which is what the
 		// stored hint content describes (see scripts/generate-ai-hints.mjs).
-		aiHints: mergeHints(comics.name, getAIHints('marveldle', dateKey)),
+		aiHints: mergeHints(comics.name, getAIHints('marveldle', displayKey)),
 		hintFaqs,
 		schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),
 		meta: {

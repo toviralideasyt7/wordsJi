@@ -67,6 +67,11 @@ interface ArchiveLookupOptions {
 	dateKey: string | null;
 	fetchImpl: typeof fetch;
 	platform?: unknown;
+	// Verified answer for the selected date from the daily-games database,
+	// fetched by the API route (worldle: ISO country code; searchle: the
+	// answer word). When present it overrides the local derivation, which
+	// diverges from the real game for these two games.
+	dbAnswerOverride?: string | null;
 }
 
 interface ContextoAnswerResponse {
@@ -281,7 +286,7 @@ function getQuordleArchiveData(dateKey: string | null) {
 	};
 }
 
-function getSearchleArchiveData(dateKey: string | null) {
+function getSearchleArchiveData(dateKey: string | null, answerOverride?: string | null) {
 	const { selectedDateKey } = getValidatedSelection(
 		dateKey,
 		SEARCHLE_START_DATE,
@@ -291,7 +296,7 @@ function getSearchleArchiveData(dateKey: string | null) {
 	return {
 		selectedDateKey,
 		selectedPuzzle: selectedDateKey
-			? getSearchlePuzzleForDate(new Date(`${selectedDateKey}T12:00:00`))
+			? getSearchlePuzzleForDate(new Date(`${selectedDateKey}T12:00:00`), answerOverride ?? undefined)
 			: null
 	};
 }
@@ -359,7 +364,7 @@ async function getWaffleArchiveData(dateKey: string | null) {
 	};
 }
 
-function getWorldleArchiveData(dateKey: string | null) {
+function getWorldleArchiveData(dateKey: string | null, answerCodeOverride?: string | null) {
 	const selectedDate = parseArchiveDateKey(dateKey);
 
 	if (!selectedDate) {
@@ -383,7 +388,13 @@ function getWorldleArchiveData(dateKey: string | null) {
 
 	return {
 		selectedDateKey,
-		selectedAnswer: getDailyWorldleAnswer(countries, cities, countryDetails, selectedDateKey),
+		selectedAnswer: getDailyWorldleAnswer(
+			countries,
+			cities,
+			countryDetails,
+			selectedDateKey,
+			answerCodeOverride ? { [selectedDateKey]: answerCodeOverride } : undefined
+		),
 		formattedSelectedDate: getDisplayDateLabel(selectedDateKey)
 	};
 }
@@ -440,7 +451,7 @@ export async function getArchiveRouteResponse(
 		case 'quordle':
 			return getQuordleArchiveData(options.dateKey);
 		case 'searchle':
-			return getSearchleArchiveData(options.dateKey);
+			return getSearchleArchiveData(options.dateKey, options.dbAnswerOverride);
 		case 'semantle':
 			return getSemantleArchiveData(options.dateKey);
 		case 'spotle':
@@ -450,6 +461,6 @@ export async function getArchiveRouteResponse(
 		case 'worgle':
 			return getWorgleArchiveData(options.dateKey);
 		case 'worldle':
-			return getWorldleArchiveData(options.dateKey);
+			return getWorldleArchiveData(options.dateKey, options.dbAnswerOverride);
 	}
 }

@@ -26,6 +26,7 @@
   );
   const comics = $derived(data.entry?.comics ?? null);
   const mcu = $derived(data.entry?.mcu ?? null);
+  const mcuHints = $derived(data.hints?.mcu ?? null);
 
   const factLetters = $derived((comics?.name ?? '').toLowerCase().replace(/[^a-z]/g, ''));
   const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
@@ -93,6 +94,16 @@
           Open Solver
         </a>
       </div>
+      {#if data.video.videoId}
+        <div class="mt-6 text-left">
+          <VideoSection
+            videoId={data.video.videoId}
+            gameName="Marveldle"
+            dateStr={data.formattedDate}
+            uploadDate={data.video.uploadDate}
+          />
+        </div>
+      {/if}
     </div>
   </div>
 {:else}
@@ -131,6 +142,27 @@
       <div class="mt-6 flex justify-center">
         <UpdatedStamp stamp={data.updatedStamp} />
       </div>
+
+      {#if data.fallback}
+        <div class="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-5 text-amber-900 shadow-sm" role="status">
+          <p class="font-semibold">Today's Marveldle answers are still being solved.</p>
+          <p class="mt-1 text-sm leading-relaxed">
+            The characters for {data.fallback.requestedDate} have not landed yet, so below are
+            yesterday's confirmed answers for {data.formattedDate}. This page retries today's
+            answers on every rebuild and updates itself as soon as they are verified.
+          </p>
+        </div>
+      {/if}
+
+      {#if data.partial}
+        <div class="mt-6 rounded-2xl border border-sky-300 bg-sky-50 p-5 text-sky-900 shadow-sm" role="status">
+          <p class="font-semibold">Today's Comics answer is confirmed below.</p>
+          <p class="mt-1 text-sm leading-relaxed">
+            The MCU character for {data.formattedDate} is still being verified — it joins this
+            page as soon as the full solve lands. Today's Comics solve is also in the video below.
+          </p>
+        </div>
+      {/if}
 
       <div class="mt-8">
         <VideoSection
@@ -175,15 +207,16 @@
           </details>
         </section>
 
+        {#if mcu && mcuHints}
         <!-- MCU mode -->
         <section class="rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
           <p class="text-xs font-semibold uppercase tracking-widest text-indigo-600">MCU mode</p>
           <h2 class="mt-1 text-2xl font-bold text-slate-900">Today's hint</h2>
           <ul class="mt-4 space-y-2 text-slate-600">
-            <li>Appears in <strong class="text-slate-900">{data.hints.mcu.appearances}</strong></li>
-            <li><strong class="text-slate-900">{data.hints.mcu.type}</strong> · {data.hints.mcu.gender} · origin: {data.hints.mcu.origin}</li>
-            {#if data.hints.mcu.affiliations.length > 0}
-              <li>Connected to {data.hints.mcu.affiliations.join(', ')}</li>
+            <li>Appears in <strong class="text-slate-900">{mcuHints.appearances}</strong></li>
+            <li><strong class="text-slate-900">{mcuHints.type}</strong> · {mcuHints.gender} · origin: {mcuHints.origin}</li>
+            {#if mcuHints.affiliations.length > 0}
+              <li>Connected to {mcuHints.affiliations.join(', ')}</li>
             {/if}
           </ul>
           <details class="marveldle-answer-details mt-5">
@@ -201,6 +234,18 @@
             </div>
           </details>
         </section>
+        {:else if data.partial}
+        <!-- MCU mode: not verified yet in the partial (daily-games) state -->
+        <section class="rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+          <p class="text-xs font-semibold uppercase tracking-widest text-indigo-600">MCU mode</p>
+          <h2 class="mt-1 text-2xl font-bold text-slate-900">Still being verified</h2>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Today's MCU character has not been confirmed yet. This card fills in automatically
+            when the full Marveldle solve lands — the Comics answer above and today's video
+            are already live.
+          </p>
+        </section>
+        {/if}
       </div>
 
       {#if comics}

@@ -78,7 +78,7 @@
     {
       question: 'How are Searchle answers calculated?',
       answer:
-        'Searchle answers are mapped by date from the original Searchle puzzle list and update daily.'
+        'Each day\'s Searchle answer is verified against the live game by our solver, and this page is updated with the confirmed word.'
     },
     {
       question: 'Can I view previous Searchle answers?',
@@ -88,7 +88,7 @@
     {
       question: 'Where does the data come from?',
       answer:
-        "Searchle answers come from the game's official daily puzzle list."
+        "Each day's answer is recorded from the actual Searchle game by our solver and cross-checked before publishing."
     },
     {
       question: 'When was this page last updated?',
@@ -185,9 +185,11 @@
             {todayPuzzle.date}
           </span>
         </div>
-        <div class="text-lg text-slate-600 mb-4 italic">
-          "{todayPuzzle.prompt}"
-        </div>
+        {#if todayPuzzle.prompt}
+          <div class="text-lg text-slate-600 mb-4 italic">
+            "{todayPuzzle.prompt}"
+          </div>
+        {/if}
         <div class="font-mono text-5xl font-bold text-purple-600 uppercase tracking-wider mb-6">
           {todayPuzzle.answer}
         </div>
@@ -289,9 +291,15 @@
         <p class="mt-4 text-lg leading-8 text-slate-600">
           Searchle is a daily puzzle built around Google autocomplete suggestions. Each day, the game shows you a Google search prompt with a blank, and your job is to guess the word or phrase that Google would autocomplete. For example, if the prompt is &quot;Why does my cat always ___&quot;, the answer might be &quot;STARE&quot; or &quot;MEOW&quot; — whatever Google&apos;s autocomplete engine suggests first.
         </p>
-        <p class="mt-4 text-lg leading-8 text-slate-600">
-          Today&apos;s Searchle prompt is &quot;{todayPuzzle.prompt}&quot; and the answer is <strong class="text-slate-900">{todayPuzzle.answer.toUpperCase()}</strong>.
-        </p>
+        {#if todayPuzzle.prompt}
+          <p class="mt-4 text-lg leading-8 text-slate-600">
+            Today&apos;s Searchle prompt is &quot;{todayPuzzle.prompt}&quot; and the answer is <strong class="text-slate-900">{todayPuzzle.answer.toUpperCase()}</strong>.
+          </p>
+        {:else}
+          <p class="mt-4 text-lg leading-8 text-slate-600">
+            Today&apos;s confirmed Searchle answer is <strong class="text-slate-900">{todayPuzzle.answer.toUpperCase()}</strong>.
+          </p>
+        {/if}
         <p class="mt-4 text-lg leading-8 text-slate-600">
           The game taps into something people already do every day — type partial searches into Google and read the suggestions. Searchle turns that everyday behavior into a structured puzzle. The answer pool is enormous because it reflects actual search behavior, which means some answers are surprising, funny, or oddly specific.
         </p>

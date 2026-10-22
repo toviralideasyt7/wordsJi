@@ -2,6 +2,7 @@ import countriesData from '$lib/data/worldle/countries.json';
 import citiesData from '$lib/data/worldle/cities.json';
 import countryDetailsData from '$lib/data/worldle/country-details.json';
 import { WORLDLE_START_DATE, getCurrentWorldleDateString, getDailyWorldleAnswer, isValidWorldleDate } from '$lib/worldle/logic';
+import { getWorldleDbCountryCode } from '$lib/server/daily-games-answers';
 import type { WorldleCity, WorldleCountry, WorldleCountryDetailsMap } from '$lib/worldle/types';
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
@@ -23,6 +24,13 @@ export const GET: RequestHandler = async ({ url }) => {
     );
   }
 
-  const answer = getDailyWorldleAnswer(countries, cities, countryDetails, date);
+  const dbCode = await getWorldleDbCountryCode(date);
+  const answer = getDailyWorldleAnswer(
+    countries,
+    cities,
+    countryDetails,
+    date,
+    dbCode ? { [date]: dbCode } : undefined,
+  );
   return json({ answer });
 };

@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import { ARCHIVE_GAMES, getArchiveRouteResponse, type ArchiveGame } from '$lib/archive-data';
+import { getSearchleDbAnswer, getWorldleDbCountryCode } from '$lib/server/daily-games-answers';
 import type { RequestHandler } from './$types';
 
 const SUCCESS_CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400';
@@ -23,10 +24,21 @@ export const GET: RequestHandler = async ({ params, url, fetch, platform }) => {
 	}
 
 	try {
+		const dateParam = url.searchParams.get('date');
+		// Worldle/Searchle answers must come from the daily-games database
+		// (the record of the real game) whenever it covers the date — the
+		// local derivations for these two games diverge from the game.
+		let dbAnswerOverride: string | null = null;
+		if (dateParam && game === 'worldle') {
+			dbAnswerOverride = await getWorldleDbCountryCode(dateParam);
+		} else if (dateParam && game === 'searchle') {
+			dbAnswerOverride = await getSearchleDbAnswer(dateParam);
+		}
 		const payload = await getArchiveRouteResponse(game as ArchiveGame, {
-			dateKey: url.searchParams.get('date'),
+			dateKey: dateParam,
 			fetchImpl: fetch,
-			platform
+			platform,
+			dbAnswerOverride
 		});
 
 		return json(payload, {

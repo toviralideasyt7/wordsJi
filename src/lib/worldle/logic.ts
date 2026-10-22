@@ -103,8 +103,15 @@ export function getDailyWorldleAnswer(
   cities: WorldleCity[],
   detailsMap: WorldleCountryDetailsMap,
   dateStr: string = getCurrentWorldleDateString(),
+  // Verified country codes (ISO alpha-2) keyed by date, sourced at build
+  // time from the daily-games database — the record of what the real game
+  // actually served. An override ALWAYS wins: the seeded pick below is a
+  // local fabrication that does not match the game's own sequence, kept
+  // only as a last resort for dates no verified record covers.
+  answerCodeOverrides?: Record<string, string>,
 ): WorldleAnswer {
-  const knownCode = KNOWN_ANSWERS[dateStr];
+  const overrideCode = answerCodeOverrides?.[dateStr];
+  const knownCode = overrideCode ?? KNOWN_ANSWERS[dateStr];
   const sortedCountries = [...countries].sort((a, b) => a.code.localeCompare(b.code));
   const worldleNumber = getWorldleNumberFromDateString(dateStr);
 
@@ -137,13 +144,14 @@ export function getRecentWorldleAnswers(
   cities: WorldleCity[],
   detailsMap: WorldleCountryDetailsMap,
   fromDateStr: string = getCurrentWorldleDateString(),
+  answerCodeOverrides?: Record<string, string>,
 ): WorldleAnswer[] {
   const results: WorldleAnswer[] = [];
   const cursor = dateStringToLocalDate(fromDateStr);
 
   for (let index = 0; index < count; index += 1) {
     const dateStr = localDateToString(cursor);
-    results.push(getDailyWorldleAnswer(countries, cities, detailsMap, dateStr));
+    results.push(getDailyWorldleAnswer(countries, cities, detailsMap, dateStr, answerCodeOverrides));
     cursor.setDate(cursor.getDate() - 1);
   }
 

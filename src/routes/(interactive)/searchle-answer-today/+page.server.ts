@@ -1,5 +1,11 @@
-import { SEARCHLE_PUZZLES, getDailyPuzzle } from '$lib/searchle/searchleData';
+import {
+	SEARCHLE_PUZZLES,
+	findSearchlePuzzleByAnswer,
+	getDailyPuzzle,
+	getSearchleDayIndex
+} from '$lib/searchle/searchleData';
 import { getSearchlePuzzleForDate } from '$lib/searchle/daily';
+import { getSearchleDbAnswer } from '$lib/server/daily-games-answers';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
@@ -10,11 +16,22 @@ import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async () => {
 	const today = getPuzzleDateForGame('searchle');
 	const video = await getGameVideo('searchle', format(today, 'yyyy-MM-dd'));
-	const todayPuzzle = getSearchlePuzzleForDate(today);
+	// Verified answers from the daily-games database. The bundled pool's
+	// day-index rotation no longer matches the real game's sequence (the
+	// pool is a stale snapshot; current answers like "hooves" are not in
+	// it at all), so the database answer wins whenever it exists.
+	const todayDbAnswer = await getSearchleDbAnswer(format(today, 'yyyy-MM-dd'));
+	const todayPuzzle = getSearchlePuzzleForDate(today, todayDbAnswer ?? undefined);
 	const todayLabel = format(today, 'MMMM d, yyyy');
 	// Searchle has no official puzzle number; use the puzzle's stable index
-	// within the site's Searchle collection (1-based).
-	const searchleNumber = SEARCHLE_PUZZLES.indexOf(getDailyPuzzle(today)) + 1;
+	// within the site's Searchle collection (1-based). For a verified
+	// answer that is not in the collection, fall back to the day index.
+	const matchedEntry = todayDbAnswer ? findSearchlePuzzleByAnswer(todayDbAnswer) : undefined;
+	const searchleNumber = matchedEntry
+		? SEARCHLE_PUZZLES.indexOf(matchedEntry) + 1
+		: todayDbAnswer
+			? (getSearchleDayIndex(today) % SEARCHLE_PUZZLES.length) + 1
+			: SEARCHLE_PUZZLES.indexOf(getDailyPuzzle(today)) + 1;
 	// Bing ranking components (2026-10-06): title built from the shared daily
 	// title pattern, keyed on the puzzle-window date (todayLabel) so a "today"
 	// page can never carry tomorrow's date or answer here.
@@ -22,12 +39,19 @@ export const load: PageServerLoad = async () => {
 	const updatedStamp = updatedStampText('Searchle', searchleNumber, todayLabel);
 	const aiHints = mergeHints(todayPuzzle.answer, getAIHints('searchle', todayPuzzle.date));
 
-	// Yesterday's entry from the site's own daily mapping.
+	// Yesterday's entry — verified database answer first, the site's own
+	// daily mapping only for dates the database does not cover.
 	const yesterdayDate = subDays(today, 1);
-	const yesterdayPuzzle = getSearchlePuzzleForDate(yesterdayDate);
+	const yesterdayDbAnswer = await getSearchleDbAnswer(format(yesterdayDate, 'yyyy-MM-dd'));
+	const yesterdayPuzzle = getSearchlePuzzleForDate(yesterdayDate, yesterdayDbAnswer ?? undefined);
+	const yesterdayEntry = yesterdayDbAnswer ? findSearchlePuzzleByAnswer(yesterdayDbAnswer) : undefined;
 	const yesterday = yesterdayPuzzle
 		? {
-				number: SEARCHLE_PUZZLES.indexOf(getDailyPuzzle(yesterdayDate)) + 1,
+				number: yesterdayEntry
+					? SEARCHLE_PUZZLES.indexOf(yesterdayEntry) + 1
+					: yesterdayDbAnswer
+						? (getSearchleDayIndex(yesterdayDate) % SEARCHLE_PUZZLES.length) + 1
+						: SEARCHLE_PUZZLES.indexOf(getDailyPuzzle(yesterdayDate)) + 1,
 				dateLong: format(yesterdayDate, 'MMMM d, yyyy'),
 				answer: yesterdayPuzzle.answer.toUpperCase()
 			}

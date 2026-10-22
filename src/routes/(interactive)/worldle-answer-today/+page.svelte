@@ -111,6 +111,30 @@
       />
     </div>
 
+    <!-- All 13 Worldle modes, as solved in today's video. Every mode is a
+         facet of the same verified country; the values below come from
+         the country dataset for that country. -->
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900">Today's Worldle answers — all modes</h2>
+      <p class="mt-2 text-slate-600">
+        The daily video solves all 13 Worldle modes for {data.todayAnswer.country.name}. Here is the
+        answer for every mode:
+      </p>
+      <dl class="mt-5 grid gap-3 sm:grid-cols-2">
+        {#each data.modeDetails as row}
+          <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-500">{row.mode}</dt>
+            <dd class="mt-1 flex items-center gap-2 font-semibold text-slate-900">
+              {#if row.flagUrl}
+                <img src={row.flagUrl} alt="" width="40" height="27" loading="lazy" class="rounded-sm shadow-sm" />
+              {/if}
+              <span>{row.detail}</span>
+            </dd>
+          </div>
+        {/each}
+      </dl>
+    </section>
+
     {#if data.yesterday}
       <div class="mt-8">
         <YesterdayBlock
