@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-21T06:04:33.731Z",
+  "generatedAt": "2026-10-22T06:05:51.480Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -206,6 +206,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires identifying four distinct champions across different roles."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -224,6 +236,7 @@
     "2026-10-18": "LoLdle Game #1564 for October 18, 2026, features a diverse set of characters. The solution follows a specific sequence of letters ending in a vowel.",
     "2026-10-19": "LoLdle Game #1565 for October 19, 2026, features a multi-champion answer. The solution follows a specific sequence of letters ending in M.",
     "2026-10-20": "LoLdle Game #1566 was released on October 20, 2026. This specific puzzle features a sequence of names ending in X.",
-    "2026-10-21": "LoLdle Game #1567 for October 21, 2026, features a diverse set of champions. The solution consists of four names with a varied letter distribution."
+    "2026-10-21": "LoLdle Game #1567 for October 21, 2026, features a diverse set of champions. The solution consists of four names with a varied letter distribution.",
+    "2026-10-22": "The LoLdle puzzle for October 22, 2026 (Game #1568) is live with today's answer confirmed. The answer runs 21 characters, starting with B and ending with N — see the letter hints above before you peek."
   }
 }

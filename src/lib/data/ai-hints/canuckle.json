@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-21T06:03:54.411Z",
+  "generatedAt": "2026-10-22T06:05:48.256Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -203,6 +203,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a distinct sensory association."
+    },
+    "2026-10-22": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "B",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -221,6 +233,7 @@
     "2026-10-18": "The Canuckle puzzle for October 18, 2026 (#1618) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-10-19": "Canuckle puzzle #1619 for October 19, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant structure.",
     "2026-10-20": "Canuckle puzzle #1620 for October 20, 2026, features a five-letter word. The pattern consists of a consonant followed by several vowels.",
-    "2026-10-21": "Canuckle puzzle #1621 is scheduled for October 21, 2026. The target word follows a consonant-vowel-consonant-consonant-consonant pattern."
+    "2026-10-21": "Canuckle puzzle #1621 is scheduled for October 21, 2026. The target word follows a consonant-vowel-consonant-consonant-consonant pattern.",
+    "2026-10-22": "The Canuckle puzzle for October 22, 2026 (#1622) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with B — see the letter hints above before you peek."
   }
 }
