@@ -1587,5 +1587,54 @@
       ]
     },
     "solvedAt": "2026-10-22T13:56:49.526Z"
+  },
+  "2026-10-23": {
+    "date": "2026-10-23",
+    "dateId": "10/23/2026 12:00:00 AM",
+    "comics": {
+      "id": "laufey",
+      "name": "Laufey",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "FrostGiant"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Magic"
+      ],
+      "origin": "Jotunheim",
+      "apparitionYear": 1964,
+      "firstApparitionComicTitle": "Journey Into Mystery #112",
+      "keywords": [
+        "king laufey"
+      ]
+    },
+    "mcu": {
+      "id": "jamesritson",
+      "name": "President Ritson",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Dermot Mulroney",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "james ritson",
+        "ritson"
+      ]
+    },
+    "solvedAt": "2026-10-23T06:06:23.719Z"
   }
 }
