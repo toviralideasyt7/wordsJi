@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-22T19:33:51.177Z",
+  "generatedAt": "2026-10-23T20:11:56.805Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -200,6 +200,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "Gather them all together to complete your set.",
+      "clue1": "An action taken when gathering stamps or taxes.",
+      "starts_with": "C",
+      "ends_with": "T",
+      "definition": "To bring or gather together from various sources.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common verb with a simple structure and familiar meaning."
     }
   },
   "prose": {
@@ -218,6 +231,7 @@
     "2026-10-18": "The Searchle puzzle for October 18, 2026 (#85) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-10-19": "The Searchle puzzle for October 19, 2026 (#86) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with W — see the letter hints above before you peek.",
     "2026-10-22": "The Searchle puzzle for October 22, 2026 (#89) is live with today's answer confirmed. The answer runs 6 characters, starting with H and ending with S — see the letter hints above before you peek.",
-    "2026-10-23": "The Searchle puzzle for October 23, 2026 (#90) is live with today's answer confirmed. The answer runs 6 characters, starting with A and ending with S — see the letter hints above before you peek."
+    "2026-10-23": "The Searchle puzzle for October 23, 2026 (#90) is live with today's answer confirmed. The answer runs 6 characters, starting with A and ending with S — see the letter hints above before you peek.",
+    "2026-10-24": "Searchle puzzle #91 is scheduled for October 24, 2026. This specific word follows a seven-letter pattern with a repeated consonant."
   }
 }

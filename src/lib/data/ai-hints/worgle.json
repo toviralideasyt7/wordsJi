@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-22T18:56:33.535Z",
+  "generatedAt": "2026-10-23T20:13:26.956Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -222,6 +222,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -242,6 +254,7 @@
     "2026-10-20": "The Worgle puzzle for October 20, 2026 (#1742) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "Worgle puzzle #1743 for October 21, 2026, features a six-letter word. The pattern includes a doubled consonant near the end.",
     "2026-10-22": "The Worgle puzzle for October 22, 2026 (#1744) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with R — see the letter hints above before you peek.",
-    "2026-10-23": "The Worgle puzzle for October 23, 2026 (#1745) is live with today's answer confirmed. The answer runs 6 characters, starting with O and ending with Y — see the letter hints above before you peek."
+    "2026-10-23": "The Worgle puzzle for October 23, 2026 (#1745) is live with today's answer confirmed. The answer runs 6 characters, starting with O and ending with Y — see the letter hints above before you peek.",
+    "2026-10-24": "The Worgle puzzle for October 24, 2026 (#1746) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }
