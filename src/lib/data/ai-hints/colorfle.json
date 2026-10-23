@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-22T16:46:21.276Z",
+  "generatedAt": "2026-10-23T16:46:44.322Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -224,6 +224,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -244,6 +256,7 @@
     "2026-10-20": "The Colorfle puzzle for October 20, 2026 (#1639) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "The Colorfle puzzle for October 21, 2026 (#1640) is live with today's answer confirmed. The answer runs 16 characters, starting with O and ending with W — see the letter hints above before you peek.",
     "2026-10-22": "The Colorfle puzzle for October 22, 2026 (#1641) is live with today's answer confirmed. The answer runs 21 characters, starting with B and ending with W — see the letter hints above before you peek.",
-    "2026-10-23": "The Colorfle puzzle for October 23, 2026 (#1642) is live with today's answer confirmed. The answer runs 17 characters, starting with M and ending with E — see the letter hints above before you peek."
+    "2026-10-23": "The Colorfle puzzle for October 23, 2026 (#1642) is live with today's answer confirmed. The answer runs 17 characters, starting with M and ending with E — see the letter hints above before you peek.",
+    "2026-10-24": "The Colorfle puzzle for October 24, 2026 (#1643) is live with today's answer confirmed. The answer runs 25 characters, starting with L and ending with K — see the letter hints above before you peek."
   }
 }

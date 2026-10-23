@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-22T16:46:20.672Z",
+  "generatedAt": "2026-10-23T16:46:43.777Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -226,6 +226,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -246,6 +258,7 @@
     "2026-10-20": "The Contexto puzzle for October 20, 2026 (#1493) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "Contexto puzzle #1494 for October 21, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel.",
     "2026-10-22": "Contexto puzzle #1495 was released on October 22, 2026. The target word follows a five-letter pattern with no repeating characters.",
-    "2026-10-23": "The Contexto puzzle for October 23, 2026 (#1496) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with L — see the letter hints above before you peek."
+    "2026-10-23": "The Contexto puzzle for October 23, 2026 (#1496) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with L — see the letter hints above before you peek.",
+    "2026-10-24": "The Contexto puzzle for October 24, 2026 (#1497) is live with today's answer confirmed. The answer runs 10 characters, starting with G and ending with E — see the letter hints above before you peek."
   }
 }

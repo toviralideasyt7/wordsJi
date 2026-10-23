@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-22T16:43:53.698Z",
+  "generatedAt": "2026-10-23T16:44:17.896Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -281,6 +281,22 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-10-24": {
+      "kind": "math",
+      "operator_hint": "Uses division and multiplication.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a 2-digit number and even.",
+      "riddle": "",
+      "starts_with": "3",
+      "ends_with": "4",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -301,6 +317,7 @@
     "2026-10-20": "The Nerdle puzzle for October 20, 2026 (#1735) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
     "2026-10-21": "Nerdle puzzle #1736 presents a straightforward arithmetic challenge. This October 21, 2026 entry rewards players who spot basic sums quickly.",
     "2026-10-22": "Nerdle puzzle #1737 offers a quick mental challenge for players. This October 22, 2026 entry balances two basic operations.",
-    "2026-10-23": "The Nerdle puzzle for October 23, 2026 (#1738) is live with today's equation confirmed. The equation runs 8 characters using division and addition — see the math hints above before you peek."
+    "2026-10-23": "The Nerdle puzzle for October 23, 2026 (#1738) is live with today's equation confirmed. The equation runs 8 characters using division and addition — see the math hints above before you peek.",
+    "2026-10-24": "The Nerdle puzzle for October 24, 2026 (#1739) is live with today's equation confirmed. The equation runs 8 characters using division and multiplication — see the math hints above before you peek."
   }
 }

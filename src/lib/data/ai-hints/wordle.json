@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-22T16:43:53.899Z",
+  "generatedAt": "2026-10-23T16:44:17.880Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -228,6 +228,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -248,6 +260,7 @@
     "2026-10-20": "The Wordle puzzle for October 20, 2026 (#1949) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with T — see the letter hints above before you peek.",
     "2026-10-21": "The Wordle puzzle for October 21, 2026 (#1950) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-10-22": "Wordle puzzle #1951 for October 22, 2026, features a five-letter word. The pattern consists of a repeated vowel in the second and fourth positions.",
-    "2026-10-23": "The Wordle puzzle for October 23, 2026 (#1952) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with L — see the letter hints above before you peek."
+    "2026-10-23": "The Wordle puzzle for October 23, 2026 (#1952) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with L — see the letter hints above before you peek.",
+    "2026-10-24": "The Wordle puzzle for October 24, 2026 (#1953) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with Y — see the letter hints above before you peek."
   }
 }

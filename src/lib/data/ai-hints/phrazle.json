@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-22T16:46:32.026Z",
+  "generatedAt": "2026-10-23T16:46:55.065Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -226,6 +226,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -246,6 +258,7 @@
     "2026-10-20": "The Phrazle puzzle for October 20, 2026 (2026-10-20) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with F — see the letter hints above before you peek.",
     "2026-10-21": "The Phrazle puzzle for October 21, 2026, features two common English idioms. Puzzle 2026-10-21 consists of twenty-one letters in total.",
     "2026-10-22": "The Phrazle puzzle for October 22, 2026, features a long character string. Puzzle 2026-10-22 utilizes a pattern that begins and ends with the same letter.",
-    "2026-10-23": "The Phrazle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with T — see the letter hints above before you peek."
+    "2026-10-23": "The Phrazle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with T — see the letter hints above before you peek.",
+    "2026-10-24": "The Phrazle puzzle for October 24, 2026 (2026-10-24) is live with today's answer confirmed. The answer runs 33 characters, starting with B and ending with N — see the letter hints above before you peek."
   }
 }

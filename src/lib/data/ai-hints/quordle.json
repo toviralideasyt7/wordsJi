@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-22T16:43:54.876Z",
+  "generatedAt": "2026-10-23T16:44:18.202Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -224,6 +224,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -244,6 +256,7 @@
     "2026-10-20": "The Quordle puzzle for October 20, 2026 (#1730) is live with today's answer confirmed. The answer runs 20 characters, starting with C and ending with Y — see the letter hints above before you peek.",
     "2026-10-21": "The Quordle puzzle for October 21, 2026 (#1731) is live with today's answer confirmed. The answer runs 20 characters, starting with M and ending with H — see the letter hints above before you peek.",
     "2026-10-22": "The Quordle puzzle for October 22, 2026 (#1732) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with R — see the letter hints above before you peek.",
-    "2026-10-23": "The Quordle puzzle for October 23, 2026 (#1733) is live with today's answer confirmed. The answer runs 20 characters, starting with B and ending with D — see the letter hints above before you peek."
+    "2026-10-23": "The Quordle puzzle for October 23, 2026 (#1733) is live with today's answer confirmed. The answer runs 20 characters, starting with B and ending with D — see the letter hints above before you peek.",
+    "2026-10-24": "The Quordle puzzle for October 24, 2026 (#1734) is live with today's answer confirmed. The answer runs 20 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }
