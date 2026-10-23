@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-21T16:46:00.408Z",
+  "generatedAt": "2026-10-23T05:38:05.861Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -191,6 +191,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Well-known title but requires connecting the setting to the specific name."
+    },
+    "2026-10-23": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A shower of blood and a scream in the night.",
+      "clue1": "Hitchcock's famous study of a fractured mind.",
+      "starts_with": "P",
+      "ends_with": "O",
+      "definition": "A person suffering from a chronic mental disorder.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common term but often associated with specific cinematic classics."
     }
   },
   "prose": {
@@ -208,6 +221,7 @@
     "2026-10-19": "Framed puzzle #1684 for October 19, 2026, features a nine-letter word. The pattern includes a repeated consonant and four vowels.",
     "2026-10-20": "The Framed puzzle for October 20, 2026 (#1685) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-10-21": "Framed puzzle #1686 was released on October 21, 2026. The target phrase consists of four words and seventeen letters.",
-    "2026-10-22": "Framed puzzle #1687 arrives on October 22, 2026. This specific entry follows a fourteen-letter pattern."
+    "2026-10-22": "Framed puzzle #1687 arrives on October 22, 2026. This specific entry follows a fourteen-letter pattern.",
+    "2026-10-23": "Framed puzzle #1688 arrives on October 23, 2026. This specific entry features a six-letter word pattern."
   }
 }
