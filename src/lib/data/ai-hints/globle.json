@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-22T06:05:49.523Z",
+  "generatedAt": "2026-10-23T06:13:48.372Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -219,6 +219,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-23": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -238,6 +250,7 @@
     "2026-10-19": "The Globle puzzle for October 19, 2026, features a five-letter country. Puzzle 2026-10-19 follows a consonant-vowel-consonant-vowel-vowel pattern.",
     "2026-10-20": "The Globle puzzle for October 20, 2026, features a four-letter country name. Puzzle 2026-10-20 follows a pattern with no repeating characters.",
     "2026-10-21": "The Globle puzzle for October 21, 2026, features a seven-letter country name. Puzzle 2026-10-21 follows a pattern starting with a consonant and ending with an S.",
-    "2026-10-22": "The Globle puzzle for October 22, 2026 (2026-10-22) is live with today's answer confirmed. The answer runs 6 characters, starting with U and ending with A — see the letter hints above before you peek."
+    "2026-10-22": "The Globle puzzle for October 22, 2026 (2026-10-22) is live with today's answer confirmed. The answer runs 6 characters, starting with U and ending with A — see the letter hints above before you peek.",
+    "2026-10-23": "The Globle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with A — see the letter hints above before you peek."
   }
 }
