@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-23T06:05:55.248Z",
+  "generatedAt": "2026-10-24T06:05:59.630Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -229,6 +229,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 17 vowels.",
+      "repeat_hint": "23 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -249,6 +261,7 @@
     "2026-10-20": "Narutodle Game #901 for October 20, 2026, features a multi-character sequence. The letter pattern spans four distinct names.",
     "2026-10-21": "The Narutodle puzzle for October 21, 2026 (Game #902) is live with today's answer confirmed. The answer runs 32 characters, starting with D and ending with E — see the letter hints above before you peek.",
     "2026-10-22": "The Narutodle puzzle for October 22, 2026 (Game #903) is live with today's answer confirmed. The answer runs 42 characters, starting with I and ending with A — see the letter hints above before you peek.",
-    "2026-10-23": "The Narutodle puzzle for October 23, 2026 (Game #904) is live with today's answer confirmed. The answer runs 43 characters, starting with O and ending with I — see the letter hints above before you peek."
+    "2026-10-23": "The Narutodle puzzle for October 23, 2026 (Game #904) is live with today's answer confirmed. The answer runs 43 characters, starting with O and ending with I — see the letter hints above before you peek.",
+    "2026-10-24": "The Narutodle puzzle for October 24, 2026 (Game #905) is live with today's answer confirmed. The answer runs 39 characters, starting with H and ending with A — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-23T06:05:55.295Z",
+  "generatedAt": "2026-10-24T06:05:58.294Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -229,6 +229,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -249,6 +261,7 @@
     "2026-10-20": "Dotadle Game #1040 for October 20, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct names.",
     "2026-10-21": "Dotadle Game #1041 was released on October 21, 2026. This puzzle features a long sequence of letters across four names.",
     "2026-10-22": "The Dotadle puzzle for October 22, 2026 (Game #1042) is live with today's answer confirmed. The answer runs 31 characters, starting with T and ending with A — see the letter hints above before you peek.",
-    "2026-10-23": "The Dotadle puzzle for October 23, 2026 (Game #1043) is live with today's answer confirmed. The answer runs 35 characters, starting with L and ending with R — see the letter hints above before you peek."
+    "2026-10-23": "The Dotadle puzzle for October 23, 2026 (Game #1043) is live with today's answer confirmed. The answer runs 35 characters, starting with L and ending with R — see the letter hints above before you peek.",
+    "2026-10-24": "The Dotadle puzzle for October 24, 2026 (Game #1044) is live with today's answer confirmed. The answer runs 33 characters, starting with H and ending with E — see the letter hints above before you peek."
   }
 }

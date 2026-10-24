@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-23T06:05:55.260Z",
+  "generatedAt": "2026-10-24T06:05:58.241Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -227,6 +227,18 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -247,6 +259,7 @@
     "2026-10-20": "OnePiecedle Game #933 takes place on October 20, 2026. This specific puzzle features a name ending in a vowel.",
     "2026-10-21": "OnePiecedle Game #934 for October 21, 2026, features a complex multi-character answer. The letter pattern for this specific puzzle is unusually long.",
     "2026-10-22": "The OnePiecedle puzzle for October 22, 2026 (Game #935) is live with today's answer confirmed. The answer runs 38 characters, starting with A and ending with O — see the letter hints above before you peek.",
-    "2026-10-23": "The OnePiecedle puzzle for October 23, 2026 (Game #936) is live with today's answer confirmed. The answer runs 30 characters, starting with V and ending with Y — see the letter hints above before you peek."
+    "2026-10-23": "The OnePiecedle puzzle for October 23, 2026 (Game #936) is live with today's answer confirmed. The answer runs 30 characters, starting with V and ending with Y — see the letter hints above before you peek.",
+    "2026-10-24": "The OnePiecedle puzzle for October 24, 2026 (Game #937) is live with today's answer confirmed. The answer runs 41 characters, starting with K and ending with S — see the letter hints above before you peek."
   }
 }
