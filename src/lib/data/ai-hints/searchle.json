@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-23T20:11:56.805Z",
+  "generatedAt": "2026-10-24T18:48:47.320Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -213,6 +213,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common verb with a simple structure and familiar meaning."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -232,6 +244,7 @@
     "2026-10-19": "The Searchle puzzle for October 19, 2026 (#86) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with W — see the letter hints above before you peek.",
     "2026-10-22": "The Searchle puzzle for October 22, 2026 (#89) is live with today's answer confirmed. The answer runs 6 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-10-23": "The Searchle puzzle for October 23, 2026 (#90) is live with today's answer confirmed. The answer runs 6 characters, starting with A and ending with S — see the letter hints above before you peek.",
-    "2026-10-24": "Searchle puzzle #91 is scheduled for October 24, 2026. This specific word follows a seven-letter pattern with a repeated consonant."
+    "2026-10-24": "Searchle puzzle #91 is scheduled for October 24, 2026. This specific word follows a seven-letter pattern with a repeated consonant.",
+    "2026-10-25": "The Searchle puzzle for October 25, 2026 (#55) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with N — see the letter hints above before you peek."
   }
 }

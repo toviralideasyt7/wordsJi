@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-23T20:13:29.009Z",
+  "generatedAt": "2026-10-24T18:48:47.518Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -188,6 +188,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -205,6 +217,7 @@
     "2026-10-17": "Worldle puzzle #1731 for October 17, 2026, features a multi-word name. The target word follows a complex pattern with several repeating letters.",
     "2026-10-22": "The Worldle puzzle for October 22, 2026 (#1736) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
     "2026-10-23": "The Worldle puzzle for October 23, 2026 (#1737) is live with today's answer confirmed. The answer runs 22 characters, starting with C and ending with C — see the letter hints above before you peek.",
-    "2026-10-24": "The Worldle puzzle for October 24, 2026 (#1738) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-10-24": "The Worldle puzzle for October 24, 2026 (#1738) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-10-25": "The Worldle puzzle for October 25, 2026 (#1739) is live with today's answer confirmed. The answer runs 9 characters, starting with A and ending with A — see the letter hints above before you peek."
   }
 }
