@@ -419,5 +419,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/31/8ce33cd9-30a24c0c-a5b2dc05-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-22",
     "fetchedAt": "2026-10-22T01:06:20.347Z"
+  },
+  "2026-10-23": {
+    "date": "2026-10-23",
+    "gameNumber": 978,
+    "player": {
+      "player_name": "Maikel Garcia",
+      "player_id": "4905884",
+      "team_name": "Royals",
+      "born": "VEN.",
+      "birth_date": "2000-03-03",
+      "position": [
+        "3B"
+      ],
+      "debut": 2022,
+      "jersey_number": 11
+    },
+    "videoDescription": "[04/11/26 : CHW 0 - 2 KC] Maikel Garcia drives the first pitch he sees 412 feet to left-center field to get the Royals on the board early.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/01/5abb0aa8-23a50ff5-22ebf9d2-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-23",
+    "fetchedAt": "2026-10-24T01:05:28.548Z"
   }
 }
