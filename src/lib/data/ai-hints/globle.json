@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-23T06:13:48.372Z",
+  "generatedAt": "2026-10-24T06:18:28.321Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -231,6 +231,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -251,6 +263,7 @@
     "2026-10-20": "The Globle puzzle for October 20, 2026, features a four-letter country name. Puzzle 2026-10-20 follows a pattern with no repeating characters.",
     "2026-10-21": "The Globle puzzle for October 21, 2026, features a seven-letter country name. Puzzle 2026-10-21 follows a pattern starting with a consonant and ending with an S.",
     "2026-10-22": "The Globle puzzle for October 22, 2026 (2026-10-22) is live with today's answer confirmed. The answer runs 6 characters, starting with U and ending with A — see the letter hints above before you peek.",
-    "2026-10-23": "The Globle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with A — see the letter hints above before you peek."
+    "2026-10-23": "The Globle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with A — see the letter hints above before you peek.",
+    "2026-10-24": "The Globle puzzle for October 24, 2026 (2026-10-24) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with O — see the letter hints above before you peek."
   }
 }
