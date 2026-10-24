@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-23T05:38:05.861Z",
+  "generatedAt": "2026-10-24T05:14:38.523Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -204,6 +204,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common term but often associated with specific cinematic classics."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -222,6 +234,7 @@
     "2026-10-20": "The Framed puzzle for October 20, 2026 (#1685) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-10-21": "Framed puzzle #1686 was released on October 21, 2026. The target phrase consists of four words and seventeen letters.",
     "2026-10-22": "Framed puzzle #1687 arrives on October 22, 2026. This specific entry follows a fourteen-letter pattern.",
-    "2026-10-23": "Framed puzzle #1688 arrives on October 23, 2026. This specific entry features a six-letter word pattern."
+    "2026-10-23": "Framed puzzle #1688 arrives on October 23, 2026. This specific entry features a six-letter word pattern.",
+    "2026-10-24": "The Framed puzzle for October 24, 2026 (#1689) is live with today's answer confirmed. The answer runs 16 characters, starting with F and ending with N — see the letter hints above before you peek."
   }
 }
