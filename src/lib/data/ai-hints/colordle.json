@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-23T16:44:18.540Z",
+  "generatedAt": "2026-10-24T16:43:54.023Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -238,6 +238,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "B",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -259,6 +271,7 @@
     "2026-10-21": "Colordle puzzle #1671 for October 21, 2026, features a ten-letter color name. The word follows a consonant-vowel pattern with one repeating letter.",
     "2026-10-22": "The Colordle puzzle for October 22, 2026 (#1672) is live with today's answer confirmed. The answer runs 16 characters, starting with E and ending with F — see the letter hints above before you peek.",
     "2026-10-23": "The Colordle puzzle for October 23, 2026 (#1673) is live with today's answer confirmed. The answer runs 13 characters, starting with T and ending with A — see the letter hints above before you peek.",
-    "2026-10-24": "The Colordle puzzle for October 24, 2026 (#1674) is live with today's answer confirmed. The answer runs 9 characters, starting with P and ending with F — see the letter hints above before you peek."
+    "2026-10-24": "The Colordle puzzle for October 24, 2026 (#1674) is live with today's answer confirmed. The answer runs 9 characters, starting with P and ending with F — see the letter hints above before you peek.",
+    "2026-10-25": "The Colordle puzzle for October 25, 2026 (#1675) is live with today's answer confirmed. The answer runs 10 characters, starting with F and ending with B — see the letter hints above before you peek."
   }
 }

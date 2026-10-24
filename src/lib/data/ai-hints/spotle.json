@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-23T16:44:18.003Z",
+  "generatedAt": "2026-10-24T16:43:54.478Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -236,6 +236,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -257,6 +269,7 @@
     "2026-10-21": "The Spotle puzzle for October 21, 2026 (Day 1678) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with R — see the letter hints above before you peek.",
     "2026-10-22": "The Spotle puzzle for October 22, 2026 (Day 1679) is live with today's answer confirmed. The answer runs 11 characters, starting with D and ending with E — see the letter hints above before you peek.",
     "2026-10-23": "The Spotle puzzle for October 23, 2026 (Day 1680) is live with today's answer confirmed. The answer runs 10 characters, starting with N and ending with J — see the letter hints above before you peek.",
-    "2026-10-24": "The Spotle puzzle for October 24, 2026 (Day 1681) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with S — see the letter hints above before you peek."
+    "2026-10-24": "The Spotle puzzle for October 24, 2026 (Day 1681) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with S — see the letter hints above before you peek.",
+    "2026-10-25": "The Spotle puzzle for October 25, 2026 (Day 1682) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with Y — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-23T16:46:44.504Z",
+  "generatedAt": "2026-10-24T16:46:21.122Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -237,6 +237,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -258,6 +270,7 @@
     "2026-10-21": "The Countryle puzzle for October 21, 2026 (Game #1706) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek.",
     "2026-10-22": "The Countryle puzzle for October 22, 2026 (Game #1707) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek.",
     "2026-10-23": "The Countryle puzzle for October 23, 2026 (Game #1708) is live with today's answer confirmed. The answer runs 21 characters, starting with U and ending with A — see the letter hints above before you peek.",
-    "2026-10-24": "The Countryle puzzle for October 24, 2026 (Game #1709) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek."
+    "2026-10-24": "The Countryle puzzle for October 24, 2026 (Game #1709) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
+    "2026-10-25": "The Countryle puzzle for October 25, 2026 (Game #1710) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with O — see the letter hints above before you peek."
   }
 }
