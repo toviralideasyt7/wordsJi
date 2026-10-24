@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-23T01:10:13.786Z",
+  "generatedAt": "2026-10-24T00:24:09.064Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -213,6 +213,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -232,6 +244,7 @@
     "2026-10-20": "The Waffle puzzle for October 20, 2026 (#1733) is live with today's answer confirmed. The answer runs 30 characters, starting with A and ending with T — see the letter hints above before you peek.",
     "2026-10-21": "The Waffle puzzle for October 21, 2026 (#1734) is live with today's answer confirmed. The answer runs 30 characters, starting with G and ending with Y — see the letter hints above before you peek.",
     "2026-10-22": "The Waffle puzzle for October 22, 2026 (#1735) is live with today's answer confirmed. The answer runs 30 characters, starting with C and ending with R — see the letter hints above before you peek.",
-    "2026-10-23": "The Waffle puzzle for October 23, 2026 (#1736) is live with today's answer confirmed. The answer runs 30 characters, starting with M and ending with R — see the letter hints above before you peek."
+    "2026-10-23": "The Waffle puzzle for October 23, 2026 (#1736) is live with today's answer confirmed. The answer runs 30 characters, starting with M and ending with R — see the letter hints above before you peek.",
+    "2026-10-24": "The Waffle puzzle for October 24, 2026 (#1737) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with R — see the letter hints above before you peek."
   }
 }
