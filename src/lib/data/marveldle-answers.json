@@ -1685,5 +1685,56 @@
       ]
     },
     "solvedAt": "2026-10-24T06:05:31.389Z"
+  },
+  "2026-10-25": {
+    "date": "2026-10-25",
+    "dateId": "10/25/2026 12:00:00 AM",
+    "comics": {
+      "id": "shadowking",
+      "name": "Shadow King",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "AbstractEntity"
+      ],
+      "powerTypes": [
+        "Resistance",
+        "Psychic"
+      ],
+      "origin": "AstralPlan",
+      "apparitionYear": 1978,
+      "firstApparitionComicTitle": "X-Men #117",
+      "keywords": [
+        "king",
+        "amahl farouk",
+        "farouk"
+      ]
+    },
+    "mcu": {
+      "id": "valkyrie",
+      "name": "Valkyrie",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Asgardian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration"
+      ],
+      "origin": "Asgard",
+      "actorName": "Tessa Thompson",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Revengers"
+      ],
+      "keywords": [
+        "brunnhilde"
+      ]
+    },
+    "solvedAt": "2026-10-25T06:05:41.498Z"
   }
 }
