@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-24T06:05:58.241Z",
+  "generatedAt": "2026-10-25T06:05:52.912Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -239,6 +239,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "V",
+      "ends_with": "U",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -260,6 +272,7 @@
     "2026-10-21": "OnePiecedle Game #934 for October 21, 2026, features a complex multi-character answer. The letter pattern for this specific puzzle is unusually long.",
     "2026-10-22": "The OnePiecedle puzzle for October 22, 2026 (Game #935) is live with today's answer confirmed. The answer runs 38 characters, starting with A and ending with O — see the letter hints above before you peek.",
     "2026-10-23": "The OnePiecedle puzzle for October 23, 2026 (Game #936) is live with today's answer confirmed. The answer runs 30 characters, starting with V and ending with Y — see the letter hints above before you peek.",
-    "2026-10-24": "The OnePiecedle puzzle for October 24, 2026 (Game #937) is live with today's answer confirmed. The answer runs 41 characters, starting with K and ending with S — see the letter hints above before you peek."
+    "2026-10-24": "The OnePiecedle puzzle for October 24, 2026 (Game #937) is live with today's answer confirmed. The answer runs 41 characters, starting with K and ending with S — see the letter hints above before you peek.",
+    "2026-10-25": "The OnePiecedle puzzle for October 25, 2026 (Game #938) is live with today's answer confirmed. The answer runs 28 characters, starting with V and ending with U — see the letter hints above before you peek."
   }
 }

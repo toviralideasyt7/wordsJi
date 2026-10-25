@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-24T06:05:59.630Z",
+  "generatedAt": "2026-10-25T06:05:52.060Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -241,6 +241,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 21 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -262,6 +274,7 @@
     "2026-10-21": "The Narutodle puzzle for October 21, 2026 (Game #902) is live with today's answer confirmed. The answer runs 32 characters, starting with D and ending with E — see the letter hints above before you peek.",
     "2026-10-22": "The Narutodle puzzle for October 22, 2026 (Game #903) is live with today's answer confirmed. The answer runs 42 characters, starting with I and ending with A — see the letter hints above before you peek.",
     "2026-10-23": "The Narutodle puzzle for October 23, 2026 (Game #904) is live with today's answer confirmed. The answer runs 43 characters, starting with O and ending with I — see the letter hints above before you peek.",
-    "2026-10-24": "The Narutodle puzzle for October 24, 2026 (Game #905) is live with today's answer confirmed. The answer runs 39 characters, starting with H and ending with A — see the letter hints above before you peek."
+    "2026-10-24": "The Narutodle puzzle for October 24, 2026 (Game #905) is live with today's answer confirmed. The answer runs 39 characters, starting with H and ending with A — see the letter hints above before you peek.",
+    "2026-10-25": "The Narutodle puzzle for October 25, 2026 (Game #906) is live with today's answer confirmed. The answer runs 40 characters, starting with O and ending with O — see the letter hints above before you peek."
   }
 }

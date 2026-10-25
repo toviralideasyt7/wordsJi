@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-24T06:05:58.257Z",
+  "generatedAt": "2026-10-25T06:05:53.311Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -242,6 +242,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -263,6 +275,7 @@
     "2026-10-21": "LoLdle Game #1567 for October 21, 2026, features a diverse set of champions. The solution consists of four names with a varied letter distribution.",
     "2026-10-22": "The LoLdle puzzle for October 22, 2026 (Game #1568) is live with today's answer confirmed. The answer runs 21 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-10-23": "The LoLdle puzzle for October 23, 2026 (Game #1569) is live with today's answer confirmed. The answer runs 25 characters, starting with K and ending with O — see the letter hints above before you peek.",
-    "2026-10-24": "The LoLdle puzzle for October 24, 2026 (Game #1570) is live with today's answer confirmed. The answer runs 26 characters, starting with N and ending with I — see the letter hints above before you peek."
+    "2026-10-24": "The LoLdle puzzle for October 24, 2026 (Game #1570) is live with today's answer confirmed. The answer runs 26 characters, starting with N and ending with I — see the letter hints above before you peek.",
+    "2026-10-25": "The LoLdle puzzle for October 25, 2026 (Game #1571) is live with today's answer confirmed. The answer runs 19 characters, starting with F and ending with I — see the letter hints above before you peek."
   }
 }

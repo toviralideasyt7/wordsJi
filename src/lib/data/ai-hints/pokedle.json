@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-24T06:05:59.449Z",
+  "generatedAt": "2026-10-25T06:08:18.872Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -241,6 +241,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -262,6 +274,7 @@
     "2026-10-21": "Pokedle Game #1105 takes place on October 21, 2026. This specific puzzle features a multi-word answer starting with E and ending with R.",
     "2026-10-22": "The Pokedle puzzle for October 22, 2026 (Game #1106) is live with today's answer confirmed. The answer runs 33 characters, starting with E and ending with N — see the letter hints above before you peek.",
     "2026-10-23": "The Pokedle puzzle for October 23, 2026 (Game #1107) is live with today's answer confirmed. The answer runs 26 characters, starting with V and ending with W — see the letter hints above before you peek.",
-    "2026-10-24": "The Pokedle puzzle for October 24, 2026 (Game #1108) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with R — see the letter hints above before you peek."
+    "2026-10-24": "The Pokedle puzzle for October 24, 2026 (Game #1108) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with R — see the letter hints above before you peek.",
+    "2026-10-25": "The Pokedle puzzle for October 25, 2026 (Game #1109) is live with today's answer confirmed. The answer runs 29 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }

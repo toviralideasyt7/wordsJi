@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-24T06:05:58.217Z",
+  "generatedAt": "2026-10-25T06:08:18.724Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -240,6 +240,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-25": {
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -261,6 +273,7 @@
     "2026-10-21": "The Smashdle puzzle for October 21, 2026 (Game #1141) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with O — see the letter hints above before you peek.",
     "2026-10-22": "The Smashdle puzzle for October 22, 2026 (Game #1142) is live with today's answer confirmed. The answer runs 45 characters, starting with M and ending with R — see the letter hints above before you peek.",
     "2026-10-23": "The Smashdle puzzle for October 23, 2026 (Game #1143) is live with today's answer confirmed. The answer runs 39 characters, starting with P and ending with L — see the letter hints above before you peek.",
-    "2026-10-24": "The Smashdle puzzle for October 24, 2026 (Game #1144) is live with today's answer confirmed. The answer runs 35 characters, starting with K and ending with H — see the letter hints above before you peek."
+    "2026-10-24": "The Smashdle puzzle for October 24, 2026 (Game #1144) is live with today's answer confirmed. The answer runs 35 characters, starting with K and ending with H — see the letter hints above before you peek.",
+    "2026-10-25": "The Smashdle puzzle for October 25, 2026 (Game #1145) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with N — see the letter hints above before you peek."
   }
 }
