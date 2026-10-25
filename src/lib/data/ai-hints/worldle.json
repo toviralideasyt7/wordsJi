@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-10-24T18:48:47.518Z",
+  "generatedAt": "2026-10-25T19:07:53.575Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -200,6 +200,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -218,6 +230,7 @@
     "2026-10-22": "The Worldle puzzle for October 22, 2026 (#1736) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
     "2026-10-23": "The Worldle puzzle for October 23, 2026 (#1737) is live with today's answer confirmed. The answer runs 22 characters, starting with C and ending with C — see the letter hints above before you peek.",
     "2026-10-24": "The Worldle puzzle for October 24, 2026 (#1738) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with S — see the letter hints above before you peek.",
-    "2026-10-25": "The Worldle puzzle for October 25, 2026 (#1739) is live with today's answer confirmed. The answer runs 9 characters, starting with A and ending with A — see the letter hints above before you peek."
+    "2026-10-25": "The Worldle puzzle for October 25, 2026 (#1739) is live with today's answer confirmed. The answer runs 9 characters, starting with A and ending with A — see the letter hints above before you peek.",
+    "2026-10-26": "The Worldle puzzle for October 26, 2026 (#1740) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }
