@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-24T16:46:21.782Z",
+  "generatedAt": "2026-10-25T16:46:17.448Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -250,6 +250,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -272,6 +284,7 @@
     "2026-10-22": "Contexto puzzle #1495 was released on October 22, 2026. The target word follows a five-letter pattern with no repeating characters.",
     "2026-10-23": "The Contexto puzzle for October 23, 2026 (#1496) is live with today's answer confirmed. The answer runs 4 characters, starting with G and ending with L — see the letter hints above before you peek.",
     "2026-10-24": "The Contexto puzzle for October 24, 2026 (#1497) is live with today's answer confirmed. The answer runs 10 characters, starting with G and ending with E — see the letter hints above before you peek.",
-    "2026-10-25": "The Contexto puzzle for October 25, 2026 (#1498) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with N — see the letter hints above before you peek."
+    "2026-10-25": "The Contexto puzzle for October 25, 2026 (#1498) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with N — see the letter hints above before you peek.",
+    "2026-10-26": "The Contexto puzzle for October 26, 2026 (#1499) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with E — see the letter hints above before you peek."
   }
 }

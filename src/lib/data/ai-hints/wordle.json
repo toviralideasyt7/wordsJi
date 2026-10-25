@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-24T16:43:55.990Z",
+  "generatedAt": "2026-10-25T16:43:49.331Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -252,6 +252,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -274,6 +286,7 @@
     "2026-10-22": "Wordle puzzle #1951 for October 22, 2026, features a five-letter word. The pattern consists of a repeated vowel in the second and fourth positions.",
     "2026-10-23": "The Wordle puzzle for October 23, 2026 (#1952) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with L — see the letter hints above before you peek.",
     "2026-10-24": "The Wordle puzzle for October 24, 2026 (#1953) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with Y — see the letter hints above before you peek.",
-    "2026-10-25": "The Wordle puzzle for October 25, 2026 (#1954) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek."
+    "2026-10-25": "The Wordle puzzle for October 25, 2026 (#1954) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek.",
+    "2026-10-26": "The Wordle puzzle for October 26, 2026 (#1955) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with Y — see the letter hints above before you peek."
   }
 }
