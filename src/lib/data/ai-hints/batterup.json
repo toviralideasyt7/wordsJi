@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-24T01:09:34.206Z",
+  "generatedAt": "2026-10-25T01:09:25.553Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -178,6 +178,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -194,6 +206,7 @@
     "2026-10-19": "Batter Up Game #974 for October 19, 2026, features a nine-letter answer. The pattern consists of two distinct words separated by a space.",
     "2026-10-20": "The Batter Up puzzle for October 20, 2026 (Game #975) is live with today's answer confirmed. The answer runs 14 characters, starting with J and ending with A — see the letter hints above before you peek.",
     "2026-10-22": "The Batter Up puzzle for October 22, 2026 (Game #977) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with T — see the letter hints above before you peek.",
-    "2026-10-23": "The Batter Up puzzle for October 23, 2026 (Game #978) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek."
+    "2026-10-23": "The Batter Up puzzle for October 23, 2026 (Game #978) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
+    "2026-10-24": "The Batter Up puzzle for October 24, 2026 (Game #979) is live with today's answer confirmed. The answer runs 12 characters, starting with C and ending with R — see the letter hints above before you peek."
   }
 }
