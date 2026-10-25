@@ -439,5 +439,27 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/01/5abb0aa8-23a50ff5-22ebf9d2-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-23",
     "fetchedAt": "2026-10-24T01:05:28.548Z"
+  },
+  "2026-10-24": {
+    "date": "2026-10-24",
+    "gameNumber": 979,
+    "player": {
+      "player_name": "Colton Cowser",
+      "player_id": "4416990",
+      "team_name": "Orioles",
+      "born": "USA",
+      "birth_date": "2000-03-20",
+      "position": [
+        "CF",
+        "RF",
+        "LF"
+      ],
+      "debut": 2023,
+      "jersey_number": 17
+    },
+    "videoDescription": "[06/11/26 : SEA 5 - 7 BAL] Colton Cowser ties the game at one after hitting a solo homer to left-center field in the bottom of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/01/c3410ccf-d5f97dee-6a64380a-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-24",
+    "fetchedAt": "2026-10-25T01:05:28.171Z"
   }
 }
