@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-25T06:05:50.476Z",
+  "generatedAt": "2026-10-26T13:21:15.751Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -228,6 +228,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -248,6 +260,7 @@
     "2026-10-22": "Framed puzzle #1687 arrives on October 22, 2026. This specific entry follows a fourteen-letter pattern.",
     "2026-10-23": "Framed puzzle #1688 arrives on October 23, 2026. This specific entry features a six-letter word pattern.",
     "2026-10-24": "The Framed puzzle for October 24, 2026 (#1689) is live with today's answer confirmed. The answer runs 16 characters, starting with F and ending with N — see the letter hints above before you peek.",
-    "2026-10-25": "The Framed puzzle for October 25, 2026 (#1690) is live with today's answer confirmed. The answer runs 8 characters, starting with T and ending with S — see the letter hints above before you peek."
+    "2026-10-25": "The Framed puzzle for October 25, 2026 (#1690) is live with today's answer confirmed. The answer runs 8 characters, starting with T and ending with S — see the letter hints above before you peek.",
+    "2026-10-26": "The Framed puzzle for October 26, 2026 (#1691) is live with today's answer confirmed. The answer runs 17 characters, starting with W and ending with Y — see the letter hints above before you peek."
   }
 }
