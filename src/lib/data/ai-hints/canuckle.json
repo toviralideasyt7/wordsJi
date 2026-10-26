@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-25T05:14:21.082Z",
+  "generatedAt": "2026-10-26T05:14:26.952Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -252,6 +252,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "X",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -274,6 +286,7 @@
     "2026-10-22": "The Canuckle puzzle for October 22, 2026 (#1622) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with B — see the letter hints above before you peek.",
     "2026-10-23": "Canuckle puzzle #1623 for October 23, 2026, features a five-letter word. The solution follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-10-24": "The Canuckle puzzle for October 24, 2026 (#1624) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with L — see the letter hints above before you peek.",
-    "2026-10-25": "The Canuckle puzzle for October 25, 2026 (#1625) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with A — see the letter hints above before you peek."
+    "2026-10-25": "The Canuckle puzzle for October 25, 2026 (#1625) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with A — see the letter hints above before you peek.",
+    "2026-10-26": "The Canuckle puzzle for October 26, 2026 (#1626) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with X — see the letter hints above before you peek."
   }
 }
