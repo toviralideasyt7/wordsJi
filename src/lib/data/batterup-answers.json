@@ -461,5 +461,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/01/c3410ccf-d5f97dee-6a64380a-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-24",
     "fetchedAt": "2026-10-25T01:05:28.171Z"
+  },
+  "2026-10-26": {
+    "date": "2026-10-26",
+    "gameNumber": 981,
+    "player": {
+      "player_name": "Josh Naylor",
+      "player_id": "35066",
+      "team_name": "Mariners",
+      "born": "CAN.",
+      "birth_date": "1997-06-22",
+      "position": [
+        "1B"
+      ],
+      "debut": 2019,
+      "jersey_number": 12
+    },
+    "videoDescription": "[06/08/26 : SEA 6 - 3 BAL] Josh Naylor hits a grand slam to right field, putting the Mariners in front 5-1 in the top of the 5th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/08/591dc1fc-42be8117-8885db67-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-26",
+    "fetchedAt": "2026-10-26T01:05:31.186Z"
   }
 }
