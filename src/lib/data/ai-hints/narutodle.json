@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-10-25T06:05:52.060Z",
+  "generatedAt": "2026-10-26T06:05:50.287Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -253,6 +253,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -275,6 +287,7 @@
     "2026-10-22": "The Narutodle puzzle for October 22, 2026 (Game #903) is live with today's answer confirmed. The answer runs 42 characters, starting with I and ending with A — see the letter hints above before you peek.",
     "2026-10-23": "The Narutodle puzzle for October 23, 2026 (Game #904) is live with today's answer confirmed. The answer runs 43 characters, starting with O and ending with I — see the letter hints above before you peek.",
     "2026-10-24": "The Narutodle puzzle for October 24, 2026 (Game #905) is live with today's answer confirmed. The answer runs 39 characters, starting with H and ending with A — see the letter hints above before you peek.",
-    "2026-10-25": "The Narutodle puzzle for October 25, 2026 (Game #906) is live with today's answer confirmed. The answer runs 40 characters, starting with O and ending with O — see the letter hints above before you peek."
+    "2026-10-25": "The Narutodle puzzle for October 25, 2026 (Game #906) is live with today's answer confirmed. The answer runs 40 characters, starting with O and ending with O — see the letter hints above before you peek.",
+    "2026-10-26": "The Narutodle puzzle for October 26, 2026 (Game #907) is live with today's answer confirmed. The answer runs 29 characters, starting with T and ending with Y — see the letter hints above before you peek."
   }
 }
