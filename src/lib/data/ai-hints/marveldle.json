@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-10-25T06:18:45.707Z",
+  "generatedAt": "2026-10-26T06:23:47.306Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -215,6 +215,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-26": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -234,6 +246,7 @@
     "2026-10-22": "The Marveldle puzzle for October 22, 2026 (10/22/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 17 characters, starting with S and ending with T — see the letter hints above before you peek.",
     "2026-10-23": "The Marveldle puzzle for October 23, 2026 (10/23/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 21 characters, starting with L and ending with N — see the letter hints above before you peek.",
     "2026-10-24": "The Marveldle puzzle for October 24, 2026 (10/24/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 13 characters, starting with A and ending with R — see the letter hints above before you peek.",
-    "2026-10-25": "The Marveldle puzzle for October 25, 2026 (10/25/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 18 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-10-25": "The Marveldle puzzle for October 25, 2026 (10/25/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 18 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-10-26": "The Marveldle puzzle for October 26, 2026 (10/26/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with B and ending with N — see the letter hints above before you peek."
   }
 }
