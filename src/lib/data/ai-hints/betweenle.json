@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-25T16:46:17.214Z",
+  "generatedAt": "2026-10-26T16:47:05.647Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -262,6 +262,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -285,6 +297,7 @@
     "2026-10-23": "The Betweenle puzzle for October 23, 2026 (#1317) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with K — see the letter hints above before you peek.",
     "2026-10-24": "The Betweenle puzzle for October 24, 2026 (#1318) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
     "2026-10-25": "The Betweenle puzzle for October 25, 2026 (#1319) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with K — see the letter hints above before you peek.",
-    "2026-10-26": "The Betweenle puzzle for October 26, 2026 (#1320) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with Y — see the letter hints above before you peek."
+    "2026-10-26": "The Betweenle puzzle for October 26, 2026 (#1320) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with Y — see the letter hints above before you peek.",
+    "2026-10-27": "The Betweenle puzzle for October 27, 2026 (#1321) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with Y — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-25T16:43:51.076Z",
+  "generatedAt": "2026-10-26T16:44:41.147Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -262,6 +262,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -285,6 +297,7 @@
     "2026-10-23": "The Colordle puzzle for October 23, 2026 (#1673) is live with today's answer confirmed. The answer runs 13 characters, starting with T and ending with A — see the letter hints above before you peek.",
     "2026-10-24": "The Colordle puzzle for October 24, 2026 (#1674) is live with today's answer confirmed. The answer runs 9 characters, starting with P and ending with F — see the letter hints above before you peek.",
     "2026-10-25": "The Colordle puzzle for October 25, 2026 (#1675) is live with today's answer confirmed. The answer runs 10 characters, starting with F and ending with B — see the letter hints above before you peek.",
-    "2026-10-26": "The Colordle puzzle for October 26, 2026 (#1676) is live with today's answer confirmed. The answer runs 11 characters, starting with T and ending with F — see the letter hints above before you peek."
+    "2026-10-26": "The Colordle puzzle for October 26, 2026 (#1676) is live with today's answer confirmed. The answer runs 11 characters, starting with T and ending with F — see the letter hints above before you peek.",
+    "2026-10-27": "The Colordle puzzle for October 27, 2026 (#1677) is live with today's answer confirmed. The answer runs 13 characters, starting with L and ending with D — see the letter hints above before you peek."
   }
 }

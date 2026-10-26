@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-25T16:46:27.677Z",
+  "generatedAt": "2026-10-26T16:49:33.241Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -262,6 +262,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "23 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -285,6 +297,7 @@
     "2026-10-23": "The Phrazle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with T — see the letter hints above before you peek.",
     "2026-10-24": "The Phrazle puzzle for October 24, 2026 (2026-10-24) is live with today's answer confirmed. The answer runs 33 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-10-25": "The Phrazle puzzle for October 25, 2026 (2026-10-25) is live with today's answer confirmed. The answer runs 27 characters, starting with S and ending with T — see the letter hints above before you peek.",
-    "2026-10-26": "The Phrazle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with M — see the letter hints above before you peek."
+    "2026-10-26": "The Phrazle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 34 characters, starting with P and ending with M — see the letter hints above before you peek.",
+    "2026-10-27": "The Phrazle puzzle for October 27, 2026 (2026-10-27) is live with today's answer confirmed. The answer runs 38 characters, starting with F and ending with L — see the letter hints above before you peek."
   }
 }
