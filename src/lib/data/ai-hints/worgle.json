@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-10-26T21:27:10.082Z",
+  "generatedAt": "2026-10-27T20:46:22.900Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -270,6 +270,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -294,6 +306,7 @@
     "2026-10-24": "The Worgle puzzle for October 24, 2026 (#1746) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-10-25": "The Worgle puzzle for October 25, 2026 (#1747) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with E — see the letter hints above before you peek.",
     "2026-10-26": "The Worgle puzzle for October 26, 2026 (#1748) is live with today's answer confirmed. The answer runs 6 characters, starting with W and ending with N — see the letter hints above before you peek.",
-    "2026-10-27": "The Worgle puzzle for October 27, 2026 (#1749) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with D — see the letter hints above before you peek."
+    "2026-10-27": "The Worgle puzzle for October 27, 2026 (#1749) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with D — see the letter hints above before you peek.",
+    "2026-10-28": "The Worgle puzzle for October 28, 2026 (#1750) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with T — see the letter hints above before you peek."
   }
 }
