@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-10-26T06:05:50.487Z",
+  "generatedAt": "2026-10-27T06:05:56.724Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -263,6 +263,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 16 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -286,6 +298,7 @@
     "2026-10-23": "The OnePiecedle puzzle for October 23, 2026 (Game #936) is live with today's answer confirmed. The answer runs 30 characters, starting with V and ending with Y — see the letter hints above before you peek.",
     "2026-10-24": "The OnePiecedle puzzle for October 24, 2026 (Game #937) is live with today's answer confirmed. The answer runs 41 characters, starting with K and ending with S — see the letter hints above before you peek.",
     "2026-10-25": "The OnePiecedle puzzle for October 25, 2026 (Game #938) is live with today's answer confirmed. The answer runs 28 characters, starting with V and ending with U — see the letter hints above before you peek.",
-    "2026-10-26": "The OnePiecedle puzzle for October 26, 2026 (Game #939) is live with today's answer confirmed. The answer runs 19 characters, starting with K and ending with I — see the letter hints above before you peek."
+    "2026-10-26": "The OnePiecedle puzzle for October 26, 2026 (Game #939) is live with today's answer confirmed. The answer runs 19 characters, starting with K and ending with I — see the letter hints above before you peek.",
+    "2026-10-27": "The OnePiecedle puzzle for October 27, 2026 (Game #940) is live with today's answer confirmed. The answer runs 35 characters, starting with E and ending with O — see the letter hints above before you peek."
   }
 }
