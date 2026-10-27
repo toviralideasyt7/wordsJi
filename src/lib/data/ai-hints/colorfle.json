@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-26T16:47:08.231Z",
+  "generatedAt": "2026-10-27T16:33:45.583Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -272,6 +272,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -296,6 +308,7 @@
     "2026-10-24": "The Colorfle puzzle for October 24, 2026 (#1643) is live with today's answer confirmed. The answer runs 25 characters, starting with L and ending with K — see the letter hints above before you peek.",
     "2026-10-25": "The Colorfle puzzle for October 25, 2026 (#1644) is live with today's answer confirmed. The answer runs 19 characters, starting with N and ending with N — see the letter hints above before you peek.",
     "2026-10-26": "The Colorfle puzzle for October 26, 2026 (#1645) is live with today's answer confirmed. The answer runs 14 characters, starting with O and ending with E — see the letter hints above before you peek.",
-    "2026-10-27": "The Colorfle puzzle for October 27, 2026 (#1646) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with E — see the letter hints above before you peek."
+    "2026-10-27": "The Colorfle puzzle for October 27, 2026 (#1646) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with E — see the letter hints above before you peek.",
+    "2026-10-28": "The Colorfle puzzle for October 28, 2026 (#1647) is live with today's answer confirmed. The answer runs 19 characters, starting with O and ending with E — see the letter hints above before you peek."
   }
 }

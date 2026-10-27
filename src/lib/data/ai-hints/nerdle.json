@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-26T16:44:40.811Z",
+  "generatedAt": "2026-10-27T16:33:10.454Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -345,6 +345,22 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-10-28": {
+      "kind": "math",
+      "operator_hint": "Uses subtraction and addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit and odd.",
+      "riddle": "",
+      "starts_with": "1",
+      "ends_with": "9",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -369,6 +385,7 @@
     "2026-10-24": "The Nerdle puzzle for October 24, 2026 (#1739) is live with today's equation confirmed. The equation runs 8 characters using division and multiplication — see the math hints above before you peek.",
     "2026-10-25": "The Nerdle puzzle for October 25, 2026 (#1740) is live with today's equation confirmed. The equation runs 8 characters using division and multiplication — see the math hints above before you peek.",
     "2026-10-26": "The Nerdle puzzle for October 26, 2026 (#1741) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
-    "2026-10-27": "The Nerdle puzzle for October 27, 2026 (#1742) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek."
+    "2026-10-27": "The Nerdle puzzle for October 27, 2026 (#1742) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
+    "2026-10-28": "The Nerdle puzzle for October 28, 2026 (#1743) is live with today's equation confirmed. The equation runs 8 characters using subtraction and addition — see the math hints above before you peek."
   }
 }

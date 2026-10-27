@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-26T16:44:39.315Z",
+  "generatedAt": "2026-10-27T16:33:10.439Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -272,6 +272,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -296,6 +308,7 @@
     "2026-10-24": "The Spotle puzzle for October 24, 2026 (Day 1681) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with S — see the letter hints above before you peek.",
     "2026-10-25": "The Spotle puzzle for October 25, 2026 (Day 1682) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-10-26": "The Spotle puzzle for October 26, 2026 (Day 1683) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with Y — see the letter hints above before you peek.",
-    "2026-10-27": "The Spotle puzzle for October 27, 2026 (Day 1684) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with E — see the letter hints above before you peek."
+    "2026-10-27": "The Spotle puzzle for October 27, 2026 (Day 1684) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with E — see the letter hints above before you peek.",
+    "2026-10-28": "The Spotle puzzle for October 28, 2026 (Day 1685) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek."
   }
 }
