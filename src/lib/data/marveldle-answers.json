@@ -1795,5 +1795,60 @@
       ]
     },
     "solvedAt": "2026-10-26T06:05:30.325Z"
+  },
+  "2026-10-27": {
+    "date": "2026-10-27",
+    "dateId": "10/27/2026 12:00:00 AM",
+    "comics": {
+      "id": "humantorch",
+      "name": "Human Torch",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Elemental",
+        "Flight"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1961,
+      "firstApparitionComicTitle": "Fantastic Four #1",
+      "keywords": [
+        "jonathan",
+        "storm",
+        "johnny"
+      ]
+    },
+    "mcu": {
+      "id": "ironman",
+      "name": "Iron Man",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Flight",
+        "Technological"
+      ],
+      "origin": "Earth",
+      "actorName": "Robert Downey Jr.",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Avengers",
+        "StarkIndustries"
+      ],
+      "keywords": [
+        "tony",
+        "stark",
+        "tony stark"
+      ]
+    },
+    "solvedAt": "2026-10-27T06:05:31.008Z"
   }
 }
