@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-26T06:13:44.601Z",
+  "generatedAt": "2026-10-27T06:21:21.022Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -267,6 +267,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -290,6 +302,7 @@
     "2026-10-23": "The Globle puzzle for October 23, 2026 (2026-10-23) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with A — see the letter hints above before you peek.",
     "2026-10-24": "The Globle puzzle for October 24, 2026 (2026-10-24) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with O — see the letter hints above before you peek.",
     "2026-10-25": "The Globle puzzle for October 25, 2026 (2026-10-25) is live with today's answer confirmed. The answer runs 7 characters, starting with L and ending with N — see the letter hints above before you peek.",
-    "2026-10-26": "The Globle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek."
+    "2026-10-26": "The Globle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek.",
+    "2026-10-27": "The Globle puzzle for October 27, 2026 (2026-10-27) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek."
   }
 }
