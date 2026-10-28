@@ -1850,5 +1850,72 @@
       ]
     },
     "solvedAt": "2026-10-27T06:05:31.008Z"
+  },
+  "2026-10-28": {
+    "date": "2026-10-28",
+    "dateId": "10/28/2026 12:00:00 AM",
+    "comics": {
+      "id": "apocalypse",
+      "name": "Apocalypse",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutant",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Magic",
+        "Perception",
+        "Flight",
+        "Technological",
+        "Shapeshifting",
+        "ForceFields",
+        "Speed",
+        "RealityManipulation"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1985,
+      "firstApparitionComicTitle": "Marvel Graphic Novel #17",
+      "keywords": [
+        "nur",
+        "en sabah nur",
+        "sabah nur"
+      ]
+    },
+    "mcu": {
+      "id": "thor",
+      "name": "Thor",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Asgardian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Elemental",
+        "Flight"
+      ],
+      "origin": "Asgard",
+      "actorName": "Cameron Chapek, Dakota Goyo, Tristan Hemsworth, Samson Alston, Chris Hemsworth",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Avengers",
+        "Revengers",
+        "GuardiansOfTheGalaxy"
+      ],
+      "keywords": [
+        "odinson"
+      ]
+    },
+    "solvedAt": "2026-10-28T06:05:33.637Z"
   }
 }
