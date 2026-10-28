@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-10-27T16:33:10.469Z",
+  "generatedAt": "2026-10-28T16:45:41.491Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -288,6 +288,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-29": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -313,6 +325,7 @@
     "2026-10-25": "The Wordle puzzle for October 25, 2026 (#1954) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with S — see the letter hints above before you peek.",
     "2026-10-26": "The Wordle puzzle for October 26, 2026 (#1955) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with Y — see the letter hints above before you peek.",
     "2026-10-27": "The Wordle puzzle for October 27, 2026 (#1956) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with O — see the letter hints above before you peek.",
-    "2026-10-28": "The Wordle puzzle for October 28, 2026 (#1957) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with T — see the letter hints above before you peek."
+    "2026-10-28": "The Wordle puzzle for October 28, 2026 (#1957) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with T — see the letter hints above before you peek.",
+    "2026-10-29": "The Wordle puzzle for October 29, 2026 (#1958) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with R — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-27T16:33:45.664Z",
+  "generatedAt": "2026-10-28T16:48:06.877Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -288,6 +288,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-29": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "B",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -313,6 +325,7 @@
     "2026-10-25": "The Phoodle puzzle for October 25, 2026 (2026-10-25) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with Y — see the letter hints above before you peek.",
     "2026-10-26": "The Phoodle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with G — see the letter hints above before you peek.",
     "2026-10-27": "The Phoodle puzzle for October 27, 2026 (2026-10-27) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with Y — see the letter hints above before you peek.",
-    "2026-10-28": "The Phoodle puzzle for October 28, 2026 (2026-10-28) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with N — see the letter hints above before you peek."
+    "2026-10-28": "The Phoodle puzzle for October 28, 2026 (2026-10-28) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with N — see the letter hints above before you peek.",
+    "2026-10-29": "The Phoodle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with B — see the letter hints above before you peek."
   }
 }
