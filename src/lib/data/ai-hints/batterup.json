@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-26T01:15:09.626Z",
+  "generatedAt": "2026-10-28T01:09:24.398Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -202,6 +202,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-27": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -220,6 +232,7 @@
     "2026-10-22": "The Batter Up puzzle for October 22, 2026 (Game #977) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-10-23": "The Batter Up puzzle for October 23, 2026 (Game #978) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
     "2026-10-24": "The Batter Up puzzle for October 24, 2026 (Game #979) is live with today's answer confirmed. The answer runs 12 characters, starting with C and ending with R — see the letter hints above before you peek.",
-    "2026-10-26": "The Batter Up puzzle for October 26, 2026 (Game #981) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek."
+    "2026-10-26": "The Batter Up puzzle for October 26, 2026 (Game #981) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek.",
+    "2026-10-27": "The Batter Up puzzle for October 27, 2026 (Game #982) is live with today's answer confirmed. The answer runs 16 characters, starting with W and ending with S — see the letter hints above before you peek."
   }
 }

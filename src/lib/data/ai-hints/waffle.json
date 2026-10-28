@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-27T01:09:29.443Z",
+  "generatedAt": "2026-10-28T01:09:24.849Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -261,6 +261,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -284,6 +296,7 @@
     "2026-10-24": "The Waffle puzzle for October 24, 2026 (#1737) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with R — see the letter hints above before you peek.",
     "2026-10-25": "The Waffle puzzle for October 25, 2026 (#1738) is live with today's answer confirmed. The answer runs 30 characters, starting with G and ending with Y — see the letter hints above before you peek.",
     "2026-10-26": "The Waffle puzzle for October 26, 2026 (#1739) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with T — see the letter hints above before you peek.",
-    "2026-10-27": "The Waffle puzzle for October 27, 2026 (#1740) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek."
+    "2026-10-27": "The Waffle puzzle for October 27, 2026 (#1740) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek.",
+    "2026-10-28": "The Waffle puzzle for October 28, 2026 (#1741) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with A — see the letter hints above before you peek."
   }
 }
