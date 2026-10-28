@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-27T06:05:54.484Z",
+  "generatedAt": "2026-10-28T06:05:53.273Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -277,6 +277,18 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -301,6 +313,7 @@
     "2026-10-24": "The Dotadle puzzle for October 24, 2026 (Game #1044) is live with today's answer confirmed. The answer runs 33 characters, starting with H and ending with E — see the letter hints above before you peek.",
     "2026-10-25": "The Dotadle puzzle for October 25, 2026 (Game #1045) is live with today's answer confirmed. The answer runs 28 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-10-26": "The Dotadle puzzle for October 26, 2026 (Game #1046) is live with today's answer confirmed. The answer runs 38 characters, starting with W and ending with R — see the letter hints above before you peek.",
-    "2026-10-27": "The Dotadle puzzle for October 27, 2026 (Game #1047) is live with today's answer confirmed. The answer runs 31 characters, starting with Z and ending with T — see the letter hints above before you peek."
+    "2026-10-27": "The Dotadle puzzle for October 27, 2026 (Game #1047) is live with today's answer confirmed. The answer runs 31 characters, starting with Z and ending with T — see the letter hints above before you peek.",
+    "2026-10-28": "The Dotadle puzzle for October 28, 2026 (Game #1048) is live with today's answer confirmed. The answer runs 31 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }
