@@ -1917,5 +1917,69 @@
       ]
     },
     "solvedAt": "2026-10-28T06:05:33.637Z"
+  },
+  "2026-10-29": {
+    "date": "2026-10-29",
+    "dateId": "10/29/2026 12:00:00 AM",
+    "comics": {
+      "id": "manthing",
+      "name": "Man-Thing",
+      "gender": "Male",
+      "type": "Unknown",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Elemental",
+        "Flight",
+        "Shapeshifting",
+        "Psychic",
+        "InterdimensionalTravel",
+        "Teleportation",
+        "RealityManipulation",
+        "Toxicity"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1971,
+      "firstApparitionComicTitle": "Savage Tales #1",
+      "keywords": [
+        "theodore sallis",
+        "sallis",
+        "thing"
+      ]
+    },
+    "mcu": {
+      "id": "byrdie",
+      "name": "Byrdie the Duck",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Duckworldian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Flight"
+      ],
+      "origin": "Earth",
+      "actorName": "Natasha Lyonne",
+      "appearanceTypes": [
+        "Cartoon"
+      ],
+      "affiliations": [
+        "GuardiansOfTheMultiverse"
+      ],
+      "keywords": [
+        "duck",
+        "the duck"
+      ]
+    },
+    "solvedAt": "2026-10-29T06:05:34.090Z"
   }
 }
