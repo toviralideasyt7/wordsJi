@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-28T16:48:06.000Z",
+  "generatedAt": "2026-10-29T16:45:49.681Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -298,6 +298,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -324,6 +336,7 @@
     "2026-10-26": "The Betweenle puzzle for October 26, 2026 (#1320) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with Y — see the letter hints above before you peek.",
     "2026-10-27": "The Betweenle puzzle for October 27, 2026 (#1321) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-10-28": "The Betweenle puzzle for October 28, 2026 (#1322) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with T — see the letter hints above before you peek.",
-    "2026-10-29": "The Betweenle puzzle for October 29, 2026 (#1323) is live with today's answer confirmed. The answer runs 5 characters, starting with Q and ending with L — see the letter hints above before you peek."
+    "2026-10-29": "The Betweenle puzzle for October 29, 2026 (#1323) is live with today's answer confirmed. The answer runs 5 characters, starting with Q and ending with L — see the letter hints above before you peek.",
+    "2026-10-30": "The Betweenle puzzle for October 30, 2026 (#1324) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with Y — see the letter hints above before you peek."
   }
 }

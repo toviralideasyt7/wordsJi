@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-28T16:45:42.091Z",
+  "generatedAt": "2026-10-29T16:43:25.696Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -298,6 +298,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -324,6 +336,7 @@
     "2026-10-26": "The Colordle puzzle for October 26, 2026 (#1676) is live with today's answer confirmed. The answer runs 11 characters, starting with T and ending with F — see the letter hints above before you peek.",
     "2026-10-27": "The Colordle puzzle for October 27, 2026 (#1677) is live with today's answer confirmed. The answer runs 13 characters, starting with L and ending with D — see the letter hints above before you peek.",
     "2026-10-28": "The Colordle puzzle for October 28, 2026 (#1678) is live with today's answer confirmed. The answer runs 11 characters, starting with M and ending with C — see the letter hints above before you peek.",
-    "2026-10-29": "The Colordle puzzle for October 29, 2026 (#1679) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with A — see the letter hints above before you peek."
+    "2026-10-29": "The Colordle puzzle for October 29, 2026 (#1679) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with A — see the letter hints above before you peek.",
+    "2026-10-30": "The Colordle puzzle for October 30, 2026 (#1680) is live with today's answer confirmed. The answer runs 8 characters, starting with G and ending with E — see the letter hints above before you peek."
   }
 }

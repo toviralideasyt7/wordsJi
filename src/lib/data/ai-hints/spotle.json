@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-28T16:45:40.584Z",
+  "generatedAt": "2026-10-29T16:43:24.539Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -296,6 +296,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -322,6 +334,7 @@
     "2026-10-26": "The Spotle puzzle for October 26, 2026 (Day 1683) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with Y — see the letter hints above before you peek.",
     "2026-10-27": "The Spotle puzzle for October 27, 2026 (Day 1684) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-10-28": "The Spotle puzzle for October 28, 2026 (Day 1685) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek.",
-    "2026-10-29": "The Spotle puzzle for October 29, 2026 (Day 1686) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with N — see the letter hints above before you peek."
+    "2026-10-29": "The Spotle puzzle for October 29, 2026 (Day 1686) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with N — see the letter hints above before you peek.",
+    "2026-10-30": "The Spotle puzzle for October 30, 2026 (Day 1687) is live with today's answer confirmed. The answer runs 11 characters, starting with H and ending with S — see the letter hints above before you peek."
   }
 }
