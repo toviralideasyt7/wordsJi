@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-28T01:09:24.849Z",
+  "generatedAt": "2026-10-29T01:09:40.693Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -273,6 +273,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-29": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Q",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -297,6 +309,7 @@
     "2026-10-25": "The Waffle puzzle for October 25, 2026 (#1738) is live with today's answer confirmed. The answer runs 30 characters, starting with G and ending with Y — see the letter hints above before you peek.",
     "2026-10-26": "The Waffle puzzle for October 26, 2026 (#1739) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-10-27": "The Waffle puzzle for October 27, 2026 (#1740) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek.",
-    "2026-10-28": "The Waffle puzzle for October 28, 2026 (#1741) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with A — see the letter hints above before you peek."
+    "2026-10-28": "The Waffle puzzle for October 28, 2026 (#1741) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with A — see the letter hints above before you peek.",
+    "2026-10-29": "The Waffle puzzle for October 29, 2026 (#1742) is live with today's answer confirmed. The answer runs 30 characters, starting with Q and ending with Y — see the letter hints above before you peek."
   }
 }

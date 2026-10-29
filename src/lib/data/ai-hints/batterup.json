@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-10-28T01:09:24.398Z",
+  "generatedAt": "2026-10-29T01:09:41.249Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -214,6 +214,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-28": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -233,6 +245,7 @@
     "2026-10-23": "The Batter Up puzzle for October 23, 2026 (Game #978) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
     "2026-10-24": "The Batter Up puzzle for October 24, 2026 (Game #979) is live with today's answer confirmed. The answer runs 12 characters, starting with C and ending with R — see the letter hints above before you peek.",
     "2026-10-26": "The Batter Up puzzle for October 26, 2026 (Game #981) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek.",
-    "2026-10-27": "The Batter Up puzzle for October 27, 2026 (Game #982) is live with today's answer confirmed. The answer runs 16 characters, starting with W and ending with S — see the letter hints above before you peek."
+    "2026-10-27": "The Batter Up puzzle for October 27, 2026 (Game #982) is live with today's answer confirmed. The answer runs 16 characters, starting with W and ending with S — see the letter hints above before you peek.",
+    "2026-10-28": "The Batter Up puzzle for October 28, 2026 (Game #983) is live with today's answer confirmed. The answer runs 13 characters, starting with T and ending with H — see the letter hints above before you peek."
   }
 }
