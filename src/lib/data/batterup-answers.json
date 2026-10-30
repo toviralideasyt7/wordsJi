@@ -521,5 +521,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/26/32f9e442-a6207f71-133fc63e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-28",
     "fetchedAt": "2026-10-29T01:05:45.348Z"
+  },
+  "2026-10-29": {
+    "date": "2026-10-29",
+    "gameNumber": 984,
+    "player": {
+      "player_name": "Vladimir Guerrero Jr",
+      "player_id": "35002",
+      "team_name": "Blue Jays",
+      "born": "CAN.",
+      "birth_date": "1999-03-16",
+      "position": [
+        "1B"
+      ],
+      "debut": 2019,
+      "jersey_number": 27
+    },
+    "videoDescription": "[06/18/26 : TOR 4 - 3 BOS] Vladimir Guerrero Jr. crushes a home run to center field to open the scoring for the Blue Jays in the top of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/18/af2ac8c2-3484662d-b01f4939-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-29",
+    "fetchedAt": "2026-10-30T01:05:42.417Z"
   }
 }
