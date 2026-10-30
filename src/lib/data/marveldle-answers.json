@@ -1981,5 +1981,61 @@
       ]
     },
     "solvedAt": "2026-10-29T06:05:34.090Z"
+  },
+  "2026-10-30": {
+    "date": "2026-10-30",
+    "dateId": "10/30/2026 12:00:00 AM",
+    "comics": {
+      "id": "thunderball",
+      "name": "Thunderball",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1974,
+      "firstApparitionComicTitle": "Defenders #17",
+      "keywords": [
+        "eliot",
+        "eliot franklin",
+        "franklin"
+      ]
+    },
+    "mcu": {
+      "id": "storm",
+      "name": "Storm",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Elemental",
+        "Flight",
+        "Summoning"
+      ],
+      "origin": "Earth",
+      "actorName": "Alison Sealy-Smith",
+      "appearanceTypes": [
+        "Cartoon"
+      ],
+      "affiliations": [
+        "GuardiansOfTheMultiverse"
+      ],
+      "keywords": [
+        "ororo munroe",
+        "munroe"
+      ]
+    },
+    "solvedAt": "2026-10-30T06:05:48.062Z"
   }
 }
