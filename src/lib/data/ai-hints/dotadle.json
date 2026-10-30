@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-10-29T06:05:37.115Z",
+  "generatedAt": "2026-10-30T06:05:54.038Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -301,6 +301,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -327,6 +339,7 @@
     "2026-10-26": "The Dotadle puzzle for October 26, 2026 (Game #1046) is live with today's answer confirmed. The answer runs 38 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-10-27": "The Dotadle puzzle for October 27, 2026 (Game #1047) is live with today's answer confirmed. The answer runs 31 characters, starting with Z and ending with T — see the letter hints above before you peek.",
     "2026-10-28": "The Dotadle puzzle for October 28, 2026 (Game #1048) is live with today's answer confirmed. The answer runs 31 characters, starting with S and ending with E — see the letter hints above before you peek.",
-    "2026-10-29": "The Dotadle puzzle for October 29, 2026 (Game #1049) is live with today's answer confirmed. The answer runs 36 characters, starting with D and ending with E — see the letter hints above before you peek."
+    "2026-10-29": "The Dotadle puzzle for October 29, 2026 (Game #1049) is live with today's answer confirmed. The answer runs 36 characters, starting with D and ending with E — see the letter hints above before you peek.",
+    "2026-10-30": "The Dotadle puzzle for October 30, 2026 (Game #1050) is live with today's answer confirmed. The answer runs 29 characters, starting with E and ending with E — see the letter hints above before you peek."
   }
 }

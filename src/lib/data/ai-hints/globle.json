@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-10-29T06:13:32.221Z",
+  "generatedAt": "2026-10-30T06:05:50.873Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -303,6 +303,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -329,6 +341,7 @@
     "2026-10-26": "The Globle puzzle for October 26, 2026 (2026-10-26) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek.",
     "2026-10-27": "The Globle puzzle for October 27, 2026 (2026-10-27) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-10-28": "The Globle puzzle for October 28, 2026 (2026-10-28) is live with today's answer confirmed. The answer runs 9 characters, starting with V and ending with A — see the letter hints above before you peek.",
-    "2026-10-29": "The Globle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek."
+    "2026-10-29": "The Globle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek.",
+    "2026-10-30": "The Globle puzzle for October 30, 2026 (2026-10-30) is live with today's answer confirmed. The answer runs 10 characters, starting with E and ending with R — see the letter hints above before you peek."
   }
 }

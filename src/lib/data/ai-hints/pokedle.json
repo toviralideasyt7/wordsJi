@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-10-29T06:05:37.068Z",
+  "generatedAt": "2026-10-30T06:05:53.365Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -301,6 +301,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 15 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -327,6 +339,7 @@
     "2026-10-26": "The Pokedle puzzle for October 26, 2026 (Game #1110) is live with today's answer confirmed. The answer runs 28 characters, starting with D and ending with F — see the letter hints above before you peek.",
     "2026-10-27": "The Pokedle puzzle for October 27, 2026 (Game #1111) is live with today's answer confirmed. The answer runs 29 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-10-28": "The Pokedle puzzle for October 28, 2026 (Game #1112) is live with today's answer confirmed. The answer runs 28 characters, starting with H and ending with N — see the letter hints above before you peek.",
-    "2026-10-29": "The Pokedle puzzle for October 29, 2026 (Game #1113) is live with today's answer confirmed. The answer runs 28 characters, starting with G and ending with A — see the letter hints above before you peek."
+    "2026-10-29": "The Pokedle puzzle for October 29, 2026 (Game #1113) is live with today's answer confirmed. The answer runs 28 characters, starting with G and ending with A — see the letter hints above before you peek.",
+    "2026-10-30": "The Pokedle puzzle for October 30, 2026 (Game #1114) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with E — see the letter hints above before you peek."
   }
 }
