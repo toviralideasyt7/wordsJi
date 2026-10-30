@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-10-29T20:54:47.506Z",
+  "generatedAt": "2026-10-30T20:29:12.023Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -285,6 +285,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -310,6 +322,7 @@
     "2026-10-27": "The Searchle puzzle for October 27, 2026 (#94) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with Y — see the letter hints above before you peek.",
     "2026-10-28": "The Searchle puzzle for October 28, 2026 (#95) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with O — see the letter hints above before you peek.",
     "2026-10-29": "The Searchle puzzle for October 29, 2026 (#96) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with Y — see the letter hints above before you peek.",
-    "2026-10-30": "The Searchle puzzle for October 30, 2026 (#97) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with D — see the letter hints above before you peek."
+    "2026-10-30": "The Searchle puzzle for October 30, 2026 (#97) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with D — see the letter hints above before you peek.",
+    "2026-10-31": "The Searchle puzzle for October 31, 2026 (#98) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with D — see the letter hints above before you peek."
   }
 }
