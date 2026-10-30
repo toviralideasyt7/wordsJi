@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-29T05:14:29.541Z",
+  "generatedAt": "2026-10-30T05:14:53.960Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -300,6 +300,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-30": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -326,6 +338,7 @@
     "2026-10-26": "The Canuckle puzzle for October 26, 2026 (#1626) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with X — see the letter hints above before you peek.",
     "2026-10-27": "The Canuckle puzzle for October 27, 2026 (#1627) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with S — see the letter hints above before you peek.",
     "2026-10-28": "The Canuckle puzzle for October 28, 2026 (#1628) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with W — see the letter hints above before you peek.",
-    "2026-10-29": "The Canuckle puzzle for October 29, 2026 (#1629) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with A — see the letter hints above before you peek."
+    "2026-10-29": "The Canuckle puzzle for October 29, 2026 (#1629) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with A — see the letter hints above before you peek.",
+    "2026-10-30": "The Canuckle puzzle for October 30, 2026 (#1630) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with Y — see the letter hints above before you peek."
   }
 }
