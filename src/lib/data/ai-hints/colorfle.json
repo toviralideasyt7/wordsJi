@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-10-29T16:45:52.829Z",
+  "generatedAt": "2026-10-30T16:46:51.003Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -308,6 +308,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -335,6 +347,7 @@
     "2026-10-27": "The Colorfle puzzle for October 27, 2026 (#1646) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-10-28": "The Colorfle puzzle for October 28, 2026 (#1647) is live with today's answer confirmed. The answer runs 19 characters, starting with O and ending with E — see the letter hints above before you peek.",
     "2026-10-29": "The Colorfle puzzle for October 29, 2026 (#1648) is live with today's answer confirmed. The answer runs 15 characters, starting with R and ending with R — see the letter hints above before you peek.",
-    "2026-10-30": "The Colorfle puzzle for October 30, 2026 (#1649) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with E — see the letter hints above before you peek."
+    "2026-10-30": "The Colorfle puzzle for October 30, 2026 (#1649) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with E — see the letter hints above before you peek.",
+    "2026-10-31": "The Colorfle puzzle for October 31, 2026 (#1650) is live with today's answer confirmed. The answer runs 15 characters, starting with N and ending with E — see the letter hints above before you peek."
   }
 }

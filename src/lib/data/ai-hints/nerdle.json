@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-10-29T16:43:24.385Z",
+  "generatedAt": "2026-10-30T16:44:25.193Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -393,6 +393,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-10-31": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication and division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit and odd.",
+      "riddle": "",
+      "starts_with": "2",
+      "ends_with": "7",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -420,6 +436,7 @@
     "2026-10-27": "The Nerdle puzzle for October 27, 2026 (#1742) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
     "2026-10-28": "The Nerdle puzzle for October 28, 2026 (#1743) is live with today's equation confirmed. The equation runs 8 characters using subtraction and addition — see the math hints above before you peek.",
     "2026-10-29": "The Nerdle puzzle for October 29, 2026 (#1744) is live with today's equation confirmed. The equation runs 8 characters using addition and division — see the math hints above before you peek.",
-    "2026-10-30": "The Nerdle puzzle for October 30, 2026 (#1745) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek."
+    "2026-10-30": "The Nerdle puzzle for October 30, 2026 (#1745) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
+    "2026-10-31": "The Nerdle puzzle for October 31, 2026 (#1746) is live with today's equation confirmed. The equation runs 8 characters using multiplication and division — see the math hints above before you peek."
   }
 }

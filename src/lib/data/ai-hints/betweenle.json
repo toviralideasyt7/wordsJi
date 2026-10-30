@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-10-29T16:45:49.681Z",
+  "generatedAt": "2026-10-30T16:46:49.086Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -310,6 +310,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -337,6 +349,7 @@
     "2026-10-27": "The Betweenle puzzle for October 27, 2026 (#1321) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-10-28": "The Betweenle puzzle for October 28, 2026 (#1322) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with T — see the letter hints above before you peek.",
     "2026-10-29": "The Betweenle puzzle for October 29, 2026 (#1323) is live with today's answer confirmed. The answer runs 5 characters, starting with Q and ending with L — see the letter hints above before you peek.",
-    "2026-10-30": "The Betweenle puzzle for October 30, 2026 (#1324) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with Y — see the letter hints above before you peek."
+    "2026-10-30": "The Betweenle puzzle for October 30, 2026 (#1324) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with Y — see the letter hints above before you peek.",
+    "2026-10-31": "The Betweenle puzzle for October 31, 2026 (#1325) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with E — see the letter hints above before you peek."
   }
 }

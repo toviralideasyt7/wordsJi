@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-29T16:45:51.650Z",
+  "generatedAt": "2026-10-30T16:46:50.669Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -309,6 +309,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -336,6 +348,7 @@
     "2026-10-27": "The Countryle puzzle for October 27, 2026 (Game #1712) is live with today's answer confirmed. The answer runs 7 characters, starting with D and ending with K — see the letter hints above before you peek.",
     "2026-10-28": "The Countryle puzzle for October 28, 2026 (Game #1713) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with Y — see the letter hints above before you peek.",
     "2026-10-29": "The Countryle puzzle for October 29, 2026 (Game #1714) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with N — see the letter hints above before you peek.",
-    "2026-10-30": "The Countryle puzzle for October 30, 2026 (Game #1715) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek."
+    "2026-10-30": "The Countryle puzzle for October 30, 2026 (Game #1715) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek.",
+    "2026-10-31": "The Countryle puzzle for October 31, 2026 (Game #1716) is live with today's answer confirmed. The answer runs 6 characters, starting with S and ending with N — see the letter hints above before you peek."
   }
 }

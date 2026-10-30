@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-10-29T16:45:50.386Z",
+  "generatedAt": "2026-10-30T16:46:49.560Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -312,6 +312,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -339,6 +351,7 @@
     "2026-10-27": "The Phoodle puzzle for October 27, 2026 (2026-10-27) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-10-28": "The Phoodle puzzle for October 28, 2026 (2026-10-28) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with N — see the letter hints above before you peek.",
     "2026-10-29": "The Phoodle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with B — see the letter hints above before you peek.",
-    "2026-10-30": "The Phoodle puzzle for October 30, 2026 (2026-10-30) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with S — see the letter hints above before you peek."
+    "2026-10-30": "The Phoodle puzzle for October 30, 2026 (2026-10-30) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with S — see the letter hints above before you peek.",
+    "2026-10-31": "The Phoodle puzzle for October 31, 2026 (2026-10-31) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with S — see the letter hints above before you peek."
   }
 }
