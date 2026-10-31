@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-10-30T06:08:18.545Z",
+  "generatedAt": "2026-10-31T06:08:18.754Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -312,6 +312,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -339,6 +351,7 @@
     "2026-10-27": "The Smashdle puzzle for October 27, 2026 (Game #1147) is live with today's answer confirmed. The answer runs 30 characters, starting with K and ending with O — see the letter hints above before you peek.",
     "2026-10-28": "The Smashdle puzzle for October 28, 2026 (Game #1148) is live with today's answer confirmed. The answer runs 39 characters, starting with B and ending with A — see the letter hints above before you peek.",
     "2026-10-29": "The Smashdle puzzle for October 29, 2026 (Game #1149) is live with today's answer confirmed. The answer runs 49 characters, starting with D and ending with Y — see the letter hints above before you peek.",
-    "2026-10-30": "The Smashdle puzzle for October 30, 2026 (Game #1150) is live with today's answer confirmed. The answer runs 34 characters, starting with L and ending with N — see the letter hints above before you peek."
+    "2026-10-30": "The Smashdle puzzle for October 30, 2026 (Game #1150) is live with today's answer confirmed. The answer runs 34 characters, starting with L and ending with N — see the letter hints above before you peek.",
+    "2026-10-31": "The Smashdle puzzle for October 31, 2026 (Game #1151) is live with today's answer confirmed. The answer runs 26 characters, starting with S and ending with I — see the letter hints above before you peek."
   }
 }

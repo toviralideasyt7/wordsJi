@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-10-30T06:05:53.220Z",
+  "generatedAt": "2026-10-31T06:05:53.156Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -314,6 +314,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -341,6 +353,7 @@
     "2026-10-27": "The LoLdle puzzle for October 27, 2026 (Game #1573) is live with today's answer confirmed. The answer runs 24 characters, starting with E and ending with A — see the letter hints above before you peek.",
     "2026-10-28": "The LoLdle puzzle for October 28, 2026 (Game #1574) is live with today's answer confirmed. The answer runs 19 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-10-29": "The LoLdle puzzle for October 29, 2026 (Game #1575) is live with today's answer confirmed. The answer runs 26 characters, starting with D and ending with E — see the letter hints above before you peek.",
-    "2026-10-30": "The LoLdle puzzle for October 30, 2026 (Game #1576) is live with today's answer confirmed. The answer runs 22 characters, starting with S and ending with R — see the letter hints above before you peek."
+    "2026-10-30": "The LoLdle puzzle for October 30, 2026 (Game #1576) is live with today's answer confirmed. The answer runs 22 characters, starting with S and ending with R — see the letter hints above before you peek.",
+    "2026-10-31": "The LoLdle puzzle for October 31, 2026 (Game #1577) is live with today's answer confirmed. The answer runs 29 characters, starting with W and ending with R — see the letter hints above before you peek."
   }
 }
