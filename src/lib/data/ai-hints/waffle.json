@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-10-30T01:09:41.798Z",
+  "generatedAt": "2026-10-31T01:19:19.751Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -297,6 +297,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -323,6 +335,7 @@
     "2026-10-27": "The Waffle puzzle for October 27, 2026 (#1740) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek.",
     "2026-10-28": "The Waffle puzzle for October 28, 2026 (#1741) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with A — see the letter hints above before you peek.",
     "2026-10-29": "The Waffle puzzle for October 29, 2026 (#1742) is live with today's answer confirmed. The answer runs 30 characters, starting with Q and ending with Y — see the letter hints above before you peek.",
-    "2026-10-30": "The Waffle puzzle for October 30, 2026 (#1743) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with L — see the letter hints above before you peek."
+    "2026-10-30": "The Waffle puzzle for October 30, 2026 (#1743) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with L — see the letter hints above before you peek.",
+    "2026-10-31": "The Waffle puzzle for October 31, 2026 (#1744) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }
