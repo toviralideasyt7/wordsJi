@@ -541,5 +541,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/18/af2ac8c2-3484662d-b01f4939-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-29",
     "fetchedAt": "2026-10-30T01:05:42.417Z"
+  },
+  "2026-10-31": {
+    "date": "2026-10-31",
+    "gameNumber": 986,
+    "player": {
+      "player_name": "Brady House",
+      "player_id": "4872681",
+      "team_name": "Nationals",
+      "born": "USA",
+      "birth_date": "2003-06-04",
+      "position": [
+        "3B"
+      ],
+      "debut": 2025,
+      "jersey_number": 12
+    },
+    "videoDescription": "[05/12/26 : WSH 10 - 4 CIN] Brady House drives a two-run home run to right-center field, extending the Nationals' lead to 9-2 in the 8th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/12/5437cd4b-af1e1691-71325b57-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-10-31",
+    "fetchedAt": "2026-10-31T01:05:56.289Z"
   }
 }
