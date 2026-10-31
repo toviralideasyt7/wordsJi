@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-10-30T05:14:53.960Z",
+  "generatedAt": "2026-10-31T05:14:56.076Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -312,6 +312,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-10-31": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -339,6 +351,7 @@
     "2026-10-27": "The Canuckle puzzle for October 27, 2026 (#1627) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with S — see the letter hints above before you peek.",
     "2026-10-28": "The Canuckle puzzle for October 28, 2026 (#1628) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with W — see the letter hints above before you peek.",
     "2026-10-29": "The Canuckle puzzle for October 29, 2026 (#1629) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-10-30": "The Canuckle puzzle for October 30, 2026 (#1630) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with Y — see the letter hints above before you peek."
+    "2026-10-30": "The Canuckle puzzle for October 30, 2026 (#1630) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with Y — see the letter hints above before you peek.",
+    "2026-10-31": "The Canuckle puzzle for October 31, 2026 (#1631) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }
