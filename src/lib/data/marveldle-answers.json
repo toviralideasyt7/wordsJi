@@ -2037,5 +2037,58 @@
       ]
     },
     "solvedAt": "2026-10-30T06:05:48.062Z"
+  },
+  "2026-10-31": {
+    "date": "2026-10-31",
+    "dateId": "10/31/2026 12:00:00 AM",
+    "comics": {
+      "id": "gwenpool",
+      "name": "Gwenpool",
+      "gender": "Female",
+      "type": "AntiHero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Perception",
+        "InterdimensionalTravel",
+        "RealityManipulation"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 2015,
+      "firstApparitionComicTitle": "Deadpool's Secret Secret Wars #2",
+      "keywords": [
+        "gwendolyne pool",
+        "gwen pool"
+      ]
+    },
+    "mcu": {
+      "id": "phastos",
+      "name": "Phastos",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Eternal"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Elemental",
+        "ForceFields"
+      ],
+      "origin": "WorldForge",
+      "actorName": "Brian Tyree Henry",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Eternals"
+      ],
+      "keywords": [
+        "phastos"
+      ]
+    },
+    "solvedAt": "2026-10-31T06:06:06.002Z"
   }
 }
