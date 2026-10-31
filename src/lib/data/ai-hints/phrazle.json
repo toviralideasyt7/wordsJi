@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-10-30T16:46:58.835Z",
+  "generatedAt": "2026-10-31T16:46:35.836Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -322,6 +322,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -350,6 +362,7 @@
     "2026-10-28": "The Phrazle puzzle for October 28, 2026 (2026-10-28) is live with today's answer confirmed. The answer runs 24 characters, starting with R and ending with Y — see the letter hints above before you peek.",
     "2026-10-29": "The Phrazle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 29 characters, starting with T and ending with R — see the letter hints above before you peek.",
     "2026-10-30": "The Phrazle puzzle for October 30, 2026 (2026-10-30) is live with today's answer confirmed. The answer runs 31 characters, starting with B and ending with E — see the letter hints above before you peek.",
-    "2026-10-31": "The Phrazle puzzle for October 31, 2026 (2026-10-31) is live with today's answer confirmed. The answer runs 23 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-10-31": "The Phrazle puzzle for October 31, 2026 (2026-10-31) is live with today's answer confirmed. The answer runs 23 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-11-01": "The Phrazle puzzle for November 1, 2026 (2026-11-01) is live with today's answer confirmed. The answer runs 20 characters, starting with C and ending with S — see the letter hints above before you peek."
   }
 }

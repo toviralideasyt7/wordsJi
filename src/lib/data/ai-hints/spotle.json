@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-10-30T16:44:23.764Z",
+  "generatedAt": "2026-10-31T16:43:55.679Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -320,6 +320,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -348,6 +360,7 @@
     "2026-10-28": "The Spotle puzzle for October 28, 2026 (Day 1685) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with R — see the letter hints above before you peek.",
     "2026-10-29": "The Spotle puzzle for October 29, 2026 (Day 1686) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with N — see the letter hints above before you peek.",
     "2026-10-30": "The Spotle puzzle for October 30, 2026 (Day 1687) is live with today's answer confirmed. The answer runs 11 characters, starting with H and ending with S — see the letter hints above before you peek.",
-    "2026-10-31": "The Spotle puzzle for October 31, 2026 (Day 1688) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with S — see the letter hints above before you peek."
+    "2026-10-31": "The Spotle puzzle for October 31, 2026 (Day 1688) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with S — see the letter hints above before you peek.",
+    "2026-11-01": "The Spotle puzzle for November 1, 2026 (Day 1689) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }

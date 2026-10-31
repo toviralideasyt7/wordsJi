@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-30T16:44:25.498Z",
+  "generatedAt": "2026-10-31T16:43:54.765Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -322,6 +322,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -350,6 +362,7 @@
     "2026-10-28": "The Colordle puzzle for October 28, 2026 (#1678) is live with today's answer confirmed. The answer runs 11 characters, starting with M and ending with C — see the letter hints above before you peek.",
     "2026-10-29": "The Colordle puzzle for October 29, 2026 (#1679) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with A — see the letter hints above before you peek.",
     "2026-10-30": "The Colordle puzzle for October 30, 2026 (#1680) is live with today's answer confirmed. The answer runs 8 characters, starting with G and ending with E — see the letter hints above before you peek.",
-    "2026-10-31": "The Colordle puzzle for October 31, 2026 (#1681) is live with today's answer confirmed. The answer runs 11 characters, starting with C and ending with A — see the letter hints above before you peek."
+    "2026-10-31": "The Colordle puzzle for October 31, 2026 (#1681) is live with today's answer confirmed. The answer runs 11 characters, starting with C and ending with A — see the letter hints above before you peek.",
+    "2026-11-01": "The Colordle puzzle for November 1, 2026 (#1682) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with N — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-10-30T16:46:50.562Z",
+  "generatedAt": "2026-10-31T16:46:22.305Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -322,6 +322,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -350,6 +362,7 @@
     "2026-10-28": "The Contexto puzzle for October 28, 2026 (#1501) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with X — see the letter hints above before you peek.",
     "2026-10-29": "The Contexto puzzle for October 29, 2026 (#1502) is live with today's answer confirmed. The answer runs 4 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-10-30": "The Contexto puzzle for October 30, 2026 (#1503) is live with today's answer confirmed. The answer runs 4 characters, starting with H and ending with E — see the letter hints above before you peek.",
-    "2026-10-31": "The Contexto puzzle for October 31, 2026 (#1504) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with T — see the letter hints above before you peek."
+    "2026-10-31": "The Contexto puzzle for October 31, 2026 (#1504) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with T — see the letter hints above before you peek.",
+    "2026-11-01": "The Contexto puzzle for November 1, 2026 (#1505) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with T — see the letter hints above before you peek."
   }
 }

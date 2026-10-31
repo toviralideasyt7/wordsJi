@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-10-30T16:44:23.820Z",
+  "generatedAt": "2026-10-31T16:43:54.950Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -323,6 +323,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -351,6 +363,7 @@
     "2026-10-28": "The Semantle puzzle for October 28, 2026 (#1733) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with T — see the letter hints above before you peek.",
     "2026-10-29": "The Semantle puzzle for October 29, 2026 (#1734) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with T — see the letter hints above before you peek.",
     "2026-10-30": "The Semantle puzzle for October 30, 2026 (#1735) is live with today's answer confirmed. The answer runs 7 characters, starting with F and ending with E — see the letter hints above before you peek.",
-    "2026-10-31": "The Semantle puzzle for October 31, 2026 (#1736) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with E — see the letter hints above before you peek."
+    "2026-10-31": "The Semantle puzzle for October 31, 2026 (#1736) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with E — see the letter hints above before you peek.",
+    "2026-11-01": "The Semantle puzzle for November 1, 2026 (#1737) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with N — see the letter hints above before you peek."
   }
 }
