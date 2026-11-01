@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-10-31T16:43:54.765Z",
+  "generatedAt": "2026-11-01T16:43:59.673Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -334,6 +334,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -363,6 +375,7 @@
     "2026-10-29": "The Colordle puzzle for October 29, 2026 (#1679) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with A — see the letter hints above before you peek.",
     "2026-10-30": "The Colordle puzzle for October 30, 2026 (#1680) is live with today's answer confirmed. The answer runs 8 characters, starting with G and ending with E — see the letter hints above before you peek.",
     "2026-10-31": "The Colordle puzzle for October 31, 2026 (#1681) is live with today's answer confirmed. The answer runs 11 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-11-01": "The Colordle puzzle for November 1, 2026 (#1682) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-11-01": "The Colordle puzzle for November 1, 2026 (#1682) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-11-02": "The Colordle puzzle for November 2, 2026 (#1683) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with F — see the letter hints above before you peek."
   }
 }

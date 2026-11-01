@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-10-31T16:46:22.957Z",
+  "generatedAt": "2026-11-01T16:46:26.717Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -333,6 +333,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -362,6 +374,7 @@
     "2026-10-29": "The Countryle puzzle for October 29, 2026 (Game #1714) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with N — see the letter hints above before you peek.",
     "2026-10-30": "The Countryle puzzle for October 30, 2026 (Game #1715) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek.",
     "2026-10-31": "The Countryle puzzle for October 31, 2026 (Game #1716) is live with today's answer confirmed. The answer runs 6 characters, starting with S and ending with N — see the letter hints above before you peek.",
-    "2026-11-01": "The Countryle puzzle for November 1, 2026 (Game #1717) is live with today's answer confirmed. The answer runs 4 characters, starting with C and ending with A — see the letter hints above before you peek."
+    "2026-11-01": "The Countryle puzzle for November 1, 2026 (Game #1717) is live with today's answer confirmed. The answer runs 4 characters, starting with C and ending with A — see the letter hints above before you peek.",
+    "2026-11-02": "The Countryle puzzle for November 2, 2026 (Game #1718) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with S — see the letter hints above before you peek."
   }
 }

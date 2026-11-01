@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-10-31T16:43:55.103Z",
+  "generatedAt": "2026-11-01T16:43:58.461Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -332,6 +332,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -361,6 +373,7 @@
     "2026-10-29": "The Quordle puzzle for October 29, 2026 (#1739) is live with today's answer confirmed. The answer runs 20 characters, starting with P and ending with R — see the letter hints above before you peek.",
     "2026-10-30": "The Quordle puzzle for October 30, 2026 (#1740) is live with today's answer confirmed. The answer runs 20 characters, starting with U and ending with N — see the letter hints above before you peek.",
     "2026-10-31": "The Quordle puzzle for October 31, 2026 (#1741) is live with today's answer confirmed. The answer runs 20 characters, starting with A and ending with H — see the letter hints above before you peek.",
-    "2026-11-01": "The Quordle puzzle for November 1, 2026 (#1742) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with N — see the letter hints above before you peek."
+    "2026-11-01": "The Quordle puzzle for November 1, 2026 (#1742) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with N — see the letter hints above before you peek.",
+    "2026-11-02": "The Quordle puzzle for November 2, 2026 (#1743) is live with today's answer confirmed. The answer runs 20 characters, starting with E and ending with E — see the letter hints above before you peek."
   }
 }
