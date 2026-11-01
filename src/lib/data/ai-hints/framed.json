@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-10-31T05:14:56.545Z",
+  "generatedAt": "2026-11-01T13:19:15.889Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -300,6 +300,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-01": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -326,6 +338,7 @@
     "2026-10-28": "The Framed puzzle for October 28, 2026 (#1693) is live with today's answer confirmed. The answer runs 14 characters, starting with D and ending with R — see the letter hints above before you peek.",
     "2026-10-29": "The Framed puzzle for October 29, 2026 (#1694) is live with today's answer confirmed. The answer runs 18 characters, starting with B and ending with S — see the letter hints above before you peek.",
     "2026-10-30": "The Framed puzzle for October 30, 2026 (#1695) is live with today's answer confirmed. The answer runs 9 characters, starting with H and ending with N — see the letter hints above before you peek.",
-    "2026-10-31": "The Framed puzzle for October 31, 2026 (#1696) is live with today's answer confirmed. The answer runs 19 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-10-31": "The Framed puzzle for October 31, 2026 (#1696) is live with today's answer confirmed. The answer runs 19 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-11-01": "The Framed puzzle for November 1, 2026 (#1697) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }
