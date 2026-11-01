@@ -2090,5 +2090,59 @@
       ]
     },
     "solvedAt": "2026-10-31T06:06:06.002Z"
+  },
+  "2026-11-01": {
+    "date": "2026-11-01",
+    "dateId": "11/1/2026 12:00:00 AM",
+    "comics": {
+      "id": "livinglaser",
+      "name": "Living Laser",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Shapeshifting",
+        "Psychic",
+        "Speed"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1966,
+      "firstApparitionComicTitle": "Avengers #34",
+      "keywords": [
+        "arthur parks",
+        "parks",
+        "laser"
+      ]
+    },
+    "mcu": {
+      "id": "doorman",
+      "name": "Doorman",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Teleportation"
+      ],
+      "origin": "Earth",
+      "actorName": "Byron Bowers",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "DeMarr Davis",
+        "Davis"
+      ]
+    },
+    "solvedAt": "2026-11-01T06:06:03.891Z"
   }
 }
