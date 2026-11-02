@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-01T06:23:49.671Z",
+  "generatedAt": "2026-11-02T06:25:06.651Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -299,6 +299,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -325,6 +337,7 @@
     "2026-10-29": "The Marveldle puzzle for October 29, 2026 (10/29/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 21 characters, starting with M and ending with K — see the letter hints above before you peek.",
     "2026-10-30": "The Marveldle puzzle for October 30, 2026 (10/30/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 16 characters, starting with T and ending with M — see the letter hints above before you peek.",
     "2026-10-31": "The Marveldle puzzle for October 31, 2026 (10/31/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 15 characters, starting with G and ending with S — see the letter hints above before you peek.",
-    "2026-11-01": "The Marveldle puzzle for November 1, 2026 (11/1/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 18 characters, starting with L and ending with N — see the letter hints above before you peek."
+    "2026-11-01": "The Marveldle puzzle for November 1, 2026 (11/1/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 18 characters, starting with L and ending with N — see the letter hints above before you peek.",
+    "2026-11-02": "The Marveldle puzzle for November 2, 2026 (11/2/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 21 characters, starting with F and ending with F — see the letter hints above before you peek."
   }
 }
