@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-01T06:13:47.150Z",
+  "generatedAt": "2026-11-02T06:07:02.397Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -339,6 +339,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -368,6 +380,7 @@
     "2026-10-29": "The Globle puzzle for October 29, 2026 (2026-10-29) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with N — see the letter hints above before you peek.",
     "2026-10-30": "The Globle puzzle for October 30, 2026 (2026-10-30) is live with today's answer confirmed. The answer runs 10 characters, starting with E and ending with R — see the letter hints above before you peek.",
     "2026-10-31": "The Globle puzzle for October 31, 2026 (2026-10-31) is live with today's answer confirmed. The answer runs 9 characters, starting with G and ending with A — see the letter hints above before you peek.",
-    "2026-11-01": "The Globle puzzle for November 1, 2026 (2026-11-01) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with A — see the letter hints above before you peek."
+    "2026-11-01": "The Globle puzzle for November 1, 2026 (2026-11-01) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with A — see the letter hints above before you peek.",
+    "2026-11-02": "The Globle puzzle for November 2, 2026 (2026-11-02) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with N — see the letter hints above before you peek."
   }
 }

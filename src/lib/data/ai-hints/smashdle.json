@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-01T06:05:54.927Z",
+  "generatedAt": "2026-11-02T06:10:46.014Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -336,6 +336,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -365,6 +377,7 @@
     "2026-10-29": "The Smashdle puzzle for October 29, 2026 (Game #1149) is live with today's answer confirmed. The answer runs 49 characters, starting with D and ending with Y — see the letter hints above before you peek.",
     "2026-10-30": "The Smashdle puzzle for October 30, 2026 (Game #1150) is live with today's answer confirmed. The answer runs 34 characters, starting with L and ending with N — see the letter hints above before you peek.",
     "2026-10-31": "The Smashdle puzzle for October 31, 2026 (Game #1151) is live with today's answer confirmed. The answer runs 26 characters, starting with S and ending with I — see the letter hints above before you peek.",
-    "2026-11-01": "The Smashdle puzzle for November 1, 2026 (Game #1152) is live with today's answer confirmed. The answer runs 34 characters, starting with M and ending with K — see the letter hints above before you peek."
+    "2026-11-01": "The Smashdle puzzle for November 1, 2026 (Game #1152) is live with today's answer confirmed. The answer runs 34 characters, starting with M and ending with K — see the letter hints above before you peek.",
+    "2026-11-02": "The Smashdle puzzle for November 2, 2026 (Game #1153) is live with today's answer confirmed. The answer runs 25 characters, starting with K and ending with N — see the letter hints above before you peek."
   }
 }

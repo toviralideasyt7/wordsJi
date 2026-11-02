@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-01T06:05:53.960Z",
+  "generatedAt": "2026-11-02T06:07:05.339Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -337,6 +337,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-02": {
+      "vowel_hint": "It contains 20 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -366,6 +378,7 @@
     "2026-10-29": "The Narutodle puzzle for October 29, 2026 (Game #910) is live with today's answer confirmed. The answer runs 48 characters, starting with I and ending with I — see the letter hints above before you peek.",
     "2026-10-30": "The Narutodle puzzle for October 30, 2026 (Game #911) is live with today's answer confirmed. The answer runs 40 characters, starting with K and ending with I — see the letter hints above before you peek.",
     "2026-10-31": "The Narutodle puzzle for October 31, 2026 (Game #912) is live with today's answer confirmed. The answer runs 49 characters, starting with B and ending with E — see the letter hints above before you peek.",
-    "2026-11-01": "The Narutodle puzzle for November 1, 2026 (Game #913) is live with today's answer confirmed. The answer runs 48 characters, starting with K and ending with A — see the letter hints above before you peek."
+    "2026-11-01": "The Narutodle puzzle for November 1, 2026 (Game #913) is live with today's answer confirmed. The answer runs 48 characters, starting with K and ending with A — see the letter hints above before you peek.",
+    "2026-11-02": "The Narutodle puzzle for November 2, 2026 (Game #914) is live with today's answer confirmed. The answer runs 41 characters, starting with M and ending with O — see the letter hints above before you peek."
   }
 }
