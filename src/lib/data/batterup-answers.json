@@ -561,5 +561,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/12/5437cd4b-af1e1691-71325b57-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-31",
     "fetchedAt": "2026-10-31T01:05:56.289Z"
+  },
+  "2026-11-01": {
+    "date": "2026-11-01",
+    "gameNumber": 987,
+    "player": {
+      "player_name": "Evan Carter",
+      "player_id": "4917921",
+      "team_name": "Rangers",
+      "born": "USA",
+      "birth_date": "2002-08-29",
+      "position": [
+        "CF"
+      ],
+      "debut": 2023,
+      "jersey_number": 32
+    },
+    "videoDescription": "[07/02/26 : DET 4 - 10 TEX] Evan Carter hits a solo home run to center field putting the Rangers up 10-4 in the bottom of the 8th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/02/77bb4c6d-3c1751dd-cde5bc1f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-01",
+    "fetchedAt": "2026-11-02T01:05:56.309Z"
   }
 }
