@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-01T16:43:59.247Z",
+  "generatedAt": "2026-11-02T22:07:03.991Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -344,6 +344,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -374,6 +386,7 @@
     "2026-10-30": "The Spotle puzzle for October 30, 2026 (Day 1687) is live with today's answer confirmed. The answer runs 11 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-10-31": "The Spotle puzzle for October 31, 2026 (Day 1688) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with S — see the letter hints above before you peek.",
     "2026-11-01": "The Spotle puzzle for November 1, 2026 (Day 1689) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with E — see the letter hints above before you peek.",
-    "2026-11-02": "The Spotle puzzle for November 2, 2026 (Day 1690) is live with today's answer confirmed. The answer runs 12 characters, starting with R and ending with S — see the letter hints above before you peek."
+    "2026-11-02": "The Spotle puzzle for November 2, 2026 (Day 1690) is live with today's answer confirmed. The answer runs 12 characters, starting with R and ending with S — see the letter hints above before you peek.",
+    "2026-11-03": "The Spotle puzzle for November 3, 2026 (Day 1691) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with R — see the letter hints above before you peek."
   }
 }

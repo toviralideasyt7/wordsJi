@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-11-01T16:43:58.986Z",
+  "generatedAt": "2026-11-02T22:07:04.206Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -347,6 +347,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -377,6 +389,7 @@
     "2026-10-30": "The Semantle puzzle for October 30, 2026 (#1735) is live with today's answer confirmed. The answer runs 7 characters, starting with F and ending with E — see the letter hints above before you peek.",
     "2026-10-31": "The Semantle puzzle for October 31, 2026 (#1736) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-01": "The Semantle puzzle for November 1, 2026 (#1737) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with N — see the letter hints above before you peek.",
-    "2026-11-02": "The Semantle puzzle for November 2, 2026 (#1738) is live with today's answer confirmed. The answer runs 4 characters, starting with H and ending with T — see the letter hints above before you peek."
+    "2026-11-02": "The Semantle puzzle for November 2, 2026 (#1738) is live with today's answer confirmed. The answer runs 4 characters, starting with H and ending with T — see the letter hints above before you peek.",
+    "2026-11-03": "The Semantle puzzle for November 3, 2026 (#1739) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with D — see the letter hints above before you peek."
   }
 }

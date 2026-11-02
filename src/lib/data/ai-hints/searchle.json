@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-01T20:21:35.239Z",
+  "generatedAt": "2026-11-02T22:07:04.428Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -321,6 +321,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -349,6 +361,7 @@
     "2026-10-30": "The Searchle puzzle for October 30, 2026 (#97) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with D — see the letter hints above before you peek.",
     "2026-10-31": "The Searchle puzzle for October 31, 2026 (#98) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with D — see the letter hints above before you peek.",
     "2026-11-01": "The Searchle puzzle for November 1, 2026 (#99) is live with today's answer confirmed. The answer runs 7 characters, starting with V and ending with S — see the letter hints above before you peek.",
-    "2026-11-02": "The Searchle puzzle for November 2, 2026 (#100) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek."
+    "2026-11-02": "The Searchle puzzle for November 2, 2026 (#100) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek.",
+    "2026-11-03": "The Searchle puzzle for November 3, 2026 (#101) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with G — see the letter hints above before you peek."
   }
 }
