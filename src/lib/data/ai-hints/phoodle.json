@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-02T16:05:08.924Z",
+  "generatedAt": "2026-11-03T16:49:22.004Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -360,6 +360,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -391,6 +403,7 @@
     "2026-10-31": "The Phoodle puzzle for October 31, 2026 (2026-10-31) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with S — see the letter hints above before you peek.",
     "2026-11-01": "The Phoodle puzzle for November 1, 2026 (2026-11-01) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with S — see the letter hints above before you peek.",
     "2026-11-02": "The Phoodle puzzle for November 2, 2026 (2026-11-02) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with K — see the letter hints above before you peek.",
-    "2026-11-03": "The Phoodle puzzle for November 3, 2026 (2026-11-03) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-11-03": "The Phoodle puzzle for November 3, 2026 (2026-11-03) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-11-04": "The Phoodle puzzle for November 4, 2026 (2026-11-04) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek."
   }
 }

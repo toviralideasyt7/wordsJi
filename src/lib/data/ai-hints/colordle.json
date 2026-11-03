@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-02T16:05:08.997Z",
+  "generatedAt": "2026-11-03T16:45:39.284Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -358,6 +358,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "C",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -389,6 +401,7 @@
     "2026-10-31": "The Colordle puzzle for October 31, 2026 (#1681) is live with today's answer confirmed. The answer runs 11 characters, starting with C and ending with A — see the letter hints above before you peek.",
     "2026-11-01": "The Colordle puzzle for November 1, 2026 (#1682) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-11-02": "The Colordle puzzle for November 2, 2026 (#1683) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with F — see the letter hints above before you peek.",
-    "2026-11-03": "The Colordle puzzle for November 3, 2026 (#1684) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-11-03": "The Colordle puzzle for November 3, 2026 (#1684) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-11-04": "The Colordle puzzle for November 4, 2026 (#1685) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with C — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-02T22:07:05.526Z",
+  "generatedAt": "2026-11-03T16:45:39.302Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -356,6 +356,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -387,6 +399,7 @@
     "2026-10-31": "The Quordle puzzle for October 31, 2026 (#1741) is live with today's answer confirmed. The answer runs 20 characters, starting with A and ending with H — see the letter hints above before you peek.",
     "2026-11-01": "The Quordle puzzle for November 1, 2026 (#1742) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with N — see the letter hints above before you peek.",
     "2026-11-02": "The Quordle puzzle for November 2, 2026 (#1743) is live with today's answer confirmed. The answer runs 20 characters, starting with E and ending with E — see the letter hints above before you peek.",
-    "2026-11-03": "The Quordle puzzle for November 3, 2026 (#1744) is live with today's answer confirmed. The answer runs 20 characters, starting with T and ending with S — see the letter hints above before you peek."
+    "2026-11-03": "The Quordle puzzle for November 3, 2026 (#1744) is live with today's answer confirmed. The answer runs 20 characters, starting with T and ending with S — see the letter hints above before you peek.",
+    "2026-11-04": "The Quordle puzzle for November 4, 2026 (#1745) is live with today's answer confirmed. The answer runs 20 characters, starting with J and ending with Y — see the letter hints above before you peek."
   }
 }
