@@ -2193,5 +2193,57 @@
       ]
     },
     "solvedAt": "2026-11-02T06:06:08.624Z"
+  },
+  "2026-11-03": {
+    "date": "2026-11-03",
+    "dateId": "11/3/2026 12:00:00 AM",
+    "comics": {
+      "id": "abomination",
+      "name": "Abomination",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Perception"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1967,
+      "firstApparitionComicTitle": "Tales to Astonish #90",
+      "keywords": [
+        "emil blonsky",
+        "blonsky"
+      ]
+    },
+    "mcu": {
+      "id": "eleanorbishop",
+      "name": "Eleanor Bishop",
+      "gender": "Female",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Vera Farmiga",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "BishopSecurity"
+      ],
+      "keywords": [
+        "bishop"
+      ]
+    },
+    "solvedAt": "2026-11-03T06:05:36.025Z"
   }
 }
