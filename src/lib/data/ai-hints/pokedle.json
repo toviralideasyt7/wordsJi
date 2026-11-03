@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-02T06:07:04.831Z",
+  "generatedAt": "2026-11-03T06:10:46.282Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -349,6 +349,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "14 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -379,6 +391,7 @@
     "2026-10-30": "The Pokedle puzzle for October 30, 2026 (Game #1114) is live with today's answer confirmed. The answer runs 34 characters, starting with N and ending with E — see the letter hints above before you peek.",
     "2026-10-31": "The Pokedle puzzle for October 31, 2026 (Game #1115) is live with today's answer confirmed. The answer runs 27 characters, starting with N and ending with R — see the letter hints above before you peek.",
     "2026-11-01": "The Pokedle puzzle for November 1, 2026 (Game #1116) is live with today's answer confirmed. The answer runs 31 characters, starting with V and ending with A — see the letter hints above before you peek.",
-    "2026-11-02": "The Pokedle puzzle for November 2, 2026 (Game #1117) is live with today's answer confirmed. The answer runs 28 characters, starting with H and ending with T — see the letter hints above before you peek."
+    "2026-11-02": "The Pokedle puzzle for November 2, 2026 (Game #1117) is live with today's answer confirmed. The answer runs 28 characters, starting with H and ending with T — see the letter hints above before you peek.",
+    "2026-11-03": "The Pokedle puzzle for November 3, 2026 (Game #1118) is live with today's answer confirmed. The answer runs 30 characters, starting with K and ending with H — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-02T06:07:04.600Z",
+  "generatedAt": "2026-11-03T06:07:05.095Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -349,6 +349,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "19 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -379,6 +391,7 @@
     "2026-10-30": "The Dotadle puzzle for October 30, 2026 (Game #1050) is live with today's answer confirmed. The answer runs 29 characters, starting with E and ending with E — see the letter hints above before you peek.",
     "2026-10-31": "The Dotadle puzzle for October 31, 2026 (Game #1051) is live with today's answer confirmed. The answer runs 25 characters, starting with T and ending with K — see the letter hints above before you peek.",
     "2026-11-01": "The Dotadle puzzle for November 1, 2026 (Game #1052) is live with today's answer confirmed. The answer runs 32 characters, starting with S and ending with A — see the letter hints above before you peek.",
-    "2026-11-02": "The Dotadle puzzle for November 2, 2026 (Game #1053) is live with today's answer confirmed. The answer runs 32 characters, starting with U and ending with R — see the letter hints above before you peek."
+    "2026-11-02": "The Dotadle puzzle for November 2, 2026 (Game #1053) is live with today's answer confirmed. The answer runs 32 characters, starting with U and ending with R — see the letter hints above before you peek.",
+    "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek."
   }
 }
