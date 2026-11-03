@@ -581,5 +581,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/02/77bb4c6d-3c1751dd-cde5bc1f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-01",
     "fetchedAt": "2026-11-02T01:05:56.309Z"
+  },
+  "2026-11-02": {
+    "date": "2026-11-02",
+    "gameNumber": 988,
+    "player": {
+      "player_name": "Otto Lopez",
+      "player_id": "41917",
+      "team_name": "Marlins",
+      "born": "D.R.",
+      "birth_date": "1998-10-01",
+      "position": [
+        "SS"
+      ],
+      "debut": 2021,
+      "jersey_number": 6
+    },
+    "videoDescription": "[07/04/26 : MIA 7 - 2 ATH] Otto Lopez belts a two-run homer to left field, extending the Marlins' lead to 3-0 in the top of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/04/0ecbef07-81357316-9f1930be-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-02",
+    "fetchedAt": "2026-11-03T01:05:33.135Z"
   }
 }
