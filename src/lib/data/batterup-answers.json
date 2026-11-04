@@ -601,5 +601,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/04/0ecbef07-81357316-9f1930be-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-02",
     "fetchedAt": "2026-11-03T01:05:33.135Z"
+  },
+  "2026-11-03": {
+    "date": "2026-11-03",
+    "gameNumber": 989,
+    "player": {
+      "player_name": "Juan Soto",
+      "player_id": "36969",
+      "team_name": "Mets",
+      "born": "D.R.",
+      "birth_date": "1998-10-25",
+      "position": [
+        "LF"
+      ],
+      "debut": 2018,
+      "jersey_number": 22
+    },
+    "videoDescription": "[07/09/26 : KC 3 - 7 NYM] Juan Soto powers his 21st home run of the year to extend the Mets lead to 7-3 in the bottom of the 7th.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/09/5cc69394-062da24b-a86f7852-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-03",
+    "fetchedAt": "2026-11-04T01:05:36.678Z"
   }
 }
