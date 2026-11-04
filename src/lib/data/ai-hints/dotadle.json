@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-03T06:07:05.095Z",
+  "generatedAt": "2026-11-04T06:05:01.367Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -361,6 +361,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "A long shot, a frozen heart, a raging beast, a heavy slam.",
+      "clue1": "Four distinct heroes from the lanes and the jungle.",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "A group of four specific playable characters from Dota 2.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of four specific character names combined into one string."
     }
   },
   "prose": {
@@ -392,6 +405,7 @@
     "2026-10-31": "The Dotadle puzzle for October 31, 2026 (Game #1051) is live with today's answer confirmed. The answer runs 25 characters, starting with T and ending with K — see the letter hints above before you peek.",
     "2026-11-01": "The Dotadle puzzle for November 1, 2026 (Game #1052) is live with today's answer confirmed. The answer runs 32 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-02": "The Dotadle puzzle for November 2, 2026 (Game #1053) is live with today's answer confirmed. The answer runs 32 characters, starting with U and ending with R — see the letter hints above before you peek.",
-    "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek."
+    "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek.",
+    "2026-11-04": "Dotadle Game #1055 for November 4, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct hero names."
   }
 }

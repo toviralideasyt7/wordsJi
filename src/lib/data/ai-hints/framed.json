@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-03T06:07:02.756Z",
+  "generatedAt": "2026-11-04T06:05:25.791Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -336,6 +336,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I can cut through grass or be a sharp edge of steel.",
+      "clue1": "Think of a tool for mowing or a sword's edge.",
+      "starts_with": "B",
+      "ends_with": "E",
+      "definition": "The flat, cutting part of a tool or weapon.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a straightforward meaning and simple structure."
     }
   },
   "prose": {
@@ -365,6 +378,7 @@
     "2026-10-31": "The Framed puzzle for October 31, 2026 (#1696) is live with today's answer confirmed. The answer runs 19 characters, starting with S and ending with S — see the letter hints above before you peek.",
     "2026-11-01": "The Framed puzzle for November 1, 2026 (#1697) is live with today's answer confirmed. The answer runs 12 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-11-02": "The Framed puzzle for November 2, 2026 (#1698) is live with today's answer confirmed. The answer runs 9 characters, starting with G and ending with M — see the letter hints above before you peek.",
-    "2026-11-03": "The Framed puzzle for November 3, 2026 (#1699) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-11-03": "The Framed puzzle for November 3, 2026 (#1699) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-11-04": "Framed puzzle #1700 arrives on November 4, 2026. This specific entry features a five-letter word pattern."
   }
 }

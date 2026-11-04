@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-03T06:10:47.523Z",
+  "generatedAt": "2026-11-04T06:07:08.990Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -360,6 +360,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-04": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -391,6 +403,7 @@
     "2026-10-31": "The Smashdle puzzle for October 31, 2026 (Game #1151) is live with today's answer confirmed. The answer runs 26 characters, starting with S and ending with I — see the letter hints above before you peek.",
     "2026-11-01": "The Smashdle puzzle for November 1, 2026 (Game #1152) is live with today's answer confirmed. The answer runs 34 characters, starting with M and ending with K — see the letter hints above before you peek.",
     "2026-11-02": "The Smashdle puzzle for November 2, 2026 (Game #1153) is live with today's answer confirmed. The answer runs 25 characters, starting with K and ending with N — see the letter hints above before you peek.",
-    "2026-11-03": "The Smashdle puzzle for November 3, 2026 (Game #1154) is live with today's answer confirmed. The answer runs 23 characters, starting with W and ending with K — see the letter hints above before you peek."
+    "2026-11-03": "The Smashdle puzzle for November 3, 2026 (Game #1154) is live with today's answer confirmed. The answer runs 23 characters, starting with W and ending with K — see the letter hints above before you peek.",
+    "2026-11-04": "The Smashdle puzzle for November 4, 2026 (Game #1155) is live with today's answer confirmed. The answer runs 29 characters, starting with G and ending with A — see the letter hints above before you peek."
   }
 }
