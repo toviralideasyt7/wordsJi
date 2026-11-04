@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-03T01:10:56.412Z",
+  "generatedAt": "2026-11-04T01:10:52.356Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -274,6 +274,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-03": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -298,6 +310,7 @@
     "2026-10-29": "The Batter Up puzzle for October 29, 2026 (Game #984) is live with today's answer confirmed. The answer runs 18 characters, starting with V and ending with R — see the letter hints above before you peek.",
     "2026-10-31": "The Batter Up puzzle for October 31, 2026 (Game #986) is live with today's answer confirmed. The answer runs 10 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-01": "The Batter Up puzzle for November 1, 2026 (Game #987) is live with today's answer confirmed. The answer runs 10 characters, starting with E and ending with R — see the letter hints above before you peek.",
-    "2026-11-02": "The Batter Up puzzle for November 2, 2026 (Game #988) is live with today's answer confirmed. The answer runs 9 characters, starting with O and ending with Z — see the letter hints above before you peek."
+    "2026-11-02": "The Batter Up puzzle for November 2, 2026 (Game #988) is live with today's answer confirmed. The answer runs 9 characters, starting with O and ending with Z — see the letter hints above before you peek.",
+    "2026-11-03": "The Batter Up puzzle for November 3, 2026 (Game #989) is live with today's answer confirmed. The answer runs 8 characters, starting with J and ending with O — see the letter hints above before you peek."
   }
 }
