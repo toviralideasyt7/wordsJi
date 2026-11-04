@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-03T16:49:22.144Z",
+  "generatedAt": "2026-11-04T16:49:45.152Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -368,6 +368,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-05": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -400,6 +412,7 @@
     "2026-11-01": "The Colorfle puzzle for November 1, 2026 (#1651) is live with today's answer confirmed. The answer runs 15 characters, starting with Y and ending with N — see the letter hints above before you peek.",
     "2026-11-02": "The Colorfle puzzle for November 2, 2026 (#1652) is live with today's answer confirmed. The answer runs 19 characters, starting with W and ending with N — see the letter hints above before you peek.",
     "2026-11-03": "The Colorfle puzzle for November 3, 2026 (#1653) is live with today's answer confirmed. The answer runs 22 characters, starting with L and ending with E — see the letter hints above before you peek.",
-    "2026-11-04": "The Colorfle puzzle for November 4, 2026 (#1654) is live with today's answer confirmed. The answer runs 18 characters, starting with M and ending with E — see the letter hints above before you peek."
+    "2026-11-04": "The Colorfle puzzle for November 4, 2026 (#1654) is live with today's answer confirmed. The answer runs 18 characters, starting with M and ending with E — see the letter hints above before you peek.",
+    "2026-11-05": "The Colorfle puzzle for November 5, 2026 (#1655) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with N — see the letter hints above before you peek."
   }
 }
