@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-05T15:25:57.612Z",
+  "generatedAt": "2026-11-05T22:05:44.651Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -380,6 +380,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "A leafy green, a prickly stem, a lid, and the exterior.",
+      "clue1": "One is a vegetable, one is a sharp plant part.",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "A set including a leafy green, a plant spine, a lid, and an exterior.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words but overlapping letters like R and O may cause confusion."
     }
   },
   "prose": {
@@ -413,6 +426,7 @@
     "2026-11-02": "The Quordle puzzle for November 2, 2026 (#1743) is live with today's answer confirmed. The answer runs 20 characters, starting with E and ending with E — see the letter hints above before you peek.",
     "2026-11-03": "The Quordle puzzle for November 3, 2026 (#1744) is live with today's answer confirmed. The answer runs 20 characters, starting with T and ending with S — see the letter hints above before you peek.",
     "2026-11-04": "The Quordle puzzle for November 4, 2026 (#1745) is live with today's answer confirmed. The answer runs 20 characters, starting with J and ending with Y — see the letter hints above before you peek.",
-    "2026-11-05": "The Quordle puzzle for November 5, 2026 (#1746) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with Y — see the letter hints above before you peek."
+    "2026-11-05": "The Quordle puzzle for November 5, 2026 (#1746) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with Y — see the letter hints above before you peek.",
+    "2026-11-06": "Quordle puzzle #1747 for November 6, 2026, features four five-letter words. The set contains several recurring consonants and a variety of common vowels."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-04T16:49:45.457Z",
+  "generatedAt": "2026-11-05T22:07:39.445Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -382,6 +382,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A striped monarch of the jungle with a thunderous roar.",
+      "clue1": "A large feline known for its orange and black coat.",
+      "starts_with": "T",
+      "ends_with": "R",
+      "definition": "A large solitary cat of Asia with a striped coat.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common animal with distinct visual markers and a high semantic association."
     }
   },
   "prose": {
@@ -415,6 +428,7 @@
     "2026-11-02": "The Contexto puzzle for November 2, 2026 (#1506) is live with today's answer confirmed. The answer runs 10 characters, starting with A and ending with E — see the letter hints above before you peek.",
     "2026-11-03": "The Contexto puzzle for November 3, 2026 (#1507) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-11-04": "The Contexto puzzle for November 4, 2026 (#1508) is live with today's answer confirmed. The answer runs 6 characters, starting with W and ending with R — see the letter hints above before you peek.",
-    "2026-11-05": "The Contexto puzzle for November 5, 2026 (#1509) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with E — see the letter hints above before you peek."
+    "2026-11-05": "The Contexto puzzle for November 5, 2026 (#1509) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with E — see the letter hints above before you peek.",
+    "2026-11-06": "Contexto puzzle #1510 was released on November 6, 2026. The target word follows a consonant-vowel-consonant-consonant-vowel-consonant pattern."
   }
 }
