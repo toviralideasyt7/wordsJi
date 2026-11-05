@@ -621,5 +621,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/09/5cc69394-062da24b-a86f7852-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-03",
     "fetchedAt": "2026-11-04T01:05:36.678Z"
+  },
+  "2026-11-04": {
+    "date": "2026-11-04",
+    "gameNumber": 990,
+    "player": {
+      "player_name": "Brayan Rocchio",
+      "player_id": "41217",
+      "team_name": "Guardians",
+      "born": "VEN.",
+      "birth_date": "2001-01-13",
+      "position": [
+        "SS"
+      ],
+      "debut": 2023,
+      "jersey_number": 4
+    },
+    "videoDescription": "[09/04/26 : DET 6 - 7 CLE] Brayan Rocchio hits a MASSIVE clutch walk-off home run, sealing the Guardians' 7-6 win over the Tigers.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/04/9dfb3f01-5faf698f-5aab58e8-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-04",
+    "fetchedAt": "2026-11-05T01:05:35.697Z"
   }
 }
