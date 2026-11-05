@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-04T06:05:01.367Z",
+  "generatedAt": "2026-11-05T06:07:26.195Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -374,6 +374,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Requires knowledge of four specific character names combined into one string."
+    },
+    "2026-11-05": {
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "22 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -406,6 +418,7 @@
     "2026-11-01": "The Dotadle puzzle for November 1, 2026 (Game #1052) is live with today's answer confirmed. The answer runs 32 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-02": "The Dotadle puzzle for November 2, 2026 (Game #1053) is live with today's answer confirmed. The answer runs 32 characters, starting with U and ending with R — see the letter hints above before you peek.",
     "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek.",
-    "2026-11-04": "Dotadle Game #1055 for November 4, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct hero names."
+    "2026-11-04": "Dotadle Game #1055 for November 4, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct hero names.",
+    "2026-11-05": "The Dotadle puzzle for November 5, 2026 (Game #1056) is live with today's answer confirmed. The answer runs 39 characters, starting with O and ending with R — see the letter hints above before you peek."
   }
 }

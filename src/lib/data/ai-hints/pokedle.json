@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-04T06:07:08.199Z",
+  "generatedAt": "2026-11-05T06:07:26.977Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -374,6 +374,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires identifying four distinct creatures from the original roster."
+    },
+    "2026-11-05": {
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -406,6 +418,7 @@
     "2026-11-01": "The Pokedle puzzle for November 1, 2026 (Game #1116) is live with today's answer confirmed. The answer runs 31 characters, starting with V and ending with A — see the letter hints above before you peek.",
     "2026-11-02": "The Pokedle puzzle for November 2, 2026 (Game #1117) is live with today's answer confirmed. The answer runs 28 characters, starting with H and ending with T — see the letter hints above before you peek.",
     "2026-11-03": "The Pokedle puzzle for November 3, 2026 (Game #1118) is live with today's answer confirmed. The answer runs 30 characters, starting with K and ending with H — see the letter hints above before you peek.",
-    "2026-11-04": "Pokedle Game #1119 takes place on November 4, 2026. This specific puzzle features a multi-word answer starting with S and ending with S."
+    "2026-11-04": "Pokedle Game #1119 takes place on November 4, 2026. This specific puzzle features a multi-word answer starting with S and ending with S.",
+    "2026-11-05": "The Pokedle puzzle for November 5, 2026 (Game #1120) is live with today's answer confirmed. The answer runs 27 characters, starting with R and ending with O — see the letter hints above before you peek."
   }
 }

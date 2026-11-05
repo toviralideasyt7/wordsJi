@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-04T06:05:22.205Z",
+  "generatedAt": "2026-11-05T06:07:26.547Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -373,6 +373,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-05": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "U",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -405,6 +417,7 @@
     "2026-11-01": "The Narutodle puzzle for November 1, 2026 (Game #913) is live with today's answer confirmed. The answer runs 48 characters, starting with K and ending with A — see the letter hints above before you peek.",
     "2026-11-02": "The Narutodle puzzle for November 2, 2026 (Game #914) is live with today's answer confirmed. The answer runs 41 characters, starting with M and ending with O — see the letter hints above before you peek.",
     "2026-11-03": "The Narutodle puzzle for November 3, 2026 (Game #915) is live with today's answer confirmed. The answer runs 38 characters, starting with Y and ending with I — see the letter hints above before you peek.",
-    "2026-11-04": "The Narutodle puzzle for November 4, 2026 (Game #916) is live with today's answer confirmed. The answer runs 40 characters, starting with K and ending with I — see the letter hints above before you peek."
+    "2026-11-04": "The Narutodle puzzle for November 4, 2026 (Game #916) is live with today's answer confirmed. The answer runs 40 characters, starting with K and ending with I — see the letter hints above before you peek.",
+    "2026-11-05": "The Narutodle puzzle for November 5, 2026 (Game #917) is live with today's answer confirmed. The answer runs 29 characters, starting with A and ending with U — see the letter hints above before you peek."
   }
 }
