@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-05T01:27:09.781Z",
+  "generatedAt": "2026-11-05T15:37:04.899Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -298,6 +298,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-05": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A powerful swing from a name that sounds like a short cut.",
+      "clue1": "A rising star in the professional baseball circuit.",
+      "starts_with": "N",
+      "ends_with": "Z",
+      "definition": "American professional baseball player.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The name is not yet a household household name for casual fans."
     }
   },
   "prose": {
@@ -324,6 +337,7 @@
     "2026-11-01": "The Batter Up puzzle for November 1, 2026 (Game #987) is live with today's answer confirmed. The answer runs 10 characters, starting with E and ending with R — see the letter hints above before you peek.",
     "2026-11-02": "The Batter Up puzzle for November 2, 2026 (Game #988) is live with today's answer confirmed. The answer runs 9 characters, starting with O and ending with Z — see the letter hints above before you peek.",
     "2026-11-03": "The Batter Up puzzle for November 3, 2026 (Game #989) is live with today's answer confirmed. The answer runs 8 characters, starting with J and ending with O — see the letter hints above before you peek.",
-    "2026-11-04": "The Batter Up puzzle for November 4, 2026 (Game #990) is live with today's answer confirmed. The answer runs 13 characters, starting with B and ending with O — see the letter hints above before you peek."
+    "2026-11-04": "The Batter Up puzzle for November 4, 2026 (Game #990) is live with today's answer confirmed. The answer runs 13 characters, starting with B and ending with O — see the letter hints above before you peek.",
+    "2026-11-05": "Batter Up Game #991 takes place on November 5, 2026. This puzzle features a nine-letter name with a rare ending consonant."
   }
 }
