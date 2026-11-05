@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-04T06:05:01.255Z",
+  "generatedAt": "2026-11-05T06:21:34.713Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -376,6 +376,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Distinctive starting letter and well-known geographic location."
+    },
+    "2026-11-05": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Z",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -408,6 +420,7 @@
     "2026-11-01": "The Globle puzzle for November 1, 2026 (2026-11-01) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-02": "The Globle puzzle for November 2, 2026 (2026-11-02) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-11-03": "The Globle puzzle for November 3, 2026 (2026-11-03) is live with today's answer confirmed. The answer runs 6 characters, starting with I and ending with L — see the letter hints above before you peek.",
-    "2026-11-04": "The Globle puzzle for November 4, 2026, features a six-letter country name. This specific puzzle 2026-11-04 follows a pattern with no repeating characters."
+    "2026-11-04": "The Globle puzzle for November 4, 2026, features a six-letter country name. This specific puzzle 2026-11-04 follows a pattern with no repeating characters.",
+    "2026-11-05": "The Globle puzzle for November 5, 2026 (2026-11-05) is live with today's answer confirmed. The answer runs 8 characters, starting with Z and ending with E — see the letter hints above before you peek."
   }
 }
