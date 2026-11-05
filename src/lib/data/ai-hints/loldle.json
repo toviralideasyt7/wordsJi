@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-05T06:07:26.712Z",
+  "generatedAt": "2026-11-05T15:25:59.225Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -377,15 +377,15 @@
       "difficulty_reason": "Requires identifying four different champions based on limited clues."
     },
     "2026-11-05": {
-      "vowel_hint": "It contains 9 vowels.",
-      "repeat_hint": "12 letters appear more than once.",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
       "riddle": "",
       "clue1": "",
-      "starts_with": "N",
+      "starts_with": "M",
       "ends_with": "R",
       "definition": "",
-      "difficulty": 7,
-      "difficulty_label": "Hard",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
@@ -420,6 +420,6 @@
     "2026-11-02": "The LoLdle puzzle for November 2, 2026 (Game #1579) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with I — see the letter hints above before you peek.",
     "2026-11-03": "The LoLdle puzzle for November 3, 2026 (Game #1580) is live with today's answer confirmed. The answer runs 22 characters, starting with E and ending with Z — see the letter hints above before you peek.",
     "2026-11-04": "LoLdle Game #1581 for November 4, 2026, features a multi-champion answer. The solution follows a specific letter pattern across four names.",
-    "2026-11-05": "The LoLdle puzzle for November 5, 2026 (Game #1582) is live with today's answer confirmed. The answer runs 27 characters, starting with N and ending with R — see the letter hints above before you peek."
+    "2026-11-05": "The LoLdle puzzle for November 5, 2026 (Game #1582) is live with today's answer confirmed. The answer runs 8 characters, starting with M and ending with R — see the letter hints above before you peek."
   }
 }

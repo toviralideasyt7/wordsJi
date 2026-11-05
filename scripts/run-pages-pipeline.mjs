@@ -26,4 +26,7 @@ function runNodeScript(relativeScriptPath) {
 runNodeScript('scripts/run-group-data-update.mjs');
 runNodeScript('scripts/generate-daily-articles.mjs');
 runNodeScript('scripts/build-pages.mjs');
+// Gate: hint cards must never contradict the facts strip on the same page.
+// A contradiction fails the pipeline BEFORE deploy (see validate-hints.mjs).
+runNodeScript('scripts/validate-hints.mjs');
 runNodeScript('scripts/deploy-pages.mjs');

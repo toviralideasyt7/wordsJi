@@ -509,17 +509,22 @@ const GAMES = [
 			if (!Array.isArray(answers) || !answers.length) return null;
 			const latestDate = answers.map((a) => a.date).filter(Boolean).sort().pop();
 			const todays = answers.filter((a) => a.date === latestDate);
-			const names = [];
-			for (const a of todays) {
-				try {
-					const content = JSON.parse(a.json_content || '{}');
-					const name = (content.champion_name || '').trim();
-					if (name && !names.includes(name)) names.push(name);
-				} catch { /* ignore */ }
-			}
-			if (!names.length) return null;
-			const gameId = todays[0]?.game_id;
-			return { text: names.join(' / '), dateKey: latestDate, numberText: gameId ? `Game #${gameId}` : latestDate };
+			// Hints describe the primary (Classic, america-region) answer ONLY —
+			// the same name the page's facts strip uses. The previous code joined
+			// every mode/region name and computed letter stats over the mash,
+			// which shipped nonsense like "32 vowels" for Narutodle's 2-letter
+			// Classic answer "Ao" (fixed 2026-11-05).
+			const primary =
+				todays.find((a) => a.mode === 'classic' && a.region === 'america') ??
+				todays.find((a) => a.mode === 'classic') ??
+				todays[0];
+			let primaryName = '';
+			try {
+				primaryName = (JSON.parse(primary?.json_content || '{}').champion_name || '').trim();
+			} catch { /* ignore */ }
+			if (!primaryName) return null;
+			const gameId = primary?.game_id ?? todays[0]?.game_id;
+			return { text: primaryName, dateKey: latestDate, numberText: gameId ? `Game #${gameId}` : latestDate };
 		}
 	})),
 	{

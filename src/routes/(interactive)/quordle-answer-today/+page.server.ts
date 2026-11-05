@@ -25,7 +25,12 @@ export const load: PageServerLoad = async () => {
     const quordleNumber = todayData?.dN ?? 0;
     const pageTitle = dailyAnswerTitle('Quordle', quordleNumber, formattedDate);
     const updatedStamp = updatedStampText('Quordle', quordleNumber, formattedDate);
-    const aiHints = mergeHints(todayWords, getAIHints('quordle', dateKey));
+    // Hint stats must be computed from the four words only. todayWords is the
+    // display string ("W1, W2, W3, and W4") — feeding it to mergeHints counted
+    // the word "and" as a fifth word (8 vowels shown vs 7 in the facts strip,
+    // 2026-11-05). Use a clean join of the words themselves.
+    const statsText = (todayData?.d ?? []).join(' / ');
+    const aiHints = mergeHints(statsText, getAIHints('quordle', dateKey));
     // No FAQ array existed on this page — create hintFaqs with the updated entry.
     const hintFaqs = [{ question: 'When was this page last updated?', answer: updatedStamp }];
 

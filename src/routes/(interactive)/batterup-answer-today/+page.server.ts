@@ -124,7 +124,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		},
 		{
 			question: 'When does Batter Up update?',
-			answer: 'A new Batter Up puzzle goes live shortly after midnight UTC each day, and this page is updated with the confirmed answer every morning.'
+			answer: 'A new Batter Up puzzle goes live in the early hours of the day (UTC), and this page is updated with the confirmed answer every morning.'
 		},
 		{
 			question: 'When was this page last updated?',

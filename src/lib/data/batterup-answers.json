@@ -99,6 +99,26 @@
     "sourceDate": "2026-09-29",
     "fetchedAt": "2026-09-29T08:43:00.400Z"
   },
+  "2026-09-30": {
+    "date": "2026-09-30",
+    "gameNumber": 955,
+    "player": {
+      "player_name": "Gunnar Henderson",
+      "player_id": "42507",
+      "team_name": "Orioles",
+      "born": "USA",
+      "birth_date": "2001-06-29",
+      "position": [
+        "SS"
+      ],
+      "debut": 2022,
+      "jersey_number": 2
+    },
+    "videoDescription": "[05/24/26 : DET 3 - 5 BAL] Gunnar Henderson cranks a solo home run to right field, putting the Orioles on the board and cutting the deficit to 2-1 in the bottom of the 6th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/24/83105a8d-e4a71f71-281b59b8-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.459Z"
+  },
   "2026-10-01": {
     "date": "2026-10-01",
     "gameNumber": 956,
@@ -139,6 +159,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/11/3c8ccaf9-e70e6a42-87a0223e-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-02",
     "fetchedAt": "2026-10-02T01:05:50.285Z"
+  },
+  "2026-10-03": {
+    "date": "2026-10-03",
+    "gameNumber": 958,
+    "player": {
+      "player_name": "Keibert Ruiz",
+      "player_id": "38827",
+      "team_name": "Nationals",
+      "born": "VEN.",
+      "birth_date": "1998-07-20",
+      "position": [
+        "C"
+      ],
+      "debut": 2020,
+      "jersey_number": 20
+    },
+    "videoDescription": "[05/13/26 : WSH 8 - 7 CIN] Keibert Ruiz cracks a two-run homer to left field, cutting the Nationals' deficit to 5-4 in the top of the 2nd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/13/48555670-7b189bf8-b0f17724-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.459Z"
   },
   "2026-10-04": {
     "date": "2026-10-04",
@@ -220,6 +260,26 @@
     "sourceDate": "2026-10-07",
     "fetchedAt": "2026-10-08T01:05:44.681Z"
   },
+  "2026-10-08": {
+    "date": "2026-10-08",
+    "gameNumber": 963,
+    "player": {
+      "player_name": "Jeff McNeil",
+      "player_id": "33900",
+      "team_name": "Athletics",
+      "born": "USA",
+      "birth_date": "1992-04-08",
+      "position": [
+        "2B"
+      ],
+      "debut": 2018,
+      "jersey_number": 22
+    },
+    "videoDescription": "[07/22/26 : ATH 5 - 15 ARI] Jeff McNeil fouls a ball off his knee and crushes a solo home run later in the same at-bat for his 4th of the season, tying the game at 2-2 in the 5th.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/22/c95eb658-a2c39d7d-38980878-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.459Z"
+  },
   "2026-10-09": {
     "date": "2026-10-09",
     "gameNumber": 964,
@@ -260,6 +320,26 @@
     "sourceDate": "2026-10-10",
     "fetchedAt": "2026-10-10T01:05:40.857Z"
   },
+  "2026-10-11": {
+    "date": "2026-10-11",
+    "gameNumber": 966,
+    "player": {
+      "player_name": "Cam Smith",
+      "player_id": "5080766",
+      "team_name": "Astros",
+      "born": "USA",
+      "birth_date": "2003-02-22",
+      "position": [
+        "RF"
+      ],
+      "debut": 2025,
+      "jersey_number": 11
+    },
+    "videoDescription": "[08/18/26 : LAA 3 - 1 HOU] Cam Smith crushes a solo home run to left field to cut the Astros' deficit to 3-1 in the bottom of the 8th.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/18/50ec299c-2a655c8a-66db73d4-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
+  },
   "2026-10-12": {
     "date": "2026-10-12",
     "gameNumber": 967,
@@ -279,6 +359,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/21/17f1222b-b2672d89-4ee1af0c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-12",
     "fetchedAt": "2026-10-12T01:05:44.878Z"
+  },
+  "2026-10-13": {
+    "date": "2026-10-13",
+    "gameNumber": 968,
+    "player": {
+      "player_name": "Javier Baez",
+      "player_id": "32127",
+      "team_name": "Tigers",
+      "born": "P.R.",
+      "birth_date": "1992-12-01",
+      "position": [
+        "SS"
+      ],
+      "debut": 2014,
+      "jersey_number": 28
+    },
+    "videoDescription": "[04/24/26 : DET 8 - 9 CIN] Javier Baez smacks a solo home run to center field to extend the Tigers' lead to 2-0 in the top of the 3rd.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/24/d711f358-8a94475b-c31ff916-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
   },
   "2026-10-14": {
     "date": "2026-10-14",
@@ -360,6 +460,26 @@
     "sourceDate": "2026-10-17",
     "fetchedAt": "2026-10-18T01:06:12.148Z"
   },
+  "2026-10-18": {
+    "date": "2026-10-18",
+    "gameNumber": 973,
+    "player": {
+      "player_name": "Alec Burleson",
+      "player_id": "4345070",
+      "team_name": "Cardinals",
+      "born": "USA",
+      "birth_date": "1998-11-25",
+      "position": [
+        "1B"
+      ],
+      "debut": 2022,
+      "jersey_number": 41
+    },
+    "videoDescription": "[08/03/26 : STL 13 - 7 NYY] Alec Burleson lines a two-run home run to right field in the top of the 1st inning to give the Cardinals a 2-0 lead.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/03/d74f0913-480c8142-55701a4b-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
+  },
   "2026-10-19": {
     "date": "2026-10-19",
     "gameNumber": 974,
@@ -399,6 +519,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/12/5a76f222-48c659a4-6732695d-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-20",
     "fetchedAt": "2026-10-21T01:06:09.723Z"
+  },
+  "2026-10-21": {
+    "date": "2026-10-21",
+    "gameNumber": 976,
+    "player": {
+      "player_name": "Jackson Chourio",
+      "player_id": "4917869",
+      "team_name": "Brewers",
+      "born": "VEN.",
+      "birth_date": "2004-03-11",
+      "position": [
+        "CF"
+      ],
+      "debut": 2024,
+      "jersey_number": 11
+    },
+    "videoDescription": "[06/27/26 : CHC 8 - 2 MIL] Jackson Chourio drills a leadoff home run to straightaway center field to give the Brewers a 1-0 lead in the bottom of the 1st.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/27/154d8a9b-db421999-1ce6eae1-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
   },
   "2026-10-22": {
     "date": "2026-10-22",
@@ -461,6 +601,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/01/c3410ccf-d5f97dee-6a64380a-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-24",
     "fetchedAt": "2026-10-25T01:05:28.171Z"
+  },
+  "2026-10-25": {
+    "date": "2026-10-25",
+    "gameNumber": 980,
+    "player": {
+      "player_name": "Casey Schmitt",
+      "player_id": "4301949",
+      "team_name": "Giants",
+      "born": "USA",
+      "birth_date": "1999-03-01",
+      "position": [
+        "LF"
+      ],
+      "debut": 2023,
+      "jersey_number": 10
+    },
+    "videoDescription": "[05/20/26 : SF 3 - 6 ARI] Casey Schmitt belts a solo home run to left field, giving the Giants a 1-0 lead in the top of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/20/9369548d-dd07e947-d1782b81-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
   },
   "2026-10-26": {
     "date": "2026-10-26",
@@ -541,6 +701,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/18/af2ac8c2-3484662d-b01f4939-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-10-29",
     "fetchedAt": "2026-10-30T01:05:42.417Z"
+  },
+  "2026-10-30": {
+    "date": "2026-10-30",
+    "gameNumber": 985,
+    "player": {
+      "player_name": "Jackson Merrill",
+      "player_id": "4872691",
+      "team_name": "Padres",
+      "born": "USA",
+      "birth_date": "2003-04-19",
+      "position": [
+        "CF"
+      ],
+      "debut": 2024,
+      "jersey_number": 3
+    },
+    "videoDescription": "[08/22/26 : MIN 5 - 7 SD] Jackson Merrill crushes a solo home run to center field to put the Padres on the board making it 3-1 in the bottom of the 2nd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/22/2e62d2d4-a6f913e2-bfb3c108-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
   },
   "2026-10-31": {
     "date": "2026-10-31",
@@ -641,5 +821,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/04/9dfb3f01-5faf698f-5aab58e8-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-04",
     "fetchedAt": "2026-11-05T01:05:35.697Z"
+  },
+  "2026-11-05": {
+    "date": "2026-11-05",
+    "gameNumber": 991,
+    "player": {
+      "player_name": "Nick Kurtz",
+      "player_id": "4966637",
+      "team_name": "Athletics",
+      "born": "USA",
+      "birth_date": "2003-03-12",
+      "position": [
+        "1B"
+      ],
+      "debut": 2025,
+      "jersey_number": 16
+    },
+    "videoDescription": "[04/24/26 : ATH 8 - 1 TEX] Nick Kurtz crushes a leadoff home run to right field, giving the Athletics the lead 1-0 in the top of the 1st.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/24/32091544-72b1bfc9-df0894ec-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-05",
+    "fetchedAt": "2026-11-05T15:26:11.460Z"
   }
 }

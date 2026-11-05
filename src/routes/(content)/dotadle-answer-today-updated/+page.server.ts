@@ -35,8 +35,10 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	});
 
 	const answers = result.answers ?? [];
-	// The AI hint store was generated from the deduped champion names joined
-	// with ' / ' (see scripts/generate-ai-hints.mjs) — merge against the same text.
+	// answerText (all mode names joined) is only the reveal text. Hint stats
+	// must describe the primary (Classic) answer — the same name the facts
+	// strip uses — never the joined multi-mode text: stats over the join
+	// produced nonsense like "32 vowels" for a 2-letter answer (2026-11-05).
 	const names: string[] = [];
 	for (const answer of answers) {
 		const name = parseChampionName(answer.json_content).trim();
@@ -54,7 +56,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	const hintFaqs = hasPuzzle
 		? [{ question: 'When was this page last updated?', answer: updatedStamp }]
 		: [];
-	const aiHints: AIHints = mergeHints(answerText, getAIHints('dotadle', result.latestDate ?? ''));
+	const aiHints: AIHints = mergeHints(primaryName, getAIHints('dotadle', result.latestDate ?? ''));
 
 	return {
 		...result,

@@ -76,7 +76,7 @@
       <p class="text-sm font-semibold uppercase tracking-widest text-teal-600">Batter Up</p>
       <h1 class="mt-2 text-2xl font-bold text-slate-900">Today's answer is updating</h1>
       <p class="mt-3 text-slate-500">
-        The Batter Up puzzle for {data.formattedDate} hasn't landed in our data feed yet. New games publish shortly after midnight UTC — check back in a few minutes, or browse the archive and solver while you wait.
+        The Batter Up puzzle for {data.formattedDate} hasn't landed in our data feed yet. New games publish in the early hours of the day (UTC) — check back shortly, or browse the archive and solver while you wait.
       </p>
       <div class="mt-6 flex flex-wrap justify-center gap-3">
         <a href="/batterup-archive" class="inline-flex items-center rounded-lg bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-700 transition-colors">
