@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-04T16:46:01.547Z",
+  "generatedAt": "2026-11-05T15:17:04.298Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -384,6 +384,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A pile of waste that is truly a sight to avoid.",
+      "clue1": "Something of very poor quality.",
+      "starts_with": "D",
+      "ends_with": "K",
+      "definition": "Rubbish, trash, or worthless matter.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Contains an uncommon consonant cluster and a less frequent vocabulary word."
     }
   },
   "prose": {
@@ -417,6 +430,7 @@
     "2026-11-02": "The Wordle puzzle for November 2, 2026 (#1962) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with T — see the letter hints above before you peek.",
     "2026-11-03": "The Wordle puzzle for November 3, 2026 (#1963) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with H — see the letter hints above before you peek.",
     "2026-11-04": "The Wordle puzzle for November 4, 2026 (#1964) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with Y — see the letter hints above before you peek.",
-    "2026-11-05": "The Wordle puzzle for November 5, 2026 (#1965) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with H — see the letter hints above before you peek."
+    "2026-11-05": "The Wordle puzzle for November 5, 2026 (#1965) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with H — see the letter hints above before you peek.",
+    "2026-11-06": "Wordle puzzle #1966 occurs on November 6, 2026. This specific entry features a consonant-heavy structure ending in K."
   }
 }

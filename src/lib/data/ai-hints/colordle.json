@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-04T16:46:03.042Z",
+  "generatedAt": "2026-11-05T15:16:14.356Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -382,6 +382,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A ghostly haze that barely tints the pale light.",
+      "clue1": "A very light shade of gray.",
+      "starts_with": "W",
+      "ends_with": "F",
+      "definition": "A very pale gray color, nearly white.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A compound word with a common color base but a specific modifier."
     }
   },
   "prose": {
@@ -415,6 +428,7 @@
     "2026-11-02": "The Colordle puzzle for November 2, 2026 (#1683) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with F — see the letter hints above before you peek.",
     "2026-11-03": "The Colordle puzzle for November 3, 2026 (#1684) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-11-04": "The Colordle puzzle for November 4, 2026 (#1685) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with C — see the letter hints above before you peek.",
-    "2026-11-05": "The Colordle puzzle for November 5, 2026 (#1686) is live with today's answer confirmed. The answer runs 10 characters, starting with I and ending with E — see the letter hints above before you peek."
+    "2026-11-05": "The Colordle puzzle for November 5, 2026 (#1686) is live with today's answer confirmed. The answer runs 10 characters, starting with I and ending with E — see the letter hints above before you peek.",
+    "2026-11-06": "Colordle puzzle #1687 for November 6, 2026, features a ten-letter word. The pattern consists of a primary color combined with a natural phenomenon."
   }
 }
