@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-05T05:16:35.276Z",
+  "generatedAt": "2026-11-06T05:16:06.197Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -384,6 +384,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -417,6 +429,7 @@
     "2026-11-02": "The Canuckle puzzle for November 2, 2026 (#1633) is live with today's answer confirmed. The answer runs 5 characters, starting with E and ending with R — see the letter hints above before you peek.",
     "2026-11-03": "The Canuckle puzzle for November 3, 2026 (#1634) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-11-04": "The Canuckle puzzle for November 4, 2026 (#1635) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with H — see the letter hints above before you peek.",
-    "2026-11-05": "The Canuckle puzzle for November 5, 2026 (#1636) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-11-05": "The Canuckle puzzle for November 5, 2026 (#1636) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-11-06": "The Canuckle puzzle for November 6, 2026 (#1637) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with Y — see the letter hints above before you peek."
   }
 }
