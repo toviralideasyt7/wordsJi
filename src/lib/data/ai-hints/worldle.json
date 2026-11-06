@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-05T22:07:47.279Z",
+  "generatedAt": "2026-11-06T21:45:16.972Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -320,6 +320,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -348,6 +360,7 @@
     "2026-11-03": "The Worldle puzzle for November 3, 2026 (#1748) is live with today's answer confirmed. The answer runs 7 characters, starting with D and ending with K — see the letter hints above before you peek.",
     "2026-11-04": "The Worldle puzzle for November 4, 2026 (#1749) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with A — see the letter hints above before you peek.",
     "2026-11-05": "The Worldle puzzle for November 5, 2026 (#1750) is live with today's answer confirmed. The answer runs 9 characters, starting with V and ending with A — see the letter hints above before you peek.",
-    "2026-11-06": "The Worldle puzzle for November 6, 2026 (#1751) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with O — see the letter hints above before you peek."
+    "2026-11-06": "The Worldle puzzle for November 6, 2026 (#1751) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with O — see the letter hints above before you peek.",
+    "2026-11-07": "The Worldle puzzle for November 7, 2026 (#1752) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with A — see the letter hints above before you peek."
   }
 }

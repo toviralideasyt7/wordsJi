@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-05T22:14:11.933Z",
+  "generatedAt": "2026-11-06T21:45:08.911Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -369,6 +369,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -401,6 +413,7 @@
     "2026-11-03": "The Searchle puzzle for November 3, 2026 (#101) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with G — see the letter hints above before you peek.",
     "2026-11-04": "The Searchle puzzle for November 4, 2026 (#102) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with D — see the letter hints above before you peek.",
     "2026-11-05": "The Searchle puzzle for November 5, 2026 (#103) is live with today's answer confirmed. The answer runs 8 characters, starting with B and ending with T — see the letter hints above before you peek.",
-    "2026-11-06": "The Searchle puzzle for November 6, 2026 (#104) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with S — see the letter hints above before you peek."
+    "2026-11-06": "The Searchle puzzle for November 6, 2026 (#104) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with S — see the letter hints above before you peek.",
+    "2026-11-07": "The Searchle puzzle for November 7, 2026 (#105) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek."
   }
 }

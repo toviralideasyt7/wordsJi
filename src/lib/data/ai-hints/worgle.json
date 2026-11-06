@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-05T22:05:22.711Z",
+  "generatedAt": "2026-11-06T21:45:09.000Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -391,6 +391,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common vocabulary word with a distinct association with medals."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -425,6 +437,7 @@
     "2026-11-03": "The Worgle puzzle for November 3, 2026 (#1756) is live with today's answer confirmed. The answer runs 6 characters, starting with L and ending with Y — see the letter hints above before you peek.",
     "2026-11-04": "The Worgle puzzle for November 4, 2026 (#1757) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with R — see the letter hints above before you peek.",
     "2026-11-05": "The Worgle puzzle for November 5, 2026 (#1758) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with C — see the letter hints above before you peek.",
-    "2026-11-06": "Worgle puzzle #1759 for November 6, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern."
+    "2026-11-06": "Worgle puzzle #1759 for November 6, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
+    "2026-11-07": "The Worgle puzzle for November 7, 2026 (#1760) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek."
   }
 }
