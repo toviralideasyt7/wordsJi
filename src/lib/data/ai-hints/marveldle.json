@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-05T06:21:34.208Z",
+  "generatedAt": "2026-11-06T06:25:06.849Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -347,6 +347,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -377,6 +389,7 @@
     "2026-11-02": "The Marveldle puzzle for November 2, 2026 (11/2/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 21 characters, starting with F and ending with F — see the letter hints above before you peek.",
     "2026-11-03": "The Marveldle puzzle for November 3, 2026 (11/3/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 24 characters, starting with A and ending with P — see the letter hints above before you peek.",
     "2026-11-04": "The Marveldle puzzle for November 4, 2026 (11/4/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 23 characters, starting with K and ending with R — see the letter hints above before you peek.",
-    "2026-11-05": "The Marveldle puzzle for November 5, 2026 (11/5/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 15 characters, starting with T and ending with S — see the letter hints above before you peek."
+    "2026-11-05": "The Marveldle puzzle for November 5, 2026 (11/5/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 15 characters, starting with T and ending with S — see the letter hints above before you peek.",
+    "2026-11-06": "The Marveldle puzzle for November 6, 2026 (11/6/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with N — see the letter hints above before you peek."
   }
 }
