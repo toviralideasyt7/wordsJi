@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-05T22:07:39.445Z",
+  "generatedAt": "2026-11-06T16:47:41.622Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -395,6 +395,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common animal with distinct visual markers and a high semantic association."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -429,6 +441,7 @@
     "2026-11-03": "The Contexto puzzle for November 3, 2026 (#1507) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-11-04": "The Contexto puzzle for November 4, 2026 (#1508) is live with today's answer confirmed. The answer runs 6 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-11-05": "The Contexto puzzle for November 5, 2026 (#1509) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with E — see the letter hints above before you peek.",
-    "2026-11-06": "Contexto puzzle #1510 was released on November 6, 2026. The target word follows a consonant-vowel-consonant-consonant-vowel-consonant pattern."
+    "2026-11-06": "Contexto puzzle #1510 was released on November 6, 2026. The target word follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
+    "2026-11-07": "The Contexto puzzle for November 7, 2026 (#1511) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with T — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-05T22:05:20.489Z",
+  "generatedAt": "2026-11-06T16:43:16.259Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -505,6 +505,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple arithmetic with a short length and common operators."
+    },
+    "2026-11-07": {
+      "kind": "math",
+      "operator_hint": "Uses division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a two-digit multiple of ten.",
+      "riddle": "A large slice split eight ways leaves a round sum.",
+      "starts_with": "5",
+      "ends_with": "0",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple division with common multiples and a clean result."
     }
   },
   "prose": {
@@ -539,6 +555,7 @@
     "2026-11-03": "The Nerdle puzzle for November 3, 2026 (#1749) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
     "2026-11-04": "The Nerdle puzzle for November 4, 2026 (#1750) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
     "2026-11-05": "The Nerdle puzzle for November 5, 2026 (#1751) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
-    "2026-11-06": "Nerdle puzzle #1752 arrives on November 6, 2026. This specific challenge requires balancing basic operations to find the total."
+    "2026-11-06": "Nerdle puzzle #1752 arrives on November 6, 2026. This specific challenge requires balancing basic operations to find the total.",
+    "2026-11-07": "Nerdle puzzle #1753 presents a straightforward arithmetic challenge for players. This November 7, 2026 entry focuses on a basic division operation."
   }
 }

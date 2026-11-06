@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-05T15:16:44.468Z",
+  "generatedAt": "2026-11-06T16:46:15.558Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -393,6 +393,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The combination of common colors makes it moderately intuitive."
+    },
+    "2026-11-07": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A dark sea, a lush leaf, and a muddy trail.",
+      "clue1": "A trio of earthy and aquatic shades.",
+      "starts_with": "N",
+      "ends_with": "N",
+      "definition": "A sequence of three specific colors: a dark blue, a leaf-hue, and a soil-tone.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common color names but a long combined character count."
     }
   },
   "prose": {
@@ -427,6 +440,7 @@
     "2026-11-03": "The Colorfle puzzle for November 3, 2026 (#1653) is live with today's answer confirmed. The answer runs 22 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-11-04": "The Colorfle puzzle for November 4, 2026 (#1654) is live with today's answer confirmed. The answer runs 18 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-11-05": "The Colorfle puzzle for November 5, 2026 (#1655) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with N — see the letter hints above before you peek.",
-    "2026-11-06": "Colorfle puzzle #1656 was released on November 6, 2026. This specific sequence features a total of fifteen letters."
+    "2026-11-06": "Colorfle puzzle #1656 was released on November 6, 2026. This specific sequence features a total of fifteen letters.",
+    "2026-11-07": "Colorfle puzzle #1657 was released on November 7, 2026. This specific sequence features a pattern of fifteen total letters."
   }
 }

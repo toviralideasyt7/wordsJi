@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-05T15:17:04.298Z",
+  "generatedAt": "2026-11-06T16:43:38.602Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -397,6 +397,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Contains an uncommon consonant cluster and a less frequent vocabulary word."
+    },
+    "2026-11-07": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am a long-winded talk that goes on and on.",
+      "clue1": "To chatter idly or talk foolishly.",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "To talk foolishly or at tedious length.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "It is an uncommon verb that is rarely used in daily conversation."
     }
   },
   "prose": {
@@ -431,6 +444,7 @@
     "2026-11-03": "The Wordle puzzle for November 3, 2026 (#1963) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with H — see the letter hints above before you peek.",
     "2026-11-04": "The Wordle puzzle for November 4, 2026 (#1964) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with Y — see the letter hints above before you peek.",
     "2026-11-05": "The Wordle puzzle for November 5, 2026 (#1965) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with H — see the letter hints above before you peek.",
-    "2026-11-06": "Wordle puzzle #1966 occurs on November 6, 2026. This specific entry features a consonant-heavy structure ending in K."
+    "2026-11-06": "Wordle puzzle #1966 occurs on November 6, 2026. This specific entry features a consonant-heavy structure ending in K.",
+    "2026-11-07": "Wordle puzzle #1967 for November 7, 2026, features a five-letter word. The solution follows a consonant-consonant-vowel-consonant-vowel pattern."
   }
 }

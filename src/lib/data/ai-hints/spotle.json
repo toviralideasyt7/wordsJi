@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-05T22:05:54.407Z",
+  "generatedAt": "2026-11-06T16:44:38.001Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -392,6 +392,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -426,6 +438,7 @@
     "2026-11-03": "The Spotle puzzle for November 3, 2026 (Day 1691) is live with today's answer confirmed. The answer runs 10 characters, starting with T and ending with R — see the letter hints above before you peek.",
     "2026-11-04": "The Spotle puzzle for November 4, 2026 (Day 1692) is live with today's answer confirmed. The answer runs 8 characters, starting with T and ending with Y — see the letter hints above before you peek.",
     "2026-11-05": "The Spotle puzzle for November 5, 2026 (Day 1693) is live with today's answer confirmed. The answer runs 1 character, starting with U and ending with U — see the letter hints above before you peek.",
-    "2026-11-06": "The Spotle puzzle for November 6, 2026 (Day 1694) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with S — see the letter hints above before you peek."
+    "2026-11-06": "The Spotle puzzle for November 6, 2026 (Day 1694) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with S — see the letter hints above before you peek.",
+    "2026-11-07": "The Spotle puzzle for November 7, 2026 (Day 1695) is live with today's answer confirmed. The answer runs 14 characters, starting with M and ending with N — see the letter hints above before you peek."
   }
 }
