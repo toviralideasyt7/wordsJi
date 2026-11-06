@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-05T15:25:59.487Z",
+  "generatedAt": "2026-11-06T06:07:12.443Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -386,6 +386,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A chitinous queen spawning a swarm from the depths.",
+      "clue1": "A monstrous matriarch of the hive.",
+      "starts_with": "B",
+      "ends_with": "R",
+      "definition": "A female insect-like creature that produces offspring for a colony.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A compound word with common elements but a specific fantasy connotation."
     }
   },
   "prose": {
@@ -419,6 +432,7 @@
     "2026-11-02": "The Dotadle puzzle for November 2, 2026 (Game #1053) is live with today's answer confirmed. The answer runs 32 characters, starting with U and ending with R — see the letter hints above before you peek.",
     "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek.",
     "2026-11-04": "Dotadle Game #1055 for November 4, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct hero names.",
-    "2026-11-05": "The Dotadle puzzle for November 5, 2026 (Game #1056) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with T — see the letter hints above before you peek."
+    "2026-11-05": "The Dotadle puzzle for November 5, 2026 (Game #1056) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with T — see the letter hints above before you peek.",
+    "2026-11-06": "Dotadle Game #1057 takes place on November 6, 2026. This puzzle features an eleven-letter word with a repeating consonant pattern."
   }
 }

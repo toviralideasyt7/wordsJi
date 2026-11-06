@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-05T06:07:26.977Z",
+  "generatedAt": "2026-11-06T06:06:25.762Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -386,6 +386,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-06": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A sleepy psychic who vanishes in a blink.",
+      "clue1": "Known for its tendency to teleport away from trainers.",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "A psychic-type Pokémon known for sleeping and teleporting.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a very famous first-generation Pokémon with a short name."
     }
   },
   "prose": {
@@ -419,6 +432,7 @@
     "2026-11-02": "The Pokedle puzzle for November 2, 2026 (Game #1117) is live with today's answer confirmed. The answer runs 28 characters, starting with H and ending with T — see the letter hints above before you peek.",
     "2026-11-03": "The Pokedle puzzle for November 3, 2026 (Game #1118) is live with today's answer confirmed. The answer runs 30 characters, starting with K and ending with H — see the letter hints above before you peek.",
     "2026-11-04": "Pokedle Game #1119 takes place on November 4, 2026. This specific puzzle features a multi-word answer starting with S and ending with S.",
-    "2026-11-05": "The Pokedle puzzle for November 5, 2026 (Game #1120) is live with today's answer confirmed. The answer runs 27 characters, starting with R and ending with O — see the letter hints above before you peek."
+    "2026-11-05": "The Pokedle puzzle for November 5, 2026 (Game #1120) is live with today's answer confirmed. The answer runs 27 characters, starting with R and ending with O — see the letter hints above before you peek.",
+    "2026-11-06": "Pokedle Game #1121 takes place on November 6, 2026. This specific puzzle features a four-letter word starting and ending with the same character."
   }
 }
