@@ -841,5 +841,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/24/32091544-72b1bfc9-df0894ec-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-05",
     "fetchedAt": "2026-11-05T15:26:11.460Z"
+  },
+  "2026-11-06": {
+    "date": "2026-11-06",
+    "gameNumber": 992,
+    "player": {
+      "player_name": "Alex Bregman",
+      "player_id": "34886",
+      "team_name": "Cubs",
+      "born": "USA",
+      "birth_date": "1994-03-30",
+      "position": [
+        "3B"
+      ],
+      "debut": 2016,
+      "jersey_number": 3
+    },
+    "videoDescription": "[09/27/26 : CHC 6 - 2 BOS] Alex Bregman slugs another no-doubt home run against his former team, this one a solo homer that puts the Cubs back up 3-2 in the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/27/02527c8a-6559c4a4-ffacf192-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-06",
+    "fetchedAt": "2026-11-07T01:05:28.350Z"
   }
 }
