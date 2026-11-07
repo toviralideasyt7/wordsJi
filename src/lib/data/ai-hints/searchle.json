@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-06T21:45:08.911Z",
+  "generatedAt": "2026-11-07T19:46:58.925Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -381,6 +381,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A rhythmic shake that moves the shoulders side to side.",
+      "clue1": "A dance move or a way to squeeze through.",
+      "starts_with": "S",
+      "ends_with": "Y",
+      "definition": "To shake the body or shoulders in a rhythmic way.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The double consonant and uncommon vowel placement make it moderately challenging."
     }
   },
   "prose": {
@@ -414,6 +427,7 @@
     "2026-11-04": "The Searchle puzzle for November 4, 2026 (#102) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with D — see the letter hints above before you peek.",
     "2026-11-05": "The Searchle puzzle for November 5, 2026 (#103) is live with today's answer confirmed. The answer runs 8 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-11-06": "The Searchle puzzle for November 6, 2026 (#104) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with S — see the letter hints above before you peek.",
-    "2026-11-07": "The Searchle puzzle for November 7, 2026 (#105) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek."
+    "2026-11-07": "The Searchle puzzle for November 7, 2026 (#105) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek.",
+    "2026-11-08": "Searchle puzzle #106 for November 8, 2026, features a six-letter word. The pattern includes a repeated consonant and ends with a semi-vowel."
   }
 }

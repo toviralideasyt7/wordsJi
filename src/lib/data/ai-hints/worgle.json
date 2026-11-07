@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-06T21:45:09.000Z",
+  "generatedAt": "2026-11-07T19:46:59.766Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -403,6 +403,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I arrange the pieces, but I am not the puzzle.",
+      "clue1": "A designer's plan for a page or room.",
+      "starts_with": "L",
+      "ends_with": "T",
+      "definition": "The way in which the parts of something are arranged.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common vocabulary word with a standard consonant-vowel structure."
     }
   },
   "prose": {
@@ -438,6 +451,7 @@
     "2026-11-04": "The Worgle puzzle for November 4, 2026 (#1757) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with R — see the letter hints above before you peek.",
     "2026-11-05": "The Worgle puzzle for November 5, 2026 (#1758) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with C — see the letter hints above before you peek.",
     "2026-11-06": "Worgle puzzle #1759 for November 6, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
-    "2026-11-07": "The Worgle puzzle for November 7, 2026 (#1760) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek."
+    "2026-11-07": "The Worgle puzzle for November 7, 2026 (#1760) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek.",
+    "2026-11-08": "Worgle puzzle #1761 for November 8, 2026, features a six-letter word. The pattern consists of a repeated vowel and a terminal consonant."
   }
 }
