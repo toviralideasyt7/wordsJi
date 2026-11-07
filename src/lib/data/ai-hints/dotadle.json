@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-06T06:07:12.443Z",
+  "generatedAt": "2026-11-07T06:05:14.022Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -399,6 +399,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "A compound word with common elements but a specific fantasy connotation."
+    },
+    "2026-11-07": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A skeletal mage who keeps his soul in a hidden box.",
+      "clue1": "An undead spellcaster of great power.",
+      "starts_with": "L",
+      "ends_with": "H",
+      "definition": "An undead creature, typically a wizard, who has achieved immortality through magic.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common in fantasy tropes but a relatively short, specific word."
     }
   },
   "prose": {
@@ -433,6 +446,7 @@
     "2026-11-03": "The Dotadle puzzle for November 3, 2026 (Game #1054) is live with today's answer confirmed. The answer runs 34 characters, starting with W and ending with I — see the letter hints above before you peek.",
     "2026-11-04": "Dotadle Game #1055 for November 4, 2026, features a long sequence of characters. The puzzle follows a specific pattern of four distinct hero names.",
     "2026-11-05": "The Dotadle puzzle for November 5, 2026 (Game #1056) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with T — see the letter hints above before you peek.",
-    "2026-11-06": "Dotadle Game #1057 takes place on November 6, 2026. This puzzle features an eleven-letter word with a repeating consonant pattern."
+    "2026-11-06": "Dotadle Game #1057 takes place on November 6, 2026. This puzzle features an eleven-letter word with a repeating consonant pattern.",
+    "2026-11-07": "Dotadle Game #1058 takes place on November 7, 2026. This puzzle features a four-letter word with a consonant-vowel-consonant-consonant pattern."
   }
 }

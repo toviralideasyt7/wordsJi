@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-06T06:07:10.594Z",
+  "generatedAt": "2026-11-07T06:05:18.335Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -395,6 +395,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A blue knight of the sea who steers the ship.",
+      "clue1": "A former Seven Warlord and master of Fish-Man Karate.",
+      "starts_with": "J",
+      "ends_with": "E",
+      "definition": "A whale shark fish-man and helmsman of the Straw Hat Pirates.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A core crew member with a very distinct name and role."
     }
   },
   "prose": {
@@ -429,6 +442,7 @@
     "2026-11-03": "The OnePiecedle puzzle for November 3, 2026 (Game #947) is live with today's answer confirmed. The answer runs 32 characters, starting with H and ending with I — see the letter hints above before you peek.",
     "2026-11-04": "The OnePiecedle puzzle for November 4, 2026 (Game #948) is live with today's answer confirmed. The answer runs 41 characters, starting with M and ending with S — see the letter hints above before you peek.",
     "2026-11-05": "The OnePiecedle puzzle for November 5, 2026 (Game #949) is live with today's answer confirmed. The answer runs 48 characters, starting with V and ending with H — see the letter hints above before you peek.",
-    "2026-11-06": "The OnePiecedle puzzle for November 6, 2026 (Game #950) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek."
+    "2026-11-06": "The OnePiecedle puzzle for November 6, 2026 (Game #950) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
+    "2026-11-07": "OnePiecedle Game #951 takes place on November 7, 2026. This puzzle features a five-letter word with a consonant-vowel pattern."
   }
 }
