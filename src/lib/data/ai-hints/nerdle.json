@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-06T16:43:16.259Z",
+  "generatedAt": "2026-11-07T16:32:42.361Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -521,6 +521,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple division with common multiples and a clean result."
+    },
+    "2026-11-08": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication and division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a two-digit even number.",
+      "riddle": "A product split in half finds a balanced pair.",
+      "starts_with": "5",
+      "ends_with": "0",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple single-digit operations leading to a common round number."
     }
   },
   "prose": {
@@ -556,6 +572,7 @@
     "2026-11-04": "The Nerdle puzzle for November 4, 2026 (#1750) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
     "2026-11-05": "The Nerdle puzzle for November 5, 2026 (#1751) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-06": "Nerdle puzzle #1752 arrives on November 6, 2026. This specific challenge requires balancing basic operations to find the total.",
-    "2026-11-07": "Nerdle puzzle #1753 presents a straightforward arithmetic challenge for players. This November 7, 2026 entry focuses on a basic division operation."
+    "2026-11-07": "Nerdle puzzle #1753 presents a straightforward arithmetic challenge for players. This November 7, 2026 entry focuses on a basic division operation.",
+    "2026-11-08": "Nerdle puzzle #1754 arrives on November 8, 2026. This specific challenge requires balancing two different operators to reach the goal."
   }
 }

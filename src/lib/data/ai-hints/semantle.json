@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-11-06T16:44:19.831Z",
+  "generatedAt": "2026-11-07T16:33:01.401Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -407,6 +407,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -442,6 +454,7 @@
     "2026-11-04": "The Semantle puzzle for November 4, 2026 (#1740) is live with today's answer confirmed. The answer runs 7 characters, starting with O and ending with L — see the letter hints above before you peek.",
     "2026-11-05": "The Semantle puzzle for November 5, 2026 (#1741) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with M — see the letter hints above before you peek.",
     "2026-11-06": "The Semantle puzzle for November 6, 2026 (#1742) is live with today's answer confirmed. The answer runs 9 characters, starting with P and ending with N — see the letter hints above before you peek.",
-    "2026-11-07": "The Semantle puzzle for November 7, 2026 (#1743) is live with today's answer confirmed. The answer runs 8 characters, starting with E and ending with E — see the letter hints above before you peek."
+    "2026-11-07": "The Semantle puzzle for November 7, 2026 (#1743) is live with today's answer confirmed. The answer runs 8 characters, starting with E and ending with E — see the letter hints above before you peek.",
+    "2026-11-08": "The Semantle puzzle for November 8, 2026 (#1744) is live with today's answer confirmed. The answer runs 10 characters, starting with P and ending with N — see the letter hints above before you peek."
   }
 }

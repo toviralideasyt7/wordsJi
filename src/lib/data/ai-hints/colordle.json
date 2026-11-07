@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-06T16:44:38.548Z",
+  "generatedAt": "2026-11-07T16:32:46.733Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -408,6 +408,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The color is highly iconic and linked to a common object."
+    },
+    "2026-11-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A colorful bridge that appears after the rain.",
+      "clue1": "A spectrum of seven distinct hues.",
+      "starts_with": "R",
+      "ends_with": "C",
+      "definition": "An arc of colors formed by the refraction of sunlight in raindrops.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a common word associated with a very distinct visual phenomenon."
     }
   },
   "prose": {
@@ -443,6 +456,7 @@
     "2026-11-04": "The Colordle puzzle for November 4, 2026 (#1685) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with C — see the letter hints above before you peek.",
     "2026-11-05": "The Colordle puzzle for November 5, 2026 (#1686) is live with today's answer confirmed. The answer runs 10 characters, starting with I and ending with E — see the letter hints above before you peek.",
     "2026-11-06": "Colordle puzzle #1687 for November 6, 2026, features a ten-letter word. The pattern consists of a primary color combined with a natural phenomenon.",
-    "2026-11-07": "Colordle puzzle #1688 for November 7, 2026, features a multi-word answer. The solution follows a ten-letter pattern including several repetitions."
+    "2026-11-07": "Colordle puzzle #1688 for November 7, 2026, features a multi-word answer. The solution follows a ten-letter pattern including several repetitions.",
+    "2026-11-08": "Colordle puzzle #1689 for November 8, 2026, features a seven-letter word. The pattern consists of unique letters with no repetitions."
   }
 }

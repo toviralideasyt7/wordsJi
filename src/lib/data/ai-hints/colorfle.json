@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-06T16:46:15.558Z",
+  "generatedAt": "2026-11-07T16:35:03.119Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -406,6 +406,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common color names but a long combined character count."
+    },
+    "2026-11-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "A deep sea hue, earthy soil, and a soft candy glow.",
+      "clue1": "A mix of a dark ocean, wood, and light rose.",
+      "starts_with": "T",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The three-word combination requires guessing specific shade descriptors."
     }
   },
   "prose": {
@@ -441,6 +454,7 @@
     "2026-11-04": "The Colorfle puzzle for November 4, 2026 (#1654) is live with today's answer confirmed. The answer runs 18 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-11-05": "The Colorfle puzzle for November 5, 2026 (#1655) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with N — see the letter hints above before you peek.",
     "2026-11-06": "Colorfle puzzle #1656 was released on November 6, 2026. This specific sequence features a total of fifteen letters.",
-    "2026-11-07": "Colorfle puzzle #1657 was released on November 7, 2026. This specific sequence features a pattern of fifteen total letters."
+    "2026-11-07": "Colorfle puzzle #1657 was released on November 7, 2026. This specific sequence features a pattern of fifteen total letters.",
+    "2026-11-08": "Colorfle puzzle #1658 for November 8, 2026, features a three-word color sequence. The solution consists of twenty-three letters in total."
   }
 }

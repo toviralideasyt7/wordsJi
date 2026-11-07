@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-06T16:46:26.098Z",
+  "generatedAt": "2026-11-07T16:34:30.408Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -406,6 +406,19 @@
       "difficulty": 1,
       "difficulty_label": "Very Easy",
       "difficulty_reason": "One of the most recognized and largest countries globally."
+    },
+    "2026-11-08": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A place of wine and mountains, bridging two different continents.",
+      "clue1": "It borders the Black Sea to the west.",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "A country located at the intersection of Eastern Europe and Western Asia.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Well-known name that is also a common US state."
     }
   },
   "prose": {
@@ -441,6 +454,7 @@
     "2026-11-04": "The Countryle puzzle for November 4, 2026 (Game #1720) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-05": "The Countryle puzzle for November 5, 2026 (Game #1721) is live with today's answer confirmed. The answer runs 7 characters, starting with N and ending with A — see the letter hints above before you peek.",
     "2026-11-06": "The Countryle puzzle for November 6, 2026 (Game #1722) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-11-07": "Countryle Game #1723 for November 7, 2026, features a long name. The letter pattern includes multiple repetitions across its length."
+    "2026-11-07": "Countryle Game #1723 for November 7, 2026, features a long name. The letter pattern includes multiple repetitions across its length.",
+    "2026-11-08": "Countryle Game #1724 for November 8, 2026, features a seven-letter word. The pattern consists of four vowels and three consonants."
   }
 }
