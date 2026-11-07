@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-06T06:25:06.849Z",
+  "generatedAt": "2026-11-07T06:23:19.994Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -359,6 +359,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "One cannot die, the other hunts those who deserve it.",
+      "clue1": "A pair of vigilantes with very different views on death.",
+      "starts_with": "M",
+      "ends_with": "R",
+      "definition": "A duo consisting of an undying man and a lethal vigilante.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The answer consists of two distinct characters, increasing the letter count."
     }
   },
   "prose": {
@@ -390,6 +403,7 @@
     "2026-11-03": "The Marveldle puzzle for November 3, 2026 (11/3/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 24 characters, starting with A and ending with P — see the letter hints above before you peek.",
     "2026-11-04": "The Marveldle puzzle for November 4, 2026 (11/4/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 23 characters, starting with K and ending with R — see the letter hints above before you peek.",
     "2026-11-05": "The Marveldle puzzle for November 5, 2026 (11/5/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 15 characters, starting with T and ending with S — see the letter hints above before you peek.",
-    "2026-11-06": "The Marveldle puzzle for November 6, 2026 (11/6/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-11-06": "The Marveldle puzzle for November 6, 2026 (11/6/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-11-07": "The Marveldle puzzle for November 7, 2026, features a multi-character solution. This 11/7/2026 12:00:00 AM entry follows a complex letter pattern spanning two names."
   }
 }
