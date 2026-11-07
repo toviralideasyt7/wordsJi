@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-11-06T01:08:43.227Z",
+  "generatedAt": "2026-11-07T01:11:06.253Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -382,6 +382,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -415,6 +427,7 @@
     "2026-11-03": "The Waffle puzzle for November 3, 2026 (#1747) is live with today's answer confirmed. The answer runs 30 characters, starting with F and ending with E — see the letter hints above before you peek.",
     "2026-11-04": "Waffle puzzle #1748 for November 4, 2026, features several words with similar endings. The grid requires careful placement of repeated consonants to solve.",
     "2026-11-05": "The Waffle puzzle for November 5, 2026 (#1749) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with E — see the letter hints above before you peek.",
-    "2026-11-06": "The Waffle puzzle for November 6, 2026 (#1750) is live with today's answer confirmed. The answer runs 30 characters, starting with L and ending with D — see the letter hints above before you peek."
+    "2026-11-06": "The Waffle puzzle for November 6, 2026 (#1750) is live with today's answer confirmed. The answer runs 30 characters, starting with L and ending with D — see the letter hints above before you peek.",
+    "2026-11-07": "The Waffle puzzle for November 7, 2026 (#1751) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek."
   }
 }
