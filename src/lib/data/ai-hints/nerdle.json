@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-07T16:32:42.361Z",
+  "generatedAt": "2026-11-08T16:44:46.194Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -537,6 +537,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple single-digit operations leading to a common round number."
+    },
+    "2026-11-09": {
+      "kind": "math",
+      "operator_hint": "Uses subtraction.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a 2-digit number and odd.",
+      "riddle": "",
+      "starts_with": "6",
+      "ends_with": "7",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -573,6 +589,7 @@
     "2026-11-05": "The Nerdle puzzle for November 5, 2026 (#1751) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-06": "Nerdle puzzle #1752 arrives on November 6, 2026. This specific challenge requires balancing basic operations to find the total.",
     "2026-11-07": "Nerdle puzzle #1753 presents a straightforward arithmetic challenge for players. This November 7, 2026 entry focuses on a basic division operation.",
-    "2026-11-08": "Nerdle puzzle #1754 arrives on November 8, 2026. This specific challenge requires balancing two different operators to reach the goal."
+    "2026-11-08": "Nerdle puzzle #1754 arrives on November 8, 2026. This specific challenge requires balancing two different operators to reach the goal.",
+    "2026-11-09": "The Nerdle puzzle for November 9, 2026 (#1755) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek."
   }
 }

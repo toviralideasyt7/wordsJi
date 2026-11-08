@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-07T16:32:53.492Z",
+  "generatedAt": "2026-11-08T16:44:45.483Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -417,6 +417,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Extremely famous global entity with a very recognizable name."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -453,6 +465,7 @@
     "2026-11-05": "The Spotle puzzle for November 5, 2026 (Day 1693) is live with today's answer confirmed. The answer runs 1 character, starting with U and ending with U — see the letter hints above before you peek.",
     "2026-11-06": "The Spotle puzzle for November 6, 2026 (Day 1694) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with S — see the letter hints above before you peek.",
     "2026-11-07": "The Spotle puzzle for November 7, 2026 (Day 1695) is live with today's answer confirmed. The answer runs 14 characters, starting with M and ending with N — see the letter hints above before you peek.",
-    "2026-11-08": "Spotle puzzle Day 1696 takes place on November 8, 2026. This specific entry features a multi-word pattern with several repeated characters."
+    "2026-11-08": "Spotle puzzle Day 1696 takes place on November 8, 2026. This specific entry features a multi-word pattern with several repeated characters.",
+    "2026-11-09": "The Spotle puzzle for November 9, 2026 (Day 1697) is live with today's answer confirmed. The answer runs 3 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }

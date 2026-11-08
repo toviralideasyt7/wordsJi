@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-07T16:35:01.601Z",
+  "generatedAt": "2026-11-08T16:48:40.121Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -419,6 +419,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Contains two distinct idiomatic expressions combined into one answer."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 10 vowels.",
+      "repeat_hint": "13 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -455,6 +467,7 @@
     "2026-11-05": "The Phrazle puzzle for November 5, 2026 (2026-11-05) is live with today's answer confirmed. The answer runs 34 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-06": "The Phrazle puzzle for November 6, 2026 (2026-11-06) is live with today's answer confirmed. The answer runs 23 characters, starting with P and ending with L — see the letter hints above before you peek.",
     "2026-11-07": "The Phrazle puzzle for November 7, 2026 (2026-11-07) is live with today's answer confirmed. The answer runs 24 characters, starting with A and ending with E — see the letter hints above before you peek.",
-    "2026-11-08": "The Phrazle puzzle for November 8, 2026, features a multi-phrase solution. Puzzle 2026-11-08 utilizes a pattern starting with B and ending with H."
+    "2026-11-08": "The Phrazle puzzle for November 8, 2026, features a multi-phrase solution. Puzzle 2026-11-08 utilizes a pattern starting with B and ending with H.",
+    "2026-11-09": "The Phrazle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with K — see the letter hints above before you peek."
   }
 }
