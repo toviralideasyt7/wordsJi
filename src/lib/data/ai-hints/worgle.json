@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-07T19:46:59.766Z",
+  "generatedAt": "2026-11-08T20:24:04.328Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -416,6 +416,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common vocabulary word with a standard consonant-vowel structure."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -452,6 +464,7 @@
     "2026-11-05": "The Worgle puzzle for November 5, 2026 (#1758) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with C — see the letter hints above before you peek.",
     "2026-11-06": "Worgle puzzle #1759 for November 6, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
     "2026-11-07": "The Worgle puzzle for November 7, 2026 (#1760) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek.",
-    "2026-11-08": "Worgle puzzle #1761 for November 8, 2026, features a six-letter word. The pattern consists of a repeated vowel and a terminal consonant."
+    "2026-11-08": "Worgle puzzle #1761 for November 8, 2026, features a six-letter word. The pattern consists of a repeated vowel and a terminal consonant.",
+    "2026-11-09": "The Worgle puzzle for November 9, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with N — see the letter hints above before you peek."
   }
 }
