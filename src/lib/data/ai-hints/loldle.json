@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-07T06:05:18.365Z",
+  "generatedAt": "2026-11-08T06:07:04.284Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -412,6 +412,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The unique starting letter and short length make it easy to guess."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -447,6 +459,7 @@
     "2026-11-04": "LoLdle Game #1581 for November 4, 2026, features a multi-champion answer. The solution follows a specific letter pattern across four names.",
     "2026-11-05": "The LoLdle puzzle for November 5, 2026 (Game #1582) is live with today's answer confirmed. The answer runs 8 characters, starting with M and ending with R — see the letter hints above before you peek.",
     "2026-11-06": "The LoLdle puzzle for November 6, 2026 (Game #1583) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with O — see the letter hints above before you peek.",
-    "2026-11-07": "LoLdle Game #1584 for November 7, 2026, features a four-letter champion name. The pattern consists of a rare starting consonant and a vowel ending."
+    "2026-11-07": "LoLdle Game #1584 for November 7, 2026, features a four-letter champion name. The pattern consists of a rare starting consonant and a vowel ending.",
+    "2026-11-08": "The LoLdle puzzle for November 8, 2026 (Game #1585) is live with today's answer confirmed. The answer runs 4 characters, starting with S and ending with N — see the letter hints above before you peek."
   }
 }

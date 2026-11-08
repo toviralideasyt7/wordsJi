@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-06T16:46:53.740Z",
+  "generatedAt": "2026-11-08T06:07:01.513Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -385,6 +385,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "I",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -418,6 +430,7 @@
     "2026-11-04": "Framed puzzle #1700 arrives on November 4, 2026. This specific entry features a five-letter word pattern.",
     "2026-11-05": "The Framed puzzle for November 5, 2026 (#1701) is live with today's answer confirmed. The answer runs 19 characters, starting with B and ending with S — see the letter hints above before you peek.",
     "2026-11-06": "The Framed puzzle for November 6, 2026 (#1702) is live with today's answer confirmed. The answer runs 9 characters, starting with L and ending with R — see the letter hints above before you peek.",
-    "2026-11-07": "The Framed puzzle for November 7, 2026 (#1703) is live with today's answer confirmed. The answer runs 9 characters, starting with G and ending with K — see the letter hints above before you peek."
+    "2026-11-07": "The Framed puzzle for November 7, 2026 (#1703) is live with today's answer confirmed. The answer runs 9 characters, starting with G and ending with K — see the letter hints above before you peek.",
+    "2026-11-08": "The Framed puzzle for November 8, 2026 (#1704) is live with today's answer confirmed. The answer runs 2 characters, starting with I and ending with T — see the letter hints above before you peek."
   }
 }

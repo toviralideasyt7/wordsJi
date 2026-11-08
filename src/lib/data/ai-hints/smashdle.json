@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-07T06:05:36.938Z",
+  "generatedAt": "2026-11-08T06:10:47.184Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -408,6 +408,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -443,6 +455,7 @@
     "2026-11-04": "The Smashdle puzzle for November 4, 2026 (Game #1155) is live with today's answer confirmed. The answer runs 29 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-11-05": "The Smashdle puzzle for November 5, 2026 (Game #1156) is live with today's answer confirmed. The answer runs 28 characters, starting with P and ending with R — see the letter hints above before you peek.",
     "2026-11-06": "The Smashdle puzzle for November 6, 2026 (Game #1157) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with N — see the letter hints above before you peek.",
-    "2026-11-07": "The Smashdle puzzle for November 7, 2026 (Game #1158) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with Y — see the letter hints above before you peek."
+    "2026-11-07": "The Smashdle puzzle for November 7, 2026 (Game #1158) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with Y — see the letter hints above before you peek.",
+    "2026-11-08": "The Smashdle puzzle for November 8, 2026 (Game #1159) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with S — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-07T06:05:18.335Z",
+  "generatedAt": "2026-11-08T06:07:04.427Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -408,6 +408,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A core crew member with a very distinct name and role."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -443,6 +455,7 @@
     "2026-11-04": "The OnePiecedle puzzle for November 4, 2026 (Game #948) is live with today's answer confirmed. The answer runs 41 characters, starting with M and ending with S — see the letter hints above before you peek.",
     "2026-11-05": "The OnePiecedle puzzle for November 5, 2026 (Game #949) is live with today's answer confirmed. The answer runs 48 characters, starting with V and ending with H — see the letter hints above before you peek.",
     "2026-11-06": "The OnePiecedle puzzle for November 6, 2026 (Game #950) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with N — see the letter hints above before you peek.",
-    "2026-11-07": "OnePiecedle Game #951 takes place on November 7, 2026. This puzzle features a five-letter word with a consonant-vowel pattern."
+    "2026-11-07": "OnePiecedle Game #951 takes place on November 7, 2026. This puzzle features a five-letter word with a consonant-vowel pattern.",
+    "2026-11-08": "The OnePiecedle puzzle for November 8, 2026 (Game #952) is live with today's answer confirmed. The answer runs 16 characters, starting with C and ending with R — see the letter hints above before you peek."
   }
 }

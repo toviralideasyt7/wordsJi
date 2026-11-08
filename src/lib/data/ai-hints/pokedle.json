@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-07T06:05:16.244Z",
+  "generatedAt": "2026-11-08T06:10:45.099Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -412,6 +412,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A well-known first-generation Pokémon with a simple five-letter name."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -447,6 +459,7 @@
     "2026-11-04": "Pokedle Game #1119 takes place on November 4, 2026. This specific puzzle features a multi-word answer starting with S and ending with S.",
     "2026-11-05": "The Pokedle puzzle for November 5, 2026 (Game #1120) is live with today's answer confirmed. The answer runs 27 characters, starting with R and ending with O — see the letter hints above before you peek.",
     "2026-11-06": "Pokedle Game #1121 takes place on November 6, 2026. This specific puzzle features a four-letter word starting and ending with the same character.",
-    "2026-11-07": "Pokedle Game #1122 takes place on November 7, 2026. This specific puzzle features a five-letter word with a repeating consonant."
+    "2026-11-07": "Pokedle Game #1122 takes place on November 7, 2026. This specific puzzle features a five-letter word with a repeating consonant.",
+    "2026-11-08": "The Pokedle puzzle for November 8, 2026 (Game #1123) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with H — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-07T06:13:41.566Z",
+  "generatedAt": "2026-11-08T06:07:01.357Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -413,6 +413,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Small geographical size makes it harder to pinpoint on the map."
+    },
+    "2026-11-08": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "U",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -448,6 +460,7 @@
     "2026-11-04": "The Globle puzzle for November 4, 2026, features a six-letter country name. This specific puzzle 2026-11-04 follows a pattern with no repeating characters.",
     "2026-11-05": "The Globle puzzle for November 5, 2026 (2026-11-05) is live with today's answer confirmed. The answer runs 8 characters, starting with Z and ending with E — see the letter hints above before you peek.",
     "2026-11-06": "The Globle puzzle for November 6, 2026 (2026-11-06) is live with today's answer confirmed. The answer runs 10 characters, starting with S and ending with A — see the letter hints above before you peek.",
-    "2026-11-07": "The Globle puzzle for November 7, 2026, features a ten-letter destination. This 2026-11-07 challenge requires identifying a specific European state with a unique political title."
+    "2026-11-07": "The Globle puzzle for November 7, 2026, features a ten-letter destination. This 2026-11-07 challenge requires identifying a specific European state with a unique political title.",
+    "2026-11-08": "The Globle puzzle for November 8, 2026 (2026-11-08) is live with today's answer confirmed. The answer runs 10 characters, starting with U and ending with N — see the letter hints above before you peek."
   }
 }
