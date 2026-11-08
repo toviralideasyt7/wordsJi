@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-07T01:10:51.775Z",
+  "generatedAt": "2026-11-08T01:10:14.554Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -323,6 +323,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-07": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -351,6 +363,7 @@
     "2026-11-03": "The Batter Up puzzle for November 3, 2026 (Game #989) is live with today's answer confirmed. The answer runs 8 characters, starting with J and ending with O — see the letter hints above before you peek.",
     "2026-11-04": "The Batter Up puzzle for November 4, 2026 (Game #990) is live with today's answer confirmed. The answer runs 13 characters, starting with B and ending with O — see the letter hints above before you peek.",
     "2026-11-05": "Batter Up Game #991 takes place on November 5, 2026. This puzzle features a nine-letter name with a rare ending consonant.",
-    "2026-11-06": "The Batter Up puzzle for November 6, 2026 (Game #992) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek."
+    "2026-11-06": "The Batter Up puzzle for November 6, 2026 (Game #992) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek.",
+    "2026-11-07": "The Batter Up puzzle for November 7, 2026 (Game #993) is live with today's answer confirmed. The answer runs 11 characters, starting with D and ending with T — see the letter hints above before you peek."
   }
 }
