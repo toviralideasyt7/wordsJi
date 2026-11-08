@@ -861,5 +861,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/27/02527c8a-6559c4a4-ffacf192-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-06",
     "fetchedAt": "2026-11-07T01:05:28.350Z"
+  },
+  "2026-11-07": {
+    "date": "2026-11-07",
+    "gameNumber": 993,
+    "player": {
+      "player_name": "Drew Gilbert",
+      "player_id": "4619467",
+      "team_name": "Giants",
+      "born": "USA",
+      "birth_date": "2000-09-27",
+      "position": [
+        "CF"
+      ],
+      "debut": 2025,
+      "jersey_number": 0
+    },
+    "videoDescription": "[08/27/26 : ARI 1 - 6 SF] Drew Gilbert hits a 407-foot solo home run to right-center field to give the Giants a 1-0 lead in the bottom of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/27/69c1eceb-c5993d16-be16cb5d-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-07",
+    "fetchedAt": "2026-11-08T01:05:37.722Z"
   }
 }
