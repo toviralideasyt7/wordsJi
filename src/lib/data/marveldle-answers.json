@@ -2409,7 +2409,7 @@
   },
   "2026-11-07": {
     "date": "2026-11-07",
-    "dateId": "11/7/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/8/2026 12:00:00 AM",
     "comics": {
       "id": "mrimmortal",
       "name": "Mister Immortal",
@@ -2459,7 +2459,7 @@
         "francis castle"
       ]
     },
-    "solvedAt": "2026-11-07T06:05:32.087Z"
+    "solvedAt": "2026-11-08T06:35:37.682Z"
   },
   "2026-11-08": {
     "date": "2026-11-08",
