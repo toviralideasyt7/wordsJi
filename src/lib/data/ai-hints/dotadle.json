@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-08T06:07:03.561Z",
+  "generatedAt": "2026-11-09T06:07:07.196Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -424,6 +424,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -460,6 +472,7 @@
     "2026-11-05": "The Dotadle puzzle for November 5, 2026 (Game #1056) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with T — see the letter hints above before you peek.",
     "2026-11-06": "Dotadle Game #1057 takes place on November 6, 2026. This puzzle features an eleven-letter word with a repeating consonant pattern.",
     "2026-11-07": "Dotadle Game #1058 takes place on November 7, 2026. This puzzle features a four-letter word with a consonant-vowel-consonant-consonant pattern.",
-    "2026-11-08": "The Dotadle puzzle for November 8, 2026 (Game #1059) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with R — see the letter hints above before you peek."
+    "2026-11-08": "The Dotadle puzzle for November 8, 2026 (Game #1059) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with R — see the letter hints above before you peek.",
+    "2026-11-09": "The Dotadle puzzle for November 9, 2026 (Game #1060) is live with today's answer confirmed. The answer runs 9 characters, starting with A and ending with T — see the letter hints above before you peek."
   }
 }

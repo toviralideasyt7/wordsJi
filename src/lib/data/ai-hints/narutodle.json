@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-08T06:07:04.659Z",
+  "generatedAt": "2026-11-09T06:07:07.139Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -422,6 +422,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -458,6 +470,7 @@
     "2026-11-05": "The Narutodle puzzle for November 5, 2026 (Game #917) is live with today's answer confirmed. The answer runs 2 characters, starting with A and ending with O — see the letter hints above before you peek.",
     "2026-11-06": "The Narutodle puzzle for November 6, 2026 (Game #918) is live with today's answer confirmed. The answer runs 12 characters, starting with I and ending with A — see the letter hints above before you peek.",
     "2026-11-07": "Narutodle Game #919 for November 7, 2026, features a thirteen-letter name. The solution follows a pattern of alternating consonants and vowels.",
-    "2026-11-08": "The Narutodle puzzle for November 8, 2026 (Game #920) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with A — see the letter hints above before you peek."
+    "2026-11-08": "The Narutodle puzzle for November 8, 2026 (Game #920) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with A — see the letter hints above before you peek.",
+    "2026-11-09": "The Narutodle puzzle for November 9, 2026 (Game #921) is live with today's answer confirmed. The answer runs 9 characters, starting with R and ending with A — see the letter hints above before you peek."
   }
 }
