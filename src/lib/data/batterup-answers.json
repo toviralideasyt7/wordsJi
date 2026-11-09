@@ -881,5 +881,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/27/69c1eceb-c5993d16-be16cb5d-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-07",
     "fetchedAt": "2026-11-08T01:05:37.722Z"
+  },
+  "2026-11-08": {
+    "date": "2026-11-08",
+    "gameNumber": 994,
+    "player": {
+      "player_name": "Heliot Ramos",
+      "player_id": "39642",
+      "team_name": "Yankees",
+      "born": "P.R.",
+      "birth_date": "1999-09-07",
+      "position": [
+        "LF"
+      ],
+      "debut": 2022,
+      "jersey_number": 34
+    },
+    "videoDescription": "[09/20/26 : NYY 4 - 8 ARI] Heliot Ramos crushes a solo homer to left field, tying the game 1-1 in the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/20/054e51f3-d3586d51-4f5c06f0-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-08",
+    "fetchedAt": "2026-11-09T01:05:40.235Z"
   }
 }
