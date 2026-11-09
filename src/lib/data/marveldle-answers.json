@@ -2523,5 +2523,67 @@
       ]
     },
     "solvedAt": "2026-11-08T06:05:41.662Z"
+  },
+  "2026-11-09": {
+    "date": "2026-11-09",
+    "dateId": "11/9/2026 12:00:00 AM",
+    "comics": {
+      "id": "odin",
+      "name": "Odin",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "FrostGiant",
+        "Asgardian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Shapeshifting",
+        "Psychic",
+        "Kinesis",
+        "InterdimensionalTravel",
+        "Teleportation",
+        "RealityManipulation",
+        "TimeTravel"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1962,
+      "firstApparitionComicTitle": "Journey Into Mystery #85",
+      "keywords": [
+        "borson",
+        "odin borson",
+        "all-father"
+      ]
+    },
+    "mcu": {
+      "id": "volstagg",
+      "name": "Volstagg",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Asgardian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration"
+      ],
+      "origin": "Asgard",
+      "actorName": "Ray Stevenson",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "WarriorsThree"
+      ],
+      "keywords": [
+        "volstagg"
+      ]
+    },
+    "solvedAt": "2026-11-09T06:05:52.588Z"
   }
 }
