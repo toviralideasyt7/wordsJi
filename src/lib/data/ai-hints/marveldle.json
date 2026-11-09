@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-08T06:20:06.874Z",
+  "generatedAt": "2026-11-09T06:25:01.013Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -384,6 +384,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-09": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -417,6 +429,7 @@
     "2026-11-05": "The Marveldle puzzle for November 5, 2026 (11/5/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 15 characters, starting with T and ending with S — see the letter hints above before you peek.",
     "2026-11-06": "The Marveldle puzzle for November 6, 2026 (11/6/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-11-07": "The Marveldle puzzle for November 7, 2026, features a multi-character solution. This 11/7/2026 12:00:00 AM entry follows a complex letter pattern spanning two names.",
-    "2026-11-08": "The Marveldle puzzle for November 8, 2026 (11/8/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 16 characters, starting with N and ending with E — see the letter hints above before you peek."
+    "2026-11-08": "The Marveldle puzzle for November 8, 2026 (11/8/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 16 characters, starting with N and ending with E — see the letter hints above before you peek.",
+    "2026-11-09": "The Marveldle puzzle for November 9, 2026 (11/9/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 12 characters, starting with O and ending with G — see the letter hints above before you peek."
   }
 }
