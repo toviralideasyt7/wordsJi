@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-08T20:24:04.492Z",
+  "generatedAt": "2026-11-09T16:34:29.348Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -406,6 +406,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -441,6 +453,7 @@
     "2026-11-06": "The Searchle puzzle for November 6, 2026 (#104) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with S — see the letter hints above before you peek.",
     "2026-11-07": "The Searchle puzzle for November 7, 2026 (#105) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with Y — see the letter hints above before you peek.",
     "2026-11-08": "Searchle puzzle #106 for November 8, 2026, features a six-letter word. The pattern includes a repeated consonant and ends with a semi-vowel.",
-    "2026-11-09": "The Searchle puzzle for November 9, 2026 (#149) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with S — see the letter hints above before you peek."
+    "2026-11-09": "The Searchle puzzle for November 9, 2026 (#149) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with S — see the letter hints above before you peek.",
+    "2026-11-10": "The Searchle puzzle for November 10, 2026 (#108) is live with today's answer confirmed. The answer runs 8 characters, starting with R and ending with R — see the letter hints above before you peek."
   }
 }

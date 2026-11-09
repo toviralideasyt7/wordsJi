@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-08T16:48:28.369Z",
+  "generatedAt": "2026-11-09T16:38:12.580Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -434,6 +434,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -471,6 +483,7 @@
     "2026-11-06": "The Phoodle puzzle for November 6, 2026 (2026-11-06) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with S — see the letter hints above before you peek.",
     "2026-11-07": "The Phoodle puzzle for November 7, 2026, features a five-letter word. Puzzle 2026-11-07 follows a consonant-vowel-consonant-vowel-vowel pattern.",
     "2026-11-08": "The Phoodle puzzle for November 8, 2026, features a five-letter word. Puzzle 2026-11-08 follows a consonant-vowel-consonant-vowel-vowel pattern.",
-    "2026-11-09": "The Phoodle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with E — see the letter hints above before you peek."
+    "2026-11-09": "The Phoodle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with E — see the letter hints above before you peek.",
+    "2026-11-10": "The Phoodle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with S — see the letter hints above before you peek."
   }
 }

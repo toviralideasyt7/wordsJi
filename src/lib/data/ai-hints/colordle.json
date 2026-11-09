@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-08T16:44:46.650Z",
+  "generatedAt": "2026-11-09T16:34:29.765Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -433,6 +433,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -470,6 +482,7 @@
     "2026-11-06": "Colordle puzzle #1687 for November 6, 2026, features a ten-letter word. The pattern consists of a primary color combined with a natural phenomenon.",
     "2026-11-07": "Colordle puzzle #1688 for November 7, 2026, features a multi-word answer. The solution follows a ten-letter pattern including several repetitions.",
     "2026-11-08": "Colordle puzzle #1689 for November 8, 2026, features a seven-letter word. The pattern consists of unique letters with no repetitions.",
-    "2026-11-09": "The Colordle puzzle for November 9, 2026 (#1690) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with F — see the letter hints above before you peek."
+    "2026-11-09": "The Colordle puzzle for November 9, 2026 (#1690) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with F — see the letter hints above before you peek.",
+    "2026-11-10": "The Colordle puzzle for November 10, 2026 (#1691) is live with today's answer confirmed. The answer runs 12 characters, starting with P and ending with F — see the letter hints above before you peek."
   }
 }

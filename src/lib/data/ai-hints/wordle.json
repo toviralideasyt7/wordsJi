@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-08T16:44:45.699Z",
+  "generatedAt": "2026-11-09T16:34:29.361Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -435,6 +435,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -472,6 +484,7 @@
     "2026-11-06": "Wordle puzzle #1966 occurs on November 6, 2026. This specific entry features a consonant-heavy structure ending in K.",
     "2026-11-07": "Wordle puzzle #1967 for November 7, 2026, features a five-letter word. The solution follows a consonant-consonant-vowel-consonant-vowel pattern.",
     "2026-11-08": "Wordle puzzle #1968 arrives on November 8, 2026. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
-    "2026-11-09": "The Wordle puzzle for November 9, 2026 (#1969) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with Y — see the letter hints above before you peek."
+    "2026-11-09": "The Wordle puzzle for November 9, 2026 (#1969) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with Y — see the letter hints above before you peek.",
+    "2026-11-10": "The Wordle puzzle for November 10, 2026 (#1970) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek."
   }
 }

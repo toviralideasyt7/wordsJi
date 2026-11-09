@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-08T16:48:27.904Z",
+  "generatedAt": "2026-11-09T16:38:11.967Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -431,6 +431,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -468,6 +480,7 @@
     "2026-11-06": "The Betweenle puzzle for November 6, 2026 (#1331) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with Y — see the letter hints above before you peek.",
     "2026-11-07": "Betweenle puzzle #1332 for November 7, 2026, features a five-letter word. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-11-08": "The Betweenle puzzle for November 8, 2026 (#1333) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with P — see the letter hints above before you peek.",
-    "2026-11-09": "The Betweenle puzzle for November 9, 2026 (#1334) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with Y — see the letter hints above before you peek."
+    "2026-11-09": "The Betweenle puzzle for November 9, 2026 (#1334) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with Y — see the letter hints above before you peek.",
+    "2026-11-10": "The Betweenle puzzle for November 10, 2026 (#1335) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with E — see the letter hints above before you peek."
   }
 }
