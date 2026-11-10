@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-09T16:38:12.520Z",
+  "generatedAt": "2026-11-10T22:00:07.213Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -443,6 +443,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A small West African coast where the Gulf of Guinea meets.",
+      "clue1": "A former French mandate in West Africa.",
+      "starts_with": "T",
+      "ends_with": "O",
+      "definition": "A small coastal country in West Africa bordering Ghana and Benin.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Short name but less commonly discussed than larger neighbors."
     }
   },
   "prose": {
@@ -481,6 +494,7 @@
     "2026-11-07": "Countryle Game #1723 for November 7, 2026, features a long name. The letter pattern includes multiple repetitions across its length.",
     "2026-11-08": "Countryle Game #1724 for November 8, 2026, features a seven-letter word. The pattern consists of four vowels and three consonants.",
     "2026-11-09": "The Countryle puzzle for November 9, 2026 (Game #1725) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
-    "2026-11-10": "The Countryle puzzle for November 10, 2026 (Game #1726) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek."
+    "2026-11-10": "The Countryle puzzle for November 10, 2026 (Game #1726) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek.",
+    "2026-11-11": "Countryle Game #1727 for November 11, 2026, features a four-letter country. The pattern consists of two consonants and two vowels."
   }
 }

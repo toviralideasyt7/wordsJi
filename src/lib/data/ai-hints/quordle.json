@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-09T16:34:29.430Z",
+  "generatedAt": "2026-11-10T21:58:24.517Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -441,6 +441,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "kind": "word",
+      "vowel_hint": "There are 8 vowels across the four words.",
+      "repeat_hint": "11 letters appear more than once.",
+      "riddle": "A public act, a star's light, a party, and a shout.",
+      "clue1": "One word describes something done in plain sight.",
+      "starts_with": "O",
+      "ends_with": "O",
+      "definition": "A set including an open act, a star system, a celebration, and applause.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common vocabulary words with overlapping vowels and consonants."
     }
   },
   "prose": {
@@ -479,6 +492,7 @@
     "2026-11-07": "The Quordle puzzle for November 7, 2026 (#1748) is live with today's answer confirmed. The answer runs 20 characters, starting with P and ending with H — see the letter hints above before you peek.",
     "2026-11-08": "The Quordle puzzle for November 8, 2026 (#1749) is live with today's answer confirmed. The answer runs 20 characters, starting with G and ending with M — see the letter hints above before you peek.",
     "2026-11-09": "The Quordle puzzle for November 9, 2026 (#1750) is live with today's answer confirmed. The answer runs 20 characters, starting with U and ending with E — see the letter hints above before you peek.",
-    "2026-11-10": "The Quordle puzzle for November 10, 2026 (#1751) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-11-10": "The Quordle puzzle for November 10, 2026 (#1751) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-11-11": "Quordle puzzle #1752 for November 11, 2026, features four five-letter words. The set contains a mix of common vowels and several repeated consonants."
   }
 }

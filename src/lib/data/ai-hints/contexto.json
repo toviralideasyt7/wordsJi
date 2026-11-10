@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-09T16:41:54.277Z",
+  "generatedAt": "2026-11-10T22:00:14.990Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -444,6 +444,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -482,6 +494,7 @@
     "2026-11-07": "The Contexto puzzle for November 7, 2026 (#1511) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with T — see the letter hints above before you peek.",
     "2026-11-08": "Contexto puzzle #1512 was released on November 8, 2026. The target word follows a pattern of starting and ending with consonants if you ignore the first letter.",
     "2026-11-09": "The Contexto puzzle for November 9, 2026 (#1513) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with E — see the letter hints above before you peek.",
-    "2026-11-10": "The Contexto puzzle for November 10, 2026 (#1514) is live with today's answer confirmed. The answer runs 10 characters, starting with I and ending with E — see the letter hints above before you peek."
+    "2026-11-10": "The Contexto puzzle for November 10, 2026 (#1514) is live with today's answer confirmed. The answer runs 10 characters, starting with I and ending with E — see the letter hints above before you peek.",
+    "2026-11-11": "The Contexto puzzle for November 11, 2026 (#1515) is live with today's answer confirmed. The answer runs 4 characters, starting with C and ending with N — see the letter hints above before you peek."
   }
 }

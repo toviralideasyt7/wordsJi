@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-09T16:34:29.361Z",
+  "generatedAt": "2026-11-10T21:56:37.612Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -447,6 +447,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A holy wish or a sneeze's companion.",
+      "clue1": "Often associated with a prayer or a sneeze.",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "To pronounce a prayer over someone or to confer happiness upon them.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a simple double-consonant pattern."
     }
   },
   "prose": {
@@ -485,6 +498,7 @@
     "2026-11-07": "Wordle puzzle #1967 for November 7, 2026, features a five-letter word. The solution follows a consonant-consonant-vowel-consonant-vowel pattern.",
     "2026-11-08": "Wordle puzzle #1968 arrives on November 8, 2026. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-11-09": "The Wordle puzzle for November 9, 2026 (#1969) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with Y — see the letter hints above before you peek.",
-    "2026-11-10": "The Wordle puzzle for November 10, 2026 (#1970) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek."
+    "2026-11-10": "The Wordle puzzle for November 10, 2026 (#1970) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek.",
+    "2026-11-11": "Wordle puzzle #1971 occurs on November 11, 2026. This specific entry features a double letter at the end."
   }
 }
