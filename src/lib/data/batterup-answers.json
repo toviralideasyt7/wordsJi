@@ -901,5 +901,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/20/054e51f3-d3586d51-4f5c06f0-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-08",
     "fetchedAt": "2026-11-09T01:05:40.235Z"
+  },
+  "2026-11-09": {
+    "date": "2026-11-09",
+    "gameNumber": 995,
+    "player": {
+      "player_name": "Vinnie Pasquantino",
+      "player_id": "4109109",
+      "team_name": "Royals",
+      "born": "USA",
+      "birth_date": "1997-10-10",
+      "position": [
+        "1B"
+      ],
+      "debut": 2022,
+      "jersey_number": 9
+    },
+    "videoDescription": "[06/03/26 : KC 5 - 2 CIN] Vinnie Pasquantino crushes a two-run home run to right field, giving the Royals the lead in the top of the 1st, 2-0.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/03/3fd3f088-2d68a1bf-a671c49c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-09",
+    "fetchedAt": "2026-11-10T01:06:11.678Z"
   }
 }
