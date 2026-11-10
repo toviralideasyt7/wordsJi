@@ -2585,5 +2585,59 @@
       ]
     },
     "solvedAt": "2026-11-09T06:05:52.588Z"
+  },
+  "2026-11-10": {
+    "date": "2026-11-10",
+    "dateId": "11/10/2026 12:00:00 AM",
+    "comics": {
+      "id": "deadpool",
+      "name": "Deadpool",
+      "gender": "Male",
+      "type": "AntiHero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Regeneration",
+        "Resistance"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1990,
+      "firstApparitionComicTitle": "New Mutants #98",
+      "keywords": [
+        "wade",
+        "wilson"
+      ]
+    },
+    "mcu": {
+      "id": "koraththepursuer",
+      "name": "Korath the Pursuer",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Cyborg",
+        "Kree"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration"
+      ],
+      "origin": "Hala",
+      "actorName": "Djimon Hounsou",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "StarForce"
+      ],
+      "keywords": [
+        "pursuer"
+      ]
+    },
+    "solvedAt": "2026-11-10T06:06:15.631Z"
   }
 }
