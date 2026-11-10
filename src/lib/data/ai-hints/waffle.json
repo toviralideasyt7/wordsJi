@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-11-09T01:11:03.536Z",
+  "generatedAt": "2026-11-10T00:06:57.029Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -418,6 +418,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "16 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -454,6 +466,7 @@
     "2026-11-06": "The Waffle puzzle for November 6, 2026 (#1750) is live with today's answer confirmed. The answer runs 30 characters, starting with L and ending with D — see the letter hints above before you peek.",
     "2026-11-07": "The Waffle puzzle for November 7, 2026 (#1751) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with Y — see the letter hints above before you peek.",
     "2026-11-08": "The Waffle puzzle for November 8, 2026 (#1752) is live with today's answer confirmed. The answer runs 30 characters, starting with L and ending with E — see the letter hints above before you peek.",
-    "2026-11-09": "The Waffle puzzle for November 9, 2026 (#1753) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with L — see the letter hints above before you peek."
+    "2026-11-09": "The Waffle puzzle for November 9, 2026 (#1753) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with L — see the letter hints above before you peek.",
+    "2026-11-10": "The Waffle puzzle for November 10, 2026 (#1754) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with E — see the letter hints above before you peek."
   }
 }
