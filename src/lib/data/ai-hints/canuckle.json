@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-09T05:15:43.062Z",
+  "generatedAt": "2026-11-10T05:16:14.789Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -432,6 +432,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-10": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -469,6 +481,7 @@
     "2026-11-06": "The Canuckle puzzle for November 6, 2026 (#1637) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with Y — see the letter hints above before you peek.",
     "2026-11-07": "The Canuckle puzzle for November 7, 2026 (#1638) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with R — see the letter hints above before you peek.",
     "2026-11-08": "The Canuckle puzzle for November 8, 2026 (#1639) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with G — see the letter hints above before you peek.",
-    "2026-11-09": "The Canuckle puzzle for November 9, 2026 (#1640) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with K — see the letter hints above before you peek."
+    "2026-11-09": "The Canuckle puzzle for November 9, 2026 (#1640) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with K — see the letter hints above before you peek.",
+    "2026-11-10": "The Canuckle puzzle for November 10, 2026 (#1641) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with L — see the letter hints above before you peek."
   }
 }
