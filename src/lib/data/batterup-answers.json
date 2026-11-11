@@ -921,5 +921,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/03/3fd3f088-2d68a1bf-a671c49c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-09",
     "fetchedAt": "2026-11-10T01:06:11.678Z"
+  },
+  "2026-11-11": {
+    "date": "2026-11-11",
+    "gameNumber": 997,
+    "player": {
+      "player_name": "Chandler Simpson",
+      "player_id": "4679983",
+      "team_name": "Rays",
+      "born": "USA",
+      "birth_date": "2000-11-18",
+      "position": [
+        "LF"
+      ],
+      "debut": 2025,
+      "jersey_number": 14
+    },
+    "videoDescription": "[10/27/26 : MIL 3 - 4 TB] Chandler Simpson singles on a line drive to center fielder and loads the bases.",
+    "rawVideo": "https://sporty-clips.mlb.com/Qnc0V25fV0ZRVkV3dEdEUT09X0FsSUVWVkJXVXdvQUNsRUZWd0FIVUFWZkFBQU1VMVVBQWxWWEJRc01BRlVIQUZNQw==.mp4",
+    "sourceDate": "2026-11-11",
+    "fetchedAt": "2026-11-11T01:06:09.539Z"
   }
 }
