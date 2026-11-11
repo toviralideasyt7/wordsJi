@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-10T21:56:44.828Z",
+  "generatedAt": "2026-11-11T15:18:56.744Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -458,6 +458,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The word is a common descriptive adjective based on a primary color."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -497,6 +509,7 @@
     "2026-11-08": "Colordle puzzle #1689 for November 8, 2026, features a seven-letter word. The pattern consists of unique letters with no repetitions.",
     "2026-11-09": "The Colordle puzzle for November 9, 2026 (#1690) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with F — see the letter hints above before you peek.",
     "2026-11-10": "The Colordle puzzle for November 10, 2026 (#1691) is live with today's answer confirmed. The answer runs 12 characters, starting with P and ending with F — see the letter hints above before you peek.",
-    "2026-11-11": "Colordle puzzle #1692 for November 11, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels."
+    "2026-11-11": "Colordle puzzle #1692 for November 11, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels.",
+    "2026-11-12": "The Colordle puzzle for November 12, 2026 (#1693) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }
