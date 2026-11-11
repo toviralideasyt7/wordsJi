@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-10T21:58:23.634Z",
+  "generatedAt": "2026-11-11T22:04:32.045Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -585,6 +585,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple operations and small integers make this a straightforward solve."
+    },
+    "2026-11-12": {
+      "kind": "math",
+      "operator_hint": "Uses addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a 2-digit number and even.",
+      "riddle": "",
+      "starts_with": "5",
+      "ends_with": "0",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -624,6 +640,7 @@
     "2026-11-08": "Nerdle puzzle #1754 arrives on November 8, 2026. This specific challenge requires balancing two different operators to reach the goal.",
     "2026-11-09": "The Nerdle puzzle for November 9, 2026 (#1755) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
     "2026-11-10": "The Nerdle puzzle for November 10, 2026 (#1756) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
-    "2026-11-11": "Nerdle puzzle #1757 presents a clean arithmetic challenge for November 11, 2026. This specific sequence relies on basic order of operations."
+    "2026-11-11": "Nerdle puzzle #1757 presents a clean arithmetic challenge for November 11, 2026. This specific sequence relies on basic order of operations.",
+    "2026-11-12": "The Nerdle puzzle for November 12, 2026 (#1758) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek."
   }
 }

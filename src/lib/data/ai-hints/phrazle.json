@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-10T22:01:49.575Z",
+  "generatedAt": "2026-11-11T22:06:03.159Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -456,6 +456,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "It consists of two distinct common idioms combined into one long string."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 14 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "U",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -495,6 +507,7 @@
     "2026-11-08": "The Phrazle puzzle for November 8, 2026, features a multi-phrase solution. Puzzle 2026-11-08 utilizes a pattern starting with B and ending with H.",
     "2026-11-09": "The Phrazle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with K — see the letter hints above before you peek.",
     "2026-11-10": "The Phrazle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 33 characters, starting with P and ending with F — see the letter hints above before you peek.",
-    "2026-11-11": "The Phrazle puzzle for November 11, 2026, features a long sequence of letters. Puzzle 2026-11-11 begins and ends with the same consonant."
+    "2026-11-11": "The Phrazle puzzle for November 11, 2026, features a long sequence of letters. Puzzle 2026-11-11 begins and ends with the same consonant.",
+    "2026-11-12": "The Phrazle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 25 characters, starting with U and ending with E — see the letter hints above before you peek."
   }
 }

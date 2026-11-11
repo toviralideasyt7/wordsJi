@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-10T22:00:07.213Z",
+  "generatedAt": "2026-11-11T22:06:00.137Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -456,6 +456,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Short name but less commonly discussed than larger neighbors."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -495,6 +507,7 @@
     "2026-11-08": "Countryle Game #1724 for November 8, 2026, features a seven-letter word. The pattern consists of four vowels and three consonants.",
     "2026-11-09": "The Countryle puzzle for November 9, 2026 (Game #1725) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-11-10": "The Countryle puzzle for November 10, 2026 (Game #1726) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek.",
-    "2026-11-11": "Countryle Game #1727 for November 11, 2026, features a four-letter country. The pattern consists of two consonants and two vowels."
+    "2026-11-11": "Countryle Game #1727 for November 11, 2026, features a four-letter country. The pattern consists of two consonants and two vowels.",
+    "2026-11-12": "The Countryle puzzle for November 12, 2026 (Game #1728) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with A — see the letter hints above before you peek."
   }
 }

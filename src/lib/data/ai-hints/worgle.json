@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-10T21:58:08.080Z",
+  "generatedAt": "2026-11-11T22:04:31.664Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -452,6 +452,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "W",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -491,6 +503,7 @@
     "2026-11-08": "Worgle puzzle #1761 for November 8, 2026, features a six-letter word. The pattern consists of a repeated vowel and a terminal consonant.",
     "2026-11-09": "The Worgle puzzle for November 9, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-11-10": "The Worgle puzzle for November 10, 2026 (#1763) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with E — see the letter hints above before you peek.",
-    "2026-11-11": "The Worgle puzzle for November 11, 2026 (#1764) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with E — see the letter hints above before you peek."
+    "2026-11-11": "The Worgle puzzle for November 11, 2026 (#1764) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with E — see the letter hints above before you peek.",
+    "2026-11-12": "The Worgle puzzle for November 12, 2026 (#1765) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with W — see the letter hints above before you peek."
   }
 }
