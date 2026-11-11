@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-10T06:06:28.170Z",
+  "generatedAt": "2026-11-11T06:05:26.125Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -448,6 +448,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -486,6 +498,7 @@
     "2026-11-07": "Dotadle Game #1058 takes place on November 7, 2026. This puzzle features a four-letter word with a consonant-vowel-consonant-consonant pattern.",
     "2026-11-08": "The Dotadle puzzle for November 8, 2026 (Game #1059) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with R — see the letter hints above before you peek.",
     "2026-11-09": "The Dotadle puzzle for November 9, 2026 (Game #1060) is live with today's answer confirmed. The answer runs 9 characters, starting with A and ending with T — see the letter hints above before you peek.",
-    "2026-11-10": "The Dotadle puzzle for November 10, 2026 (Game #1061) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with A — see the letter hints above before you peek."
+    "2026-11-10": "The Dotadle puzzle for November 10, 2026 (Game #1061) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with A — see the letter hints above before you peek.",
+    "2026-11-11": "The Dotadle puzzle for November 11, 2026 (Game #1062) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with R — see the letter hints above before you peek."
   }
 }

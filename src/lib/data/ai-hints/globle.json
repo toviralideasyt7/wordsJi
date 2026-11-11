@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-10T06:06:24.716Z",
+  "generatedAt": "2026-11-11T06:04:38.931Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -449,6 +449,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A tiny red dot where a lion guards the port.",
+      "clue1": "A wealthy city-state located in Southeast Asia.",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "An island city-state and sovereign nation in Southeast Asia.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a globally recognized city-state with a distinct geographical profile."
     }
   },
   "prose": {
@@ -487,6 +500,7 @@
     "2026-11-07": "The Globle puzzle for November 7, 2026, features a ten-letter destination. This 2026-11-07 challenge requires identifying a specific European state with a unique political title.",
     "2026-11-08": "The Globle puzzle for November 8, 2026 (2026-11-08) is live with today's answer confirmed. The answer runs 10 characters, starting with U and ending with N — see the letter hints above before you peek.",
     "2026-11-09": "The Globle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-11-10": "The Globle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-11-10": "The Globle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-11-11": "The Globle puzzle for November 11, 2026, features a nine-letter destination. This 2026-11-11 challenge follows a consonant-vowel pattern throughout the word."
   }
 }
