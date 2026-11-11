@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-10T14:58:45.956Z",
+  "generatedAt": "2026-11-11T05:14:13.676Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -421,6 +421,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A technician's mistake turns a home into a chaotic digital playground.",
+      "clue1": "Jim Carrey plays a vengeful service worker.",
+      "starts_with": "T",
+      "ends_with": "Y",
+      "definition": "A 1995 comedy film about a disgruntled television installation technician.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The lead actor is highly recognizable and the title is a common phrase."
     }
   },
   "prose": {
@@ -457,6 +470,7 @@
     "2026-11-07": "The Framed puzzle for November 7, 2026 (#1703) is live with today's answer confirmed. The answer runs 9 characters, starting with G and ending with K — see the letter hints above before you peek.",
     "2026-11-08": "The Framed puzzle for November 8, 2026 (#1704) is live with today's answer confirmed. The answer runs 2 characters, starting with I and ending with T — see the letter hints above before you peek.",
     "2026-11-09": "The Framed puzzle for November 9, 2026 (#1705) is live with today's answer confirmed. The answer runs 23 characters, starting with W and ending with Y — see the letter hints above before you peek.",
-    "2026-11-10": "The Framed puzzle for November 10, 2026 (#1706) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek."
+    "2026-11-10": "The Framed puzzle for November 10, 2026 (#1706) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek.",
+    "2026-11-11": "Framed puzzle #1707 was released on November 11, 2026. This specific entry features a thirteen-letter pattern."
   }
 }
