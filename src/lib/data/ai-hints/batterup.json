@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-10T01:11:21.773Z",
+  "generatedAt": "2026-11-11T01:14:27.088Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -359,6 +359,18 @@
       "difficulty": 9,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-11": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -390,6 +402,7 @@
     "2026-11-06": "The Batter Up puzzle for November 6, 2026 (Game #992) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek.",
     "2026-11-07": "The Batter Up puzzle for November 7, 2026 (Game #993) is live with today's answer confirmed. The answer runs 11 characters, starting with D and ending with T — see the letter hints above before you peek.",
     "2026-11-08": "The Batter Up puzzle for November 8, 2026 (Game #994) is live with today's answer confirmed. The answer runs 11 characters, starting with H and ending with S — see the letter hints above before you peek.",
-    "2026-11-09": "The Batter Up puzzle for November 9, 2026 (Game #995) is live with today's answer confirmed. The answer runs 17 characters, starting with V and ending with O — see the letter hints above before you peek."
+    "2026-11-09": "The Batter Up puzzle for November 9, 2026 (Game #995) is live with today's answer confirmed. The answer runs 17 characters, starting with V and ending with O — see the letter hints above before you peek.",
+    "2026-11-11": "The Batter Up puzzle for November 11, 2026 (Game #997) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with N — see the letter hints above before you peek."
   }
 }
