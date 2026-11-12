@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-11-11T01:14:47.615Z",
+  "generatedAt": "2026-11-12T01:09:04.307Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -443,6 +443,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word set is diverse with common vocabulary and a few tricky placements."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "O",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -481,6 +493,7 @@
     "2026-11-08": "The Waffle puzzle for November 8, 2026 (#1752) is live with today's answer confirmed. The answer runs 30 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-11-09": "The Waffle puzzle for November 9, 2026 (#1753) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with L — see the letter hints above before you peek.",
     "2026-11-10": "The Waffle puzzle for November 10, 2026 (#1754) is live with today's answer confirmed. The answer runs 30 characters, starting with B and ending with E — see the letter hints above before you peek.",
-    "2026-11-11": "Waffle puzzle #1755 was released on November 11, 2026. This specific grid features a variety of common five-letter words."
+    "2026-11-11": "Waffle puzzle #1755 was released on November 11, 2026. This specific grid features a variety of common five-letter words.",
+    "2026-11-12": "The Waffle puzzle for November 12, 2026 (#1756) is live with today's answer confirmed. The answer runs 30 characters, starting with O and ending with N — see the letter hints above before you peek."
   }
 }
