@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-11T15:18:56.450Z",
+  "generatedAt": "2026-11-12T15:24:07.411Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -472,6 +472,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -512,6 +524,7 @@
     "2026-11-09": "The Wordle puzzle for November 9, 2026 (#1969) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with Y — see the letter hints above before you peek.",
     "2026-11-10": "The Wordle puzzle for November 10, 2026 (#1970) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek.",
     "2026-11-11": "Wordle puzzle #1971 occurs on November 11, 2026. This specific entry features a double letter at the end.",
-    "2026-11-12": "The Wordle puzzle for November 12, 2026 (#1972) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with T — see the letter hints above before you peek."
+    "2026-11-12": "The Wordle puzzle for November 12, 2026 (#1972) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with T — see the letter hints above before you peek.",
+    "2026-11-13": "The Wordle puzzle for November 13, 2026 (#1973) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with E — see the letter hints above before you peek."
   }
 }

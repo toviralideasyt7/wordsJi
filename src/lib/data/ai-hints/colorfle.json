@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-11T15:18:57.044Z",
+  "generatedAt": "2026-11-12T15:24:07.738Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -467,6 +467,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -507,6 +519,7 @@
     "2026-11-09": "The Colorfle puzzle for November 9, 2026 (#1659) is live with today's answer confirmed. The answer runs 15 characters, starting with O and ending with W — see the letter hints above before you peek.",
     "2026-11-10": "The Colorfle puzzle for November 10, 2026 (#1660) is live with today's answer confirmed. The answer runs 20 characters, starting with O and ending with N — see the letter hints above before you peek.",
     "2026-11-11": "The Colorfle puzzle for November 11, 2026 (#1661) is live with today's answer confirmed. The answer runs 25 characters, starting with M and ending with N — see the letter hints above before you peek.",
-    "2026-11-12": "The Colorfle puzzle for November 12, 2026 (#1662) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with R — see the letter hints above before you peek."
+    "2026-11-12": "The Colorfle puzzle for November 12, 2026 (#1662) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with R — see the letter hints above before you peek.",
+    "2026-11-13": "The Colorfle puzzle for November 13, 2026 (#1663) is live with today's answer confirmed. The answer runs 20 characters, starting with M and ending with E — see the letter hints above before you peek."
   }
 }

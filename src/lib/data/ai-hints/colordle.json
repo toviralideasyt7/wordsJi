@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-11T15:18:56.744Z",
+  "generatedAt": "2026-11-12T15:24:08.083Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -470,6 +470,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -510,6 +522,7 @@
     "2026-11-09": "The Colordle puzzle for November 9, 2026 (#1690) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with F — see the letter hints above before you peek.",
     "2026-11-10": "The Colordle puzzle for November 10, 2026 (#1691) is live with today's answer confirmed. The answer runs 12 characters, starting with P and ending with F — see the letter hints above before you peek.",
     "2026-11-11": "Colordle puzzle #1692 for November 11, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels.",
-    "2026-11-12": "The Colordle puzzle for November 12, 2026 (#1693) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek."
+    "2026-11-12": "The Colordle puzzle for November 12, 2026 (#1693) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
+    "2026-11-13": "The Colordle puzzle for November 13, 2026 (#1694) is live with today's answer confirmed. The answer runs 10 characters, starting with R and ending with F — see the letter hints above before you peek."
   }
 }
