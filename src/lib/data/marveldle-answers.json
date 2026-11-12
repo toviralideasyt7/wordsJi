@@ -2642,7 +2642,7 @@
   },
   "2026-11-11": {
     "date": "2026-11-11",
-    "dateId": "11/11/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/12/2026 12:00:00 AM",
     "comics": {
       "id": "cosmicghostrider",
       "name": "Cosmic Ghost Rider",
@@ -2693,7 +2693,7 @@
         "cooper"
       ]
     },
-    "solvedAt": "2026-11-11T06:06:16.401Z"
+    "solvedAt": "2026-11-12T06:35:47.806Z"
   },
   "2026-11-12": {
     "date": "2026-11-12",
