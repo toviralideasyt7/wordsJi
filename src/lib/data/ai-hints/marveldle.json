@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-11T06:22:42.296Z",
+  "generatedAt": "2026-11-12T06:19:56.254Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -421,6 +421,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "The name is long and consists of multiple distinct titles."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "X",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -457,6 +469,7 @@
     "2026-11-08": "The Marveldle puzzle for November 8, 2026 (11/8/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 16 characters, starting with N and ending with E — see the letter hints above before you peek.",
     "2026-11-09": "The Marveldle puzzle for November 9, 2026 (11/9/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 12 characters, starting with O and ending with G — see the letter hints above before you peek.",
     "2026-11-10": "The Marveldle puzzle for November 10, 2026 (11/10/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 24 characters, starting with D and ending with R — see the letter hints above before you peek.",
-    "2026-11-11": "The Marveldle puzzle for November 11, 2026, features a complex multi-word answer. This 11/11/2026 12:00:00 AM challenge follows a specific consonant-vowel distribution."
+    "2026-11-11": "The Marveldle puzzle for November 11, 2026, features a complex multi-word answer. This 11/11/2026 12:00:00 AM challenge follows a specific consonant-vowel distribution.",
+    "2026-11-12": "The Marveldle puzzle for November 12, 2026 (11/12/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 9 characters, starting with R and ending with X — see the letter hints above before you peek."
   }
 }
