@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-11T22:04:32.045Z",
+  "generatedAt": "2026-11-12T22:06:48.853Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -601,6 +601,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-11-13": {
+      "kind": "math",
+      "operator_hint": "Uses subtraction.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit and odd.",
+      "riddle": "",
+      "starts_with": "1",
+      "ends_with": "3",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -641,6 +657,7 @@
     "2026-11-09": "The Nerdle puzzle for November 9, 2026 (#1755) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
     "2026-11-10": "The Nerdle puzzle for November 10, 2026 (#1756) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
     "2026-11-11": "Nerdle puzzle #1757 presents a clean arithmetic challenge for November 11, 2026. This specific sequence relies on basic order of operations.",
-    "2026-11-12": "The Nerdle puzzle for November 12, 2026 (#1758) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek."
+    "2026-11-12": "The Nerdle puzzle for November 12, 2026 (#1758) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
+    "2026-11-13": "The Nerdle puzzle for November 13, 2026 (#1759) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek."
   }
 }

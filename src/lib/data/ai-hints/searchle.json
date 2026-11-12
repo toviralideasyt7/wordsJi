@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-11T22:22:25.647Z",
+  "generatedAt": "2026-11-12T22:06:47.209Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -442,6 +442,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -480,6 +492,7 @@
     "2026-11-09": "The Searchle puzzle for November 9, 2026 (#149) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with S — see the letter hints above before you peek.",
     "2026-11-10": "The Searchle puzzle for November 10, 2026 (#108) is live with today's answer confirmed. The answer runs 8 characters, starting with R and ending with R — see the letter hints above before you peek.",
     "2026-11-11": "The Searchle puzzle for November 11, 2026 (#109) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with A — see the letter hints above before you peek.",
-    "2026-11-12": "The Searchle puzzle for November 12, 2026 (#110) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with S — see the letter hints above before you peek."
+    "2026-11-12": "The Searchle puzzle for November 12, 2026 (#110) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with S — see the letter hints above before you peek.",
+    "2026-11-13": "The Searchle puzzle for November 13, 2026 (#111) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek."
   }
 }

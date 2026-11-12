@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-11T22:22:25.719Z",
+  "generatedAt": "2026-11-12T22:10:30.012Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -380,6 +380,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -413,6 +425,7 @@
     "2026-11-09": "The Worldle puzzle for November 9, 2026 (#1754) is live with today's answer confirmed. The answer runs 7 characters, starting with E and ending with R — see the letter hints above before you peek.",
     "2026-11-10": "The Worldle puzzle for November 10, 2026 (#1755) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with L — see the letter hints above before you peek.",
     "2026-11-11": "The Worldle puzzle for November 11, 2026 (#1756) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with A — see the letter hints above before you peek.",
-    "2026-11-12": "The Worldle puzzle for November 12, 2026 (#1757) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with D — see the letter hints above before you peek."
+    "2026-11-12": "The Worldle puzzle for November 12, 2026 (#1757) is live with today's answer confirmed. The answer runs 11 characters, starting with S and ending with D — see the letter hints above before you peek.",
+    "2026-11-13": "The Worldle puzzle for November 13, 2026 (#1758) is live with today's answer confirmed. The answer runs 8 characters, starting with D and ending with I — see the letter hints above before you peek."
   }
 }

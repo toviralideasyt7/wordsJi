@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-11T22:06:00.137Z",
+  "generatedAt": "2026-11-12T22:10:30.699Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -468,6 +468,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -508,6 +520,7 @@
     "2026-11-09": "The Countryle puzzle for November 9, 2026 (Game #1725) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-11-10": "The Countryle puzzle for November 10, 2026 (Game #1726) is live with today's answer confirmed. The answer runs 4 characters, starting with L and ending with S — see the letter hints above before you peek.",
     "2026-11-11": "Countryle Game #1727 for November 11, 2026, features a four-letter country. The pattern consists of two consonants and two vowels.",
-    "2026-11-12": "The Countryle puzzle for November 12, 2026 (Game #1728) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with A — see the letter hints above before you peek."
+    "2026-11-12": "The Countryle puzzle for November 12, 2026 (Game #1728) is live with today's answer confirmed. The answer runs 8 characters, starting with C and ending with A — see the letter hints above before you peek.",
+    "2026-11-13": "The Countryle puzzle for November 13, 2026 (Game #1729) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with N — see the letter hints above before you peek."
   }
 }

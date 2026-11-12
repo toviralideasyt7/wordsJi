@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-11T22:04:33.053Z",
+  "generatedAt": "2026-11-12T22:10:28.985Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -467,6 +467,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -507,6 +519,7 @@
     "2026-11-09": "The Betweenle puzzle for November 9, 2026 (#1334) is live with today's answer confirmed. The answer runs 5 characters, starting with O and ending with Y — see the letter hints above before you peek.",
     "2026-11-10": "The Betweenle puzzle for November 10, 2026 (#1335) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with E — see the letter hints above before you peek.",
     "2026-11-11": "The Betweenle puzzle for November 11, 2026 (#1336) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with M — see the letter hints above before you peek.",
-    "2026-11-12": "The Betweenle puzzle for November 12, 2026 (#1337) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with O — see the letter hints above before you peek."
+    "2026-11-12": "The Betweenle puzzle for November 12, 2026 (#1337) is live with today's answer confirmed. The answer runs 5 characters, starting with J and ending with O — see the letter hints above before you peek.",
+    "2026-11-13": "The Betweenle puzzle for November 13, 2026 (#1338) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with E — see the letter hints above before you peek."
   }
 }
