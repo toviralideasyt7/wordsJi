@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-11T06:04:38.931Z",
+  "generatedAt": "2026-11-12T06:04:28.810Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -462,6 +462,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a globally recognized city-state with a distinct geographical profile."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -501,6 +513,7 @@
     "2026-11-08": "The Globle puzzle for November 8, 2026 (2026-11-08) is live with today's answer confirmed. The answer runs 10 characters, starting with U and ending with N — see the letter hints above before you peek.",
     "2026-11-09": "The Globle puzzle for November 9, 2026 (2026-11-09) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with A — see the letter hints above before you peek.",
     "2026-11-10": "The Globle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek.",
-    "2026-11-11": "The Globle puzzle for November 11, 2026, features a nine-letter destination. This 2026-11-11 challenge follows a consonant-vowel pattern throughout the word."
+    "2026-11-11": "The Globle puzzle for November 11, 2026, features a nine-letter destination. This 2026-11-11 challenge follows a consonant-vowel pattern throughout the word.",
+    "2026-11-12": "The Globle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with S — see the letter hints above before you peek."
   }
 }

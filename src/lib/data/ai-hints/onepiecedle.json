@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-11T06:06:09.487Z",
+  "generatedAt": "2026-11-12T06:04:31.131Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -457,6 +457,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "A main protagonist with a highly recognizable name and role."
+    },
+    "2026-11-12": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Z",
+      "ends_with": "F",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -496,6 +508,7 @@
     "2026-11-08": "The OnePiecedle puzzle for November 8, 2026 (Game #952) is live with today's answer confirmed. The answer runs 16 characters, starting with C and ending with R — see the letter hints above before you peek.",
     "2026-11-09": "The OnePiecedle puzzle for November 9, 2026 (Game #953) is live with today's answer confirmed. The answer runs 4 characters, starting with N and ending with I — see the letter hints above before you peek.",
     "2026-11-10": "The OnePiecedle puzzle for November 10, 2026 (Game #954) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with Y — see the letter hints above before you peek.",
-    "2026-11-11": "OnePiecedle Game #955 takes place on November 11, 2026. This puzzle features a name consisting of eleven letters across two words."
+    "2026-11-11": "OnePiecedle Game #955 takes place on November 11, 2026. This puzzle features a name consisting of eleven letters across two words.",
+    "2026-11-12": "The OnePiecedle puzzle for November 12, 2026 (Game #956) is live with today's answer confirmed. The answer runs 4 characters, starting with Z and ending with F — see the letter hints above before you peek."
   }
 }
