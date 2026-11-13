@@ -941,5 +941,25 @@
     "rawVideo": "https://sporty-clips.mlb.com/Qnc0V25fV0ZRVkV3dEdEUT09X0FsSUVWVkJXVXdvQUNsRUZWd0FIVUFWZkFBQU1VMVVBQWxWWEJRc01BRlVIQUZNQw==.mp4",
     "sourceDate": "2026-11-11",
     "fetchedAt": "2026-11-11T01:06:09.539Z"
+  },
+  "2026-11-12": {
+    "date": "2026-11-12",
+    "gameNumber": 998,
+    "player": {
+      "player_name": "Cal Raleigh",
+      "player_id": "41292",
+      "team_name": "Mariners",
+      "born": "USA",
+      "birth_date": "1996-11-26",
+      "position": [
+        "C"
+      ],
+      "debut": 2021,
+      "jersey_number": 29
+    },
+    "videoDescription": "[07/20/26 : CIN 0 - 8 SEA] Cal Raleigh crushes a grand slam to left field in the bottom of the 7th inning, extending the Mariners lead to 7-0.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/20/9e3a7dab-f41bb326-66b98930-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-12",
+    "fetchedAt": "2026-11-13T01:06:12.716Z"
   }
 }
