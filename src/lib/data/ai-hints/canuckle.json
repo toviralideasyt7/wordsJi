@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-12T05:14:03.829Z",
+  "generatedAt": "2026-11-13T05:16:34.431Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -469,6 +469,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "Z",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -509,6 +521,7 @@
     "2026-11-09": "The Canuckle puzzle for November 9, 2026 (#1640) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with K — see the letter hints above before you peek.",
     "2026-11-10": "The Canuckle puzzle for November 10, 2026 (#1641) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with L — see the letter hints above before you peek.",
     "2026-11-11": "Canuckle puzzle #1642 is scheduled for November 11, 2026. This specific entry follows a five-letter pattern starting with a consonant.",
-    "2026-11-12": "The Canuckle puzzle for November 12, 2026 (#1643) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek."
+    "2026-11-12": "The Canuckle puzzle for November 12, 2026 (#1643) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek.",
+    "2026-11-13": "The Canuckle puzzle for November 13, 2026 (#1644) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with Z — see the letter hints above before you peek."
   }
 }
