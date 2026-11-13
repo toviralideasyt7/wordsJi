@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-12T15:24:07.954Z",
+  "generatedAt": "2026-11-13T16:48:23.572Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -483,6 +483,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -524,6 +536,7 @@
     "2026-11-10": "The Phoodle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with S — see the letter hints above before you peek.",
     "2026-11-11": "The Phoodle puzzle for November 11, 2026, features a five-letter word. Puzzle 2026-11-11 follows a pattern starting and ending with consonants.",
     "2026-11-12": "The Phoodle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
-    "2026-11-13": "The Phoodle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with S — see the letter hints above before you peek."
+    "2026-11-13": "The Phoodle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with S — see the letter hints above before you peek.",
+    "2026-11-14": "The Phoodle puzzle for November 14, 2026 (2026-11-14) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with D — see the letter hints above before you peek."
   }
 }
