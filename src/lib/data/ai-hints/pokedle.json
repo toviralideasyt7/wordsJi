@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-12T06:04:31.146Z",
+  "generatedAt": "2026-11-13T06:06:46.157Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -472,6 +472,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -512,6 +524,7 @@
     "2026-11-09": "The Pokedle puzzle for November 9, 2026 (Game #1124) is live with today's answer confirmed. The answer runs 9 characters, starting with V and ending with E — see the letter hints above before you peek.",
     "2026-11-10": "The Pokedle puzzle for November 10, 2026 (Game #1125) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-11-11": "The Pokedle puzzle for November 11, 2026 (Game #1126) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with M — see the letter hints above before you peek.",
-    "2026-11-12": "The Pokedle puzzle for November 12, 2026 (Game #1127) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with M — see the letter hints above before you peek."
+    "2026-11-12": "The Pokedle puzzle for November 12, 2026 (Game #1127) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with M — see the letter hints above before you peek.",
+    "2026-11-13": "The Pokedle puzzle for November 13, 2026 (Game #1128) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with R — see the letter hints above before you peek."
   }
 }

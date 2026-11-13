@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-12T06:05:57.841Z",
+  "generatedAt": "2026-11-13T06:10:26.695Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -468,6 +468,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -508,6 +520,7 @@
     "2026-11-09": "The Smashdle puzzle for November 9, 2026 (Game #1160) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with N — see the letter hints above before you peek.",
     "2026-11-10": "The Smashdle puzzle for November 10, 2026 (Game #1161) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with R — see the letter hints above before you peek.",
     "2026-11-11": "The Smashdle puzzle for November 11, 2026 (Game #1162) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with X — see the letter hints above before you peek.",
-    "2026-11-12": "The Smashdle puzzle for November 12, 2026 (Game #1163) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with A — see the letter hints above before you peek."
+    "2026-11-12": "The Smashdle puzzle for November 12, 2026 (Game #1163) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with A — see the letter hints above before you peek.",
+    "2026-11-13": "The Smashdle puzzle for November 13, 2026 (Game #1164) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }

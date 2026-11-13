@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-12T06:04:31.131Z",
+  "generatedAt": "2026-11-13T06:06:45.717Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -469,6 +469,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -509,6 +521,7 @@
     "2026-11-09": "The OnePiecedle puzzle for November 9, 2026 (Game #953) is live with today's answer confirmed. The answer runs 4 characters, starting with N and ending with I — see the letter hints above before you peek.",
     "2026-11-10": "The OnePiecedle puzzle for November 10, 2026 (Game #954) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-11-11": "OnePiecedle Game #955 takes place on November 11, 2026. This puzzle features a name consisting of eleven letters across two words.",
-    "2026-11-12": "The OnePiecedle puzzle for November 12, 2026 (Game #956) is live with today's answer confirmed. The answer runs 4 characters, starting with Z and ending with F — see the letter hints above before you peek."
+    "2026-11-12": "The OnePiecedle puzzle for November 12, 2026 (Game #956) is live with today's answer confirmed. The answer runs 4 characters, starting with Z and ending with F — see the letter hints above before you peek.",
+    "2026-11-13": "The OnePiecedle puzzle for November 13, 2026 (Game #957) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with K — see the letter hints above before you peek."
   }
 }

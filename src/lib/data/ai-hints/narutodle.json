@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-12T06:04:31.015Z",
+  "generatedAt": "2026-11-13T06:06:44.825Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -470,6 +470,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -510,6 +522,7 @@
     "2026-11-09": "The Narutodle puzzle for November 9, 2026 (Game #921) is live with today's answer confirmed. The answer runs 9 characters, starting with R and ending with A — see the letter hints above before you peek.",
     "2026-11-10": "The Narutodle puzzle for November 10, 2026 (Game #922) is live with today's answer confirmed. The answer runs 14 characters, starting with H and ending with O — see the letter hints above before you peek.",
     "2026-11-11": "The Narutodle puzzle for November 11, 2026 (Game #923) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
-    "2026-11-12": "The Narutodle puzzle for November 12, 2026 (Game #924) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with U — see the letter hints above before you peek."
+    "2026-11-12": "The Narutodle puzzle for November 12, 2026 (Game #924) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with U — see the letter hints above before you peek.",
+    "2026-11-13": "The Narutodle puzzle for November 13, 2026 (Game #925) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with A — see the letter hints above before you peek."
   }
 }
