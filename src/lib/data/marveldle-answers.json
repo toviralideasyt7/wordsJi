@@ -2749,5 +2749,60 @@
       ]
     },
     "solvedAt": "2026-11-12T06:05:57.504Z"
+  },
+  "2026-11-13": {
+    "date": "2026-11-13",
+    "dateId": "11/13/2026 12:00:00 AM",
+    "comics": {
+      "id": "darkclaw_9602",
+      "name": "Dark Claw (Earth-9602)",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Mutant",
+        "Metahuman"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Perception"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1996,
+      "firstApparitionComicTitle": "Marvel Versus DC #3",
+      "keywords": [
+        "logan wayne",
+        "wayne",
+        "9602"
+      ]
+    },
+    "mcu": {
+      "id": "alicewugulliver",
+      "name": "Alice Wu-Gulliver",
+      "gender": "Female",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Resistance",
+        "Magic"
+      ],
+      "origin": "Earth",
+      "actorName": "Ali Ahn",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "AgathasCoven"
+      ],
+      "keywords": [
+        "wu",
+        "wu-gulliver",
+        "alice"
+      ]
+    },
+    "solvedAt": "2026-11-13T06:06:12.983Z"
   }
 }
