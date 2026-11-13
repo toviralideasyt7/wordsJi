@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-12T22:06:46.660Z",
+  "generatedAt": "2026-11-13T21:58:57.961Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -476,6 +476,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "To be the living form of a spirit or a trait.",
+      "clue1": "To give a tangible form to an abstract idea.",
+      "starts_with": "E",
+      "ends_with": "Y",
+      "definition": "To be an expression of or give a tangible form to.",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word but used more frequently in formal or artistic contexts."
     }
   },
   "prose": {
@@ -517,6 +530,7 @@
     "2026-11-10": "The Worgle puzzle for November 10, 2026 (#1763) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-11": "The Worgle puzzle for November 11, 2026 (#1764) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-11-12": "The Worgle puzzle for November 12, 2026 (#1765) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with W — see the letter hints above before you peek.",
-    "2026-11-13": "The Worgle puzzle for November 13, 2026 (#1766) is live with today's answer confirmed. The answer runs 6 characters, starting with F and ending with N — see the letter hints above before you peek."
+    "2026-11-13": "The Worgle puzzle for November 13, 2026 (#1766) is live with today's answer confirmed. The answer runs 6 characters, starting with F and ending with N — see the letter hints above before you peek.",
+    "2026-11-14": "Worgle puzzle #1767 for November 14, 2026, features a six-letter word. The solution follows a pattern of three vowels and three consonants."
   }
 }

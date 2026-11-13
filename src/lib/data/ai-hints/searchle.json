@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-12T22:06:47.209Z",
+  "generatedAt": "2026-11-13T21:58:57.925Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -454,6 +454,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -493,6 +505,7 @@
     "2026-11-10": "The Searchle puzzle for November 10, 2026 (#108) is live with today's answer confirmed. The answer runs 8 characters, starting with R and ending with R — see the letter hints above before you peek.",
     "2026-11-11": "The Searchle puzzle for November 11, 2026 (#109) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with A — see the letter hints above before you peek.",
     "2026-11-12": "The Searchle puzzle for November 12, 2026 (#110) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with S — see the letter hints above before you peek.",
-    "2026-11-13": "The Searchle puzzle for November 13, 2026 (#111) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek."
+    "2026-11-13": "The Searchle puzzle for November 13, 2026 (#111) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with L — see the letter hints above before you peek.",
+    "2026-11-14": "The Searchle puzzle for November 14, 2026 (#112) is live with today's answer confirmed. The answer runs 7 characters, starting with R and ending with G — see the letter hints above before you peek."
   }
 }
