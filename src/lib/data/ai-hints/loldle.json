@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-13T06:06:45.345Z",
+  "generatedAt": "2026-11-14T06:05:30.290Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -484,6 +484,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A small scout with a big boom and a leaping jump.",
+      "clue1": "A Yordle who loves explosives and gunpowder.",
+      "starts_with": "T",
+      "ends_with": "A",
+      "definition": "A Yordle marksman and gunner from Bandle City.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A popular champion with a distinct name structure."
     }
   },
   "prose": {
@@ -525,6 +538,7 @@
     "2026-11-10": "The LoLdle puzzle for November 10, 2026 (Game #1587) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with X — see the letter hints above before you peek.",
     "2026-11-11": "The LoLdle puzzle for November 11, 2026 (Game #1588) is live with today's answer confirmed. The answer runs 7 characters, starting with T and ending with H — see the letter hints above before you peek.",
     "2026-11-12": "The LoLdle puzzle for November 12, 2026 (Game #1589) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with A — see the letter hints above before you peek.",
-    "2026-11-13": "The LoLdle puzzle for November 13, 2026 (Game #1590) is live with today's answer confirmed. The answer runs 7 characters, starting with N and ending with E — see the letter hints above before you peek."
+    "2026-11-13": "The LoLdle puzzle for November 13, 2026 (Game #1590) is live with today's answer confirmed. The answer runs 7 characters, starting with N and ending with E — see the letter hints above before you peek.",
+    "2026-11-14": "LoLdle Game #1591 for November 14, 2026, features a name ending in a vowel. The letter pattern consists of eight characters in total."
   }
 }

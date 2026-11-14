@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-13T06:10:26.695Z",
+  "generatedAt": "2026-11-14T06:07:18.886Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -480,6 +480,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A pink balloon that sings you to sleep.",
+      "clue1": "A Normal/Fairy type from the Kanto region.",
+      "starts_with": "J",
+      "ends_with": "F",
+      "definition": "A round, pink Pokémon known for its singing voice.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Highly recognizable character with a distinct visual design."
     }
   },
   "prose": {
@@ -521,6 +534,7 @@
     "2026-11-10": "The Smashdle puzzle for November 10, 2026 (Game #1161) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with R — see the letter hints above before you peek.",
     "2026-11-11": "The Smashdle puzzle for November 11, 2026 (Game #1162) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with X — see the letter hints above before you peek.",
     "2026-11-12": "The Smashdle puzzle for November 12, 2026 (Game #1163) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with A — see the letter hints above before you peek.",
-    "2026-11-13": "The Smashdle puzzle for November 13, 2026 (Game #1164) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-11-13": "The Smashdle puzzle for November 13, 2026 (Game #1164) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-11-14": "Smashdle Game #1165 takes place on November 14, 2026. This puzzle features a ten-letter word with a repeated consonant."
   }
 }

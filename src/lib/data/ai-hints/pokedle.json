@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-13T06:06:46.157Z",
+  "generatedAt": "2026-11-14T06:05:32.457Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -484,6 +484,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A royal poison protector with a sturdy, armored hide.",
+      "clue1": "The female counterpart to a certain king.",
+      "starts_with": "N",
+      "ends_with": "N",
+      "definition": "A Poison/Ground-type Pokémon known for its protective nature and royal title.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A well-known first-generation Pokémon with a distinct naming convention."
     }
   },
   "prose": {
@@ -525,6 +538,7 @@
     "2026-11-10": "The Pokedle puzzle for November 10, 2026 (Game #1125) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-11-11": "The Pokedle puzzle for November 11, 2026 (Game #1126) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with M — see the letter hints above before you peek.",
     "2026-11-12": "The Pokedle puzzle for November 12, 2026 (Game #1127) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with M — see the letter hints above before you peek.",
-    "2026-11-13": "The Pokedle puzzle for November 13, 2026 (Game #1128) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with R — see the letter hints above before you peek."
+    "2026-11-13": "The Pokedle puzzle for November 13, 2026 (Game #1128) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with R — see the letter hints above before you peek.",
+    "2026-11-14": "Pokedle Game #1129 for November 14, 2026, features a nine-letter word. The pattern begins and ends with the same consonant."
   }
 }

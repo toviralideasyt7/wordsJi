@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-13T06:06:44.825Z",
+  "generatedAt": "2026-11-14T06:06:08.952Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -482,6 +482,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A shy blossom with eyes that see through every wall.",
+      "clue1": "A member of a noble clan with a unique ocular trait.",
+      "starts_with": "H",
+      "ends_with": "A",
+      "definition": "A gentle kunoichi and the wife of the Seventh Hokage.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A central character with a very recognizable name."
     }
   },
   "prose": {
@@ -523,6 +536,7 @@
     "2026-11-10": "The Narutodle puzzle for November 10, 2026 (Game #922) is live with today's answer confirmed. The answer runs 14 characters, starting with H and ending with O — see the letter hints above before you peek.",
     "2026-11-11": "The Narutodle puzzle for November 11, 2026 (Game #923) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
     "2026-11-12": "The Narutodle puzzle for November 12, 2026 (Game #924) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with U — see the letter hints above before you peek.",
-    "2026-11-13": "The Narutodle puzzle for November 13, 2026 (Game #925) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with A — see the letter hints above before you peek."
+    "2026-11-13": "The Narutodle puzzle for November 13, 2026 (Game #925) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with A — see the letter hints above before you peek.",
+    "2026-11-14": "Narutodle Game #926 arrives on November 14, 2026. This puzzle features a twelve-letter name with a repeating vowel pattern."
   }
 }

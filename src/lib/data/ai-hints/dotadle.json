@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-13T06:06:44.999Z",
+  "generatedAt": "2026-11-14T06:05:29.904Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -484,6 +484,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I cross threads to make a cloth, or spin like a spider.",
+      "clue1": "Associated with looms and textiles.",
+      "starts_with": "W",
+      "ends_with": "R",
+      "definition": "A person who makes fabric by interlacing threads on a loom.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common occupational term with a recognizable pattern."
     }
   },
   "prose": {
@@ -525,6 +538,7 @@
     "2026-11-10": "The Dotadle puzzle for November 10, 2026 (Game #1061) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with A — see the letter hints above before you peek.",
     "2026-11-11": "The Dotadle puzzle for November 11, 2026 (Game #1062) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-11-12": "The Dotadle puzzle for November 12, 2026 (Game #1063) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with A — see the letter hints above before you peek.",
-    "2026-11-13": "The Dotadle puzzle for November 13, 2026 (Game #1064) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with W — see the letter hints above before you peek."
+    "2026-11-13": "The Dotadle puzzle for November 13, 2026 (Game #1064) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with W — see the letter hints above before you peek.",
+    "2026-11-14": "Dotadle Game #1065 takes place on November 14, 2026. This specific puzzle features a six-letter word with a repeated vowel."
   }
 }

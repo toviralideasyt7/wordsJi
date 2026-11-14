@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-13T06:06:42.411Z",
+  "generatedAt": "2026-11-14T06:06:10.194Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -486,6 +486,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A land of deep fjords and the dancing northern lights.",
+      "clue1": "A Scandinavian nation bordering the North Sea.",
+      "starts_with": "N",
+      "ends_with": "Y",
+      "definition": "A Nordic country in Northern Europe known for its mountainous coastline.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Distinctive geography and a common name make it recognizable."
     }
   },
   "prose": {
@@ -527,6 +540,7 @@
     "2026-11-10": "The Globle puzzle for November 10, 2026 (2026-11-10) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with S — see the letter hints above before you peek.",
     "2026-11-11": "The Globle puzzle for November 11, 2026, features a nine-letter destination. This 2026-11-11 challenge follows a consonant-vowel pattern throughout the word.",
     "2026-11-12": "The Globle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with S — see the letter hints above before you peek.",
-    "2026-11-13": "The Globle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 5 characters, starting with Y and ending with N — see the letter hints above before you peek."
+    "2026-11-13": "The Globle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 5 characters, starting with Y and ending with N — see the letter hints above before you peek.",
+    "2026-11-14": "The Globle puzzle for November 14, 2026, features a six-letter country. This 2026-11-14 challenge follows a pattern with no repeating characters."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-13T06:06:45.717Z",
+  "generatedAt": "2026-11-14T06:05:28.706Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -481,6 +481,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A secret agent who cleans up the mess with soap.",
+      "clue1": "A former CP9 member who worked as a secretary.",
+      "starts_with": "K",
+      "ends_with": "A",
+      "definition": "A former CP9 operative and former assistant to Spandam.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "A recognizable side character but not a main protagonist."
     }
   },
   "prose": {
@@ -522,6 +535,7 @@
     "2026-11-10": "The OnePiecedle puzzle for November 10, 2026 (Game #954) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-11-11": "OnePiecedle Game #955 takes place on November 11, 2026. This puzzle features a name consisting of eleven letters across two words.",
     "2026-11-12": "The OnePiecedle puzzle for November 12, 2026 (Game #956) is live with today's answer confirmed. The answer runs 4 characters, starting with Z and ending with F — see the letter hints above before you peek.",
-    "2026-11-13": "The OnePiecedle puzzle for November 13, 2026 (Game #957) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with K — see the letter hints above before you peek."
+    "2026-11-13": "The OnePiecedle puzzle for November 13, 2026 (Game #957) is live with today's answer confirmed. The answer runs 9 characters, starting with S and ending with K — see the letter hints above before you peek.",
+    "2026-11-14": "OnePiecedle Game #958 takes place on November 14, 2026. This puzzle features a six-letter word with no repeating characters."
   }
 }
