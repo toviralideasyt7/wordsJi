@@ -961,5 +961,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/20/9e3a7dab-f41bb326-66b98930-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-12",
     "fetchedAt": "2026-11-13T01:06:12.716Z"
+  },
+  "2026-11-13": {
+    "date": "2026-11-13",
+    "gameNumber": 999,
+    "player": {
+      "player_name": "Mike Yastrzemski",
+      "player_id": "33341",
+      "team_name": "Braves",
+      "born": "USA",
+      "birth_date": "1990-08-23",
+      "position": [
+        "LF"
+      ],
+      "debut": 2019,
+      "jersey_number": 18
+    },
+    "videoDescription": "[08/02/26 : WSH 2 - 4 ATL] Mike Yastrzemski hits a solo home run to right-center field, giving the Braves a 1-0 lead in the bottom of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/02/46da060d-1f8593e8-d3976241-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-13",
+    "fetchedAt": "2026-11-14T01:06:08.758Z"
   }
 }
