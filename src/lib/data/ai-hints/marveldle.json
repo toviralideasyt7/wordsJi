@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-13T06:24:37.256Z",
+  "generatedAt": "2026-11-14T06:25:04.907Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -445,6 +445,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-14": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -483,6 +495,7 @@
     "2026-11-10": "The Marveldle puzzle for November 10, 2026 (11/10/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 24 characters, starting with D and ending with R — see the letter hints above before you peek.",
     "2026-11-11": "The Marveldle puzzle for November 11, 2026, features a complex multi-word answer. This 11/11/2026 12:00:00 AM challenge follows a specific consonant-vowel distribution.",
     "2026-11-12": "The Marveldle puzzle for November 12, 2026 (11/12/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 9 characters, starting with R and ending with X — see the letter hints above before you peek.",
-    "2026-11-13": "The Marveldle puzzle for November 13, 2026 (11/13/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 28 characters, starting with D and ending with R — see the letter hints above before you peek."
+    "2026-11-13": "The Marveldle puzzle for November 13, 2026 (11/13/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 28 characters, starting with D and ending with R — see the letter hints above before you peek.",
+    "2026-11-14": "The Marveldle puzzle for November 14, 2026 (11/14/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 21 characters, starting with C and ending with I — see the letter hints above before you peek."
   }
 }
