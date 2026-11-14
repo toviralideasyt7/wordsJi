@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-13T01:11:40.796Z",
+  "generatedAt": "2026-11-14T01:11:28.205Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -383,6 +383,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-13": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -416,6 +428,7 @@
     "2026-11-08": "The Batter Up puzzle for November 8, 2026 (Game #994) is live with today's answer confirmed. The answer runs 11 characters, starting with H and ending with S — see the letter hints above before you peek.",
     "2026-11-09": "The Batter Up puzzle for November 9, 2026 (Game #995) is live with today's answer confirmed. The answer runs 17 characters, starting with V and ending with O — see the letter hints above before you peek.",
     "2026-11-11": "The Batter Up puzzle for November 11, 2026 (Game #997) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with N — see the letter hints above before you peek.",
-    "2026-11-12": "The Batter Up puzzle for November 12, 2026 (Game #998) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with H — see the letter hints above before you peek."
+    "2026-11-12": "The Batter Up puzzle for November 12, 2026 (Game #998) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with H — see the letter hints above before you peek.",
+    "2026-11-13": "The Batter Up puzzle for November 13, 2026 (Game #999) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with I — see the letter hints above before you peek."
   }
 }
