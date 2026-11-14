@@ -2804,5 +2804,52 @@
       ]
     },
     "solvedAt": "2026-11-13T06:06:12.983Z"
+  },
+  "2026-11-14": {
+    "date": "2026-11-14",
+    "dateId": "11/14/2026 12:00:00 AM",
+    "comics": {
+      "id": "crescent",
+      "name": "Crescent",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Summoning"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 2019,
+      "firstApparitionComicTitle": "War of the Realms: New Agents of Atlas #1",
+      "keywords": [
+        "dan bi",
+        "bi"
+      ]
+    },
+    "mcu": {
+      "id": "brunocarrelli",
+      "name": "Bruno Carrelli",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Matt Lintz",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "carrelli"
+      ]
+    },
+    "solvedAt": "2026-11-14T06:06:10.475Z"
   }
 }
