@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-14T06:05:29.904Z",
+  "generatedAt": "2026-11-15T06:05:49.003Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -497,6 +497,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common occupational term with a recognizable pattern."
+    },
+    "2026-11-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A stitched-up horror who pulls enemies close with a hook.",
+      "clue1": "A notorious butcher from the lanes of Dota 2.",
+      "starts_with": "P",
+      "ends_with": "E",
+      "definition": "A playable strength hero in the game Dota 2 known for hooking.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Highly recognizable character name with a simple five-letter structure."
     }
   },
   "prose": {
@@ -539,6 +552,7 @@
     "2026-11-11": "The Dotadle puzzle for November 11, 2026 (Game #1062) is live with today's answer confirmed. The answer runs 10 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-11-12": "The Dotadle puzzle for November 12, 2026 (Game #1063) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with A — see the letter hints above before you peek.",
     "2026-11-13": "The Dotadle puzzle for November 13, 2026 (Game #1064) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with W — see the letter hints above before you peek.",
-    "2026-11-14": "Dotadle Game #1065 takes place on November 14, 2026. This specific puzzle features a six-letter word with a repeated vowel."
+    "2026-11-14": "Dotadle Game #1065 takes place on November 14, 2026. This specific puzzle features a six-letter word with a repeated vowel.",
+    "2026-11-15": "Dotadle Game #1066 takes place on November 15, 2026. This specific puzzle features a five-letter word with no repeating characters."
   }
 }

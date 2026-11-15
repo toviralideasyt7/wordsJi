@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-14T06:07:18.886Z",
+  "generatedAt": "2026-11-15T06:08:48.366Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -493,6 +493,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Highly recognizable character with a distinct visual design."
+    },
+    "2026-11-15": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -535,6 +547,7 @@
     "2026-11-11": "The Smashdle puzzle for November 11, 2026 (Game #1162) is live with today's answer confirmed. The answer runs 3 characters, starting with F and ending with X — see the letter hints above before you peek.",
     "2026-11-12": "The Smashdle puzzle for November 12, 2026 (Game #1163) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with A — see the letter hints above before you peek.",
     "2026-11-13": "The Smashdle puzzle for November 13, 2026 (Game #1164) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
-    "2026-11-14": "Smashdle Game #1165 takes place on November 14, 2026. This puzzle features a ten-letter word with a repeated consonant."
+    "2026-11-14": "Smashdle Game #1165 takes place on November 14, 2026. This puzzle features a ten-letter word with a repeated consonant.",
+    "2026-11-15": "The Smashdle puzzle for November 15, 2026 (Game #1166) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with O — see the letter hints above before you peek."
   }
 }

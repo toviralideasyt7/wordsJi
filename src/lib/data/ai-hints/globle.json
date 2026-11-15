@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-14T06:06:10.194Z",
+  "generatedAt": "2026-11-15T06:05:43.490Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -499,6 +499,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Distinctive geography and a common name make it recognizable."
+    },
+    "2026-11-15": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A coastal West African spot where two names join as one.",
+      "clue1": "Located on the Atlantic coast of West Africa.",
+      "starts_with": "G",
+      "ends_with": "U",
+      "definition": "A small republic in West Africa bordering Senegal.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "It is a less commonly known nation with a hyphenated name."
     }
   },
   "prose": {
@@ -541,6 +554,7 @@
     "2026-11-11": "The Globle puzzle for November 11, 2026, features a nine-letter destination. This 2026-11-11 challenge follows a consonant-vowel pattern throughout the word.",
     "2026-11-12": "The Globle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with S — see the letter hints above before you peek.",
     "2026-11-13": "The Globle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 5 characters, starting with Y and ending with N — see the letter hints above before you peek.",
-    "2026-11-14": "The Globle puzzle for November 14, 2026, features a six-letter country. This 2026-11-14 challenge follows a pattern with no repeating characters."
+    "2026-11-14": "The Globle puzzle for November 14, 2026, features a six-letter country. This 2026-11-14 challenge follows a pattern with no repeating characters.",
+    "2026-11-15": "The Globle puzzle for November 15, 2026, features a twelve-letter destination. Puzzle 2026-11-15 follows a pattern with several repeating characters."
   }
 }
