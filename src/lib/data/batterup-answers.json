@@ -981,5 +981,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/02/46da060d-1f8593e8-d3976241-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-13",
     "fetchedAt": "2026-11-14T01:06:08.758Z"
+  },
+  "2026-11-15": {
+    "date": "2026-11-15",
+    "gameNumber": 1001,
+    "player": {
+      "player_name": "David Hamilton",
+      "player_id": "42987",
+      "team_name": "Brewers",
+      "born": "USA",
+      "birth_date": "1997-09-29",
+      "position": [
+        "3B"
+      ],
+      "debut": 2023,
+      "jersey_number": 6
+    },
+    "videoDescription": "[08/18/26 : SEA 0 - 22 MIL] David Hamilton crushes a three-run homer to right field, extending the Brewers' lead to 9-0 in the 6th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/18/092afcee-77b3f77a-10c9995c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-15",
+    "fetchedAt": "2026-11-15T01:06:08.625Z"
   }
 }
