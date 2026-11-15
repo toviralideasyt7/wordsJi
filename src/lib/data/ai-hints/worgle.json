@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-14T20:32:38.239Z",
+  "generatedAt": "2026-11-15T21:13:53.243Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -502,6 +502,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a simple structure."
+    },
+    "2026-11-16": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -545,6 +557,7 @@
     "2026-11-12": "The Worgle puzzle for November 12, 2026 (#1765) is live with today's answer confirmed. The answer runs 6 characters, starting with N and ending with W — see the letter hints above before you peek.",
     "2026-11-13": "The Worgle puzzle for November 13, 2026 (#1766) is live with today's answer confirmed. The answer runs 6 characters, starting with F and ending with N — see the letter hints above before you peek.",
     "2026-11-14": "Worgle puzzle #1767 for November 14, 2026, features a six-letter word. The solution follows a pattern of three vowels and three consonants.",
-    "2026-11-15": "Worgle puzzle #1768 for November 15, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-vowel pattern."
+    "2026-11-15": "Worgle puzzle #1768 for November 15, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-vowel pattern.",
+    "2026-11-16": "The Worgle puzzle for November 16, 2026 (#1769) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with G — see the letter hints above before you peek."
   }
 }
