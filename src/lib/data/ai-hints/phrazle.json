@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-14T16:52:04.796Z",
+  "generatedAt": "2026-11-15T16:48:31.869Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -504,6 +504,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-16": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -547,6 +559,7 @@
     "2026-11-12": "The Phrazle puzzle for November 12, 2026 (2026-11-12) is live with today's answer confirmed. The answer runs 25 characters, starting with U and ending with E — see the letter hints above before you peek.",
     "2026-11-13": "The Phrazle puzzle for November 13, 2026 (2026-11-13) is live with today's answer confirmed. The answer runs 22 characters, starting with T and ending with K — see the letter hints above before you peek.",
     "2026-11-14": "The Phrazle puzzle for November 14, 2026 (2026-11-14) is live with today's answer confirmed. The answer runs 23 characters, starting with F and ending with S — see the letter hints above before you peek.",
-    "2026-11-15": "The Phrazle puzzle for November 15, 2026 (2026-11-15) is live with today's answer confirmed. The answer runs 21 characters, starting with Z and ending with P — see the letter hints above before you peek."
+    "2026-11-15": "The Phrazle puzzle for November 15, 2026 (2026-11-15) is live with today's answer confirmed. The answer runs 21 characters, starting with Z and ending with P — see the letter hints above before you peek.",
+    "2026-11-16": "The Phrazle puzzle for November 16, 2026 (2026-11-16) is live with today's answer confirmed. The answer runs 17 characters, starting with A and ending with T — see the letter hints above before you peek."
   }
 }

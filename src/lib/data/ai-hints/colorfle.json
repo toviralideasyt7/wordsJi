@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-14T16:48:38.731Z",
+  "generatedAt": "2026-11-15T16:48:22.144Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -503,6 +503,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-16": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Y",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -546,6 +558,7 @@
     "2026-11-12": "The Colorfle puzzle for November 12, 2026 (#1662) is live with today's answer confirmed. The answer runs 18 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-11-13": "The Colorfle puzzle for November 13, 2026 (#1663) is live with today's answer confirmed. The answer runs 20 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-11-14": "The Colorfle puzzle for November 14, 2026 (#1664) is live with today's answer confirmed. The answer runs 21 characters, starting with L and ending with E — see the letter hints above before you peek.",
-    "2026-11-15": "The Colorfle puzzle for November 15, 2026 (#1665) is live with today's answer confirmed. The answer runs 22 characters, starting with L and ending with W — see the letter hints above before you peek."
+    "2026-11-15": "The Colorfle puzzle for November 15, 2026 (#1665) is live with today's answer confirmed. The answer runs 22 characters, starting with L and ending with W — see the letter hints above before you peek.",
+    "2026-11-16": "The Colorfle puzzle for November 16, 2026 (#1666) is live with today's answer confirmed. The answer runs 13 characters, starting with Y and ending with N — see the letter hints above before you peek."
   }
 }

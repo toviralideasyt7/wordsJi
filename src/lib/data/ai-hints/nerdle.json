@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-14T16:44:37.335Z",
+  "generatedAt": "2026-11-15T16:44:39.428Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -649,6 +649,22 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-11-16": {
+      "kind": "math",
+      "operator_hint": "Uses addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a 2-digit number and odd.",
+      "riddle": "",
+      "starts_with": "3",
+      "ends_with": "3",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -692,6 +708,7 @@
     "2026-11-12": "The Nerdle puzzle for November 12, 2026 (#1758) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-13": "The Nerdle puzzle for November 13, 2026 (#1759) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
     "2026-11-14": "The Nerdle puzzle for November 14, 2026 (#1760) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
-    "2026-11-15": "The Nerdle puzzle for November 15, 2026 (#1761) is live with today's equation confirmed. The equation runs 8 characters using addition and subtraction — see the math hints above before you peek."
+    "2026-11-15": "The Nerdle puzzle for November 15, 2026 (#1761) is live with today's equation confirmed. The equation runs 8 characters using addition and subtraction — see the math hints above before you peek.",
+    "2026-11-16": "The Nerdle puzzle for November 16, 2026 (#1762) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-14T16:44:36.162Z",
+  "generatedAt": "2026-11-15T16:44:38.400Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -501,6 +501,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-16": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -544,6 +556,7 @@
     "2026-11-12": "The Spotle puzzle for November 12, 2026 (Day 1700) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with X — see the letter hints above before you peek.",
     "2026-11-13": "The Spotle puzzle for November 13, 2026 (Day 1701) is live with today's answer confirmed. The answer runs 4 characters, starting with C and ending with T — see the letter hints above before you peek.",
     "2026-11-14": "The Spotle puzzle for November 14, 2026 (Day 1702) is live with today's answer confirmed. The answer runs 10 characters, starting with S and ending with N — see the letter hints above before you peek.",
-    "2026-11-15": "The Spotle puzzle for November 15, 2026 (Day 1703) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with O — see the letter hints above before you peek."
+    "2026-11-15": "The Spotle puzzle for November 15, 2026 (Day 1703) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with O — see the letter hints above before you peek.",
+    "2026-11-16": "The Spotle puzzle for November 16, 2026 (Day 1704) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with Y — see the letter hints above before you peek."
   }
 }
