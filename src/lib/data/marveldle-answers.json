@@ -2901,5 +2901,63 @@
       ]
     },
     "solvedAt": "2026-11-15T06:05:42.255Z"
+  },
+  "2026-11-16": {
+    "date": "2026-11-16",
+    "dateId": "11/16/2026 12:00:00 AM",
+    "comics": {
+      "id": "moltenman",
+      "name": "Molten Man",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Elemental"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1965,
+      "firstApparitionComicTitle": "Amazing Spider-Man #28",
+      "keywords": [
+        "mark raxton",
+        "raxton"
+      ]
+    },
+    "mcu": {
+      "id": "modok",
+      "name": "M.O.D.O.K.",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Resistance",
+        "Flight",
+        "Technological"
+      ],
+      "origin": "Earth",
+      "actorName": "Corey Stoll",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "darren cross",
+        "yellowjacket",
+        "modok",
+        "cross"
+      ]
+    },
+    "solvedAt": "2026-11-16T06:05:40.306Z"
   }
 }
