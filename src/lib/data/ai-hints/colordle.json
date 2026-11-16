@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-15T16:44:39.039Z",
+  "generatedAt": "2026-11-16T15:59:59.805Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -518,6 +518,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-17": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -562,6 +574,7 @@
     "2026-11-13": "The Colordle puzzle for November 13, 2026 (#1694) is live with today's answer confirmed. The answer runs 10 characters, starting with R and ending with F — see the letter hints above before you peek.",
     "2026-11-14": "The Colordle puzzle for November 14, 2026 (#1695) is live with today's answer confirmed. The answer runs 10 characters, starting with R and ending with A — see the letter hints above before you peek.",
     "2026-11-15": "The Colordle puzzle for November 15, 2026 (#1696) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with A — see the letter hints above before you peek.",
-    "2026-11-16": "The Colordle puzzle for November 16, 2026 (#1697) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with D — see the letter hints above before you peek."
+    "2026-11-16": "The Colordle puzzle for November 16, 2026 (#1697) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with D — see the letter hints above before you peek.",
+    "2026-11-17": "The Colordle puzzle for November 17, 2026 (#1698) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with D — see the letter hints above before you peek."
   }
 }
