@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-16T06:11:04.573Z",
+  "generatedAt": "2026-11-17T06:11:05.441Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -517,6 +517,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-17": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -561,6 +573,7 @@
     "2026-11-13": "The Smashdle puzzle for November 13, 2026 (Game #1164) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-11-14": "Smashdle Game #1165 takes place on November 14, 2026. This puzzle features a ten-letter word with a repeated consonant.",
     "2026-11-15": "The Smashdle puzzle for November 15, 2026 (Game #1166) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with O — see the letter hints above before you peek.",
-    "2026-11-16": "The Smashdle puzzle for November 16, 2026 (Game #1167) is live with today's answer confirmed. The answer runs 3 characters, starting with R and ending with Y — see the letter hints above before you peek."
+    "2026-11-16": "The Smashdle puzzle for November 16, 2026 (Game #1167) is live with today's answer confirmed. The answer runs 3 characters, starting with R and ending with Y — see the letter hints above before you peek.",
+    "2026-11-17": "The Smashdle puzzle for November 17, 2026 (Game #1168) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with E — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-16T06:07:23.897Z",
+  "generatedAt": "2026-11-17T06:07:24.005Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -519,6 +519,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-17": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -563,6 +575,7 @@
     "2026-11-13": "The Narutodle puzzle for November 13, 2026 (Game #925) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-14": "Narutodle Game #926 arrives on November 14, 2026. This puzzle features a twelve-letter name with a repeating vowel pattern.",
     "2026-11-15": "The Narutodle puzzle for November 15, 2026 (Game #927) is live with today's answer confirmed. The answer runs 6 characters, starting with Y and ending with O — see the letter hints above before you peek.",
-    "2026-11-16": "The Narutodle puzzle for November 16, 2026 (Game #928) is live with today's answer confirmed. The answer runs 12 characters, starting with D and ending with A — see the letter hints above before you peek."
+    "2026-11-16": "The Narutodle puzzle for November 16, 2026 (Game #928) is live with today's answer confirmed. The answer runs 12 characters, starting with D and ending with A — see the letter hints above before you peek.",
+    "2026-11-17": "The Narutodle puzzle for November 17, 2026 (Game #929) is live with today's answer confirmed. The answer runs 8 characters, starting with M and ending with Y — see the letter hints above before you peek."
   }
 }
