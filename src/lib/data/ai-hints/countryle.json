@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-16T22:19:08.188Z",
+  "generatedAt": "2026-11-17T22:16:21.570Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -528,6 +528,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "An island home where a giant flightless bird once roamed.",
+      "clue1": "An Indian Ocean nation known for its turquoise waters.",
+      "starts_with": "M",
+      "ends_with": "S",
+      "definition": "An island nation in the Indian Ocean east of Madagascar.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known island nation but slightly longer name than average."
     }
   },
   "prose": {
@@ -573,6 +586,7 @@
     "2026-11-14": "The Countryle puzzle for November 14, 2026 (Game #1730) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek.",
     "2026-11-15": "The Countryle puzzle for November 15, 2026 (Game #1731) is live with today's answer confirmed. The answer runs 13 characters, starting with L and ending with N — see the letter hints above before you peek.",
     "2026-11-16": "The Countryle puzzle for November 16, 2026 (Game #1732) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
-    "2026-11-17": "The Countryle puzzle for November 17, 2026 (Game #1733) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with N — see the letter hints above before you peek."
+    "2026-11-17": "The Countryle puzzle for November 17, 2026 (Game #1733) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with N — see the letter hints above before you peek.",
+    "2026-11-18": "Countryle Game #1734 for November 18, 2026, features a nine-letter country. The word follows a consonant-vowel pattern starting with M."
   }
 }

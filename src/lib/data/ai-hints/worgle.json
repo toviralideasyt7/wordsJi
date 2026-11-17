@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-16T22:15:25.250Z",
+  "generatedAt": "2026-11-17T22:14:18.217Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -526,6 +526,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "Small stones that crunch beneath your feet on a country path.",
+      "clue1": "Commonly used for driveways or railway beds.",
+      "starts_with": "G",
+      "ends_with": "L",
+      "definition": "A mixture of small stones, pebbles, and sand.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common noun with a straightforward phonetic structure."
     }
   },
   "prose": {
@@ -571,6 +584,7 @@
     "2026-11-14": "Worgle puzzle #1767 for November 14, 2026, features a six-letter word. The solution follows a pattern of three vowels and three consonants.",
     "2026-11-15": "Worgle puzzle #1768 for November 15, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-vowel pattern.",
     "2026-11-16": "The Worgle puzzle for November 16, 2026 (#1769) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with G — see the letter hints above before you peek.",
-    "2026-11-17": "The Worgle puzzle for November 17, 2026 (#1770) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with C — see the letter hints above before you peek."
+    "2026-11-17": "The Worgle puzzle for November 17, 2026 (#1770) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with C — see the letter hints above before you peek.",
+    "2026-11-18": "Worgle puzzle #1771 for November 18, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with two vowels."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-16T22:19:07.966Z",
+  "generatedAt": "2026-11-17T22:16:13.467Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -440,6 +440,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A giant island where the kangaroos hop and the opera house sings.",
+      "clue1": "It is both a country and a continent.",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "A sovereign country and continent located between the Indian and Pacific oceans.",
+      "difficulty": 1,
+      "difficulty_label": "Very Easy",
+      "difficulty_reason": "It is one of the most recognizable and largest nations globally."
     }
   },
   "prose": {
@@ -478,6 +491,7 @@
     "2026-11-14": "The Worldle puzzle for November 14, 2026 (#1759) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with O — see the letter hints above before you peek.",
     "2026-11-15": "The Worldle puzzle for November 15, 2026 (#1760) is live with today's answer confirmed. The answer runs 4 characters, starting with I and ending with N — see the letter hints above before you peek.",
     "2026-11-16": "The Worldle puzzle for November 16, 2026 (#1761) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
-    "2026-11-17": "The Worldle puzzle for November 17, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with I — see the letter hints above before you peek."
+    "2026-11-17": "The Worldle puzzle for November 17, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with I — see the letter hints above before you peek.",
+    "2026-11-18": "Worldle puzzle #1763 for November 18, 2026, features a ten-letter word. The pattern begins and ends with the same vowel."
   }
 }
