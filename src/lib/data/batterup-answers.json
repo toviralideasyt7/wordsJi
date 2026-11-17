@@ -1001,5 +1001,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/18/092afcee-77b3f77a-10c9995c-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-15",
     "fetchedAt": "2026-11-15T01:06:08.625Z"
+  },
+  "2026-11-16": {
+    "date": "2026-11-16",
+    "gameNumber": 1002,
+    "player": {
+      "player_name": "Giancarlo Stanton",
+      "player_id": "30583",
+      "team_name": "Yankees",
+      "born": "USA",
+      "birth_date": "1989-11-08",
+      "position": [
+        "DH"
+      ],
+      "debut": 2010,
+      "jersey_number": 27
+    },
+    "videoDescription": "[10/19/24 : NYY 7 - 3 CLE] Giancarlo Stanton ties the game at 2 with a two-run home run to left-center field in the top of the 6th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2024/2024-10/19/a58b1054-5cda2394-20cbbdfd-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-16",
+    "fetchedAt": "2026-11-17T01:06:02.594Z"
   }
 }
