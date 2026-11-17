@@ -2959,5 +2959,60 @@
       ]
     },
     "solvedAt": "2026-11-16T06:05:40.306Z"
+  },
+  "2026-11-17": {
+    "date": "2026-11-17",
+    "dateId": "11/17/2026 12:00:00 AM",
+    "comics": {
+      "id": "spiderman_peterparker",
+      "name": "Spider-Man (Peter Parker)",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Wallcrawling"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1962,
+      "firstApparitionComicTitle": "Amazing Fantasy #15",
+      "keywords": [
+        "peter",
+        "parker",
+        "peter parker"
+      ]
+    },
+    "mcu": {
+      "id": "ulyssesklaue",
+      "name": "Ulysses Klaue",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Technological"
+      ],
+      "origin": "Earth",
+      "actorName": "Andy Serkis",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "klaue"
+      ]
+    },
+    "solvedAt": "2026-11-17T06:06:07.859Z"
   }
 }
