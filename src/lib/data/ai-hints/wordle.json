@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-16T15:59:59.508Z",
+  "generatedAt": "2026-11-17T16:09:40.054Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -532,6 +532,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A sudden slip of the tongue that reveals a secret.",
+      "clue1": "To speak impulsively without thinking first.",
+      "starts_with": "B",
+      "ends_with": "T",
+      "definition": "To utter abruptly and impulsively.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word but uses a less frequent consonant cluster."
     }
   },
   "prose": {
@@ -577,6 +590,7 @@
     "2026-11-14": "The Wordle puzzle for November 14, 2026 (#1974) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with Y — see the letter hints above before you peek.",
     "2026-11-15": "The Wordle puzzle for November 15, 2026 (#1975) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek.",
     "2026-11-16": "The Wordle puzzle for November 16, 2026 (#1976) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with L — see the letter hints above before you peek.",
-    "2026-11-17": "The Wordle puzzle for November 17, 2026 (#1977) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek."
+    "2026-11-17": "The Wordle puzzle for November 17, 2026 (#1977) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
+    "2026-11-18": "Wordle puzzle #1978 for November 18, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel."
   }
 }

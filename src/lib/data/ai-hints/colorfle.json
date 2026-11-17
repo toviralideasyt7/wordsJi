@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-16T16:00:00.174Z",
+  "generatedAt": "2026-11-17T16:09:49.994Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -527,6 +527,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "A bright sun, a soft bloom, and a royal robe.",
+      "clue1": "A sunny hue, a soft blush, and a deep violet.",
+      "starts_with": "Y",
+      "ends_with": "E",
+      "definition": "A sequence of three specific colors including a bright, a pale, and a dark shade.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The multi-word format and specific shade descriptors increase the complexity."
     }
   },
   "prose": {
@@ -572,6 +585,7 @@
     "2026-11-14": "The Colorfle puzzle for November 14, 2026 (#1664) is live with today's answer confirmed. The answer runs 21 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-11-15": "The Colorfle puzzle for November 15, 2026 (#1665) is live with today's answer confirmed. The answer runs 22 characters, starting with L and ending with W — see the letter hints above before you peek.",
     "2026-11-16": "The Colorfle puzzle for November 16, 2026 (#1666) is live with today's answer confirmed. The answer runs 13 characters, starting with Y and ending with N — see the letter hints above before you peek.",
-    "2026-11-17": "The Colorfle puzzle for November 17, 2026 (#1667) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with D — see the letter hints above before you peek."
+    "2026-11-17": "The Colorfle puzzle for November 17, 2026 (#1667) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with D — see the letter hints above before you peek.",
+    "2026-11-18": "Colorfle puzzle #1668 for November 18, 2026, features a three-color combination. The solution follows a specific pattern of brightness and saturation."
   }
 }
