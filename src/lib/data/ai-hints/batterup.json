@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-15T01:17:44.466Z",
+  "generatedAt": "2026-11-17T01:11:31.507Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -407,6 +407,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-16": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -442,6 +454,7 @@
     "2026-11-11": "The Batter Up puzzle for November 11, 2026 (Game #997) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with N — see the letter hints above before you peek.",
     "2026-11-12": "The Batter Up puzzle for November 12, 2026 (Game #998) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with H — see the letter hints above before you peek.",
     "2026-11-13": "The Batter Up puzzle for November 13, 2026 (Game #999) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with I — see the letter hints above before you peek.",
-    "2026-11-15": "The Batter Up puzzle for November 15, 2026 (Game #1001) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with N — see the letter hints above before you peek."
+    "2026-11-15": "The Batter Up puzzle for November 15, 2026 (Game #1001) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with N — see the letter hints above before you peek.",
+    "2026-11-16": "The Batter Up puzzle for November 16, 2026 (Game #1002) is live with today's answer confirmed. The answer runs 16 characters, starting with G and ending with N — see the letter hints above before you peek."
   }
 }
