@@ -2962,7 +2962,7 @@
   },
   "2026-11-17": {
     "date": "2026-11-17",
-    "dateId": "11/17/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/18/2026 12:00:00 AM",
     "comics": {
       "id": "spiderman_peterparker",
       "name": "Spider-Man (Peter Parker)",
@@ -3013,7 +3013,7 @@
         "klaue"
       ]
     },
-    "solvedAt": "2026-11-17T06:06:07.859Z"
+    "solvedAt": "2026-11-18T06:35:51.932Z"
   },
   "2026-11-18": {
     "date": "2026-11-18",
