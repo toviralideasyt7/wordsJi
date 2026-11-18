@@ -1021,5 +1021,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2024/2024-10/19/a58b1054-5cda2394-20cbbdfd-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-16",
     "fetchedAt": "2026-11-17T01:06:02.594Z"
+  },
+  "2026-11-17": {
+    "date": "2026-11-17",
+    "gameNumber": 1003,
+    "player": {
+      "player_name": "Nolan Schanuel",
+      "player_id": "4739755",
+      "team_name": "Angels",
+      "born": "USA",
+      "birth_date": "2002-02-14",
+      "position": [
+        "1B"
+      ],
+      "debut": 2023,
+      "jersey_number": 18
+    },
+    "videoDescription": "[04/22/26 : TOR 3 - 7 LAA] Nolan Schanuel hits a solo home run to right field to extend the Angels' lead to 2-0 in the bottom of the 4th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/22/6af3f86e-57df19dc-eaf79413-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-17",
+    "fetchedAt": "2026-11-18T01:05:54.636Z"
   }
 }
