@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-17T16:09:41.491Z",
+  "generatedAt": "2026-11-18T15:47:40.971Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -543,6 +543,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The color is a common descriptive pair but the specific shade varies."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A warm spice that tastes like a cozy winter treat.",
+      "clue1": "Commonly found in rolls or sprinkled on lattes.",
+      "starts_with": "C",
+      "ends_with": "D",
+      "definition": "An aromatic spice made from the inner bark of certain laurel trees.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common spice and recognizable color name."
     }
   },
   "prose": {
@@ -589,6 +602,7 @@
     "2026-11-15": "The Colordle puzzle for November 15, 2026 (#1696) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with A — see the letter hints above before you peek.",
     "2026-11-16": "The Colordle puzzle for November 16, 2026 (#1697) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with D — see the letter hints above before you peek.",
     "2026-11-17": "The Colordle puzzle for November 17, 2026 (#1698) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with D — see the letter hints above before you peek.",
-    "2026-11-18": "Colordle puzzle #1699 for November 18, 2026, features a ten-letter color name. The solution follows a pattern of two distinct words."
+    "2026-11-18": "Colordle puzzle #1699 for November 18, 2026, features a ten-letter color name. The solution follows a pattern of two distinct words.",
+    "2026-11-19": "Colordle puzzle #1700 for November 19, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels."
   }
 }

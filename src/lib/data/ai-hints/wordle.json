@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-17T16:09:40.054Z",
+  "generatedAt": "2026-11-18T15:47:34.805Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -545,6 +545,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common word but uses a less frequent consonant cluster."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am the power to move crowds without lifting a finger.",
+      "clue1": "Often associated with social media influence.",
+      "starts_with": "C",
+      "ends_with": "T",
+      "definition": "Influence or power, especially in politics or business.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common modern usage, but the spelling is straightforward."
     }
   },
   "prose": {
@@ -591,6 +604,7 @@
     "2026-11-15": "The Wordle puzzle for November 15, 2026 (#1975) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek.",
     "2026-11-16": "The Wordle puzzle for November 16, 2026 (#1976) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with L — see the letter hints above before you peek.",
     "2026-11-17": "The Wordle puzzle for November 17, 2026 (#1977) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
-    "2026-11-18": "Wordle puzzle #1978 for November 18, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel."
+    "2026-11-18": "Wordle puzzle #1978 for November 18, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel.",
+    "2026-11-19": "Wordle puzzle #1979 arrives on November 19, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }
