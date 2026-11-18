@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-17T22:17:19.533Z",
+  "generatedAt": "2026-11-18T22:07:20.109Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -541,6 +541,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Contains two distinct idioms combined into one long phrase."
+    },
+    "2026-11-19": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "18 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -587,6 +599,7 @@
     "2026-11-15": "The Phrazle puzzle for November 15, 2026 (2026-11-15) is live with today's answer confirmed. The answer runs 21 characters, starting with Z and ending with P — see the letter hints above before you peek.",
     "2026-11-16": "The Phrazle puzzle for November 16, 2026 (2026-11-16) is live with today's answer confirmed. The answer runs 17 characters, starting with A and ending with T — see the letter hints above before you peek.",
     "2026-11-17": "The Phrazle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 23 characters, starting with T and ending with N — see the letter hints above before you peek.",
-    "2026-11-18": "The Phrazle puzzle for November 18, 2026, features a complex multi-word structure. Puzzle 2026-11-18 consists of twenty-eight letters including several spaces."
+    "2026-11-18": "The Phrazle puzzle for November 18, 2026, features a complex multi-word structure. Puzzle 2026-11-18 consists of twenty-eight letters including several spaces.",
+    "2026-11-19": "The Phrazle puzzle for November 19, 2026 (2026-11-19) is live with today's answer confirmed. The answer runs 32 characters, starting with T and ending with G — see the letter hints above before you peek."
   }
 }

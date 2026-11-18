@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-17T22:16:13.467Z",
+  "generatedAt": "2026-11-18T22:06:23.382Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -453,6 +453,19 @@
       "difficulty": 1,
       "difficulty_label": "Very Easy",
       "difficulty_reason": "It is one of the most recognizable and largest nations globally."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A West African coast where gold and bauxite reside.",
+      "clue1": "It shares a name with a former British gold coin.",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "A republic in West Africa bordering Senegal and Ivory Coast.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Commonly known country with a distinctive starting letter."
     }
   },
   "prose": {
@@ -492,6 +505,7 @@
     "2026-11-15": "The Worldle puzzle for November 15, 2026 (#1760) is live with today's answer confirmed. The answer runs 4 characters, starting with I and ending with N — see the letter hints above before you peek.",
     "2026-11-16": "The Worldle puzzle for November 16, 2026 (#1761) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Worldle puzzle for November 17, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with I — see the letter hints above before you peek.",
-    "2026-11-18": "Worldle puzzle #1763 for November 18, 2026, features a ten-letter word. The pattern begins and ends with the same vowel."
+    "2026-11-18": "Worldle puzzle #1763 for November 18, 2026, features a ten-letter word. The pattern begins and ends with the same vowel.",
+    "2026-11-19": "Worldle puzzle #1764 for November 19, 2026, features a six-letter country name. The word follows a consonant-vowel-consonant-vowel pattern for its first four letters."
   }
 }

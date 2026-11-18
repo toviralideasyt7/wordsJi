@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-17T22:13:24.295Z",
+  "generatedAt": "2026-11-18T22:04:29.852Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -538,6 +538,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "The name is a common color and a very famous global pop star."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "He loves to shout about winning and keeping it a certain way.",
+      "clue1": "Known for high-energy introductions on hit records.",
+      "starts_with": "D",
+      "ends_with": "D",
+      "definition": "American record producer and media personality known for curated hit singles.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Highly recognizable public figure with a distinct catchphrase."
     }
   },
   "prose": {
@@ -584,6 +597,7 @@
     "2026-11-15": "The Spotle puzzle for November 15, 2026 (Day 1703) is live with today's answer confirmed. The answer runs 15 characters, starting with C and ending with O — see the letter hints above before you peek.",
     "2026-11-16": "The Spotle puzzle for November 16, 2026 (Day 1704) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with Y — see the letter hints above before you peek.",
     "2026-11-17": "The Spotle puzzle for November 17, 2026 (Day 1705) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with T — see the letter hints above before you peek.",
-    "2026-11-18": "Spotle puzzle Day 1706 takes place on November 18, 2026. This specific entry follows a four-letter pattern ending in a consonant."
+    "2026-11-18": "Spotle puzzle Day 1706 takes place on November 18, 2026. This specific entry follows a four-letter pattern ending in a consonant.",
+    "2026-11-19": "Spotle puzzle Day 1707 arrives on November 19, 2026. This specific entry features a name starting and ending with the same letter."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-17T22:15:04.303Z",
+  "generatedAt": "2026-11-18T22:06:09.065Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -540,6 +540,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a straightforward structure and clear synonyms."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "The harsh force of a winter wind's blow.",
+      "clue1": "Often associated with the cold or a sudden impact.",
+      "starts_with": "B",
+      "ends_with": "T",
+      "definition": "The piercing coldness of a wind; the main force of a blow.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word is common but has a less frequent usage pattern."
     }
   },
   "prose": {
@@ -586,6 +599,7 @@
     "2026-11-15": "The Betweenle puzzle for November 15, 2026 (#1340) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with T — see the letter hints above before you peek.",
     "2026-11-16": "The Betweenle puzzle for November 16, 2026 (#1341) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with T — see the letter hints above before you peek.",
     "2026-11-17": "The Betweenle puzzle for November 17, 2026 (#1342) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with O — see the letter hints above before you peek.",
-    "2026-11-18": "Betweenle puzzle #1343 is scheduled for November 18, 2026. This specific entry follows a five-letter pattern ending in Y."
+    "2026-11-18": "Betweenle puzzle #1343 is scheduled for November 18, 2026. This specific entry follows a five-letter pattern ending in Y.",
+    "2026-11-19": "Betweenle puzzle #1344 takes place on November 19, 2026. This specific entry follows a consonant-heavy five-letter pattern."
   }
 }

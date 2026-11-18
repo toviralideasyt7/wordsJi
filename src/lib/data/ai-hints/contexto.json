@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-17T22:16:21.628Z",
+  "generatedAt": "2026-11-18T22:06:59.336Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -541,6 +541,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common spiritual concept with strong semantic associations."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A hunger of the heart that seeks what is not yet held.",
+      "clue1": "A strong feeling of wanting something.",
+      "starts_with": "D",
+      "ends_with": "E",
+      "definition": "A strong feeling of wanting to get something or wishing for something.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common abstract noun with a straightforward meaning."
     }
   },
   "prose": {
@@ -587,6 +600,7 @@
     "2026-11-15": "The Contexto puzzle for November 15, 2026 (#1519) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with D — see the letter hints above before you peek.",
     "2026-11-16": "The Contexto puzzle for November 16, 2026 (#1520) is live with today's answer confirmed. The answer runs 4 characters, starting with H and ending with O — see the letter hints above before you peek.",
     "2026-11-17": "The Contexto puzzle for November 17, 2026 (#1521) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with E — see the letter hints above before you peek.",
-    "2026-11-18": "Contexto puzzle #1522 was released on November 18, 2026. The target word follows a consonant-vowel-consonsonant-vowel-consonant-vowel-consonant pattern."
+    "2026-11-18": "Contexto puzzle #1522 was released on November 18, 2026. The target word follows a consonant-vowel-consonsonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-11-19": "Contexto puzzle #1523 for November 19, 2026, features a word with six letters. The pattern begins and ends with the same vowel."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-17T22:13:24.987Z",
+  "generatedAt": "2026-11-18T22:05:13.124Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -697,6 +697,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple two-digit subtraction with no regrouping needed for the final result."
+    },
+    "2026-11-19": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication and division.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit.",
+      "riddle": "A product divided by itself leaves a lonely unit.",
+      "starts_with": "9",
+      "ends_with": "1",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple operations with a common factor lead to a basic outcome."
     }
   },
   "prose": {
@@ -743,6 +759,7 @@
     "2026-11-15": "The Nerdle puzzle for November 15, 2026 (#1761) is live with today's equation confirmed. The equation runs 8 characters using addition and subtraction — see the math hints above before you peek.",
     "2026-11-16": "The Nerdle puzzle for November 16, 2026 (#1762) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-17": "The Nerdle puzzle for November 17, 2026 (#1763) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
-    "2026-11-18": "Nerdle puzzle #1764 presents a straightforward subtraction challenge for players. This November 18, 2026 entry requires finding a specific two-digit difference."
+    "2026-11-18": "Nerdle puzzle #1764 presents a straightforward subtraction challenge for players. This November 18, 2026 entry requires finding a specific two-digit difference.",
+    "2026-11-19": "Nerdle puzzle #1765 arrives on November 19, 2026. This specific challenge focuses on the relationship between products and quotients."
   }
 }
