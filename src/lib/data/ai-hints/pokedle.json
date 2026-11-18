@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-17T06:07:24.577Z",
+  "generatedAt": "2026-11-18T06:04:49.184Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -533,6 +533,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "M",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -578,6 +590,7 @@
     "2026-11-14": "Pokedle Game #1129 for November 14, 2026, features a nine-letter word. The pattern begins and ends with the same consonant.",
     "2026-11-15": "The Pokedle puzzle for November 15, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-16": "The Pokedle puzzle for November 16, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 7 characters, starting with R and ending with A — see the letter hints above before you peek.",
-    "2026-11-17": "The Pokedle puzzle for November 17, 2026 (Game #1132) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with L — see the letter hints above before you peek."
+    "2026-11-17": "The Pokedle puzzle for November 17, 2026 (Game #1132) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with L — see the letter hints above before you peek.",
+    "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek."
   }
 }

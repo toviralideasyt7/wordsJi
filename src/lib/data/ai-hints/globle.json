@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-17T06:07:20.936Z",
+  "generatedAt": "2026-11-18T06:04:41.664Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -536,6 +536,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-18": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A land of tango and silver, where football is a religion.",
+      "clue1": "Located at the southern tip of South America.",
+      "starts_with": "A",
+      "ends_with": "A",
+      "definition": "A large country in southern South America known for its diverse landscapes.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A globally recognized nation with distinct cultural and geographical markers."
     }
   },
   "prose": {
@@ -581,6 +594,7 @@
     "2026-11-14": "The Globle puzzle for November 14, 2026, features a six-letter country. This 2026-11-14 challenge follows a pattern with no repeating characters.",
     "2026-11-15": "The Globle puzzle for November 15, 2026, features a twelve-letter destination. Puzzle 2026-11-15 follows a pattern with several repeating characters.",
     "2026-11-16": "The Globle puzzle for November 16, 2026 (2026-11-16) is live with today's answer confirmed. The answer runs 5 characters, starting with N and ending with R — see the letter hints above before you peek.",
-    "2026-11-17": "The Globle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with R — see the letter hints above before you peek."
+    "2026-11-17": "The Globle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with R — see the letter hints above before you peek.",
+    "2026-11-18": "The Globle puzzle for November 18, 2026, features a word starting and ending with the same letter. Puzzle 2026-11-18 requires players to navigate toward a major Southern Hemisphere territory."
   }
 }
