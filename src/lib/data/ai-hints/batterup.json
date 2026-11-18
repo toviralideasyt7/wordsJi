@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-17T01:11:31.507Z",
+  "generatedAt": "2026-11-18T01:09:23.142Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -419,6 +419,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-17": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A rookie's patience leads to a record-breaking wait for a strike.",
+      "clue1": "Known for an incredibly long streak without a strikeout.",
+      "starts_with": "N",
+      "ends_with": "L",
+      "definition": "American professional baseball player known for his disciplined plate approach.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A niche sports record makes him recognizable only to dedicated baseball fans."
     }
   },
   "prose": {
@@ -455,6 +468,7 @@
     "2026-11-12": "The Batter Up puzzle for November 12, 2026 (Game #998) is live with today's answer confirmed. The answer runs 10 characters, starting with C and ending with H — see the letter hints above before you peek.",
     "2026-11-13": "The Batter Up puzzle for November 13, 2026 (Game #999) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with I — see the letter hints above before you peek.",
     "2026-11-15": "The Batter Up puzzle for November 15, 2026 (Game #1001) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with N — see the letter hints above before you peek.",
-    "2026-11-16": "The Batter Up puzzle for November 16, 2026 (Game #1002) is live with today's answer confirmed. The answer runs 16 characters, starting with G and ending with N — see the letter hints above before you peek."
+    "2026-11-16": "The Batter Up puzzle for November 16, 2026 (Game #1002) is live with today's answer confirmed. The answer runs 16 characters, starting with G and ending with N — see the letter hints above before you peek.",
+    "2026-11-17": "Batter Up Game #1003 arrives on November 17, 2026. This puzzle features a thirteen-letter name with a distinct consonant-vowel balance."
   }
 }
