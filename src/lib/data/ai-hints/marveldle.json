@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-18T06:19:49.125Z",
+  "generatedAt": "2026-11-19T06:22:26.812Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -506,6 +506,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A porcine web-slinger and a master of time's twisted loops.",
+      "clue1": "A cartoon counterpart and a temporal anomaly.",
+      "starts_with": "S",
+      "ends_with": "X",
+      "definition": "A porcine version of a web-slinging hero and a time-traveling villain.",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Requires knowledge of obscure multiversal and temporal characters."
     }
   },
   "prose": {
@@ -549,6 +562,7 @@
     "2026-11-15": "The Marveldle puzzle for November 15, 2026 (11/15/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 17 characters, starting with M and ending with T — see the letter hints above before you peek.",
     "2026-11-16": "The Marveldle puzzle for November 16, 2026 (11/16/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 14 characters, starting with M and ending with K — see the letter hints above before you peek.",
     "2026-11-17": "The Marveldle puzzle for November 17, 2026, features a complex multi-character string. This 11/17/2026 12:00:00 AM challenge begins with the letter S and ends with E.",
-    "2026-11-18": "The Marveldle puzzle for November 18, 2026 (11/18/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 19 characters, starting with V and ending with A — see the letter hints above before you peek."
+    "2026-11-18": "The Marveldle puzzle for November 18, 2026 (11/18/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 19 characters, starting with V and ending with A — see the letter hints above before you peek.",
+    "2026-11-19": "The Marveldle puzzle for November 19, 2026, features a complex multi-character answer. This specific puzzle 11/19/2026 12:00:00 AM contains a wide variety of distinct consonants."
   }
 }
