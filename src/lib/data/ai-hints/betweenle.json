@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-18T22:06:09.065Z",
+  "generatedAt": "2026-11-19T22:15:28.595Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -553,6 +553,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The word is common but has a less frequent usage pattern."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I reach a conclusion without being told the truth directly.",
+      "clue1": "To deduce from evidence.",
+      "starts_with": "I",
+      "ends_with": "R",
+      "definition": "To deduce or conclude from evidence and reasoning rather than explicit statements.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common academic vocabulary word with a straightforward five-letter structure."
     }
   },
   "prose": {
@@ -600,6 +613,7 @@
     "2026-11-16": "The Betweenle puzzle for November 16, 2026 (#1341) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with T — see the letter hints above before you peek.",
     "2026-11-17": "The Betweenle puzzle for November 17, 2026 (#1342) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with O — see the letter hints above before you peek.",
     "2026-11-18": "Betweenle puzzle #1343 is scheduled for November 18, 2026. This specific entry follows a five-letter pattern ending in Y.",
-    "2026-11-19": "Betweenle puzzle #1344 takes place on November 19, 2026. This specific entry follows a consonant-heavy five-letter pattern."
+    "2026-11-19": "Betweenle puzzle #1344 takes place on November 19, 2026. This specific entry follows a consonant-heavy five-letter pattern.",
+    "2026-11-20": "Betweenle puzzle #1345 was released on November 20, 2026. This specific entry follows a five-letter pattern with no repeating characters."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-18T22:04:42.530Z",
+  "generatedAt": "2026-11-19T22:14:20.791Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -552,6 +552,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common verb with a repeated vowel that may mislead some players."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "To seek a consensus, a meeting is called.",
+      "clue1": "A formal discussion to reach an agreement.",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "To consult together or compare opinions.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common verb with a repeated consonant that may mislead some players."
     }
   },
   "prose": {
@@ -599,6 +612,7 @@
     "2026-11-16": "The Worgle puzzle for November 16, 2026 (#1769) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with G — see the letter hints above before you peek.",
     "2026-11-17": "The Worgle puzzle for November 17, 2026 (#1770) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with C — see the letter hints above before you peek.",
     "2026-11-18": "Worgle puzzle #1771 for November 18, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with two vowels.",
-    "2026-11-19": "Worgle puzzle #1772 for November 19, 2026, features a six-letter word. The solution follows a pattern with a repeated vowel."
+    "2026-11-19": "Worgle puzzle #1772 for November 19, 2026, features a six-letter word. The solution follows a pattern with a repeated vowel.",
+    "2026-11-20": "Worgle puzzle #1773 for November 20, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-18T22:06:23.382Z",
+  "generatedAt": "2026-11-19T22:16:10.407Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -466,6 +466,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Commonly known country with a distinctive starting letter."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A coastal sultanate where the desert meets the Arabian Sea.",
+      "clue1": "Located on the southeastern coast of the Arabian Peninsula.",
+      "starts_with": "O",
+      "ends_with": "N",
+      "definition": "A sovereign state in Western Asia bordering the UAE and Saudi Arabia.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Short name and distinct geographic location make it recognizable."
     }
   },
   "prose": {
@@ -506,6 +519,7 @@
     "2026-11-16": "The Worldle puzzle for November 16, 2026 (#1761) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Worldle puzzle for November 17, 2026 (#1762) is live with today's answer confirmed. The answer runs 6 characters, starting with B and ending with I — see the letter hints above before you peek.",
     "2026-11-18": "Worldle puzzle #1763 for November 18, 2026, features a ten-letter word. The pattern begins and ends with the same vowel.",
-    "2026-11-19": "Worldle puzzle #1764 for November 19, 2026, features a six-letter country name. The word follows a consonant-vowel-consonant-vowel pattern for its first four letters."
+    "2026-11-19": "Worldle puzzle #1764 for November 19, 2026, features a six-letter country name. The word follows a consonant-vowel-consonant-vowel pattern for its first four letters.",
+    "2026-11-20": "Worldle puzzle #1765 for November 20, 2026, features a four-letter country. The word follows a vowel-consonant-vowel-consonant pattern."
   }
 }

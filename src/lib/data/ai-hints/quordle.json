@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-18T22:04:35.791Z",
+  "generatedAt": "2026-11-19T22:13:37.053Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -552,6 +552,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common words but varied vowel placements and one repeated letter in a word."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "Sadness, a small scale, mistreatment, and a grilled treat.",
+      "clue1": "One word relates to deep sorrow.",
+      "starts_with": "G",
+      "ends_with": "B",
+      "definition": "A set of words covering sorrow, size, mistreatment, and Middle Eastern food.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words but distinct themes and a few repeating consonants."
     }
   },
   "prose": {
@@ -599,6 +612,7 @@
     "2026-11-16": "The Quordle puzzle for November 16, 2026 (#1757) is live with today's answer confirmed. The answer runs 20 characters, starting with R and ending with D — see the letter hints above before you peek.",
     "2026-11-17": "The Quordle puzzle for November 17, 2026 (#1758) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-11-18": "Quordle puzzle #1759 for November 18, 2026, features four five-letter words. The set includes a variety of common consonants and a repeated vowel.",
-    "2026-11-19": "Quordle puzzle #1760 for November 19, 2026, features four distinct five-letter words. The set includes a mix of common nouns and adjectives."
+    "2026-11-19": "Quordle puzzle #1760 for November 19, 2026, features four distinct five-letter words. The set includes a mix of common nouns and adjectives.",
+    "2026-11-20": "Quordle puzzle #1761 was released on November 20, 2026. This specific set features four five-letter words with varying vowel placements."
   }
 }

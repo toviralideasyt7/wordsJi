@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-18T22:06:59.336Z",
+  "generatedAt": "2026-11-19T22:16:08.087Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -554,6 +554,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common abstract noun with a straightforward meaning."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A powerful jungle giant who loves to eat greens.",
+      "clue1": "A large primate from the African rainforest.",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "The largest living primate, native to the forests of central Africa.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common animal with distinct characteristics and a simple letter pattern."
     }
   },
   "prose": {
@@ -601,6 +614,7 @@
     "2026-11-16": "The Contexto puzzle for November 16, 2026 (#1520) is live with today's answer confirmed. The answer runs 4 characters, starting with H and ending with O — see the letter hints above before you peek.",
     "2026-11-17": "The Contexto puzzle for November 17, 2026 (#1521) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-11-18": "Contexto puzzle #1522 was released on November 18, 2026. The target word follows a consonant-vowel-consonsonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-11-19": "Contexto puzzle #1523 for November 19, 2026, features a word with six letters. The pattern begins and ends with the same vowel."
+    "2026-11-19": "Contexto puzzle #1523 for November 19, 2026, features a word with six letters. The pattern begins and ends with the same vowel.",
+    "2026-11-20": "Contexto puzzle #1524 was released on November 20, 2026. This specific word follows a seven-letter pattern ending in a vowel."
   }
 }

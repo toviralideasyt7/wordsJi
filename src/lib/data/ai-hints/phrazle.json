@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-18T22:07:20.109Z",
+  "generatedAt": "2026-11-19T22:17:47.329Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -553,6 +553,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-20": {
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -600,6 +612,7 @@
     "2026-11-16": "The Phrazle puzzle for November 16, 2026 (2026-11-16) is live with today's answer confirmed. The answer runs 17 characters, starting with A and ending with T — see the letter hints above before you peek.",
     "2026-11-17": "The Phrazle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 23 characters, starting with T and ending with N — see the letter hints above before you peek.",
     "2026-11-18": "The Phrazle puzzle for November 18, 2026, features a complex multi-word structure. Puzzle 2026-11-18 consists of twenty-eight letters including several spaces.",
-    "2026-11-19": "The Phrazle puzzle for November 19, 2026 (2026-11-19) is live with today's answer confirmed. The answer runs 32 characters, starting with T and ending with G — see the letter hints above before you peek."
+    "2026-11-19": "The Phrazle puzzle for November 19, 2026 (2026-11-19) is live with today's answer confirmed. The answer runs 32 characters, starting with T and ending with G — see the letter hints above before you peek.",
+    "2026-11-20": "The Phrazle puzzle for November 20, 2026 (2026-11-20) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with S — see the letter hints above before you peek."
   }
 }

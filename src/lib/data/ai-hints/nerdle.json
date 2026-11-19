@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-18T22:05:13.124Z",
+  "generatedAt": "2026-11-19T22:14:07.823Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -713,6 +713,22 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple operations with a common factor lead to a basic outcome."
+    },
+    "2026-11-20": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication and subtraction.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a single digit.",
+      "riddle": "A product minus a double-digit value leaves a small prime.",
+      "starts_with": "5",
+      "ends_with": "7",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple operations and a short length make this a straightforward solve."
     }
   },
   "prose": {
@@ -760,6 +776,7 @@
     "2026-11-16": "The Nerdle puzzle for November 16, 2026 (#1762) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-17": "The Nerdle puzzle for November 17, 2026 (#1763) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
     "2026-11-18": "Nerdle puzzle #1764 presents a straightforward subtraction challenge for players. This November 18, 2026 entry requires finding a specific two-digit difference.",
-    "2026-11-19": "Nerdle puzzle #1765 arrives on November 19, 2026. This specific challenge focuses on the relationship between products and quotients."
+    "2026-11-19": "Nerdle puzzle #1765 arrives on November 19, 2026. This specific challenge focuses on the relationship between products and quotients.",
+    "2026-11-20": "Nerdle puzzle #1766 presents a clean arithmetic challenge for November 20, 2026. Players must balance two different operators to find the correct sequence."
   }
 }

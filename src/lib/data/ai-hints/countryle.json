@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-18T22:06:39.932Z",
+  "generatedAt": "2026-11-19T22:15:52.431Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -554,6 +554,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Less commonly guessed Central Asian nation with a specific spelling."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A landlocked heart where rugged peaks meet ancient crossroads.",
+      "clue1": "It borders Pakistan and Iran to the east and west.",
+      "starts_with": "A",
+      "ends_with": "N",
+      "definition": "A landlocked country in South-Central Asia known for its mountainous terrain.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A well-known nation with a distinctive name length and starting letter."
     }
   },
   "prose": {
@@ -601,6 +614,7 @@
     "2026-11-16": "The Countryle puzzle for November 16, 2026 (Game #1732) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Countryle puzzle for November 17, 2026 (Game #1733) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-11-18": "Countryle Game #1734 for November 18, 2026, features a nine-letter country. The word follows a consonant-vowel pattern starting with M.",
-    "2026-11-19": "Countryle Game #1735 takes place on November 19, 2026. This puzzle features a ten-letter word starting with T."
+    "2026-11-19": "Countryle Game #1735 takes place on November 19, 2026. This puzzle features a ten-letter word starting with T.",
+    "2026-11-20": "Countryle Game #1736 for November 20, 2026, features a ten-letter word. The pattern begins and ends with consonants and vowels in a specific sequence."
   }
 }
