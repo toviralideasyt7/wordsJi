@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-11-18T01:09:23.270Z",
+  "generatedAt": "2026-11-19T01:09:01.408Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -528,6 +528,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The word set contains several uncommon letter combinations and overlapping consonants."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 13 vowels.",
+      "repeat_hint": "17 letters appear more than once.",
+      "riddle": "A construction of edges, depths, and essential starts.",
+      "clue1": "Six five-letter words forming a tight grid.",
+      "starts_with": "B",
+      "ends_with": "E",
+      "definition": "A collection of six five-letter words including construction and essential terms.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word set contains common vocabulary but requires precise placement."
     }
   },
   "prose": {
@@ -573,6 +586,7 @@
     "2026-11-15": "The Waffle puzzle for November 15, 2026 (#1759) is live with today's answer confirmed. The answer runs 30 characters, starting with P and ending with R — see the letter hints above before you peek.",
     "2026-11-16": "The Waffle puzzle for November 16, 2026 (#1760) is live with today's answer confirmed. The answer runs 30 characters, starting with T and ending with Y — see the letter hints above before you peek.",
     "2026-11-17": "The Waffle puzzle for November 17, 2026 (#1761) is live with today's answer confirmed. The answer runs 30 characters, starting with R and ending with T — see the letter hints above before you peek.",
-    "2026-11-18": "Waffle puzzle #1762 for November 18, 2026, features a complex grid. The letter pattern involves several repeated consonants across the six words."
+    "2026-11-18": "Waffle puzzle #1762 for November 18, 2026, features a complex grid. The letter pattern involves several repeated consonants across the six words.",
+    "2026-11-19": "Waffle puzzle #1763 for November 19, 2026, features a specific set of six words. The letter distribution includes several repetitions across the grid."
   }
 }
