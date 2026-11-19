@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-18T06:05:30.179Z",
+  "generatedAt": "2026-11-19T06:05:05.267Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -543,6 +543,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A fish-man's hate fuels a fake king's dream.",
+      "clue1": "He sought to rule Fish-Man Island through hatred.",
+      "starts_with": "H",
+      "ends_with": "S",
+      "definition": "Antagonist and former leader of the New Fish-Man Pirates.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A prominent villain from a major arc, though not a top-tier antagonist."
     }
   },
   "prose": {
@@ -589,6 +602,7 @@
     "2026-11-15": "OnePiecedle Game #959 for November 15, 2026, features a ten-letter word. The pattern consists of a repeated consonant and four vowels.",
     "2026-11-16": "The OnePiecedle puzzle for November 16, 2026 (Game #960) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The OnePiecedle puzzle for November 17, 2026 (Game #961) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with E — see the letter hints above before you peek.",
-    "2026-11-18": "The OnePiecedle puzzle for November 18, 2026 (Game #962) is live with today's answer confirmed. The answer runs 7 characters, starting with C and ending with U — see the letter hints above before you peek."
+    "2026-11-18": "The OnePiecedle puzzle for November 18, 2026 (Game #962) is live with today's answer confirmed. The answer runs 7 characters, starting with C and ending with U — see the letter hints above before you peek.",
+    "2026-11-19": "OnePiecedle Game #963 arrives on November 19, 2026. This puzzle features a nine-letter name with a repeating consonant."
   }
 }

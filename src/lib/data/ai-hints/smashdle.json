@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-18T06:06:13.823Z",
+  "generatedAt": "2026-11-19T06:05:05.313Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -542,6 +542,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The name is well-known but the specific outfit variation adds length."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am a deep hole or a seed's hard heart.",
+      "clue1": "Think of a fruit stone or a dark abyss.",
+      "starts_with": "P",
+      "ends_with": "T",
+      "definition": "A large hole in the ground or the stone of a fruit.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a very short word with common letters."
     }
   },
   "prose": {
@@ -588,6 +601,7 @@
     "2026-11-15": "The Smashdle puzzle for November 15, 2026 (Game #1166) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with O — see the letter hints above before you peek.",
     "2026-11-16": "The Smashdle puzzle for November 16, 2026 (Game #1167) is live with today's answer confirmed. The answer runs 3 characters, starting with R and ending with Y — see the letter hints above before you peek.",
     "2026-11-17": "The Smashdle puzzle for November 17, 2026 (Game #1168) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with E — see the letter hints above before you peek.",
-    "2026-11-18": "Smashdle Game #1169 for November 18, 2026, features a multi-word character name. The solution follows a complex pattern of repeating consonants and vowels."
+    "2026-11-18": "Smashdle Game #1169 for November 18, 2026, features a multi-word character name. The solution follows a complex pattern of repeating consonants and vowels.",
+    "2026-11-19": "Smashdle Game #1170 for November 19, 2026, features a three-letter word. This specific puzzle follows a consonant-vowel-consonant pattern."
   }
 }

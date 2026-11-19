@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-18T06:04:41.044Z",
+  "generatedAt": "2026-11-19T06:04:42.227Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -547,6 +547,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "He is a highly recognizable champion with a distinct kit."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A shadow that splits into two different fates.",
+      "clue1": "He can walk through walls.",
+      "starts_with": "K",
+      "ends_with": "N",
+      "definition": "A shapeshifting shadow assassin from the Ionian region.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A popular champion with a short, distinct name."
     }
   },
   "prose": {
@@ -593,6 +606,7 @@
     "2026-11-15": "LoLdle Game #1592 for November 15, 2026, features a seven-letter champion. The pattern consists of unique letters starting and ending with consonants.",
     "2026-11-16": "The LoLdle puzzle for November 16, 2026 (Game #1593) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with Y — see the letter hints above before you peek.",
     "2026-11-17": "The LoLdle puzzle for November 17, 2026 (Game #1594) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with C — see the letter hints above before you peek.",
-    "2026-11-18": "LoLdle Game #1595 for November 18, 2026, features a ten-letter champion. The pattern begins with a consonant and ends with a vowel."
+    "2026-11-18": "LoLdle Game #1595 for November 18, 2026, features a ten-letter champion. The pattern begins with a consonant and ends with a vowel.",
+    "2026-11-19": "LoLdle Game #1596 for November 19, 2026, features a four-letter name. The pattern consists of a single vowel surrounded by consonants."
   }
 }

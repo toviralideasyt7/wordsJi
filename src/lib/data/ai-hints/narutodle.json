@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-18T06:04:39.547Z",
+  "generatedAt": "2026-11-19T06:04:37.729Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -544,6 +544,19 @@
       "difficulty": 8,
       "difficulty_label": "Very Hard",
       "difficulty_reason": "An obscure character with very little screen time or dialogue."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A smoking leader who fought with wind and fire.",
+      "clue1": "He was a mentor to Team 10.",
+      "starts_with": "A",
+      "ends_with": "I",
+      "definition": "A Konoha shinobi and descendant of the Third Hokage.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A well-known sensei with a distinct visual design."
     }
   },
   "prose": {
@@ -590,6 +603,7 @@
     "2026-11-15": "The Narutodle puzzle for November 15, 2026 (Game #927) is live with today's answer confirmed. The answer runs 6 characters, starting with Y and ending with O — see the letter hints above before you peek.",
     "2026-11-16": "The Narutodle puzzle for November 16, 2026 (Game #928) is live with today's answer confirmed. The answer runs 12 characters, starting with D and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Narutodle puzzle for November 17, 2026 (Game #929) is live with today's answer confirmed. The answer runs 8 characters, starting with M and ending with Y — see the letter hints above before you peek.",
-    "2026-11-18": "Narutodle Game #930 for November 18, 2026, features a name with seven letters. The solution follows a consonant-vowel pattern that challenges most players."
+    "2026-11-18": "Narutodle Game #930 for November 18, 2026, features a name with seven letters. The solution follows a consonant-vowel pattern that challenges most players.",
+    "2026-11-19": "Narutodle Game #931 for November 19, 2026, features a twelve-letter name. The solution follows a specific pattern of repeated consonants and vowels."
   }
 }

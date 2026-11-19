@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-18T06:04:49.184Z",
+  "generatedAt": "2026-11-19T06:05:12.541Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -545,6 +545,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A stony skin and a horn for a heavy charge.",
+      "clue1": "A Ground-type known for its immense physical durability.",
+      "starts_with": "R",
+      "ends_with": "N",
+      "definition": "A Ground-type Pokémon resembling a rhinoceros with rocky skin.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common first-generation Pokémon with a distinct silhouette."
     }
   },
   "prose": {
@@ -591,6 +604,7 @@
     "2026-11-15": "The Pokedle puzzle for November 15, 2026 (Game #1130) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-16": "The Pokedle puzzle for November 16, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 7 characters, starting with R and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Pokedle puzzle for November 17, 2026 (Game #1132) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with L — see the letter hints above before you peek.",
-    "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek."
+    "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek.",
+    "2026-11-19": "Pokedle Game #1134 for November 19, 2026, features a seven-letter word. The pattern consists of unique letters starting with R and ending with N."
   }
 }

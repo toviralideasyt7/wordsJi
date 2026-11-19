@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-18T06:04:58.575Z",
+  "generatedAt": "2026-11-19T06:04:37.992Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -546,6 +546,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "A hidden blade strikes from the shadows of a holy order.",
+      "clue1": "A stealthy agility carry from the Dota 2 roster.",
+      "starts_with": "T",
+      "ends_with": "N",
+      "definition": "A stealth-based agility hero known for critical strikes and invisibility.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The name is long and consists of two common words."
     }
   },
   "prose": {
@@ -592,6 +605,7 @@
     "2026-11-15": "Dotadle Game #1066 takes place on November 15, 2026. This specific puzzle features a five-letter word with no repeating characters.",
     "2026-11-16": "The Dotadle puzzle for November 16, 2026 (Game #1067) is live with today's answer confirmed. The answer runs 4 characters, starting with D and ending with M — see the letter hints above before you peek.",
     "2026-11-17": "The Dotadle puzzle for November 17, 2026 (Game #1068) is live with today's answer confirmed. The answer runs 6 characters, starting with V and ending with E — see the letter hints above before you peek.",
-    "2026-11-18": "The Dotadle puzzle for November 18, 2026 (Game #1069) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with K — see the letter hints above before you peek."
+    "2026-11-18": "The Dotadle puzzle for November 18, 2026 (Game #1069) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with K — see the letter hints above before you peek.",
+    "2026-11-19": "Dotadle Game #1070 takes place on November 19, 2026. This puzzle features a sixteen-letter phrase with several repeating characters."
   }
 }
