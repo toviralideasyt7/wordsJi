@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-18T15:47:47.280Z",
+  "generatedAt": "2026-11-19T15:53:38.963Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -553,6 +553,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires knowledge of specific color names and their spelling."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A warm hue, a zesty fruit, and a woody shade.",
+      "clue1": "A primary, a citrus, and an earthy tone.",
+      "starts_with": "R",
+      "ends_with": "N",
+      "definition": "A sequence of three distinct colors: a primary red, a bright green, and a dark earthy tone.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The colors are common and distinct, making them easy to guess."
     }
   },
   "prose": {
@@ -600,6 +613,7 @@
     "2026-11-16": "The Colorfle puzzle for November 16, 2026 (#1666) is live with today's answer confirmed. The answer runs 13 characters, starting with Y and ending with N — see the letter hints above before you peek.",
     "2026-11-17": "The Colorfle puzzle for November 17, 2026 (#1667) is live with today's answer confirmed. The answer runs 19 characters, starting with L and ending with D — see the letter hints above before you peek.",
     "2026-11-18": "Colorfle puzzle #1668 for November 18, 2026, features a three-color combination. The solution follows a specific pattern of brightness and saturation.",
-    "2026-11-19": "Colorfle puzzle #1669 for November 19, 2026, features a sequence of three colors. The solution follows a pattern of six, six, and four letters."
+    "2026-11-19": "Colorfle puzzle #1669 for November 19, 2026, features a sequence of three colors. The solution follows a pattern of six, six, and four letters.",
+    "2026-11-20": "Colorfle puzzle #1670 was released on November 20, 2026. This specific combination features a pattern of three distinct color names."
   }
 }

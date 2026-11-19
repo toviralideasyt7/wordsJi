@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-18T15:47:38.980Z",
+  "generatedAt": "2026-11-19T15:52:49.443Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -557,6 +557,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The word is a nonsense term and lacks common dictionary references."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I hold the whole world, but I cannot move a muscle.",
+      "clue1": "A collection of maps bound in a book.",
+      "starts_with": "A",
+      "ends_with": "S",
+      "definition": "A book of maps or charts.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common noun with a distinct, well-known meaning."
     }
   },
   "prose": {
@@ -604,6 +617,7 @@
     "2026-11-16": "The Phoodle puzzle for November 16, 2026 (2026-11-16) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with Y — see the letter hints above before you peek.",
     "2026-11-17": "The Phoodle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with D — see the letter hints above before you peek.",
     "2026-11-18": "The Phoodle puzzle for November 18, 2026, features a five-letter word. Puzzle 2026-11-18 follows a consonant-vowel-consonant-consonant-consonant pattern.",
-    "2026-11-19": "The Phoodle puzzle for November 19, 2026, features a five-letter word. Puzzle 2026-11-19 follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-11-19": "The Phoodle puzzle for November 19, 2026, features a five-letter word. Puzzle 2026-11-19 follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-11-20": "The Phoodle puzzle for November 20, 2026, features a five-letter word. Puzzle 2026-11-20 follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }

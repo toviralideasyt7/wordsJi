@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-18T15:47:34.805Z",
+  "generatedAt": "2026-11-19T15:53:30.596Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -558,6 +558,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common modern usage, but the spelling is straightforward."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I happened when the sun climbed high or a problem surfaced.",
+      "clue1": "Past tense of getting up from sleep.",
+      "starts_with": "A",
+      "ends_with": "E",
+      "definition": "Got up from sleep or a reclining position; emerged.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common verb in past tense with a simple vowel structure."
     }
   },
   "prose": {
@@ -605,6 +618,7 @@
     "2026-11-16": "The Wordle puzzle for November 16, 2026 (#1976) is live with today's answer confirmed. The answer runs 5 characters, starting with D and ending with L — see the letter hints above before you peek.",
     "2026-11-17": "The Wordle puzzle for November 17, 2026 (#1977) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
     "2026-11-18": "Wordle puzzle #1978 for November 18, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel.",
-    "2026-11-19": "Wordle puzzle #1979 arrives on November 19, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-11-19": "Wordle puzzle #1979 arrives on November 19, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-11-20": "Wordle puzzle #1980 takes place on November 20, 2026. This specific entry follows a vowel-consonant-vowel-consonant-vowel pattern."
   }
 }

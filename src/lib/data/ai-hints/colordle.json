@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-18T15:47:40.971Z",
+  "generatedAt": "2026-11-19T15:52:49.159Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -556,6 +556,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common spice and recognizable color name."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A spun sugar cloud that melts away on your tongue.",
+      "clue1": "Commonly found at carnivals and fairs.",
+      "starts_with": "C",
+      "ends_with": "D",
+      "definition": "A spun sugar confection typically served on a paper cone.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "The phrase is a common treat and the color is a recognizable pastel pink."
     }
   },
   "prose": {
@@ -603,6 +616,7 @@
     "2026-11-16": "The Colordle puzzle for November 16, 2026 (#1697) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with D — see the letter hints above before you peek.",
     "2026-11-17": "The Colordle puzzle for November 17, 2026 (#1698) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with D — see the letter hints above before you peek.",
     "2026-11-18": "Colordle puzzle #1699 for November 18, 2026, features a ten-letter color name. The solution follows a pattern of two distinct words.",
-    "2026-11-19": "Colordle puzzle #1700 for November 19, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels."
+    "2026-11-19": "Colordle puzzle #1700 for November 19, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels.",
+    "2026-11-20": "Colordle puzzle #1701 for November 20, 2026, features a multi-word phrase. The target color is a light shade of pink."
   }
 }
