@@ -1041,5 +1041,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/22/6af3f86e-57df19dc-eaf79413-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-17",
     "fetchedAt": "2026-11-18T01:05:54.636Z"
+  },
+  "2026-11-18": {
+    "date": "2026-11-18",
+    "gameNumber": 1004,
+    "player": {
+      "player_name": "Adolis Garcia",
+      "player_id": "35537",
+      "team_name": "Phillies",
+      "born": "CUBA",
+      "birth_date": "1993-03-02",
+      "position": [
+        "RF"
+      ],
+      "debut": 2018,
+      "jersey_number": 53
+    },
+    "videoDescription": "[06/08/26 : PHI 5 - 2 TOR] Adolis García smashes a two-run home run to left field, giving the Phillies an early 2-0 lead.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/08/e0528979-41ef59b6-a9aad83f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-18",
+    "fetchedAt": "2026-11-19T01:05:54.479Z"
   }
 }
