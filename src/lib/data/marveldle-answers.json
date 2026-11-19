@@ -3017,7 +3017,7 @@
   },
   "2026-11-18": {
     "date": "2026-11-18",
-    "dateId": "11/18/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/19/2026 12:00:00 AM",
     "comics": {
       "id": "vulture",
       "name": "Vulture",
@@ -3053,7 +3053,8 @@
       "origin": "Earth",
       "actorName": "Zabryna Guevara",
       "appearanceTypes": [
-        "Movie"
+        "Movie",
+        "Series"
       ],
       "affiliations": [
         "None"
@@ -3062,7 +3063,7 @@
         "rivera"
       ]
     },
-    "solvedAt": "2026-11-18T06:06:06.028Z"
+    "solvedAt": "2026-11-19T06:36:11.695Z"
   },
   "2026-11-19": {
     "date": "2026-11-19",
