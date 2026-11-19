@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-18T05:28:05.307Z",
+  "generatedAt": "2026-11-19T05:14:08.502Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -542,6 +542,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common five-letter word with a distinct consonant-heavy structure."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am the chaos that follows a sudden storm.",
+      "clue1": "A state of widespread disorder.",
+      "starts_with": "H",
+      "ends_with": "C",
+      "definition": "Widespread destruction or great confusion and disorder.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common word but the ending consonant is less frequent."
     }
   },
   "prose": {
@@ -588,6 +601,7 @@
     "2026-11-15": "The Canuckle puzzle for November 15, 2026 (#1646) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with H — see the letter hints above before you peek.",
     "2026-11-16": "The Canuckle puzzle for November 16, 2026 (#1647) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with L — see the letter hints above before you peek.",
     "2026-11-17": "The Canuckle puzzle for November 17, 2026 (#1648) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek.",
-    "2026-11-18": "Canuckle puzzle #1649 for November 18, 2026, features a five-letter word. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern."
+    "2026-11-18": "Canuckle puzzle #1649 for November 18, 2026, features a five-letter word. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
+    "2026-11-19": "Canuckle puzzle #1650 is scheduled for November 19, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }

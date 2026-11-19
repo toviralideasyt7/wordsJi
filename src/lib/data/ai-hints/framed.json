@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-17T22:15:31.678Z",
+  "generatedAt": "2026-11-19T05:14:16.381Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -519,6 +519,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a very famous movie title with a common word."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A rigid set of rules that no one dares to question.",
+      "clue1": "A belief held as an absolute truth.",
+      "starts_with": "D",
+      "ends_with": "A",
+      "definition": "A principle or set of principles laid down by an authority as incontrovertibly true.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word is common but used primarily in formal or religious contexts."
     }
   },
   "prose": {
@@ -563,6 +576,7 @@
     "2026-11-15": "The Framed puzzle for November 15, 2026 (#1711) is live with today's answer confirmed. The answer runs 17 characters, starting with F and ending with S — see the letter hints above before you peek.",
     "2026-11-16": "The Framed puzzle for November 16, 2026 (#1712) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with E — see the letter hints above before you peek.",
     "2026-11-17": "The Framed puzzle for November 17, 2026 (#1713) is live with today's answer confirmed. The answer runs 14 characters, starting with T and ending with O — see the letter hints above before you peek.",
-    "2026-11-18": "Framed puzzle #1714 for November 18, 2026, features a twelve-letter solution. The pattern consists of two separate words."
+    "2026-11-18": "Framed puzzle #1714 for November 18, 2026, features a twelve-letter solution. The pattern consists of two separate words.",
+    "2026-11-19": "Framed puzzle #1715 for November 19, 2026, features a five-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel pattern."
   }
 }
