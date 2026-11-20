@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-19T06:05:12.541Z",
+  "generatedAt": "2026-11-20T06:05:03.087Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -558,6 +558,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common first-generation Pokémon with a distinct silhouette."
+    },
+    "2026-11-20": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -605,6 +617,7 @@
     "2026-11-16": "The Pokedle puzzle for November 16, 2026 (Game #1131) is live with today's answer confirmed. The answer runs 7 characters, starting with R and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Pokedle puzzle for November 17, 2026 (Game #1132) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with L — see the letter hints above before you peek.",
     "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek.",
-    "2026-11-19": "Pokedle Game #1134 for November 19, 2026, features a seven-letter word. The pattern consists of unique letters starting with R and ending with N."
+    "2026-11-19": "Pokedle Game #1134 for November 19, 2026, features a seven-letter word. The pattern consists of unique letters starting with R and ending with N.",
+    "2026-11-20": "The Pokedle puzzle for November 20, 2026 (Game #1135) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with R — see the letter hints above before you peek."
   }
 }

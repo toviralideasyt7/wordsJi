@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-19T06:05:05.267Z",
+  "generatedAt": "2026-11-20T06:05:07.947Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -556,6 +556,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "A prominent villain from a major arc, though not a top-tier antagonist."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A white cloud of justice chasing a rubbery pirate.",
+      "clue1": "A Marine officer with a love for cigars.",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "A high-ranking Marine officer and Logia user in One Piece.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A prominent early antagonist with a very distinct power and habit."
     }
   },
   "prose": {
@@ -603,6 +616,7 @@
     "2026-11-16": "The OnePiecedle puzzle for November 16, 2026 (Game #960) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The OnePiecedle puzzle for November 17, 2026 (Game #961) is live with today's answer confirmed. The answer runs 9 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-11-18": "The OnePiecedle puzzle for November 18, 2026 (Game #962) is live with today's answer confirmed. The answer runs 7 characters, starting with C and ending with U — see the letter hints above before you peek.",
-    "2026-11-19": "OnePiecedle Game #963 arrives on November 19, 2026. This puzzle features a nine-letter name with a repeating consonant."
+    "2026-11-19": "OnePiecedle Game #963 arrives on November 19, 2026. This puzzle features a nine-letter name with a repeating consonant.",
+    "2026-11-20": "OnePiecedle Game #964 takes place on November 20, 2026. This puzzle features a six-letter word with no repeating characters."
   }
 }

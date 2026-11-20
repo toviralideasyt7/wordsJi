@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-19T06:04:37.729Z",
+  "generatedAt": "2026-11-20T06:04:34.195Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -557,6 +557,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A well-known sensei with a distinct visual design."
+    },
+    "2026-11-20": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A feline's roar echoes within this Cloud village warrior.",
+      "clue1": "A Jinchuriki from the Land of Lightning.",
+      "starts_with": "Y",
+      "ends_with": "I",
+      "definition": "A kunoichi from Kumogakure and the former jinchuriki of the Two-Tails.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "A supporting character who appears briefly in the series."
     }
   },
   "prose": {
@@ -604,6 +617,7 @@
     "2026-11-16": "The Narutodle puzzle for November 16, 2026 (Game #928) is live with today's answer confirmed. The answer runs 12 characters, starting with D and ending with A — see the letter hints above before you peek.",
     "2026-11-17": "The Narutodle puzzle for November 17, 2026 (Game #929) is live with today's answer confirmed. The answer runs 8 characters, starting with M and ending with Y — see the letter hints above before you peek.",
     "2026-11-18": "Narutodle Game #930 for November 18, 2026, features a name with seven letters. The solution follows a consonant-vowel pattern that challenges most players.",
-    "2026-11-19": "Narutodle Game #931 for November 19, 2026, features a twelve-letter name. The solution follows a specific pattern of repeated consonants and vowels."
+    "2026-11-19": "Narutodle Game #931 for November 19, 2026, features a twelve-letter name. The solution follows a specific pattern of repeated consonants and vowels.",
+    "2026-11-20": "Narutodle Game #932 for November 20, 2026, features a name with eight letters. The pattern consists of several vowels and a few repeated consonants."
   }
 }
