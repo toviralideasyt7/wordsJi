@@ -3117,5 +3117,74 @@
       ]
     },
     "solvedAt": "2026-11-19T06:06:22.253Z"
+  },
+  "2026-11-20": {
+    "date": "2026-11-20",
+    "dateId": "11/20/2026 12:00:00 AM",
+    "comics": {
+      "id": "agentantivenom",
+      "name": "Agent Anti-Venom",
+      "gender": "Male",
+      "type": "Agent",
+      "species": [
+        "Human",
+        "Cyborg",
+        "Symbiote"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Elemental",
+        "Wallcrawling"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1962,
+      "firstApparitionComicTitle": "Amazing Fantasy #15",
+      "keywords": [
+        "Flash Thompson",
+        "thompson",
+        "venom",
+        "antivenom",
+        "anti-venom"
+      ]
+    },
+    "mcu": {
+      "id": "wintersoldier",
+      "name": "Winter Soldier",
+      "gender": "Male",
+      "type": "AntiHero",
+      "species": [
+        "Human",
+        "Mutate",
+        "Cyborg"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Agility",
+        "Resistance",
+        "Regeneration"
+      ],
+      "origin": "Earth",
+      "actorName": "Sebastian Stan",
+      "appearanceTypes": [
+        "Movie",
+        "Series"
+      ],
+      "affiliations": [
+        "Hydra",
+        "Thunderbolts",
+        "NewAvengers"
+      ],
+      "keywords": [
+        "James Buchanan Barnes",
+        "bucky",
+        "bucky barnes",
+        "soldier",
+        "white wolf"
+      ]
+    },
+    "solvedAt": "2026-11-20T06:06:15.887Z"
   }
 }
