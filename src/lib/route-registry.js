@@ -154,18 +154,13 @@ export const PUBLIC_ROUTE_ENTRIES = [
 
 export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES, '/wordle/*', '/5-letter-wordle-solver'])];
 
-// --- Wordle hints hub (/wordle-hints) ---
-// One prerendered page carrying all 12 daily hint sections. It replaced the
-// 12 /wordle-hints/* micro pages in the Phase 1 cleanup (2026-11-20); the old
-// URLs 301 to the matching section anchors via EXACT_CANONICAL_REDIRECTS.
-// The puzzle date is the puzzle-window date (getPuzzleDateForGame('wordle'))
-// resolved in the page's server load, never the build date.
-export const WORDLE_HINT_ROUTES = [
-  '/wordle-hints'
-];
+// The 12 Wordle hint sections live on /wordle-answer-today itself (rendered
+// by WordleHintSections from the page's own server load). There is no
+// separate /wordle-hints route — it was retired 2026-11-20 on the owner's
+// instruction, with no redirects kept.
 
 export const PRERENDER_ENTRIES = [
-  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES, ...WORDLE_HINT_ROUTES])
+  ...new Set([...EVERGREEN_STATIC_ROUTES, ...TODAY_STATIC_ROUTES, ...ARCHIVE_STATIC_ROUTES])
 ];
 
 export const SITEMAP_ENTRIES = PRERENDER_ENTRIES.filter(

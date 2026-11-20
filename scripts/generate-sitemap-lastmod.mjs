@@ -8,7 +8,7 @@ import { PUBLIC_ROUTE_ENTRIES } from '../src/lib/route-registry.js';
 // their source files rarely change. They get no entry here: the sitemap
 // server falls back to the current puzzle date for them, which is the
 // honest lastmod. Stamping their last source edit would freeze the date.
-const DAILY_DRIVEN_ROUTES = new Set(['/', '/today', '/archive', '/wordle-hints']);
+const DAILY_DRIVEN_ROUTES = new Set(['/', '/today', '/archive']);
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(scriptDir, '..');

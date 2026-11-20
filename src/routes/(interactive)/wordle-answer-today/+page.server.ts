@@ -3,6 +3,7 @@ import { getWordleNumber, formatDate } from '$lib/utils';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
 import { getAIHints, mergeHints } from '$lib/ai-hints';
+import { buildHintContent, WORDLE_HINT_PAGES } from '$lib/wordle-hints-today';
 import type { WordleAnswer } from '$lib/api';
 import { generatePersonAuthorSchema } from '$lib/seo';
 import type { PageServerLoad } from './$types';
@@ -64,6 +65,25 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
     const updatedStamp = updatedStampText('Wordle', wordleNumber, formattedDate);
     const aiHints = mergeHints(wordleWord, getAIHints('wordle', todayKey));
+
+    // The 12 hint sections live on this page (the separate /wordle-hints hub
+    // was retired 2026-11-20 on the owner's instruction). They are computed
+    // from this page's own word + merged hints, so they cannot drift from
+    // the answer revealed here.
+    const hintSections = wordleWord
+        ? WORDLE_HINT_PAGES.map((def) => {
+            const content = buildHintContent(def.slug, wordleWord, aiHints);
+            return {
+                slug: def.slug,
+                label: def.label,
+                question: def.question,
+                value: content.value ?? '',
+                explain: content.explain ?? '',
+                emptyNote: content.emptyNote ?? '',
+                extraFacts: content.extraFacts ?? []
+            };
+        })
+        : [];
 
     const hintFaqs = [
         { question: `What is the Wordle answer for today, ${formattedDate}?`, answer: `The Wordle answer for today, ${formattedDate}, is ${wordleWord.toUpperCase()}. This is Wordle #${wordleNumber}.` },
@@ -132,6 +152,11 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         hintFaqs,
         updatedStamp,
         aiHints,
+        hintSections,
+        aiOneLiner: aiHints?.clue1 || aiHints?.riddle || '',
+        difficultyLabel: aiHints?.difficulty_label ?? '',
+        difficultyScore: aiHints?.difficulty ?? 0,
+        difficultyReason: aiHints?.difficulty_reason ?? '',
         yesterday,
         vowelCount,
         hasDouble,

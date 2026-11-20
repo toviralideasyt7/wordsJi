@@ -19,6 +19,7 @@
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
   import PaaHints from '$lib/components/PaaHints.svelte';
+  import WordleHintSections from '$lib/components/WordleHintSections.svelte';
 
   let { data } = $props();
 
@@ -128,6 +129,20 @@
     <div class="mt-8">
       <PaaHints gameName="Wordle" hints={data.aiHints} />
     </div>
+
+    {#if data.hintSections?.length}
+      <div class="mt-8">
+        <WordleHintSections
+          sections={data.hintSections}
+          formattedDate={data.formattedDate}
+          wordleNumber={data.wordleNumber}
+          aiOneLiner={data.aiOneLiner}
+          difficultyLabel={data.difficultyLabel}
+          difficultyScore={data.difficultyScore}
+          difficultyReason={data.difficultyReason}
+        />
+      </div>
+    {/if}
 
     <KeepExploring slug="wordle" puzzleDate={data.wordleData?.date} />
 
