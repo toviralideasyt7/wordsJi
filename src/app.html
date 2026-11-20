@@ -8,11 +8,11 @@
 		// First-party breadcrumb for opaque third-party failures.
 		// With crossorigin="anonymous" on the tag, real messages arrive here instead of "Script error."
 		window.addEventListener('error', function (e) {
-			console.error('[wordsolverx:error]', e.message, e.filename, e.lineno, e.colno);
+			console.error('[wordauditor:error]', e.message, e.filename, e.lineno, e.colno);
 		}, true);
 		window.addEventListener('unhandledrejection', function (e) {
 			var reason = e.reason;
-			console.error('[wordsolverx:rejection]', reason && (reason.message || String(reason)));
+			console.error('[wordauditor:rejection]', reason && (reason.message || String(reason)));
 		});
 	</script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,11 +71,11 @@
 			var CLARITY_ID = 'yl5jj469m7';
 
                         window.dataLayer = window.dataLayer || [];
-                        window.__wordsolverxQueuedGtagCalls = window.__wordsolverxQueuedGtagCalls || [];
+                        window.__wordauditorQueuedGtagCalls = window.__wordauditorQueuedGtagCalls || [];
 
                         function queueGtagCall() {
                                 var args = Array.prototype.slice.call(arguments);
-                                window.__wordsolverxQueuedGtagCalls.push(args);
+                                window.__wordauditorQueuedGtagCalls.push(args);
                         }
 
                         window.gtag = window.gtag || queueGtagCall;
@@ -90,10 +90,10 @@
                         }
 
                         function flushQueuedCalls() {
-                                var queue = window.__wordsolverxQueuedGtagCalls || [];
+                                var queue = window.__wordauditorQueuedGtagCalls || [];
                                 var hadQueuedPageView = false;
 
-                                window.__wordsolverxQueuedGtagCalls = [];
+                                window.__wordauditorQueuedGtagCalls = [];
                                 for (var i = 0; i < queue.length; i += 1) {
                                         var args = queue[i];
                                         if (args[0] === 'event' && args[1] === 'page_view') {
@@ -108,8 +108,8 @@
                         }
 
                         function loadAnalytics() {
-                                if (window.__wordsolverxAnalyticsLoaded) return;
-                                window.__wordsolverxAnalyticsLoaded = true;
+                                if (window.__wordauditorAnalyticsLoaded) return;
+                                window.__wordauditorAnalyticsLoaded = true;
 
                                 var script = document.createElement('script');
                                 script.async = true;
@@ -179,8 +179,8 @@
                         }
 
                         function loadClarity() {
-                                if (window.__wordsolverxClarityLoaded) return;
-                                window.__wordsolverxClarityLoaded = true;
+                                if (window.__wordauditorClarityLoaded) return;
+                                window.__wordauditorClarityLoaded = true;
 
                                 var preconnect = document.createElement('link');
                                 preconnect.rel = 'preconnect';

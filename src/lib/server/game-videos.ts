@@ -30,7 +30,7 @@ async function fetchGameVideo(game: string, dateKey: string): Promise<GameVideo>
 	try {
 		const url = `https://raw.githubusercontent.com/satwiksamanta77/daily-games/main/database/${dateKey}/${game}/result.json`;
 		const response = await fetch(url, {
-			headers: { 'User-Agent': 'wordsolverx-site-build' }
+			headers: { 'User-Agent': 'wordauditor-site-build' }
 		});
 		if (!response.ok) {
 			return NOT_PUBLISHED;

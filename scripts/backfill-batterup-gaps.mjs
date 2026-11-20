@@ -50,7 +50,7 @@ function dateKeyUTC(date) {
 
 async function fetchJson(url) {
 	const res = await fetch(url, {
-		headers: { 'User-Agent': 'WordSolverX-batterup-backfill/1.0' },
+		headers: { 'User-Agent': 'WordAuditor-batterup-backfill/1.0' },
 		signal: AbortSignal.timeout(30000)
 	});
 	if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);

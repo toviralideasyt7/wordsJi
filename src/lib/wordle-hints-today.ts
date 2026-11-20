@@ -13,7 +13,7 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import type { AIHints } from '$lib/ai-hints';
 import type { WordleAnswer } from '$lib/api';
 
-const TODAY_API_URL = 'https://api.wordsolverx.workers.dev/api/today';
+const TODAY_API_URL = 'https://api.wordauditor.com/api/today';
 
 export interface WordleHintToday {
 	word: string; // uppercase solution, '' when unresolved

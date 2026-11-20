@@ -1,10 +1,10 @@
-// Pull Bing Webmaster API query stats for wordsolverx.com (last 90 days via GET)
+// Pull Bing Webmaster API query stats for wordauditor.com (last 90 days via GET)
 // and dump: (a) FAQ-style keywords, (b) per-game keyword pools with opportunity metrics.
 // Usage: node scripts/bing-faq-keywords.mjs
 // Requires BING_KEY in the environment (never hardcode API keys).
 const KEY = process.env.BING_KEY;
 if (!KEY) throw new Error('Set BING_KEY (Bing Webmaster API key) in the environment.');
-const SITE = 'https://wordsolverx.com/';
+const SITE = 'https://wordauditor.com/';
 
 const games = ['wordle', 'colordle', 'globle', 'worldle', 'semantle', 'nerdle', 'quordle',
   'contexto', 'framed', 'phoodle', 'phrazle', 'canuckle', 'waffle', 'worgle', 'sportle',

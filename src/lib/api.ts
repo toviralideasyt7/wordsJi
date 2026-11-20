@@ -1,5 +1,5 @@
 // API utilities for fetching Wordle data
-const API_BASE_URL = 'https://api.wordsolverx.workers.dev';
+const API_BASE_URL = 'https://api.wordauditor.com';
 
 // Fetch today's Wordle answer directly from API
 export async function getTodayWordle() {

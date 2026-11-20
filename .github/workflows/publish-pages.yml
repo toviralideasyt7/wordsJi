@@ -135,7 +135,7 @@ jobs:
       RUN_DATA_UPDATE_MODE: full
       SOURCE_NAME: ${{ github.event.client_payload.source || github.event.inputs.source || (github.event_name == 'push' && format('push:{0}', github.ref_name)) || github.event.action || 'manual' }}
       PREVIEW_BASE_URL: https://wordsolverx-z-ai.pages.dev
-      PUBLIC_BASE_URL: https://wordsolverx.com
+      PUBLIC_BASE_URL: https://wordauditor.com
       NVIDIA_API_KEYS: ${{ secrets.NVIDIA_API_KEYS }}
       NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       AGENT_ROUTER_TOKENS: ${{ secrets.AGENT_ROUTER_TOKENS }}
@@ -157,7 +157,7 @@ jobs:
       ARTICLE_REPETITION_PENALTY: 1.0
       INDEXING_ARTIFACT_DIR: artifacts/indexing
       INDEXING_REQUEST_TIMEOUT_MS: 10000
-      SITEMAP_URL: https://wordsolverx.com/sitemap.xml
+      SITEMAP_URL: https://wordauditor.com/sitemap.xml
       ENABLE_GOOGLE_INSPECTION: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.run_google_inspection != 'false' }}
       GOOGLE_INSPECTION_STAGGER_MS: 250
       GOOGLE_INSPECTION_CONCURRENCY: 6

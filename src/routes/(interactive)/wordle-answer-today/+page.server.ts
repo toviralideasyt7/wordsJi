@@ -174,7 +174,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 };
 
 async function getWordleDataWithFallback(todayKey: string, fallbackNumber: number): Promise<TodayApiResponse | null> {
-    const todayResponse = await fetch('https://api.wordsolverx.workers.dev/api/today');
+    const todayResponse = await fetch('https://api.wordauditor.com/api/today');
     const todayPayload = (await todayResponse.json()) as TodayApiResponse & { error?: string };
 
     if (todayResponse.ok && todayPayload?.solution) {

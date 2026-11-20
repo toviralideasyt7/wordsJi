@@ -1,4 +1,4 @@
-// scripts/marveldle-solve.mjs — WordSolverX daily Marveldle answer solver.
+// scripts/marveldle-solve.mjs — WordAuditor daily Marveldle answer solver.
 // Plain Node.js, no dependencies. Run from the repo root:
 //     node scripts/marveldle-solve.mjs today                  # solve both modes for the current pick-id
 //     node scripts/marveldle-solve.mjs yesterday              # cheap backfill via the /yesterday endpoint

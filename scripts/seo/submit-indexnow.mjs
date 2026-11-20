@@ -9,7 +9,7 @@ const artifactDir = path.resolve(
 const reportPath = path.join(artifactDir, "indexnow-report.json");
 const indexNowKey = process.env.INDEXNOW_KEY || "";
 const publicBaseUrl = (
-  process.env.PUBLIC_BASE_URL || "https://wordsolverx.com"
+  process.env.PUBLIC_BASE_URL || "https://wordauditor.com"
 ).replace(/\/$/, "");
 const requestTimeoutMs = Number.parseInt(
   process.env.INDEXING_REQUEST_TIMEOUT_MS || "15000",

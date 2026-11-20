@@ -24,7 +24,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'loldle helper',
 			'loldle answer',
 			'league of legends champion solver',
-			'wordsolverx loldle'
+			'wordauditor loldle'
 		],
 		attributes: [
 			{ key: 'gender', label: 'Gender', type: 'string', compareType: 'exact' },
@@ -50,7 +50,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'dotadle helper',
 			'dotadle answer',
 			'dota 2 hero solver',
-			'wordsolverx dotadle'
+			'wordauditor dotadle'
 		],
 		attributes: [
 			{ key: 'gender', label: 'Gender', type: 'string', compareType: 'exact' },
@@ -76,7 +76,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'pokedle helper',
 			'pokedle answer',
 			'pokemon daily puzzle solver',
-			'wordsolverx pokedle'
+			'wordauditor pokedle'
 		],
 		attributes: [
 			{ key: 'type1', label: 'Type 1', type: 'string', compareType: 'exact' },
@@ -102,7 +102,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'smashdle helper',
 			'smashdle answer',
 			'smash bros fighter solver',
-			'wordsolverx smashdle'
+			'wordauditor smashdle'
 		],
 		attributes: [
 			{ key: 'gender', label: 'Gender', type: 'string', compareType: 'exact' },
@@ -129,7 +129,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'narutodle helper',
 			'narutodle answer',
 			'naruto character solver',
-			'wordsolverx narutodle'
+			'wordauditor narutodle'
 		],
 		attributes: [
 			{ key: 'gender', label: 'Gender', type: 'string', compareType: 'exact' },
@@ -156,7 +156,7 @@ export const GAME_SOLVER_CONFIGS: Record<SolverGameKey, GameSolverConfig> = {
 			'one piecedle solver',
 			'onepiecedle helper',
 			'one piece character solver',
-			'wordsolverx onepiecedle'
+			'wordauditor onepiecedle'
 		],
 		attributes: [
 			{ key: 'gender', label: 'Gender', type: 'string', compareType: 'exact' },

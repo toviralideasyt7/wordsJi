@@ -118,10 +118,10 @@ async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'sites.json'), JSON.stringify(sites, null, 2));
 
-  const preferred = process.env.GSC_SITE_URL || 'https://wordsolverx.com/';
-  const site = siteList.find((s) => s.includes('wordsolverx.com')) || siteList[0];
+  const preferred = process.env.GSC_SITE_URL || 'https://wordauditor.com/';
+  const site = siteList.find((s) => s.includes('wordauditor.com')) || siteList[0];
   if (!siteList.includes(preferred) && !site) {
-    console.error('wordsolverx.com not found among verified sites:', siteList.join(', '));
+    console.error('wordauditor.com not found among verified sites:', siteList.join(', '));
     process.exit(1);
   }
   const enc = encodeURIComponent(site);
@@ -218,7 +218,7 @@ async function main() {
   console.log('\nURL INSPECTION:');
   const insp = [];
   for (const p of SAMPLE_URLS) {
-    const url = p.startsWith('http') ? p : `https://wordsolverx.com${p}`;
+    const url = p.startsWith('http') ? p : `https://wordauditor.com${p}`;
     const { status, json: r } = await gsc(token, 'https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
       method: 'POST',
       body: { inspectionUrl: url, siteUrl: site },

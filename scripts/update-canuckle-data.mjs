@@ -123,7 +123,7 @@ async function fetchAllPuzzles() {
 		const response = await fetch(pageUrl, {
 			headers: {
 				accept: 'application/json',
-				'user-agent': 'WordSolverX Canuckle Dataset Builder'
+				'user-agent': 'WordAuditor Canuckle Dataset Builder'
 			},
 			signal: AbortSignal.timeout(30000)
 		});
@@ -160,7 +160,7 @@ async function fetchAcceptedWords() {
 	const response = await fetch(WORDS_URL, {
 		headers: {
 			accept: 'application/json',
-			'user-agent': 'WordSolverX Canuckle Dataset Builder'
+			'user-agent': 'WordAuditor Canuckle Dataset Builder'
 		},
 		signal: AbortSignal.timeout(30000)
 	});

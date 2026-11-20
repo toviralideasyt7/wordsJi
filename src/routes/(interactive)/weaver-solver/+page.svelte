@@ -7,18 +7,18 @@
   import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
         import { generateBreadcrumbSchema, generateHowToSchema, generateSoftwareApplicationSchema, generateWebPageSchema, stripStructuredDataTypes } from '$lib/seo';
   import {
-    WORDSOLVERX_WORD_LENGTHS,
+    WORDAUDITOR_WORD_LENGTHS,
     getWordLadderIndexClient,
     getWordsOfLengthClient,
     type WordLadderIndex,
   } from '$lib/word-ladder-client';
   import { solveWordLadderWithIndex } from '$lib/word-ladder-logic';
 
-  const MIN_LENGTH = WORDSOLVERX_WORD_LENGTHS[0]; // 3
-  const MAX_LENGTH = WORDSOLVERX_WORD_LENGTHS[WORDSOLVERX_WORD_LENGTHS.length - 1]; // 12
+  const MIN_LENGTH = WORDAUDITOR_WORD_LENGTHS[0]; // 3
+  const MAX_LENGTH = WORDAUDITOR_WORD_LENGTHS[WORDAUDITOR_WORD_LENGTHS.length - 1]; // 12
   const MAX_PATHS_TO_SHOW = 5;
 
-  type WordLengthOption = (typeof WORDSOLVERX_WORD_LENGTHS)[number];
+  type WordLengthOption = (typeof WORDAUDITOR_WORD_LENGTHS)[number];
 
   let startWord = $state('');
   let endWord = $state('');
@@ -49,7 +49,7 @@
     detectedLength !== null &&
     detectedLength >= MIN_LENGTH &&
     detectedLength <= MAX_LENGTH &&
-    WORDSOLVERX_WORD_LENGTHS.includes(detectedLength as WordLengthOption)
+    WORDAUDITOR_WORD_LENGTHS.includes(detectedLength as WordLengthOption)
   );
 
   async function loadWordData(length: number) {
@@ -94,7 +94,7 @@
 
     // Both must be same length and within range to solve
     if (s.length !== e.length || s.length < MIN_LENGTH || s.length > MAX_LENGTH) return;
-    if (!WORDSOLVERX_WORD_LENGTHS.includes(s.length as WordLengthOption)) return;
+    if (!WORDAUDITOR_WORD_LENGTHS.includes(s.length as WordLengthOption)) return;
 
     // Load data if needed
     if (loadedLength !== s.length || !ladderIndex) {

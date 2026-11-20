@@ -1,4 +1,4 @@
-// scripts/batterup-daily.mjs — WordSolverX daily Batter Up answer fetch.
+// scripts/batterup-daily.mjs — WordAuditor daily Batter Up answer fetch.
 // Plain Node.js, no dependencies. Run from the repo root:
 //     node scripts/batterup-daily.mjs            # today's game (UTC date)
 //     node scripts/batterup-daily.mjs 2026-09-24  # a specific date
@@ -42,7 +42,7 @@ function shiftDateKey(dateKey, days) {
 
 async function fetchJson(url) {
   const res = await fetch(url, {
-    headers: { 'User-Agent': 'WordSolverX-batterup-daily/1.0' },
+    headers: { 'User-Agent': 'WordAuditor-batterup-daily/1.0' },
     signal: AbortSignal.timeout(30000)
   });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);

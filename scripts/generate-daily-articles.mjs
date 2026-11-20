@@ -16,7 +16,7 @@ const seoSkillPath = path.join(projectRoot, '.opencode', 'seo-skills', 'write-co
 const colordleDataPath = path.join(projectRoot, 'static', 'colordle_data.json');
 
 const WORDLE_API_BASE_URL =
-  process.env.WORDLE_API_BASE_URL ?? 'https://api.wordsolverx.workers.dev';
+  process.env.WORDLE_API_BASE_URL ?? 'https://api.wordauditor.com';
 const COLOR_ANSWERS_API_BASE =
   (process.env.COLOR_ANSWERS_API_BASE ?? 'https://color-answers-worker.colordle.workers.dev').replace(
     /\/+$/,
@@ -560,7 +560,7 @@ async function fetchJson(url, init = {}) {
     ...init,
     headers: {
       Accept: 'application/json',
-      'User-Agent': 'WordSolverX Daily Article Builder',
+      'User-Agent': 'WordAuditor Daily Article Builder',
       ...(init.headers ?? {})
     }
   });
@@ -584,7 +584,7 @@ async function getWordleContext(targetDate) {
   if (!payload?.solution) {
     const nytPayload = await fetchJson(`https://www.nytimes.com/svc/wordle/v2/${targetDate}.json`, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 WordSolverX Daily Article Builder'
+        'User-Agent': 'Mozilla/5.0 WordAuditor Daily Article Builder'
       }
     });
 
@@ -1064,7 +1064,7 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
   return [
     'You are writing a daily Wordle answer page for a real site. Return JSON only.',
     '',
-    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
+    'Write in Preston Hayes\' editorial voice for WordAuditor. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -1090,7 +1090,7 @@ function buildWordlePrompt(skillText, context, seoSkillText = '') {
     '- Never use the phrase "in today\'s". Prefer "for this puzzle", "on this board", or a direct noun phrase.',
     '- Keep the first 5 hints spoiler-safe. Do not reveal the answer before the reveal section.',
     '- Use straightforward American English.',
-    '- Keep links internal to wordsolverx.com only when you actually need a link.',
+    '- Keep links internal to wordauditor.com only when you actually need a link.',
     '- Avoid fake etymology or dictionary trivia unless you are highly confident from general knowledge.',
     '- Prefer fuller, human paragraphs: usually 2-4 sentences, with a single-sentence paragraph only when it lands a sharp takeaway.',
     '- Vary sentence length naturally. Avoid machine-like runs of tiny sentences, but also avoid bloated walls of text.',
@@ -1135,7 +1135,7 @@ function buildColordlePrompt(skillText, context, seoSkillText = '') {
   return [
     'You are writing a daily Colordle answer page for a real site. Return JSON only.',
     '',
-    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
+    'Write in Preston Hayes\' editorial voice for WordAuditor. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -1476,7 +1476,7 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
   const lines = [
     'You are writing a daily answer-page article for a real puzzle website. Return JSON only.',
     '',
-    'Write in Preston Hayes\' editorial voice for WordSolverX. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
+    'Write in Preston Hayes\' editorial voice for WordAuditor. Sound experienced and specific, but do not claim first-hand gameplay, private logs, or biography details that were not supplied.',
     '',
     'Human writing rules to follow:',
     skillText,
@@ -1515,7 +1515,7 @@ function buildGenericPrompt(skillText, entry, targetDate, seoSkillText = '') {
     '- If exact answer facts are not supplied, refer to "the answer above", "the reveal card", "today\'s page", or "the archive/solver on this page" instead of inventing specifics.',
     '- Pass Google\'s Who/How/Why test in tone: make it obvious the page exists to help a player verify the answer quickly, understand the solve path, and move to the right on-site tool if needed.',
     '- Show how the write-up was built from visible page elements only: answer card, hint widgets, archive history, solver links, and other verified page data. Do not mention prompts, models, or hidden workflow.',
-    '- Use internal links sparingly and only when they clearly help, usually to the solver, archive, or a closely related answer resource on WordSolverX.',
+    '- Use internal links sparingly and only when they clearly help, usually to the solver, archive, or a closely related answer resource on WordAuditor.',
     '',
     'Required sections inside `articleHtml` (use these exact headings):',
     ...getGenericSections(entry).map((s, i) => `${i + 1}. ${s}`),
@@ -1693,7 +1693,7 @@ async function pollPendingChatCompletion({ baseUrl, apiKey, requestId, deadlineA
         headers: {
           Authorization: `Bearer ${apiKey}`,
           Accept: 'application/json',
-          'User-Agent': 'WordSolverX Daily Article Builder'
+          'User-Agent': 'WordAuditor Daily Article Builder'
         }
       },
       deadlineAt
@@ -1759,7 +1759,7 @@ async function callChatCompletion({ baseUrl, apiKey, model, prompt, temperature 
           Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          'User-Agent': 'WordSolverX Daily Article Builder'
+          'User-Agent': 'WordAuditor Daily Article Builder'
         },
         body: JSON.stringify(requestBody)
       },

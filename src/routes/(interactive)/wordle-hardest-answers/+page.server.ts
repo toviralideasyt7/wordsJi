@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	let scored: Array<RawAnswer & { score: number; why: string }> = [];
 
 	try {
-		const res = await fetch('https://api.wordsolverx.workers.dev/api/answers?limit=2000');
+		const res = await fetch('https://api.wordauditor.com/api/answers?limit=2000');
 		if (res.ok) {
 			const payload = await res.json();
 			const answers: RawAnswer[] = payload.answers || [];

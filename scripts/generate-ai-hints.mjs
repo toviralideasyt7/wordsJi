@@ -217,7 +217,7 @@ const GAMES = [
 	{
 		key: 'wordle', label: 'Wordle',
 		async getInput() {
-			const d = await fetchJson('https://api.wordsolverx.workers.dev/api/today');
+			const d = await fetchJson('https://api.wordauditor.com/api/today');
 			if (!d || !d.solution || !d.date) return null;
 			return { text: d.solution, dateKey: d.date, numberText: `#${d.days_since_launch}` };
 		}
@@ -315,7 +315,7 @@ const GAMES = [
 			let rec = null;
 			try {
 				rec = await fetchJson(`https://raw.githubusercontent.com/satwiksamanta77/daily-games/main/database/${key}/searchle/result.json`, {
-					headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+					headers: { accept: 'application/json', 'user-agent': 'WordAuditor Daily Live Fetch' }
 				});
 			} catch { /* no verified record for this date */ }
 			if (!rec || rec.solved !== true || typeof rec.answer !== 'string' || !rec.answer) return null;
@@ -396,7 +396,7 @@ const GAMES = [
 			const target = new Date(`${key}T12:00:00Z`).getTime();
 			const puzzleNumber = 1483 + Math.round((target - refDate) / 86_400_000); // 'daily' referencePuzzle
 			const payload = await fetchJson(`https://titles.framed.wtf/v1/titles/top-ten/${puzzleNumber}?gameType=daily`, {
-				headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+				headers: { accept: 'application/json', 'user-agent': 'WordAuditor Daily Live Fetch' }
 			});
 			const frames = payload?.frames ?? [];
 			const lastFrame = frames[frames.length - 1];
@@ -437,7 +437,7 @@ const GAMES = [
 			let rec = null;
 			try {
 				rec = await fetchJson(`https://raw.githubusercontent.com/satwiksamanta77/daily-games/main/database/${key}/worldle/result.json`, {
-					headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+					headers: { accept: 'application/json', 'user-agent': 'WordAuditor Daily Live Fetch' }
 				});
 			} catch { /* no verified record for this date */ }
 			if (!rec) return null;
@@ -460,7 +460,7 @@ const GAMES = [
 			const apiDate = `${da}/${mo}/${y}`;
 			try {
 				const payload = await fetchJson(`https://www.countryle.com/hidden-api/get-daily-country-valid.php?date=${apiDate}`, {
-					headers: { accept: 'application/json', 'user-agent': 'WordSolverX Daily Live Fetch' }
+					headers: { accept: 'application/json', 'user-agent': 'WordAuditor Daily Live Fetch' }
 				});
 				const CryptoJS = require('crypto-js');
 				const raw = payload.country ?? payload.id ?? payload;

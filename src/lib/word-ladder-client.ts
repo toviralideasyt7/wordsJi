@@ -14,9 +14,9 @@ interface WordsData {
 	words: string[];
 }
 
-export const WORDSOLVERX_WORD_LENGTHS = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
+export const WORDAUDITOR_WORD_LENGTHS = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
 
-const WORDSOLVERX_FILES: Record<number, string> = {
+const WORDAUDITOR_FILES: Record<number, string> = {
 	3: '/3letterwords.json',
 	4: '/4letterwords.json',
 	5: '/words.json',
@@ -30,7 +30,7 @@ const WORDSOLVERX_FILES: Record<number, string> = {
 };
 
 const textDictionaryCache = new Map<'twl' | 'sowpods', Promise<Map<number, Set<string>>>>();
-const wordSolverXCache = new Map<string, Promise<Set<string>>>();
+const wordAuditorCache = new Map<string, Promise<Set<string>>>();
 const indexCache = new Map<string, Promise<WordLadderIndex>>();
 
 function normalizeWords(words: Iterable<string>, wordCase: WordListCase): Set<string> {
@@ -46,7 +46,7 @@ function normalizeWords(words: Iterable<string>, wordCase: WordListCase): Set<st
 }
 
 function getWordAuditorFile(length: number): string | null {
-	return WORDSOLVERX_FILES[length] ?? null;
+	return WORDAUDITOR_FILES[length] ?? null;
 }
 
 async function loadTextDictionary(type: 'twl' | 'sowpods'): Promise<Map<number, Set<string>>> {
@@ -93,7 +93,7 @@ async function loadWordAuditorWords(
 	}
 
 	const cacheKey = `${length}:${wordCase}`;
-	let cached = wordSolverXCache.get(cacheKey);
+	let cached = wordAuditorCache.get(cacheKey);
 	if (!cached) {
 		cached = fetch(file)
 			.then(async (response) => {
@@ -111,7 +111,7 @@ async function loadWordAuditorWords(
 				const filteredWords = typedData.words.filter((word) => word && word.length === length);
 				return normalizeWords(filteredWords, wordCase);
 			});
-		wordSolverXCache.set(cacheKey, cached);
+		wordAuditorCache.set(cacheKey, cached);
 	}
 
 	return cached;

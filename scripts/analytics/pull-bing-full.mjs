@@ -2,7 +2,7 @@
 // Requires BING_KEY in the environment (never hardcode API keys).
 const KEY = process.env.BING_KEY;
 if (!KEY) throw new Error('Set BING_KEY (Bing Webmaster API key) in the environment.');
-const SITE = 'https://wordsolverx.com/';
+const SITE = 'https://wordauditor.com/';
 const res = await fetch(`https://ssl.bing.com/webmaster/api.svc/json/GetQueryStats?siteUrl=${encodeURIComponent(SITE)}&apikey=${KEY}`);
 if (!res.ok) throw new Error(`HTTP ${res.status}`);
 const data = await res.json();

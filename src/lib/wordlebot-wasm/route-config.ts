@@ -1719,7 +1719,7 @@ function buildSolverKeywords(game: WordlebotGameConfig, wordLength?: number) {
                         `${wordLength} letter wordle helper`,
                         `${wordLength} letter wordle answer finder`,
                         `${wordLength} letter word finder`,
-                        'wordsolverx wordle solver'
+                        'wordauditor wordle solver'
                 ];
         }
 
@@ -1729,7 +1729,7 @@ function buildSolverKeywords(game: WordlebotGameConfig, wordLength?: number) {
                         'spotle word game solver',
                         'blank clue wordle solver',
                         'spotle answer helper',
-                        'wordsolverx spotle wordle'
+                        'wordauditor spotle wordle'
                 ];
         }
 
@@ -1738,7 +1738,7 @@ function buildSolverKeywords(game: WordlebotGameConfig, wordLength?: number) {
                 `${base} helper`,
                 `${base} answer finder`,
                 `${base} clue solver`,
-                `wordsolverx ${base}`
+                 `wordauditor ${base}`
         ];
 }
 
@@ -1966,7 +1966,7 @@ export function getCanuckleTodayPageConfig(): WordlebotPageConfig {
                         'canuckle today',
                         'canuckle puzzle today',
                         'canuckle hint today',
-                        'wordsolverx canuckle'
+                        'wordauditor canuckle'
                 ],
                 faqTitle: 'Canuckle Answer Today FAQs',
                 faqs: [
@@ -2032,7 +2032,7 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
                         'canuckle answers',
                         'past canuckle puzzles',
                         'canuckle answer history',
-                        'wordsolverx canuckle archive'
+                        'wordauditor canuckle archive'
                 ],
                 faqTitle: 'Canuckle Archive FAQs',
                 faqs: [

@@ -1,6 +1,6 @@
 // GSC keyword-opportunity puller.
 // Reads the service account from GSC_CREDENTIALS_PATH, pulls 90 days of query
-// analytics for wordsolverx.com, and flags the keywords with impressions but
+// analytics for wordauditor.com, and flags the keywords with impressions but
 // weak CTR (the "huge potential" list), plus near-miss queries sitting at
 // position 2-6 that should convert.
 //
@@ -64,11 +64,11 @@ async function main() {
   const token = await getAccessToken();
   const headers = { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' };
 
-  // Pick the verified property for wordsolverx.com.
+  // Pick the verified property for wordauditor.com.
   const siteListRes = await fetch('https://searchconsole.googleapis.com/webmasters/v3/sites', { headers });
   const siteListJson = await siteListRes.json();
   const siteList = (siteListJson.siteEntry || []).map((s) => s.siteUrl);
-  const site = siteList.find((s) => s.includes('wordsolverx.com')) || siteList[0];
+  const site = siteList.find((s) => s.includes('wordauditor.com')) || siteList[0];
   if (!site) {
     console.error('No verified GSC properties found:', JSON.stringify(siteListJson));
     process.exit(1);

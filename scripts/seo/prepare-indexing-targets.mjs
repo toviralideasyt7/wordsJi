@@ -15,7 +15,7 @@ const artifactDir = path.resolve(
 const outputPath = path.join(artifactDir, "updated-urls.json");
 const githubOutput = process.env.GITHUB_OUTPUT;
 const publicBaseUrl = (
-  process.env.PUBLIC_BASE_URL || "https://wordsolverx.com"
+  process.env.PUBLIC_BASE_URL || "https://wordauditor.com"
 ).replace(/\/$/, "");
 const eventName = process.env.GITHUB_EVENT_NAME || "";
 const groupName = process.env.GROUP_NAME || "site";

@@ -108,7 +108,7 @@ async function fetchCountryleCountryId(dateKey) {
   const response = await fetch(url, {
     headers: {
       accept: 'application/json',
-      'user-agent': 'WordSolverX Countryle Dataset Builder'
+      'user-agent': 'WordAuditor Countryle Dataset Builder'
     },
     signal: AbortSignal.timeout(15000)
   });

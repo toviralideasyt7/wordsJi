@@ -65,7 +65,7 @@ async function fetchFramedAnswer(gameType, puzzleNumber) {
     {
       headers: {
         accept: 'application/json',
-        'user-agent': 'WordSolverX Framed Dataset Builder'
+        'user-agent': 'WordAuditor Framed Dataset Builder'
       },
       signal: AbortSignal.timeout(15000)
     }

@@ -27,7 +27,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	let fetchError: string | null = null;
 
 	try {
-		const res = await fetch('https://api.wordsolverx.workers.dev/api/answers?limit=2000');
+		const res = await fetch('https://api.wordauditor.com/api/answers?limit=2000');
 		if (res.ok) {
 			const payload = await res.json();
 			answers = payload.answers || [];
