@@ -37,6 +37,8 @@ const TARGETS = [
 	{ gameNumber: 983, date: '2026-10-28' }, // Trevor Larnach (verified in games_batterup2026-10-28.json cumulative file, game_date matches, player_id 41205; Oct 28 cron raced the publisher, page on "updating")
 	{ gameNumber: 985, date: '2026-10-30' }, // Jackson Merrill (verified in games_batterup2026-10-31.json cumulative file, game_date 2026-10-30 matches, player_id 4872691; Oct 30 game missing from site's recent list, Oct 31 #986 landed fine)
 	{ gameNumber: 991, date: '2026-11-05' }, // Nick Kurtz (verified in games_batterup2026-11-05.json, game_date 2026-11-05 matches, player_id 4966637, Athletics; file last_updated 2026-11-04T23:50:36-05:00 = 2026-11-05 04:50 UTC, after both the 01:05 cron and the proposed 04:00 move — Nov 5 page on "updating" at 10:43 UTC, archive newest is #990 Nov 4)
+	{ gameNumber: 996, date: '2026-11-10' }, // Andy Pages (verified in games_batterup2026-11-19.json cumulative file, game_date 2026-11-10 matches, player_id 42468, Dodgers; Nov 10 01:05 cron raced the publisher (file meta 03:54 UTC) and the day never self-healed — archive jumped #995 -> #997)
+	{ gameNumber: 1000, date: '2026-11-14' } // Chase Meidroth (verified in games_batterup2026-11-19.json cumulative file, game_date 2026-11-14 matches, player_id 5136929, White Sox; file landed 03:18 UTC, after the 01:05 cron, and the day never self-healed — archive jumped #1001 -> #999)
 ];
 
 function dateKeyUTC(date) {

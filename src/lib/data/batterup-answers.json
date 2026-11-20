@@ -922,6 +922,26 @@
     "sourceDate": "2026-11-09",
     "fetchedAt": "2026-11-10T01:06:11.678Z"
   },
+  "2026-11-10": {
+    "date": "2026-11-10",
+    "gameNumber": 996,
+    "player": {
+      "player_name": "Andy Pages",
+      "player_id": "42468",
+      "team_name": "Dodgers",
+      "born": "CUBA",
+      "birth_date": "2000-12-08",
+      "position": [
+        "CF"
+      ],
+      "debut": 2024,
+      "jersey_number": 44
+    },
+    "videoDescription": "[05/15/26 : LAD 6 - 0 LAA] Andy Pages takes this one deep to center field to get the scoring started in the top of the 4th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/15/1cef2e82-3ea76470-c150ecd1-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-19",
+    "fetchedAt": "2026-11-20T00:40:09.880Z"
+  },
   "2026-11-11": {
     "date": "2026-11-11",
     "gameNumber": 997,
@@ -981,6 +1001,26 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/02/46da060d-1f8593e8-d3976241-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-13",
     "fetchedAt": "2026-11-14T01:06:08.758Z"
+  },
+  "2026-11-14": {
+    "date": "2026-11-14",
+    "gameNumber": 1000,
+    "player": {
+      "player_name": "Chase Meidroth",
+      "player_id": "5136929",
+      "team_name": "White Sox",
+      "born": "USA",
+      "birth_date": "2001-07-23",
+      "position": [
+        "2B"
+      ],
+      "debut": 2025,
+      "jersey_number": 10
+    },
+    "videoDescription": "[09/30/26 : CHW 7 - 3 HOU] Chase Meidroth mashes a homer deep to left field to score three and increase the White Sox lead to 7-3 in the top of the 6th.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/30/16102435-97b7f38c-174d1ddd-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-19",
+    "fetchedAt": "2026-11-20T00:40:09.880Z"
   },
   "2026-11-15": {
     "date": "2026-11-15",
