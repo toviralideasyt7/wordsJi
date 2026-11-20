@@ -20,6 +20,14 @@ on:
     types:
       - batterup-daily-requested
   workflow_dispatch:
+  # Safety net (2026-11-21): the upstream CDN file has been observed landing
+  # as late as 04:50 UTC, after the worker's 01:05 dispatch — on those days
+  # the 01:05 run fails loudly and the page sits on "updating". This 05:30
+  # UTC run catches every observed landing time. It is a no-op when the data
+  # is already current (the commit step below diff-guards), and it fails
+  # loudly without committing when the CDN file still has not landed.
+  schedule:
+    - cron: '30 5 * * *'
 
 permissions:
   contents: write
