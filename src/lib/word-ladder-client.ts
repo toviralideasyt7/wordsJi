@@ -7,7 +7,7 @@ import {
 	type WordLadderIndex
 } from '$lib/word-ladder-logic';
 
-export type DictionaryType = 'wordsolverx' | 'twl' | 'sowpods';
+export type DictionaryType = 'wordauditor' | 'twl' | 'sowpods';
 export type WordListCase = 'upper' | 'lower';
 
 interface WordsData {
@@ -118,7 +118,7 @@ async function loadWordAuditorWords(
 }
 
 export function getDictionaryLabel(dictionary: DictionaryType): string {
-	if (dictionary === 'wordsolverx') return 'Our Word List';
+	if (dictionary === 'wordauditor') return 'Our Word List';
 	if (dictionary === 'twl') return 'OWL2 (US Scrabble)';
 	return 'SOWPODS (World Scrabble)';
 }
@@ -129,10 +129,10 @@ export function supportsWordAuditorLength(length: number): boolean {
 
 export async function getWordsOfLengthClient(
 	length: number,
-	dictionary: DictionaryType = 'wordsolverx',
+	dictionary: DictionaryType = 'wordauditor',
 	wordCase: WordListCase = 'upper'
 ): Promise<Set<string>> {
-	if (dictionary === 'wordsolverx') {
+	if (dictionary === 'wordauditor') {
 		return loadWordAuditorWords(length, wordCase);
 	}
 
@@ -142,7 +142,7 @@ export async function getWordsOfLengthClient(
 
 export async function getWordLadderIndexClient(
 	length: number,
-	dictionary: DictionaryType = 'wordsolverx',
+	dictionary: DictionaryType = 'wordauditor',
 	wordCase: WordListCase = 'upper'
 ): Promise<WordLadderIndex> {
 	const cacheKey = `${dictionary}:${length}:${wordCase}`;
@@ -160,12 +160,12 @@ export async function getWordLadderIndexClient(
 
 export async function isValidWordClient(
 	word: string,
-	dictionary: DictionaryType = 'wordsolverx'
+	dictionary: DictionaryType = 'wordauditor'
 ): Promise<boolean> {
 	const trimmedWord = word.trim();
 	if (!trimmedWord) return false;
 
-	const wordCase: WordListCase = dictionary === 'wordsolverx' && trimmedWord === trimmedWord.toLowerCase()
+	const wordCase: WordListCase = dictionary === 'wordauditor' && trimmedWord === trimmedWord.toLowerCase()
 		? 'lower'
 		: 'upper';
 	const words = await getWordsOfLengthClient(trimmedWord.length, dictionary, wordCase);
@@ -177,7 +177,7 @@ export async function isValidWordClient(
 export async function solveWordLadderClient(
 	startWord: string,
 	endWord: string,
-	dictionary: DictionaryType = 'wordsolverx',
+	dictionary: DictionaryType = 'wordauditor',
 	options: number | SolveWordLadderOptions = 10
 ): Promise<SolveWordLadderResult> {
 	const start = startWord.trim();
@@ -194,7 +194,7 @@ export async function solveWordLadderClient(
 	}
 
 	const wordCase: WordListCase =
-		dictionary === 'wordsolverx' && start === start.toLowerCase() && end === end.toLowerCase()
+		dictionary === 'wordauditor' && start === start.toLowerCase() && end === end.toLowerCase()
 			? 'lower'
 			: 'upper';
 

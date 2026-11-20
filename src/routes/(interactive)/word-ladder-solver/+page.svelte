@@ -26,7 +26,7 @@
 
         let startWord = $state('');
         let endWord = $state('');
-        let dictionary = $state<DictionaryType>('wordsolverx');
+        let dictionary = $state<DictionaryType>('wordauditor');
         let maxSolutions = $state('10');
         let loading = $state(false);
         let result = $state<SolutionResult | null>(null);
@@ -131,7 +131,7 @@
                 const normalizedMaxSolutions = normalizeMaxSolutions(maxSolutions);
                 maxSolutions = String(normalizedMaxSolutions);
 
-                if (dictionary === 'wordsolverx' && !supportsWordAuditorLength(startWord.length)) {
+                if (dictionary === 'wordauditor' && !supportsWordAuditorLength(startWord.length)) {
                         error =
                                 'Our Word List is currently available for 3 to 12 letter words. Use OWL2 or SOWPODS for other lengths.';
                         return;
@@ -318,7 +318,7 @@
                         <div class="mt-4 rounded-2xl border border-violet-100 bg-violet-50 px-4 py-3 text-sm text-violet-800">
                                 <p class="font-semibold">Mixed results are enabled by default.</p>
                                 <p class="mt-1">The solver now mixes different step counts together instead of filling the whole list with only one step length first. Manual answer caps like 12 or 18 are supported.</p>
-                                {#if dictionary === 'wordsolverx'}
+                                {#if dictionary === 'wordauditor'}
                                         <p class="mt-2 text-violet-700">Our Word List uses the same local word lists as Weaver for 3 to 12 letter words.</p>
                                 {/if}
                         </div>

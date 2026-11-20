@@ -59,8 +59,8 @@
 
     try {
       const [loadedWords, loadedIndex] = await Promise.all([
-        getWordsOfLengthClient(length as WordLengthOption, 'wordsolverx', 'lower'),
-        getWordLadderIndexClient(length as WordLengthOption, 'wordsolverx', 'lower'),
+        getWordsOfLengthClient(length as WordLengthOption, 'wordauditor', 'lower'),
+        getWordLadderIndexClient(length as WordLengthOption, 'wordauditor', 'lower'),
       ]);
 
       wordSet = loadedWords;
