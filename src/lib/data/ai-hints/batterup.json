@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-19T01:09:12.154Z",
+  "generatedAt": "2026-11-20T00:42:49.555Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -445,6 +445,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires specific knowledge of current MLB rosters and international players."
+    },
+    "2026-11-19": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "A bird-named outfielder who flies across the grass for the Cubs.",
+      "clue1": "A dynamic young talent from the North Side of Chicago.",
+      "starts_with": "P",
+      "ends_with": "G",
+      "definition": "American professional baseball outfielder playing for the Chicago Cubs.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The hyphenated name and length increase the complexity for most players."
     }
   },
   "prose": {
@@ -483,6 +496,7 @@
     "2026-11-15": "The Batter Up puzzle for November 15, 2026 (Game #1001) is live with today's answer confirmed. The answer runs 13 characters, starting with D and ending with N — see the letter hints above before you peek.",
     "2026-11-16": "The Batter Up puzzle for November 16, 2026 (Game #1002) is live with today's answer confirmed. The answer runs 16 characters, starting with G and ending with N — see the letter hints above before you peek.",
     "2026-11-17": "Batter Up Game #1003 arrives on November 17, 2026. This puzzle features a thirteen-letter name with a distinct consonant-vowel balance.",
-    "2026-11-18": "Batter Up Game #1004 for November 18, 2026, features a twelve-letter name. The solution begins and ends with the same vowel."
+    "2026-11-18": "Batter Up Game #1004 for November 18, 2026, features a twelve-letter name. The solution begins and ends with the same vowel.",
+    "2026-11-19": "Batter Up Game #1005 for November 19, 2026, features a long hyphenated name. The solution follows a complex pattern of seventeen letters."
   }
 }
