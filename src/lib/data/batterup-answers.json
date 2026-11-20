@@ -1121,5 +1121,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/20/a0a130e3-68e46500-f4412cab-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-19",
     "fetchedAt": "2026-11-20T00:39:21.105Z"
+  },
+  "2026-11-20": {
+    "date": "2026-11-20",
+    "gameNumber": 1006,
+    "player": {
+      "player_name": "Dillon Dingler",
+      "player_id": "4345620",
+      "team_name": "Tigers",
+      "born": "USA",
+      "birth_date": "1998-09-17",
+      "position": [
+        "C"
+      ],
+      "debut": 2024,
+      "jersey_number": 13
+    },
+    "videoDescription": "[06/01/26 : DET 10 - 9 TB] Dillon Dingler crushes a two-run home run to center field, extending the Tigers' lead to 4-0 in the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/01/0f14b15c-1c9e6e12-6cb5fab7-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-20",
+    "fetchedAt": "2026-11-20T17:06:59.873Z"
   }
 }
