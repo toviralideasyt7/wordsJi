@@ -87,6 +87,46 @@
     </div>
     <p class="mt-4 text-sm text-slate-500">Showing {filtered.length} of {data.count} days.</p>
 
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">How this archive is organized</h2>
+      <div class="space-y-3 text-slate-600 leading-relaxed">
+        <p>One row per day, newest first — and two answers in every row. Marveldle runs a Comics game and an MCU game side by side, each with its own character pool, so a date is only fully answered when both names are filled in. The label after each character is that answer's type (hero, villain, anti-hero and so on), the same type the game's own tiles score.</p>
+        <p>A day's row is added once both answers have been verified against the game's daily picks. Because the two modes are picked independently, the same character can headline both columns on one day, appear in one mode several times across the archive, or show up in Comics long before the MCU ever uses them — the search box matches either column.</p>
+      </div>
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Ways to use the archive</h2>
+      <div class="space-y-3 text-slate-600 leading-relaxed">
+        <p><strong class="text-slate-800">Settle a past day.</strong> Missed a game, or debating who last Thursday's MCU answer was? Search the character or the date and the row is the record — both modes at once.</p>
+        <p><strong class="text-slate-800">Check for repeats before you guess.</strong> Search a character's name to see every day they have already been the answer in each mode. The pools are large, but the game does revisit favorites, and a name with three rows is a different bet from a name with none.</p>
+        <p><strong class="text-slate-800">Read the type column for the game's habits.</strong> Scroll a month of rows and the mix shows itself: how often villains headline, how rarely anti-heroes appear, whether the MCU column leans on the current shows and films. That mix is the prior your first guess should respect.</p>
+        <p><strong class="text-slate-800">Cross-check a solver board.</strong> If the <a href="/marveldle-solver" class="text-red-700 hover:text-red-800 font-medium underline">solver</a> narrows a past game to two or three names, the archive confirms which one the day actually used.</p>
+      </div>
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Marveldle archive FAQ</h2>
+      <div class="space-y-3">
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Why does each day have two answers?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">Because Marveldle is two daily games sharing a name: a Comics game drawn from the print universe and an MCU game drawn from the screen universe. They have separate pools and separate picks, so the archive records both, side by side.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Are today's answers in the archive?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">Yes — once both of today's picks are verified and published, they appear here as the newest row. For today's games, the <a href="/marveldle-answer-today" class="text-red-700 hover:text-red-800 font-medium underline">Marveldle answer page</a> carries the fuller breakdown for each mode.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">How often is the archive updated?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">After every daily game, once both modes' answers are verified. The count at the top of this page always matches the rows actually listed.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Can the same character be the answer twice?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">Yes, and the archive is where it shows. Search any character to see all of their appearances in each mode — repeats happen in both pools, which is exactly why checking here beats relying on memory.</p>
+        </details>
+      </div>
+    </section>
+
     <div class="mt-12">
       <InternalLinkSection currentGame="Marveldle" />
     </div>

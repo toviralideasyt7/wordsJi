@@ -292,6 +292,62 @@
       </section>
     {/if}
 
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">How to play Batter Up</h2>
+      <div class="space-y-3 text-slate-600 leading-relaxed">
+        <p>Batter Up posts one mystery MLB batter every day. You name a player, and the game scores your guess across six tiles: jersey number, team, division, birthplace, age and position. Green means that tile matches the answer exactly. White means no match. Yellow is the interesting one — it means you are close, and each column defines "close" differently.</p>
+        <p>Jersey yellow means the two numbers share a tens digit, so a yellow on #24 puts the answer somewhere in the twenties. Division yellow means the same league — American or National — without the same division. Age yellow means the answer is within two years of your guess. Position yellow means the same group: infield or outfield. Team and birthplace never turn yellow; they are either exactly right or not, which makes a green on either one the most valuable tile on the board.</p>
+      </div>
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">How to use this solver</h2>
+      <ol class="list-decimal pl-5 space-y-2 text-slate-600 leading-relaxed">
+        <li>Play your guess in the real game first, and note the color of every tile.</li>
+        <li>Search for that same player here and select him.</li>
+        <li>Tap each of the six tiles until the colors match your game board. Team and birthplace skip yellow, because the game never scores them close.</li>
+        <li>Press <strong class="text-slate-800">Apply guess</strong>. The candidate count drops to only the batters who fit every color you entered.</li>
+        <li>Repeat with each new guess, or press <strong class="text-slate-800">Suggest guesses</strong> at any point to see the highest-information players to try next.</li>
+      </ol>
+      <p class="mt-3 text-slate-600 leading-relaxed">Everything runs in your browser. The solver never looks up today's answer — it only applies the feedback you type in, the same way you would work through the list by hand, just faster.</p>
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Strategy: shrinking the pool fast</h2>
+      <div class="space-y-3 text-slate-600 leading-relaxed">
+        <p><strong class="text-slate-800">Spend your first guess on information, not on a hunch.</strong> A good opener is a player whose tiles split the pool many ways at once: a common jersey range, a mid-range age, and a division you genuinely cannot rule out. Even an all-white board helps — it clears a league, an age band and a position group in one move.</p>
+        <p><strong class="text-slate-800">Treat a yellow jersey as a lock, not a hint.</strong> Same tens digit is a hard filter: the answer's number is in that decade, full stop. The same goes for a yellow division (the league is settled) and a yellow age (the answer sits in a five-year window). Stack two yellows and the pool usually falls to a handful of names.</p>
+        <p><strong class="text-slate-800">Probe outside the pool when the solver suggests it.</strong> The best next guess is sometimes a player who cannot be the answer, because his tiles divide the remaining candidates more evenly than any candidate's own tiles would. That feels wasteful and is usually the fastest route to a short list — after which every suggestion is a player who can actually end the game.</p>
+        <p><strong class="text-slate-800">Watch birthplace.</strong> It is the tile players ignore, and it is quietly powerful late: once team and division narrow the pool to one club, birthplace and jersey number separate teammates better than position does.</p>
+      </div>
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Batter Up solver FAQ</h2>
+      <div class="space-y-3">
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Does the solver know today's answer?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">No. It filters the player pool using only the guesses and colors you enter. If you want the confirmed answer instead, it is on the <a href="/batterup-answer-today" class="text-sky-700 hover:text-sky-800 font-medium underline">Batter Up answer page</a>, updated every day.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Which players are in the pool?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">Roughly a thousand current MLB batters — the same pool the counter at the top of this page reports once it loads. Players outside that pool cannot be the daily answer, so they are not candidates, though the suggestion engine can still name one as a probe guess.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Why does it suggest a player who can't be the answer?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">Because that player's tiles split the remaining candidates more evenly than any candidate's tiles would, so his feedback rules out more names per guess. Suggestions marked from inside the pool take over once the list is short.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Do team and birthplace ever turn yellow?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">No. In Batter Up those two tiles are green or white only. That is why this solver skips yellow when you tap them, and why a green team tile is worth so much: it settles the club outright.</p>
+        </details>
+        <details class="rounded-xl border border-slate-200 px-5 py-4">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Where can I check a past answer?</summary>
+          <p class="mt-2 text-slate-600 leading-relaxed">The <a href="/batterup-archive" class="text-sky-700 hover:text-sky-800 font-medium underline">Batter Up archive</a> lists every verified daily answer by game number and date, searchable by player, team or division.</p>
+        </details>
+      </div>
+    </section>
+
     <div class="mt-12">
       <InternalLinkSection currentGame="Batter Up" />
     </div>
