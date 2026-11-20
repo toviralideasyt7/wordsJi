@@ -126,7 +126,7 @@
             <dt class="text-xs font-semibold uppercase tracking-widest text-slate-500">{row.mode}</dt>
             <dd class="mt-1 flex items-center gap-2 font-semibold text-slate-900">
               {#if row.flagUrl}
-                <img src={row.flagUrl} alt="" width="40" height="27" loading="lazy" class="rounded-sm shadow-sm" />
+                <img src={row.flagUrl} alt={`Flag of ${data.todayAnswer.country.name}`} width="40" height="27" loading="lazy" class="rounded-sm shadow-sm" />
               {/if}
               <span>{row.detail}</span>
             </dd>

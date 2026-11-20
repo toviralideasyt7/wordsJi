@@ -108,7 +108,7 @@
         >
           <img
             class="yt-poster"
-            alt=""
+            alt={title}
             loading="lazy"
             src={posterMax}
             data-wsx-poster
