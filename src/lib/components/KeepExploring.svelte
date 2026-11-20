@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+  import { parseArchiveDateKey, toArchiveDateKey } from '$lib/archive-page';
   import { KEEP_EXPLORING_CONFIG, type KeepExploringSlug } from '$lib/keep-exploring';
 
   interface ExploreCard {
@@ -48,13 +48,13 @@
   const cards = $derived.by((): ExploreCard[] => {
     const list: ExploreCard[] = [];
 
-    if (config.datedPrefix && yesterday) {
-      // Games with prerendered per-day dated pages: link straight to
-      // yesterday's answer page, e.g. /wordle-answer-for-october-4-2026.
+    if (config.datedArchive && config.archiveHref && yesterday) {
+      // The archive page renders any past day's answer via ?date=, so
+      // yesterday's answer is one click away without a per-day page.
       list.push({
         title: `Yesterday's ${gameName} answer`,
         sub: formatLongUTC(yesterday),
-        href: `/${config.datedPrefix}-answer-for-${toMonthDayYearKey(yesterday)}`,
+        href: `${config.archiveHref}?date=${toArchiveDateKey(yesterday)}`,
         icon: '📅'
       });
     } else if (config.archiveHref) {
@@ -76,9 +76,9 @@
     });
 
     if (config.archiveHref) {
-      if (config.datedPrefix) {
-        // Yesterday already has its own dated page, so the archive card is for
-        // browsing the full history.
+      if (config.datedArchive) {
+        // Yesterday already has its own card above, so the archive card is
+        // for browsing the full history.
         list.push({
           title: `${gameName} archive`,
           sub: 'Every past answer, date by date',

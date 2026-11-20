@@ -1,9 +1,9 @@
 // Per-game config for the KeepExploring "keep exploring" module shown below the
 // answer on daily answer pages.
 //
-// - datedPrefix: games with prerendered per-day dated pages
-//   (/{prefix}-answer-for-october-4-2026). The "yesterday" link is computed from
-//   the page's own puzzle date minus one day — never hardcoded.
+// - datedArchive: games whose archive page accepts ?date=YYYY-MM-DD deep
+//   links to a specific day. The "yesterday" link is computed from the page's
+//   own puzzle date minus one day — never hardcoded.
 // - solverHref: the game's own solver, or '/solver' when it has none.
 // - archiveHref: the game's archive page, or null when it has none (falls back
 //   to the /archive hub and the /today hub for onward links).
@@ -39,8 +39,8 @@ export type KeepExploringSlug =
 
 export interface KeepExploringConfig {
 	gameName: string;
-	/** per-day dated pages exist for this game (e.g. 'wordle' -> /wordle-answer-for-...) */
-	datedPrefix?: 'wordle' | 'colordle';
+	/** archive page supports ?date= deep links to a specific day's answer */
+	datedArchive?: boolean;
 	solverHref: string;
 	solverLabel: string;
 	solverSub: string;
@@ -65,13 +65,13 @@ const SOLVER_HUB = {
 export const KEEP_EXPLORING_CONFIG: Record<KeepExploringSlug, KeepExploringConfig> = {
 	wordle: {
 		gameName: 'Wordle',
-		datedPrefix: 'wordle',
+		datedArchive: true,
 		...dedicatedSolver('Wordle', '/wordle-solver'),
 		archiveHref: '/wordle-answer-archive'
 	},
 	colordle: {
 		gameName: 'Colordle',
-		datedPrefix: 'colordle',
+		datedArchive: true,
 		...dedicatedSolver('Colordle', '/colordle-solver'),
 		archiveHref: '/colordle-archive'
 	},

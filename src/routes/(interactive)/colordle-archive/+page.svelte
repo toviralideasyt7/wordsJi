@@ -4,7 +4,7 @@
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { fetchArchivePayload } from '$lib/archive-client';
-  import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+  import { parseArchiveDateKey } from '$lib/archive-page';
   import { getPuzzleDateForGame } from '$lib/puzzle-window';
   import ArchiveCalendar from '$lib/components/ArchiveCalendar.svelte';
   import ColorClues from '$lib/components/ColorClues.svelte';
@@ -33,7 +33,7 @@
     const today = getPuzzleDateForGame('colordle');
     const todayKey = `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
     if (iso === todayKey) return '/colordle-answer-today';
-    return `/colordle-answer-for-${toMonthDayYearKey(date)}`;
+    return `/colordle-archive?date=${iso}`;
   }
 
   let data = $state<ColordleArchivePayload>({

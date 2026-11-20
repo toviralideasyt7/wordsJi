@@ -1,20 +1,18 @@
 import { describe, expect, it } from 'vitest';
-import { getLegacyDatedRedirect, getLegacyTodayRedirect } from './legacy-redirects';
+import { getLegacyTodayRedirect } from './legacy-redirects';
 
 describe('getLegacyTodayRedirect', () => {
-	it('redirects old month-slug answer pages to the canonical today route (non-Wordle)', () => {
-		expect(getLegacyTodayRedirect('/semantle-answer-for-october-1-2025')).toBe(
-			'/semantle-answer-today'
-		);
+	it('redirects old month-slug answer pages to the canonical today route (games that never had dated pages)', () => {
 		expect(getLegacyTodayRedirect('/phoodle-answer-for-december-06-2025')).toBe(
 			'/phoodle-answer-today'
 		);
 	});
 
-	it('does not redirect Wordle or Colordle dated pages (they are real prerendered pages now)', () => {
+	it('does not redirect dated answer pages (removed in the Phase 1 cleanup — they 404, no many-to-one redirect)', () => {
 		expect(getLegacyTodayRedirect('/wordle-answer-for-may-31-2023')).toBeNull();
 		expect(getLegacyTodayRedirect('/wordle-answer-for-december-06-2025')).toBeNull();
 		expect(getLegacyTodayRedirect('/colordle-answer-for-december-06-2025')).toBeNull();
+		expect(getLegacyTodayRedirect('/semantle-answer-for-october-1-2025')).toBeNull();
 	});
 
 	it('redirects old date-folder paths to the canonical today route', () => {
@@ -39,21 +37,5 @@ describe('getLegacyTodayRedirect', () => {
 		expect(getLegacyTodayRedirect('/wordle-answer-for-not-a-date')).toBeNull();
 		expect(getLegacyTodayRedirect('/wordle/2025-13-40')).toBeNull();
 		expect(getLegacyTodayRedirect('/not-a-game/2025-12-06')).toBeNull();
-	});
-});
-
-describe('getLegacyDatedRedirect', () => {
-	it('redirects Wordle ISO-date paths to the month-day-year dated page', () => {
-		expect(getLegacyDatedRedirect('/wordle/2022-11-19')).toBe('/wordle-answer-for-november-19-2022');
-		expect(getLegacyDatedRedirect('/wordle/2022-11-19-foyer')).toBe(
-			'/wordle-answer-for-november-19-2022'
-		);
-		expect(getLegacyDatedRedirect('/wordle/2021-06-19')).toBe('/wordle-answer-for-june-19-2021');
-	});
-
-	it('ignores non-Wordle and invalid paths', () => {
-		expect(getLegacyDatedRedirect('/colordle/2022-11-19')).toBeNull();
-		expect(getLegacyDatedRedirect('/wordle/2025-13-40')).toBeNull();
-		expect(getLegacyDatedRedirect('/wordle-answer-for-november-19-2022')).toBeNull();
 	});
 });

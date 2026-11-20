@@ -10,7 +10,7 @@
   import WordleDisplayWrapper from '$lib/components/WordleDisplayWrapper.svelte';
   import type { WordleAnswer } from '$lib/api';
   import { formatDate } from '$lib/utils';
-import { parseArchiveDateKey, toMonthDayYearKey } from '$lib/archive-page';
+import { parseArchiveDateKey } from '$lib/archive-page';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 
   function datedLink(iso: string): string {
@@ -19,7 +19,7 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
     const today = getPuzzleDateForGame('wordle');
     const todayKey = `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
     if (iso === todayKey) return '/wordle-answer-today';
-    return `/wordle-answer-for-${toMonthDayYearKey(date)}`;
+    return `/wordle-answer-archive?date=${iso}`;
   }
 
   interface WordleArchivePayload {

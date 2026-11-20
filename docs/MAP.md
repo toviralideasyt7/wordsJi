@@ -17,7 +17,6 @@ Generated index. Locate code from here instead of listing directories.
 | `/boggle-solver` | interactive | `src/routes/(interactive)/boggle-solver/+page.svelte` |
 | `/canuckle-answer-today` | interactive | `src/routes/(interactive)/canuckle-answer-today/+page.svelte` |
 | `/canuckle-archive` | interactive | `src/routes/(interactive)/canuckle-archive/+page.svelte` |
-| `/colordle-answer-for-[date]` | interactive | `src/routes/(interactive)/colordle-answer-for-[date]/+page.svelte` |
 | `/colordle-answer-today` | interactive | `src/routes/(interactive)/colordle-answer-today/+page.svelte` |
 | `/colordle-archive` | interactive | `src/routes/(interactive)/colordle-archive/+page.svelte` |
 | `/colordle-solver` | interactive | `src/routes/(interactive)/colordle-solver/+page.svelte` |
@@ -84,7 +83,6 @@ Generated index. Locate code from here instead of listing directories.
 | `/weaver-solver` | interactive | `src/routes/(interactive)/weaver-solver/+page.svelte` |
 | `/word-ladder-solver` | interactive | `src/routes/(interactive)/word-ladder-solver/+page.svelte` |
 | `/wordle-answer-archive` | interactive | `src/routes/(interactive)/wordle-answer-archive/+page.svelte` |
-| `/wordle-answer-for-[date]` | interactive | `src/routes/(interactive)/wordle-answer-for-[date]/+page.svelte` |
 | `/wordle-answer-today` | interactive | `src/routes/(interactive)/wordle-answer-today/+page.svelte` |
 | `/wordle-solver` | interactive | `src/routes/(interactive)/wordle-solver/+page.svelte` |
 | `/worgle-answer-today` | interactive | `src/routes/(interactive)/worgle-answer-today/+page.svelte` |

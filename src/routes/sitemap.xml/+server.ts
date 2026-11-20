@@ -1,7 +1,6 @@
 import { formatPuzzleDateKey, getPuzzleDateForGame, TODAY_ROUTE_GAME_MAP, ARCHIVE_ROUTE_GAME_MAP, type PuzzleGame } from '$lib/puzzle-window';
 import { GENERATED_SITEMAP_LASTMOD } from '$lib/generated/sitemap-lastmod';
 import { MAIN_SITEMAP_ENTRIES } from '$lib/route-registry';
-import { parseMonthDayYearKey, toArchiveDateKey } from '$lib/archive-page';
 
 // Routes that should NOT be in sitemap (return 404 or are broken)
 const BROKEN_ROUTES = new Set([
@@ -43,13 +42,6 @@ function capToToday(value: string): string {
 	return value > todayStr ? todayStr : value;
 }
 
-function getDatedAnswerLastModified(path: string): string | null {
-	const prefix = '/wordle-answer-for-';
-	if (!path.startsWith(prefix)) return null;
-	const date = parseMonthDayYearKey(path.slice(prefix.length));
-	return date ? toArchiveDateKey(date) : null;
-}
-
 const ROUTE_LASTMOD_GAME_MAP: Record<string, PuzzleGame> = {
 	...TODAY_ROUTE_GAME_MAP,
 	...ARCHIVE_ROUTE_GAME_MAP
@@ -64,7 +56,7 @@ function getLastModified(path: string): string {
 		return capToToday(getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME)));
 	}
 
-	return capToToday(getDatedAnswerLastModified(path) ?? getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME)));
+	return capToToday(getPuzzleRouteLastModified(path) ?? getGeneratedLastModified(path) ?? formatPuzzleDateKey(getPuzzleDateForGame(MAIN_DAILY_FALLBACK_GAME)));
 }
 
 function getPriority(path: string): string {
