@@ -23,7 +23,21 @@ const DATED_PAGE_GAMES = new Set([
 const EXACT_CANONICAL_REDIRECTS: Record<string, string> = {
 	'/canuckle': '/canuckle-answer-today',
 	'/5-letter-wordle-solver': '/wordle-solver',
-	'/wordle/2022-05-06': '/wordle-answer-today'
+	'/wordle/2022-05-06': '/wordle-answer-today',
+	// The 12 wordle-hints micro pages merged into the /wordle-hints hub in the
+	// Phase 1 cleanup (2026-11-20); each old URL lands on its hub section.
+	'/wordle-hints/first-letter': '/wordle-hints#first-letter',
+	'/wordle-hints/first-two-letters': '/wordle-hints#first-two-letters',
+	'/wordle-hints/middle-letter': '/wordle-hints#middle-letter',
+	'/wordle-hints/last-two-letters': '/wordle-hints#last-two-letters',
+	'/wordle-hints/last-letter': '/wordle-hints#last-letter',
+	'/wordle-hints/vowel-count': '/wordle-hints#vowel-count',
+	'/wordle-hints/consonant-count': '/wordle-hints#consonant-count',
+	'/wordle-hints/repeating-letters': '/wordle-hints#repeating-letters',
+	'/wordle-hints/letter-pattern': '/wordle-hints#letter-pattern',
+	'/wordle-hints/unique-letters': '/wordle-hints#unique-letters',
+	'/wordle-hints/starts-with-vowel': '/wordle-hints#starts-with-vowel',
+	'/wordle-hints/word-definition': '/wordle-hints#word-definition'
 };
 
 const LEGACY_GAME_ALIASES: Record<string, string> = {

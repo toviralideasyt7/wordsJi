@@ -154,23 +154,14 @@ export const PUBLIC_ROUTE_ENTRIES = [
 
 export const PAGES_FUNCTION_INCLUDE_ROUTES = [...new Set([...API_RUNTIME_ROUTES, '/wordle/*', '/5-letter-wordle-solver'])];
 
-// --- Wordle letter-hint micro pages (/wordle-hints/*) ---
-// Static, prerendered daily-hint pages. The puzzle date is the puzzle-window
-// date (getPuzzleDateForGame('wordle')) resolved in each page's server load,
-// never the build date.
+// --- Wordle hints hub (/wordle-hints) ---
+// One prerendered page carrying all 12 daily hint sections. It replaced the
+// 12 /wordle-hints/* micro pages in the Phase 1 cleanup (2026-11-20); the old
+// URLs 301 to the matching section anchors via EXACT_CANONICAL_REDIRECTS.
+// The puzzle date is the puzzle-window date (getPuzzleDateForGame('wordle'))
+// resolved in the page's server load, never the build date.
 export const WORDLE_HINT_ROUTES = [
-  '/wordle-hints/first-letter',
-  '/wordle-hints/first-two-letters',
-  '/wordle-hints/middle-letter',
-  '/wordle-hints/last-two-letters',
-  '/wordle-hints/last-letter',
-  '/wordle-hints/vowel-count',
-  '/wordle-hints/consonant-count',
-  '/wordle-hints/repeating-letters',
-  '/wordle-hints/letter-pattern',
-  '/wordle-hints/unique-letters',
-  '/wordle-hints/starts-with-vowel',
-  '/wordle-hints/word-definition'
+  '/wordle-hints'
 ];
 
 export const PRERENDER_ENTRIES = [

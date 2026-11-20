@@ -1,7 +1,7 @@
-// Shared build-time helper for the /wordle-hints/* micro-page cluster.
+// Shared build-time helper for the /wordle-hints hub page.
 // Resolves TODAY's Wordle answer using the same API + NYT fallback pattern as
 // src/routes/(interactive)/wordle-answer-today/+page.server.ts, and computes the
-// deterministic hint values for each of the 12 hint pages.
+// deterministic hint values for each of the 12 hint sections.
 //
 // The puzzle date is ALWAYS the puzzle-window date (getPuzzleDateForGame),
 // never the build date — a page titled "today" must never carry tomorrow's
@@ -14,7 +14,6 @@ import type { AIHints } from '$lib/ai-hints';
 import type { WordleAnswer } from '$lib/api';
 
 const TODAY_API_URL = 'https://api.wordsolverx.workers.dev/api/today';
-const SITE_URL = 'https://wordsolverx.com';
 
 export interface WordleHintToday {
 	word: string; // uppercase solution, '' when unresolved
@@ -182,15 +181,6 @@ export const WORDLE_HINT_PAGES: WordleHintPageDef[] = [
 	}
 ];
 
-export const WORDLE_HINT_BASE = '/wordle-hints';
-
-export function getWordleHintPageDef(slug: string): WordleHintPageDef {
-	const def = WORDLE_HINT_PAGES.find((p) => p.slug === slug);
-	if (!def) {
-		throw new Error(`Unknown wordle-hints page slug: ${slug}`);
-	}
-	return def;
-}
 
 export interface WordleHintFact {
 	label: string;
@@ -369,8 +359,4 @@ export function buildHintContent(slug: string, word: string, ai: AIHints | null)
 		default:
 			throw new Error(`Unknown wordle-hints page slug: ${slug}`);
 	}
-}
-
-export function wordleHintCanonical(slug: string): string {
-	return `${SITE_URL}${WORDLE_HINT_BASE}/${slug}`;
 }
