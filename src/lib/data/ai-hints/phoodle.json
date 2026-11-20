@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-19T15:52:49.443Z",
+  "generatedAt": "2026-11-20T15:38:00.982Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -570,6 +570,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common noun with a distinct, well-known meaning."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I am a sudden flash of light in the deep dark sky.",
+      "clue1": "Think of stellar explosions in far-off galaxies.",
+      "starts_with": "N",
+      "ends_with": "S",
+      "definition": "Stars that suddenly increase in brightness then slowly fade.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The term is scientific but commonly known in astronomy."
     }
   },
   "prose": {
@@ -618,6 +631,7 @@
     "2026-11-17": "The Phoodle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 5 characters, starting with K and ending with D — see the letter hints above before you peek.",
     "2026-11-18": "The Phoodle puzzle for November 18, 2026, features a five-letter word. Puzzle 2026-11-18 follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-11-19": "The Phoodle puzzle for November 19, 2026, features a five-letter word. Puzzle 2026-11-19 follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-11-20": "The Phoodle puzzle for November 20, 2026, features a five-letter word. Puzzle 2026-11-20 follows a consonant-vowel-consonant-vowel-consonant pattern."
+    "2026-11-20": "The Phoodle puzzle for November 20, 2026, features a five-letter word. Puzzle 2026-11-20 follows a consonant-vowel-consonant-vowel-consonant pattern.",
+    "2026-11-21": "The Phoodle puzzle for November 21, 2026, features a five-letter word. Puzzle 2026-11-21 follows a consonant-vowel-consonant-vowel-consonant pattern."
   }
 }

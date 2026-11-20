@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-19T15:53:30.596Z",
+  "generatedAt": "2026-11-20T15:37:30.065Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -571,6 +571,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common verb in past tense with a simple vowel structure."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A tiny tube that keeps a vital river flowing.",
+      "clue1": "Commonly used in cardiology to open blocked paths.",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "A tubular support placed inside a blood vessel or duct.",
+      "difficulty": 6,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "It is a specialized medical term not used in common daily conversation."
     }
   },
   "prose": {
@@ -619,6 +632,7 @@
     "2026-11-17": "The Wordle puzzle for November 17, 2026 (#1977) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
     "2026-11-18": "Wordle puzzle #1978 for November 18, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a single vowel.",
     "2026-11-19": "Wordle puzzle #1979 arrives on November 19, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-11-20": "Wordle puzzle #1980 takes place on November 20, 2026. This specific entry follows a vowel-consonant-vowel-consonant-vowel pattern."
+    "2026-11-20": "Wordle puzzle #1980 takes place on November 20, 2026. This specific entry follows a vowel-consonant-vowel-consonant-vowel pattern.",
+    "2026-11-21": "Wordle puzzle #1981 takes place on November 21, 2026. This specific word follows a consonant-vowel-consonant-consonant-consonant pattern."
   }
 }
