@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-19T22:14:20.791Z",
+  "generatedAt": "2026-11-20T18:40:12.532Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -565,6 +565,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common verb with a repeated consonant that may mislead some players."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I am the book you read when the machine breaks.",
+      "clue1": "Done by hand rather than automatically.",
+      "starts_with": "M",
+      "ends_with": "L",
+      "definition": "Operating or producing by hand rather than automatically; a handbook of instructions.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a familiar pattern and clear associations."
     }
   },
   "prose": {
@@ -613,6 +626,7 @@
     "2026-11-17": "The Worgle puzzle for November 17, 2026 (#1770) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with C — see the letter hints above before you peek.",
     "2026-11-18": "Worgle puzzle #1771 for November 18, 2026, features a six-letter word. The solution follows a consonant-heavy pattern with two vowels.",
     "2026-11-19": "Worgle puzzle #1772 for November 19, 2026, features a six-letter word. The solution follows a pattern with a repeated vowel.",
-    "2026-11-20": "Worgle puzzle #1773 for November 20, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern."
+    "2026-11-20": "Worgle puzzle #1773 for November 20, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
+    "2026-11-21": "Worgle puzzle #1774 for November 21, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-vowel-consonant pattern."
   }
 }
