@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-19T22:14:07.823Z",
+  "generatedAt": "2026-11-20T17:12:27.698Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -729,6 +729,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Simple operations and a short length make this a straightforward solve."
+    },
+    "2026-11-21": {
+      "kind": "math",
+      "operator_hint": "Uses multiplication.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a three-digit odd number.",
+      "riddle": "A small prime triples a quarter-century's triple.",
+      "starts_with": "3",
+      "ends_with": "5",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Simple multiplication with common multiples of twenty-five."
     }
   },
   "prose": {
@@ -777,6 +793,7 @@
     "2026-11-17": "The Nerdle puzzle for November 17, 2026 (#1763) is live with today's equation confirmed. The equation runs 8 characters using division — see the math hints above before you peek.",
     "2026-11-18": "Nerdle puzzle #1764 presents a straightforward subtraction challenge for players. This November 18, 2026 entry requires finding a specific two-digit difference.",
     "2026-11-19": "Nerdle puzzle #1765 arrives on November 19, 2026. This specific challenge focuses on the relationship between products and quotients.",
-    "2026-11-20": "Nerdle puzzle #1766 presents a clean arithmetic challenge for November 20, 2026. Players must balance two different operators to find the correct sequence."
+    "2026-11-20": "Nerdle puzzle #1766 presents a clean arithmetic challenge for November 20, 2026. Players must balance two different operators to find the correct sequence.",
+    "2026-11-21": "Nerdle puzzle #1767 arrives on November 21, 2026. This specific challenge focuses on a clean multiplication sequence."
   }
 }

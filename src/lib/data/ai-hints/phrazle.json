@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-19T22:17:47.329Z",
+  "generatedAt": "2026-11-20T17:14:11.132Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -565,6 +565,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 11 vowels.",
+      "repeat_hint": "12 letters appear more than once.",
+      "riddle": "One part is perfect health; the other is a daring escape.",
+      "clue1": "Two common idioms combined into one challenge.",
+      "starts_with": "R",
+      "ends_with": "T",
+      "definition": "A combination of phrases meaning perfectly well and attempting a sudden escape.",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "The puzzle combines two distinct idioms, increasing the total character count."
     }
   },
   "prose": {
@@ -613,6 +626,7 @@
     "2026-11-17": "The Phrazle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 23 characters, starting with T and ending with N — see the letter hints above before you peek.",
     "2026-11-18": "The Phrazle puzzle for November 18, 2026, features a complex multi-word structure. Puzzle 2026-11-18 consists of twenty-eight letters including several spaces.",
     "2026-11-19": "The Phrazle puzzle for November 19, 2026 (2026-11-19) is live with today's answer confirmed. The answer runs 32 characters, starting with T and ending with G — see the letter hints above before you peek.",
-    "2026-11-20": "The Phrazle puzzle for November 20, 2026 (2026-11-20) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with S — see the letter hints above before you peek."
+    "2026-11-20": "The Phrazle puzzle for November 20, 2026 (2026-11-20) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with S — see the letter hints above before you peek.",
+    "2026-11-21": "The Phrazle puzzle for November 21, 2026, features a long sequence of characters. Puzzle 2026-11-21 requires identifying two separate idiomatic expressions."
   }
 }

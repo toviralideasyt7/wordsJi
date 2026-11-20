@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-11-19T22:14:40.598Z",
+  "generatedAt": "2026-11-20T17:12:18.197Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -565,6 +565,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 0 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I am the heartbeat of a song, felt but not seen.",
+      "clue1": "Essential for dancing and poetry.",
+      "starts_with": "R",
+      "ends_with": "M",
+      "definition": "A strong, regular, repeated pattern of movement or sound.",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common musical term with a distinct semantic neighborhood."
     }
   },
   "prose": {
@@ -613,6 +626,7 @@
     "2026-11-17": "The Semantle puzzle for November 17, 2026 (#1753) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-11-18": "Semantle puzzle #1754 was released on November 18, 2026. The target word follows a six-letter pattern starting with R.",
     "2026-11-19": "Semantle puzzle #1755 was released on November 19, 2026. This specific word follows a consonant-vowel-consonant-consonant-consonant pattern.",
-    "2026-11-20": "The Semantle puzzle for November 20, 2026 (#1756) is live with today's answer confirmed. The answer runs 5 characters, starting with I and ending with Y — see the letter hints above before you peek."
+    "2026-11-20": "The Semantle puzzle for November 20, 2026 (#1756) is live with today's answer confirmed. The answer runs 5 characters, starting with I and ending with Y — see the letter hints above before you peek.",
+    "2026-11-21": "Semantle puzzle #1757 was released on November 21, 2026. The target word follows a consonant-heavy pattern with only one vowel."
   }
 }

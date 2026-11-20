@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-19T22:14:09.207Z",
+  "generatedAt": "2026-11-20T17:12:18.034Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -564,6 +564,19 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Extremely famous global pop star with very recognizable hits."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A search for a target, a name for a chase.",
+      "clue1": "A name associated with the British music scene.",
+      "starts_with": "S",
+      "ends_with": "T",
+      "definition": "British singer-songwriter known for his soulful pop music.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The name is relatively common but the specific artist is niche."
     }
   },
   "prose": {
@@ -612,6 +625,7 @@
     "2026-11-17": "The Spotle puzzle for November 17, 2026 (Day 1705) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with T — see the letter hints above before you peek.",
     "2026-11-18": "Spotle puzzle Day 1706 takes place on November 18, 2026. This specific entry follows a four-letter pattern ending in a consonant.",
     "2026-11-19": "Spotle puzzle Day 1707 arrives on November 19, 2026. This specific entry features a name starting and ending with the same letter.",
-    "2026-11-20": "Spotle puzzle Day 1708 arrives on November 20, 2026. This specific entry follows a seven-letter pattern across two words."
+    "2026-11-20": "Spotle puzzle Day 1708 arrives on November 20, 2026. This specific entry follows a seven-letter pattern across two words.",
+    "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words."
   }
 }

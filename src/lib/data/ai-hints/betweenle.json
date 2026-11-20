@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-19T22:15:28.595Z",
+  "generatedAt": "2026-11-20T17:14:13.310Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -566,6 +566,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common academic vocabulary word with a straightforward five-letter structure."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I take a heavy blow but never feel the pain.",
+      "clue1": "Essential for a blacksmith's craft.",
+      "starts_with": "A",
+      "ends_with": "L",
+      "definition": "A heavy iron block on which hot metals are hammered.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common object with a distinct purpose and simple structure."
     }
   },
   "prose": {
@@ -614,6 +627,7 @@
     "2026-11-17": "The Betweenle puzzle for November 17, 2026 (#1342) is live with today's answer confirmed. The answer runs 5 characters, starting with P and ending with O — see the letter hints above before you peek.",
     "2026-11-18": "Betweenle puzzle #1343 is scheduled for November 18, 2026. This specific entry follows a five-letter pattern ending in Y.",
     "2026-11-19": "Betweenle puzzle #1344 takes place on November 19, 2026. This specific entry follows a consonant-heavy five-letter pattern.",
-    "2026-11-20": "Betweenle puzzle #1345 was released on November 20, 2026. This specific entry follows a five-letter pattern with no repeating characters."
+    "2026-11-20": "Betweenle puzzle #1345 was released on November 20, 2026. This specific entry follows a five-letter pattern with no repeating characters.",
+    "2026-11-21": "Betweenle puzzle #1346 arrives on November 21, 2026. This specific entry follows a five-letter pattern starting with a vowel."
   }
 }

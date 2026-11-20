@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-19T22:15:52.431Z",
+  "generatedAt": "2026-11-20T17:13:53.031Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -567,6 +567,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "A well-known nation with a distinctive name length and starting letter."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "A landlocked giant where the steppe meets the sky.",
+      "clue1": "The largest landlocked nation on Earth.",
+      "starts_with": "K",
+      "ends_with": "N",
+      "definition": "A large Central Asian country bordering Russia, China, and Uzbekistan.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a well-known large nation with a distinct geographical status."
     }
   },
   "prose": {
@@ -615,6 +628,7 @@
     "2026-11-17": "The Countryle puzzle for November 17, 2026 (Game #1733) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with N — see the letter hints above before you peek.",
     "2026-11-18": "Countryle Game #1734 for November 18, 2026, features a nine-letter country. The word follows a consonant-vowel pattern starting with M.",
     "2026-11-19": "Countryle Game #1735 takes place on November 19, 2026. This puzzle features a ten-letter word starting with T.",
-    "2026-11-20": "Countryle Game #1736 for November 20, 2026, features a ten-letter word. The pattern begins and ends with consonants and vowels in a specific sequence."
+    "2026-11-20": "Countryle Game #1736 for November 20, 2026, features a ten-letter word. The pattern begins and ends with consonants and vowels in a specific sequence.",
+    "2026-11-21": "Countryle Game #1737 for November 21, 2026, features a ten-letter word. The pattern consists of several vowels and a few repeated consonants."
   }
 }
