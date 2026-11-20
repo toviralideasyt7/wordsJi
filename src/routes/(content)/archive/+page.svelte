@@ -35,7 +35,7 @@
 
 <svelte:head>
   <title>Puzzle Answer Archives - Every Daily Game</title>
-  <meta name="description" content="Browse archive pages for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
+  <meta name="description" content="Browse past answers for Wordle, Canuckle, Quordle, Colordle, Waffle, Worldle, Nerdle, Contexto, Phrazle and 20+ more games." />
   <link rel="canonical" href="https://wordsolverx.com/archive" />
   <meta property="og:title" content="Puzzle Answer Archive - All Solutions" />
   <meta property="og:description" content="Browse full answer history, archive calendars, and past solutions for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
@@ -52,7 +52,7 @@
       {
         "@type": "CollectionPage",
         "name": "Puzzle Answer Archive",
-        "description": "Browse answer archives for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle.",
+        "description": "Browse past answers for Wordle, Canuckle, Quordle, Colordle, Waffle, Worldle, Nerdle, Contexto, Phrazle and 20+ more games.",
         "url": "https://wordsolverx.com/archive",
         "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
       },

@@ -56,7 +56,7 @@
 
 <svelte:head>
   <title>Guides & Strategies - Expert Tips for Word Puzzles</title>
-  <meta name="description" content="Expert guides and strategies for Wordle, Quordle, Phoodle, Waffle, Colordle, and Semantle. Learn the best techniques to improve your puzzle-solving skills." />
+  <meta name="description" content="Guides and strategies for Wordle, Quordle, Phoodle, Waffle, Colordle and Semantle to sharpen your daily solving." />
   <link rel="canonical" href="https://wordsolverx.com/guides" />
   <meta property="og:title" content="Guides & Strategies - Expert Tips for Word Puzzles" />
   <meta property="og:description" content="Read practical puzzle guides, strategy tips, and improvement advice for Wordle, Quordle, Phoodle, Waffle, Colordle, and Semantle." />

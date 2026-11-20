@@ -97,7 +97,7 @@
 
 <svelte:head>
   <title>Puzzle Solver Tools - Wordle, Betweenle, Quordle & More</title>
-  <meta name="description" content="Free puzzle solver tools for 3 to 11 letter Wordle, Canuckle, Quordle, Betweenle, Phoodle, Waffle, Colordle, and more with fast clue-based filtering." />
+  <meta name="description" content="Free solvers for Wordle, Canuckle, Quordle, Betweenle, Phoodle, Waffle and Colordle — filter by clues for 3 to 11 letter words." />
   <link rel="canonical" href="https://wordsolverx.com/solver" />
   <meta property="og:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
   <meta property="og:description" content="Use free solver tools for 3 to 11 letter Wordle, Canuckle, Betweenle, Worldle, Quordle, Phoodle, Waffle, Colordle, and more daily puzzle games." />
@@ -152,6 +152,7 @@
       <input
         data-card-filter-input="solver-search"
         type="search"
+        aria-label="Filter by solver name or game"
         placeholder="Filter by solver name or game..."
         class="w-full bg-transparent pl-11 pr-4 py-3.5 text-sm text-slate-900 dark:text-slate-100 outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
       />

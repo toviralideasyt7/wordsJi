@@ -95,7 +95,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	// Tease with hints — never the player name in title or description.
 	// Template keeps the description inside the 140-158 budget for the full
 	// range of position/team/jersey lengths (worst cases: ~130-157).
-	const pageDescription = `Batter Up hints (${shortDate}): today's ${position} for the ${player.team_name}, jersey in ${tensWord(player.jersey_number)}. Daily MLB clues and the confirmed answer at WordSolverX.`;
+	const pageDescription = `Batter Up hints (${shortDate}): today's ${position} for the ${player.team_name}. Daily MLB clues and the confirmed answer at WordSolverX.`;
 	const pageKeywords = `batter up answer today, batter up answer, batter up mlb answer today, batter up hint, batter up hint today, batter up solver, batter up answer for ${formattedDate}`;
 
 	const updatedStamp = updatedStampText('Batter Up', entry.gameNumber, formattedDate);

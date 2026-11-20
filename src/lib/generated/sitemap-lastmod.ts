@@ -106,7 +106,7 @@ export const GENERATED_SITEMAP_LASTMOD: Record<string, string> = {
 	"/worgle-answer-today": "2026-10-22",
 	"/waffle-answer-today": "2026-10-22",
 	"/wordle-answer-today": "2026-10-06",
-	"/worldle-answer-today": "2026-10-22",
+	"/worldle-answer-today": "2026-11-20",
 	"/batterup-archive": "2026-11-20",
 	"/colorfle-archive": "2026-09-25",
 	"/colordle-archive": "2026-11-20",

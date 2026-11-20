@@ -298,6 +298,7 @@
           <input
             bind:value={historySearch}
             type="search"
+            aria-label="Search history by date, color name, or hex code"
             placeholder="Search by date, color name, or hex code..."
             class="min-w-0 flex-1 bg-transparent px-5 py-4 text-base text-slate-900 outline-none placeholder:text-slate-400"
           />

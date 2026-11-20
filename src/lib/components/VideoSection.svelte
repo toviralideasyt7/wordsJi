@@ -109,7 +109,8 @@
           <img
             class="yt-poster"
             alt={title}
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             src={posterMax}
             data-wsx-poster
             data-poster-fallback={posterHq}
