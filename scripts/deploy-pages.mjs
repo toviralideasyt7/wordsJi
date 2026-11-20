@@ -51,7 +51,7 @@ const exitCode = await withPagesConfigRedirect(async () => {
 			'deploy',
 			'build/pages',
 			'--project-name',
-			'wordsolverx-z-ai',
+			'wordauditor',
 			...extraArgs
 		],
 		{
