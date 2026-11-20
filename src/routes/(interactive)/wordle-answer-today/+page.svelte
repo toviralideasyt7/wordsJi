@@ -41,6 +41,13 @@
   <meta name="keywords" content={data.meta.keywords ?? 'wordle answer today, wordle answer, wordle hint, wordle hint today'} />
   <meta name="news_keywords" content="wordle, wordle answer, wordle today, nyt wordle, daily word puzzle" />
   <link rel="canonical" href="https://wordsolverx.com/wordle-answer-today" />
+  <link
+    rel="preload"
+    as="image"
+    imagesrcset="/Wordle-Answer-today-760.webp 760w, /Wordle-Answer-today.webp 1200w"
+    imagesizes="(max-width: 768px) 100vw, 665px"
+    fetchpriority="high"
+  />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:image" content={data.meta.socialImage} />
@@ -87,6 +94,7 @@
       pageContext="today"
       contentGuide={data.wordleData?.content_guide}
       socialImage={data.directSocialImage}
+      socialImageSrcset="/Wordle-Answer-today-760.webp 760w, /Wordle-Answer-today.webp 1200w"
       youtubeVideoUrl={data.wordleData?.youtube_video_url}
       aiHints={data.aiHints}
     />

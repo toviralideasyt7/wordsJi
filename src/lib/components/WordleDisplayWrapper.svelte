@@ -15,6 +15,7 @@
     pageContext,
     contentGuide,
     socialImage,
+    socialImageSrcset,
     youtubeVideoUrl,
     aiHints = null,
   }: {
@@ -25,6 +26,7 @@
     pageContext: 'today' | 'archive';
     contentGuide?: string | null;
     socialImage?: string | null;
+    socialImageSrcset?: string | null;
     youtubeVideoUrl?: string | null;
     aiHints?: AIHints | null;
   } = $props();
@@ -71,10 +73,12 @@
   </div>
 {:else}
   <div class="relative">
-    <!-- Decorative background -->
+    <!-- Decorative background. Radial gradients, not blurred divs: a 64px
+         blur filter over two 384px circles is expensive paint work on
+         mobile GPUs and delayed the hero image's first paint (LCP). -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-      <div class="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-teal-200 to-teal-300 dark:from-teal-900 dark:to-teal-800 rounded-full opacity-20 blur-3xl"></div>
-      <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-to-tr from-amber-200 to-amber-300 dark:from-amber-900 dark:to-amber-800 rounded-full opacity-20 blur-3xl"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full opacity-20 bg-[radial-gradient(closest-side,#5eead4,transparent)] dark:bg-[radial-gradient(closest-side,#115e59,transparent)]"></div>
+      <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full opacity-20 bg-[radial-gradient(closest-side,#fcd34d,transparent)] dark:bg-[radial-gradient(closest-side,#92400e,transparent)]"></div>
     </div>
 
     <div class="relative z-10">
@@ -83,6 +87,7 @@
         <div class="mb-8 max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl relative isolate">
           <img
             src={socialImage}
+            srcset={socialImageSrcset ?? undefined}
             alt="Wordle Answer for {formattedDate}"
             class="w-full h-auto object-cover block"
             width="1200"
