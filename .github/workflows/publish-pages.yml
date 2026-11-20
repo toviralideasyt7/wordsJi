@@ -369,7 +369,7 @@ jobs:
 
           async function canaryShowsDate(baseUrl) {
             const response = await fetch(`${baseUrl}${canaryPath}`, {
-              headers: { 'User-Agent': 'WordSolverX GitHub Pages Publisher' }
+              headers: { 'User-Agent': 'WordAuditor GitHub Pages Publisher' }
             });
 
             if (!response.ok) {

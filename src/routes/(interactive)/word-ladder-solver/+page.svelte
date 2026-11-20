@@ -295,7 +295,7 @@
                                                 class="mt-2 h-12 w-full rounded-2xl border border-slate-200 bg-white px-4 text-slate-900"
                                                 bind:value={dictionary}
                                         >
-                                                <option value="wordsolverx">Our Word List (same as Weaver)</option>
+                                                <option value="wordauditor">Our Word List (same as Weaver)</option>
                                                 <option value="twl">OWL2 (US Scrabble)</option>
                                                 <option value="sowpods">SOWPODS (World)</option>
                                         </select>
