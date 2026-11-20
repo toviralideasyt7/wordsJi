@@ -16,7 +16,7 @@
   const pageTitle = 'Lights Out Solver - Step-by-Step Puzzle Solution';
   const pageDescription =
     'Use this Lights Out solver online to build any 2x2 to 5x5 puzzle and generate the exact optimal sequence of moves that clears the whole board.';
-  const pageUrl = 'https://wordsolverx.com/light-out-solver';
+  const pageUrl = 'https://wordauditor.com/light-out-solver';
 
 
   const schemas = JSON.stringify([
@@ -30,8 +30,8 @@
       keywords: ['light out solver', 'lights out solver', 'lights out puzzle solver']
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Light Out Solver', url: pageUrl }
     ]),
     generateWebPageSchema('Light Out Solver', pageDescription, pageUrl)
@@ -50,7 +50,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
   <link rel="canonical" href={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/light-out-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/light-out-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

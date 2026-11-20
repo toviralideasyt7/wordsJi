@@ -66,7 +66,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
       title: pageTitle,
       description: pageDescription,
       keywords: pageKeywords,
-      canonical: 'https://wordsolverx.com/betweenle-answer-today',
+      canonical: 'https://wordauditor.com/betweenle-answer-today',
     },
   };
 };

@@ -114,16 +114,16 @@ import { getPuzzleDateForGame } from '$lib/puzzle-window';
 <svelte:head>
   <title>All Wordle Answers: Every Puzzle #1 to Today, Searchable</title>
   <meta name="description" content="Every Wordle answer in one searchable list: all 2026 puzzles updated daily, plus 2025 and every solution back to puzzle #1. Search by date or word." />
-  <link rel="canonical" href="https://wordsolverx.com/wordle-answer-archive" />
+  <link rel="canonical" href="https://wordauditor.com/wordle-answer-archive" />
   <meta property="og:title" content="All Wordle Answers: Every Puzzle #1 to Today, Searchable" />
   <meta property="og:description" content="The full list of Wordle answers by date and puzzle number, from puzzle #1 to today. Searchable, updated daily." />
-  <meta property="og:url" content="https://wordsolverx.com/wordle-answer-archive" />
+  <meta property="og:url" content="https://wordauditor.com/wordle-answer-archive" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/wordle-answer-archive.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="All Wordle Answers: Every Puzzle #1 to Today, Searchable" />
   <meta name="twitter:description" content="Every Wordle answer by date and puzzle number, searchable, updated daily." />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/wordle-answer-archive.webp" />
 </svelte:head>
 
 <!-- Calendar for "today" and interactive date lookups -->

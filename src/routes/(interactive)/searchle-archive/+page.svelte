@@ -81,10 +81,10 @@
 <svelte:head>
   <title>Searchle Archive - Complete Prompt Answer History</title>
   <meta name="description" content="Browse the complete archive of every Searchle answer, with a calendar view and direct access to past autocomplete prompts and their confirmed answers." />
-  <link rel="canonical" href="https://wordsolverx.com/searchle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/searchle-archive" />
   <meta property="og:title" content="Searchle Archive - All Past Answers" />
   <meta property="og:description" content="Complete history of every Searchle answer. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/searchle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/searchle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

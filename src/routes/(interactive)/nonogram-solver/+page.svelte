@@ -17,7 +17,7 @@
   const pageTitle = 'Nonogram Solver - Solve Picross Puzzles Instantly';
   const pageDescription =
     'Paste your nonogram clues into the grid and watch the solver fill in the picture. Handles Picross, Griddlers and Hanjie puzzles up to 20 by 20, free.';
-  const pageUrl = 'https://wordsolverx.com/nonogram-solver';
+  const pageUrl = 'https://wordauditor.com/nonogram-solver';
 
   const schemas = JSON.stringify([
     generateHowToSchema('How to use the nonogram solver', [
@@ -30,8 +30,8 @@
       keywords: ['nonogram solver', 'picross solver', 'griddlers solver', 'hanjie solver', 'nonogram puzzle solver online']
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Nonogram Solver', url: pageUrl }
     ]),
     generateWebPageSchema('Nonogram Solver', pageDescription, pageUrl)
@@ -50,7 +50,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
   <link rel="canonical" href={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta property="og:image" content="https://wordauditor.com/wordauditor.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

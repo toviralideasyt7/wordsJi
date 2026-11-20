@@ -82,7 +82,7 @@ function getChangefreq(path: string): string {
 function generateSitemap(): string {
 	const urls = MAIN_SITEMAP_ENTRIES.filter(shouldIncludeUrl)
 		.map((url: string) => {
-			const fullUrl = url.startsWith('http') ? url : `https://wordsolverx.com${url}`;
+			const fullUrl = url.startsWith('http') ? url : `https://wordauditor.com${url}`;
 			const lastmod = getLastModified(url);
 			const priority = getPriority(url);
 			const changefreq = getChangefreq(url);
@@ -90,7 +90,7 @@ function generateSitemap(): string {
 			let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>`;
 
 			if (url === '/') {
-				entry += `\n    <image:image>\n      <image:loc>https://wordsolverx.com/wordsolverx.webp</image:loc>\n    </image:image>`;
+				entry += `\n    <image:image>\n      <image:loc>https://wordauditor.com/wordauditor.webp</image:loc>\n    </image:image>`;
 			}
 
 			entry += `\n  </url>`;

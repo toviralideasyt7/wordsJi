@@ -55,7 +55,7 @@
       { '@type': 'Question', name: 'Is LoLdle free to play?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, LoLdle is completely free to play in your browser.' } },
       ...(data.hintFaqs ?? []).map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
     ]},
-    { '@type': 'Article', headline: 'LoLdle Answer Today', description: "Today's LoLdle champion revealed — Classic, Ability, Splash, Quote, and Emoji mode answers all in one place. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/loldle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/loldle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'LoLdle Answer Today', description: "Today's LoLdle champion revealed — Classic, Ability, Splash, Quote, and Emoji mode answers all in one place. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/loldle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/images/loldle-answer-today.webp' } } },
   ]};
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

@@ -7,29 +7,29 @@
   <title>Privacy Policy - Data, Cookies and Advertising</title>
   <meta
     name="description"
-    content="Read the WordSolverX privacy policy covering browser storage, analytics, advertising partners, your cookie choices, and how to reach us about your data."
+    content="Read the WordAuditor privacy policy covering browser storage, analytics, advertising partners, your cookie choices, and how to reach us about your data."
   />
-  <link rel="canonical" href="https://wordsolverx.com/privacy-policy" />
+  <link rel="canonical" href="https://wordauditor.com/privacy-policy" />
   <meta property="og:title" content="Privacy Policy - Data, Cookies and Advertising" />
   <meta
     property="og:description"
-    content="Review how WordSolverX handles browser storage, analytics, advertising, and privacy requests."
+    content="Review how WordAuditor handles browser storage, analytics, advertising, and privacy requests."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/privacy-policy" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/privacy-policy" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Privacy Policy - Data, Cookies and Advertising" />
   <meta
     name="twitter:description"
-    content="See how WordSolverX handles privacy, cookie preferences, analytics, and advertising disclosures."
+    content="See how WordAuditor handles privacy, cookie preferences, analytics, and advertising disclosures."
   />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
       'Privacy Policy - Data, Cookies and Advertising',
-      'Privacy policy and data handling information for WordSolverX.',
-      'https://wordsolverx.com/privacy-policy',
+      'Privacy policy and data handling information for WordAuditor.',
+      'https://wordauditor.com/privacy-policy',
       { dateModified: '2026-09-26' }
     )
   )}</script>`}
@@ -46,19 +46,19 @@
   <div class="border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 p-6 sm:p-8">
     <div class="prose prose-slate dark:prose-invert max-w-none">
       <p class="lead text-lg">
-        This Privacy Policy - Data, Cookies and Advertising explains how WordSolverX may collect, use, store, and disclose information
-        when you visit https://wordsolverx.com, use our puzzle pages, or contact us directly.
+        This Privacy Policy - Data, Cookies and Advertising explains how WordAuditor may collect, use, store, and disclose information
+        when you visit https://wordauditor.com, use our puzzle pages, or contact us directly.
       </p>
 
       <h2>1. Information You Provide Voluntarily</h2>
       <p>
-        If you email WordSolverX, we may receive the information you include in that message, such as
+        If you email WordAuditor, we may receive the information you include in that message, such as
         your name, email address, the content of your message, and any other details you choose to send.
       </p>
 
       <h2>2. Technical Data and Hosting Logs</h2>
       <p>
-        Like most websites, WordSolverX and its hosting providers may automatically record basic
+        Like most websites, WordAuditor and its hosting providers may automatically record basic
         technical information such as IP address, browser type, device type, referring page, timestamps,
         and requested pages. This information is used for site operations, security, troubleshooting,
         and performance review.
@@ -66,7 +66,7 @@
 
       <h2>3. Browser Storage and Site Preferences</h2>
       <p>
-        Some WordSolverX tools store preferences directly in your browser so the experience works
+        Some WordAuditor tools store preferences directly in your browser so the experience works
         smoothly the next time you visit. Examples include solver settings, selected modes, and word
         length choices.
       </p>
@@ -76,7 +76,7 @@
 
       <h2>4. Analytics and Advertising</h2>
       <p>
-        WordSolverX uses third-party services for analytics and advertising.
+        WordAuditor uses third-party services for analytics and advertising.
       </p>
 
       <h3>Google Analytics</h3>
@@ -88,7 +88,7 @@
 
       <h3>Advertising</h3>
       <p>
-        WordSolverX may display advertisements served by Google AdSense. Google uses cookies,
+        WordAuditor may display advertisements served by Google AdSense. Google uses cookies,
         including the DoubleClick cookie, to serve ads based on your visits to this site and other
         sites on the internet. Google's use of advertising cookies enables it and its partners to
         serve ads to you based on your visit to this site and/or other sites on the internet.
@@ -125,7 +125,7 @@
       <h2>7. How We Use Information</h2>
       <p>We may use the information described in this policy to:</p>
       <ul>
-        <li>Operate, maintain, and improve WordSolverX</li>
+        <li>Operate, maintain, and improve WordAuditor</li>
         <li>Remember simple tool preferences in your browser</li>
         <li>Respond to support, correction, legal, or business inquiries</li>
         <li>Review technical issues, abuse, and security events</li>
@@ -134,7 +134,7 @@
 
       <h2>8. Data Sharing</h2>
       <p>
-        WordSolverX does not sell your personal information. Information may be processed by hosting,
+        WordAuditor does not sell your personal information. Information may be processed by hosting,
         infrastructure, analytics, advertising, or embedded service providers only as needed to operate
         the site and any services you have chosen to enable.
       </p>
@@ -150,12 +150,12 @@
       <p>
         Depending on where you live, you may have rights related to access, correction, deletion, or
         objection to the processing of your personal information. To make a request, email
-        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
+        <a href="mailto:blog@wordauditor.com">blog@wordauditor.com</a>.
       </p>
 
       <h2>11. Children&apos;s Privacy</h2>
       <p>
-        WordSolverX is not directed specifically to children under 13, and we do not knowingly collect
+        WordAuditor is not directed specifically to children under 13, and we do not knowingly collect
         personal information from children through this website.
       </p>
 
@@ -168,7 +168,7 @@
       <h2>13. Contact</h2>
       <p>
         If you have questions about this Privacy Policy - Data, Cookies and Advertising or advertising disclosures,
-        contact <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
+        contact <a href="mailto:blog@wordauditor.com">blog@wordauditor.com</a>.
       </p>
     </div>
   </div>

@@ -120,15 +120,15 @@
     generateWebPageSchema(
       metaTitle,
       pageDescription,
-      'https://wordsolverx.com/contexto-answer-today'
+      'https://wordauditor.com/contexto-answer-today'
     )
   );
 
   // Breadcrumb schema for navigation
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://wordsolverx.com' },
-    { name: 'Today', url: 'https://wordsolverx.com/today' },
-    { name: 'Contexto Answer Today', url: 'https://wordsolverx.com/contexto-answer-today' },
+    { name: 'Home', url: 'https://wordauditor.com' },
+    { name: 'Today', url: 'https://wordauditor.com/today' },
+    { name: 'Contexto Answer Today', url: 'https://wordauditor.com/contexto-answer-today' },
   ]);
 
   const faqPageSchema = $derived(
@@ -158,9 +158,9 @@
   <meta property="og:title" content={metaTitle} />
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/contexto-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
-  <meta property="og:image" content="https://wordsolverx.com/images/contexto-answer-today.webp" />
+  <meta property="og:url" content="https://wordauditor.com/contexto-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
+  <meta property="og:image" content="https://wordauditor.com/images/contexto-answer-today.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Contexto Answer Today" />
@@ -169,7 +169,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={metaTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <link rel="canonical" href="https://wordsolverx.com/contexto-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/contexto-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
   {@html `<script type="application/ld+json">${faqPageSchema}</script>`}

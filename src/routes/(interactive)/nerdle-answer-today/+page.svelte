@@ -54,12 +54,12 @@
         <meta property="og:description" content={data.meta.description} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={data.meta.canonical} />
-        <meta property="og:image" content="https://wordsolverx.com/images/nerdle-answer-today.webp" />
-        <meta property="og:site_name" content="WordSolverX" />
+        <meta property="og:image" content="https://wordauditor.com/images/nerdle-answer-today.webp" />
+        <meta property="og:site_name" content="WordAuditor" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={data.meta.title} />
         <meta name="twitter:description" content={data.meta.description} />
-        <meta name="twitter:image" content="https://wordsolverx.com/images/nerdle-answer-today.webp" />
+        <meta name="twitter:image" content="https://wordauditor.com/images/nerdle-answer-today.webp" />
         {#if cleanedSchemas}
                 {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
         {/if}

@@ -25,7 +25,7 @@
   let pageTitle = $derived(data.meta?.title ?? "Phoodle Answer Today");
   let pageDescription = $derived(
     data.meta?.description ??
-      "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordSolverX."
+      "Get today's Phoodle answer, food-themed hints, recent solutions, and the latest verified daily update from WordAuditor."
   );
   const publishedDate = $derived(data.dateKey ? `${data.dateKey}T00:00:00Z` : null);
   // FAQPage schema built from the server's hintFaqs (wordle pattern).
@@ -49,16 +49,16 @@
       generateWebPageSchema(
         pageTitle,
         pageDescription,
-        'https://wordsolverx.com/phoodle-answer-today',
+        'https://wordauditor.com/phoodle-answer-today',
         {
-          image: 'https://wordsolverx.com/images/phoodle-answer-today.webp',
+          image: 'https://wordauditor.com/images/phoodle-answer-today.webp',
           dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
         }
       ),
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Today', url: 'https://wordsolverx.com/today' },
-        { name: 'Phoodle Answer Today', url: 'https://wordsolverx.com/phoodle-answer-today' }
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Today', url: 'https://wordauditor.com/today' },
+        { name: 'Phoodle Answer Today', url: 'https://wordauditor.com/phoodle-answer-today' }
       ]),
       ...faqSchemaNode
     ])
@@ -71,15 +71,15 @@
   <meta property="og:title" content={pageTitle} />
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/phoodle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
-  <meta property="og:image" content="https://wordsolverx.com/images/phoodle-answer-today.webp" />
+  <meta property="og:url" content="https://wordauditor.com/phoodle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
+  <meta property="og:image" content="https://wordauditor.com/images/phoodle-answer-today.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/phoodle-answer-today.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/phoodle-answer-today.webp" />
   <meta name="news_keywords" content={data.meta?.keywords ?? 'phoodle answer today, phoodle answer, phoodle hint, phoodle hint today'} />
-  <link rel="canonical" href="https://wordsolverx.com/phoodle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/phoodle-answer-today" />
   {@html `<script type="application/ld+json">${pageSchema}</script>`}
 </svelte:head>
 

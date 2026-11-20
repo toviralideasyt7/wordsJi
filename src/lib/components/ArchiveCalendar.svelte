@@ -194,7 +194,7 @@
     currentMonth.getFullYear() === startDate.getFullYear() && currentMonth.getMonth() === startDate.getMonth()
   );
   let pageTitle = $derived(`${gameName} Archive`);
-  let pageUrl = $derived(`https://wordsolverx.com${basePath}`);
+  let pageUrl = $derived(`https://wordauditor.com${basePath}`);
   let pageDescription = $derived(description || `Browse the complete history of all ${gameName} answers.`);
   let archiveSchemaJson = $derived(
     JSON.stringify([
@@ -204,13 +204,13 @@
         pageUrl,
         allPuzzles.slice(0, 10).map((puzzle) => ({
           name: `${gameName} #${puzzle.dayNum}`,
-          url: `https://wordsolverx.com${puzzle.href}`
+          url: `https://wordauditor.com${puzzle.href}`
         }))
       ),
       generateWebPageSchema(pageTitle, pageDescription, pageUrl),
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Archive', url: 'https://wordsolverx.com/archive' },
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Archive', url: 'https://wordauditor.com/archive' },
         { name: pageTitle, url: pageUrl }
       ])
     ])

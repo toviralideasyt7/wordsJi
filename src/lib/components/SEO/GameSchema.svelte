@@ -5,7 +5,7 @@
     name,
     description,
     url,
-    image = 'https://wordsolverx.com/wordsolverx.webp',
+    image = 'https://wordauditor.com/wordauditor.webp',
     authorName = 'Preston Hayes',
     datePublished = '2026-01-01',
     genre = ['Puzzle', 'Word Game'],

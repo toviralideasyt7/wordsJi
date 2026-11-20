@@ -100,13 +100,13 @@
   <title>{data.meta.title}</title>
   <meta name="description" content={data.meta.description} />
   <meta name="keywords" content={data.meta.keywords} />
-  <link rel="canonical" href="https://wordsolverx.com/marveldle-solver" />
+  <link rel="canonical" href="https://wordauditor.com/marveldle-solver" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/marveldle-solver" />
+  <meta property="og:url" content="https://wordauditor.com/marveldle-solver" />
   <meta property="og:image" content={data.meta.socialImage} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
 </svelte:head>
 
 <div class="min-h-screen bg-slate-50/60">

@@ -69,16 +69,16 @@ import { ARTICLE_CONTENT } from '$lib/content/registry';
       generateCollectionPageSchema(
         'Framed Archive',
         'Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records.',
-        'https://wordsolverx.com/framed-archive',
+        'https://wordauditor.com/framed-archive',
         availableDates.slice(0, 10).map((dateKey: string) => ({
           name: `Framed ${dateKey}`,
-          url: `https://wordsolverx.com/framed-archive?date=${dateKey}`
+          url: `https://wordauditor.com/framed-archive?date=${dateKey}`
         }))
       ),
       generateWebPageSchema(
         'Framed Archive - Past Framed Answers by Date',
         'Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records.',
-        'https://wordsolverx.com/framed-archive'
+        'https://wordauditor.com/framed-archive'
       )
     ])
   );
@@ -87,16 +87,16 @@ import { ARTICLE_CONTENT } from '$lib/content/registry';
 <svelte:head>
   <title>Framed Archive - Past Framed Answers by Date</title>
   <meta name="description" content="Browse the Framed archive by date and reveal the saved answers for Framed Classic, One Frame, Titleshot, and Poster from our verified answer records." />
-  <link rel="canonical" href="https://wordsolverx.com/framed-archive" />
+  <link rel="canonical" href="https://wordauditor.com/framed-archive" />
   <meta property="og:title" content="Framed Archive - Past Framed Answers by Date" />
   <meta property="og:description" content="Search saved Framed movie title answers by date for all supported Framed modes." />
-  <meta property="og:url" content="https://wordsolverx.com/framed-archive" />
+  <meta property="og:url" content="https://wordauditor.com/framed-archive" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Framed Archive" />
   <meta name="twitter:description" content="Browse static Framed answer history by date." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 

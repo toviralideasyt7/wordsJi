@@ -33,16 +33,16 @@
         const config = $derived(GAME_SOLVER_CONFIGS[gameKey]);
         const seoContent = $derived(gameSolverSeoContent[gameKey]);
         const crossLinks = $derived(getSolverCrossLinks(gameKey));
-        const pageUrl = $derived(`https://wordsolverx.com${config.route}`);
+        const pageUrl = $derived(`https://wordauditor.com${config.route}`);
         const pageTitle = $derived(seoContent.title);
         const pageDescription = $derived(seoContent.description);
         const pageKeywords = $derived(config.keywords.join(', '));
-        const solverOgImage = $derived(`https://wordsolverx.com/og/${config.key}-solver.svg`);
+        const solverOgImage = $derived(`https://wordauditor.com/og/${config.key}-solver.svg`);
 
         const breadcrumbSchema = $derived(
                 generateBreadcrumbSchema([
-                        { name: 'Home', url: 'https://wordsolverx.com' },
-                        { name: 'Solver Tools', url: 'https://wordsolverx.com/solver' },
+                        { name: 'Home', url: 'https://wordauditor.com' },
+                        { name: 'Solver Tools', url: 'https://wordauditor.com/solver' },
                         { name: config.name }
                 ])
         );
@@ -455,7 +455,7 @@
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:site_name" content="WordSolverX" />
+        <meta property="og:site_name" content="WordAuditor" />
         <meta property="og:image" content={solverOgImage} />
         <meta property="og:image:alt" content={`${config.name} Solver Tool`} />
         <meta name="twitter:card" content="summary_large_image" />

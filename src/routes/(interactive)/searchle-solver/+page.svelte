@@ -281,8 +281,8 @@
   const pageTitle = 'Searchle Solver - Autocomplete Guess Helper';
   const pageDescription =
     'Solve Searchle faster with entropy-ranked guesses, the daily autocomplete prompt, and feedback tracking that finds the missing word in seconds.';
-  const pageUrl = 'https://wordsolverx.com/searchle-solver';
-  const pageImage = 'https://wordsolverx.com/images/searchle-solver.webp';
+  const pageUrl = 'https://wordauditor.com/searchle-solver';
+  const pageImage = 'https://wordauditor.com/images/searchle-solver.webp';
 
 </script>
 
@@ -302,11 +302,11 @@
     content="Enter the Searchle prompt and get the best autocomplete guesses ranked by entropy."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/searchle-solver" />
-  <meta property="og:site_name" content="WordSolverX" />
-  <meta property="og:image" content="https://wordsolverx.com/images/searchle-solver.webp" />
+  <meta property="og:url" content="https://wordauditor.com/searchle-solver" />
+  <meta property="og:site_name" content="WordAuditor" />
+  <meta property="og:image" content="https://wordauditor.com/images/searchle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://wordsolverx.com/searchle-solver" />
+  <link rel="canonical" href="https://wordauditor.com/searchle-solver" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -330,9 +330,9 @@
         ]
       },
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-        { name: 'Searchle Solver', url: 'https://wordsolverx.com/searchle-solver' }
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Solver', url: 'https://wordauditor.com/solver' },
+        { name: 'Searchle Solver', url: 'https://wordauditor.com/searchle-solver' }
       ])
     ]
   }), ['FAQPage', 'HowTo'])}</script>`}

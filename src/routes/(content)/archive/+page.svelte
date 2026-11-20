@@ -29,23 +29,23 @@
     '@type': 'ListItem',
     position: index + 1,
     name: `${archive.name} Archive`,
-    url: `https://wordsolverx.com${archive.href}`
+    url: `https://wordauditor.com${archive.href}`
   }));
 </script>
 
 <svelte:head>
   <title>Puzzle Answer Archives - Every Daily Game</title>
   <meta name="description" content="Browse past answers for Wordle, Canuckle, Quordle, Colordle, Waffle, Worldle, Nerdle, Contexto, Phrazle and 20+ more games." />
-  <link rel="canonical" href="https://wordsolverx.com/archive" />
+  <link rel="canonical" href="https://wordauditor.com/archive" />
   <meta property="og:title" content="Puzzle Answer Archive - All Solutions" />
   <meta property="og:description" content="Browse full answer history, archive calendars, and past solutions for Wordle, Canuckle, Quordle, Colordle, Semantle, Phoodle, Globle, Waffle, Worldle, Nerdle, Searchle, Contexto, Phrazle, and Spotle." />
-  <meta property="og:url" content="https://wordsolverx.com/archive" />
+  <meta property="og:url" content="https://wordauditor.com/archive" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Puzzle Answer Archive - All Solutions" />
   <meta name="twitter:description" content="Explore complete answer archives and calendar lookups for Wordle, Canuckle, and the most popular daily puzzle games." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -53,13 +53,13 @@
         "@type": "CollectionPage",
         "name": "Puzzle Answer Archive",
         "description": "Browse past answers for Wordle, Canuckle, Quordle, Colordle, Waffle, Worldle, Nerdle, Contexto, Phrazle and 20+ more games.",
-        "url": "https://wordsolverx.com/archive",
-        "isPartOf": { "@type": "WebSite", "name": "WordSolverX", "url": "https://wordsolverx.com" }
+        "url": "https://wordauditor.com/archive",
+        "isPartOf": { "@type": "WebSite", "name": "WordAuditor", "url": "https://wordauditor.com" }
       },
       generateWebPageSchema(
         "Puzzle Answer Archive",
         "Archive hub for past puzzle answers, history pages, and answer calendars.",
-        "https://wordsolverx.com/archive"
+        "https://wordauditor.com/archive"
       ),
       {
         "@type": "ItemList",
@@ -152,7 +152,7 @@
       <h2 class="text-slate-900 dark:text-slate-50">How Each Archive Works</h2>
 
       <p>
-        Every archive page on WordSolverX follows the same structure. You land on a calendar-style interface (or a scrollable list for games that don't use calendar dates). Pick the date you want, and the answer loads immediately. No page reloads for each date — the data is either embedded in the page or fetched in the background so browsing between dates feels instant.
+        Every archive page on WordAuditor follows the same structure. You land on a calendar-style interface (or a scrollable list for games that don't use calendar dates). Pick the date you want, and the answer loads immediately. No page reloads for each date — the data is either embedded in the page or fetched in the background so browsing between dates feels instant.
       
       </p>
       <p>

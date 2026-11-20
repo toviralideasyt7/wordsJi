@@ -179,19 +179,19 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				'@type': 'ListItem',
 				position: 1,
 				name: 'Home',
-				item: 'https://wordsolverx.com'
+				item: 'https://wordauditor.com'
 			},
 			{
 				'@type': 'ListItem',
 				position: 2,
 				name: 'Today',
-				item: 'https://wordsolverx.com/today'
+				item: 'https://wordauditor.com/today'
 			},
 			{
 				'@type': 'ListItem',
 				position: 3,
 				name: 'Spotle Answer Today',
-				item: 'https://wordsolverx.com/spotle-answer-today'
+				item: 'https://wordauditor.com/spotle-answer-today'
 			}
 		]
 	};
@@ -201,14 +201,14 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		'@type': 'WebPage',
 		name: metaTitle,
 		description: metaDescription,
-		url: 'https://wordsolverx.com/spotle-answer-today',
-		image: 'https://wordsolverx.com/wordsolverx.webp',
+		url: 'https://wordauditor.com/spotle-answer-today',
+		image: 'https://wordauditor.com/wordauditor.webp',
 		dateModified: displayDate,
 		inLanguage: 'en',
 		isPartOf: {
 			'@type': 'WebSite',
-			name: 'WordSolverX',
-			url: 'https://wordsolverx.com'
+			name: 'WordAuditor',
+			url: 'https://wordauditor.com'
 		}
 	};
 

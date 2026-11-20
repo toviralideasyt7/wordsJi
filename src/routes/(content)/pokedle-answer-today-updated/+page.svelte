@@ -51,7 +51,7 @@
       { '@type': 'Question', name: 'Is Pokedle free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Pokedle is completely free to play in your browser.' } },
       { '@type': 'Question', name: 'When was this page last updated?', acceptedAnswer: { '@type': 'Answer', text: data.updatedStamp ?? '' } },
     ]},
-    { '@type': 'Article', headline: 'Pokedle Answer Today', description: "Today's Pokedle Pokemon revealed — Classic, Type, and Generation mode answers. Check your guess or browse the archive.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/pokedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/pokedle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'Pokedle Answer Today', description: "Today's Pokedle Pokemon revealed — Classic, Type, and Generation mode answers. Check your guess or browse the archive.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/pokedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/images/pokedle-answer-today.webp' } } },
   ]});
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

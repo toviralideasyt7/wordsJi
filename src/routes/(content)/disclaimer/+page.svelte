@@ -4,32 +4,32 @@
 </script>
 
 <svelte:head>
-  <title>Disclaimer - WordSolverX Site and Content</title>
+  <title>Disclaimer - WordAuditor Site and Content</title>
   <meta
     name="description"
-    content="Read the WordSolverX disclaimer covering site accuracy, puzzle trademarks, our independent status, external links, and the limits of the answers we publish."
+    content="Read the WordAuditor disclaimer covering site accuracy, puzzle trademarks, our independent status, external links, and the limits of the answers we publish."
   />
-  <link rel="canonical" href="https://wordsolverx.com/disclaimer" />
-  <meta property="og:title" content="Disclaimer - WordSolverX Site and Content" />
+  <link rel="canonical" href="https://wordauditor.com/disclaimer" />
+  <meta property="og:title" content="Disclaimer - WordAuditor Site and Content" />
   <meta
     property="og:description"
-    content="Review the WordSolverX disclaimer for puzzle content, trademarks, and independent site status."
+    content="Review the WordAuditor disclaimer for puzzle content, trademarks, and independent site status."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/disclaimer" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/disclaimer" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Disclaimer - WordSolverX Site and Content" />
+  <meta name="twitter:title" content="Disclaimer - WordAuditor Site and Content" />
   <meta
     name="twitter:description"
-    content="See the WordSolverX disclaimer for answer accuracy, external links, and trademark notices."
+    content="See the WordAuditor disclaimer for answer accuracy, external links, and trademark notices."
   />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
-      'Disclaimer - WordSolverX Site and Content',
-      'Disclaimer - WordSolverX Site and Content for WordSolverX and its puzzle content.',
-      'https://wordsolverx.com/disclaimer',
+      'Disclaimer - WordAuditor Site and Content',
+      'Disclaimer - WordAuditor Site and Content for WordAuditor and its puzzle content.',
+      'https://wordauditor.com/disclaimer',
       { dateModified: '2026-03-14' }
     )
   )}</script>`}
@@ -39,7 +39,7 @@
   <Breadcrumbs />
 
   <div class="mb-10">
-    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Disclaimer - WordSolverX Site and Content</h1>
+    <h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Disclaimer - WordAuditor Site and Content</h1>
     <p class="mt-3 text-slate-500 dark:text-slate-400">Last updated: March 14, 2026</p>
   </div>
 
@@ -47,7 +47,7 @@
     <div class="prose prose-slate dark:prose-invert max-w-none">
       <h2>1. Independent Website</h2>
       <p>
-        WordSolverX is an independent website that provides puzzle answers, archives, guides, and
+        WordAuditor is an independent website that provides puzzle answers, archives, guides, and
         solver tools. We are not affiliated with The New York Times or with the official publishers
         of the games covered on this site unless a page explicitly says otherwise. This independence
         means we have no special access to game data, no commercial relationship with game publishers,
@@ -59,7 +59,7 @@
 
       <h2>2. Informational and Entertainment Use</h2>
       <p>
-        All content on WordSolverX is provided for informational and entertainment purposes only.
+        All content on WordAuditor is provided for informational and entertainment purposes only.
         Our pages and tools are designed to help users review puzzle information and solve games more
         easily, but use of the site is always at your own discretion. The answers, hints, strategy
         tips, and solver results we publish are meant to supplement your own puzzle-solving experience,
@@ -86,7 +86,7 @@
 
       <h2>4. External Links and Third-Party Content</h2>
       <p>
-        WordSolverX may link to or embed third-party content. We are not responsible for the
+        WordAuditor may link to or embed third-party content. We are not responsible for the
         content, availability, or policies of any third-party website or service. Links to external
         sites are provided for convenience and reference only — they do not imply endorsement of the
         linked site, its content, or its operators. Third-party content that appears on our pages
@@ -101,7 +101,7 @@
       <h2>5. Trademarks</h2>
       <p>
         Wordle and other puzzle names, logos, and trademarks mentioned on this site belong to their
-        respective owners. Their appearance on WordSolverX is for identification and reference
+        respective owners. Their appearance on WordAuditor is for identification and reference
         purposes only. We use game names to help players find the specific puzzle information they
         are looking for, which is a standard and recognized practice in the puzzle-answer community.
         No trademark use on this site should be interpreted as suggesting affiliation, sponsorship,
@@ -112,7 +112,7 @@
 
       <h2>6. Solver Tools and Results</h2>
       <p>
-        The solver tools on WordSolverX are provided as-is. While we test them regularly against
+        The solver tools on WordAuditor are provided as-is. While we test them regularly against
         known puzzle solutions, solver results may occasionally be inaccurate due to outdated word
         lists, game rule changes, or edge cases in filtering logic. A solver is a tool to help narrow
         down possibilities, not a guarantee of a correct answer. If a solver produces a result that
@@ -122,8 +122,8 @@
 
       <h2>7. Contact</h2>
       <p>
-        If you have questions about this Disclaimer - WordSolverX Site and Content, contact
-        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
+        If you have questions about this Disclaimer - WordAuditor Site and Content, contact
+        <a href="mailto:blog@wordauditor.com">blog@wordauditor.com</a>.
         You can also reach us through our <a href="/contact">contact page</a>,
         which includes additional details about what information to include in your message so we
         can respond effectively. We read every message we receive and aim to respond within a

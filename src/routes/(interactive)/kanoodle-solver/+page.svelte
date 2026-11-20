@@ -17,7 +17,7 @@
   const pageTitle = 'Kanoodle Solver — Solve Any Kanoodle Puzzle Online';
   const pageDescription =
     'Use the Kanoodle solver online to fit all 12 pieces onto the board, with hints, challenge mode, and fast solving that runs entirely in your browser.';
-  const pageUrl = 'https://wordsolverx.com/kanoodle-solver';
+  const pageUrl = 'https://wordauditor.com/kanoodle-solver';
 
   const schemas = JSON.stringify([
     generateHowToSchema('How to solve Kanoodle online', [
@@ -40,8 +40,8 @@
       keywords: ['kanoodle solver', 'noodle solver', 'kanoodle puzzle solver'],
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Kanoodle Solver', url: pageUrl },
     ]),
     {
@@ -64,11 +64,11 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/kanoodle-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/kanoodle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/kanoodle-solver.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/kanoodle-solver.webp" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 

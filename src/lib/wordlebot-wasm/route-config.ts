@@ -54,7 +54,7 @@ function buildSolverFaqs(game: WordlebotGameConfig, wordLength?: number) {
       {
         question: 'Can I switch between today\'s puzzle, the archive, and the solver?',
         answer:
-          'Yes. The top navigation tabs on the Canuckle section let you jump between the daily answer page, the searchable archive, and the solver without leaving WordSolverX.'
+          'Yes. The top navigation tabs on the Canuckle section let you jump between the daily answer page, the searchable archive, and the solver without leaving WordAuditor.'
       },
       {
         question: 'What do the brown, yellow, and green clue colors mean in Canuckle?',
@@ -734,8 +734,8 @@ function buildSolverSections(game: WordlebotGameConfig, wordLength?: number) {
       {
         title: 'The three Canuckle pages work together',
         paragraphs: [
-          'The Canuckle section on WordSolverX has three distinct pages. The answer today page shows the current puzzle number, date, and answer with its Canadian fact. The archive page lets you search past puzzles by date, number, answer, or fact text. The solver page helps you find the answer through clue-based elimination.',
-          'These pages are linked through the top navigation tabs in the Canuckle section. You can move from checking today\'s answer to the archive or solver without leaving WordSolverX.',
+          'The Canuckle section on WordAuditor has three distinct pages. The answer today page shows the current puzzle number, date, and answer with its Canadian fact. The archive page lets you search past puzzles by date, number, answer, or fact text. The solver page helps you find the answer through clue-based elimination.',
+          'These pages are linked through the top navigation tabs in the Canuckle section. You can move from checking today\'s answer to the archive or solver without leaving WordAuditor.',
           'Use each page for its intended purpose. Check the answer today page when you want a direct reveal. Use the archive when you want to research older puzzles. Use the solver when you want to figure it out yourself but need help narrowing down candidates.'
         ]
       },
@@ -1752,10 +1752,10 @@ function buildSolverChips(game: WordlebotGameConfig, wordLength?: number) {
 
 export function getWordleLengthPageConfig(wordLength: number): WordlebotPageConfig {
         const game = getWordlebotGame('wordle');
-        const pageUrl = `https://wordsolverx.com${getWordleLengthSolverPath(wordLength)}`;
+        const pageUrl = `https://wordauditor.com${getWordleLengthSolverPath(wordLength)}`;
         // SEO audit chapter 6.4: the 5-letter solver page had 12,869 Bing impressions but
         // only 33 clicks (0.26% CTR) — far below the site-wide average — because the title
-        // was generic ("5-Letter Wordle Solver | WordSolverX"). Someone Googling "wordle
+        // was generic ("5-Letter Wordle Solver | WordAuditor"). Someone Googling "wordle
         // solver 5 letters" has a Wordle puzzle in front of them and wants to enter their
         // green/yellow/gray tiles to get candidate words. The title should promise exactly
         // that. For the 5-letter page specifically (the highest-traffic per-length page),
@@ -1832,7 +1832,7 @@ export function getVariantSolverPageConfig(variant: WordlebotVariantRouteSlug): 
         const gameSlug = getGameForVariantRoute(variant);
         const game = getWordlebotGame(gameSlug);
         const routePath = `/${variant}-solver`;
-        const pageUrl = `https://wordsolverx.com${routePath}`;
+        const pageUrl = `https://wordauditor.com${routePath}`;
         // Each variant carries its own title and description rather than one shared
         // boilerplate sentence. Titles are budgeted to 30-60 characters and descriptions to
         // 140-158 so nothing truncates in a SERP result, and no two variants repeat the same
@@ -1960,7 +1960,7 @@ export function getCanuckleTodayPageConfig(): WordlebotPageConfig {
                 eyebrow: 'Daily Canuckle answer, fact, and puzzle number',
                 description:
                         "See the Canuckle answer today, check the current puzzle number, and read the matching Canadian fact with quick links to the archive and solver.",
-                pageUrl: `https://wordsolverx.com${getCanucklePagePath('today')}`,
+                pageUrl: `https://wordauditor.com${getCanucklePagePath('today')}`,
                 keywords: [
                         'canuckle answer today',
                         'canuckle today',
@@ -2004,7 +2004,7 @@ export function getCanuckleTodayPageConfig(): WordlebotPageConfig {
                                 title: 'Where to go after checking today’s answer',
                                 paragraphs: [
                                         'Open the Canuckle solver if you want clue-based help instead of a direct reveal. That page lets you enter guesses, mark feedback, and narrow the answer list quickly.',
-                                        'If you are researching earlier puzzles, the Canuckle archive gives you a searchable history of dates, answers, and facts without leaving WordSolverX.'
+                                        'If you are researching earlier puzzles, the Canuckle archive gives you a searchable history of dates, answers, and facts without leaving WordAuditor.'
                                 ]
                         }
                 ],
@@ -2026,7 +2026,7 @@ export function getCanuckleArchivePageConfig(): WordlebotPageConfig {
                 eyebrow: 'Search past Canuckle answers by date or puzzle number',
                 description:
                         'Browse the Canuckle archive to look up any past puzzle by date, number, answer, or Canadian fact, with every entry kept on one searchable page.',
-                pageUrl: 'https://wordsolverx.com/canuckle-archive',
+                pageUrl: 'https://wordauditor.com/canuckle-archive',
                 keywords: [
                         'canuckle archive',
                         'canuckle answers',
@@ -2099,15 +2099,15 @@ export function getWordlebotStructuredData(config: WordlebotPageConfig) {
                         generateCollectionPageSchema(config.title, config.description, config.pageUrl, [
                                 {
                                         name: 'Canuckle Answer Today',
-                                        url: `https://wordsolverx.com${getCanucklePagePath('today')}`
+                                        url: `https://wordauditor.com${getCanucklePagePath('today')}`
                                 },
                                 {
                                         name: 'Canuckle Archive',
-                                        url: `https://wordsolverx.com${getCanucklePagePath('archive')}`
+                                        url: `https://wordauditor.com${getCanucklePagePath('archive')}`
                                 },
                                 {
                                         name: 'Canuckle Solver',
-                                        url: `https://wordsolverx.com${getCanucklePagePath('solver')}`
+                                        url: `https://wordauditor.com${getCanucklePagePath('solver')}`
                                 }
                         ]),
                         generateWebPageSchema(config.title, config.description, config.pageUrl)

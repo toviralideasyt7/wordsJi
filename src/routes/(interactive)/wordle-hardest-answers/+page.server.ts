@@ -114,7 +114,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 		},
 		{
 			question: 'Can I cite this ranking in an article or classroom?',
-			answer: 'Yes. This ranking is published as a citation-friendly reference: every row names the real answer, its official puzzle number, and its date. Please credit WordSolverX and link to this page. The methodology is documented on this page so your readers can verify how each score was calculated.'
+			answer: 'Yes. This ranking is published as a citation-friendly reference: every row names the real answer, its official puzzle number, and its date. Please credit WordAuditor and link to this page. The methodology is documented on this page so your readers can verify how each score was calculated.'
 		}
 	];
 

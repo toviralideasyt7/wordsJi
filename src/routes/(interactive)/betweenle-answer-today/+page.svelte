@@ -78,8 +78,8 @@
   let schemas = $derived.by(() =>
     JSON.stringify([
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Today', url: 'https://wordsolverx.com/today' },
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Today', url: 'https://wordauditor.com/today' },
         { name: 'Betweenle Answer Today', url: data.meta.canonical },
       ]),
       generateWebPageSchema(data.meta.title, data.meta.description, data.meta.canonical),
@@ -117,12 +117,12 @@
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={data.meta.canonical} />
-  <meta property="og:image" content="https://wordsolverx.com/images/betweenle-answer-today.webp" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:image" content="https://wordauditor.com/images/betweenle-answer-today.webp" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/betweenle-answer-today.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/betweenle-answer-today.webp" />
   {@html `<script type="application/ld+json">${schemas}</script>`}
 </svelte:head>
 

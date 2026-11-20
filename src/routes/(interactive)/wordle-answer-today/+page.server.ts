@@ -13,7 +13,7 @@ interface TodayApiResponse extends WordleAnswer {
     social_image_direct?: string;
 }
 
-const SITE_URL = 'https://wordsolverx.com';
+const SITE_URL = 'https://wordauditor.com';
 const STATIC_WORDLE_TODAY_IMAGE_PATH = '/Wordle-Answer-today.webp';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
@@ -95,8 +95,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com/' },
-            { '@type': 'ListItem', position: 2, name: 'Wordle', item: 'https://wordsolverx.com/wordle-answer-today' }
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordauditor.com/' },
+            { '@type': 'ListItem', position: 2, name: 'Wordle', item: 'https://wordauditor.com/wordle-answer-today' }
         ]
     };
 
@@ -106,10 +106,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         headline: `Wordle Hints and Answer for Today (${formattedDate})`,
         datePublished: new Date(normalizedWordleData?.date || today).toISOString(),
         dateModified: new Date(normalizedWordleData?.date || today).toISOString(),
-        author: generatePersonAuthorSchema('Preston Hayes', 'https://wordsolverx.com/about#preston-hayes', 'https://wordsolverx.com/author-wordsolverx.webp'),
-        publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/wordsolverx.webp' } },
+        author: generatePersonAuthorSchema('Preston Hayes', 'https://wordauditor.com/about#preston-hayes', 'https://wordauditor.com/author-wordauditor.webp'),
+        publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/wordauditor.webp' } },
         description: `Get Wordle hints and the confirmed Wordle answer for today, ${formattedDate}. Hints, clues, and the solution for Wordle #${wordleNumber}.`,
-        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/wordle-answer-today' },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/wordle-answer-today' },
     };
 
     // Bing ranking components (2026-10-06): title built from the shared daily
@@ -161,7 +161,7 @@ async function getWordleDataWithFallback(todayKey: string, fallbackNumber: numbe
     try {
         const nytResponse = await fetch(`https://www.nytimes.com/svc/wordle/v2/${todayKey}.json`, {
             headers: {
-                'User-Agent': 'Mozilla/5.0 WordSolverX'
+                'User-Agent': 'Mozilla/5.0 WordAuditor'
             }
         });
 

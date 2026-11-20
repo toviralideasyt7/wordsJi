@@ -9,7 +9,7 @@
   let details = '';
 
   function openMailDraft() {
-    const subject = `[${contactType}] WordSolverX`;
+    const subject = `[${contactType}] WordAuditor`;
     const bodySections = [
       `Contact type: ${contactType}`,
       name.trim() ? `Name: ${name.trim()}` : '',
@@ -20,7 +20,7 @@
       details.trim() || 'Please describe the issue or request here.'
     ].filter(Boolean);
 
-    const href = `mailto:blog@wordsolverx.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodySections.join('\n'))}`;
+    const href = `mailto:blog@wordauditor.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodySections.join('\n'))}`;
     window.location.href = href;
   }
 </script>
@@ -29,38 +29,38 @@
   <title>Contact | Support, Feedback, and Corrections</title>
   <meta
     name="description"
-    content="Contact WordSolverX for support, corrections, privacy questions, legal notices, or general feedback about our puzzle pages and solver tools."
+    content="Contact WordAuditor for support, corrections, privacy questions, legal notices, or general feedback about our puzzle pages and solver tools."
   />
-  <link rel="canonical" href="https://wordsolverx.com/contact" />
+  <link rel="canonical" href="https://wordauditor.com/contact" />
   <meta property="og:title" content="Contact | Support, Feedback, and Corrections" />
   <meta
     property="og:description"
-    content="Reach WordSolverX by email for corrections, support, legal notices, and puzzle site feedback."
+    content="Reach WordAuditor by email for corrections, support, legal notices, and puzzle site feedback."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/contact" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/contact" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | Support, Feedback, and Corrections" />
   <meta
     name="twitter:description"
-    content="Get in touch with WordSolverX for support, feedback, correction requests, and legal notices."
+    content="Get in touch with WordAuditor for support, feedback, correction requests, and legal notices."
   />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify([
     {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      name: 'Contact WordSolverX',
-      description: 'Contact page for WordSolverX support, feedback, corrections, and legal inquiries.',
-      url: 'https://wordsolverx.com/contact',
-      email: 'blog@wordsolverx.com'
+      name: 'Contact WordAuditor',
+      description: 'Contact page for WordAuditor support, feedback, corrections, and legal inquiries.',
+      url: 'https://wordauditor.com/contact',
+      email: 'blog@wordauditor.com'
     },
     {
       ...generateWebPageSchema(
-        'Contact WordSolverX',
-        'Contact WordSolverX for support, corrections, feedback, and legal questions.',
-        'https://wordsolverx.com/contact'
+        'Contact WordAuditor',
+        'Contact WordAuditor for support, corrections, feedback, and legal questions.',
+        'https://wordauditor.com/contact'
       )
     }
   ])}</script>`}
@@ -71,7 +71,7 @@
 
   <div class="mb-12">
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      Contact WordSolverX
+      Contact WordAuditor
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       Questions, corrections, privacy requests, DMCA notices, or feature suggestions. Email works best.
@@ -85,11 +85,11 @@
         For support, corrections, business inquiries, privacy questions, or copyright notices:
       </p>
       <a
-        href="mailto:blog@wordsolverx.com"
+        href="mailto:blog@wordauditor.com"
         class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800/40 text-teal-700 dark:text-teal-300 font-bold hover:bg-teal-100 dark:hover:bg-teal-900/30 transition-colors"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-        blog@wordsolverx.com
+        blog@wordauditor.com
       </a>
 
       <div class="mt-8">
@@ -120,7 +120,7 @@
           This opens your email app with the details filled in so correction requests and bug reports are easier to send in one pass.
         </p>
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
-          Nothing typed here is submitted to WordSolverX. The button builds a pre-filled message and hands it to your own email app, so nothing leaves your device until you press send there, and nothing is stored on this site.
+          Nothing typed here is submitted to WordAuditor. The button builds a pre-filled message and hands it to your own email app, so nothing leaves your device until you press send there, and nothing is stored on this site.
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <label class="block text-sm">
@@ -143,7 +143,7 @@
           </label>
           <label class="block text-sm">
             <span class="mb-1 block font-medium text-slate-700 dark:text-slate-200">Page URL</span>
-            <input bind:value={pageUrl} type="url" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-slate-900 dark:text-slate-100" placeholder="https://wordsolverx.com/..." />
+            <input bind:value={pageUrl} type="url" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-3 py-2 text-slate-900 dark:text-slate-100" placeholder="https://wordauditor.com/..." />
           </label>
         </div>
         <label class="mt-4 block text-sm">
@@ -161,7 +161,7 @@
     </div>
 
     <div class="lg:col-span-2 space-y-4">
-      <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-1">Follow WordSolverX</h2>
+      <h2 class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-1">Follow WordAuditor</h2>
       <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">
         We share puzzle updates and site links on these platforms.
       </p>
@@ -233,7 +233,7 @@
 
       <h2 class="text-slate-900 dark:text-slate-50">What We Cannot Help With</h2>
       <p>
-        WordSolverX publishes answers, archives, and solver tools. It is not affiliated with the games it covers, so it cannot act on anything inside those games.
+        WordAuditor publishes answers, archives, and solver tools. It is not affiliated with the games it covers, so it cannot act on anything inside those games.
       </p>
       <ul>
         <li>
@@ -246,7 +246,7 @@
           <strong>Answers before a puzzle is live.</strong> Answers are published for puzzles that have already been released. A future answer cannot be provided early, and requests for one cannot be met.
         </li>
         <li>
-          <strong>Account recovery here.</strong> There are no user accounts on WordSolverX, so there is no profile, password, or saved progress to recover or reset.
+          <strong>Account recovery here.</strong> There are no user accounts on WordAuditor, so there is no profile, password, or saved progress to recover or reset.
         </li>
         <li>
           <strong>Removing a published answer.</strong> Reporting the day's solution is the purpose of the answer pages. A page is only removed or changed if it is wrong, or if the complaint is a copyright matter handled through the <a href="/dmca-policy">DMCA Policy</a>.

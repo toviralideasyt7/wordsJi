@@ -41,16 +41,16 @@
 <svelte:head>
   <title>Today's Puzzle Answers ({todayStr})</title>
   <meta name="description" content="Today's answers for Wordle, Canuckle, Betweenle, Quordle, Colordle, Waffle and 20+ more puzzles for {todayStr}, hints first." />
-  <link rel="canonical" href="https://wordsolverx.com/today" />
+  <link rel="canonical" href="https://wordauditor.com/today" />
   <meta property="og:title" content={"Today's Puzzle Answers (" + todayStr + ")"} />
   <meta property="og:description" content="See today's verified puzzle answers, daily solution links, and quick access to all supported games in one place." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/today" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/today" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={"Today's Puzzle Answers (" + todayStr + ")"} />
   <meta name="twitter:description" content="Daily answers for Wordle, Canuckle, Worldle, Betweenle, Phoodle, Quordle, Colordle, Semantle, Waffle, and more." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -58,12 +58,12 @@
         '@type': 'CollectionPage',
         'name': "Today's Puzzle Answers",
         'description': "All of today's puzzle answers for " + todayStr,
-        'url': 'https://wordsolverx.com/today'
+        'url': 'https://wordauditor.com/today'
       },
       generateWebPageSchema(
         "Today's Puzzle Answers",
         "Hub page for all of today's verified puzzle answers.",
-        'https://wordsolverx.com/today',
+        'https://wordauditor.com/today',
         { dateModified: todayKey }
       )
     ]
@@ -155,7 +155,7 @@
       
       </p>
       <p>
-        Most puzzle answer sites bury the actual answer under paragraphs of keyword-stuffed text and pop-up ads. WordSolverX puts the answer at the top of each page. Scroll down if you want context and strategy tips — but you never have to. The answer is right there, the moment the page loads.
+        Most puzzle answer sites bury the actual answer under paragraphs of keyword-stuffed text and pop-up ads. WordAuditor puts the answer at the top of each page. Scroll down if you want context and strategy tips — but you never have to. The answer is right there, the moment the page loads.
       
 
       </p>
@@ -166,7 +166,7 @@
       
       </p>
       <p>
-        WordSolverX tracks all of these schedules. The date you see displayed on this page — {todayStr} — reflects the current puzzle date based on Wordle's window. Other games may show slightly different dates depending on their reset times, but the answer-today pages all account for this automatically. You don't need to worry about time zones or puzzle windows. Just open the page and the correct answer for the current puzzle loads.
+        WordAuditor tracks all of these schedules. The date you see displayed on this page — {todayStr} — reflects the current puzzle date based on Wordle's window. Other games may show slightly different dates depending on their reset times, but the answer-today pages all account for this automatically. You don't need to worry about time zones or puzzle windows. Just open the page and the correct answer for the current puzzle loads.
       
       </p>
       <p>

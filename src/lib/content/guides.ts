@@ -1,5 +1,5 @@
 /**
- * Guide article registry for WordSolverX.
+ * Guide article registry for WordAuditor.
  *
  * These are evergreen strategy/help articles rendered at /guides/<slug>.
  * They target low-competition, steady-traffic informational queries (starting

@@ -105,7 +105,7 @@ export async function fetchNerdleAnswerByPuzzleNumber(puzzleNumber: number): Pro
 		const filename = getNerdleFilename(puzzleNumber);
 		const response = await fetch(`https://nerdlegame.com/words/${filename}`, {
 			headers: {
-				'User-Agent': 'Mozilla/5.0 WordSolverX'
+				'User-Agent': 'Mozilla/5.0 WordAuditor'
 			}
 		});
 

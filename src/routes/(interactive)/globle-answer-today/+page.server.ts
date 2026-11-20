@@ -19,7 +19,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
     const { data, publishedDateKey } = resolved;
     const { country, formattedDate } = data;
-    const featuredImage = 'https://wordsolverx.com/images/globle-answer-today.webp';
+    const featuredImage = 'https://wordauditor.com/images/globle-answer-today.webp';
     // Stream 4 (2026-10-06): shared daily title/stamp. Globle has no upstream
     // puzzle number, so the published date key is the puzzle identifier.
     const pageTitle = dailyAnswerTitle('Globle', publishedDateKey, formattedDate);
@@ -33,11 +33,11 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
             headline: pageTitle,
             datePublished: new Date(data.date).toISOString(),
             dateModified: new Date(data.date).toISOString(),
-            author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' },
-            publisher: { '@type': 'Organization', name: 'WordSolverX' },
+            author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' },
+            publisher: { '@type': 'Organization', name: 'WordAuditor' },
             description: pageDescription,
             image: [featuredImage],
-            mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/globle-answer-today' }
+            mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/globle-answer-today' }
         }
     ]);
 

@@ -17,7 +17,7 @@
   const pageTitle = 'Minesweeper Solver - Free Online Safe Move Finder';
   const pageDescription =
     'Use this free Minesweeper solver to find safe moves, mark suspected mines, and analyse custom boards, with hints for the squares worth opening next.';
-  const pageUrl = 'https://wordsolverx.com/minesweeper-solver';
+  const pageUrl = 'https://wordauditor.com/minesweeper-solver';
 
 
   const schemas = JSON.stringify([
@@ -41,8 +41,8 @@
     },
     generateWebApplicationSchema('Minesweeper Solver', pageDescription),
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Minesweeper Solver', url: pageUrl },
     ]),
     generateWebPageSchema('Minesweeper Solver', pageDescription, pageUrl),
@@ -60,7 +60,7 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/minesweeper-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/minesweeper-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

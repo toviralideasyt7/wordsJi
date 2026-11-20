@@ -16,7 +16,7 @@
   const pageTitle = 'Hangman Solver - Free Online Word Finder & Hint Tool';
   const pageDescription =
     'Use this Hangman solver to enter your pattern and the letters you have already tried, then get ranked answers and a suggestion for the best next guess.';
-  const pageUrl = 'https://wordsolverx.com/hangman-solver';
+  const pageUrl = 'https://wordauditor.com/hangman-solver';
 
 
   const schemas = JSON.stringify([
@@ -30,8 +30,8 @@
       keywords: ['hangman solver', 'hangman helper', 'hangman word finder']
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Hangman Solver', url: pageUrl }
     ]),
     generateWebPageSchema('Hangman Solver', pageDescription, pageUrl)
@@ -50,7 +50,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
   <link rel="canonical" href={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/hangman-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/hangman-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

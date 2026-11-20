@@ -52,7 +52,7 @@
       { '@type': 'Question', name: 'Is Narutodle free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Narutodle is completely free to play in your browser.' } },
       ...(data.hintFaqs ?? []).map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
     ]},
-    { '@type': 'Article', headline: 'Narutodle Answer Today', description: "Today's Narutodle character revealed — Character, Jutsu, and Quote mode answers for Part 1 and Shippuden. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/narutodle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/narutodle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'Narutodle Answer Today', description: "Today's Narutodle character revealed — Character, Jutsu, and Quote mode answers for Part 1 and Shippuden. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/narutodle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/images/narutodle-answer-today.webp' } } },
   ]};
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

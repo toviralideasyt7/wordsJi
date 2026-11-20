@@ -107,7 +107,7 @@
   let error = $derived(data?.error ?? null);
   let dateStr = $derived(data?.dateStr ?? '');
 
-  let canonicalUrl = $derived(`https://wordsolverx.com/${gameKey}-answer-today-updated`);
+  let canonicalUrl = $derived(`https://wordauditor.com/${gameKey}-answer-today-updated`);
   let seoDate = $derived(dateStr ? dateStr.replace(/^[^,]+,\s*/, '') : '');
   let publishedDate = $derived(answers[0]?.date ?? '');
   let pageTitle = $derived(
@@ -124,12 +124,12 @@
     data?.meta?.keywords ??
       `${gameKey} answer today, ${gameKey} answer, ${gameKey} hint, ${gameKey} hint today${seoDate ? `, ${gameKey} answer for ${seoDate}` : ''}`
   );
-  let pageImage = $derived(data?.meta?.featuredImage ?? 'https://wordsolverx.com/wordsolverx.webp');
+  let pageImage = $derived(data?.meta?.featuredImage ?? 'https://wordauditor.com/wordauditor.webp');
   let crossLinkColsClass = $derived(crossLinks.length > 4 ? 'md:grid-cols-5' : 'md:grid-cols-4');
   let breadcrumbSchemaData = $derived(
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Today', url: 'https://wordsolverx.com/today' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Today', url: 'https://wordauditor.com/today' },
       { name: `${gameTitle} Answer Today`, url: canonicalUrl }
     ])
   );
@@ -266,16 +266,16 @@
     },
     author: generatePersonAuthorSchema(
       'Preston Hayes',
-      'https://wordsolverx.com/about#preston-hayes',
-      'https://wordsolverx.com/author-wordsolverx.webp'
+      'https://wordauditor.com/about#preston-hayes',
+      'https://wordauditor.com/author-wordauditor.webp'
     ),
     publisher: {
       '@type': 'Organization',
-      name: 'WordSolverX',
-      url: 'https://wordsolverx.com',
+      name: 'WordAuditor',
+      url: 'https://wordauditor.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wordsolverx.com/wordsolverx.webp',
+        url: 'https://wordauditor.com/wordauditor.webp',
         width: 1200,
         height: 630
       }
@@ -311,7 +311,7 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={canonicalUrl} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta property="og:image" content={pageImage} />
   <meta property="og:image:width" content="768" />
   <meta property="og:image:height" content="319" />

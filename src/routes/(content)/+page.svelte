@@ -72,11 +72,11 @@
 
   let jsonLd = $derived.by(() =>
     JSON.stringify([
-      generateSearchActionSchema('https://wordsolverx.com', 'https://wordsolverx.com/?q={search_term_string}'),
+      generateSearchActionSchema('https://wordauditor.com', 'https://wordauditor.com/?q={search_term_string}'),
       generateWebPageSchema(
-        'WordSolverX Homepage',
+        'WordAuditor Homepage',
         'Daily puzzle answers, solver tools, and Wordle resources for popular word and trivia games.',
-        'https://wordsolverx.com',
+        'https://wordauditor.com',
         {
           dateModified: todayKey
         }
@@ -88,16 +88,16 @@
 <svelte:head>
   <title>Daily Puzzle Answers, Solvers & Wordle Tools</title>
   <meta name="description" content="Daily answers, hints and solvers for Wordle, Quordle, Betweenle, Worldle, Colordle and 20+ more puzzle games, updated every day." />
-  <link rel="canonical" href="https://wordsolverx.com/" />
+  <link rel="canonical" href="https://wordauditor.com/" />
   <meta property="og:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta property="og:description" content="Daily answers, hints and solvers for Wordle, Quordle, Betweenle, Worldle, Colordle and 20+ more puzzle games, updated every day." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta name="twitter:description" content="Daily answers, hints and solvers for Wordle, Quordle, Betweenle, Worldle, Colordle and 20+ more puzzle games, updated every day." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
@@ -166,7 +166,7 @@
       </form>
 
       <!-- Trust badges -->
-      <ul class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8" aria-label="WordSolverX trust signals">
+      <ul class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-8" aria-label="WordAuditor trust signals">
         {#each [
           { label: '100% Free', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
           { label: '27 Games', icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10' },
@@ -296,14 +296,14 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     WHY WORDSOLVERX — Feature cards
+     WHY WORDAUDITOR — Feature cards
      ═══════════════════════════════════════════════════════════ -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
   <header class="text-center mb-14">
-    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Why WordSolverX?</h2>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">Why WordAuditor?</h2>
     <p class="mt-3 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Built by puzzle players who got tired of bouncing between ten different sites.</p>
   </header>
-  <ul class="grid grid-cols-1 md:grid-cols-3 gap-6" aria-label="Why WordSolverX">
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-6" aria-label="Why WordAuditor">
     <li class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
       <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-100/40 to-transparent dark:from-teal-900/20 dark:to-transparent rounded-bl-full"></div>
       <article class="relative">
@@ -393,10 +393,10 @@
 
     <div class="prose prose-slate dark:prose-invert max-w-none prose-headings:scroll-mt-20">
 
-      <h2 class="text-slate-900 dark:text-slate-50">What WordSolverX Actually Does</h2>
+      <h2 class="text-slate-900 dark:text-slate-50">What WordAuditor Actually Does</h2>
 
       <p>
-        WordSolverX is a single site that handles three things puzzle players need: daily answers, solver tools, and answer archives. Instead of Googling "Wordle answer today" and landing on a site with six pop-ups and a 900-word essay before the actual answer, you get the information upfront, clean and fast.
+        WordAuditor is a single site that handles three things puzzle players need: daily answers, solver tools, and answer archives. Instead of Googling "Wordle answer today" and landing on a site with six pop-ups and a 900-word essay before the actual answer, you get the information upfront, clean and fast.
       
       </p>
       <p>
@@ -426,7 +426,7 @@
       <h2 class="text-slate-900 dark:text-slate-50">Solver Tools: More Than Just Answer Lookup</h2>
 
       <p>
-        Here's where WordSolverX separates itself from the dozen other "wordle answer" sites out there. Our solver tools actually let you play along.
+        Here's where WordAuditor separates itself from the dozen other "wordle answer" sites out there. Our solver tools actually let you play along.
       
       </p>
       <p>
@@ -483,7 +483,7 @@
       <h2 class="text-slate-900 dark:text-slate-50">The Technical Side (For the Curious)</h2>
 
       <p>
-        WordSolverX is built on SvelteKit and deployed on Cloudflare Pages. The interactive solver tools run client-side using WebAssembly for the heavy computation — the 5-letter Wordle solver, for instance, compiles the entire filtering algorithm to WASM so it runs in your browser without any server round-trips. This makes the tools fast regardless of your connection speed.
+        WordAuditor is built on SvelteKit and deployed on Cloudflare Pages. The interactive solver tools run client-side using WebAssembly for the heavy computation — the 5-letter Wordle solver, for instance, compiles the entire filtering algorithm to WASM so it runs in your browser without any server round-trips. This makes the tools fast regardless of your connection speed.
       
       </p>
       <p>

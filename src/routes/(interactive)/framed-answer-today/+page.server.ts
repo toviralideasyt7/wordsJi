@@ -76,7 +76,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const pageDescription = hasExactEntries
 		? `Get today's Framed answers for ${formattedDate}, including Framed Classic, One Frame, Titleshot, and Poster movie titles, plus the archive.`
 		: `Check whether the Framed answers for ${formattedDate} are ready yet, then use the Framed archive to look up older saved movie titles and scores.`;
-	const pageUrl = 'https://wordsolverx.com/framed-answer-today';
+	const pageUrl = 'https://wordauditor.com/framed-answer-today';
 	const isFallback = displayDateKey !== targetDateKey || !hasExactEntries;
 
 	setHeaders({
@@ -88,8 +88,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		generateWebPageSchema('Framed Answers Today', pageDescription, pageUrl),
 		generateSoftwareApplicationSchema('Framed Answers Today', 'UtilitiesApplication'),
 		generateBreadcrumbSchema([
-			{ name: 'Home', url: 'https://wordsolverx.com' },
-			{ name: 'Today', url: 'https://wordsolverx.com/today' },
+			{ name: 'Home', url: 'https://wordauditor.com' },
+			{ name: 'Today', url: 'https://wordauditor.com/today' },
 			{ name: 'Framed Answers Today', url: pageUrl }
 		])
 	]);

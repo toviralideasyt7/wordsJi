@@ -1,5 +1,5 @@
 /**
- * Static article registry for WordSolverX.
+ * Static article registry for WordAuditor.
  *
  * Every today/solver page renders one of these as a prerendered, static `<article>`.
  * Each entry is intentionally structured differently (unique H2 blueprints, varied

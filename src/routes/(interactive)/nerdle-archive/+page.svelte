@@ -49,7 +49,7 @@
                         'Browse stored Nerdle answers by date across every mode: Classic, Micro, Mini, Midi, Maxi, Mini Bi, Quad, Speed, and Instant, with the full equation shown.',
                 keywords:
                         'nerdle archive, nerdle all modes archive, nerdle classic micro mini midi maxi quad speed instant answers, nerdle previous answers',
-                canonical: 'https://wordsolverx.com/nerdle-archive'
+                canonical: 'https://wordauditor.com/nerdle-archive'
         };
         const SCHEMAS = JSON.stringify([
                 {
@@ -63,8 +63,8 @@
                         '@context': 'https://schema.org',
                         '@type': 'BreadcrumbList',
                         itemListElement: [
-                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },
-                                { '@type': 'ListItem', position: 2, name: 'Archive', item: 'https://wordsolverx.com/archive' },
+                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordauditor.com' },
+                                { '@type': 'ListItem', position: 2, name: 'Archive', item: 'https://wordauditor.com/archive' },
                                 { '@type': 'ListItem', position: 3, name: 'Nerdle Archive', item: META.canonical }
                         ]
                 },
@@ -74,7 +74,7 @@
                         name: META.title,
                         description: META.description,
                         url: META.canonical,
-                        image: 'https://wordsolverx.com/wordsolverx.webp'
+                        image: 'https://wordauditor.com/wordauditor.webp'
                 }
         ]);
 
@@ -292,12 +292,12 @@
         <meta property="og:description" content={META.description} />
         <meta property="og:url" content={META.canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="WordSolverX" />
-        <meta property="og:image" content="https://wordsolverx.com/og/nerdle-archive.svg" />
+        <meta property="og:site_name" content="WordAuditor" />
+        <meta property="og:image" content="https://wordauditor.com/og/nerdle-archive.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={META.title} />
         <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content="https://wordsolverx.com/og/nerdle-archive.svg" />
+        <meta name="twitter:image" content="https://wordauditor.com/og/nerdle-archive.svg" />
         {@html `<script type="application/ld+json">${SCHEMAS}</script>`}
 </svelte:head>
 

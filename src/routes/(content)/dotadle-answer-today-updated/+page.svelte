@@ -51,7 +51,7 @@
       { '@type': 'Question', name: 'Does Dotadle cost money?', acceptedAnswer: { '@type': 'Answer', text: 'No, Dotadle is completely free to play.' } },
       ...(data.hintFaqs ?? []).map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
     ]},
-    { '@type': 'Article', headline: 'Dotadle Answer Today', description: "Today's Dotadle hero revealed — Classic, Ability, Item, and Quote mode answers. Check your guess or jump to the solver.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/dotadle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/dotadle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'Dotadle Answer Today', description: "Today's Dotadle hero revealed — Classic, Ability, Item, and Quote mode answers. Check your guess or jump to the solver.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/dotadle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/images/dotadle-answer-today.webp' } } },
   ]};
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

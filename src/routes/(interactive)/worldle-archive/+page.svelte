@@ -87,10 +87,10 @@
 <svelte:head>
   <title>Worldle Archive - Complete Country Answer History</title>
   <meta name="description" content="Browse the complete archive of every Worldle answer, with a calendar view and direct access to each past country silhouette puzzle and its solution." />
-  <link rel="canonical" href="https://wordsolverx.com/worldle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/worldle-archive" />
   <meta property="og:title" content="Worldle Archive - All Past Country Answers" />
   <meta property="og:description" content="Complete history of every Worldle country answer. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/worldle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/worldle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

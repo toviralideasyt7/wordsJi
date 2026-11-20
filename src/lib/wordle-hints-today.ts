@@ -65,7 +65,7 @@ async function getWordleDataWithFallback(todayKey: string, fallbackNumber: numbe
 	try {
 		const nytResponse = await fetch(`https://www.nytimes.com/svc/wordle/v2/${todayKey}.json`, {
 			headers: {
-				'User-Agent': 'Mozilla/5.0 WordSolverX'
+				'User-Agent': 'Mozilla/5.0 WordAuditor'
 			}
 		});
 

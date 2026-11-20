@@ -98,16 +98,16 @@
 <svelte:head>
   <title>Puzzle Solver Tools - Wordle, Betweenle, Quordle & More</title>
   <meta name="description" content="Free solvers for Wordle, Canuckle, Quordle, Betweenle, Phoodle, Waffle and Colordle — filter by clues for 3 to 11 letter words." />
-  <link rel="canonical" href="https://wordsolverx.com/solver" />
+  <link rel="canonical" href="https://wordauditor.com/solver" />
   <meta property="og:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
   <meta property="og:description" content="Use free solver tools for 3 to 11 letter Wordle, Canuckle, Betweenle, Worldle, Quordle, Phoodle, Waffle, Colordle, and more daily puzzle games." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/solver" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/solver" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
-  <meta name="twitter:description" content="Find the right puzzle solver fast with WordSolverX's full collection of free clue-based tools for Wordle, Canuckle, Quordle, and more." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:description" content="Find the right puzzle solver fast with WordAuditor's full collection of free clue-based tools for Wordle, Canuckle, Quordle, and more." />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -115,12 +115,12 @@
         '@type': 'CollectionPage',
         'name': 'Puzzle Solver Tools',
         'description': 'Advanced solver tools for word puzzles',
-        'url': 'https://wordsolverx.com/solver'
+        'url': 'https://wordauditor.com/solver'
       },
       generateWebPageSchema(
         'Puzzle Solver Tools',
         'Directory of solver tools for word and puzzle games.',
-        'https://wordsolverx.com/solver'
+        'https://wordauditor.com/solver'
       )
     ]
   })}</script>`}

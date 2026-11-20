@@ -211,9 +211,9 @@ const jsonLdSchema = JSON.stringify({
     generateWebPageSchema(
       'Colordle Solver, Helper & Color Finder',
       'Filter Colordle candidates by entering your guess and percentage score. Find the daily color answer faster.',
-      'https://wordsolverx.com/colordle-solver',
+      'https://wordauditor.com/colordle-solver',
       {
-        image: 'https://wordsolverx.com/images/colordle-solver.webp'
+        image: 'https://wordauditor.com/images/colordle-solver.webp'
       }
     ),
     {
@@ -232,9 +232,9 @@ const jsonLdSchema = JSON.stringify({
       { name: 'Pick the top candidate as your next guess', text: 'Choose a color from the filtered results, guess it in Colordle, then add the new percentage to the solver to filter again.' },
     ]),
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-      { name: 'Colordle Solver', url: 'https://wordsolverx.com/colordle-solver' }
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
+      { name: 'Colordle Solver', url: 'https://wordauditor.com/colordle-solver' }
     ]),
   ],
 });
@@ -264,17 +264,17 @@ const jsonLdSchema = JSON.stringify({
   <title>Colordle Solver, Helper & Color Finder</title>
   <meta name="description" content="Enter your Colordle guess and its percentage score. The solver filters thousands of named colours to find the candidates that match your result." />
   <meta name="keywords" content="Colordle Solver, Colordle Answer, Color Puzzle, Colordle Help, Colordle Cheat" />
-  <link rel="canonical" href="https://wordsolverx.com/colordle-solver" />
+  <link rel="canonical" href="https://wordauditor.com/colordle-solver" />
   <meta property="og:title" content="Colordle Solver, Helper & Color Finder" />
   <meta property="og:description" content="Use our Colordle solver to filter named colors by similarity percentage and find the exact daily answer faster." />
-  <meta property="og:url" content="https://wordsolverx.com/colordle-solver" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/colordle-solver" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://wordsolverx.com/images/colordle-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/colordle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Colordle Solver" />
-  <meta name="twitter:description" content="Filter Colordle guesses by percentage similarity and find the exact color match with WordSolverX." />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/colordle-solver.webp" />
+  <meta name="twitter:description" content="Filter Colordle guesses by percentage similarity and find the exact color match with WordAuditor." />
+  <meta name="twitter:image" content="https://wordauditor.com/images/colordle-solver.webp" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 

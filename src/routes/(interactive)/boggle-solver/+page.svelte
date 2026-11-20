@@ -239,15 +239,15 @@
                                 name: 'Boggle Solver',
                                 description:
                                         'Find every valid word in a 3x3 to 10x10 Boggle board using the same trie and DFS logic as the source project.',
-                                url: 'https://wordsolverx.com/boggle-solver',
+                                url: 'https://wordauditor.com/boggle-solver',
                                 applicationCategory: 'GameApplication',
                                 offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                         },
                         generateWebPageSchema(
                                 'Boggle Solver - Free Board Search Tool',
                                 'Find every valid word in a 3x3 to 10x10 Boggle board using the same trie and DFS logic as the source project.',
-                                'https://wordsolverx.com/boggle-solver',
-                                { image: 'https://wordsolverx.com/images/boggle-solver.webp' }
+                                'https://wordauditor.com/boggle-solver',
+                                { image: 'https://wordauditor.com/images/boggle-solver.webp' }
                         ),
                         generateHowToSchema('How to use the Boggle solver', [
                                 { name: 'Choose a board size', text: 'Pick a grid size from 3x3 to 10x10. Standard Boggle uses 4x4.' },
@@ -255,9 +255,9 @@
                                 { name: 'Click Solve', text: 'The solver finds every valid word and shows them grouped by length, with scores and clickable paths.' }
                         ]),
                         generateBreadcrumbSchema([
-                                { name: 'Home', url: 'https://wordsolverx.com' },
-                                { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-                                { name: 'Boggle Solver', url: 'https://wordsolverx.com/boggle-solver' }
+                                { name: 'Home', url: 'https://wordauditor.com' },
+                                { name: 'Solver', url: 'https://wordauditor.com/solver' },
+                                { name: 'Boggle Solver', url: 'https://wordauditor.com/boggle-solver' }
                         ])
                 ]
         });
@@ -290,15 +290,15 @@
                 name="description"
                 content="Free Boggle solver for 3x3 to 10x10 boards: enter your letters and see every valid word with its letter path highlighted, instantly, in your browser."
         />
-        <link rel="canonical" href="https://wordsolverx.com/boggle-solver" />
+        <link rel="canonical" href="https://wordauditor.com/boggle-solver" />
         <meta property="og:title" content="Boggle Solver - Find Every Word on Any Board" />
         <meta
                 property="og:description"
                 content="Solve any Boggle board, highlight paths, filter by starting cell, and share board URLs."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wordsolverx.com/boggle-solver" />
-        <meta property="og:image" content="https://wordsolverx.com/images/boggle-solver.webp" />
+        <meta property="og:url" content="https://wordauditor.com/boggle-solver" />
+        <meta property="og:image" content="https://wordauditor.com/images/boggle-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Boggle Solver - Find Every Word on Any Board" />
         <meta

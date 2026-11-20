@@ -16,8 +16,8 @@
 
   const pageTitle = 'Worldle Solver - Your Free AI Solver';
   const pageDescription =
-    'Use the WordSolverX Worldle Solver to filter countries by distance, direction, and proximity clues. This Worldle helper runs instantly in your browser.';
-  const pageUrl = 'https://wordsolverx.com/worldle-solver';
+    'Use the WordAuditor Worldle Solver to filter countries by distance, direction, and proximity clues. This Worldle helper runs instantly in your browser.';
+  const pageUrl = 'https://wordauditor.com/worldle-solver';
 
   const schemas = JSON.stringify([
     generateHowToSchema('How to use the Worldle solver', [
@@ -36,8 +36,8 @@
     ]),
     generateSoftwareApplicationSchema('Worldle Solver', 'UtilitiesApplication'),
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Worldle Solver', url: pageUrl },
     ]),
     generateWebPageSchema('Worldle Solver', pageDescription, pageUrl),
@@ -56,11 +56,11 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/worldle-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/worldle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/worldle-solver.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/worldle-solver.webp" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 

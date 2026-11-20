@@ -101,8 +101,8 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
         const pageTitle = 'Spotle Solver - Spotify Artist Guess Helper';
         const pageDescription =
                 'Solve Spotle faster with real-time artist filtering by rank, debut year, genre, country, group size, and gender.';
-        const pageUrl = 'https://wordsolverx.com/spotle-solver';
-        const pageImage = 'https://wordsolverx.com/images/spotle-solver.webp';
+        const pageUrl = 'https://wordauditor.com/spotle-solver';
+        const pageImage = 'https://wordauditor.com/images/spotle-solver.webp';
 </script>
 
 <svelte:head>
@@ -111,16 +111,16 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                 name="description"
                 content="Solve Spotle faster with a Spotify artist solver that matches rank, debut year, genre, and country using precise feedback filters on every guess."
         />
-        <link rel="canonical" href="https://wordsolverx.com/spotle-solver" />
+        <link rel="canonical" href="https://wordauditor.com/spotle-solver" />
         <meta property="og:title" content="Spotle Solver - Spotify Artist Guess Helper" />
         <meta
                 property="og:description"
                 content="Use smart feedback filters to narrow Spotle answers by rank, debut year, genre, country, group size, and gender."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wordsolverx.com/spotle-solver" />
-        <meta property="og:site_name" content="WordSolverX" />
-        <meta property="og:image" content="https://wordsolverx.com/images/spotle-solver.webp" />
+        <meta property="og:url" content="https://wordauditor.com/spotle-solver" />
+        <meta property="og:site_name" content="WordAuditor" />
+        <meta property="og:image" content="https://wordauditor.com/images/spotle-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
                 '@context': 'https://schema.org',
@@ -145,9 +145,9 @@ import AuthorCard from '$lib/components/AuthorCard.svelte';
                                 ]
                         },
                         generateBreadcrumbSchema([
-                                { name: 'Home', url: 'https://wordsolverx.com' },
-                                { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-                                { name: 'Spotle Solver', url: 'https://wordsolverx.com/spotle-solver' }
+                                { name: 'Home', url: 'https://wordauditor.com' },
+                                { name: 'Solver', url: 'https://wordauditor.com/solver' },
+                                { name: 'Spotle Solver', url: 'https://wordauditor.com/spotle-solver' }
                         ])
                 ]
         }), ['FAQPage', 'HowTo'])}</script>`}

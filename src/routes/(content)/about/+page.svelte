@@ -14,15 +14,15 @@
     {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'About WordSolverX',
-      description: 'About page for WordSolverX and its puzzle answer, archive, and solver content.',
-      url: 'https://wordsolverx.com/about'
+      name: 'About WordAuditor',
+      description: 'About page for WordAuditor and its puzzle answer, archive, and solver content.',
+      url: 'https://wordauditor.com/about'
     },
     {
       ...generateWebPageSchema(
-        'About WordSolverX',
-        'Learn about WordSolverX, its puzzle answer pages, archives, solver tools, and guides.',
-        'https://wordsolverx.com/about'
+        'About WordAuditor',
+        'Learn about WordAuditor, its puzzle answer pages, archives, solver tools, and guides.',
+        'https://wordauditor.com/about'
       )
     },
     {
@@ -35,8 +35,8 @@
       description: PRESTON_HAYES_AUTHOR_DESCRIPTION,
       worksFor: {
         '@type': 'Organization',
-        name: 'WordSolverX',
-        url: 'https://wordsolverx.com'
+        name: 'WordAuditor',
+        url: 'https://wordauditor.com'
       }
     }
   ];
@@ -46,24 +46,24 @@
   <title>About | Puzzle Answers, Archives, and Solver Tools</title>
   <meta
     name="description"
-    content="Learn about WordSolverX — how we publish daily puzzle answers, solver tools and archives, plus our sources and corrections policy."
+    content="Learn about WordAuditor — how we publish daily puzzle answers, solver tools and archives, plus our sources and corrections policy."
   />
-  <link rel="canonical" href="https://wordsolverx.com/about" />
+  <link rel="canonical" href="https://wordauditor.com/about" />
   <meta property="og:title" content="About | Puzzle Answers, Archives, and Solver Tools" />
   <meta
     property="og:description"
-    content="See what WordSolverX offers, which puzzle tools we cover, and how the site stays updated."
+    content="See what WordAuditor offers, which puzzle tools we cover, and how the site stays updated."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/about" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/about" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About | Puzzle Answers, Archives, and Solver Tools" />
   <meta
     name="twitter:description"
-    content="Learn about WordSolverX, our puzzle resources, and how the site helps players every day."
+    content="Learn about WordAuditor, our puzzle resources, and how the site helps players every day."
   />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(aboutSchemas)}</script>`}
 </svelte:head>
 
@@ -72,7 +72,7 @@
 
   <div class="mb-10">
     <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight leading-[1.1]">
-      About WordSolverX
+      About WordAuditor
     </h1>
     <p class="mt-3 text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
       An independent puzzle resource built for people who want fast answer checks, useful archives, and solver tools that do not bury the page under clutter.
@@ -80,9 +80,9 @@
   </div>
 
   <div class="prose prose-slate dark:prose-invert max-w-none prose-headings:scroll-mt-20">
-    <h2 class="text-slate-900 dark:text-slate-50">What WordSolverX Is</h2>
+    <h2 class="text-slate-900 dark:text-slate-50">What WordAuditor Is</h2>
     <p>
-      WordSolverX publishes daily puzzle answers, answer archives, and interactive solver tools for Wordle and many other daily games. The site is independent. It is not affiliated with The New York Times, any puzzle publisher, or any official game operator.
+      WordAuditor publishes daily puzzle answers, answer archives, and interactive solver tools for Wordle and many other daily games. The site is independent. It is not affiliated with The New York Times, any puzzle publisher, or any official game operator.
     </p>
     <p>
       The core idea is simple: answer first, extra context second. If you only need today's answer, the page should give it to you quickly. If you want hints, archive access, or a solver, those should be available without making the answer harder to reach.
@@ -104,7 +104,7 @@
 
     <h2 class="text-slate-900 dark:text-slate-50">How The Site Works</h2>
     <p>
-      WordSolverX is built with SvelteKit and deployed on Cloudflare Pages. Most answer pages are statically generated at build time so the answer, page date, and supporting metadata are already in the HTML before the browser loads the page.
+      WordAuditor is built with SvelteKit and deployed on Cloudflare Pages. Most answer pages are statically generated at build time so the answer, page date, and supporting metadata are already in the HTML before the browser loads the page.
     </p>
     <p>
       Solver tools run in the browser. Some use WebAssembly for speed, while others use plain client-side logic. The site also uses scheduled jobs to refresh game datasets and publish new static pages when daily answers roll over.
@@ -115,7 +115,7 @@
       Answer data comes from game source material, published payloads, verified APIs, or maintained datasets that trace back to stable game rules. The exact method varies by game, but the rule does not: the answer itself must come from the game, not from guesswork and not from article text.
     </p>
     <p>
-      When a source is late or fails, WordSolverX may keep the last verified data rather than inventing a replacement. Follow-up retry jobs can then refresh only the sources that were still missing.
+      When a source is late or fails, WordAuditor may keep the last verified data rather than inventing a replacement. Follow-up retry jobs can then refresh only the sources that were still missing.
     </p>
 
     <h2 class="text-slate-900 dark:text-slate-50">How Article Content Works</h2>
@@ -131,7 +131,7 @@
 
     <h2 class="text-slate-900 dark:text-slate-50">Independent Status</h2>
     <p>
-      WordSolverX is an unofficial fan and reference site. Puzzle names, logos, and trademarks belong to their respective owners and are used here for identification and commentary only.
+      WordAuditor is an unofficial fan and reference site. Puzzle names, logos, and trademarks belong to their respective owners and are used here for identification and commentary only.
     </p>
 
     <h2 class="text-slate-900 dark:text-slate-50">Corrections</h2>
@@ -142,7 +142,7 @@
     <section id="preston-hayes" class="scroll-mt-20">
       <h2 class="text-slate-900 dark:text-slate-50">About Preston Hayes</h2>
       <p>
-        Preston Hayes is the credited editorial byline for WordSolverX answer pages and puzzle content. The focus of that editorial role is practical accuracy: make the answer easy to verify, keep the page readable, and avoid padding the page with claims that cannot be supported by the puzzle data.
+        Preston Hayes is the credited editorial byline for WordAuditor answer pages and puzzle content. The focus of that editorial role is practical accuracy: make the answer easy to verify, keep the page readable, and avoid padding the page with claims that cannot be supported by the puzzle data.
       </p>
       <p>
         The standard is straightforward. If a player can reach the page, confirm the answer quickly, and use the rest of the page only when it is genuinely helpful, the content is doing its job.

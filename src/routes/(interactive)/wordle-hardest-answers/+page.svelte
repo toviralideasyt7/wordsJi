@@ -9,18 +9,18 @@
   const pageTitle = 'The Hardest Wordle Answers, Ranked';
   const pageDescription =
     'Every Wordle answer ranked by difficulty: a transparent 0–100 rubric scoring rare letters, repeats, and awkward patterns. The 50 hardest answers plus the 10 easiest.';
-  const pageUrl = 'https://wordsolverx.com/wordle-hardest-answers';
+  const pageUrl = 'https://wordauditor.com/wordle-hardest-answers';
 
   const schemas = $derived(JSON.stringify([
     generateArticleSchema({
       headline: pageTitle,
       description: pageDescription,
       url: pageUrl,
-      image: 'https://wordsolverx.com/images/wordle-answer-archive.webp',
+      image: 'https://wordauditor.com/images/wordle-answer-archive.webp',
       datePublished: data.publishedDate,
       dateModified: data.publishedDate,
       authorName: 'Preston Hayes',
-      authorImage: 'https://wordsolverx.com/author-wordsolverx.webp',
+      authorImage: 'https://wordauditor.com/author-wordauditor.webp',
       authorJobTitle: 'Puzzle Content Editor',
       authorKnowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
       authorSameAs: ['https://www.pinterest.com/wordsolverx/'],
@@ -50,11 +50,11 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:url" content={pageUrl} />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/wordle-answer-archive.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/wordle-answer-archive.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/wordle-answer-archive.webp" />
   {@html `<script type="application/ld+json">${schemas}</script>`}
 </svelte:head>
 

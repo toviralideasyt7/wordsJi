@@ -111,12 +111,12 @@
     ...generateWebPageSchema(
       metaTitle,
       pageDescription,
-      'https://wordsolverx.com/searchle-answer-today'
+      'https://wordauditor.com/searchle-answer-today'
     ),
     author: generatePersonAuthorSchema(
       'Preston Hayes',
-      'https://wordsolverx.com/about#preston-hayes',
-      'https://wordsolverx.com/author-wordsolverx.webp'
+      'https://wordauditor.com/about#preston-hayes',
+      'https://wordauditor.com/author-wordauditor.webp'
     )
   });
 </script>
@@ -128,10 +128,10 @@
   <meta property="og:title" content={metaTitle} />
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/searchle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/searchle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://wordsolverx.com/searchle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/searchle-answer-today" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
 </svelte:head>

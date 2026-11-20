@@ -11,7 +11,7 @@
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content={data.canonical} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />

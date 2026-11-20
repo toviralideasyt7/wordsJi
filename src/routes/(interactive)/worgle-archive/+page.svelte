@@ -94,12 +94,12 @@
         <meta property="og:title" content="Worgle Archive - All Past Answers" />
         <meta property="og:description" content="Browse the Worgle archive by date, with the puzzle number, the confirmed word, and a direct answer lookup for every past puzzle in the list." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wordsolverx.com/worgle-archive" />
-        <meta property="og:site_name" content="WordSolverX" />
+        <meta property="og:url" content="https://wordauditor.com/worgle-archive" />
+        <meta property="og:site_name" content="WordAuditor" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Worgle Archive - All Past Answers" />
         <meta name="twitter:description" content="Browse the Worgle archive by date, with the puzzle number, the confirmed word, and a direct answer lookup for every past puzzle in the list." />
-        <link rel="canonical" href="https://wordsolverx.com/worgle-archive" />
+        <link rel="canonical" href="https://wordauditor.com/worgle-archive" />
 </svelte:head>
 
 <ArchiveCalendar

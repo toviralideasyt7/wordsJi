@@ -249,9 +249,9 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         '@context': 'https://schema.org',
                         '@type': 'BreadcrumbList',
                         itemListElement: [
-                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },
-                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordsolverx.com/today' },
-                                { '@type': 'ListItem', position: 3, name: 'Canuckle Answer Today', item: 'https://wordsolverx.com/canuckle-answer-today' }
+                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordauditor.com' },
+                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordauditor.com/today' },
+                                { '@type': 'ListItem', position: 3, name: 'Canuckle Answer Today', item: 'https://wordauditor.com/canuckle-answer-today' }
                         ]
                 },
                 {
@@ -263,13 +263,13 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                         author: {
                                 '@type': 'Person',
                                 name: 'Preston Hayes',
-                                image: 'https://wordsolverx.com/author-wordsolverx.webp',
-                                url: 'https://wordsolverx.com/about#preston-hayes'
+                                image: 'https://wordauditor.com/author-wordauditor.webp',
+                                url: 'https://wordauditor.com/about#preston-hayes'
                         },
-                        publisher: { '@type': 'Organization', name: 'WordSolverX' },
-                        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/canuckle-answer-today' },
+                        publisher: { '@type': 'Organization', name: 'WordAuditor' },
+                        mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/canuckle-answer-today' },
                         description: pageDescription,
-                        image: ['https://wordsolverx.com/images/canuckle-answer-today.webp']
+                        image: ['https://wordauditor.com/images/canuckle-answer-today.webp']
                 }
         ]);
 

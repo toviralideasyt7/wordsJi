@@ -16,7 +16,7 @@ import { getGameVideo } from '$lib/server/game-videos';
 import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, BatterUpDayEntry>;
-const SITE_URL = 'https://wordsolverx.com';
+const SITE_URL = 'https://wordauditor.com';
 const CANONICAL = `${SITE_URL}/batterup-answer-today`;
 
 const POSITION_WORDS: Record<string, string> = {
@@ -73,10 +73,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			aiHints: null,
 			schemas: null,
 			meta: {
-				title: `Batter Up Answer Today (${format(today, 'MMM d')}) | WordSolverX`,
+				title: `Batter Up Answer Today (${format(today, 'MMM d')}) | WordAuditor`,
 				description: `Today's Batter Up answer for ${staleDate} is still being verified. Check back shortly for the confirmed MLB player, hints and the full player card.`,
 				keywords: 'batter up answer today, batter up answer, batter up mlb, batter up hint today',
-				socialImage: `${SITE_URL}/wordsolverx.webp`
+				socialImage: `${SITE_URL}/wordauditor.webp`
 			}
 		};
 	}
@@ -95,7 +95,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	// Tease with hints — never the player name in title or description.
 	// Template keeps the description inside the 140-158 budget for the full
 	// range of position/team/jersey lengths (worst cases: ~130-157).
-	const pageDescription = `Batter Up hints (${shortDate}): today's ${position} for the ${player.team_name}. Daily MLB clues and the confirmed answer at WordSolverX.`;
+	const pageDescription = `Batter Up hints (${shortDate}): today's ${position} for the ${player.team_name}. Daily MLB clues and the confirmed answer at WordAuditor.`;
 	const pageKeywords = `batter up answer today, batter up answer, batter up mlb answer today, batter up hint, batter up hint today, batter up solver, batter up answer for ${formattedDate}`;
 
 	const updatedStamp = updatedStampText('Batter Up', entry.gameNumber, formattedDate);
@@ -151,10 +151,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		author: {
 			'@type': 'Person',
 			name: 'Preston Hayes',
-			url: 'https://wordsolverx.com/about#preston-hayes',
-			image: 'https://wordsolverx.com/author-wordsolverx.webp'
+			url: 'https://wordauditor.com/about#preston-hayes',
+			image: 'https://wordauditor.com/author-wordauditor.webp'
 		},
-		publisher: { '@type': 'Organization', name: 'WordSolverX' },
+		publisher: { '@type': 'Organization', name: 'WordAuditor' },
 		mainEntityOfPage: { '@type': 'WebPage', '@id': CANONICAL }
 	};
 	const breadcrumbSchema = {
@@ -198,7 +198,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordsolverx.webp`
+			socialImage: `${SITE_URL}/wordauditor.webp`
 		}
 	};
 };

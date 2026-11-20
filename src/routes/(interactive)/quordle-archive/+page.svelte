@@ -82,10 +82,10 @@
 <svelte:head>
   <title>Quordle Archive - Complete Four-Word Answer History</title>
   <meta name="description" content="Browse the complete archive of every Quordle answer, with a calendar view, search, and direct links to each past four-word puzzle solution and its daily grid." />
-  <link rel="canonical" href="https://wordsolverx.com/quordle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/quordle-archive" />
   <meta property="og:title" content="Quordle Archive - All Past Four-Word Answers" />
   <meta property="og:description" content="Complete history of every Quordle answer. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/quordle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/quordle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

@@ -248,7 +248,7 @@
   <!-- Related tools: internal linking hub -->
   {#if content.relatedLinks.length > 0}
     <section class="mt-10 rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-800 p-6 shadow-lg sm:p-8">
-      <h2 class="text-xl font-extrabold text-white mb-5 sm:text-2xl">More WordSolverX tools</h2>
+      <h2 class="text-xl font-extrabold text-white mb-5 sm:text-2xl">More WordAuditor tools</h2>
       <div class="grid gap-3 sm:grid-cols-2">
         {#each content.relatedLinks as link}
           <a

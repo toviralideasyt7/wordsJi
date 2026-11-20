@@ -50,7 +50,7 @@ export function generateLineArrangements(
   length: number,
   currentLine: CellState[] = []
 ): CellState[][] {
-  // ── HARDENING (WordSolverX): memoize full-line enumeration and reset the
+  // ── HARDENING (WordAuditor): memoize full-line enumeration and reset the
   // per-line arrangement budget. Recursive calls pass a non-empty currentLine
   // and skip the memo/budget bookkeeping.
   const memoKey = currentLine.length === 0 ? lineArrangementCacheKey(clues, length) : null;
@@ -576,7 +576,7 @@ function cluesMatch(a: number[], b: number[]): boolean {
 }
 
 /* ════════════════════════════════════════════════════════════════════════════
- * HARDENING — WordSolverX port additions (everything below this line).
+ * HARDENING — WordAuditor port additions (everything below this line).
  *
  * The original solver above is reproduced verbatim from
  * sujitbhai7710/nonogram-solver, with four marked call sites inside
@@ -731,7 +731,7 @@ export interface HardenedSolveResult extends SolveResult {
 }
 
 /**
- * Solve with the WordSolverX safety rails: dimension cap, per-line arrangement
+ * Solve with the WordAuditor safety rails: dimension cap, per-line arrangement
  * budget, bounded memo cache, and capped step recording. Never throws for
  * oversized or pathological input — it returns a SolveResult with an error
  * message instead.

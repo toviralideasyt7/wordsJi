@@ -50,9 +50,9 @@
                         generateWebPageSchema(
                                 data.meta.title,
                                 data.meta.description,
-                                'https://wordsolverx.com/worgle-answer-today',
+                                'https://wordauditor.com/worgle-answer-today',
                                 {
-                                        image: 'https://wordsolverx.com/images/worgle-answer-today.webp',
+                                        image: 'https://wordauditor.com/images/worgle-answer-today.webp',
                                         dateModified: data.todayKey
                                 }
                         ),
@@ -107,14 +107,14 @@
         <title>{data.meta.title}</title>
         <meta name="description" content={data.meta.description} />
         <meta name="keywords" content={data.meta.keywords ?? 'worgle answer today, worgle archive'} />
-        <link rel="canonical" href="https://wordsolverx.com/worgle-answer-today" />
+        <link rel="canonical" href="https://wordauditor.com/worgle-answer-today" />
         <meta property="og:title" content={data.meta.title} />
         <meta property="og:description" content={data.meta.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://wordsolverx.com/worgle-answer-today" />
-        <meta property="og:image" content="https://wordsolverx.com/images/worgle-answer-today.webp" />
-        <meta property="og:site_name" content="WordSolverX" />
-        <meta name="twitter:image" content="https://wordsolverx.com/images/worgle-answer-today.webp" />
+        <meta property="og:url" content="https://wordauditor.com/worgle-answer-today" />
+        <meta property="og:image" content="https://wordauditor.com/images/worgle-answer-today.webp" />
+        <meta property="og:site_name" content="WordAuditor" />
+        <meta name="twitter:image" content="https://wordauditor.com/images/worgle-answer-today.webp" />
         {@html `<script type="application/ld+json">${pageSchemaJson}</script>`}
 </svelte:head>
 

@@ -16,7 +16,7 @@
   const pageTitle = 'Squaredle Solver - Solve Today\u2019s Board in Seconds';
   const pageDescription =
     'Stuck on Squaredle today? Paste today\u2019s board or any custom grid and get every valid word with the exact letter path, solved in seconds \u2014 free, no signup.';
-  const pageUrl = 'https://wordsolverx.com/squaredle-solver';
+  const pageUrl = 'https://wordauditor.com/squaredle-solver';
 
 
   const schemas = JSON.stringify([
@@ -30,8 +30,8 @@
       keywords: ['squaredle solver', 'squaredle helper', 'squaredle today solver']
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Squaredle Solver', url: pageUrl }
     ]),
     generateWebPageSchema('Squaredle Solver', pageDescription, pageUrl)
@@ -47,7 +47,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
   <link rel="canonical" href={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/images/squaredle-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/squaredle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

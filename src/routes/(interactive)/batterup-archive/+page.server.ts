@@ -5,7 +5,7 @@ import answersRaw from '$lib/data/batterup-answers.json';
 import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, BatterUpDayEntry>;
-const SITE_URL = 'https://wordsolverx.com';
+const SITE_URL = 'https://wordauditor.com';
 const CANONICAL = `${SITE_URL}/batterup-archive`;
 
 export const load: PageServerLoad = async () => {
@@ -25,9 +25,9 @@ export const load: PageServerLoad = async () => {
 			};
 		});
 
-	const pageTitle = 'Batter Up Archive: Every Answer Since 2024 | WordSolverX';
+	const pageTitle = 'Batter Up Archive: Every Answer Since 2024 | WordAuditor';
 	const pageDescription =
-		'Every Batter Up answer in one place: game number, date, player, team and position. Search the full archive of the daily MLB guessing game at WordSolverX.';
+		'Every Batter Up answer in one place: game number, date, player, team and position. Search the full archive of the daily MLB guessing game at WordAuditor.';
 	const pageKeywords =
 		'batter up archive, batter up answers, batter up past answers, batter up answer history, mlb guessing game archive';
 
@@ -49,7 +49,7 @@ export const load: PageServerLoad = async () => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordsolverx.webp`
+			socialImage: `${SITE_URL}/wordauditor.webp`
 		}
 	};
 };

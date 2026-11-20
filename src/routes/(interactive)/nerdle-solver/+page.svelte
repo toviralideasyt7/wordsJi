@@ -399,7 +399,7 @@
                         name: 'Nerdle Solver',
                         description:
                                 'Nerdle solver for Micro, Mini, Midi, Classic, and Maxi with direct worker solving and a Wordle-style interface.',
-                        url: 'https://wordsolverx.com/nerdle-solver',
+                        url: 'https://wordauditor.com/nerdle-solver',
                         applicationCategory: 'GameApplication',
                         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
                 },
@@ -410,14 +410,14 @@
                         { name: 'Get suggestions', text: 'Click Calculate Best Equation to get entropy-ranked suggestions, then use the top pick as your next guess.' }
                 ]),
                 generateBreadcrumbSchema([
-                        { name: 'Home', url: 'https://wordsolverx.com' },
-                        { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-                        { name: 'Nerdle Solver', url: 'https://wordsolverx.com/nerdle-solver' }
+                        { name: 'Home', url: 'https://wordauditor.com' },
+                        { name: 'Solver', url: 'https://wordauditor.com/solver' },
+                        { name: 'Nerdle Solver', url: 'https://wordauditor.com/nerdle-solver' }
                 ]),
                 generateWebPageSchema(
                         'Nerdle Solver',
                         'Solve Micro, Mini, Midi, Classic, and Maxi Nerdle with entropy-ranked suggestions and direct worker solving.',
-                        'https://wordsolverx.com/nerdle-solver'
+                        'https://wordauditor.com/nerdle-solver'
                 )
         ];
 
@@ -432,9 +432,9 @@
         <title>Nerdle Solver - Solve Micro, Mini, Midi, Classic and Maxi</title>
         <meta
                 name="description"
-                content="Use the WordSolverX Nerdle solver for Micro, Mini, Midi, Classic, and Maxi equations, with solving that runs in the browser and Wordle-style clue entry."
+                content="Use the WordAuditor Nerdle solver for Micro, Mini, Midi, Classic, and Maxi equations, with solving that runs in the browser and Wordle-style clue entry."
         />
-        <link rel="canonical" href="https://wordsolverx.com/nerdle-solver" />
+        <link rel="canonical" href="https://wordauditor.com/nerdle-solver" />
         <!--
           The first thing this page does on mount is POST to the solver worker on its own
           origin. Warming DNS + TLS during HTML parse takes that handshake off the critical
@@ -448,10 +448,10 @@
                 content="Solve every Nerdle mode with the original logic and a cleaner Wordle-style layout."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wordsolverx.com/nerdle-solver" />
-        <meta property="og:image" content="https://wordsolverx.com/images/nerdle-solver.webp" />
+        <meta property="og:url" content="https://wordauditor.com/nerdle-solver" />
+        <meta property="og:image" content="https://wordauditor.com/images/nerdle-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://wordsolverx.com/images/nerdle-solver.webp" />
+        <meta name="twitter:image" content="https://wordauditor.com/images/nerdle-solver.webp" />
         <meta name="twitter:title" content="Nerdle Solver All Modes" />
         <meta
                 name="twitter:description"

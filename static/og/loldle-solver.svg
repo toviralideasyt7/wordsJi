@@ -9,6 +9,6 @@
   <circle cx='1030' cy='120' r='180' fill='rgba(255,255,255,0.08)'/>
   <circle cx='170' cy='540' r='220' fill='rgba(20,184,166,0.25)'/>
   <text x='80' y='260' fill='#f8fafc' font-family='Arial, sans-serif' font-size='74' font-weight='700'>LoLdle Solver</text>
-  <text x='80' y='340' fill='#ccfbf1' font-family='Arial, sans-serif' font-size='38'>WordSolverX Puzzle Tool</text>
-  <text x='80' y='560' fill='#99f6e4' font-family='Arial, sans-serif' font-size='32'>wordsolverx.com</text>
+  <text x='80' y='340' fill='#ccfbf1' font-family='Arial, sans-serif' font-size='38'>WordAuditor Puzzle Tool</text>
+  <text x='80' y='560' fill='#99f6e4' font-family='Arial, sans-serif' font-size='32'>wordauditor.com</text>
 </svg>

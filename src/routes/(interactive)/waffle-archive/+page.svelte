@@ -82,10 +82,10 @@
 <svelte:head>
   <title>Waffle Archive - Complete Waffle Puzzle Answer History</title>
   <meta name="description" content="Browse the complete archive of every Waffle puzzle answer, with a calendar view, search, and direct links to each past waffle grid solution." />
-  <link rel="canonical" href="https://wordsolverx.com/waffle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/waffle-archive" />
   <meta property="og:title" content="Waffle Archive - All Past Waffle Answers" />
   <meta property="og:description" content="Complete history of every Waffle puzzle answer. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/waffle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/waffle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

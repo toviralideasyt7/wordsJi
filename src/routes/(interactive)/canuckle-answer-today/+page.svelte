@@ -32,7 +32,7 @@
   const socialImage = $derived(
     data.meta?.featuredImage?.startsWith('http')
       ? data.meta.featuredImage
-      : `https://wordsolverx.com${data.meta?.featuredImage ?? '/wordsolverx.webp'}`
+      : `https://wordauditor.com${data.meta?.featuredImage ?? '/wordauditor.webp'}`
   );
   const cleanedSchemas = $derived(
     stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)
@@ -44,16 +44,16 @@
   <meta name="description" content={data.meta?.description ?? ''} />
   <meta name="robots" content="index, follow, max-snippet:-1" />
   <meta name="news_keywords" content={data.meta?.keywords ?? 'canuckle answer today, canuckle hint, daily canadian puzzle'} />
-  <link rel="canonical" href="https://wordsolverx.com/canuckle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/canuckle-answer-today" />
   <meta property="og:title" content={data.meta?.title ?? 'Canuckle Answer Today'} />
   <meta property="og:description" content={data.meta?.description ?? ''} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/canuckle-answer-today" />
+  <meta property="og:url" content="https://wordauditor.com/canuckle-answer-today" />
   <meta property="og:image" content={socialImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content={`Canuckle daily word solution for ${formattedDate}`} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta?.title ?? 'Canuckle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
@@ -66,7 +66,7 @@
     '@type': 'WebPage',
     name: data.meta?.title ?? 'Canuckle Answer Today',
     description: data.meta?.description ?? '',
-    url: 'https://wordsolverx.com/canuckle-answer-today',
+    url: 'https://wordauditor.com/canuckle-answer-today',
     image: socialImage,
     dateModified: data.todayPuzzle?.date || new Date().toISOString().split('T')[0]
   })}</script>`}

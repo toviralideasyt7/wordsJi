@@ -45,7 +45,7 @@ function normalizeWords(words: Iterable<string>, wordCase: WordListCase): Set<st
 	return normalized;
 }
 
-function getWordSolverXFile(length: number): string | null {
+function getWordAuditorFile(length: number): string | null {
 	return WORDSOLVERX_FILES[length] ?? null;
 }
 
@@ -83,11 +83,11 @@ async function loadTextDictionary(type: 'twl' | 'sowpods'): Promise<Map<number, 
 	return cached;
 }
 
-async function loadWordSolverXWords(
+async function loadWordAuditorWords(
 	length: number,
 	wordCase: WordListCase = 'upper'
 ): Promise<Set<string>> {
-	const file = getWordSolverXFile(length);
+	const file = getWordAuditorFile(length);
 	if (!file) {
 		return new Set();
 	}
@@ -105,7 +105,7 @@ async function loadWordSolverXWords(
 			.then((data) => {
 				const typedData = data as WordsData;
 				if (!Array.isArray(typedData.words)) {
-					throw new Error('Invalid WordSolverX word list format');
+					throw new Error('Invalid WordAuditor word list format');
 				}
 
 				const filteredWords = typedData.words.filter((word) => word && word.length === length);
@@ -123,8 +123,8 @@ export function getDictionaryLabel(dictionary: DictionaryType): string {
 	return 'SOWPODS (World Scrabble)';
 }
 
-export function supportsWordSolverXLength(length: number): boolean {
-	return getWordSolverXFile(length) !== null;
+export function supportsWordAuditorLength(length: number): boolean {
+	return getWordAuditorFile(length) !== null;
 }
 
 export async function getWordsOfLengthClient(
@@ -133,7 +133,7 @@ export async function getWordsOfLengthClient(
 	wordCase: WordListCase = 'upper'
 ): Promise<Set<string>> {
 	if (dictionary === 'wordsolverx') {
-		return loadWordSolverXWords(length, wordCase);
+		return loadWordAuditorWords(length, wordCase);
 	}
 
 	const dict = await loadTextDictionary(dictionary);

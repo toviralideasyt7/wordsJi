@@ -84,7 +84,7 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                 {
                         question: 'Where can I solve old Nerdle puzzles?',
                         answer:
-                                'Use the Nerdle Solver and the Nerdle Archive on WordSolverX to check older dates, mode answers, and puzzle history.'
+                                'Use the Nerdle Solver and the Nerdle Archive on WordAuditor to check older dates, mode answers, and puzzle history.'
                 },
                 { question: 'When was this page last updated?', answer: updatedStamp }
         ];
@@ -97,22 +97,22 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         description: pageDescription,
                         datePublished: `${answerData.date}T00:00:00+09:00`,
                         dateModified: `${answerData.date}T00:00:00+09:00`,
-                        mainEntityOfPage: 'https://wordsolverx.com/nerdle-answer-today',
+                        mainEntityOfPage: 'https://wordauditor.com/nerdle-answer-today',
                         author: {
                                 '@type': 'Person',
                                 name: 'Preston Hayes',
-                                url: 'https://wordsolverx.com/about#preston-hayes',
-                                image: 'https://wordsolverx.com/author-wordsolverx.webp',
+                                url: 'https://wordauditor.com/about#preston-hayes',
+                                image: 'https://wordauditor.com/author-wordauditor.webp',
                                 jobTitle: 'Word Puzzle Analyst',
                                 knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
                                 sameAs: ['https://www.pinterest.com/wordsolverx/']
                         },
                         publisher: {
                                 '@type': 'Organization',
-                                name: 'WordSolverX',
+                                name: 'WordAuditor',
                                 logo: {
                                         '@type': 'ImageObject',
-                                        url: 'https://wordsolverx.com/images/nerdle-answer-today.webp'
+                                        url: 'https://wordauditor.com/images/nerdle-answer-today.webp'
                                 }
                         }
                 },
@@ -121,21 +121,21 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         '@type': 'WebPage',
                         name: pageTitle,
                         description: pageDescription,
-                        url: 'https://wordsolverx.com/nerdle-answer-today',
-                        image: 'https://wordsolverx.com/images/nerdle-answer-today.webp',
+                        url: 'https://wordauditor.com/nerdle-answer-today',
+                        image: 'https://wordauditor.com/images/nerdle-answer-today.webp',
                         dateModified: answerData.date
                 },
                 {
                         '@context': 'https://schema.org',
                         '@type': 'BreadcrumbList',
                         itemListElement: [
-                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordsolverx.com' },
-                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordsolverx.com/today' },
+                                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wordauditor.com' },
+                                { '@type': 'ListItem', position: 2, name: 'Today', item: 'https://wordauditor.com/today' },
                                 {
                                         '@type': 'ListItem',
                                         position: 3,
                                         name: 'Nerdle Answer Today',
-                                        item: 'https://wordsolverx.com/nerdle-answer-today'
+                                        item: 'https://wordauditor.com/nerdle-answer-today'
                                 }
                         ]
                 },
@@ -172,7 +172,7 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         title: pageTitle,
                         description: pageDescription,
                         keywords: `nerdle answer today, nerdle all modes answer, nerdle classic micro mini midi maxi quad speed instant, nerdle archive, nerdle answer ${formattedDate}`,
-                        canonical: 'https://wordsolverx.com/nerdle-answer-today'
+                        canonical: 'https://wordauditor.com/nerdle-answer-today'
                 },
                 schemas
         };

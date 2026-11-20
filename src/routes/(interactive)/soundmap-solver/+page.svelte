@@ -241,8 +241,8 @@
                         generateWebPageSchema(
                                 'Soundmap Solver - Artist Guesser Helper',
                                 'Solve Soundmap Artist Guesser faster with the Soundmap solver. Filter artists by debut year, popularity, genre, country, and other clue fields.',
-                                'https://wordsolverx.com/soundmap-solver',
-                                { image: 'https://wordsolverx.com/images/soundmap-solver.webp' }
+                                'https://wordauditor.com/soundmap-solver',
+                                { image: 'https://wordauditor.com/images/soundmap-solver.webp' }
                         ),
                         generateSoftwareApplicationSchema('Soundmap Solver', 'GameApplication'),
                         generateHowToSchema('How to use the Soundmap Solver', [
@@ -252,8 +252,8 @@
                                 { name: 'Use the best next guess', text: 'If you have added at least one guess, the solver recommends the best next artist to maximize information. Click Use Guess to auto-fill it.' },
                         ]),
                 generateBreadcrumbSchema([
-                        { name: 'Home', url: 'https://wordsolverx.com' },
-                        { name: 'Soundmap Solver', url: 'https://wordsolverx.com/soundmap-solver' },
+                        { name: 'Home', url: 'https://wordauditor.com' },
+                        { name: 'Soundmap Solver', url: 'https://wordauditor.com/soundmap-solver' },
                 ]),
                 ],
         });
@@ -276,9 +276,9 @@
                 content="Use smart feedback filters to narrow Soundmap answers and get the best next guess instantly."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wordsolverx.com/soundmap-solver" />
-        <meta property="og:site_name" content="WordSolverX" />
-        <meta property="og:image" content="https://wordsolverx.com/images/soundmap-solver.webp" />
+        <meta property="og:url" content="https://wordauditor.com/soundmap-solver" />
+        <meta property="og:site_name" content="WordAuditor" />
+        <meta property="og:image" content="https://wordauditor.com/images/soundmap-solver.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
                 name="twitter:title"
@@ -288,7 +288,7 @@
                 name="twitter:description"
                 content="Free Soundmap solver with best-guess recommendations and instant candidate filtering."
         />
-        <link rel="canonical" href="https://wordsolverx.com/soundmap-solver" />
+        <link rel="canonical" href="https://wordauditor.com/soundmap-solver" />
                 {@html `<script type="application/ld+json">${stripStructuredDataTypes(jsonLdSchema, ['FAQPage', 'HowTo']) ?? jsonLdSchema}</script>`}
 </svelte:head>
 

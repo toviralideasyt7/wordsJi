@@ -21,7 +21,7 @@ import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, MarveldleDayEntry>;
 const comicsCharacters = comicsCharactersRaw as unknown as CharacterData[];
-const SITE_URL = 'https://wordsolverx.com';
+const SITE_URL = 'https://wordauditor.com';
 const CANONICAL = `${SITE_URL}/marveldle-answer-today`;
 
 function formatSeoDate(dateStr: string): string {
@@ -99,10 +99,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			hintFaqs: [],
 			schemas: null,
 			meta: {
-				title: `Marveldle Answer Today (${format(today, 'MMM d')}) | WordSolverX`,
+				title: `Marveldle Answer Today (${format(today, 'MMM d')}) | WordAuditor`,
 				description: `Today's Marveldle answers for ${staleDate} are still being solved. Check back shortly for the confirmed Comics and MCU characters and hints.`,
 				keywords: 'marveldle answer today, marveldle answer, marveldle hint today, marvel wordle',
-				socialImage: `${SITE_URL}/wordsolverx.webp`
+				socialImage: `${SITE_URL}/wordauditor.webp`
 			}
 		};
 	}
@@ -125,7 +125,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	// Tease with hints — never the character names in title or description.
 	// Template stays inside the 140-158 budget across decade/appearance lengths.
 	const pageDescription = mcu
-		? `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}, MCU appears in ${(mcu.appearanceTypes ?? []).join(' and ').toLowerCase() || 'film and TV'}. Daily clues for both modes and the confirmed answers at WordSolverX.`
+		? `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}, MCU appears in ${(mcu.appearanceTypes ?? []).join(' and ').toLowerCase() || 'film and TV'}. Daily clues for both modes and the confirmed answers at WordAuditor.`
 		: `Marveldle hints (${shortDate}): Comics debuted in ${decadeOf(comics.apparitionYear)}. The confirmed Comics answer is live now; the MCU character is still being verified and joins this page shortly.`;
 	const pageKeywords = `marveldle answer today, marveldle answer, marveldle hint, marveldle hint today, marveldle mcu answer, marveldle comics answer, marveldle answer for ${formattedDate}`;
 
@@ -198,10 +198,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		author: {
 			'@type': 'Person',
 			name: 'Preston Hayes',
-			url: 'https://wordsolverx.com/about#preston-hayes',
-			image: 'https://wordsolverx.com/author-wordsolverx.webp'
+			url: 'https://wordauditor.com/about#preston-hayes',
+			image: 'https://wordauditor.com/author-wordauditor.webp'
 		},
-		publisher: { '@type': 'Organization', name: 'WordSolverX' },
+		publisher: { '@type': 'Organization', name: 'WordAuditor' },
 		mainEntityOfPage: { '@type': 'WebPage', '@id': CANONICAL }
 	};
 	const breadcrumbSchema = {
@@ -264,7 +264,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordsolverx.webp`
+			socialImage: `${SITE_URL}/wordauditor.webp`
 		}
 	};
 };

@@ -5,8 +5,8 @@
   const schemaJson = JSON.stringify(
     generateWebPageSchema(
       'DMCA Policy - Copyright Notices and Takedowns',
-      'Read the WordSolverX DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them.',
-      'https://wordsolverx.com/dmca-policy'
+      'Read the WordAuditor DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them.',
+      'https://wordauditor.com/dmca-policy'
     )
   );
 </script>
@@ -15,24 +15,24 @@
   <title>DMCA Policy - Copyright Notices and Takedowns</title>
   <meta
     name="description"
-    content="Read the WordSolverX DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them."
+    content="Read the WordAuditor DMCA policy for copyright complaints, including how to send a takedown notice, how counter notices work, and where to send them."
   />
-  <link rel="canonical" href="https://wordsolverx.com/dmca-policy" />
+  <link rel="canonical" href="https://wordauditor.com/dmca-policy" />
   <meta property="og:title" content="DMCA Policy - Copyright Notices and Takedowns" />
   <meta
     property="og:description"
-    content="Copyright takedown and counter-notice process for WordSolverX."
+    content="Copyright takedown and counter-notice process for WordAuditor."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/dmca-policy" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/dmca-policy" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="DMCA Policy - Copyright Notices and Takedowns" />
   <meta
     name="twitter:description"
-    content="See how to submit copyright notices and counter notices to WordSolverX."
+    content="See how to submit copyright notices and counter notices to WordAuditor."
   />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 
@@ -47,19 +47,19 @@
   <div class="border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800/50 p-6 sm:p-8">
     <div class="prose prose-slate dark:prose-invert max-w-none">
       <p class="lead text-lg">
-        WordSolverX respects intellectual property rights. If you believe material on this site infringes
+        WordAuditor respects intellectual property rights. If you believe material on this site infringes
         your copyright, send a written notice so we can review it promptly.
       </p>
 
       <h2>How to Submit a Takedown Notice</h2>
       <p>
-        Send notices to <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a> with the subject
+        Send notices to <a href="mailto:blog@wordauditor.com">blog@wordauditor.com</a> with the subject
         line <strong>DMCA Notice</strong>. Please include:
       </p>
       <ul>
         <li>Your full name and contact information</li>
         <li>A description of the copyrighted work you claim has been infringed</li>
-        <li>The exact WordSolverX URL you want us to review</li>
+        <li>The exact WordAuditor URL you want us to review</li>
         <li>A statement that you have a good-faith belief the use is not authorized</li>
         <li>A statement, under penalty of perjury, that the information in your notice is accurate</li>
         <li>Your physical or electronic signature</li>
@@ -82,14 +82,14 @@
 
       <h2>Repeat Infringement</h2>
       <p>
-        WordSolverX may remove material or restrict future submissions from repeat infringers when
+        WordAuditor may remove material or restrict future submissions from repeat infringers when
         appropriate.
       </p>
 
       <h2>Contact</h2>
       <p>
         Questions about this policy can also be sent to
-        <a href="mailto:blog@wordsolverx.com">blog@wordsolverx.com</a>.
+        <a href="mailto:blog@wordauditor.com">blog@wordauditor.com</a>.
       </p>
     </div>
   </div>

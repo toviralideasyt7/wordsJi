@@ -1,6 +1,6 @@
 # Design Tokens System
 
-This directory contains the design tokens system for the WordSolverX application, providing a centralized and consistent approach to styling.
+This directory contains the design tokens system for the WordAuditor application, providing a centralized and consistent approach to styling.
 
 ## Overview
 

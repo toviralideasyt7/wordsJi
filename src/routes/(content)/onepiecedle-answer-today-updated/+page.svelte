@@ -52,7 +52,7 @@
       { '@type': 'Question', name: 'Is OnePiecedle free to play?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, OnePiecedle is completely free to play in your browser.' } },
       { '@type': 'Question', name: 'When was this page last updated?', acceptedAnswer: { '@type': 'Answer', text: data.updatedStamp ?? '' } },
     ]},
-    { '@type': 'Article', headline: 'OnePiecedle Answer Today', description: "Today's Onepiecedle character revealed — Character, Devil Fruit, and Wanted Poster mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/onepiecedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordSolverX', logo: { '@type': 'ImageObject', url: 'https://wordsolverx.com/images/onepiecedle-answer-today.webp' } } },
+    { '@type': 'Article', headline: 'OnePiecedle Answer Today', description: "Today's Onepiecedle character revealed — Character, Devil Fruit, and Wanted Poster mode answers. Updated daily.", mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/onepiecedle-answer-today-updated' }, author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' }, publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/images/onepiecedle-answer-today.webp' } } },
   ]});
   const articleDate = $derived(data.answers?.[0]?.date ?? '');
 </script>

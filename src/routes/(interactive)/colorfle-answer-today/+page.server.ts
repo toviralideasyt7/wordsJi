@@ -54,7 +54,7 @@ export const load: PageServerLoad = async () => {
 				title: 'Colorfle Answers Today',
 				description: 'Colorfle normal and hard mode answers are temporarily unavailable.',
 				keywords: 'colorfle answer today, colorfle answer, colorfle archive, colorfle solver',
-				canonical: 'https://wordsolverx.com/colorfle-answer-today',
+				canonical: 'https://wordauditor.com/colorfle-answer-today',
 				featuredImage: '/images/colorfle-answer-today.webp'
 			}
 		};
@@ -63,7 +63,7 @@ export const load: PageServerLoad = async () => {
 	const formattedDate = answer.formattedDate;
 	const pageTitle = dailyAnswerTitle('Colorfle', answer.puzzleNumber, formattedDate);
 	const pageDescription = `Get today's Colorfle answers for ${formattedDate} — normal and hard mode mixes, weights and target hex values.`;
-	const pageUrl = 'https://wordsolverx.com/colorfle-answer-today';
+	const pageUrl = 'https://wordauditor.com/colorfle-answer-today';
 
 	const updatedStamp = updatedStampText('Colorfle', answer.puzzleNumber, formattedDate);
 	const answerSummary = `${buildModeAnswerSummary(answer)} / ${answer.hard.colors.map((color) => color.name).join(', ')}`;
@@ -92,8 +92,8 @@ export const load: PageServerLoad = async () => {
 			}))
 		},
 		generateBreadcrumbSchema([
-			{ name: 'Home', url: 'https://wordsolverx.com' },
-			{ name: 'Today', url: 'https://wordsolverx.com/today' },
+			{ name: 'Home', url: 'https://wordauditor.com' },
+			{ name: 'Today', url: 'https://wordauditor.com/today' },
 			{ name: 'Colorfle Answer Today', url: pageUrl }
 		])
 	]);

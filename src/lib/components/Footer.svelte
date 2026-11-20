@@ -2,7 +2,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
 			<!-- Brand -->
-			<section class="col-span-2 md:col-span-1" aria-label="WordSolverX">
+			<section class="col-span-2 md:col-span-1" aria-label="WordAuditor">
 				<a href="/" class="inline-flex items-center gap-2 mb-4">
 					<div class="w-7 h-7 rounded-md bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
 						<span class="text-white font-extrabold text-xs leading-none">W</span>
@@ -14,7 +14,7 @@
 				<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
 					Daily puzzle answers, solver tools, and strategy guides for word game enthusiasts who play every day.
 				</p>
-				<nav class="mt-5 flex gap-2" aria-label="WordSolverX social links">
+				<nav class="mt-5 flex gap-2" aria-label="WordAuditor social links">
 					<a href="https://www.facebook.com/wordsolverx/" target="_blank" rel="noopener noreferrer"
 						class="w-8 h-8 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-teal-600 hover:border-teal-300 dark:hover:text-teal-400 dark:hover:border-teal-700 transition-colors"
 						aria-label="Facebook">
@@ -75,10 +75,10 @@
 		<!-- Bottom bar -->
 		<div class="mt-12 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3">
 			<p class="text-xs text-slate-400 dark:text-slate-500">
-				&copy; {new Date().getFullYear()} WordSolverX. All rights reserved.
+				&copy; {new Date().getFullYear()} WordAuditor. All rights reserved.
 			</p>
 			<p class="text-xs text-slate-400 dark:text-slate-500 text-center">
-				Wordle is a trademark of The New York Times Company. WordSolverX is not affiliated with NYT.
+				Wordle is a trademark of The New York Times Company. WordAuditor is not affiliated with NYT.
 			</p>
 		</div>
 	</div>

@@ -20,7 +20,7 @@
 
   let { data } = $props();
 
-  const socialImage = $derived(data.meta?.socialImage ?? 'https://wordsolverx.com/wordsolverx.webp');
+  const socialImage = $derived(data.meta?.socialImage ?? 'https://wordauditor.com/wordauditor.webp');
   const cleanedSchemas = $derived(
     data.schemas ? stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) : null
   );
@@ -44,13 +44,13 @@
   <meta name="keywords" content={data.meta.keywords} />
   <meta name="news_keywords" content="marveldle, marveldle answer, marveldle today, marvel wordle, mcu wordle" />
   <meta name="robots" content="index, follow, max-snippet:-1" />
-  <link rel="canonical" href="https://wordsolverx.com/marveldle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/marveldle-answer-today" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/marveldle-answer-today" />
+  <meta property="og:url" content="https://wordauditor.com/marveldle-answer-today" />
   <meta property="og:image" content={socialImage} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
@@ -63,7 +63,7 @@
     '@type': 'WebPage',
     name: data.meta.title,
     description: data.meta.description,
-    url: 'https://wordsolverx.com/marveldle-answer-today',
+    url: 'https://wordauditor.com/marveldle-answer-today',
     image: socialImage,
     dateModified: data.visibleDateKey
   })}</script>`}

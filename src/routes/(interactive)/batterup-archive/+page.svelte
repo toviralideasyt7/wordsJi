@@ -24,13 +24,13 @@
   <title>{data.meta.title}</title>
   <meta name="description" content={data.meta.description} />
   <meta name="keywords" content={data.meta.keywords} />
-  <link rel="canonical" href="https://wordsolverx.com/batterup-archive" />
+  <link rel="canonical" href="https://wordauditor.com/batterup-archive" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/batterup-archive" />
+  <meta property="og:url" content="https://wordauditor.com/batterup-archive" />
   <meta property="og:image" content={data.meta.socialImage} />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:site_name" content="WordAuditor" />
   {#if cleanedSchemas}
     {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
   {/if}

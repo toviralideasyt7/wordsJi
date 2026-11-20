@@ -96,10 +96,10 @@
 <svelte:head>
   <title>Colordle Archive - Complete Color Answer History</title>
   <meta name="description" content="Browse the complete archive of every Colordle colour answer, with a calendar view, search, and a direct link to each past colour puzzle solution." />
-  <link rel="canonical" href="https://wordsolverx.com/colordle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/colordle-archive" />
   <meta property="og:title" content="Colordle Archive - All Past Color Answers" />
   <meta property="og:description" content="Complete history of every Colordle color answer. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/colordle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/colordle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

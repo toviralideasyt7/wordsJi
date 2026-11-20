@@ -60,7 +60,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const pageDescription = today
 		? `Get today's Countryle answer for ${formattedDate}. See the country, the key clues, and quick links to the Countryle archive and the Countryle solver.`
 		: 'Get the Countryle answer for today, plus the country clues, the archive, and the Countryle solver.';
-	const pageUrl = 'https://wordsolverx.com/countryle-answer-today';
+	const pageUrl = 'https://wordauditor.com/countryle-answer-today';
 	const isFallback = displayDateKey !== targetDateKey;
 
 	// FAQPage (wordle pattern): the updated-stamp Q&A feeds its own schema node
@@ -99,8 +99,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		generateWebPageSchema('Countryle Answer Today', pageDescription, pageUrl),
 		generateSoftwareApplicationSchema('Countryle Answer Today', 'UtilitiesApplication'),
 		generateBreadcrumbSchema([
-			{ name: 'Home', url: 'https://wordsolverx.com' },
-			{ name: 'Today', url: 'https://wordsolverx.com/today' },
+			{ name: 'Home', url: 'https://wordauditor.com' },
+			{ name: 'Today', url: 'https://wordauditor.com/today' },
 			{ name: 'Countryle Answer Today', url: pageUrl }
 		])
 	]);

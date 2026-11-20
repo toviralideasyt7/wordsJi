@@ -206,25 +206,25 @@
   const pageTitle = 'Colorfle Solver - Free Colorfle Helper Tool';
   const pageDescription =
     'Use the Colorfle solver to match a target hex colour, test your Colorfle feedback, and narrow the correct three-colour combination in fewer attempts.';
-  const pageUrl = 'https://wordsolverx.com/colorfle-solver';
-  const pageImage = 'https://wordsolverx.com/images/colorfle-solver.webp';
+  const pageUrl = 'https://wordauditor.com/colorfle-solver';
+  const pageImage = 'https://wordauditor.com/images/colorfle-solver.webp';
 </script>
 
 <svelte:head>
   <title>Colorfle Solver - Free Colorfle Helper Tool</title>
   <meta name="description" content="Use the Colorfle solver to match a target hex colour, test your Colorfle feedback, and narrow the correct three-colour combination in fewer attempts." />
   <meta name="keywords" content="colorfle solver, colorfle helper, colorfle answer, colorfle color solver" />
-  <link rel="canonical" href="https://wordsolverx.com/colorfle-solver" />
+  <link rel="canonical" href="https://wordauditor.com/colorfle-solver" />
   <meta property="og:title" content="Colorfle Solver - Free Colorfle Helper Tool" />
   <meta property="og:description" content="Match Colorfle target hex values or refine guesses with Colorfle-style feedback filtering." />
-  <meta property="og:url" content="https://wordsolverx.com/colorfle-solver" />
+  <meta property="og:url" content="https://wordauditor.com/colorfle-solver" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="WordSolverX" />
-  <meta property="og:image" content="https://wordsolverx.com/images/colorfle-solver.webp" />
+  <meta property="og:site_name" content="WordAuditor" />
+  <meta property="og:image" content="https://wordauditor.com/images/colorfle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Colorfle Solver" />
   <meta name="twitter:description" content="A static Colorfle solver for target hex matching and feedback-based elimination." />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/colorfle-solver.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/colorfle-solver.webp" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -239,9 +239,9 @@
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       },
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Solver', url: 'https://wordsolverx.com/solver' },
-        { name: 'Colorfle Solver', url: 'https://wordsolverx.com/colorfle-solver' }
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Solver', url: 'https://wordauditor.com/solver' },
+        { name: 'Colorfle Solver', url: 'https://wordauditor.com/colorfle-solver' }
       ]),
       generateHowToSchema('How to use the Colorfle solver', [
         { name: 'Enter the target hex', text: 'Type or paste the target hex code from Colorfle into the input field, or use the color picker to select it visually.' },

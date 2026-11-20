@@ -183,8 +183,8 @@
     generateWebPageSchema(
       'Waffle Solver - Solve Any Waffle Puzzle Instantly',
       "Solve today's Waffle puzzle with a high-performance WASM solver. Auto-fill the grid or enter it by hand, then get the swap sequence that solves it.",
-      'https://wordsolverx.com/waffle-solver',
-      { image: 'https://wordsolverx.com/images/waffle-solver.webp' }
+      'https://wordauditor.com/waffle-solver',
+      { image: 'https://wordauditor.com/images/waffle-solver.webp' }
     ),
     generateSoftwareApplicationSchema('Waffle Solver', 'GameApplication'),
     generateHowToSchema('How to use the Waffle Solver', [
@@ -194,8 +194,8 @@
       { name: 'Use the result', text: 'Pick a solution and plan your swaps to reach it in as few moves as possible — ideally 10 for a perfect score.' },
     ]),
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Waffle Solver', url: 'https://wordsolverx.com/waffle-solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Waffle Solver', url: 'https://wordauditor.com/waffle-solver' },
     ]),
   ]);
 
@@ -211,13 +211,13 @@
   <title>Waffle Solver - Solve Any Waffle Puzzle Instantly</title>
   <meta name="description" content="Solve today's Waffle puzzle with a high-performance WASM solver. Auto-fill the grid or enter it by hand, then get the swap sequence that solves it." />
   <meta name="keywords" content="Waffle Solver, Waffle Answer, Waffle Puzzle, Waffle Game Helper, Waffle Cheat" />
-  <link rel="canonical" href="https://wordsolverx.com/waffle-solver" />
+  <link rel="canonical" href="https://wordauditor.com/waffle-solver" />
   <meta property="og:title" content="Waffle Solver - Instant Puzzle Solutions" />
   <meta property="og:description" content="Solve any Waffle puzzle instantly with our Rust-powered engine." />
-  <meta property="og:url" content="https://wordsolverx.com/waffle-solver" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/waffle-solver" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://wordsolverx.com/images/waffle-solver.webp" />
+  <meta property="og:image" content="https://wordauditor.com/images/waffle-solver.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Waffle Solver" />
   <meta name="twitter:description" content="Solve today's Waffle puzzle instantly." />

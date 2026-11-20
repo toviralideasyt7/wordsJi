@@ -76,9 +76,9 @@
     generateWebPageSchema(
       data.meta?.title ?? 'Colordle Answer Today',
       data.meta?.description ?? '',
-      'https://wordsolverx.com/colordle-answer-today',
+      'https://wordauditor.com/colordle-answer-today',
       {
-        image: featuredImage.startsWith('http') ? featuredImage : `https://wordsolverx.com${featuredImage}`,
+        image: featuredImage.startsWith('http') ? featuredImage : `https://wordauditor.com${featuredImage}`,
         dateModified: data.publishedDate ?? new Date().toISOString().split('T')[0]
       }
     )
@@ -115,11 +115,11 @@
     name="news_keywords"
     content={data.meta?.keywords ?? 'colordle answer today, colordle hint, daily color puzzle'}
   />
-  <link rel="canonical" href="https://wordsolverx.com/colordle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/colordle-answer-today" />
   <meta property="og:title" content={data.meta?.title ?? 'Colordle Answer Today'} />
   <meta property="og:description" content={data.meta?.description ?? ''} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/colordle-answer-today" />
+  <meta property="og:url" content="https://wordauditor.com/colordle-answer-today" />
   <meta property="og:image" content={featuredImage} />
   <meta property="og:image:alt" content={`Colordle answer for ${answerDateLabel}`} />
   <meta name="twitter:card" content="summary_large_image" />

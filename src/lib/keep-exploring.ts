@@ -59,7 +59,7 @@ function dedicatedSolver(gameName: string, href: string): Pick<KeepExploringConf
 const SOLVER_HUB = {
 	solverHref: '/solver',
 	solverLabel: 'All puzzle solvers',
-	solverSub: 'Browse every solver on WordSolverX in one place.'
+	solverSub: 'Browse every solver on WordAuditor in one place.'
 };
 
 export const KEEP_EXPLORING_CONFIG: Record<KeepExploringSlug, KeepExploringConfig> = {

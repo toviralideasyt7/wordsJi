@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
     const dateStr = result.dateStr;
     try {
         const seoDate = formatSeoDate(latestDate);
-        const featuredImage = 'https://wordsolverx.com/images/smashdle-answer-today.webp';
+        const featuredImage = 'https://wordauditor.com/images/smashdle-answer-today.webp';
         const uniqueNames = Array.from(new Set(
             answers
                 .map((answer) => parseContent(answer.json_content).champion_name?.trim())
@@ -129,14 +129,14 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
                     headline: pageTitle,
                     description: pageDescription,
                     image: [featuredImage],
-                    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordsolverx.com/smashdle-answer-today-updated' },
+                    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/smashdle-answer-today-updated' },
                     author: {
                         '@type': 'Person',
                         name: 'Preston Hayes',
-                        url: 'https://wordsolverx.com/about#preston-hayes',
-                        image: 'https://wordsolverx.com/author-wordsolverx.webp'
+                        url: 'https://wordauditor.com/about#preston-hayes',
+                        image: 'https://wordauditor.com/author-wordauditor.webp'
                     },
-                    publisher: { '@type': 'Organization', name: 'WordSolverX' },
+                    publisher: { '@type': 'Organization', name: 'WordAuditor' },
                     ...(latestDate ? { datePublished: `${latestDate}T00:00:00Z`, dateModified: `${latestDate}T00:00:00Z` } : {})
                 }
             ]

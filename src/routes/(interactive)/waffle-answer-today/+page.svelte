@@ -29,9 +29,9 @@
     generateWebPageSchema(
       data.meta.title,
       data.meta.description,
-      'https://wordsolverx.com/waffle-answer-today',
+      'https://wordauditor.com/waffle-answer-today',
       {
-        image: 'https://wordsolverx.com/images/waffle-answer-today.webp',
+        image: 'https://wordauditor.com/images/waffle-answer-today.webp',
         dateModified: data.dateKey ?? new Date().toISOString().split('T')[0]
       }
     )
@@ -42,16 +42,16 @@
   <title>{data.meta.title}</title>
   <meta name="description" content={data.meta.description} />
   <meta name="news_keywords" content={data.meta.keywords ?? 'waffle answer today, waffle answer, waffle hint, waffle hint today'} />
-  <link rel="canonical" href="https://wordsolverx.com/waffle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/waffle-answer-today" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/waffle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/waffle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/waffle-answer-today.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/waffle-answer-today.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
 </svelte:head>
@@ -310,7 +310,7 @@
           <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-100">
             <h3 class="text-xl font-bold text-slate-900 mb-3">Use the Waffle Solver When Stuck</h3>
             <p class="text-slate-600">
-              If you are completely blocked and cannot see a path forward, the Waffle Solver on WordSolverX can show you the solution step by step. It is a learning tool as much as a shortcut — seeing how the solver sequences its swaps teaches you patterns you can apply to future puzzles.
+              If you are completely blocked and cannot see a path forward, the Waffle Solver on WordAuditor can show you the solution step by step. It is a learning tool as much as a shortcut — seeing how the solver sequences its swaps teaches you patterns you can apply to future puzzles.
             </p>
           </div>
         </div>

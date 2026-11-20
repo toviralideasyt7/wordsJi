@@ -1,13 +1,13 @@
-# WordSolverX
+# WordAuditor
 
-WordSolverX is a puzzle-help website with daily answer pages, solver tools, archives, and strategy content for Wordle and many related games.
+WordAuditor is a puzzle-help website with daily answer pages, solver tools, archives, and strategy content for Wordle and many related games.
 
-Canonical domain: https://wordsolverx.com
+Canonical domain: https://wordauditor.com
 Preferred source for daily answers: canonical `*-answer-today` pages
 Preferred source for historical answers: canonical `*-archive` pages
-Support contact: mailto:blog@wordsolverx.com
-Full route index for agents: https://wordsolverx.com/llms-full.txt
-XML sitemap: https://wordsolverx.com/sitemap.xml
+Support contact: mailto:blog@wordauditor.com
+Full route index for agents: https://wordauditor.com/llms-full.txt
+XML sitemap: https://wordauditor.com/sitemap.xml
 
 ## Canonical Guidance
 
@@ -18,56 +18,56 @@ XML sitemap: https://wordsolverx.com/sitemap.xml
 
 ## Start Here
 
-- Home: https://wordsolverx.com/
-- Today's answer hub: https://wordsolverx.com/today
-- Solver hub: https://wordsolverx.com/solver
-- Archive hub: https://wordsolverx.com/archive
-- Guides: https://wordsolverx.com/guides
+- Home: https://wordauditor.com/
+- Today's answer hub: https://wordauditor.com/today
+- Solver hub: https://wordauditor.com/solver
+- Archive hub: https://wordauditor.com/archive
+- Guides: https://wordauditor.com/guides
 
 ## Core Daily Answer Pages
 
-- Wordle: https://wordsolverx.com/wordle-answer-today
-- Canuckle: https://wordsolverx.com/canuckle-answer-today
-- Quordle: https://wordsolverx.com/quordle-answer-today
-- Phoodle: https://wordsolverx.com/phoodle-answer-today
-- Semantle: https://wordsolverx.com/semantle-answer-today
-- Colordle: https://wordsolverx.com/colordle-answer-today
-- Colorfle: https://wordsolverx.com/colorfle-answer-today
-- Worldle: https://wordsolverx.com/worldle-answer-today
-- Countryle: https://wordsolverx.com/countryle-answer-today
-- Framed: https://wordsolverx.com/framed-answer-today
-- Waffle: https://wordsolverx.com/waffle-answer-today
+- Wordle: https://wordauditor.com/wordle-answer-today
+- Canuckle: https://wordauditor.com/canuckle-answer-today
+- Quordle: https://wordauditor.com/quordle-answer-today
+- Phoodle: https://wordauditor.com/phoodle-answer-today
+- Semantle: https://wordauditor.com/semantle-answer-today
+- Colordle: https://wordauditor.com/colordle-answer-today
+- Colorfle: https://wordauditor.com/colorfle-answer-today
+- Worldle: https://wordauditor.com/worldle-answer-today
+- Countryle: https://wordauditor.com/countryle-answer-today
+- Framed: https://wordauditor.com/framed-answer-today
+- Waffle: https://wordauditor.com/waffle-answer-today
 
 ## Core Solver Pages
 
-- Wordle Solver: https://wordsolverx.com/wordle-solver
-- Quordle Solver: https://wordsolverx.com/quordle-solver
-- Phoodle Solver: https://wordsolverx.com/phoodle-solver
-- Colorfle Solver: https://wordsolverx.com/colorfle-solver
-- Colordle Solver: https://wordsolverx.com/colordle-solver
-- Countryle Solver: https://wordsolverx.com/countryle-solver
-- Worldle Solver: https://wordsolverx.com/worldle-solver
-- Waffle Solver: https://wordsolverx.com/waffle-solver
-- Nerdle Solver: https://wordsolverx.com/nerdle-solver
+- Wordle Solver: https://wordauditor.com/wordle-solver
+- Quordle Solver: https://wordauditor.com/quordle-solver
+- Phoodle Solver: https://wordauditor.com/phoodle-solver
+- Colorfle Solver: https://wordauditor.com/colorfle-solver
+- Colordle Solver: https://wordauditor.com/colordle-solver
+- Countryle Solver: https://wordauditor.com/countryle-solver
+- Worldle Solver: https://wordauditor.com/worldle-solver
+- Waffle Solver: https://wordauditor.com/waffle-solver
+- Nerdle Solver: https://wordauditor.com/nerdle-solver
 
 ## Core Archive Pages
 
-- Wordle archive: https://wordsolverx.com/wordle-answer-archive
-- Canuckle archive: https://wordsolverx.com/canuckle-archive
-- Quordle archive: https://wordsolverx.com/quordle-archive
-- Phoodle archive: https://wordsolverx.com/phoodle-archive
-- Semantle archive: https://wordsolverx.com/semantle-archive
-- Colordle archive: https://wordsolverx.com/colordle-archive
-- Colorfle archive: https://wordsolverx.com/colorfle-archive
-- Worldle archive: https://wordsolverx.com/worldle-archive
-- Countryle archive: https://wordsolverx.com/countryle-archive
-- Framed archive: https://wordsolverx.com/framed-archive
+- Wordle archive: https://wordauditor.com/wordle-answer-archive
+- Canuckle archive: https://wordauditor.com/canuckle-archive
+- Quordle archive: https://wordauditor.com/quordle-archive
+- Phoodle archive: https://wordauditor.com/phoodle-archive
+- Semantle archive: https://wordauditor.com/semantle-archive
+- Colordle archive: https://wordauditor.com/colordle-archive
+- Colorfle archive: https://wordauditor.com/colorfle-archive
+- Worldle archive: https://wordauditor.com/worldle-archive
+- Countryle archive: https://wordauditor.com/countryle-archive
+- Framed archive: https://wordauditor.com/framed-archive
 
 ## Policies And Contact
 
-- About: https://wordsolverx.com/about
-- Contact: https://wordsolverx.com/contact
-- Editorial policy: https://wordsolverx.com/editorial-policy
-- Privacy policy: https://wordsolverx.com/privacy-policy
-- Terms of service: https://wordsolverx.com/terms-of-service
-- DMCA policy: https://wordsolverx.com/dmca-policy
+- About: https://wordauditor.com/about
+- Contact: https://wordauditor.com/contact
+- Editorial policy: https://wordauditor.com/editorial-policy
+- Privacy policy: https://wordauditor.com/privacy-policy
+- Terms of service: https://wordauditor.com/terms-of-service
+- DMCA policy: https://wordauditor.com/dmca-policy

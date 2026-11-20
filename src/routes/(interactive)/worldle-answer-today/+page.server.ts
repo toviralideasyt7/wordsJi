@@ -142,7 +142,7 @@ export const load: PageServerLoad = async () => {
   const pageDescription = `Get Worldle hints and today's confirmed answer for ${formattedTodayDate}, with the distance and direction clues and a direct link to the full archive.`;
   const pageKeywords = `worldle answer today, worldle answer, worldle hint, worldle hint today, worldle answer for ${formattedTodayDate}`;
 
-  const pageUrl = 'https://wordsolverx.com/worldle-answer-today';
+  const pageUrl = 'https://wordauditor.com/worldle-answer-today';
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -154,18 +154,18 @@ export const load: PageServerLoad = async () => {
     author: {
       '@type': 'Person',
       name: 'Preston Hayes',
-      url: 'https://wordsolverx.com/about#preston-hayes',
-      image: 'https://wordsolverx.com/author-wordsolverx.webp',
+      url: 'https://wordauditor.com/about#preston-hayes',
+      image: 'https://wordauditor.com/author-wordauditor.webp',
       jobTitle: 'Word Puzzle Analyst',
       knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
       sameAs: ['https://www.pinterest.com/wordsolverx/']
     },
     publisher: {
       '@type': 'Organization',
-      name: 'WordSolverX',
+      name: 'WordAuditor',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wordsolverx.com/images/worldle-answer-today.webp',
+        url: 'https://wordauditor.com/images/worldle-answer-today.webp',
       },
     },
     mainEntityOfPage: {
@@ -189,8 +189,8 @@ export const load: PageServerLoad = async () => {
     faqSchema,
     generateSoftwareApplicationSchema('Worldle Answer Today', 'UtilitiesApplication'),
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Today', url: 'https://wordsolverx.com/today' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Today', url: 'https://wordauditor.com/today' },
       { name: 'Worldle Answer Today', url: pageUrl },
     ]),
     generateWebPageSchema('Worldle Answer Today', pageDescription, pageUrl),

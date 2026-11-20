@@ -66,13 +66,13 @@
   <meta property="og:title" content={data.metaTitle} />
   <meta property="og:description" content={data.pageDescription} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/phrazle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
-  <meta property="og:image" content="https://wordsolverx.com/images/phrazle-answer-today.webp" />
+  <meta property="og:url" content="https://wordauditor.com/phrazle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
+  <meta property="og:image" content="https://wordauditor.com/images/phrazle-answer-today.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.metaTitle} />
   <meta name="twitter:description" content={data.pageDescription} />
-  <link rel="canonical" href="https://wordsolverx.com/phrazle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/phrazle-answer-today" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
 </svelte:head>
 

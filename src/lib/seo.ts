@@ -1,4 +1,4 @@
-// SEO Utilities for WordSolverX Website
+// SEO Utilities for WordAuditor Website
 
 export interface SchemaOrganization {
     '@context': string;
@@ -22,11 +22,11 @@ export const SOCIAL_PROFILE_URLS = [
     'https://www.pinterest.com/wordsolverx/',
 ];
 
-const DEFAULT_SOCIAL_IMAGE = 'https://wordsolverx.com/wordsolverx.webp';
-const DEFAULT_CONTACT_URL = 'https://wordsolverx.com/contact';
-const DEFAULT_CONTACT_EMAIL = 'blog@wordsolverx.com';
+const DEFAULT_SOCIAL_IMAGE = 'https://wordauditor.com/wordauditor.webp';
+const DEFAULT_CONTACT_URL = 'https://wordauditor.com/contact';
+const DEFAULT_CONTACT_EMAIL = 'blog@wordauditor.com';
 const DEFAULT_ORGANIZATION_DESCRIPTION =
-    'WordSolverX publishes daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.';
+    'WordAuditor publishes daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.';
 
 /**
  * Site-wide title and description budget for indexable pages. `scripts/seo/check-meta-lengths.mjs`
@@ -218,8 +218,8 @@ export function generateOrganizationSchema(): SchemaOrganization {
     return {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'WordSolverX',
-        url: 'https://wordsolverx.com',
+        name: 'WordAuditor',
+        url: 'https://wordauditor.com',
         logo: DEFAULT_SOCIAL_IMAGE,
         image: DEFAULT_SOCIAL_IMAGE,
         description: DEFAULT_ORGANIZATION_DESCRIPTION,
@@ -281,11 +281,11 @@ export function generateArticleSchema(config: {
         },
         publisher: {
             '@type': 'Organization',
-            name: 'WordSolverX',
-            url: 'https://wordsolverx.com',
+            name: 'WordAuditor',
+            url: 'https://wordauditor.com',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://wordsolverx.com/wordsolverx.webp',
+                url: 'https://wordauditor.com/wordauditor.webp',
             },
         },
         mainEntityOfPage: config.url,
@@ -587,7 +587,7 @@ export function generateMetaTags(config: MetaTagsConfig): Record<string, string>
         description,
         keywords = [],
         canonicalUrl,
-        ogImage = 'https://wordsolverx.com/wordsolverx.webp',
+        ogImage = 'https://wordauditor.com/wordauditor.webp',
         twitterCard = 'summary_large_image',
     } = config;
 

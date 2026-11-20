@@ -98,13 +98,13 @@
     name="description"
     content="Browse the full Colorfle archive with normal and hard answers for every past date, plus the blended colour and its source swatches for each puzzle."
   />
-  <link rel="canonical" href="https://wordsolverx.com/colorfle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/colorfle-archive" />
   <meta property="og:title" content="Colorfle Archive - Normal and Hard Answers by Date" />
   <meta
     property="og:description"
     content="Look up any Colorfle date and see the exact normal and hard mode color mixes."
   />
-  <meta property="og:url" content="https://wordsolverx.com/colorfle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/colorfle-archive" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
@@ -197,7 +197,7 @@
                   </div>
                 </div>
                 <div class="text-sm leading-6 text-slate-600 sm:max-w-xs sm:text-right">
-                  The worker provides the exact source colors. WordSolverX computes the blended target
+                  The worker provides the exact source colors. WordAuditor computes the blended target
                   preview for this archive card from those verified inputs.
                 </div>
               </div>

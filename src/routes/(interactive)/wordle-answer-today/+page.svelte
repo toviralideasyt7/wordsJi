@@ -40,7 +40,7 @@
   <meta name="description" content={data.meta.description} />
   <meta name="keywords" content={data.meta.keywords ?? 'wordle answer today, wordle answer, wordle hint, wordle hint today'} />
   <meta name="news_keywords" content="wordle, wordle answer, wordle today, nyt wordle, daily word puzzle" />
-  <link rel="canonical" href="https://wordsolverx.com/wordle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/wordle-answer-today" />
   <link
     rel="preload"
     as="image"
@@ -55,8 +55,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content={`Wordle Answer for ${data.formattedDate}`} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/wordle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/wordle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
@@ -66,7 +66,7 @@
     '@type': 'WebPage',
     name: data.meta.title,
     description: data.meta.description,
-    url: 'https://wordsolverx.com/wordle-answer-today',
+    url: 'https://wordauditor.com/wordle-answer-today',
     image: data.meta.socialImage,
     dateModified: data.wordleData?.date || new Date().toISOString().split('T')[0]
   })}</script>`}

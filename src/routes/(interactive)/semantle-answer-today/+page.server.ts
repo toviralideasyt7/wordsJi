@@ -59,7 +59,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
         { question: 'When was this page last updated?', answer: updatedStamp }
     ];
 
-    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(formattedDate).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordsolverx.com/author-wordsolverx.webp', url: 'https://wordsolverx.com/about#preston-hayes' } }, { '@type': 'FAQPage', mainEntity: hintFaqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] });
+    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: pageTitle, description: pageDescription, datePublished: new Date(formattedDate).toISOString(), author: { '@type': 'Person', name: 'Preston Hayes', image: 'https://wordauditor.com/author-wordauditor.webp', url: 'https://wordauditor.com/about#preston-hayes' } }, { '@type': 'FAQPage', mainEntity: hintFaqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }] });
 
     return { video, word, puzzleNumber, formattedDate, dateKey, last10Days, clues, updatedStamp, aiHints, hintFaqs, yesterday, factData, schemas: jsonLd, meta: { title: pageTitle, description: pageDescription, keywords: pageKeywords } };
 };

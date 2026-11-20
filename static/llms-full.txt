@@ -1,6 +1,6 @@
-# WordSolverX Full Route Guide
+# WordAuditor Full Route Guide
 
-This file is a fuller agent-facing route index for WordSolverX. Prefer canonical site URLs on `https://wordsolverx.com`.
+This file is a fuller agent-facing route index for WordAuditor. Prefer canonical site URLs on `https://wordauditor.com`.
 
 ## Site Summary
 
@@ -12,126 +12,126 @@ This file is a fuller agent-facing route index for WordSolverX. Prefer canonical
 
 ## Main Navigation
 
-- Home: https://wordsolverx.com/
-- Today's answers hub: https://wordsolverx.com/today
-- Solver hub: https://wordsolverx.com/solver
-- Archive hub: https://wordsolverx.com/archive
-- Guides: https://wordsolverx.com/guides
-- About: https://wordsolverx.com/about
-- Contact: https://wordsolverx.com/contact
+- Home: https://wordauditor.com/
+- Today's answers hub: https://wordauditor.com/today
+- Solver hub: https://wordauditor.com/solver
+- Archive hub: https://wordauditor.com/archive
+- Guides: https://wordauditor.com/guides
+- About: https://wordauditor.com/about
+- Contact: https://wordauditor.com/contact
 
 ## Daily Answer Pages
 
-- https://wordsolverx.com/betweenle-answer-today
-- https://wordsolverx.com/canuckle-answer-today
-- https://wordsolverx.com/colorfle-answer-today
-- https://wordsolverx.com/colordle-answer-today
-- https://wordsolverx.com/contexto-answer-today
-- https://wordsolverx.com/countryle-answer-today
-- https://wordsolverx.com/dotadle-answer-today-updated
-- https://wordsolverx.com/framed-answer-today
-- https://wordsolverx.com/globle-answer-today
-- https://wordsolverx.com/loldle-answer-today-updated
-- https://wordsolverx.com/narutodle-answer-today-updated
-- https://wordsolverx.com/nerdle-answer-today
-- https://wordsolverx.com/onepiecedle-answer-today-updated
-- https://wordsolverx.com/phoodle-answer-today
-- https://wordsolverx.com/phrazle-answer-today
-- https://wordsolverx.com/pokedle-answer-today-updated
-- https://wordsolverx.com/quordle-answer-today
-- https://wordsolverx.com/searchle-answer-today
-- https://wordsolverx.com/semantle-answer-today
-- https://wordsolverx.com/smashdle-answer-today-updated
-- https://wordsolverx.com/spotle-answer-today
-- https://wordsolverx.com/waffle-answer-today
-- https://wordsolverx.com/wordle-answer-today
-- https://wordsolverx.com/worldle-answer-today
-- https://wordsolverx.com/worgle-answer-today
+- https://wordauditor.com/betweenle-answer-today
+- https://wordauditor.com/canuckle-answer-today
+- https://wordauditor.com/colorfle-answer-today
+- https://wordauditor.com/colordle-answer-today
+- https://wordauditor.com/contexto-answer-today
+- https://wordauditor.com/countryle-answer-today
+- https://wordauditor.com/dotadle-answer-today-updated
+- https://wordauditor.com/framed-answer-today
+- https://wordauditor.com/globle-answer-today
+- https://wordauditor.com/loldle-answer-today-updated
+- https://wordauditor.com/narutodle-answer-today-updated
+- https://wordauditor.com/nerdle-answer-today
+- https://wordauditor.com/onepiecedle-answer-today-updated
+- https://wordauditor.com/phoodle-answer-today
+- https://wordauditor.com/phrazle-answer-today
+- https://wordauditor.com/pokedle-answer-today-updated
+- https://wordauditor.com/quordle-answer-today
+- https://wordauditor.com/searchle-answer-today
+- https://wordauditor.com/semantle-answer-today
+- https://wordauditor.com/smashdle-answer-today-updated
+- https://wordauditor.com/spotle-answer-today
+- https://wordauditor.com/waffle-answer-today
+- https://wordauditor.com/wordle-answer-today
+- https://wordauditor.com/worldle-answer-today
+- https://wordauditor.com/worgle-answer-today
 
 ## Archive Pages
 
-- https://wordsolverx.com/canuckle-archive
-- https://wordsolverx.com/colorfle-archive
-- https://wordsolverx.com/colordle-archive
-- https://wordsolverx.com/contexto-archive
-- https://wordsolverx.com/countryle-archive
-- https://wordsolverx.com/framed-archive
-- https://wordsolverx.com/globle-archive
-- https://wordsolverx.com/nerdle-archive
-- https://wordsolverx.com/phoodle-archive
-- https://wordsolverx.com/phrazle-archive
-- https://wordsolverx.com/quordle-archive
-- https://wordsolverx.com/searchle-archive
-- https://wordsolverx.com/semantle-archive
-- https://wordsolverx.com/spotle-archive
-- https://wordsolverx.com/waffle-archive
-- https://wordsolverx.com/wordle-answer-archive
-- https://wordsolverx.com/worldle-archive
-- https://wordsolverx.com/worgle-archive
+- https://wordauditor.com/canuckle-archive
+- https://wordauditor.com/colorfle-archive
+- https://wordauditor.com/colordle-archive
+- https://wordauditor.com/contexto-archive
+- https://wordauditor.com/countryle-archive
+- https://wordauditor.com/framed-archive
+- https://wordauditor.com/globle-archive
+- https://wordauditor.com/nerdle-archive
+- https://wordauditor.com/phoodle-archive
+- https://wordauditor.com/phrazle-archive
+- https://wordauditor.com/quordle-archive
+- https://wordauditor.com/searchle-archive
+- https://wordauditor.com/semantle-archive
+- https://wordauditor.com/spotle-archive
+- https://wordauditor.com/waffle-archive
+- https://wordauditor.com/wordle-answer-archive
+- https://wordauditor.com/worldle-archive
+- https://wordauditor.com/worgle-archive
 
 ## Solver Pages
 
-- https://wordsolverx.com/3-letter-wordle-solver
-- https://wordsolverx.com/4-letter-wordle-solver
-- https://wordsolverx.com/wordle-solver
-- https://wordsolverx.com/6-letter-wordle-solver
-- https://wordsolverx.com/7-letter-wordle-solver
-- https://wordsolverx.com/8-letter-wordle-solver
-- https://wordsolverx.com/9-letter-wordle-solver
-- https://wordsolverx.com/10-letter-wordle-solver
-- https://wordsolverx.com/11-letter-wordle-solver
-- https://wordsolverx.com/betweenle-solver
-- https://wordsolverx.com/boggle-solver
-- https://wordsolverx.com/canuckle-solver
-- https://wordsolverx.com/colorfle-solver
-- https://wordsolverx.com/colordle-solver
-- https://wordsolverx.com/countryle-solver
-- https://wordsolverx.com/dordle-solver
-- https://wordsolverx.com/dotadle-solver
-- https://wordsolverx.com/fibble-solver
-- https://wordsolverx.com/hangman-solver
-- https://wordsolverx.com/hardle-solver
-- https://wordsolverx.com/kanoodle-solver
-- https://wordsolverx.com/light-out-solver
-- https://wordsolverx.com/loldle-solver
-- https://wordsolverx.com/minesweeper-solver
-- https://wordsolverx.com/narutodle-solver
-- https://wordsolverx.com/nerdle-solver
-- https://wordsolverx.com/octordle-solver
-- https://wordsolverx.com/onepiecedle-solver
-- https://wordsolverx.com/phoodle-solver
-- https://wordsolverx.com/pokedle-solver
-- https://wordsolverx.com/quordle-solver
-- https://wordsolverx.com/searchle-solver
-- https://wordsolverx.com/smashdle-solver
-- https://wordsolverx.com/soundmap-solver
-- https://wordsolverx.com/spotle-solver
-- https://wordsolverx.com/spotle-wordle-solver
-- https://wordsolverx.com/squaredle-solver
-- https://wordsolverx.com/thirdle-solver
-- https://wordsolverx.com/waffle-solver
-- https://wordsolverx.com/w-peaks-solver
-- https://wordsolverx.com/warmle-solver
-- https://wordsolverx.com/weaver-solver
-- https://wordsolverx.com/woodle-solver
-- https://wordsolverx.com/word-ladder-solver
-- https://wordsolverx.com/wordle-solver
-- https://wordsolverx.com/worldle-solver
-- https://wordsolverx.com/xordle-solver
+- https://wordauditor.com/3-letter-wordle-solver
+- https://wordauditor.com/4-letter-wordle-solver
+- https://wordauditor.com/wordle-solver
+- https://wordauditor.com/6-letter-wordle-solver
+- https://wordauditor.com/7-letter-wordle-solver
+- https://wordauditor.com/8-letter-wordle-solver
+- https://wordauditor.com/9-letter-wordle-solver
+- https://wordauditor.com/10-letter-wordle-solver
+- https://wordauditor.com/11-letter-wordle-solver
+- https://wordauditor.com/betweenle-solver
+- https://wordauditor.com/boggle-solver
+- https://wordauditor.com/canuckle-solver
+- https://wordauditor.com/colorfle-solver
+- https://wordauditor.com/colordle-solver
+- https://wordauditor.com/countryle-solver
+- https://wordauditor.com/dordle-solver
+- https://wordauditor.com/dotadle-solver
+- https://wordauditor.com/fibble-solver
+- https://wordauditor.com/hangman-solver
+- https://wordauditor.com/hardle-solver
+- https://wordauditor.com/kanoodle-solver
+- https://wordauditor.com/light-out-solver
+- https://wordauditor.com/loldle-solver
+- https://wordauditor.com/minesweeper-solver
+- https://wordauditor.com/narutodle-solver
+- https://wordauditor.com/nerdle-solver
+- https://wordauditor.com/octordle-solver
+- https://wordauditor.com/onepiecedle-solver
+- https://wordauditor.com/phoodle-solver
+- https://wordauditor.com/pokedle-solver
+- https://wordauditor.com/quordle-solver
+- https://wordauditor.com/searchle-solver
+- https://wordauditor.com/smashdle-solver
+- https://wordauditor.com/soundmap-solver
+- https://wordauditor.com/spotle-solver
+- https://wordauditor.com/spotle-wordle-solver
+- https://wordauditor.com/squaredle-solver
+- https://wordauditor.com/thirdle-solver
+- https://wordauditor.com/waffle-solver
+- https://wordauditor.com/w-peaks-solver
+- https://wordauditor.com/warmle-solver
+- https://wordauditor.com/weaver-solver
+- https://wordauditor.com/woodle-solver
+- https://wordauditor.com/word-ladder-solver
+- https://wordauditor.com/wordle-solver
+- https://wordauditor.com/worldle-solver
+- https://wordauditor.com/xordle-solver
 
 ## Evergreen Information Pages
 
-- https://wordsolverx.com/about
-- https://wordsolverx.com/archive
-- https://wordsolverx.com/contact
-- https://wordsolverx.com/disclaimer
-- https://wordsolverx.com/dmca-policy
-- https://wordsolverx.com/editorial-policy
-- https://wordsolverx.com/guides
-- https://wordsolverx.com/privacy-policy
-- https://wordsolverx.com/solver
-- https://wordsolverx.com/terms-of-service
-- https://wordsolverx.com/today
+- https://wordauditor.com/about
+- https://wordauditor.com/archive
+- https://wordauditor.com/contact
+- https://wordauditor.com/disclaimer
+- https://wordauditor.com/dmca-policy
+- https://wordauditor.com/editorial-policy
+- https://wordauditor.com/guides
+- https://wordauditor.com/privacy-policy
+- https://wordauditor.com/solver
+- https://wordauditor.com/terms-of-service
+- https://wordauditor.com/today
 
 ## Citation Notes
 
@@ -142,5 +142,5 @@ This file is a fuller agent-facing route index for WordSolverX. Prefer canonical
 
 ## Contact
 
-- Contact page: https://wordsolverx.com/contact
-- Email: mailto:blog@wordsolverx.com
+- Contact page: https://wordauditor.com/contact
+- Email: mailto:blog@wordauditor.com

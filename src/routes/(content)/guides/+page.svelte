@@ -57,16 +57,16 @@
 <svelte:head>
   <title>Guides & Strategies - Expert Tips for Word Puzzles</title>
   <meta name="description" content="Guides and strategies for Wordle, Quordle, Phoodle, Waffle, Colordle and Semantle to sharpen your daily solving." />
-  <link rel="canonical" href="https://wordsolverx.com/guides" />
+  <link rel="canonical" href="https://wordauditor.com/guides" />
   <meta property="og:title" content="Guides & Strategies - Expert Tips for Word Puzzles" />
   <meta property="og:description" content="Read practical puzzle guides, strategy tips, and improvement advice for Wordle, Quordle, Phoodle, Waffle, Colordle, and Semantle." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wordsolverx.com/guides" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/guides" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Guides & Strategies - Expert Tips for Word Puzzles" />
-  <meta name="twitter:description" content="Improve your puzzle solving with practical guides and strategy breakdowns from WordSolverX." />
-  <meta name="twitter:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta name="twitter:description" content="Improve your puzzle solving with practical guides and strategy breakdowns from WordAuditor." />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -74,13 +74,13 @@
         '@type': 'CollectionPage',
         'name': 'Puzzle Guides & Strategies',
         'description': 'Expert guides for word puzzle games',
-        'url': 'https://wordsolverx.com/guides'
+        'url': 'https://wordauditor.com/guides'
       },
       {
         ...generateWebPageSchema(
           'Puzzle Guides & Strategies',
           'Strategy articles and learning content for daily puzzle fans.',
-          'https://wordsolverx.com/guides'
+          'https://wordauditor.com/guides'
         )
       }
     ]

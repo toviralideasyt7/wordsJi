@@ -11,7 +11,7 @@
 
   let { data } = $props();
   const guide = $derived(data.guide);
-  const canonical = $derived(`https://wordsolverx.com/guides/${guide.slug}`);
+  const canonical = $derived(`https://wordauditor.com/guides/${guide.slug}`);
   const headings = $derived(articleHeadings(guide.body));
   const readingMinutes = $derived(data.readingMinutes ?? 2);
 
@@ -23,8 +23,8 @@
   const breadcrumbSchema = $derived(
     JSON.stringify(
       generateBreadcrumbSchema([
-        { name: 'Home', url: 'https://wordsolverx.com' },
-        { name: 'Guides', url: 'https://wordsolverx.com/guides' },
+        { name: 'Home', url: 'https://wordauditor.com' },
+        { name: 'Guides', url: 'https://wordauditor.com/guides' },
         { name: guide.title, url: canonical }
       ])
     )

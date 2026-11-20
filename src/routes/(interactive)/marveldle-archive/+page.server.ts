@@ -4,7 +4,7 @@ import answersRaw from '$lib/data/marveldle-answers.json';
 import type { PageServerLoad } from './$types';
 
 const answers = answersRaw as Record<string, MarveldleDayEntry>;
-const SITE_URL = 'https://wordsolverx.com';
+const SITE_URL = 'https://wordauditor.com';
 const CANONICAL = `${SITE_URL}/marveldle-archive`;
 
 export const load: PageServerLoad = async () => {
@@ -22,9 +22,9 @@ export const load: PageServerLoad = async () => {
 			};
 		});
 
-	const pageTitle = 'Marveldle Archive: Every Past Answer | WordSolverX';
+	const pageTitle = 'Marveldle Archive: Every Past Answer | WordAuditor';
 	const pageDescription =
-		'Every past Marveldle answer: Comics and MCU characters for each day, searchable by name. Spot patterns and never miss a pair again at WordSolverX.';
+		'Every past Marveldle answer: Comics and MCU characters for each day, searchable by name. Spot patterns and never miss a pair again at WordAuditor.';
 	const pageKeywords =
 		'marveldle archive, marveldle answers, marveldle past answers, marveldle answer history';
 
@@ -46,7 +46,7 @@ export const load: PageServerLoad = async () => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordsolverx.webp`
+			socialImage: `${SITE_URL}/wordauditor.webp`
 		}
 	};
 };

@@ -87,7 +87,7 @@ export async function fetchRecentCanucklePuzzles(): Promise<LiveCanucklePuzzle[]
 		{
 			headers: {
 				accept: 'application/json',
-				'user-agent': 'WordSolverX Daily Live Fetch'
+				'user-agent': 'WordAuditor Daily Live Fetch'
 			},
 			signal: AbortSignal.timeout(15000)
 		}
@@ -146,7 +146,7 @@ export async function fetchLiveCountryleToday(dateKey: string): Promise<Countryl
 	const response = await fetch(`${COUNTRYLE_SOURCE_URL}?date=${formatCountryleApiDate(dateKey)}`, {
 		headers: {
 			accept: 'application/json',
-			'user-agent': 'WordSolverX Daily Live Fetch'
+			'user-agent': 'WordAuditor Daily Live Fetch'
 		},
 		signal: AbortSignal.timeout(15000)
 	});
@@ -182,7 +182,7 @@ async function fetchFramedAnswer(gameType: FramedGameType, puzzleNumber: number)
 	const response = await fetch(`${FRAMED_SOURCE_URL}/${puzzleNumber}?gameType=${gameType}`, {
 		headers: {
 			accept: 'application/json',
-			'user-agent': 'WordSolverX Daily Live Fetch'
+			'user-agent': 'WordAuditor Daily Live Fetch'
 		},
 		signal: AbortSignal.timeout(15000)
 	});

@@ -16,7 +16,7 @@
   const pageTitle = 'Betweenle Solver, Helper & Word Finder';
   const pageDescription =
     'Use the Betweenle solver to enter your bounds and distance clues, then get the best next guess with real dictionary logic and a ranked shortlist of answers.';
-  const pageUrl = 'https://wordsolverx.com/betweenle-solver';
+  const pageUrl = 'https://wordauditor.com/betweenle-solver';
 
 
   const schemas = JSON.stringify([
@@ -39,8 +39,8 @@
       keywords: ['betweenle solver', 'betweenle helper', 'betweenle answer solver'],
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Betweenle Solver', url: pageUrl },
     ]),
     generateWebPageSchema('Betweenle Solver', pageDescription, pageUrl),
@@ -59,11 +59,11 @@
   <meta property="og:description" content={pageDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/og/betweenle-solver.svg" />
+  <meta property="og:image" content="https://wordauditor.com/og/betweenle-solver.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content="https://wordsolverx.com/og/betweenle-solver.svg" />
+  <meta name="twitter:image" content="https://wordauditor.com/og/betweenle-solver.svg" />
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(schemas, ['FAQPage', 'HowTo']) ?? schemas}</script>`}
 </svelte:head>
 

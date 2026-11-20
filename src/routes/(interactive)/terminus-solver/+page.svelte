@@ -17,7 +17,7 @@
   const pageTitle = 'Terminus Code Solver - BO6 Zombies Easter Egg Calculator';
   const pageDescription =
     'Enter the X, Y and Z symbols from the Terminus Research Office whiteboard and get your three terminal codes instantly. Free BO6 Zombies easter egg calculator.';
-  const pageUrl = 'https://wordsolverx.com/terminus-solver';
+  const pageUrl = 'https://wordauditor.com/terminus-solver';
 
   const schemas = JSON.stringify([
     generateHowToSchema('How to use the Terminus code solver', [
@@ -30,8 +30,8 @@
       keywords: ['terminus code calculator', 'bo6 zombies terminus code solver', 'terminus easter egg code', 'black ops 6 zombies code calculator']
     },
     generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://wordsolverx.com' },
-      { name: 'Solver', url: 'https://wordsolverx.com/solver' },
+      { name: 'Home', url: 'https://wordauditor.com' },
+      { name: 'Solver', url: 'https://wordauditor.com/solver' },
       { name: 'Terminus Code Solver', url: pageUrl }
     ]),
     generateWebPageSchema('Terminus Code Solver', pageDescription, pageUrl)
@@ -50,7 +50,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={pageUrl} />
   <link rel="canonical" href={pageUrl} />
-  <meta property="og:image" content="https://wordsolverx.com/wordsolverx.webp" />
+  <meta property="og:image" content="https://wordauditor.com/wordauditor.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />

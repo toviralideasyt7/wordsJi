@@ -34,9 +34,9 @@
     generateWebPageSchema(
       data.meta.title,
       data.meta.description,
-      'https://wordsolverx.com/globle-answer-today',
+      'https://wordauditor.com/globle-answer-today',
       {
-        image: data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp',
+        image: data.meta.featuredImage ?? 'https://wordauditor.com/images/globle-answer-today.webp',
         dateModified: data.dateKey
       }
     )
@@ -47,17 +47,17 @@
   <title>{data.meta.title}</title>
   <meta name="description" content={data.meta.description} />
   <meta name="news_keywords" content={data.meta.keywords ?? 'globle answer today, globle answer, globle hint, globle hint today'} />
-  <link rel="canonical" href="https://wordsolverx.com/globle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/globle-answer-today" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/globle-answer-today" />
-  <meta property="og:image" content={data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp'} />
+  <meta property="og:url" content="https://wordauditor.com/globle-answer-today" />
+  <meta property="og:image" content={data.meta.featuredImage ?? 'https://wordauditor.com/images/globle-answer-today.webp'} />
   <meta property="og:image:alt" content={`Globle hints and answer for ${data.formattedDate}`} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta.title} />
   <meta name="twitter:description" content={data.meta.description} />
-  <meta name="twitter:image" content={data.meta.featuredImage ?? 'https://wordsolverx.com/images/globle-answer-today.webp'} />
+  <meta name="twitter:image" content={data.meta.featuredImage ?? 'https://wordauditor.com/images/globle-answer-today.webp'} />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {@html `<script type="application/ld+json">${stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) ?? data.schemas}</script>`}
   {#if data.faqSchemaJson}

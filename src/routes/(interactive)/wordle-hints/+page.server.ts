@@ -31,7 +31,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				...sections.map((s) => ({ question: s.question, answer: s.faqAnswer })),
 				{
 					question: 'Where can I find the full Wordle answer?',
-					answer: `The confirmed answer for Wordle #${today.wordleNumber}, with the full letter-by-letter breakdown, is at https://wordsolverx.com/wordle-answer-today.`
+					answer: `The confirmed answer for Wordle #${today.wordleNumber}, with the full letter-by-letter breakdown, is at https://wordauditor.com/wordle-answer-today.`
 				}
 			]
 		: [
@@ -57,7 +57,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	});
 
 	return {
-		canonical: 'https://wordsolverx.com/wordle-hints',
+		canonical: 'https://wordauditor.com/wordle-hints',
 		meta: {
 			title: `Wordle Hints Today (${today.formattedDate}) — All 12 Hints for Wordle #${today.wordleNumber}`,
 			description: `All 12 Wordle hints for ${today.formattedDate} (Wordle #${today.wordleNumber}) on one page: first and last letters, vowel and consonant counts, letter pattern, repeating letters and the definition — plus the confirmed answer.`,

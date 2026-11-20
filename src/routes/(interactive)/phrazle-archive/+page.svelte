@@ -84,10 +84,10 @@
 <svelte:head>
   <title>Phrazle Archive - Complete Phrase Answer History</title>
   <meta name="description" content="Browse the complete archive of all Phrazle answers. Calendar view with direct access to both the morning and afternoon phrase for each date." />
-  <link rel="canonical" href="https://wordsolverx.com/phrazle-archive" />
+  <link rel="canonical" href="https://wordauditor.com/phrazle-archive" />
   <meta property="og:title" content="Phrazle Archive - All Past Answers" />
   <meta property="og:description" content="Complete history of every Phrazle phrase pair. Browse by calendar or search." />
-  <meta property="og:url" content="https://wordsolverx.com/phrazle-archive" />
+  <meta property="og:url" content="https://wordauditor.com/phrazle-archive" />
   <meta property="og:type" content="website" />
 </svelte:head>
 

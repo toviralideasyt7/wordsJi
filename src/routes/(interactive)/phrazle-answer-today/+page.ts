@@ -90,7 +90,7 @@ export const load: PageLoad = ({ data }) => {
 	const webPageSchema = generateWebPageSchema(
 		pageTitle,
 		pageDescription,
-		'https://wordsolverx.com/phrazle-answer-today'
+		'https://wordauditor.com/phrazle-answer-today'
 	);
 
 	// FAQPage schema built from the page FAQ array (wordle pattern).

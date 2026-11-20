@@ -29,9 +29,9 @@
     generateWebPageSchema(
       data.meta?.title ?? 'Semantle Answer Today',
       data.meta?.description ?? '',
-      'https://wordsolverx.com/semantle-answer-today',
+      'https://wordauditor.com/semantle-answer-today',
       {
-        image: 'https://wordsolverx.com/images/semantle-answer-today.webp',
+        image: 'https://wordauditor.com/images/semantle-answer-today.webp',
         dateModified: data.dateKey
       }
     )
@@ -45,16 +45,16 @@
   <title>{data.meta?.title ?? 'Semantle Answer Today'}</title>
   <meta name="description" content={data.meta?.description ?? ''} />
   <meta name="news_keywords" content={data.meta?.keywords ?? 'semantle answer today, semantle answer, semantle hint, semantle hint today'} />
-  <link rel="canonical" href="https://wordsolverx.com/semantle-answer-today" />
+  <link rel="canonical" href="https://wordauditor.com/semantle-answer-today" />
   <meta property="og:title" content={data.meta?.title ?? 'Semantle Answer Today'} />
   <meta property="og:description" content={data.meta?.description ?? ''} />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://wordsolverx.com/semantle-answer-today" />
-  <meta property="og:site_name" content="WordSolverX" />
+  <meta property="og:url" content="https://wordauditor.com/semantle-answer-today" />
+  <meta property="og:site_name" content="WordAuditor" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.meta?.title ?? 'Semantle Answer Today'} />
   <meta name="twitter:description" content={data.meta?.description ?? ''} />
-  <meta name="twitter:image" content="https://wordsolverx.com/images/semantle-answer-today.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/images/semantle-answer-today.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>`}
   {#if cleanedSchemas}
     {@html `<script type="application/ld+json">${cleanedSchemas}</script>`}
