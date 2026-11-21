@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-20T17:13:53.031Z",
+  "generatedAt": "2026-11-21T21:38:22.805Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -580,6 +580,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a well-known large nation with a distinct geographical status."
+    },
+    "2026-11-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A landlocked heart where the Danube flows through a grand capital.",
+      "clue1": "Known for its thermal baths and Rubik's invention.",
+      "starts_with": "H",
+      "ends_with": "Y",
+      "definition": "A landlocked country in Central Europe, bordering Austria and Romania.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Well-known European nation with a distinct starting letter."
     }
   },
   "prose": {
@@ -629,6 +642,7 @@
     "2026-11-18": "Countryle Game #1734 for November 18, 2026, features a nine-letter country. The word follows a consonant-vowel pattern starting with M.",
     "2026-11-19": "Countryle Game #1735 takes place on November 19, 2026. This puzzle features a ten-letter word starting with T.",
     "2026-11-20": "Countryle Game #1736 for November 20, 2026, features a ten-letter word. The pattern begins and ends with consonants and vowels in a specific sequence.",
-    "2026-11-21": "Countryle Game #1737 for November 21, 2026, features a ten-letter word. The pattern consists of several vowels and a few repeated consonants."
+    "2026-11-21": "Countryle Game #1737 for November 21, 2026, features a ten-letter word. The pattern consists of several vowels and a few repeated consonants.",
+    "2026-11-22": "Countryle Game #1738 takes place on November 22, 2026. This puzzle features a seven-letter word with no repeating characters."
   }
 }

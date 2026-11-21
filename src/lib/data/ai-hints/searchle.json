@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-20T17:12:17.868Z",
+  "generatedAt": "2026-11-21T21:37:22.188Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -552,6 +552,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common emotional term with a familiar letter pattern."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -599,6 +611,7 @@
     "2026-11-18": "The Searchle puzzle for November 18, 2026 (#116) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with E — see the letter hints above before you peek.",
     "2026-11-19": "The Searchle puzzle for November 19, 2026 (#117) is live with today's answer confirmed. The answer runs 7 characters, starting with C and ending with S — see the letter hints above before you peek.",
     "2026-11-20": "The Searchle puzzle for November 20, 2026 (#118) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with S — see the letter hints above before you peek.",
-    "2026-11-21": "Searchle puzzle #119 for November 21, 2026, features a seven-letter word. The target word begins and ends with the same consonant."
+    "2026-11-21": "Searchle puzzle #119 for November 21, 2026, features a seven-letter word. The target word begins and ends with the same consonant.",
+    "2026-11-22": "The Searchle puzzle for November 22, 2026 (#35) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with G — see the letter hints above before you peek."
   }
 }

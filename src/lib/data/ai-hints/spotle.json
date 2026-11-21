@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-20T17:12:18.034Z",
+  "generatedAt": "2026-11-21T21:37:10.550Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -577,6 +577,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The name is relatively common but the specific artist is niche."
+    },
+    "2026-11-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "Heavy sounds from a garage, riding the lightning with loud chords.",
+      "clue1": "Legendary thrash metal pioneers from California.",
+      "starts_with": "M",
+      "ends_with": "A",
+      "definition": "An influential American heavy metal band formed in 1981.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Extremely famous global brand with a distinct name structure."
     }
   },
   "prose": {
@@ -626,6 +639,7 @@
     "2026-11-18": "Spotle puzzle Day 1706 takes place on November 18, 2026. This specific entry follows a four-letter pattern ending in a consonant.",
     "2026-11-19": "Spotle puzzle Day 1707 arrives on November 19, 2026. This specific entry features a name starting and ending with the same letter.",
     "2026-11-20": "Spotle puzzle Day 1708 arrives on November 20, 2026. This specific entry follows a seven-letter pattern across two words.",
-    "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words."
+    "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words.",
+    "2026-11-22": "Spotle puzzle Day 1710 arrives on November 22, 2026. This specific entry features a nine-letter pattern."
   }
 }

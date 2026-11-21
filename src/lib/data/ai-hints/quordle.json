@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-20T17:12:33.266Z",
+  "generatedAt": "2026-11-21T21:36:19.586Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -578,6 +578,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Common five-letter words with distinct vowel placements."
+    },
+    "2026-11-22": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "A dizzy spell, a surprise, a trip, and a prayer's pose.",
+      "clue1": "Four distinct verbs and exclamations.",
+      "starts_with": "F",
+      "ends_with": "T",
+      "definition": "A set of words describing weakness, surprise, a short journey, and kneeling.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Contains uncommon starting letters like J and K."
     }
   },
   "prose": {
@@ -627,6 +640,7 @@
     "2026-11-18": "Quordle puzzle #1759 for November 18, 2026, features four five-letter words. The set includes a variety of common consonants and a repeated vowel.",
     "2026-11-19": "Quordle puzzle #1760 for November 19, 2026, features four distinct five-letter words. The set includes a mix of common nouns and adjectives.",
     "2026-11-20": "Quordle puzzle #1761 was released on November 20, 2026. This specific set features four five-letter words with varying vowel placements.",
-    "2026-11-21": "Quordle puzzle #1762 for November 21, 2026, features four unique words. The letter patterns vary across the set of solutions."
+    "2026-11-21": "Quordle puzzle #1762 for November 21, 2026, features four unique words. The letter patterns vary across the set of solutions.",
+    "2026-11-22": "Quordle puzzle #1763 for November 22, 2026, features four five-letter words. The set includes a variety of starting consonants."
   }
 }
