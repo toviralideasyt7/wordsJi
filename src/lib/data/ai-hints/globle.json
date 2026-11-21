@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-20T06:04:11.952Z",
+  "generatedAt": "2026-11-21T06:12:15.311Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -575,6 +575,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The name is long and distinctive, though the region is specific."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A Central African hub where two languages are spoken officially.",
+      "clue1": "Located on the Gulf of Guinea.",
+      "starts_with": "C",
+      "ends_with": "N",
+      "definition": "A country in Central Africa known as Africa in miniature.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Well-known country but not a global superpower."
     }
   },
   "prose": {
@@ -623,6 +636,7 @@
     "2026-11-17": "The Globle puzzle for November 17, 2026 (2026-11-17) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with R — see the letter hints above before you peek.",
     "2026-11-18": "The Globle puzzle for November 18, 2026, features a word starting and ending with the same letter. Puzzle 2026-11-18 requires players to navigate toward a major Southern Hemisphere territory.",
     "2026-11-19": "The Globle puzzle for November 19, 2026, features a five-letter country. This 2026-11-19 challenge follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-11-20": "The Globle puzzle for November 20, 2026, features a multi-word name. Puzzle 2026-11-20 contains a repeating pattern of vowels and consonants."
+    "2026-11-20": "The Globle puzzle for November 20, 2026, features a multi-word name. Puzzle 2026-11-20 contains a repeating pattern of vowels and consonants.",
+    "2026-11-21": "The Globle puzzle for November 21, 2026, features a word with eight letters. This 2026-11-21 challenge requires finding a nation with a repeated vowel."
   }
 }
