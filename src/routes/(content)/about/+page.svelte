@@ -63,7 +63,7 @@
     name="twitter:description"
     content="Learn about WordAuditor, our puzzle resources, and how the site helps players every day."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(aboutSchemas)}</script>`}
 </svelte:head>
 

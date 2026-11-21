@@ -26,7 +26,7 @@
         description:
           'WordAuditor editorial policy: how we verify puzzle answers, validate article drafts, reuse cached article files, and handle corrections.',
         url: 'https://wordauditor.com/editorial-policy',
-        image: 'https://wordauditor.com/wordauditor.webp',
+        image: 'https://wordauditor.com/wordauditor-logo.webp',
         datePublished: '2025-01-01',
         dateModified: new Date().toISOString().split('T')[0],
         author: {
@@ -44,7 +44,7 @@
           url: 'https://wordauditor.com',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://wordauditor.com/wordauditor.webp'
+            url: 'https://wordauditor.com/wordauditor-logo.webp'
           }
         },
         mainEntityOfPage: 'https://wordauditor.com/editorial-policy'
@@ -67,7 +67,7 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wordauditor.com/editorial-policy" />
-  <meta property="og:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta property="og:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="WordAuditor Editorial Policy - How We Publish Answers" />
@@ -77,7 +77,7 @@
     name="twitter:description"
     content="Learn how WordAuditor verifies answers, handles generated article text, and publishes corrections."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(editorialSchemas)}</script>`}
 </svelte:head>
 

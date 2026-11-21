@@ -26,11 +26,14 @@
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
-/author-wordsolverx.webp
-  Cache-Control: public, max-age=31536000, immutable
+/author-wordauditor.webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
-/wordsolverx-favicon.webp
-  Cache-Control: public, max-age=31536000, immutable
+/wordauditor-logo.webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/wordauditor-icon.webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /og/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800

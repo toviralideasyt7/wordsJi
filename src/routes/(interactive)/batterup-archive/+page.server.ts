@@ -49,7 +49,7 @@ export const load: PageServerLoad = async () => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordauditor.webp`
+			socialImage: `${SITE_URL}/wordauditor-logo.webp`
 		}
 	};
 };

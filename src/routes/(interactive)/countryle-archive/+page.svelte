@@ -42,7 +42,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Countryle Archive" />
   <meta name="twitter:description" content="Search the saved Countryle answer archive by date." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 

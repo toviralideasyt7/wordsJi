@@ -74,7 +74,7 @@
                         name: META.title,
                         description: META.description,
                         url: META.canonical,
-                        image: 'https://wordauditor.com/wordauditor.webp'
+                        image: 'https://wordauditor.com/wordauditor-logo.webp'
                 }
         ]);
 

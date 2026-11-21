@@ -32,7 +32,7 @@
   const socialImage = $derived(
     data.meta?.featuredImage?.startsWith('http')
       ? data.meta.featuredImage
-      : `https://wordauditor.com${data.meta?.featuredImage ?? '/wordauditor.webp'}`
+      : `https://wordauditor.com${data.meta?.featuredImage ?? '/wordauditor-logo.webp'}`
   );
   const cleanedSchemas = $derived(
     stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES)

@@ -97,7 +97,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Daily Puzzle Answers, Solvers & Wordle Tools" />
   <meta name="twitter:description" content="Daily answers, hints and solvers for Wordle, Quordle, Betweenle, Worldle, Colordle and 20+ more puzzle games, updated every day." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 

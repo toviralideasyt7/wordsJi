@@ -66,7 +66,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Guides & Strategies - Expert Tips for Word Puzzles" />
   <meta name="twitter:description" content="Improve your puzzle solving with practical guides and strategy breakdowns from WordAuditor." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [

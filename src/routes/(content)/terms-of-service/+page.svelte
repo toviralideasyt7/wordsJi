@@ -24,7 +24,7 @@
     name="twitter:description"
     content="Review the rules, site usage terms, and limitations for WordAuditor."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
       'Terms of Service - Using WordAuditor',

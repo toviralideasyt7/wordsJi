@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 			description: pageDescription,
 			keywords:
 				'marveldle solver, marveldle helper, marvel wordle solver, marveldle mcu solver, marveldle answer today',
-			socialImage: `${SITE_URL}/wordauditor.webp`
+			socialImage: `${SITE_URL}/wordauditor-logo.webp`
 		}
 	};
 };

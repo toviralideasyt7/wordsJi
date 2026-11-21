@@ -24,7 +24,7 @@
     name="twitter:description"
     content="See the WordAuditor disclaimer for answer accuracy, external links, and trademark notices."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
       'Disclaimer - WordAuditor Site and Content',

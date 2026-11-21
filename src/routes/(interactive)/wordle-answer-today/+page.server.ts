@@ -127,7 +127,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
         datePublished: new Date(normalizedWordleData?.date || today).toISOString(),
         dateModified: new Date(normalizedWordleData?.date || today).toISOString(),
         author: generatePersonAuthorSchema('Preston Hayes', 'https://wordauditor.com/about#preston-hayes', 'https://wordauditor.com/author-wordauditor.webp'),
-        publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/wordauditor.webp' } },
+        publisher: { '@type': 'Organization', name: 'WordAuditor', logo: { '@type': 'ImageObject', url: 'https://wordauditor.com/wordauditor-logo.webp' } },
         description: `Get Wordle hints and the confirmed Wordle answer for today, ${formattedDate}. Hints, clues, and the solution for Wordle #${wordleNumber}.`,
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://wordauditor.com/wordle-answer-today' },
     };

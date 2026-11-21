@@ -124,7 +124,7 @@
     data?.meta?.keywords ??
       `${gameKey} answer today, ${gameKey} answer, ${gameKey} hint, ${gameKey} hint today${seoDate ? `, ${gameKey} answer for ${seoDate}` : ''}`
   );
-  let pageImage = $derived(data?.meta?.featuredImage ?? 'https://wordauditor.com/wordauditor.webp');
+  let pageImage = $derived(data?.meta?.featuredImage ?? 'https://wordauditor.com/wordauditor-logo.webp');
   let crossLinkColsClass = $derived(crossLinks.length > 4 ? 'md:grid-cols-5' : 'md:grid-cols-4');
   let breadcrumbSchemaData = $derived(
     generateBreadcrumbSchema([
@@ -275,7 +275,7 @@
       url: 'https://wordauditor.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://wordauditor.com/wordauditor.webp',
+        url: 'https://wordauditor.com/wordauditor-logo.webp',
         width: 1200,
         height: 630
       }

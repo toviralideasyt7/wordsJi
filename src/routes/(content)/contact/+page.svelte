@@ -46,7 +46,7 @@
     name="twitter:description"
     content="Get in touch with WordAuditor for support, feedback, correction requests, and legal notices."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify([
     {
       '@context': 'https://schema.org',

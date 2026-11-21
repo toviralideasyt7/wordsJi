@@ -28,7 +28,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
                 name: `Waffle Hints and Answer for Today (${formattedDate})`,
                 description: `Get Waffle hints and the confirmed Waffle answer for today, ${formattedDate}.`,
                 url: 'https://wordauditor.com/waffle-answer-today',
-                image: 'https://wordauditor.com/wordauditor.webp',
+                image: 'https://wordauditor.com/wordauditor-logo.webp',
                 dateModified: today.toISOString().split('T')[0]
             })
         };

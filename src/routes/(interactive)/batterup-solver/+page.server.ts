@@ -13,7 +13,7 @@ export const load: PageServerLoad = async () => {
 			description: pageDescription,
 			keywords:
 				'batter up solver, batter up helper, batter up mlb solver, batter up guess helper, batter up answer today',
-			socialImage: `${SITE_URL}/wordauditor.webp`
+			socialImage: `${SITE_URL}/wordauditor-logo.webp`
 		}
 	};
 };

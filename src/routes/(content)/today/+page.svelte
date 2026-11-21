@@ -50,7 +50,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={"Today's Puzzle Answers (" + todayStr + ")"} />
   <meta name="twitter:description" content="Daily answers for Wordle, Canuckle, Worldle, Betweenle, Phoodle, Quordle, Colordle, Semantle, Waffle, and more." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [

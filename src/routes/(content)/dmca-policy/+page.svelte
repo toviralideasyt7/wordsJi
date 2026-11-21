@@ -32,7 +32,7 @@
     name="twitter:description"
     content="See how to submit copyright notices and counter notices to WordAuditor."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 

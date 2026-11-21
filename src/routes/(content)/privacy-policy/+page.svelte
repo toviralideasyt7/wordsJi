@@ -24,7 +24,7 @@
     name="twitter:description"
     content="See how WordAuditor handles privacy, cookie preferences, analytics, and advertising disclosures."
   />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify(
     generateWebPageSchema(
       'Privacy Policy - Data, Cookies and Advertising',

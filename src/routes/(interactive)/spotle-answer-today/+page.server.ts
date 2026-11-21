@@ -202,7 +202,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 		name: metaTitle,
 		description: metaDescription,
 		url: 'https://wordauditor.com/spotle-answer-today',
-		image: 'https://wordauditor.com/wordauditor.webp',
+		image: 'https://wordauditor.com/wordauditor-logo.webp',
 		dateModified: displayDate,
 		inLanguage: 'en',
 		isPartOf: {

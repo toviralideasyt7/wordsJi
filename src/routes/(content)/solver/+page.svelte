@@ -107,7 +107,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Puzzle Solver Tools - Wordle, Betweenle, Quordle & More" />
   <meta name="twitter:description" content="Find the right puzzle solver fast with WordAuditor's full collection of free clue-based tools for Wordle, Canuckle, Quordle, and more." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [

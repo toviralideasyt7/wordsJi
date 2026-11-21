@@ -45,7 +45,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Puzzle Answer Archive - All Solutions" />
   <meta name="twitter:description" content="Explore complete answer archives and calendar lookups for Wordle, Canuckle, and the most popular daily puzzle games." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [

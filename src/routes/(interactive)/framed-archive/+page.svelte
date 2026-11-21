@@ -96,7 +96,7 @@ import { ARTICLE_CONTENT } from '$lib/content/registry';
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Framed Archive" />
   <meta name="twitter:description" content="Browse static Framed answer history by date." />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   {@html `<script type="application/ld+json">${schemaJson}</script>`}
 </svelte:head>
 

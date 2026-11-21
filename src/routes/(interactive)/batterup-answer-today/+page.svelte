@@ -20,7 +20,7 @@
 
   let { data } = $props();
 
-  const socialImage = $derived(data.meta?.socialImage ?? 'https://wordauditor.com/wordauditor.webp');
+  const socialImage = $derived(data.meta?.socialImage ?? 'https://wordauditor.com/wordauditor-logo.webp');
   const cleanedSchemas = $derived(
     data.schemas ? stripStructuredDataTypes(data.schemas, PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES) : null
   );

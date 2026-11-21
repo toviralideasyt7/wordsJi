@@ -102,7 +102,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				title: `Marveldle Answer Today (${format(today, 'MMM d')}) | WordAuditor`,
 				description: `Today's Marveldle answers for ${staleDate} are still being solved. Check back shortly for the confirmed Comics and MCU characters and hints.`,
 				keywords: 'marveldle answer today, marveldle answer, marveldle hint today, marvel wordle',
-				socialImage: `${SITE_URL}/wordauditor.webp`
+				socialImage: `${SITE_URL}/wordauditor-logo.webp`
 			}
 		};
 	}
@@ -264,7 +264,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordauditor.webp`
+			socialImage: `${SITE_URL}/wordauditor-logo.webp`
 		}
 	};
 };

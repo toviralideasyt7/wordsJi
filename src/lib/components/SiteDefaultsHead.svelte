@@ -25,7 +25,7 @@
             (page.data?.meta?.description as string | undefined) ??
             'Daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.',
           url: currentUrl,
-          image: 'https://wordauditor.com/wordauditor.webp',
+          image: 'https://wordauditor.com/wordauditor-logo.webp',
           datePublished: (page.data?.publishedDate as string | undefined) ?? new Date().toISOString().split('T')[0],
           // Daily answer pages rebuild every puzzle day but set only publishedDate,
           // so falling straight through to the build date would report an edit that
@@ -50,17 +50,17 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" type="image/webp" href="/wordauditor-favicon.webp" />
+  <link rel="icon" type="image/webp" href="/wordauditor-icon.webp" />
   <meta name="theme-color" content="#10b981" />
   <meta property="og:site_name" content="WordAuditor" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:image" content="https://wordauditor.com/wordauditor.webp" />
+  <meta property="og:image" content="https://wordauditor.com/wordauditor-logo.webp" />
   <meta property="og:image:width" content="768" />
   <meta property="og:image:height" content="319" />
   <meta property="og:image:alt" content="WordAuditor - Daily Puzzle Answers and Solver Tools" />
   <meta name="twitter:site" content="@WordAuditor" />
-  <meta name="twitter:image" content="https://wordauditor.com/wordauditor.webp" />
-  <link rel="apple-touch-icon" href="/wordauditor-favicon.webp" />
+  <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />
+  <link rel="apple-touch-icon" href="/wordauditor-icon.webp" />
   <link rel="alternate" hreflang="en" href={currentUrl} />
   <link rel="alternate" hreflang="x-default" href={currentUrl} />
   <meta name="author" content="Preston Hayes" />

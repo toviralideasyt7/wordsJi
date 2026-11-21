@@ -76,7 +76,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 				title: `Batter Up Answer Today (${format(today, 'MMM d')}) | WordAuditor`,
 				description: `Today's Batter Up answer for ${staleDate} is still being verified. Check back shortly for the confirmed MLB player, hints and the full player card.`,
 				keywords: 'batter up answer today, batter up answer, batter up mlb, batter up hint today',
-				socialImage: `${SITE_URL}/wordauditor.webp`
+				socialImage: `${SITE_URL}/wordauditor-logo.webp`
 			}
 		};
 	}
@@ -198,7 +198,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			title: pageTitle,
 			description: pageDescription,
 			keywords: pageKeywords,
-			socialImage: `${SITE_URL}/wordauditor.webp`
+			socialImage: `${SITE_URL}/wordauditor-logo.webp`
 		}
 	};
 };

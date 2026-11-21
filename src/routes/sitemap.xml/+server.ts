@@ -90,7 +90,7 @@ function generateSitemap(): string {
 			let entry = `  <url>\n    <loc>${fullUrl}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>`;
 
 			if (url === '/') {
-				entry += `\n    <image:image>\n      <image:loc>https://wordauditor.com/wordauditor.webp</image:loc>\n    </image:image>`;
+				entry += `\n    <image:image>\n      <image:loc>https://wordauditor.com/wordauditor-logo.webp</image:loc>\n    </image:image>`;
 			}
 
 			entry += `\n  </url>`;

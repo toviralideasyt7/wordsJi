@@ -22,7 +22,7 @@ export const SOCIAL_PROFILE_URLS = [
     'https://www.pinterest.com/wordsolverx/',
 ];
 
-const DEFAULT_SOCIAL_IMAGE = 'https://wordauditor.com/wordauditor.webp';
+const DEFAULT_SOCIAL_IMAGE = 'https://wordauditor.com/wordauditor-logo.webp';
 const DEFAULT_CONTACT_URL = 'https://wordauditor.com/contact';
 const DEFAULT_CONTACT_EMAIL = 'blog@wordauditor.com';
 const DEFAULT_ORGANIZATION_DESCRIPTION =
@@ -285,7 +285,7 @@ export function generateArticleSchema(config: {
             url: 'https://wordauditor.com',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://wordauditor.com/wordauditor.webp',
+                url: 'https://wordauditor.com/wordauditor-logo.webp',
             },
         },
         mainEntityOfPage: config.url,
@@ -587,7 +587,7 @@ export function generateMetaTags(config: MetaTagsConfig): Record<string, string>
         description,
         keywords = [],
         canonicalUrl,
-        ogImage = 'https://wordauditor.com/wordauditor.webp',
+        ogImage = 'https://wordauditor.com/wordauditor-logo.webp',
         twitterCard = 'summary_large_image',
     } = config;
 
