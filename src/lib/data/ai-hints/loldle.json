@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-20T06:04:35.508Z",
+  "generatedAt": "2026-11-21T06:04:50.430Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -572,6 +572,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A blue wanderer seeking ancient runes across the land.",
+      "clue1": "He is a master of arcane knowledge and teleportation.",
+      "starts_with": "R",
+      "ends_with": "E",
+      "definition": "A powerful mage and rune-seeker in League of Legends.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A highly recognizable champion with a short, distinct name."
     }
   },
   "prose": {
@@ -620,6 +633,7 @@
     "2026-11-17": "The LoLdle puzzle for November 17, 2026 (Game #1594) is live with today's answer confirmed. The answer runs 11 characters, starting with R and ending with C — see the letter hints above before you peek.",
     "2026-11-18": "LoLdle Game #1595 for November 18, 2026, features a ten-letter champion. The pattern begins with a consonant and ends with a vowel.",
     "2026-11-19": "LoLdle Game #1596 for November 19, 2026, features a four-letter name. The pattern consists of a single vowel surrounded by consonants.",
-    "2026-11-20": "The LoLdle puzzle for November 20, 2026 (Game #1597) is live with today's answer confirmed. The answer runs 4 characters, starting with S and ending with T — see the letter hints above before you peek."
+    "2026-11-20": "The LoLdle puzzle for November 20, 2026 (Game #1597) is live with today's answer confirmed. The answer runs 4 characters, starting with S and ending with T — see the letter hints above before you peek.",
+    "2026-11-21": "LoLdle Game #1598 takes place on November 21, 2026. This puzzle features a four-letter name ending in a vowel."
   }
 }

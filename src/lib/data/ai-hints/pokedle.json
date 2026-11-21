@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-20T06:05:03.087Z",
+  "generatedAt": "2026-11-21T06:04:50.072Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -570,6 +570,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A spherical spark that might go boom if you touch it.",
+      "clue1": "Often mistaken for a Poké Ball in the grass.",
+      "starts_with": "V",
+      "ends_with": "B",
+      "definition": "An Electric-type Pokémon resembling a red and white sphere.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "It is a well-known Generation 1 Pokémon with a distinct shape."
     }
   },
   "prose": {
@@ -618,6 +631,7 @@
     "2026-11-17": "The Pokedle puzzle for November 17, 2026 (Game #1132) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with L — see the letter hints above before you peek.",
     "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek.",
     "2026-11-19": "Pokedle Game #1134 for November 19, 2026, features a seven-letter word. The pattern consists of unique letters starting with R and ending with N.",
-    "2026-11-20": "The Pokedle puzzle for November 20, 2026 (Game #1135) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with R — see the letter hints above before you peek."
+    "2026-11-20": "The Pokedle puzzle for November 20, 2026 (Game #1135) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with R — see the letter hints above before you peek.",
+    "2026-11-21": "Pokedle Game #1136 takes place on November 21, 2026. This specific puzzle features a seven-letter word ending in B."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-20T06:04:16.647Z",
+  "generatedAt": "2026-11-21T06:05:06.886Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -572,6 +572,19 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "Requires knowledge of a specific game character and a two-word phrase."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "A scaled warrior who breathes fire and wears heavy armor.",
+      "clue1": "A noble fighter with a reptilian spirit.",
+      "starts_with": "D",
+      "ends_with": "T",
+      "definition": "A fantasy warrior character who transforms into a winged beast.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common fantasy archetype with a recognizable naming convention."
     }
   },
   "prose": {
@@ -620,6 +633,7 @@
     "2026-11-17": "The Dotadle puzzle for November 17, 2026 (Game #1068) is live with today's answer confirmed. The answer runs 6 characters, starting with V and ending with E — see the letter hints above before you peek.",
     "2026-11-18": "The Dotadle puzzle for November 18, 2026 (Game #1069) is live with today's answer confirmed. The answer runs 4 characters, starting with T and ending with K — see the letter hints above before you peek.",
     "2026-11-19": "Dotadle Game #1070 takes place on November 19, 2026. This puzzle features a sixteen-letter phrase with several repeating characters.",
-    "2026-11-20": "Dotadle Game #1071 for November 20, 2026, features a twelve-letter solution. The pattern consists of two separate words starting with the same letter."
+    "2026-11-20": "Dotadle Game #1071 for November 20, 2026, features a twelve-letter solution. The pattern consists of two separate words starting with the same letter.",
+    "2026-11-21": "Dotadle Game #1072 is scheduled for November 21, 2026. This puzzle features a twelve-letter combination across two words."
   }
 }
