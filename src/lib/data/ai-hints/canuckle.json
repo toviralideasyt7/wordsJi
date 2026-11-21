@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-20T05:14:48.621Z",
+  "generatedAt": "2026-11-21T05:14:49.236Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -568,6 +568,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common adjective with a straightforward structure."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "I fill the attic or a plush toy's belly.",
+      "clue1": "Items pushed into a small space.",
+      "starts_with": "S",
+      "ends_with": "F",
+      "definition": "Matter, material, or a collection of miscellaneous objects.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common word with a simple structure and familiar usage."
     }
   },
   "prose": {
@@ -616,6 +629,7 @@
     "2026-11-17": "The Canuckle puzzle for November 17, 2026 (#1648) is live with today's answer confirmed. The answer runs 5 characters, starting with A and ending with E — see the letter hints above before you peek.",
     "2026-11-18": "Canuckle puzzle #1649 for November 18, 2026, features a five-letter word. This specific entry follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-11-19": "Canuckle puzzle #1650 is scheduled for November 19, 2026. This specific word follows a consonant-vowel-consonant-vowel-consonant pattern.",
-    "2026-11-20": "Canuckle puzzle #1651 for November 20, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant sequence."
+    "2026-11-20": "Canuckle puzzle #1651 for November 20, 2026, features a five-letter word. The pattern consists of a consonant-vowel-consonant-vowel-consonant sequence.",
+    "2026-11-21": "Canuckle puzzle #1652 for November 21, 2026, features a five-letter word. The solution follows a consonant-heavy pattern with a double letter at the end."
   }
 }
