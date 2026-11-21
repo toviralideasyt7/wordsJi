@@ -1141,5 +1141,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/01/0f14b15c-1c9e6e12-6cb5fab7-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-20",
     "fetchedAt": "2026-11-20T17:06:59.873Z"
+  },
+  "2026-11-21": {
+    "date": "2026-11-21",
+    "gameNumber": 1007,
+    "player": {
+      "player_name": "Alex Freeland",
+      "player_id": "4727589",
+      "team_name": "Dodgers",
+      "born": "USA",
+      "birth_date": "2001-08-24",
+      "position": [
+        "2B"
+      ],
+      "debut": 2025,
+      "jersey_number": 76
+    },
+    "videoDescription": "[09/15/26 : LAD 4 - 0 CIN] Alex Freeland belts a solo home run to left field to extend the Dodgers' lead to 4-0 in the top of the 7th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/15/0c876dff-0b9e6403-d3208390-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-21",
+    "fetchedAt": "2026-11-21T09:25:42.322Z"
   }
 }
