@@ -3186,5 +3186,62 @@
       ]
     },
     "solvedAt": "2026-11-20T06:06:15.887Z"
+  },
+  "2026-11-21": {
+    "date": "2026-11-21",
+    "dateId": "11/21/2026 12:00:00 AM",
+    "comics": {
+      "id": "yondu_691",
+      "name": "Yondu (Earth-691)",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Centaurian"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Perception",
+        "Psychic"
+      ],
+      "origin": "CentauriIV",
+      "apparitionYear": 1968,
+      "firstApparitionComicTitle": "Marvel Super-Heroes #18",
+      "keywords": [
+        "yondu udonta",
+        "udonta"
+      ]
+    },
+    "mcu": {
+      "id": "arishem",
+      "name": "Arishem",
+      "gender": "Male",
+      "type": "Unknown",
+      "species": [
+        "Celestial"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Elemental",
+        "Kinesis",
+        "Teleportation"
+      ],
+      "origin": "Unknown",
+      "actorName": "David Kaye",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "None"
+      ],
+      "keywords": [
+        "judge",
+        "arishem the judge"
+      ]
+    },
+    "solvedAt": "2026-11-21T06:06:10.774Z"
   }
 }
