@@ -1,6 +1,6 @@
 {
   "game": "batterup",
-  "generatedAt": "2026-11-20T17:12:29.234Z",
+  "generatedAt": "2026-11-21T09:36:39.054Z",
   "hints": {
     "2026-10-05": {
       "vowel_hint": "It contains 3 vowels.",
@@ -471,6 +471,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "The name is not yet a household household name for casual fans."
+    },
+    "2026-11-21": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -511,6 +523,7 @@
     "2026-11-17": "Batter Up Game #1003 arrives on November 17, 2026. This puzzle features a thirteen-letter name with a distinct consonant-vowel balance.",
     "2026-11-18": "Batter Up Game #1004 for November 18, 2026, features a twelve-letter name. The solution begins and ends with the same vowel.",
     "2026-11-19": "Batter Up Game #1005 for November 19, 2026, features a long hyphenated name. The solution follows a complex pattern of seventeen letters.",
-    "2026-11-20": "Batter Up Game #1006 takes place on November 20, 2026. This puzzle features a fourteen-letter name with a repeating initial."
+    "2026-11-20": "Batter Up Game #1006 takes place on November 20, 2026. This puzzle features a fourteen-letter name with a repeating initial.",
+    "2026-11-21": "The Batter Up puzzle for November 21, 2026 (Game #1007) is live with today's answer confirmed. The answer runs 12 characters, starting with A and ending with D — see the letter hints above before you peek."
   }
 }
