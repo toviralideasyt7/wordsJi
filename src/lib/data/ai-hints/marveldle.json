@@ -1,6 +1,6 @@
 {
   "game": "marveldle",
-  "generatedAt": "2026-11-20T06:22:25.860Z",
+  "generatedAt": "2026-11-21T06:22:40.570Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 5 vowels.",
@@ -532,6 +532,19 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "The answer is a long, complex combination of two distinct characters."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "A cosmic judge and a whistling rogue share this space.",
+      "clue1": "A celestial judge and a Ravager from another reality.",
+      "starts_with": "Y",
+      "ends_with": "M",
+      "definition": "A pair consisting of a cosmic entity and a variant Ravager.",
+      "difficulty": 9,
+      "difficulty_label": "Very Hard",
+      "difficulty_reason": "Combines a specific multiverse variant with a high-tier cosmic entity."
     }
   },
   "prose": {
@@ -577,6 +590,7 @@
     "2026-11-17": "The Marveldle puzzle for November 17, 2026, features a complex multi-character string. This 11/17/2026 12:00:00 AM challenge begins with the letter S and ends with E.",
     "2026-11-18": "The Marveldle puzzle for November 18, 2026 (11/18/2026 12:00:00 AM) is live with today's answer confirmed. The answer runs 19 characters, starting with V and ending with A — see the letter hints above before you peek.",
     "2026-11-19": "The Marveldle puzzle for November 19, 2026, features a complex multi-character answer. This specific puzzle 11/19/2026 12:00:00 AM contains a wide variety of distinct consonants.",
-    "2026-11-20": "The Marveldle puzzle for November 20, 2026, features a multi-word character name. This specific entry for 11/20/2026 12:00:00 AM contains a high number of consonants."
+    "2026-11-20": "The Marveldle puzzle for November 20, 2026, features a multi-word character name. This specific entry for 11/20/2026 12:00:00 AM contains a high number of consonants.",
+    "2026-11-21": "The Marveldle puzzle for November 21, 2026, presents a complex multi-character answer. This specific entry for 11/21/2026 12:00:00 AM features a long string of characters."
   }
 }

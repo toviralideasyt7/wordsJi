@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-20T15:37:30.277Z",
+  "generatedAt": "2026-11-21T06:22:15.521Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -545,6 +545,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common four-letter word with a distinct ending letter."
+    },
+    "2026-11-21": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "A loud mouth and a quiet friend return for a cinematic battle.",
+      "clue1": "A Kevin Smith production featuring a duo of slackers.",
+      "starts_with": "J",
+      "ends_with": "K",
+      "definition": "A 2006 comedy film featuring two recurring characters in a parody plot.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The title is long and specific, though the characters are iconic."
     }
   },
   "prose": {
@@ -591,6 +604,7 @@
     "2026-11-17": "The Framed puzzle for November 17, 2026 (#1713) is live with today's answer confirmed. The answer runs 14 characters, starting with T and ending with O — see the letter hints above before you peek.",
     "2026-11-18": "Framed puzzle #1714 for November 18, 2026, features a twelve-letter solution. The pattern consists of two separate words.",
     "2026-11-19": "Framed puzzle #1715 for November 19, 2026, features a five-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel pattern.",
-    "2026-11-20": "Framed puzzle #1716 was released on November 20, 2026. This specific entry follows a consonant-vowel-consonant-consonant pattern."
+    "2026-11-20": "Framed puzzle #1716 was released on November 20, 2026. This specific entry follows a consonant-vowel-consonant-consonant pattern.",
+    "2026-11-21": "Framed puzzle #1717 arrives on November 21, 2026. This specific entry features a long sequence of twenty-seven characters."
   }
 }
