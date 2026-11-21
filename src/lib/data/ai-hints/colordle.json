@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-20T15:38:23.438Z",
+  "generatedAt": "2026-11-21T16:11:50.758Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -582,6 +582,18 @@
       "difficulty": 6,
       "difficulty_label": "Hard",
       "difficulty_reason": "The specific dark grey-green hue is subtle and the word is uncommon."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "B",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -631,6 +643,7 @@
     "2026-11-18": "Colordle puzzle #1699 for November 18, 2026, features a ten-letter color name. The solution follows a pattern of two distinct words.",
     "2026-11-19": "Colordle puzzle #1700 for November 19, 2026, features an eight-letter word. The pattern includes a repeated consonant and three vowels.",
     "2026-11-20": "Colordle puzzle #1701 for November 20, 2026, features a multi-word phrase. The target color is a light shade of pink.",
-    "2026-11-21": "Colordle puzzle #1702 for November 21, 2026, features an eight-letter word. The target color is a very dark, desaturated shade."
+    "2026-11-21": "Colordle puzzle #1702 for November 21, 2026, features an eight-letter word. The target color is a very dark, desaturated shade.",
+    "2026-11-22": "The Colordle puzzle for November 22, 2026 (#1703) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with B — see the letter hints above before you peek."
   }
 }

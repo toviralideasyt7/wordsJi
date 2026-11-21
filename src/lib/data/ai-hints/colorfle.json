@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-20T15:37:31.424Z",
+  "generatedAt": "2026-11-21T16:11:50.569Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -579,6 +579,18 @@
       "difficulty": 4,
       "difficulty_label": "Normal",
       "difficulty_reason": "The multi-word format increases complexity, though the colors are common."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Y",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -628,6 +640,7 @@
     "2026-11-18": "Colorfle puzzle #1668 for November 18, 2026, features a three-color combination. The solution follows a specific pattern of brightness and saturation.",
     "2026-11-19": "Colorfle puzzle #1669 for November 19, 2026, features a sequence of three colors. The solution follows a pattern of six, six, and four letters.",
     "2026-11-20": "Colorfle puzzle #1670 was released on November 20, 2026. This specific combination features a pattern of three distinct color names.",
-    "2026-11-21": "Colorfle puzzle #1671 was released on November 21, 2026. This specific combination features a pattern of three distinct color names."
+    "2026-11-21": "Colorfle puzzle #1671 was released on November 21, 2026. This specific combination features a pattern of three distinct color names.",
+    "2026-11-22": "The Colorfle puzzle for November 22, 2026 (#1672) is live with today's answer confirmed. The answer runs 16 characters, starting with Y and ending with K — see the letter hints above before you peek."
   }
 }
