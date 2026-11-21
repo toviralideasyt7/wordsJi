@@ -3120,7 +3120,7 @@
   },
   "2026-11-20": {
     "date": "2026-11-20",
-    "dateId": "11/20/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/21/2026 12:00:00 AM",
     "comics": {
       "id": "agentantivenom",
       "name": "Agent Anti-Venom",
@@ -3185,7 +3185,7 @@
         "white wolf"
       ]
     },
-    "solvedAt": "2026-11-20T06:06:15.887Z"
+    "solvedAt": "2026-11-21T06:36:12.673Z"
   },
   "2026-11-21": {
     "date": "2026-11-21",
