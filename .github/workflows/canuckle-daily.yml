@@ -21,6 +21,11 @@ on:
     types:
       - canuckle-daily-requested
   workflow_dispatch:
+  # Safety net (2026-11-21): if the worker dispatch ever misses, this 05:45
+  # UTC run catches the day. Idempotent — commits only when data changed,
+  # so on normal days (worker already landed it) this is a no-op.
+  schedule:
+    - cron: '45 5 * * *'
 
 permissions:
   contents: write

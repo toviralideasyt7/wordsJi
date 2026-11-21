@@ -29,6 +29,13 @@ on:
   repository_dispatch:
     types:
       - marveldle-daily-requested
+  # Safety net (2026-11-21): a schedule event resolves SOLVE_MODE to 'today'
+  # (no dispatch payload), so this 06:50 UTC run re-solves today if the
+  # worker's 06:05 dispatch ever misses. Commits only on change — a no-op
+  # when the worker already landed the entry. The yesterday backfill stays
+  # worker-only (a schedule cannot pass mode=yesterday).
+  schedule:
+    - cron: '50 6 * * *'
   workflow_dispatch:
     inputs:
       mode:
