@@ -18,9 +18,9 @@
   );
 
   const articleSchema = $derived(
-    isArticleRoute
+    isArticleRoute && currentTitle
       ? generateArticleSchema({
-          headline: currentTitle || pathname,
+          headline: currentTitle,
           description:
             (page.data?.meta?.description as string | undefined) ??
             'Daily puzzle answers, solver tools, archives, and strategy guides for Wordle and other popular puzzle games.',
@@ -55,8 +55,8 @@
   <meta property="og:site_name" content="WordAuditor" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://wordauditor.com/wordauditor-logo.webp" />
-  <meta property="og:image:width" content="768" />
-  <meta property="og:image:height" content="319" />
+  <meta property="og:image:width" content="1408" />
+  <meta property="og:image:height" content="768" />
   <meta property="og:image:alt" content="WordAuditor - Daily Puzzle Answers and Solver Tools" />
   <meta name="twitter:site" content="@WordAuditor" />
   <meta name="twitter:image" content="https://wordauditor.com/wordauditor-logo.webp" />

@@ -138,7 +138,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 
         const last30 = getLast30Puzzles(puzzles, puzzlePositionByIndex, todayPuzzle);
         const pageTitle = dailyAnswerTitle('Canuckle', todayPuzzle.index, formattedDate);
-        const pageDescription = `Today's Canuckle answer for ${formattedDate}, yesterday's word, the Canadian fact, and a searchable archive. Updated every day with the latest puzzle.`;
+        const pageDescription = `Today's Canuckle answer for ${formattedDate}: yesterday's word, the Canadian fact, and a searchable archive, updated daily.`;
         const pageKeywords = `canuckle answer today, canuckle word, canuckle hint, canuckle fact, canuckle archive, canadian wordle`;
 
         const updatedStamp = updatedStampText('Canuckle', todayPuzzle.index, formattedDate);

@@ -8,7 +8,7 @@
 						<span class="text-white font-extrabold text-xs leading-none">W</span>
 					</div>
 					<span class="text-base font-extrabold tracking-tight text-slate-900 dark:text-slate-50">
-						Word<span class="text-teal-600 dark:text-teal-400">Solver</span><span class="text-amber-500 dark:text-amber-400">X</span>
+						Word<span class="text-teal-600 dark:text-teal-400">Auditor</span>
 					</span>
 				</a>
 				<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">

@@ -138,8 +138,8 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     // stays out of the title and meta description (snippet tease, not reveal).
     const pageTitle = dailyAnswerTitle('Wordle', wordleNumber, formattedDate);
     const pageDescription = wordleWord
-        ? `Wordle answer today ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on Wordle #${wordleNumber}? Hints, letter clues and the confirmed solution, updated daily.`
-        : `Wordle answer today ${formattedDate}: hints, letter clues and the confirmed solution for Wordle #${wordleNumber}, with yesterday's answer too. Updated daily.`;
+        ? `Wordle answer today ${formattedDate}: starts with ${startLetter}, ends with ${endLetter}. Stuck on #${wordleNumber}? Hints, clues and the confirmed solution, updated daily.`
+        : `Wordle answer today ${formattedDate}: hints, clues and the confirmed solution for #${wordleNumber}, with yesterday's answer too. Updated daily.`;
     const pageKeywords = `wordle answer today, wordle answer, wordle hint, wordle hint today, wordle answer for ${formattedDate}`;
 
     return {

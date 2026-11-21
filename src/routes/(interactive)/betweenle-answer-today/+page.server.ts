@@ -19,7 +19,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
     day: 'numeric',
   });
   const pageTitle = dailyAnswerTitle('Betweenle', todayAnswer.puzzleNumber, todaySeoDate);
-  const pageDescription = `Check Betweenle hints and reveal today's answer for ${todaySeoDate}. Includes the clue cards, the puzzle number, recent answers, and archive links.`;
+  const pageDescription = `Betweenle hints and today's answer for ${todaySeoDate}: clue cards, the puzzle number, recent answers, and the archive.`;
   const pageKeywords = [
     'betweenle answer today',
     'betweenle answer',
@@ -55,7 +55,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
   return {
     video,
     todayAnswer,
-    archive,
+    // The page renders only the last five previous answers (slice(-6, -1))
+    // plus yesterday, which is extracted above. Shipping the full archive
+    // serialized ~65 KB of JSON into the HTML for six rows.
+    archive: archive.slice(-6),
     todayLabel: formatBetweenleDate(todayAnswer.date),
     todaySeoDate,
     updatedStamp,
