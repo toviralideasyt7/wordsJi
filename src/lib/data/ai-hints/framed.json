@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-21T06:22:15.521Z",
+  "generatedAt": "2026-11-22T06:14:46.159Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -558,6 +558,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "The title is long and specific, though the characters are iconic."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -605,6 +617,7 @@
     "2026-11-18": "Framed puzzle #1714 for November 18, 2026, features a twelve-letter solution. The pattern consists of two separate words.",
     "2026-11-19": "Framed puzzle #1715 for November 19, 2026, features a five-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel pattern.",
     "2026-11-20": "Framed puzzle #1716 was released on November 20, 2026. This specific entry follows a consonant-vowel-consonant-consonant pattern.",
-    "2026-11-21": "Framed puzzle #1717 arrives on November 21, 2026. This specific entry features a long sequence of twenty-seven characters."
+    "2026-11-21": "Framed puzzle #1717 arrives on November 21, 2026. This specific entry features a long sequence of twenty-seven characters.",
+    "2026-11-22": "The Framed puzzle for November 22, 2026 (#1718) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with S — see the letter hints above before you peek."
   }
 }
