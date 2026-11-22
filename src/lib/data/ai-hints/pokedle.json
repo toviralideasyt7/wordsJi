@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-21T06:04:50.072Z",
+  "generatedAt": "2026-11-22T06:06:38.225Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -583,6 +583,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "It is a well-known Generation 1 Pokémon with a distinct shape."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "P",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -632,6 +644,7 @@
     "2026-11-18": "The Pokedle puzzle for November 18, 2026 (Game #1133) is live with today's answer confirmed. The answer runs 8 characters, starting with N and ending with M — see the letter hints above before you peek.",
     "2026-11-19": "Pokedle Game #1134 for November 19, 2026, features a seven-letter word. The pattern consists of unique letters starting with R and ending with N.",
     "2026-11-20": "The Pokedle puzzle for November 20, 2026 (Game #1135) is live with today's answer confirmed. The answer runs 6 characters, starting with G and ending with R — see the letter hints above before you peek.",
-    "2026-11-21": "Pokedle Game #1136 takes place on November 21, 2026. This specific puzzle features a seven-letter word ending in B."
+    "2026-11-21": "Pokedle Game #1136 takes place on November 21, 2026. This specific puzzle features a seven-letter word ending in B.",
+    "2026-11-22": "The Pokedle puzzle for November 22, 2026 (Game #1137) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with R — see the letter hints above before you peek."
   }
 }

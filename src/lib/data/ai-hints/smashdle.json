@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-21T06:05:17.731Z",
+  "generatedAt": "2026-11-22T06:10:19.918Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -580,6 +580,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-22": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "I",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -629,6 +641,7 @@
     "2026-11-18": "Smashdle Game #1169 for November 18, 2026, features a multi-word character name. The solution follows a complex pattern of repeating consonants and vowels.",
     "2026-11-19": "Smashdle Game #1170 for November 19, 2026, features a three-letter word. This specific puzzle follows a consonant-vowel-consonant pattern.",
     "2026-11-20": "Smashdle Game #1171 is the challenge for November 20, 2026. This puzzle features a repetitive four-letter pattern split into two words.",
-    "2026-11-21": "The Smashdle puzzle for November 21, 2026 (Game #1172) is live with today's answer confirmed. The answer runs 13 characters, starting with W and ending with R — see the letter hints above before you peek."
+    "2026-11-21": "The Smashdle puzzle for November 21, 2026 (Game #1172) is live with today's answer confirmed. The answer runs 13 characters, starting with W and ending with R — see the letter hints above before you peek.",
+    "2026-11-22": "The Smashdle puzzle for November 22, 2026 (Game #1173) is live with today's answer confirmed. The answer runs 11 characters, starting with I and ending with S — see the letter hints above before you peek."
   }
 }
