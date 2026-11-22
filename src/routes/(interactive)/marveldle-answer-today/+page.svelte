@@ -8,9 +8,7 @@
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
   import VideoSection from '$lib/components/VideoSection.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
     PRESTON_HAYES_AUTHOR_IMAGE,
@@ -174,9 +172,8 @@
       </div>
 
       {#if comics}
-        <div class="mt-6">
-          <AIHintCards gameName="Marveldle Comics" answer={comics.name} hints={data.aiHints} showAnswerReveal={false} />
-        </div>
+        <!-- Character-fact hints live in the comics/MCU fact blocks; word-game
+             AI hint cards (vowel counts over a character name) do not apply. -->
       {/if}
 
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -261,9 +258,6 @@
           />
         </div>
 
-        <div class="mt-8">
-          <PaaHints gameName="Marveldle" hints={data.aiHints} />
-        </div>
       {/if}
 
       <KeepExploring slug="marveldle" puzzleDate={data.visibleDateKey} />

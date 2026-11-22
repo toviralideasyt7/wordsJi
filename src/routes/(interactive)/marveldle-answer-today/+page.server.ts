@@ -11,7 +11,6 @@
 import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { getGameVideo } from '$lib/server/game-videos';
 import { getMarveldleDbAnswer } from '$lib/server/daily-games-answers';
 import type { CharacterData, MarveldleDayEntry } from '$lib/marveldle/types';
@@ -255,9 +254,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 					}
 				: null
 		},
-		// AI hint cards: merged against the Comics name, which is what the
-		// stored hint content describes (see scripts/generate-ai-hints.mjs).
-		aiHints: mergeHints(comics.name, getAIHints('marveldle', displayKey)),
+		// No word-game AI hints for Marveldle: the answer is a character, not a
+		// word — vowel/repeat counts over the name are nonsense (one entry
+		// claimed "23 vowels"). Character hints live in the fact blocks.
+		aiHints: null,
 		hintFaqs,
 		schemas: JSON.stringify([faqSchema, articleSchema, breadcrumbSchema]),
 		meta: {

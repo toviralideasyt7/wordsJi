@@ -222,26 +222,10 @@ const GAMES = [
 			return { text: d.solution, dateKey: d.date, numberText: `#${d.days_since_launch}` };
 		}
 	},
-	{
-		key: 'batterup', label: 'Batter Up',
-		async getInput() {
-			const answers = loadBatterup();
-			const keys = Object.keys(answers).sort();
-			const entry = answers[keys[keys.length - 1]];
-			if (!entry || entry.date !== keys[keys.length - 1] || !entry.player?.player_name) return null;
-			return { text: entry.player.player_name, dateKey: entry.date, numberText: `Game #${entry.gameNumber}` };
-		}
-	},
-	{
-		key: 'marveldle', label: 'Marveldle',
-		async getInput() {
-			const answers = loadMarveldle();
-			const keys = Object.keys(answers).sort();
-			const entry = answers[keys[keys.length - 1]];
-			if (!entry || entry.date !== keys[keys.length - 1] || !entry.comics?.name || !entry.mcu?.name) return null;
-			return { text: `${entry.comics.name} / ${entry.mcu.name}`, dateKey: entry.date, numberText: entry.dateId || entry.date };
-		}
-	},
+	// batterup and marveldle are intentionally NOT generated here: their answers
+	// are a player / a character, not a word, so the word-metric hints (vowel
+	// counts, letter repeats) are nonsense for them. Their pages carry
+	// fact-based hint cards instead.
 	{
 		key: 'canuckle', label: 'Canuckle',
 		async getInput() {

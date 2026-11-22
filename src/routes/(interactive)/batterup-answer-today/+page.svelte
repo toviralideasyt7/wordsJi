@@ -14,9 +14,7 @@
   import { PAGE_LEVEL_DUPLICATE_SCHEMA_TYPES, stripStructuredDataTypes } from '$lib/seo';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
   import VideoSection from '$lib/components/VideoSection.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
 
   let { data } = $props();
 
@@ -160,10 +158,6 @@
         </p>
       </section>
 
-      <div class="mt-8">
-        <AIHintCards gameName="Batter Up" answer={answerName} hints={data.aiHints} showAnswerReveal={false} />
-      </div>
-
       <!-- Reveal -->
       <section class="mt-8 rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-slate-100">
         <h2 class="text-2xl font-bold text-slate-900 mb-5">Today's answer</h2>
@@ -207,10 +201,6 @@
           vowelCount={answerVowelCount}
           repeatText={answerHasRepeat ? 'Yes' : 'No'}
         />
-      </div>
-
-      <div class="mt-8">
-        <PaaHints gameName="Batter Up" hints={data.aiHints} />
       </div>
 
       <KeepExploring slug="batterup" puzzleDate={data.visibleDateKey} />

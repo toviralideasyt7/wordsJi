@@ -8,7 +8,6 @@
 import { format, subDays } from 'date-fns';
 import { getPuzzleDateForGame } from '$lib/puzzle-window';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints } from '$lib/ai-hints';
 import { getTeamDivision, getLeague, calculateAge } from '$lib/batterup/solver';
 import type { BatterUpDayEntry } from '$lib/batterup/solver';
 import answersRaw from '$lib/data/batterup-answers.json';
@@ -99,7 +98,10 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	const pageKeywords = `batter up answer today, batter up answer, batter up mlb answer today, batter up hint, batter up hint today, batter up solver, batter up answer for ${formattedDate}`;
 
 	const updatedStamp = updatedStampText('Batter Up', entry.gameNumber, formattedDate);
-	const aiHints = mergeHints(player.player_name, getAIHints('batterup', dateKey));
+	// No word-game AI hints for Batter Up: the answer is a player, not a word,
+	// so vowel/repeat counts over the name are nonsense. This page's hints are
+	// the player-fact cards (position, team, age, jersey) built below.
+	const aiHints = null;
 
 	const hintFaqs = [
 		{
