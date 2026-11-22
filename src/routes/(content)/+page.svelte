@@ -15,59 +15,59 @@
   let todayKey = $derived(data.todayKey);
 
   const answerTodayGames = [
-    { name: 'Wordle Answer Today', href: '/wordle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'W', isPopular: true },
-    { name: 'Canuckle Answer Today', href: '/canuckle-answer-today', color: 'from-rose-500 to-red-600', icon: 'Ca', isPopular: true },
-    { name: 'Betweenle Answer Today', href: '/betweenle-answer-today', color: 'from-indigo-500 to-fuchsia-700', icon: 'Bt', isPopular: true },
-    { name: 'Colorfle Answer Today', href: '/colorfle-answer-today', color: 'from-fuchsia-500 to-pink-600', icon: 'Cf', isPopular: true },
-    { name: 'Nerdle Answer Today', href: '/nerdle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'Nd', isPopular: true },
-    { name: 'Phoodle Answer Today', href: '/phoodle-answer-today', color: 'from-orange-500 to-red-500', icon: 'P' },
-    { name: 'Quordle Answer Today', href: '/quordle-answer-today', color: 'from-blue-500 to-indigo-600', icon: 'Q', isPopular: true },
-    { name: 'Colordle Answer Today', href: '/colordle-answer-today', color: 'from-pink-500 to-purple-600', icon: 'C' },
-    { name: 'Countryle Answer Today', href: '/countryle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'Cy' },
-    { name: 'Framed Answer Today', href: '/framed-answer-today', color: 'from-amber-500 to-orange-600', icon: 'Fr' },
-    { name: 'Semantle Answer Today', href: '/semantle-answer-today', color: 'from-cyan-500 to-teal-600', icon: 'S' },
-    { name: 'Waffle Answer Today', href: '/waffle-answer-today', color: 'from-amber-500 to-yellow-600', icon: 'W' },
-    { name: 'Globle Answer Today', href: '/globle-answer-today', color: 'from-sky-500 to-blue-600', icon: 'G' },
-    { name: 'Dotadle Answer Today', href: '/dotadle-answer-today-updated', color: 'from-red-600 to-rose-700', icon: 'D' },
-    { name: 'LoLdle Answer Today', href: '/loldle-answer-today-updated', color: 'from-violet-500 to-purple-700', icon: 'L' },
-    { name: 'Pokedle Answer Today', href: '/pokedle-answer-today-updated', color: 'from-yellow-400 to-amber-500', icon: 'P' },
-    { name: 'Narutodle Answer Today', href: '/narutodle-answer-today-updated', color: 'from-orange-600 to-red-600', icon: 'N' },
-    { name: 'Smashdle Answer Today', href: '/smashdle-answer-today-updated', color: 'from-red-500 to-pink-600', icon: 'S' },
-    { name: 'One Piecedle Answer Today', href: '/onepiecedle-answer-today-updated', color: 'from-blue-600 to-cyan-600', icon: 'O' },
-    { name: 'Contexto Answer Today', href: '/contexto-answer-today', color: 'from-violet-500 to-fuchsia-600', icon: 'Cx' },
-    { name: 'Searchle Answer Today', href: '/searchle-answer-today', color: 'from-purple-500 to-pink-600', icon: 'Se' },
-    { name: 'Phrazle Answer Today', href: '/phrazle-answer-today', color: 'from-teal-500 to-lime-600', icon: 'Ph' },
-    { name: 'Spotle Answer Today', href: '/spotle-answer-today', color: 'from-teal-500 to-teal-600', icon: 'Sp' },
-    { name: 'Worgle Answer Today', href: '/worgle-answer-today', color: 'from-slate-700 to-slate-900', icon: 'Wo' },
-    { name: 'Worldle Answer Today', href: '/worldle-answer-today', color: 'from-sky-500 to-blue-700', icon: 'Wr' },
-    { name: 'Batter Up Answer Today', href: '/batterup-answer-today', color: 'from-blue-600 to-indigo-700', icon: 'Bu' },
-    { name: 'Marveldle Answer Today', href: '/marveldle-answer-today', color: 'from-red-600 to-blue-700', icon: 'Mv' },
+    { name: 'Wordle Answer Today', href: '/wordle-answer-today', color: 'bg-teal-600', icon: 'W', isPopular: true },
+    { name: 'Canuckle Answer Today', href: '/canuckle-answer-today', color: 'bg-rose-600', icon: 'Ca', isPopular: true },
+    { name: 'Betweenle Answer Today', href: '/betweenle-answer-today', color: 'bg-indigo-600', icon: 'Bt', isPopular: true },
+    { name: 'Colorfle Answer Today', href: '/colorfle-answer-today', color: 'bg-fuchsia-600', icon: 'Cf', isPopular: true },
+    { name: 'Nerdle Answer Today', href: '/nerdle-answer-today', color: 'bg-teal-600', icon: 'Nd', isPopular: true },
+    { name: 'Phoodle Answer Today', href: '/phoodle-answer-today', color: 'bg-orange-600', icon: 'P' },
+    { name: 'Quordle Answer Today', href: '/quordle-answer-today', color: 'bg-blue-600', icon: 'Q', isPopular: true },
+    { name: 'Colordle Answer Today', href: '/colordle-answer-today', color: 'bg-pink-600', icon: 'C' },
+    { name: 'Countryle Answer Today', href: '/countryle-answer-today', color: 'bg-teal-600', icon: 'Cy' },
+    { name: 'Framed Answer Today', href: '/framed-answer-today', color: 'bg-amber-600', icon: 'Fr' },
+    { name: 'Semantle Answer Today', href: '/semantle-answer-today', color: 'bg-cyan-600', icon: 'S' },
+    { name: 'Waffle Answer Today', href: '/waffle-answer-today', color: 'bg-amber-600', icon: 'W' },
+    { name: 'Globle Answer Today', href: '/globle-answer-today', color: 'bg-sky-600', icon: 'G' },
+    { name: 'Dotadle Answer Today', href: '/dotadle-answer-today-updated', color: 'bg-red-600', icon: 'D' },
+    { name: 'LoLdle Answer Today', href: '/loldle-answer-today-updated', color: 'bg-violet-600', icon: 'L' },
+    { name: 'Pokedle Answer Today', href: '/pokedle-answer-today-updated', color: 'bg-yellow-600', icon: 'P' },
+    { name: 'Narutodle Answer Today', href: '/narutodle-answer-today-updated', color: 'bg-orange-600', icon: 'N' },
+    { name: 'Smashdle Answer Today', href: '/smashdle-answer-today-updated', color: 'bg-red-600', icon: 'S' },
+    { name: 'One Piecedle Answer Today', href: '/onepiecedle-answer-today-updated', color: 'bg-blue-600', icon: 'O' },
+    { name: 'Contexto Answer Today', href: '/contexto-answer-today', color: 'bg-violet-600', icon: 'Cx' },
+    { name: 'Searchle Answer Today', href: '/searchle-answer-today', color: 'bg-purple-600', icon: 'Se' },
+    { name: 'Phrazle Answer Today', href: '/phrazle-answer-today', color: 'bg-teal-600', icon: 'Ph' },
+    { name: 'Spotle Answer Today', href: '/spotle-answer-today', color: 'bg-teal-600', icon: 'Sp' },
+    { name: 'Worgle Answer Today', href: '/worgle-answer-today', color: 'bg-slate-600', icon: 'Wo' },
+    { name: 'Worldle Answer Today', href: '/worldle-answer-today', color: 'bg-sky-600', icon: 'Wr' },
+    { name: 'Batter Up Answer Today', href: '/batterup-answer-today', color: 'bg-blue-600', icon: 'Bu' },
+    { name: 'Marveldle Answer Today', href: '/marveldle-answer-today', color: 'bg-red-600', icon: 'Mv' },
   ];
 
   const solverTools = [
-    { name: '5-Letter Wordle Solver', href: '/wordle-solver', color: 'from-teal-500 to-teal-600', icon: '5', isPopular: true },
-    { name: 'Nerdle Solver', href: '/nerdle-solver', color: 'from-teal-500 to-teal-600', icon: 'Nd', isPopular: true },
-    { name: 'Betweenle Solver', href: '/betweenle-solver', color: 'from-indigo-500 to-fuchsia-700', icon: 'Bt', isPopular: true },
-    { name: 'Colorfle Solver', href: '/colorfle-solver', color: 'from-fuchsia-500 to-pink-600', icon: 'Cf', isPopular: true },
-    { name: 'Boggle Solver', href: '/boggle-solver', color: 'from-teal-500 to-cyan-600', icon: 'Bg' },
-    { name: 'Hangman Solver', href: '/hangman-solver', color: 'from-orange-500 to-amber-600', icon: 'H' },
-    { name: 'Light Out Solver', href: '/light-out-solver', color: 'from-teal-500 to-cyan-600', icon: 'Lo' },
-    { name: 'Phoodle Solver', href: '/phoodle-solver', color: 'from-orange-500 to-red-500', icon: 'Ph' },
-    { name: 'Quordle Solver', href: '/quordle-solver', color: 'from-blue-500 to-indigo-600', icon: 'Q' },
-    { name: 'Squaredle Solver', href: '/squaredle-solver', color: 'from-red-500 to-rose-700', icon: 'Sq' },
-    { name: 'Colordle Solver', href: '/colordle-solver', color: 'from-pink-500 to-purple-600', icon: 'C' },
-    { name: 'Countryle Solver', href: '/countryle-solver', color: 'from-teal-500 to-teal-600', icon: 'Cy' },
-    { name: 'Waffle Solver', href: '/waffle-solver', color: 'from-amber-500 to-yellow-600', icon: 'W' },
-    { name: 'Word Ladder Solver', href: '/word-ladder-solver', color: 'from-violet-500 to-fuchsia-600', icon: 'WL' },
-    { name: 'LoLdle Solver', href: '/loldle-solver', color: 'from-violet-500 to-purple-700', icon: 'L' },
-    { name: 'Dotadle Solver', href: '/dotadle-solver', color: 'from-red-600 to-rose-700', icon: 'D' },
-    { name: 'Pokedle Solver', href: '/pokedle-solver', color: 'from-yellow-400 to-amber-500', icon: 'P' },
-    { name: 'Smashdle Solver', href: '/smashdle-solver', color: 'from-rose-500 to-pink-600', icon: 'S' },
-    { name: 'Narutodle Solver', href: '/narutodle-solver', color: 'from-orange-500 to-red-600', icon: 'N' },
-    { name: 'Onepiecedle Solver', href: '/onepiecedle-solver', color: 'from-blue-500 to-cyan-600', icon: 'O' },
-    { name: 'Soundmap Solver', href: '/soundmap-solver', color: 'from-teal-500 to-teal-700', icon: 'SM' },
-    { name: 'Searchle Solver', href: '/searchle-solver', color: 'from-purple-500 to-pink-600', icon: 'Se' },
-    { name: 'Spotle Solver', href: '/spotle-solver', color: 'from-teal-500 to-teal-600', icon: 'S' },
+    { name: '5-Letter Wordle Solver', href: '/wordle-solver', color: 'bg-teal-600', icon: '5', isPopular: true },
+    { name: 'Nerdle Solver', href: '/nerdle-solver', color: 'bg-teal-600', icon: 'Nd', isPopular: true },
+    { name: 'Betweenle Solver', href: '/betweenle-solver', color: 'bg-indigo-600', icon: 'Bt', isPopular: true },
+    { name: 'Colorfle Solver', href: '/colorfle-solver', color: 'bg-fuchsia-600', icon: 'Cf', isPopular: true },
+    { name: 'Boggle Solver', href: '/boggle-solver', color: 'bg-teal-600', icon: 'Bg' },
+    { name: 'Hangman Solver', href: '/hangman-solver', color: 'bg-orange-600', icon: 'H' },
+    { name: 'Light Out Solver', href: '/light-out-solver', color: 'bg-teal-600', icon: 'Lo' },
+    { name: 'Phoodle Solver', href: '/phoodle-solver', color: 'bg-orange-600', icon: 'Ph' },
+    { name: 'Quordle Solver', href: '/quordle-solver', color: 'bg-blue-600', icon: 'Q' },
+    { name: 'Squaredle Solver', href: '/squaredle-solver', color: 'bg-red-600', icon: 'Sq' },
+    { name: 'Colordle Solver', href: '/colordle-solver', color: 'bg-pink-600', icon: 'C' },
+    { name: 'Countryle Solver', href: '/countryle-solver', color: 'bg-teal-600', icon: 'Cy' },
+    { name: 'Waffle Solver', href: '/waffle-solver', color: 'bg-amber-600', icon: 'W' },
+    { name: 'Word Ladder Solver', href: '/word-ladder-solver', color: 'bg-violet-600', icon: 'WL' },
+    { name: 'LoLdle Solver', href: '/loldle-solver', color: 'bg-violet-600', icon: 'L' },
+    { name: 'Dotadle Solver', href: '/dotadle-solver', color: 'bg-red-600', icon: 'D' },
+    { name: 'Pokedle Solver', href: '/pokedle-solver', color: 'bg-yellow-600', icon: 'P' },
+    { name: 'Smashdle Solver', href: '/smashdle-solver', color: 'bg-rose-600', icon: 'S' },
+    { name: 'Narutodle Solver', href: '/narutodle-solver', color: 'bg-orange-600', icon: 'N' },
+    { name: 'Onepiecedle Solver', href: '/onepiecedle-solver', color: 'bg-blue-600', icon: 'O' },
+    { name: 'Soundmap Solver', href: '/soundmap-solver', color: 'bg-teal-600', icon: 'SM' },
+    { name: 'Searchle Solver', href: '/searchle-solver', color: 'bg-purple-600', icon: 'Se' },
+    { name: 'Spotle Solver', href: '/spotle-solver', color: 'bg-teal-600', icon: 'S' },
   ];
 
   let jsonLd = $derived.by(() =>
@@ -210,7 +210,7 @@
         <article class="h-full">
           <a
             href={game.href}
-            class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {game.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            class="group relative block h-full overflow-hidden rounded-xl {game.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <div class="flex items-start justify-between mb-3">
               <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
@@ -267,7 +267,7 @@
           <article class="h-full">
             <a
               href={tool.href}
-              class="group relative block h-full overflow-hidden rounded-xl bg-gradient-to-br {tool.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              class="group relative block h-full overflow-hidden rounded-xl {tool.color} p-4 sm:p-5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div class="flex items-start justify-between mb-3">
                 <div class="bg-white/20 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-white text-lg sm:text-xl font-bold backdrop-blur-sm">
