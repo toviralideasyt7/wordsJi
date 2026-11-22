@@ -196,7 +196,7 @@ export interface WordleHintContent {
 }
 
 function isVowel(letter: string): boolean {
-	return 'AEIOU'.includes(letter);
+	return 'AEIOU'.includes(letter.toUpperCase());
 }
 
 function countVowels(word: string): number {
