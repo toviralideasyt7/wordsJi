@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-21T21:41:11.977Z",
+  "generatedAt": "2026-11-22T19:34:42.580Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -590,6 +590,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 18 vowels.",
+      "repeat_hint": "25 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -640,6 +652,7 @@
     "2026-11-19": "The Phrazle puzzle for November 19, 2026 (2026-11-19) is live with today's answer confirmed. The answer runs 32 characters, starting with T and ending with G — see the letter hints above before you peek.",
     "2026-11-20": "The Phrazle puzzle for November 20, 2026 (2026-11-20) is live with today's answer confirmed. The answer runs 32 characters, starting with L and ending with S — see the letter hints above before you peek.",
     "2026-11-21": "The Phrazle puzzle for November 21, 2026, features a long sequence of characters. Puzzle 2026-11-21 requires identifying two separate idiomatic expressions.",
-    "2026-11-22": "The Phrazle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 17 characters, starting with S and ending with H — see the letter hints above before you peek."
+    "2026-11-22": "The Phrazle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 17 characters, starting with S and ending with H — see the letter hints above before you peek.",
+    "2026-11-23": "The Phrazle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 43 characters, starting with A and ending with S — see the letter hints above before you peek."
   }
 }

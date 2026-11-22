@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-21T21:37:10.550Z",
+  "generatedAt": "2026-11-22T19:30:55.788Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -590,6 +590,18 @@
       "difficulty": 2,
       "difficulty_label": "Easy",
       "difficulty_reason": "Extremely famous global brand with a distinct name structure."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "K",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -640,6 +652,7 @@
     "2026-11-19": "Spotle puzzle Day 1707 arrives on November 19, 2026. This specific entry features a name starting and ending with the same letter.",
     "2026-11-20": "Spotle puzzle Day 1708 arrives on November 20, 2026. This specific entry follows a seven-letter pattern across two words.",
     "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words.",
-    "2026-11-22": "Spotle puzzle Day 1710 arrives on November 22, 2026. This specific entry features a nine-letter pattern."
+    "2026-11-22": "Spotle puzzle Day 1710 arrives on November 22, 2026. This specific entry features a nine-letter pattern.",
+    "2026-11-23": "The Spotle puzzle for November 23, 2026 (Day 1711) is live with today's answer confirmed. The answer runs 9 characters, starting with K and ending with T — see the letter hints above before you peek."
   }
 }

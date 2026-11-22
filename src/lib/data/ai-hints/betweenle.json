@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-21T21:39:52.340Z",
+  "generatedAt": "2026-11-22T19:34:38.482Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -591,6 +591,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -641,6 +653,7 @@
     "2026-11-19": "Betweenle puzzle #1344 takes place on November 19, 2026. This specific entry follows a consonant-heavy five-letter pattern.",
     "2026-11-20": "Betweenle puzzle #1345 was released on November 20, 2026. This specific entry follows a five-letter pattern with no repeating characters.",
     "2026-11-21": "Betweenle puzzle #1346 arrives on November 21, 2026. This specific entry follows a five-letter pattern starting with a vowel.",
-    "2026-11-22": "The Betweenle puzzle for November 22, 2026 (#1347) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with H — see the letter hints above before you peek."
+    "2026-11-22": "The Betweenle puzzle for November 22, 2026 (#1347) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with H — see the letter hints above before you peek.",
+    "2026-11-23": "The Betweenle puzzle for November 23, 2026 (#1348) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek."
   }
 }
