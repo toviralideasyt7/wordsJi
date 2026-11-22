@@ -1161,5 +1161,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-09/15/0c876dff-0b9e6403-d3208390-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-21",
     "fetchedAt": "2026-11-21T09:25:42.322Z"
+  },
+  "2026-11-22": {
+    "date": "2026-11-22",
+    "gameNumber": 1008,
+    "player": {
+      "player_name": "Jonny DeLuca",
+      "player_id": "5005912",
+      "team_name": "Rays",
+      "born": "USA",
+      "birth_date": "1998-07-10",
+      "position": [
+        "RF"
+      ],
+      "debut": 2023,
+      "jersey_number": 21
+    },
+    "videoDescription": "[08/30/26 : SD 4 - 5 TB] Jonny DeLuca gets a two-run home run after the ball pops out of the left fielder's glove to tie the game at 3 in the bottom of the 9th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/30/1c1c62a4-1960f89f-2df3f064-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-22",
+    "fetchedAt": "2026-11-22T13:32:40.454Z"
   }
 }
