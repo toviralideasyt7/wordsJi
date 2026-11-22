@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-21T16:11:50.249Z",
+  "generatedAt": "2026-11-22T15:04:02.362Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -596,6 +596,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -646,6 +658,7 @@
     "2026-11-19": "Wordle puzzle #1979 arrives on November 19, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-11-20": "Wordle puzzle #1980 takes place on November 20, 2026. This specific entry follows a vowel-consonant-vowel-consonant-vowel pattern.",
     "2026-11-21": "Wordle puzzle #1981 takes place on November 21, 2026. This specific word follows a consonant-vowel-consonant-consonant-consonant pattern.",
-    "2026-11-22": "The Wordle puzzle for November 22, 2026 (#1982) is live with today's answer confirmed. The answer runs 5 characters, starting with U and ending with D — see the letter hints above before you peek."
+    "2026-11-22": "The Wordle puzzle for November 22, 2026 (#1982) is live with today's answer confirmed. The answer runs 5 characters, starting with U and ending with D — see the letter hints above before you peek.",
+    "2026-11-23": "The Wordle puzzle for November 23, 2026 (#1983) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with H — see the letter hints above before you peek."
   }
 }
