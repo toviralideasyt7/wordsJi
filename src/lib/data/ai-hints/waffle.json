@@ -1,6 +1,6 @@
 {
   "game": "waffle",
-  "generatedAt": "2026-11-22T01:11:06.574Z",
+  "generatedAt": "2026-11-23T01:11:06.332Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 10 vowels.",
@@ -579,6 +579,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 12 vowels.",
+      "repeat_hint": "15 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -628,6 +640,7 @@
     "2026-11-19": "Waffle puzzle #1763 for November 19, 2026, features a specific set of six words. The letter distribution includes several repetitions across the grid.",
     "2026-11-20": "Waffle puzzle #1764 was released on November 20, 2026. This specific grid features a diverse array of consonants across its six words.",
     "2026-11-21": "Waffle puzzle #1765 was released on November 21, 2026. This specific grid features a variety of five-letter words with intersecting letters.",
-    "2026-11-22": "The Waffle puzzle for November 22, 2026 (#1766) is live with today's answer confirmed. The answer runs 30 characters, starting with M and ending with L — see the letter hints above before you peek."
+    "2026-11-22": "The Waffle puzzle for November 22, 2026 (#1766) is live with today's answer confirmed. The answer runs 30 characters, starting with M and ending with L — see the letter hints above before you peek.",
+    "2026-11-23": "The Waffle puzzle for November 23, 2026 (#1767) is live with today's answer confirmed. The answer runs 30 characters, starting with S and ending with E — see the letter hints above before you peek."
   }
 }
