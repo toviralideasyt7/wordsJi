@@ -3246,7 +3246,7 @@
   },
   "2026-11-22": {
     "date": "2026-11-22",
-    "dateId": "11/22/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/23/2026 12:00:00 AM",
     "comics": {
       "id": "goliath",
       "name": "Goliath (Bill Foster)",
@@ -3301,7 +3301,7 @@
         "john krasinski"
       ]
     },
-    "solvedAt": "2026-11-22T14:55:43.091Z"
+    "solvedAt": "2026-11-23T06:35:44.655Z"
   },
   "2026-11-23": {
     "date": "2026-11-23",
