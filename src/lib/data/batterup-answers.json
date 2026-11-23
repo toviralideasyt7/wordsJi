@@ -1181,5 +1181,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/30/1c1c62a4-1960f89f-2df3f064-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-22",
     "fetchedAt": "2026-11-22T13:32:40.454Z"
+  },
+  "2026-11-23": {
+    "date": "2026-11-23",
+    "gameNumber": 1009,
+    "player": {
+      "player_name": "Corbin Carroll",
+      "player_id": "42404",
+      "team_name": "Diamondbacks",
+      "born": "USA",
+      "birth_date": "2000-08-21",
+      "position": [
+        "RF"
+      ],
+      "debut": 2022,
+      "jersey_number": 7
+    },
+    "videoDescription": "[06/13/26 : ARI 1 - 2 CIN] Corbin Carroll crushes a solo home run to right-center field for his 12th home run of the season, putting the D-backs on the board in the 1st.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/13/5e847b53-3ea426ad-ef8494b2-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-23",
+    "fetchedAt": "2026-11-23T16:23:04.633Z"
   }
 }
