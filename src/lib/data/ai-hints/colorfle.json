@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-22T15:04:02.242Z",
+  "generatedAt": "2026-11-23T16:28:02.697Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -603,6 +603,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "kind": "word",
+      "vowel_hint": "It contains 9 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "A pale bloom, a salty fruit, and a deep red wine.",
+      "clue1": "Three distinct shades of purple, green, and red.",
+      "starts_with": "L",
+      "ends_with": "N",
+      "definition": "A trio of colors: a light purple, a yellowish-green, and a dark brownish-red.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Requires identifying three specific color names with moderate length."
     }
   },
   "prose": {
@@ -654,6 +667,7 @@
     "2026-11-20": "Colorfle puzzle #1670 was released on November 20, 2026. This specific combination features a pattern of three distinct color names.",
     "2026-11-21": "Colorfle puzzle #1671 was released on November 21, 2026. This specific combination features a pattern of three distinct color names.",
     "2026-11-22": "The Colorfle puzzle for November 22, 2026 (#1672) is live with today's answer confirmed. The answer runs 16 characters, starting with Y and ending with K — see the letter hints above before you peek.",
-    "2026-11-23": "The Colorfle puzzle for November 23, 2026 (#1673) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with W — see the letter hints above before you peek."
+    "2026-11-23": "The Colorfle puzzle for November 23, 2026 (#1673) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with W — see the letter hints above before you peek.",
+    "2026-11-24": "Colorfle puzzle #1674 was released on November 24, 2026. This specific combination features a total of 22 letters across three words."
   }
 }
