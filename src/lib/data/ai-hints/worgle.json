@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-22T19:30:55.768Z",
+  "generatedAt": "2026-11-23T18:52:31.045Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -603,6 +603,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "M",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -654,6 +666,7 @@
     "2026-11-20": "Worgle puzzle #1773 for November 20, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-consonant-vowel-consonant pattern.",
     "2026-11-21": "Worgle puzzle #1774 for November 21, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-11-22": "Worgle puzzle #1775 for November 22, 2026, features a six-letter word. The solution follows a consonant-vowel-consonant-vowel-consonant-consonant pattern.",
-    "2026-11-23": "The Worgle puzzle for November 23, 2026 (#1776) is live with today's answer confirmed. The answer runs 6 characters, starting with S and ending with N — see the letter hints above before you peek."
+    "2026-11-23": "The Worgle puzzle for November 23, 2026 (#1776) is live with today's answer confirmed. The answer runs 6 characters, starting with S and ending with N — see the letter hints above before you peek.",
+    "2026-11-24": "The Worgle puzzle for November 24, 2026 (#1777) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with M — see the letter hints above before you peek."
   }
 }
