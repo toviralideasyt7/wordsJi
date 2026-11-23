@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-22T06:06:39.245Z",
+  "generatedAt": "2026-11-23T06:07:04.175Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -597,6 +597,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "V",
+      "ends_with": "X",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -647,6 +659,7 @@
     "2026-11-19": "LoLdle Game #1596 for November 19, 2026, features a four-letter name. The pattern consists of a single vowel surrounded by consonants.",
     "2026-11-20": "The LoLdle puzzle for November 20, 2026 (Game #1597) is live with today's answer confirmed. The answer runs 4 characters, starting with S and ending with T — see the letter hints above before you peek.",
     "2026-11-21": "LoLdle Game #1598 takes place on November 21, 2026. This puzzle features a four-letter name ending in a vowel.",
-    "2026-11-22": "The LoLdle puzzle for November 22, 2026 (Game #1599) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with Z — see the letter hints above before you peek."
+    "2026-11-22": "The LoLdle puzzle for November 22, 2026 (Game #1599) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with Z — see the letter hints above before you peek.",
+    "2026-11-23": "The LoLdle puzzle for November 23, 2026 (Game #1600) is live with today's answer confirmed. The answer runs 3 characters, starting with V and ending with X — see the letter hints above before you peek."
   }
 }

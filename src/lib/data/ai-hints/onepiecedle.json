@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-22T06:06:38.733Z",
+  "generatedAt": "2026-11-23T06:07:04.688Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -594,6 +594,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -644,6 +656,7 @@
     "2026-11-19": "OnePiecedle Game #963 arrives on November 19, 2026. This puzzle features a nine-letter name with a repeating consonant.",
     "2026-11-20": "OnePiecedle Game #964 takes place on November 20, 2026. This puzzle features a six-letter word with no repeating characters.",
     "2026-11-21": "OnePiecedle Game #965 takes place on November 21, 2026. This puzzle features a four-letter word starting with P.",
-    "2026-11-22": "The OnePiecedle puzzle for November 22, 2026 (Game #966) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with O — see the letter hints above before you peek."
+    "2026-11-22": "The OnePiecedle puzzle for November 22, 2026 (Game #966) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with O — see the letter hints above before you peek.",
+    "2026-11-23": "The OnePiecedle puzzle for November 23, 2026 (Game #967) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with Y — see the letter hints above before you peek."
   }
 }
