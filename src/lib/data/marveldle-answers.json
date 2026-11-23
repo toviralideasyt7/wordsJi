@@ -3302,5 +3302,62 @@
       ]
     },
     "solvedAt": "2026-11-22T14:55:43.091Z"
+  },
+  "2026-11-23": {
+    "date": "2026-11-23",
+    "dateId": "11/23/2026 12:00:00 AM",
+    "comics": {
+      "id": "moondragon",
+      "name": "Moondragon",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Flight",
+        "Shapeshifting",
+        "Psychic",
+        "Kinesis",
+        "ForceFields"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1972,
+      "firstApparitionComicTitle": "Iron Man #54",
+      "keywords": [
+        "heather douglas",
+        "douglas",
+        "dragon"
+      ]
+    },
+    "mcu": {
+      "id": "aldrichkillian",
+      "name": "Aldrich Killian",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Regeneration",
+        "Elemental"
+      ],
+      "origin": "Earth",
+      "actorName": " Guy Pearce",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "AIM"
+      ],
+      "keywords": [
+        "killiam",
+        "extremis"
+      ]
+    },
+    "solvedAt": "2026-11-23T06:05:52.314Z"
   }
 }
