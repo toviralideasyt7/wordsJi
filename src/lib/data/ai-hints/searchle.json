@@ -1,6 +1,6 @@
 {
   "game": "searchle",
-  "generatedAt": "2026-11-22T21:52:51.035Z",
+  "generatedAt": "2026-11-23T18:23:14.531Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -576,6 +576,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "T",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -625,6 +637,7 @@
     "2026-11-20": "The Searchle puzzle for November 20, 2026 (#118) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with S — see the letter hints above before you peek.",
     "2026-11-21": "Searchle puzzle #119 for November 21, 2026, features a seven-letter word. The target word begins and ends with the same consonant.",
     "2026-11-22": "The Searchle puzzle for November 22, 2026 (#35) is live with today's answer confirmed. The answer runs 8 characters, starting with A and ending with G — see the letter hints above before you peek.",
-    "2026-11-23": "The Searchle puzzle for November 23, 2026 (#121) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with D — see the letter hints above before you peek."
+    "2026-11-23": "The Searchle puzzle for November 23, 2026 (#121) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with D — see the letter hints above before you peek.",
+    "2026-11-24": "The Searchle puzzle for November 24, 2026 (#122) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with T — see the letter hints above before you peek."
   }
 }
