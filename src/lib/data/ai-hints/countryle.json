@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-22T19:34:38.479Z",
+  "generatedAt": "2026-11-23T16:41:58.119Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -605,6 +605,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "A",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -656,6 +668,7 @@
     "2026-11-20": "Countryle Game #1736 for November 20, 2026, features a ten-letter word. The pattern begins and ends with consonants and vowels in a specific sequence.",
     "2026-11-21": "Countryle Game #1737 for November 21, 2026, features a ten-letter word. The pattern consists of several vowels and a few repeated consonants.",
     "2026-11-22": "Countryle Game #1738 takes place on November 22, 2026. This puzzle features a seven-letter word with no repeating characters.",
-    "2026-11-23": "The Countryle puzzle for November 23, 2026 (Game #1739) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with Y — see the letter hints above before you peek."
+    "2026-11-23": "The Countryle puzzle for November 23, 2026 (Game #1739) is live with today's answer confirmed. The answer runs 8 characters, starting with P and ending with Y — see the letter hints above before you peek.",
+    "2026-11-24": "The Countryle puzzle for November 24, 2026 (Game #1740) is live with today's answer confirmed. The answer runs 10 characters, starting with A and ending with N — see the letter hints above before you peek."
   }
 }

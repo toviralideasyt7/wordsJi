@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-22T19:34:38.484Z",
+  "generatedAt": "2026-11-23T16:45:37.708Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -604,6 +604,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "F",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -655,6 +667,7 @@
     "2026-11-20": "Contexto puzzle #1524 was released on November 20, 2026. This specific word follows a seven-letter pattern ending in a vowel.",
     "2026-11-21": "Contexto puzzle #1525 was released on November 21, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-consonant pattern.",
     "2026-11-22": "The Contexto puzzle for November 22, 2026 (#1526) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with R — see the letter hints above before you peek.",
-    "2026-11-23": "The Contexto puzzle for November 23, 2026 (#1527) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with T — see the letter hints above before you peek."
+    "2026-11-23": "The Contexto puzzle for November 23, 2026 (#1527) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with T — see the letter hints above before you peek.",
+    "2026-11-24": "The Contexto puzzle for November 24, 2026 (#1528) is live with today's answer confirmed. The answer runs 9 characters, starting with F and ending with E — see the letter hints above before you peek."
   }
 }

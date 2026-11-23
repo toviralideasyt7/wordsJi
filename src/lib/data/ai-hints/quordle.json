@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-22T19:30:55.759Z",
+  "generatedAt": "2026-11-23T16:41:55.360Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -603,6 +603,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "8 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "D",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -654,6 +666,7 @@
     "2026-11-20": "Quordle puzzle #1761 was released on November 20, 2026. This specific set features four five-letter words with varying vowel placements.",
     "2026-11-21": "Quordle puzzle #1762 for November 21, 2026, features four unique words. The letter patterns vary across the set of solutions.",
     "2026-11-22": "Quordle puzzle #1763 for November 22, 2026, features four five-letter words. The set includes a variety of starting consonants.",
-    "2026-11-23": "The Quordle puzzle for November 23, 2026 (#1764) is live with today's answer confirmed. The answer runs 20 characters, starting with R and ending with E — see the letter hints above before you peek."
+    "2026-11-23": "The Quordle puzzle for November 23, 2026 (#1764) is live with today's answer confirmed. The answer runs 20 characters, starting with R and ending with E — see the letter hints above before you peek.",
+    "2026-11-24": "The Quordle puzzle for November 24, 2026 (#1765) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with Y — see the letter hints above before you peek."
   }
 }

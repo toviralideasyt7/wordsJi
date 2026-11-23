@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-22T19:30:55.788Z",
+  "generatedAt": "2026-11-23T16:41:54.984Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -602,6 +602,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -653,6 +665,7 @@
     "2026-11-20": "Spotle puzzle Day 1708 arrives on November 20, 2026. This specific entry follows a seven-letter pattern across two words.",
     "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words.",
     "2026-11-22": "Spotle puzzle Day 1710 arrives on November 22, 2026. This specific entry features a nine-letter pattern.",
-    "2026-11-23": "The Spotle puzzle for November 23, 2026 (Day 1711) is live with today's answer confirmed. The answer runs 9 characters, starting with K and ending with T — see the letter hints above before you peek."
+    "2026-11-23": "The Spotle puzzle for November 23, 2026 (Day 1711) is live with today's answer confirmed. The answer runs 9 characters, starting with K and ending with T — see the letter hints above before you peek.",
+    "2026-11-24": "The Spotle puzzle for November 24, 2026 (Day 1712) is live with today's answer confirmed. The answer runs 11 characters, starting with L and ending with N — see the letter hints above before you peek."
   }
 }
