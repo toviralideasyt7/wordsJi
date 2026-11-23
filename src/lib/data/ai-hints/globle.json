@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-22T06:06:36.175Z",
+  "generatedAt": "2026-11-23T06:13:29.564Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -600,6 +600,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-23": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -650,6 +662,7 @@
     "2026-11-19": "The Globle puzzle for November 19, 2026, features a five-letter country. This 2026-11-19 challenge follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-11-20": "The Globle puzzle for November 20, 2026, features a multi-word name. Puzzle 2026-11-20 contains a repeating pattern of vowels and consonants.",
     "2026-11-21": "The Globle puzzle for November 21, 2026, features a word with eight letters. This 2026-11-21 challenge requires finding a nation with a repeated vowel.",
-    "2026-11-22": "The Globle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek."
+    "2026-11-22": "The Globle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek.",
+    "2026-11-23": "The Globle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with L — see the letter hints above before you peek."
   }
 }
