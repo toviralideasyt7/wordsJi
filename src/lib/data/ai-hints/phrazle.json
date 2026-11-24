@@ -1,6 +1,6 @@
 {
   "game": "phrazle",
-  "generatedAt": "2026-11-23T16:45:40.326Z",
+  "generatedAt": "2026-11-24T16:40:30.010Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 13 vowels.",
@@ -614,6 +614,19 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "9 letters appear more than once.",
+      "riddle": "One leaves a trace, the other seeks a short break.",
+      "clue1": "Two common idioms involving personal impact and a brief rest.",
+      "starts_with": "M",
+      "ends_with": "N",
+      "definition": "",
+      "difficulty": 7,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Two distinct idioms combined make the pattern harder to guess."
     }
   },
   "prose": {
@@ -666,6 +679,7 @@
     "2026-11-21": "The Phrazle puzzle for November 21, 2026, features a long sequence of characters. Puzzle 2026-11-21 requires identifying two separate idiomatic expressions.",
     "2026-11-22": "The Phrazle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 17 characters, starting with S and ending with H — see the letter hints above before you peek.",
     "2026-11-23": "The Phrazle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 43 characters, starting with A and ending with S — see the letter hints above before you peek.",
-    "2026-11-24": "The Phrazle puzzle for November 24, 2026 (2026-11-24) is live with today's answer confirmed. The answer runs 26 characters, starting with H and ending with S — see the letter hints above before you peek."
+    "2026-11-24": "The Phrazle puzzle for November 24, 2026 (2026-11-24) is live with today's answer confirmed. The answer runs 26 characters, starting with H and ending with S — see the letter hints above before you peek.",
+    "2026-11-25": "The Phrazle puzzle for November 25, 2026, features a multi-phrase solution. Puzzle 2026-11-25 consists of several words with a specific repeating letter pattern."
   }
 }

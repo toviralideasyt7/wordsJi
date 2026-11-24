@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-23T16:42:14.950Z",
+  "generatedAt": "2026-11-24T16:38:00.474Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -615,6 +615,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I swing open and shut, but I have no wings.",
+      "clue1": "Essential for a door to function.",
+      "starts_with": "H",
+      "ends_with": "E",
+      "definition": "A jointed device on a door or lid to allow swinging.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common household object with a distinct function."
     }
   },
   "prose": {
@@ -667,6 +680,7 @@
     "2026-11-21": "Betweenle puzzle #1346 arrives on November 21, 2026. This specific entry follows a five-letter pattern starting with a vowel.",
     "2026-11-22": "The Betweenle puzzle for November 22, 2026 (#1347) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with H — see the letter hints above before you peek.",
     "2026-11-23": "The Betweenle puzzle for November 23, 2026 (#1348) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
-    "2026-11-24": "The Betweenle puzzle for November 24, 2026 (#1349) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with S — see the letter hints above before you peek."
+    "2026-11-24": "The Betweenle puzzle for November 24, 2026 (#1349) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with S — see the letter hints above before you peek.",
+    "2026-11-25": "Betweenle puzzle #1350 is scheduled for November 25, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-vowel pattern."
   }
 }

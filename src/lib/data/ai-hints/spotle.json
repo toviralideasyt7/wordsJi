@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-23T16:41:54.984Z",
+  "generatedAt": "2026-11-24T16:38:12.900Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -614,6 +614,19 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 5 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "A Disney star who found a powerful voice beyond the screen.",
+      "clue1": "Known for hit songs and advocacy for mental health.",
+      "starts_with": "D",
+      "ends_with": "O",
+      "definition": "American singer, songwriter, and actor who rose to fame on Disney Channel.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "A globally recognized celebrity with a distinct name structure."
     }
   },
   "prose": {
@@ -666,6 +679,7 @@
     "2026-11-21": "Spotle puzzle Day 1709 takes place on November 21, 2026. This specific entry follows a seven-letter pattern across two words.",
     "2026-11-22": "Spotle puzzle Day 1710 arrives on November 22, 2026. This specific entry features a nine-letter pattern.",
     "2026-11-23": "The Spotle puzzle for November 23, 2026 (Day 1711) is live with today's answer confirmed. The answer runs 9 characters, starting with K and ending with T — see the letter hints above before you peek.",
-    "2026-11-24": "The Spotle puzzle for November 24, 2026 (Day 1712) is live with today's answer confirmed. The answer runs 11 characters, starting with L and ending with N — see the letter hints above before you peek."
+    "2026-11-24": "The Spotle puzzle for November 24, 2026 (Day 1712) is live with today's answer confirmed. The answer runs 11 characters, starting with L and ending with N — see the letter hints above before you peek.",
+    "2026-11-25": "Spotle puzzle Day 1713 occurs on November 25, 2026. This specific entry follows a ten-letter pattern across two words."
   }
 }

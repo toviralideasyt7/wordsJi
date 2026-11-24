@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-23T16:41:55.360Z",
+  "generatedAt": "2026-11-24T16:38:47.506Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -615,6 +615,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "7 letters appear more than once.",
+      "riddle": "Fruit flesh, a chemical drain, a path, and a heavy heart.",
+      "clue1": "Four words involving fruit, chemistry, travel, and grief.",
+      "starts_with": "P",
+      "ends_with": "N",
+      "definition": "A set of four words: fleshy, to drain, a way, and to grieve.",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Common words but varied vowel placements and some overlapping consonants."
     }
   },
   "prose": {
@@ -667,6 +680,7 @@
     "2026-11-21": "Quordle puzzle #1762 for November 21, 2026, features four unique words. The letter patterns vary across the set of solutions.",
     "2026-11-22": "Quordle puzzle #1763 for November 22, 2026, features four five-letter words. The set includes a variety of starting consonants.",
     "2026-11-23": "The Quordle puzzle for November 23, 2026 (#1764) is live with today's answer confirmed. The answer runs 20 characters, starting with R and ending with E — see the letter hints above before you peek.",
-    "2026-11-24": "The Quordle puzzle for November 24, 2026 (#1765) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with Y — see the letter hints above before you peek."
+    "2026-11-24": "The Quordle puzzle for November 24, 2026 (#1765) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with Y — see the letter hints above before you peek.",
+    "2026-11-25": "Quordle puzzle #1766 for November 25, 2026, features four distinct five-letter words. The letter distribution includes several repeated consonants across the set."
   }
 }

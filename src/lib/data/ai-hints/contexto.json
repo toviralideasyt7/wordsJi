@@ -1,6 +1,6 @@
 {
   "game": "contexto",
-  "generatedAt": "2026-11-23T16:45:37.708Z",
+  "generatedAt": "2026-11-24T16:40:00.786Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -616,6 +616,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I turn the lock but have no hands to hold.",
+      "clue1": "Essential for opening a secured door.",
+      "starts_with": "K",
+      "ends_with": "Y",
+      "definition": "A small piece of shaped metal used to operate a lock.",
+      "difficulty": 2,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common object with a very strong semantic association to locks."
     }
   },
   "prose": {
@@ -668,6 +681,7 @@
     "2026-11-21": "Contexto puzzle #1525 was released on November 21, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-consonant pattern.",
     "2026-11-22": "The Contexto puzzle for November 22, 2026 (#1526) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with R — see the letter hints above before you peek.",
     "2026-11-23": "The Contexto puzzle for November 23, 2026 (#1527) is live with today's answer confirmed. The answer runs 7 characters, starting with A and ending with T — see the letter hints above before you peek.",
-    "2026-11-24": "The Contexto puzzle for November 24, 2026 (#1528) is live with today's answer confirmed. The answer runs 9 characters, starting with F and ending with E — see the letter hints above before you peek."
+    "2026-11-24": "The Contexto puzzle for November 24, 2026 (#1528) is live with today's answer confirmed. The answer runs 9 characters, starting with F and ending with E — see the letter hints above before you peek.",
+    "2026-11-25": "Contexto puzzle #1529 for November 25, 2026, features a three-letter word. The target follows a consonant-vowel-consonant pattern."
   }
 }
