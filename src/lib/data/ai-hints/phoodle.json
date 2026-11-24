@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-23T16:26:46.120Z",
+  "generatedAt": "2026-11-24T16:15:28.981Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -620,6 +620,19 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common word with a distinct sound association and simple structure."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "I bind things tight, but I am not a knot.",
+      "clue1": "Strong string used for tying packages.",
+      "starts_with": "T",
+      "ends_with": "E",
+      "definition": "Strong thread or string consisting of two or more strands twisted together.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common household object with a simple five-letter structure."
     }
   },
   "prose": {
@@ -672,6 +685,7 @@
     "2026-11-21": "The Phoodle puzzle for November 21, 2026, features a five-letter word. Puzzle 2026-11-21 follows a consonant-vowel-consonant-vowel-consonant pattern.",
     "2026-11-22": "The Phoodle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with E — see the letter hints above before you peek.",
     "2026-11-23": "The Phoodle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with S — see the letter hints above before you peek.",
-    "2026-11-24": "The Phoodle puzzle for November 24, 2026, features a five-letter word. Puzzle 2026-11-24 follows a pattern that starts and ends with the same consonant."
+    "2026-11-24": "The Phoodle puzzle for November 24, 2026, features a five-letter word. Puzzle 2026-11-24 follows a pattern that starts and ends with the same consonant.",
+    "2026-11-25": "The Phoodle puzzle for November 25, 2026, features a five-letter word. Puzzle 2026-11-25 follows a consonant-vowel-consonant-consonant-vowel pattern."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-23T16:28:02.059Z",
+  "generatedAt": "2026-11-24T16:16:11.293Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -620,6 +620,19 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "A kick of heat that makes your tongue dance.",
+      "clue1": "Often associated with chili peppers or hot sauce.",
+      "starts_with": "S",
+      "ends_with": "Y",
+      "definition": "Flavored with or smelling of strong spices, especially those that are hot.",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Common adjective with a distinct and recognizable meaning."
     }
   },
   "prose": {
@@ -672,6 +685,7 @@
     "2026-11-21": "Wordle puzzle #1981 takes place on November 21, 2026. This specific word follows a consonant-vowel-consonant-consonant-consonant pattern.",
     "2026-11-22": "The Wordle puzzle for November 22, 2026 (#1982) is live with today's answer confirmed. The answer runs 5 characters, starting with U and ending with D — see the letter hints above before you peek.",
     "2026-11-23": "The Wordle puzzle for November 23, 2026 (#1983) is live with today's answer confirmed. The answer runs 5 characters, starting with F and ending with H — see the letter hints above before you peek.",
-    "2026-11-24": "The Wordle puzzle for November 24, 2026 (#1984) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with R — see the letter hints above before you peek."
+    "2026-11-24": "The Wordle puzzle for November 24, 2026 (#1984) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with R — see the letter hints above before you peek.",
+    "2026-11-25": "Wordle puzzle #1985 takes place on November 25, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant-consonant-vowel structure ending in Y."
   }
 }

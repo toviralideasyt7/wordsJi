@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-23T16:28:11.455Z",
+  "generatedAt": "2026-11-24T16:15:47.468Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -618,6 +618,19 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "kind": "word",
+      "vowel_hint": "It contains 8 vowels.",
+      "repeat_hint": "5 letters appear more than once.",
+      "riddle": "A gemstone's glow, like a tropical sea's flow.",
+      "clue1": "A bright, blue-green shade.",
+      "starts_with": "A",
+      "ends_with": "B",
+      "definition": "A pale greenish-blue color, named after a gemstone.",
+      "difficulty": 4,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "The word is long but describes a common color and gemstone."
     }
   },
   "prose": {
@@ -670,6 +683,7 @@
     "2026-11-21": "Colordle puzzle #1702 for November 21, 2026, features an eight-letter word. The target color is a very dark, desaturated shade.",
     "2026-11-22": "The Colordle puzzle for November 22, 2026 (#1703) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with B — see the letter hints above before you peek.",
     "2026-11-23": "The Colordle puzzle for November 23, 2026 (#1704) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with C — see the letter hints above before you peek.",
-    "2026-11-24": "The Colordle puzzle for November 24, 2026 (#1705) is live with today's answer confirmed. The answer runs 9 characters, starting with L and ending with E — see the letter hints above before you peek."
+    "2026-11-24": "The Colordle puzzle for November 24, 2026 (#1705) is live with today's answer confirmed. The answer runs 9 characters, starting with L and ending with E — see the letter hints above before you peek.",
+    "2026-11-25": "Colordle puzzle #1706 for November 25, 2026, features a ten-letter word. The solution follows a pattern with several repeating vowels."
   }
 }
