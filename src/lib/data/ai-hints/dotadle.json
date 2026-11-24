@@ -1,6 +1,6 @@
 {
   "game": "dotadle",
-  "generatedAt": "2026-11-23T06:07:04.030Z",
+  "generatedAt": "2026-11-24T06:07:02.199Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -609,6 +609,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "K",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -660,6 +672,7 @@
     "2026-11-20": "Dotadle Game #1071 for November 20, 2026, features a twelve-letter solution. The pattern consists of two separate words starting with the same letter.",
     "2026-11-21": "Dotadle Game #1072 is scheduled for November 21, 2026. This puzzle features a twelve-letter combination across two words.",
     "2026-11-22": "The Dotadle puzzle for November 22, 2026 (Game #1073) is live with today's answer confirmed. The answer runs 8 characters, starting with O and ending with I — see the letter hints above before you peek.",
-    "2026-11-23": "The Dotadle puzzle for November 23, 2026 (Game #1074) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with G — see the letter hints above before you peek."
+    "2026-11-23": "The Dotadle puzzle for November 23, 2026 (Game #1074) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with G — see the letter hints above before you peek.",
+    "2026-11-24": "The Dotadle puzzle for November 24, 2026 (Game #1075) is live with today's answer confirmed. The answer runs 11 characters, starting with B and ending with K — see the letter hints above before you peek."
   }
 }

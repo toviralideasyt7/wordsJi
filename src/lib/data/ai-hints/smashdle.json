@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-23T06:07:04.104Z",
+  "generatedAt": "2026-11-24T06:10:43.127Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -604,6 +604,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "G",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -655,6 +667,7 @@
     "2026-11-20": "Smashdle Game #1171 is the challenge for November 20, 2026. This puzzle features a repetitive four-letter pattern split into two words.",
     "2026-11-21": "The Smashdle puzzle for November 21, 2026 (Game #1172) is live with today's answer confirmed. The answer runs 13 characters, starting with W and ending with R — see the letter hints above before you peek.",
     "2026-11-22": "The Smashdle puzzle for November 22, 2026 (Game #1173) is live with today's answer confirmed. The answer runs 11 characters, starting with I and ending with S — see the letter hints above before you peek.",
-    "2026-11-23": "The Smashdle puzzle for November 23, 2026 (Game #1174) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with E — see the letter hints above before you peek."
+    "2026-11-23": "The Smashdle puzzle for November 23, 2026 (Game #1174) is live with today's answer confirmed. The answer runs 10 characters, starting with K and ending with E — see the letter hints above before you peek.",
+    "2026-11-24": "The Smashdle puzzle for November 24, 2026 (Game #1175) is live with today's answer confirmed. The answer runs 8 characters, starting with G and ending with A — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-23T06:07:04.686Z",
+  "generatedAt": "2026-11-24T06:07:01.851Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -606,6 +606,18 @@
       "difficulty": 7,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -657,6 +669,7 @@
     "2026-11-20": "Narutodle Game #932 for November 20, 2026, features a name with eight letters. The pattern consists of several vowels and a few repeated consonants.",
     "2026-11-21": "The Narutodle puzzle for November 21, 2026 (Game #933) is live with today's answer confirmed. The answer runs 14 characters, starting with K and ending with I — see the letter hints above before you peek.",
     "2026-11-22": "The Narutodle puzzle for November 22, 2026 (Game #934) is live with today's answer confirmed. The answer runs 12 characters, starting with M and ending with A — see the letter hints above before you peek.",
-    "2026-11-23": "The Narutodle puzzle for November 23, 2026 (Game #935) is live with today's answer confirmed. The answer runs 15 characters, starting with H and ending with I — see the letter hints above before you peek."
+    "2026-11-23": "The Narutodle puzzle for November 23, 2026 (Game #935) is live with today's answer confirmed. The answer runs 15 characters, starting with H and ending with I — see the letter hints above before you peek.",
+    "2026-11-24": "The Narutodle puzzle for November 24, 2026 (Game #936) is live with today's answer confirmed. The answer runs 9 characters, starting with N and ending with A — see the letter hints above before you peek."
   }
 }

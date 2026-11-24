@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-23T06:07:04.175Z",
+  "generatedAt": "2026-11-24T06:07:02.080Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -609,6 +609,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-24": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "N",
+      "ends_with": "P",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -660,6 +672,7 @@
     "2026-11-20": "The LoLdle puzzle for November 20, 2026 (Game #1597) is live with today's answer confirmed. The answer runs 4 characters, starting with S and ending with T — see the letter hints above before you peek.",
     "2026-11-21": "LoLdle Game #1598 takes place on November 21, 2026. This puzzle features a four-letter name ending in a vowel.",
     "2026-11-22": "The LoLdle puzzle for November 22, 2026 (Game #1599) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with Z — see the letter hints above before you peek.",
-    "2026-11-23": "The LoLdle puzzle for November 23, 2026 (Game #1600) is live with today's answer confirmed. The answer runs 3 characters, starting with V and ending with X — see the letter hints above before you peek."
+    "2026-11-23": "The LoLdle puzzle for November 23, 2026 (Game #1600) is live with today's answer confirmed. The answer runs 3 characters, starting with V and ending with X — see the letter hints above before you peek.",
+    "2026-11-24": "The LoLdle puzzle for November 24, 2026 (Game #1601) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with P — see the letter hints above before you peek."
   }
 }
