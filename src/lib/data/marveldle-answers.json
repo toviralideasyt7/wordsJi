@@ -3359,5 +3359,62 @@
       ]
     },
     "solvedAt": "2026-11-23T18:47:27.928Z"
+  },
+  "2026-11-24": {
+    "date": "2026-11-24",
+    "dateId": "11/24/2026 12:00:00 AM",
+    "comics": {
+      "id": "namora",
+      "name": "Namora",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant",
+        "Atlantean"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Flight",
+        "Shapeshifting"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1947,
+      "firstApparitionComicTitle": "Marvel Mystery Comics #82",
+      "keywords": [
+        "aquaria neptunia",
+        "neptunia"
+      ]
+    },
+    "mcu": {
+      "id": "crossbones",
+      "name": "Crossbones",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance"
+      ],
+      "origin": "Earth",
+      "actorName": "Frank Grillo",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "Hydra",
+        "SHIELD"
+      ],
+      "keywords": [
+        "brock rumlow",
+        "rumlow"
+      ]
+    },
+    "solvedAt": "2026-11-24T06:05:42.233Z"
   }
 }
