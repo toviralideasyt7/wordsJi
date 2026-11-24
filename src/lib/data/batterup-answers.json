@@ -1201,5 +1201,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-06/13/5e847b53-3ea426ad-ef8494b2-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-23",
     "fetchedAt": "2026-11-23T16:23:04.633Z"
+  },
+  "2026-11-24": {
+    "date": "2026-11-24",
+    "gameNumber": 1010,
+    "player": {
+      "player_name": "Sal Stewart",
+      "player_id": "5080771",
+      "team_name": "Reds",
+      "born": "USA",
+      "birth_date": "2003-12-07",
+      "position": [
+        "1B"
+      ],
+      "debut": 2025,
+      "jersey_number": 27
+    },
+    "videoDescription": "[07/28/26 : CLE 6 - 5 CIN] Sal Stewart crushes a solo home run to left-center field to get the Reds on the board in the bottom of the 3rd inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/28/141159cf-1643de92-58184834-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-24",
+    "fetchedAt": "2026-11-24T16:12:21.399Z"
   }
 }
