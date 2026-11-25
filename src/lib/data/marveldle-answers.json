@@ -3416,5 +3416,59 @@
       ]
     },
     "solvedAt": "2026-11-24T18:23:39.477Z"
+  },
+  "2026-11-25": {
+    "date": "2026-11-25",
+    "dateId": "11/25/2026 12:00:00 AM",
+    "comics": {
+      "id": "prowler_aarondavis",
+      "name": "Prowler (Aaron Davis)",
+      "gender": "Male",
+      "type": "Villain",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Flight",
+        "Technological"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 2011,
+      "firstApparitionComicTitle": "Ultimate Comics Spider-Man #1",
+      "keywords": [
+        "aaron davis",
+        "davis",
+        "prowler"
+      ]
+    },
+    "mcu": {
+      "id": "starlord",
+      "name": "Star-Lord",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Celestial"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Luke Klein, Wyatt Oleff, Chris Pratt",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "GuardiansOfTheGalaxy",
+        "Ravagers"
+      ],
+      "keywords": [
+        "peter",
+        "quill",
+        "lord"
+      ]
+    },
+    "solvedAt": "2026-11-25T06:06:03.669Z"
   }
 }
