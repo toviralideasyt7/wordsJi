@@ -1,6 +1,6 @@
 {
   "game": "onepiecedle",
-  "generatedAt": "2026-11-24T06:07:02.378Z",
+  "generatedAt": "2026-11-25T06:04:29.970Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 14 vowels.",
@@ -618,6 +618,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -670,6 +682,7 @@
     "2026-11-21": "OnePiecedle Game #965 takes place on November 21, 2026. This puzzle features a four-letter word starting with P.",
     "2026-11-22": "The OnePiecedle puzzle for November 22, 2026 (Game #966) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with O — see the letter hints above before you peek.",
     "2026-11-23": "The OnePiecedle puzzle for November 23, 2026 (Game #967) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with Y — see the letter hints above before you peek.",
-    "2026-11-24": "The OnePiecedle puzzle for November 24, 2026 (Game #968) is live with today's answer confirmed. The answer runs 12 characters, starting with J and ending with S — see the letter hints above before you peek."
+    "2026-11-24": "The OnePiecedle puzzle for November 24, 2026 (Game #968) is live with today's answer confirmed. The answer runs 12 characters, starting with J and ending with S — see the letter hints above before you peek.",
+    "2026-11-25": "The OnePiecedle puzzle for November 25, 2026 (Game #969) is live with today's answer confirmed. The answer runs 12 characters, starting with B and ending with S — see the letter hints above before you peek."
   }
 }

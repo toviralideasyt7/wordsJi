@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-24T06:06:59.014Z",
+  "generatedAt": "2026-11-25T06:04:27.058Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -624,6 +624,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-25": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "A",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -676,6 +688,7 @@
     "2026-11-21": "The Globle puzzle for November 21, 2026, features a word with eight letters. This 2026-11-21 challenge requires finding a nation with a repeated vowel.",
     "2026-11-22": "The Globle puzzle for November 22, 2026 (2026-11-22) is live with today's answer confirmed. The answer runs 11 characters, starting with A and ending with N — see the letter hints above before you peek.",
     "2026-11-23": "The Globle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with L — see the letter hints above before you peek.",
-    "2026-11-24": "The Globle puzzle for November 24, 2026 (2026-11-24) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with A — see the letter hints above before you peek."
+    "2026-11-24": "The Globle puzzle for November 24, 2026 (2026-11-24) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with A — see the letter hints above before you peek.",
+    "2026-11-25": "The Globle puzzle for November 25, 2026 (2026-11-25) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with A — see the letter hints above before you peek."
   }
 }
