@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-24T16:38:00.474Z",
+  "generatedAt": "2026-11-25T17:22:41.425Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -628,6 +628,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Common household object with a distinct function."
+    },
+    "2026-11-26": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -681,6 +693,7 @@
     "2026-11-22": "The Betweenle puzzle for November 22, 2026 (#1347) is live with today's answer confirmed. The answer runs 5 characters, starting with L and ending with H — see the letter hints above before you peek.",
     "2026-11-23": "The Betweenle puzzle for November 23, 2026 (#1348) is live with today's answer confirmed. The answer runs 5 characters, starting with R and ending with T — see the letter hints above before you peek.",
     "2026-11-24": "The Betweenle puzzle for November 24, 2026 (#1349) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with S — see the letter hints above before you peek.",
-    "2026-11-25": "Betweenle puzzle #1350 is scheduled for November 25, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-vowel pattern."
+    "2026-11-25": "Betweenle puzzle #1350 is scheduled for November 25, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-vowel pattern.",
+    "2026-11-26": "The Betweenle puzzle for November 26, 2026 (#1351) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with R — see the letter hints above before you peek."
   }
 }
