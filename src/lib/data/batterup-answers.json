@@ -1221,5 +1221,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/28/141159cf-1643de92-58184834-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-24",
     "fetchedAt": "2026-11-24T16:12:21.399Z"
+  },
+  "2026-11-25": {
+    "date": "2026-11-25",
+    "gameNumber": 1011,
+    "player": {
+      "player_name": "Jose Ramirez",
+      "player_id": "32801",
+      "team_name": "Guardians",
+      "born": "D.R.",
+      "birth_date": "1992-09-17",
+      "position": [
+        "3B"
+      ],
+      "debut": 2013,
+      "jersey_number": 11
+    },
+    "videoDescription": "[08/30/26 : KC 1 - 11 CLE] José Ramírez hits a two-run home run to right field to gain a 9-1 lead in the bottom of the 4th inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/30/8c09212e-6ed81cb5-7a07607f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-25",
+    "fetchedAt": "2026-11-25T15:56:38.484Z"
   }
 }
