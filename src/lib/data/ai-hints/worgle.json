@@ -1,6 +1,6 @@
 {
   "game": "worgle",
-  "generatedAt": "2026-11-25T22:04:28.122Z",
+  "generatedAt": "2026-11-26T22:04:32.353Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -639,6 +639,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "V",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -693,6 +705,7 @@
     "2026-11-23": "The Worgle puzzle for November 23, 2026 (#1776) is live with today's answer confirmed. The answer runs 6 characters, starting with S and ending with N — see the letter hints above before you peek.",
     "2026-11-24": "The Worgle puzzle for November 24, 2026 (#1777) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with M — see the letter hints above before you peek.",
     "2026-11-25": "The Worgle puzzle for November 25, 2026 (#1778) is live with today's answer confirmed. The answer runs 6 characters, starting with C and ending with Y — see the letter hints above before you peek.",
-    "2026-11-26": "The Worgle puzzle for November 26, 2026 (#1779) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek."
+    "2026-11-26": "The Worgle puzzle for November 26, 2026 (#1779) is live with today's answer confirmed. The answer runs 6 characters, starting with E and ending with E — see the letter hints above before you peek.",
+    "2026-11-27": "The Worgle puzzle for November 27, 2026 (#1780) is live with today's answer confirmed. The answer runs 6 characters, starting with V and ending with L — see the letter hints above before you peek."
   }
 }
