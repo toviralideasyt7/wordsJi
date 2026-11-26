@@ -1,6 +1,6 @@
 {
   "game": "pokedle",
-  "generatedAt": "2026-11-25T06:04:29.969Z",
+  "generatedAt": "2026-11-26T06:04:30.487Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 8 vowels.",
@@ -631,6 +631,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-26": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "M",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -684,6 +696,7 @@
     "2026-11-22": "The Pokedle puzzle for November 22, 2026 (Game #1137) is live with today's answer confirmed. The answer runs 6 characters, starting with P and ending with R — see the letter hints above before you peek.",
     "2026-11-23": "The Pokedle puzzle for November 23, 2026 (Game #1138) is live with today's answer confirmed. The answer runs 9 characters, starting with F and ending with D — see the letter hints above before you peek.",
     "2026-11-24": "The Pokedle puzzle for November 24, 2026 (Game #1139) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with P — see the letter hints above before you peek.",
-    "2026-11-25": "The Pokedle puzzle for November 25, 2026 (Game #1140) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with O — see the letter hints above before you peek."
+    "2026-11-25": "The Pokedle puzzle for November 25, 2026 (Game #1140) is live with today's answer confirmed. The answer runs 6 characters, starting with D and ending with O — see the letter hints above before you peek.",
+    "2026-11-26": "The Pokedle puzzle for November 26, 2026 (Game #1141) is live with today's answer confirmed. The answer runs 7 characters, starting with M and ending with S — see the letter hints above before you peek."
   }
 }

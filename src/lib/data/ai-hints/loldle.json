@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-25T06:04:29.795Z",
+  "generatedAt": "2026-11-26T06:04:29.984Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -633,6 +633,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-26": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "R",
+      "ends_with": "E",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -686,6 +698,7 @@
     "2026-11-22": "The LoLdle puzzle for November 22, 2026 (Game #1599) is live with today's answer confirmed. The answer runs 4 characters, starting with F and ending with Z — see the letter hints above before you peek.",
     "2026-11-23": "The LoLdle puzzle for November 23, 2026 (Game #1600) is live with today's answer confirmed. The answer runs 3 characters, starting with V and ending with X — see the letter hints above before you peek.",
     "2026-11-24": "The LoLdle puzzle for November 24, 2026 (Game #1601) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with P — see the letter hints above before you peek.",
-    "2026-11-25": "The LoLdle puzzle for November 25, 2026 (Game #1602) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with D — see the letter hints above before you peek."
+    "2026-11-25": "The LoLdle puzzle for November 25, 2026 (Game #1602) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with D — see the letter hints above before you peek.",
+    "2026-11-26": "The LoLdle puzzle for November 26, 2026 (Game #1603) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with E — see the letter hints above before you peek."
   }
 }
