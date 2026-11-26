@@ -1,6 +1,6 @@
 {
   "game": "framed",
-  "generatedAt": "2026-11-25T17:22:42.724Z",
+  "generatedAt": "2026-11-26T17:03:11.097Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -618,6 +618,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "3 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "G",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -670,6 +682,7 @@
     "2026-11-23": "The Framed puzzle for November 23, 2026 (#1719) is live with today's answer confirmed. The answer runs 7 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-11-24": "The Framed puzzle for November 24, 2026 (#1720) is live with today's answer confirmed. The answer runs 10 characters, starting with J and ending with L — see the letter hints above before you peek.",
     "2026-11-25": "The Framed puzzle for November 25, 2026 (#1721) is live with today's answer confirmed. The answer runs 10 characters, starting with G and ending with S — see the letter hints above before you peek.",
-    "2026-11-26": "The Framed puzzle for November 26, 2026 (#1722) is live with today's answer confirmed. The answer runs 4 characters, starting with J and ending with S — see the letter hints above before you peek."
+    "2026-11-26": "The Framed puzzle for November 26, 2026 (#1722) is live with today's answer confirmed. The answer runs 4 characters, starting with J and ending with S — see the letter hints above before you peek.",
+    "2026-11-27": "The Framed puzzle for November 27, 2026 (#1723) is live with today's answer confirmed. The answer runs 13 characters, starting with T and ending with G — see the letter hints above before you peek."
   }
 }

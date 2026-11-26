@@ -1,6 +1,6 @@
 {
   "game": "semantle",
-  "generatedAt": "2026-11-25T17:21:13.967Z",
+  "generatedAt": "2026-11-26T17:01:42.544Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -639,6 +639,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "T",
+      "ends_with": "L",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -693,6 +705,7 @@
     "2026-11-23": "The Semantle puzzle for November 23, 2026 (#1759) is live with today's answer confirmed. The answer runs 5 characters, starting with M and ending with E — see the letter hints above before you peek.",
     "2026-11-24": "The Semantle puzzle for November 24, 2026 (#1760) is live with today's answer confirmed. The answer runs 9 characters, starting with N and ending with Y — see the letter hints above before you peek.",
     "2026-11-25": "Semantle puzzle #1761 was released on November 25, 2026. The target word follows a consonant-vowel-consonant-vowel pattern.",
-    "2026-11-26": "The Semantle puzzle for November 26, 2026 (#1762) is live with today's answer confirmed. The answer runs 10 characters, starting with O and ending with N — see the letter hints above before you peek."
+    "2026-11-26": "The Semantle puzzle for November 26, 2026 (#1762) is live with today's answer confirmed. The answer runs 10 characters, starting with O and ending with N — see the letter hints above before you peek.",
+    "2026-11-27": "The Semantle puzzle for November 27, 2026 (#1763) is live with today's answer confirmed. The answer runs 6 characters, starting with T and ending with L — see the letter hints above before you peek."
   }
 }

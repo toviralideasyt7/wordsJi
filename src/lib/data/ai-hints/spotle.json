@@ -1,6 +1,6 @@
 {
   "game": "spotle",
-  "generatedAt": "2026-11-25T17:21:14.138Z",
+  "generatedAt": "2026-11-26T17:01:42.591Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -639,6 +639,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "J",
+      "ends_with": "Z",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -693,6 +705,7 @@
     "2026-11-23": "The Spotle puzzle for November 23, 2026 (Day 1711) is live with today's answer confirmed. The answer runs 9 characters, starting with K and ending with T — see the letter hints above before you peek.",
     "2026-11-24": "The Spotle puzzle for November 24, 2026 (Day 1712) is live with today's answer confirmed. The answer runs 11 characters, starting with L and ending with N — see the letter hints above before you peek.",
     "2026-11-25": "Spotle puzzle Day 1713 occurs on November 25, 2026. This specific entry follows a ten-letter pattern across two words.",
-    "2026-11-26": "The Spotle puzzle for November 26, 2026 (Day 1714) is live with today's answer confirmed. The answer runs 7 characters, starting with T and ending with E — see the letter hints above before you peek."
+    "2026-11-26": "The Spotle puzzle for November 26, 2026 (Day 1714) is live with today's answer confirmed. The answer runs 7 characters, starting with T and ending with E — see the letter hints above before you peek.",
+    "2026-11-27": "The Spotle puzzle for November 27, 2026 (Day 1715) is live with today's answer confirmed. The answer runs 4 characters, starting with J and ending with Z — see the letter hints above before you peek."
   }
 }
