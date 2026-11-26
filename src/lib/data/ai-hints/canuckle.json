@@ -1,6 +1,6 @@
 {
   "game": "canuckle",
-  "generatedAt": "2026-11-25T05:13:54.231Z",
+  "generatedAt": "2026-11-26T05:22:45.944Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 2 vowels.",
@@ -629,6 +629,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-26": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "R",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -682,6 +694,7 @@
     "2026-11-22": "The Canuckle puzzle for November 22, 2026 (#1653) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with O — see the letter hints above before you peek.",
     "2026-11-23": "The Canuckle puzzle for November 23, 2026 (#1654) is live with today's answer confirmed. The answer runs 5 characters, starting with V and ending with S — see the letter hints above before you peek.",
     "2026-11-24": "The Canuckle puzzle for November 24, 2026 (#1655) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with M — see the letter hints above before you peek.",
-    "2026-11-25": "The Canuckle puzzle for November 25, 2026 (#1656) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with T — see the letter hints above before you peek."
+    "2026-11-25": "The Canuckle puzzle for November 25, 2026 (#1656) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with T — see the letter hints above before you peek.",
+    "2026-11-26": "The Canuckle puzzle for November 26, 2026 (#1657) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with R — see the letter hints above before you peek."
   }
 }
