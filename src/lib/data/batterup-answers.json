@@ -1241,5 +1241,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-08/30/8c09212e-6ed81cb5-7a07607f-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-25",
     "fetchedAt": "2026-11-25T15:56:38.484Z"
+  },
+  "2026-11-26": {
+    "date": "2026-11-26",
+    "gameNumber": 1012,
+    "player": {
+      "player_name": "Brent Rooker",
+      "player_id": "40926",
+      "team_name": "Athletics",
+      "born": "USA",
+      "birth_date": "1994-11-01",
+      "position": [
+        "LF"
+      ],
+      "debut": 2020,
+      "jersey_number": 25
+    },
+    "videoDescription": "[04/05/26 : HOU 10 - 12 ATH] Brent Rooker crushes a three-run home run to left field to walk off the Astros by a final score of 12-10.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/05/876af72e-437bec0e-3e77c9ca-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-26",
+    "fetchedAt": "2026-11-26T15:39:10.362Z"
   }
 }
