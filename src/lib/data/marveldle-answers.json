@@ -3419,7 +3419,7 @@
   },
   "2026-11-25": {
     "date": "2026-11-25",
-    "dateId": "11/25/2026 12:00:00 AM",
+    "dateId": "yesterday-of:11/26/2026 12:00:00 AM",
     "comics": {
       "id": "prowler_aarondavis",
       "name": "Prowler (Aaron Davis)",
@@ -3469,7 +3469,7 @@
         "lord"
       ]
     },
-    "solvedAt": "2026-11-25T17:39:30.042Z"
+    "solvedAt": "2026-11-26T06:35:35.147Z"
   },
   "2026-11-26": {
     "date": "2026-11-26",
