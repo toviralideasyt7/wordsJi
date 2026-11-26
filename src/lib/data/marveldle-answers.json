@@ -3470,5 +3470,59 @@
       ]
     },
     "solvedAt": "2026-11-25T17:39:30.042Z"
+  },
+  "2026-11-26": {
+    "date": "2026-11-26",
+    "dateId": "11/26/2026 12:00:00 AM",
+    "comics": {
+      "id": "giganto",
+      "name": "Giganto",
+      "gender": "Female",
+      "type": "Villain",
+      "species": [
+        "Mutate",
+        "Deviant"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Resistance"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1961,
+      "firstApparitionComicTitle": "Fantastic Four #1",
+      "keywords": [
+        "giganto"
+      ]
+    },
+    "mcu": {
+      "id": "invisiblewoman",
+      "name": "Invisible Woman",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutate"
+      ],
+      "powerTypes": [
+        "Kinesis",
+        "Invisibility",
+        "ForceFields"
+      ],
+      "origin": "Earth",
+      "actorName": "Vanessa Kirby",
+      "appearanceTypes": [
+        "Movie"
+      ],
+      "affiliations": [
+        "FantasticFour"
+      ],
+      "keywords": [
+        "woman",
+        "sue storm",
+        "susan storm",
+        "storm"
+      ]
+    },
+    "solvedAt": "2026-11-26T06:05:46.069Z"
   }
 }
