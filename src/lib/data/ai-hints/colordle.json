@@ -1,6 +1,6 @@
 {
   "game": "colordle",
-  "generatedAt": "2026-11-25T17:21:14.485Z",
+  "generatedAt": "2026-11-26T15:42:04.173Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -643,6 +643,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -697,6 +709,7 @@
     "2026-11-23": "The Colordle puzzle for November 23, 2026 (#1704) is live with today's answer confirmed. The answer runs 9 characters, starting with B and ending with C — see the letter hints above before you peek.",
     "2026-11-24": "The Colordle puzzle for November 24, 2026 (#1705) is live with today's answer confirmed. The answer runs 9 characters, starting with L and ending with E — see the letter hints above before you peek.",
     "2026-11-25": "Colordle puzzle #1706 for November 25, 2026, features a ten-letter word. The solution follows a pattern with several repeating vowels.",
-    "2026-11-26": "The Colordle puzzle for November 26, 2026 (#1707) is live with today's answer confirmed. The answer runs 11 characters, starting with T and ending with C — see the letter hints above before you peek."
+    "2026-11-26": "The Colordle puzzle for November 26, 2026 (#1707) is live with today's answer confirmed. The answer runs 11 characters, starting with T and ending with C — see the letter hints above before you peek.",
+    "2026-11-27": "The Colordle puzzle for November 27, 2026 (#1708) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with D — see the letter hints above before you peek."
   }
 }

@@ -1,6 +1,6 @@
 {
   "game": "colorfle",
-  "generatedAt": "2026-11-25T17:24:09.592Z",
+  "generatedAt": "2026-11-26T15:42:04.508Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -640,6 +640,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 6 vowels.",
+      "repeat_hint": "6 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -694,6 +706,7 @@
     "2026-11-23": "The Colorfle puzzle for November 23, 2026 (#1673) is live with today's answer confirmed. The answer runs 16 characters, starting with B and ending with W — see the letter hints above before you peek.",
     "2026-11-24": "Colorfle puzzle #1674 was released on November 24, 2026. This specific combination features a total of 22 letters across three words.",
     "2026-11-25": "The Colorfle puzzle for November 25, 2026 (#1675) is live with today's answer confirmed. The answer runs 17 characters, starting with P and ending with E — see the letter hints above before you peek.",
-    "2026-11-26": "The Colorfle puzzle for November 26, 2026 (#1676) is live with today's answer confirmed. The answer runs 22 characters, starting with B and ending with R — see the letter hints above before you peek."
+    "2026-11-26": "The Colorfle puzzle for November 26, 2026 (#1676) is live with today's answer confirmed. The answer runs 22 characters, starting with B and ending with R — see the letter hints above before you peek.",
+    "2026-11-27": "The Colorfle puzzle for November 27, 2026 (#1677) is live with today's answer confirmed. The answer runs 16 characters, starting with L and ending with Y — see the letter hints above before you peek."
   }
 }
