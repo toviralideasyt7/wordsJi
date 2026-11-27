@@ -1,6 +1,6 @@
 {
   "game": "betweenle",
-  "generatedAt": "2026-11-26T17:02:03.580Z",
+  "generatedAt": "2026-11-27T16:47:34.118Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -652,6 +652,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 1 vowel.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "H",
+      "ends_with": "H",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -707,6 +719,7 @@
     "2026-11-24": "The Betweenle puzzle for November 24, 2026 (#1349) is live with today's answer confirmed. The answer runs 5 characters, starting with G and ending with S — see the letter hints above before you peek.",
     "2026-11-25": "Betweenle puzzle #1350 is scheduled for November 25, 2026. This specific word follows a consonant-vowel-consonsonant-consonant-vowel pattern.",
     "2026-11-26": "The Betweenle puzzle for November 26, 2026 (#1351) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with R — see the letter hints above before you peek.",
-    "2026-11-27": "The Betweenle puzzle for November 27, 2026 (#1352) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with T — see the letter hints above before you peek."
+    "2026-11-27": "The Betweenle puzzle for November 27, 2026 (#1352) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with T — see the letter hints above before you peek.",
+    "2026-11-28": "The Betweenle puzzle for November 28, 2026 (#1353) is live with today's answer confirmed. The answer runs 5 characters, starting with H and ending with H — see the letter hints above before you peek."
   }
 }

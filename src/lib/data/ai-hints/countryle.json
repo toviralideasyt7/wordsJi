@@ -1,6 +1,6 @@
 {
   "game": "countryle",
-  "generatedAt": "2026-11-26T17:03:10.131Z",
+  "generatedAt": "2026-11-27T16:48:59.854Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 3 vowels.",
@@ -653,6 +653,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 4 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "V",
+      "ends_with": "U",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -708,6 +720,7 @@
     "2026-11-24": "The Countryle puzzle for November 24, 2026 (Game #1740) is live with today's answer confirmed. The answer runs 10 characters, starting with A and ending with N — see the letter hints above before you peek.",
     "2026-11-25": "The Countryle puzzle for November 25, 2026 (Game #1741) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with S — see the letter hints above before you peek.",
     "2026-11-26": "The Countryle puzzle for November 26, 2026 (Game #1742) is live with today's answer confirmed. The answer runs 4 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-11-27": "The Countryle puzzle for November 27, 2026 (Game #1743) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek."
+    "2026-11-27": "The Countryle puzzle for November 27, 2026 (Game #1743) is live with today's answer confirmed. The answer runs 6 characters, starting with M and ending with I — see the letter hints above before you peek.",
+    "2026-11-28": "The Countryle puzzle for November 28, 2026 (Game #1744) is live with today's answer confirmed. The answer runs 7 characters, starting with V and ending with U — see the letter hints above before you peek."
   }
 }

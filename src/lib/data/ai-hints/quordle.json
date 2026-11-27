@@ -1,6 +1,6 @@
 {
   "game": "quordle",
-  "generatedAt": "2026-11-26T17:01:43.095Z",
+  "generatedAt": "2026-11-27T16:47:32.242Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 6 vowels.",
@@ -652,6 +652,18 @@
       "difficulty": 8,
       "difficulty_label": "Hard",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "10 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "E",
+      "ends_with": "D",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -707,6 +719,7 @@
     "2026-11-24": "The Quordle puzzle for November 24, 2026 (#1765) is live with today's answer confirmed. The answer runs 20 characters, starting with D and ending with Y — see the letter hints above before you peek.",
     "2026-11-25": "Quordle puzzle #1766 for November 25, 2026, features four distinct five-letter words. The letter distribution includes several repeated consonants across the set.",
     "2026-11-26": "The Quordle puzzle for November 26, 2026 (#1767) is live with today's answer confirmed. The answer runs 20 characters, starting with S and ending with K — see the letter hints above before you peek.",
-    "2026-11-27": "The Quordle puzzle for November 27, 2026 (#1768) is live with today's answer confirmed. The answer runs 20 characters, starting with C and ending with K — see the letter hints above before you peek."
+    "2026-11-27": "The Quordle puzzle for November 27, 2026 (#1768) is live with today's answer confirmed. The answer runs 20 characters, starting with C and ending with K — see the letter hints above before you peek.",
+    "2026-11-28": "The Quordle puzzle for November 28, 2026 (#1769) is live with today's answer confirmed. The answer runs 20 characters, starting with E and ending with D — see the letter hints above before you peek."
   }
 }

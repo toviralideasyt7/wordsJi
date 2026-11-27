@@ -1,6 +1,6 @@
 {
   "game": "nerdle",
-  "generatedAt": "2026-11-26T17:01:43.019Z",
+  "generatedAt": "2026-11-27T16:47:32.576Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 0 vowels.",
@@ -841,6 +841,22 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from operators, number size, and equation length."
+    },
+    "2026-11-28": {
+      "kind": "math",
+      "operator_hint": "Uses addition.",
+      "length_hint": "The equation is 8 characters long.",
+      "result_hint": "The result is a 2-digit number and odd.",
+      "riddle": "",
+      "starts_with": "2",
+      "ends_with": "1",
+      "vowel_hint": "",
+      "repeat_hint": "",
+      "clue1": "",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from operators, number size, and equation length."
     }
   },
   "prose": {
@@ -896,6 +912,7 @@
     "2026-11-24": "The Nerdle puzzle for November 24, 2026 (#1770) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
     "2026-11-25": "The Nerdle puzzle for November 25, 2026 (#1771) is live with today's equation confirmed. The equation runs 8 characters using subtraction — see the math hints above before you peek.",
     "2026-11-26": "The Nerdle puzzle for November 26, 2026 (#1772) is live with today's equation confirmed. The equation runs 8 characters using multiplication — see the math hints above before you peek.",
-    "2026-11-27": "The Nerdle puzzle for November 27, 2026 (#1773) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek."
+    "2026-11-27": "The Nerdle puzzle for November 27, 2026 (#1773) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek.",
+    "2026-11-28": "The Nerdle puzzle for November 28, 2026 (#1774) is live with today's equation confirmed. The equation runs 8 characters using addition — see the math hints above before you peek."
   }
 }
