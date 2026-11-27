@@ -3524,5 +3524,65 @@
       ]
     },
     "solvedAt": "2026-11-26T17:22:05.216Z"
+  },
+  "2026-11-27": {
+    "date": "2026-11-27",
+    "dateId": "11/27/2026 12:00:00 AM",
+    "comics": {
+      "id": "exnihilo",
+      "name": "Ex Nihilo",
+      "gender": "Male",
+      "type": "Superhero",
+      "species": [
+        "ExNihili"
+      ],
+      "powerTypes": [
+        "Energy",
+        "Resistance",
+        "Elemental"
+      ],
+      "origin": "Unknown",
+      "apparitionYear": 2012,
+      "firstApparitionComicTitle": "Avengers (Vol. 5) #1",
+      "keywords": [
+        "nihilo",
+        "nihili"
+      ]
+    },
+    "mcu": {
+      "id": "uatu",
+      "name": "Uatu",
+      "gender": "Male",
+      "type": "Unknown",
+      "species": [
+        "Watcher"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Regeneration",
+        "Perception",
+        "Flight",
+        "Shapeshifting",
+        "Invisibility",
+        "InterdimensionalTravel",
+        "Speed"
+      ],
+      "origin": "Unknown",
+      "actorName": "Amuche Chukudebelu, Jeffrey Wright",
+      "appearanceTypes": [
+        "Cartoon"
+      ],
+      "affiliations": [
+        "OrderOfTheWatchers"
+      ],
+      "keywords": [
+        "watcher",
+        "the watcher",
+        "uatu the watcher"
+      ]
+    },
+    "solvedAt": "2026-11-27T06:05:43.321Z"
   }
 }
