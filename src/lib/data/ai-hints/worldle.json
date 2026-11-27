@@ -1,6 +1,6 @@
 {
   "game": "worldle",
-  "generatedAt": "2026-11-26T17:18:08.906Z",
+  "generatedAt": "2026-11-27T17:08:28.137Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 4 vowels.",
@@ -539,6 +539,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "M",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -585,6 +597,7 @@
     "2026-11-23": "The Worldle puzzle for November 23, 2026 (#1768) is live with today's answer confirmed. The answer runs 5 characters, starting with I and ending with A — see the letter hints above before you peek.",
     "2026-11-25": "The Worldle puzzle for November 25, 2026 (#1770) is live with today's answer confirmed. The answer runs 9 characters, starting with T and ending with A — see the letter hints above before you peek.",
     "2026-11-26": "The Worldle puzzle for November 26, 2026 (#1771) is live with today's answer confirmed. The answer runs 8 characters, starting with S and ending with A — see the letter hints above before you peek.",
-    "2026-11-27": "The Worldle puzzle for November 27, 2026 (#1772) is live with today's answer confirmed. The answer runs 7 characters, starting with N and ending with A — see the letter hints above before you peek."
+    "2026-11-27": "The Worldle puzzle for November 27, 2026 (#1772) is live with today's answer confirmed. The answer runs 7 characters, starting with N and ending with A — see the letter hints above before you peek.",
+    "2026-11-28": "The Worldle puzzle for November 28, 2026 (#1773) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with M — see the letter hints above before you peek."
   }
 }
