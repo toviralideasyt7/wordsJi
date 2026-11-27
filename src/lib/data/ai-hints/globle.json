@@ -1,6 +1,6 @@
 {
   "game": "globle",
-  "generatedAt": "2026-11-26T06:04:27.623Z",
+  "generatedAt": "2026-11-27T06:04:31.553Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 7 vowels.",
@@ -648,6 +648,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "C",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 4,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -702,6 +714,7 @@
     "2026-11-23": "The Globle puzzle for November 23, 2026 (2026-11-23) is live with today's answer confirmed. The answer runs 7 characters, starting with S and ending with L — see the letter hints above before you peek.",
     "2026-11-24": "The Globle puzzle for November 24, 2026 (2026-11-24) is live with today's answer confirmed. The answer runs 14 characters, starting with P and ending with A — see the letter hints above before you peek.",
     "2026-11-25": "The Globle puzzle for November 25, 2026 (2026-11-25) is live with today's answer confirmed. The answer runs 10 characters, starting with M and ending with A — see the letter hints above before you peek.",
-    "2026-11-26": "The Globle puzzle for November 26, 2026 (2026-11-26) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek."
+    "2026-11-26": "The Globle puzzle for November 26, 2026 (2026-11-26) is live with today's answer confirmed. The answer runs 6 characters, starting with K and ending with T — see the letter hints above before you peek.",
+    "2026-11-27": "The Globle puzzle for November 27, 2026 (2026-11-27) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with O — see the letter hints above before you peek."
   }
 }

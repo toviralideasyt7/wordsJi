@@ -1,6 +1,6 @@
 {
   "game": "narutodle",
-  "generatedAt": "2026-11-26T06:04:30.834Z",
+  "generatedAt": "2026-11-27T06:04:33.980Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 12 vowels.",
@@ -642,6 +642,18 @@
       "difficulty": 6,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-27": {
+      "vowel_hint": "It contains 7 vowels.",
+      "repeat_hint": "4 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "S",
+      "ends_with": "I",
+      "definition": "",
+      "difficulty": 8,
+      "difficulty_label": "Hard",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -696,6 +708,7 @@
     "2026-11-23": "The Narutodle puzzle for November 23, 2026 (Game #935) is live with today's answer confirmed. The answer runs 15 characters, starting with H and ending with I — see the letter hints above before you peek.",
     "2026-11-24": "The Narutodle puzzle for November 24, 2026 (Game #936) is live with today's answer confirmed. The answer runs 9 characters, starting with N and ending with A — see the letter hints above before you peek.",
     "2026-11-25": "The Narutodle puzzle for November 25, 2026 (Game #937) is live with today's answer confirmed. The answer runs 13 characters, starting with C and ending with I — see the letter hints above before you peek.",
-    "2026-11-26": "The Narutodle puzzle for November 26, 2026 (Game #938) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with E — see the letter hints above before you peek."
+    "2026-11-26": "The Narutodle puzzle for November 26, 2026 (Game #938) is live with today's answer confirmed. The answer runs 12 characters, starting with S and ending with E — see the letter hints above before you peek.",
+    "2026-11-27": "The Narutodle puzzle for November 27, 2026 (Game #939) is live with today's answer confirmed. The answer runs 14 characters, starting with S and ending with I — see the letter hints above before you peek."
   }
 }
