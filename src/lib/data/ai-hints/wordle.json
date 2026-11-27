@@ -1,6 +1,6 @@
 {
   "game": "wordle",
-  "generatedAt": "2026-11-26T15:42:03.794Z",
+  "generatedAt": "2026-11-27T15:32:04.486Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -657,6 +657,18 @@
       "difficulty": 3,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "1 letter appears more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "W",
+      "ends_with": "Y",
+      "definition": "",
+      "difficulty": 6,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -712,6 +724,7 @@
     "2026-11-24": "The Wordle puzzle for November 24, 2026 (#1984) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with R — see the letter hints above before you peek.",
     "2026-11-25": "Wordle puzzle #1985 takes place on November 25, 2026. This specific entry follows a consonant-vowel-consonant-vowel-consonant-consonant-vowel structure ending in Y.",
     "2026-11-26": "The Wordle puzzle for November 26, 2026 (#1986) is live with today's answer confirmed. The answer runs 5 characters, starting with T and ending with E — see the letter hints above before you peek.",
-    "2026-11-27": "The Wordle puzzle for November 27, 2026 (#1987) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with F — see the letter hints above before you peek."
+    "2026-11-27": "The Wordle puzzle for November 27, 2026 (#1987) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with F — see the letter hints above before you peek.",
+    "2026-11-28": "The Wordle puzzle for November 28, 2026 (#1988) is live with today's answer confirmed. The answer runs 5 characters, starting with W and ending with Y — see the letter hints above before you peek."
   }
 }
