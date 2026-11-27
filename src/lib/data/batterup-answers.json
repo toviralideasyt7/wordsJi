@@ -1261,5 +1261,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-04/05/876af72e-437bec0e-3e77c9ca-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-26",
     "fetchedAt": "2026-11-26T15:39:10.362Z"
+  },
+  "2026-11-27": {
+    "date": "2026-11-27",
+    "gameNumber": 1013,
+    "player": {
+      "player_name": "Drake Baldwin",
+      "player_id": "4810190",
+      "team_name": "Braves",
+      "born": "USA",
+      "birth_date": "2001-03-28",
+      "position": [
+        "C"
+      ],
+      "debut": 2025,
+      "jersey_number": 30
+    },
+    "videoDescription": "[05/15/26 : BOS 2 - 3 ATL] Drake Baldwin hits a solo homer to center field to give the Braves a 1-0 lead in the bottom of the 1st inning.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/15/176f585b-117a5a88-18c217ba-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-27",
+    "fetchedAt": "2026-11-27T15:28:57.273Z"
   }
 }
