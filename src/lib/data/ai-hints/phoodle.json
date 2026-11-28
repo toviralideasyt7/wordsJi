@@ -1,6 +1,6 @@
 {
   "game": "phoodle",
-  "generatedAt": "2026-11-27T15:32:04.330Z",
+  "generatedAt": "2026-11-28T15:33:56.585Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 1 vowel.",
@@ -669,6 +669,18 @@
       "difficulty": 4,
       "difficulty_label": "Easy",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-29": {
+      "vowel_hint": "It contains 2 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "B",
+      "ends_with": "S",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Easy: common letters, no repeats, standard length."
     }
   },
   "prose": {
@@ -725,6 +737,7 @@
     "2026-11-25": "The Phoodle puzzle for November 25, 2026, features a five-letter word. Puzzle 2026-11-25 follows a consonant-vowel-consonant-consonant-vowel pattern.",
     "2026-11-26": "The Phoodle puzzle for November 26, 2026 (2026-11-26) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with E — see the letter hints above before you peek.",
     "2026-11-27": "The Phoodle puzzle for November 27, 2026 (2026-11-27) is live with today's answer confirmed. The answer runs 5 characters, starting with C and ending with A — see the letter hints above before you peek.",
-    "2026-11-28": "The Phoodle puzzle for November 28, 2026 (2026-11-28) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek."
+    "2026-11-28": "The Phoodle puzzle for November 28, 2026 (2026-11-28) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with K — see the letter hints above before you peek.",
+    "2026-11-29": "The Phoodle puzzle for November 29, 2026 (2026-11-29) is live with today's answer confirmed. The answer runs 5 characters, starting with B and ending with S — see the letter hints above before you peek."
   }
 }
