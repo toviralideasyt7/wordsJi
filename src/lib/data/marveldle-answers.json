@@ -3584,5 +3584,58 @@
       ]
     },
     "solvedAt": "2026-11-27T17:00:10.576Z"
+  },
+  "2026-11-28": {
+    "date": "2026-11-28",
+    "dateId": "11/28/2026 12:00:00 AM",
+    "comics": {
+      "id": "rogue",
+      "name": "Rogue",
+      "gender": "Female",
+      "type": "Superhero",
+      "species": [
+        "Human",
+        "Mutant"
+      ],
+      "powerTypes": [
+        "Strength",
+        "Energy",
+        "Resistance",
+        "Perception",
+        "Flight"
+      ],
+      "origin": "Earth",
+      "apparitionYear": 1981,
+      "firstApparitionComicTitle": "Avengers Annual #10",
+      "keywords": [
+        "anna maria labeau",
+        "marie labeau",
+        "labeau"
+      ]
+    },
+    "mcu": {
+      "id": "malcolmducasse",
+      "name": "Malcolm Ducasse",
+      "gender": "Male",
+      "type": "Supporting",
+      "species": [
+        "Human"
+      ],
+      "powerTypes": [
+        "None"
+      ],
+      "origin": "Earth",
+      "actorName": "Eka Darville",
+      "appearanceTypes": [
+        "Series"
+      ],
+      "affiliations": [
+        "AliasInvestigations"
+      ],
+      "keywords": [
+        "ducasse"
+      ]
+    },
+    "solvedAt": "2026-11-28T06:05:48.809Z"
   }
 }
