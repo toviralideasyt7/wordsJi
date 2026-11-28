@@ -1,6 +1,6 @@
 {
   "game": "loldle",
-  "generatedAt": "2026-11-27T06:04:33.910Z",
+  "generatedAt": "2026-11-28T06:04:25.512Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 9 vowels.",
@@ -657,6 +657,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "There are zero repeated letters.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "Y",
+      "ends_with": "O",
+      "definition": "",
+      "difficulty": 3,
+      "difficulty_label": "Easy",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -712,6 +724,7 @@
     "2026-11-24": "The LoLdle puzzle for November 24, 2026 (Game #1601) is live with today's answer confirmed. The answer runs 11 characters, starting with N and ending with P — see the letter hints above before you peek.",
     "2026-11-25": "The LoLdle puzzle for November 25, 2026 (Game #1602) is live with today's answer confirmed. The answer runs 4 characters, starting with K and ending with D — see the letter hints above before you peek.",
     "2026-11-26": "The LoLdle puzzle for November 26, 2026 (Game #1603) is live with today's answer confirmed. The answer runs 6 characters, starting with R and ending with E — see the letter hints above before you peek.",
-    "2026-11-27": "The LoLdle puzzle for November 27, 2026 (Game #1604) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with H — see the letter hints above before you peek."
+    "2026-11-27": "The LoLdle puzzle for November 27, 2026 (Game #1604) is live with today's answer confirmed. The answer runs 7 characters, starting with B and ending with H — see the letter hints above before you peek.",
+    "2026-11-28": "The LoLdle puzzle for November 28, 2026 (Game #1605) is live with today's answer confirmed. The answer runs 5 characters, starting with Y and ending with O — see the letter hints above before you peek."
   }
 }

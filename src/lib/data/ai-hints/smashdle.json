@@ -1,6 +1,6 @@
 {
   "game": "smashdle",
-  "generatedAt": "2026-11-27T06:06:00.665Z",
+  "generatedAt": "2026-11-28T06:05:52.108Z",
   "hints": {
     "2026-10-06": {
       "vowel_hint": "It contains 11 vowels.",
@@ -652,6 +652,18 @@
       "difficulty": 5,
       "difficulty_label": "Normal",
       "difficulty_reason": "Scored from letter rarity, repeats, and length."
+    },
+    "2026-11-28": {
+      "vowel_hint": "It contains 3 vowels.",
+      "repeat_hint": "2 letters appear more than once.",
+      "riddle": "",
+      "clue1": "",
+      "starts_with": "L",
+      "ends_with": "C",
+      "definition": "",
+      "difficulty": 5,
+      "difficulty_label": "Normal",
+      "difficulty_reason": "Scored from letter rarity, repeats, and length."
     }
   },
   "prose": {
@@ -707,6 +719,7 @@
     "2026-11-24": "The Smashdle puzzle for November 24, 2026 (Game #1175) is live with today's answer confirmed. The answer runs 8 characters, starting with G and ending with A — see the letter hints above before you peek.",
     "2026-11-25": "The Smashdle puzzle for November 25, 2026 (Game #1176) is live with today's answer confirmed. The answer runs 5 characters, starting with S and ending with E — see the letter hints above before you peek.",
     "2026-11-26": "The Smashdle puzzle for November 26, 2026 (Game #1177) is live with today's answer confirmed. The answer runs 15 characters, starting with M and ending with R — see the letter hints above before you peek.",
-    "2026-11-27": "The Smashdle puzzle for November 27, 2026 (Game #1178) is live with today's answer confirmed. The answer runs 7 characters, starting with I and ending with G — see the letter hints above before you peek."
+    "2026-11-27": "The Smashdle puzzle for November 27, 2026 (Game #1178) is live with today's answer confirmed. The answer runs 7 characters, starting with I and ending with G — see the letter hints above before you peek.",
+    "2026-11-28": "The Smashdle puzzle for November 28, 2026 (Game #1179) is live with today's answer confirmed. The answer runs 9 characters, starting with L and ending with C — see the letter hints above before you peek."
   }
 }
