@@ -158,7 +158,7 @@ export const load: PageServerLoad = async () => {
       image: 'https://wordauditor.com/author-wordauditor.webp',
       jobTitle: 'Word Puzzle Analyst',
       knowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-      sameAs: ['https://www.pinterest.com/wordsolverx/']
+      sameAs: ['https://www.pinterest.com/wordsolverx/', 'https://www.facebook.com/wordsolverx/', 'https://t.me/wordsolverx']
     },
     publisher: {
       '@type': 'Organization',

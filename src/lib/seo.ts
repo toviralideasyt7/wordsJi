@@ -20,6 +20,8 @@ export interface SchemaOrganization {
 
 export const SOCIAL_PROFILE_URLS = [
     'https://www.pinterest.com/wordsolverx/',
+    'https://www.facebook.com/wordsolverx/',
+    'https://t.me/wordsolverx',
 ];
 
 const DEFAULT_SOCIAL_IMAGE = 'https://wordauditor.com/wordauditor-logo.webp';
@@ -250,6 +252,7 @@ export function generateArticleSchema(config: {
     authorDescription?: string;
     authorKnowsAbout?: string[];
     authorSameAs?: string[];
+    authorUrl?: string;
     wordCount?: number;
     articleSection?: string;
     keywords?: string[];
@@ -273,6 +276,7 @@ export function generateArticleSchema(config: {
             '@context': 'https://schema.org',
             '@type': 'Person',
             name: config.authorName || 'Preston Hayes',
+            ...(config.authorUrl && { url: config.authorUrl }),
             ...(config.authorImage && { image: config.authorImage }),
             ...(config.authorJobTitle && { jobTitle: config.authorJobTitle }),
             ...(config.authorDescription && { description: config.authorDescription }),

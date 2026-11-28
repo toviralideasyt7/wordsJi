@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { generateOrganizationSchema, generateArticleSchema } from '$lib/seo';
+  import { PRESTON_HAYES_AUTHOR_SAME_AS, PRESTON_HAYES_AUTHOR_URL } from '$lib/authors';
 
   const organizationSchema = generateOrganizationSchema();
   const currentUrl = $derived(`https://wordauditor.com${page.url.pathname}`);
@@ -38,7 +39,8 @@
           authorImage: 'https://wordauditor.com/author-wordauditor.webp',
           authorJobTitle: 'Puzzle Content Editor',
           authorKnowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-          authorSameAs: ['https://www.pinterest.com/wordsolverx/'],
+          authorSameAs: PRESTON_HAYES_AUTHOR_SAME_AS,
+          authorUrl: PRESTON_HAYES_AUTHOR_URL,
           // Optional enrichment: only routes that supply these emit them, so
           // every other page's Article JSON-LD is unchanged.
           wordCount: page.data?.wordCount as number | undefined,

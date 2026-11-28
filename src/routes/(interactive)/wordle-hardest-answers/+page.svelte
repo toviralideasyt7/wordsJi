@@ -23,7 +23,7 @@
       authorImage: 'https://wordauditor.com/author-wordauditor.webp',
       authorJobTitle: 'Puzzle Content Editor',
       authorKnowsAbout: ['Wordle', 'Word Puzzles', 'Daily Puzzle Answers', 'Puzzle Solver Tools', 'Information Theory'],
-      authorSameAs: ['https://www.pinterest.com/wordsolverx/'],
+      authorSameAs: ['https://www.pinterest.com/wordsolverx/', 'https://www.facebook.com/wordsolverx/', 'https://t.me/wordsolverx'],
       articleSection: 'Wordle Strategy',
       keywords: ['hardest wordle answers', 'hardest wordle words', 'wordle difficulty ranking', 'rare wordle answers']
     }),
