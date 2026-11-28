@@ -1,10 +1,8 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
   import YesterdayBlock from '$lib/components/YesterdayBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import type { AIHints } from '$lib/ai-hints';
 
   let { data }: { data: {
@@ -67,7 +65,6 @@
   {#snippet hintsSnippet()}
     {#if data.aiHints && data.aiAnswer}
       <div class="mb-8">
-        <AIHintCards gameName="Pokedle" answer={data.aiAnswer} hints={data.aiHints} />
         <p class="mt-3 text-center text-sm text-slate-500">
           Need help solving? <a href="/pokedle-solver" class="font-semibold text-teal-700 hover:text-teal-600 underline">Try the free Pokedle Solver →</a>
         </p>
@@ -96,13 +93,6 @@
           vowelCount={data.factData.vowelCount}
           repeatText={data.factData.repeatText}
         />
-      </div>
-    {/if}
-  {/snippet}
-  {#snippet paaSnippet()}
-    {#if data.aiHints}
-      <div class="mb-8">
-        <PaaHints gameName="Pokedle" hints={data.aiHints} />
       </div>
     {/if}
   {/snippet}

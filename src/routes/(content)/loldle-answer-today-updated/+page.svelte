@@ -1,9 +1,7 @@
 <script lang="ts">
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import type { AIHints } from '$lib/ai-hints';
 
   interface Facts {
@@ -71,7 +69,6 @@
   {#snippet hintsSnippet()}
     {#if data.aiHints && data.answerText}
       <div class="mb-8">
-        <AIHintCards gameName="LoLdle" answer={data.answerText} hints={data.aiHints} />
         <p class="mt-4 text-center text-sm text-slate-600">
           Need help solving? Try the free <a href="/loldle-solver" class="font-bold text-teal-700 underline underline-offset-2 hover:text-teal-600">LoLdle Solver →</a>
         </p>
@@ -90,13 +87,6 @@
           vowelCount={data.facts.vowelCount}
           repeatText={data.facts.repeatText}
         />
-      </div>
-    {/if}
-  {/snippet}
-  {#snippet paaSnippet()}
-    {#if data.aiHints && data.answerText}
-      <div class="mb-8">
-        <PaaHints gameName="LoLdle" hints={data.aiHints} />
       </div>
     {/if}
   {/snippet}

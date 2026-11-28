@@ -7,7 +7,6 @@ import {
 import { fetchLiveFramedEntries } from '$lib/live-answer-sources';
 import { getMainDailyDateKey } from '$lib/main-daily-date';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints } from '$lib/ai-hints';
 import {
 	generateBreadcrumbSchema,
 	generateSoftwareApplicationSchema,
@@ -108,7 +107,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 	});
 
 	// AI hint cards for the Classic answer (matches the generated hint store).
-	const aiHints = mergeHints(classicAnswer, getAIHints('framed', targetDateKey));
+	const aiHints = null; // film-title answer — no word-metric hints
 
 	const video = await getGameVideo('framed', displayDateKey);
 

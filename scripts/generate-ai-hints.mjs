@@ -365,32 +365,8 @@ const GAMES = [
 			return { text: word, dateKey: key, numberText: `#${puzzleNumber}` };
 		}
 	},
-	{
-		key: 'framed', label: 'Framed',
-		async getInput() {
-			const key = windowKey('framed');
-			const dataset = loadFramed();
-			const entry = dataset.modes?.daily?.entries?.find((e) => e.date === key);
-			if (entry && entry.answer) {
-				return { text: entry.answer, dateKey: entry.date, numberText: `#${entry.puzzleNumber}` };
-			}
-			// Bundled data ends 2026-05-29; fall back to the live titles.framed.wtf source
-			// (mirrors fetchLiveFramedEntries/fetchFramedAnswer in src/lib/live-answer-sources.ts).
-			const refDate = new Date(`${dataset.referenceDate}T00:00:00Z`).getTime();
-			const target = new Date(`${key}T12:00:00Z`).getTime();
-			const puzzleNumber = 1483 + Math.round((target - refDate) / 86_400_000); // 'daily' referencePuzzle
-			const payload = await fetchJson(`https://titles.framed.wtf/v1/titles/top-ten/${puzzleNumber}?gameType=daily`, {
-				headers: { accept: 'application/json', 'user-agent': 'WordAuditor Daily Live Fetch' }
-			});
-			const frames = payload?.frames ?? [];
-			const lastFrame = frames[frames.length - 1];
-			const rawItems = lastFrame?.items;
-			const items = typeof rawItems === 'string' ? JSON.parse(rawItems) : (Array.isArray(rawItems) ? rawItems : []);
-			const title = items?.[0]?.title;
-			if (!title) return null;
-			return { text: title, dateKey: key, numberText: `#${puzzleNumber}` };
-		}
-	},
+	// framed is intentionally NOT generated here: its answer is a film
+	// title, not a word, so word-metric hints are nonsense for it.
 	{
 		key: 'globle', label: 'Globle',
 		async getInput() {
@@ -485,32 +461,10 @@ const GAMES = [
 			return { text: word, dateKey: key, numberText: `#${gameNumber}` };
 		}
 	},
-	...['dotadle', 'loldle', 'narutodle', 'onepiecedle', 'pokedle', 'smashdle'].map((gameKey) => ({
-		key: gameKey,
-		label: { dotadle: 'Dotadle', loldle: 'LoLdle', narutodle: 'Narutodle', onepiecedle: 'OnePiecedle', pokedle: 'Pokedle', smashdle: 'Smashdle' }[gameKey],
-		async getInput() {
-			const answers = await fetchJson(`https://narutodle-worker.narutodle.workers.dev/today?game=${gameKey}`);
-			if (!Array.isArray(answers) || !answers.length) return null;
-			const latestDate = answers.map((a) => a.date).filter(Boolean).sort().pop();
-			const todays = answers.filter((a) => a.date === latestDate);
-			// Hints describe the primary (Classic, america-region) answer ONLY —
-			// the same name the page's facts strip uses. The previous code joined
-			// every mode/region name and computed letter stats over the mash,
-			// which shipped nonsense like "32 vowels" for Narutodle's 2-letter
-			// Classic answer "Ao" (fixed 2026-11-05).
-			const primary =
-				todays.find((a) => a.mode === 'classic' && a.region === 'america') ??
-				todays.find((a) => a.mode === 'classic') ??
-				todays[0];
-			let primaryName = '';
-			try {
-				primaryName = (JSON.parse(primary?.json_content || '{}').champion_name || '').trim();
-			} catch { /* ignore */ }
-			if (!primaryName) return null;
-			const gameId = primary?.game_id ?? todays[0]?.game_id;
-			return { text: primaryName, dateKey: latestDate, numberText: gameId ? `Game #${gameId}` : latestDate };
-		}
-	})),
+	// The six character -dle games (dotadle, loldle, narutodle, onepiecedle,
+	// pokedle, smashdle) are intentionally NOT generated here: their answers
+	// are character names, not words, so word-metric hints are nonsense for
+	// them (same call as batterup/marvle/framed).
 	{
 		key: 'phrazle', label: 'Phrazle',
 		async getInput() {
@@ -536,7 +490,10 @@ function analyzeText(text) {
 	const letters = text.toLowerCase().replace(/[^a-z]/g, '');
 	const chars = letters || text.toLowerCase().replace(/[^a-z0-9]/g, '');
 	const vowelCount = [...letters].filter((c) => 'aeiou'.includes(c)).length;
-	const repeatCount = chars.length - new Set(chars).size;
+	// Distinct characters that appear more than once — NOT extra copies.
+	const freq = new Map();
+	for (const c of chars) freq.set(c, (freq.get(c) ?? 0) + 1);
+	const repeatCount = [...freq.values()].filter((n) => n > 1).length;
 	const first = chars[0] ? chars[0].toUpperCase() : '?';
 	const last = chars[chars.length - 1] ? chars[chars.length - 1].toUpperCase() : '?';
 	const unit = letters ? 'letter' : (/^[0-9]+$/.test(chars) ? 'digit' : 'character');

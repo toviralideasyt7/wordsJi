@@ -2,9 +2,7 @@
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import type { AIHints } from '$lib/ai-hints';
 
   interface Facts {
@@ -68,7 +66,6 @@
   {#snippet hintsSnippet()}
     {#if data.aiHints && data.answerText}
       <div class="mb-8">
-        <AIHintCards gameName="Narutodle" answer={data.answerText} hints={data.aiHints} />
         <p class="mt-4 text-center text-sm text-slate-600">
           Need help solving? Try the free <a href="/narutodle-solver" class="font-bold text-teal-700 underline underline-offset-2 hover:text-teal-600">Narutodle Solver →</a>
         </p>
@@ -87,13 +84,6 @@
           vowelCount={data.facts.vowelCount}
           repeatText={data.facts.repeatText}
         />
-      </div>
-    {/if}
-  {/snippet}
-  {#snippet paaSnippet()}
-    {#if data.aiHints && data.answerText}
-      <div class="mb-8">
-        <PaaHints gameName="Narutodle" hints={data.aiHints} />
       </div>
     {/if}
   {/snippet}

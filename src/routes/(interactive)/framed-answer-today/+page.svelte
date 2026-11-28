@@ -11,9 +11,7 @@
   import KeepExploring from '$lib/components/KeepExploring.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
   import VideoSection from '$lib/components/VideoSection.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import { getMainDailyDateKey } from '$lib/main-daily-date';
   import {
     PRESTON_HAYES_AUTHOR_DESCRIPTION,
@@ -97,9 +95,8 @@
       />
     </div>
 
-    {#if data.hasExactEntries && data.classicAnswer}
-      <AIHintCards gameName="Framed" answer={data.classicAnswer} hints={data.aiHints} showAnswerReveal={false} />
-    {/if}
+    <!-- No word-game AI hint cards for Framed: the answer is a film title,
+         not a word — vowel counts over it are nonsense. -->
 
     <section class="space-y-5">
       {#if data.hasExactEntries}
@@ -143,7 +140,6 @@
         repeatText={factRepeatText}
       />
 
-      <PaaHints gameName="Framed" hints={data.aiHints} />
     {/if}
 
     <KeepExploring slug="framed" puzzleDate={data.targetDateKey} />

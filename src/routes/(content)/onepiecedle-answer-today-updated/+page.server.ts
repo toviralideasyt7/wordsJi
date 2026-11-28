@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { loadGameDleToday, type GameDleAnswer } from '$lib/game-dle/today';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints, type AIHints } from '$lib/ai-hints';
+import { type AIHints } from '$lib/ai-hints';
 import { format, subDays } from 'date-fns';
 
 interface ParsedChampion {
@@ -62,7 +62,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         ? dailyAnswerTitle('OnePiecedle', gameId, longDate)
         : 'OnePiecedle Hints and Answers for Today';
     const updatedStamp = hasPuzzle ? updatedStampText('OnePiecedle', gameId, longDate) : '';
-    const aiHints: AIHints | null = champion.name ? mergeHints(champion.name, getAIHints('onepiecedle', todayKey)) : null;
+    const aiHints: AIHints | null = null; // character game — no word-metric hints
 
     // Yesterday's name ships inside the worker's json_content; number/dateLong
     // are derived from the daily sequence (game_id - 1, latestDate - 1 day).

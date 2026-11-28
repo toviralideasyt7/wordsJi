@@ -1,7 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { loadGameDleToday, type GameDleAnswer } from '$lib/game-dle/today';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints } from '$lib/ai-hints';
 
 interface ParsedContent {
     champion_name?: string;
@@ -61,7 +60,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
             ? dailyAnswerTitle('Smashdle', smashdleNumber, seoDate)
             : 'Smashdle Answer Today - All Modes';
         const updatedStamp = updatedStampText('Smashdle', smashdleNumber, seoDate);
-        const aiHints = mergeHints(classicChampion, getAIHints('smashdle', latestDate ?? ''));
+        const aiHints = null; // character game — no word-metric hints
         const factVowelCount = classicChampion.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length;
         const factRepeatCount = classicChampion.replace(/[^a-z]/gi, '').length - new Set(classicChampion.toLowerCase().replace(/[^a-z]/g, '')).size;
         const factData = {

@@ -77,7 +77,12 @@ function analyzeLetters(text: string) {
 	const letters = text.toLowerCase().replace(/[^a-z]/g, '');
 	const chars = letters || text.toLowerCase().replace(/[^a-z0-9]/g, '');
 	const vowelCount = [...letters].filter((c) => 'aeiou'.includes(c)).length;
-	const repeatCount = chars.length - new Set(chars).size;
+	// Distinct characters that appear more than once — NOT extra copies.
+	// (chars.length - unique counted copies: "PLAYING WITH FIRE" scored 2
+	// for its single repeating letter I, and long answers scored 20.)
+	const freq = new Map<string, number>();
+	for (const c of chars) freq.set(c, (freq.get(c) ?? 0) + 1);
+	const repeatCount = [...freq.values()].filter((n) => n > 1).length;
 	const first = chars[0] ? chars[0].toUpperCase() : '?';
 	const last = chars[chars.length - 1] ? chars[chars.length - 1].toUpperCase() : '?';
 	const unit = letters ? 'letter' : /^[0-9]+$/.test(chars) ? 'digit' : 'character';

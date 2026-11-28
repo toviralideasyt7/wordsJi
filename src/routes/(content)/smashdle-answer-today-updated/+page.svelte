@@ -2,9 +2,7 @@
   import GameDleAnswerPage from '$lib/components/GameDleAnswerPage.svelte';
   import StrategyDeepDive from '$lib/components/StrategyDeepDive.svelte';
   import UpdatedStamp from '$lib/components/UpdatedStamp.svelte';
-  import AIHintCards from '$lib/components/AIHintCards.svelte';
   import FactBlock from '$lib/components/FactBlock.svelte';
-  import PaaHints from '$lib/components/PaaHints.svelte';
   import type { AIHints } from '$lib/ai-hints';
 
   let { data }: { data: {
@@ -67,7 +65,6 @@
 {#snippet hintsSnippet()}
   {#if data.aiHints && data.classicChampion}
     <div class="mb-8">
-      <AIHintCards gameName="Smashdle" answer={data.classicChampion} hints={data.aiHints} />
       <p class="mt-4 text-center text-sm text-slate-600">
         Need help solving? <a href="/smashdle-solver" class="font-semibold text-teal-700 hover:text-teal-800 underline">Try the free Smashdle Solver &rarr;</a>
       </p>
@@ -91,15 +88,8 @@
   {/if}
 {/snippet}
 
-{#snippet paaSnippet()}
-  {#if data.aiHints}
-    <section class="mb-12">
-      <PaaHints gameName="Smashdle" hints={data.aiHints} />
-    </section>
-  {/if}
-{/snippet}
 
-<GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data} {stampSnippet} {hintsSnippet} {factsSnippet} {paaSnippet}>
+<GameDleAnswerPage gameKey="smashdle" gameTitle="Smashdle" apiGame="smashdle" {modes} {modeConfig} {gridCols} {regions} {crossLinks} {schemas} {data} {stampSnippet} {hintsSnippet} {factsSnippet}>
   {#snippet seoContent()}
     <article class="space-y-8">
       <section class="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm sm:p-8">

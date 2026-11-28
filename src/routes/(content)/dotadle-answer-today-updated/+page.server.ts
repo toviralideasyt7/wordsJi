@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { loadGameDleToday } from '$lib/game-dle/today';
 import { dailyAnswerTitle, updatedStampText } from '$lib/seo/daily-title';
-import { getAIHints, mergeHints, type AIHints } from '$lib/ai-hints';
+import { type AIHints } from '$lib/ai-hints';
 
 function parseChampionName(jsonContent: string | undefined): string {
 	if (!jsonContent) return '';
@@ -56,7 +56,7 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
 	const hintFaqs = hasPuzzle
 		? [{ question: 'When was this page last updated?', answer: updatedStamp }]
 		: [];
-	const aiHints: AIHints = mergeHints(primaryName, getAIHints('dotadle', result.latestDate ?? ''));
+	const aiHints: AIHints | null = null; // character game — no word-metric hints (see batterup/marvle precedent)
 
 	return {
 		...result,
