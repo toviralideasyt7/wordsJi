@@ -796,7 +796,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
         list: {
           title: 'The four spellings that land here',
           items: [
-            "If you searched for 'worlde', you mean Wordle — the daily five-letter word game, and this solver filters its answer list for you.",
+            "Typed 'worlde'? You mean Wordle — the daily five-letter word game — and this solver filters its answer list for you.",
             "If you typed 'wordel', you swapped the last two letters of Wordle; the game and the solver above are exactly what you were looking for.",
             "If you typed 'wordlw', your finger slipped onto W instead of E at the end of Wordle; same game, same solver.",
             "If you typed 'wrodle', you transposed the first two letters of Wordle; the daily puzzle and this helper work the same either way."
@@ -1324,7 +1324,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'contexto-answer-today',
     eyebrow: 'Contexto Answer Today',
     intro:
-      "The Contexto answer today is behind the blurred card above, confirmed against the official puzzle. If you searched todays contexto and want the Contexto answer first, take it there. The rest of this page teaches the number-as-compass method that drops most averages from forty-plus guesses to under twenty.",
+      "The Contexto answer today is behind the blurred card above, confirmed against the official puzzle. Want the answer first? Take it there. The rest of this page teaches the number-as-compass method that drops most averages from forty-plus guesses to under twenty.",
     sections: [
       {
         heading: "The number is a distance, not a grade",
@@ -1473,7 +1473,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: 'The Colordle answer today: {date}, day {dayNum}',
         paragraphs: [
-          "The Colordle answer for {date} lands as the hex code in the reveal card above, on day {dayNum}. If you searched the date format, or the community's day-number format, colordle day {dayNum} answer, both resolve to this same color, and it matches every mirror of the official source.",
+          "The Colordle answer for {date} lands as the hex code in the reveal card above, on day {dayNum}. By date or by the community's day-number format, it resolves to this same color, and it matches every mirror of the official source.",
           'The answer card above shows today\'s color rendered at its exact hex, so you can put your final mix next to it and see precisely where you landed. The percentage on your last attempt is the same number the solver uses to confirm the target, which is a nice closed loop: the tool and the game speak the same math.',
           'One small thing that trips people up: the color name is the canonical name from the game\'s official list. Day {dayNum} has exactly one answer, full stop. If it looked like a different shade on someone else\'s screen, that is monitor calibration having opinions, not a second answer.'
         ],
@@ -1694,7 +1694,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'semantle-answer-today',
     eyebrow: 'Semantle Answer and Hints',
     intro:
-      "The Semantle answer today is on this page for puzzle {number}, checked against the official game. If you searched the Semantle answer for {date}, the reveal card above holds it. The hint card gives the semantic family first. Below: how to read the 0-100 score and escape the 70s trap.",
+      "The Semantle answer today is on this page for puzzle {number}, checked against the official game. The reveal card above holds it. The hint card gives the semantic family first. Below: how to read the 0-100 score and escape the 70s trap.",
     sections: [
       {
         heading: "What the Semantle score is actually measuring",
@@ -1708,7 +1708,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: "The Semantle answer today: {date}, puzzle {number}",
         paragraphs: [
-          "Today's Semantle is puzzle {number}, and the answer is revealed on this page, the same word across every mirror of the game, checked against the official source rather than scraped out of a forum thread. If you searched the Semantle answer for {date} or semantle answer today, the card at the top of the page is your word.",
+          "Today's Semantle is puzzle {number}, and the answer is revealed on this page, the same word across every mirror of the game, checked against the official source rather than scraped out of a forum thread. The card at the top of the page is your word.",
           "If you are mid-solve and want to keep the solve honest, the hint card gives you the semantic family, the part of speech, and the first letter. That is the usual off-ramp: one hint, then back to guessing. The answer card sits right there for when you are done fighting.",
           "One note on how people trade these: the community shares answers by puzzle number more often than by date, which is why {number} is the reliable key for {date}. Search either format and you land on the same word."
         ],
@@ -2039,7 +2039,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'phrazle-answer-today',
     eyebrow: 'Phrazle Answer Today',
     intro:
-      "The Phrazle answer today covers both {date} sessions, morning and afternoon, revealed on this page and confirmed from the official source. If you searched today's Phrazle or the Phrazle answer for {date}, both phrases sit in the cards above. Below: phrase-shape strategy that beats single-word thinking.",
+      "The Phrazle answer today covers both {date} sessions, morning and afternoon, revealed on this page and confirmed from the official source. Both phrases sit in the cards above. Below: phrase-shape strategy that beats single-word thinking.",
     sections: [
       {
         heading: "The Phrazle answer today for {date}",
@@ -2164,7 +2164,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'canuckle-answer-today',
     eyebrow: 'Canuckle Answer Today',
     intro:
-      "The Canuckle answer today is the {date} word, revealed on this page with its daily Canadian fact and checked against the official game. If you searched today's Canuckle or the Canuckle answer for {date}, the card above has both. Below: U-spellings and openers that respect them.",
+      "The Canuckle answer today is the {date} word, revealed on this page with its daily Canadian fact and checked against the official game. The card above has both. Below: U-spellings and openers that respect them.",
     sections: [
       {
         heading: "The Canuckle answer today for {date}",
@@ -2290,7 +2290,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'worldle-answer-today',
     eyebrow: 'Worldle Answers Today, Verified Daily',
     intro:
-      "Worldle today shows {country} for {date}, confirmed from the official game and revealed in the card above. If you searched the Worldle today country or the answer for {date}, that card holds the flag and region too. Below: silhouette reads and the distance bands that cut solves to four guesses.",
+      "Worldle today shows {country} for {date}, confirmed from the official game and revealed in the card above. That card holds the flag and region too. Below: silhouette reads and the distance bands that cut solves to four guesses.",
     sections: [
       {
         heading: "The silhouette is the whole game, and most players skip it",
@@ -2303,7 +2303,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
       {
         heading: "Worldle today: {country} for {date}",
         paragraphs: [
-          "Today's Worldle country is {country}, the answer for {date}. If you searched for the Worldle answer for {date}, today's Worldle country, or the Worldle solution, this is it, confirmed from the official source and the same country across every mirror of the game.",
+          "Today's Worldle country is {country}, the answer for {date}. This is it — confirmed from the official source, and the same country across every mirror of the game.",
           "The answer card at the top shows the country, its flag, and its region, so you can check your silhouette read and see which feature should have given it away. The {date} puzzle has one answer, and it does not change depending on which copy of the game you play.",
           "Still solving? The hint card gives you the region, the direction from your current guess, and the silhouette features: enough to close in without a full reveal."
         ],
@@ -3125,7 +3125,7 @@ export const ARTICLE_CONTENT: Record<string, StaticArticleContent> = {
     key: 'betweenle-answer-today',
     eyebrow: 'Betweenle Answer Today · Daily Reveal',
     intro:
-      "Today's betweenle answer is revealed at the top of this page, checked against the official daily puzzle. If you searched for the betweenle answer today for {date}, the five-letter word is up there with the boundary pair that framed it. Below sit hints for solvers and the midpoint method that cracks it.",
+      "Today's betweenle answer is revealed at the top of this page, checked against the official daily puzzle. The five-letter word is up there, with the boundary pair that framed it. Below sit hints for solvers and the midpoint method that cracks it.",
     sections: [
       {
         heading: 'The betweenle answer today for {date}',

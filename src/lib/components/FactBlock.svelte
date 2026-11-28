@@ -16,7 +16,7 @@
     dateLong = '',
     firstLetter = '',
     lastLetter = '',
-    vowelCount = 0,
+    vowelCount = undefined,
     repeatText = '',
     previousUse = null
   }: Props = $props();
@@ -41,10 +41,12 @@
       <dt class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Last letter</dt>
       <dd class="font-bold text-slate-900 dark:text-slate-100">{lastLetter ? lastLetter.toUpperCase() : '—'}</dd>
     </div>
-    <div>
-      <dt class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Vowels</dt>
-      <dd class="font-bold text-slate-900 dark:text-slate-100">{vowelCount}</dd>
-    </div>
+    {#if vowelCount !== undefined}
+      <div>
+        <dt class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Vowels</dt>
+        <dd class="font-bold text-slate-900 dark:text-slate-100">{vowelCount}</dd>
+      </div>
+    {/if}
     <div>
       <dt class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Repeats</dt>
       <dd class="font-bold text-slate-900 dark:text-slate-100">{repeatText || '—'}</dd>

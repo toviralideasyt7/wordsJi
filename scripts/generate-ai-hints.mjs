@@ -517,11 +517,28 @@ function deterministicHints(text) {
 	if (/^[qxzjv]/.test(letters)) score += 1;
 	score = Math.max(0, Math.min(10, score));
 	const difficulty_label = score <= 2 ? 'Very Easy' : score <= 4 ? 'Easy' : score <= 6 ? 'Normal' : score <= 8 ? 'Hard' : 'Very Hard';
+	// Per-answer reason, mirroring src/lib/ai-hints.ts — never the old
+	// static line that read identical on every page.
+	const reasonParts = [];
+	const rareHeavy = [...new Set(letters.match(/[qzxj]/g) ?? [])];
+	if (rareHeavy.length)
+		reasonParts.push(`rare letter${rareHeavy.length > 1 ? 's' : ''} ${rareHeavy.map((c) => c.toUpperCase()).join(' and ')}`);
+	const rareLight = [...new Set(letters.match(/[kv]/g) ?? [])];
+	if (rareLight.length)
+		reasonParts.push(`${rareLight.map((c) => c.toUpperCase()).join(' and ')} rarely show${rareLight.length > 1 ? '' : 's'} up`);
+	if (repeatCount > 0) reasonParts.push('a repeated letter hides one of the slots');
+	if (spanLen > 8) reasonParts.push(`it runs long at ${spanLen} ${unit}s`);
+	else if (spanLen < 4) reasonParts.push(`it is short at ${spanLen} ${unit}s`);
+	if (/^[qxzjv]/.test(letters)) reasonParts.push(`it opens with ${first}, an uncommon first letter`);
+	const difficulty_reason =
+		reasonParts.length > 0
+			? `${difficulty_label} because of ${reasonParts.join('; ')}.`
+			: `${difficulty_label}: common letters, no repeats, standard length.`;
 	return {
 		vowel_hint, repeat_hint, riddle: '', clue1: '',
 		starts_with: first, ends_with: last, definition: '',
 		difficulty: score, difficulty_label,
-		difficulty_reason: 'Scored from letter rarity, repeats, and length.'
+		difficulty_reason
 	};
 }
 // ---------------------------------------------------------------- Math (nerdle) hints

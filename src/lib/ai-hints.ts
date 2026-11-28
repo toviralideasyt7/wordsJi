@@ -106,6 +106,26 @@ export function deterministicHints(text: string): AIHints {
 	score = Math.max(0, Math.min(10, score));
 	const difficulty_label =
 		score <= 2 ? 'Very Easy' : score <= 4 ? 'Easy' : score <= 6 ? 'Normal' : score <= 8 ? 'Hard' : 'Very Hard';
+	// Say why THIS answer scored what it did — the old static line
+	// ("Scored from letter rarity, repeats, and length.") read identical
+	// on all 24 pages that show it.
+	const reasonParts: string[] = [];
+	const rareHeavy = [...new Set(letters.match(/[qzxj]/g) ?? [])];
+	if (rareHeavy.length)
+		reasonParts.push(
+			`rare letter${rareHeavy.length > 1 ? 's' : ''} ${rareHeavy.map((c) => c.toUpperCase()).join(' and ')}`
+		);
+	const rareLight = [...new Set(letters.match(/[kv]/g) ?? [])];
+	if (rareLight.length)
+		reasonParts.push(`${rareLight.map((c) => c.toUpperCase()).join(' and ')} rarely show${rareLight.length > 1 ? '' : 's'} up`);
+	if (repeatCount > 0) reasonParts.push('a repeated letter hides one of the slots');
+	if (chars.length > 8) reasonParts.push(`it runs long at ${chars.length} ${unit}s`);
+	else if (chars.length < 4) reasonParts.push(`it is short at ${chars.length} ${unit}s`);
+	if (/^[qxzjv]/.test(letters)) reasonParts.push(`it opens with ${first}, an uncommon first letter`);
+	const difficulty_reason =
+		reasonParts.length > 0
+			? `${difficulty_label} because of ${reasonParts.join('; ')}.`
+			: `${difficulty_label}: common letters, no repeats, standard length.`;
 	return {
 		vowel_hint,
 		repeat_hint,
@@ -116,7 +136,7 @@ export function deterministicHints(text: string): AIHints {
 		definition: '',
 		difficulty: score,
 		difficulty_label,
-		difficulty_reason: 'Scored from letter rarity, repeats, and length.'
+		difficulty_reason
 	};
 }
 

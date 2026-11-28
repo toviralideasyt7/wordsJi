@@ -47,10 +47,15 @@
       faqs: { question: string; answer: string }[];
       updatedStamp: string;
       aiHints: AIHints;
+      aiHintsAfternoon: AIHints;
       morningVowelCount: number;
       morningHasDouble: boolean;
       morningStartLetter: string;
       morningEndLetter: string;
+      afternoonVowelCount: number;
+      afternoonHasDouble: boolean;
+      afternoonStartLetter: string;
+      afternoonEndLetter: string;
       schemas: string;
     };
   } = $props();
@@ -115,8 +120,14 @@
       />
     </div>
 
+    <p class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Morning phrase hints</p>
     <div class="mb-8">
       <AIHintCards gameName="Phrazle" answer={data.todayAnswers.morning.phrase} hints={data.aiHints} showAnswerReveal={false} />
+    </div>
+
+    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Afternoon phrase hints</p>
+    <div class="mb-8">
+      <AIHintCards gameName="Phrazle" answer={data.todayAnswers.afternoon.phrase} hints={data.aiHintsAfternoon} showAnswerReveal={false} />
     </div>
 
     <div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -179,6 +190,7 @@
       </div>
     </div>
 
+    <p class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Morning phrase facts</p>
     <div class="mb-8">
       <FactBlock
         gameName="Phrazle"
@@ -193,6 +205,23 @@
 
     <div class="mb-8">
       <PaaHints gameName="Phrazle" hints={data.aiHints} />
+    </div>
+
+    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Afternoon phrase facts</p>
+    <div class="mb-8">
+      <FactBlock
+        gameName="Phrazle"
+        puzzleNumber={String(data.todayAnswers.afternoon.index ?? '')}
+        dateLong={data.todayLabel}
+        firstLetter={data.afternoonStartLetter ?? ''}
+        lastLetter={data.afternoonEndLetter ?? ''}
+        vowelCount={data.afternoonVowelCount ?? 0}
+        repeatText={data.afternoonHasDouble ? 'Yes' : 'No'}
+      />
+    </div>
+
+    <div class="mb-8">
+      <PaaHints gameName="Phrazle" hints={data.aiHintsAfternoon} />
     </div>
 
     <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8">

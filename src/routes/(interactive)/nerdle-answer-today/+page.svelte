@@ -189,7 +189,6 @@
                                                 dateLong={data.formattedDate}
                                                 firstLetter={data.factFirstLetter ?? ''}
                                                 lastLetter={data.factLastLetter ?? ''}
-                                                vowelCount={data.factVowelCount ?? 0}
                                                 repeatText={data.factRepeatText ?? ''}
                                         />
                                 </div>

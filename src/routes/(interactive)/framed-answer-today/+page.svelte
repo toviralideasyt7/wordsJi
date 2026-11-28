@@ -25,7 +25,7 @@
   const publishedDate = $derived(`${data.targetDateKey ?? todayKey}T00:00:00Z`);
   const noscriptAnswer = $derived.by(() =>
     data.hasExactEntries
-      ? data.entries.map((entry) => `${entry.game}: ${entry.answer}`).join(' | ')
+      ? data.entries.map((entry) => `${entry.game.label}: ${entry.answer}`).join(' | ')
       : null
   );
   const featuredEntry = $derived(data.hasExactEntries ? data.entries[0] ?? null : null);

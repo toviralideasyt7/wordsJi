@@ -63,6 +63,14 @@ export const load: PageLoad = ({ data }) => {
 	const pageKeywords = `phrazle answer today, phrazle answer, phrazle hint, phrazle hint today, phrazle answer for ${todayLabel}`;
 	const updatedStamp = updatedStampText('Phrazle', todayAnswers.morning.index, todayLabel);
 	const aiHints = mergeHints(todayAnswers.morning.phrase, getAIHints('phrazle', todayAnswers.date));
+	// The afternoon phrase gets its own hint set, computed from its own
+	// text. Until 2026-11-28 the page showed only the morning phrase's
+	// hints while the afternoon answer sat beside them (starts P / ends E
+	// next to SICK AS A DOG). No stored entry is passed for the afternoon:
+	// the generator's phrazle entry is built from the combined
+	// "morning / afternoon" text, so its prose could describe either
+	// phrase — the deterministic hints are always afternoon-correct.
+	const aiHintsAfternoon = mergeHints(todayAnswers.afternoon.phrase, null);
 	const faqs = [
 		{
 			question: 'What is Phrazle?',
@@ -111,6 +119,13 @@ export const load: PageLoad = ({ data }) => {
 		.split('')
 		.some((c, i, a) => a.indexOf(c) !== a.lastIndexOf(c));
 
+	// FactBlock values from the afternoon phrase (same treatment).
+	const afternoonLetters = todayAnswers.afternoon.phrase.toLowerCase().replace(/[^a-z]/g, '');
+	const afternoonVowelCount = [...afternoonLetters].filter((c) => 'aeiou'.includes(c)).length;
+	const afternoonHasDouble = afternoonLetters
+		.split('')
+		.some((c, i, a) => a.indexOf(c) !== a.lastIndexOf(c));
+
 	return {
 		// Server-load data (the build-time video state) is not merged into
 		// the page data automatically when a universal load returns its own
@@ -126,10 +141,15 @@ export const load: PageLoad = ({ data }) => {
 		faqs,
 		updatedStamp,
 		aiHints,
+		aiHintsAfternoon,
 		morningVowelCount,
 		morningHasDouble,
 		morningStartLetter: morningLetters[0]?.toUpperCase() ?? '',
 		morningEndLetter: morningLetters[morningLetters.length - 1]?.toUpperCase() ?? '',
+		afternoonVowelCount,
+		afternoonHasDouble,
+		afternoonStartLetter: afternoonLetters[0]?.toUpperCase() ?? '',
+		afternoonEndLetter: afternoonLetters[afternoonLetters.length - 1]?.toUpperCase() ?? '',
 		schemas: JSON.stringify([webPageSchema, faqSchema])
 	};
 };

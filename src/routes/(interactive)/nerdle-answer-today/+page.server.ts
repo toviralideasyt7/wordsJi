@@ -9,6 +9,46 @@ import {
 import { getPuzzleWindow } from '$lib/puzzle-window';
 import { getGameVideo } from '$lib/server/game-videos';
 
+/**
+ * Display guard: an answer is only shown if it is a real, balanced
+ * equation. The upstream feed shipped "Instant: +17=24*9_5" on
+ * 2026-11-28 — a leading "+", a "_" placeholder, and no balance — and
+ * the page rendered it raw. Malformed entries are dropped, never shown.
+ */
+function isValidNerdleEquation(eq: string): boolean {
+        if (!/^[0-9+\-*/=]+$/.test(eq)) return false;
+        const sides = eq.split('=');
+        if (sides.length !== 2 || !sides[0] || !sides[1]) return false;
+        const evaluate = (side: string): number | null => {
+                const tokens = side.match(/\d+|[+\-*/]/g);
+                if (!tokens || tokens.join('') !== side) return null;
+                if (!/^\d+$/.test(tokens[0]) || !/^\d+$/.test(tokens[tokens.length - 1])) return null;
+                const values: number[] = [Number(tokens[0])];
+                const ops: string[] = [];
+                for (let i = 1; i < tokens.length; i += 2) {
+                        const op = tokens[i];
+                        const next = tokens[i + 1];
+                        if (!['+', '-', '*', '/'].includes(op) || next === undefined || !/^\d+$/.test(next)) return null;
+                        if (op === '*') values[values.length - 1] *= Number(next);
+                        else if (op === '/') {
+                                if (Number(next) === 0) return null;
+                                values[values.length - 1] /= Number(next);
+                        } else {
+                                ops.push(op);
+                                values.push(Number(next));
+                        }
+                }
+                let result = values[0];
+                for (let i = 0; i < ops.length; i++) {
+                        result = ops[i] === '+' ? result + values[i + 1] : result - values[i + 1];
+                }
+                return result;
+        };
+        const left = evaluate(sides[0]);
+        const right = evaluate(sides[1]);
+        return left !== null && right !== null && Math.abs(left - right) < 1e-9;
+}
+
 function formatDateLabel(dateKey: string): string {
         const date = new Date(`${dateKey}T00:00:00Z`);
         if (Number.isNaN(date.getTime())) {
@@ -36,6 +76,9 @@ export const load: PageServerLoad = async ({ setHeaders, platform, fetch }) => {
                         classicPuzzleNumber: Number.NaN,
                         modes: []
                 } satisfies NerdleAllModeAnswerData);
+        for (const mode of answerData.modes ?? []) {
+                mode.answers = (mode.answers ?? []).filter((entry) => isValidNerdleEquation(entry.answer ?? ''));
+        }
         const formattedDate = formatDateLabel(answerData.date);
         const hasValidTodayData =
                 Number.isFinite(answerData.classicPuzzleNumber) &&
