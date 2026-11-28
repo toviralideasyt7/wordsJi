@@ -41,7 +41,7 @@ export const load: PageServerLoad = async ({ setHeaders }) => {
 			}
 		: null;
 	const factLetters = todayEntry.word.toLowerCase().replace(/[^a-z]/g, '');
-	const factRepeatCount = factLetters.length - new Set(factLetters).size;
+	const factRepeatCount = (() => { const f: Record<string, number> = {}; for (const c of factLetters) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })(); // distinct letters that repeat, not extra copies
 	const factData = {
 		puzzleNumber: String(todayEntry.puzzle),
 		dateLong: formattedDate,

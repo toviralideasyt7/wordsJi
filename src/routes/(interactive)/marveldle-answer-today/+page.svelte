@@ -30,7 +30,7 @@
   const factFirstLetter = $derived((factLetters[0] ?? '').toUpperCase());
   const factLastLetter = $derived((factLetters[factLetters.length - 1] ?? '').toUpperCase());
   const factVowelCount = $derived([...factLetters].filter((c) => 'aeiou'.includes(c)).length);
-  const factRepeatCount = $derived(factLetters.length - new Set(factLetters).size);
+  const factRepeatCount = $derived((() => { const f: Record<string, number> = {}; for (const c of factLetters) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })()); // distinct letters that repeat, not extra copies
   const factRepeatText = $derived(
     factRepeatCount === 0 ? 'None' : `${factRepeatCount} repeated letter${factRepeatCount === 1 ? '' : 's'}`
   );

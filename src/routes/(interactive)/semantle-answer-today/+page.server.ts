@@ -35,7 +35,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
         : null;
 
     const factVowelCount = word.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length;
-    const factRepeatCount = word.length - new Set(word.toLowerCase()).size;
+    const factRepeatCount = (() => { const f: Record<string, number> = {}; for (const c of word.toLowerCase()) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })(); // distinct letters that repeat, not extra copies
     const factData = {
         puzzleNumber: String(puzzleNumber),
         dateLong: formattedDate,

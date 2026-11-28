@@ -28,7 +28,7 @@ function classicAnswer(answers: GameDleAnswer[]): GameDleAnswer | undefined {
 function factFields(name: string, puzzleNumber: string, dateLong: string) {
     const chars = name.toLowerCase().replace(/[^a-z]/g, '');
     const vowelCount = [...chars].filter((c) => 'aeiou'.includes(c)).length;
-    const repeats = chars.length - new Set(chars).size;
+    const repeats = (() => { const f: Record<string, number> = {}; for (const c of chars) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })(); // distinct letters that repeat, not extra copies
     return {
         puzzleNumber,
         dateLong,

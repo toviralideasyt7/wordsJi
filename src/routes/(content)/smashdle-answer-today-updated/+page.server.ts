@@ -62,7 +62,8 @@ export const load: PageServerLoad = async ({ fetch, setHeaders }) => {
         const updatedStamp = updatedStampText('Smashdle', smashdleNumber, seoDate);
         const aiHints = null; // character game — no word-metric hints
         const factVowelCount = classicChampion.toLowerCase().split('').filter((c: string) => 'aeiou'.includes(c)).length;
-        const factRepeatCount = classicChampion.replace(/[^a-z]/gi, '').length - new Set(classicChampion.toLowerCase().replace(/[^a-z]/g, '')).size;
+        const factLetters = classicChampion.toLowerCase().replace(/[^a-z]/g, '');
+        const factRepeatCount = (() => { const f: Record<string, number> = {}; for (const c of factLetters) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })(); // distinct letters that repeat, not extra copies
         const factData = {
             puzzleNumber: String(smashdleNumber),
             dateLong: seoDate,

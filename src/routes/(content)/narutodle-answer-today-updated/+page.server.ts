@@ -16,7 +16,7 @@ function parseChampionName(jsonContent: string | undefined): string {
 function letterFacts(name: string) {
 	const letters = name.toLowerCase().replace(/[^a-z]/g, '');
 	const vowelCount = [...letters].filter((c) => 'aeiou'.includes(c)).length;
-	const repeatCount = letters.length - new Set(letters).size;
+	const repeatCount = (() => { const f: Record<string, number> = {}; for (const c of letters) f[c] = (f[c] ?? 0) + 1; return Object.values(f).filter((n) => n > 1).length; })(); // distinct letters that repeat, not extra copies
 	return {
 		firstLetter: (letters[0] ?? '').toUpperCase(),
 		lastLetter: (letters[letters.length - 1] ?? '').toUpperCase(),
