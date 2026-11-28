@@ -1281,5 +1281,25 @@
     "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-05/15/176f585b-117a5a88-18c217ba-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
     "sourceDate": "2026-11-27",
     "fetchedAt": "2026-11-27T15:28:57.273Z"
+  },
+  "2026-11-28": {
+    "date": "2026-11-28",
+    "gameNumber": 1014,
+    "player": {
+      "player_name": "Nick Gonzales",
+      "player_id": "4311634",
+      "team_name": "Pirates",
+      "born": "USA",
+      "birth_date": "1999-05-27",
+      "position": [
+        "3B"
+      ],
+      "debut": 2023,
+      "jersey_number": 3
+    },
+    "videoDescription": "[07/18/26 : PIT 7 - 1 CLE] Nick Gonzales crushes a solo home run to right-center field, extending the Pirates' lead to 5-1 in the 6th.",
+    "rawVideo": "https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-07/18/1879e1d7-a776feb9-618e14d4-csvm-diamondgcp-asset_1280x720_59_16000K.mp4",
+    "sourceDate": "2026-11-28",
+    "fetchedAt": "2026-11-28T14:03:34.459Z"
   }
 }
