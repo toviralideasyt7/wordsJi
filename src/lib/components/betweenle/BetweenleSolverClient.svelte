@@ -28,6 +28,7 @@
   let topDistance = $state('');
   let bottomDistance = $state('');
   let showSuggestion = $state(false);
+  let formError = $state('');
   let copiedWord = $state('');
   let copyFeedback = $state(false);
   let runtimeLoading = $state(false);
@@ -72,15 +73,40 @@
     scrollToId('betweenle-solver-panel');
   }
 
+  // The Solve button used to render only when result.remaining > 1 and
+  // no suggestion was showing — so on a fresh page there was no Solve
+  // button at all (the page's own step 3 says "Click Solve"), and it
+  // vanished again after every solve. Clarity showed dead clicks in 55%
+  // of sessions. The button is now always present; clicking it with
+  // incomplete bounds explains what is missing instead of silently
+  // suggesting a word for empty inputs (it returned "LUMPS").
+  async function solve(): Promise<void> {
+    await ensureBetweenleRuntime();
+    if (topWord.trim().length !== 5 || bottomWord.trim().length !== 5) {
+      formError = 'Enter both bound words first — the 5-letter word above your guess and the 5-letter word below it.';
+      showSuggestion = false;
+      return;
+    }
+    if (!result.suggestionWord) {
+      formError = 'No word sits between those two bounds — check the words and try again.';
+      showSuggestion = false;
+      return;
+    }
+    formError = '';
+    showSuggestion = true;
+  }
+
   function updateTopWord(value: string): void {
     topWord = value.toLowerCase().slice(0, 5);
     showSuggestion = false;
+    formError = '';
     void ensureBetweenleRuntime();
   }
 
   function updateBottomWord(value: string): void {
     bottomWord = value.toLowerCase().slice(0, 5);
     showSuggestion = false;
+    formError = '';
     void ensureBetweenleRuntime();
   }
 
@@ -290,17 +316,19 @@
                 {/if}
               </div>
               <button
-                class="flex h-14 w-full items-center justify-center rounded-2xl bg-indigo-600 px-4 text-xl font-black uppercase tracking-[0.2em] text-white transition-transform hover:scale-[1.01]"
+                class="flex w-full flex-col items-center justify-center gap-1 rounded-2xl bg-indigo-600 px-4 py-3 text-white transition-transform hover:scale-[1.01]"
                 onclick={() => copyToClipboard(result.suggestionWord)}
                 type="button"
               >
-                {#if copyFeedback && copiedWord === result.suggestionWord}
-                  Copied!
-                {:else}
-                  {result.suggestionWord}
-                {/if}
+                <span class="text-xl font-black uppercase tracking-[0.2em]">
+                  {#if copyFeedback && copiedWord === result.suggestionWord}
+                    Copied!
+                  {:else}
+                    {result.suggestionWord}
+                  {/if}
+                </span>
+                <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-200">Click to copy</span>
               </button>
-              <p class="mt-2 text-center text-xs text-indigo-700 dark:text-indigo-300">Click to copy</p>
             </div>
           {/if}
 
@@ -326,13 +354,10 @@
           {/if}
 
           <div class="flex flex-wrap gap-3 pt-2">
-            {#if result.remaining > 1 && !showSuggestion}
+            {#if !result.isSolved}
               <button
                 class="flex-1 rounded-2xl bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-5 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-[1.01]"
-                onclick={async () => {
-                  await ensureBetweenleRuntime();
-                  showSuggestion = true;
-                }}
+                onclick={() => void solve()}
                 type="button"
               >
                 {runtimeLoading ? 'Loading...' : 'Solve'}
@@ -348,6 +373,9 @@
               Reset
             </button>
           </div>
+          {#if formError}
+            <p role="alert" class="pt-3 text-center text-sm font-semibold text-rose-600 dark:text-rose-400">{formError}</p>
+          {/if}
         </div>
       </div>
     </div>
