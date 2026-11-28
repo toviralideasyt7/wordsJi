@@ -38,17 +38,22 @@ function stripText(html) {
 }
 
 function extract(text) {
-	const factsMatch = text.match(
-		/Puzzle facts\s+Puzzle number\s+\S+\s+Date\s+.+?\s+First letter\s+(\S)\s+Last letter\s+(\S)\s+Vowels\s+(\d+)\s+Repeats\s+(None|\d+|Yes|No)\b/
-	);
-	const facts = factsMatch
-		? {
-				first: factsMatch[1].toUpperCase(),
-				last: factsMatch[2].toUpperCase(),
-				vowels: parseInt(factsMatch[3], 10),
-				repeats: factsMatch[4] === 'None' ? 0 : /^\d+$/.test(factsMatch[4]) ? parseInt(factsMatch[4], 10) : null
-			}
-		: null;
+	// A page can carry more than one facts strip (Phrazle shows a morning
+	// and an afternoon phrase, each with its own strip and hint set since
+	// 2026-11-28). Collect every strip; a hint value is consistent when
+	// it matches at least one strip on the page. Single-strip pages —
+	// everything else — behave exactly as before.
+	const factsList = [
+		...text.matchAll(
+			/Puzzle facts\s+Puzzle number\s+\S+\s+Date\s+.+?\s+First letter\s+(\S)\s+Last letter\s+(\S)\s+Vowels\s+(\d+)\s+Repeats\s+(None|\d+|Yes|No)\b/g
+		)
+	].map((factsMatch) => ({
+		first: factsMatch[1].toUpperCase(),
+		last: factsMatch[2].toUpperCase(),
+		vowels: parseInt(factsMatch[3], 10),
+		repeats: factsMatch[4] === 'None' ? 0 : /^\d+$/.test(factsMatch[4]) ? parseInt(factsMatch[4], 10) : null
+	}));
+	const facts = factsList[0] ?? null;
 
 	const hintVowels = new Set([...text.matchAll(/It contains (\d+) vowels?/g)].map((m) => parseInt(m[1], 10)));
 	const hintStartEnd = new Set(
@@ -59,17 +64,20 @@ function extract(text) {
 	if (/There are zero repeated/.test(text)) hintRepeats.add(0);
 
 	const hasHints = hintVowels.size > 0 || hintStartEnd.size > 0 || hintRepeats.size > 0;
-	return { facts, hintVowels, hintStartEnd, hintRepeats, hasHints };
+	return { facts, factsList, hintVowels, hintStartEnd, hintRepeats, hasHints };
 }
 
 function checkPage(name, text) {
-	const { facts, hintVowels, hintStartEnd, hintRepeats, hasHints } = extract(text);
+	const { facts, factsList, hintVowels, hintStartEnd, hintRepeats, hasHints } = extract(text);
 	if (!facts) return { name, status: hasHints ? 'NOTE' : 'SKIP', problems: hasHints ? ['hint cards present but no facts strip to check against'] : [] };
 	const problems = [];
-	for (const v of hintVowels) if (v !== facts.vowels) problems.push(`hint vowels=${v} but facts vowels=${facts.vowels}`);
-	for (const se of hintStartEnd) if (se !== `${facts.first}..${facts.last}`) problems.push(`hint start/end=${se} but facts=${facts.first}..${facts.last}`);
-	if (facts.repeats !== null) {
-		for (const r of hintRepeats) if (r !== facts.repeats) problems.push(`hint repeats=${r} but facts repeats=${facts.repeats}`);
+	const factsVowels = new Set(factsList.map((f) => f.vowels));
+	const factsStartEnd = new Set(factsList.map((f) => `${f.first}..${f.last}`));
+	const factsRepeats = new Set(factsList.map((f) => f.repeats).filter((r) => r !== null));
+	for (const v of hintVowels) if (!factsVowels.has(v)) problems.push(`hint vowels=${v} but facts vowels=${[...factsVowels].join('/')}`);
+	for (const se of hintStartEnd) if (!factsStartEnd.has(se)) problems.push(`hint start/end=${se} but facts=${[...factsStartEnd].join('/')}`);
+	if (factsRepeats.size > 0) {
+		for (const r of hintRepeats) if (!factsRepeats.has(r)) problems.push(`hint repeats=${r} but facts repeats=${[...factsRepeats].join('/')}`);
 	}
 	return { name, status: problems.length ? 'FAIL' : 'PASS', problems };
 }
