@@ -259,7 +259,15 @@ export function mergeHints(text: string, ai: AIHints | null): AIHints {
 						: difficulty <= 8
 							? 'Hard'
 							: 'Very Hard';
-		if (ai.difficulty_reason && ai.difficulty_reason.trim()) {
+		// The generator's old fallback wrote one static reason into every
+		// entry ("Scored from letter rarity, repeats, and length.") — that
+		// boilerplate is not a real reason, so treat it as absent and keep
+		// the computed per-answer reason. Genuine LLM reasons still win.
+		if (
+			ai.difficulty_reason &&
+			ai.difficulty_reason.trim() &&
+			ai.difficulty_reason.trim() !== 'Scored from letter rarity, repeats, and length.'
+		) {
 			difficulty_reason = ai.difficulty_reason.trim();
 		}
 	}
